@@ -1,22 +1,46 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import { friendHits, friendsMean, getItem, itemFacts, items, typeName } from '../data/catalog'
+import { friends as seedFriends, getItem, itemFacts, items, itemsById, typeName } from '../data/catalog'
 import { PLATFORMS, WIZARD_TITLE } from '../config'
 import { BOOK_QUESTIONS, QUESTIONS_BY_SHELF, type Question } from '../data/questions'
-import { applyShaper, MORE_DUELS, newShaping, nextShaperPair, scoreCandidates, SHAPER_DUELS, type Answers, type Cand, type Shaping } from '../lib/recommend'
+import {
+  initDecideSession,
+  nextDuel,
+  applyDuelChoice,
+  shouldPropose,
+  getProposal,
+  rejectAndContinue,
+  type DecideProposal,
+  type DecideState,
+} from '../lib/engine/decide'
 import { useStore } from '../store/useStore'
+import { useFriends } from '../store/useFriends'
+import { useRanks } from '../store/useScores'
 import { track, useEvents } from '../store/useEvents'
-import { SHELVES, SHELF_LABEL, type Item, type ShelfType } from '../types'
+import { affinity } from '../lib/affinity'
+import { friendRanks } from '../lib/rank'
+import { SHELVES, SHELF_LABEL, type Friend, type Item, type ShelfType } from '../types'
 import { Poster } from '../components/Poster'
 import { SwipePair, type Side } from '../components/SwipePair'
 import { RatingFlow } from '../components/RatingFlow'
 import { Chip, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
 
-// El progreso se guarda: al volver a Decidir se retoma donde estabas (hasta pulsar «Empezar de nuevo»)
-const SNAP_KEY = 'biblioteca-decidir-v3'
-interface Snap { shelf: ShelfType | null; phase: string; qi: number; answers: Answers; shaping: Shaping; pair: [string, string] | null; duel: { n: number; of: number }; current: string | null; rejected: string[] }
+export type Answers = Record<string, string | string[] | undefined>
+
+const SNAP_KEY = 'biblioteca-decidir-v4'
+interface Snap {
+  shelf: ShelfType | null
+  phase: string
+  qi: number
+  answers: Answers
+  pair: [string, string] | null
+  duel: { n: number; of: number }
+  current: string | null
+  rejected: string[]
+}
+
 const loadSnap = (): Snap | null => {
   try {
     const r = localStorage.getItem(SNAP_KEY)
@@ -42,63 +66,96 @@ export function WhatToWatch() {
   const entries = useStore((s) => s.entries)
   const rankings = useStore((s) => s.rankings)
   const setStatus = useStore((s) => s.setStatus)
+  const ranks = useRanks()
+
+  const realFriends = useFriends((s) => s.realFriends)
+  const activeFriends = realFriends.length > 0 ? realFriends : seedFriends
 
   const [phase, setPhase] = useState<'shelf' | 'ask' | 'shape' | 'propose' | 'done' | 'none'>((snap?.phase as 'ask') ?? (shelf ? 'ask' : 'shelf'))
   const [qi, setQi] = useState(snap?.qi ?? 0)
   const [answers, setAnswers] = useState<Answers>(snap?.answers ?? { platforms: profile.platforms })
-  const [shaping, setShaping] = useState<Shaping>(snap?.shaping ?? newShaping)
   const [pair, setPair] = useState<[Item, Item] | null>(snap?.pair ? ([getItem(snap.pair[0]), getItem(snap.pair[1])] as [Item, Item]) : null)
-  const [duel, setDuel] = useState(snap?.duel ?? { n: 0, of: SHAPER_DUELS })
+  const [duel, setDuel] = useState(snap?.duel ?? { n: 0, of: 5 })
+  const [duelPhase, setDuelPhase] = useState<'coarse' | 'fine'>('coarse')
   const [current, setCurrent] = useState<string | null>(snap?.current ?? null)
   const [rejected, setRejected] = useState<string[]>(snap?.rejected ?? [])
   const [rating, setRating] = useState<string | null>(null)
   const [toast, setToast] = useState<string | null>(null)
   const timer = useRef<number | undefined>(undefined)
 
+  const [decideState, setDecideState] = useState<DecideState | null>(null)
+  const [proposal, setProposal] = useState<DecideProposal | null>(null)
+
   const newSession = useEvents((s) => s.newSession)
   const sessionSid = useRef(newSession('dec'))
   const roundRef = useRef(1)
   const duelStepRef = useRef(0)
 
+  const getFriendPct = useCallback((friend: Friend, itemId: string) => {
+    return friendRanks(friend, getItem)[itemId]?.pct ?? null
+  }, [])
+
+  const getAffinity = useCallback((friendId: string) => {
+    const f = activeFriends.find((x) => x.id === friendId)
+    if (!f) return null
+    const mine = Object.fromEntries(Object.entries(ranks).map(([id, r]) => [id, r.pct]))
+    const theirs = Object.fromEntries(Object.entries(friendRanks(f, getItem)).map(([id, r]) => [id, r.pct]))
+    return affinity(mine, theirs)
+  }, [activeFriends, ranks])
+
   useEffect(() => {
     if (!shelf || phase === 'shelf') return
-    const data: Snap = { shelf, phase, qi, answers, shaping, pair: pair && pair[0] && pair[1] ? [pair[0].id, pair[1].id] : null, duel, current, rejected }
+    const data: Snap = { shelf, phase, qi, answers, pair: pair && pair[0] && pair[1] ? [pair[0].id, pair[1].id] : null, duel, current, rejected }
     try { localStorage.setItem(SNAP_KEY, JSON.stringify(data)) } catch { /* ok */ }
-  }, [shelf, phase, qi, answers, shaping, pair, duel, current, rejected])
+  }, [shelf, phase, qi, answers, pair, duel, current, rejected])
 
   const isBook = shelf === 'book'
   const baseQs: Question[] = !shelf ? [] : isBook ? BOOK_QUESTIONS : QUESTIONS_BY_SHELF[shelf]
   const activeQs = (a: Answers) => baseQs.filter((q) => !q.skipIf?.(a))
   const questions = activeQs(answers)
 
-  // géneros de tus 5 favoritas de esta categoría (para «parecido a lo que te gusta»)
-  const topGenres = useMemo(() => (shelf ? (rankings[shelf] ?? []).slice(0, 5).flatMap((id) => getItem(id)?.genres ?? []) : []), [shelf, rankings])
-
-  const candidates = useMemo<Cand[]>(() => {
-    if (!shelf || (phase !== 'propose' && phase !== 'done')) return []
-    return scoreCandidates({ shelf, items, entries, answers, shaping, friendsMean, platforms: profile.platforms, topGenres })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase === 'propose' || phase === 'done', shelf, answers, shaping, entries])
-
   /* ------------------------------- navegación ------------------------------- */
-  // Duelos orientadores (§14.2): obras concretas de la categoría, contrastadas; no son candidatas.
-  const startShaping = (a: Answers, sh: Shaping, count: number) => {
+  // Duelos orientadores (§8): obras concretas de la categoría; no son candidatas.
+  const startShaping = (a: Answers, targetDuels = 5) => {
     if (!shelf) return
-    if (count === SHAPER_DUELS) {
-      sessionSid.current = newSession('dec')
-      roundRef.current = 1
-      duelStepRef.current = 0
-      track('dec_start', {
-        shelf,
-        sid: sessionSid.current,
-        data: { answers: a },
-      })
+    sessionSid.current = newSession('dec')
+    roundRef.current = 1
+    duelStepRef.current = 0
+    track('dec_start', {
+      shelf,
+      sid: sessionSid.current,
+      data: { answers: a },
+    })
+
+    const state = initDecideSession({
+      shelf,
+      items,
+      entries,
+      rankings,
+      profile,
+      friends: activeFriends,
+      answers: a,
+      affinity: getAffinity,
+      friendPct: getFriendPct,
+    })
+    setDecideState(state)
+
+    const next = nextDuel(state, items, new Set())
+    if (!next) {
+      const prop = getProposal(state, itemsById, activeFriends, profile)
+      if (prop) {
+        setProposal(prop)
+        setCurrent(prop.item.id)
+        setPhase('propose')
+      } else {
+        setPhase('none')
+      }
+      return
     }
-    const next = nextShaperPair(items, shelf, a, sh.shown, Math.random)
-    if (!next) { setCurrent(null); setPhase('propose'); return }
-    setShaping({ ...sh, shown: [...sh.shown, next[0].id, next[1].id] })
-    setPair(next)
-    setDuel({ n: 0, of: count })
+
+    setPair([next.a, next.b])
+    setDuelPhase(next.phase)
+    setDuel({ n: 0, of: targetDuels })
     setPhase('shape')
   }
 
@@ -107,18 +164,19 @@ export function WhatToWatch() {
     setAnswers(next)
     clearTimeout(timer.current)
     timer.current = window.setTimeout(() => {
-      if (qi + 1 >= activeQs(next).length) startShaping(next, newShaping(), SHAPER_DUELS)
+      if (qi + 1 >= activeQs(next).length) startShaping(next, 5)
       else setQi(qi + 1)
     }, q.multi ? 0 : 200)
   }
 
   const onShaperChoose = (w: 'a' | 'b') => {
-    if (!pair || !shelf) return
+    if (!pair || !shelf || !decideState) return
     const [a, b] = pair
     const winner = w === 'a' ? a : b
     const loser = w === 'a' ? b : a
-    const sh = applyShaper(shaping, winner, loser)
-    const n = duel.n + 1
+
+    const updatedState = applyDuelChoice(decideState, winner, loser, itemsById)
+    setDecideState(updatedState)
     duelStepRef.current++
 
     const infoGain = Math.round((0.5 + Math.abs(a.popularity - b.popularity) / 200) * 100) / 100
@@ -130,51 +188,58 @@ export function WhatToWatch() {
         b: b.id,
         winner: winner.id,
         step: duelStepRef.current,
-        phase: 'coarse',
+        phase: duelPhase,
         infoGain,
       },
     })
 
-    const next = n < duel.of ? nextShaperPair(items, shelf, answers, sh.shown, Math.random) : null
-    if (next) {
-      setShaping({ ...sh, shown: [...sh.shown, next[0].id, next[1].id] })
-      setPair(next)
-      setDuel({ ...duel, n })
-    } else {
-      setShaping(sh)
-      setPair(null)
-      setCurrent(null)
-      setPhase('propose')
-    }
-  }
-
-  // propuesta: la mejor candidata no descartada
-  useEffect(() => {
-    if (phase === 'propose' && !current) {
-      const pool = candidates.filter((c) => !rejected.includes(c.item.id))
-      if (pool.length) {
-        const item = pool[0]
-        setCurrent(item.item.id)
+    // ¿Momento de proponer? (§8.7)
+    if (shouldPropose(updatedState)) {
+      const prop = getProposal(updatedState, itemsById, activeFriends, profile)
+      if (prop) {
+        setProposal(prop)
+        setCurrent(prop.item.id)
+        setPair(null)
+        setPhase('propose')
         track('dec_propose', {
-          shelf: shelf || 'movie',
-          itemId: item.item.id,
+          shelf,
+          itemId: prop.item.id,
           sid: sessionSid.current,
           data: {
             round: roundRef.current,
-            score: item.score,
-            candidates: pool.length,
+            score: prop.finalScore,
+            candidates: updatedState.pool.length,
           },
         })
-      } else setPhase('none')
+        return
+      }
     }
-  }, [phase, current, candidates, rejected])
-  const cand = candidates.find((c) => c.item.id === current)
+
+    // Siguiente duelo
+    const next = nextDuel(updatedState, items, new Set(updatedState.shown))
+    if (next) {
+      setPair([next.a, next.b])
+      setDuelPhase(next.phase)
+      setDuel((d) => ({ ...d, n: d.n + 1 }))
+    } else {
+      const prop = getProposal(updatedState, itemsById, activeFriends, profile)
+      if (prop) {
+        setProposal(prop)
+        setCurrent(prop.item.id)
+        setPair(null)
+        setPhase('propose')
+      } else {
+        setPhase('none')
+      }
+    }
+  }
 
   const handleAccept = () => {
-    if (cand && shelf) {
+    const currentItem = proposal?.item ?? (current ? getItem(current) : null)
+    if (currentItem && shelf) {
       track('dec_accept', {
         shelf,
-        itemId: cand.item.id,
+        itemId: currentItem.id,
         sid: sessionSid.current,
         data: { round: roundRef.current },
       })
@@ -182,9 +247,9 @@ export function WhatToWatch() {
     setPhase('done')
   }
 
-  // «Seguir buscando»: más duelos orientadores y nueva propuesta (§14.2)
+  // «Seguir buscando»: 3 duelos orientadores en fase fine y nueva propuesta (§8.7, §8.8)
   const seguir = () => {
-    if (!current || !shelf) return
+    if (!current || !shelf || !decideState) return
     track('dec_reject', {
       shelf,
       itemId: current,
@@ -192,8 +257,28 @@ export function WhatToWatch() {
       data: { round: roundRef.current },
     })
     roundRef.current++
-    setRejected([...rejected, current])
-    startShaping(answers, shaping, MORE_DUELS)
+    const newRejected = [...rejected, current]
+    setRejected(newRejected)
+
+    const updatedState = rejectAndContinue(decideState, current)
+    setDecideState(updatedState)
+
+    const next = nextDuel(updatedState, items, new Set(updatedState.shown))
+    if (next) {
+      setPair([next.a, next.b])
+      setDuelPhase(next.phase)
+      setDuel({ n: 0, of: 3 }) // 3 duelos en cada «Seguir buscando» (§8.7)
+      setPhase('shape')
+    } else {
+      const prop = getProposal(updatedState, itemsById, activeFriends, profile)
+      if (prop) {
+        setProposal(prop)
+        setCurrent(prop.item.id)
+        setPhase('propose')
+      } else {
+        setPhase('none')
+      }
+    }
   }
 
   // Reiniciar vuelve siempre a elegir categoría (§13.2)
@@ -211,22 +296,13 @@ export function WhatToWatch() {
     setQi(0)
     setCurrent(null)
     setRejected([])
-    setShaping(newShaping())
+    setDecideState(null)
+    setProposal(null)
     setPair(null)
   }
 
   const shelfTerms = shelf ? SHELF_LABEL[shelf] : SHELF_LABEL.movie
-
-  const reason = (c: Cand) => {
-    const top = friendHits(c.item.id).filter((h) => h.entry.status === 'seen' && h.entry.score !== undefined)[0]
-    const plat = c.item.platforms?.find((p) => profile.platforms.includes(p)) ?? c.item.platforms?.[0]
-    return [
-      c.like ? `Algo como ${c.like.title}` : null,
-      top ? `${top.friend.name} ${shelfTerms.pronoun} tiene en su ranking` : null,
-      c.fromFriends ? null : 'Estaba en tus pendientes',
-      !isBook && plat ? `Está en ${plat}` : null,
-    ].filter(Boolean).join(' · ')
-  }
+  const currentItem = proposal?.item ?? (current ? getItem(current) : null)
 
   const shaperSide = (it: Item): Side => ({ key: it.id, title: it.title, subtitle: `${it.year} · ${it.creator}`, bg: <Poster item={it} showTitle={false} className="absolute inset-0 w-full h-full" /> })
 
@@ -283,7 +359,7 @@ export function WhatToWatch() {
                   })}
                 </div>
                 <p className="text-xs text-mute mt-3">Sin ninguna marcada, no filtramos por plataforma.</p>
-                <button onClick={() => (qi + 1 >= questions.length ? startShaping(answers, newShaping(), SHAPER_DUELS) : setQi(qi + 1))} className="mt-6 w-full min-h-[52px] rounded-2xl bg-accent text-accent-ink font-semibold">Seguir</button>
+                <button onClick={() => (qi + 1 >= questions.length ? startShaping(answers, 5) : setQi(qi + 1))} className="mt-6 w-full min-h-[52px] rounded-2xl bg-accent text-accent-ink font-semibold">Seguir</button>
               </div>
             ) : (
               <div className="space-y-2.5">
@@ -312,18 +388,19 @@ export function WhatToWatch() {
         <SwipePair left={shaperSide(pair[0])} right={shaperSide(pair[1])} onChoose={onShaperChoose} between={['Me siento más…', '← como esta  ·  como esta →']} />
       </div>
     )
-  } else if (phase === 'propose' && cand) {
+  } else if (phase === 'propose' && currentItem) {
+    const reasonsText = proposal?.reasons.join(' · ') || 'Sugerencia basada en tus respuestas'
     body = (
       <div className="flex-1 min-h-0 flex flex-col px-4 pb-8">
-        <Link to={`/i/${encodeURIComponent(cand.item.id)}`} key={cand.item.id} className="relative flex-1 min-h-0 rounded-[28px] overflow-hidden border border-line shadow-2xl block pop">
-          <Poster item={cand.item} showTitle={false} className="absolute inset-0 w-full h-full" />
+        <Link to={`/i/${encodeURIComponent(currentItem.id)}`} key={currentItem.id} className="relative flex-1 min-h-0 rounded-[28px] overflow-hidden border border-line shadow-2xl block pop">
+          <Poster item={currentItem} showTitle={false} className="absolute inset-0 w-full h-full" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
           <div className="absolute top-3 left-3 bg-accent text-accent-ink text-xs font-bold px-3 py-1.5 rounded-full">Te propongo esta</div>
           <div className="absolute bottom-0 inset-x-0 p-5">
-            <div className="text-[11px] uppercase tracking-[0.14em] text-white/70">{typeName(cand.item.type)} · {cand.item.year} · {itemFacts(cand.item)}</div>
-            <h2 className="serif text-[30px] leading-[1.05] font-semibold mt-1">{cand.item.title}</h2>
-            <p className="text-sm text-accent mt-2 font-medium">{reason(cand)}</p>
-            <p className="text-sm text-white/75 mt-1.5 line-clamp-2">{cand.item.synopsis}</p>
+            <div className="text-[11px] uppercase tracking-[0.14em] text-white/70">{typeName(currentItem.type)} · {currentItem.year} · {itemFacts(currentItem)}</div>
+            <h2 className="serif text-[30px] leading-[1.05] font-semibold mt-1">{currentItem.title}</h2>
+            <p className="text-sm text-accent mt-2 font-medium">{reasonsText}</p>
+            <p className="text-sm text-white/75 mt-1.5 line-clamp-2">{currentItem.synopsis}</p>
           </div>
         </Link>
         <div className="flex gap-2 mt-3">
@@ -332,17 +409,17 @@ export function WhatToWatch() {
         </div>
       </div>
     )
-  } else if (phase === 'done' && cand) {
-    const plat = cand.item.platforms?.find((p) => profile.platforms.includes(p)) ?? cand.item.platforms?.[0]
+  } else if (phase === 'done' && currentItem) {
+    const plat = currentItem.platforms?.find((p) => profile.platforms.includes(p)) ?? currentItem.platforms?.[0]
     body = (
       <div className="flex-1 min-h-0 flex flex-col items-center justify-center px-6 text-center gap-3">
-        <Poster item={cand.item} className="w-36 aspect-[2/3] rounded-2xl shadow-2xl" />
+        <Poster item={currentItem} className="w-36 aspect-[2/3] rounded-2xl shadow-2xl" />
         <h2 className="serif text-3xl font-semibold mt-2">{shelf === 'book' ? 'A leer 📖' : shelf === 'boardgame' ? 'A jugar 🎲' : shelf === 'artist' ? 'A escuchar 🎧' : 'A disfrutar 🍿'}</h2>
-        <p className="text-mute">{cand.item.title}</p>
+        <p className="text-mute">{currentItem.title}</p>
         {!isBook && plat && (
           <button onClick={() => setToast('En la demo no abre la plataforma')} className="min-h-[52px] px-6 rounded-2xl bg-accent text-accent-ink font-semibold flex items-center gap-2"><Icon name="tv" size={20} /> Abrir en {plat}</button>
         )}
-        <button onClick={() => { setStatus(cand.item.id, 'seen'); setRating(cand.item.id) }} className="min-h-[48px] px-6 rounded-2xl bg-surface border border-line font-medium">Ya {shelfTerms.pronoun} he {shelfTerms.seenPastPart}: valorar</button>
+        <button onClick={() => { setStatus(currentItem.id, 'seen'); setRating(currentItem.id) }} className="min-h-[48px] px-6 rounded-2xl bg-surface border border-line font-medium">Ya {shelfTerms.pronoun} he {shelfTerms.seenPastPart}: valorar</button>
         <button onClick={reset} className="text-sm text-mute underline underline-offset-2 mt-1">Empezar de nuevo</button>
       </div>
     )
