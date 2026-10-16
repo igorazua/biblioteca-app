@@ -1,1 +1,2072 @@
-{}
+{
+  "movie:cadena-perpetua-1994": [
+    {
+      "id": "series:the-walking-dead-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:iron-man-2008": [
+    {
+      "id": "series:the-mandalorian-2019",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:del-reves-2015": [
+    {
+      "id": "series:monster-2004",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:up-2009": [
+    {
+      "id": "series:monster-2004",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:akira-1988": [
+    {
+      "id": "series:andor-2022",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:drive-2011": [
+    {
+      "id": "series:resurrection-2014",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:line-of-duty-2012",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:stargate-sg-1-1997",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:ex-machina-2014": [
+    {
+      "id": "series:devs-2020",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:the-shawshank-redemption-1994": [
+    {
+      "id": "series:the-walking-dead-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:the-dark-knight-2008": [
+    {
+      "id": "series:batman-beyond-1999",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:star-wars-episode-v-the-empire-strikes-back-1980": [
+    {
+      "id": "series:star-wars-the-clone-wars-2008",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:cidade-de-deus-2002": [
+    {
+      "id": "series:antidisturbios-2020",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:the-green-mile-1999": [
+    {
+      "id": "series:the-walking-dead-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:star-wars-1977": [
+    {
+      "id": "series:stargate-sg-1-1997",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:kyle-xy-2006",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:mulaney-2014",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:terminator-2-judgment-day-1991": [
+    {
+      "id": "series:terminator-the-sarah-connor-chronicles-2008",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:hotaru-no-haka-1988": [
+    {
+      "id": "series:durarara-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:psycho-1960": [
+    {
+      "id": "series:bates-motel-2013",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:andhadhun-2018": [
+    {
+      "id": "series:el-juego-del-calamar-2021",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:treme-2010",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:haven-2010",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:drishyam-2013": [
+    {
+      "id": "series:la-casa-de-papel-2017",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:el-juego-del-calamar-2021",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:vigil-2021",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:k-g-f-chapter-1-2018": [
+    {
+      "id": "series:stargate-sg-1-1997",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:the-4400-2004",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:mulaney-2014",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:talvar-2015": [
+    {
+      "id": "series:farina-2018",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:la-casa-de-papel-2017",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:el-juego-del-calamar-2021",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:gangs-of-wasseypur-2012": [
+    {
+      "id": "series:the-red-road-2014",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:banshee-2013",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:regenesis-2004",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:udaan-2010": [
+    {
+      "id": "series:the-village-2013",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:the-deep-2010",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:haven-2010",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:batman-begins-2005": [
+    {
+      "id": "series:batman-beyond-1999",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:batman-the-animated-series-1992",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:hera-pheri-2000": [
+    {
+      "id": "series:la-casa-de-papel-2017",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:farina-2018",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:contratiempo-2016": [
+    {
+      "id": "series:el-inocente-2021",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:kahaani-2012": [
+    {
+      "id": "series:vigil-2021",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:monster-2004",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:stargate-sg-1-1997",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:shin-seiki-evangelion-gekij-ban-air-magokoro-wo-kimi-ni-1997": [
+    {
+      "id": "series:evangelion-1995",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:chinatown-1974": [
+    {
+      "id": "boardgame:chinatown-1999",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:guardians-of-the-galaxy-2014": [
+    {
+      "id": "series:loki-2021",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:marvel-s-agents-of-s-h-i-e-l-d-2013",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:yip-man-2008": [
+    {
+      "id": "series:single-ladies-2011",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:mulaney-2014",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:nefes-vatan-sagolsun-2009": [
+    {
+      "id": "series:el-juego-del-calamar-2021",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:the-avengers-2012": [
+    {
+      "id": "series:loki-2021",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:marvel-s-agents-of-s-h-i-e-l-d-2013",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:g-o-r-a-2004": [
+    {
+      "id": "series:stargate-sg-1-1997",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:the-4400-2004",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:vozvrashchenie-2003": [
+    {
+      "id": "series:mulaney-2014",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:the-deep-2010",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:fake-off-2014",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:twelve-monkeys-1995": [
+    {
+      "id": "series:12-monkeys-2015",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:dil-bechara-2020": [
+    {
+      "id": "series:el-juego-del-calamar-2021",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:mulaney-2014",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:single-ladies-2011",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:star-wars-episode-vii-the-force-awakens-2015": [
+    {
+      "id": "series:star-wars-the-clone-wars-2008",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:moon-2009": [
+    {
+      "id": "series:the-4400-2004",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:stargate-sg-1-1997",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:kyle-xy-2006",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:star-trek-2009": [
+    {
+      "id": "series:star-trek-the-next-generation-1987",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:star-trek-enterprise-2001",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:under-sandet-2015": [
+    {
+      "id": "series:suburra-2017",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:stargate-sg-1-1997",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:ajeossi-2010": [
+    {
+      "id": "series:el-juego-del-calamar-2021",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:haven-2010",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:merli-2015",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:the-boy-in-the-striped-pyjamas-2008": [
+    {
+      "id": "boardgame:churchill-2015",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "boardgame:empire-of-the-sun-the-pacific-war-1941-1945-2005",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:batman-mask-of-the-phantasm-1993": [
+    {
+      "id": "series:batman-the-animated-series-1992",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:batman-beyond-1999",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:wind-river-2017": [
+    {
+      "id": "series:yellowstone-2018",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:rockstar-2011": [
+    {
+      "id": "series:treme-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:merli-2015",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "series:resurrection-2014",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:harry-potter-and-the-deathly-hallows-part-1-2010": [
+    {
+      "id": "book:harry-potter-and-the-deathly-hallows-2007",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Profundidad narrativa similar y atmósfera pareja"
+    },
+    {
+      "id": "book:harry-potter-and-the-half-blood-prince-2005",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Profundidad narrativa similar y atmósfera pareja"
+    },
+    {
+      "id": "book:harry-potter-y-la-piedra-filosofal-1997",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Profundidad narrativa similar y atmósfera pareja"
+    }
+  ],
+  "movie:south-park-bigger-longer-uncut-1999": [
+    {
+      "id": "series:south-park-1997",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "movie:nelyubov-2017": [
+    {
+      "id": "series:suburra-2017",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:south-park-1997": [
+    {
+      "id": "movie:south-park-bigger-longer-uncut-1999",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:the-mandalorian-2019": [
+    {
+      "id": "movie:iron-man-2008",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:the-walking-dead-2010": [
+    {
+      "id": "movie:the-green-mile-1999",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:the-shawshank-redemption-1994",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:cadena-perpetua-1994",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:el-juego-del-calamar-2021": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:andhadhun-2018",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:merli-2015": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:rockstar-2011",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "boardgame:sub-terra-2017",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:la-casa-de-papel-2017": [
+    {
+      "id": "movie:drishyam-2013",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:hera-pheri-2000",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:evangelion-1995": [
+    {
+      "id": "movie:shin-seiki-evangelion-gekij-ban-air-magokoro-wo-kimi-ni-1997",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:monster-2004": [
+    {
+      "id": "movie:del-reves-2015",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:drishyam-2013",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:kahaani-2012",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:loki-2021": [
+    {
+      "id": "movie:guardians-of-the-galaxy-2014",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:the-avengers-2012",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:andor-2022": [
+    {
+      "id": "movie:akira-1988",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:line-of-duty-2012": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:drive-2011",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:andhadhun-2018",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:yellowstone-2018": [
+    {
+      "id": "movie:wind-river-2017",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:antidisturbios-2020": [
+    {
+      "id": "movie:cidade-de-deus-2002",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:farina-2018": [
+    {
+      "id": "movie:talvar-2015",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:hera-pheri-2000",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:suburra-2017": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:andhadhun-2018",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:vozvrashchenie-2003",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:vigil-2021": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:drishyam-2013",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:andhadhun-2018",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:bodyguard-2018": [
+    {
+      "id": "movie:gangs-of-wasseypur-2012",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:bates-motel-2013": [
+    {
+      "id": "movie:psycho-1960",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:heartstopper-2022": [
+    {
+      "id": "book:heartstopper-volume-1-2018",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:new-girl-2011": [
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:devs-2020": [
+    {
+      "id": "movie:ex-machina-2014",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:el-inocente-2021": [
+    {
+      "id": "movie:contratiempo-2016",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:marvel-s-agents-of-s-h-i-e-l-d-2013": [
+    {
+      "id": "movie:guardians-of-the-galaxy-2014",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:the-avengers-2012",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:resurrection-2014": [
+    {
+      "id": "movie:drive-2011",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:rockstar-2011",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:forever-2014": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:drive-2011",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:haven-2010": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:andhadhun-2018",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:mulaney-2014": [
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:vozvrashchenie-2003",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:getting-on-2013": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:andhadhun-2018",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:human-target-2010": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:banshee-2013": [
+    {
+      "id": "movie:gangs-of-wasseypur-2012",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:suits-2011": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:hello-ladies-2013": [
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:stargate-sg-1-1997": [
+    {
+      "id": "movie:star-wars-1977",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:k-g-f-chapter-1-2018",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:being-human-2011": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:moon-2009",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:alphas-2011": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "boardgame:stationfall-2023",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:moon-2009",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:vegas-2012": [
+    {
+      "id": "boardgame:stationfall-2023",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "boardgame:flash-point-fire-rescue-2011",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:benched-2014": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:vozvrashchenie-2003",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:newswipe-2009": [
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:vozvrashchenie-2003",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:rogue-2013": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:plebs-2013": [
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:vozvrashchenie-2003",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:hit-the-floor-2013": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:on-the-menu-2014": [
+    {
+      "id": "boardgame:sub-terra-2017",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:alpha-house-2013": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:vozvrashchenie-2003",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:perception-2012": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:vozvrashchenie-2003",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:single-ladies-2011": [
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:k-g-f-chapter-1-2018",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:sirens-2014": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:the-red-road-2014": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:vozvrashchenie-2003",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:drive-2011",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:moone-boy-2012": [
+    {
+      "id": "movie:moon-2009",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:citizen-khan-2012": [
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:video-game-high-school-2012": [
+    {
+      "id": "boardgame:stationfall-2023",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "boardgame:unsettled-2021",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:charlie-s-angels-2011": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:the-deep-2010": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:vozvrashchenie-2003",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:regenesis-2004": [
+    {
+      "id": "movie:vozvrashchenie-2003",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:gangs-of-wasseypur-2012",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:terminator-the-sarah-connor-chronicles-2008": [
+    {
+      "id": "movie:terminator-2-judgment-day-1991",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:the-4400-2004": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:moon-2009",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:k-g-f-chapter-1-2018",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:harsh-realm-1999": [
+    {
+      "id": "movie:moon-2009",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:star-trek-the-next-generation-1987": [
+    {
+      "id": "movie:star-trek-2009",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:v-2009": [
+    {
+      "id": "boardgame:friday-2011",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:batman-beyond-1999": [
+    {
+      "id": "movie:batman-mask-of-the-phantasm-1993",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:the-dark-knight-2008",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:batman-begins-2005",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:moonshiners-2011": [
+    {
+      "id": "movie:rockstar-2011",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:halo-nightfall-2014": [
+    {
+      "id": "boardgame:stationfall-2023",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "boardgame:flash-point-fire-rescue-2011",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "boardgame:under-falling-skies-2020",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:star-wars-the-clone-wars-2008": [
+    {
+      "id": "movie:star-wars-episode-vii-the-force-awakens-2015",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:star-wars-episode-v-the-empire-strikes-back-1980",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:fake-off-2014": [
+    {
+      "id": "movie:vozvrashchenie-2003",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:rockstar-2011",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:12-monkeys-2015": [
+    {
+      "id": "movie:twelve-monkeys-1995",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:friends-of-the-people-2014": [
+    {
+      "id": "movie:vozvrashchenie-2003",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:risking-it-all-2014": [
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:burn-notice-2007": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:durarara-2010": [
+    {
+      "id": "movie:hotaru-no-haka-1988",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:star-trek-enterprise-2001": [
+    {
+      "id": "movie:star-trek-2009",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:comedy-bang-bang-2012": [
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:batman-the-animated-series-1992": [
+    {
+      "id": "movie:batman-mask-of-the-phantasm-1993",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:batman-begins-2005",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:edge-of-alaska-2014": [
+    {
+      "id": "boardgame:sub-terra-2017",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:planet-earth-2006": [
+    {
+      "id": "boardgame:earth-2023",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:merlin-2008": [
+    {
+      "id": "boardgame:wizard-1984",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:kyle-xy-2006": [
+    {
+      "id": "movie:star-wars-1977",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:moon-2009",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:boss-2011": [
+    {
+      "id": "boardgame:nemesis-lockdown-2022",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "boardgame:descent-legends-of-the-dark-2021",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:treme-2010": [
+    {
+      "id": "movie:rockstar-2011",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:extreme-weight-loss-2011": [
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:young-dracula-2006": [
+    {
+      "id": "book:dracula-1897",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:storage-hunters-2011": [
+    {
+      "id": "movie:vozvrashchenie-2003",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:girlfriends-2000": [
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:strange-sex-2010": [
+    {
+      "id": "movie:dil-bechara-2020",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:saving-grace-2007": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:drishyam-2013",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:drive-2011",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "series:the-village-2013": [
+    {
+      "id": "movie:ajeossi-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:k-g-f-chapter-1-2018",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma afinidad estética y universo temático"
+    },
+    {
+      "id": "movie:udaan-2010",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "book:harry-potter-y-la-piedra-filosofal-1997": [
+    {
+      "id": "movie:harry-potter-and-the-deathly-hallows-part-1-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Adaptación y espíritu cinematográfico compartido"
+    }
+  ],
+  "book:dracula-1897": [
+    {
+      "id": "series:young-dracula-2006",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "book:harry-potter-and-the-philosopher-s-stone-1997": [
+    {
+      "id": "movie:harry-potter-and-the-deathly-hallows-part-1-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Adaptación y espíritu cinematográfico compartido"
+    }
+  ],
+  "book:harry-potter-and-the-deathly-hallows-2007": [
+    {
+      "id": "movie:harry-potter-and-the-deathly-hallows-part-1-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Adaptación y espíritu cinematográfico compartido"
+    }
+  ],
+  "book:harry-potter-and-the-half-blood-prince-2005": [
+    {
+      "id": "movie:harry-potter-and-the-deathly-hallows-part-1-2010",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Adaptación y espíritu cinematográfico compartido"
+    }
+  ],
+  "book:heartstopper-volume-1-2018": [
+    {
+      "id": "series:heartstopper-2022",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma afinidad estética y universo temático"
+    }
+  ],
+  "boardgame:nemesis-lockdown-2022": [
+    {
+      "id": "series:boss-2011",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:earth-2023": [
+    {
+      "id": "series:planet-earth-2006",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:under-falling-skies-2020": [
+    {
+      "id": "series:stargate-sg-1-1997",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    },
+    {
+      "id": "series:halo-nightfall-2014",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    },
+    {
+      "id": "series:merli-2015",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:lost-cities-1999": [
+    {
+      "id": "series:merli-2015",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:chinatown-1999": [
+    {
+      "id": "movie:chinatown-1974",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:maria-2009": [
+    {
+      "id": "series:merli-2015",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:unsettled-2021": [
+    {
+      "id": "series:stargate-sg-1-1997",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    },
+    {
+      "id": "series:video-game-high-school-2012",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    },
+    {
+      "id": "series:merli-2015",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:descent-legends-of-the-dark-2021": [
+    {
+      "id": "series:boss-2011",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:skull-2011": [
+    {
+      "id": "series:merli-2015",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:flash-point-fire-rescue-2011": [
+    {
+      "id": "series:halo-nightfall-2014",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    },
+    {
+      "id": "series:saving-grace-2007",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    },
+    {
+      "id": "series:vegas-2012",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:friday-2011": [
+    {
+      "id": "series:v-2009",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:heroquest-1989": [
+    {
+      "id": "series:merli-2015",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:thebes-2007": [
+    {
+      "id": "series:merli-2015",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:sub-terra-2017": [
+    {
+      "id": "series:merli-2015",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    },
+    {
+      "id": "series:saving-grace-2007",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    },
+    {
+      "id": "series:stargate-sg-1-1997",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:stationfall-2023": [
+    {
+      "id": "series:stargate-sg-1-1997",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    },
+    {
+      "id": "series:halo-nightfall-2014",
+      "kind": "pick",
+      "w": 0.75,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    },
+    {
+      "id": "series:vegas-2012",
+      "kind": "pick",
+      "w": 0.65,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:time-s-up-1999": [
+    {
+      "id": "series:merli-2015",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:babylonia-2019": [
+    {
+      "id": "series:merli-2015",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:churchill-2015": [
+    {
+      "id": "movie:the-boy-in-the-striped-pyjamas-2008",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:fort-2020": [
+    {
+      "id": "series:merli-2015",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:shakespeare-2015": [
+    {
+      "id": "series:merli-2015",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:wizard-1984": [
+    {
+      "id": "series:merlin-2008",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:empire-of-the-sun-the-pacific-war-1941-1945-2005": [
+    {
+      "id": "movie:the-boy-in-the-striped-pyjamas-2008",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:machi-koro-2012": [
+    {
+      "id": "series:merli-2015",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ],
+  "boardgame:tsuro-2005": [
+    {
+      "id": "series:merli-2015",
+      "kind": "pick",
+      "w": 0.85,
+      "reason": "Misma ambientación temática y toma de decisiones"
+    }
+  ]
+}

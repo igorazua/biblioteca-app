@@ -536,7 +536,8 @@ async function main() {
   })
 
   ensureDir(CACHE_DIR)
-  const unmatchedPath = join(CACHE_DIR, 'unmatched.json')
+  const unmatchedFile = FILTER_SHELF ? `unmatched-${FILTER_SHELF}.json` : 'unmatched.json'
+  const unmatchedPath = join(CACHE_DIR, unmatchedFile)
   writeFileSync(unmatchedPath, JSON.stringify(unmatchedItems, null, 2))
 
   console.log('\n--- Resumen de re-anclaje ---')
