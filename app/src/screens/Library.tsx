@@ -46,7 +46,7 @@ export function Library() {
         </div>
         <h1 className="serif text-[34px] leading-[1.02] font-semibold mt-3">Hola, {profile.name.split(' ')[0]}.</h1>
         <p className="text-mute mt-1.5 text-[15px]">
-          <b className="text-ink font-semibold">{seen}</b> vistas y leídas · <b className="text-ink font-semibold">{pending}</b> pendientes
+          <b className="text-ink font-semibold">{seen}</b> en tu biblioteca · <b className="text-ink font-semibold">{pending}</b> pendientes
         </p>
       </header>
 

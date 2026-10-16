@@ -40,7 +40,7 @@ export function RatingFlow({ itemId, onDone, withStars }: { itemId: string; onDo
       <div className="flex gap-3 items-center">
         <Poster item={item} className="w-14 h-20 rounded-xl shrink-0" />
         <div className="min-w-0">
-          <div className="text-xs text-mute uppercase tracking-wide">{label.singular === 'libro' ? 'Leído' : 'Visto'}</div>
+          <div className="text-xs text-mute uppercase tracking-wide">{label.actionPast}</div>
           <div className="serif text-xl font-semibold leading-tight line-clamp-2">{item.title}</div>
         </div>
       </div>

@@ -83,10 +83,10 @@ export function Discover() {
           <ActionBtn label="No me interesa" color="#ef4b4b" size={62} disabled={!deck.length || blocked} onClick={() => deckRef.current?.fling('left')}>
             <Icon name="x" size={28} strokeWidth={2.6} />
           </ActionBtn>
-          <ActionBtn label="Pendiente: no la he visto, me interesa" color="#5b9cf5" size={52} disabled={!deck.length || blocked} onClick={() => deckRef.current?.fling('up')}>
+          <ActionBtn label={`Pendiente: no ${label.pronoun} he ${label.seenPastPart}, me interesa`} color="#5b9cf5" size={52} disabled={!deck.length || blocked} onClick={() => deckRef.current?.fling('up')}>
             <Icon name="bookmark" size={22} strokeWidth={2.4} />
           </ActionBtn>
-          <ActionBtn label={`${label.stamp.replace(/[¡!]/g, '')}: la he ${label.seenFem === 'leído' ? 'leído' : 'visto'}`} color="#3ec878" size={62} disabled={!deck.length || blocked} onClick={() => deckRef.current?.fling('right')}>
+          <ActionBtn label={`${label.stamp.replace(/[¡!]/g, '')}: ${label.pronoun} he ${label.seenPastPart}`} color="#3ec878" size={62} disabled={!deck.length || blocked} onClick={() => deckRef.current?.fling('right')}>
             <Icon name="check" size={28} strokeWidth={2.8} />
           </ActionBtn>
           <span className="w-11" aria-hidden />

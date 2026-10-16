@@ -63,7 +63,7 @@ export function ItemDetail() {
     setListSheet(false)
     setToast(`Añadida a «${l.title}»`)
   }
-  const askText = (name: string, pos: number) => `Oye ${name}, he visto que tienes ${item.title} en el puesto ${pos} de tus ${label.plural.toLowerCase()}, ¿me ${item.type === 'book' ? 'lo' : 'la'} recomiendas?`
+  const askText = (name: string, pos: number) => `Oye ${name}, he visto que tienes ${item.title} en el puesto ${pos} de tus ${label.plural.toLowerCase()}, ¿me ${label.pronoun} recomiendas?`
 
   return (
     <div className="h-full relative bg-bg">
@@ -91,11 +91,11 @@ export function ItemDetail() {
           <section aria-label="Tu estado">
             <h2 className="text-sm font-semibold text-mute uppercase tracking-wide mb-2">Tu estado</h2>
             <div className="flex gap-2">
-              <Chip active={status === 'seen'} onClick={() => toggle('seen')} className="flex-1">{label.singular === 'libro' ? 'Leído' : 'Visto'}</Chip>
+              <Chip active={status === 'seen'} onClick={() => toggle('seen')} className="flex-1">{label.actionPast}</Chip>
               <Chip active={status === 'pending'} onClick={() => toggle('pending')} className="flex-1">Pendiente</Chip>
               <Chip active={status === 'dismissed'} onClick={() => toggle('dismissed')} className="flex-1">No me interesa</Chip>
             </div>
-            {entry?.origin && status === 'pending' && <div className="text-xs text-mute mt-2">Te la pasó {entry.origin}</div>}
+            {entry?.origin && status === 'pending' && <div className="text-xs text-mute mt-2">Te {label.pronoun} pasó {entry.origin}</div>}
             {status === 'seen' && (
               <div className="mt-3 rounded-3xl bg-surface border border-line p-4">
                 <div className="flex items-center justify-between">
@@ -110,8 +110,8 @@ export function ItemDetail() {
           </section>
 
           <section aria-label="Tus amigos">
-            <h2 className="text-sm font-semibold text-mute uppercase tracking-wide mb-2">¿Quién {item.type === 'book' ? 'lo' : 'la'} {item.type === 'book' ? 'leyó' : 'vio'} antes que yo?</h2>
-            {seenBy.length === 0 && <p className="text-sm text-mute">Ninguno de tus amigos {item.type === 'book' ? 'lo' : 'la'} ha {item.type === 'book' ? 'leído' : 'visto'} todavía.</p>}
+            <h2 className="text-sm font-semibold text-mute uppercase tracking-wide mb-2">¿Quién {label.pronoun} {label.verbPast} antes que yo?</h2>
+            {seenBy.length === 0 && <p className="text-sm text-mute">Ninguno de tus amigos {label.verbPerfSingular} todavía.</p>}
             <ul className="space-y-3">
               {seenBy.map(({ friend, entry: e }) => {
                 const r = friendRank(friend, item.id, item.type)
@@ -132,7 +132,7 @@ export function ItemDetail() {
               })}
             </ul>
             {pendingBy.length > 0 && (
-              <p className="text-sm text-mute mt-3 flex items-center gap-1.5"><Icon name="bookmark" size={15} /> {item.type === 'book' ? 'Lo tienen' : 'La tienen'} pendiente: {pendingBy.map((h) => h.friend.name).join(', ')}</p>
+              <p className="text-sm text-mute mt-3 flex items-center gap-1.5"><Icon name="bookmark" size={15} /> {label.pendingPlural}: {pendingBy.map((h) => h.friend.name).join(', ')}</p>
             )}
           </section>
 

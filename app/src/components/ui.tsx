@@ -4,6 +4,7 @@ import { animate, motion, useMotionValue } from 'framer-motion'
 import { friendHits, getItem } from '../data/catalog'
 import { Icon } from './Icon'
 import { friendRanks } from '../lib/rank'
+import { SHELF_LABEL } from '../types'
 
 /** Pinta superposiciones (hojas, diálogos) sobre todo el marco de móvil, barra de pestañas incluida. */
 export function Portal({ children }: { children: ReactNode }) {
@@ -45,13 +46,15 @@ export function Chip({ active, onClick, children, className = '' }: { active?: b
 export function FriendBubbles({ itemId, max = 4 }: { itemId: string; max?: number }) {
   const hits = friendHits(itemId)
   if (!hits.length) return null
+  const item = getItem(itemId)
+  const terms = item ? SHELF_LABEL[item.type] : SHELF_LABEL.movie
   const shown = hits.slice(0, max)
   const extra = hits.length - shown.length
   const seen = hits.filter((h) => h.entry.status === 'seen')
   const names = seen.slice(0, 1).map((h) => h.friend.name)
   const label = seen.length
-    ? `${names[0]}${seen.length > 1 ? ` y ${seen.length - 1} más` : ''} ${seen.length > 1 ? 'la han visto' : 'la ha visto'}`
-    : `${hits[0].friend.name}${hits.length > 1 ? ` y ${hits.length - 1} más` : ''} la tiene${hits.length > 1 ? 'n' : ''} pendiente`
+    ? `${names[0]}${seen.length > 1 ? ` y ${seen.length - 1} más` : ''} ${seen.length > 1 ? terms.verbPerfPlural : terms.verbPerfSingular}`
+    : `${hits[0].friend.name}${hits.length > 1 ? ` y ${hits.length - 1} más` : ''} ${hits.length > 1 ? terms.pendingPlural : terms.pendingSingular}`
   return (
     <div className="flex flex-col items-end gap-1" aria-label={label}>
       <div className="flex items-center">

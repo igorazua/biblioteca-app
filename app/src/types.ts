@@ -86,10 +86,102 @@ export interface Settings {
   rateOnSwipe?: boolean
 }
 
-export const SHELF_LABEL: Record<ShelfType, { plural: string; singular: string; seen: string; seenFem: string; stamp: string }> = {
-  movie: { plural: 'Pelis', singular: 'peli', seen: 'vistas', seenFem: 'vista', stamp: '¡VISTA!' },
-  series: { plural: 'Series', singular: 'serie', seen: 'vistas', seenFem: 'vista', stamp: '¡VISTA!' },
-  book: { plural: 'Libros', singular: 'libro', seen: 'leídos', seenFem: 'leído', stamp: '¡LEÍDO!' },
-  artist: { plural: 'Artistas', singular: 'artista', seen: 'escuchados', seenFem: 'escuchado', stamp: '¡ESCUCHADO!' },
-  boardgame: { plural: 'Juegos de mesa', singular: 'juego', seen: 'jugados', seenFem: 'jugado', stamp: '¡JUGADO!' },
+export interface ShelfTerms {
+  plural: string
+  singular: string
+  seen: string
+  seenFem: string
+  stamp: string
+  actionPast: string
+  pronoun: string
+  pronounCap: string
+  verbPast: string
+  seenPastPart: string
+  verbPerfSingular: string
+  verbPerfPlural: string
+  pendingSingular: string
+  pendingPlural: string
+}
+
+export const SHELF_LABEL: Record<ShelfType, ShelfTerms> = {
+  movie: {
+    plural: 'Pelis',
+    singular: 'peli',
+    seen: 'vistas',
+    seenFem: 'vista',
+    stamp: '¡VISTA!',
+    actionPast: 'Vista',
+    pronoun: 'la',
+    pronounCap: 'La',
+    verbPast: 'vio',
+    seenPastPart: 'visto',
+    verbPerfSingular: 'la ha visto',
+    verbPerfPlural: 'la han visto',
+    pendingSingular: 'la tiene pendiente',
+    pendingPlural: 'la tienen pendiente',
+  },
+  series: {
+    plural: 'Series',
+    singular: 'serie',
+    seen: 'vistas',
+    seenFem: 'vista',
+    stamp: '¡VISTA!',
+    actionPast: 'Vista',
+    pronoun: 'la',
+    pronounCap: 'La',
+    verbPast: 'vio',
+    seenPastPart: 'visto',
+    verbPerfSingular: 'la ha visto',
+    verbPerfPlural: 'la han visto',
+    pendingSingular: 'la tiene pendiente',
+    pendingPlural: 'la tienen pendiente',
+  },
+  book: {
+    plural: 'Libros',
+    singular: 'libro',
+    seen: 'leídos',
+    seenFem: 'leído',
+    stamp: '¡LEÍDO!',
+    actionPast: 'Leído',
+    pronoun: 'lo',
+    pronounCap: 'Lo',
+    verbPast: 'leyó',
+    seenPastPart: 'leído',
+    verbPerfSingular: 'lo ha leído',
+    verbPerfPlural: 'lo han leído',
+    pendingSingular: 'lo tiene pendiente',
+    pendingPlural: 'lo tienen pendiente',
+  },
+  artist: {
+    plural: 'Artistas',
+    singular: 'artista',
+    seen: 'escuchados',
+    seenFem: 'escuchado',
+    stamp: '¡ESCUCHADO!',
+    actionPast: 'Escuchado',
+    pronoun: 'lo',
+    pronounCap: 'Lo',
+    verbPast: 'escuchó',
+    seenPastPart: 'escuchado',
+    verbPerfSingular: 'lo ha escuchado',
+    verbPerfPlural: 'lo han escuchado',
+    pendingSingular: 'lo tiene pendiente',
+    pendingPlural: 'lo tienen pendiente',
+  },
+  boardgame: {
+    plural: 'Juegos de mesa',
+    singular: 'juego',
+    seen: 'jugados',
+    seenFem: 'jugado',
+    stamp: '¡JUGADO!',
+    actionPast: 'Jugado',
+    pronoun: 'lo',
+    pronounCap: 'Lo',
+    verbPast: 'jugó',
+    seenPastPart: 'jugado',
+    verbPerfSingular: 'lo ha jugado',
+    verbPerfPlural: 'lo han jugado',
+    pendingSingular: 'lo tiene pendiente',
+    pendingPlural: 'lo tienen pendiente',
+  },
 }

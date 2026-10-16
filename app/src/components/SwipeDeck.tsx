@@ -124,7 +124,7 @@ export const SwipeDeck = forwardRef<DeckHandle, Props>(function SwipeDeck({ deck
           setTimeout(() => { dragged.current = false }, 60)
         }}
         onTap={() => { if (!dragged.current && !busy.current) onOpen(top) }}
-        aria-label={`${top.title}. Desliza a la derecha si la has ${SHELF_LABEL[shelf].seenFem === 'leído' ? 'leído' : 'visto'}, a la izquierda si no te interesa, arriba para pendientes. Toca para ver la ficha.`}
+        aria-label={`${top.title}. Desliza a la derecha si ${SHELF_LABEL[shelf].pronoun} has ${SHELF_LABEL[shelf].seenPastPart}, a la izquierda si no te interesa, arriba para pendientes. Toca para ver la ficha.`}
         role="button"
         tabIndex={0}
         onKeyDown={(e) => {
