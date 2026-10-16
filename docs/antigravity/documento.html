@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Especificación de Producto: Plataforma de Legado Cultural</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Newsreader:ital,opsz,wght@0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --accent: #b45309;
+      --text: #1f2937;
+      --text-light: #4b5563;
+      --border: #e5e7eb;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: var(--text);
+      background: #f3f4f6;
+      line-height: 1.65;
+      padding: 40px 20px;
+    }
+
+    .toolbar {
+      max-width: 820px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .btn-docx {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .btn-docx:hover { background: #1d4ed8; }
+
+    .btn-pdf {
+      background: #dc2626;
+      color: #fff;
+    }
+
+    .btn-pdf:hover { background: #b91c1c; }
+
+    .page {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 60px 70px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      font-family: 'Newsreader', serif;
+      font-size: 2.3rem;
+      color: var(--primary);
+      line-height: 1.2;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 1.15rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 30px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 28px 0;
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.3rem;
+      color: #111827;
+      margin-top: 26px;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #f3f4f6;
+      padding-bottom: 6px;
+    }
+
+    .quote-box {
+      background: #fffbeb;
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: #78350f;
+      font-size: 1.05rem;
+      margin: 16px 0;
+    }
+
+    p { margin-bottom: 12px; font-size: 0.98rem; }
+
+    ul { margin-left: 20px; margin-bottom: 14px; }
+    li { margin-bottom: 6px; font-size: 0.98rem; }
+
+    .feature-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 10px;
+    }
+
+    .feature-card strong { color: var(--primary); }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .toolbar { display: none; }
+      .page { box-shadow: none; padding: 30px; max-width: 100%; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <a href="VISION_Y_FEATURES.docx" download class="btn btn-docx">
+      📄 Descargar en Word (.docx)
+    </a>
+    <button onclick="window.print()" class="btn btn-pdf">
+      🖨️ Guardar como PDF / Imprimir
+    </button>
+  </div>
+
+  <div class="page">
+    <h1>📜 Manifiesto y Especificación de Producto</h1>
+    <div class="subtitle">Plataforma de Legado Cultural & Red Social de Afinidad</div>
+
+    <hr>
+
+    <h2>1. Visión y Misión</h2>
+    <div class="quote-box">
+      «No eres lo que aparentas ni lo que compras: eres las historias, coplas, películas y libros que te han construido por dentro.»
+    </div>
+    <p>A diferencia de las redes sociales convencionales (Instagram, TikTok, LinkedIn) centradas en el contenido efímero, la estética y la vanidad, esta plataforma es un <strong>Museo de la Sensibilidad Personal</strong>: una biblioteca viva del legado cultural que una persona consume, atesora y comparte a lo largo de su existencia.</p>
+
+    <hr>
+
+    <h2>2. Compartir Listas y «Cápsulas Culturales» con Amigos (Feature Principal)</h2>
+    <p>Una de las utilidades más directas y diarias de la app es poder enviar recomendaciones reales a quien tú quieras sin tener que redactar mensajes largos por WhatsApp:</p>
+    
+    <div class="feature-card">
+      <strong>• Envío de Listas Completas:</strong> Entras a una categoría (ej. <em>Mis Películas</em>), pulsas «Seleccionar todas» y le das a compartir. A tu amigo le llega tu catálogo ordenado con tus notas.
+    </div>
+    <div class="feature-card">
+      <strong>• Selección Quirúrgica (Micro-listas bajo demanda):</strong> Un amigo te pide consejo: seleccionas 3 o 5 obras concretas y se las envías directamente. Recibirá cada ficha con tu valoración y tu comentario personal de por qué se la recomiendas.
+    </div>
+    <div class="feature-card">
+      <strong>• Paquetes Culturales Cruzados («Cápsulas»):</strong> Puedes componer un paquete temático personalizado combinando distintos tipos de contenido (por ejemplo: <em>2 libros, 1 serie y 5 canciones para superar una ruptura</em> o <em>un paquete de bienvenida al Carnaval de Cádiz</em>).
+    </div>
+
+    <hr>
+
+    <h2>3. Mecánicas de Ingesta & Descubrimiento Rápido</h2>
+    <p><strong>Discovery Feed Estilo «Swipe» (Curación Rápida):</strong></p>
+    <ul>
+      <li><strong>Objetivo:</strong> Descubrir nuevas obras o registrar rápidamente el contenido que ya has consumido en el pasado sin que resulte una tarea tediosa.</li>
+      <li><strong>Flujo de la Ficha (Card UI):</strong> Portada a pantalla completa con avatares de amigos que ya lo tienen guardado en primer plano. Al pulsar sobre la ficha, se despliega la ficha completa con sinopsis y reseñas.</li>
+      <li><strong>Gestos de Swipe:</strong>
+        <ul>
+          <li>👈 <strong>Swipe Izquierda:</strong> «No me interesa / Descartar».</li>
+          <li>👉 <strong>Swipe Derecha:</strong> «Ya lo he visto / leído» (despliega micro-formulario: puntuación 1-10 + cajetín de nota personal).</li>
+          <li>👆 <strong>Swipe Arriba:</strong> «Guardar en Pendientes / Por ver».</li>
+          <li>🔍 <strong>Click Central:</strong> Abrir ficha expandida con reseñas de tu círculo y perfiles destacados.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <hr>
+
+    <h2>4. Mecánica de Clasificación a Pares («A vs B»)</h2>
+    <p>El ser humano duda mucho cuando tiene que poner una nota numérica abstracta en frío. Sin embargo, comparar dos elementos cara a cara («¿Cuál prefieres, A o B?») es instantáneo. Esta mecánica se enfoca en dos utilidades claras:</p>
+    <div class="feature-card">
+      <strong>1. Curación Rápida de Contenido Importado:</strong> Tras importar de golpe 200 libros o películas desde Goodreads o Letterboxd, muchas quedan sin valorar. En lugar de poner notas una a una, la app te muestra pares rápidos: vas eligiendo cuál te gustó más y el sistema las califica y ordena automáticamente.
+    </div>
+    <div class="feature-card">
+      <strong>2. Coordinación de Parejas y Grupos («¿Qué vemos / qué escuchamos?»):</strong> Dos o más personas conectan sus perfiles para resolver el clásico dilema en segundos: películas pendientes comunes que ninguno ha visto, favoritos compartidos para apuestas seguras, o «el DJ de consenso» que genera una lista musical equilibrada para un viaje o fiesta.
+    </div>
+
+    <hr>
+
+    <h2>5. El Validador Previo («¿Quién lo vio antes que yo?»)</h2>
+    <p>Antes de pagar una entrada de cine, comprar un libro o empezar una serie, entras a la ficha de la obra en la app:</p>
+    <ul>
+      <li>Ves inmediatamente qué amigos de tu círculo ya la han consumido y qué opinan (<em>«Carlos le dio un 9; Laura un 4»</em>).</li>
+      <li><strong>El Puente hacia la Conversación Real:</strong> Más allá de leer la ficha, te da el motivo perfecto para escribir o llamar a ese amigo en persona (<em>«Oye Carlos, he visto que le pusiste un 9 a esta peli, ¿me la recomiendas para este finde?»</em>). La tecnología al servicio de la conversación humana real, no para sustituirla.</li>
+    </ul>
+
+    <hr>
+
+    <h2>6. Trazabilidad & Árbol Genealógico del Descubrimiento</h2>
+    <ul>
+      <li><strong>El Metadato Oculto <code>descubierto_por: @amigo</code>:</strong> Si guardas una obra partiendo del perfil o lista de un amigo, queda registrado quién te la descubrió.</li>
+      <li><strong>El Efecto Onda (Ser un 'Tastemaker'):</strong> Visualiza el impacto de tu criterio: <em>«Le descubriste esta chirigota a Carlos → Carlos se la pasó a Laura → Laura se la enseñó a 40 personas»</em>.</li>
+      <li><strong>El Agradecimiento Automático:</strong> Recordatorio anual: <em>«Hoy hace un año que María te recomendó este libro que calificaste con 5 estrellas. Pulsa aquí para enviarle un 'Gracias por descubrírmelo'»</em>.</li>
+    </ul>
+
+    <hr>
+
+    <h2>7. Wishlist Viva (Regalos Infalibles) & Wrapped Anual</h2>
+    <ul>
+      <li><strong>Social Gifting:</strong> En cumpleaños o Navidad, tus amigos o pareja entran a tu perfil para ver tus obras en «Pendientes» o tus obras favoritas de siempre (para regalar vinilos, libros o entradas sin equivocarse).</li>
+      <li><strong>Wrapped Anual con Alma:</strong> Recapitulación anual del crecimiento cultural y reconocimiento a los amigos que más aportaron a tu biblioteca ese año.</li>
+    </ul>
+
+    <hr>
+
+    <h2>8. Importación de Datos & Integraciones Externas</h2>
+    <ul>
+      <li><strong>Goodreads & Letterboxd:</strong> Importación instantánea vía archivo oficial <code>.csv</code>.</li>
+      <li><strong>Spotify:</strong> Sincronización oficial por API con biblioteca y favoritos.</li>
+      <li><strong>FilmAffinity:</strong> Importación asistida por enlace público de usuario.</li>
+      <li><strong>Contactos del Móvil:</strong> Detección de amigos mediante hash seguro de agenda telefónica.</li>
+      <li><strong>TikTok / YouTube / Instagram:</strong> Ingesta directa desde el menú nativo «Compartir con...» del teléfono.</li>
+    </ul>
+
+    <hr>
+
+    <h2>9. Ideas y Extensiones para el Futuro</h2>
+    <ul>
+      <li><strong>Dating por Afinidad Cultural:</strong> Modo de conexión profunda entre personas afines basado en su compatibilidad de consumo artístico y sensibilidad compartida, sin superficialidad.</li>
+    </ul>
+  </div>
+
+</body>
+</html>

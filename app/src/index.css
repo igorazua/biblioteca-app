@@ -1,0 +1,109 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/outfit';
+@import '@fontsource-variable/fraunces';
+
+@theme {
+  --font-sans: 'Outfit Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Fraunces Variable', Georgia, serif;
+  --color-bg: #0f0e0d;
+  --color-surface: #181715;
+  --color-surface2: #22201d;
+  --color-line: #2e2b27;
+  --color-ink: #f4f1ea;
+  --color-mute: #a09c93;
+  --color-accent: #f5b544;
+  --color-accent-ink: #1b1305;
+  --color-stamp-red: #ef4b4b;
+  --color-stamp-green: #3ec878;
+  --color-stamp-blue: #4a8df0;
+}
+
+html, body, #root { height: 100%; }
+html { background: var(--color-bg); }
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  font-variant-numeric: tabular-nums;
+  text-rendering: optimizeLegibility;
+  user-select: none;
+  -webkit-user-select: none;
+}
+@layer base {
+  input, textarea { user-select: text; -webkit-user-select: text; font: inherit; }
+  button { font: inherit; color: inherit; cursor: pointer; }
+  a { color: inherit; text-decoration: none; }
+}
+
+.serif { font-family: var(--font-serif); font-variation-settings: 'opsz' 72; }
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.scroll-y { overflow-y: auto; overscroll-behavior-y: contain; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.scroll-y::-webkit-scrollbar { display: none; }
+.touch-none-all { touch-action: none; }
+
+/* Fondo de escritorio: halos ámbar difuminados detrás del marco de móvil */
+.desk-bg {
+  background:
+    radial-gradient(60vw 60vh at 18% 22%, rgb(245 181 68 / 0.16), transparent 70%),
+    radial-gradient(50vw 55vh at 85% 80%, rgb(91 141 239 / 0.12), transparent 70%),
+    #08080a;
+}
+
+/* Marco de móvil solo en pantallas anchas; en móvil real, a sangre */
+.frame { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--color-bg); transform: translateZ(0); }
+@media (min-width: 500px) and (min-height: 600px) {
+  .frame {
+    width: 400px;
+    height: min(850px, calc(100dvh - 32px));
+    border-radius: 38px;
+    border: 1px solid #34343c;
+    box-shadow: 0 30px 80px rgb(0 0 0 / 0.6), 0 0 0 8px #121216;
+  }
+}
+
+.safe-top { padding-top: max(env(safe-area-inset-top), 12px); }
+.safe-bottom { padding-bottom: max(env(safe-area-inset-bottom), 0px); }
+
+@keyframes pop { 0% { transform: scale(0.8); opacity: 0; } 60% { transform: scale(1.06); } 100% { transform: scale(1); opacity: 1; } }
+.pop { animation: pop 260ms ease-out; }
+
+:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-radius: 8px; }
+
+/* Grano muy sutil sobre el marco: rompe la planitud digital sin tocar la interacción */
+.frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+/* Sombras teñidas de ámbar oscuro en lugar de negro puro */
+.shadow-2xl { --tw-shadow-color: rgb(20 12 2 / 0.7); }
+h1, h2, h3 { text-wrap: balance; }
+
+/* --- Pulido v1.2 --- */
+h1, h2 { letter-spacing: -0.015em; }
+.serif { letter-spacing: -0.01em; }
+.label-caps { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
+/* Número de ranking grande y hueco (top de cada estantería) */
+.rank-num {
+  font-family: var(--font-serif);
+  font-weight: 800;
+  line-height: 0.8;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgb(244 241 234 / 0.55);
+  font-variation-settings: 'opsz' 144;
+}
+.glass {
+  background: rgb(15 14 13 / 0.78);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+}

@@ -1,0 +1,2161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Legado Cultural - Prototipo Oficial Avanzado</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0c0e14;
+      --card-bg: #151824;
+      --card-surface: #1e2233;
+      --accent: #f59e0b;
+      --accent-soft: rgba(245, 158, 11, 0.15);
+      --purple: #8b5cf6;
+      --purple-soft: rgba(139, 92, 246, 0.15);
+      --green: #10b981;
+      --green-soft: rgba(16, 185, 129, 0.15);
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --border: #282e42;
+      --radius-app: 36px;
+      --radius-card: 16px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: #06070a;
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 15px 10px;
+    }
+
+    /* Device Mockup Shell */
+    .phone-container {
+      width: 100%;
+      max-width: 440px;
+      height: 900px;
+      background: var(--bg);
+      border-radius: var(--radius-app);
+      border: 5px solid #282e42;
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.85), 0 0 50px rgba(245, 158, 11, 0.1);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Status Bar */
+    .status-bar {
+      height: 42px;
+      padding: 12px 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      z-index: 50;
+      background: var(--bg);
+    }
+
+    /* Top App Header */
+    .app-top-nav {
+      padding: 8px 18px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      background: var(--bg);
+    }
+
+    .top-title {
+      font-family: 'Newsreader', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-action-pill {
+      background: var(--accent-soft);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 5px 11px;
+      border-radius: 20px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s;
+    }
+
+    .btn-action-pill:hover {
+      background: var(--accent);
+      color: #000;
+    }
+
+    .btn-add-primary {
+      background: var(--accent);
+      color: #000;
+      border-color: var(--accent);
+    }
+
+    .top-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    /* Screen Views */
+    .screen-view {
+      flex: 1;
+      overflow-y: auto;
+      padding: 14px 16px 95px;
+      display: none;
+      scrollbar-width: none;
+    }
+
+    .screen-view.active {
+      display: block;
+      animation: fadeIn 0.2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Buscador en Vivo en la Home */
+    .search-bar-wrap {
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px 14px 10px 38px;
+      background: #141724;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.85rem;
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .search-icon-inside {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Toggle de Vistas: Obras vs Listas */
+    .home-view-toggle {
+      display: flex;
+      background: #141724;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 4px;
+      margin-bottom: 12px;
+    }
+
+    .toggle-tab-btn {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .toggle-tab-btn.active {
+      background: var(--card-surface);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    /* Categorías */
+    .category-pills-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .cat-pill {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 6px 13px;
+      border-radius: 20px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .cat-pill.active {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Toolbar de Selección Múltiple */
+    .vault-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 10px;
+      margin-bottom: 12px;
+      font-size: 0.8rem;
+    }
+
+    .selection-badge {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .btn-share-selection {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+
+    /* Tarjetas de Obras en Bóveda */
+    .vault-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 12px;
+      margin-bottom: 11px;
+      display: flex;
+      gap: 12px;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .vault-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(245, 158, 11, 0.4);
+    }
+
+    .vault-card.selected {
+      border-color: var(--accent);
+      background: #191e2e;
+    }
+
+    .card-select-box {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 20px;
+      height: 20px;
+      accent-color: var(--accent);
+      cursor: pointer;
+      z-index: 5;
+    }
+
+    .card-cover {
+      width: 76px;
+      height: 106px;
+      border-radius: 8px;
+      object-fit: cover;
+      background: #000;
+      flex-shrink: 0;
+    }
+
+    .card-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-right: 18px;
+    }
+
+    .card-type {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+    }
+
+    .card-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin: 2px 0;
+    }
+
+    .card-author {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .card-rating-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 3px 0;
+    }
+
+    .card-rating {
+      color: #fbbf24;
+      font-size: 0.8rem;
+    }
+
+    .btn-card-listen-mini {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .card-user-note {
+      font-size: 0.76rem;
+      font-style: italic;
+      color: #cbd5e1;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 5px 8px;
+      border-left: 2px solid var(--accent);
+      border-radius: 4px;
+      line-height: 1.35;
+    }
+
+    /* Colecciones Grandes en Mis Listas */
+    .collections-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .collection-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .collection-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .collection-mosaic {
+      width: 100%;
+      height: 110px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      background: #000;
+    }
+
+    .collection-mosaic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .collection-body {
+      padding: 10px 12px;
+    }
+
+    .collection-title {
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    .collection-count {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .btn-create-list-card {
+      grid-column: 1 / -1;
+      padding: 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px dashed var(--border);
+      border-radius: 14px;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.88rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      margin-top: 4px;
+    }
+
+    /* PANTALLA DE DETALLE DE LISTA (EXPANDIDA AL ENTRAR A UNA COLECCIÓN) */
+    .list-detail-screen {
+      position: absolute;
+      top: 42px; left: 0; right: 0; bottom: 70px;
+      background: var(--bg);
+      z-index: 150;
+      display: none;
+      flex-direction: column;
+      overflow-y: auto;
+      padding: 16px;
+      animation: fadeIn 0.2s ease-out;
+    }
+
+    .list-detail-screen.open {
+      display: flex;
+    }
+
+    .list-detail-header-nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .btn-back-circle {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    .list-detail-hero {
+      background: linear-gradient(135deg, #181d2e 0%, #101320 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 16px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .list-hero-mosaic {
+      width: 80px;
+      height: 80px;
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .list-hero-mosaic img { width: 100%; height: 100%; object-fit: cover; }
+
+    .btn-share-entire-list {
+      width: 100%;
+      padding: 12px;
+      background: #25d366;
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 0.88rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    }
+
+    /* ==================== 2. DESCUBRIR (SWIPE DECK) ==================== */
+    .swipe-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      justify-content: space-between;
+      padding-bottom: 6px;
+    }
+
+    .friend-badge-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(139, 92, 246, 0.12);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #c4b5fd;
+      margin-bottom: 12px;
+    }
+
+    .avatar-stack {
+      display: flex;
+    }
+
+    .avatar-stack img {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid var(--bg);
+      margin-left: -6px;
+    }
+
+    .avatar-stack img:first-child { margin-left: 0; }
+
+    .swipe-card {
+      width: 100%;
+      height: 470px;
+      background: #000;
+      border-radius: 22px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+      border: 1px solid var(--border);
+      cursor: pointer;
+    }
+
+    .swipe-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.85;
+    }
+
+    .swipe-card-gradient {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 65%;
+      background: linear-gradient(to top, rgba(12, 14, 20, 0.98) 15%, rgba(12, 14, 20, 0.6) 65%, transparent 100%);
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .swipe-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .swipe-meta {
+      font-size: 0.8rem;
+      color: var(--accent);
+      margin: 3px 0 6px;
+      font-weight: 600;
+    }
+
+    .swipe-synopsis {
+      font-size: 0.78rem;
+      color: #94a3b8;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .swipe-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 14px;
+      width: 100%;
+    }
+
+    .btn-circle {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s;
+    }
+
+    .btn-circle:hover { transform: scale(1.08); }
+    .btn-circle:active { transform: scale(0.95); }
+
+    .btn-skip { background: #1e2433; color: #ef4444; border: 1px solid #333d54; }
+    .btn-save { background: var(--purple); color: #fff; width: 66px; height: 66px; font-size: 1.4rem; }
+    .btn-watched { background: var(--accent); color: #000; font-size: 1.35rem; }
+
+    .btn-label {
+      font-size: 0.62rem;
+      font-weight: 700;
+      margin-top: 2px;
+      text-transform: uppercase;
+    }
+
+    /* ==================== 3. FEED SOCIAL ==================== */
+    .feed-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+
+    .feed-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .feed-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .feed-meta-user { font-size: 0.85rem; font-weight: 700; }
+    .feed-time { font-size: 0.7rem; color: var(--text-muted); }
+
+    .feed-content-card {
+      display: flex;
+      gap: 10px;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 10px;
+      border-radius: 10px;
+      margin: 8px 0;
+    }
+
+    .feed-btn-action {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .feed-btn-action:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ==================== 4. HERRAMIENTAS & NICHO ==================== */
+    .tools-hub-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .tool-hub-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 14px;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .tool-hub-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+
+    .tool-header-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 4px;
+    }
+
+    .tool-icon-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+    }
+
+    .tool-title { font-size: 1rem; font-weight: 800; }
+    .tool-desc { font-size: 0.76rem; color: var(--text-muted); line-height: 1.35; }
+
+    /* ==================== 5. PERFIL & IMPORTACIONES ==================== */
+    .profile-hero {
+      text-align: center;
+      padding: 12px 0 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      margin-bottom: 16px;
+    }
+
+    .profile-avatar-big {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      border: 3px solid var(--accent);
+      object-fit: cover;
+      margin-bottom: 8px;
+    }
+
+    .profile-name { font-size: 1.25rem; font-weight: 800; }
+    .profile-bio { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; }
+
+    .profile-stats-row {
+      display: flex;
+      justify-content: space-around;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      padding: 10px;
+      margin: 14px 0 18px;
+    }
+
+    .stat-box { text-align: center; }
+    .stat-val { font-size: 1.15rem; font-weight: 800; color: var(--accent); }
+    .stat-lbl { font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; font-weight: 700; }
+
+    .import-section-title {
+      font-size: 0.92rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .import-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .import-btn-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 11px 14px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .import-btn-item:hover {
+      background: #1b2030;
+      border-color: var(--accent);
+    }
+
+    .import-info-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .import-icon { font-size: 1.35rem; }
+    .import-label { font-size: 0.85rem; font-weight: 700; }
+    .import-sub { font-size: 0.72rem; color: var(--text-muted); }
+
+    /* ==================== DUELO SPLIT A vs B ==================== */
+    .split-duel-modal {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #000;
+      z-index: 400;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .split-duel-modal.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .duel-top-bar {
+      height: 48px;
+      padding: 0 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(12, 14, 20, 0.95);
+      border-bottom: 1px solid var(--border);
+      z-index: 50;
+    }
+
+    .duel-round-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .btn-close-duel-x {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    .duel-split-stage {
+      flex: 1;
+      display: flex;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .duel-side {
+      flex: 1;
+      height: 100%;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 16px 12px 24px;
+      border: 2px solid transparent;
+      transition: transform 0.2s, border-color 0.2s, filter 0.2s;
+    }
+
+    .duel-side-left { border-right: 1px solid rgba(255, 255, 255, 0.15); }
+    .duel-side-right { border-left: 1px solid rgba(255, 255, 255, 0.15); }
+
+    .duel-side:hover { filter: brightness(1.1); }
+    .duel-side.selected-choice {
+      border-color: var(--accent);
+      box-shadow: inset 0 0 40px rgba(245, 158, 11, 0.4);
+    }
+
+    .duel-bg-poster {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.85;
+      z-index: 1;
+      transition: transform 0.3s;
+    }
+
+    .duel-side:hover .duel-bg-poster { transform: scale(1.04); }
+
+    .duel-side-gradient {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 75%;
+      background: linear-gradient(to top, rgba(0,0,0,0.98) 15%, rgba(0,0,0,0.7) 60%, transparent 100%);
+      z-index: 2;
+    }
+
+    .duel-side-content { position: relative; z-index: 3; }
+
+    .duel-badge-pill {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(245, 158, 11, 0.2);
+      color: var(--accent);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      margin-bottom: 6px;
+    }
+
+    .duel-side-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    }
+
+    .duel-side-sub { font-size: 0.74rem; color: #cbd5e1; margin-top: 3px; }
+    .duel-side-rating { color: #fbbf24; font-size: 0.78rem; margin-top: 4px; }
+
+    .duel-floating-vs {
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: #dc2626;
+      color: #fff;
+      font-weight: 900;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid #000;
+      box-shadow: 0 0 25px rgba(220, 38, 38, 0.8);
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .duel-bottom-instruction {
+      background: #0f111a;
+      padding: 10px;
+      text-align: center;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+
+    /* MINI-REPRODUCTOR FLOTANTE INFERIOR PERSISTENTE */
+    .mini-player-bar {
+      position: absolute;
+      bottom: 70px;
+      left: 10px;
+      right: 10px;
+      background: rgba(21, 24, 36, 0.95);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 12px;
+      padding: 8px 12px;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+      z-index: 90;
+      animation: slideUp 0.25s ease-out;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .mini-player-bar.active { display: flex; }
+
+    .mini-player-thumb { width: 38px; height: 38px; border-radius: 6px; object-fit: cover; }
+    .mini-player-meta { flex: 1; overflow: hidden; }
+    .mini-player-title { font-size: 0.8rem; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .mini-player-artist { font-size: 0.68rem; color: var(--accent); }
+
+    .mini-player-btn {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+    }
+
+    /* Barra de Navegación Inferior (5 Tabs) */
+    .app-bottom-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      background: rgba(18, 21, 31, 0.96);
+      backdrop-filter: blur(16px);
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 4px;
+      z-index: 100;
+    }
+
+    .nav-tab-btn {
+      background: transparent;
+      border: none;
+      color: #64748b;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      cursor: pointer;
+      font-size: 0.66rem;
+      font-weight: 600;
+      padding: 6px 8px;
+      border-radius: 10px;
+      transition: all 0.2s;
+    }
+
+    .nav-tab-btn .tab-icon { font-size: 1.25rem; }
+    .nav-tab-btn.active { color: var(--accent); }
+
+    /* Modales Generales */
+    .modal-sheet-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: flex-end;
+      z-index: 350;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .modal-sheet-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-sheet-box {
+      background: #131622;
+      border-top: 1px solid var(--border);
+      border-radius: 24px 24px 0 0;
+      width: 100%;
+      max-height: 88%;
+      overflow-y: auto;
+      padding: 22px 18px 30px;
+      transform: translateY(100%);
+      transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .modal-sheet-overlay.open .modal-sheet-box {
+      transform: translateY(0);
+    }
+
+    .btn-action-full {
+      width: 100%;
+      padding: 12px;
+      background: var(--accent);
+      color: #000;
+      font-weight: 700;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+
+    /* ESTILOS DEL VALIDADOR PREVIO (FICHA EXPANDIDA) */
+    .work-detail-hero {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .work-detail-poster {
+      width: 90px;
+      height: 130px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      flex-shrink: 0;
+    }
+
+    .friend-validator-box {
+      background: #161a29;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin: 14px 0;
+    }
+
+    .friend-review-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .friend-review-row:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .btn-ask-wa {
+      background: #25d366;
+      color: #000;
+      border: none;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      cursor: pointer;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ESTILOS DEL MODAL AÑADIR OBRA */
+    .add-mode-toggle {
+      display: flex;
+      background: #10131f;
+      border-radius: 10px;
+      padding: 3px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .btn-add-mode {
+      flex: 1;
+      padding: 8px;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .btn-add-mode.active {
+      background: var(--card-surface);
+      color: #fff;
+    }
+
+    .input-clean {
+      width: 100%;
+      padding: 10px 12px;
+      background: #0f111a;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+
+    .input-clean:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Contenedor Maqueta Móvil -->
+  <div class="phone-container">
+    
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <span>12:45</span>
+      <span>📶 5G 🔋 98%</span>
+    </div>
+
+    <!-- Header Superior -->
+    <header class="app-top-nav">
+      <div>
+        <h1 class="top-title" id="screen-heading">Mi Bóveda</h1>
+      </div>
+      <div class="top-actions">
+        <!-- BOTÓN PRINCIPAL ➕ AÑADIR OBRA -->
+        <button class="btn-action-pill btn-add-primary" id="btn-open-add-modal" title="Añadir nueva obra o enlace">
+          <span>➕</span> Añadir
+        </button>
+        <button class="btn-action-pill" id="btn-open-capsule" title="Crear cápsula cultural">
+          <span>📦</span> Cápsula
+        </button>
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Avatar" class="top-avatar" id="btn-profile-shortcut">
+      </div>
+    </header>
+
+    <!-- ==================== PANTALLA 1: MI BÓVEDA ==================== -->
+    <div class="screen-view active" id="view-vault">
+      
+      <!-- Buscador en Vivo -->
+      <div class="search-bar-wrap">
+        <span class="search-icon-inside">🔍</span>
+        <input type="text" id="vault-search-input" class="search-input" placeholder="Buscar por título, autor o agrupación...">
+      </div>
+
+      <!-- Toggle de Vistas: Obras vs Listas -->
+      <div class="home-view-toggle">
+        <button class="toggle-tab-btn active" id="btn-show-works">
+          <span>📚</span> Todas mis Obras (12)
+        </button>
+        <button class="toggle-tab-btn" id="btn-show-lists">
+          <span>📂</span> Mis Listas (4)
+        </button>
+      </div>
+
+      <!-- SECCIÓN A: TODAS LAS OBRAS (ACTIVA POR DEFECTO) -->
+      <div id="section-works-container">
+        <!-- Píldoras de Categoría -->
+        <div class="category-pills-row">
+          <button class="cat-pill active" data-cat="all">🎭 Todo</button>
+          <button class="cat-pill" data-cat="books">📚 Libros (4)</button>
+          <button class="cat-pill" data-cat="movies">🎬 Cine & Series (4)</button>
+          <button class="cat-pill" data-cat="music">🎵 Música (2)</button>
+          <button class="cat-pill" data-cat="carnaval">🎭 Carnaval (2)</button>
+        </div>
+
+        <!-- Toolbar de Selección -->
+        <div class="vault-toolbar">
+          <span>Seleccionadas: <strong class="selection-badge" id="selected-counter">0 obras</strong></span>
+          <button class="btn-share-selection" id="btn-share-selected">Compartir Selección ↗</button>
+        </div>
+
+        <!-- Lista de Tarjetas (Cada tarjeta abre la FICHA EXPANDIDA) -->
+        <div id="vault-cards-list">
+          
+          <!-- 1. Cien Años de Soledad -->
+          <div class="vault-card" data-category="books" onclick="openWorkDetail('Cien años de soledad', 'Gabriel García Márquez • 1967', '📚 Libro', 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300&auto=format&fit=crop&q=80', '10/10', 'Obra maestra absoluta. El realismo mágico me atrapó desde la primera línea.', 'La novela narra la historia de la familia Buendía a lo largo de siete generaciones en el pueblo ficticio de Macondo.')">
+            <input type="checkbox" class="card-select-box">
+            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300&auto=format&fit=crop&q=80" class="card-cover">
+            <div class="card-info">
+              <div>
+                <span class="card-type">📚 Libro</span>
+                <h3 class="card-name">Cien años de soledad</h3>
+                <p class="card-author">Gabriel García Márquez • 1967</p>
+                <div class="card-rating-row">
+                  <span class="card-rating">★★★★★ (10/10)</span>
+                </div>
+              </div>
+              <p class="card-user-note">«Obra maestra absoluta. El realismo mágico me atrapó desde la primera línea.»</p>
+            </div>
+          </div>
+
+          <!-- 2. Blade Runner 2049 -->
+          <div class="vault-card" data-category="movies" onclick="openWorkDetail('Blade Runner 2049', 'Denis Villeneuve • 2017', '🎬 Película', 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=300&auto=format&fit=crop&q=80', '9.5/10', 'Atmósfera increíble, banda sonora brutal. Cine en estado puro.', 'Treinta años después de los eventos del primer film, un nuevo blade runner, K, descubre un secreto profundamente oculto.')">
+            <input type="checkbox" class="card-select-box">
+            <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=300&auto=format&fit=crop&q=80" class="card-cover">
+            <div class="card-info">
+              <div>
+                <span class="card-type">🎬 Película</span>
+                <h3 class="card-name">Blade Runner 2049</h3>
+                <p class="card-author">Denis Villeneuve • 2017</p>
+                <div class="card-rating-row">
+                  <span class="card-rating">★★★★★ (9.5/10)</span>
+                </div>
+              </div>
+              <p class="card-user-note">«Atmósfera increíble, banda sonora brutal. Cine en estado puro.»</p>
+            </div>
+          </div>
+
+          <!-- 3. Los Peregrinos (Credo) -->
+          <div class="vault-card" data-category="carnaval" onclick="openWorkDetail('Los Peregrinos (Credo)', 'Juan Carlos Aragón • 2017', '🎭 Carnaval', 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80', '10/10', 'Piel de gallina cada vez que suena. Lo que más fuerza me da en días malos.', 'El Credo del popurrí de Los Peregrinos, una de las mayores cumbres poéticas del Carnaval de Cádiz.')">
+            <input type="checkbox" class="card-select-box">
+            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80" class="card-cover">
+            <div class="card-info">
+              <div>
+                <span class="card-type">🎭 Carnaval</span>
+                <h3 class="card-name">Los Peregrinos (Credo)</h3>
+                <p class="card-author">Juan Carlos Aragón • 2017</p>
+                <div class="card-rating-row">
+                  <span class="card-rating">★★★★★ (10/10)</span>
+                  <button class="btn-card-listen-mini" onclick="event.stopPropagation(); playMiniAudio('Credo de Los Peregrinos', 'Juan Carlos Aragón', 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=100&auto=format&fit=crop&q=80')">▶️ Escuchar</button>
+                </div>
+              </div>
+              <p class="card-user-note">«Piel de gallina cada vez que suena. Lo que más fuerza me da en días malos.»</p>
+            </div>
+          </div>
+
+          <!-- 4. Abbey Road -->
+          <div class="vault-card" data-category="music" onclick="openWorkDetail('Abbey Road', 'The Beatles • 1969', '🎵 Álbum', 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&auto=format&fit=crop&q=80', '10/10', 'El medley final es perfección pura de composición.', 'El undécimo álbum de estudio de The Beatles, grabado en los estudios Abbey Road en Londres.')">
+            <input type="checkbox" class="card-select-box">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&auto=format&fit=crop&q=80" class="card-cover">
+            <div class="card-info">
+              <div>
+                <span class="card-type">🎵 Álbum</span>
+                <h3 class="card-name">Abbey Road</h3>
+                <p class="card-author">The Beatles • 1969</p>
+                <div class="card-rating-row">
+                  <span class="card-rating">★★★★★ (10/10)</span>
+                  <button class="btn-card-listen-mini" onclick="event.stopPropagation(); playMiniAudio('Abbey Road (Medley)', 'The Beatles', 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=100&auto=format&fit=crop&q=80')">▶️ Escuchar</button>
+                </div>
+              </div>
+              <p class="card-user-note">«El medley final es perfección pura de composición.»</p>
+            </div>
+          </div>
+
+          <!-- 5. Oppenheimer -->
+          <div class="vault-card" data-category="movies" onclick="openWorkDetail('Oppenheimer', 'Christopher Nolan • 2023', '🎬 Película', 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=300&auto=format&fit=crop&q=80', '9.2/10', 'El tramo final del juicio te deja con el corazón encogido.', 'La historia del físico teórico J. Robert Oppenheimer, líder del Proyecto Manhattan que desarrolló la primera bomba atómica.')">
+            <input type="checkbox" class="card-select-box">
+            <img src="https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=300&auto=format&fit=crop&q=80" class="card-cover">
+            <div class="card-info">
+              <div>
+                <span class="card-type">🎬 Película</span>
+                <h3 class="card-name">Oppenheimer</h3>
+                <p class="card-author">Christopher Nolan • 2023</p>
+                <div class="card-rating-row">
+                  <span class="card-rating">★★★★★ (9.2/10)</span>
+                </div>
+              </div>
+              <p class="card-user-note">«El tramo final del juicio te deja con el corazón encogido.»</p>
+            </div>
+          </div>
+
+          <!-- 6. 1984 -->
+          <div class="vault-card" data-category="books" onclick="openWorkDetail('1984', 'George Orwell • 1949', '📚 Libro', 'https://images.unsplash.com/photo-1495640388908-05fa85288e61?w=300&auto=format&fit=crop&q=80', '9.8/10', 'Aterradoramente profético. Lectura obligatoria una vez en la vida.', 'Una novela de ficción distópica que introdujo conceptos como el Gran Hermano y la Policía del Pensamiento.')">
+            <input type="checkbox" class="card-select-box">
+            <img src="https://images.unsplash.com/photo-1495640388908-05fa85288e61?w=300&auto=format&fit=crop&q=80" class="card-cover">
+            <div class="card-info">
+              <div>
+                <span class="card-type">📚 Libro</span>
+                <h3 class="card-name">1984</h3>
+                <p class="card-author">George Orwell • 1949</p>
+                <div class="card-rating-row">
+                  <span class="card-rating">★★★★★ (9.8/10)</span>
+                </div>
+              </div>
+              <p class="card-user-note">«Aterradoramente profético. Lectura obligatoria una vez en la vida.»</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECCIÓN B: MIS LISTAS (COLECCIONES GRANDES) -->
+      <div id="section-lists-container" style="display: none;">
+        <div class="collections-grid">
+          
+          <!-- Colección 1: Favoritos Sagrados -->
+          <div class="collection-card" onclick="openCollectionDetail('Favoritos Sagrados', '18 obras • Mi canon absoluto', 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=150&auto=format&fit=crop&q=80', 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=150&auto=format&fit=crop&q=80', 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=150&auto=format&fit=crop&q=80', 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=150&auto=format&fit=crop&q=80')">
+            <div class="collection-mosaic">
+              <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=150&auto=format&fit=crop&q=80">
+              <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=150&auto=format&fit=crop&q=80">
+              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=150&auto=format&fit=crop&q=80">
+              <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=150&auto=format&fit=crop&q=80">
+            </div>
+            <div class="collection-body">
+              <h4 class="collection-title">Favoritos Sagrados</h4>
+              <p class="collection-count">18 obras • Mi canon</p>
+            </div>
+          </div>
+
+          <!-- Colección 2: Cine con mi Padre -->
+          <div class="collection-card" onclick="openCollectionDetail('Cine con mi Padre', '5 películas guardadas para ver juntos', 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=150&auto=format&fit=crop&q=80', 'https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=150&auto=format&fit=crop&q=80', 'https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?w=150&auto=format&fit=crop&q=80', 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=150&auto=format&fit=crop&q=80')">
+            <div class="collection-mosaic">
+              <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=150&auto=format&fit=crop&q=80">
+              <img src="https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=150&auto=format&fit=crop&q=80">
+              <img src="https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?w=150&auto=format&fit=crop&q=80">
+              <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=150&auto=format&fit=crop&q=80">
+            </div>
+            <div class="collection-body">
+              <h4 class="collection-title">Cine con mi Padre</h4>
+              <p class="collection-count">5 películas guardadas</p>
+            </div>
+          </div>
+
+          <!-- Colección 3: Carnaval de Oro -->
+          <div class="collection-card" onclick="openCollectionDetail('Carnaval de Oro', '8 agrupaciones históricas del Falla', 'https://img.youtube.com/vi/DxQBrOV6XF4/hqdefault.jpg', 'https://img.youtube.com/vi/3m1a8FxCuBY/hqdefault.jpg', 'https://img.youtube.com/vi/lRALzOiV0_A/hqdefault.jpg', 'https://img.youtube.com/vi/tP1jMYNE2Ss/hqdefault.jpg')">
+            <div class="collection-mosaic">
+              <img src="https://img.youtube.com/vi/DxQBrOV6XF4/hqdefault.jpg">
+              <img src="https://img.youtube.com/vi/3m1a8FxCuBY/hqdefault.jpg">
+              <img src="https://img.youtube.com/vi/lRALzOiV0_A/hqdefault.jpg">
+              <img src="https://img.youtube.com/vi/tP1jMYNE2Ss/hqdefault.jpg">
+            </div>
+            <div class="collection-body">
+              <h4 class="collection-title">Carnaval de Oro</h4>
+              <p class="collection-count">8 agrupaciones • Coplas</p>
+            </div>
+          </div>
+
+          <!-- Colección 4: Pendientes / Por Ver -->
+          <div class="collection-card" onclick="openCollectionDetail('Pendientes / Por Ver', '12 obras marcadas para consumir pronto', 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=150&auto=format&fit=crop&q=80', 'https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?w=150&auto=format&fit=crop&q=80', 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=150&auto=format&fit=crop&q=80', 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=150&auto=format&fit=crop&q=80')">
+            <div class="collection-mosaic">
+              <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=150&auto=format&fit=crop&q=80">
+              <img src="https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?w=150&auto=format&fit=crop&q=80">
+              <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=150&auto=format&fit=crop&q=80">
+              <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=150&auto=format&fit=crop&q=80">
+            </div>
+            <div class="collection-body">
+              <h4 class="collection-title">Pendientes / Por Ver</h4>
+              <p class="collection-count">12 obras • Lista de deseos</p>
+            </div>
+          </div>
+
+          <button class="btn-create-list-card" onclick="alert('Abriendo creador de lista...')">
+            <span>➕</span> Crear Nueva Lista
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==================== PANTALLA: DETALLE DE UNA LISTA (ENTRAR A LA COLECCIÓN) ==================== -->
+    <div class="list-detail-screen" id="list-detail-screen">
+      <div class="list-detail-header-nav">
+        <button class="btn-back-circle" id="btn-back-to-lists">←</button>
+        <h3 id="list-detail-nav-title" style="font-size: 1.05rem; font-weight: 800;">Detalle de Colección</h3>
+      </div>
+
+      <div class="list-detail-hero">
+        <div class="list-hero-mosaic" id="list-detail-hero-mosaic"></div>
+        <div>
+          <h2 id="list-detail-title" style="font-size: 1.25rem; font-weight: 800; line-height: 1.2;">Título Lista</h2>
+          <p id="list-detail-desc" style="font-size: 0.76rem; color: var(--text-muted); margin-top: 4px;">Descripción</p>
+        </div>
+      </div>
+
+      <!-- BOTÓN DIRECTO: COMPARTIR LISTA COMPLETA POR WHATSAPP -->
+      <button class="btn-share-entire-list" id="btn-share-entire-list-wa">
+        <span>💬</span> Compartir Lista Completa por WhatsApp
+      </button>
+
+      <h4 style="font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; color: var(--accent);">Obras incluidas en esta lista:</h4>
+      
+      <div id="list-detail-cards-container">
+        <!-- Tarjetas dinámicas inyectadas por JS -->
+      </div>
+    </div>
+
+    <!-- ==================== PANTALLA 2: DESCUBRIR (SWIPE DECK) ==================== -->
+    <div class="screen-view" id="view-discover">
+      <div class="swipe-container">
+        
+        <div class="friend-badge-header">
+          <div class="avatar-stack">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&auto=format&fit=crop&q=80">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&auto=format&fit=crop&q=80">
+          </div>
+          <span id="swipe-recommend-text">Recomendado por Laura y Carlos</span>
+        </div>
+
+        <div class="swipe-card" id="current-swipe-card">
+          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&auto=format&fit=crop&q=80" class="swipe-card-img" id="swipe-img">
+          <div class="swipe-card-gradient">
+            <span class="card-type" id="swipe-cat">🎬 Película de Ciencia Ficción</span>
+            <h2 class="swipe-title" id="swipe-title">Dune: Parte Dos</h2>
+            <p class="swipe-meta" id="swipe-meta">Denis Villeneuve • 2h 46m • 2024</p>
+            <p class="swipe-synopsis" id="swipe-synopsis">Paul Atreides se une a Chani y a los Fremen mientras busca venganza contra los conspiradores que destruyeron a su familia.</p>
+          </div>
+        </div>
+
+        <div class="swipe-actions">
+          <button class="btn-circle btn-skip" id="btn-swipe-skip" title="Descartar">
+            ✕
+            <span class="btn-label">Pasar</span>
+          </button>
+          
+          <button class="btn-circle btn-save" id="btn-swipe-save" title="Guardar en Pendientes">
+            🔖
+            <span class="btn-label">Por ver</span>
+          </button>
+
+          <button class="btn-circle btn-watched" id="btn-swipe-watched" title="Ya lo he visto">
+            ✓
+            <span class="btn-label">Ya visto</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== PANTALLA 3: FEED SOCIAL ==================== -->
+    <div class="screen-view" id="view-feed">
+      <div class="feed-item">
+        <div class="feed-header">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&auto=format&fit=crop&q=80" class="feed-avatar">
+          <div>
+            <p class="feed-meta-user">Carlos Gómez</p>
+            <p class="feed-time">Añadió hace 2 horas</p>
+          </div>
+        </div>
+        <p style="font-size: 0.82rem; margin-bottom: 6px;">«Hacía años que una novela no me dejaba sin dormir. El final es tremendo.»</p>
+        <div class="feed-content-card">
+          <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=100&auto=format&fit=crop&q=80" style="width: 44px; height: 60px; border-radius: 6px; object-fit: cover;">
+          <div>
+            <h4 style="font-size: 0.88rem;">El problema de los tres cuerpos</h4>
+            <p style="font-size: 0.72rem; color: var(--text-muted);">Cixin Liu • 📚 Libro</p>
+            <p style="color: #fbbf24; font-size: 0.78rem;">★★★★★ 9/10</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 8px; margin-top: 8px;">
+          <button class="feed-btn-action" onclick="alert('Guardado en tu Bóveda')">🔖 Guardar en mi Bóveda</button>
+          <button class="feed-btn-action" onclick="alert('Abriendo WhatsApp con Carlos...')">💬 Preguntar por WhatsApp</button>
+        </div>
+      </div>
+
+      <div class="feed-item">
+        <div class="feed-header">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&auto=format&fit=crop&q=80" class="feed-avatar">
+          <div>
+            <p class="feed-meta-user">Laura Ramos</p>
+            <p class="feed-time">Añadió ayer</p>
+          </div>
+        </div>
+        <p style="font-size: 0.82rem; margin-bottom: 6px;">«Escuchar el pasodoble 'Que bien sabían' de No Valemo un duro te alegra el día.»</p>
+        <div class="feed-content-card">
+          <img src="https://img.youtube.com/vi/3m1a8FxCuBY/hqdefault.jpg" style="width: 60px; height: 45px; border-radius: 6px; object-fit: cover;">
+          <div>
+            <h4 style="font-size: 0.85rem;">No Valemo un Duro (2017)</h4>
+            <p style="font-size: 0.72rem; color: var(--text-muted);">Chirigota • 🎭 Carnaval</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 8px; margin-top: 8px;">
+          <button class="feed-btn-action" onclick="alert('Guardado en tu Bóveda')">🔖 Guardar en mi Bóveda</button>
+          <button class="feed-btn-action" onclick="alert('Abriendo WhatsApp con Laura...')">💬 Preguntar por WhatsApp</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PANTALLA 4: HERRAMIENTAS & NICHO ==================== -->
+    <div class="screen-view" id="view-tools">
+      <div class="tools-hub-grid">
+        <div class="tool-hub-card" id="tool-open-split-duel">
+          <div class="tool-header-row">
+            <div class="tool-icon-badge" style="color: #f59e0b; background: rgba(245, 158, 11, 0.15);">⚔️</div>
+            <div>
+              <h3 class="tool-title">Duelos a Pares (Modo Split A vs B)</h3>
+              <p class="tool-desc">Pantalla dividida izquierda vs derecha. Toca tu favorita y calibra tu ranking ELO sin números.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-hub-card" id="tool-open-together">
+          <div class="tool-header-row">
+            <div class="tool-icon-badge" style="color: #8b5cf6; background: rgba(139, 92, 246, 0.15);">🍿</div>
+            <div>
+              <h3 class="tool-title">Juntos («¿Qué vemos hoy?»):</h3>
+              <p class="tool-desc">Cruza pendientes con tu pareja o amigos y encuentra películas que ambos tenéis por ver.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tool-hub-card" onclick="alert('Generando lista DJ de Consenso para el coche con música puntuada con 9 o 10 por el grupo...')">
+          <div class="tool-header-row">
+            <div class="tool-icon-badge" style="color: #10b981; background: rgba(16, 185, 129, 0.15);">🚗</div>
+            <div>
+              <h3 class="tool-title">El DJ de Consenso (Música de Viaje)</h3>
+              <p class="tool-desc">Combina los gustos de las personas presentes y genera una lista con canciones que todos aman.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PANTALLA 5: PERFIL & IMPORTACIONES ==================== -->
+    <div class="screen-view" id="view-profile">
+      <div class="profile-hero">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80" class="profile-avatar-big">
+        <h2 class="profile-name">Igor</h2>
+        <p class="profile-bio">Curador de coplas, cine de autor y literatura inolvidable</p>
+
+        <div class="profile-stats-row">
+          <div class="stat-box">
+            <div class="stat-val">142</div>
+            <div class="stat-lbl">En Bóveda</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-val">28</div>
+            <div class="stat-lbl">Amigos</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-val">4</div>
+            <div class="stat-lbl">Listas</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="import-section-title">📥 Importar Biblioteca Externa</h3>
+      
+      <div class="import-list">
+        <div class="import-btn-item" onclick="alert('Importando de Goodreads... ¡142 libros añadidos a tu Bóveda!')">
+          <div class="import-info-left">
+            <span class="import-icon">📚</span>
+            <div>
+              <p class="import-label">Goodreads</p>
+              <p class="import-sub">Sube tu archivo .csv oficial con 1 clic</p>
+            </div>
+          </div>
+          <span style="font-size: 0.8rem; color: var(--accent); font-weight: 700;">Subir ↗</span>
+        </div>
+
+        <div class="import-btn-item" onclick="alert('Importando de Letterboxd... ¡89 películas añadidas!')">
+          <div class="import-info-left">
+            <span class="import-icon">🎬</span>
+            <div>
+              <p class="import-label">Letterboxd</p>
+              <p class="import-sub">Importa tu historial de películas vistas y notas</p>
+            </div>
+          </div>
+          <span style="font-size: 0.8rem; color: var(--accent); font-weight: 700;">Subir ↗</span>
+        </div>
+
+        <div class="import-btn-item" onclick="alert('Conectando Spotify... ¡34 álbumes sincronizados!')">
+          <div class="import-info-left">
+            <span class="import-icon">🎵</span>
+            <div>
+              <p class="import-label">Spotify</p>
+              <p class="import-sub">Conecta tu cuenta y álbumes favoritos</p>
+            </div>
+          </div>
+          <span style="font-size: 0.8rem; color: #10b981; font-weight: 700;">Conectar ↗</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== MINI-REPRODUCTOR FLOTANTE ==================== -->
+    <div class="mini-player-bar" id="mini-player">
+      <img src="" id="mini-player-img" class="mini-player-thumb">
+      <div class="mini-player-meta">
+        <p class="mini-player-title" id="mini-player-title">Título</p>
+        <p class="mini-player-artist" id="mini-player-artist">Artista</p>
+      </div>
+      <button class="mini-player-btn" id="btn-mini-play-toggle">⏸️</button>
+      <button class="mini-player-btn" style="background: transparent; color: var(--text-muted); font-size: 1.1rem;" onclick="closeMiniPlayer()">✕</button>
+    </div>
+
+    <!-- ==================== BARRA DE NAVEGACIÓN INFERIOR (5 TABS) ==================== -->
+    <nav class="app-bottom-bar">
+      <button class="nav-tab-btn active" data-target="view-vault" data-title="Mi Bóveda">
+        <span class="tab-icon">🏛️</span>
+        <span>Bóveda</span>
+      </button>
+      <button class="nav-tab-btn" data-target="view-discover" data-title="Descubrir">
+        <span class="tab-icon">✨</span>
+        <span>Descubrir</span>
+      </button>
+      <button class="nav-tab-btn" data-target="view-feed" data-title="Feed Social">
+        <span class="tab-icon">👥</span>
+        <span>Amigos</span>
+      </button>
+      <button class="nav-tab-btn" data-target="view-tools" data-title="Herramientas">
+        <span class="tab-icon">🛠️</span>
+        <span>Herramientas</span>
+      </button>
+      <button class="nav-tab-btn" data-target="view-profile" data-title="Mi Perfil">
+        <span class="tab-icon">👤</span>
+        <span>Perfil</span>
+      </button>
+    </nav>
+
+    <!-- ==================== MODAL 1: AÑADIR NUEVA OBRA / PEGAR ENLACE ==================== -->
+    <div class="modal-sheet-overlay" id="add-work-modal">
+      <div class="modal-sheet-box">
+        <h3 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 12px;">➕ Añadir a mi Bóveda</h3>
+        
+        <div class="add-mode-toggle">
+          <button class="btn-add-mode active" id="btn-mode-link">🔗 Pegar Enlace</button>
+          <button class="btn-add-mode" id="btn-mode-search">🔍 Buscar por Título</button>
+        </div>
+
+        <div id="add-link-section">
+          <input type="text" id="add-input-url" class="input-clean" placeholder="Pega enlace de YouTube, TikTok, Instagram o Spotify...">
+          <button class="btn-action-pill" id="btn-autodetect-link" style="margin-bottom: 12px;">⚡ Auto-detectar datos</button>
+        </div>
+
+        <div id="add-search-section" style="display: none;">
+          <input type="text" id="add-input-search" class="input-clean" placeholder="Ej: Interstellar, El Señor de los Anillos...">
+        </div>
+
+        <input type="text" id="add-input-title" class="input-clean" placeholder="Título de la obra">
+        <input type="text" id="add-input-author" class="input-clean" placeholder="Autor / Director / Agrupación">
+
+        <label style="font-size: 0.76rem; color: var(--text-muted); font-weight: 700;">Añadir a lista:</label>
+        <select class="input-clean" id="add-select-list" style="margin-top: 4px;">
+          <option value="favoritos">Favoritos Sagrados</option>
+          <option value="padre">Cine con mi Padre</option>
+          <option value="carnaval">Carnaval de Oro</option>
+          <option value="pendientes">Pendientes / Por Ver</option>
+        </select>
+
+        <textarea id="add-input-note" class="input-clean" style="height: 65px; resize: none;" placeholder="Tu nota emocional personal opcional (ej: 'Me cambió la perspectiva en 2020')..."></textarea>
+
+        <button class="btn-action-full" id="btn-confirm-add-work">Guardar en Mi Bóveda</button>
+        <button class="btn-action-full" style="background: transparent; color: var(--text-muted); border: 1px solid var(--border);" id="btn-close-add-modal">Cancelar</button>
+      </div>
+    </div>
+
+    <!-- ==================== MODAL 2: VALIDADOR PREVIO (FICHA EXPANDIDA) ==================== -->
+    <div class="modal-sheet-overlay" id="work-detail-modal">
+      <div class="modal-sheet-box">
+        <div class="work-detail-hero">
+          <img src="" id="detail-work-poster" class="work-detail-poster">
+          <div>
+            <span class="card-type" id="detail-work-type">🎬 Película</span>
+            <h2 id="detail-work-title" style="font-size: 1.2rem; font-weight: 800; line-height: 1.25; margin: 2px 0;">Título</h2>
+            <p id="detail-work-meta" style="font-size: 0.78rem; color: var(--text-muted);">Autor • Año</p>
+            <div id="detail-work-rating" style="color: #fbbf24; font-size: 0.85rem; margin: 4px 0;">★★★★★ 9.5/10</div>
+          </div>
+        </div>
+
+        <p id="detail-work-synopsis" style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.45; margin-bottom: 12px;">Sinopsis de la obra...</p>
+
+        <!-- BLOQUE SOCIAL DEL VALIDADOR PREVIO -->
+        <div class="friend-validator-box">
+          <h4 style="font-size: 0.82rem; font-weight: 800; color: var(--accent); margin-bottom: 8px;">
+            👥 ¿Quién de tu círculo la vio antes que tú?
+          </h4>
+          
+          <div class="friend-review-row">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&auto=format&fit=crop&q=80" style="width: 28px; height: 28px; border-radius: 50%;">
+            <div style="flex: 1;">
+              <p style="font-size: 0.75rem; font-weight: 700;">Carlos Gómez <span style="color: #fbbf24;">★ 9.5</span></p>
+              <p style="font-size: 0.72rem; color: var(--text-muted);">«Una obra maestra visual, no te la pierdas en pantalla grande.»</p>
+            </div>
+            <button class="btn-ask-wa" onclick="askFriendWhatsApp('Carlos Gómez')">
+              <span>💬</span> Preguntar
+            </button>
+          </div>
+
+          <div class="friend-review-row">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&auto=format&fit=crop&q=80" style="width: 28px; height: 28px; border-radius: 50%;">
+            <div style="flex: 1;">
+              <p style="font-size: 0.75rem; font-weight: 700;">Laura Ramos <span style="color: #f87171;">★ 5.0</span></p>
+              <p style="font-size: 0.72rem; color: var(--text-muted);">«Se hace algo lenta en el segundo acto, pero tiene buena fotografía.»</p>
+            </div>
+            <button class="btn-ask-wa" onclick="askFriendWhatsApp('Laura Ramos')">
+              <span>💬</span> Preguntar
+            </button>
+          </div>
+        </div>
+
+        <div style="font-size: 0.72rem; color: var(--text-muted); margin-bottom: 12px;">
+          📍 <em>Descubierto por @Diego en Mayo 2024</em>
+        </div>
+
+        <button class="btn-action-full" style="background: transparent; color: var(--text-muted); border: 1px solid var(--border);" id="btn-close-work-detail">Cerrar Ficha</button>
+      </div>
+    </div>
+
+    <!-- MODAL DUELO SPLIT A vs B -->
+    <div class="split-duel-modal" id="split-duel-modal">
+      <div class="duel-top-bar">
+        <span class="duel-round-title" id="duel-round-indicator">⚔️ Duelo 1 de 3 (Curación ELO)</span>
+        <button class="btn-close-duel-x" id="btn-close-split-duel">&times;</button>
+      </div>
+
+      <div class="duel-split-stage">
+        <div class="duel-side duel-side-left" id="duel-choice-left">
+          <img src="" class="duel-bg-poster" id="duel-img-left">
+          <div class="duel-side-gradient"></div>
+          <div class="duel-side-content">
+            <span class="duel-badge-pill" id="duel-pill-left">Opción Izquierda</span>
+            <h3 class="duel-side-title" id="duel-title-left">Blade Runner 2049</h3>
+            <p class="duel-side-sub" id="duel-sub-left">Denis Villeneuve</p>
+            <div class="duel-side-rating" id="duel-rate-left">★★★★★ 9.5</div>
+          </div>
+        </div>
+
+        <div class="duel-floating-vs">VS</div>
+
+        <div class="duel-side duel-side-right" id="duel-choice-right">
+          <img src="" class="duel-bg-poster" id="duel-img-right">
+          <div class="duel-side-gradient"></div>
+          <div class="duel-side-content">
+            <span class="duel-badge-pill" id="duel-pill-right">Opción Derecha</span>
+            <h3 class="duel-side-title" id="duel-title-right">Oppenheimer</h3>
+            <p class="duel-side-sub" id="duel-sub-right">Christopher Nolan</p>
+            <div class="duel-side-rating" id="duel-rate-right">★★★★★ 9.2</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="duel-bottom-instruction">
+        👆 Toca el lado izquierdo o derecho que prefieras para recalibrar tu Bóveda.
+      </div>
+    </div>
+
+    <!-- Modal Cápsula Cultural -->
+    <div class="modal-sheet-overlay" id="capsule-modal">
+      <div class="modal-sheet-box">
+        <h3 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 4px;">📦 Crear Cápsula Cultural</h3>
+        <p style="font-size: 0.78rem; color: var(--text-muted);">Envía tus recomendaciones seleccionadas en un paquete único para un amigo:</p>
+
+        <input type="text" value="«Mis imprescindibles para este fin de semana»" class="input-clean" style="margin: 12px 0;">
+
+        <button class="btn-action-full" id="btn-copy-capsule">🔗 Copiar Enlace Compartible</button>
+        <button class="btn-action-full" style="background: transparent; color: var(--text-muted); border: 1px solid var(--border);" id="btn-close-capsule">Cancelar</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // 1. Navegación Principal (5 Tabs)
+    document.querySelectorAll('.nav-tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.nav-tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.screen-view').forEach(v => v.classList.remove('active'));
+        document.getElementById('list-detail-screen').classList.remove('open');
+
+        btn.classList.add('active');
+        const targetId = btn.dataset.target;
+        document.getElementById(targetId).classList.add('active');
+        document.getElementById('screen-heading').textContent = btn.dataset.title;
+      });
+    });
+
+    document.getElementById('btn-profile-shortcut').addEventListener('click', () => {
+      document.querySelector('[data-target="view-profile"]').click();
+    });
+
+    // 2. Buscador en Vivo en la Home
+    const searchInput = document.getElementById('vault-search-input');
+    searchInput.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      document.querySelectorAll('#vault-cards-list .vault-card').forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(q) ? 'flex' : 'none';
+      });
+    });
+
+    // 3. Toggle Limpio en la Home: Obras vs Listas
+    const btnShowWorks = document.getElementById('btn-show-works');
+    const btnShowLists = document.getElementById('btn-show-lists');
+    const sectionWorks = document.getElementById('section-works-container');
+    const sectionLists = document.getElementById('section-lists-container');
+
+    btnShowWorks.addEventListener('click', () => {
+      btnShowWorks.classList.add('active');
+      btnShowLists.classList.remove('active');
+      sectionWorks.style.display = 'block';
+      sectionLists.style.display = 'none';
+      document.getElementById('list-detail-screen').classList.remove('open');
+    });
+
+    btnShowLists.addEventListener('click', () => {
+      btnShowLists.classList.add('active');
+      btnShowWorks.classList.remove('active');
+      sectionWorks.style.display = 'none';
+      sectionLists.style.display = 'block';
+    });
+
+    // 4. Filtro de Categorías
+    document.querySelectorAll('.cat-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const cat = pill.dataset.cat;
+
+        document.querySelectorAll('#vault-cards-list .vault-card').forEach(card => {
+          if (cat === 'all') {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = card.dataset.category === cat ? 'flex' : 'none';
+          }
+        });
+      });
+    });
+
+    // 5. Selección Múltiple para Compartir
+    let count = 0;
+    document.querySelectorAll('.card-select-box').forEach(chk => {
+      chk.addEventListener('click', (e) => e.stopPropagation());
+      chk.addEventListener('change', (e) => {
+        const card = e.target.closest('.vault-card');
+        if (e.target.checked) {
+          card.classList.add('selected');
+          count++;
+        } else {
+          card.classList.remove('selected');
+          count--;
+        }
+        document.getElementById('selected-counter').textContent = `${count} obras`;
+      });
+    });
+
+    // 6. PRIORIDAD ALTA 1: MODAL AÑADIR OBRA / PEGAR ENLACE
+    const addModal = document.getElementById('add-work-modal');
+    document.getElementById('btn-open-add-modal').addEventListener('click', () => addModal.classList.add('open'));
+    document.getElementById('btn-close-add-modal').addEventListener('click', () => addModal.classList.remove('open'));
+
+    const btnModeLink = document.getElementById('btn-mode-link');
+    const btnModeSearch = document.getElementById('btn-mode-search');
+    const linkSection = document.getElementById('add-link-section');
+    const searchSection = document.getElementById('add-search-section');
+
+    btnModeLink.addEventListener('click', () => {
+      btnModeLink.classList.add('active');
+      btnModeSearch.classList.remove('active');
+      linkSection.style.display = 'block';
+      searchSection.style.display = 'none';
+    });
+
+    btnModeSearch.addEventListener('click', () => {
+      btnModeSearch.classList.add('active');
+      btnModeLink.classList.remove('active');
+      searchSection.style.display = 'block';
+      linkSection.style.display = 'none';
+    });
+
+    document.getElementById('btn-autodetect-link').addEventListener('click', () => {
+      document.getElementById('add-input-title').value = "Carnaval de Cádiz - Pasodoble Histórico";
+      document.getElementById('add-input-author').value = "Juan Carlos Aragón • YouTube";
+      alert('¡Metadatos y carátula extraídos automáticamente con éxito!');
+    });
+
+    document.getElementById('btn-confirm-add-work').addEventListener('click', () => {
+      const title = document.getElementById('add-input-title').value || "Nueva Obra Añadida";
+      const author = document.getElementById('add-input-author').value || "Autor Desconocido";
+      const note = document.getElementById('add-input-note').value || "Sin nota aún.";
+
+      // Inyectar tarjeta en vivo en la Bóveda
+      const newCard = document.createElement('div');
+      newCard.className = "vault-card";
+      newCard.dataset.category = "movies";
+      newCard.onclick = () => openWorkDetail(title, author, "🎬 Cine / Enlace", "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=300&auto=format&fit=crop&q=80", "10/10", note, "Obra incorporada recientemente a tu Bóveda personal.");
+      newCard.innerHTML = `
+        <input type="checkbox" class="card-select-box">
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=300&auto=format&fit=crop&q=80" class="card-cover">
+        <div class="card-info">
+          <div>
+            <span class="card-type">✨ Recién Añadido</span>
+            <h3 class="card-name">${title}</h3>
+            <p class="card-author">${author}</p>
+            <div class="card-rating-row">
+              <span class="card-rating">★★★★★ (10/10)</span>
+            </div>
+          </div>
+          <p class="card-user-note">«${note}»</p>
+        </div>
+      `;
+
+      document.getElementById('vault-cards-list').prepend(newCard);
+      addModal.classList.remove('open');
+      alert(`¡"${title}" se ha guardado en tu Bóveda personal!`);
+    });
+
+    // 7. PRIORIDAD ALTA 2: DETALLE DE LISTA (ENTRAR DENTRO DE UNA COLECCIÓN)
+    const listDetailScreen = document.getElementById('list-detail-screen');
+    const btnBackToLists = document.getElementById('btn-back-to-lists');
+
+    btnBackToLists.addEventListener('click', () => {
+      listDetailScreen.classList.remove('open');
+    });
+
+    const LIST_DATA = {
+      'Cine con mi Padre': [
+        { title: "Blade Runner 2049", author: "Denis Villeneuve • 2017", rate: "9.5/10", note: "La vimos en el cine y salimos flipando.", img: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=300&auto=format&fit=crop&q=80", cat: "🎬 Película" },
+        { title: "Oppenheimer", author: "Christopher Nolan • 2023", rate: "9.2/10", note: "Nos encantó el debate moral del final.", img: "https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=300&auto=format&fit=crop&q=80", cat: "🎬 Película" },
+        { title: "Interstellar", author: "Christopher Nolan • 2014", rate: "10/10", note: "Nuestra película favorita juntos.", img: "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?w=300&auto=format&fit=crop&q=80", cat: "🎬 Película" }
+      ],
+      'Carnaval de Oro': [
+        { title: "Los Peregrinos (Credo)", author: "Juan Carlos Aragón • 2017", rate: "10/10", note: "La mayor cuarteta de la historia.", img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&auto=format&fit=crop&q=80", cat: "🎭 Carnaval" },
+        { title: "No Valemo un Duro", author: "Pasodoble 'Que bien sabían' • 2017", rate: "9.5/10", note: "Chirigota con compás y corazón.", img: "https://img.youtube.com/vi/3m1a8FxCuBY/hqdefault.jpg", cat: "🎭 Carnaval" }
+      ],
+      'Favoritos Sagrados': [
+        { title: "Cien años de soledad", author: "Gabriel García Márquez • 1967", rate: "10/10", note: "Realismo mágico inolvidable.", img: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=300&auto=format&fit=crop&q=80", cat: "📚 Libro" },
+        { title: "Abbey Road", author: "The Beatles • 1969", rate: "10/10", note: "El mejor medley de la historia.", img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&auto=format&fit=crop&q=80", cat: "🎵 Álbum" }
+      ],
+      'Pendientes / Por Ver': [
+        { title: "Dune: Parte Dos", author: "Denis Villeneuve • 2024", rate: "Pendiente", note: "Me la recomendaron Carlos y Laura.", img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=300&auto=format&fit=crop&q=80", cat: "🎬 Película" }
+      ]
+    };
+
+    function openCollectionDetail(title, desc, img1, img2, img3, img4) {
+      document.getElementById('list-detail-title').textContent = title;
+      document.getElementById('list-detail-desc').textContent = desc;
+      document.getElementById('list-detail-nav-title').textContent = title;
+      
+      const mosaic = document.getElementById('list-detail-hero-mosaic');
+      mosaic.innerHTML = `<img src="${img1}"><img src="${img2}"><img src="${img3}"><img src="${img4}">`;
+
+      // Cargar obras pertenecientes a esta lista
+      const container = document.getElementById('list-detail-cards-container');
+      container.innerHTML = '';
+      const items = LIST_DATA[title] || LIST_DATA['Favoritos Sagrados'];
+
+      items.forEach(item => {
+        const c = document.createElement('div');
+        c.className = "vault-card";
+        c.onclick = () => openWorkDetail(item.title, item.author, item.cat, item.img, item.rate, item.note, `Ficha incluida en la colección ${title}.`);
+        c.innerHTML = `
+          <img src="${item.img}" class="card-cover">
+          <div class="card-info">
+            <div>
+              <span class="card-type">${item.cat}</span>
+              <h3 class="card-name">${item.title}</h3>
+              <p class="card-author">${item.author}</p>
+              <div class="card-rating-row"><span class="card-rating">★★★★★ (${item.rate})</span></div>
+            </div>
+            <p class="card-user-note">«${item.note}»</p>
+          </div>
+        `;
+        container.appendChild(c);
+      });
+
+      listDetailScreen.classList.add('open');
+    }
+
+    document.getElementById('btn-share-entire-list-wa').addEventListener('click', () => {
+      const title = document.getElementById('list-detail-title').textContent;
+      alert(`¡Enlace generado para WhatsApp!\n\n«Oye, te comparto mi lista completa de "${title}" con todas mis notas personales: https://legado.app/l/${encodeURIComponent(title)}»`);
+    });
+
+    // 8. PRIORIDAD ALTA 3: VALIDADOR PREVIO (FICHA EXPANDIDA DE OBRA)
+    const workDetailModal = document.getElementById('work-detail-modal');
+
+    function openWorkDetail(title, meta, type, poster, rating, note, synopsis) {
+      document.getElementById('detail-work-title').textContent = title;
+      document.getElementById('detail-work-meta').textContent = meta;
+      document.getElementById('detail-work-type').textContent = type;
+      document.getElementById('detail-work-poster').src = poster;
+      document.getElementById('detail-work-rating').textContent = `★★★★★ (${rating})`;
+      document.getElementById('detail-work-synopsis').textContent = synopsis || `Tu nota: «${note}»`;
+
+      workDetailModal.classList.add('open');
+    }
+
+    document.getElementById('btn-close-work-detail').addEventListener('click', () => {
+      workDetailModal.classList.remove('open');
+    });
+
+    function askFriendWhatsApp(friendName) {
+      const title = document.getElementById('detail-work-title').textContent;
+      alert(`Abriendo WhatsApp con ${friendName}...\n\nMensaje predefinido:\n«Oye ${friendName}, he visto en tu legado que le diste muy buena nota a "${title}", ¿me la recomiendas para este finde?»`);
+    }
+
+    // 9. Duelos Split A vs B
+    const splitDuelModal = document.getElementById('split-duel-modal');
+    const duelChoiceLeft = document.getElementById('duel-choice-left');
+    const duelChoiceRight = document.getElementById('duel-choice-right');
+    const duelRoundIndicator = document.getElementById('duel-round-indicator');
+
+    const DUEL_ROUNDS = [
+      {
+        left: { title: "Blade Runner 2049", sub: "Denis Villeneuve • 2017", pill: "Cine Sci-Fi", rating: "★★★★★ 9.5", img: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=500&auto=format&fit=crop&q=80" },
+        right: { title: "Oppenheimer", sub: "Christopher Nolan • 2023", pill: "Cine Drama", rating: "★★★★★ 9.2", img: "https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=500&auto=format&fit=crop&q=80" }
+      },
+      {
+        left: { title: "Los Peregrinos (Credo)", sub: "Juan Carlos Aragón • 2017", pill: "Carnaval", rating: "★★★★★ 10.0", img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&auto=format&fit=crop&q=80" },
+        right: { title: "No Valemo un Duro", sub: "Pasodoble • 2017", pill: "Chirigota", rating: "★★★★★ 9.5", img: "https://img.youtube.com/vi/3m1a8FxCuBY/hqdefault.jpg" }
+      },
+      {
+        left: { title: "Cien años de soledad", sub: "G. García Márquez • 1967", pill: "Literatura", rating: "★★★★★ 10.0", img: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500&auto=format&fit=crop&q=80" },
+        right: { title: "1984", sub: "George Orwell • 1949", pill: "Distopía", rating: "★★★★★ 9.8", img: "https://images.unsplash.com/photo-1495640388908-05fa85288e61?w=500&auto=format&fit=crop&q=80" }
+      }
+    ];
+
+    let currentDuelIndex = 0;
+    function renderDuelRound() {
+      const d = DUEL_ROUNDS[currentDuelIndex];
+      duelRoundIndicator.textContent = `⚔️ Duelo ${currentDuelIndex + 1} de ${DUEL_ROUNDS.length} (Curación ELO)`;
+      
+      document.getElementById('duel-title-left').textContent = d.left.title;
+      document.getElementById('duel-sub-left').textContent = d.left.sub;
+      document.getElementById('duel-pill-left').textContent = d.left.pill;
+      document.getElementById('duel-rate-left').textContent = d.left.rating;
+      document.getElementById('duel-img-left').src = d.left.img;
+
+      document.getElementById('duel-title-right').textContent = d.right.title;
+      document.getElementById('duel-sub-right').textContent = d.right.sub;
+      document.getElementById('duel-pill-right').textContent = d.right.pill;
+      document.getElementById('duel-rate-right').textContent = d.right.rating;
+      document.getElementById('duel-img-right').src = d.right.img;
+    }
+
+    document.getElementById('tool-open-split-duel').addEventListener('click', () => {
+      currentDuelIndex = 0;
+      renderDuelRound();
+      splitDuelModal.classList.add('open');
+    });
+
+    document.getElementById('btn-close-split-duel').addEventListener('click', () => {
+      splitDuelModal.classList.remove('open');
+    });
+
+    function chooseDuelSide(side) {
+      const winner = side === 'left' ? DUEL_ROUNDS[currentDuelIndex].left.title : DUEL_ROUNDS[currentDuelIndex].right.title;
+      const el = side === 'left' ? duelChoiceLeft : duelChoiceRight;
+      el.classList.add('selected-choice');
+
+      setTimeout(() => {
+        el.classList.remove('selected-choice');
+        currentDuelIndex++;
+        if (currentDuelIndex < DUEL_ROUNDS.length) {
+          renderDuelRound();
+        } else {
+          alert(`🏆 ¡Rondas completadas!\n\nHas elegido ${winner} y tu ranking ELO ha recalibrado tu Bóveda automáticamente.`);
+          splitDuelModal.classList.remove('open');
+        }
+      }, 250);
+    }
+
+    duelChoiceLeft.addEventListener('click', () => chooseDuelSide('left'));
+    duelChoiceRight.addEventListener('click', () => chooseDuelSide('right'));
+
+    // 10. Mini-reproductor persistente
+    const miniPlayer = document.getElementById('mini-player');
+    function playMiniAudio(title, artist, img) {
+      document.getElementById('mini-player-title').textContent = title;
+      document.getElementById('mini-player-artist').textContent = artist;
+      document.getElementById('mini-player-img').src = img;
+      miniPlayer.classList.add('active');
+    }
+
+    function closeMiniPlayer() {
+      miniPlayer.classList.remove('active');
+    }
+
+    let isPlayingMini = true;
+    document.getElementById('btn-mini-play-toggle').addEventListener('click', () => {
+      isPlayingMini = !isPlayingMini;
+      document.getElementById('btn-mini-play-toggle').textContent = isPlayingMini ? '⏸️' : '▶️';
+    });
+
+    // 11. Modal Cápsula
+    const capsuleModal = document.getElementById('capsule-modal');
+    document.getElementById('btn-open-capsule').addEventListener('click', () => capsuleModal.classList.add('open'));
+    document.getElementById('btn-share-selected').addEventListener('click', () => capsuleModal.classList.add('open'));
+    document.getElementById('btn-close-capsule').addEventListener('click', () => capsuleModal.classList.remove('open'));
+    document.getElementById('btn-copy-capsule').addEventListener('click', () => {
+      alert('¡Enlace de cápsula copiado!\n\nhttps://legado.app/c/mis-favoritas');
+      capsuleModal.classList.remove('open');
+    });
+  </script>
+</body>
+</html>

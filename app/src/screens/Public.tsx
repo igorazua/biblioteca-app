@@ -1,0 +1,162 @@
+import { useEffect, useMemo, useState } from 'react'
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
+import { getItem, isKnownItem, itemFacts, typeName } from '../data/catalog'
+import { useStore } from '../store/useStore'
+import { SHELVES, SHELF_LABEL } from '../types'
+import { decodeList, decodeProfile } from '../lib/share'
+import { Poster } from '../components/Poster'
+import { Avatar, Toast } from '../components/ui'
+import { Icon } from '../components/Icon'
+import { APP_NAME } from '../config'
+
+/** Vistas públicas: sin marco ni barra de pestañas, como una web normal para quien no tiene la app. */
+function PublicShell({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="min-h-full bg-bg">
+      <div className="mx-auto max-w-[480px] min-h-screen px-5 pt-[max(env(safe-area-inset-top),20px)] pb-32 relative">
+        <div className="flex items-center justify-between mb-6">
+          <span className="text-accent text-sm font-semibold tracking-widest uppercase">{APP_NAME}</span>
+          <Link to="/" className="text-sm text-mute underline underline-offset-2">Abrir la app</Link>
+        </div>
+        {children}
+      </div>
+    </div>
+  )
+}
+
+function Broken() {
+  return (
+    <PublicShell>
+      <div className="py-24 text-center text-mute">
+        <div className="text-5xl mb-4">🔗</div>
+        <h1 className="serif text-2xl text-ink font-semibold">Este link no funciona</h1>
+        <p className="mt-2 text-sm">Puede que esté cortado o incompleto. Pide que te lo vuelvan a enviar.</p>
+      </div>
+    </PublicShell>
+  )
+}
+
+export function PublicList() {
+  const { payload = '' } = useParams()
+  const { pathname } = useLocation()
+  const nav = useNavigate()
+  const onboarded = useStore((s) => s.onboarded)
+  const entries = useStore((s) => s.entries)
+  const setPendingSave = useStore((s) => s.setPendingSave)
+  const saveItemsAsPending = useStore((s) => s.saveItemsAsPending)
+  const applyPendingSave = useStore((s) => s.applyPendingSave)
+  const pendingSave = useStore((s) => s.pendingSave)
+  const [toast, setToast] = useState<string | null>(null)
+  const data = useMemo(() => decodeList(payload, isKnownItem), [payload])
+
+  // volvemos del onboarding con un guardado en espera → se aplica ahora
+  useEffect(() => {
+    if (onboarded && pendingSave) {
+      const n = applyPendingSave()
+      if (n) setToast(`${n} guardada${n > 1 ? 's' : ''} como pendiente${n > 1 ? 's' : ''}`)
+    }
+  }, [onboarded, pendingSave, applyPendingSave])
+
+  if (!data) return <Broken />
+  const { list, items } = data
+  const ids = items.map(([id]) => id)
+
+  const save = (these: string[]) => {
+    if (!onboarded) {
+      setPendingSave({ ids: these, origin: list.a })
+      nav(`/onboarding?next=${encodeURIComponent(pathname)}`)
+      return
+    }
+    const n = saveItemsAsPending(these, list.a)
+    setToast(n ? `${n} guardada${n > 1 ? 's' : ''} como pendiente${n > 1 ? 's' : ''}` : 'Ya la tenías en tu biblioteca')
+  }
+
+  return (
+    <PublicShell>
+      <div className="flex items-center gap-3">
+        <Avatar name={list.a} color={list.c} size={44} />
+        <p className="text-sm text-mute"><b className="text-ink">{list.a}</b> te ha preparado esta lista</p>
+      </div>
+      <h1 className="serif text-[34px] leading-[1.08] font-semibold mt-4">{list.t}</h1>
+      {list.d && <p className="text-mute mt-2">{list.d}</p>}
+      <div className="text-xs text-mute mt-3">{ids.length} obra{ids.length !== 1 ? 's' : ''}{data.missing ? ` · ${data.missing} ya no está${data.missing > 1 ? 'n' : ''} en el catálogo` : ''}</div>
+
+      <ul className="mt-6 space-y-4">
+        {items.map(([id, note]) => {
+          const it = getItem(id)!
+          const mine = entries[id]
+          return (
+            <li key={id} className="flex gap-4 bg-surface rounded-3xl border border-line p-3">
+              <Poster item={it} className="w-[104px] aspect-[2/3] rounded-2xl shrink-0" />
+              <div className="flex-1 min-w-0 flex flex-col">
+                <div className="text-[11px] uppercase tracking-wider text-mute">{typeName(it.type)} · {it.year}</div>
+                <div className="serif text-xl font-semibold leading-tight mt-0.5">{it.title}</div>
+                <div className="text-xs text-mute mt-0.5">{it.creator}{itemFacts(it) ? ` · ${itemFacts(it)}` : ''}</div>
+                {note && <p className="serif italic text-[15px] text-accent mt-2">«{note}»</p>}
+                <p className="text-xs text-mute mt-1.5 line-clamp-2">{it.synopsis}</p>
+                <button onClick={() => save([id])} disabled={!!mine && mine.status !== 'dismissed'}
+                  className="mt-auto pt-2 self-start min-h-[44px] px-4 rounded-xl bg-surface2 text-sm font-medium flex items-center gap-2 disabled:text-stamp-green">
+                  <Icon name={mine && mine.status !== 'dismissed' ? 'check' : 'bookmark'} size={16} />
+                  {mine && mine.status !== 'dismissed' ? 'Ya en tu biblioteca' : 'Guardar en mi biblioteca'}
+                </button>
+              </div>
+            </li>
+          )
+        })}
+      </ul>
+
+      <div className="fixed bottom-0 inset-x-0 p-4 bg-gradient-to-t from-bg via-bg/95 to-transparent">
+        <div className="mx-auto max-w-[480px]">
+          <button onClick={() => save(ids)} className="w-full min-h-[54px] rounded-2xl bg-accent text-accent-ink font-semibold text-lg shadow-xl">Guardar toda la lista</button>
+        </div>
+      </div>
+      <AnimatePresence>{toast && <Toast key={toast} message={toast} onDone={() => setToast(null)} />}</AnimatePresence>
+    </PublicShell>
+  )
+}
+
+export function PublicProfile() {
+  const { payload = '' } = useParams()
+  const data = useMemo(() => decodeProfile(payload, isKnownItem), [payload])
+  if (!data) return <Broken />
+  return (
+    <PublicShell>
+      <div className="flex items-center gap-4">
+        <Avatar name={data.n} color={data.c} size={64} />
+        <div>
+          <h1 className="serif text-[30px] leading-tight font-semibold">{data.n}</h1>
+          <p className="text-sm text-mute">Lo que más le ha marcado</p>
+        </div>
+      </div>
+      {SHELVES.map((t) => {
+        const ids = data.top[t] ?? []
+        if (!ids.length) return null
+        return (
+          <section key={t} className="mt-7">
+            <h2 className="serif text-xl font-semibold mb-3">{SHELF_LABEL[t].plural}</h2>
+            <ol className="grid grid-cols-3 gap-3">
+              {ids.map((id, i) => {
+                const it = getItem(id)!
+                return (
+                  <li key={id}>
+                    <div className="relative">
+                      <Poster item={it} className="w-full aspect-[2/3] rounded-2xl border border-line" />
+                      <span className="absolute top-1.5 left-1.5 w-7 h-7 rounded-full bg-accent text-accent-ink text-sm font-bold flex items-center justify-center">{i + 1}</span>
+                    </div>
+                    <div className="serif text-sm font-semibold leading-tight mt-1.5 line-clamp-2">{it.title}</div>
+                  </li>
+                )
+              })}
+            </ol>
+          </section>
+        )
+      })}
+      <div className="fixed bottom-0 inset-x-0 p-4 bg-gradient-to-t from-bg via-bg/95 to-transparent">
+        <div className="mx-auto max-w-[480px]">
+          <Link to="/" className="w-full min-h-[54px] rounded-2xl bg-accent text-accent-ink font-semibold text-lg flex items-center justify-center shadow-xl">Crear mi biblioteca</Link>
+        </div>
+      </div>
+    </PublicShell>
+  )
+}
