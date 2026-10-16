@@ -40,6 +40,7 @@ async function main() {
           if (raw.tmdbId) item.tmdbId = raw.tmdbId
           if (raw.olid) item.olid = raw.olid
           if (raw.mbid) item.mbid = raw.mbid
+          if (raw.bggId) item.bggId = raw.bggId
           if (raw.readers) item.readers = raw.readers
           if (raw.voteAvg != null) item.voteAvg = raw.voteAvg
           if (raw.voteCount != null) item.voteCount = raw.voteCount
@@ -47,10 +48,23 @@ async function main() {
           if (raw.originCountry?.length) item.originCountry = raw.originCountry
           if (raw.originalLanguage) item.originalLanguage = raw.originalLanguage
           if (raw.collection) item.collection = raw.collection
+          if (raw.basedOn) item.basedOn = raw.basedOn
+          if (raw.awards?.length) item.awards = raw.awards
           if (raw.ongoing != null) item.ongoing = raw.ongoing
+          if (raw.synopsis) item.synopsis = raw.synopsis
           if (raw.keywords?.length) item.keywords = raw.keywords
           else if (raw.subjects?.length) item.keywords = raw.subjects
           else if (raw.tags?.length) item.keywords = raw.tags
+
+          if (raw.posterUrl && (raw.imageSrc === 'wikimedia' || raw.imageSrc === 'openlibrary')) {
+            item.posterUrl = raw.posterUrl
+            item.imageSrc = raw.imageSrc
+            item.imageCredit = raw.imageCredit
+          }
+
+          if (raw.src) {
+            item.src = { ...item.src, ...raw.src }
+          }
 
           enrichedCount++
         }

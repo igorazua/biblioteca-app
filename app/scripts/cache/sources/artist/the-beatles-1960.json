@@ -1,9 +1,9 @@
 {
   "source": "musicbrainz",
   "mbid": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
+  "wikidataId": "Q1299",
   "name": "The Beatles",
   "country": "GB",
-  "disambiguation": "UK rock band, “The Fab Four”",
   "tags": [
     "rock",
     "pop",
@@ -87,5 +87,13 @@
     "rock groups",
     "vyrzukhisuc-artiest"
   ],
-  "similar": []
+  "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Beatles%20Trenter%201963.jpg?width=600",
+  "imageSrc": "wikimedia",
+  "imageCredit": "Wikimedia Commons",
+  "src": {
+    "mbid": "musicbrainz",
+    "wikidataId": "wikidata",
+    "tags": "musicbrainz",
+    "posterUrl": "wikimedia"
+  }
 }

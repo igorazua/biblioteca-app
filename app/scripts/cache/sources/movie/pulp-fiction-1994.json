@@ -5,9 +5,47 @@
   "imdbId": "tt0110912",
   "title": "Pulp Fiction",
   "year": 1994,
-  "synopsis": "película de 1994 dirigida por Quentin Tarantino",
+  "synopsis": "Pulp Fiction es una película estadounidense de 1994 escrita y dirigida por Quentin Tarantino. El guion está basado en historias que el mismo Tarantino desarrolló en colaboración con Roger Avary durante los años 1992 y 1993, incluyendo escenas que originalmente habían sido escritas para True Romance. A partir de una narrativa no lineal, la película entrelaza varias historias cuyos protagonistas son miembros del crimen organizado de Los Ángeles. Los diálogos estilizados, la mezcla de humor y violencia y su tono irónico distinguen a la película. Su nombre deriva de las revistas de literatura pulp y las novelas gráficas hard boiled, muy populares a mediados del siglo XX, conocidas por su violencia gráfica y su prosa dura. Es protagonizada por John Travolta, Uma Thurman, Samuel L. Jackson, Harvey Keitel, Bruce Willis y Tim Roth, entre otros. Es considerada una de las cintas más representativas de la obra del director estadounidense, siendo una de las obras que lo consagró como cineasta.",
   "wikiLangs": 107,
+  "durationMin": 154,
   "originCountry": [
     "Q30"
-  ]
+  ],
+  "collection": null,
+  "basedOn": null,
+  "awards": [
+    "Q1315008",
+    "Q1720784",
+    "Q1789102",
+    "Q179808",
+    "Q1868950",
+    "Q952914",
+    "Q41417",
+    "Q503034",
+    "Q505449",
+    "Q696972",
+    "Q696998",
+    "Q6978541",
+    "Q849124",
+    "Q1170507",
+    "Q2295041",
+    "Q2544859",
+    "Q3404523",
+    "Q41375",
+    "Q3841643",
+    "Q540977",
+    "Q548389",
+    "Q1966965",
+    "Q5211226"
+  ],
+  "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pulp%20Fiction%20Showing%20(16296612198).jpg?width=600",
+  "imageSrc": "wikimedia",
+  "imageCredit": "Wikimedia Commons",
+  "src": {
+    "wikidataId": "wikidata",
+    "tmdbId": "wikidata",
+    "imdbId": "wikidata",
+    "synopsis": "wikipedia",
+    "posterUrl": "wikimedia"
+  }
 }

@@ -22,5 +22,15 @@
     "spanish language materials",
     "ficcion"
   ],
-  "firstPublishYear": 1967
+  "firstPublishYear": 1967,
+  "posterUrl": "https://covers.openlibrary.org/b/id/12627383-L.jpg",
+  "imageSrc": "openlibrary",
+  "imageCredit": "Open Library",
+  "src": {
+    "olid": "openlibrary",
+    "readers": "openlibrary",
+    "voteAvg": "openlibrary",
+    "subjects": "openlibrary",
+    "posterUrl": "openlibrary"
+  }
 }

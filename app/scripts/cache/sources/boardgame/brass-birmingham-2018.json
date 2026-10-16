@@ -1,5 +1,15 @@
 {
   "source": "wikidata",
-  "wikidataId": "Q108033998",
-  "label": "Brass: Birmingham"
+  "wikidataId": "Q134968692",
+  "bggId": null,
+  "title": "Brass: Birmingham",
+  "synopsis": "videojuego de 2021",
+  "wikiLangs": 0,
+  "posterUrl": "https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__original/img/FpyxH41Y6_ROoePAilPNEhXnzO8=/0x0/filters:format(jpeg)/pic3490053.jpg",
+  "imageSrc": "seed",
+  "src": {
+    "wikidataId": "wikidata",
+    "synopsis": "wikidata",
+    "posterUrl": "seed"
+  }
 }

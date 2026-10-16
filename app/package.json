@@ -12,7 +12,8 @@
     "icons": "node scripts/make-icons.mjs",
     "engine:sources": "node --env-file-if-exists=.env.local scripts/engine/sources.mjs",
     "engine:build": "node scripts/engine/build.mjs",
-    "engine": "npm run engine:sources && npm run engine:build",
+    "engine:coverage": "node scripts/engine/coverage.mjs",
+    "engine": "npm run engine:sources && npm run engine:build && npm run engine:coverage",
     "build-preview": "npm run build && vite preview --port 4173 --host"
   },
   "dependencies": {

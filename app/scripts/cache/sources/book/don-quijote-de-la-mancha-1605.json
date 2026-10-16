@@ -22,5 +22,15 @@
     "great_books_of_the_western_world",
     "squires"
   ],
-  "firstPublishYear": 1600
+  "firstPublishYear": 1600,
+  "posterUrl": "https://covers.openlibrary.org/b/id/14428305-L.jpg",
+  "imageSrc": "openlibrary",
+  "imageCredit": "Open Library",
+  "src": {
+    "olid": "openlibrary",
+    "readers": "openlibrary",
+    "voteAvg": "openlibrary",
+    "subjects": "openlibrary",
+    "posterUrl": "openlibrary"
+  }
 }

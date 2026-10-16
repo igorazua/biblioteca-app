@@ -1,7 +1,7 @@
 # Diseño técnico del motor — Biblioteca
 
 > **Para quién:** el agente que lo construya. Las decisiones de producto están en `docs/IDEA.md` §7b (fuente de verdad). Aquí está el **cómo**.
-> **Estado:** v1.0 (16/10/2026). Ningún paso de este documento está construido todavía.
+> **Estado:** v1.1 (16/10/2026). Construidos F-Backend, F0, F1 (scripts), F4, F5 y F6. **F1 no se ha ejecutado de verdad y F2-F3 no existen**: los motores funcionan en modo degradado. El enriquecimiento se ejecuta con `docs/ENRIQUECIMIENTO.md`, que además añade el **grafo importado** (E4) y la **elección de vecinos con LLM** (E8) y sustituye la fórmula de §6.2.
 > **Alcance:** la demo sigue siendo una PWA sin backend (`app/`). Todo el motor corre **en el navegador** con datos precalculados por scripts offline. §11 dice qué cambia cuando haya Supabase.
 
 ---
@@ -334,6 +334,8 @@ sim(a,b) = 0.45·cos(emb_a, emb_b)
          + 0.10·[b ∈ related_a ∨ a ∈ related_b]
 ```
 Pesos en `params.ts` (`SIM_W`). Se ajustan con la QA de §5.7: se elige la combinación que más aciertos da.
+
+> **Sustituida** por la fórmula de `docs/ENRIQUECIMIENTO.md` E9, que añade las aristas importadas (`graph`) y las elegidas por el LLM (`pick`).
 
 ### 6.3 Lo que se guarda para el navegador (`src/data/engine/<shelf>.json`)
 

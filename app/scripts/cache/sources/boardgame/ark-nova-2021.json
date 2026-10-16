@@ -1,5 +1,17 @@
 {
   "source": "wikidata",
   "wikidataId": "Q111493740",
-  "label": "Ark Nova"
+  "bggId": "342942",
+  "title": "Ark Nova",
+  "synopsis": "In Ark Nova, you will plan and design a modern, scientifically managed zoo. With the ultimate goal of owning the most successful zoological establishment, you will build enclosures, accommodate animals, and support conservation projects all over the world. Specialists and unique ...",
+  "wikiLangs": 4,
+  "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ark%20Nova%20-%204c0b85ad-9d86-4491-85bc-f88def354ec3~1.jpg?width=600",
+  "imageSrc": "wikimedia",
+  "imageCredit": "Wikimedia Commons / Wikipedia",
+  "src": {
+    "wikidataId": "wikidata",
+    "bggId": "wikidata",
+    "synopsis": "wikidata",
+    "posterUrl": "wikimedia"
+  }
 }

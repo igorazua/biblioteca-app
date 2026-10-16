@@ -1,9 +1,9 @@
 {
   "source": "musicbrainz",
   "mbid": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+  "wikidataId": "Q15862",
   "name": "Queen",
   "country": "GB",
-  "disambiguation": "UK rock group",
   "tags": [
     "rock",
     "pop",
@@ -61,5 +61,13 @@
     "rx27",
     "vyrzukhisuc-artiest"
   ],
-  "similar": []
+  "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Queen%20A%20Night%20At%20The%20Opera%20(1975%20Elektra%20publicity%20photo%2002).jpg?width=600",
+  "imageSrc": "wikimedia",
+  "imageCredit": "Wikimedia Commons",
+  "src": {
+    "mbid": "musicbrainz",
+    "wikidataId": "wikidata",
+    "tags": "musicbrainz",
+    "posterUrl": "wikimedia"
+  }
 }

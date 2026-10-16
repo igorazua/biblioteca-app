@@ -140,7 +140,10 @@ Aparece una tarjeta de la estantería en la que estés. Gestos:
   - **Juegos**: Wikidata; BGG es solo no comercial.
 - **Capa 2, un LLM procesa cada obra por lotes** (una vez, no en tiempo real) con todo lo anterior como base, para no inventar en obras nicho. Devuelve **ejes de sensación** del 1 al 5 propios de cada categoría (pelis: tono luminoso↔oscuro, ritmo, carga emocional, exigencia, humor, tensión o miedo, realismo↔fantasía, para toda la familia, reconfortante o para repetir…) y etiquetas de tema y de «para cuándo» (en pareja, con amigos, para desconectar…).
 - **Capa 3, vectores de cercanía**: un embedding por obra → distancia entre dos obras cualesquiera, vecinos más cercanos (grafo de *alikeness*) y clústeres.
-- **Capa 4, colaborativo** («a quien le gusta A le gusta B») cuando haya usuarios; mientras, valen los amigos y las relaciones de TMDB.
+- **Capa 1b, asociaciones importadas** ✅ (16/10): antes de fabricar el parecido, se importa el que ya existe en otras fuentes (TMDB recommendations, Wikidata «basada en», sagas, influencias, mismo autor…). Cada asociación guarda su **fuente**, para poder quitarla si una licencia no vale al pasar a comercial. El LLM elige además los vecinos de cada obra de entre candidatas reales, con un motivo. Plan en `docs/ENRIQUECIMIENTO.md`.
+- **Capa 4, colaborativo** («a quien le gusta A le gusta B») cuando haya usuarios; mientras, valen los amigos y las asociaciones importadas.
+- **Lo social no depende de la escala** ✅: la opinión de un amigo es una señal directa que vale desde el primer amigo (la app es para pocos amigos bien elegidos). Lo que necesita volumen es solo el colaborativo estadístico.
+- **Las listas compartidas no son señal del motor** ✅ de momento: son una función voluntaria.
 - **MovieLens / Tag Genome**: la **idea** de describir cada obra con grados de sensación es libre y la usamos, pero con **vocabulario y valores propios**. Sus **datos** (las puntuaciones) son solo no comerciales: no entran en el producto. Para calibrar en local, solo con permiso de GroupLens (lo conceden a petición).
 - **País y región** del usuario: se toman del idioma o el país del dispositivo; sin GPS.
 - **Plataformas**: en Descubrir y en las recomendaciones **nunca filtran**, solo suben un poco (si no, no se descubre nada). En Decidir sí pesan mucho, porque es para ver ahora.

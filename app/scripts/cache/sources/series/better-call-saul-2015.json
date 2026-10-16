@@ -5,9 +5,23 @@
   "imdbId": "tt3032476",
   "title": "Better Call Saul",
   "year": 2015,
-  "synopsis": "serie de televisión estadounidense",
+  "synopsis": "Better Call Saul es una serie de televisión estadounidense de drama que se emitió entre 2015 y 2022.\nFue creada por Vince Gilligan y Peter Gould, derivada (spin-off) de Breaking Bad (2008‑2013), también creada por Gilligan y de la que constituye a la vez una precuela y secuela.",
   "wikiLangs": 58,
+  "durationMin": 50,
   "originCountry": [
     "Q30"
-  ]
+  ],
+  "collection": null,
+  "basedOn": "Q1079",
+  "awards": [],
+  "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/501/1253515.jpg",
+  "imageSrc": "seed",
+  "imageCredit": "IMDb / Archivo",
+  "src": {
+    "wikidataId": "wikidata",
+    "tmdbId": "wikidata",
+    "imdbId": "wikidata",
+    "synopsis": "wikipedia",
+    "posterUrl": "seed"
+  }
 }

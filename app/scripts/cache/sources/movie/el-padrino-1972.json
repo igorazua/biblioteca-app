@@ -5,9 +5,31 @@
   "imdbId": "tt0068646",
   "title": "El padrino",
   "year": 1972,
-  "synopsis": "película estadounidense de 1972 dirigida por Francis Ford Coppola",
+  "synopsis": "El padrino es una película estadounidense de 1972 dirigida por Francis Ford Coppola. La película fue producida por Albert S. Ruddy, de la compañía Paramount Pictures. Está basada en la novela homónima de Mario Puzo, quien adaptó el guion junto a Coppola y Robert Towne, este último sin ser acreditado. Protagonizada por Marlon Brando y Al Pacino como los líderes de una poderosa familia criminal ficticia de Nueva York, la historia, ambientada desde 1945 a 1955, cuenta las crónicas de la familia Corleone liderada por Vito Corleone (Brando), enfocándose en el personaje de Michael Corleone (Pacino), y su transformación de un reacio joven ajeno a los asuntos familiares a un implacable jefe de la mafia ítalo-estadounidense.",
   "wikiLangs": 132,
+  "durationMin": 175,
   "originCountry": [
     "Q30"
-  ]
+  ],
+  "collection": "Q3225260",
+  "basedOn": "Q243556",
+  "awards": [
+    "Q102427",
+    "Q103916",
+    "Q107258",
+    "Q1966965",
+    "Q849124",
+    "Q1011509",
+    "Q593098"
+  ],
+  "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Godfather%20logo.svg?width=600",
+  "imageSrc": "wikimedia",
+  "imageCredit": "Wikimedia Commons",
+  "src": {
+    "wikidataId": "wikidata",
+    "tmdbId": "wikidata",
+    "imdbId": "wikidata",
+    "synopsis": "wikipedia",
+    "posterUrl": "wikimedia"
+  }
 }

@@ -14,8 +14,9 @@
 1. `docs/IDEA.md` — la idea, decisiones tomadas (✅) y debates abiertos. **Fuente de verdad.**
 2. `docs/DISENO_DEMO.md` — especificación completa de la demo navegable (PWA, sin backend) para enseñar a amigos.
 3. `docs/MOTOR.md` — diseño técnico del motor (mazo por cupos, Decidir, limpieza, enriquecimiento y métricas), por fases.
-4. `docs/COMPETENCIA.md` — competidores, cifras, viabilidad y análisis de pivote.
-5. `docs/antigravity/` — manifiesto previo hecho con Antigravity (`VISION_Y_FEATURES.md`) y mockup de UI.
+4. `docs/ENRIQUECIMIENTO.md` — plan de ejecución para enriquecer el catálogo de todas las categorías (fuentes y licencias, grafo importado, LLM, vectores, cobertura).
+5. `docs/COMPETENCIA.md` — competidores, cifras, viabilidad y análisis de pivote.
+6. `docs/antigravity/` — manifiesto previo hecho con Antigravity (`VISION_Y_FEATURES.md`) y mockup de UI.
 
 ## Estructura
 - `demo/mockup.html` — demo antigua de Antigravity (solo referencia visual; no reutilizar).
