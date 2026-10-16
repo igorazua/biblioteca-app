@@ -1,6 +1,10 @@
+import { useEffect } from 'react'
 import { Navigate, Outlet, Route, Routes, useLocation } from 'react-router-dom'
 import { TabBar } from './components/TabBar'
 import { useStore } from './store/useStore'
+import { useAuth } from './store/useAuth'
+import { useFriends } from './store/useFriends'
+import { pullCloudEntries, initStoreSync } from './lib/sync'
 import { Discover } from './screens/Discover'
 import { Library } from './screens/Library'
 import { Shelf } from './screens/Shelf'
@@ -11,6 +15,7 @@ import { Profile } from './screens/Profile'
 import { Onboarding } from './screens/Onboarding'
 import { ListEditor } from './screens/ListEditor'
 import { PublicList, PublicProfile } from './screens/Public'
+import { JoinInvite } from './screens/JoinInvite'
 
 function Frame() {
   const onboarded = useStore((s) => s.onboarded)
@@ -51,11 +56,30 @@ function TabLayout() {
 }
 
 export function App() {
+  const user = useAuth((s) => s.user)
+
+  useEffect(() => {
+    const unsub = useAuth.getState().init()
+    const unsubSync = initStoreSync()
+    return () => {
+      unsub()
+      unsubSync?.()
+    }
+  }, [])
+
+  useEffect(() => {
+    if (user) {
+      pullCloudEntries(user.id)
+      useFriends.getState().loadFriends()
+    }
+  }, [user])
+
   return (
     <Routes>
       {/* Vistas públicas de links compartidos: sin marco ni barra, como una web normal */}
       <Route path="/l/:payload" element={<PublicList />} />
       <Route path="/p/:payload" element={<PublicProfile />} />
+      <Route path="/unete/:code" element={<JoinInvite />} />
       <Route path="/*" element={<Frame />} />
     </Routes>
   )

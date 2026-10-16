@@ -19,11 +19,18 @@ for (const f of friends)
     arr.push({ friend: f, entry: e })
     byItem.set(e.itemId, arr)
   }
-// los que la han visto primero, de mayor a menor nota; después los pendientes
 for (const arr of byItem.values())
   arr.sort((a, b) => (a.entry.status === b.entry.status ? (b.entry.score ?? 0) - (a.entry.score ?? 0) : a.entry.status === 'seen' ? -1 : 1))
 
-export const friendHits = (itemId: string): FriendHit[] => byItem.get(itemId) ?? []
+let friendHitsProvider: ((itemId: string) => FriendHit[]) | null = null
+export const setFriendHitsProvider = (fn: (itemId: string) => FriendHit[]) => {
+  friendHitsProvider = fn
+}
+
+export const friendHits = (itemId: string): FriendHit[] => {
+  if (friendHitsProvider) return friendHitsProvider(itemId)
+  return byItem.get(itemId) ?? []
+}
 
 /** Media de las notas de amigos (0-10) o null. */
 /**

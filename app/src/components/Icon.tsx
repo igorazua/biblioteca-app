@@ -27,6 +27,7 @@ const P = {
   link: 'M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3A4 4 0 0 0 11 18.7l1-1',
   edit: 'M4 20h4L19 9l-4-4L4 16v4zM13.5 6.5l4 4',
   more: 'M5 12h.01M12 12h.01M19 12h.01',
+  mail: 'M4 6h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2l8 6 8-6',
 } as const
 
 export type IconName = keyof typeof P
