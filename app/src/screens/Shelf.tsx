@@ -6,6 +6,7 @@ import { SHELVES, SHELF_LABEL, type ShelfType } from '../types'
 import { ItemRow } from '../components/ItemRow'
 import { Chip, ScreenHeader, Toast } from '../components/ui'
 import { AddFlow } from '../components/AddFlow'
+import { CleanupFlow } from '../components/CleanupFlow'
 import { Icon } from '../components/Icon'
 import { AnimatePresence } from 'framer-motion'
 import { WIZARD_PATH } from '../config'
@@ -20,6 +21,7 @@ export function Shelf() {
   const [params] = useSearchParams()
   const [seg, setSeg] = useState<Seg>(params.get('seg') === 'pend' ? 'pend' : 'ord')
   const [adding, setAdding] = useState(false)
+  const [cleaning, setCleaning] = useState(false)
   const [selecting, setSelecting] = useState(false)
   const [sel, setSel] = useState<string[]>([])
   const [toast, setToast] = useState<string | null>(null)
@@ -75,6 +77,15 @@ export function Shelf() {
         {seg === 'pend' && (
           pend.length ? (
             <>
+              {pend.length >= 3 && (
+                <button
+                  onClick={() => setCleaning(true)}
+                  className="w-full min-h-[48px] rounded-2xl bg-surface2 border border-line text-sm font-semibold mb-2 flex items-center justify-center gap-2 active:scale-[0.985] transition-transform"
+                >
+                  <Icon name="sparkle" size={17} className="text-accent" />
+                  Lanzar limpieza ({pend.length})
+                </button>
+              )}
               <Link to={`${WIZARD_PATH}?t=${t}`} className="w-full min-h-[50px] rounded-2xl bg-accent text-accent-ink font-semibold mb-1 flex items-center justify-center">
                 {t === 'book' ? '¿Qué leo ahora? Te ayudo a elegir' : t === 'boardgame' ? '¿A qué jugamos hoy? Te ayudo a elegir' : t === 'artist' ? '¿Qué escucho hoy? Te ayudo a elegir' : '¿Qué vemos? Te ayudo a elegir'}
               </Link>
@@ -93,6 +104,7 @@ export function Shelf() {
         </div>
       )}
       {adding && <AddFlow shelf={t} onClose={(m) => { setAdding(false); if (m) setToast(m) }} />}
+      {cleaning && <CleanupFlow shelf={t} onClose={() => setCleaning(false)} />}
       <AnimatePresence>{toast && <Toast key={toast} message={toast} onDone={() => setToast(null)} />}</AnimatePresence>
     </div>
   )

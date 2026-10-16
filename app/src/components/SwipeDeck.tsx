@@ -49,9 +49,14 @@ interface Props {
   shelf: ShelfType
   onSwipe: (item: Item, dir: SwipeDir) => void
   onOpen: (item: Item) => void
+  stamps?: {
+    right?: string
+    left?: string
+    up?: string
+  }
 }
 
-export const SwipeDeck = forwardRef<DeckHandle, Props>(function SwipeDeck({ deck, shelf, onSwipe, onOpen }, ref) {
+export const SwipeDeck = forwardRef<DeckHandle, Props>(function SwipeDeck({ deck, shelf, onSwipe, onOpen, stamps }, ref) {
   const box = useRef<HTMLDivElement>(null)
   const x = useMotionValue(0)
   const y = useMotionValue(0)
@@ -138,9 +143,9 @@ export const SwipeDeck = forwardRef<DeckHandle, Props>(function SwipeDeck({ deck
         <motion.div className="absolute inset-0 rounded-[28px] bg-stamp-green/25 pointer-events-none" style={{ opacity: rightO }} />
         <motion.div className="absolute inset-0 rounded-[28px] bg-stamp-red/25 pointer-events-none" style={{ opacity: leftO }} />
         <motion.div className="absolute inset-0 rounded-[28px] bg-stamp-blue/25 pointer-events-none" style={{ opacity: upO }} />
-        <Stamp label={SHELF_LABEL[shelf].stamp} color="var(--color-stamp-green)" opacity={rightO} className="top-[22%] left-5 -rotate-12" />
-        <Stamp label="NO ME INTERESA" color="var(--color-stamp-red)" opacity={leftO} className="top-[22%] right-4 rotate-12 text-[22px]" />
-        <Stamp label="PENDIENTE" color="var(--color-stamp-blue)" opacity={upO} className="top-[38%] left-1/2 -translate-x-1/2 -rotate-6" />
+        <Stamp label={stamps?.right ?? SHELF_LABEL[shelf].stamp} color="var(--color-stamp-green)" opacity={rightO} className="top-[22%] left-5 -rotate-12" />
+        <Stamp label={stamps?.left ?? "NO ME INTERESA"} color="var(--color-stamp-red)" opacity={leftO} className="top-[22%] right-4 rotate-12 text-[22px]" />
+        <Stamp label={stamps?.up ?? "PENDIENTE"} color="var(--color-stamp-blue)" opacity={upO} className="top-[38%] left-1/2 -translate-x-1/2 -rotate-6" />
       </motion.div>
     </div>
   )
