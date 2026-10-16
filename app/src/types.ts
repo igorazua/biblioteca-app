@@ -19,6 +19,22 @@ export interface Item {
   popularity: number // 0-100
   tmdbId?: number
   olid?: string
+  wikidataId?: string
+  mbid?: string
+  keywords?: string[]
+  voteAvg?: number
+  voteCount?: number
+  originCountry?: string[]
+  originalLanguage?: string
+  collection?: string
+  providers?: Record<string, string[]>
+  releasedIn?: string[]
+  cert?: Record<string, string>
+  wikiLangs?: number
+  wikiLocal?: string[]
+  readers?: number
+  related?: string[]
+  ongoing?: boolean
 }
 
 export type Depth = 'ligera' | 'media' | 'densa'
@@ -44,6 +60,7 @@ export interface FriendEntry {
   status: 'seen' | 'pending'
   score?: number
   comment?: string
+  at?: number // fecha determinista de la entrada (para recencia y avisos sociales)
 }
 
 export interface Friend {
@@ -73,6 +90,8 @@ export interface Profile {
   birthYear?: number
   platforms: string[]
   reader?: ReaderProfile
+  country?: string // ISO-3166 ('ES', 'MX'...)
+  lang?: string // ISO-639-1 ('es', 'en'...)
 }
 
 export type Motivation = 'aventura' | 'intriga' | 'emocion' | 'ideas' | 'lenguaje' | 'historia'
