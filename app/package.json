@@ -10,6 +10,9 @@
     "test": "vitest run",
     "seed": "node --env-file-if-exists=.env.local scripts/build-seed.mjs",
     "icons": "node scripts/make-icons.mjs",
+    "engine:sources": "node --env-file-if-exists=.env.local scripts/engine/sources.mjs",
+    "engine:build": "node scripts/engine/build.mjs",
+    "engine": "npm run engine:sources && npm run engine:build",
     "build-preview": "npm run build && vite preview --port 4173 --host"
   },
   "dependencies": {
