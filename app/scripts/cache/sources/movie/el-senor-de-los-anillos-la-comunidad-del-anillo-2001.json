@@ -1,0 +1,45 @@
+{
+  "source": "wikidata",
+  "wikidataId": "Q127367",
+  "tmdbId": 120,
+  "imdbId": "tt0120737",
+  "title": "El Señor de los Anillos: la Comunidad del Anillo",
+  "year": 2001,
+  "synopsis": "El Señor de los Anillos: la Comunidad del Anillo —cuyo título original en inglés es The Lord of the Rings: The Fellowship of the Ring—, conocida también de forma más abreviada como La Comunidad del Anillo, es una película de aventuras y fantasía de 2001 dirigida por Peter Jackson y basada en el primer volumen de El señor de los Anillos, de J. R. R. Tolkien (1954-55). Es la primera entrega de la trilogía cinematográfica de El Señor de los Anillos, compuesta también por Las Dos Torres y El Retorno del Rey, que a su vez adaptan los otros dos volúmenes de la saga literaria de fantasía.",
+  "wikiLangs": 97,
+  "durationMin": 178,
+  "voteAvg": 8.8,
+  "voteCount": 271,
+  "keywords": [
+    "fantasía",
+    "aventura"
+  ],
+  "seasons": null,
+  "episodes": null,
+  "originCountry": [
+    "Q664"
+  ],
+  "collection": "Q190214",
+  "basedOn": "Q208002",
+  "awards": [
+    "Q131520",
+    "Q487136",
+    "Q488651",
+    "Q139184",
+    "Q393686",
+    "Q3414212"
+  ],
+  "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/LotR21.png/330px-LotR21.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "imageSrc": "wikimedia",
+  "imageCredit": "Wikipedia / Wikimedia Commons",
+  "src": {
+    "wikidataId": "wikidata",
+    "tmdbId": "wikidata",
+    "imdbId": "wikidata",
+    "voteAvg": "wikidata",
+    "voteCount": "wikidata",
+    "keywords": "wikidata",
+    "synopsis": "wikipedia",
+    "posterUrl": "wikimedia"
+  }
+}

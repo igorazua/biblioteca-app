@@ -1,0 +1,36 @@
+{
+  "source": "openlibrary",
+  "olid": "OL11326416W",
+  "wikidataId": null,
+  "voteAvg": 9.3,
+  "voteCount": 15,
+  "readers": 505,
+  "subjects": [
+    "totalitarianism",
+    "fiction",
+    "totalitarianism -- fiction",
+    "dystopias",
+    "textbooks for foreign speakers",
+    "lectures et morceaux choisis",
+    "readers for new literates",
+    "high interest-low vocabulary books",
+    "english language",
+    "british and irish fiction (fictional works by one author)",
+    "london (england), fiction",
+    "fiction, political",
+    "fiction, dystopian",
+    "fiction, science fiction, general",
+    "readers"
+  ],
+  "firstPublishYear": 2003,
+  "posterUrl": "https://covers.openlibrary.org/b/id/8745958-L.jpg",
+  "imageSrc": "openlibrary",
+  "imageCredit": "Open Library",
+  "src": {
+    "olid": "openlibrary",
+    "readers": "openlibrary",
+    "voteAvg": "openlibrary",
+    "subjects": "openlibrary",
+    "posterUrl": "openlibrary"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "source": "wikidata",
+  "wikidataId": "Q190050",
+  "tmdbId": 550,
+  "imdbId": "tt0137523",
+  "title": "Fight Club",
+  "year": 1999,
+  "synopsis": "Fight Club es una película estadounidense de 1999 basada en la novela homónima de Chuck Palahniuk. La cinta fue dirigida por David Fincher y protagonizada por Edward Norton, Brad Pitt y Helena Bonham Carter.",
+  "wikiLangs": 102,
+  "durationMin": 139,
+  "voteAvg": 7.4,
+  "voteCount": 185,
+  "keywords": [
+    "drama",
+    "thriller",
+    "Q201662"
+  ],
+  "seasons": null,
+  "episodes": null,
+  "originCountry": [
+    "Q30"
+  ],
+  "collection": null,
+  "basedOn": "Q837283",
+  "awards": [
+    "Q28044798",
+    "Q943908",
+    "Q22055485",
+    "Q28044812",
+    "Q110728909"
+  ],
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_.jpg",
+  "imageSrc": "seed",
+  "imageCredit": "IMDb / Archivo",
+  "src": {
+    "wikidataId": "wikidata",
+    "tmdbId": "wikidata",
+    "imdbId": "wikidata",
+    "voteAvg": "wikidata",
+    "voteCount": "wikidata",
+    "keywords": "wikidata",
+    "synopsis": "wikipedia",
+    "posterUrl": "seed"
+  }
+}

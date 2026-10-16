@@ -2,6 +2,7 @@ import type { Friend, Item, Profile, ShelfType, UserEntry } from '../../types'
 import { PARAMS } from './params'
 import { MOOD_GENRES, NONFICTION_GENRES } from '../../data/questions'
 import { friendRanks } from '../rank'
+import { sim as engineSim } from './features'
 
 export type Answers = Record<string, string | string[] | undefined>
 
@@ -113,6 +114,11 @@ export function passesFilters(it: Item, a: Answers, platforms: string[]): boolea
 /** Similitud continua en [0, 1] entre dos obras */
 export function calcSimilarity(a: Item, b: Item): number {
   if (a.id === b.id) return 1.0
+
+  if (a.type === b.type) {
+    const s = engineSim(a.type, a.id, b.id)
+    if (s != null && s !== 0.5) return s
+  }
 
   // 1. Similitud de géneros (Jaccard)
   const gA = new Set(a.genres)

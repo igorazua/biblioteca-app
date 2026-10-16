@@ -1,0 +1,27 @@
+{
+  "source": "wikidata",
+  "wikidataId": "Q478360",
+  "tmdbId": 1438,
+  "imdbId": "tt0306414",
+  "title": "The Wire",
+  "year": 2002,
+  "synopsis": "The Wire es una serie de televisión estadounidense ambientada en Baltimore, Maryland, cuyo hilo conductor son las intervenciones telefónicas judiciales encomendadas a un grupo policial. Fue ideada, escrita y producida por el periodista y escritor David Simon, que se basó en su experiencia en la sección de sucesos del Baltimore Sun. Se estrenó en el canal de televisión por cable HBO el 2 de junio de 2002 y finalizó su emisión el 9 de marzo de 2008, periodo en el que se emitieron sesenta capítulos repartidos en cinco temporadas.",
+  "wikiLangs": 49,
+  "durationMin": 60,
+  "originCountry": [
+    "Q30"
+  ],
+  "collection": null,
+  "basedOn": null,
+  "awards": [],
+  "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/The_Wire_logo.svg/langes-330px-The_Wire_logo.svg.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "imageSrc": "wikimedia",
+  "imageCredit": "Wikipedia / Wikimedia Commons",
+  "src": {
+    "wikidataId": "wikidata",
+    "tmdbId": "wikidata",
+    "imdbId": "wikidata",
+    "synopsis": "wikipedia",
+    "posterUrl": "wikimedia"
+  }
+}

@@ -3,7 +3,7 @@
  * Centraliza todos los números y umbrales (MOTOR.md §10).
  */
 
-export const ENGINE_VERSION = 'm1.0'
+export const ENGINE_VERSION = 'm1.1'
 
 export type Bucket = 'seen_likely' | 'social' | 'friend_gem' | 'explore'
 

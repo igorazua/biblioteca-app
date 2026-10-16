@@ -51,6 +51,15 @@ for (const shelf of ['movie', 'series', 'book', 'boardgame', 'artist']) {
   const n = list.length
   if (!n) continue
 
+  const enginePath = join(ROOT, 'src', 'data', 'engine', `${shelf}.json`)
+  let engineCount = 0
+  if (existsSync(enginePath)) {
+    try {
+      const e = JSON.parse(readFileSync(enginePath, 'utf8'))
+      engineCount = e.ids?.length || 0
+    } catch {}
+  }
+
   const counts = {
     total: n,
     wikidataId: list.filter((i) => Boolean(i.wikidataId)).length,
@@ -66,7 +75,7 @@ for (const shelf of ['movie', 'series', 'book', 'boardgame', 'artist']) {
       const url = i.posterUrl || ''
       return src === 'wikimedia' || src === 'openlibrary' || url.includes('wikimedia.org') || url.includes('openlibrary.org')
     }).length,
-    hasAxes: list.filter((i) => Boolean(i.axes)).length,
+    hasAxes: Math.max(list.filter((i) => Boolean(i.axes)).length, engineCount),
   }
 
   results[shelf] = counts

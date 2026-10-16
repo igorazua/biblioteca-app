@@ -1,4 +1,40 @@
 
+## Cobertura a 2026-10-16T13:01:45.213Z
+
+| Categoría | Obras | Wikidata | ID Primario | Votos/Readers | Keywords/Tags | Sinopsis | Portada Legal | Ejes |
+|---|---|---|---|---|---|---|---|---|
+| **movie** | 1000 | 1.0% | 1.0% | 0.5% | 0.5% | 100.0% | 0.5% | 100.0% |
+| **series** | 1000 | 0.5% | 0.5% | 0.0% | 0.0% | 100.0% | 0.2% | 100.0% |
+| **book** | 1000 | 0.1% | 13.2% | 0.5% | 0.4% | 100.0% | 95.6% | 100.0% |
+| **boardgame** | 1015 | 0.5% | 0.0% | 0.0% | 0.0% | 99.9% | 0.2% | 100.0% |
+| **artist** | 261 | 0.8% | 1.1% | 0.0% | 1.1% | 100.0% | 0.8% | 100.0% |
+
+
+
+## Cobertura a 2026-10-16T12:53:10.216Z
+
+| Categoría | Obras | Wikidata | ID Primario | Votos/Readers | Keywords/Tags | Sinopsis | Portada Legal | Ejes |
+|---|---|---|---|---|---|---|---|---|
+| **movie** | 1000 | 1.0% | 1.0% | 0.5% | 0.5% | 100.0% | 0.5% | 0.0% |
+| **series** | 1000 | 0.5% | 0.5% | 0.0% | 0.0% | 100.0% | 0.2% | 0.0% |
+| **book** | 1000 | 0.1% | 13.2% | 0.5% | 0.4% | 100.0% | 95.6% | 0.0% |
+| **boardgame** | 1015 | 0.5% | 0.0% | 0.0% | 0.0% | 99.9% | 0.2% | 0.0% |
+| **artist** | 261 | 0.8% | 1.1% | 0.0% | 1.1% | 100.0% | 0.8% | 0.0% |
+
+
+
+## Cobertura a 2026-10-16T12:50:22.172Z
+
+| Categoría | Obras | Wikidata | ID Primario | Votos/Readers | Keywords/Tags | Sinopsis | Portada Legal | Ejes |
+|---|---|---|---|---|---|---|---|---|
+| **movie** | 1000 | 0.3% | 0.3% | 0.0% | 0.0% | 100.0% | 0.0% | 0.0% |
+| **series** | 1000 | 0.3% | 0.3% | 0.0% | 0.0% | 100.0% | 0.0% | 0.0% |
+| **book** | 1000 | 0.1% | 13.2% | 0.3% | 0.3% | 100.0% | 95.6% | 0.0% |
+| **boardgame** | 1015 | 0.3% | 0.0% | 0.0% | 0.0% | 100.0% | 0.0% | 0.0% |
+| **artist** | 261 | 0.0% | 1.1% | 0.0% | 1.1% | 100.0% | 0.0% | 0.0% |
+
+
+
 ## Cobertura a 2026-10-16T12:45:25.217Z
 
 | Categoría | Obras | Wikidata | ID Primario | Votos/Readers | Keywords/Tags | Sinopsis | Portada Legal | Ejes |

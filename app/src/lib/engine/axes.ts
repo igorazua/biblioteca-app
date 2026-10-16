@@ -1,12 +1,15 @@
-import type { ShelfType } from '../../types'
+/**
+ * Definición técnica de los ejes de sensación por estantería (MOTOR.md §5.2).
+ * Copia fiel de scripts/engine/axes.mjs para uso en la aplicación cliente.
+ */
 
-export interface AxisDefinition {
+export interface AxisDef {
   id: string
   min: string
   max: string
 }
 
-export const AXES_BY_SHELF: Record<ShelfType, AxisDefinition[]> = {
+export const AXES_BY_SHELF: Record<string, AxisDef[]> = {
   movie: [
     { id: 'tono', min: 'luminoso, optimista', max: 'oscuro, desolador' },
     { id: 'ritmo', min: 'pausado, contemplativo', max: 'frenético' },

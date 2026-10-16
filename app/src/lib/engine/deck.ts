@@ -1,5 +1,6 @@
 import type { Friend, Item, Profile, ShelfType, UserEntry } from '../../types'
 import { PARAMS, type Bucket } from './params'
+import { centroid, simWithCentroid } from './features'
 
 export interface DeckSessionState {
   countsByDecade: Record<string, { seen: number; up: number; left: number; shown: number }>
@@ -111,6 +112,7 @@ export function nextCards(input: DeckInput, already: string[] = [], n = 20): Dec
     shelf,
     items,
     entries,
+    rankings,
     profile,
     friends,
     affinity,
@@ -151,6 +153,11 @@ export function nextCards(input: DeckInput, already: string[] = [], n = 20): Dec
     friend_gem: [],
     explore: [],
   }
+
+  const userRanked = rankings?.[shelf] || []
+  const topN = Math.max(1, Math.floor(userRanked.length * 0.2))
+  const userTopIds = userRanked.slice(0, topN)
+  const userCentroid = userTopIds.length > 0 ? centroid(shelf, userTopIds) : null
 
   for (const it of eligible) {
     const pop = (it.popularity || 50) / 100
@@ -216,7 +223,7 @@ export function nextCards(input: DeckInput, already: string[] = [], n = 20): Dec
     const social = 1 - socialProd
     const adaptSeen = calcAdapt(it, session, true)
     const adaptOther = calcAdapt(it, session, false)
-    const taste = 0.5 // Degradado elegante sin motor LLM vectorial (§12)
+    const taste = userCentroid ? simWithCentroid(shelf, userCentroid, it.id) : 0.5
     const novelty = 1.0 - pop * 0.4
 
     // Cálculo por cupos

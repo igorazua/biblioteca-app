@@ -1,0 +1,17 @@
+{
+  "source": "wikidata",
+  "wikidataId": "Q36816341",
+  "bggId": "174430",
+  "title": "Gloomhaven",
+  "synopsis": "Gloomhaven es un juego de tablero cooperativo de género fantástico diseñado por Isaac Childres y publicado en 2017 por Cephalofair Games. Se trata de un juego de mazmorras basado en campañas con una historia en árbol que dispone de 95 escenarios diferentes, 17 clases de personaje jugables y más de 1.500 cartas, en una caja que pesa unos 10 kilogramos. ",
+  "wikiLangs": 10,
+  "posterUrl": "https://cf.geekdo-images.com/sZYp_3BTDGjh2unaZfZmuA__original/img/7d-lj5Gd1e8PFnD97LYFah2c45M=/0x0/filters:format(jpeg)/pic2437871.jpg",
+  "imageSrc": "wikimedia",
+  "imageCredit": "Wikimedia Commons / Wikipedia",
+  "src": {
+    "wikidataId": "wikidata",
+    "bggId": "wikidata",
+    "synopsis": "wikipedia",
+    "posterUrl": "wikimedia"
+  }
+}

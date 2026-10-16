@@ -1,0 +1,20 @@
+{
+  "source": "openlibrary",
+  "olid": "OL34766796W",
+  "wikidataId": null,
+  "voteAvg": 7.7,
+  "voteCount": 14,
+  "readers": 374,
+  "subjects": [],
+  "firstPublishYear": 2018,
+  "posterUrl": "https://covers.openlibrary.org/b/id/13499066-L.jpg",
+  "imageSrc": "openlibrary",
+  "imageCredit": "Open Library",
+  "src": {
+    "olid": "openlibrary",
+    "readers": "openlibrary",
+    "voteAvg": "openlibrary",
+    "subjects": "openlibrary",
+    "posterUrl": "openlibrary"
+  }
+}

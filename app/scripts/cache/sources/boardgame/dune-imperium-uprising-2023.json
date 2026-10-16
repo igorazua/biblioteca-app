@@ -1,0 +1,16 @@
+{
+  "source": "wikidata",
+  "wikidataId": "Q133463982",
+  "bggId": "397598",
+  "title": "Dune: Imperium – Insurrección",
+  "synopsis": "In Dune: Imperium Uprising, you want to continue to balance military might with political intrigue, wielding new tools in pursuit of victory. Spies will shore up your plans, vital contracts will expand your resources, or you can learn the ways of the Fremen and ride mighty sandwo...",
+  "wikiLangs": 1,
+  "posterUrl": "https://cf.geekdo-images.com/UVUkjMV_Q2paVUIUP30Vvw__original/img/BoUtCkd1NRO0bR1R5EwL51xIuXA=/0x0/filters:format(jpeg)/pic7664424.jpg",
+  "imageSrc": "seed",
+  "src": {
+    "wikidataId": "wikidata",
+    "bggId": "wikidata",
+    "synopsis": "wikidata",
+    "posterUrl": "seed"
+  }
+}

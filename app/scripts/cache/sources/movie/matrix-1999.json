@@ -1,0 +1,51 @@
+{
+  "source": "wikidata",
+  "wikidataId": "Q83495",
+  "tmdbId": 603,
+  "imdbId": "tt0133093",
+  "title": "The Matrix",
+  "year": 1999,
+  "synopsis": "The Matrix es una película de acción y ciencia ficción de 1999 escrita y dirigida por las hermanas Wachowski y protagonizada por Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss y Hugo Weaving. Representa un futuro distópico en el que la humanidad está atrapada sin saberlo dentro de una realidad simulada llamada Matrix, que las máquinas inteligentes han creado para distraer a los humanos mientras usan sus cuerpos como fuente de energía en campos de cultivo. Cuando el programador informático Thomas Anderson, bajo el alias de hacker \"Neo\", descubre la incómoda verdad, se une a una rebelión contra las máquinas junto con otras personas que han sido liberadas de Matrix. Siendo estrenada en los Estados Unidos el 31 de marzo de 1999, es la primera entrega de la franquicia Matrix, de la que derivan una serie de videojuegos, cortos animados y cómics, llegando a ser un claro ejemplo del subgénero cyberpunk.",
+  "wikiLangs": 114,
+  "durationMin": 136,
+  "voteAvg": 7.8,
+  "voteCount": 36,
+  "keywords": [
+    "ciencia ficción",
+    "acción",
+    "Q2798820",
+    "Q544830",
+    "Q11660",
+    "Q2742884"
+  ],
+  "seasons": null,
+  "episodes": null,
+  "originCountry": [
+    "Q30"
+  ],
+  "collection": "Q1210827",
+  "basedOn": null,
+  "awards": [
+    "Q1131772",
+    "Q281939",
+    "Q488645",
+    "Q830079",
+    "Q393686",
+    "Q1265702",
+    "Q739633",
+    "Q787127"
+  ],
+  "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The.Matrix.glmatrix.1.png?width=600",
+  "imageSrc": "wikimedia",
+  "imageCredit": "Wikimedia Commons",
+  "src": {
+    "wikidataId": "wikidata",
+    "tmdbId": "wikidata",
+    "imdbId": "wikidata",
+    "voteAvg": "wikidata",
+    "voteCount": "wikidata",
+    "keywords": "wikidata",
+    "synopsis": "wikipedia",
+    "posterUrl": "wikimedia"
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "sourceId": "movie:el-padrino-1972",
+    "targetQid": "Q243556",
+    "kind": "basedOn"
+  },
+  {
+    "sourceId": "movie:cadena-perpetua-1994",
+    "targetQid": "Q968314",
+    "kind": "basedOn"
+  },
+  {
+    "sourceId": "movie:el-club-de-la-lucha-1999",
+    "targetQid": "Q837283",
+    "kind": "basedOn"
+  },
+  {
+    "sourceId": "movie:el-senor-de-los-anillos-la-comunidad-del-anillo-2001",
+    "targetQid": "Q208002",
+    "kind": "basedOn"
+  }
+]

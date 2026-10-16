@@ -1,0 +1,31 @@
+{
+  "source": "wikidata",
+  "wikidataId": "Q36479",
+  "tmdbId": 8587,
+  "imdbId": "tt0110357",
+  "title": "El rey león",
+  "year": 1994,
+  "synopsis": "El rey león es una película animada producida por Walt Disney Feature Animation y distribuida por Walt Disney Pictures. Es la trigésima segunda película en el canon de Walt Disney Animation y se realizó en un período conocido como el Renacimiento de Disney. La película se realizó bajo la dirección de Rob Minkoff y Roger Allers, el productor Don Hahn, los guiones de Irene Mecchi, Jonathan Roberts y Linda Woolverton, y con Hans Zimmer, Elton John y Tim Rice como encargados de la banda sonora.",
+  "wikiLangs": 132,
+  "durationMin": 88,
+  "originCountry": [
+    "Q30"
+  ],
+  "collection": "Q56070713",
+  "basedOn": null,
+  "awards": [
+    "Q488651",
+    "Q1800189",
+    "Q6404857"
+  ],
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BZGRiZDZhZjItM2M3ZC00Y2IyLTk3Y2MtMWY5YjliNDFkZTJlXkEyXkFqcGc@._V1_.jpg",
+  "imageSrc": "seed",
+  "imageCredit": "IMDb / Archivo",
+  "src": {
+    "wikidataId": "wikidata",
+    "tmdbId": "wikidata",
+    "imdbId": "wikidata",
+    "synopsis": "wikipedia",
+    "posterUrl": "seed"
+  }
+}

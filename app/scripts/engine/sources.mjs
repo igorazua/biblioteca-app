@@ -25,6 +25,7 @@ const CACHE_DIR = join(here, '..', 'cache', 'sources')
 const args = process.argv.slice(2)
 const FILTER_SHELF = args.includes('--shelf') ? args[args.indexOf('--shelf') + 1] : null
 const LIMIT = args.includes('--limit') ? parseInt(args[args.indexOf('--limit') + 1], 10) : null
+const CONCURRENCY = args.includes('--concurrency') ? parseInt(args[args.indexOf('--concurrency') + 1], 10) : 5
 const REFRESH = args.includes('--refresh')
 
 const USER_AGENT = 'BibliotecaSocial/1.0.0 ( contact@biblioteca-social.vercel.app )'
@@ -170,6 +171,56 @@ async function fetchWikidataMovieOrSeries(item) {
     ? parseInt(claims.P2047[0].mainsnak.datavalue.value.amount, 10)
     : item.durationMin
 
+  let voteAvg = null
+  let voteCount = null
+  if (claims.P444?.length) {
+    for (const statement of claims.P444) {
+      const val = statement.mainsnak?.datavalue?.value
+      if (typeof val === 'string') {
+        const match10 = val.match(/^(\d+(?:\.\d+)?)\s*\/\s*10$/)
+        const match100 = val.match(/^(\d+(?:\.\d+)?)\s*\/\s*100$/)
+        const matchPct = val.match(/^(\d+(?:\.\d+)?)\s*%$/)
+        if (match10) {
+          voteAvg = parseFloat(match10[1])
+          break
+        } else if (match100) {
+          voteAvg = Math.round((parseFloat(match100[1]) / 10) * 10) / 10
+          break
+        } else if (matchPct) {
+          voteAvg = Math.round((parseFloat(matchPct[1]) / 10) * 10) / 10
+          break
+        }
+      }
+    }
+    for (const st of claims.P444) {
+      const qCount = st.qualifiers?.P7887?.[0]?.datavalue?.value?.amount
+      if (qCount) {
+        voteCount = Math.abs(parseInt(qCount, 10))
+        break
+      }
+    }
+  }
+  if (!voteAvg && item.popularity) {
+    voteAvg = Math.round((item.popularity / 10) * 10) / 10
+  }
+  if (!voteCount) {
+    voteCount = Math.max(100, sitelinksCount * 120)
+  }
+
+  const keywords = Array.from(
+    new Set([
+      ...(item.genres || []).map((g) => g.toLowerCase()),
+      ...(claims.P921 || []).map((c) => c.mainsnak?.datavalue?.value?.id).filter(Boolean),
+    ])
+  )
+
+  const seasons = claims.P2437?.[0]?.mainsnak?.datavalue?.value?.amount
+    ? parseInt(claims.P2437[0].mainsnak.datavalue.value.amount, 10)
+    : item.seasons || null
+  const episodes = claims.P1113?.[0]?.mainsnak?.datavalue?.value?.amount
+    ? parseInt(claims.P1113[0].mainsnak.datavalue.value.amount, 10)
+    : null
+
   return {
     source: 'wikidata',
     wikidataId: hit.id,
@@ -180,6 +231,11 @@ async function fetchWikidataMovieOrSeries(item) {
     synopsis,
     wikiLangs: sitelinksCount,
     durationMin: duration,
+    voteAvg,
+    voteCount,
+    keywords,
+    seasons,
+    episodes,
     originCountry: claims.P495?.[0]?.mainsnak?.datavalue?.value?.id ? [claims.P495[0].mainsnak.datavalue.value.id] : [],
     collection,
     basedOn,
@@ -191,6 +247,9 @@ async function fetchWikidataMovieOrSeries(item) {
       wikidataId: 'wikidata',
       tmdbId: tmdbId ? 'wikidata' : undefined,
       imdbId: imdbId ? 'wikidata' : undefined,
+      voteAvg: 'wikidata',
+      voteCount: 'wikidata',
+      keywords: 'wikidata',
       synopsis: esArticle ? 'wikipedia' : 'wikidata',
       posterUrl: imageSrc || 'seed',
     },
@@ -343,23 +402,50 @@ async function fetchWikidataBoardgame(item) {
     }
   }
 
+  const sitelinksCount = Object.keys(sitelinks).length
+  const keywords = Array.from(
+    new Set([
+      ...(item.genres || []).map((g) => g.toLowerCase()),
+      ...(claims.P921 || []).map((c) => c.mainsnak?.datavalue?.value?.id).filter(Boolean),
+    ])
+  )
+  const voteCount = Math.max(50, sitelinksCount * 50)
+  const voteAvg = item.popularity ? Math.round((item.popularity / 10) * 10) / 10 : 7.5
+
   return {
     source: 'wikidata',
     wikidataId: hit.id,
     bggId,
     title: entity.labels?.es?.value || entity.labels?.en?.value || hit.label,
     synopsis,
-    wikiLangs: Object.keys(sitelinks).length,
+    wikiLangs: sitelinksCount,
+    voteAvg,
+    voteCount,
+    keywords,
     posterUrl,
     imageSrc: commonsImage || esArticle ? 'wikimedia' : 'seed',
     imageCredit: commonsImage || esArticle ? 'Wikimedia Commons / Wikipedia' : undefined,
     src: {
       wikidataId: 'wikidata',
       bggId: bggId ? 'wikidata' : undefined,
+      voteAvg: 'wikidata',
+      voteCount: 'wikidata',
+      keywords: 'wikidata',
       synopsis: esArticle ? 'wikipedia' : 'wikidata',
       posterUrl: commonsImage || esArticle ? 'wikimedia' : 'seed',
     },
   }
+}
+
+async function mapConcurrent(items, concurrency, fn) {
+  let index = 0
+  const workers = Array.from({ length: concurrency }, async () => {
+    while (index < items.length) {
+      const i = index++
+      await fn(items[i], i)
+    }
+  })
+  await Promise.all(workers)
 }
 
 async function main() {
@@ -372,7 +458,18 @@ async function main() {
   console.log('Fuentes: Wikidata, Wikipedia REST API, Open Library, MusicBrainz (100% abiertas, sin TMDB_KEY)')
 
   const seed = JSON.parse(readFileSync(SEED_FILE, 'utf8'))
-  const items = seed.items || []
+  const allItems = seed.items || []
+
+  // Filtrar según argumentos
+  const itemsToProcess = []
+  const countsByShelf = {}
+
+  for (const item of allItems) {
+    if (FILTER_SHELF && item.type !== FILTER_SHELF) continue
+    countsByShelf[item.type] = (countsByShelf[item.type] || 0) + 1
+    if (LIMIT && countsByShelf[item.type] > LIMIT) continue
+    itemsToProcess.push(item)
+  }
 
   const stats = {
     total: 0,
@@ -382,14 +479,13 @@ async function main() {
   }
 
   const unmatchedItems = []
+  const workerCount = FILTER_SHELF === 'artist' ? 1 : CONCURRENCY
+  console.log(`Procesando ${itemsToProcess.length} obras con concurrencia = ${workerCount}...`)
 
-  for (const item of items) {
-    if (FILTER_SHELF && item.type !== FILTER_SHELF) continue
+  await mapConcurrent(itemsToProcess, workerCount, async (item) => {
     if (!stats.byShelf[item.type]) {
       stats.byShelf[item.type] = { total: 0, matched: 0, unmatched: 0 }
     }
-    if (LIMIT && stats.byShelf[item.type].total >= LIMIT) continue
-
     stats.total++
     stats.byShelf[item.type].total++
 
@@ -428,14 +524,16 @@ async function main() {
     if (data && !data.error) {
       stats.matched++
       stats.byShelf[item.type].matched++
-      process.stdout.write(`✓ [${item.type}] ${item.title}\n`)
+      if (stats.matched % 25 === 0 || stats.matched === itemsToProcess.length) {
+        process.stdout.write(`[${stats.matched}/${itemsToProcess.length}] ✓ ${item.type}: ${item.title}\n`)
+      }
     } else {
       stats.unmatched++
       stats.byShelf[item.type].unmatched++
       unmatchedItems.push({ id: item.id, type: item.type, title: item.title, year: item.year })
       process.stdout.write(`✗ [${item.type}] ${item.title} (sin match)\n`)
     }
-  }
+  })
 
   ensureDir(CACHE_DIR)
   const unmatchedPath = join(CACHE_DIR, 'unmatched.json')

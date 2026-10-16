@@ -1,0 +1,54 @@
+{
+  "source": "wikidata",
+  "wikidataId": "Q128518",
+  "tmdbId": 98,
+  "imdbId": "tt0172495",
+  "title": "Gladiator",
+  "year": 2000,
+  "synopsis": "Gladiator es una película épica del género péplum y acción del año 2000 dirigida por Ridley Scott y protagonizada por Russell Crowe, Joaquin Phoenix y Connie Nielsen. Crowe interpreta a Máximo Décimo Meridio, un leal general hispano del ejército del Imperio romano que es traicionado por Cómodo, el ambicioso hijo del emperador Marco Aurelio, quien ha asesinado a su padre y se ha hecho con el trono. Forzado a convertirse en esclavo, Máximo triunfa como gladiador mientras anhela vengar la muerte de su familia y la del emperador.",
+  "wikiLangs": 108,
+  "durationMin": 155,
+  "voteAvg": 7.3,
+  "voteCount": 46,
+  "keywords": [
+    "acción",
+    "histórica",
+    "Q1712140",
+    "Q482999",
+    "Q96677971",
+    "Q252000",
+    "Q1430",
+    "Q1434",
+    "Q933963"
+  ],
+  "seasons": null,
+  "episodes": null,
+  "originCountry": [
+    "Q145"
+  ],
+  "collection": null,
+  "basedOn": null,
+  "awards": [
+    "Q102427",
+    "Q103916",
+    "Q277536",
+    "Q830079",
+    "Q393686",
+    "Q139184",
+    "Q1966965",
+    "Q16320408"
+  ],
+  "posterUrl": "https://m.media-amazon.com/images/M/MV5BYWQ4YmNjYjEtOWE1Zi00Y2U4LWI4NTAtMTU0MjkxNWQ1ZmJiXkEyXkFqcGc@._V1_.jpg",
+  "imageSrc": "seed",
+  "imageCredit": "IMDb / Archivo",
+  "src": {
+    "wikidataId": "wikidata",
+    "tmdbId": "wikidata",
+    "imdbId": "wikidata",
+    "voteAvg": "wikidata",
+    "voteCount": "wikidata",
+    "keywords": "wikidata",
+    "synopsis": "wikipedia",
+    "posterUrl": "seed"
+  }
+}

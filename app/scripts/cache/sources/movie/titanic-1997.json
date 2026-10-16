@@ -1,0 +1,40 @@
+{
+  "source": "wikidata",
+  "wikidataId": "Q1197729",
+  "tmdbId": 16535,
+  "imdbId": "tt0046435",
+  "title": "Titanic",
+  "year": 1997,
+  "synopsis": "Titanic es una película estadounidense de 1953, dirigida por Jean Negulesco. Protagonizada por Clifton Webb, Barbara Stanwyck, Robert Wagner, Audrey Dalton y Thelma Ritter.",
+  "wikiLangs": 28,
+  "durationMin": 100,
+  "voteAvg": 6.7,
+  "voteCount": 12,
+  "keywords": [
+    "romance",
+    "drama"
+  ],
+  "seasons": null,
+  "episodes": null,
+  "originCountry": [
+    "Q30"
+  ],
+  "collection": null,
+  "basedOn": null,
+  "awards": [
+    "Q41417"
+  ],
+  "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/The_destruction_of_RMS_Titanic.jpg/330px-The_destruction_of_RMS_Titanic.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+  "imageSrc": "wikimedia",
+  "imageCredit": "Wikipedia / Wikimedia Commons",
+  "src": {
+    "wikidataId": "wikidata",
+    "tmdbId": "wikidata",
+    "imdbId": "wikidata",
+    "voteAvg": "wikidata",
+    "voteCount": "wikidata",
+    "keywords": "wikidata",
+    "synopsis": "wikipedia",
+    "posterUrl": "wikimedia"
+  }
+}

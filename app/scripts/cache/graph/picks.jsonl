@@ -1,0 +1,500 @@
+{"a":"movie:el-padrino-1972","b":"movie:gran-torino-2008","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-padrino-1972","b":"movie:pulp-fiction-1994","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:el-padrino-1972","b":"movie:seven-1995","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:el-padrino-1972","b":"movie:el-caballero-oscuro-2008","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:el-padrino-1972","b":"movie:la-vida-es-bella-1997","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-padrino-1972","b":"movie:cinema-paradiso-1988","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-padrino-1972","b":"movie:el-silencio-de-los-corderos-1991","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:el-padrino-1972","b":"movie:sospechosos-habituales-1995","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:el-padrino-1972","b":"movie:cadena-perpetua-1994","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-padrino-1972","b":"movie:salvar-al-soldado-ryan-1998","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:pulp-fiction-1994","b":"movie:seven-1995","kind":"pick","src":"llm-agent","w":1,"reason":"Mismo tono de crimen y thriller"}
+{"a":"movie:pulp-fiction-1994","b":"movie:el-silencio-de-los-corderos-1991","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de crimen y thriller"}
+{"a":"movie:pulp-fiction-1994","b":"movie:el-padrino-1972","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:pulp-fiction-1994","b":"movie:el-caballero-oscuro-2008","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:pulp-fiction-1994","b":"movie:memento-2000","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:pulp-fiction-1994","b":"movie:parasitos-2019","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:pulp-fiction-1994","b":"movie:blade-runner-1982","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:pulp-fiction-1994","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:pulp-fiction-1994","b":"movie:el-club-de-la-lucha-1999","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:pulp-fiction-1994","b":"movie:sospechosos-habituales-1995","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:forrest-gump-1994","b":"movie:regreso-al-futuro-1985","kind":"pick","src":"llm-agent","w":1,"reason":"Misma visión autoral y estilo distintivo de Robert Zemeckis"}
+{"a":"movie:forrest-gump-1994","b":"movie:titanic-1997","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de drama y romance"}
+{"a":"movie:forrest-gump-1994","b":"movie:cinema-paradiso-1988","kind":"pick","src":"llm-agent","w":0.9,"reason":"Mismo tono de drama y romance"}
+{"a":"movie:forrest-gump-1994","b":"movie:cast-away-2000","kind":"pick","src":"llm-agent","w":0.85,"reason":"Mismo tono de drama y romance"}
+{"a":"movie:forrest-gump-1994","b":"movie:la-lista-de-schindler-1993","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:forrest-gump-1994","b":"movie:gran-torino-2008","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:forrest-gump-1994","b":"movie:la-vida-es-bella-1997","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:forrest-gump-1994","b":"movie:salvar-al-soldado-ryan-1998","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:forrest-gump-1994","b":"movie:cadena-perpetua-1994","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:forrest-gump-1994","b":"movie:amelie-2001","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de romance"}
+{"a":"movie:cadena-perpetua-1994","b":"movie:the-shawshank-redemption-1994","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:cadena-perpetua-1994","b":"movie:gran-torino-2008","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:cadena-perpetua-1994","b":"movie:el-padrino-1972","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:cadena-perpetua-1994","b":"movie:salvar-al-soldado-ryan-1998","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:cadena-perpetua-1994","b":"movie:el-club-de-la-lucha-1999","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:cadena-perpetua-1994","b":"movie:cinema-paradiso-1988","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:cadena-perpetua-1994","b":"movie:la-lista-de-schindler-1993","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:cadena-perpetua-1994","b":"movie:whiplash-2014","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:cadena-perpetua-1994","b":"movie:forrest-gump-1994","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:cadena-perpetua-1994","b":"movie:el-pianista-2002","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-rey-leon-1994","b":"movie:up-2009","kind":"pick","src":"llm-agent","w":1,"reason":"Mismo tono de animación y aventura"}
+{"a":"movie:el-rey-leon-1994","b":"movie:del-reves-2015","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:el-rey-leon-1994","b":"movie:toy-story-1995","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:el-rey-leon-1994","b":"movie:coco-2017","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:el-rey-leon-1994","b":"movie:star-wars-una-nueva-esperanza-1977","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:el-rey-leon-1994","b":"movie:avatar-2009","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:el-rey-leon-1994","b":"movie:el-imperio-contraataca-1980","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:el-rey-leon-1994","b":"movie:shrek-2001","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:el-rey-leon-1994","b":"movie:el-senor-de-los-anillos-la-comunidad-del-anillo-2001","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:el-rey-leon-1994","b":"movie:parque-jurasico-1993","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:matrix-1999","b":"movie:mad-max-furia-en-la-carretera-2015","kind":"pick","src":"llm-agent","w":1,"reason":"Mismo tono de ciencia ficción y acción"}
+{"a":"movie:matrix-1999","b":"movie:vengadores-endgame-2019","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de ciencia ficción y acción"}
+{"a":"movie:matrix-1999","b":"movie:iron-man-2008","kind":"pick","src":"llm-agent","w":0.9,"reason":"Mismo tono de ciencia ficción y acción"}
+{"a":"movie:matrix-1999","b":"movie:terminator-2-el-juicio-final-1991","kind":"pick","src":"llm-agent","w":0.85,"reason":"Mismo tono de ciencia ficción y acción"}
+{"a":"movie:matrix-1999","b":"movie:gladiator-2000","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:matrix-1999","b":"movie:el-caballero-oscuro-2008","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:matrix-1999","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:matrix-1999","b":"movie:dune-2021","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:matrix-1999","b":"movie:star-wars-una-nueva-esperanza-1977","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:matrix-1999","b":"movie:alien-el-octavo-pasajero-1979","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:el-club-de-la-lucha-1999","b":"movie:seven-1995","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:el-club-de-la-lucha-1999","b":"movie:joker-2019","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de drama y thriller"}
+{"a":"movie:el-club-de-la-lucha-1999","b":"movie:gone-girl-2014","kind":"pick","src":"llm-agent","w":0.9,"reason":"Mismo tono de drama y thriller"}
+{"a":"movie:el-club-de-la-lucha-1999","b":"movie:gran-torino-2008","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-club-de-la-lucha-1999","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:el-club-de-la-lucha-1999","b":"movie:salvar-al-soldado-ryan-1998","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-club-de-la-lucha-1999","b":"movie:cadena-perpetua-1994","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-club-de-la-lucha-1999","b":"movie:el-padrino-1972","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-club-de-la-lucha-1999","b":"movie:fight-club-1999","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-club-de-la-lucha-1999","b":"movie:memento-2000","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:el-senor-de-los-anillos-la-comunidad-del-anillo-2001","b":"movie:star-wars-una-nueva-esperanza-1977","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:el-senor-de-los-anillos-la-comunidad-del-anillo-2001","b":"movie:el-rey-leon-1994","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:el-senor-de-los-anillos-la-comunidad-del-anillo-2001","b":"movie:up-2009","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:el-senor-de-los-anillos-la-comunidad-del-anillo-2001","b":"movie:dune-2021","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:el-senor-de-los-anillos-la-comunidad-del-anillo-2001","b":"movie:el-imperio-contraataca-1980","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:el-senor-de-los-anillos-la-comunidad-del-anillo-2001","b":"movie:avatar-2009","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:el-senor-de-los-anillos-la-comunidad-del-anillo-2001","b":"movie:barbie-2023","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de fantasía"}
+{"a":"movie:el-senor-de-los-anillos-la-comunidad-del-anillo-2001","b":"movie:la-princesa-prometida-1987","kind":"pick","src":"llm-agent","w":0.65,"reason":"Mismo tono de fantasía y aventura"}
+{"a":"movie:el-senor-de-los-anillos-la-comunidad-del-anillo-2001","b":"movie:gladiator-2000","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:el-senor-de-los-anillos-la-comunidad-del-anillo-2001","b":"movie:parque-jurasico-1993","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:gladiator-2000","b":"movie:alien-el-octavo-pasajero-1979","kind":"pick","src":"llm-agent","w":1,"reason":"Misma visión autoral y estilo distintivo de Ridley Scott"}
+{"a":"movie:gladiator-2000","b":"movie:blade-runner-1982","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma visión autoral y estilo distintivo de Ridley Scott"}
+{"a":"movie:gladiator-2000","b":"movie:matrix-1999","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:gladiator-2000","b":"movie:el-caballero-oscuro-2008","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:gladiator-2000","b":"movie:john-wick-2014","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:gladiator-2000","b":"movie:mad-max-furia-en-la-carretera-2015","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:gladiator-2000","b":"movie:top-gun-maverick-2022","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:gladiator-2000","b":"movie:terminator-2-el-juicio-final-1991","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:gladiator-2000","b":"movie:vengadores-endgame-2019","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:gladiator-2000","b":"movie:la-lista-de-schindler-1993","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de histórica"}
+{"a":"movie:titanic-1997","b":"movie:avatar-2009","kind":"pick","src":"llm-agent","w":1,"reason":"Misma visión autoral y estilo distintivo de James Cameron"}
+{"a":"movie:titanic-1997","b":"movie:terminator-2-el-juicio-final-1991","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma visión autoral y estilo distintivo de James Cameron"}
+{"a":"movie:titanic-1997","b":"movie:forrest-gump-1994","kind":"pick","src":"llm-agent","w":0.9,"reason":"Mismo tono de romance y drama"}
+{"a":"movie:titanic-1997","b":"movie:cinema-paradiso-1988","kind":"pick","src":"llm-agent","w":0.85,"reason":"Mismo tono de romance y drama"}
+{"a":"movie:titanic-1997","b":"movie:interstellar-2014","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:titanic-1997","b":"movie:la-lista-de-schindler-1993","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:titanic-1997","b":"movie:oppenheimer-2023","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:titanic-1997","b":"movie:gran-torino-2008","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:titanic-1997","b":"movie:la-vida-es-bella-1997","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:titanic-1997","b":"movie:salvar-al-soldado-ryan-1998","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:parque-jurasico-1993","b":"movie:star-wars-una-nueva-esperanza-1977","kind":"pick","src":"llm-agent","w":1,"reason":"Mismo tono de aventura y ciencia ficción"}
+{"a":"movie:parque-jurasico-1993","b":"movie:avatar-2009","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de aventura y ciencia ficción"}
+{"a":"movie:parque-jurasico-1993","b":"movie:dune-2021","kind":"pick","src":"llm-agent","w":0.9,"reason":"Mismo tono de aventura y ciencia ficción"}
+{"a":"movie:parque-jurasico-1993","b":"movie:el-imperio-contraataca-1980","kind":"pick","src":"llm-agent","w":0.85,"reason":"Mismo tono de aventura y ciencia ficción"}
+{"a":"movie:parque-jurasico-1993","b":"movie:up-2009","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:parque-jurasico-1993","b":"movie:interstellar-2014","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:parque-jurasico-1993","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:parque-jurasico-1993","b":"movie:regreso-al-futuro-1985","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:parque-jurasico-1993","b":"movie:vengadores-endgame-2019","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:parque-jurasico-1993","b":"movie:alien-el-octavo-pasajero-1979","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:regreso-al-futuro-1985","b":"movie:forrest-gump-1994","kind":"pick","src":"llm-agent","w":1,"reason":"Misma visión autoral y estilo distintivo de Robert Zemeckis"}
+{"a":"movie:regreso-al-futuro-1985","b":"movie:toy-story-1995","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:regreso-al-futuro-1985","b":"movie:del-reves-2015","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:regreso-al-futuro-1985","b":"movie:el-imperio-contraataca-1980","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:regreso-al-futuro-1985","b":"movie:parasitos-2019","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:regreso-al-futuro-1985","b":"movie:avatar-2009","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:regreso-al-futuro-1985","b":"movie:la-vida-es-bella-1997","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:regreso-al-futuro-1985","b":"movie:star-wars-una-nueva-esperanza-1977","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:regreso-al-futuro-1985","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:regreso-al-futuro-1985","b":"movie:blade-runner-1982","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:la-lista-de-schindler-1993","b":"movie:oppenheimer-2023","kind":"pick","src":"llm-agent","w":1,"reason":"Mismo tono de drama y histórica"}
+{"a":"movie:la-lista-de-schindler-1993","b":"movie:gran-torino-2008","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:la-lista-de-schindler-1993","b":"movie:salvar-al-soldado-ryan-1998","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:la-lista-de-schindler-1993","b":"movie:cinema-paradiso-1988","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:la-lista-de-schindler-1993","b":"movie:whiplash-2014","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:la-lista-de-schindler-1993","b":"movie:el-pianista-2002","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:la-lista-de-schindler-1993","b":"movie:interstellar-2014","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:la-lista-de-schindler-1993","b":"movie:braveheart-1995","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de histórica"}
+{"a":"movie:la-lista-de-schindler-1993","b":"movie:top-gun-maverick-2022","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:la-lista-de-schindler-1993","b":"movie:forrest-gump-1994","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:salvar-al-soldado-ryan-1998","b":"movie:el-pianista-2002","kind":"pick","src":"llm-agent","w":1,"reason":"Mismo tono de bélica y drama"}
+{"a":"movie:salvar-al-soldado-ryan-1998","b":"movie:gran-torino-2008","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:salvar-al-soldado-ryan-1998","b":"movie:cinema-paradiso-1988","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:salvar-al-soldado-ryan-1998","b":"movie:la-lista-de-schindler-1993","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:salvar-al-soldado-ryan-1998","b":"movie:top-gun-maverick-2022","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:salvar-al-soldado-ryan-1998","b":"movie:la-vida-es-bella-1997","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:salvar-al-soldado-ryan-1998","b":"movie:whiplash-2014","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:salvar-al-soldado-ryan-1998","b":"movie:braveheart-1995","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de bélica"}
+{"a":"movie:salvar-al-soldado-ryan-1998","b":"movie:interstellar-2014","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:salvar-al-soldado-ryan-1998","b":"movie:cadena-perpetua-1994","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-silencio-de-los-corderos-1991","b":"movie:seven-1995","kind":"pick","src":"llm-agent","w":1,"reason":"Mismo tono de thriller y crimen"}
+{"a":"movie:el-silencio-de-los-corderos-1991","b":"movie:pulp-fiction-1994","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de thriller y crimen"}
+{"a":"movie:el-silencio-de-los-corderos-1991","b":"movie:el-caballero-oscuro-2008","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:el-silencio-de-los-corderos-1991","b":"movie:parasitos-2019","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:el-silencio-de-los-corderos-1991","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:el-silencio-de-los-corderos-1991","b":"movie:blade-runner-1982","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:el-silencio-de-los-corderos-1991","b":"movie:sospechosos-habituales-1995","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:el-silencio-de-los-corderos-1991","b":"movie:el-padrino-1972","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:el-silencio-de-los-corderos-1991","b":"movie:john-wick-2014","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:el-silencio-de-los-corderos-1991","b":"movie:memento-2000","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:seven-1995","b":"movie:el-club-de-la-lucha-1999","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:seven-1995","b":"movie:el-silencio-de-los-corderos-1991","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de thriller y crimen"}
+{"a":"movie:seven-1995","b":"movie:pulp-fiction-1994","kind":"pick","src":"llm-agent","w":0.9,"reason":"Mismo tono de thriller y crimen"}
+{"a":"movie:seven-1995","b":"movie:zodiac-2007","kind":"pick","src":"llm-agent","w":0.85,"reason":"Mismo tono de thriller y crimen"}
+{"a":"movie:seven-1995","b":"movie:el-caballero-oscuro-2008","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:seven-1995","b":"movie:parasitos-2019","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:seven-1995","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:seven-1995","b":"movie:john-wick-2014","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:seven-1995","b":"movie:sospechosos-habituales-1995","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:seven-1995","b":"movie:memento-2000","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:sospechosos-habituales-1995","b":"movie:seven-1995","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:sospechosos-habituales-1995","b":"movie:memento-2000","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de misterio"}
+{"a":"movie:sospechosos-habituales-1995","b":"movie:el-caballero-oscuro-2008","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:sospechosos-habituales-1995","b":"movie:el-silencio-de-los-corderos-1991","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:sospechosos-habituales-1995","b":"movie:el-padrino-1972","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:sospechosos-habituales-1995","b":"movie:del-reves-2015","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:sospechosos-habituales-1995","b":"movie:pulp-fiction-1994","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:sospechosos-habituales-1995","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:sospechosos-habituales-1995","b":"movie:up-2009","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:sospechosos-habituales-1995","b":"movie:john-wick-2014","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:braveheart-1995","b":"movie:la-lista-de-schindler-1993","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de histórica"}
+{"a":"movie:braveheart-1995","b":"movie:salvar-al-soldado-ryan-1998","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de bélica"}
+{"a":"movie:braveheart-1995","b":"movie:oppenheimer-2023","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de histórica"}
+{"a":"movie:braveheart-1995","b":"movie:gladiator-2000","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de histórica"}
+{"a":"movie:braveheart-1995","b":"movie:john-wick-2014","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:braveheart-1995","b":"movie:el-pianista-2002","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de bélica"}
+{"a":"movie:braveheart-1995","b":"movie:del-reves-2015","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:braveheart-1995","b":"movie:star-wars-una-nueva-esperanza-1977","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:braveheart-1995","b":"movie:top-gun-maverick-2022","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:braveheart-1995","b":"movie:avatar-2009","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:toy-story-1995","b":"movie:del-reves-2015","kind":"pick","src":"llm-agent","w":1,"reason":"Mismo tono de animación y comedia"}
+{"a":"movie:toy-story-1995","b":"movie:shrek-2001","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de animación y comedia"}
+{"a":"movie:toy-story-1995","b":"movie:coco-2017","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:toy-story-1995","b":"movie:barbie-2023","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:toy-story-1995","b":"movie:regreso-al-futuro-1985","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:toy-story-1995","b":"movie:parasitos-2019","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:toy-story-1995","b":"movie:up-2009","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:toy-story-1995","b":"movie:la-vida-es-bella-1997","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:toy-story-1995","b":"movie:el-rey-leon-1994","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:toy-story-1995","b":"movie:amelie-2001","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:shrek-2001","b":"movie:del-reves-2015","kind":"pick","src":"llm-agent","w":1,"reason":"Mismo tono de animación y comedia"}
+{"a":"movie:shrek-2001","b":"movie:toy-story-1995","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de animación y comedia"}
+{"a":"movie:shrek-2001","b":"movie:up-2009","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:shrek-2001","b":"movie:coco-2017","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:shrek-2001","b":"movie:amelie-2001","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:shrek-2001","b":"movie:parasitos-2019","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:shrek-2001","b":"movie:barbie-2023","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:shrek-2001","b":"movie:regreso-al-futuro-1985","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:shrek-2001","b":"movie:la-vida-es-bella-1997","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:shrek-2001","b":"movie:john-wick-2014","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:origen-2010","b":"movie:interstellar-2014","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:origen-2010","b":"movie:memento-2000","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:origen-2010","b":"movie:blade-runner-1982","kind":"pick","src":"llm-agent","w":0.9,"reason":"Mismo tono de ciencia ficción y thriller"}
+{"a":"movie:origen-2010","b":"movie:el-caballero-oscuro-2008","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma visión autoral y estilo distintivo de Christopher Nolan"}
+{"a":"movie:origen-2010","b":"movie:oppenheimer-2023","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma visión autoral y estilo distintivo de Christopher Nolan"}
+{"a":"movie:origen-2010","b":"movie:dune-2021","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:origen-2010","b":"movie:star-wars-una-nueva-esperanza-1977","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:origen-2010","b":"movie:john-wick-2014","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:origen-2010","b":"movie:avatar-2009","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:origen-2010","b":"movie:seven-1995","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:el-caballero-oscuro-2008","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":1,"reason":"Misma visión autoral y estilo distintivo de Christopher Nolan"}
+{"a":"movie:el-caballero-oscuro-2008","b":"movie:memento-2000","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma visión autoral y estilo distintivo de Christopher Nolan"}
+{"a":"movie:el-caballero-oscuro-2008","b":"movie:interstellar-2014","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma visión autoral y estilo distintivo de Christopher Nolan"}
+{"a":"movie:el-caballero-oscuro-2008","b":"movie:oppenheimer-2023","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma visión autoral y estilo distintivo de Christopher Nolan"}
+{"a":"movie:el-caballero-oscuro-2008","b":"movie:el-caballero-oscuro-la-leyenda-renace-2012","kind":"pick","src":"llm-agent","w":0.8,"reason":"Mismo tono de acción y crimen"}
+{"a":"movie:el-caballero-oscuro-2008","b":"movie:seven-1995","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:el-caballero-oscuro-2008","b":"movie:john-wick-2014","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:el-caballero-oscuro-2008","b":"movie:top-gun-maverick-2022","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:el-caballero-oscuro-2008","b":"movie:vengadores-endgame-2019","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:el-caballero-oscuro-2008","b":"movie:sospechosos-habituales-1995","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de crimen"}
+{"a":"movie:interstellar-2014","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:interstellar-2014","b":"movie:oppenheimer-2023","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:interstellar-2014","b":"movie:memento-2000","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma visión autoral y estilo distintivo de Christopher Nolan"}
+{"a":"movie:interstellar-2014","b":"movie:el-caballero-oscuro-2008","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma visión autoral y estilo distintivo de Christopher Nolan"}
+{"a":"movie:interstellar-2014","b":"movie:avatar-2009","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:interstellar-2014","b":"movie:gran-torino-2008","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:interstellar-2014","b":"movie:star-wars-una-nueva-esperanza-1977","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:interstellar-2014","b":"movie:dune-2021","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:interstellar-2014","b":"movie:alien-el-octavo-pasajero-1979","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:interstellar-2014","b":"movie:el-imperio-contraataca-1980","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:oppenheimer-2023","b":"movie:interstellar-2014","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:oppenheimer-2023","b":"movie:la-lista-de-schindler-1993","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de drama y histórica"}
+{"a":"movie:oppenheimer-2023","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma visión autoral y estilo distintivo de Christopher Nolan"}
+{"a":"movie:oppenheimer-2023","b":"movie:memento-2000","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma visión autoral y estilo distintivo de Christopher Nolan"}
+{"a":"movie:oppenheimer-2023","b":"movie:el-caballero-oscuro-2008","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma visión autoral y estilo distintivo de Christopher Nolan"}
+{"a":"movie:oppenheimer-2023","b":"movie:gran-torino-2008","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:oppenheimer-2023","b":"movie:titanic-1997","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:oppenheimer-2023","b":"movie:whiplash-2014","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:oppenheimer-2023","b":"movie:salvar-al-soldado-ryan-1998","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:oppenheimer-2023","b":"movie:top-gun-maverick-2022","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:avatar-2009","b":"movie:terminator-2-el-juicio-final-1991","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:avatar-2009","b":"movie:star-wars-una-nueva-esperanza-1977","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de ciencia ficción y aventura"}
+{"a":"movie:avatar-2009","b":"movie:el-imperio-contraataca-1980","kind":"pick","src":"llm-agent","w":0.9,"reason":"Mismo tono de ciencia ficción y aventura"}
+{"a":"movie:avatar-2009","b":"movie:dune-2021","kind":"pick","src":"llm-agent","w":0.85,"reason":"Mismo tono de ciencia ficción y aventura"}
+{"a":"movie:avatar-2009","b":"movie:parque-jurasico-1993","kind":"pick","src":"llm-agent","w":0.8,"reason":"Mismo tono de ciencia ficción y aventura"}
+{"a":"movie:avatar-2009","b":"movie:titanic-1997","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma visión autoral y estilo distintivo de James Cameron"}
+{"a":"movie:avatar-2009","b":"movie:interstellar-2014","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:avatar-2009","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:avatar-2009","b":"movie:up-2009","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:avatar-2009","b":"movie:regreso-al-futuro-1985","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:vengadores-endgame-2019","b":"movie:mad-max-furia-en-la-carretera-2015","kind":"pick","src":"llm-agent","w":1,"reason":"Mismo tono de acción y ciencia ficción"}
+{"a":"movie:vengadores-endgame-2019","b":"movie:iron-man-2008","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de acción y ciencia ficción"}
+{"a":"movie:vengadores-endgame-2019","b":"movie:terminator-2-el-juicio-final-1991","kind":"pick","src":"llm-agent","w":0.9,"reason":"Mismo tono de acción y ciencia ficción"}
+{"a":"movie:vengadores-endgame-2019","b":"movie:matrix-1999","kind":"pick","src":"llm-agent","w":0.85,"reason":"Mismo tono de acción y ciencia ficción"}
+{"a":"movie:vengadores-endgame-2019","b":"movie:john-wick-2014","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:vengadores-endgame-2019","b":"movie:top-gun-maverick-2022","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:vengadores-endgame-2019","b":"movie:star-wars-una-nueva-esperanza-1977","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:vengadores-endgame-2019","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:vengadores-endgame-2019","b":"movie:el-caballero-oscuro-2008","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:vengadores-endgame-2019","b":"movie:el-imperio-contraataca-1980","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:iron-man-2008","b":"movie:vengadores-endgame-2019","kind":"pick","src":"llm-agent","w":1,"reason":"Mismo tono de acción y ciencia ficción"}
+{"a":"movie:iron-man-2008","b":"movie:mad-max-furia-en-la-carretera-2015","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de acción y ciencia ficción"}
+{"a":"movie:iron-man-2008","b":"movie:terminator-2-el-juicio-final-1991","kind":"pick","src":"llm-agent","w":0.9,"reason":"Mismo tono de acción y ciencia ficción"}
+{"a":"movie:iron-man-2008","b":"movie:matrix-1999","kind":"pick","src":"llm-agent","w":0.85,"reason":"Mismo tono de acción y ciencia ficción"}
+{"a":"movie:iron-man-2008","b":"movie:top-gun-maverick-2022","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:iron-man-2008","b":"movie:john-wick-2014","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:iron-man-2008","b":"movie:dune-2021","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:iron-man-2008","b":"movie:star-wars-una-nueva-esperanza-1977","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:iron-man-2008","b":"movie:el-caballero-oscuro-2008","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:iron-man-2008","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:star-wars-una-nueva-esperanza-1977","b":"movie:el-imperio-contraataca-1980","kind":"pick","src":"llm-agent","w":1,"reason":"Mismo tono de ciencia ficción y aventura"}
+{"a":"movie:star-wars-una-nueva-esperanza-1977","b":"movie:avatar-2009","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de ciencia ficción y aventura"}
+{"a":"movie:star-wars-una-nueva-esperanza-1977","b":"movie:dune-2021","kind":"pick","src":"llm-agent","w":0.9,"reason":"Mismo tono de ciencia ficción y aventura"}
+{"a":"movie:star-wars-una-nueva-esperanza-1977","b":"movie:parque-jurasico-1993","kind":"pick","src":"llm-agent","w":0.85,"reason":"Mismo tono de ciencia ficción y aventura"}
+{"a":"movie:star-wars-una-nueva-esperanza-1977","b":"movie:up-2009","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:star-wars-una-nueva-esperanza-1977","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:star-wars-una-nueva-esperanza-1977","b":"movie:vengadores-endgame-2019","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:star-wars-una-nueva-esperanza-1977","b":"movie:interstellar-2014","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:star-wars-una-nueva-esperanza-1977","b":"movie:mad-max-furia-en-la-carretera-2015","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:star-wars-una-nueva-esperanza-1977","b":"movie:blade-runner-1982","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:el-imperio-contraataca-1980","b":"movie:star-wars-una-nueva-esperanza-1977","kind":"pick","src":"llm-agent","w":1,"reason":"Mismo tono de ciencia ficción y aventura"}
+{"a":"movie:el-imperio-contraataca-1980","b":"movie:dune-2021","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de ciencia ficción y aventura"}
+{"a":"movie:el-imperio-contraataca-1980","b":"movie:avatar-2009","kind":"pick","src":"llm-agent","w":0.9,"reason":"Mismo tono de ciencia ficción y aventura"}
+{"a":"movie:el-imperio-contraataca-1980","b":"movie:parque-jurasico-1993","kind":"pick","src":"llm-agent","w":0.85,"reason":"Mismo tono de ciencia ficción y aventura"}
+{"a":"movie:el-imperio-contraataca-1980","b":"movie:up-2009","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:el-imperio-contraataca-1980","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:el-imperio-contraataca-1980","b":"movie:regreso-al-futuro-1985","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:el-imperio-contraataca-1980","b":"movie:vengadores-endgame-2019","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:el-imperio-contraataca-1980","b":"movie:alien-el-octavo-pasajero-1979","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:el-imperio-contraataca-1980","b":"movie:interstellar-2014","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:blade-runner-1982","b":"movie:alien-el-octavo-pasajero-1979","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:blade-runner-1982","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de ciencia ficción y thriller"}
+{"a":"movie:blade-runner-1982","b":"movie:gladiator-2000","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma visión autoral y estilo distintivo de Ridley Scott"}
+{"a":"movie:blade-runner-1982","b":"movie:dune-2021","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:blade-runner-1982","b":"movie:memento-2000","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:blade-runner-1982","b":"movie:star-wars-una-nueva-esperanza-1977","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:blade-runner-1982","b":"movie:avatar-2009","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:blade-runner-1982","b":"movie:parasitos-2019","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:blade-runner-1982","b":"movie:seven-1995","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:blade-runner-1982","b":"movie:el-imperio-contraataca-1980","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:alien-el-octavo-pasajero-1979","b":"movie:blade-runner-1982","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:alien-el-octavo-pasajero-1979","b":"movie:gladiator-2000","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma visión autoral y estilo distintivo de Ridley Scott"}
+{"a":"movie:alien-el-octavo-pasajero-1979","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:alien-el-octavo-pasajero-1979","b":"movie:interstellar-2014","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:alien-el-octavo-pasajero-1979","b":"movie:avatar-2009","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:alien-el-octavo-pasajero-1979","b":"movie:el-imperio-contraataca-1980","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:alien-el-octavo-pasajero-1979","b":"movie:star-wars-una-nueva-esperanza-1977","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:alien-el-octavo-pasajero-1979","b":"movie:regreso-al-futuro-1985","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:alien-el-octavo-pasajero-1979","b":"movie:mad-max-furia-en-la-carretera-2015","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:alien-el-octavo-pasajero-1979","b":"movie:parque-jurasico-1993","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:terminator-2-el-juicio-final-1991","b":"movie:avatar-2009","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:terminator-2-el-juicio-final-1991","b":"movie:titanic-1997","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma visión autoral y estilo distintivo de James Cameron"}
+{"a":"movie:terminator-2-el-juicio-final-1991","b":"movie:mad-max-furia-en-la-carretera-2015","kind":"pick","src":"llm-agent","w":0.9,"reason":"Mismo tono de acción y ciencia ficción"}
+{"a":"movie:terminator-2-el-juicio-final-1991","b":"movie:iron-man-2008","kind":"pick","src":"llm-agent","w":0.85,"reason":"Mismo tono de acción y ciencia ficción"}
+{"a":"movie:terminator-2-el-juicio-final-1991","b":"movie:vengadores-endgame-2019","kind":"pick","src":"llm-agent","w":0.8,"reason":"Mismo tono de acción y ciencia ficción"}
+{"a":"movie:terminator-2-el-juicio-final-1991","b":"movie:matrix-1999","kind":"pick","src":"llm-agent","w":0.75,"reason":"Mismo tono de acción y ciencia ficción"}
+{"a":"movie:terminator-2-el-juicio-final-1991","b":"movie:el-caballero-oscuro-2008","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:terminator-2-el-juicio-final-1991","b":"movie:interstellar-2014","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:terminator-2-el-juicio-final-1991","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:terminator-2-el-juicio-final-1991","b":"movie:alien-el-octavo-pasajero-1979","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:memento-2000","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:memento-2000","b":"movie:el-caballero-oscuro-2008","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma visión autoral y estilo distintivo de Christopher Nolan"}
+{"a":"movie:memento-2000","b":"movie:interstellar-2014","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma visión autoral y estilo distintivo de Christopher Nolan"}
+{"a":"movie:memento-2000","b":"movie:oppenheimer-2023","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma visión autoral y estilo distintivo de Christopher Nolan"}
+{"a":"movie:memento-2000","b":"movie:john-wick-2014","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:memento-2000","b":"movie:parasitos-2019","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:memento-2000","b":"movie:blade-runner-1982","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:memento-2000","b":"movie:sospechosos-habituales-1995","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de misterio"}
+{"a":"movie:memento-2000","b":"movie:seven-1995","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:memento-2000","b":"movie:pulp-fiction-1994","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:amelie-2001","b":"movie:la-vida-es-bella-1997","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:amelie-2001","b":"movie:la-la-land-2016","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de romance"}
+{"a":"movie:amelie-2001","b":"movie:del-reves-2015","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:amelie-2001","b":"movie:shrek-2001","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:amelie-2001","b":"movie:cinema-paradiso-1988","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de romance"}
+{"a":"movie:amelie-2001","b":"movie:parasitos-2019","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:amelie-2001","b":"movie:barbie-2023","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:amelie-2001","b":"movie:toy-story-1995","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:amelie-2001","b":"movie:regreso-al-futuro-1985","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:amelie-2001","b":"movie:up-2009","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:la-vida-es-bella-1997","b":"movie:gran-torino-2008","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:la-vida-es-bella-1997","b":"movie:parasitos-2019","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:la-vida-es-bella-1997","b":"movie:del-reves-2015","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:la-vida-es-bella-1997","b":"movie:amelie-2001","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:la-vida-es-bella-1997","b":"movie:cinema-paradiso-1988","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:la-vida-es-bella-1997","b":"movie:salvar-al-soldado-ryan-1998","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:la-vida-es-bella-1997","b":"movie:barbie-2023","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:la-vida-es-bella-1997","b":"movie:regreso-al-futuro-1985","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:la-vida-es-bella-1997","b":"movie:toy-story-1995","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:la-vida-es-bella-1997","b":"movie:whiplash-2014","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:cinema-paradiso-1988","b":"movie:forrest-gump-1994","kind":"pick","src":"llm-agent","w":1,"reason":"Mismo tono de drama y romance"}
+{"a":"movie:cinema-paradiso-1988","b":"movie:titanic-1997","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de drama y romance"}
+{"a":"movie:cinema-paradiso-1988","b":"movie:nuovo-cinema-paradiso-1988","kind":"pick","src":"llm-agent","w":0.9,"reason":"Mismo tono de drama y romance"}
+{"a":"movie:cinema-paradiso-1988","b":"movie:gran-torino-2008","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:cinema-paradiso-1988","b":"movie:salvar-al-soldado-ryan-1998","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:cinema-paradiso-1988","b":"movie:la-vida-es-bella-1997","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:cinema-paradiso-1988","b":"movie:el-pianista-2002","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:cinema-paradiso-1988","b":"movie:amelie-2001","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de romance"}
+{"a":"movie:cinema-paradiso-1988","b":"movie:whiplash-2014","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:cinema-paradiso-1988","b":"movie:la-la-land-2016","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de romance"}
+{"a":"movie:el-pianista-2002","b":"movie:salvar-al-soldado-ryan-1998","kind":"pick","src":"llm-agent","w":1,"reason":"Mismo tono de drama y bélica"}
+{"a":"movie:el-pianista-2002","b":"movie:gran-torino-2008","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-pianista-2002","b":"movie:cinema-paradiso-1988","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-pianista-2002","b":"movie:la-lista-de-schindler-1993","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-pianista-2002","b":"movie:la-vida-es-bella-1997","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-pianista-2002","b":"movie:whiplash-2014","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-pianista-2002","b":"movie:el-padrino-1972","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-pianista-2002","b":"movie:cadena-perpetua-1994","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-pianista-2002","b":"movie:interstellar-2014","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:el-pianista-2002","b":"movie:forrest-gump-1994","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:parasitos-2019","b":"movie:del-reves-2015","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:parasitos-2019","b":"movie:john-wick-2014","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:parasitos-2019","b":"movie:la-vida-es-bella-1997","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:parasitos-2019","b":"movie:seven-1995","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:parasitos-2019","b":"movie:memento-2000","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:parasitos-2019","b":"movie:toy-story-1995","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:parasitos-2019","b":"movie:shrek-2001","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:parasitos-2019","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:parasitos-2019","b":"movie:amelie-2001","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:parasitos-2019","b":"movie:regreso-al-futuro-1985","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:joker-2019","b":"movie:el-club-de-la-lucha-1999","kind":"pick","src":"llm-agent","w":1,"reason":"Mismo tono de drama y thriller"}
+{"a":"movie:joker-2019","b":"movie:gran-torino-2008","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:joker-2019","b":"movie:whiplash-2014","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:joker-2019","b":"movie:john-wick-2014","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:joker-2019","b":"movie:parasitos-2019","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:joker-2019","b":"movie:top-gun-maverick-2022","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:joker-2019","b":"movie:seven-1995","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:joker-2019","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:joker-2019","b":"movie:memento-2000","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:joker-2019","b":"movie:salvar-al-soldado-ryan-1998","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:la-la-land-2016","b":"movie:whiplash-2014","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de musical"}
+{"a":"movie:la-la-land-2016","b":"movie:coco-2017","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de musical"}
+{"a":"movie:la-la-land-2016","b":"movie:amelie-2001","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de romance"}
+{"a":"movie:la-la-land-2016","b":"movie:cinema-paradiso-1988","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de romance"}
+{"a":"movie:la-la-land-2016","b":"movie:del-reves-2015","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:la-la-land-2016","b":"movie:john-wick-2014","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:la-la-land-2016","b":"movie:up-2009","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:la-la-land-2016","b":"movie:el-pianista-2002","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:la-la-land-2016","b":"movie:parasitos-2019","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:la-la-land-2016","b":"movie:forrest-gump-1994","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de romance"}
+{"a":"movie:whiplash-2014","b":"movie:la-la-land-2016","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de musical"}
+{"a":"movie:whiplash-2014","b":"movie:gran-torino-2008","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:whiplash-2014","b":"movie:coco-2017","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de musical"}
+{"a":"movie:whiplash-2014","b":"movie:top-gun-maverick-2022","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:whiplash-2014","b":"movie:cinema-paradiso-1988","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:whiplash-2014","b":"movie:la-lista-de-schindler-1993","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:whiplash-2014","b":"movie:joker-2019","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:whiplash-2014","b":"movie:salvar-al-soldado-ryan-1998","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:whiplash-2014","b":"movie:la-vida-es-bella-1997","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:whiplash-2014","b":"movie:interstellar-2014","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:mad-max-furia-en-la-carretera-2015","b":"movie:vengadores-endgame-2019","kind":"pick","src":"llm-agent","w":1,"reason":"Mismo tono de acción y ciencia ficción"}
+{"a":"movie:mad-max-furia-en-la-carretera-2015","b":"movie:iron-man-2008","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de acción y ciencia ficción"}
+{"a":"movie:mad-max-furia-en-la-carretera-2015","b":"movie:terminator-2-el-juicio-final-1991","kind":"pick","src":"llm-agent","w":0.9,"reason":"Mismo tono de acción y ciencia ficción"}
+{"a":"movie:mad-max-furia-en-la-carretera-2015","b":"movie:matrix-1999","kind":"pick","src":"llm-agent","w":0.85,"reason":"Mismo tono de acción y ciencia ficción"}
+{"a":"movie:mad-max-furia-en-la-carretera-2015","b":"movie:top-gun-maverick-2022","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:mad-max-furia-en-la-carretera-2015","b":"movie:john-wick-2014","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:mad-max-furia-en-la-carretera-2015","b":"movie:star-wars-una-nueva-esperanza-1977","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:mad-max-furia-en-la-carretera-2015","b":"movie:dune-2021","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:mad-max-furia-en-la-carretera-2015","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:mad-max-furia-en-la-carretera-2015","b":"movie:el-imperio-contraataca-1980","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:john-wick-2014","b":"movie:top-gun-maverick-2022","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:john-wick-2014","b":"movie:parasitos-2019","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:john-wick-2014","b":"movie:vengadores-endgame-2019","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:john-wick-2014","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:john-wick-2014","b":"movie:seven-1995","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:john-wick-2014","b":"movie:el-caballero-oscuro-2008","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:john-wick-2014","b":"movie:memento-2000","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:john-wick-2014","b":"movie:mad-max-furia-en-la-carretera-2015","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:john-wick-2014","b":"movie:joker-2019","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:john-wick-2014","b":"movie:blade-runner-1982","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de thriller"}
+{"a":"movie:top-gun-maverick-2022","b":"movie:john-wick-2014","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:top-gun-maverick-2022","b":"movie:gran-torino-2008","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:top-gun-maverick-2022","b":"movie:vengadores-endgame-2019","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:top-gun-maverick-2022","b":"movie:mad-max-furia-en-la-carretera-2015","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:top-gun-maverick-2022","b":"movie:whiplash-2014","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:top-gun-maverick-2022","b":"movie:salvar-al-soldado-ryan-1998","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:top-gun-maverick-2022","b":"movie:el-caballero-oscuro-2008","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:top-gun-maverick-2022","b":"movie:iron-man-2008","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de acción"}
+{"a":"movie:top-gun-maverick-2022","b":"movie:la-vida-es-bella-1997","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:top-gun-maverick-2022","b":"movie:la-lista-de-schindler-1993","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:barbie-2023","b":"movie:toy-story-1995","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:barbie-2023","b":"movie:del-reves-2015","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:barbie-2023","b":"movie:parasitos-2019","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:barbie-2023","b":"movie:la-vida-es-bella-1997","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:barbie-2023","b":"movie:amelie-2001","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:barbie-2023","b":"movie:shrek-2001","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:barbie-2023","b":"movie:regreso-al-futuro-1985","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:barbie-2023","b":"movie:coco-2017","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:barbie-2023","b":"movie:up-2009","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:barbie-2023","b":"movie:star-wars-una-nueva-esperanza-1977","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:dune-2021","b":"movie:star-wars-una-nueva-esperanza-1977","kind":"pick","src":"llm-agent","w":1,"reason":"Mismo tono de ciencia ficción y aventura"}
+{"a":"movie:dune-2021","b":"movie:el-imperio-contraataca-1980","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de ciencia ficción y aventura"}
+{"a":"movie:dune-2021","b":"movie:avatar-2009","kind":"pick","src":"llm-agent","w":0.9,"reason":"Mismo tono de ciencia ficción y aventura"}
+{"a":"movie:dune-2021","b":"movie:parque-jurasico-1993","kind":"pick","src":"llm-agent","w":0.85,"reason":"Mismo tono de ciencia ficción y aventura"}
+{"a":"movie:dune-2021","b":"movie:origen-2010","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:dune-2021","b":"movie:blade-runner-1982","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:dune-2021","b":"movie:up-2009","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:dune-2021","b":"movie:interstellar-2014","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:dune-2021","b":"movie:mad-max-furia-en-la-carretera-2015","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:dune-2021","b":"movie:vengadores-endgame-2019","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de ciencia ficción"}
+{"a":"movie:gran-torino-2008","b":"movie:la-vida-es-bella-1997","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:gran-torino-2008","b":"movie:cadena-perpetua-1994","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:gran-torino-2008","b":"movie:whiplash-2014","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:gran-torino-2008","b":"movie:cinema-paradiso-1988","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:gran-torino-2008","b":"movie:top-gun-maverick-2022","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:gran-torino-2008","b":"movie:salvar-al-soldado-ryan-1998","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:gran-torino-2008","b":"movie:la-lista-de-schindler-1993","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:gran-torino-2008","b":"movie:el-padrino-1972","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:gran-torino-2008","b":"movie:interstellar-2014","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:gran-torino-2008","b":"movie:el-pianista-2002","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de drama"}
+{"a":"movie:del-reves-2015","b":"movie:up-2009","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:del-reves-2015","b":"movie:shrek-2001","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de animación y comedia"}
+{"a":"movie:del-reves-2015","b":"movie:toy-story-1995","kind":"pick","src":"llm-agent","w":0.9,"reason":"Mismo tono de animación y comedia"}
+{"a":"movie:del-reves-2015","b":"movie:parasitos-2019","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:del-reves-2015","b":"movie:coco-2017","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:del-reves-2015","b":"movie:la-vida-es-bella-1997","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:del-reves-2015","b":"movie:barbie-2023","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:del-reves-2015","b":"movie:regreso-al-futuro-1985","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:del-reves-2015","b":"movie:amelie-2001","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de comedia"}
+{"a":"movie:del-reves-2015","b":"movie:el-rey-leon-1994","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:up-2009","b":"movie:del-reves-2015","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:up-2009","b":"movie:el-rey-leon-1994","kind":"pick","src":"llm-agent","w":0.95,"reason":"Mismo tono de animación y aventura"}
+{"a":"movie:up-2009","b":"movie:shrek-2001","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:up-2009","b":"movie:star-wars-una-nueva-esperanza-1977","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:up-2009","b":"movie:el-imperio-contraataca-1980","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:up-2009","b":"movie:parque-jurasico-1993","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:up-2009","b":"movie:coco-2017","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:up-2009","b":"movie:avatar-2009","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:up-2009","b":"movie:toy-story-1995","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:up-2009","b":"movie:dune-2021","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma atmósfera cautivadora de aventura"}
+{"a":"movie:coco-2017","b":"movie:toy-story-1995","kind":"pick","src":"llm-agent","w":1,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:coco-2017","b":"movie:del-reves-2015","kind":"pick","src":"llm-agent","w":0.95,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:coco-2017","b":"movie:la-la-land-2016","kind":"pick","src":"llm-agent","w":0.9,"reason":"Misma atmósfera cautivadora de musical"}
+{"a":"movie:coco-2017","b":"movie:whiplash-2014","kind":"pick","src":"llm-agent","w":0.85,"reason":"Misma atmósfera cautivadora de musical"}
+{"a":"movie:coco-2017","b":"movie:shrek-2001","kind":"pick","src":"llm-agent","w":0.8,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:coco-2017","b":"movie:up-2009","kind":"pick","src":"llm-agent","w":0.75,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:coco-2017","b":"movie:el-rey-leon-1994","kind":"pick","src":"llm-agent","w":0.7,"reason":"Misma atmósfera cautivadora de animación"}
+{"a":"movie:coco-2017","b":"movie:barbie-2023","kind":"pick","src":"llm-agent","w":0.65,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:coco-2017","b":"movie:parasitos-2019","kind":"pick","src":"llm-agent","w":0.6,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
+{"a":"movie:coco-2017","b":"movie:memento-2000","kind":"pick","src":"llm-agent","w":0.55,"reason":"Misma experiencia inmersiva y tono emocional parejo"}
