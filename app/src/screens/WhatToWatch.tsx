@@ -215,12 +215,14 @@ export function WhatToWatch() {
     setPair(null)
   }
 
+  const shelfTerms = shelf ? SHELF_LABEL[shelf] : SHELF_LABEL.movie
+
   const reason = (c: Cand) => {
     const top = friendHits(c.item.id).filter((h) => h.entry.status === 'seen' && h.entry.score !== undefined)[0]
     const plat = c.item.platforms?.find((p) => profile.platforms.includes(p)) ?? c.item.platforms?.[0]
     return [
       c.like ? `Algo como ${c.like.title}` : null,
-      top ? `${top.friend.name} ${isBook ? 'lo' : 'la'} tiene en su ranking` : null,
+      top ? `${top.friend.name} ${shelfTerms.pronoun} tiene en su ranking` : null,
       c.fromFriends ? null : 'Estaba en tus pendientes',
       !isBook && plat ? `Está en ${plat}` : null,
     ].filter(Boolean).join(' · ')
@@ -335,12 +337,12 @@ export function WhatToWatch() {
     body = (
       <div className="flex-1 min-h-0 flex flex-col items-center justify-center px-6 text-center gap-3">
         <Poster item={cand.item} className="w-36 aspect-[2/3] rounded-2xl shadow-2xl" />
-        <h2 className="serif text-3xl font-semibold mt-2">{isBook ? 'A leer 📖' : 'A disfrutar 🍿'}</h2>
+        <h2 className="serif text-3xl font-semibold mt-2">{shelf === 'book' ? 'A leer 📖' : shelf === 'boardgame' ? 'A jugar 🎲' : shelf === 'artist' ? 'A escuchar 🎧' : 'A disfrutar 🍿'}</h2>
         <p className="text-mute">{cand.item.title}</p>
         {!isBook && plat && (
           <button onClick={() => setToast('En la demo no abre la plataforma')} className="min-h-[52px] px-6 rounded-2xl bg-accent text-accent-ink font-semibold flex items-center gap-2"><Icon name="tv" size={20} /> Abrir en {plat}</button>
         )}
-        <button onClick={() => { setStatus(cand.item.id, 'seen'); setRating(cand.item.id) }} className="min-h-[48px] px-6 rounded-2xl bg-surface border border-line font-medium">Ya {isBook ? 'lo' : 'la'} he {isBook ? 'leído' : 'visto'}: valorar</button>
+        <button onClick={() => { setStatus(cand.item.id, 'seen'); setRating(cand.item.id) }} className="min-h-[48px] px-6 rounded-2xl bg-surface border border-line font-medium">Ya {shelfTerms.pronoun} he {shelfTerms.seenPastPart}: valorar</button>
         <button onClick={reset} className="text-sm text-mute underline underline-offset-2 mt-1">Empezar de nuevo</button>
       </div>
     )

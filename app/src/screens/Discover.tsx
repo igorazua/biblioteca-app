@@ -1,11 +1,15 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
-import { friends, friendsMean, items } from '../data/catalog'
-import { buildDeck } from '../lib/deck'
+import { friends as seedFriends, getItem, items } from '../data/catalog'
+import { nextCards, newDeckSessionState, type DeckCard, type DeckSessionState } from '../lib/engine/deck'
 import { useStore } from '../store/useStore'
+import { useFriends } from '../store/useFriends'
 import { track, useEvents } from '../store/useEvents'
-import { SHELVES, SHELF_LABEL, type ShelfType } from '../types'
+import { affinity } from '../lib/affinity'
+import { friendRanks } from '../lib/rank'
+import { useRanks } from '../store/useScores'
+import { SHELVES, SHELF_LABEL, type Friend, type Item, type ShelfType } from '../types'
 import { SwipeDeck, type DeckHandle, type SwipeDir } from '../components/SwipeDeck'
 import { RatingFlow } from '../components/RatingFlow'
 import { Chip, Toast } from '../components/ui'
@@ -22,37 +26,66 @@ export function Discover() {
   const setShelf = (s: ShelfType) => { setShelfState(s); try { sessionStorage.setItem('discover-shelf', s) } catch { /* ok */ } }
   const entries = useStore((s) => s.entries)
   const profile = useStore((s) => s.profile)
+  const rankings = useStore((s) => s.rankings)
+  const ranks = useRanks()
   const swipe = useStore((s) => s.swipe)
   const settings = useStore((s) => s.settings)
   const undoSwipe = useStore((s) => s.undoSwipe)
   const hasHistory = useStore((s) => s.history.length > 0)
   const [rating, setRating] = useState<string | null>(null)
   const [toast, setToast] = useState<string | null>(null)
-  const [first, setFirst] = useState<string | null>(null) // tarjeta recuperada con «deshacer»
   const deckRef = useRef<DeckHandle>(null)
+
+  const realFriends = useFriends((s) => s.realFriends)
+  const activeFriends = realFriends.length > 0 ? realFriends : seedFriends
 
   const newSession = useEvents((s) => s.newSession)
   const sessionSid = useRef(newSession('deck'))
   const cardShownAt = useRef(Date.now())
   const swipeCount = useRef(0)
   const shownIds = useRef(new Set<string>())
+  const sessionStateRef = useRef<DeckSessionState>(newDeckSessionState())
 
-  const deck = useMemo(() => {
-    const pool = items.filter((i) => i.type === shelf)
-    const all = buildDeck(pool, { friends, entries, birthYear: profile.birthYear, platforms: profile.platforms, reader: profile.reader, quality: friendsMean })
-    if (first) {
-      const idx = all.findIndex((i) => i.id === first)
-      if (idx > 0) return [all[idx], ...all.slice(0, idx), ...all.slice(idx + 1)]
-    }
-    return all
-  }, [shelf, entries, profile.birthYear, profile.platforms, profile.reader, first])
+  const getFriendPct = useCallback((friend: Friend, itemId: string) => {
+    return friendRanks(friend, getItem)[itemId]?.pct ?? null
+  }, [])
 
-  // Nueva sesión al cambiar estantería
+  const getAffinity = useCallback((friendId: string) => {
+    const f = activeFriends.find((x) => x.id === friendId)
+    if (!f) return null
+    const mine = Object.fromEntries(Object.entries(ranks).map(([id, r]) => [id, r.pct]))
+    const theirs = Object.fromEntries(Object.entries(friendRanks(f, getItem)).map(([id, r]) => [id, r.pct]))
+    return affinity(mine, theirs)
+  }, [activeFriends, ranks])
+
+  // Cola de tarjetas con batching (§7)
+  const [deckCards, setDeckCards] = useState<DeckCard[]>([])
+
+  const fetchBatch = useCallback((existingIds: Set<string>, count = 20) => {
+    const pool = items.filter((i) => i.type === shelf && !existingIds.has(i.id))
+    return nextCards({
+      shelf,
+      items: pool,
+      entries,
+      rankings,
+      profile,
+      friends: activeFriends,
+      affinity: getAffinity,
+      friendPct: getFriendPct,
+      session: sessionStateRef.current,
+    }, Array.from(existingIds), count)
+  }, [shelf, entries, rankings, profile, activeFriends, getAffinity, getFriendPct])
+
+  // Inicializar o recargar mazo al cambiar estantería
   useEffect(() => {
     sessionSid.current = newSession('deck')
     swipeCount.current = 0
     shownIds.current.clear()
+    sessionStateRef.current = newDeckSessionState()
     cardShownAt.current = Date.now()
+
+    const initial = fetchBatch(new Set(), 20)
+    setDeckCards(initial)
 
     return () => {
       track('deck_session_end', {
@@ -61,41 +94,76 @@ export function Discover() {
         data: { cards: shownIds.current.size, swipes: swipeCount.current },
       })
     }
-  }, [shelf])
+  }, [shelf, fetchBatch, newSession])
+
+  // Reabastecer mazo cuando quedan <= 8 tarjetas (§7)
+  useEffect(() => {
+    if (deckCards.length > 0 && deckCards.length <= 8) {
+      const existing = new Set(deckCards.map((c) => c.item.id))
+      const nextBatch = fetchBatch(existing, 20)
+      if (nextBatch.length > 0) {
+        setDeckCards((prev) => [...prev, ...nextBatch])
+      }
+    }
+  }, [deckCards.length, fetchBatch])
 
   // Registrar tarjeta mostrada
-  const topCard = deck[0]
+  const topCard = deckCards[0]
   useEffect(() => {
-    if (topCard && !shownIds.current.has(topCard.id)) {
-      shownIds.current.add(topCard.id)
+    if (topCard && !shownIds.current.has(topCard.item.id)) {
+      shownIds.current.add(topCard.item.id)
       cardShownAt.current = Date.now()
       track('deck_shown', {
         shelf,
-        itemId: topCard.id,
+        itemId: topCard.item.id,
         sid: sessionSid.current,
-        data: { pos: shownIds.current.size, bucket: 'seen_likely', score: topCard.popularity },
+        data: { pos: shownIds.current.size, bucket: topCard.bucket, score: topCard.score },
       })
     }
-  }, [topCard?.id, shelf])
+  }, [topCard?.item.id, topCard?.bucket, topCard?.score, shelf])
 
-  const onSwipe = (item: (typeof deck)[number], dir: SwipeDir) => {
+  const onSwipe = (item: Item, dir: SwipeDir) => {
     const ms = Math.max(100, Date.now() - cardShownAt.current)
     cardShownAt.current = Date.now()
     swipeCount.current++
 
+    const cur = topCard
     track('deck_swipe', {
       shelf,
       itemId: item.id,
       sid: sessionSid.current,
-      data: { pos: swipeCount.current, bucket: 'seen_likely', dir, ms },
+      data: { pos: swipeCount.current, bucket: cur?.bucket ?? 'seen_likely', dir, ms },
     })
 
-    setFirst(null)
+    // Actualizar adaptación de la sesión (§7.6)
+    const decade = `${Math.floor(item.year / 10) * 10}s`
+    const macro = item.genres?.[0] || 'General'
+    const dStat = sessionStateRef.current.countsByDecade[decade] ??= { seen: 0, up: 0, left: 0, shown: 0 }
+    const mStat = sessionStateRef.current.countsByMacro[macro] ??= { seen: 0, up: 0, left: 0, shown: 0 }
+    dStat.shown++
+    mStat.shown++
+    if (dir === 'right') { dStat.seen++; mStat.seen++ }
+    else if (dir === 'up') { dStat.up++; mStat.up++ }
+    else if (dir === 'left') { dStat.left++; mStat.left++ }
+
+    setDeckCards((prev) => prev.slice(1))
     swipe(item.id, dir)
     if (dir === 'right') { if (settings.rateOnSwipe === false) setToast('Guardada ✓'); else setRating(item.id) }
     else if (dir === 'up') setToast('Guardada en pendientes ✓')
   }
-  const undo = () => { const id = undoSwipe(); if (id) { setFirst(id); setRating(null) } }
+
+  const undo = () => {
+    const id = undoSwipe()
+    if (id) {
+      const it = getItem(id)
+      if (it) {
+        setDeckCards((prev) => [{ item: it, bucket: 'seen_likely', score: it.popularity }, ...prev.filter((c) => c.item.id !== id)])
+        setRating(null)
+      }
+    }
+  }
+
+  const deck = deckCards.map((c) => c.item)
   const label = SHELF_LABEL[shelf]
   const blocked = !!rating
 

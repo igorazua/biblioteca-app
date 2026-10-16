@@ -1,10 +1,10 @@
-import { useEffect, useRef, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { animate, motion, useMotionValue } from 'framer-motion'
-import { friendHits, getItem } from '../data/catalog'
+import { friendHits, getItem, type FriendHit } from '../data/catalog'
 import { Icon } from './Icon'
 import { friendRanks } from '../lib/rank'
-import { SHELF_LABEL } from '../types'
+import { SHELF_LABEL, type ShelfType } from '../types'
 
 /** Pinta superposiciones (hojas, diálogos) sobre todo el marco de móvil, barra de pestañas incluida. */
 export function Portal({ children }: { children: ReactNode }) {
@@ -42,39 +42,123 @@ export function Chip({ active, onClick, children, className = '' }: { active?: b
   )
 }
 
-/** Burbujas de amigos sobre la tarjeta: hasta 4 avatares solapados + «+N», con la nota de cada uno (🔖 si lo tiene pendiente). */
-export function FriendBubbles({ itemId, max = 4 }: { itemId: string; max?: number }) {
+/** Burbujas de amigos sobre la tarjeta: hasta 4 avatares solapados + «+N», con la nota de cada uno (🔖 si lo tiene pendiente, 💬 si tiene comentario). */
+export function FriendBubbles({ itemId, shelf, max = 4 }: { itemId: string; shelf?: ShelfType; max?: number }) {
   const hits = friendHits(itemId)
   if (!hits.length) return null
   const item = getItem(itemId)
-  const terms = item ? SHELF_LABEL[item.type] : SHELF_LABEL.movie
-  const shown = hits.slice(0, max)
-  const extra = hits.length - shown.length
-  const seen = hits.filter((h) => h.entry.status === 'seen')
+  const category: ShelfType = shelf ?? item?.type ?? (itemId.startsWith('boardgame:') ? 'boardgame' : itemId.startsWith('book:') ? 'book' : itemId.startsWith('artist:') ? 'artist' : itemId.startsWith('series:') ? 'series' : 'movie')
+  const terms = SHELF_LABEL[category]
+
+  // Orden (§7.8): primero las que tienen comentario, luego por puesto
+  const sortedHits = [...hits].sort((a, b) => {
+    const aComment = Boolean(a.entry.comment)
+    const bComment = Boolean(b.entry.comment)
+    if (aComment !== bComment) return aComment ? -1 : 1
+    const aRank = friendRanks(a.friend, getItem)[itemId]?.pos ?? 9999
+    const bRank = friendRanks(b.friend, getItem)[itemId]?.pos ?? 9999
+    return aRank - bRank
+  })
+
+  const shown = sortedHits.slice(0, max)
+  const extra = sortedHits.length - shown.length
+  const seen = sortedHits.filter((h) => h.entry.status === 'seen')
   const names = seen.slice(0, 1).map((h) => h.friend.name)
   const label = seen.length
     ? `${names[0]}${seen.length > 1 ? ` y ${seen.length - 1} más` : ''} ${seen.length > 1 ? terms.verbPerfPlural : terms.verbPerfSingular}`
-    : `${hits[0].friend.name}${hits.length > 1 ? ` y ${hits.length - 1} más` : ''} ${hits.length > 1 ? terms.pendingPlural : terms.pendingSingular}`
+    : `${sortedHits[0].friend.name}${sortedHits.length > 1 ? ` y ${sortedHits.length - 1} más` : ''} ${sortedHits.length > 1 ? terms.pendingPlural : terms.pendingSingular}`
+
+  const [activeFriend, setActiveFriend] = useState<FriendHit | null>(null)
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const clearTimer = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current)
+      timerRef.current = null
+    }
+  }
+
+  const handlePointerDown = (h: FriendHit, e: React.PointerEvent) => {
+    e.stopPropagation()
+    clearTimer()
+    timerRef.current = setTimeout(() => {
+      setActiveFriend(h)
+      navigator.vibrate?.(10)
+    }, 350)
+  }
+
+  const handlePointerUpOrCancel = (e: React.PointerEvent) => {
+    e.stopPropagation()
+    clearTimer()
+    setActiveFriend(null)
+  }
+
   return (
-    <div className="flex flex-col items-end gap-1" aria-label={label}>
+    <div className="flex flex-col items-end gap-1 relative" aria-label={label}>
       <div className="flex items-center">
-        {shown.map((h, i) => (
-          <span key={h.friend.id} className="relative" style={{ marginLeft: i ? 2 : 0, zIndex: 10 - i }}>
-            <Avatar name={h.friend.name} color={h.friend.avatarColor} size={34} className="ring-2 ring-black/70" />
-            {h.entry.status === 'seen' && friendRanks(h.friend, getItem)[itemId] ? (
-              <RankBadge pos={friendRanks(h.friend, getItem)[itemId].pos} className="absolute -bottom-2 left-1/2 -translate-x-1/2 ring-1 ring-black/60" />
-            ) : (
-              <span className="absolute -bottom-1.5 -right-1 bg-stamp-blue rounded-full p-[3px] ring-1 ring-black/60" title="Lo tiene pendiente">
-                <Icon name="bookmark" size={9} fill="white" strokeWidth={2.5} />
-              </span>
-            )}
-          </span>
-        ))}
+        {shown.map((h, i) => {
+          const rank = friendRanks(h.friend, getItem)[itemId]
+          const hasComment = Boolean(h.entry.comment)
+          return (
+            <span
+              key={h.friend.id}
+              className="relative cursor-pointer select-none"
+              style={{ marginLeft: i ? 2 : 0, zIndex: 10 - i }}
+              onPointerDown={(e) => handlePointerDown(h, e)}
+              onPointerUp={handlePointerUpOrCancel}
+              onPointerLeave={handlePointerUpOrCancel}
+              onPointerCancel={handlePointerUpOrCancel}
+            >
+              <Avatar name={h.friend.name} color={h.friend.avatarColor} size={34} className="ring-2 ring-black/70" />
+              {h.entry.status === 'seen' && rank ? (
+                <RankBadge pos={rank.pos} className="absolute -bottom-2 left-1/2 -translate-x-1/2 ring-1 ring-black/60" />
+              ) : (
+                <span className="absolute -bottom-1.5 -right-1 bg-stamp-blue rounded-full p-[3px] ring-1 ring-black/60" title="Lo tiene pendiente">
+                  <Icon name="bookmark" size={9} fill="white" strokeWidth={2.5} />
+                </span>
+              )}
+              {hasComment && (
+                <span
+                  className="absolute -bottom-1 -right-1 bg-[#161513] rounded-full w-[14px] h-[14px] ring-1 ring-black/70 flex items-center justify-center text-white"
+                  title="Tiene comentario"
+                >
+                  <Icon name="message" size={8} fill="white" strokeWidth={1} />
+                </span>
+              )}
+            </span>
+          )
+        })}
         {extra > 0 && (
           <span className="ml-[2px] z-0 w-[34px] h-[34px] rounded-full bg-black/70 ring-2 ring-black/70 text-xs font-semibold flex items-center justify-center">+{extra}</span>
         )}
       </div>
       <span className="mt-2 text-[11px] text-white/85 bg-black/55 rounded-full px-2 py-[2px] backdrop-blur-sm">{label}</span>
+
+      {/* Globo con primera línea del comentario y puesto al mantener pulsado (§7.8) */}
+      {activeFriend && (
+        <div
+          className="absolute top-12 right-0 z-50 bg-[#181715] text-white border border-line rounded-2xl p-3 shadow-2xl min-w-[190px] max-w-[240px] text-left pointer-events-none"
+          role="tooltip"
+        >
+          <div className="flex items-center gap-2 mb-1.5 font-semibold text-xs">
+            <span>{activeFriend.friend.name}</span>
+            {friendRanks(activeFriend.friend, getItem)[itemId] ? (
+              <RankBadge pos={friendRanks(activeFriend.friend, getItem)[itemId].pos} />
+            ) : activeFriend.entry.status === 'pending' ? (
+              <span className="text-[10px] bg-stamp-blue/20 text-stamp-blue px-1.5 py-0.5 rounded font-medium">Pendiente</span>
+            ) : null}
+          </div>
+          {activeFriend.entry.comment ? (
+            <p className="italic text-white/90 serif text-[13px] leading-snug">
+              «{activeFriend.entry.comment.split('\n')[0].slice(0, 80)}{activeFriend.entry.comment.length > 80 ? '…' : ''}»
+            </p>
+          ) : (
+            <p className="text-white/60 text-[11px]">
+              {activeFriend.entry.status === 'seen' ? terms.verbPerfSingular : terms.pendingSingular}
+            </p>
+          )}
+        </div>
+      )}
     </div>
   )
 }

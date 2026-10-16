@@ -20,7 +20,7 @@ function CardFace({ item, bubbles = true }: { item: Item; bubbles?: boolean }) {
       <Poster item={item} showTitle={false} className="absolute inset-0 w-full h-full" />
       <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/95 via-black/55 to-transparent" />
       <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/45 to-transparent" />
-      {bubbles && <div className="absolute top-3 right-3"><FriendBubbles itemId={item.id} /></div>}
+      {bubbles && <div className="absolute top-3 right-3"><FriendBubbles itemId={item.id} shelf={item.type} /></div>}
       <div className="absolute bottom-0 inset-x-0 p-5 pb-4">
         <div className="text-[11px] uppercase tracking-[0.14em] text-white/70 font-medium">{typeName(item.type)} · {item.year}</div>
         <h2 className="serif text-[30px] leading-[1.05] font-semibold text-white mt-1 line-clamp-3" style={{ textWrap: 'balance' } as React.CSSProperties}>{item.title}</h2>
