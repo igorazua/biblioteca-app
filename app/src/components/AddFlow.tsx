@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { friends, friendsMean, items } from '../data/catalog'
-import { buildDeck } from '../lib/deck'
+import { friends, items } from '../data/catalog'
+import { nextCards } from '../lib/engine/deck'
 import { useStore } from '../store/useStore'
 import { SHELVES, SHELF_LABEL, type ShelfType } from '../types'
 import { Portal } from './ui'
@@ -27,11 +27,20 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
   const results = useMemo(() => {
     if (!shelf) return []
     const n = norm(q.trim())
-    // Sin texto (§14.5): sugerencias ordenadas como el mazo de Descubrir (fama, amigos, época, plataformas),
-    // sin nada que ya tengas guardado. Al escribir, se busca en todo el catálogo y se marca lo que ya tienes.
+    // Sin texto (§14.5, §7.9): sugerencias ordenadas con nextCards sin cupo explore ni aprendizaje
     if (!n) {
       const st = useStore.getState()
-      return buildDeck(items.filter((i) => i.type === shelf), { friends, entries: st.entries, birthYear: st.profile.birthYear, platforms: st.profile.platforms, reader: st.profile.reader, quality: friendsMean }).slice(0, 40)
+      const cards = nextCards({
+        shelf,
+        items: items.filter((i) => i.type === shelf),
+        entries: st.entries,
+        rankings: st.rankings,
+        profile: st.profile,
+        friends,
+        affinity: () => null,
+        friendPct: () => null,
+      }, [], 40)
+      return cards.map((c) => c.item)
     }
     return items
       .filter((i) => i.type === shelf && (norm(i.title).includes(n) || norm(i.creator).includes(n)))
