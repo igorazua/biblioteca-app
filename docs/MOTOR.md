@@ -648,21 +648,19 @@ Todo lo ajustable, con un comentario de qué hace cada valor:
 
 ---
 
-## 11. Cuando haya backend (Supabase) — no construir ahora
+## 11. Backend (Supabase) — Fase adelantada para beta con amigos
 
-- **Tablas**:
-  - `items` (+ columnas de F1);
-  - `item_features` (ejes, temas, momentos, `vector(384)` con **pgvector** e índice HNSW, macro/micro);
-  - `entries` y `friend_entries` con `at`;
-  - `events` (la misma forma que F0);
-  - `engine_params` (configuración remota por versión).
-- **Colaborativo** (IDEA §7b.1, fase 4): matriz obra-obra de co-ocurrencia en el top 30 % de los rankings de usuarios (coseno sobre usuarios, con encogimiento por soporte). Entra como un término más de `sim()` (`SIM_W.cf`) cuando haya al menos 20 usuarios en común; hasta entonces, peso 0.
-- **A/B real** entre versiones del motor: asignación por usuario y comparación de los KPIs de §3.2 en una vista SQL.
-- **Avisos con motivo** (IDEA §7b.4):
-  - un trabajo diario compara `providers` y genera «*X*, que tenías guardada, llega a Netflix» o «se va de Filmin»;
-  - el alta de una entrada de un amigo genera «Ana acaba de ver *X*»;
-  - `ongoing` + nueva temporada en TMDB genera su aviso.
-- **Enriquecimiento continuo**: las obras nuevas pasan F1→F3 en un lote nocturno; `ShelfEngine` se sirve desde Storage con caché.
+Para probar la app con amigos reales y evitar que cada uno viva en un `localStorage` aislado, el backend se ha adelantado con Supabase (en la cuenta secundaria `usamoneandoando@gmail.com`, proyecto `pvewnpemlwmvaduzhjso`).
+
+- **Tablas ya creadas (con prefijo `biblio_` y RLS habilitado)**:
+  - `biblio_profiles`: perfiles de usuario vinculados a `auth.users(id)`.
+  - `biblio_entries`: catálogo personal de cada usuario (obras, estados, puntuaciones y puestos).
+  - `biblio_friends`: relaciones de amistad bidireccionales reales.
+  - `biblio_invites`: enlaces mágicos de invitación («Únete a mi biblioteca»).
+  - `biblio_events`: persistencia en la nube de los eventos de motor y analítica (conecta con F0).
+- **Modo Demo (fallback)**: se mantiene para usuarios no autenticados, usando amigos simulados en memoria/local.
+- **Colaborativo futuro** (IDEA §7b.1, fase 4): matriz obra-obra de co-ocurrencia en el top 30 % de los rankings de usuarios.
+- **Avisos con motivo** (IDEA §7b.4): notificaciones cuando un amigo califica una obra guardada o cuando una obra entra en su catálogo de streaming.
 
 ---
 
@@ -670,7 +668,8 @@ Todo lo ajustable, con un comentario de qué hace cada valor:
 
 | # | Fase | Entregable | Depende de | Confirmación de Igor |
 |---|---|---|---|---|
-| 1 | F0 Eventos y métricas (§3) | `useEvents`, `track`, `metrics.ts`, `/metricas`, `params.ts` | — | — |
+| 0 | F-Backend Mínimo (§11) | Cliente Supabase, login email/Google, sincronización de estanterías, invitaciones de amigos y eventos a `biblio_events` | — | ✅ Configurado |
+| 1 | F0 Eventos y métricas (§3) | `useEvents`, `track`, `metrics.ts`, `/metricas`, `params.ts` (con persistencia local + Supabase) | F-Backend | — |
 | 2 | F1 Datos base (§4) | `sources.mjs`, `Item` ampliado, amigos con `at`, perfil con país, re-anclaje §4.4 | — | revisar `unmatched.json` y qué hacer con lo no re-anclable |
 | 3 | F2 LLM (§5) | `axes.mjs`, `vocab.mjs`, `llm.mjs`, muestra de 60, lote completo | F1 | **vocabulario**, **muestra** y **coste** antes del lote |
 | 4 | F3 Vectores (§6) | `vectors.mjs`, `engine/<shelf>.json`, `features.ts`, QA | F2 | revisar los vecinos |

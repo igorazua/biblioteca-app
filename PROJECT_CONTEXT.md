@@ -2,9 +2,13 @@
 
 **Qué es:** app social para guardar, valorar y compartir todo lo que te ha formado (pelis, series, libros…), organizada en estanterías. Swipe de tres gestos para catalogar y descubrir, ranking por comparación A/B, caras de amigos con su nota, «¿qué vemos hoy?» y listas compartibles por link.
 
-**Estado (15/10/2026):** demo navegable construida en `app/` (PWA sin backend, datos de prueba). Pendiente: probarla en un móvil real, clave de TMDB para portadas reales y despliegue en Vercel (con confirmación de Igor).
+**Estado (16/10/2026):**
+- **Git & GitHub:** `git@github.com:igorazua/biblioteca-app.git` (rama `main`).
+- **Despliegue Vercel:** [https://biblioteca-social.vercel.app](https://biblioteca-social.vercel.app) (proyecto `biblioteca-app`, conectado a GitHub, SSO protection desactivada).
+- **Backend Supabase:** Cuenta secundaria (`usamoneandoando@gmail.com`, proyecto `pvewnpemlwmvaduzhjso`). Tablas creadas con RLS: `biblio_profiles`, `biblio_entries`, `biblio_friends`, `biblio_invites`, `biblio_events`.
+- **Demo funcional:** PWA navegable en `app/` lista para probar con amigos y móviles reales.
 
-**Motor (16/10/2026):** decisiones de producto del motor (orden del mazo, Decidir, limpieza de guardados, métricas) en `docs/IDEA.md` §7b; diseño técnico por fases en `docs/MOTOR.md`, listo para que lo construya otro agente (empezar por F0 y F1).
+**Motor (16/10/2026):** decisiones de producto del motor (orden del mazo, Decidir, limpieza de guardados, métricas) en `docs/IDEA.md` §7b; diseño técnico por fases en `docs/MOTOR.md`. Se incorpora la fase previa de Backend Mínimo para conectar Supabase antes del cálculo de eventos.
 
 ## Documentos (leer en este orden)
 1. `docs/IDEA.md` — la idea, decisiones tomadas (✅) y debates abiertos. **Fuente de verdad.**
