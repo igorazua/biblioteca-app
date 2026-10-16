@@ -3,6 +3,7 @@ import { persist } from 'zustand/middleware'
 import { items, getItem } from '../data/catalog'
 import { clampStars, insertAt, starBand } from '../lib/ranking'
 import { SHELVES, type List, type Profile, type Settings, type ShelfType, type Stars, type Status, type UserEntry } from '../types'
+import { track } from './useEvents'
 
 interface HistoryItem {
   itemId: string
@@ -73,13 +74,24 @@ export const useStore = create<State>()(
       swipe: (itemId, dir) =>
         set((s) => {
           const shelf = shelfOf(itemId)
+          const now = Date.now()
+          const prevEntry = s.entries[itemId]
+          const newStatus = dir === 'left' ? 'dismissed' : dir === 'up' ? 'pending' : 'seen'
           const entry: UserEntry = {
             itemId,
-            status: dir === 'left' ? 'dismissed' : dir === 'up' ? 'pending' : 'seen',
+            status: newStatus,
             ranked: false,
-            updatedAt: Date.now(),
+            updatedAt: now,
+            ...(dir === 'left' ? { dismissedAt: now } : {}),
           }
-          const history = [...s.history, { itemId, prev: s.entries[itemId] ?? null, prevRanking: s.rankings[shelf] ?? [], shelf }].slice(-20)
+          const history = [...s.history, { itemId, prev: prevEntry ?? null, prevRanking: s.rankings[shelf] ?? [], shelf }].slice(-20)
+
+          track('entry_status', {
+            shelf,
+            itemId,
+            data: { from: prevEntry?.status ?? null, to: newStatus, via: 'deck' },
+          })
+
           return { entries: { ...s.entries, [itemId]: entry }, history }
         }),
 
@@ -110,15 +122,22 @@ export const useStore = create<State>()(
         set((s) => {
           const shelf = shelfOf(itemId)
           const entries = { ...s.entries }
+          const cur = entries[itemId]
           let ranking = s.rankings[shelf] ?? []
           if (status === null) { delete entries[itemId]; ranking = ranking.filter((x) => x !== itemId) }
           else {
-            const cur = entries[itemId]
             if (status === 'seen') entries[itemId] = { ...(cur ?? { itemId, ranked: false }), itemId, status, updatedAt: Date.now() } as UserEntry
             else {
-              entries[itemId] = { itemId, status, ranked: false, ...(cur?.origin ? { origin: cur.origin } : {}), updatedAt: Date.now() }
+              entries[itemId] = { itemId, status, ranked: false, ...(cur?.origin ? { origin: cur.origin } : {}), updatedAt: Date.now(), ...(status === 'dismissed' ? { dismissedAt: Date.now() } : {}) }
               ranking = ranking.filter((x) => x !== itemId)
             }
+          }
+          if (cur?.status !== status) {
+            track('entry_status', {
+              shelf,
+              itemId,
+              data: { from: cur?.status ?? null, to: status, via: 'other' },
+            })
           }
           return { entries, rankings: { ...s.rankings, [shelf]: ranking } }
         }),
@@ -132,7 +151,18 @@ export const useStore = create<State>()(
             const c = clampStars(ranking, starsOf, id)
             entries[id] = { ...entries[id], ranked: true, ...(c ? { stars: c } : {}) }
           }
-          if (placedId && entries[placedId]) { const { provisional: _p, ...rest } = entries[placedId]; entries[placedId] = rest }
+          if (placedId && entries[placedId]) {
+            const { provisional: _p, ...rest } = entries[placedId]
+            entries[placedId] = rest
+            const pos = ranking.indexOf(placedId) + 1
+            const total = ranking.length
+            const pct = total > 1 ? (total - pos) / (total - 1) : 1
+            track('entry_ranked', {
+              shelf,
+              itemId: placedId,
+              data: { pos, total, pct },
+            })
+          }
           return { entries, rankings: { ...s.rankings, [shelf]: ranking } }
         }),
 
@@ -145,6 +175,14 @@ export const useStore = create<State>()(
           const base = (s.rankings[shelf] ?? []).filter((x) => x !== itemId)
           const [, hi] = starBand(base, (id) => s.entries[id]?.stars, e.stars)
           const ranking = insertAt(base, itemId, hi)
+          const pos = ranking.indexOf(itemId) + 1
+          const total = ranking.length
+          const pct = total > 1 ? (total - pos) / (total - 1) : 1
+          track('entry_ranked', {
+            shelf,
+            itemId,
+            data: { pos, total, pct },
+          })
           return { entries: { ...s.entries, [itemId]: { ...e, ranked: true, provisional: true } }, rankings: { ...s.rankings, [shelf]: ranking } }
         }),
 

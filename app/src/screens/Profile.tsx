@@ -1,8 +1,9 @@
-import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useMemo, useRef, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { friends, getItem, items } from '../data/catalog'
 import { APP_NAME, AVATAR_COLORS, PLATFORMS } from '../config'
+import { ENGINE_VERSION } from '../lib/engine/params'
 import { useStore } from '../store/useStore'
 import { useRanks } from '../store/useScores'
 import { friendRanks } from '../lib/rank'
@@ -35,6 +36,16 @@ export function Profile() {
   const resetAll = useStore((s) => s.resetAll)
   const loadSample = useStore((s) => s.loadSample)
   const ranks = useRanks()
+  const nav = useNavigate()
+  const longPressTimer = useRef<number | null>(null)
+  const onPointerDownVersion = () => {
+    longPressTimer.current = window.setTimeout(() => {
+      nav('/metricas')
+    }, 800)
+  }
+  const onPointerUpVersion = () => {
+    if (longPressTimer.current) clearTimeout(longPressTimer.current)
+  }
   const [toast, setToast] = useState<string | null>(null)
   const [confirm, setConfirm] = useState(false)
   const [colorOpen, setColorOpen] = useState(false)
@@ -324,11 +335,22 @@ export function Profile() {
           </div>
         </section>
 
-        <section aria-label="Acerca de" className="text-xs text-mute space-y-2 pb-4">
+        <section aria-label="Acerca de" className="text-xs text-mute space-y-2 pb-6">
           <h2 className="text-sm font-semibold uppercase tracking-wide">Acerca de</h2>
           <p>{APP_NAME} es una app social para guardar y compartir lo que te ha formado. Los datos se sincronizan con Supabase.</p>
           <p>Este producto usa la API de TMDB pero no está respaldado ni certificado por TMDB.</p>
           <p>Portadas de libros: Open Library. Catálogo: {items.length} obras.</p>
+          <div className="pt-2">
+            <span
+              onPointerDown={onPointerDownVersion}
+              onPointerUp={onPointerUpVersion}
+              onPointerLeave={onPointerUpVersion}
+              className="inline-block cursor-pointer select-none text-[11px] text-mute/70 hover:text-accent active:text-accent transition-colors"
+              title="Mantén pulsado para abrir métricas"
+            >
+              Biblioteca {ENGINE_VERSION} · Mantén pulsado para ver métricas
+            </span>
+          </div>
         </section>
       </div>
 

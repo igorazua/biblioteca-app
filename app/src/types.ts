@@ -34,6 +34,8 @@ export interface UserEntry {
   provisional?: boolean // colocada solo por estrellas; Comparar la afina
   cmp?: number // nº de comparaciones en las que ha salido (Comparar prioriza las que menos llevan, §14.4)
   origin?: string // «de Igor»: quién te pasó la obra en una lista compartida
+  dismissedAt?: number // fecha del último descarte (permite volver a aparecer según §7.7)
+  reviewedAt?: number // fecha de la última revisión en limpieza de pendientes (§9)
   updatedAt: number
 }
 

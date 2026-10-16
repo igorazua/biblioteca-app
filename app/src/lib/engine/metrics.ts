@@ -1,0 +1,279 @@
+import type { EngineEvent } from '../../store/useEvents'
+import type { ShelfType } from '../../types'
+import type { Bucket } from './params'
+
+export interface DeckMetrics {
+  totalSwipes: number
+  totalSessions: number
+  first20Accuracy: number // % right en primeras 20 tarjetas de cada sesión (0-100)
+  discoveryRate: number // % up sobre total swipes (0-100)
+  dismissRate: number // % left sobre total swipes (0-100)
+  seenRate: number // % right sobre total swipes (0-100)
+  avgCardsPerSession: number
+  avgMsPerCard: number
+  byBucket: Record<
+    Bucket,
+    {
+      shown: number
+      right: number
+      up: number
+      left: number
+      successRate: number // (right + up) / shown
+    }
+  >
+}
+
+export interface DecideMetrics {
+  totalSessions: number
+  acceptedSessions: number
+  firstRoundAcceptRate: number // % con dec_accept en ronda 1 (0-100)
+  abandonRate: number // % con dec_abandon (0-100)
+  avgRejects: number // media de dec_reject por sesión
+  avgDuels: number // media de duelos por sesión aceptada
+  avgInfoGain: number // infoGain medio en dec_duel
+  acceptedItemsCount: number
+  realSuccessRate14d: number // % de aceptadas que pasaron a seen en 14 días
+  realAvgPercentile: number // percentil medio con el que acaban en ranking
+}
+
+export interface CleanupMetrics {
+  totalSwipes: number
+  rightRate: number // % marcadas vistas (0-100)
+  upRate: number // % siguen guardadas (0-100)
+  leftRate: number // % descartadas (0-100)
+}
+
+export interface SummaryKPIs {
+  deck: DeckMetrics
+  decide: DecideMetrics
+  cleanup: CleanupMetrics
+}
+
+const defaultBucketCounts = (): DeckMetrics['byBucket'] => ({
+  seen_likely: { shown: 0, right: 0, up: 0, left: 0, successRate: 0 },
+  social: { shown: 0, right: 0, up: 0, left: 0, successRate: 0 },
+  friend_gem: { shown: 0, right: 0, up: 0, left: 0, successRate: 0 },
+  explore: { shown: 0, right: 0, up: 0, left: 0, successRate: 0 },
+})
+
+/**
+ * Calcula las métricas del mazo de Descubrir
+ */
+export function calcDeckMetrics(events: EngineEvent[]): DeckMetrics {
+  const swipes = events.filter((e) => e.type === 'deck_swipe')
+  const shown = events.filter((e) => e.type === 'deck_shown')
+  const byBucket = defaultBucketCounts()
+
+  // Agrupar swipes por sesión para calcular acierto en las primeras 20
+  const sessionSwipes = new Map<string, EngineEvent[]>()
+  for (const s of swipes) {
+    const list = sessionSwipes.get(s.sid) || []
+    list.push(s)
+    sessionSwipes.set(s.sid, list)
+  }
+
+  let first20Total = 0
+  let first20Right = 0
+  let totalMs = 0
+  let msCount = 0
+
+  for (const list of sessionSwipes.values()) {
+    // Ordenar por tiempo
+    list.sort((a, b) => a.t - b.t)
+    const first20 = list.slice(0, 20)
+    for (const s of first20) {
+      first20Total++
+      if (s.data?.dir === 'right') first20Right++
+    }
+  }
+
+  let rightCount = 0
+  let upCount = 0
+  let leftCount = 0
+
+  for (const s of swipes) {
+    const dir = s.data?.dir as 'right' | 'up' | 'left' | undefined
+    const bucket = s.data?.bucket as Bucket | undefined
+    const ms = typeof s.data?.ms === 'number' ? s.data.ms : undefined
+
+    if (ms !== undefined && ms > 0) {
+      totalMs += ms
+      msCount++
+    }
+
+    if (dir === 'right') rightCount++
+    if (dir === 'up') upCount++
+    if (dir === 'left') leftCount++
+
+    if (bucket && byBucket[bucket]) {
+      if (dir === 'right') byBucket[bucket].right++
+      if (dir === 'up') byBucket[bucket].up++
+      if (dir === 'left') byBucket[bucket].left++
+    }
+  }
+
+  for (const sh of shown) {
+    const bucket = sh.data?.bucket as Bucket | undefined
+    if (bucket && byBucket[bucket]) {
+      byBucket[bucket].shown++
+    }
+  }
+
+  for (const b of Object.values(byBucket)) {
+    const actTotal = b.right + b.up + b.left
+    const base = b.shown > 0 ? b.shown : actTotal
+    b.successRate = base > 0 ? Math.round(((b.right + b.up) / base) * 100) : 0
+  }
+
+  const totalSwipes = swipes.length
+  const totalSessions = sessionSwipes.size
+
+  return {
+    totalSwipes,
+    totalSessions,
+    first20Accuracy: first20Total > 0 ? Math.round((first20Right / first20Total) * 100) : 0,
+    discoveryRate: totalSwipes > 0 ? Math.round((upCount / totalSwipes) * 100) : 0,
+    dismissRate: totalSwipes > 0 ? Math.round((leftCount / totalSwipes) * 100) : 0,
+    seenRate: totalSwipes > 0 ? Math.round((rightCount / totalSwipes) * 100) : 0,
+    avgCardsPerSession: totalSessions > 0 ? Math.round((totalSwipes / totalSessions) * 10) / 10 : 0,
+    avgMsPerCard: msCount > 0 ? Math.round(totalMs / msCount) : 0,
+    byBucket,
+  }
+}
+
+/**
+ * Calcula las métricas del motor de Decidir
+ */
+export function calcDecideMetrics(events: EngineEvent[]): DecideMetrics {
+  const sessions = new Map<string, EngineEvent[]>()
+  for (const e of events) {
+    if (e.type.startsWith('dec_')) {
+      const list = sessions.get(e.sid) || []
+      list.push(e)
+      sessions.set(e.sid, list)
+    }
+  }
+
+  let firstRoundAcceptCount = 0
+  let acceptedCount = 0
+  let abandonCount = 0
+  let totalRejects = 0
+  let totalDuels = 0
+  let totalInfoGain = 0
+  let duelCount = 0
+
+  const acceptedItems = new Map<string, { itemId: string; acceptedAt: number }>()
+
+  for (const [, list] of sessions) {
+    let sessionAccepted = false
+    let sessionRejects = 0
+    let sessionDuels = 0
+
+    for (const e of list) {
+      if (e.type === 'dec_duel') {
+        sessionDuels++
+        const ig = typeof e.data?.infoGain === 'number' ? e.data.infoGain : 0
+        totalInfoGain += ig
+        duelCount++
+      } else if (e.type === 'dec_reject') {
+        sessionRejects++
+      } else if (e.type === 'dec_accept') {
+        sessionAccepted = true
+        acceptedCount++
+        const round = typeof e.data?.round === 'number' ? e.data.round : 1
+        if (round === 1) firstRoundAcceptCount++
+        if (e.itemId) {
+          acceptedItems.set(e.itemId, { itemId: e.itemId, acceptedAt: e.t })
+        }
+      } else if (e.type === 'dec_abandon') {
+        abandonCount++
+      }
+    }
+
+    totalRejects += sessionRejects
+    if (sessionAccepted) {
+      totalDuels += sessionDuels
+    }
+  }
+
+  // Medir acierto real a 14 días y percentil medio en ranking
+  // Analizamos los eventos posteriores a la aceptación
+  const statusEvents = events.filter((e) => e.type === 'entry_status' && e.data?.to === 'seen')
+  const rankedEvents = events.filter((e) => e.type === 'entry_ranked')
+
+  let convertedToSeen14d = 0
+  let totalPctSum = 0
+  let rankedCount = 0
+  const FOURTEEN_DAYS_MS = 14 * 24 * 60 * 60 * 1000
+
+  for (const [itemId, info] of acceptedItems) {
+    const seenEv = statusEvents.find(
+      (ev) => ev.itemId === itemId && ev.t >= info.acceptedAt && ev.t - info.acceptedAt <= FOURTEEN_DAYS_MS
+    )
+    if (seenEv) convertedToSeen14d++
+
+    const rankEv = rankedEvents.find((ev) => ev.itemId === itemId && ev.t >= info.acceptedAt)
+    if (rankEv && typeof rankEv.data?.pct === 'number') {
+      totalPctSum += rankEv.data.pct
+      rankedCount++
+    }
+  }
+
+  const totalSessions = sessions.size
+
+  return {
+    totalSessions,
+    acceptedSessions: acceptedCount,
+    firstRoundAcceptRate: acceptedCount > 0 ? Math.round((firstRoundAcceptCount / acceptedCount) * 100) : 0,
+    abandonRate: totalSessions > 0 ? Math.round((abandonCount / totalSessions) * 100) : 0,
+    avgRejects: totalSessions > 0 ? Math.round((totalRejects / totalSessions) * 10) / 10 : 0,
+    avgDuels: acceptedCount > 0 ? Math.round((totalDuels / acceptedCount) * 10) / 10 : 0,
+    avgInfoGain: duelCount > 0 ? Math.round((totalInfoGain / duelCount) * 100) / 100 : 0,
+    acceptedItemsCount: acceptedItems.size,
+    realSuccessRate14d: acceptedItems.size > 0 ? Math.round((convertedToSeen14d / acceptedItems.size) * 100) : 0,
+    realAvgPercentile: rankedCount > 0 ? Math.round((totalPctSum / rankedCount) * 100) / 100 : 0,
+  }
+}
+
+/**
+ * Calcula las métricas de Limpieza de pendientes
+ */
+export function calcCleanupMetrics(events: EngineEvent[]): CleanupMetrics {
+  const swipes = events.filter((e) => e.type === 'clean_swipe')
+  let right = 0
+  let up = 0
+  let left = 0
+
+  for (const s of swipes) {
+    const dir = s.data?.dir
+    if (dir === 'right') right++
+    else if (dir === 'up') up++
+    else if (dir === 'left') left++
+  }
+
+  const total = swipes.length
+  return {
+    totalSwipes: total,
+    rightRate: total > 0 ? Math.round((right / total) * 100) : 0,
+    upRate: total > 0 ? Math.round((up / total) * 100) : 0,
+    leftRate: total > 0 ? Math.round((left / total) * 100) : 0,
+  }
+}
+
+/**
+ * Agrupa y calcula todas las métricas filtradas opcionalmente por estantería o versión
+ */
+export function calcAllMetrics(
+  events: EngineEvent[],
+  filter?: { version?: string; shelf?: ShelfType }
+): SummaryKPIs {
+  let filtered = events
+  if (filter?.version) filtered = filtered.filter((e) => e.v === filter.version)
+  if (filter?.shelf) filtered = filtered.filter((e) => e.shelf === filter.shelf)
+
+  return {
+    deck: calcDeckMetrics(filtered),
+    decide: calcDecideMetrics(filtered),
+    cleanup: calcCleanupMetrics(filtered),
+  }
+}

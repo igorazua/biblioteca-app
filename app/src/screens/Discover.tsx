@@ -1,9 +1,10 @@
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { friends, friendsMean, items } from '../data/catalog'
 import { buildDeck } from '../lib/deck'
 import { useStore } from '../store/useStore'
+import { track, useEvents } from '../store/useEvents'
 import { SHELVES, SHELF_LABEL, type ShelfType } from '../types'
 import { SwipeDeck, type DeckHandle, type SwipeDir } from '../components/SwipeDeck'
 import { RatingFlow } from '../components/RatingFlow'
@@ -30,6 +31,12 @@ export function Discover() {
   const [first, setFirst] = useState<string | null>(null) // tarjeta recuperada con «deshacer»
   const deckRef = useRef<DeckHandle>(null)
 
+  const newSession = useEvents((s) => s.newSession)
+  const sessionSid = useRef(newSession('deck'))
+  const cardShownAt = useRef(Date.now())
+  const swipeCount = useRef(0)
+  const shownIds = useRef(new Set<string>())
+
   const deck = useMemo(() => {
     const pool = items.filter((i) => i.type === shelf)
     const all = buildDeck(pool, { friends, entries, birthYear: profile.birthYear, platforms: profile.platforms, reader: profile.reader, quality: friendsMean })
@@ -40,7 +47,49 @@ export function Discover() {
     return all
   }, [shelf, entries, profile.birthYear, profile.platforms, profile.reader, first])
 
+  // Nueva sesión al cambiar estantería
+  useEffect(() => {
+    sessionSid.current = newSession('deck')
+    swipeCount.current = 0
+    shownIds.current.clear()
+    cardShownAt.current = Date.now()
+
+    return () => {
+      track('deck_session_end', {
+        shelf,
+        sid: sessionSid.current,
+        data: { cards: shownIds.current.size, swipes: swipeCount.current },
+      })
+    }
+  }, [shelf])
+
+  // Registrar tarjeta mostrada
+  const topCard = deck[0]
+  useEffect(() => {
+    if (topCard && !shownIds.current.has(topCard.id)) {
+      shownIds.current.add(topCard.id)
+      cardShownAt.current = Date.now()
+      track('deck_shown', {
+        shelf,
+        itemId: topCard.id,
+        sid: sessionSid.current,
+        data: { pos: shownIds.current.size, bucket: 'seen_likely', score: topCard.popularity },
+      })
+    }
+  }, [topCard?.id, shelf])
+
   const onSwipe = (item: (typeof deck)[number], dir: SwipeDir) => {
+    const ms = Math.max(100, Date.now() - cardShownAt.current)
+    cardShownAt.current = Date.now()
+    swipeCount.current++
+
+    track('deck_swipe', {
+      shelf,
+      itemId: item.id,
+      sid: sessionSid.current,
+      data: { pos: swipeCount.current, bucket: 'seen_likely', dir, ms },
+    })
+
     setFirst(null)
     swipe(item.id, dir)
     if (dir === 'right') { if (settings.rateOnSwipe === false) setToast('Guardada ✓'); else setRating(item.id) }
@@ -60,7 +109,16 @@ export function Discover() {
 
       <div className="flex-1 min-h-0 px-4 relative">
         {deck.length > 0 ? (
-          <SwipeDeck ref={deckRef} deck={deck} shelf={shelf} onSwipe={onSwipe} onOpen={(it) => nav(`/i/${encodeURIComponent(it.id)}`)} />
+          <SwipeDeck
+            ref={deckRef}
+            deck={deck}
+            shelf={shelf}
+            onSwipe={onSwipe}
+            onOpen={(it) => {
+              track('deck_open', { shelf, itemId: it.id, sid: sessionSid.current })
+              nav(`/i/${encodeURIComponent(it.id)}`)
+            }}
+          />
         ) : (
           <div className="h-full flex flex-col items-center justify-center text-center px-6 gap-3">
             <div className="text-5xl">🎉</div>

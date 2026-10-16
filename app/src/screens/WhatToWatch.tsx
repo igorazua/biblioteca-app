@@ -6,6 +6,7 @@ import { PLATFORMS, WIZARD_TITLE } from '../config'
 import { BOOK_QUESTIONS, QUESTIONS_BY_SHELF, type Question } from '../data/questions'
 import { applyShaper, MORE_DUELS, newShaping, nextShaperPair, scoreCandidates, SHAPER_DUELS, type Answers, type Cand, type Shaping } from '../lib/recommend'
 import { useStore } from '../store/useStore'
+import { track, useEvents } from '../store/useEvents'
 import { SHELVES, SHELF_LABEL, type Item, type ShelfType } from '../types'
 import { Poster } from '../components/Poster'
 import { SwipePair, type Side } from '../components/SwipePair'
@@ -54,6 +55,11 @@ export function WhatToWatch() {
   const [toast, setToast] = useState<string | null>(null)
   const timer = useRef<number | undefined>(undefined)
 
+  const newSession = useEvents((s) => s.newSession)
+  const sessionSid = useRef(newSession('dec'))
+  const roundRef = useRef(1)
+  const duelStepRef = useRef(0)
+
   useEffect(() => {
     if (!shelf || phase === 'shelf') return
     const data: Snap = { shelf, phase, qi, answers, shaping, pair: pair && pair[0] && pair[1] ? [pair[0].id, pair[1].id] : null, duel, current, rejected }
@@ -78,6 +84,16 @@ export function WhatToWatch() {
   // Duelos orientadores (§14.2): obras concretas de la categoría, contrastadas; no son candidatas.
   const startShaping = (a: Answers, sh: Shaping, count: number) => {
     if (!shelf) return
+    if (count === SHAPER_DUELS) {
+      sessionSid.current = newSession('dec')
+      roundRef.current = 1
+      duelStepRef.current = 0
+      track('dec_start', {
+        shelf,
+        sid: sessionSid.current,
+        data: { answers: a },
+      })
+    }
     const next = nextShaperPair(items, shelf, a, sh.shown, Math.random)
     if (!next) { setCurrent(null); setPhase('propose'); return }
     setShaping({ ...sh, shown: [...sh.shown, next[0].id, next[1].id] })
@@ -99,8 +115,26 @@ export function WhatToWatch() {
   const onShaperChoose = (w: 'a' | 'b') => {
     if (!pair || !shelf) return
     const [a, b] = pair
-    const sh = applyShaper(shaping, w === 'a' ? a : b, w === 'a' ? b : a)
+    const winner = w === 'a' ? a : b
+    const loser = w === 'a' ? b : a
+    const sh = applyShaper(shaping, winner, loser)
     const n = duel.n + 1
+    duelStepRef.current++
+
+    const infoGain = Math.round((0.5 + Math.abs(a.popularity - b.popularity) / 200) * 100) / 100
+    track('dec_duel', {
+      shelf,
+      sid: sessionSid.current,
+      data: {
+        a: a.id,
+        b: b.id,
+        winner: winner.id,
+        step: duelStepRef.current,
+        phase: 'coarse',
+        infoGain,
+      },
+    })
+
     const next = n < duel.of ? nextShaperPair(items, shelf, answers, sh.shown, Math.random) : null
     if (next) {
       setShaping({ ...sh, shown: [...sh.shown, next[0].id, next[1].id] })
@@ -118,21 +152,68 @@ export function WhatToWatch() {
   useEffect(() => {
     if (phase === 'propose' && !current) {
       const pool = candidates.filter((c) => !rejected.includes(c.item.id))
-      if (pool.length) setCurrent(pool[0].item.id)
-      else setPhase('none')
+      if (pool.length) {
+        const item = pool[0]
+        setCurrent(item.item.id)
+        track('dec_propose', {
+          shelf: shelf || 'movie',
+          itemId: item.item.id,
+          sid: sessionSid.current,
+          data: {
+            round: roundRef.current,
+            score: item.score,
+            candidates: pool.length,
+          },
+        })
+      } else setPhase('none')
     }
   }, [phase, current, candidates, rejected])
   const cand = candidates.find((c) => c.item.id === current)
 
+  const handleAccept = () => {
+    if (cand && shelf) {
+      track('dec_accept', {
+        shelf,
+        itemId: cand.item.id,
+        sid: sessionSid.current,
+        data: { round: roundRef.current },
+      })
+    }
+    setPhase('done')
+  }
+
   // «Seguir buscando»: más duelos orientadores y nueva propuesta (§14.2)
   const seguir = () => {
-    if (!current) return
+    if (!current || !shelf) return
+    track('dec_reject', {
+      shelf,
+      itemId: current,
+      sid: sessionSid.current,
+      data: { round: roundRef.current },
+    })
+    roundRef.current++
     setRejected([...rejected, current])
     startShaping(answers, shaping, MORE_DUELS)
   }
 
   // Reiniciar vuelve siempre a elegir categoría (§13.2)
-  const reset = () => { clearSnap(); setShelf(null); setPhase('shelf'); setQi(0); setCurrent(null); setRejected([]); setShaping(newShaping()); setPair(null) }
+  const reset = () => {
+    if (shelf && phase !== 'done' && phase !== 'shelf') {
+      track('dec_abandon', {
+        shelf,
+        sid: sessionSid.current,
+        data: { step: duelStepRef.current, phase },
+      })
+    }
+    clearSnap()
+    setShelf(null)
+    setPhase('shelf')
+    setQi(0)
+    setCurrent(null)
+    setRejected([])
+    setShaping(newShaping())
+    setPair(null)
+  }
 
   const reason = (c: Cand) => {
     const top = friendHits(c.item.id).filter((h) => h.entry.status === 'seen' && h.entry.score !== undefined)[0]
@@ -245,7 +326,7 @@ export function WhatToWatch() {
         </Link>
         <div className="flex gap-2 mt-3">
           <button onClick={seguir} className="flex-1 min-h-[54px] rounded-2xl bg-surface border border-line font-semibold">Seguir buscando</button>
-          <button onClick={() => setPhase('done')} className="flex-[1.2] min-h-[54px] rounded-2xl bg-accent text-accent-ink font-semibold text-lg">¡Esta!</button>
+          <button onClick={handleAccept} className="flex-[1.2] min-h-[54px] rounded-2xl bg-accent text-accent-ink font-semibold text-lg">¡Esta!</button>
         </div>
       </div>
     )
