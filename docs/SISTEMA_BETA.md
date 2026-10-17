@@ -8,7 +8,12 @@
 - Catálogo solo de fuentes abiertas o con licencia (TMDB, Open Library, MusicBrainz, Wikidata). **Nada de raspar webs.**
 - **No desplegar** (Vercel ni funciones de Supabase) sin confirmación de Igor.
 - Supabase: proyecto compartido `pvewnpemlwmvaduzhjso`. Todo lo nuevo lleva prefijo `biblio_` (tablas, funciones, buckets). No tocar tablas de otros proyectos (`posts`, `scrape_targets`…).
-- Cada fase: `npm test` y `npm run build` en verde antes del commit. Commits en español, estilo `feat(catalog): …`.
+- **Tests, con moderación** (Igor prueba a mano y avisa de fallos):
+  - Cambios sencillos (UI, textos, estilos, pantallas): **sin tests nuevos**; basta `npm run build` en verde antes del commit.
+  - Tests nuevos **solo** donde un fallo pierde o corrompe datos o no se ve a mano: sync local↔nube, catálogo vivo e IDs, arranque en frío, imports, borrado de cuenta, migraciones y lógica del motor. Los criterios de «Aceptación» de abajo que piden tests de UI (p. ej. `Avatar`) pasan a ser comprobación manual.
+  - `npm test` completo al tocar esas zonas, antes de cada despliegue y cada varias tandas de cambios; no en cada commit.
+  - Tras cada cambio, indicar en una línea qué conviene probar a mano.
+- Commits en español, estilo `feat(catalog): …`.
 
 ## 1. Estado de partida (lo que hay hoy)
 - **App**: `app/` — Vite + React 19 + TS + Tailwind v4 + framer-motion + zustand + vite-plugin-pwa.
