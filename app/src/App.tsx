@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Navigate, Outlet, Route, Routes, useLocation } from 'react-router-dom'
 import { TabBar } from './components/TabBar'
 import { Toast } from './components/ui'
+import { UpdatePrompt } from './components/UpdatePrompt'
 import { useStore } from './store/useStore'
 import { useAuth } from './store/useAuth'
 import { useFriends } from './store/useFriends'
@@ -105,6 +106,7 @@ export function App() {
 
   return (
     <>
+      <UpdatePrompt />
       {syncToast && <Toast message={syncToast} onDone={() => setSyncToast(null)} />}
       <Routes>
         {/* Vistas públicas de links compartidos: sin marco ni barra, como una web normal */}
