@@ -80,7 +80,7 @@ create policy "catálogo legible por todos" on public.biblio_catalog for select 
 - Idempotente: volver a ejecutarlo no duplica (upsert por `id`).
 
 ### Función `biblio-catalog` (`supabase/functions/biblio-catalog/index.ts`)
-Secrets: `TMDB_API_KEY`, `MB_USER_AGENT` (p. ej. `Biblioteca/0.1 (igorazua@gmail.com)`). Acepta la anon key (los usuarios de la demo sin login también buscan). Límite básico: 60 peticiones/minuto por IP en memoria.
+Secrets: `TMDB_API_KEY`, `MB_USER_AGENT` (formato `Biblioteca/0.1 (<contacto que elija Igor>)`; pedírselo, no inventarlo). Acepta la anon key (los usuarios de la demo sin login también buscan). Límite básico: 60 peticiones/minuto por IP en memoria.
 
 Todas las llamadas son `POST` con JSON `{ action, … }`:
 
@@ -134,6 +134,13 @@ Reglas de «seguro»: `imdbId` → TMDB `/find?external_source=imdb_id`; `isbn13
 - **`components/AddFlow.tsx`**: resultados locales primero; debajo, sección «Más en el catálogo» con `search` (debounce 300 ms, mínimo 2 letras, `AbortController`). Al tocar uno: `resolve` → `addItems` → el flujo actual de vista/pendiente. Si no hay red: solo locales, sin error.
 - **Atribución** en Perfil → «Fuentes»: «Este producto usa la API de TMDB pero no está respaldado ni certificado por TMDB» + logo, Open Library, MusicBrainz y Wikidata.
 
+### Arranque en frío: nunca perder entradas de obras vivas
+- La caché viva se rehidrata de IndexedDB **de forma asíncrona**; `useStore` (localStorage) puede rehidratarse antes. Por eso:
+  - El primer render de `App.tsx`, la sincronización y el `migrate` de `useStore` esperan a `useCatalog.persist.hasHydrated()` (pantalla de carga breve).
+  - **Regla dura**: ninguna ruta (migrate, rankings, limpieza, sync) borra ni descarta entradas o puestos cuyo id no se conozca. Se ocultan o se pintan como esqueleto y se piden con `ensureItems`.
+  - `store/useStore.ts` tiene **su propio** `shelfOf` con caída a `'movie'` (línea ~62), usado para los rankings: aplicarle el mismo arreglo que a `lib/sync.ts` (guardar `shelf` en `UserEntry` al crearla y usarlo primero).
+- **Aceptación**: test que simula arranque con la caché viva vacía, rehidrata `useStore` con una entrada y un puesto de una obra viva (serie), rehidrata después la caché, y comprueba que la entrada sigue, está en el ranking de `series` y no en el de `movie`.
+
 ### Enriquecimiento posterior
 - Las obras vivas nacen con `enriched_at = null`. Script `npm run engine:pull-live` descarga las no enriquecidas a `scripts/cache/` para que las procese la cadena `engine:*` existente; `engine:merge` marca `enriched_at`.
 - Mientras tanto, mazo, Decidir y limpieza tratan la obra solo con géneros, año y popularidad (modo degradado de `features.ts`).
@@ -149,7 +156,7 @@ Reglas de «seguro»: `imdbId` → TMDB `/find?external_source=imdb_id`; `isbn13
 
 ## F-B2. Cuentas básicas
 1. **Borrar cuenta de verdad** — función `biblio-delete-account` (service role, exige JWT del usuario): borra `biblio_entries`, `biblio_friends` (en **ambas** direcciones), `biblio_invites` creadas por el usuario, `biblio_events` (o pone `user_id = null`), su carpeta del bucket de avatares, `biblio_profiles` y por último `auth.admin.deleteUser`. `useAuth.deleteAccount` llama a la función y después limpia el estado local.
-2. **@usuario único** — migración: `create unique index biblio_profiles_handle on biblio_profiles (lower(handle)) where handle is not null;` + `check (handle ~ '^[a-z0-9_.]{3,20}$')`. En Perfil: campo editable con sugerencia a partir del nombre y comprobación de disponibilidad (consulta `select` por `lower(handle)`).
+2. **@usuario único** — migración: primero normalizar los existentes (`update biblio_profiles set handle = null where handle !~ '^[a-z0-9_.]{3,20}$';`), después `create unique index biblio_profiles_handle on biblio_profiles (lower(handle)) where handle is not null;` + `check (handle ~ '^[a-z0-9_.]{3,20}$')`. En Perfil: campo editable con sugerencia a partir del nombre y comprobación de disponibilidad (consulta `select` por `lower(handle)`).
 3. **Una sola identidad visible** — hoy conviven el perfil local (`useStore.profile`: nombre, color) y el de la nube (`useAuth.profile`). Con sesión iniciada, la nube manda: nombre, `avatarUrl` y país se copian al perfil local al entrar; los cambios en Perfil se guardan en los dos.
 4. **Primera entrada** — al iniciar sesión por primera vez en un dispositivo: subir lo local (`pushLocalEntriesToCloud`) y luego bajar (`pullCloudEntries`); gana el `updatedAt` más reciente. Mostrar «Hemos guardado tus N obras en tu cuenta».
 5. **Registro libre** — cualquiera con el enlace puede crear cuenta; `/unirse/:code` solo crea la amistad.

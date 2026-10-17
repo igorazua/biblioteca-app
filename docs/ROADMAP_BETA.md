@@ -68,7 +68,7 @@ Contraste medido sobre el fondo de cada propuesta (AA = 4,5 o más para texto).
 | secundario (lila) | `#9D8CFF` | 7,1 |
 | éxito (menta) | `#4FD1A5` | 10,2 |
 
-Recomendación: **1 como base** con un **color por estantería** (pelis ámbar, series coral, libros burdeos, música lila, juegos menta) para que cada estantería se reconozca de un vistazo, y modo claro inspirado en la 2 más adelante.
+Recomendación: **1 como base** con un **color por estantería**, todos por encima de 6,9 sobre `#100E0C`: pelis ámbar `#F2B04A` (10,2), series coral `#FF6B5B` (6,9), libros rosa `#E37D8C` (7,0; el burdeos de la paleta 2 da 2,6 sobre fondo oscuro y no vale), música lila `#9D8CFF` (7,0), juegos menta `#4FD1A5` (10,1) para que cada estantería se reconozca de un vistazo, y modo claro inspirado en la 2 más adelante.
 
 **Formas y movimiento:** radios de 20 px en tarjetas y 999 px en chips; sombras de profundidad en el mazo; el sello aparece mientras arrastras y la tarjeta vuelve con muelle; el póster «vuela» de la tarjeta a la ficha (`layoutId`); esqueletos de carga; celebración al terminar una tanda de duelos; vibración corta al confirmar (solo Android).
 
