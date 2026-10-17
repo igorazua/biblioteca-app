@@ -11,6 +11,7 @@ import { SHELVES, SHELF_LABEL } from '../types'
 import { affinity } from '../lib/affinity'
 import { profileUrl, type SharedProfile } from '../lib/share'
 import { shareOrCopy } from '../lib/shareUi'
+import { generateShareCard, shareOrDownloadCard } from '../lib/shareCard'
 import { Poster } from '../components/Poster'
 import { Avatar, Chip, Confirm, PlatformPicker, Sheet, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
@@ -138,6 +139,70 @@ export function Profile() {
     } finally {
       setUploadingAvatar(false)
       if (avatarInputRef.current) avatarInputRef.current.value = ''
+    }
+  }
+
+  const [generatingCard, setGeneratingCard] = useState(false)
+  const [feedbackOpen, setFeedbackOpen] = useState(false)
+  const [feedbackMsg, setFeedbackMsg] = useState('')
+  const [feedbackContact, setFeedbackContact] = useState('')
+  const [sendingFeedback, setSendingFeedback] = useState(false)
+
+  const handleShareStoryCard = async () => {
+    setGeneratingCard(true)
+    try {
+      const topIds: string[] = []
+      for (const t of SHELVES) {
+        for (const id of rankings[t] ?? []) {
+          if (!topIds.includes(id)) topIds.push(id)
+          if (topIds.length >= 5) break
+        }
+        if (topIds.length >= 5) break
+      }
+      const topItems = topIds.map(getItem).filter(Boolean) as any[]
+      if (topItems.length === 0) {
+        setToast('Ordena alguna obra antes de generar tu tarjeta')
+        return
+      }
+      const url = profileUrl(location.origin, sharedProfile())
+      const blob = await generateShareCard({
+        title: 'Lo que más me marcó',
+        author: profile.name,
+        items: topItems,
+        shareUrl: url,
+      })
+      await shareOrDownloadCard(blob, `biblioteca-${profile.name.toLowerCase().replace(/\s+/g, '-')}.png`)
+    } catch (e) {
+      console.error('Error generando tarjeta:', e)
+      setToast('Error al generar la tarjeta')
+    } finally {
+      setGeneratingCard(false)
+    }
+  }
+
+  const handleSubmitFeedback = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!feedbackMsg.trim() || !supabase) return
+    setSendingFeedback(true)
+    try {
+      await supabase.from('biblio_feedback').insert({
+        message: feedbackMsg.trim(),
+        contact: feedbackContact.trim() || null,
+        user_id: user?.id || null,
+        metadata: {
+          profileName: profile.name,
+          version: ENGINE_VERSION,
+        },
+      })
+      setFeedbackMsg('')
+      setFeedbackContact('')
+      setFeedbackOpen(false)
+      setToast('¡Muchas gracias por tu feedback!')
+    } catch (err) {
+      console.error('Error enviando feedback:', err)
+      setToast('Error enviando feedback')
+    } finally {
+      setSendingFeedback(false)
     }
   }
 
@@ -336,6 +401,23 @@ export function Profile() {
                   </div>
                 </div>
               ))}
+              <div className="flex gap-2 pt-2">
+                <button
+                  onClick={shareProfile}
+                  className="flex-1 min-h-[44px] rounded-2xl bg-surface border border-line text-xs font-semibold flex items-center justify-center gap-1.5 active:scale-95 transition-transform"
+                >
+                  <Icon name="share" size={16} />
+                  Compartir enlace
+                </button>
+                <button
+                  onClick={handleShareStoryCard}
+                  disabled={generatingCard}
+                  className="flex-1 min-h-[44px] rounded-2xl bg-accent text-accent-ink text-xs font-semibold flex items-center justify-center gap-1.5 active:scale-95 transition-transform"
+                >
+                  <Icon name="cards" size={16} />
+                  {generatingCard ? 'Creando...' : 'Tarjeta para Story'}
+                </button>
+              </div>
             </div>
           ) : <p className="text-sm text-mute rounded-3xl border border-dashed border-line p-4">Cuando ordenes tus obras, aquí aparecerá el top 3 de cada estantería.</p>}
         </section>
@@ -540,6 +622,7 @@ export function Profile() {
           <div className="rounded-3xl bg-surface border border-line divide-y divide-line">
             <div className="flex items-center gap-3 p-4"><span className="flex-1 text-[15px]">Valorar al guardar en Descubrir<span className="block text-xs text-mute">Abre la hoja de estrellas y comentario al marcar «vista»</span></span><Toggle on={settings.rateOnSwipe !== false} onChange={(v) => setSettings({ rateOnSwipe: v })} label="Valorar al guardar en Descubrir" /></div>
             <div className="flex items-center gap-3 p-4"><span className="flex-1 text-[15px]">Preguntar un comentario al comparar</span><Toggle on={settings.commentBoxInPairs} onChange={(v) => setSettings({ commentBoxInPairs: v })} label="Comentario al comparar" /></div>
+            <button onClick={() => setFeedbackOpen(true)} className="w-full text-left p-4 text-[15px] flex items-center gap-2"><Icon name="message" size={18} className="text-accent" /> Enviar feedback o sugerencias</button>
             <button onClick={() => { loadSample(); setToast('Datos de ejemplo cargados') }} className="w-full text-left p-4 text-[15px] flex items-center gap-2"><Icon name="sparkle" size={18} className="text-accent" /> Cargar datos de ejemplo</button>
             <button onClick={() => setConfirm(true)} className="w-full text-left p-4 text-[15px] text-stamp-red flex items-center gap-2"><Icon name="trash" size={18} /> Reiniciar demo</button>
           </div>
@@ -591,6 +674,51 @@ export function Profile() {
               <button key={c} role="radio" aria-checked={c === profile.avatarColor} aria-label={`Color ${c}`} onClick={() => { setProfile({ avatarColor: c }); setColorOpen(false) }} className={`w-12 h-12 rounded-full border-2 ${c === profile.avatarColor ? 'border-white' : 'border-transparent'}`} style={{ background: c }} />
             ))}
           </div>
+        </Sheet>
+      )}
+      {feedbackOpen && (
+        <Sheet label="Enviar feedback" onClose={() => setFeedbackOpen(false)} height="60%">
+          <h3 className="font-semibold text-lg mb-1">Enviar feedback</h3>
+          <p className="text-xs text-mute mb-4">¿Has encontrado un error, echas algo en falta o tienes una sugerencia? Te leemos.</p>
+          <form onSubmit={handleSubmitFeedback} className="space-y-3">
+            <div>
+              <label className="block text-xs font-semibold text-mute mb-1">Tu mensaje *</label>
+              <textarea
+                value={feedbackMsg}
+                onChange={(e) => setFeedbackMsg(e.target.value)}
+                placeholder="Cuéntanos qué tal tu experiencia..."
+                required
+                rows={4}
+                className="w-full bg-surface2 border border-line rounded-xl p-3 text-xs focus:outline-none focus:border-accent resize-none"
+              />
+            </div>
+            <div>
+              <label className="block text-xs font-semibold text-mute mb-1">Contacto opcional (email o @telegram)</label>
+              <input
+                type="text"
+                value={feedbackContact}
+                onChange={(e) => setFeedbackContact(e.target.value)}
+                placeholder="Para responderte si quieres..."
+                className="w-full bg-surface2 border border-line rounded-xl px-3 min-h-[38px] text-xs focus:outline-none focus:border-accent"
+              />
+            </div>
+            <div className="flex gap-2 pt-2">
+              <button
+                type="button"
+                onClick={() => setFeedbackOpen(false)}
+                className="flex-1 min-h-[44px] rounded-xl bg-surface border border-line text-xs font-semibold"
+              >
+                Cancelar
+              </button>
+              <button
+                type="submit"
+                disabled={sendingFeedback || !feedbackMsg.trim()}
+                className="flex-1 min-h-[44px] rounded-xl bg-accent text-accent-ink text-xs font-semibold disabled:opacity-40"
+              >
+                {sendingFeedback ? 'Enviando...' : 'Enviar'}
+              </button>
+            </div>
+          </form>
         </Sheet>
       )}
       {confirm && <Confirm title="¿Reiniciar la demo?" text="Se borrarán tus valoraciones, listas y ajustes de este navegador. Vuelves al principio." confirmLabel="Reiniciar" onCancel={() => setConfirm(false)} onConfirm={() => { resetAll(); setConfirm(false) }} />}

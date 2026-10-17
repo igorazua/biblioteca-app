@@ -5,17 +5,24 @@
 @theme {
   --font-sans: 'Outfit Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-serif: 'Fraunces Variable', Georgia, serif;
-  --color-bg: #0f0e0d;
-  --color-surface: #181715;
-  --color-surface2: #22201d;
-  --color-line: #2e2b27;
-  --color-ink: #f4f1ea;
-  --color-mute: #a09c93;
-  --color-accent: #f5b544;
-  --color-accent-ink: #1b1305;
+  --color-bg: #100e0c;
+  --color-surface: #1a1816;
+  --color-surface2: #25221f;
+  --color-line: #2c2824;
+  --color-ink: #f4efe6;
+  --color-mute: #a39d92;
+  --color-accent: #f2b04a;
+  --color-accent-ink: #100e0c;
+  --color-secundario: #d9714e;
   --color-stamp-red: #ef4b4b;
   --color-stamp-green: #3ec878;
   --color-stamp-blue: #4a8df0;
+
+  --color-shelf-movie: #f2b04a;
+  --color-shelf-series: #ff6b5b;
+  --color-shelf-book: #e37d8c;
+  --color-shelf-artist: #9d8cff;
+  --color-shelf-boardgame: #4fd1a5;
 }
 
 html, body, #root { height: 100%; }
