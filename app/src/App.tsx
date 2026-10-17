@@ -1,11 +1,12 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Navigate, Outlet, Route, Routes, useLocation } from 'react-router-dom'
 import { TabBar } from './components/TabBar'
+import { Toast } from './components/ui'
 import { useStore } from './store/useStore'
 import { useAuth } from './store/useAuth'
 import { useFriends } from './store/useFriends'
 import { useCatalog } from './store/useCatalog'
-import { pullCloudEntries, initStoreSync } from './lib/sync'
+import { pullCloudEntries, pushLocalEntriesToCloud, initStoreSync } from './lib/sync'
 import { Discover } from './screens/Discover'
 import { Library } from './screens/Library'
 import { Shelf } from './screens/Shelf'
@@ -61,6 +62,7 @@ function TabLayout() {
 export function App() {
   const user = useAuth((s) => s.user)
   const hasHydrated = useCatalog((s) => s._hasHydrated)
+  const [syncToast, setSyncToast] = useState<string | null>(null)
 
   useEffect(() => {
     if (!hasHydrated) return
@@ -74,7 +76,19 @@ export function App() {
 
   useEffect(() => {
     if (user && hasHydrated) {
-      pullCloudEntries(user.id)
+      const localCount = Object.keys(useStore.getState().entries).length
+      const syncKey = `biblio_synced_${user.id}`
+      if (localCount > 0 && !localStorage.getItem(syncKey)) {
+        pushLocalEntriesToCloud(user.id).then((pushed) => {
+          localStorage.setItem(syncKey, '1')
+          if (pushed > 0) {
+            setSyncToast(`Hemos guardado tus ${pushed} obras en tu cuenta`)
+          }
+          pullCloudEntries(user.id)
+        })
+      } else {
+        pullCloudEntries(user.id)
+      }
       useFriends.getState().loadFriends()
     }
   }, [user, hasHydrated])
@@ -90,12 +104,15 @@ export function App() {
   }
 
   return (
-    <Routes>
-      {/* Vistas públicas de links compartidos: sin marco ni barra, como una web normal */}
-      <Route path="/l/:payload" element={<PublicList />} />
-      <Route path="/p/:payload" element={<PublicProfile />} />
-      <Route path="/unete/:code" element={<JoinInvite />} />
-      <Route path="/*" element={<Frame />} />
-    </Routes>
+    <>
+      {syncToast && <Toast message={syncToast} onDone={() => setSyncToast(null)} />}
+      <Routes>
+        {/* Vistas públicas de links compartidos: sin marco ni barra, como una web normal */}
+        <Route path="/l/:payload" element={<PublicList />} />
+        <Route path="/p/:payload" element={<PublicProfile />} />
+        <Route path="/unete/:code" element={<JoinInvite />} />
+        <Route path="/*" element={<Frame />} />
+      </Routes>
+    </>
   )
 }

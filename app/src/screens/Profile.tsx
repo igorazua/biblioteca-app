@@ -14,7 +14,7 @@ import { shareOrCopy } from '../lib/shareUi'
 import { Poster } from '../components/Poster'
 import { Avatar, Chip, Confirm, Sheet, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
-import { useAuth } from '../store/useAuth'
+import { useAuth, checkHandleAvailability } from '../store/useAuth'
 import { useFriends } from '../store/useFriends'
 import { pushLocalEntriesToCloud } from '../lib/sync'
 
@@ -59,6 +59,50 @@ export function Profile() {
   const [syncing, setSyncing] = useState(false)
   const [deleteConfirm, setDeleteConfirm] = useState(false)
   const [inviting, setInviting] = useState(false)
+
+  const [handleInput, setHandleInput] = useState(authProfile?.handle || '')
+  const [handleCheck, setHandleCheck] = useState<{ checked: boolean; available?: boolean; message?: string }>({ checked: false })
+  const [savingHandle, setSavingHandle] = useState(false)
+
+  const suggestedHandle = useMemo(() => {
+    const base = authProfile?.displayName || profile.name
+    return base
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9_.]/g, '')
+      .slice(0, 15)
+  }, [authProfile?.displayName, profile.name])
+
+  const handleValidateHandle = async (val: string) => {
+    const target = val.trim().toLowerCase()
+    if (!target) {
+      setHandleCheck({ checked: false })
+      return
+    }
+    const res = await checkHandleAvailability(target, user?.id)
+    if (res.available) {
+      setHandleCheck({ checked: true, available: true, message: '¡Disponible!' })
+    } else {
+      setHandleCheck({ checked: true, available: false, message: res.error || 'No disponible' })
+    }
+  }
+
+  const handleSaveHandle = async () => {
+    const target = handleInput.trim().toLowerCase()
+    if (!target) return
+    setSavingHandle(true)
+    const res = await checkHandleAvailability(target, user?.id)
+    if (!res.available) {
+      setHandleCheck({ checked: true, available: false, message: res.error || 'No disponible' })
+      setSavingHandle(false)
+      return
+    }
+    await useAuth.getState().updateProfile({ handle: target })
+    setSavingHandle(false)
+    setToast('¡@usuario actualizado con éxito!')
+    setHandleCheck({ checked: true, available: true, message: 'Guardado ✓' })
+  }
 
   // Contact Picker API: solo existe en Chrome Android; si no está, el botón no se muestra
   const canPick = typeof navigator !== 'undefined' && 'contacts' in navigator && typeof window !== 'undefined' && 'ContactsManager' in window
@@ -254,9 +298,58 @@ export function Profile() {
                 <div className="flex items-center justify-between">
                   <div className="min-w-0 pr-2">
                     <div className="font-semibold text-sm truncate">{authProfile?.displayName || user.email}</div>
-                    <div className="text-xs text-mute truncate">{user.email}</div>
+                    <div className="text-xs text-mute truncate">{authProfile?.handle ? `@${authProfile.handle} · ` : ''}{user.email}</div>
                   </div>
                   <span className="text-xs bg-stamp-green/20 text-stamp-green font-medium px-2.5 py-1 rounded-full shrink-0">Sincronizado</span>
+                </div>
+
+                <div className="p-3 bg-surface2/60 rounded-2xl border border-line space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-semibold text-mute">Tu @usuario</span>
+                    {handleCheck.checked && (
+                      <span className={`text-[11px] font-medium ${handleCheck.available ? 'text-stamp-green' : 'text-stamp-red'}`}>
+                        {handleCheck.message}
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex gap-2">
+                    <div className="relative flex-1">
+                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-mute text-xs">@</span>
+                      <input
+                        type="text"
+                        value={handleInput}
+                        onChange={(e) => {
+                          const val = e.target.value.toLowerCase().replace(/[^a-z0-9_.]/g, '')
+                          setHandleInput(val)
+                          setHandleCheck({ checked: false })
+                        }}
+                        onBlur={() => handleValidateHandle(handleInput)}
+                        placeholder={suggestedHandle}
+                        maxLength={20}
+                        className="w-full bg-surface border border-line rounded-xl pl-7 pr-3 min-h-[38px] text-xs focus:outline-none focus:border-accent"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      onClick={handleSaveHandle}
+                      disabled={savingHandle || !handleInput.trim() || handleInput === authProfile?.handle}
+                      className="px-3 min-h-[38px] rounded-xl bg-accent text-accent-ink text-xs font-semibold disabled:opacity-40"
+                    >
+                      {savingHandle ? '...' : 'Guardar'}
+                    </button>
+                  </div>
+                  {!handleInput && suggestedHandle && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setHandleInput(suggestedHandle)
+                        handleValidateHandle(suggestedHandle)
+                      }}
+                      className="text-[11px] text-accent/80 hover:underline"
+                    >
+                      Sugerencia: @{suggestedHandle}
+                    </button>
+                  )}
                 </div>
 
                 <div className="flex gap-2">

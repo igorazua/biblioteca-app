@@ -2,6 +2,8 @@ import { create } from 'zustand'
 import type { User } from '@supabase/supabase-js'
 import { supabase, isSupabaseConfigured } from '../lib/supabase'
 
+import { useStore } from './useStore'
+
 export interface BiblioProfile {
   id: string
   displayName: string
@@ -25,6 +27,25 @@ interface AuthState {
   updateProfile: (patch: Partial<BiblioProfile>) => Promise<void>
 }
 
+export async function checkHandleAvailability(handle: string, currentUserId?: string): Promise<{ available: boolean; error?: string }> {
+  if (!supabase) return { available: false, error: 'No conectado' }
+  const clean = handle.toLowerCase().trim()
+  if (!/^[a-z0-9_.]{3,20}$/.test(clean)) {
+    return { available: false, error: 'Debe tener entre 3 y 20 caracteres (letras, números, punto o guion bajo)' }
+  }
+  const { data, error } = await supabase
+    .from('biblio_profiles')
+    .select('id')
+    .ilike('handle', clean)
+    .maybeSingle()
+
+  if (error) return { available: false, error: error.message }
+  if (data && data.id !== currentUserId) {
+    return { available: false, error: 'Este @usuario ya está en uso' }
+  }
+  return { available: true }
+}
+
 export const useAuth = create<AuthState>((set, get) => ({
   user: null,
   profile: null,
@@ -43,7 +64,14 @@ export const useAuth = create<AuthState>((set, get) => ({
       const user = session?.user ?? null
       set({ user })
       if (user) {
-        fetchOrCreateProfile(user).then((profile) => set({ profile, loading: false }))
+        fetchOrCreateProfile(user).then((profile) => {
+          set({ profile, loading: false })
+          // Sincronizar identidad nube -> local
+          useStore.getState().setProfile({
+            name: profile.displayName,
+            country: profile.country,
+          })
+        })
       } else {
         set({ loading: false })
       }
@@ -56,6 +84,10 @@ export const useAuth = create<AuthState>((set, get) => ({
       if (user) {
         const profile = await fetchOrCreateProfile(user)
         set({ profile, loading: false })
+        useStore.getState().setProfile({
+          name: profile.displayName,
+          country: profile.country,
+        })
       } else {
         set({ profile: null, loading: false })
       }
@@ -102,12 +134,17 @@ export const useAuth = create<AuthState>((set, get) => ({
     if (!supabase) return { error: new Error('No configurado') }
     const { user } = get()
     if (!user) return { error: null }
-    // Elimina las entradas y el perfil de la base de datos
-    const { error: err1 } = await supabase.from('biblio_entries').delete().eq('user_id', user.id)
-    const { error: err2 } = await supabase.from('biblio_profiles').delete().eq('id', user.id)
+    try {
+      const { error } = await supabase.functions.invoke('biblio-delete-account')
+      if (error) throw error
+    } catch (err: any) {
+      console.warn('Fallo al invocar biblio-delete-account:', err)
+      return { error: err }
+    }
     await supabase.auth.signOut()
     set({ user: null, profile: null })
-    return { error: err1 || err2 }
+    useStore.getState().resetAll()
+    return { error: null }
   },
 
   updateProfile: async (patch) => {
@@ -116,11 +153,18 @@ export const useAuth = create<AuthState>((set, get) => ({
     if (!user || !profile) return
     const updated = { ...profile, ...patch }
     set({ profile: updated })
+
+    // Sincronizar con el perfil local también
+    useStore.getState().setProfile({
+      name: updated.displayName,
+      country: updated.country,
+    })
+
     await supabase
       .from('biblio_profiles')
       .update({
         display_name: updated.displayName,
-        handle: updated.handle,
+        handle: updated.handle ? updated.handle.toLowerCase().trim() : null,
         avatar_url: updated.avatarUrl,
         country: updated.country,
         updated_at: new Date().toISOString(),

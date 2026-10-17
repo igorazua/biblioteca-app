@@ -25,8 +25,8 @@ export interface CloudEntry {
 }
 
 /** Sube las entradas locales a Supabase */
-export async function pushLocalEntriesToCloud(userId: string) {
-  if (!supabase) return
+export async function pushLocalEntriesToCloud(userId: string): Promise<number> {
+  if (!supabase) return 0
   const { entries, rankings } = useStore.getState()
 
   // Si hay obras con shelf desconocido, pedirlas antes a biblio_catalog
@@ -55,40 +55,37 @@ export async function pushLocalEntriesToCloud(userId: string) {
     })
   }
 
-  if (rows.length === 0) return
+  if (rows.length === 0) return 0
 
   // Upsert en lotes de 100
   for (let i = 0; i < rows.length; i += 100) {
     const chunk = rows.slice(i, i + 100)
     await supabase.from('biblio_entries').upsert(chunk, { onConflict: 'user_id,item_id' })
   }
+  return rows.length
 }
 
-/** Descarga las entradas de Supabase y las fusiona con el store local */
-export async function pullCloudEntries(userId: string) {
-  if (!supabase) return
-  const { data, error } = await supabase
-    .from('biblio_entries')
-    .select('*')
-    .eq('user_id', userId)
+export interface MergeResult {
+  entries: Record<string, UserEntry>
+  rankings: Record<ShelfType, string[]>
+}
 
-  if (error || !data || data.length === 0) return
-
-  // Asegurar que las obras existen en catálogo antes de procesar
-  const allIds = (data as CloudEntry[]).map((r) => r.item_id)
-  await useCatalog.getState().ensureItems(allIds)
-
-  const store = useStore.getState()
-  const newEntries = { ...store.entries }
+/** Fusiona entradas locales con las de la nube según updatedAt (gana el más reciente) */
+export function mergeCloudAndLocal(
+  localEntries: Record<string, UserEntry>,
+  localRankings: Record<ShelfType, string[]>,
+  cloudRows: CloudEntry[]
+): MergeResult {
+  const newEntries = { ...localEntries }
   const newRankings: Record<ShelfType, string[]> = {
-    movie: [...(store.rankings.movie ?? [])],
-    series: [...(store.rankings.series ?? [])],
-    book: [...(store.rankings.book ?? [])],
-    artist: [...(store.rankings.artist ?? [])],
-    boardgame: [...(store.rankings.boardgame ?? [])],
+    movie: [...(localRankings.movie ?? [])],
+    series: [...(localRankings.series ?? [])],
+    book: [...(localRankings.book ?? [])],
+    artist: [...(localRankings.artist ?? [])],
+    boardgame: [...(localRankings.boardgame ?? [])],
   }
 
-  for (const row of data as CloudEntry[]) {
+  for (const row of cloudRows) {
     const existing = newEntries[row.item_id]
     const rowUpdatedAt = new Date(row.updated_at).getTime()
     const shelf = (row.shelf in newRankings ? row.shelf : getItem(row.item_id)?.type) as ShelfType | undefined
@@ -113,7 +110,26 @@ export async function pullCloudEntries(userId: string) {
     }
   }
 
-  useStore.setState({ entries: newEntries, rankings: newRankings })
+  return { entries: newEntries, rankings: newRankings }
+}
+
+/** Descarga las entradas de Supabase y las fusiona con el store local */
+export async function pullCloudEntries(userId: string) {
+  if (!supabase) return
+  const { data, error } = await supabase
+    .from('biblio_entries')
+    .select('*')
+    .eq('user_id', userId)
+
+  if (error || !data || data.length === 0) return
+
+  // Asegurar que las obras existen en catálogo antes de procesar
+  const allIds = (data as CloudEntry[]).map((r) => r.item_id)
+  await useCatalog.getState().ensureItems(allIds)
+
+  const store = useStore.getState()
+  const { entries, rankings } = mergeCloudAndLocal(store.entries, store.rankings, data as CloudEntry[])
+  useStore.setState({ entries, rankings })
 }
 
 /** Guarda un único cambio de entrada en la nube si hay usuario conectado */
