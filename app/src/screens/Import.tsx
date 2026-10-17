@@ -23,9 +23,11 @@ type ImportSource = 'letterboxd' | 'imdb' | 'goodreads' | 'netflix'
 interface SourceConfig {
   id: ImportSource
   name: string
-  icon: string
+  icon: 'film' | 'tv' | 'bookOpen'
   shelves: string
   extensions: string
+  url?: string
+  urlLabel?: string
   steps: string[]
 }
 
@@ -36,46 +38,54 @@ const SOURCES: SourceConfig[] = [
     icon: 'film',
     shelves: 'Películas',
     extensions: '.zip, .csv',
+    url: 'https://letterboxd.com/settings/data/',
+    urlLabel: 'Abrir Ajustes de Letterboxd',
     steps: [
       'Entra en letterboxd.com en tu navegador e inicia sesión.',
-      'Ve a Ajustes (Settings) → Import & Export → «Export your data».',
-      'Descarga el archivo ZIP o el archivo ratings.csv / watched.csv y súbelo aquí.',
+      'Ve a Ajustes (Settings) → pestaña «Data» o «Import & Export» → pulsa «Export your data».',
+      'Descarga el archivo ZIP (o los archivos ratings.csv / watched.csv) y súbelo aquí.',
     ],
   },
   {
     id: 'imdb',
     name: 'IMDb',
-    icon: 'film',
+    icon: 'tv',
     shelves: 'Películas y series',
     extensions: '.csv',
+    url: 'https://www.imdb.com/list/ratings',
+    urlLabel: 'Abrir tus ratings en IMDb',
     steps: [
-      'Entra en imdb.com y ve a «Your Ratings» o a tu Watchlist.',
-      'Pulsa los 3 puntos (⋮) o el botón «Export» al final de la página.',
+      'Entra en imdb.com y ve a tu página de «Your Ratings» o a tu «Watchlist».',
+      'Pulsa el menú de 3 puntos (⋮) o el botón «Export» al final de la página.',
       'Sube aquí el archivo ratings.csv o watchlist.csv descargado.',
     ],
   },
   {
     id: 'goodreads',
     name: 'Goodreads / StoryGraph',
-    icon: 'book',
+    icon: 'bookOpen',
     shelves: 'Libros',
     extensions: '.csv',
+    url: 'https://www.goodreads.com/review/import',
+    urlLabel: 'Abrir exportación en Goodreads',
     steps: [
-      'Entra en goodreads.com (o app StoryGraph) en tu navegador.',
+      'Entra en goodreads.com en tu navegador e inicia sesión.',
       'Ve a «My Books» → en el menú lateral pulsa «Import and export».',
-      'Pulsa «Export Library» y sube aquí el archivo CSV generado.',
+      'Pulsa «Export Library» y sube aquí el archivo CSV generado (o el export de StoryGraph).',
     ],
   },
   {
     id: 'netflix',
     name: 'Netflix',
-    icon: 'play',
+    icon: 'film',
     shelves: 'Películas y series',
     extensions: '.csv',
+    url: 'https://www.netflix.com/viewingactivity',
+    urlLabel: 'Abrir actividad de visionado en Netflix',
     steps: [
       'Entra en netflix.com/youraccount e inicia sesión.',
-      'En tu perfil, ve a «Actividad de visionado» (Viewing activity).',
-      'Al final de la página, pulsa «Descargar todo» y sube NetflixViewingHistory.csv.',
+      'Selecciona tu perfil y ve a «Actividad de visionado» (Viewing activity).',
+      'Al final de la lista, pulsa «Descargar todo» y sube el archivo NetflixViewingHistory.csv.',
     ],
   },
 ]
@@ -101,7 +111,7 @@ interface DoubtfulPair {
 export function Import() {
   const nav = useNavigate()
   const user = useAuth((s) => s.user)
-  const [selectedSource, setSelectedSource] = useState<ImportSource | null>(null)
+  const [selectedSource, setSelectedSource] = useState<ImportSource>('letterboxd')
   const [parsing, setParsing] = useState(false)
   const [progress, setProgress] = useState<{ current: number; total: number } | null>(null)
 
@@ -354,29 +364,60 @@ export function Import() {
             </div>
 
             {activeSourceConfig && (
-              <div className="bg-surface border border-line rounded-3xl p-4 space-y-4">
-                <h3 className="text-sm font-semibold text-ink">Cómo descargar tu archivo de {activeSourceConfig.name}:</h3>
-                <ol className="list-decimal list-inside space-y-2 text-sm text-mute">
+              <div className="bg-surface border border-accent/30 rounded-3xl p-5 space-y-4 shadow-sm">
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-accent" />
+                  <h3 className="text-sm font-semibold text-ink">
+                    Tutorial: Cómo exportar tu lista de {activeSourceConfig.name}
+                  </h3>
+                </div>
+
+                <div className="space-y-3 pt-1">
                   {activeSourceConfig.steps.map((st, i) => (
-                    <li key={i} className="leading-snug">{st}</li>
+                    <div key={i} className="flex items-start gap-3 text-sm">
+                      <span className="w-6 h-6 rounded-full bg-surface2 border border-line text-xs font-bold text-accent flex items-center justify-center shrink-0 mt-0.5">
+                        {i + 1}
+                      </span>
+                      <p className="flex-1 text-ink/90 leading-snug">{st}</p>
+                    </div>
                   ))}
-                </ol>
+                </div>
 
-                <input
-                  ref={fileInputRef}
-                  type="file"
-                  accept={activeSourceConfig.extensions}
-                  onChange={handleFileChange}
-                  className="hidden"
-                />
+                {activeSourceConfig.url && (
+                  <div className="pt-1">
+                    <a
+                      href={activeSourceConfig.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs text-accent hover:underline font-semibold bg-accent/10 px-3 py-1.5 rounded-xl border border-accent/20 active:scale-95 transition-transform"
+                    >
+                      <Icon name="link" size={13} />
+                      {activeSourceConfig.urlLabel}
+                      <span className="text-[10px]">↗</span>
+                    </a>
+                  </div>
+                )}
 
-                <button
-                  onClick={() => fileInputRef.current?.click()}
-                  className="w-full min-h-[50px] rounded-2xl bg-accent text-accent-ink font-semibold flex items-center justify-center gap-2 active:scale-95 transition-transform"
-                >
-                  <Icon name="search" size={18} />
-                  Seleccionar archivo ({activeSourceConfig.extensions})
-                </button>
+                <div className="pt-2">
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept={activeSourceConfig.extensions}
+                    onChange={handleFileChange}
+                    className="hidden"
+                  />
+
+                  <button
+                    onClick={() => fileInputRef.current?.click()}
+                    className="w-full min-h-[50px] rounded-2xl bg-accent text-accent-ink font-semibold flex items-center justify-center gap-2 active:scale-95 transition-transform shadow"
+                  >
+                    <Icon name="search" size={18} />
+                    Subir archivo ({activeSourceConfig.extensions})
+                  </button>
+                  <p className="text-[11px] text-mute text-center mt-2">
+                    Privacidad: El archivo se lee únicamente en tu navegador. Tus notas se guardan sin pisar las existentes.
+                  </p>
+                </div>
               </div>
             )}
           </div>

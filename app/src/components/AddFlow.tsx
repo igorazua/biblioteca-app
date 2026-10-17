@@ -160,7 +160,23 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
 
         {!shelf ? (
           <div className="px-5 pt-2 space-y-3">
-            <p className="text-mute text-sm">¿A qué estantería?</p>
+            <button
+              onClick={() => {
+                onClose()
+                nav('/importar')
+              }}
+              className="w-full p-4 rounded-3xl bg-accent/10 border border-accent/40 text-left flex items-center gap-3.5 active:scale-[0.99] transition-transform"
+            >
+              <div className="w-10 h-10 rounded-2xl bg-accent text-accent-ink flex items-center justify-center shrink-0">
+                <Icon name="sparkle" size={20} />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="font-semibold text-sm text-ink">Importar listas externas</div>
+                <div className="text-xs text-mute">Letterboxd, IMDb, Goodreads o Netflix con tutoriales</div>
+              </div>
+              <Icon name="chevron" size={16} className="text-accent shrink-0" />
+            </button>
+            <p className="text-mute text-sm pt-1">O añade una a una por estantería:</p>
             {SHELVES.map((s) => (
               <button
                 key={s}

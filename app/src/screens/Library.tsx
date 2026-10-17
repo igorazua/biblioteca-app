@@ -42,7 +42,17 @@ export function Library() {
             <Avatar name={profile.name} color={profile.avatarColor} size={36} />
             <span className="label-caps text-mute">Tu biblioteca</span>
           </Link>
-          <button onClick={() => setAdd({})} aria-label="Añadir a mano" className="w-11 h-11 rounded-full bg-accent text-accent-ink flex items-center justify-center shadow-[0_8px_24px_-8px_rgb(245_181_68/0.7)] active:scale-90 transition-transform"><Icon name="plus" size={22} strokeWidth={2.5} /></button>
+          <div className="flex items-center gap-2">
+            <Link
+              to="/importar"
+              className="min-h-[38px] px-3.5 rounded-full bg-surface border border-line text-xs font-semibold flex items-center gap-1.5 active:scale-95 transition-transform text-ink/90 hover:border-accent"
+              title="Importar de Letterboxd, IMDb, Goodreads o Netflix"
+            >
+              <Icon name="sparkle" size={13} className="text-accent" />
+              Importar
+            </Link>
+            <button onClick={() => setAdd({})} aria-label="Añadir a mano" className="w-11 h-11 rounded-full bg-accent text-accent-ink flex items-center justify-center shadow-[0_8px_24px_-8px_rgb(245_181_68/0.7)] active:scale-90 transition-transform"><Icon name="plus" size={22} strokeWidth={2.5} /></button>
+          </div>
         </div>
         <h1 className="serif text-[34px] leading-[1.02] font-semibold mt-3">Hola, {profile.name.split(' ')[0]}.</h1>
         <p className="text-mute mt-1.5 text-[15px]">

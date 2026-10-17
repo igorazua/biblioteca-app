@@ -473,6 +473,22 @@ export function Profile() {
           )}
         </section>
 
+        <section aria-label="Importar">
+          <Link
+            to="/importar"
+            className="flex items-center gap-3.5 p-4 rounded-3xl bg-surface border border-accent/40 hover:border-accent active:bg-surface2 transition-colors"
+          >
+            <div className="w-10 h-10 rounded-2xl bg-accent/15 text-accent flex items-center justify-center shrink-0">
+              <Icon name="sparkle" size={20} />
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="font-semibold text-base text-ink">Importar listas externas</div>
+              <div className="text-xs text-mute">Letterboxd, IMDb, Goodreads o Netflix con tutoriales</div>
+            </div>
+            <span className="text-accent text-xl pr-1">›</span>
+          </Link>
+        </section>
+
         <section aria-label="Cuenta y Nube">
           <h2 className="serif text-[22px] font-semibold mb-3">Cuenta y Nube</h2>
           <div className="rounded-3xl bg-surface border border-line p-4 space-y-4">
@@ -599,22 +615,6 @@ export function Profile() {
               Privacidad: Tus notas solo se comparten con los amigos a los que invites o tus listas compartidas.
             </p>
           </div>
-        </section>
-
-        <section aria-label="Importar">
-          <Link
-            to="/importar"
-            className="flex items-center gap-3.5 p-4 rounded-3xl bg-surface border border-line hover:border-accent active:bg-surface2 transition-colors"
-          >
-            <div className="w-10 h-10 rounded-2xl bg-accent/15 text-accent flex items-center justify-center shrink-0">
-              <Icon name="sparkle" size={20} />
-            </div>
-            <div className="flex-1 min-w-0">
-              <div className="font-semibold text-base">Importar listas</div>
-              <div className="text-xs text-mute">Letterboxd, IMDb, Goodreads o Netflix</div>
-            </div>
-            <span className="text-mute text-xl pr-1">›</span>
-          </Link>
         </section>
 
         <section aria-label="Ajustes">
