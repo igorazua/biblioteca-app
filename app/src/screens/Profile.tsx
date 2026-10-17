@@ -419,6 +419,22 @@ export function Profile() {
           </div>
         </section>
 
+        <section aria-label="Importar">
+          <Link
+            to="/importar"
+            className="flex items-center gap-3.5 p-4 rounded-3xl bg-surface border border-line hover:border-accent active:bg-surface2 transition-colors"
+          >
+            <div className="w-10 h-10 rounded-2xl bg-accent/15 text-accent flex items-center justify-center shrink-0">
+              <Icon name="sparkle" size={20} />
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="font-semibold text-base">Importar listas</div>
+              <div className="text-xs text-mute">Letterboxd, IMDb, Goodreads o Netflix</div>
+            </div>
+            <span className="text-mute text-xl pr-1">›</span>
+          </Link>
+        </section>
+
         <section aria-label="Ajustes">
           <h2 className="serif text-[22px] font-semibold mb-3">Ajustes</h2>
           <div className="rounded-3xl bg-surface border border-line divide-y divide-line">

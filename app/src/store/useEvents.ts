@@ -22,6 +22,9 @@ export type EventType =
   | 'clean_start'
   | 'clean_swipe' // data: { dir }
   | 'clean_end'
+  // Importación
+  | 'import_started' // data: { source }
+  | 'import_done' // data: { source, total, sure, doubt, none }
   // Resultado a posteriori
   | 'entry_status' // data: { from, to, via: 'deck'|'decide'|'clean'|'add'|'other' }
   | 'entry_ranked' // data: { pos, total, pct }

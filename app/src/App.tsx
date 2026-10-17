@@ -16,6 +16,7 @@ import { Compare } from './screens/Compare'
 import { WhatToWatch } from './screens/WhatToWatch'
 import { Profile } from './screens/Profile'
 import { Onboarding } from './screens/Onboarding'
+import { Import } from './screens/Import'
 import { ListEditor } from './screens/ListEditor'
 import { PublicList, PublicProfile } from './screens/Public'
 import { JoinInvite } from './screens/JoinInvite'
@@ -40,6 +41,7 @@ function Frame() {
           <Route path="estanteria/:type" element={<Shelf />} />
           <Route path="i/:id" element={<ItemDetail />} />
           <Route path="lista/:id" element={<ListEditor />} />
+          <Route path="importar" element={<Import />} />
           <Route path="metricas" element={<Metrics />} />
           <Route path="onboarding" element={<Onboarding />} />
           <Route path="*" element={<Navigate to="/" replace />} />

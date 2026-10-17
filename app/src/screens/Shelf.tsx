@@ -72,7 +72,17 @@ export function Shelf() {
                 return it ? <ItemRow key={id} item={it} selecting={selecting} selected={sel.includes(id)} onToggle={() => toggle(id)} /> : null
               })}
             </>
-          ) : <Empty text="Todavía no hay nada aquí." action={<Link to="/descubrir" className="min-h-[46px] px-5 rounded-2xl bg-accent text-accent-ink font-semibold flex items-center">Ir a Descubrir</Link>} />
+          ) : (
+            <Empty
+              text="Todavía no hay nada aquí."
+              action={
+                <div className="flex flex-col gap-2 w-full max-w-xs">
+                  <Link to="/descubrir" className="min-h-[46px] px-5 rounded-2xl bg-accent text-accent-ink font-semibold flex items-center justify-center">Ir a Descubrir</Link>
+                  <Link to="/importar" className="min-h-[46px] px-5 rounded-2xl bg-surface2 border border-line text-sm font-semibold flex items-center justify-center">Importar tus obras</Link>
+                </div>
+              }
+            />
+          )
         )}
         {seg === 'pend' && (
           pend.length ? (
@@ -94,7 +104,14 @@ export function Shelf() {
                 return it ? <ItemRow key={e.itemId} item={it} note={e.origin ? `De ${e.origin}` : undefined} selecting={selecting} selected={sel.includes(e.itemId)} onToggle={() => toggle(e.itemId)} /> : null
               })}
             </>
-          ) : <Empty text="No tienes pendientes. Desliza hacia arriba en Descubrir para guardar." />
+          ) : (
+            <Empty
+              text="No tienes pendientes. Desliza hacia arriba en Descubrir para guardar."
+              action={
+                <Link to="/importar" className="min-h-[46px] px-5 rounded-2xl bg-surface2 border border-line text-sm font-semibold flex items-center justify-center">Importar tus listas</Link>
+              }
+            />
+          )
         )}
       </div>
       {selecting && (

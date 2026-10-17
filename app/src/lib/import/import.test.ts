@@ -1,0 +1,230 @@
+import { describe, it, expect } from 'vitest'
+import { parseLetterboxd } from './letterboxd'
+import { parseImdb } from './imdb'
+import { parseGoodreads } from './goodreads'
+import { parseNetflix } from './netflix'
+import { applyImportRows } from './apply'
+import type { ShelfType, UserEntry } from '../../types'
+
+import letterboxdRatingsCsv from './__fixtures__/letterboxd_ratings.csv?raw'
+import letterboxdWatchedCsv from './__fixtures__/letterboxd_watched.csv?raw'
+import letterboxdWatchlistCsv from './__fixtures__/letterboxd_watchlist.csv?raw'
+import imdbRatingsCsv from './__fixtures__/imdb_ratings.csv?raw'
+import goodreadsCsv from './__fixtures__/goodreads.csv?raw'
+import netflixCsv from './__fixtures__/netflix.csv?raw'
+
+describe('Analizador Letterboxd', () => {
+  it('procesa ratings, watched y watchlist correctamente', () => {
+    const rows = parseLetterboxd({
+      ratingsCsv: letterboxdRatingsCsv,
+      watchedCsv: letterboxdWatchedCsv,
+      watchlistCsv: letterboxdWatchlistCsv,
+    })
+
+    // El Padrino (en ratings y watched) debe tener estrellas 5 y status 'seen'
+    const padrino = rows.find((r) => r.title === 'El Padrino')
+    expect(padrino).toBeDefined()
+    expect(padrino?.year).toBe(1972)
+    expect(padrino?.status).toBe('seen')
+    expect(padrino?.stars).toBe(5)
+
+    // "Todo sobre mi madre, de Almodóvar" con comas dentro de comillas y rating 4.5 redondeado a 5
+    const almodovar = rows.find((r) => r.title.includes('Almodóvar'))
+    expect(almodovar).toBeDefined()
+    expect(almodovar?.stars).toBe(5)
+
+    // Dune (solo en watched) -> vista sin estrellas
+    const dune = rows.find((r) => r.title === 'Dune')
+    expect(dune).toBeDefined()
+    expect(dune?.status).toBe('seen')
+    expect(dune?.stars).toBeUndefined()
+
+    // Challengers (en watchlist) -> pendiente sin estrellas
+    const challengers = rows.find((r) => r.title === 'Challengers')
+    expect(challengers).toBeDefined()
+    expect(challengers?.status).toBe('pending')
+    expect(challengers?.stars).toBeUndefined()
+  })
+})
+
+describe('Analizador IMDb', () => {
+  it('diferencia películas y series, extrae imdbId y calcula estrellas con ceil(nota/2)', () => {
+    const rows = parseImdb(imdbRatingsCsv)
+
+    // The Shawshank Redemption -> movie, imdbId tt0111161, nota 10 -> 5 estrellas
+    const movie = rows.find((r) => r.imdbId === 'tt0111161')
+    expect(movie).toBeDefined()
+    expect(movie?.type).toBe('movie')
+    expect(movie?.stars).toBe(5)
+
+    // Breaking Bad -> tvSeries -> type 'series', nota 9 -> ceil(9/2) = 5 estrellas
+    const series = rows.find((r) => r.imdbId === 'tt0903747')
+    expect(series).toBeDefined()
+    expect(series?.type).toBe('series')
+    expect(series?.stars).toBe(5)
+
+    // Movie, With Comma -> nota vacía -> sin estrellas
+    const withComma = rows.find((r) => r.imdbId === 'tt1234567')
+    expect(withComma).toBeDefined()
+    expect(withComma?.title).toBe('Movie, With Comma')
+    expect(withComma?.stars).toBeUndefined()
+  })
+})
+
+describe('Analizador Goodreads', () => {
+  it('limpia ISBN13 con ="...", detecta estanterías read/to-read y maneja notas', () => {
+    const rows = parseGoodreads(goodreadsCsv)
+
+    // Cien años de soledad: read -> seen, rating 5 -> 5 estrellas, ISBN13 limpio
+    const book1 = rows.find((r) => r.title.includes('Cien años de soledad'))
+    expect(book1).toBeDefined()
+    expect(book1?.type).toBe('book')
+    expect(book1?.creator).toBe('Gabriel García Márquez')
+    expect(book1?.isbn13).toBe('9780307350411')
+    expect(book1?.status).toBe('seen')
+    expect(book1?.stars).toBe(5)
+
+    // 1984: to-read -> pending, rating 0 -> sin estrellas
+    const book2 = rows.find((r) => r.title === '1984')
+    expect(book2).toBeDefined()
+    expect(book2?.isbn13).toBe('9780451524935')
+    expect(book2?.status).toBe('pending')
+    expect(book2?.stars).toBeUndefined()
+  })
+})
+
+describe('Analizador Netflix', () => {
+  it('agrupa episodios en series (inglés y español) y clasifica películas', () => {
+    const rows = parseNetflix(netflixCsv)
+
+    // Stranger Things (2 episodios) debe dar UNA sola fila de tipo 'series'
+    const stranger = rows.find((r) => r.title === 'Stranger Things')
+    expect(stranger).toBeDefined()
+    expect(stranger?.type).toBe('series')
+    expect(stranger?.status).toBe('seen')
+    expect(stranger?.stars).toBeUndefined()
+
+    // La casa de papel (Parte 1: Episodio 1) -> series
+    const lcdp = rows.find((r) => r.title === 'La casa de papel')
+    expect(lcdp).toBeDefined()
+    expect(lcdp?.type).toBe('series')
+
+    // Chernobyl (Miniserie: Episodio 1) -> series
+    const chernobyl = rows.find((r) => r.title === 'Chernobyl')
+    expect(chernobyl).toBeDefined()
+    expect(chernobyl?.type).toBe('series')
+
+    // The Queen's Gambit (Miniseries: End Game) -> series
+    const gambit = rows.find((r) => r.title === "The Queen's Gambit")
+    expect(gambit).toBeDefined()
+    expect(gambit?.type).toBe('series')
+
+    // Roma y El irlandés -> películas
+    const roma = rows.find((r) => r.title === 'Roma')
+    expect(roma).toBeDefined()
+    expect(roma?.type).toBe('movie')
+
+    const irlandes = rows.find((r) => r.title.toLowerCase().includes('irland'))
+    expect(irlandes).toBeDefined()
+    expect(irlandes?.type).toBe('movie')
+  })
+})
+
+describe('Reglas al crear entradas (regla «no pisar»)', () => {
+  const emptyRankings: Record<ShelfType, string[]> = {
+    movie: [],
+    series: [],
+    book: [],
+    artist: [],
+    boardgame: [],
+  }
+
+  it('no pisa una entrada que ya tenga estrellas', () => {
+    const existing: Record<string, UserEntry> = {
+      'movie:el-padrino-1972': {
+        itemId: 'movie:el-padrino-1972',
+        shelf: 'movie',
+        status: 'seen',
+        stars: 5,
+        ranked: true,
+        updatedAt: 1000,
+      },
+    }
+
+    const matched = [
+      {
+        itemId: 'movie:el-padrino-1972',
+        row: {
+          type: 'movie' as const,
+          title: 'El Padrino',
+          year: 1972,
+          status: 'seen' as const,
+          stars: 4 as const, // import trae 4, pero local ya tenía 5
+        },
+      },
+    ]
+
+    const result = applyImportRows(existing, emptyRankings, matched, 'letterboxd')
+    expect(result.skippedCount).toBe(1)
+    expect(result.updatedCount).toBe(0)
+    expect(result.createdCount).toBe(0)
+    expect(result.entries['movie:el-padrino-1972'].stars).toBe(5)
+  })
+
+  it('actualiza una entrada existente si no tenía estrellas y el import sí', () => {
+    const existing: Record<string, UserEntry> = {
+      'movie:el-padrino-1972': {
+        itemId: 'movie:el-padrino-1972',
+        shelf: 'movie',
+        status: 'seen',
+        stars: undefined,
+        ranked: false,
+        updatedAt: 1000,
+      },
+    }
+
+    const matched = [
+      {
+        itemId: 'movie:el-padrino-1972',
+        row: {
+          type: 'movie' as const,
+          title: 'El Padrino',
+          year: 1972,
+          status: 'seen' as const,
+          stars: 5 as const,
+        },
+      },
+    ]
+
+    const result = applyImportRows(existing, emptyRankings, matched, 'letterboxd')
+    expect(result.updatedCount).toBe(1)
+    expect(result.entries['movie:el-padrino-1972'].stars).toBe(5)
+    expect(result.entries['movie:el-padrino-1972'].ranked).toBe(true)
+    expect(result.entries['movie:el-padrino-1972'].provisional).toBe(true)
+    expect(result.rankings.movie).toContain('movie:el-padrino-1972')
+  })
+
+  it('crea entradas nuevas con origin import:<source>', () => {
+    const matched = [
+      {
+        itemId: 'book:cien-anos-de-soledad',
+        row: {
+          type: 'book' as const,
+          title: 'Cien años de soledad',
+          status: 'seen' as const,
+          stars: 5 as const,
+        },
+      },
+    ]
+
+    const result = applyImportRows({}, emptyRankings, matched, 'goodreads')
+    expect(result.createdCount).toBe(1)
+    const entry = result.entries['book:cien-anos-de-soledad']
+    expect(entry).toBeDefined()
+    expect(entry.origin).toBe('import:goodreads')
+    expect(entry.stars).toBe(5)
+    expect(entry.ranked).toBe(true)
+    expect(entry.provisional).toBe(true)
+    expect(result.rankings.book).toContain('book:cien-anos-de-soledad')
+  })
+})
