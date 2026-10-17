@@ -20,6 +20,7 @@
     "engine:coverage": "node scripts/engine/coverage.mjs",
     "engine:all": "npm run engine:sources && npm run engine:build && npm run engine:graph && npm run engine:context && npm run engine:vectors && npm run engine:neighbors && npm run engine:merge && npm run engine:coverage",
     "engine": "npm run engine:sources && npm run engine:build && npm run engine:coverage",
+    "catalog:upload": "node --env-file-if-exists=.env.local scripts/catalog-upload.mjs",
     "build-preview": "npm run build && vite preview --port 4173 --host"
   },
   "dependencies": {
@@ -27,6 +28,7 @@
     "@fontsource-variable/outfit": "^5.3.0",
     "@supabase/supabase-js": "^2.118.0",
     "framer-motion": "^14.2.0",
+    "idb-keyval": "^6.3.0",
     "lz-string": "^1.5.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",

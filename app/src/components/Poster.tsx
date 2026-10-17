@@ -27,8 +27,17 @@ const GRAIN = "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/
  * paleta oscura derivada del título, composición geométrica sutil, grano y viñeta, y el título completo en la serif.
  * Con `showTitle={false}` (cuando el título ya va encima) solo pinta la composición, sin texto.
  */
-export function Poster({ item, className = '', style, alt, showTitle = true }: { item: Item; className?: string; style?: CSSProperties; alt?: string; showTitle?: boolean }) {
+export function Poster({ item, className = '', style, alt, showTitle = true }: { item?: Item | null; className?: string; style?: CSSProperties; alt?: string; showTitle?: boolean }) {
   const [imgError, setImgError] = useState(false)
+  if (!item) {
+    return (
+      <div
+        className={`animate-pulse bg-surface2/60 border border-line ${className}`}
+        style={style}
+        aria-hidden="true"
+      />
+    )
+  }
   if (item.posterUrl && !imgError)
     return <img src={item.posterUrl} alt={alt ?? `Portada de ${item.title}`} onError={() => setImgError(true)} draggable={false} className={`object-cover ${className}`} style={style} />
   const h = hash(item.id)

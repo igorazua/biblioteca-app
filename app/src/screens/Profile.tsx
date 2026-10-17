@@ -335,11 +335,17 @@ export function Profile() {
           </div>
         </section>
 
-        <section aria-label="Acerca de" className="text-xs text-mute space-y-2 pb-6">
-          <h2 className="text-sm font-semibold uppercase tracking-wide">Acerca de</h2>
+        <section aria-label="Fuentes" className="text-xs text-mute space-y-2 pb-6 border-t border-line/60 pt-4">
+          <h2 className="text-sm font-semibold uppercase tracking-wide">Fuentes y atribución</h2>
           <p>{APP_NAME} es una app social para guardar y compartir lo que te ha formado. Los datos se sincronizan con Supabase.</p>
-          <p>Este producto usa la API de TMDB pero no está respaldado ni certificado por TMDB.</p>
-          <p>Portadas de libros: Open Library. Catálogo: {items.length} obras.</p>
+          <div className="flex items-center gap-3 py-1">
+            <svg className="h-3 w-auto fill-[#01d277] shrink-0" viewBox="0 0 185 16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.9 0H0v3.4h4.6v12.2h3.7V3.4h4.6V0zm16.5 0h-3.8l-4.1 7.4L17.4 0h-3.8v15.6h3.6V5.4l3.5 6.2h1.6l3.5-6.2v10.2h3.6V0zm10.7 0h-7.2v15.6h7.2c4.4 0 7.3-2.6 7.3-7.8S44.5 0 40.1 0zm0 12.2h-3.5V3.4h3.5c2.3 0 3.7 1.4 3.7 4.4s-1.4 4.4-3.7 4.4zm14.8-12.2h-7.2v15.6h7.6c3.9 0 6.4-1.9 6.4-5.2 0-2.3-1.4-3.9-3.4-4.5 1.7-.5 2.8-2 2.8-4 0-3.3-2.4-5.1-6.2-5.1zm-.2 3.1c1.7 0 2.7.9 2.7 2.3 0 1.5-1 2.4-2.7 2.4h-3.3V3.1h3.3zm.4 6.1c1.9 0 3 1 3 2.6 0 1.6-1.1 2.6-3 2.6H51V9.2h4.1z" />
+            </svg>
+            <span>Este producto usa la API de TMDB pero no está respaldado ni certificado por TMDB.</span>
+          </div>
+          <p>Datos y recursos abiertos de <strong>Open Library</strong> (libros), <strong>MusicBrainz</strong> (música) y <strong>Wikidata</strong> (metadatos comunes).</p>
+          <p>Catálogo: {items.length} obras en la semilla.</p>
           <div className="pt-2">
             <span
               onPointerDown={onPointerDownVersion}

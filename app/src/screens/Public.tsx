@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { getItem, isKnownItem, itemFacts, typeName } from '../data/catalog'
 import { useStore } from '../store/useStore'
+import { useCatalog } from '../store/useCatalog'
 import { SHELVES, SHELF_LABEL } from '../types'
 import { decodeList, decodeProfile } from '../lib/share'
 import { Poster } from '../components/Poster'
@@ -47,8 +48,16 @@ export function PublicList() {
   const saveItemsAsPending = useStore((s) => s.saveItemsAsPending)
   const applyPendingSave = useStore((s) => s.applyPendingSave)
   const pendingSave = useStore((s) => s.pendingSave)
+  const catalogVersion = useCatalog((s) => s.version)
   const [toast, setToast] = useState<string | null>(null)
-  const data = useMemo(() => decodeList(payload, isKnownItem), [payload])
+  const data = useMemo(() => decodeList(payload, isKnownItem), [payload, catalogVersion])
+
+  useEffect(() => {
+    if (data?.items) {
+      const ids = data.items.map(([id]) => id)
+      useCatalog.getState().ensureItems(ids)
+    }
+  }, [data])
 
   // volvemos del onboarding con un guardado en espera → se aplica ahora
   useEffect(() => {
@@ -118,7 +127,18 @@ export function PublicList() {
 
 export function PublicProfile() {
   const { payload = '' } = useParams()
-  const data = useMemo(() => decodeProfile(payload, isKnownItem), [payload])
+  const catalogVersion = useCatalog((s) => s.version)
+  const data = useMemo(() => decodeProfile(payload, isKnownItem), [payload, catalogVersion])
+
+  useEffect(() => {
+    if (data?.top) {
+      const allIds = Object.values(data.top).flat()
+      if (allIds.length > 0) {
+        useCatalog.getState().ensureItems(allIds)
+      }
+    }
+  }, [data])
+
   if (!data) return <Broken />
   return (
     <PublicShell>

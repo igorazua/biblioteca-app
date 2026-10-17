@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { friendHits, getItem, itemFacts, typeName } from '../data/catalog'
 import { useStore } from '../store/useStore'
+import { useCatalog } from '../store/useCatalog'
 import { useRanks } from '../store/useScores'
 import { Poster } from '../components/Poster'
 import { Avatar, Chip, RankBadge, Sheet, Toast } from '../components/ui'
@@ -26,7 +27,19 @@ export function ItemDetail() {
   const loc = useLocation()
   // sin historial (recarga o link directo) «volver» lleva a la biblioteca; antes no hacía nada y parecía bloqueado
   const goBack = () => (loc.key !== 'default' ? nav(-1) : nav('/', { replace: true }))
+  const catalogVersion = useCatalog((s) => s.version)
   const item = getItem(id)
+  const [loading, setLoading] = useState(!item)
+
+  useEffect(() => {
+    if (id && !getItem(id)) {
+      setLoading(true)
+      useCatalog.getState().ensureItems([id]).finally(() => setLoading(false))
+    } else {
+      setLoading(false)
+    }
+  }, [id, catalogVersion])
+
   const entry = useStore((s) => s.entries[id])
   const rankings = useStore((s) => s.rankings)
   const lists = useStore((s) => s.lists)
@@ -37,12 +50,31 @@ export function ItemDetail() {
   const [listSheet, setListSheet] = useState(false)
   const [toast, setToast] = useState<string | null>(null)
 
-  if (!item) return (
-    <div className="h-full flex flex-col items-center justify-center gap-3 p-6 text-center">
-      <p>No encontramos esta obra.</p>
-      <Link to="/" className="text-accent underline">Volver a la biblioteca</Link>
-    </div>
-  )
+  if (!item) {
+    if (loading) {
+      return (
+        <div className="h-full flex flex-col p-4 animate-pulse">
+          <div className="safe-top flex items-center justify-between py-2 mb-4">
+            <button onClick={goBack} className="w-10 h-10 rounded-full bg-surface2" />
+          </div>
+          <div className="flex gap-4 mb-6">
+            <div className="w-28 h-40 rounded-2xl bg-surface2 shrink-0" />
+            <div className="flex-1 space-y-3 py-2">
+              <div className="h-6 bg-surface2 rounded w-3/4" />
+              <div className="h-4 bg-surface2/60 rounded w-1/2" />
+            </div>
+          </div>
+          <div className="h-24 bg-surface2/40 rounded-2xl mb-4" />
+        </div>
+      )
+    }
+    return (
+      <div className="h-full flex flex-col items-center justify-center gap-3 p-6 text-center">
+        <p>No encontramos esta obra.</p>
+        <Link to="/" className="text-accent underline">Volver a la biblioteca</Link>
+      </div>
+    )
+  }
   const label = SHELF_LABEL[item.type]
   const hits = friendHits(item.id)
   const seenBy = hits.filter((h) => h.entry.status === 'seen')

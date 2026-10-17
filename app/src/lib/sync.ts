@@ -2,9 +2,15 @@ import { supabase } from './supabase'
 import { getItem } from '../data/catalog'
 import { useStore } from '../store/useStore'
 import { useAuth } from '../store/useAuth'
+import { useCatalog } from '../store/useCatalog'
 import type { ShelfType, UserEntry } from '../types'
 
-const shelfOf = (id: string): ShelfType => (getItem(id)?.type ?? 'movie') as ShelfType
+const resolveShelf = (itemId: string, shelfFromEntry?: string): ShelfType | undefined => {
+  if (shelfFromEntry && shelfFromEntry in { movie: 1, series: 1, book: 1, artist: 1, boardgame: 1 }) {
+    return shelfFromEntry as ShelfType
+  }
+  return getItem(itemId)?.type
+}
 
 export interface CloudEntry {
   id: string
@@ -22,11 +28,22 @@ export interface CloudEntry {
 export async function pushLocalEntriesToCloud(userId: string) {
   if (!supabase) return
   const { entries, rankings } = useStore.getState()
-  const rows = Object.values(entries).map((e) => {
-    const shelf = shelfOf(e.itemId)
+
+  // Si hay obras con shelf desconocido, pedirlas antes a biblio_catalog
+  const unknownIds = Object.values(entries)
+    .filter((e) => !resolveShelf(e.itemId, e.shelf))
+    .map((e) => e.itemId)
+  if (unknownIds.length > 0) {
+    await useCatalog.getState().ensureItems(unknownIds)
+  }
+
+  const rows = []
+  for (const e of Object.values(entries)) {
+    const shelf = resolveShelf(e.itemId, e.shelf)
+    if (!shelf) continue
     const shelfRanking = rankings[shelf] ?? []
     const rankPos = e.ranked ? shelfRanking.indexOf(e.itemId) + 1 : null
-    return {
+    rows.push({
       user_id: userId,
       item_id: e.itemId,
       shelf,
@@ -35,8 +52,8 @@ export async function pushLocalEntriesToCloud(userId: string) {
       comment: e.comment ?? null,
       rank_position: rankPos && rankPos > 0 ? rankPos : null,
       updated_at: new Date(e.updatedAt || Date.now()).toISOString(),
-    }
-  })
+    })
+  }
 
   if (rows.length === 0) return
 
@@ -57,6 +74,10 @@ export async function pullCloudEntries(userId: string) {
 
   if (error || !data || data.length === 0) return
 
+  // Asegurar que las obras existen en catálogo antes de procesar
+  const allIds = (data as CloudEntry[]).map((r) => r.item_id)
+  await useCatalog.getState().ensureItems(allIds)
+
   const store = useStore.getState()
   const newEntries = { ...store.entries }
   const newRankings: Record<ShelfType, string[]> = {
@@ -70,11 +91,13 @@ export async function pullCloudEntries(userId: string) {
   for (const row of data as CloudEntry[]) {
     const existing = newEntries[row.item_id]
     const rowUpdatedAt = new Date(row.updated_at).getTime()
+    const shelf = (row.shelf in newRankings ? row.shelf : getItem(row.item_id)?.type) as ShelfType | undefined
 
     // Si la versión de la nube es más reciente o no existe en local
     if (!existing || rowUpdatedAt > (existing.updatedAt || 0)) {
       newEntries[row.item_id] = {
         itemId: row.item_id,
+        shelf,
         status: row.status,
         stars: row.score ? (Math.round(row.score) as any) : undefined,
         comment: row.comment || undefined,
@@ -82,10 +105,9 @@ export async function pullCloudEntries(userId: string) {
         updatedAt: rowUpdatedAt,
       }
 
-      if (row.rank_position && row.shelf in newRankings) {
-        const shelfKey = row.shelf as ShelfType
-        if (!newRankings[shelfKey].includes(row.item_id)) {
-          newRankings[shelfKey].push(row.item_id)
+      if (row.rank_position && shelf && shelf in newRankings) {
+        if (!newRankings[shelf].includes(row.item_id)) {
+          newRankings[shelf].push(row.item_id)
         }
       }
     }
@@ -97,7 +119,12 @@ export async function pullCloudEntries(userId: string) {
 /** Guarda un único cambio de entrada en la nube si hay usuario conectado */
 export async function syncSingleEntry(userId: string, entry: UserEntry) {
   if (!supabase) return
-  const shelf = shelfOf(entry.itemId)
+  let shelf = resolveShelf(entry.itemId, entry.shelf)
+  if (!shelf) {
+    await useCatalog.getState().ensureItems([entry.itemId])
+    shelf = resolveShelf(entry.itemId, entry.shelf)
+    if (!shelf) return
+  }
   const rankings = useStore.getState().rankings[shelf] ?? []
   const rankPos = entry.ranked ? rankings.indexOf(entry.itemId) + 1 : null
 

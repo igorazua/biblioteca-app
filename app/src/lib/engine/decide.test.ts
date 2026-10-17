@@ -246,4 +246,38 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
     expect(next.duelsInRound).toBe(0)
     expect(next.rejected).toContain('m1')
   })
+
+  it('does not throw with an item absent from data/engine/*.json (live catalog fallback)', () => {
+    const liveItem: Item = {
+      id: 'movie:obra-viva-decide-2026',
+      type: 'movie',
+      title: 'Live Movie',
+      year: 2026,
+      creator: 'New Director',
+      durationMin: 110,
+      genres: ['Acción', 'Comedia'],
+      synopsis: 'Sinopsis de prueba',
+      posterUrl: null,
+      popularity: 70,
+    }
+
+    const input: DecideInput = {
+      shelf: 'movie',
+      items: [liveItem],
+      entries: {},
+      rankings: { movie: [], series: [], book: [], artist: [], boardgame: [] },
+      profile: mockProfile,
+      friends: mockFriends,
+      answers: {},
+      affinity: () => 50,
+      friendPct: () => null,
+    }
+
+    expect(() => {
+      const state = initDecideSession(input)
+      expect(state).toBeDefined()
+      const sim = calcSimilarity(liveItem, liveItem)
+      expect(sim).toBeGreaterThanOrEqual(0)
+    }).not.toThrow()
+  })
 })

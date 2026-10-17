@@ -7,8 +7,20 @@ import { Icon } from './Icon'
  * Portada con su puesto (filas horizontales de la biblioteca, D25). Con `rank`, un número grande y hueco asoma por detrás
  * a la izquierda (el orden es lo que dice qué te marcó más). `faded` = aún sin ordenar.
  */
-export function PosterTile({ item, size = 104, rank, faded }: { item: Item; size?: number; rank?: number; faded?: boolean }) {
+export function PosterTile({ item, size = 104, rank, faded }: { item?: Item | null; size?: number; rank?: number; faded?: boolean }) {
   const numW = rank === undefined ? 0 : rank >= 10 ? 58 : 34
+  if (!item) {
+    return (
+      <div
+        className="relative shrink-0 block"
+        style={{ width: size + numW, paddingLeft: numW }}
+        aria-hidden="true"
+      >
+        {rank !== undefined && <span className="rank-num absolute left-0 bottom-0 text-[86px] select-none text-mute/30" aria-hidden>{rank}</span>}
+        <div className="w-full aspect-[2/3] rounded-[18px] bg-surface2/60 border border-line animate-pulse" />
+      </div>
+    )
+  }
   return (
     <Link
       to={`/i/${encodeURIComponent(item.id)}`}
@@ -25,7 +37,7 @@ export function PosterTile({ item, size = 104, rank, faded }: { item: Item; size
 }
 
 interface RowProps {
-  item: Item
+  item?: Item | null
   rank?: number
   note?: string
   highlight?: boolean
@@ -36,6 +48,18 @@ interface RowProps {
 }
 
 export function ItemRow({ item, rank, note, highlight, selecting, selected, onToggle }: RowProps) {
+  if (!item) {
+    return (
+      <div className="flex items-center gap-3 p-2.5 rounded-2xl border border-line bg-surface/40 animate-pulse w-full">
+        {rank !== undefined && <span className="w-7 text-center serif text-xl font-semibold text-mute/40">{rank}</span>}
+        <div className="w-12 h-[72px] rounded-xl bg-surface2/60 shrink-0" />
+        <div className="flex-1 space-y-2 py-1">
+          <div className="h-4 bg-surface2/80 rounded w-3/4" />
+          <div className="h-3 bg-surface2/50 rounded w-1/2" />
+        </div>
+      </div>
+    )
+  }
   const cls = `flex items-center gap-3 p-2.5 rounded-2xl border w-full text-left ${selected ? 'bg-accent/10 border-accent' : highlight ? 'bg-surface border-accent/40' : 'bg-surface/60 border-line'}`
   const body = (
     <>

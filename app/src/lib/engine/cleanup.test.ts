@@ -74,4 +74,15 @@ describe('cleanupOrder (MOTOR.md §9)', () => {
     const items = [makeItem('unknown')]
     expect(cleanupOrder(items, {})).toEqual(items)
   })
+
+  it('does not throw with an item absent from data/engine/*.json (live catalog fallback)', () => {
+    const liveItem = makeItem('series:obra-viva-cleanup-2026')
+    expect(() => {
+      const ordered = cleanupOrder([liveItem], {
+        [liveItem.id]: { itemId: liveItem.id, status: 'pending', ranked: false, updatedAt: 1000 },
+      })
+      expect(ordered.length).toBe(1)
+      expect(ordered[0].id).toBe(liveItem.id)
+    }).not.toThrow()
+  })
 })

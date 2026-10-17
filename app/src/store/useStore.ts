@@ -59,7 +59,8 @@ const defaults = () => ({
   pendingSave: null as PendingSave | null,
 })
 
-const shelfOf = (id: string): ShelfType => (getItem(id)?.type ?? 'movie') as ShelfType
+export const shelfOf = (id: string, entry?: UserEntry): ShelfType =>
+  (entry?.shelf ?? useStore.getState?.()?.entries?.[id]?.shelf ?? getItem(id)?.type ?? 'movie') as ShelfType
 const uid = () => Math.random().toString(36).slice(2, 10)
 
 export const useStore = create<State>()(
@@ -73,12 +74,13 @@ export const useStore = create<State>()(
 
       swipe: (itemId, dir) =>
         set((s) => {
-          const shelf = shelfOf(itemId)
-          const now = Date.now()
           const prevEntry = s.entries[itemId]
+          const shelf = shelfOf(itemId, prevEntry)
+          const now = Date.now()
           const newStatus = dir === 'left' ? 'dismissed' : dir === 'up' ? 'pending' : 'seen'
           const entry: UserEntry = {
             itemId,
+            shelf,
             status: newStatus,
             ranked: false,
             updatedAt: now,
@@ -111,7 +113,8 @@ export const useStore = create<State>()(
       rate: (itemId, patch) =>
         set((s) => {
           const cur = s.entries[itemId]
-          const next: UserEntry = { ...(cur ?? { itemId, ranked: false }), itemId, status: 'seen', updatedAt: Date.now() } as UserEntry
+          const shelf = shelfOf(itemId, cur)
+          const next: UserEntry = { ...(cur ?? { itemId, ranked: false }), itemId, shelf, status: 'seen', updatedAt: Date.now() } as UserEntry
           if (patch.stars === null) { delete next.stars }
           else if (patch.stars !== undefined) next.stars = patch.stars
           if (patch.comment !== undefined) { const c = patch.comment.trim(); if (c) next.comment = c; else delete next.comment }
@@ -120,15 +123,15 @@ export const useStore = create<State>()(
 
       setStatus: (itemId, status) =>
         set((s) => {
-          const shelf = shelfOf(itemId)
           const entries = { ...s.entries }
           const cur = entries[itemId]
+          const shelf = shelfOf(itemId, cur)
           let ranking = s.rankings[shelf] ?? []
           if (status === null) { delete entries[itemId]; ranking = ranking.filter((x) => x !== itemId) }
           else {
-            if (status === 'seen') entries[itemId] = { ...(cur ?? { itemId, ranked: false }), itemId, status, updatedAt: Date.now() } as UserEntry
+            if (status === 'seen') entries[itemId] = { ...(cur ?? { itemId, ranked: false }), itemId, shelf, status, updatedAt: Date.now() } as UserEntry
             else {
-              entries[itemId] = { itemId, status, ranked: false, ...(cur?.origin ? { origin: cur.origin } : {}), updatedAt: Date.now(), ...(status === 'dismissed' ? { dismissedAt: Date.now() } : {}) }
+              entries[itemId] = { itemId, shelf, status, ranked: false, ...(cur?.origin ? { origin: cur.origin } : {}), updatedAt: Date.now(), ...(status === 'dismissed' ? { dismissedAt: Date.now() } : {}) }
               ranking = ranking.filter((x) => x !== itemId)
             }
           }
@@ -170,7 +173,7 @@ export const useStore = create<State>()(
       placeProvisional: (itemId) =>
         set((s) => {
           const e = s.entries[itemId]
-          const shelf = shelfOf(itemId)
+          const shelf = shelfOf(itemId, e)
           if (!e || e.status !== 'seen' || !e.stars) return s
           const base = (s.rankings[shelf] ?? []).filter((x) => x !== itemId)
           const [, hi] = starBand(base, (id) => s.entries[id]?.stars, e.stars)
@@ -183,7 +186,7 @@ export const useStore = create<State>()(
             itemId,
             data: { pos, total, pct },
           })
-          return { entries: { ...s.entries, [itemId]: { ...e, ranked: true, provisional: true } }, rankings: { ...s.rankings, [shelf]: ranking } }
+          return { entries: { ...s.entries, [itemId]: { ...e, shelf, ranked: true, provisional: true } }, rankings: { ...s.rankings, [shelf]: ranking } }
         }),
 
       bumpCompared: (ids) =>
@@ -226,7 +229,11 @@ export const useStore = create<State>()(
         set((s) => {
           const entries = { ...s.entries }
           for (const id of ids)
-            if (!entries[id] || entries[id].status === 'dismissed') { entries[id] = { itemId: id, status: 'pending', ranked: false, origin, updatedAt: Date.now() }; n++ }
+            if (!entries[id] || entries[id].status === 'dismissed') {
+              const shelf = shelfOf(id, entries[id])
+              entries[id] = { itemId: id, shelf, status: 'pending', ranked: false, origin, updatedAt: Date.now() }
+              n++
+            }
           return { entries }
         })
         return n

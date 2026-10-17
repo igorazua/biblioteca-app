@@ -181,4 +181,31 @@ describe('nextCards (MOTOR.md §7)', () => {
 
     expect(cards).toEqual([])
   })
+
+  it('does not throw with an item absent from data/engine/*.json (live catalog fallback)', () => {
+    const liveItem = makeItem('movie:obra-viva-desconocida-2026', {
+      title: 'Obra Viva Desconocida',
+      genres: ['Suspense'],
+      popularity: 65,
+    })
+
+    expect(() => {
+      const cards = nextCards(
+        {
+          shelf: 'movie',
+          items: [liveItem],
+          entries: {},
+          rankings: { movie: [], series: [], book: [], artist: [], boardgame: [] },
+          profile: defaultProfile,
+          friends: [],
+          affinity: () => null,
+          friendPct: () => null,
+        },
+        [],
+        1
+      )
+      expect(cards.length).toBe(1)
+      expect(cards[0].item.id).toBe('movie:obra-viva-desconocida-2026')
+    }).not.toThrow()
+  })
 })

@@ -4,6 +4,7 @@ import { TabBar } from './components/TabBar'
 import { useStore } from './store/useStore'
 import { useAuth } from './store/useAuth'
 import { useFriends } from './store/useFriends'
+import { useCatalog } from './store/useCatalog'
 import { pullCloudEntries, initStoreSync } from './lib/sync'
 import { Discover } from './screens/Discover'
 import { Library } from './screens/Library'
@@ -59,22 +60,34 @@ function TabLayout() {
 
 export function App() {
   const user = useAuth((s) => s.user)
+  const hasHydrated = useCatalog((s) => s._hasHydrated)
 
   useEffect(() => {
+    if (!hasHydrated) return
     const unsub = useAuth.getState().init()
     const unsubSync = initStoreSync()
     return () => {
       unsub()
       unsubSync?.()
     }
-  }, [])
+  }, [hasHydrated])
 
   useEffect(() => {
-    if (user) {
+    if (user && hasHydrated) {
       pullCloudEntries(user.id)
       useFriends.getState().loadFriends()
     }
-  }, [user])
+  }, [user, hasHydrated])
+
+  if (!hasHydrated) {
+    return (
+      <div className="desk-bg h-full w-full flex items-center justify-center">
+        <div className="frame flex flex-col items-center justify-center gap-3">
+          <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin" />
+        </div>
+      </div>
+    )
+  }
 
   return (
     <Routes>

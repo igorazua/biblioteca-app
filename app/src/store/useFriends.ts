@@ -2,6 +2,7 @@ import { create } from 'zustand'
 import { supabase } from '../lib/supabase'
 import { useAuth } from './useAuth'
 import { friends as seedFriends, setFriendHitsProvider } from '../data/catalog'
+import { useCatalog } from './useCatalog'
 import type { Friend, FriendEntry } from '../types'
 
 export interface FriendHit {
@@ -59,6 +60,12 @@ export const useFriends = create<FriendsState>((set, get) => ({
         .from('biblio_entries')
         .select('*')
         .in('user_id', friendIds)
+
+      // Asegurar que las obras de los amigos están en el catálogo
+      const friendItemIds = (entries || []).map((e) => e.item_id)
+      if (friendItemIds.length > 0) {
+        await useCatalog.getState().ensureItems(friendItemIds)
+      }
 
       const colors = ['#F5B544', '#5B9CF5', '#3EC878', '#FF6B6B', '#A78BFA', '#F472B6']
 

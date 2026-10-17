@@ -2,13 +2,30 @@ import seed from './seed.json'
 import type { Friend, FriendEntry, Item, ShelfType } from '../types'
 import { friendRanks } from '../lib/rank'
 
+import { useCatalog, setSeedChecker } from '../store/useCatalog'
+
 export const items = seed.items as Item[]
 export const friends = seed.friends as Friend[]
 
 export const itemsById = new Map<string, Item>(items.map((i) => [i.id, i]))
-export const getItem = (id: string) => itemsById.get(id)
-export const isKnownItem = (id: string) => itemsById.has(id)
-export const itemsOfType = (t: ShelfType) => items.filter((i) => i.type === t)
+setSeedChecker((id) => itemsById.has(id))
+
+export const getItem = (id: string): Item | undefined => {
+  return itemsById.get(id) || useCatalog.getState().items[id]
+}
+
+export const isKnownItem = (id: string): boolean => {
+  return itemsById.has(id) || Boolean(useCatalog.getState().items[id])
+}
+
+export const itemsOfType = (t: ShelfType): Item[] => {
+  const seedList = items.filter((i) => i.type === t)
+  const liveItems = Object.values(useCatalog.getState().items).filter((i) => i.type === t)
+  if (liveItems.length === 0) return seedList
+  const seenIds = new Set(seedList.map((i) => i.id))
+  const extras = liveItems.filter((i) => !seenIds.has(i.id))
+  return [...seedList, ...extras]
+}
 
 export interface FriendHit { friend: Friend; entry: FriendEntry }
 

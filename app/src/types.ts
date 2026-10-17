@@ -43,6 +43,7 @@ export type Stars = 1 | 2 | 3 | 4 | 5
 
 export interface UserEntry {
   itemId: string
+  shelf?: ShelfType
   status: Status
   stars?: Stars
   comment?: string

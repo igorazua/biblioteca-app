@@ -1,17 +1,32 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { friends, items } from '../data/catalog'
+import { friends, itemsOfType } from '../data/catalog'
 import { nextCards } from '../lib/engine/deck'
 import { useStore } from '../store/useStore'
-import { SHELVES, SHELF_LABEL, type ShelfType } from '../types'
+import { useCatalog } from '../store/useCatalog'
+import { supabase } from '../lib/supabase'
+import { SHELVES, SHELF_LABEL, type Item, type ShelfType } from '../types'
 import { Portal } from './ui'
 import { Poster } from './Poster'
 import { Icon } from './Icon'
 import { RatingFlow } from './RatingFlow'
 import { PlaceFlow } from './PlaceFlow'
 
-const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
-const STATUS_TXT = { seen: 'Ya está en tu biblioteca', pending: 'Está en tus pendientes', dismissed: 'La marcaste como «no me interesa»' }
+const norm = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+const STATUS_TXT = {
+  seen: 'Ya está en tu biblioteca',
+  pending: 'Está en tus pendientes',
+  dismissed: 'La marcaste como «no me interesa»',
+}
+
+interface RemoteSearchResult {
+  ref: { source: 'tmdb' | 'openlibrary' | 'musicbrainz'; id: string }
+  title: string
+  year: number | null
+  creator: string | null
+  posterUrl: string | null
+  catalogId: string | null
+}
 
 /** Añadir a mano (§12.1): buscador del catálogo de una estantería. Sin `shelf`, primero se elige la estantería. */
 export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClose: (msg?: string) => void }) {
@@ -24,33 +39,112 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
   const [rating, setRating] = useState<string | null>(null)
   const [placing, setPlacing] = useState<string | null>(null)
 
+  const [remoteResults, setRemoteResults] = useState<RemoteSearchResult[]>([])
+  const [searchingRemote, setSearchingRemote] = useState(false)
+  const [resolvingRef, setResolvingRef] = useState<string | null>(null)
+
+  const catalogVersion = useCatalog((s) => s.version)
+
   const results = useMemo(() => {
     if (!shelf) return []
     const n = norm(q.trim())
+    const allItems = itemsOfType(shelf)
     // Sin texto (§14.5, §7.9): sugerencias ordenadas con nextCards sin cupo explore ni aprendizaje
     if (!n) {
       const st = useStore.getState()
-      const cards = nextCards({
-        shelf,
-        items: items.filter((i) => i.type === shelf),
-        entries: st.entries,
-        rankings: st.rankings,
-        profile: st.profile,
-        friends,
-        affinity: () => null,
-        friendPct: () => null,
-      }, [], 40)
+      const cards = nextCards(
+        {
+          shelf,
+          items: allItems,
+          entries: st.entries,
+          rankings: st.rankings,
+          profile: st.profile,
+          friends,
+          affinity: () => null,
+          friendPct: () => null,
+        },
+        [],
+        40
+      )
       return cards.map((c) => c.item)
     }
-    return items
+    return allItems
       .filter((i) => i.type === shelf && (norm(i.title).includes(n) || norm(i.creator).includes(n)))
       .sort((a, b) => (norm(a.title).startsWith(n) ? 0 : 1) - (norm(b.title).startsWith(n) ? 0 : 1) || b.popularity - a.popularity)
       .slice(0, 40)
-  }, [shelf, q])
+  }, [shelf, q, catalogVersion])
+
+  // Búsqueda en catálogo vivo (TMDB / OL / MB) con debounce de 300 ms y mínimo 2 letras
+  useEffect(() => {
+    const trimmed = q.trim()
+    const client = supabase
+    if (!shelf || shelf === 'boardgame' || trimmed.length < 2 || !client) {
+      setRemoteResults([])
+      setSearchingRemote(false)
+      return
+    }
+
+    const controller = new AbortController()
+    setSearchingRemote(true)
+
+    const timer = setTimeout(async () => {
+      try {
+        const { data, error } = await client.functions.invoke('biblio-catalog', {
+          body: { action: 'search', type: shelf, q: trimmed, lang: 'es' },
+        })
+        if (!controller.signal.aborted) {
+          if (!error && data?.results) {
+            const localTitles = new Set(results.map((r) => norm(r.title)))
+            const filtered = (data.results as RemoteSearchResult[]).filter(
+              (r) => !r.catalogId && !localTitles.has(norm(r.title))
+            )
+            setRemoteResults(filtered)
+          } else {
+            setRemoteResults([])
+          }
+          setSearchingRemote(false)
+        }
+      } catch {
+        if (!controller.signal.aborted) {
+          setRemoteResults([])
+          setSearchingRemote(false)
+        }
+      }
+    }, 300)
+
+    return () => {
+      clearTimeout(timer)
+      controller.abort()
+    }
+  }, [shelf, q, results])
+
+  const handleSelectRemote = async (hit: RemoteSearchResult) => {
+    const client = supabase
+    if (!shelf || !client || resolvingRef) return
+    setResolvingRef(hit.ref.id)
+    try {
+      const { data, error } = await client.functions.invoke('biblio-catalog', {
+        body: {
+          action: 'resolve',
+          refs: [{ type: shelf, source: hit.ref.source, id: hit.ref.id }],
+        },
+      })
+      if (!error && data?.items?.[0]) {
+        const item: Item = data.items[0]
+        useCatalog.getState().addItems([item])
+        setOpen(item.id)
+        // Quitar de los resultados remotos para que se vea en locales
+        setRemoteResults((prev) => prev.filter((r) => r.ref.id !== hit.ref.id))
+      }
+    } catch (e) {
+      console.warn('Error resolviendo obra del catálogo:', e)
+    } finally {
+      setResolvingRef(null)
+    }
+  }
 
   // Añadir a mano: hoja de valoración y después duelos de colocación (§13.1). En Descubrir no hay duelos.
-  if (placing)
-    return <PlaceFlow key={placing} itemId={placing} onDone={(m) => onClose(m)} />
+  if (placing) return <PlaceFlow key={placing} itemId={placing} onDone={(m) => onClose(m)} />
   if (rating)
     return <RatingFlow key={rating} itemId={rating} withStars onDone={() => { setPlacing(rating); setRating(null) }} />
 
@@ -58,7 +152,9 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
     <Portal>
       <div className="absolute inset-0 z-40 bg-bg flex flex-col" role="dialog" aria-label="Añadir a mano">
         <div className="safe-top px-3 pb-2 flex items-center gap-1 shrink-0">
-          <button onClick={() => onClose()} aria-label="Cerrar" className="w-11 h-11 flex items-center justify-center rounded-full active:bg-surface2"><Icon name="x" /></button>
+          <button onClick={() => onClose()} aria-label="Cerrar" className="w-11 h-11 flex items-center justify-center rounded-full active:bg-surface2">
+            <Icon name="x" />
+          </button>
           <h1 className="text-xl font-semibold flex-1">{shelf ? `Añadir a ${SHELF_LABEL[shelf].plural}` : 'Añadir a mano'}</h1>
         </div>
 
@@ -66,8 +162,13 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
           <div className="px-5 pt-2 space-y-3">
             <p className="text-mute text-sm">¿A qué estantería?</p>
             {SHELVES.map((s) => (
-              <button key={s} onClick={() => setShelf(s)} className="w-full min-h-[64px] rounded-3xl bg-surface border border-line px-5 text-left text-lg font-semibold flex items-center justify-between">
-                {SHELF_LABEL[s].plural}<Icon name="chevron" size={18} className="text-mute" />
+              <button
+                key={s}
+                onClick={() => setShelf(s)}
+                className="w-full min-h-[64px] rounded-3xl bg-surface border border-line px-5 text-left text-lg font-semibold flex items-center justify-between"
+              >
+                {SHELF_LABEL[s].plural}
+                <Icon name="chevron" size={18} className="text-mute" />
               </button>
             ))}
           </div>
@@ -103,14 +204,36 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
                         {st ? (
                           <div className="flex items-center gap-2">
                             <span className="flex-1 text-sm text-mute">{STATUS_TXT[st]}</span>
-                            <button onClick={() => { onClose(); nav(`/i/${encodeURIComponent(it.id)}`) }} className="min-h-[44px] px-4 rounded-xl bg-accent text-accent-ink font-semibold text-sm">Abrir ficha</button>
+                            <button
+                              onClick={() => {
+                                onClose()
+                                nav(`/i/${encodeURIComponent(it.id)}`)
+                              }}
+                              className="min-h-[44px] px-4 rounded-xl bg-accent text-accent-ink font-semibold text-sm"
+                            >
+                              Abrir ficha
+                            </button>
                           </div>
                         ) : (
                           <div className="flex gap-2">
-                            <button onClick={() => { setStatus(it.id, 'seen'); setRating(it.id) }} className="flex-1 min-h-[46px] rounded-xl bg-accent text-accent-ink font-semibold text-sm">
+                            <button
+                              onClick={() => {
+                                setStatus(it.id, 'seen')
+                                setRating(it.id)
+                              }}
+                              className="flex-1 min-h-[46px] rounded-xl bg-accent text-accent-ink font-semibold text-sm"
+                            >
                               {it.type === 'book' ? 'Lo he leído' : it.type === 'artist' ? 'Lo he escuchado' : it.type === 'boardgame' ? 'Lo he jugado' : 'La he visto'}
                             </button>
-                            <button onClick={() => { setStatus(it.id, 'pending'); onClose('Guardada en pendientes ✓') }} className="flex-1 min-h-[46px] rounded-xl bg-surface2 border border-line font-semibold text-sm">Pendiente</button>
+                            <button
+                              onClick={() => {
+                                setStatus(it.id, 'pending')
+                                onClose('Guardada en pendientes ✓')
+                              }}
+                              className="flex-1 min-h-[46px] rounded-xl bg-surface2 border border-line font-semibold text-sm"
+                            >
+                              Pendiente
+                            </button>
                           </div>
                         )}
                       </div>
@@ -118,7 +241,66 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
                   </li>
                 )
               })}
-              {results.length === 0 && (
+
+              {/* Sección «Más en el catálogo» */}
+              {(remoteResults.length > 0 || searchingRemote) && (
+                <div className="pt-4 pb-2">
+                  <div className="flex items-center justify-between px-2 mb-2">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-mute">
+                      Más en el catálogo
+                    </span>
+                    {searchingRemote && (
+                      <span className="text-xs text-mute/80 flex items-center gap-1.5">
+                        <span className="w-2.5 h-2.5 border-2 border-accent border-t-transparent rounded-full animate-spin inline-block" />
+                        Buscando…
+                      </span>
+                    )}
+                  </div>
+                  <div className="space-y-2">
+                    {remoteResults.map((hit) => {
+                      const isResolving = resolvingRef === hit.ref.id
+                      return (
+                        <li key={hit.ref.id} className="rounded-2xl bg-surface/50 border border-line/60">
+                          <button
+                            onClick={() => handleSelectRemote(hit)}
+                            disabled={isResolving}
+                            className="w-full flex items-center gap-3 p-2.5 text-left disabled:opacity-60"
+                          >
+                            {hit.posterUrl ? (
+                              <img
+                                src={hit.posterUrl}
+                                alt={`Portada de ${hit.title}`}
+                                className="w-11 h-[66px] rounded-lg object-cover shrink-0"
+                              />
+                            ) : (
+                              <div className="w-11 h-[66px] rounded-lg bg-surface2/80 flex items-center justify-center shrink-0 text-mute">
+                                <Icon name="search" size={16} />
+                              </div>
+                            )}
+                            <span className="flex-1 min-w-0">
+                              <span className="block serif font-semibold leading-tight line-clamp-2">
+                                {hit.title}
+                              </span>
+                              <span className="block text-xs text-mute truncate">
+                                {hit.year || '—'} {hit.creator ? `· ${hit.creator}` : ''}
+                              </span>
+                            </span>
+                            {isResolving ? (
+                              <span className="w-5 h-5 border-2 border-accent border-t-transparent rounded-full animate-spin shrink-0" />
+                            ) : (
+                              <span className="text-xs text-accent font-semibold px-2 py-1 bg-accent/10 rounded-lg shrink-0">
+                                Añadir
+                              </span>
+                            )}
+                          </button>
+                        </li>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {results.length === 0 && !searchingRemote && remoteResults.length === 0 && (
                 <li className="text-center text-mute py-12">
                   <div className="text-4xl mb-2">🔎</div>
                   No está en nuestro catálogo todavía
