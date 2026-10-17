@@ -83,6 +83,7 @@ export const useFriends = create<FriendsState>((set, get) => ({
           id: p.id,
           name: p.display_name,
           avatarColor: colors[idx % colors.length],
+          avatarUrl: p.avatar_url || undefined,
           entries: friendEntries,
         }
       })

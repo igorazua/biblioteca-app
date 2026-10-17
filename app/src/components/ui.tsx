@@ -13,8 +13,42 @@ export function Portal({ children }: { children: ReactNode }) {
   return host ? createPortal(children, host) : <>{children}</>
 }
 
-export function Avatar({ name, color, size = 32, className = '' }: { name: string; color: string; size?: number; className?: string }) {
-  const initials = name.trim().split(/\s+/).map((w) => w[0]).slice(0, 2).join('').toUpperCase() || '?'
+export function Avatar({
+  name,
+  color,
+  url,
+  size = 32,
+  className = '',
+}: {
+  name: string
+  color: string
+  url?: string | null
+  size?: number
+  className?: string
+}) {
+  const [imgError, setImgError] = useState(false)
+  const initials =
+    name
+      .trim()
+      .split(/\s+/)
+      .map((w) => w[0])
+      .slice(0, 2)
+      .join('')
+      .toUpperCase() || '?'
+
+  if (url && !imgError) {
+    return (
+      <img
+        src={url}
+        alt={name}
+        loading="lazy"
+        onError={() => setImgError(true)}
+        className={`inline-block rounded-full object-cover shrink-0 ${className}`}
+        style={{ width: size, height: size }}
+      />
+    )
+  }
+
   return (
     <span
       className={`inline-flex items-center justify-center rounded-full font-semibold text-black/80 shrink-0 ${className}`}
@@ -151,7 +185,7 @@ export function FriendBubbles({ itemId, shelf, max = 4 }: { itemId: string; shel
               onPointerLeave={handlePointerUpOrCancel}
               onPointerCancel={handlePointerUpOrCancel}
             >
-              <Avatar name={h.friend.name} color={h.friend.avatarColor} size={34} className="ring-2 ring-black/70" />
+              <Avatar name={h.friend.name} color={h.friend.avatarColor} url={h.friend.avatarUrl} size={34} className="ring-2 ring-black/70" />
               {h.entry.status === 'seen' && rank ? (
                 <RankBadge pos={rank.pos} className="absolute -bottom-2 left-1/2 -translate-x-1/2 ring-1 ring-black/60" />
               ) : (

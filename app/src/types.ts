@@ -68,6 +68,7 @@ export interface Friend {
   id: string
   name: string
   avatarColor: string
+  avatarUrl?: string | null
   contact?: { whatsapp?: string; instagram?: string }
   entries: FriendEntry[]
 }
@@ -88,6 +89,7 @@ export interface List {
 export interface Profile {
   name: string
   avatarColor: string
+  avatarUrl?: string | null
   birthYear?: number
   platforms: string[]
   reader?: ReaderProfile

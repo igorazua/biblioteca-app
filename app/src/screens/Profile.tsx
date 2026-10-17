@@ -17,6 +17,42 @@ import { Icon } from '../components/Icon'
 import { useAuth, checkHandleAvailability } from '../store/useAuth'
 import { useFriends } from '../store/useFriends'
 import { pushLocalEntriesToCloud } from '../lib/sync'
+import { supabase } from '../lib/supabase'
+
+async function processAvatarImage(file: File): Promise<Blob> {
+  return new Promise((resolve, reject) => {
+    const img = new Image()
+    const url = URL.createObjectURL(file)
+    img.onload = () => {
+      URL.revokeObjectURL(url)
+      const canvas = document.createElement('canvas')
+      canvas.width = 256
+      canvas.height = 256
+      const ctx = canvas.getContext('2d')
+      if (!ctx) {
+        reject(new Error('Canvas context error'))
+        return
+      }
+      const size = Math.min(img.naturalWidth, img.naturalHeight)
+      const sx = (img.naturalWidth - size) / 2
+      const sy = (img.naturalHeight - size) / 2
+      ctx.drawImage(img, sx, sy, size, size, 0, 0, 256, 256)
+      canvas.toBlob(
+        (blob) => {
+          if (blob) resolve(blob)
+          else reject(new Error('Failed to create blob'))
+        },
+        'image/webp',
+        0.85
+      )
+    }
+    img.onerror = (err) => {
+      URL.revokeObjectURL(url)
+      reject(err)
+    }
+    img.src = url
+  })
+}
 
 function Toggle({ on, onChange, label }: { on: boolean; onChange: (v: boolean) => void; label: string }) {
   return (
@@ -63,6 +99,47 @@ export function Profile() {
   const [handleInput, setHandleInput] = useState(authProfile?.handle || '')
   const [handleCheck, setHandleCheck] = useState<{ checked: boolean; available?: boolean; message?: string }>({ checked: false })
   const [savingHandle, setSavingHandle] = useState(false)
+  const avatarInputRef = useRef<HTMLInputElement>(null)
+  const [uploadingAvatar, setUploadingAvatar] = useState(false)
+
+  const handleAvatarFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file || !user || !supabase) return
+    setUploadingAvatar(true)
+    try {
+      const blob = await processAvatarImage(file)
+      const filePath = `${user.id}/avatar.webp`
+      const { error: uploadError } = await supabase.storage
+        .from('biblio-avatars')
+        .upload(filePath, blob, {
+          contentType: 'image/webp',
+          upsert: true,
+        })
+      if (uploadError) throw uploadError
+
+      const { data: { publicUrl } } = supabase.storage
+        .from('biblio-avatars')
+        .getPublicUrl(filePath)
+      const avatarUrl = `${publicUrl}?v=${Date.now()}`
+
+      await supabase
+        .from('biblio_profiles')
+        .update({ avatar_url: avatarUrl })
+        .eq('id', user.id)
+
+      useAuth.setState((s) => ({
+        profile: s.profile ? { ...s.profile, avatarUrl } : null,
+      }))
+      setProfile({ avatarUrl })
+      setToast('Foto de perfil actualizada')
+    } catch (err: any) {
+      console.error('Error subiendo avatar:', err)
+      setToast('Error al subir la foto')
+    } finally {
+      setUploadingAvatar(false)
+      if (avatarInputRef.current) avatarInputRef.current.value = ''
+    }
+  }
 
   const suggestedHandle = useMemo(() => {
     const base = authProfile?.displayName || profile.name
@@ -185,10 +262,33 @@ export function Profile() {
   return (
     <div className="h-full scroll-y pb-8">
       <header className="safe-top px-5 pb-4 flex items-center gap-4">
-        <button onClick={() => setColorOpen(true)} aria-label="Cambiar el color del avatar" className="relative shrink-0 active:scale-95 transition-transform">
-          <Avatar name={profile.name} color={profile.avatarColor} size={64} />
-          <span className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-surface2 border border-line flex items-center justify-center text-mute"><Icon name="edit" size={12} /></span>
-        </button>
+        <div className="relative shrink-0">
+          <button
+            onClick={() => {
+              if (user) avatarInputRef.current?.click()
+              else setColorOpen(true)
+            }}
+            disabled={uploadingAvatar}
+            aria-label="Cambiar foto o color del avatar"
+            className="relative block active:scale-95 transition-transform"
+          >
+            <Avatar name={profile.name} color={profile.avatarColor} url={profile.avatarUrl} size={64} />
+            <span className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-surface2 border border-line flex items-center justify-center text-mute">
+              {uploadingAvatar ? (
+                <div className="w-3 h-3 border border-accent border-t-transparent rounded-full animate-spin" />
+              ) : (
+                <Icon name="camera" size={12} />
+              )}
+            </span>
+          </button>
+          <input
+            ref={avatarInputRef}
+            type="file"
+            accept="image/*"
+            onChange={handleAvatarFile}
+            className="hidden"
+          />
+        </div>
         <div className="flex-1 min-w-0">
           <input value={profile.name} onChange={(e) => setProfile({ name: e.target.value.slice(0, 24) })} aria-label="Tu nombre" className="w-full bg-transparent text-2xl font-semibold focus:outline-none focus:border-b focus:border-accent" />
           <div className="flex items-center gap-2 mt-1 text-sm text-mute">
@@ -471,8 +571,21 @@ export function Profile() {
       </div>
 
       {colorOpen && (
-        <Sheet label="Color del avatar" onClose={() => setColorOpen(false)} height="30%">
-          <h3 className="font-semibold text-lg mb-3">Color de tu avatar</h3>
+        <Sheet label="Personalizar avatar" onClose={() => setColorOpen(false)} height="40%">
+          <h3 className="font-semibold text-lg mb-2">Personalizar avatar</h3>
+          {user && (
+            <button
+              onClick={() => {
+                setColorOpen(false)
+                avatarInputRef.current?.click()
+              }}
+              className="w-full min-h-[46px] rounded-2xl bg-surface2 border border-line text-sm font-semibold mb-4 flex items-center justify-center gap-2 active:scale-95 transition-transform"
+            >
+              <Icon name="camera" size={16} />
+              Subir nueva foto de perfil
+            </button>
+          )}
+          <div className="text-xs text-mute uppercase font-semibold mb-2">Color del avatar</div>
           <div className="flex gap-3 flex-wrap" role="radiogroup" aria-label="Color del avatar">
             {AVATAR_COLORS.map((c) => (
               <button key={c} role="radio" aria-checked={c === profile.avatarColor} aria-label={`Color ${c}`} onClick={() => { setProfile({ avatarColor: c }); setColorOpen(false) }} className={`w-12 h-12 rounded-full border-2 ${c === profile.avatarColor ? 'border-white' : 'border-transparent'}`} style={{ background: c }} />

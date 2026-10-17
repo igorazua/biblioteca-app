@@ -70,6 +70,7 @@ export const useAuth = create<AuthState>((set, get) => ({
           useStore.getState().setProfile({
             name: profile.displayName,
             country: profile.country,
+            avatarUrl: profile.avatarUrl,
           })
         })
       } else {
@@ -87,6 +88,7 @@ export const useAuth = create<AuthState>((set, get) => ({
         useStore.getState().setProfile({
           name: profile.displayName,
           country: profile.country,
+          avatarUrl: profile.avatarUrl,
         })
       } else {
         set({ profile: null, loading: false })
