@@ -11,6 +11,7 @@ import {
   type DecideInput,
 } from './decide'
 import type { Friend, Item, Profile } from '../../types'
+import { PLATFORMS } from '../../config'
 
 const mockProfile: Profile = {
   name: 'Test',
@@ -279,5 +280,25 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
       const sim = calcSimilarity(liveItem, liveItem)
       expect(sim).toBeGreaterThanOrEqual(0)
     }).not.toThrow()
+  })
+
+  it('con todas las plataformas marcadas, una obra solo en SkyShowtime pasa el filtro', () => {
+    const skyItem: Item = {
+      id: 'movie:skyshowtime-exclusive',
+      type: 'movie',
+      title: 'Sky Movie',
+      year: 2024,
+      creator: 'Director',
+      durationMin: 100,
+      genres: ['Drama'],
+      synopsis: '...',
+      posterUrl: null,
+      popularity: 50,
+      platforms: ['SkyShowtime'],
+    }
+    // Con todas marcadas, la obra pasa el filtro
+    expect(passesFilters(skyItem, {}, [...PLATFORMS])).toBe(true)
+    // Con solo Netflix marcada, no pasa
+    expect(passesFilters(skyItem, {}, ['Netflix'])).toBe(false)
   })
 })

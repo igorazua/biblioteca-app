@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import { APP_NAME, AVATAR_COLORS, PLATFORMS } from '../config'
+import { APP_NAME, AVATAR_COLORS } from '../config'
 import { useStore } from '../store/useStore'
-import { Avatar, Chip } from '../components/ui'
+import { Avatar, PlatformPicker } from '../components/ui'
 
 /** 3 pantallas rápidas y saltables. Si venimos de un link compartido (`next`), vuelve allí al terminar. */
 export function Onboarding() {
@@ -83,11 +83,7 @@ export function Onboarding() {
               <div>
                 <h1 className="serif text-[30px] leading-[1.1] font-semibold">¿Qué plataformas tienes o has tenido?</h1>
                 <p className="text-mute mt-3">Así el asistente «Decidir» te propone cosas que puedes ver ya.</p>
-                <div className="flex flex-wrap gap-2.5 mt-6">
-                  {PLATFORMS.map((p) => (
-                    <Chip key={p} active={platforms.includes(p)} onClick={() => setPlatforms((cur) => (cur.includes(p) ? cur.filter((x) => x !== p) : [...cur, p]))}>{p}</Chip>
-                  ))}
-                </div>
+                <PlatformPicker value={platforms} onChange={setPlatforms} className="mt-6" />
               </div>
             )}
           </motion.div>

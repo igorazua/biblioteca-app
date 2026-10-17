@@ -12,7 +12,7 @@ import { affinity } from '../lib/affinity'
 import { profileUrl, type SharedProfile } from '../lib/share'
 import { shareOrCopy } from '../lib/shareUi'
 import { Poster } from '../components/Poster'
-import { Avatar, Chip, Confirm, Sheet, Toast } from '../components/ui'
+import { Avatar, Chip, Confirm, PlatformPicker, Sheet, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { useAuth, checkHandleAvailability } from '../store/useAuth'
 import { useFriends } from '../store/useFriends'
@@ -206,9 +206,10 @@ export function Profile() {
       <div className="px-5 space-y-7">
         <section aria-label="Plataformas">
           <h2 className="text-sm font-semibold text-mute uppercase tracking-wide mb-2">Mis plataformas</h2>
-          <div className="flex flex-wrap gap-2">
-            {PLATFORMS.map((p) => <Chip key={p} active={profile.platforms.includes(p)} onClick={() => setProfile({ platforms: profile.platforms.includes(p) ? profile.platforms.filter((x) => x !== p) : [...profile.platforms, p] })}>{p}</Chip>)}
-          </div>
+          <PlatformPicker
+            value={profile.platforms}
+            onChange={(platforms) => setProfile({ platforms })}
+          />
         </section>
 
         <section aria-label="Lo que más me marcó">

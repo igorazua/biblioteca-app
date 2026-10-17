@@ -2,6 +2,7 @@
 // Un orientador es una obra concreta de la misma categoría («¿algo como esto o como esto?»). No es candidata:
 // solo orienta (§14.2). Cada elección suma peso a los géneros y al autor de la elegida y resta a la descartada.
 import type { Item, ShelfType, UserEntry } from '../types'
+import { PLATFORMS } from '../config'
 import { COMPANY_GENRES, MOOD_GENRES, NONFICTION_GENRES, PACE_GENRES } from '../data/questions'
 
 export type Answers = Record<string, string | string[] | undefined>
@@ -70,7 +71,7 @@ export interface RecCtx {
   topGenres?: string[]
 }
 
-function passes(it: Item, a: Answers, platforms: string[]): boolean {
+export function passes(it: Item, a: Answers, platforms: string[]): boolean {
   const time = asStr(a.time), era = asStr(a.era), format = asStr(a.format), ep = asStr(a.episode), len = asStr(a.length), kind = asStr(a.kind)
   if (it.type === 'movie') {
     if (time && time !== 'larga' && (it.durationMin ?? 0) > (time === 'corta' ? 100 : 135)) return false
@@ -95,7 +96,8 @@ function passes(it: Item, a: Answers, platforms: string[]): boolean {
     if (kind === 'ficcion' && nf) return false
     if (kind === 'noficcion' && !nf) return false
   }
-  if ((it.type === 'movie' || it.type === 'series') && platforms.length && it.platforms?.length && !it.platforms.some((p) => platforms.includes(p))) return false
+  const allPlatforms = PLATFORMS.length > 0 && PLATFORMS.every((p) => platforms.includes(p))
+  if (!allPlatforms && (it.type === 'movie' || it.type === 'series') && platforms.length && it.platforms?.length && !it.platforms.some((p) => platforms.includes(p))) return false
   return true
 }
 
@@ -108,7 +110,7 @@ export function scoreCandidates(ctx: RecCtx): Cand[] {
   const paceG = PACE_GENRES[asStr(answers.pace) ?? ''] ?? []
   const novelty = asStr(answers.novelty)
   const top = new Set(ctx.topGenres ?? [])
-  const plats = Array.isArray(answers.platforms) ? answers.platforms : []
+  const plats = Array.isArray(answers.platforms) ? answers.platforms : (ctx.platforms ?? [])
   const shown = new Set(shaping.shown)
   const winners = shaping.winners.map((id) => ctx.items.find((i) => i.id === id)).filter(Boolean) as Item[]
 

@@ -24,7 +24,7 @@ import { SHELVES, SHELF_LABEL, type Friend, type Item, type ShelfType } from '..
 import { Poster } from '../components/Poster'
 import { SwipePair, type Side } from '../components/SwipePair'
 import { RatingFlow } from '../components/RatingFlow'
-import { Chip, Toast } from '../components/ui'
+import { Chip, PlatformPicker, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
 
 export type Answers = Record<string, string | string[] | undefined>
@@ -352,13 +352,11 @@ export function WhatToWatch() {
             <h2 className="serif text-[28px] leading-tight font-semibold mt-1 mb-4">{q.q}</h2>
             {q.multi ? (
               <div>
-                <div className="flex flex-wrap gap-2.5">
-                  {PLATFORMS.map((p) => {
-                    const arr = (val as string[]) ?? []
-                    return <Chip key={p} active={arr.includes(p)} onClick={() => setAnswers({ ...answers, [q.id]: arr.includes(p) ? arr.filter((x) => x !== p) : [...arr, p] })}>{p}</Chip>
-                  })}
-                </div>
-                <p className="text-xs text-mute mt-3">Sin ninguna marcada, no filtramos por plataforma.</p>
+                <PlatformPicker
+                  value={(val as string[]) ?? []}
+                  onChange={(newPlatforms) => setAnswers({ ...answers, [q.id]: newPlatforms })}
+                />
+                <p className="text-xs text-mute mt-3">Sin ninguna o con todas marcadas, no filtramos por plataforma.</p>
                 <button onClick={() => (qi + 1 >= questions.length ? startShaping(answers, 5) : setQi(qi + 1))} className="mt-6 w-full min-h-[52px] rounded-2xl bg-accent text-accent-ink font-semibold">Seguir</button>
               </div>
             ) : (

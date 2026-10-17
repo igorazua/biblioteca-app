@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest'
-import { applyShaper, newShaping, nextShaperPair, scoreCandidates } from './recommend'
+import { applyShaper, newShaping, nextShaperPair, passes, scoreCandidates } from './recommend'
 import { items } from '../data/catalog'
+import { PLATFORMS } from '../config'
+import type { Item } from '../types'
 
 const rng = () => 0.37
 const byTitle = (t: string) => items.find((i) => i.title === t)!
@@ -64,5 +66,25 @@ describe('candidatas', () => {
     const seen = Object.fromEntries(items.filter((i) => i.type === 'movie').slice(0, 70).map((i) => [i.id, { itemId: i.id, status: 'seen' as const, ranked: true, updatedAt: 0 }]))
     const out = scoreCandidates({ ...base, entries: seen, shaping: newShaping() })
     for (const c of out) expect(seen[c.item.id]).toBeUndefined()
+  })
+
+  it('con todas las plataformas marcadas, una obra solo en SkyShowtime pasa el filtro', () => {
+    const skyItem: Item = {
+      id: 'movie:skyshowtime-exclusive',
+      type: 'movie',
+      title: 'Sky Movie',
+      year: 2024,
+      creator: 'Director',
+      durationMin: 100,
+      genres: ['Drama'],
+      synopsis: '...',
+      posterUrl: null,
+      popularity: 50,
+      platforms: ['SkyShowtime'],
+    }
+    // Con todas las plataformas marcadas, pasa
+    expect(passes(skyItem, {}, [...PLATFORMS])).toBe(true)
+    // Con solo Netflix marcada, no pasa
+    expect(passes(skyItem, {}, ['Netflix'])).toBe(false)
   })
 })

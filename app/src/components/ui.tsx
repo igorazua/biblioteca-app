@@ -4,6 +4,7 @@ import { animate, motion, useMotionValue } from 'framer-motion'
 import { friendHits, getItem, type FriendHit } from '../data/catalog'
 import { Icon } from './Icon'
 import { friendRanks } from '../lib/rank'
+import { PLATFORMS } from '../config'
 import { SHELF_LABEL, type ShelfType } from '../types'
 
 /** Pinta superposiciones (hojas, diálogos) sobre todo el marco de móvil, barra de pestañas incluida. */
@@ -39,6 +40,47 @@ export function Chip({ active, onClick, children, className = '' }: { active?: b
     >
       {children}
     </button>
+  )
+}
+
+export function PlatformPicker({
+  value,
+  onChange,
+  className = '',
+}: {
+  value: string[]
+  onChange: (platforms: string[]) => void
+  className?: string
+}) {
+  const allSelected = PLATFORMS.length > 0 && PLATFORMS.every((p) => value.includes(p))
+
+  const toggleAll = () => {
+    if (allSelected) {
+      onChange([])
+    } else {
+      onChange([...PLATFORMS])
+    }
+  }
+
+  const togglePlatform = (p: string) => {
+    if (value.includes(p)) {
+      onChange(value.filter((x) => x !== p))
+    } else {
+      onChange([...value, p])
+    }
+  }
+
+  return (
+    <div className={`flex flex-wrap gap-2.5 ${className}`}>
+      <Chip active={allSelected} onClick={toggleAll}>
+        Todas
+      </Chip>
+      {PLATFORMS.map((p) => (
+        <Chip key={p} active={value.includes(p)} onClick={() => togglePlatform(p)}>
+          {p}
+        </Chip>
+      ))}
+    </div>
   )
 }
 

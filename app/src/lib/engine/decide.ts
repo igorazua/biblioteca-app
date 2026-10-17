@@ -1,4 +1,5 @@
 import type { Friend, Item, Profile, ShelfType, UserEntry } from '../../types'
+import { PLATFORMS } from '../../config'
 import { PARAMS } from './params'
 import { MOOD_GENRES, NONFICTION_GENRES } from '../../data/questions'
 import { friendRanks } from '../rank'
@@ -104,7 +105,9 @@ export function passesFilters(it: Item, a: Answers, platforms: string[]): boolea
   }
 
   // Filtro de plataformas si se especificaron
-  if ((it.type === 'movie' || it.type === 'series') && platforms.length && it.platforms?.length) {
+  // Si están todas marcadas o ninguna, no se filtra (§B4)
+  const allPlatforms = PLATFORMS.length > 0 && PLATFORMS.every((p) => platforms.includes(p))
+  if (!allPlatforms && (it.type === 'movie' || it.type === 'series') && platforms.length && it.platforms?.length) {
     if (!it.platforms.some((p) => platforms.includes(p))) return false
   }
 
