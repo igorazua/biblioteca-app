@@ -105,34 +105,44 @@ export function Profile() {
 
   const handleAvatarFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
-    if (!file || !user || !supabase) return
+    if (!file) return
     setUploadingAvatar(true)
     try {
       const blob = await processAvatarImage(file)
-      const filePath = `${user.id}/avatar.webp`
-      const { error: uploadError } = await supabase.storage
-        .from('biblio-avatars')
-        .upload(filePath, blob, {
-          contentType: 'image/webp',
-          upsert: true,
-        })
-      if (uploadError) throw uploadError
+      if (user && supabase) {
+        const filePath = `${user.id}/avatar.webp`
+        const { error: uploadError } = await supabase.storage
+          .from('biblio-avatars')
+          .upload(filePath, blob, {
+            contentType: 'image/webp',
+            upsert: true,
+          })
+        if (uploadError) throw uploadError
 
-      const { data: { publicUrl } } = supabase.storage
-        .from('biblio-avatars')
-        .getPublicUrl(filePath)
-      const avatarUrl = `${publicUrl}?v=${Date.now()}`
+        const { data: { publicUrl } } = supabase.storage
+          .from('biblio-avatars')
+          .getPublicUrl(filePath)
+        const avatarUrl = `${publicUrl}?v=${Date.now()}`
 
-      await supabase
-        .from('biblio_profiles')
-        .update({ avatar_url: avatarUrl })
-        .eq('id', user.id)
+        await supabase
+          .from('biblio_profiles')
+          .update({ avatar_url: avatarUrl })
+          .eq('id', user.id)
 
-      useAuth.setState((s) => ({
-        profile: s.profile ? { ...s.profile, avatarUrl } : null,
-      }))
-      setProfile({ avatarUrl })
-      setToast('Foto de perfil actualizada')
+        useAuth.setState((s) => ({
+          profile: s.profile ? { ...s.profile, avatarUrl } : null,
+        }))
+        setProfile({ avatarUrl })
+        setToast('Foto de perfil actualizada y guardada en tu cuenta')
+      } else {
+        const reader = new FileReader()
+        reader.onload = () => {
+          const avatarUrl = reader.result as string
+          setProfile({ avatarUrl })
+          setToast('Foto de perfil actualizada')
+        }
+        reader.readAsDataURL(blob)
+      }
     } catch (err: any) {
       console.error('Error subiendo avatar:', err)
       setToast('Error al subir la foto')
@@ -303,7 +313,7 @@ export function Profile() {
     return { perShelf, topGenre }
   }, [entries])
 
-  const activeFriends = realFriends.length > 0 ? realFriends : friends
+  const activeFriends = realFriends
   const aff = useMemo(
     () =>
       activeFriends.map((f) => {
@@ -327,24 +337,27 @@ export function Profile() {
   return (
     <div className="h-full scroll-y pb-8">
       <header className="safe-top px-5 pb-4 flex items-center gap-4">
-        <div className="relative shrink-0">
+        <div className="relative shrink-0 flex flex-col items-center">
           <button
-            onClick={() => {
-              if (user) avatarInputRef.current?.click()
-              else setColorOpen(true)
-            }}
+            onClick={() => avatarInputRef.current?.click()}
             disabled={uploadingAvatar}
-            aria-label="Cambiar foto o color del avatar"
+            aria-label="Subir foto de perfil"
             className="relative block active:scale-95 transition-transform"
           >
-            <Avatar name={profile.name} color={profile.avatarColor} url={profile.avatarUrl} size={64} />
-            <span className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-surface2 border border-line flex items-center justify-center text-mute">
+            <Avatar name={profile.name} color={profile.avatarColor} url={profile.avatarUrl} size={68} />
+            <span className="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-accent text-accent-ink border-2 border-bg flex items-center justify-center shadow-md">
               {uploadingAvatar ? (
-                <div className="w-3 h-3 border border-accent border-t-transparent rounded-full animate-spin" />
+                <div className="w-3.5 h-3.5 border-2 border-accent-ink border-t-transparent rounded-full animate-spin" />
               ) : (
-                <Icon name="camera" size={12} />
+                <Icon name="camera" size={14} />
               )}
             </span>
+          </button>
+          <button
+            onClick={() => setColorOpen(true)}
+            className="text-[11px] text-mute hover:text-accent mt-1 underline-offset-2 hover:underline"
+          >
+            Cambiar color
           </button>
           <input
             ref={avatarInputRef}
@@ -432,20 +445,42 @@ export function Profile() {
 
         <section aria-label="Amigos">
           <h2 className="serif text-[22px] font-semibold mb-3">Amigos</h2>
-          <ul className="space-y-2.5">
-            {aff.map(({ f, a }) => (
-              <li key={f.id} className="flex items-center gap-3 bg-surface rounded-2xl border border-line p-3">
-                <Avatar name={f.name} color={f.avatarColor} size={40} />
-                <div className="flex-1 min-w-0">
-                  <div className="font-semibold">{f.name}</div>
-                  {a !== null ? (
-                    <div className="h-1.5 rounded-full bg-line mt-1.5 overflow-hidden"><div className="h-full bg-accent rounded-full" style={{ width: `${a}%` }} /></div>
-                  ) : <div className="text-xs text-mute">Aún no hay datos</div>}
-                </div>
-                {a !== null && <div className="text-lg font-bold tabular-nums text-accent">{a}%</div>}
-              </li>
-            ))}
-          </ul>
+          {aff.length > 0 ? (
+            <ul className="space-y-2.5">
+              {aff.map(({ f, a }) => (
+                <li key={f.id} className="flex items-center gap-3 bg-surface rounded-2xl border border-line p-3">
+                  <Avatar name={f.name} color={f.avatarColor} url={f.avatarUrl} size={40} />
+                  <div className="flex-1 min-w-0">
+                    <div className="font-semibold">{f.name}</div>
+                    {a !== null ? (
+                      <div className="h-1.5 rounded-full bg-line mt-1.5 overflow-hidden"><div className="h-full bg-accent rounded-full" style={{ width: `${a}%` }} /></div>
+                    ) : <div className="text-xs text-mute">Aún no hay datos</div>}
+                  </div>
+                  {a !== null && <div className="text-lg font-bold tabular-nums text-accent">{a}%</div>}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div className="bg-surface rounded-3xl border border-line p-5 text-center space-y-3">
+              <div className="w-11 h-11 rounded-2xl bg-surface2 mx-auto flex items-center justify-center text-accent">
+                <Icon name="user" size={22} />
+              </div>
+              <div className="font-semibold text-base">Sin amigos conectados todavía</div>
+              <p className="text-xs text-mute max-w-xs mx-auto leading-relaxed">
+                Invita a tus amigos con tu enlace personal. Cuando añadan sus obras, aquí veréis vuestro porcentaje de afinidad y notas en común.
+              </p>
+              {user && (
+                <button
+                  onClick={handleInviteFriend}
+                  disabled={inviting}
+                  className="mt-1 min-h-[42px] px-4 rounded-xl bg-accent text-accent-ink text-xs font-semibold inline-flex items-center gap-1.5 active:scale-95 transition-transform"
+                >
+                  <Icon name="plus" size={15} />
+                  {inviting ? 'Generando...' : 'Invitar a un amigo'}
+                </button>
+              )}
+            </div>
+          )}
           {canPick && (
             <div className="mt-3">
               <button onClick={pickContacts} className="min-h-[46px] px-4 rounded-2xl bg-surface border border-line text-sm font-medium flex items-center gap-2"><Icon name="user" size={17} /> Buscar en mis contactos</button>
@@ -463,7 +498,6 @@ export function Profile() {
               )}
             </div>
           )}
-          <p className="text-xs text-mute mt-2">Afinidad = coincidencia de notas en las obras que tenéis en común (mínimo 3). Amigos simulados.</p>
         </section>
 
         <section aria-label="Compartir">

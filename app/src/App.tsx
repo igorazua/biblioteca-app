@@ -79,6 +79,12 @@ export function App() {
 
   useEffect(() => {
     if (user && hasHydrated) {
+      if (!useStore.getState().onboarded) {
+        useStore.getState().completeOnboarding({
+          name: user.user_metadata?.full_name || user.email?.split('@')[0] || 'Tú',
+          avatarUrl: user.user_metadata?.avatar_url || null,
+        })
+      }
       const localCount = Object.keys(useStore.getState().entries).length
       const syncKey = `biblio_synced_${user.id}`
       if (localCount > 0 && !localStorage.getItem(syncKey)) {
