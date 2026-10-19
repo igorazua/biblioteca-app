@@ -167,28 +167,35 @@ export function Compare() {
         <div className="flex gap-2 overflow-x-auto no-scrollbar">
           {SHELVES.map((s) => <Chip key={s} active={s === shelf} onClick={() => choose(s)}>{SHELF_LABEL[s].plural}</Chip>)}
         </div>
-        <div className="flex items-center gap-3 mt-2">
-          <div className="flex-1">
-            <div className="flex items-center justify-between text-xs text-mute mb-1">
-              <span>Comparación <b className="text-ink">{Math.min(count + (summary ? 0 : 1), PAIRS_PER_SESSION)} / {PAIRS_PER_SESSION}</b></span>
-              <span>{ranking.length + pending} en tu ranking</span>
+        {current?.kind !== 'empty' && (
+          <div className="flex items-center gap-3 mt-2">
+            <div className="flex-1">
+              <div className="flex items-center justify-between text-xs text-mute mb-1">
+                <span>Comparación <b className="text-ink">{Math.min(count + (summary ? 0 : 1), PAIRS_PER_SESSION)} / {PAIRS_PER_SESSION}</b></span>
+                <span>{ranking.length + pending} en tu ranking</span>
+              </div>
+              <div className="h-1.5 rounded-full bg-line overflow-hidden" role="progressbar" aria-valuemin={0} aria-valuemax={PAIRS_PER_SESSION} aria-valuenow={count}>
+                <div className="h-full bg-accent rounded-full transition-all" style={{ width: `${(count / PAIRS_PER_SESSION) * 100}%` }} />
+              </div>
             </div>
-            <div className="h-1.5 rounded-full bg-line overflow-hidden" role="progressbar" aria-valuemin={0} aria-valuemax={PAIRS_PER_SESSION} aria-valuenow={count}>
-              <div className="h-full bg-accent rounded-full transition-all" style={{ width: `${(count / PAIRS_PER_SESSION) * 100}%` }} />
-            </div>
+            <button onClick={doUndo} disabled={!undo} className="min-h-[36px] px-3 rounded-full bg-surface border border-line text-mute text-xs flex items-center gap-1.5 disabled:opacity-30">
+              <Icon name="undo" size={15} /> Deshacer
+            </button>
           </div>
-          <button onClick={doUndo} disabled={!undo} className="min-h-[36px] px-3 rounded-full bg-surface border border-line text-mute text-xs flex items-center gap-1.5 disabled:opacity-30">
-            <Icon name="undo" size={15} /> Deshacer
-          </button>
-        </div>
+        )}
       </div>
 
       <div className="flex-1 min-h-0 px-4 pb-8 pt-2 flex flex-col">
         {summary && moves ? (
           <div className="flex-1 min-h-0 flex flex-col pop">
-            <h2 className="serif text-[28px] font-semibold leading-tight">¡Sesión completada!</h2>
-            <p className="text-mute text-sm mt-1">{PAIRS_PER_SESSION} comparaciones en {SHELF_LABEL[shelf].plural.toLowerCase()}.</p>
-            <div className="flex-1 min-h-0 scroll-y mt-4 space-y-4">
+            <div className="p-4 rounded-3xl bg-accent/15 border border-accent/40 mb-3 flex items-center gap-3.5">
+              <span className="text-3xl">🎉</span>
+              <div>
+                <h2 className="serif text-[26px] font-bold leading-tight text-ink">¡Sesión completada!</h2>
+                <p className="text-mute text-xs mt-0.5">{PAIRS_PER_SESSION} comparaciones en {SHELF_LABEL[shelf].plural.toLowerCase()}.</p>
+              </div>
+            </div>
+            <div className="flex-1 min-h-0 scroll-y mt-2 space-y-4">
               <MoveList title="Han subido" arrow="▲" color="#3ec878" rows={moves.up} />
               <MoveList title="Han bajado" arrow="▼" color="#ef4b4b" rows={moves.down} />
               <MoveList title="Nuevas en tu ranking" arrow="★" color="#F5B544" rows={moves.added} />

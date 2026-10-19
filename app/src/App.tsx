@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Navigate, Outlet, Route, Routes, useLocation } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion'
 import { TabBar } from './components/TabBar'
 import { Toast } from './components/ui'
 import { UpdatePrompt } from './components/UpdatePrompt'
@@ -21,6 +22,7 @@ import { ListEditor } from './screens/ListEditor'
 import { PublicList, PublicProfile } from './screens/Public'
 import { JoinInvite } from './screens/JoinInvite'
 import { Metrics } from './screens/Metrics'
+import { Settings } from './screens/Settings'
 
 function Frame() {
   const onboarded = useStore((s) => s.onboarded)
@@ -42,6 +44,7 @@ function Frame() {
           <Route path="i/:id" element={<ItemDetail />} />
           <Route path="lista/:id" element={<ListEditor />} />
           <Route path="importar" element={<Import />} />
+          <Route path="ajustes" element={<Settings />} />
           <Route path="metricas" element={<Metrics />} />
           <Route path="onboarding" element={<Onboarding />} />
           <Route path="*" element={<Navigate to="/" replace />} />
@@ -52,10 +55,22 @@ function Frame() {
 }
 
 function TabLayout() {
+  const { pathname } = useLocation()
   return (
     <div className="h-full flex flex-col relative">
       <div className="flex-1 min-h-0 relative">
-        <Outlet />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={pathname}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.12 }}
+            className="h-full w-full"
+          >
+            <Outlet />
+          </motion.div>
+        </AnimatePresence>
       </div>
       <TabBar />
     </div>

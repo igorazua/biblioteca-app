@@ -28,6 +28,10 @@ export type EventType =
   // Resultado a posteriori
   | 'entry_status' // data: { from, to, via: 'deck'|'decide'|'clean'|'add'|'other' }
   | 'entry_ranked' // data: { pos, total, pct }
+  // Recordatorios
+  | 'nudge_shown'
+  | 'nudge_tap'
+  | 'nudge_dismiss'
 
 export interface EngineEvent {
   t: number // Date.now()

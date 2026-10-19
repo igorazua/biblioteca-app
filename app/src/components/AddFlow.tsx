@@ -20,7 +20,7 @@ const STATUS_TXT = {
 }
 
 interface RemoteSearchResult {
-  ref: { source: 'tmdb' | 'openlibrary' | 'musicbrainz'; id: string }
+  ref: { source: 'wikidata' | 'openlibrary' | 'musicbrainz' | 'tvmaze'; id: string }
   title: string
   year: number | null
   creator: string | null
@@ -41,6 +41,8 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
 
   const [remoteResults, setRemoteResults] = useState<RemoteSearchResult[]>([])
   const [searchingRemote, setSearchingRemote] = useState(false)
+  const [searchError, setSearchError] = useState(false)
+  const [searchRetryKey, setSearchRetryKey] = useState(0)
   const [resolvingRef, setResolvingRef] = useState<string | null>(null)
 
   const catalogVersion = useCatalog((s) => s.version)
@@ -74,18 +76,20 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
       .slice(0, 40)
   }, [shelf, q, catalogVersion])
 
-  // Búsqueda en catálogo vivo (TMDB / OL / MB) con debounce de 300 ms y mínimo 2 letras
+  // Búsqueda en catálogo vivo (Wikidata / TVmaze / OL / MB) con debounce de 300 ms y mínimo 2 letras
   useEffect(() => {
     const trimmed = q.trim()
     const client = supabase
     if (!shelf || shelf === 'boardgame' || trimmed.length < 2 || !client) {
       setRemoteResults([])
       setSearchingRemote(false)
+      setSearchError(false)
       return
     }
 
     const controller = new AbortController()
     setSearchingRemote(true)
+    setSearchError(false)
 
     const timer = setTimeout(async () => {
       try {
@@ -99,6 +103,10 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
               (r) => !r.catalogId && !localTitles.has(norm(r.title))
             )
             setRemoteResults(filtered)
+            setSearchError(false)
+          } else if (error) {
+            setSearchError(true)
+            setRemoteResults([])
           } else {
             setRemoteResults([])
           }
@@ -107,6 +115,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
       } catch {
         if (!controller.signal.aborted) {
           setRemoteResults([])
+          setSearchError(true)
           setSearchingRemote(false)
         }
       }
@@ -116,7 +125,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
       clearTimeout(timer)
       controller.abort()
     }
-  }, [shelf, q, results])
+  }, [shelf, q, results, searchRetryKey])
 
   const handleSelectRemote = async (hit: RemoteSearchResult) => {
     const client = supabase
@@ -317,10 +326,24 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
               )}
 
               {results.length === 0 && !searchingRemote && remoteResults.length === 0 && (
-                <li className="text-center text-mute py-12">
-                  <div className="text-4xl mb-2">🔎</div>
-                  No está en nuestro catálogo todavía
-                </li>
+                searchError ? (
+                  <li className="text-center text-mute py-12 px-4 space-y-3">
+                    <div className="text-3xl">📡</div>
+                    <div className="text-sm font-semibold text-ink">No he podido conectar con el catálogo</div>
+                    <p className="text-xs text-mute max-w-xs mx-auto">Comprueba tu conexión a internet o vuelve a intentarlo.</p>
+                    <button
+                      onClick={() => setSearchRetryKey((k) => k + 1)}
+                      className="px-4 py-2 rounded-xl bg-surface border border-line text-xs font-semibold text-accent active:scale-95 transition-transform"
+                    >
+                      Reintentar
+                    </button>
+                  </li>
+                ) : (
+                  <li className="text-center text-mute py-12">
+                    <div className="text-4xl mb-2">🔎</div>
+                    No está en nuestro catálogo todavía
+                  </li>
+                )
               )}
             </ul>
           </>

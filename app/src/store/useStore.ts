@@ -24,10 +24,12 @@ interface State {
   categoryVotes: Record<string, boolean>
   history: HistoryItem[]
   pendingSave: PendingSave | null
+  nudgeDismiss: Record<string, { count: number; lastDismissedAt: number }>
 
   completeOnboarding: (p: Partial<Profile>) => void
   setProfile: (p: Partial<Profile>) => void
   setSettings: (s: Partial<Settings>) => void
+  dismissNudge: (id: string) => void
   swipe: (itemId: string, dir: 'left' | 'right' | 'up') => void
   undoSwipe: () => string | null
   rate: (itemId: string, patch: { stars?: Stars | null; comment?: string }) => void
@@ -57,6 +59,7 @@ const defaults = () => ({
   categoryVotes: {} as Record<string, boolean>,
   history: [] as HistoryItem[],
   pendingSave: null as PendingSave | null,
+  nudgeDismiss: {} as Record<string, { count: number; lastDismissedAt: number }>,
 })
 
 export const shelfOf = (id: string, entry?: UserEntry): ShelfType =>
@@ -71,6 +74,16 @@ export const useStore = create<State>()(
       completeOnboarding: (p) => set((s) => ({ onboarded: true, profile: { ...s.profile, ...p } })),
       setProfile: (p) => set((s) => ({ profile: { ...s.profile, ...p } })),
       setSettings: (p) => set((s) => ({ settings: { ...s.settings, ...p } })),
+      dismissNudge: (id) =>
+        set((s) => {
+          const prev = s.nudgeDismiss?.[id] || { count: 0, lastDismissedAt: 0 }
+          return {
+            nudgeDismiss: {
+              ...(s.nudgeDismiss || {}),
+              [id]: { count: prev.count + 1, lastDismissedAt: Date.now() },
+            },
+          }
+        }),
 
       swipe: (itemId, dir) =>
         set((s) => {

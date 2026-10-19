@@ -433,7 +433,7 @@ export function Import() {
               </p>
             )}
             <p className="text-xs text-mute/80 max-w-xs">
-              Estamos casando títulos con identidades de TMDB, Open Library y MusicBrainz.
+              Estamos casando títulos con identidades de Wikidata, TVmaze, Open Library y MusicBrainz.
             </p>
           </div>
         )}

@@ -6,6 +6,7 @@ import { Icon } from './Icon'
 import { friendRanks } from '../lib/rank'
 import { PLATFORMS } from '../config'
 import { SHELF_LABEL, type ShelfType } from '../types'
+import { useAuth } from '../store/useAuth'
 
 /** Pinta superposiciones (hojas, diálogos) sobre todo el marco de móvil, barra de pestañas incluida. */
 export function Portal({ children }: { children: ReactNode }) {
@@ -120,6 +121,8 @@ export function PlatformPicker({
 
 /** Burbujas de amigos sobre la tarjeta: hasta 4 avatares solapados + «+N», con la nota de cada uno (🔖 si lo tiene pendiente, 💬 si tiene comentario). */
 export function FriendBubbles({ itemId, shelf, max = 4 }: { itemId: string; shelf?: ShelfType; max?: number }) {
+  const user = useAuth((s) => s.user)
+  const isMock = !user
   const hits = friendHits(itemId)
   if (!hits.length) return null
   const item = getItem(itemId)
@@ -208,7 +211,9 @@ export function FriendBubbles({ itemId, shelf, max = 4 }: { itemId: string; shel
           <span className="ml-[2px] z-0 w-[34px] h-[34px] rounded-full bg-black/70 ring-2 ring-black/70 text-xs font-semibold flex items-center justify-center">+{extra}</span>
         )}
       </div>
-      <span className="mt-2 text-[11px] text-white/85 bg-black/55 rounded-full px-2 py-[2px] backdrop-blur-sm">{label}</span>
+      <span className="mt-2 text-[11px] text-white/85 bg-black/55 rounded-full px-2 py-[2px] backdrop-blur-sm">
+        {label}{isMock ? ' (ejemplo)' : ''}
+      </span>
 
       {/* Globo con primera línea del comentario y puesto al mantener pulsado (§7.8) */}
       {activeFriend && (

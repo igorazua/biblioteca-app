@@ -1,14 +1,18 @@
-import { useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
 import { getItem, items } from '../data/catalog'
 import { useStore } from '../store/useStore'
-import { SHELVES, SHELF_LABEL } from '../types'
+import { useAuth } from '../store/useAuth'
+import { useFriends } from '../store/useFriends'
+import { track } from '../store/useEvents'
+import { evaluateNudges } from '../lib/nudges'
+import { SHELVES, SHELF_LABEL, type ShelfType } from '../types'
 import { PosterTile } from '../components/ItemRow'
 import { Poster } from '../components/Poster'
 import { Avatar, Sheet, Toast } from '../components/ui'
 import { AddFlow } from '../components/AddFlow'
-import { AnimatePresence } from 'framer-motion'
-import type { ShelfType } from '../types'
+import { NudgeCard } from '../components/NudgeCard'
 import { Icon } from '../components/Icon'
 
 const FUTURE_SHELVES: [string, number][] = [
@@ -25,33 +29,82 @@ export function Library() {
   const votes = useStore((s) => s.categoryVotes)
   const toggleVote = useStore((s) => s.toggleVote)
   const loadSample = useStore((s) => s.loadSample)
+  const dismissHistory = useStore((s) => s.nudgeDismiss)
+  const dismissNudge = useStore((s) => s.dismissNudge)
+  const user = useAuth((s) => s.user)
+  const realFriends = useFriends((s) => s.realFriends)
+
   const [voting, setVoting] = useState(false)
   const [add, setAdd] = useState<{ shelf?: ShelfType } | null>(null)
   const [toast, setToast] = useState<string | null>(null)
+  const [sessionDismissed, setSessionDismissed] = useState(false)
 
   const all = Object.values(entries)
   const seen = all.filter((e) => e.status === 'seen').length
   const pending = all.filter((e) => e.status === 'pending').length
   const voted = Object.values(votes).filter(Boolean).length
 
+  // Recordatorios inteligentes (§5)
+  const nudge = useMemo(() => {
+    if (sessionDismissed) return null
+    return evaluateNudges({
+      hasAccount: Boolean(user),
+      entries,
+      rankings,
+      hasImported: Boolean(localStorage.getItem('biblio_has_imported')),
+      friendsCount: realFriends.length,
+      hasUsedDecide: Boolean(localStorage.getItem('biblio_used_decide')),
+      isStandalonePwa: typeof window !== 'undefined' && (window.matchMedia?.('(display-mode: standalone)').matches || false),
+      isMobile: typeof navigator !== 'undefined' && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent),
+      daysOfUsage: 2,
+      dismissHistory,
+      sessionNudgeShown: sessionDismissed,
+    })
+  }, [user, entries, rankings, realFriends.length, dismissHistory, sessionDismissed])
+
+  useEffect(() => {
+    if (nudge) {
+      track('nudge_shown', { itemId: nudge.id, data: { location: 'library' } })
+    }
+  }, [nudge?.id])
+
+  const handleNudgeAction = () => {
+    if (!nudge) return
+    track('nudge_tap', { itemId: nudge.id, data: { location: 'library' } })
+    if (nudge.actionType === 'login') {
+      nav('/perfil')
+    } else if (nudge.actionType === 'navigate' && nudge.targetRoute) {
+      nav(nudge.targetRoute)
+    } else if (nudge.actionType === 'invite') {
+      nav('/perfil')
+    } else if (nudge.actionType === 'install') {
+      alert('Para instalar en iPhone: pulsa Compartir > "Añadir a pantalla de inicio". En Android: menú de opciones > "Instalar aplicación".')
+    }
+  }
+
+  const handleNudgeDismiss = () => {
+    if (!nudge) return
+    track('nudge_dismiss', { itemId: nudge.id, data: { location: 'library' } })
+    dismissNudge(nudge.id)
+    setSessionDismissed(true)
+  }
+
   return (
     <div className="h-full scroll-y pb-6">
-      <header className="safe-top px-5 pb-5">
+      <header className="safe-top px-5 pb-4">
         <div className="flex items-center justify-between min-h-[48px]">
           <Link to="/perfil" className="flex items-center gap-2.5 min-h-[44px]" aria-label="Tu perfil">
-            <Avatar name={profile.name} color={profile.avatarColor} size={36} />
+            <Avatar name={profile.name} color={profile.avatarColor} url={profile.avatarUrl} size={36} />
             <span className="label-caps text-mute">Tu biblioteca</span>
           </Link>
           <div className="flex items-center gap-2">
-            <Link
-              to="/importar"
-              className="min-h-[38px] px-3.5 rounded-full bg-surface border border-line text-xs font-semibold flex items-center gap-1.5 active:scale-95 transition-transform text-ink/90 hover:border-accent"
-              title="Importar de Letterboxd, IMDb, Goodreads o Netflix"
+            <button
+              onClick={() => setAdd({})}
+              aria-label="Añadir a mano"
+              className="w-11 h-11 rounded-full bg-accent text-accent-ink flex items-center justify-center shadow-[0_8px_24px_-8px_rgb(245_181_68/0.7)] active:scale-90 transition-transform"
             >
-              <Icon name="sparkle" size={13} className="text-accent" />
-              Importar
-            </Link>
-            <button onClick={() => setAdd({})} aria-label="Añadir a mano" className="w-11 h-11 rounded-full bg-accent text-accent-ink flex items-center justify-center shadow-[0_8px_24px_-8px_rgb(245_181_68/0.7)] active:scale-90 transition-transform"><Icon name="plus" size={22} strokeWidth={2.5} /></button>
+              <Icon name="plus" size={22} strokeWidth={2.5} />
+            </button>
           </div>
         </div>
         <h1 className="serif text-[34px] leading-[1.02] font-semibold mt-3">Hola, {profile.name.split(' ')[0]}.</h1>
@@ -59,6 +112,18 @@ export function Library() {
           <b className="text-ink font-semibold">{seen}</b> en tu biblioteca · <b className="text-ink font-semibold">{pending}</b> pendientes
         </p>
       </header>
+
+      {/* Recordatorio inteligente contextual (§5) */}
+      <AnimatePresence>
+        {nudge && (
+          <NudgeCard
+            key={nudge.id}
+            nudge={nudge}
+            onAction={handleNudgeAction}
+            onDismiss={handleNudgeDismiss}
+          />
+        )}
+      </AnimatePresence>
 
       <div className="space-y-8">
         {SHELVES.map((t) => {
@@ -92,15 +157,23 @@ export function Library() {
                   })}
                 </div>
               ) : (
-                <Link to="/descubrir" className="mx-5 rounded-3xl bg-surface p-4 flex items-center gap-4 active:scale-[0.99] transition-transform">
-                  <span className="flex -space-x-5 shrink-0" aria-hidden>
-                    {items.filter((it) => it.type === t).slice(0, 3).map((it, i) => (
-                      <Poster key={it.id} item={it} showTitle={false} className="w-11 aspect-[2/3] rounded-lg ring-2 ring-surface" style={{ transform: `rotate(${(i - 1) * 7}deg)` }} />
-                    ))}
-                  </span>
-                  <span className="flex-1 text-sm text-mute leading-snug">Aún está vacía. <span className="text-ink font-medium">Haz swipe en Descubrir</span> y se llena sola.</span>
-                  <Icon name="chevron" size={18} className="text-mute shrink-0" />
-                </Link>
+                <div className="mx-5 space-y-2">
+                  <Link to={`/descubrir`} className="rounded-3xl bg-surface p-4 flex items-center gap-4 active:scale-[0.99] transition-transform">
+                    <span className="flex -space-x-5 shrink-0" aria-hidden>
+                      {items.filter((it) => it.type === t).slice(0, 3).map((it, i) => (
+                        <Poster key={it.id} item={it} showTitle={false} className="w-11 aspect-[2/3] rounded-lg ring-2 ring-surface" style={{ transform: `rotate(${(i - 1) * 7}deg)` }} />
+                      ))}
+                    </span>
+                    <span className="flex-1 text-sm text-mute leading-snug">Aún está vacía. <span className="text-ink font-medium">Haz swipe en Descubrir</span> y se llena sola.</span>
+                    <Icon name="chevron" size={18} className="text-mute shrink-0" />
+                  </Link>
+                  {(t === 'movie' || t === 'series' || t === 'book') && (
+                    <Link to="/importar" className="px-4 py-2.5 rounded-2xl bg-surface border border-line flex items-center justify-between text-xs text-mute hover:text-ink active:scale-[0.99] transition-transform">
+                      <span>Trae tus {SHELF_LABEL[t].plural.toLowerCase()} de Letterboxd o IMDb</span>
+                      <span className="text-accent font-semibold flex items-center gap-1">Importar <Icon name="chevron" size={13} /></span>
+                    </Link>
+                  )}
+                </div>
               )}
             </section>
           )

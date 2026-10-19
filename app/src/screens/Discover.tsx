@@ -1,17 +1,20 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { friends as seedFriends, getItem, items } from '../data/catalog'
 import { nextCards, newDeckSessionState, type DeckCard, type DeckSessionState } from '../lib/engine/deck'
 import { useStore } from '../store/useStore'
+import { useAuth } from '../store/useAuth'
 import { useFriends } from '../store/useFriends'
 import { track, useEvents } from '../store/useEvents'
+import { evaluateNudges, type Nudge } from '../lib/nudges'
 import { affinity } from '../lib/affinity'
 import { friendRanks } from '../lib/rank'
 import { useRanks } from '../store/useScores'
 import { SHELVES, SHELF_LABEL, type Friend, type Item, type ShelfType } from '../types'
 import { SwipeDeck, type DeckHandle, type SwipeDir } from '../components/SwipeDeck'
 import { RatingFlow } from '../components/RatingFlow'
+import { NudgeCard } from '../components/NudgeCard'
 import { Chip, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
 
@@ -32,8 +35,13 @@ export function Discover() {
   const settings = useStore((s) => s.settings)
   const undoSwipe = useStore((s) => s.undoSwipe)
   const hasHistory = useStore((s) => s.history.length > 0)
+  const dismissHistory = useStore((s) => s.nudgeDismiss)
+  const dismissNudge = useStore((s) => s.dismissNudge)
+  const user = useAuth((s) => s.user)
+
   const [rating, setRating] = useState<string | null>(null)
   const [toast, setToast] = useState<string | null>(null)
+  const [deckNudge, setDeckNudge] = useState<Nudge | null>(null)
   const deckRef = useRef<DeckHandle>(null)
 
   const realFriends = useFriends((s) => s.realFriends)
@@ -83,6 +91,7 @@ export function Discover() {
     shownIds.current.clear()
     sessionStateRef.current = newDeckSessionState()
     cardShownAt.current = Date.now()
+    setDeckNudge(null)
 
     const initial = fetchBatch(new Set(), 20)
     setDeckCards(initial)
@@ -148,6 +157,27 @@ export function Discover() {
 
     setDeckCards((prev) => prev.slice(1))
     swipe(item.id, dir)
+
+    // Evaluar Nudge dentro del mazo cada ~15 tarjetas (§5.2)
+    if (swipeCount.current > 0 && swipeCount.current % 15 === 0 && !deckNudge) {
+      const candidateNudge = evaluateNudges({
+        hasAccount: Boolean(user),
+        entries: useStore.getState().entries,
+        rankings,
+        hasImported: Boolean(localStorage.getItem('biblio_has_imported')),
+        friendsCount: realFriends.length,
+        hasUsedDecide: Boolean(localStorage.getItem('biblio_used_decide')),
+        isStandalonePwa: typeof window !== 'undefined' && (window.matchMedia?.('(display-mode: standalone)').matches || false),
+        isMobile: typeof navigator !== 'undefined' && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent),
+        daysOfUsage: 2,
+        dismissHistory,
+      })
+      if (candidateNudge) {
+        setDeckNudge(candidateNudge)
+        track('nudge_shown', { itemId: candidateNudge.id, data: { location: 'deck' } })
+      }
+    }
+
     if (dir === 'right') { if (settings.rateOnSwipe === false) setToast('Guardada ✓'); else setRating(item.id) }
     else if (dir === 'up') setToast('Guardada en pendientes ✓')
   }
@@ -163,9 +193,14 @@ export function Discover() {
     }
   }
 
+  // Contador de obras pendientes de descubrir en toda la estantería (§1.5)
+  const remainingCount = useMemo(() => {
+    return items.filter((i) => i.type === shelf && !entries[i.id]).length
+  }, [shelf, entries])
+
   const deck = deckCards.map((c) => c.item)
   const label = SHELF_LABEL[shelf]
-  const blocked = !!rating
+  const blocked = !!rating || !!deckNudge
 
   return (
     <div className="h-full flex flex-col relative">
@@ -176,7 +211,26 @@ export function Discover() {
       </div>
 
       <div className="flex-1 min-h-0 px-4 relative">
-        {deck.length > 0 ? (
+        {deckNudge ? (
+          <div className="h-full flex items-center justify-center">
+            <NudgeCard
+              variant="card"
+              nudge={deckNudge}
+              onAction={() => {
+                track('nudge_tap', { itemId: deckNudge.id, data: { location: 'deck' } })
+                if (deckNudge.actionType === 'login') nav('/perfil')
+                else if (deckNudge.targetRoute) nav(deckNudge.targetRoute)
+                else if (deckNudge.actionType === 'invite') nav('/perfil')
+                setDeckNudge(null)
+              }}
+              onDismiss={() => {
+                track('nudge_dismiss', { itemId: deckNudge.id, data: { location: 'deck' } })
+                dismissNudge(deckNudge.id)
+                setDeckNudge(null)
+              }}
+            />
+          </div>
+        ) : deck.length > 0 ? (
           <SwipeDeck
             ref={deckRef}
             deck={deck}
@@ -201,7 +255,9 @@ export function Discover() {
       </div>
 
       <div className="shrink-0 px-4 pt-2 pb-3">
-        <div className="text-center text-[12px] text-mute/80 mb-2.5 tabular-nums">{deck.length > 0 ? `Te quedan ${deck.length} en ${label.plural}` : ' '}</div>
+        <div className="text-center text-[12px] text-mute/80 mb-2.5 tabular-nums">
+          {remainingCount > 0 ? `Te quedan ${remainingCount} en ${label.plural}` : ' '}
+        </div>
         <div className="flex items-center justify-center gap-5">
           <button onClick={undo} disabled={!hasHistory || blocked} aria-label="Deshacer" className="w-11 h-11 rounded-full bg-surface flex items-center justify-center text-mute disabled:opacity-25 active:scale-90 transition-transform">
             <Icon name="undo" size={20} />
