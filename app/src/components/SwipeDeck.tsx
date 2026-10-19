@@ -2,9 +2,10 @@ import { forwardRef, useImperativeHandle, useLayoutEffect, useRef } from 'react'
 import { animate, motion, useMotionValue, useTransform, type MotionValue } from 'framer-motion'
 import type { Item, ShelfType } from '../types'
 import { SHELF_LABEL } from '../types'
-import { Poster } from './Poster'
+import { Poster, posterLayoutId } from './Poster'
 import { FriendBubbles } from './ui'
 import { itemFacts, typeName } from '../data/catalog'
+import { haptic } from '../lib/haptics'
 
 export type SwipeDir = 'left' | 'right' | 'up'
 export interface DeckHandle { fling: (dir: SwipeDir) => void }
@@ -14,10 +15,11 @@ const H_THRESHOLD = 0.3
 const V_THRESHOLD = 0.2
 const FLICK = 600
 
-function CardFace({ item, bubbles = true }: { item: Item; bubbles?: boolean }) {
+/** `flight`: solo la tarjeta de arriba vuela a la ficha (un único layoutId montado por obra). */
+function CardFace({ item, bubbles = true, flight = false }: { item: Item; bubbles?: boolean; flight?: boolean }) {
   return (
     <div className="absolute inset-0 rounded-[28px] overflow-hidden bg-surface border border-line shadow-2xl shadow-black/60">
-      <Poster item={item} showTitle={false} className="absolute inset-0 w-full h-full" />
+      <Poster item={item} showTitle={false} layoutId={flight ? posterLayoutId(item.id) : undefined} className="absolute inset-0 w-full h-full" />
       <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/95 via-black/55 to-transparent" />
       <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/45 to-transparent" />
       {bubbles && <div className="absolute top-3 right-3"><FriendBubbles itemId={item.id} shelf={item.type} /></div>}
@@ -62,11 +64,13 @@ export const SwipeDeck = forwardRef<DeckHandle, Props>(function SwipeDeck({ deck
   const y = useMotionValue(0)
   const busy = useRef(false)
   const dragged = useRef(false)
+  // pasado el umbral, soltar ya cuenta: un toque leve lo avisa una vez por cruce
+  const armed = useRef(false)
   const size = () => ({ W: box.current?.offsetWidth ?? 360, H: box.current?.offsetHeight ?? 560 })
   const top = deck[0]
 
   // La tarjeta nueva aparece en el centro antes de pintar
-  useLayoutEffect(() => { x.set(0); y.set(0); busy.current = false }, [top?.id, x, y])
+  useLayoutEffect(() => { x.set(0); y.set(0); busy.current = false; armed.current = false }, [top?.id, x, y])
 
   const rotate = useTransform(x, [-260, 0, 260], [-15, 0, 15])
   const rightO = useTransform([x, y], ([xv, yv]: number[]) => (xv > 0 && Math.abs(xv) >= Math.abs(yv) ? Math.min(1, xv / (size().W * H_THRESHOLD)) : 0))
@@ -82,7 +86,7 @@ export const SwipeDeck = forwardRef<DeckHandle, Props>(function SwipeDeck({ deck
     if (busy.current || !top) return
     busy.current = true
     const { W, H } = size()
-    navigator.vibrate?.(10)
+    haptic('success')
     const opts = { duration: 0.26, ease: 'easeIn' as const }
     const c =
       dir === 'up'
@@ -116,6 +120,13 @@ export const SwipeDeck = forwardRef<DeckHandle, Props>(function SwipeDeck({ deck
         dragMomentum={false}
         dragElastic={1}
         onDragStart={() => { dragged.current = true }}
+        onDrag={() => {
+          const { W, H } = size()
+          const ox = x.get(), oy = y.get()
+          const past = Math.abs(ox) >= Math.abs(oy) ? Math.abs(ox) > W * H_THRESHOLD : oy < 0 && -oy > H * V_THRESHOLD
+          if (past && !armed.current) haptic('tick')
+          armed.current = past
+        }}
         onDragEnd={(_, info) => {
           const { W, H } = size()
           const ox = x.get(), oy = y.get()
@@ -139,7 +150,7 @@ export const SwipeDeck = forwardRef<DeckHandle, Props>(function SwipeDeck({ deck
           else if (e.key === 'Enter') onOpen(top)
         }}
       >
-        <CardFace item={top} />
+        <CardFace item={top} flight />
         <motion.div className="absolute inset-0 rounded-[28px] bg-stamp-green/25 pointer-events-none" style={{ opacity: rightO }} />
         <motion.div className="absolute inset-0 rounded-[28px] bg-stamp-red/25 pointer-events-none" style={{ opacity: leftO }} />
         <motion.div className="absolute inset-0 rounded-[28px] bg-stamp-blue/25 pointer-events-none" style={{ opacity: upO }} />

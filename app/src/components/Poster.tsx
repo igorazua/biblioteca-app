@@ -1,4 +1,5 @@
-import { useState, type CSSProperties } from 'react'
+import { useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
+import { motion, type Transition } from 'framer-motion'
 import type { Item } from '../types'
 import { typeName } from '../data/catalog'
 
@@ -20,26 +21,56 @@ const PALETTES: [string, string, string][] = [
   ['#101010', '#3a3a46', '#c9c3b6'], // grafito
 ]
 
+/** Transición del póster que «vuela» entre pantallas (biblioteca/mazo → ficha) con el mismo `layoutId`. */
+export const POSTER_FLIGHT: Transition = { type: 'spring', stiffness: 420, damping: 40, mass: 0.9 }
+export const posterLayoutId = (itemId: string) => `poster-${itemId}`
+
 const GRAIN = "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")"
 
 /**
  * Portada: la real del catálogo o, si falta, una generada (§13.4) que parezca una portada minimalista de diseño:
  * paleta oscura derivada del título, composición geométrica sutil, grano y viñeta, y el título completo en la serif.
  * Con `showTitle={false}` (cuando el título ya va encima) solo pinta la composición, sin texto.
+ * Con `layoutId` el póster vuela hasta otro con el mismo id al cambiar de pantalla; en cada pantalla solo puede haber uno
+ * montado por id (usa `posterLayoutId`). Mientras la imagen de red carga, un brillo ocupa su hueco.
  */
-export function Poster({ item, className = '', style, alt, showTitle = true }: { item?: Item | null; className?: string; style?: CSSProperties; alt?: string; showTitle?: boolean }) {
+export function Poster({ item, className = '', style, alt, showTitle = true, layoutId }: { item?: Item | null; className?: string; style?: CSSProperties; alt?: string; showTitle?: boolean; layoutId?: string }) {
   const [imgError, setImgError] = useState(false)
+  // fade: solo si llegó por red después de montar; si ya estaba en caché aparece sin animación
+  const [loaded, setLoaded] = useState<{ src: string; fade: boolean } | null>(null)
+  const imgRef = useRef<HTMLImageElement>(null)
+  const src = item?.posterUrl ?? null
+  // una imagen ya en caché puede haber cargado antes de enganchar onLoad: sin esto se quedaría con el brillo
+  useLayoutEffect(() => {
+    const img = imgRef.current
+    if (src && img?.complete && img.naturalWidth > 0) setLoaded({ src, fade: false })
+  }, [src])
+  const flight = layoutId ? { layoutId, transition: { layout: POSTER_FLIGHT } } : {}
   if (!item) {
     return (
       <div
-        className={`animate-pulse bg-surface2/60 border border-line ${className}`}
+        className={`skeleton border border-line ${className}`}
         style={style}
         aria-hidden="true"
       />
     )
   }
-  if (item.posterUrl && !imgError)
-    return <img src={item.posterUrl} alt={alt ?? `Portada de ${item.title}`} onError={() => setImgError(true)} draggable={false} className={`object-cover ${className}`} style={style} />
+  if (src && !imgError) {
+    const done = loaded?.src === src
+    return (
+      <motion.img
+        ref={imgRef}
+        src={src}
+        alt={alt ?? `Portada de ${item.title}`}
+        onLoad={() => setLoaded((l) => (l?.src === src ? l : { src, fade: true }))}
+        onError={() => setImgError(true)}
+        draggable={false}
+        className={`object-cover ${done ? (loaded.fade ? 'img-in' : '') : 'skeleton'} ${className}`}
+        style={style}
+        {...flight}
+      />
+    )
+  }
   const h = hash(item.id)
   const [deep, mid, light] = PALETTES[h % PALETTES.length]
   const angle = 155 + ((h >> 5) % 50)
@@ -49,7 +80,8 @@ export function Poster({ item, className = '', style, alt, showTitle = true }: {
   const len = item.title.length
   const size = len > 30 ? '9.5cqw' : len > 18 ? '11.5cqw' : len > 10 ? '13.5cqw' : '16cqw'
   return (
-    <div
+    <motion.div
+      {...flight}
       role="img"
       aria-label={alt ?? `Portada de ${item.title}`}
       className={`relative overflow-hidden ${className}`}
@@ -74,6 +106,6 @@ export function Poster({ item, className = '', style, alt, showTitle = true }: {
           <div className="text-white/65 mt-[2.5cqw] truncate" style={{ fontSize: '5cqw' }}>{item.year} · {item.creator}</div>
         </div>
       )}
-    </div>
+    </motion.div>
   )
 }

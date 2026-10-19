@@ -11,12 +11,28 @@ function parseImdbRating(r: string | undefined): Stars | undefined {
   return stars as Stars
 }
 
+/**
+ * Estantería según «Title Type» de IMDb («Movie», «TV Series», «TV Mini Series», «TV Movie», «TV Episode», «Video Game»…;
+ * los exports antiguos usan «movie», «tvSeries», «tvMiniSeries»…). Devuelve null para lo que no se importa:
+ * episodios sueltos (su serie ya cuenta), videojuegos y pódcasts.
+ */
+export function imdbShelf(titleType: string): ShelfType | null {
+  const t = titleType.toLowerCase().replace(/[\s_-]/g, '')
+  if (!t) return 'movie'
+  if (t.includes('episode') || t.includes('videogame') || t.includes('podcast')) return null
+  if (t === 'tvseries' || t === 'tvminiseries') return 'series'
+  return 'movie' // Movie, TV Movie, TV Special, Short, Video…
+}
+
 export function parseImdb(
   csvText: string,
   defaultStatus: 'seen' | 'pending' = 'seen'
 ): ImportRow[] {
   const rows = parseCsv(csvText)
   const results: ImportRow[] = []
+  // El export de la watchlist trae «Position» y no tiene notas: todo lo que no esté valorado es pendiente
+  const isWatchlist = rows.length > 0 && ('Position' in rows[0] || 'position' in rows[0])
+  const fallbackStatus = isWatchlist ? 'pending' : defaultStatus
 
   for (const r of rows) {
     const title = r.Title || r.title
@@ -24,16 +40,18 @@ export function parseImdb(
 
     const constId = r.Const || r.const || ''
     const imdbId = constId.startsWith('tt') ? constId : undefined
-    const titleType = (r['Title Type'] || r['title type'] || r.TitleType || '').toLowerCase()
+    const type = imdbShelf(r['Title Type'] || r['title type'] || r.TitleType || '')
+    if (!type) continue
 
-    // Clasificación de estantería según Title Type
-    const type: ShelfType = titleType.includes('tv') || titleType.includes('series') ? 'series' : 'movie'
     const year = parseInt(r.Year || r.year || '', 10) || undefined
-    const rawRating = r['Your Rating'] || r['your rating'] || r.Rating || r.rating
+    const rawRating = r['Your Rating'] || r['your rating']
     const stars = parseImdbRating(rawRating)
 
-    // Si tiene nota, siempre es 'seen'. Si no, depende de defaultStatus o si viene de watchlist
-    const status: 'seen' | 'pending' = stars ? 'seen' : defaultStatus
+    // Con nota siempre es 'seen'; sin nota depende de si es la watchlist
+    const status: 'seen' | 'pending' = stars ? 'seen' : fallbackStatus
+
+    const originalTitle = r['Original Title'] || r['original title']
+    const creator = (r.Directors || r.directors || '').split(',')[0].trim() || undefined
 
     const dateStr = r['Date Rated'] || r['date rated'] || r.Created || r.created || r.Modified || r.modified
     const at = dateStr ? new Date(dateStr).getTime() : undefined
@@ -41,7 +59,9 @@ export function parseImdb(
     results.push({
       type,
       title,
+      ...(originalTitle && originalTitle !== title ? { originalTitle } : {}),
       year,
+      creator,
       imdbId,
       status,
       stars,

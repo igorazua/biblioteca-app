@@ -4,6 +4,7 @@ import type { Item } from '../types'
 import { Poster } from './Poster'
 import { itemFacts, typeName } from '../data/catalog'
 import { Icon } from './Icon'
+import { haptic } from '../lib/haptics'
 
 const CHOOSE_DELAY = 340
 
@@ -60,7 +61,7 @@ export function PairCompare({ a, b, onChoose, children }: { a: Item; b: Item; on
   const choose = (w: 'a' | 'b') => {
     if (picked) return
     setPicked(w)
-    navigator.vibrate?.(10)
+    haptic('success')
     timer.current = window.setTimeout(() => onChoose(w), CHOOSE_DELAY)
   }
   return (

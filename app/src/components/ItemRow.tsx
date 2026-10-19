@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import type { Item } from '../types'
-import { Poster } from './Poster'
+import { Poster, posterLayoutId } from './Poster'
 import { Icon } from './Icon'
 
 /**
@@ -17,7 +17,7 @@ export function PosterTile({ item, size = 104, rank, faded }: { item?: Item | nu
         aria-hidden="true"
       >
         {rank !== undefined && <span className="rank-num absolute left-0 bottom-0 text-[86px] select-none text-mute/30" aria-hidden>{rank}</span>}
-        <div className="w-full aspect-[2/3] rounded-[18px] bg-surface2/60 border border-line animate-pulse" />
+        <div className="skeleton w-full aspect-[2/3] rounded-[18px] border border-line" />
       </div>
     )
   }
@@ -30,7 +30,7 @@ export function PosterTile({ item, size = 104, rank, faded }: { item?: Item | nu
     >
       {rank !== undefined && <span className="rank-num absolute left-0 bottom-0 text-[86px] select-none" aria-hidden>{rank}</span>}
       <div className={`relative ${faded ? 'opacity-55 saturate-50' : ''}`}>
-        <Poster item={item} className="w-full aspect-[2/3] rounded-[18px] shadow-[0_10px_30px_-12px_rgb(0_0_0/0.9)] ring-1 ring-white/[0.06]" />
+        <Poster item={item} layoutId={posterLayoutId(item.id)} style={{ borderRadius: 18 }} className="w-full aspect-[2/3] shadow-[0_10px_30px_-12px_rgb(0_0_0/0.9)] ring-1 ring-white/[0.06]" />
       </div>
     </Link>
   )
@@ -50,12 +50,12 @@ interface RowProps {
 export function ItemRow({ item, rank, note, highlight, selecting, selected, onToggle }: RowProps) {
   if (!item) {
     return (
-      <div className="flex items-center gap-3 p-2.5 rounded-2xl border border-line bg-surface/40 animate-pulse w-full">
+      <div className="flex items-center gap-3 p-2.5 rounded-2xl border border-line bg-surface/40 w-full" aria-hidden="true">
         {rank !== undefined && <span className="w-7 text-center serif text-xl font-semibold text-mute/40">{rank}</span>}
-        <div className="w-12 h-[72px] rounded-xl bg-surface2/60 shrink-0" />
+        <div className="skeleton w-12 h-[72px] rounded-xl shrink-0" />
         <div className="flex-1 space-y-2 py-1">
-          <div className="h-4 bg-surface2/80 rounded w-3/4" />
-          <div className="h-3 bg-surface2/50 rounded w-1/2" />
+          <div className="skeleton h-4 rounded w-3/4" />
+          <div className="skeleton h-3 rounded w-1/2" />
         </div>
       </div>
     )

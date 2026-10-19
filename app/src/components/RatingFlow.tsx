@@ -4,6 +4,7 @@ import { useStore } from '../store/useStore'
 import { Poster } from './Poster'
 import { Sheet, StarRating } from './ui'
 import { SHELF_LABEL, type Stars } from '../types'
+import { haptic } from '../lib/haptics'
 
 /**
  * Hoja de valoración tras marcar una obra como vista. Cerrarla de cualquier forma guarda lo que haya.
@@ -32,6 +33,7 @@ export function RatingFlow({ itemId, onDone, withStars }: { itemId: string; onDo
       rate(itemId, { stars: (stars || null) as Stars | null, comment })
       if (stars && !entry?.ranked) placeProvisional(itemId)
     } else rate(itemId, { comment })
+    if (stars || comment) haptic('success')
     onDone('Guardada ✓')
   }
 

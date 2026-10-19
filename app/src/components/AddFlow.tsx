@@ -282,6 +282,16 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
                     )}
                   </div>
                   <div className="space-y-2">
+                    {searchingRemote && remoteResults.length === 0 &&
+                      [0, 1, 2].map((i) => (
+                        <li key={`sk${i}`} aria-hidden="true" className="rounded-2xl bg-surface/50 border border-line/60 flex items-center gap-3 p-2.5">
+                          <span className="skeleton w-11 h-[66px] rounded-lg shrink-0" />
+                          <span className="flex-1 space-y-2">
+                            <span className="skeleton block h-4 rounded w-2/3" />
+                            <span className="skeleton block h-3 rounded w-1/3" />
+                          </span>
+                        </li>
+                      ))}
                     {remoteResults.map((hit) => {
                       const isResolving = resolvingRef === hit.ref.id
                       return (
@@ -295,7 +305,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
                               <img
                                 src={hit.posterUrl}
                                 alt={`Portada de ${hit.title}`}
-                                className="w-11 h-[66px] rounded-lg object-cover shrink-0"
+                                className="skeleton w-11 h-[66px] rounded-lg object-cover shrink-0"
                               />
                             ) : (
                               <div className="w-11 h-[66px] rounded-lg bg-surface2/80 flex items-center justify-center shrink-0 text-mute">

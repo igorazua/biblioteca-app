@@ -10,6 +10,7 @@ import { track } from '../store/useEvents'
 import { supabase } from '../lib/supabase'
 import { items as seedItems, getItem } from '../data/catalog'
 import { parseLetterboxd } from '../lib/import/letterboxd'
+import { buildLocalIndex, imdbToQids, matchLocal } from '../lib/import/match'
 import { parseImdb } from '../lib/import/imdb'
 import { parseGoodreads } from '../lib/import/goodreads'
 import { parseNetflix } from '../lib/import/netflix'
@@ -90,13 +91,6 @@ const SOURCES: SourceConfig[] = [
   },
 ]
 
-const norm = (s: string) =>
-  s
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .replace(/[^a-z0-9]/g, '')
-
 interface MatchedPair {
   row: ImportRow
   item: Item
@@ -146,7 +140,7 @@ export function Import() {
         rows = parseLetterboxd(uint8)
       } else {
         const text = await file.text()
-        if (selectedSource === 'letterboxd') rows = parseLetterboxd(text)
+        if (selectedSource === 'letterboxd') rows = parseLetterboxd(text, file.name)
         else if (selectedSource === 'imdb') rows = parseImdb(text)
         else if (selectedSource === 'goodreads') rows = parseGoodreads(text)
         else if (selectedSource === 'netflix') rows = parseNetflix(text)
@@ -163,28 +157,13 @@ export function Import() {
       const matched: MatchedPair[] = []
       const remaining: ImportRow[] = []
 
-      // 1. Casar primero contra la semilla y caché local
+      // 1. Casar primero contra el catálogo local: IMDb ID → Wikidata (no depende del idioma del título) y, si no, título y año
+      const qids = await imdbToQids(rows.map((r) => r.imdbId ?? ''))
+      const index = buildLocalIndex(seedItems)
       for (const row of rows) {
-        const rNorm = norm(row.title)
-        const localMatch = seedItems.find((it) => {
-          if (it.type !== row.type) return false
-          if (row.imdbId && (it.id.includes(row.imdbId) || (it as any).imdbId === row.imdbId)) return true
-          if (row.isbn13 && (it.id.includes(row.isbn13) || it.olid === row.isbn13)) return true
-          const tNorm = norm(it.title)
-          if (tNorm === rNorm) {
-            if (row.year && it.year) {
-              return Math.abs(it.year - row.year) <= (row.type === 'series' ? 1 : 0)
-            }
-            return true
-          }
-          return false
-        })
-
-        if (localMatch) {
-          matched.push({ row, item: localMatch })
-        } else {
-          remaining.push(row)
-        }
+        const localMatch = matchLocal(row, index, row.imdbId ? qids.get(row.imdbId) : undefined)
+        if (localMatch) matched.push({ row, item: localMatch })
+        else remaining.push(row)
       }
 
       // 2. Si quedan obras y hay conexión a Supabase, enviar a match en lotes de 50
@@ -192,7 +171,8 @@ export function Import() {
       const notFound: ImportRow[] = []
 
       if (remaining.length > 0 && supabase) {
-        const chunkSize = 50
+        // lotes pequeños: cada fila puede consultar varias fuentes y la función tiene límite de tiempo
+        const chunkSize = 10
         for (let i = 0; i < remaining.length; i += chunkSize) {
           setProgress({ current: i, total: remaining.length })
           const chunk = remaining.slice(i, i + chunkSize)
@@ -203,6 +183,7 @@ export function Import() {
                 rows: chunk.map((r) => ({
                   type: r.type,
                   title: r.title,
+                  originalTitle: r.originalTitle,
                   year: r.year,
                   imdbId: r.imdbId,
                   isbn13: r.isbn13,

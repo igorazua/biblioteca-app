@@ -4,7 +4,9 @@ import { parseImdb } from './imdb'
 import { parseGoodreads } from './goodreads'
 import { parseNetflix } from './netflix'
 import { applyImportRows } from './apply'
-import type { ShelfType, UserEntry } from '../../types'
+import { buildLocalIndex, matchLocal } from './match'
+import { strToU8, zipSync } from 'fflate'
+import type { Item, ShelfType, UserEntry } from '../../types'
 
 import letterboxdRatingsCsv from './__fixtures__/letterboxd_ratings.csv?raw'
 import letterboxdWatchedCsv from './__fixtures__/letterboxd_watched.csv?raw'
@@ -226,5 +228,78 @@ describe('Reglas al crear entradas (regla «no pisar»)', () => {
     expect(entry.ranked).toBe(true)
     expect(entry.provisional).toBe(true)
     expect(result.rankings.book).toContain('book:cien-anos-de-soledad')
+  })
+})
+
+describe('Importador: exports reales de IMDb y Letterboxd', () => {
+  it('IMDb: «TV Movie» es película, «TV Mini Series» es serie y los episodios y videojuegos no se importan', () => {
+    const csv = [
+      'Const,Your Rating,Date Rated,Title,Original Title,URL,Title Type,IMDb Rating,Runtime (mins),Year,Genres,Num Votes,Release Date,Directors',
+      'tt0000001,8,2024-01-02,A TV Movie,A TV Movie,,TV Movie,7,90,2001,Drama,10,2001-01-01,Jane Doe',
+      'tt0000002,9,2024-01-02,Chernobyl,Chernobyl,,TV Mini Series,9.3,330,2019,Drama,10,2019-05-06,',
+      'tt0000003,7,2024-01-02,Pilot,Pilot,,TV Episode,8,50,2008,Drama,10,2008-01-20,',
+      'tt0000004,10,2024-01-02,Zelda,Zelda,,Video Game,9,0,2017,Adventure,10,2017-03-03,',
+      'tt0000005,9,2024-01-02,Parasite,Gisaengchung,,Movie,8.5,132,2019,Drama,10,2019-05-30,"Bong Joon Ho"',
+    ].join('\n')
+    const rows = parseImdb(csv)
+    expect(rows.map((r) => [r.title, r.type])).toEqual([
+      ['A TV Movie', 'movie'],
+      ['Chernobyl', 'series'],
+      ['Parasite', 'movie'],
+    ])
+    expect(rows[2].originalTitle).toBe('Gisaengchung')
+    expect(rows[2].creator).toBe('Bong Joon Ho')
+  })
+
+  it('IMDb: la watchlist (columna Position, sin notas) entra como pendiente', () => {
+    const csv = [
+      'Position,Const,Created,Modified,Description,Title,Original Title,URL,Title Type,IMDb Rating,Runtime (mins),Year,Genres,Num Votes,Release Date,Directors',
+      '1,tt15239678,2024-03-01,2024-03-01,,Dune: Part Two,Dune: Part Two,,Movie,8.5,166,2024,Sci-Fi,10,2024-03-01,Denis Villeneuve',
+    ].join('\n')
+    const [row] = parseImdb(csv)
+    expect(row.status).toBe('pending')
+    expect(row.stars).toBeUndefined()
+  })
+
+  it('Letterboxd: un watchlist.csv suelto entra como pendiente aunque no se parezca a ratings', () => {
+    const rows = parseLetterboxd(letterboxdWatchlistCsv, 'watchlist.csv')
+    expect(rows).toHaveLength(1)
+    expect(rows[0].status).toBe('pending')
+    // sin nombre de archivo, por columnas: sin «Rating» → vistas
+    expect(parseLetterboxd(letterboxdWatchedCsv)[0].status).toBe('seen')
+    expect(parseLetterboxd(letterboxdRatingsCsv)[0].stars).toBe(5)
+  })
+
+  it('Letterboxd ZIP: ignora los CSV de las carpetas deleted/ y orphaned/', () => {
+    const enc = (s: string) => strToU8(s)
+    const zip = zipSync({
+      'letterboxd-igor-2026/ratings.csv': enc(letterboxdRatingsCsv),
+      'letterboxd-igor-2026/watchlist.csv': enc(letterboxdWatchlistCsv),
+      'letterboxd-igor-2026/deleted/ratings.csv': enc('Date,Name,Year,Letterboxd URI,Rating\n2020-01-01,Borrada,2000,x,1'),
+      'letterboxd-igor-2026/orphaned/watched.csv': enc('Date,Name,Year,Letterboxd URI\n2020-01-01,Huérfana,2000,x'),
+    })
+    const titles = parseLetterboxd(zip).map((r) => r.title)
+    expect(titles).toContain('El Padrino')
+    expect(titles).toContain('Challengers')
+    expect(titles).not.toContain('Borrada')
+    expect(titles).not.toContain('Huérfana')
+  })
+
+  it('casado local: el IMDb ID va por Wikidata a la obra en español aunque el título venga en inglés', () => {
+    const it = (id: string, title: string, year: number, wikidataId?: string) =>
+      ({ id, type: 'movie', title, year, creator: '', genres: [], synopsis: '', posterUrl: null, popularity: 50, wikidataId }) as Item
+    const index = buildLocalIndex([
+      it('movie:cadena-perpetua-1994', 'Cadena perpetua', 1994, 'Q172241'),
+      it('movie:the-shawshank-redemption-1994', 'The Shawshank Redemption', 1994, 'Q172241'),
+      it('movie:dune-2021', 'Dune', 2021, 'Q60834962'),
+      it('movie:dune-1984', 'Dune', 1984, 'Q114819'),
+    ])
+    const row = (title: string, year?: number) => ({ type: 'movie' as const, title, year, status: 'seen' as const })
+    expect(matchLocal(row('The Shawshank Redemption', 1994), index, 'Q172241')?.id).toBe('movie:cadena-perpetua-1994')
+    // por título también gana la gemela en español
+    expect(matchLocal(row('The Shawshank Redemption', 1994), index)?.id).toBe('movie:cadena-perpetua-1994')
+    expect(matchLocal(row('Dune', 2021), index)?.id).toBe('movie:dune-2021')
+    // mismo título sin año que desempate: no se adivina
+    expect(matchLocal(row('Dune'), index)).toBeUndefined()
   })
 })

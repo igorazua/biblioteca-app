@@ -4,13 +4,14 @@ import { friendHits, getItem, itemFacts, typeName } from '../data/catalog'
 import { useStore } from '../store/useStore'
 import { useCatalog } from '../store/useCatalog'
 import { useRanks } from '../store/useScores'
-import { Poster } from '../components/Poster'
+import { Poster, posterLayoutId } from '../components/Poster'
 import { Avatar, Chip, RankBadge, Sheet, Toast } from '../components/ui'
 import { RatingFlow } from '../components/RatingFlow'
 import { AskFriend } from '../components/AskFriend'
 import { Icon } from '../components/Icon'
 import { SHELF_LABEL, type Friend, type Item, type Status } from '../types'
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
+import { haptic } from '../lib/haptics'
 
 /** Puesto de una obra en el ranking de un amigo para esa categoría (§14.6, D25): «nº 2 de sus 48 pelis». */
 function friendRank(friend: Friend, itemId: string, type: Item['type']): { pos: number; total: number } | null {
@@ -53,18 +54,18 @@ export function ItemDetail() {
   if (!item) {
     if (loading) {
       return (
-        <div className="h-full flex flex-col p-4 animate-pulse">
+        <div className="h-full flex flex-col p-4">
           <div className="safe-top flex items-center justify-between py-2 mb-4">
             <button onClick={goBack} className="w-10 h-10 rounded-full bg-surface2" />
           </div>
           <div className="flex gap-4 mb-6">
-            <div className="w-28 h-40 rounded-2xl bg-surface2 shrink-0" />
+            <div className="skeleton w-28 h-40 rounded-2xl shrink-0" />
             <div className="flex-1 space-y-3 py-2">
-              <div className="h-6 bg-surface2 rounded w-3/4" />
-              <div className="h-4 bg-surface2/60 rounded w-1/2" />
+              <div className="skeleton h-6 rounded w-3/4" />
+              <div className="skeleton h-4 rounded w-1/2" />
             </div>
           </div>
-          <div className="h-24 bg-surface2/40 rounded-2xl mb-4" />
+          <div className="skeleton h-24 rounded-2xl mb-4" />
         </div>
       )
     }
@@ -84,6 +85,7 @@ export function ItemDetail() {
   const status = entry?.status
 
   const toggle = (s: Status) => {
+    haptic('tap')
     if (status === s) { setStatus(item.id, null); return }
     setStatus(item.id, s)
     if (s === 'seen') setRating(true)
@@ -104,13 +106,14 @@ export function ItemDetail() {
       </button>
       <div className="h-full scroll-y pb-10">
         <div className="relative h-[430px]">
-          <Poster item={item} showTitle={false} className="absolute inset-0 w-full h-full" />
-          <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/50 to-black/30" />
-          <div className="absolute bottom-0 inset-x-0 px-5">
+          <Poster item={item} showTitle={false} layoutId={posterLayoutId(item.id)} style={{ borderRadius: 0 }} className="absolute inset-0 w-full h-full" />
+          {/* el degradado y el título entran cuando el póster ya casi ha llegado */}
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.25, delay: 0.12 }} className="absolute inset-0 bg-gradient-to-t from-bg via-bg/50 to-black/30" />
+          <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.16 }} className="absolute bottom-0 inset-x-0 px-5">
             <div className="text-[11px] uppercase tracking-[0.14em] text-white/70">{typeName(item.type)} · {item.year}</div>
             <h1 className="serif text-[32px] leading-[1.05] font-semibold mt-1">{item.title}</h1>
             <div className="text-sm text-white/75 mt-1">{item.creator}{itemFacts(item) ? ` · ${itemFacts(item)}` : ''}</div>
-          </div>
+          </motion.div>
         </div>
 
         <div className="px-5 mt-3 space-y-5">

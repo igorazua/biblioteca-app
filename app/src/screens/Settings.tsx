@@ -76,7 +76,7 @@ export function Settings() {
       alert('Tu navegador o dispositivo no soporta notificaciones push directamente.')
       return
     }
-    const ok = await subscribeToPush(user?.id)
+    const ok = await subscribeToPush()
     if (ok) {
       setPushEnabled(true)
       setToast('Avisos activados correctamente')

@@ -7,6 +7,7 @@ import { friendRanks } from '../lib/rank'
 import { PLATFORMS } from '../config'
 import { SHELF_LABEL, type ShelfType } from '../types'
 import { useAuth } from '../store/useAuth'
+import { haptic } from '../lib/haptics'
 
 /** Pinta superposiciones (hojas, diálogos) sobre todo el marco de móvil, barra de pestañas incluida. */
 export function Portal({ children }: { children: ReactNode }) {
@@ -162,7 +163,7 @@ export function FriendBubbles({ itemId, shelf, max = 4 }: { itemId: string; shel
     clearTimer()
     timerRef.current = setTimeout(() => {
       setActiveFriend(h)
-      navigator.vibrate?.(10)
+      haptic('tap')
     }, 350)
   }
 
@@ -255,7 +256,7 @@ export function StarRating({ value, onChange, size = 40, readOnly }: { value?: n
           role="radio"
           aria-checked={value === n}
           aria-label={`${n} estrella${n > 1 ? 's' : ''}`}
-          onClick={() => onChange?.(value === n ? 0 : n)}
+          onClick={() => { haptic('tap'); onChange?.(value === n ? 0 : n) }}
           className="p-1 transition-transform active:scale-90 disabled:cursor-default"
           style={{ minWidth: readOnly ? undefined : 44, minHeight: readOnly ? undefined : 44 }}
         >

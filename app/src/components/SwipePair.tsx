@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { animate, motion, useMotionValue, useTransform, type MotionValue } from 'framer-motion'
+import { haptic } from '../lib/haptics'
 
 export interface Side {
   key: string
@@ -38,7 +39,7 @@ export function SwipePair({ left, right, onChoose, between }: { left: Side; righ
   const choose = (w: 'a' | 'b') => {
     if (picked) return
     setPicked(w)
-    navigator.vibrate?.(12)
+    haptic('success')
     animate(x, w === 'a' ? -W() * COMMIT : W() * COMMIT, { duration: 0.16, ease: 'easeOut' })
     setTimeout(() => onChoose(w), 420)
   }

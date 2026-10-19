@@ -16,7 +16,7 @@ export async function getExistingSubscription(): Promise<PushSubscription | null
   }
 }
 
-export async function subscribeToPush(userId?: string): Promise<boolean> {
+export async function subscribeToPush(): Promise<boolean> {
   if (!isPushSupported() || !supabase) return false
 
   try {
@@ -49,14 +49,14 @@ export async function subscribeToPush(userId?: string): Promise<boolean> {
       localStorage.setItem('biblio_device_id', deviceId)
     }
 
-    await supabase.from('biblio_push_subs').upsert({
-      endpoint,
-      p256dh,
-      auth,
-      device_id: deviceId,
-      user_id: userId || null,
-      updated_at: new Date().toISOString(),
+    // La tabla no es accesible desde el navegador; la función asocia el usuario de la sesión (auth.uid()) en el servidor
+    const { error } = await supabase.rpc('biblio_push_subscribe', {
+      p_endpoint: endpoint,
+      p_p256dh: p256dh,
+      p_auth: auth,
+      p_device_id: deviceId,
     })
+    if (error) throw error
 
     return true
   } catch (err) {

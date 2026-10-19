@@ -6,6 +6,7 @@ import { useStore } from '../store/useStore'
 import { useAuth } from '../store/useAuth'
 import { SHELVES, SHELF_LABEL, type ShelfType } from '../types'
 import { Icon } from '../components/Icon'
+import { haptic } from '../lib/haptics'
 
 export function Onboarding() {
   const nav = useNavigate()
@@ -39,7 +40,7 @@ export function Onboarding() {
   }
 
   const handlePracticeSwipe = (dir: 'left' | 'right' | 'up') => {
-    navigator.vibrate?.(10)
+    haptic('tap')
     setGestures((prev) => ({ ...prev, [dir]: true }))
     cardX.set(0)
     cardY.set(0)

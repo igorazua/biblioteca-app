@@ -105,17 +105,23 @@ console.log(`Obras sin id externo registradas en ${SIN_ID_FILE}: ${sinId.length}
 
 // 4. Preparar filas para biblio_catalog
 const nowIso = new Date().toISOString()
+// Gemelas (misma obra en español y en inglés): los índices únicos (type, wikidata_id) y (type, tmdb_id) solo admiten una.
+// Se queda los ids la primera en el orden del seed (la del título en español), igual que la migración 0005.
+const seenExt = new Set()
 const rows = items.map((it) => {
   const isEnriched = enrichedIds.has(it.id)
+  const extKey = it.wikidataId ? `${it.type}|${it.wikidataId}` : null
+  const twin = extKey !== null && seenExt.has(extKey)
+  if (extKey) seenExt.add(extKey)
   return {
     id: it.id,
     type: it.type,
-    tmdb_id: it.tmdbId || null,
-    imdb_id: it.imdbId || null,
+    tmdb_id: twin ? null : it.tmdbId || null,
+    imdb_id: twin ? null : it.imdbId || null,
     ol_work: it.olid || null,
     isbn13: null,
     mbid: it.mbid || null,
-    wikidata_id: it.wikidataId || null,
+    wikidata_id: twin ? null : it.wikidataId || null,
     data: it,
     source: 'seed',
     enriched_at: isEnriched ? nowIso : null,

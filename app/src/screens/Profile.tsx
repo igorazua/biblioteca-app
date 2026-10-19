@@ -12,7 +12,7 @@ import { affinity } from '../lib/affinity'
 import { profileUrl, type SharedProfile } from '../lib/share'
 import { shareOrCopy } from '../lib/shareUi'
 import { generateShareCard, shareOrDownloadCard } from '../lib/shareCard'
-import { Poster } from '../components/Poster'
+import { Poster, posterLayoutId } from '../components/Poster'
 import { Avatar, Sheet, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { useAuth, checkHandleAvailability } from '../store/useAuth'
@@ -361,7 +361,7 @@ export function Profile() {
                       return (
                         <Link key={id} to={`/i/${encodeURIComponent(id)}`}>
                           <div className="relative">
-                            <Poster item={it} className="w-full aspect-[2/3] rounded-2xl border border-line" />
+                            <Poster item={it} layoutId={posterLayoutId(it.id)} style={{ borderRadius: 16 }} className="w-full aspect-[2/3] border border-line" />
                             <span className="absolute top-1.5 left-1.5 w-6 h-6 rounded-full bg-accent text-accent-ink text-xs font-bold flex items-center justify-center">
                               {i + 1}
                             </span>

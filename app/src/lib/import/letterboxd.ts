@@ -18,30 +18,38 @@ function parseRating(r: string | undefined): Stars | undefined {
   return rounded as Stars
 }
 
-export function parseLetterboxd(
-  input: string | Uint8Array | LetterboxdSources,
-  defaultStatus: 'seen' | 'pending' = 'seen'
-): ImportRow[] {
+function parseCsvHeader(csvText: string): string[] {
+  const firstLine = (csvText.charCodeAt(0) === 0xfeff ? csvText.slice(1) : csvText).split(/\r?\n/, 1)[0]
+  return firstLine.split(',').map((h) => h.trim().replace(/^"|"$/g, '').toLowerCase())
+}
+
+/** Qué export de Letterboxd es un CSV suelto: por el nombre del archivo o, si no, por sus columnas. */
+export function letterboxdKind(csvText: string, fileName = ''): keyof LetterboxdSources {
+  const name = fileName.toLowerCase()
+  if (name.includes('watchlist')) return 'watchlistCsv'
+  if (name.includes('ratings') || name.includes('diary') || name.includes('reviews')) return 'ratingsCsv'
+  if (name.includes('watched')) return 'watchedCsv'
+  const header = parseCsvHeader(csvText)
+  return header.includes('rating') ? 'ratingsCsv' : 'watchedCsv'
+}
+
+export function parseLetterboxd(input: string | Uint8Array | LetterboxdSources, fileName = ''): ImportRow[] {
   let sources: LetterboxdSources = {}
 
   if (input instanceof Uint8Array) {
     const unzipped = unzipSync(input)
     const decoder = new TextDecoder()
     for (const [path, data] of Object.entries(unzipped)) {
-      const lower = path.toLowerCase()
-      if (lower.endsWith('ratings.csv')) sources.ratingsCsv = decoder.decode(data)
-      else if (lower.endsWith('watched.csv')) sources.watchedCsv = decoder.decode(data)
-      else if (lower.endsWith('watchlist.csv')) sources.watchlistCsv = decoder.decode(data)
+      // Solo los CSV de la raíz del export: las carpetas deleted/, orphaned/, likes/… traen otros «films.csv» o «ratings.csv»
+      const parts = path.toLowerCase().split('/').filter(Boolean)
+      if (parts.length > 2 || (parts.length === 2 && ['deleted', 'orphaned', 'likes', 'lists'].includes(parts[0]))) continue
+      const base = parts[parts.length - 1]
+      if (base === 'ratings.csv') sources.ratingsCsv = decoder.decode(data)
+      else if (base === 'watched.csv') sources.watchedCsv = decoder.decode(data)
+      else if (base === 'watchlist.csv') sources.watchlistCsv = decoder.decode(data)
     }
   } else if (typeof input === 'string') {
-    // Si es un CSV directo, verificar columnas para determinar tipo
-    if (input.includes('Rating') || input.includes('rating')) {
-      sources.ratingsCsv = input
-    } else if (defaultStatus === 'pending') {
-      sources.watchlistCsv = input
-    } else {
-      sources.watchedCsv = input
-    }
+    sources[letterboxdKind(input, fileName)] = input
   } else {
     sources = input
   }

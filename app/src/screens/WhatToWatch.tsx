@@ -21,7 +21,7 @@ import { track, useEvents } from '../store/useEvents'
 import { affinity } from '../lib/affinity'
 import { friendRanks } from '../lib/rank'
 import { SHELVES, SHELF_LABEL, type Friend, type Item, type ShelfType } from '../types'
-import { Poster } from '../components/Poster'
+import { Poster, posterLayoutId } from '../components/Poster'
 import { SwipePair, type Side } from '../components/SwipePair'
 import { RatingFlow } from '../components/RatingFlow'
 import { Chip, PlatformPicker, Toast } from '../components/ui'
@@ -391,7 +391,7 @@ export function WhatToWatch() {
     body = (
       <div className="flex-1 min-h-0 flex flex-col px-4 pb-8">
         <Link to={`/i/${encodeURIComponent(currentItem.id)}`} key={currentItem.id} className="relative flex-1 min-h-0 rounded-[28px] overflow-hidden border border-line shadow-2xl block pop">
-          <Poster item={currentItem} showTitle={false} className="absolute inset-0 w-full h-full" />
+          <Poster item={currentItem} showTitle={false} layoutId={posterLayoutId(currentItem.id)} className="absolute inset-0 w-full h-full" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
           <div className="absolute top-3 left-3 bg-accent text-accent-ink text-xs font-bold px-3 py-1.5 rounded-full">Te propongo esta</div>
           <div className="absolute bottom-0 inset-x-0 p-5">
