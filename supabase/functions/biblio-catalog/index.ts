@@ -2,6 +2,7 @@
 // Función Edge del catálogo vivo sin TMDB
 // Acciones: 'search' | 'resolve' | 'match'
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
+import { wikidataFields } from './wikidata.ts'
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -341,37 +342,14 @@ async function resolveRefs(supabase: Supa, refs: any[]): Promise<any[]> {
         const entity = d.entities?.[refId]
         if (!entity) continue
 
-        const title = entity.labels?.es?.value || entity.labels?.en?.value || (Object.values(entity.labels || {})[0] as any)?.value || 'Sin título'
-        const synopsis = entity.descriptions?.es?.value || entity.descriptions?.en?.value || ''
-
-        // P577 fecha de publicación
-        let year = new Date().getFullYear()
-        const p577 = entity.claims?.P577?.[0]?.mainsnak?.datavalue?.value?.time
-        if (p577) {
-          const m = p577.match(/([+-]?\d{4})/)
-          if (m) year = parseInt(m[1], 10)
-        }
-
-        // P345 IMDb ID
-        const p345 = entity.claims?.P345?.[0]?.mainsnak?.datavalue?.value
-        if (p345) imdbId = p345
-
-        // P2047 duración
-        let durationMin: number | undefined = undefined
-        const p2047 = entity.claims?.P2047?.[0]?.mainsnak?.datavalue?.value?.amount
-        if (p2047) durationMin = parseInt(p2047, 10) || undefined
-
-        // P3383 póster de película (Wikimedia Commons)
-        let posterUrl: string | null = null
-        const p3383 = entity.claims?.P3383?.[0]?.mainsnak?.datavalue?.value
-        if (p3383) {
-          posterUrl = `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(p3383)}?width=400`
-        }
+        const f = await wikidataFields(entity, type)
+        imdbId = f.imdbId
+        let posterUrl = f.posterUrl
 
         // Si es serie y no tiene póster, probar TVmaze por título
         if (type === 'series' && !posterUrl) {
           try {
-            const tvSearch = await fetch(`https://api.tvmaze.com/singlesearch/shows?q=${encodeURIComponent(title)}`, { headers: { 'User-Agent': USER_AGENT } })
+            const tvSearch = await fetch(`https://api.tvmaze.com/singlesearch/shows?q=${encodeURIComponent(f.title)}`, { headers: { 'User-Agent': USER_AGENT } })
             if (tvSearch.ok) {
               const tvData = await tvSearch.json()
               if (tvData.image?.medium) posterUrl = tvData.image.medium
@@ -384,14 +362,18 @@ async function resolveRefs(supabase: Supa, refs: any[]): Promise<any[]> {
         newItem = {
           id: '',
           type,
-          title,
-          year,
-          creator: entity.descriptions?.es?.value || 'Desconocido',
-          durationMin,
-          genres: ['General'],
-          synopsis,
+          title: f.title,
+          // sin fecha en Wikidata: el año del candidato de la búsqueda, si lo trae
+          year: f.year ?? (Number(ref.year) || new Date().getFullYear()),
+          creator: f.creator || 'Desconocido',
+          ...(f.durationMin ? { durationMin: f.durationMin } : {}),
+          ...(f.seasons ? { seasons: f.seasons } : {}),
+          ...(f.pages ? { pages: f.pages } : {}),
+          genres: f.genres.length ? f.genres : [type === 'book' ? 'Literatura' : 'General'],
+          synopsis: f.synopsis,
           posterUrl,
-          popularity: 50,
+          popularity: f.popularity,
+          wikiLangs: f.wikiLangs,
           wikidataId,
           ...(imdbId ? { imdbId } : {}),
         }
@@ -646,7 +628,7 @@ async function matchRow(supabase: Supa, row: any, type: string, qids: Map<string
         (titles.includes(normTitle(r.title)) || (r.matchText && titles.includes(normTitle(r.matchText))))
     )
     if (exact.length === 1) {
-      const [item] = await resolveRefs(supabase, [{ type, source: exact[0].ref.source, id: exact[0].ref.id }])
+      const [item] = await resolveRefs(supabase, [{ type, source: exact[0].ref.source, id: exact[0].ref.id, year: exact[0].year ?? year }])
       if (item) return { status: 'sure', item }
     }
     if (exact.length > 1) return { status: 'doubt', candidates: exact.slice(0, 3) }
