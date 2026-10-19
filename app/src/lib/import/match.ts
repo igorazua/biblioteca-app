@@ -25,10 +25,13 @@ export function buildLocalIndex(items: Item[]): LocalIndex {
       const k = `${it.type}|${it.wikidataId}`
       if (!byWikidata.has(k)) byWikidata.set(k, it)
     }
-    const k = `${it.type}|${normTitle(it.title)}`
-    const list = byTitle.get(k)
-    if (list) list.push(it)
-    else byTitle.set(k, [it])
+    // también por título original: Letterboxd e IMDb exportan «Back to the Future», no «Regreso al futuro»
+    for (const t of new Set([it.title, it.originalTitle].filter(Boolean) as string[])) {
+      const k = `${it.type}|${normTitle(t)}`
+      const list = byTitle.get(k)
+      if (list) list.push(it)
+      else byTitle.set(k, [it])
+    }
   }
   return { byWikidata, byTitle }
 }

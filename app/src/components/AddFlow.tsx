@@ -71,7 +71,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
       return cards.map((c) => c.item)
     }
     return allItems
-      .filter((i) => i.type === shelf && (norm(i.title).includes(n) || norm(i.creator).includes(n)))
+      .filter((i) => i.type === shelf && (norm(i.title).includes(n) || norm(i.originalTitle ?? '').includes(n) || norm(i.creator).includes(n)))
       .sort((a, b) => (norm(a.title).startsWith(n) ? 0 : 1) - (norm(b.title).startsWith(n) ? 0 : 1) || b.popularity - a.popularity)
       .slice(0, 40)
   }, [shelf, q, catalogVersion])
@@ -98,7 +98,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
         })
         if (!controller.signal.aborted) {
           if (!error && data?.results) {
-            const localTitles = new Set(results.map((r) => norm(r.title)))
+            const localTitles = new Set(results.flatMap((r) => [norm(r.title), norm(r.originalTitle ?? '')]))
             const filtered = (data.results as RemoteSearchResult[]).filter(
               (r) => !r.catalogId && !localTitles.has(norm(r.title))
             )

@@ -5,6 +5,7 @@ import { parseGoodreads } from './goodreads'
 import { parseNetflix } from './netflix'
 import { applyImportRows } from './apply'
 import { buildLocalIndex, matchLocal } from './match'
+import { items as seedItems } from '../../data/catalog'
 import { strToU8, zipSync } from 'fflate'
 import type { Item, ShelfType, UserEntry } from '../../types'
 
@@ -301,5 +302,14 @@ describe('Importador: exports reales de IMDb y Letterboxd', () => {
     expect(matchLocal(row('Dune', 2021), index)?.id).toBe('movie:dune-2021')
     // mismo título sin año que desempate: no se adivina
     expect(matchLocal(row('Dune'), index)).toBeUndefined()
+  })
+})
+
+describe('Casado local con el catálogo real', () => {
+  it('un título en inglés de Letterboxd encuentra la obra que se muestra con el título de España', () => {
+    const index = buildLocalIndex(seedItems)
+    const hit = matchLocal({ type: 'movie', title: 'Back to the Future', year: 1985, status: 'seen' }, index)
+    expect(hit?.title).toBe('Regreso al futuro')
+    expect(hit?.originalTitle).toBe('Back to the Future')
   })
 })

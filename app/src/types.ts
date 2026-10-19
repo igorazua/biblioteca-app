@@ -5,6 +5,8 @@ export interface Item {
   id: string // slug estable: 'movie:el-hoyo-2019'
   type: ShelfType
   title: string
+  /** título original cuando se muestra el de España («Back to the Future»); sirve para buscar y para imports */
+  originalTitle?: string
   year: number
   creator: string
   durationMin?: number

@@ -47,7 +47,7 @@ export function ListEditor() {
         const st = entries[i.id]?.status
         return scope === 'all' || (scope === 'mine' ? st === 'seen' || st === 'pending' : st === scope)
       })
-      .filter((i) => !needle || i.title.toLowerCase().includes(needle) || i.creator.toLowerCase().includes(needle))
+      .filter((i) => !needle || i.title.toLowerCase().includes(needle) || (i.originalTitle ?? '').toLowerCase().includes(needle) || i.creator.toLowerCase().includes(needle))
       .sort((a, b) => b.popularity - a.popularity)
       .slice(0, 40)
   }, [q, shelf, scope, entries, sel])

@@ -41,6 +41,33 @@ for (const it of seed.items) {
   kept.push(it)
 }
 
+// Segunda pasada: misma obra con distinto Wikidata ID (uno de los dos mal puesto), que tras poner los títulos de España
+// coinciden en tipo, título y año («Band of Brothers» y «Hermanos de sangre», 2001). Se queda la que tiene portada y,
+// si las dos la tienen, la primera.
+const normTitle = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '')
+const byTitle = new Map()
+for (const it of kept) {
+  const key = `${it.type}|${normTitle(it.title)}|${it.year}`
+  const list = byTitle.get(key)
+  if (list) list.push(it)
+  else byTitle.set(key, [it])
+}
+const dropped = new Set()
+for (const list of byTitle.values()) {
+  if (list.length < 2) continue
+  const keeper = list.find((it) => it.posterUrl) ?? list[0]
+  for (const it of list) {
+    if (it === keeper) continue
+    // la que se va puede ser la que traía el título original (para casar imports en inglés)
+    if (!keeper.originalTitle && it.originalTitle) keeper.originalTitle = it.originalTitle
+    aliases[it.id] = keeper.id
+    dropped.add(it.id)
+    removed++
+    console.log(`Misma obra con otro Wikidata ID: ${it.id} → ${keeper.id}`)
+  }
+}
+if (dropped.size) kept.splice(0, kept.length, ...kept.filter((it) => !dropped.has(it.id)))
+
 // un alias nunca apunta a otro alias
 const canon = (id) => {
   let cur = id
