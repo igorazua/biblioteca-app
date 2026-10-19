@@ -3,19 +3,23 @@ import type { Friend, FriendEntry, Item, ShelfType } from '../types'
 import { friendRanks } from '../lib/rank'
 
 import { useCatalog, setSeedChecker } from '../store/useCatalog'
+import { canonicalId } from './aliases'
 
 export const items = seed.items as Item[]
 export const friends = seed.friends as Friend[]
 
 export const itemsById = new Map<string, Item>(items.map((i) => [i.id, i]))
-setSeedChecker((id) => itemsById.has(id))
+setSeedChecker((id) => itemsById.has(canonicalId(id)))
 
+/** Los ids de gemelas fusionadas (aliases.json) devuelven la obra que se conservó. */
 export const getItem = (id: string): Item | undefined => {
-  return itemsById.get(id) || useCatalog.getState().items[id]
+  const cid = canonicalId(id)
+  return itemsById.get(cid) || useCatalog.getState().items[cid]
 }
 
 export const isKnownItem = (id: string): boolean => {
-  return itemsById.has(id) || Boolean(useCatalog.getState().items[id])
+  const cid = canonicalId(id)
+  return itemsById.has(cid) || Boolean(useCatalog.getState().items[cid])
 }
 
 export const itemsOfType = (t: ShelfType): Item[] => {

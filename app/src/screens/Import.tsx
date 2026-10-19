@@ -196,8 +196,9 @@ export function Import() {
                 const row = chunk[j]
                 const m = data.matches[j]
                 if (m?.status === 'sure' && m.item) {
-                  matched.push({ row, item: m.item })
+                  // si la nube devuelve una gemela ya fusionada, se usa la obra del seed que la sustituye
                   useCatalog.getState().addItems([m.item])
+                  matched.push({ row, item: getItem(m.item.id) ?? m.item })
                 } else if (m?.status === 'doubt' && m.candidates?.length) {
                   doubts.push({ row, candidates: m.candidates })
                 } else {
@@ -240,8 +241,8 @@ export function Import() {
         },
       })
       if (!error && data?.items?.[0]) {
-        const item: Item = data.items[0]
-        useCatalog.getState().addItems([item])
+        useCatalog.getState().addItems([data.items[0]])
+        const item: Item = getItem(data.items[0].id) ?? data.items[0]
         setDoubtfulItems((prev) =>
           prev.map((d, i) => (i === index ? { ...d, chosenItem: item } : d))
         )

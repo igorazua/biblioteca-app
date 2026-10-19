@@ -7,6 +7,7 @@
  */
 
 import type { ShelfType } from '../../types'
+import { canonicalId } from '../../data/aliases'
 
 export interface ShelfEngine {
   v: string
@@ -90,6 +91,20 @@ export async function loadShelfEngine(shelf: ShelfType): Promise<ShelfEngine | n
   }
 }
 
+/** cross.json aún tiene claves y destinos con ids de gemelas fusionadas: se pasan a la obra conservada, sin repetir. */
+function canonicalCross(raw: Record<string, CrossRecommendation[]>): Record<string, CrossRecommendation[]> {
+  const out: Record<string, CrossRecommendation[]> = {}
+  for (const [key, recs] of Object.entries(raw)) {
+    const cid = canonicalId(key)
+    const list = (out[cid] ??= [])
+    for (const r of recs) {
+      const rid = canonicalId(r.id)
+      if (rid !== cid && !list.some((x) => x.id === rid)) list.push({ ...r, id: rid })
+    }
+  }
+  return out
+}
+
 /**
  * Carga el mapa de recomendaciones entre categorías cross.json
  */
@@ -98,7 +113,7 @@ export async function loadCrossEngine(): Promise<Record<string, CrossRecommendat
 
   try {
     const mod = await import('../../data/engine/cross.json')
-    crossCache = mod.default || mod
+    crossCache = canonicalCross(mod.default || mod)
     return crossCache!
   } catch {
     crossCache = {}
@@ -174,8 +189,15 @@ export function neighbors(shelf: ShelfType, id: string, k: number = 10): string[
   const idx = dec.idToIndex.get(id)
   if (idx == null) return []
 
-  const nnIndices = engine.nn[idx] || []
-  return nnIndices.slice(0, k).map((i) => engine.ids[i])
+  // los datos del motor aún incluyen gemelas fusionadas: se traducen y se quitan repetidas
+  const self = canonicalId(id)
+  const out: string[] = []
+  for (const i of engine.nn[idx] || []) {
+    const nid = canonicalId(engine.ids[i])
+    if (nid !== self && !out.includes(nid)) out.push(nid)
+    if (out.length >= k) break
+  }
+  return out
 }
 
 /**
@@ -268,5 +290,5 @@ export function simWithCentroid(
  */
 export function crossOf(id: string): CrossRecommendation[] {
   if (!crossCache) return []
-  return crossCache[id] || []
+  return crossCache[canonicalId(id)] || []
 }

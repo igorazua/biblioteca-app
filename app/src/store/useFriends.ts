@@ -3,6 +3,7 @@ import { supabase } from '../lib/supabase'
 import { useAuth } from './useAuth'
 import { friends as seedFriends, setFriendHitsProvider } from '../data/catalog'
 import { useCatalog } from './useCatalog'
+import { canonicalId } from '../data/aliases'
 import type { Friend, FriendEntry } from '../types'
 
 export interface FriendHit {
@@ -62,7 +63,7 @@ export const useFriends = create<FriendsState>((set, get) => ({
         .in('user_id', friendIds)
 
       // Asegurar que las obras de los amigos están en el catálogo
-      const friendItemIds = (entries || []).map((e) => e.item_id)
+      const friendItemIds = (entries || []).map((e) => canonicalId(e.item_id))
       if (friendItemIds.length > 0) {
         await useCatalog.getState().ensureItems(friendItemIds)
       }
@@ -73,7 +74,7 @@ export const useFriends = create<FriendsState>((set, get) => ({
         const friendEntries: FriendEntry[] = (entries || [])
           .filter((e) => e.user_id === p.id && (e.status === 'seen' || e.status === 'pending'))
           .map((e) => ({
-            itemId: e.item_id,
+            itemId: canonicalId(e.item_id),
             status: e.status as 'seen' | 'pending',
             score: e.score ? Number(e.score) : undefined,
             comment: e.comment || undefined,

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
+import { Link, Navigate, useLocation, useNavigate, useParams } from 'react-router-dom'
+import { canonicalId } from '../data/aliases'
 import { friendHits, getItem, itemFacts, typeName } from '../data/catalog'
 import { useStore } from '../store/useStore'
 import { useCatalog } from '../store/useCatalog'
@@ -51,6 +52,8 @@ export function ItemDetail() {
   const [listSheet, setListSheet] = useState(false)
   const [toast, setToast] = useState<string | null>(null)
 
+  // link antiguo a una gemela fusionada: la ficha y la entrada viven en el id que se conservó
+  if (canonicalId(id) !== id) return <Navigate to={`/i/${encodeURIComponent(canonicalId(id))}`} replace />
   if (!item) {
     if (loading) {
       return (

@@ -7132,165 +7132,6 @@
       }
     },
     {
-      "id": "movie:the-shawshank-redemption-1994",
-      "type": "movie",
-      "title": "The Shawshank Redemption",
-      "year": 1994,
-      "creator": "Frank Darabont",
-      "durationMin": 142,
-      "genres": [
-        "Drama"
-      ],
-      "synopsis": "The Shawshank Redemption es una película dramática escrita y dirigida por el estadounidense Frank Darabont, y producida por los estudios Castle Rock Entertainment, cuyo estreno se produjo en 1994. Su trama está basada en Rita Hayworth y la redención de Shawshank (1982), una novela corta de Stephen King y abarca una mirada optimista de la vida relatando la historia del banquero Andrew \"Andy\" Dufresne, quien es condenado a cadena perpetua en la Penitenciaría Estatal de Shawshank, a pesar de haberse declarado inocente. Durante las dos décadas siguientes se hace amigo de un compañero de prisión, el contrabandista Ellis \"Red\" Redding, y participa en una operación de blanqueo de dinero dirigida por el alcaide de la prisión Samuel Norton.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 93,
-      "wikidataId": "Q172241",
-      "tmdbId": 278,
-      "voteAvg": 9.5,
-      "voteCount": 146,
-      "wikiLangs": 107,
-      "originCountry": [
-        "Q30"
-      ],
-      "basedOn": "Q968314",
-      "awards": [
-        "Q4745055",
-        "Q1966965"
-      ],
-      "keywords": [
-        "drama",
-        "Q190507",
-        "Q841236",
-        "Q1459937",
-        "Q11122599",
-        "Q491",
-        "Q366",
-        "Q1975478",
-        "Q1124012"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
-      "id": "movie:the-godfather-1972",
-      "type": "movie",
-      "title": "The Godfather",
-      "year": 1972,
-      "creator": "Francis Ford Coppola",
-      "durationMin": 175,
-      "genres": [
-        "Crimen",
-        "Drama"
-      ],
-      "synopsis": "El padrino es una película estadounidense de 1972 dirigida por Francis Ford Coppola. La película fue producida por Albert S. Ruddy, de la compañía Paramount Pictures. Está basada en la novela homónima de Mario Puzo, quien adaptó el guion junto a Coppola y Robert Towne, este último sin ser acreditado. Protagonizada por Marlon Brando y Al Pacino como los líderes de una poderosa familia criminal ficticia de Nueva York, la historia, ambientada desde 1945 a 1955, cuenta las crónicas de la familia Corleone liderada por Vito Corleone (Brando), enfocándose en el personaje de Michael Corleone (Pacino), y su transformación de un reacio joven ajeno a los asuntos familiares a un implacable jefe de la mafia ítalo-estadounidense.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Godfather%20logo.svg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 92,
-      "wikidataId": "Q47703",
-      "tmdbId": 238,
-      "voteAvg": 9.4,
-      "voteCount": 16,
-      "wikiLangs": 132,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q3225260",
-      "basedOn": "Q243556",
-      "awards": [
-        "Q102427",
-        "Q103916",
-        "Q107258",
-        "Q1966965",
-        "Q849124",
-        "Q1011509",
-        "Q593098"
-      ],
-      "keywords": [
-        "crime",
-        "drama",
-        "Q46952"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:the-dark-knight-2008",
-      "type": "movie",
-      "title": "The Dark Knight",
-      "year": 2008,
-      "creator": "Christopher Nolan",
-      "durationMin": 152,
-      "genres": [
-        "Acción",
-        "Crimen",
-        "Drama"
-      ],
-      "synopsis": "The Dark Knight es una película de superhéroes británico-estadounidense de 2008 dirigida por Christopher Nolan a partir de un guion coescrito con su hermano Jonathan. Basada en el superhéroe Batman de DC Comics, es la secuela de Batman Begins (2005) y la segunda entrega de la trilogía The Dark Knight. La trama sigue al justiciero Batman, el teniente de policía James Gordon y el fiscal de distrito Harvey Dent, quienes forman una alianza para desmantelar el crimen organizado en Gotham City. Sus esfuerzos se ven descarrilados por el Joker, un cerebro anarquista que busca probar hasta dónde llegará Batman para salvar a la ciudad del caos. El reparto incluye a Christian Bale, Michael Caine, Heath Ledger, Gary Oldman, Aaron Eckhart, Maggie Gyllenhaal y Morgan Freeman.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 90,
-      "wikidataId": "Q163872",
-      "tmdbId": 155,
-      "voteAvg": 9.4,
-      "voteCount": 341,
-      "wikiLangs": 107,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q12859908",
-      "basedOn": "Q2695156",
-      "awards": [
-        "Q106291",
-        "Q488645",
-        "Q1062026",
-        "Q1966965"
-      ],
-      "keywords": [
-        "action",
-        "crime",
-        "drama",
-        "Q7283"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
       "id": "movie:the-godfather-part-ii-1974",
       "type": "movie",
       "title": "The Godfather: Part II",
@@ -7334,59 +7175,6 @@
       ],
       "imageSrc": "wikimedia",
       "imageCredit": "Wikipedia / Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:12-angry-men-1957",
-      "type": "movie",
-      "title": "12 Angry Men",
-      "year": 1957,
-      "creator": "Sidney Lumet",
-      "durationMin": 96,
-      "genres": [
-        "Crimen",
-        "Drama"
-      ],
-      "synopsis": "12 Angry Men es una película dramática estadounidense de 1957 dirigida por Sidney Lumet y basada en el guion para TV de título similar escrito por Reginald Rose.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/12%20Angry%20Men%20(1957%20film%20poster).jpg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 90,
-      "wikidataId": "Q2345",
-      "tmdbId": 389,
-      "voteAvg": 9,
-      "voteCount": 63,
-      "wikiLangs": 76,
-      "originCountry": [
-        "Q30"
-      ],
-      "basedOn": "Q13709586",
-      "awards": [
-        "Q154590",
-        "Q3114772",
-        "Q1966965",
-        "Q114267430"
-      ],
-      "keywords": [
-        "crime",
-        "drama",
-        "Q8454",
-        "Q13368786",
-        "Q1229501"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
       "src": {
         "wikidataId": "wikidata",
         "tmdbId": "wikidata",
@@ -7503,63 +7291,6 @@
       }
     },
     {
-      "id": "movie:inception-2010",
-      "type": "movie",
-      "title": "Inception",
-      "year": 2010,
-      "creator": "Christopher Nolan",
-      "durationMin": 148,
-      "genres": [
-        "Acción",
-        "Aventura",
-        "Ciencia ficción"
-      ],
-      "synopsis": "Inception es una película británica-estadounidense-canadiense-japonesa de ciencia ficción escrita, producida y dirigida por Christopher Nolan y protagonizada por Leonardo DiCaprio, Elliot Page, Joseph Gordon-Levitt, Ken Watanabe, Tom Hardy, Marion Cotillard, Cillian Murphy, Tom Berenger y Michael Caine. Se estrenó en Londres el 9 de julio de 2010. Recibió cuatro premios Óscar y otras cuatro nominaciones. Además, obtuvo el tercer lugar de taquilla en 2010, según la ABC. La Biblioteca del Congreso de los Estados Unidos la seleccionó para su conservación en el Registro Nacional de Películas en 2025.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/InceptionCast2July10.jpg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 88,
-      "wikidataId": "Q25188",
-      "tmdbId": 27205,
-      "voteAvg": 8.1,
-      "voteCount": 364,
-      "wikiLangs": 97,
-      "originCountry": [
-        "Q145"
-      ],
-      "collection": "Q26705935",
-      "awards": [
-        "Q131520",
-        "Q488645",
-        "Q830079",
-        "Q393686",
-        "Q1966965",
-        "Q1131772",
-        "Q1056240"
-      ],
-      "keywords": [
-        "action",
-        "adventure",
-        "sci-fi",
-        "Q544830",
-        "Q4425624"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
       "id": "movie:fight-club-1999",
       "type": "movie",
       "title": "Fight Club",
@@ -7594,103 +7325,6 @@
       "imageCredit": "Wikimedia Commons",
       "src": {
         "wikidataId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:the-lord-of-the-rings-the-fellowship-of-the-ring-2001",
-      "type": "movie",
-      "title": "The Lord of the Rings: The Fellowship of the Ring",
-      "year": 2001,
-      "creator": "Peter Jackson",
-      "durationMin": 178,
-      "genres": [
-        "Acción",
-        "Aventura",
-        "Drama"
-      ],
-      "synopsis": "El Señor de los Anillos: la Comunidad del Anillo —cuyo título original en inglés es The Lord of the Rings: The Fellowship of the Ring—, conocida también de forma más abreviada como La Comunidad del Anillo, es una película de aventuras y fantasía de 2001 dirigida por Peter Jackson y basada en el primer volumen de El señor de los Anillos, de J. R. R. Tolkien (1954-55). Es la primera entrega de la trilogía cinematográfica de El Señor de los Anillos, compuesta también por Las Dos Torres y El Retorno del Rey, que a su vez adaptan los otros dos volúmenes de la saga literaria de fantasía.",
-      "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/LotR21.png/330px-LotR21.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 88,
-      "wikidataId": "Q127367",
-      "tmdbId": 120,
-      "voteAvg": 8.8,
-      "voteCount": 271,
-      "wikiLangs": 97,
-      "originCountry": [
-        "Q664"
-      ],
-      "collection": "Q190214",
-      "basedOn": "Q208002",
-      "awards": [
-        "Q131520",
-        "Q487136",
-        "Q488651",
-        "Q139184",
-        "Q393686",
-        "Q3414212"
-      ],
-      "keywords": [
-        "action",
-        "adventure",
-        "drama"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikipedia / Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:il-buono-il-brutto-il-cattivo-1966",
-      "type": "movie",
-      "title": "Il buono, il brutto, il cattivo",
-      "year": 1966,
-      "creator": "Sergio Leone",
-      "durationMin": 161,
-      "genres": [
-        "Western"
-      ],
-      "synopsis": "Il buono, il brutto, il cattivo es una película del subgénero de spaghetti western estrenada en 1966 y coproducida entre Italia, España y Alemania. Fue dirigida por Sergio Leone y contó con las actuaciones de Clint Eastwood, Lee Van Cleef y Eli Wallach. El guion fue escrito por el propio Leone con Agenori Incrocci, Furio Scarpelli y Luciano Vincenzoni. La fotografía es obra de Tonino Delli Colli, y la música fue compuesta por Ennio Morricone.",
-      "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Zwei_Glorreiche_Halunken_Logo.png/330px-Zwei_Glorreiche_Halunken_Logo.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 88,
-      "wikidataId": "Q41483",
-      "tmdbId": 429,
-      "voteAvg": 8.8,
-      "voteCount": 76,
-      "wikiLangs": 95,
-      "originCountry": [
-        "Q38"
-      ],
-      "collection": "Q370180",
-      "keywords": [
-        "western"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikipedia / Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
         "voteAvg": "wikidata",
         "voteCount": "wikidata",
         "keywords": "wikidata",
@@ -7746,165 +7380,6 @@
         "keywords": "wikidata",
         "synopsis": "wikipedia",
         "posterUrl": "seed"
-      }
-    },
-    {
-      "id": "movie:the-matrix-1999",
-      "type": "movie",
-      "title": "The Matrix",
-      "year": 1999,
-      "creator": "Lana Wachowski",
-      "durationMin": 136,
-      "genres": [
-        "Acción",
-        "Ciencia ficción"
-      ],
-      "synopsis": "The Matrix es una película de acción y ciencia ficción de 1999 escrita y dirigida por las hermanas Wachowski y protagonizada por Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss y Hugo Weaving. Representa un futuro distópico en el que la humanidad está atrapada sin saberlo dentro de una realidad simulada llamada Matrix, que las máquinas inteligentes han creado para distraer a los humanos mientras usan sus cuerpos como fuente de energía en campos de cultivo. Cuando el programador informático Thomas Anderson, bajo el alias de hacker \"Neo\", descubre la incómoda verdad, se une a una rebelión contra las máquinas junto con otras personas que han sido liberadas de Matrix. Siendo estrenada en los Estados Unidos el 31 de marzo de 1999, es la primera entrega de la franquicia Matrix, de la que derivan una serie de videojuegos, cortos animados y cómics, llegando a ser un claro ejemplo del subgénero cyberpunk.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The.Matrix.glmatrix.1.png?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 87,
-      "wikidataId": "Q83495",
-      "tmdbId": 603,
-      "voteAvg": 7.8,
-      "voteCount": 36,
-      "wikiLangs": 114,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q1210827",
-      "awards": [
-        "Q1131772",
-        "Q281939",
-        "Q488645",
-        "Q830079",
-        "Q393686",
-        "Q1265702",
-        "Q739633",
-        "Q787127"
-      ],
-      "keywords": [
-        "action",
-        "sci-fi",
-        "Q2798820",
-        "Q544830",
-        "Q11660",
-        "Q2742884"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:goodfellas-1990",
-      "type": "movie",
-      "title": "Goodfellas",
-      "year": 1990,
-      "creator": "Martin Scorsese",
-      "durationMin": 146,
-      "genres": [
-        "Biografía",
-        "Crimen",
-        "Drama"
-      ],
-      "synopsis": "Goodfellas es una película dramática criminal estadounidense de 1990 dirigida por Martin Scorsese. Está basada en el libro sobre hechos reales Wiseguy de Nicholas Pileggi, quien también coescribió el guion para la película con Scorsese. La película sigue el ascenso y caída de tres delincuentes durante tres décadas. Es protagonizada por Ray Liotta, Robert De Niro, Joe Pesci, Lorraine Bracco y Paul Sorvino.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 87,
-      "wikidataId": "Q42047",
-      "tmdbId": 769,
-      "voteAvg": 9,
-      "voteCount": 21,
-      "wikiLangs": 73,
-      "originCountry": [
-        "Q30"
-      ],
-      "basedOn": "Q2543777",
-      "awards": [
-        "Q106291",
-        "Q1966965"
-      ],
-      "keywords": [
-        "biography",
-        "crime",
-        "drama",
-        "Q558354"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
-      "id": "movie:star-wars-episode-v-the-empire-strikes-back-1980",
-      "type": "movie",
-      "title": "Star Wars: Episode V - The Empire Strikes Back",
-      "year": 1980,
-      "creator": "Irvin Kershner",
-      "durationMin": 124,
-      "genres": [
-        "Acción",
-        "Aventura",
-        "Fantasía"
-      ],
-      "synopsis": "Star Wars: Episodio V - El Imperio contraataca es una película del género space opera dirigida por Irvin Kershner y estrenada por primera vez en Estados Unidos el 21 de mayo de 1980. El guion, basado en una historia de George Lucas, fue escrito por Lawrence Kasdan y Leigh Brackett. Aunque en términos cronológicos internos sea la quinta película de la saga Star Wars, en realidad fue la segunda película de la saga en ser estrenada.",
-      "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Theempirestrikesback-logo2.svg/langes-330px-Theempirestrikesback-logo2.svg.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 87,
-      "wikidataId": "Q181795",
-      "tmdbId": 1891,
-      "voteAvg": 9,
-      "voteCount": 25,
-      "wikiLangs": 84,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q22092344",
-      "awards": [
-        "Q830079",
-        "Q1131772",
-        "Q3414212"
-      ],
-      "keywords": [
-        "action",
-        "adventure",
-        "fantasy",
-        "Q5401971"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikipedia / Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
       }
     },
     {
@@ -7999,67 +7474,6 @@
       }
     },
     {
-      "id": "movie:gisaengchung-2019",
-      "type": "movie",
-      "title": "Gisaengchung",
-      "year": 2019,
-      "creator": "Bong Joon Ho",
-      "durationMin": 132,
-      "genres": [
-        "Comedia",
-        "Drama",
-        "Thriller"
-      ],
-      "synopsis": "Parásitos es una película surcoreana de drama, suspenso y humor negro del año 2019, dirigida por Bong Joon-ho y protagonizada por Song Kang-ho, Lee Sun-kyun, Cho Yeo-jeong, Choi Woo-shik y Park So-dam.",
-      "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Parasite_Korean_logo.png/330px-Parasite_Korean_logo.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 86,
-      "wikidataId": "Q61448040",
-      "tmdbId": 496243,
-      "voteAvg": 9.4,
-      "voteCount": 56,
-      "wikiLangs": 81,
-      "originCountry": [
-        "Q884"
-      ],
-      "awards": [
-        "Q179808",
-        "Q1524205",
-        "Q102427",
-        "Q41417",
-        "Q105304",
-        "Q103360",
-        "Q41375",
-        "Q2925687",
-        "Q922263",
-        "Q828289",
-        "Q387380",
-        "Q518675",
-        "Q4649838",
-        "Q30632400"
-      ],
-      "keywords": [
-        "comedy",
-        "drama",
-        "thriller"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikipedia / Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
       "id": "movie:soorarai-pottru-2020",
       "type": "movie",
       "title": "Soorarai Pottru",
@@ -8135,123 +7549,6 @@
         "Q25054194",
         "Q693827",
         "Q124490"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
-      "id": "movie:sen-to-chihiro-no-kamikakushi-2001",
-      "type": "movie",
-      "title": "Sen to Chihiro no kamikakushi",
-      "year": 2001,
-      "creator": "Hayao Miyazaki",
-      "durationMin": 125,
-      "genres": [
-        "Animación",
-        "Aventura",
-        "Familiar"
-      ],
-      "synopsis": "El viaje de Chihiro  es una película de animación japonesa estrenada el 20 de julio de 2001. Fue dirigida por Hayao Miyazaki y producida en el Studio Ghibli, por Tokuma Shoten, Nippon Television Network, Dentsu, Buena Vista Home Entertainment, Tohokushinsha Film, Mitsubishi y distribuida por Tōhō. El elenco principal está compuesto por Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naitō, Yasuko Sawaguchi, Tsunehiko Kamijō, Takehiko Ono y Bunta Sugawara. Se trata del séptimo largometraje dirigido por Miyazaki dentro del estudio y de la decimosegunda producción de Ghibli. El filme cuenta la historia de una niña de diez años llamada Chihiro, quien durante una mudanza se ve atrapada en un mundo mágico y sobrenatural, teniendo como misión buscar su libertad y la de sus padres, y así poder regresar a su mundo.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Sen%20to%20Chihiro%20no%20kamikakushi%20title.jpg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 86,
-      "wikidataId": "Q155653",
-      "tmdbId": 129,
-      "voteAvg": 8.6,
-      "voteCount": 87600,
-      "wikiLangs": 109,
-      "originCountry": [
-        "Q17"
-      ],
-      "collection": "Q104830727",
-      "awards": [
-        "Q106800",
-        "Q154590",
-        "Q19830564",
-        "Q1800189",
-        "Q922357"
-      ],
-      "keywords": [
-        "animation",
-        "adventure",
-        "family",
-        "Q3563376",
-        "Q89640",
-        "Q109278985",
-        "Q109061774",
-        "Q20888800",
-        "Q814158"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:saving-private-ryan-1998",
-      "type": "movie",
-      "title": "Saving Private Ryan",
-      "year": 1998,
-      "creator": "Steven Spielberg",
-      "durationMin": 169,
-      "genres": [
-        "Drama",
-        "Bélica"
-      ],
-      "synopsis": "Saving Private Ryan es una película bélica épica estadounidense estrenada en 1998 y ambientada en la invasión de Normandía durante la Segunda Guerra Mundial. Dirigido por Steven Spielberg y escrito por Robert Rodat, el filme destaca por su recreación muy realista de la guerra, especialmente en sus intensos 27 primeros minutos, que narran el desembarco y asalto aliado en «Playa Omaha» el 6 de junio de 1944. La historia continúa con Tom Hanks como el capitán John H. Miller del ejército de los Estados Unidos y siete hombres en busca de un paracaidista, el soldado James Francis Ryan, que ha perdido a sus tres hermanos en combate. La película es una coproducción entre DreamWorks Pictures, Paramount Pictures, Amblin Entertainment y Mutual Film Company. DreamWorks distribuyó la película en Norteamérica y Paramount internacionalmente.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BZjhkMDM4MWItZTVjOC00ZDRhLThmYTAtM2I5NzBmNmNlMzI1XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 86,
-      "wikidataId": "Q165817",
-      "tmdbId": 857,
-      "voteAvg": 8.7,
-      "voteCount": 38,
-      "wikiLangs": 86,
-      "originCountry": [
-        "Q30"
-      ],
-      "awards": [
-        "Q1011509",
-        "Q103360",
-        "Q131520",
-        "Q488645",
-        "Q281939",
-        "Q830079",
-        "Q1966965",
-        "Q5211226"
-      ],
-      "keywords": [
-        "drama",
-        "war",
-        "Q16471",
-        "Q8641370",
-        "Q362",
-        "Q20807927",
-        "Q16211712",
-        "Q4737010",
-        "Q1463062"
       ],
       "src": {
         "wikidataId": "wikidata",
@@ -8737,122 +8034,6 @@
       }
     },
     {
-      "id": "movie:the-departed-2006",
-      "type": "movie",
-      "title": "The Departed",
-      "year": 2006,
-      "creator": "Martin Scorsese",
-      "durationMin": 151,
-      "genres": [
-        "Crimen",
-        "Drama",
-        "Thriller"
-      ],
-      "synopsis": "The Departed es una película estadounidense de suspenso y crimen de 2006 dirigida por Martin Scorsese, escrita por William Monahan y protagonizada por Leonardo DiCaprio, Matt Damon, Jack Nicholson y Mark Wahlberg, con Martin Sheen, Ray Winstone, Vera Farmiga y Alec Baldwin en papeles secundarios. La película es a la vez una nueva versión de la película de Hong Kong de 2002 Infernal Affairs y también se basa libremente en la Winter Hill Gang de Boston; el personaje Colin Sullivan está basado en el agente corrupto del FBI John Connolly, mientras que el personaje Frank Costello está basado en el gánster Whitey Bulger.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Departed%20logo.svg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 85,
-      "wikidataId": "Q172975",
-      "tmdbId": 1422,
-      "voteAvg": 8.3,
-      "voteCount": 39,
-      "wikiLangs": 80,
-      "originCountry": [
-        "Q30"
-      ],
-      "basedOn": "Q714057",
-      "awards": [
-        "Q102427",
-        "Q17748520",
-        "Q103360",
-        "Q281939",
-        "Q107258",
-        "Q1062026",
-        "Q1966965"
-      ],
-      "keywords": [
-        "crime",
-        "drama",
-        "thriller",
-        "Q46952"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:the-pianist-2002",
-      "type": "movie",
-      "title": "The Pianist",
-      "year": 2002,
-      "creator": "Roman Polanski",
-      "durationMin": 150,
-      "genres": [
-        "Biografía",
-        "Drama",
-        "Música"
-      ],
-      "synopsis": "El pianista es una película del año 2002 dirigida por Roman Polanski y con Adrien Brody como actor principal. La película es una adaptación de las memorias del músico polaco de origen judío Władysław Szpilman. Narrando como este sobrevivió al holocausto y la ocupación de Varsovia (Polonia) por parte de la Alemania Nazi en la Segunda Guerra Mundial.",
-      "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Adrien_Brody_Cannes_2013.jpg/330px-Adrien_Brody_Cannes_2013.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 85,
-      "wikidataId": "Q150804",
-      "tmdbId": 423,
-      "voteAvg": 8.2,
-      "voteCount": 188,
-      "wikiLangs": 78,
-      "originCountry": [
-        "Q142"
-      ],
-      "collection": "Q26705935",
-      "basedOn": "Q2641481",
-      "awards": [
-        "Q103916",
-        "Q103360",
-        "Q107258",
-        "Q787131",
-        "Q139184",
-        "Q179808",
-        "Q1377733",
-        "Q1966965"
-      ],
-      "keywords": [
-        "biography",
-        "drama",
-        "music",
-        "Q2763",
-        "Q157176",
-        "Q104482419"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikipedia / Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
       "id": "movie:american-history-x-1998",
       "type": "movie",
       "title": "American History X",
@@ -9013,111 +8194,6 @@
       }
     },
     {
-      "id": "movie:terminator-2-judgment-day-1991",
-      "type": "movie",
-      "title": "Terminator 2: Judgment Day",
-      "year": 1991,
-      "creator": "James Cameron",
-      "durationMin": 137,
-      "genres": [
-        "Acción",
-        "Ciencia ficción"
-      ],
-      "synopsis": "Terminator 2: el juicio final es una película estadounidense de acción y ciencia ficción dirigida y producida por James Cameron, quien coescribió el guion junto con William Wisher Jr. Protagonizada por Arnold Schwarzenegger, Linda Hamilton, Robert Patrick y Edward Furlong, constituye la secuela de The Terminator (1984) y la segunda entrega de la franquicia Terminator.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 85,
-      "wikidataId": "Q170564",
-      "tmdbId": 280,
-      "voteAvg": 8.5,
-      "voteCount": 175,
-      "wikiLangs": 93,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q98063049",
-      "awards": [
-        "Q488645",
-        "Q487136",
-        "Q830079",
-        "Q393686",
-        "Q1131772",
-        "Q3414212"
-      ],
-      "keywords": [
-        "action",
-        "sci-fi",
-        "Q182154",
-        "Q181787",
-        "Q2254427"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
-      "id": "movie:nuovo-cinema-paradiso-1988",
-      "type": "movie",
-      "title": "Nuovo Cinema Paradiso",
-      "year": 1988,
-      "creator": "Giuseppe Tornatore",
-      "durationMin": 155,
-      "genres": [
-        "Drama",
-        "Romance"
-      ],
-      "synopsis": "Cinema Paradiso es una película italiana dramática estrenada en 1988, ganadora del Óscar a mejor película de habla no inglesa. Está dirigida por Giuseppe Tornatore.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20film%20Nuovo%20Cinema%20Paradiso.jpg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 85,
-      "wikidataId": "Q464032",
-      "tmdbId": 11216,
-      "voteAvg": 8,
-      "voteCount": 86,
-      "wikiLangs": 56,
-      "originCountry": [
-        "Q142"
-      ],
-      "awards": [
-        "Q844804",
-        "Q19573074",
-        "Q105304",
-        "Q932281",
-        "Q77533361"
-      ],
-      "keywords": [
-        "drama",
-        "romance",
-        "Q16144339",
-        "Q590870"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
       "id": "movie:hotaru-no-haka-1988",
       "type": "movie",
       "title": "Hotaru no haka",
@@ -9266,56 +8342,6 @@
         "Q6206",
         "Q190267",
         "Q914841"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:psycho-1960",
-      "type": "movie",
-      "title": "Psycho",
-      "year": 1960,
-      "creator": "Alfred Hitchcock",
-      "durationMin": 109,
-      "genres": [
-        "Terror",
-        "Misterio",
-        "Thriller"
-      ],
-      "synopsis": "Psicosis es una película estadounidense de suspenso y terror de 1960, producida y dirigida por Alfred Hitchcock. El guion, escrito por Joseph Stefano, se basa en la novela homónima de Robert Bloch publicada en 1959. La película está protagonizada por Anthony Perkins, Janet Leigh, Vera Miles, John Gavin y Martin Balsam. La trama se centra en el encuentro entre la malversadora fugitiva Marion Crane (Leigh) y Norman Bates (Perkins), el tímido propietario de un solitario motel. Posteriormente, un investigador privado (Balsam), el amante de Marion, Sam Loomis (Gavin), y su hermana Lila (Miles) investigan su desaparición.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Psycho%20(1960)%20theatrical%20poster%20(retouched).jpg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 85,
-      "wikidataId": "Q163038",
-      "tmdbId": 539,
-      "voteAvg": 9.2,
-      "voteCount": 18,
-      "wikiLangs": 78,
-      "originCountry": [
-        "Q30"
-      ],
-      "basedOn": "Q1275361",
-      "awards": [
-        "Q822907"
-      ],
-      "keywords": [
-        "horror",
-        "mystery",
-        "thriller",
-        "Q484188"
       ],
       "imageSrc": "wikimedia",
       "imageCredit": "Wikimedia Commons",
@@ -9624,110 +8650,6 @@
       }
     },
     {
-      "id": "movie:spider-man-into-the-spider-verse-2018",
-      "type": "movie",
-      "title": "Spider-Man: Into the Spider-Verse",
-      "year": 2018,
-      "creator": "Bob Persichetti",
-      "durationMin": 117,
-      "genres": [
-        "Animación",
-        "Acción",
-        "Aventura"
-      ],
-      "synopsis": "Spider-Man: Un nuevo universo es una película estadounidense de superhéroes animada por computadora de 2018, dirigida por Bob Persichetti, Peter Ramsey y Rodney Rothman y escrita por Phil Lord y Rothman. Siendo la primera película animada de Spider-Man, la cinta es una adaptación de la línea de cómics Spider-Verse y sigue a Miles Morales, un joven que se convierte en el nuevo Spider-Man y se une a otros Spider-People de varios universos paralelos para salvar su universo de Kingpin. La película cuenta con las voces de Shameik Moore como Miles Morales/Spider-Man y Liev Schreiber como el villano Kingpin, junto con Jake Johnson, Hailee Steinfeld, Mahershala Ali, Brian Tyree Henry, Lily Tomlin, Luna Lauren Vélez, John Mulaney, Kimiko Glenn y Nicolas Cage. Fue producida por Sony Pictures Animation y Columbia Pictures en asociación con Marvel Entertainment. La banda sonora de la película incluye la canción: \"Sunflower\" de Post Malone y Swae Lee.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 84,
-      "wikidataId": "Q29588607",
-      "tmdbId": 324857,
-      "voteAvg": 8.8,
-      "voteCount": 16430,
-      "wikiLangs": 69,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q99601314",
-      "awards": [
-        "Q1800189",
-        "Q1056240",
-        "Q106800",
-        "Q922357",
-        "Q115325414"
-      ],
-      "keywords": [
-        "animation",
-        "action",
-        "adventure",
-        "Q17630593"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
-      "id": "movie:avengers-endgame-2019",
-      "type": "movie",
-      "title": "Avengers: Endgame",
-      "year": 2019,
-      "creator": "Anthony Russo",
-      "durationMin": 181,
-      "genres": [
-        "Acción",
-        "Aventura",
-        "Drama"
-      ],
-      "synopsis": "Avengers: Endgame es una película estadounidense de superhéroes de 2019 basada en el equipo de superhéroes de Marvel Comics, los Vengadores. Producida por Marvel Studios y distribuida por Walt Disney Studios Motion Pictures, es la secuela de Avengers: Infinity War (2018) y la película número 22 en el Universo cinematográfico de Marvel (UCM). Dirigida por Anthony y Joe Russo y escrita por Christopher Markus y Stephen McFeely, la película cuenta con un reparto coral que incluye a Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson, Jeremy Renner, Don Cheadle, Paul Rudd, Brie Larson, Karen Gillan, Danai Gurira, Benedict Wong, Jon Favreau, Bradley Cooper, Gwyneth Paltrow y Josh Brolin. En la película, los miembros supervivientes de los Vengadores y sus aliados intentan revertir las acciones de Thanos en Infinity War, que borraron la mitad de toda la vida en el universo.",
-      "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Avengers_Endgame_Logo_Black.svg/langes-330px-Avengers_Endgame_Logo_Black.svg.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 84,
-      "wikidataId": "Q23781155",
-      "tmdbId": 299534,
-      "voteAvg": 8.2,
-      "voteCount": 551,
-      "wikiLangs": 90,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q642878",
-      "basedOn": "Q322646",
-      "awards": [
-        "Q1062026",
-        "Q17011060",
-        "Q6404857"
-      ],
-      "keywords": [
-        "action",
-        "adventure",
-        "drama"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikipedia / Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
       "id": "movie:avengers-infinity-war-2018",
       "type": "movie",
       "title": "Avengers: Infinity War",
@@ -9763,102 +8685,6 @@
       ],
       "imageSrc": "wikimedia",
       "imageCredit": "Wikipedia / Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:django-unchained-2012",
-      "type": "movie",
-      "title": "Django Unchained",
-      "year": 2012,
-      "creator": "Quentin Tarantino",
-      "durationMin": 165,
-      "genres": [
-        "Drama",
-        "Western"
-      ],
-      "synopsis": "Django Unchained es una película estadounidense del género western escrita y dirigida por Quentin Tarantino, interpretada por un amplio reparto liderado por Jamie Foxx, Christoph Waltz, Leonardo DiCaprio y Samuel L. Jackson. Se estrenó en los cines de Estados Unidos el 25 de diciembre de 2012 y recibió diversos galardones, como 2 premios Oscar y 2 Globos de Oro.",
-      "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Django_Unchained_logo.svg/langes-330px-Django_Unchained_logo.svg.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 84,
-      "wikidataId": "Q571032",
-      "tmdbId": 68718,
-      "voteAvg": 8,
-      "voteCount": 297,
-      "wikiLangs": 74,
-      "originCountry": [
-        "Q30"
-      ],
-      "awards": [
-        "Q106291",
-        "Q41417",
-        "Q1966965"
-      ],
-      "keywords": [
-        "drama",
-        "western",
-        "Q1712140",
-        "Q118382"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikipedia / Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:the-dark-knight-rises-2012",
-      "type": "movie",
-      "title": "The Dark Knight Rises",
-      "year": 2012,
-      "creator": "Christopher Nolan",
-      "durationMin": 164,
-      "genres": [
-        "Acción",
-        "Aventura"
-      ],
-      "synopsis": "The Dark Knight Rises es una película de superhéroes británico-estadounidense de 2012 dirigida, producida y coescrita por Christopher Nolan. Basada en el personaje Batman de DC Comics, la cinta es la tercera y última entrega de la serie fílmica Batman de Nolan, y la secuela de Batman Begins (2005) y The Dark Knight (2008). Christian Bale repite el papel principal de Bruce Wayne/Batman, junto con el mismo reparto de aliados: Michael Caine como Alfred Pennyworth, Gary Oldman como James Gordon, y Morgan Freeman como Lucius Fox. El filme introduce a Selina Kyle, una ladrona astuta y moralmente ambigua, y Bane, un mercenario empeñado en destruir Gotham City y que fuerza a un Bruce Wayne más viejo a salir del retiro y volverse Batman nuevamente.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Batman%203.JPG?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 84,
-      "wikidataId": "Q189330",
-      "tmdbId": 49026,
-      "voteAvg": 8,
-      "voteCount": 376,
-      "wikiLangs": 71,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q12859908",
-      "keywords": [
-        "action",
-        "adventure",
-        "Q1712140",
-        "Q7283"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
       "src": {
         "wikidataId": "wikidata",
         "tmdbId": "wikidata",
@@ -10051,111 +8877,6 @@
       }
     },
     {
-      "id": "movie:oldeuboi-2003",
-      "type": "movie",
-      "title": "Oldeuboi",
-      "year": 2003,
-      "creator": "Chan-wook Park",
-      "durationMin": 101,
-      "genres": [
-        "Acción",
-        "Drama",
-        "Misterio"
-      ],
-      "synopsis": "Oldboy es una película de thriller, drama y neo noir surcoreana dirigida por Park Chan-wook. Inspirada en el manga homónimo, guion de Garon Tsuchiya y dibujo de Nobuaki Minegishi, se presentó en 2003 como la segunda entrega de la denominada «Trilogía de la venganza», precedida en esta serie por Sympathy for Mr. Vengeance y continuada por Sympathy for Lady Vengeance.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTI3NTQyMzU5M15BMl5BanBnXkFtZTcwMTM2MjgyMQ@@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 84,
-      "wikidataId": "Q475693",
-      "tmdbId": 670,
-      "voteAvg": 7.4,
-      "voteCount": 160,
-      "wikiLangs": 61,
-      "originCountry": [
-        "Q884"
-      ],
-      "collection": "Q483605",
-      "basedOn": "Q1648035",
-      "awards": [
-        "Q844804",
-        "Q6359242"
-      ],
-      "keywords": [
-        "action",
-        "drama",
-        "mystery",
-        "Q10737",
-        "Q1712140",
-        "Q127683",
-        "Q6010868",
-        "Q101574237"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
-      "id": "movie:mononoke-hime-1997",
-      "type": "movie",
-      "title": "Mononoke-hime",
-      "year": 1997,
-      "creator": "Hayao Miyazaki",
-      "durationMin": 134,
-      "genres": [
-        "Animación",
-        "Acción",
-        "Aventura"
-      ],
-      "synopsis": "La princesa Mononoke  es una película de animación japonesa escrita y dirigida por Hayao Miyazaki, estrenada en 1997. Fue producida por Studio Ghibli y distribuida por Tōhō. La princesa Mononoke fue el undécimo largometraje de Studio Ghibli y el sexto dirigido por Miyazaki.",
-      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Princess_Mononoke_logo.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 84,
-      "wikidataId": "Q186572",
-      "tmdbId": 128,
-      "voteAvg": 8,
-      "voteCount": 29,
-      "wikiLangs": 73,
-      "originCountry": [
-        "Q17"
-      ],
-      "collection": "Q104830727",
-      "awards": [
-        "Q19830564",
-        "Q378567"
-      ],
-      "keywords": [
-        "animation",
-        "action",
-        "adventure",
-        "Q177413"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikipedia / Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
       "id": "movie:once-upon-a-time-in-america-1984",
       "type": "movie",
       "title": "Once Upon a Time in America",
@@ -10201,159 +8922,6 @@
         "keywords": "wikidata",
         "synopsis": "wikipedia",
         "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:raiders-of-the-lost-ark-1981",
-      "type": "movie",
-      "title": "Raiders of the Lost Ark",
-      "year": 1981,
-      "creator": "Steven Spielberg",
-      "durationMin": 115,
-      "genres": [
-        "Acción",
-        "Aventura"
-      ],
-      "synopsis": "Raiders of the Lost Ark es una película dirigida por Steven Spielberg y producida por George Lucas, y estrenada en 1981. Se trata de la primera película estrenada de la serie Indiana Jones, aunque es la segunda en la cronología del personaje. La trama describe la búsqueda del Arca de la Alianza por los nazis y los esfuerzos del arqueólogo Indiana Jones para evitarlo.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Indy's%20Arc.jpg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 84,
-      "wikidataId": "Q174284",
-      "tmdbId": 85,
-      "voteAvg": 9.3,
-      "voteCount": 17,
-      "wikiLangs": 80,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q98018448",
-      "awards": [
-        "Q281939",
-        "Q277751",
-        "Q830079",
-        "Q393686",
-        "Q1966965",
-        "Q3414212"
-      ],
-      "keywords": [
-        "action",
-        "adventure",
-        "Q14565683",
-        "Q23498"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:the-shining-1980",
-      "type": "movie",
-      "title": "The Shining",
-      "year": 1980,
-      "creator": "Stanley Kubrick",
-      "durationMin": 146,
-      "genres": [
-        "Drama",
-        "Terror"
-      ],
-      "synopsis": "El resplandor es una película británico-estadounidense de 1980 del subgénero de terror psicológico, producida y dirigida por Stanley Kubrick y protagonizada por Jack Nicholson, Shelley Duvall, Danny Lloyd y Scatman Crothers. Está basada en la novela homónima del escritor Stephen King, publicada en 1977, si bien la novela y la película difieren notablemente.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Stanley%20Kubrick%20The%20Exhibition%20-%20TIFF%20-%20Shinning%20(16215970687).jpg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 84,
-      "wikidataId": "Q186341",
-      "tmdbId": 694,
-      "voteAvg": 8.5,
-      "voteCount": 26,
-      "wikiLangs": 75,
-      "originCountry": [
-        "Q145"
-      ],
-      "basedOn": "Q470937",
-      "keywords": [
-        "drama",
-        "horror",
-        "Q80837",
-        "Q15326",
-        "Q200092",
-        "Q1778765"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:alien-1979",
-      "type": "movie",
-      "title": "Alien",
-      "year": 1979,
-      "creator": "Ridley Scott",
-      "durationMin": 117,
-      "genres": [
-        "Terror",
-        "Ciencia ficción"
-      ],
-      "synopsis": "Alien: el octavo pasajero, o simplemente Alien en su idioma original, es una película de ciencia ficción y terror dirigida por el cineasta británico Ridley Scott y estrenada en 1979. El reparto estuvo integrado por Sigourney Weaver, Tom Skerritt, Veronica Cartwright, Harry Dean Stanton, John Hurt, Ian Holm y Yaphet Kotto, y la trama relata el acecho de una criatura alienígena a la tripulación de una nave espacial.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMmQ2MmU3NzktZjAxOC00ZDZhLTk4YzEtMDMyMzcxY2IwMDAyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 84,
-      "wikidataId": "Q103569",
-      "tmdbId": 348,
-      "voteAvg": 9.1,
-      "voteCount": 34,
-      "wikiLangs": 83,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q1990792",
-      "awards": [
-        "Q1131772",
-        "Q1257399",
-        "Q393686",
-        "Q1265702",
-        "Q739633",
-        "Q3414212"
-      ],
-      "keywords": [
-        "horror",
-        "sci-fi",
-        "Q181508"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
       }
     },
     {
@@ -10687,58 +9255,6 @@
         "Q189643",
         "Q1121708",
         "Q223270"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:the-great-dictator-1940",
-      "type": "movie",
-      "title": "The Great Dictator",
-      "year": 1940,
-      "creator": "Charles Chaplin",
-      "durationMin": 125,
-      "genres": [
-        "Comedia",
-        "Drama",
-        "Bélica"
-      ],
-      "synopsis": "El gran dictador es una película estadounidense de comedia dramática, estrenada en 1940, con guion, dirección y actuación de Charles Chaplin. Chaplin era el único cineasta en Hollywood que seguía realizando películas mudas cuando el sonido ya estaba plenamente implantado en el cine, y esta fue su primera película sonora.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Great%20Dictator%20still%20cropped%20(high%20quality%20version).jpg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 84,
-      "wikidataId": "Q109116",
-      "tmdbId": 914,
-      "voteAvg": 8.9,
-      "voteCount": 52,
-      "wikiLangs": 81,
-      "originCountry": [
-        "Q30"
-      ],
-      "awards": [
-        "Q1790281",
-        "Q1966965"
-      ],
-      "keywords": [
-        "comedy",
-        "drama",
-        "war",
-        "Q6223",
-        "Q22649",
-        "Q317"
       ],
       "imageSrc": "wikimedia",
       "imageCredit": "Wikimedia Commons",
@@ -11099,117 +9615,6 @@
       }
     },
     {
-      "id": "movie:inglourious-basterds-2009",
-      "type": "movie",
-      "title": "Inglourious Basterds",
-      "year": 2009,
-      "creator": "Quentin Tarantino",
-      "durationMin": 153,
-      "genres": [
-        "Aventura",
-        "Drama",
-        "Bélica"
-      ],
-      "synopsis": "Inglourious Basterds es una película de 2009 escrita y dirigida por Quentin Tarantino, protagonizada por Brad Pitt, Christoph Waltz y Mélanie Laurent, y lanzada por The Weinstein Company en Estados Unidos y por Universal Pictures en el resto del mundo.",
-      "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Quentin_Tarantino.jpg/330px-Quentin_Tarantino.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 83,
-      "wikidataId": "Q153723",
-      "tmdbId": 16869,
-      "voteAvg": 7.8,
-      "voteCount": 36,
-      "wikiLangs": 80,
-      "originCountry": [
-        "Q183"
-      ],
-      "collection": "Q26705935",
-      "awards": [
-        "Q106291",
-        "Q1966965",
-        "Q7971821"
-      ],
-      "keywords": [
-        "adventure",
-        "drama",
-        "war",
-        "Q362",
-        "Q1712140",
-        "Q2763",
-        "Q2748708"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikipedia / Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:eternal-sunshine-of-the-spotless-mind-2004",
-      "type": "movie",
-      "title": "Eternal Sunshine of the Spotless Mind",
-      "year": 2004,
-      "creator": "Michel Gondry",
-      "durationMin": 108,
-      "genres": [
-        "Drama",
-        "Romance",
-        "Ciencia ficción"
-      ],
-      "synopsis": "Eternal Sunshine of the Spotless Mind es una película estadounidense del año 2004, de los géneros de drama, romance y ciencia ficción. Está dirigida por Michel Gondry y escrita por Charlie Kaufman. La historia, creada por Pierre Bismuth, Kaufman y Gondry, trata sobre una pareja separada que, mediante un proceso de borrado de memoria, se han borrado uno al otro y luego vuelven a conocerse. El reparto coral incluye a Jim Carrey, Kate Winslet, Kirsten Dunst, Mark Ruffalo, Elijah Wood y Tom Wilkinson. El título del filme proviene de un verso del poema Eloisa to Abelard (1717), de Alexander Pope.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTY4NzcwODg3Nl5BMl5BanBnXkFtZTcwNTEwOTMyMw@@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 83,
-      "wikidataId": "Q208269",
-      "tmdbId": 38,
-      "voteAvg": 8.5,
-      "voteCount": 256,
-      "wikiLangs": 67,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q26705935",
-      "awards": [
-        "Q41417",
-        "Q1131772"
-      ],
-      "keywords": [
-        "drama",
-        "romance",
-        "sci-fi",
-        "Q6815724",
-        "Q97243058",
-        "Q1640893",
-        "Q13604751",
-        "Q3267244",
-        "Q1759895",
-        "Q1189047",
-        "Q11072"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
       "id": "movie:am-lie-2001",
       "type": "movie",
       "title": "Am\u001alie",
@@ -11227,95 +9632,6 @@
         "Prime Video"
       ],
       "popularity": 83
-    },
-    {
-      "id": "movie:snatch-2000",
-      "type": "movie",
-      "title": "Snatch",
-      "year": 2000,
-      "creator": "Guy Ritchie",
-      "durationMin": 104,
-      "genres": [
-        "Comedia",
-        "Crimen"
-      ],
-      "synopsis": "Snatch es una película británica del director y guionista Guy Ritchie.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTA2NDYxOGYtYjU1Mi00Y2QzLTgxMTQtMWI1MGI0ZGQ5MmU4XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 83,
-      "wikidataId": "Q335160",
-      "tmdbId": 107,
-      "voteAvg": 6.4,
-      "voteCount": 141,
-      "wikiLangs": 58,
-      "originCountry": [
-        "Q145"
-      ],
-      "keywords": [
-        "comedy",
-        "crime"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
-      "id": "movie:requiem-for-a-dream-2000",
-      "type": "movie",
-      "title": "Requiem for a Dream",
-      "year": 2000,
-      "creator": "Darren Aronofsky",
-      "durationMin": 102,
-      "genres": [
-        "Drama"
-      ],
-      "synopsis": "Requiem for a Dream es una película de drama psicológico estadounidense del año 2000, basada en la novela homónima de Hubert Selby Jr. de 1978. Fue dirigida por Darren Aronofsky y protagonizada por Ellen Burstyn, Jared Leto, Jennifer Connelly y Marlon Wayans. La película muestra a cuatro personajes afectados por la drogadicción y cómo ésta altera sus estados físicos y emocionales. Sus adicciones hacen que queden aprisionados en un mundo de engaño y desesperación. A medida que avanza la película, cada personaje se deteriora y sus delirios se hacen añicos por la dura realidad de sus situaciones, lo que resulta en una catástrofe.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BOTdiNzJlOWUtNWMwNS00NmFlLWI0YTEtZmI3YjIzZWUyY2Y3XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 83,
-      "wikidataId": "Q487181",
-      "tmdbId": 641,
-      "voteAvg": 7.4,
-      "voteCount": 32,
-      "wikiLangs": 62,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q26705935",
-      "basedOn": "Q3428183",
-      "keywords": [
-        "drama",
-        "Q3378593",
-        "Q60168",
-        "Q182413",
-        "Q3184856",
-        "Q2984799",
-        "Q1121708",
-        "Q36633"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
     },
     {
       "id": "movie:american-beauty-1999",
@@ -11980,63 +10296,6 @@
       }
     },
     {
-      "id": "movie:2001-a-space-odyssey-1968",
-      "type": "movie",
-      "title": "2001: A Space Odyssey",
-      "year": 1968,
-      "creator": "Stanley Kubrick",
-      "durationMin": 149,
-      "genres": [
-        "Aventura",
-        "Ciencia ficción"
-      ],
-      "synopsis": "2001: A Space Odyssey es una película de culto británico-estadounidense del género ciencia ficción y épica dirigida por Stanley Kubrick y estrenada el 3 de abril de 1968. Marcó un hito por su estilo de comunicación visual, sus revolucionarios efectos especiales, su realismo científico y sus proyecciones vanguardistas.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Photo%20A%20scene%20from%202001.%20A%20Space%20Odyssey%2C%20a%201968%20film%20directed%20by%20Stanley%20Kubrick%201968%20-%20Touring%20Club%20Italiano%2004%200826.jpg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 83,
-      "wikidataId": "Q103474",
-      "tmdbId": 62,
-      "voteAvg": 9.3,
-      "voteCount": 118,
-      "wikiLangs": 90,
-      "originCountry": [
-        "Q30"
-      ],
-      "basedOn": "Q2688051",
-      "awards": [
-        "Q393686",
-        "Q2947527",
-        "Q3090768",
-        "Q3703462",
-        "Q739633",
-        "Q3414212",
-        "Q1966965"
-      ],
-      "keywords": [
-        "adventure",
-        "sci-fi",
-        "Q11660",
-        "Q180046",
-        "Q2254427",
-        "Q83944"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
       "id": "movie:per-qualche-dollaro-in-pi-1965",
       "type": "movie",
       "title": "Per qualche dollaro in pi\u001a",
@@ -12437,54 +10696,6 @@
         "drama",
         "film-noir",
         "Q8454"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:citizen-kane-1941",
-      "type": "movie",
-      "title": "Citizen Kane",
-      "year": 1941,
-      "creator": "Orson Welles",
-      "durationMin": 119,
-      "genres": [
-        "Drama",
-        "Misterio"
-      ],
-      "synopsis": "Citizen Kane es una película dramática estadounidense de 1941, dirigida, producida y protagonizada por Orson Welles; escrita por este y Herman J. Mankiewicz. Es considerada como una de las obras maestras de toda la historia del cine, siendo particularmente alabada por su innovación en la música, la fotografía y la estructura narrativa. Fue estrenada por RKO Pictures.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Citizen%20Kane%20poster%2C%201941%20(Style%20B%2C%20unrestored).jpg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 83,
-      "wikidataId": "Q24815",
-      "tmdbId": 15,
-      "voteAvg": 8.2,
-      "voteCount": 19,
-      "wikiLangs": 84,
-      "originCountry": [
-        "Q30"
-      ],
-      "awards": [
-        "Q41417",
-        "Q1966965",
-        "Q1789102"
-      ],
-      "keywords": [
-        "drama",
-        "mystery"
       ],
       "imageSrc": "wikimedia",
       "imageCredit": "Wikimedia Commons",
@@ -13315,61 +11526,6 @@
       }
     },
     {
-      "id": "movie:the-wolf-of-wall-street-2013",
-      "type": "movie",
-      "title": "The Wolf of Wall Street",
-      "year": 2013,
-      "creator": "Martin Scorsese",
-      "durationMin": 180,
-      "genres": [
-        "Biografía",
-        "Crimen",
-        "Drama"
-      ],
-      "synopsis": "El lobo de Wall Street —cuyo título original en inglés es The Wolf of Wall Street— es una película estadounidense de comedia negra criminal biográfica de 2013 dirigida por Martin Scorsese y escrita por Terence Winter, basada en las memorias de Jordan Belfort del mismo nombre de 2007. Cuenta la carrera de Belfort como agente de bolsa en la ciudad de Nueva York y cómo su firma, Stratton Oakmont, se involucró desenfrenadamente en la corrupción y el fraude en Wall Street, lo que lo llevó a su caída. Leonardo DiCaprio, quien también fue productor de la película, interpreta a Belfort, con Jonah Hill como su socio y amigo Donnie Azoff, Margot Robbie como su segunda esposa, Naomi Lapaglia, y Kyle Chandler como el agente del FBI Patrick Denham.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Leonardo%20DiCaprio%202010.jpg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 82,
-      "wikidataId": "Q1392744",
-      "tmdbId": 106646,
-      "voteAvg": 7.8,
-      "voteCount": 289,
-      "wikiLangs": 75,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q26705935",
-      "basedOn": "Q19902843",
-      "awards": [
-        "Q1966965"
-      ],
-      "keywords": [
-        "biography",
-        "crime",
-        "drama",
-        "Q3183674",
-        "Q208697",
-        "Q92628454",
-        "Q193543",
-        "Q238350"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
       "id": "movie:chak-de-india-2007",
       "type": "movie",
       "title": "Chak De! India",
@@ -13426,109 +11582,6 @@
         "drama",
         "family",
         "sport"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikipedia / Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:there-will-be-blood-2007",
-      "type": "movie",
-      "title": "There Will Be Blood",
-      "year": 2007,
-      "creator": "Paul Thomas Anderson",
-      "durationMin": 158,
-      "genres": [
-        "Drama"
-      ],
-      "synopsis": "There Will Be Blood es una película estadounidense de 2007, dirigida por Paul Thomas Anderson, sobre un guion propio basado en la novela ¡Petróleo!, publicada en 1927 por Upton Sinclair. Se ambienta en los Estados Unidos de la primera mitad del siglo XX, cuando el petróleo estaba comenzando a convertirse en el elemento clave de la economía moderna, y narra la historia de un empresario obsesionado con hacerse rico a través de la perforación y explotación del nuevo recurso natural.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjAxODQ4MDU5NV5BMl5BanBnXkFtZTcwMDU4MjU1MQ@@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 82,
-      "wikidataId": "Q244315",
-      "tmdbId": 7345,
-      "voteAvg": 8.5,
-      "voteCount": 697000,
-      "wikiLangs": 60,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q26705935",
-      "basedOn": "Q7081270",
-      "awards": [
-        "Q17748520",
-        "Q103916",
-        "Q131520"
-      ],
-      "keywords": [
-        "drama"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
-      "id": "movie:pan-s-labyrinth-2006",
-      "type": "movie",
-      "title": "Pan's Labyrinth",
-      "year": 2006,
-      "creator": "Guillermo del Toro",
-      "durationMin": 118,
-      "genres": [
-        "Drama",
-        "Fantasía",
-        "Bélica"
-      ],
-      "synopsis": "El laberinto del fauno es una película hispano-mexicana de drama y fantasía oscura de 2006, escrita, coproducida y dirigida por Guillermo del Toro. Está protagonizada por Ivana Baquero, Sergi López, Maribel Verdú y Doug Jones. Fue distribuida por Warner Bros Pictures España y estrenada el 11 de octubre de 2006 en España, y después se estrenó el 20 de octubre de 2006 en México, con distribución de Warner Bros. Pictures México. La película fue seleccionada por la Academia Mexicana de Artes y Ciencias Cinematográficas para representar a México en los premios Óscar, en la categoría de Mejor Película de Lengua Extranjera. Fue la película de mejores críticas a nivel mundial durante 2006, también la película con más candidaturas a los premios Óscar entre las que no son de habla inglesa. También fue ganadora de 11 premios Ariel, destacado a la de mejor película y director.",
-      "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Pan%27s_Labyrinth_movie_black_horizontal_logo.png/330px-Pan%27s_Labyrinth_movie_black_horizontal_logo.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 82,
-      "wikidataId": "Q216006",
-      "tmdbId": 1417,
-      "voteAvg": 8.6,
-      "voteCount": 244,
-      "wikiLangs": 58,
-      "originCountry": [
-        "Q96"
-      ],
-      "collection": "Q26705935",
-      "awards": [
-        "Q1267697",
-        "Q18545668",
-        "Q131520",
-        "Q487136",
-        "Q277751",
-        "Q26185626",
-        "Q1056240"
-      ],
-      "keywords": [
-        "drama",
-        "fantasy",
-        "war",
-        "Q11995",
-        "Q10859"
       ],
       "imageSrc": "wikimedia",
       "imageCredit": "Wikipedia / Wikimedia Commons",
@@ -13876,65 +11929,6 @@
       }
     },
     {
-      "id": "movie:hauru-no-ugoku-shiro-2004",
-      "type": "movie",
-      "title": "Hauru no ugoku shiro",
-      "year": 2004,
-      "creator": "Hayao Miyazaki",
-      "durationMin": 119,
-      "genres": [
-        "Animación",
-        "Aventura",
-        "Familiar"
-      ],
-      "synopsis": "Howl no Ugoku Shiro , conocida en España como El castillo ambulante y en Hispanoamérica como El increíble castillo vagabundo, es una película de animación japonesa creada por Studio Ghibli, producida por Toshio Suzuki y dirigida por Hayao Miyazaki. Se basa en la novela homónima de la escritora británica Diana Wynne Jones.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNmM4YTFmMmItMGE3Yy00MmRkLTlmZGEtMzZlOTQzYjk3MzA2XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 82,
-      "wikidataId": "Q29011",
-      "tmdbId": 4935,
-      "voteAvg": 7.5,
-      "voteCount": 40,
-      "wikiLangs": 70,
-      "originCountry": [
-        "Q17"
-      ],
-      "collection": "Q104830727",
-      "basedOn": "Q132269",
-      "awards": [
-        "Q644077"
-      ],
-      "keywords": [
-        "animation",
-        "adventure",
-        "family",
-        "Q198",
-        "Q51879448",
-        "Q58848",
-        "Q109278929",
-        "Q191089",
-        "Q182263",
-        "Q1412160",
-        "Q81741",
-        "Q112613987",
-        "Q7242",
-        "Q1321250"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
       "id": "movie:a-beautiful-mind-2001",
       "type": "movie",
       "title": "A Beautiful Mind",
@@ -14275,117 +12269,6 @@
       }
     },
     {
-      "id": "movie:unforgiven-1992",
-      "type": "movie",
-      "title": "Unforgiven",
-      "year": 1992,
-      "creator": "Clint Eastwood",
-      "durationMin": 130,
-      "genres": [
-        "Drama",
-        "Western"
-      ],
-      "synopsis": "Unforgiven es una película estadounidense del género de western crepuscular dirigida por Clint Eastwood en 1992. La película ganó 4 premios Óscar, entre ellos los de mejor película y mejor director.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BODM3YWY4NmQtN2Y3Ni00OTg0LWFhZGQtZWE3ZWY4MTJlOWU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 82,
-      "wikidataId": "Q104137",
-      "tmdbId": 33,
-      "voteAvg": 8.8,
-      "voteCount": 34,
-      "wikiLangs": 64,
-      "originCountry": [
-        "Q30"
-      ],
-      "awards": [
-        "Q102427",
-        "Q103360",
-        "Q106291",
-        "Q1315008",
-        "Q1388076",
-        "Q165313",
-        "Q1720784",
-        "Q281939",
-        "Q503034",
-        "Q505449",
-        "Q5280675",
-        "Q548389",
-        "Q586356",
-        "Q6978541",
-        "Q723830",
-        "Q952914",
-        "Q1966965",
-        "Q5211226"
-      ],
-      "keywords": [
-        "drama",
-        "western",
-        "Q25372"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
-      "id": "movie:indiana-jones-and-the-last-crusade-1989",
-      "type": "movie",
-      "title": "Indiana Jones and the Last Crusade",
-      "year": 1989,
-      "creator": "Steven Spielberg",
-      "durationMin": 127,
-      "genres": [
-        "Acción",
-        "Aventura"
-      ],
-      "synopsis": "Indiana Jones y la última cruzada es una película estadounidense de aventuras dirigida por Steven Spielberg, estrenada en 1989 y producida por Robert Watts, George Lucas y Frank Marshall. Es el tercer filme estrenado de la serie cinematográfica de Indiana Jones, siendo también el tercero en términos cronológicos de la franquicia. Obtuvo un premio Óscar en la categoría de mejores efectos y edición de sonido, de un total de tres nominaciones, siendo las restantes mejor banda sonora y mejor sonido.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/ExpoSYFY%20-%20Indiana%20Jones%20and%20the%20Last%20Crusade%20(10746697934).jpg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 82,
-      "wikidataId": "Q185658",
-      "tmdbId": 89,
-      "voteAvg": 8,
-      "voteCount": 136,
-      "wikiLangs": 68,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q98018448",
-      "awards": [
-        "Q488645",
-        "Q3414212"
-      ],
-      "keywords": [
-        "action",
-        "adventure",
-        "Q162808"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
       "id": "movie:dom-za-vesanje-1988",
       "type": "movie",
       "title": "Dom za vesanje",
@@ -14434,61 +12317,6 @@
         "keywords": "wikidata",
         "synopsis": "wikipedia",
         "posterUrl": "seed"
-      }
-    },
-    {
-      "id": "movie:tonari-no-totoro-1988",
-      "type": "movie",
-      "title": "Tonari no Totoro",
-      "year": 1988,
-      "creator": "Hayao Miyazaki",
-      "durationMin": 86,
-      "genres": [
-        "Animación",
-        "Familiar",
-        "Fantasía"
-      ],
-      "synopsis": "Mi vecino Totoro  es una película de animación japonesa de 1988 escrita y dirigida por Hayao Miyazaki y producida por Studio Ghibli. El filme —protagonizado por los actores Noriko Hidaka, Chika Sakamoto y Hitoshi Takagi— cuenta la historia de una familia y sus interacciones con un espíritu del bosque al que llaman «Totoro», en un Japón de la posguerra. Mi vecino Totoro ganó el premio Anime Grand Prix de Animage, el Mainichi Film Award y el Kinema Junpo Award en la categoría de «Mejor película» en 1989. También recibió un premio especial en los Blue Ribbon Awards de ese mismo año. Es el cuarto largometraje realizado por Studio Ghibli, del cual Totoro es su logotipo. Fue elegida por la revista británica Time Out como la mejor película de animación de la historia.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Tonari%20no%20Totoro%20title%20(green).jpg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 82,
-      "wikidataId": "Q39571",
-      "tmdbId": 8392,
-      "voteAvg": 9.3,
-      "voteCount": 59,
-      "wikiLangs": 70,
-      "originCountry": [
-        "Q17"
-      ],
-      "collection": "Q104830727",
-      "awards": [
-        "Q1340271",
-        "Q384857",
-        "Q1186171",
-        "Q18388323"
-      ],
-      "keywords": [
-        "animation",
-        "family",
-        "fantasy",
-        "Q276258",
-        "Q11879837",
-        "Q1518105"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
       }
     },
     {
@@ -14577,58 +12405,6 @@
       "imageCredit": "Wikimedia Commons",
       "src": {
         "wikidataId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:raging-bull-1980",
-      "type": "movie",
-      "title": "Raging Bull",
-      "year": 1980,
-      "creator": "Martin Scorsese",
-      "durationMin": 129,
-      "genres": [
-        "Biografía",
-        "Drama",
-        "Deporte"
-      ],
-      "synopsis": "Raging Bull es una película estadounidense de 1980 dirigida por Martin Scorsese, basada en el libro Raging Bull: My Story del boxeador Jake LaMotta. Tiene a Robert De Niro como Jake LaMotta, un boxeador de peso mediano cuya rabia sadomasoquista, celos sexuales y brutal apetito exceden los límites del cuadrilátero y destruyen su relación con su esposa y su familia. Joe Pesci interpreta a Joey, el hermano y mánager de LaMotta que lo ayuda a luchar contra sí mismo, y Cathy Moriarty interpreta a su esposa. La película tiene a Nicholas Colasanto, Theresa Saldana y Frank Vincent en papeles secundarios. Fue candidata a ocho premios Óscar y se alzó con dos: los premios al mejor montaje y mejor actor para De Niro.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Wie%20ein%20wilder%20Stier%20Logo.png?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 82,
-      "wikidataId": "Q220780",
-      "tmdbId": 1578,
-      "voteAvg": 8.8,
-      "voteCount": 151,
-      "wikiLangs": 60,
-      "originCountry": [
-        "Q30"
-      ],
-      "basedOn": "Q7283078",
-      "awards": [
-        "Q103916",
-        "Q281939",
-        "Q1966965"
-      ],
-      "keywords": [
-        "biography",
-        "drama",
-        "sport",
-        "Q32112"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
         "voteAvg": "wikidata",
         "voteCount": "wikidata",
         "keywords": "wikidata",
@@ -15001,56 +12777,6 @@
       ],
       "imageSrc": "wikimedia",
       "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:some-like-it-hot-1959",
-      "type": "movie",
-      "title": "Some Like It Hot",
-      "year": 1959,
-      "creator": "Billy Wilder",
-      "durationMin": 121,
-      "genres": [
-        "Comedia",
-        "Música",
-        "Romance"
-      ],
-      "synopsis": "Some Like It Hot es una película de comedia estadounidense de 1959, dirigida y producida por Billy Wilder y protagonizada por Marilyn Monroe, Tony Curtis y Jack Lemmon. Ambientado en 1929, el argumento gira en torno a dos músicos que se disfrazan de mujer con el fin de escapar de la mafia.",
-      "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Some_Like_It_Hot_%281959_poster%29.png/330px-Some_Like_It_Hot_%281959_poster%29.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 82,
-      "wikidataId": "Q190086",
-      "tmdbId": 239,
-      "voteAvg": 9.1,
-      "voteCount": 70,
-      "wikiLangs": 81,
-      "originCountry": [
-        "Q30"
-      ],
-      "basedOn": "Q1395545",
-      "awards": [
-        "Q22120095",
-        "Q1966965"
-      ],
-      "keywords": [
-        "comedy",
-        "music",
-        "romance"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikipedia / Wikimedia Commons",
       "src": {
         "wikidataId": "wikidata",
         "tmdbId": "wikidata",
@@ -15684,53 +13410,6 @@
         "crime",
         "drama",
         "mystery"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
-      "id": "movie:ah-ga-ssi-2016",
-      "type": "movie",
-      "title": "Ah-ga-ssi",
-      "year": 2016,
-      "creator": "Chan-wook Park",
-      "durationMin": 145,
-      "genres": [
-        "Drama",
-        "Romance",
-        "Thriller"
-      ],
-      "synopsis": "La doncella es un thriller psicológico erótico dirigido por el director surcoreano Park Chan-wook y protagonizado por Kim Min-hee, Kim Tae-ri, Ha Jung-woo y Cho Jin-woong en 2016. Está inspirada en la novela Falsa identidad de la escritora galesa Sarah Waters, con la ambientación cambiada del Reino Unido de la época victoriana a la ocupación japonesa de Corea.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNDJhYTk2MTctZmVmOS00OTViLTgxNjQtMzQxOTRiMDdmNGRjXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 81,
-      "wikidataId": "Q20444585",
-      "tmdbId": 290098,
-      "voteAvg": 10,
-      "voteCount": 227,
-      "wikiLangs": 34,
-      "originCountry": [
-        "Q884"
-      ],
-      "basedOn": "Q2756027",
-      "awards": [
-        "Q725932"
-      ],
-      "keywords": [
-        "drama",
-        "romance",
-        "thriller"
       ],
       "src": {
         "wikidataId": "wikidata",
@@ -16916,62 +14595,6 @@
       }
     },
     {
-      "id": "movie:no-country-for-old-men-2007",
-      "type": "movie",
-      "title": "No Country for Old Men",
-      "year": 2007,
-      "creator": "Ethan Coen",
-      "durationMin": 122,
-      "genres": [
-        "Crimen",
-        "Drama",
-        "Thriller"
-      ],
-      "synopsis": "No Country for Old Men es una película estadounidense del año 2007, escrita, dirigida, producida y montada por los hermanos Coen, basada en la novela No es país para viejos de Cormac McCarthy. La película es protagonizada por Tommy Lee Jones, Javier Bardem y Josh Brolin, y narra la historia de un hombre que se topa con una fortuna que no le pertenece, lo que genera un drama que entrelaza los caminos de tres hombres en el desértico paisaje del oeste de Texas en los años 1980. Reaparecen temáticas de destino, conciencia y circunstancias que los hermanos Coen habían tratado previamente en Blood Simple y Fargo.",
-      "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/No_Country_For_Old_Men_Logo.png/330px-No_Country_For_Old_Men_Logo.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 81,
-      "wikidataId": "Q183081",
-      "tmdbId": 6977,
-      "voteAvg": 8.7,
-      "voteCount": 39,
-      "wikiLangs": 79,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q26705935",
-      "basedOn": "Q611689",
-      "awards": [
-        "Q102427",
-        "Q106291",
-        "Q103360",
-        "Q107258",
-        "Q1966965",
-        "Q1789102",
-        "Q5211226"
-      ],
-      "keywords": [
-        "crime",
-        "drama",
-        "thriller"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikipedia / Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
       "id": "movie:lage-raho-munna-bhai-2006",
       "type": "movie",
       "title": "Lage Raho Munna Bhai",
@@ -17367,57 +14990,6 @@
       }
     },
     {
-      "id": "movie:kill-bill-vol-1-2003",
-      "type": "movie",
-      "title": "Kill Bill: Vol. 1",
-      "year": 2003,
-      "creator": "Quentin Tarantino",
-      "durationMin": 111,
-      "genres": [
-        "Acción",
-        "Crimen",
-        "Drama"
-      ],
-      "synopsis": "Kill Bill: Volumen 1 es una película de acción y suspense estadounidense escrita y dirigida por Quentin Tarantino. Es la primera de las dos películas que fueron lanzadas en cines aparte varios meses, la segunda titulada Kill Bill: Volumen 2. La película fue originalmente programada para un estreno único, pero con una duración de más de cuatro horas, finalmente siendo separada en dos volúmenes. Kill Bill: Volumen 1 fue estrenada a finales de 2003, y Kill Bill: Volumen 2 fue lanzada a inicios de 2004. Las dos películas son frecuentemente referidas como «Kill Bill». La película está protagonizada por Uma Thurman, David Carradine, Vivica A. Fox, Lucy Liu, Michael Madsen, Sonny Chiba y Daryl Hannah.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Killbill-vol1-logo.svg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 81,
-      "wikidataId": "Q165325",
-      "tmdbId": 24,
-      "voteAvg": 7.7,
-      "voteCount": 238,
-      "wikiLangs": 57,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q223132",
-      "awards": [
-        "Q1062026",
-        "Q127612284"
-      ],
-      "keywords": [
-        "action",
-        "crime",
-        "drama",
-        "Q1712140"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
       "id": "movie:finding-nemo-2003",
       "type": "movie",
       "title": "Finding Nemo",
@@ -17469,50 +15041,6 @@
         "keywords": "wikidata",
         "synopsis": "wikipedia",
         "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:catch-me-if-you-can-2002",
-      "type": "movie",
-      "title": "Catch Me If You Can",
-      "year": 2002,
-      "creator": "Steven Spielberg",
-      "durationMin": 141,
-      "genres": [
-        "Biografía",
-        "Crimen",
-        "Drama"
-      ],
-      "synopsis": "Atrápame si puedes es una película biográfica estadounidense de comedia dramática criminal de 2002, basada en la vida de Frank Abagnale Jr. que antes de cumplir diecinueve años consiguió millones de dólares haciéndose pasar por piloto de una aerolínea, por médico y por abogado. Su principal modus operandi era la falsificación de cheques, delito en el que logró tanta habilidad y experiencia que el FBI finalmente lo reclutó como asesor en ese tipo de fraudes. Steven Spielberg dirigió la película, y fueron protagonistas Leonardo DiCaprio como Abagnale, Tom Hanks como el policía Carl Hanratty, Christopher Walken como su padre, Amy Adams como su prometida, Martin Sheen como su futuro suegro y Nathalie Baye como su madre.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTY5MzYzNjc5NV5BMl5BanBnXkFtZTYwNTUyNTc2._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 81,
-      "wikidataId": "Q208108",
-      "tmdbId": 640,
-      "voteAvg": 7.9,
-      "voteCount": 39,
-      "wikiLangs": 76,
-      "originCountry": [
-        "Q30"
-      ],
-      "basedOn": "Q12857422",
-      "keywords": [
-        "biography",
-        "crime",
-        "drama"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
       }
     },
     {
@@ -17730,53 +15258,6 @@
       }
     },
     {
-      "id": "movie:the-truman-show-1998",
-      "type": "movie",
-      "title": "The Truman Show",
-      "year": 1998,
-      "creator": "Peter Weir",
-      "durationMin": 103,
-      "genres": [
-        "Comedia",
-        "Drama"
-      ],
-      "synopsis": "The Truman Show (en España: El show de Truman (una vida en directo) y en Hispanoamérica: The Truman Show: Historia de una vida) es una película estadounidense de 1998 de comedia dramática y ciencia ficción dirigida por Peter Weir, escrita por Andrew Niccol y producida por Edward S. Feldman, Andrew Niccol, Scott Rudin y Adam Schroeder. El filme está protagonizado por Jim Carrey en el papel de Truman Burbank, un hombre cuya vida es retransmitida en directo desde su nacimiento sin que él lo sepa, dentro de un programa televisivo adoptado de realidad simulada, hasta que descubre la verdad e intenta escapar. El resto del reparto está compuesto por Laura Linney, Noah Emmerich, Natascha McElhone, Ed Harris, Holland Taylor y Brian Delate.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMDIzODcyY2EtMmY2MC00ZWVlLTgwMzAtMjQwOWUyNmJjNTYyXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 81,
-      "wikidataId": "Q214801",
-      "tmdbId": 37165,
-      "voteAvg": 9.4,
-      "voteCount": 160,
-      "wikiLangs": 73,
-      "originCountry": [
-        "Q30"
-      ],
-      "awards": [
-        "Q1377772",
-        "Q3414212"
-      ],
-      "keywords": [
-        "comedy",
-        "drama",
-        "Q182415",
-        "Q223675"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
       "id": "movie:crna-macka-beli-macor-1998",
       "type": "movie",
       "title": "Crna macka, beli macor",
@@ -17811,50 +15292,6 @@
         "Q12754227",
         "Q2166722",
         "Q1810939"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
-      "id": "movie:the-big-lebowski-1998",
-      "type": "movie",
-      "title": "The Big Lebowski",
-      "year": 1998,
-      "creator": "Joel Coen",
-      "durationMin": 117,
-      "genres": [
-        "Comedia",
-        "Crimen",
-        "Deporte"
-      ],
-      "synopsis": "El gran Lebowski es una película cómica estadounidense de 1998 escrita, producida y dirigida por los hermanos Coen. Está protagonizada por Jeff Bridges, quien interpreta a Jeffrey Lebowski, un jugador de bolos desempleado de Los Ángeles, quien se hace llamar «The Dude». Después de un caso de identidad errónea, el Dude se presenta ante la planeada víctima: un multimillonario también llamado Jeffrey Lebowski. Cuando la joven esposa del millonario es secuestrada, este le pide al Dude que se encargue de su rescate para una segura liberación. El plan sale mal cuando un amigo del Dude, Walter Sobchak, pretende conservar el dinero del rescate. La película cuenta con las actuaciones adicionales de Julianne Moore, Steve Buscemi, John Turturro, Philip Seymour Hoffman, Tara Reid, David Thewlis, Peter Stormare, Jon Polito, Ben Gazzara y está narrada por un vaquero conocido como «The Stranger», interpretado por Sam Elliott.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMTQ0NjUzMDMyOF5BMl5BanBnXkFtZTgwODA1OTU0MDE@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 81,
-      "wikidataId": "Q337078",
-      "tmdbId": 115,
-      "voteAvg": 7.5,
-      "voteCount": 190,
-      "wikiLangs": 62,
-      "originCountry": [
-        "Q30"
-      ],
-      "keywords": [
-        "comedy",
-        "crime",
-        "sport",
-        "Q630800"
       ],
       "src": {
         "wikidataId": "wikidata",
@@ -18274,66 +15711,6 @@
       }
     },
     {
-      "id": "movie:jurassic-park-1993",
-      "type": "movie",
-      "title": "Jurassic Park",
-      "year": 1993,
-      "creator": "Steven Spielberg",
-      "durationMin": 127,
-      "genres": [
-        "Acción",
-        "Aventura",
-        "Ciencia ficción"
-      ],
-      "synopsis": "Parque Jurásico es una película de ciencia ficción y aventuras dirigida por el cineasta estadounidense Steven Spielberg y estrenada en 1993. Su trama está basada en el libro homónimo de Michael Crichton, y relata las vivencias de un grupo de personas en un parque de diversiones con dinosaurios clonados, creado por un filántropo multimillonario y un equipo de científicos genetistas. Durante una visita de evaluación antes de su apertura al público en general, los dinosaurios escapan y ponen en riesgo la vida de quienes se encuentran en el parque.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 81,
-      "wikidataId": "Q167726",
-      "tmdbId": 329,
-      "voteAvg": 8.4,
-      "voteCount": 134,
-      "wikiLangs": 99,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q17862144",
-      "basedOn": "Q756866",
-      "awards": [
-        "Q488645",
-        "Q830079",
-        "Q393686",
-        "Q1131772",
-        "Q3414212",
-        "Q1265702",
-        "Q6404857"
-      ],
-      "keywords": [
-        "action",
-        "adventure",
-        "sci-fi",
-        "Q430",
-        "Q194195",
-        "Q120877",
-        "Q873451",
-        "Q854457",
-        "Q166314"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
       "id": "movie:in-the-name-of-the-father-1993",
       "type": "movie",
       "title": "In the Name of the Father",
@@ -18438,56 +15815,6 @@
         "Prime Video"
       ],
       "popularity": 81
-    },
-    {
-      "id": "movie:dead-poets-society-1989",
-      "type": "movie",
-      "title": "Dead Poets Society",
-      "year": 1989,
-      "creator": "Peter Weir",
-      "durationMin": 128,
-      "genres": [
-        "Comedia",
-        "Drama"
-      ],
-      "synopsis": "Dead Poets Society es una película estadounidense del año 1989 dirigida por Peter Weir, con guion de Tom Schulman y protagonizada por Robin Williams. Narra el encuentro de un profesor de literatura con un grupo de alumnos durante 1959 en la Welton Academy (Vermont), institución señera y prestigiosa.",
-      "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Middletown_DE.jpg/330px-Middletown_DE.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 81,
-      "wikidataId": "Q106316",
-      "tmdbId": 207,
-      "voteAvg": 7.3,
-      "voteCount": 63,
-      "wikiLangs": 86,
-      "originCountry": [
-        "Q30"
-      ],
-      "awards": [
-        "Q41417",
-        "Q787098",
-        "Q139184",
-        "Q900414",
-        "Q1966965"
-      ],
-      "keywords": [
-        "comedy",
-        "drama"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikipedia / Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
     },
     {
       "id": "movie:stand-by-me-1986",
@@ -18929,46 +16256,6 @@
         "Q1936750",
         "Q5853064",
         "Q12131"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
-      "id": "movie:life-of-brian-1979",
-      "type": "movie",
-      "title": "Life of Brian",
-      "year": 1979,
-      "creator": "Terry Jones",
-      "durationMin": 94,
-      "genres": [
-        "Comedia"
-      ],
-      "synopsis": "La vida de Brian es el tercer largometraje del grupo de comedia inglés Monty Python. Trata la historia de un judío que nace el mismo día que Jesucristo y ya de adulto es varias veces confundido con él. Con canciones clásicas de los Python como «Always Look on the Bright Side of Life», cantada por un coro de crucificados, la película es, junto con Los caballeros de la mesa cuadrada y El sentido de la vida, una de las más exitosas de Monty Python.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMzAwNjU1OTktYjY3Mi00NDY5LWFlZWUtZjhjNGE0OTkwZDkwXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 81,
-      "wikidataId": "Q24953",
-      "tmdbId": 583,
-      "voteAvg": 8.3,
-      "voteCount": 67,
-      "wikiLangs": 61,
-      "originCountry": [
-        "Q145"
-      ],
-      "keywords": [
-        "comedy",
-        "Q630281"
       ],
       "src": {
         "wikidataId": "wikidata",
@@ -21688,57 +18975,6 @@
       }
     },
     {
-      "id": "movie:the-revenant-2015",
-      "type": "movie",
-      "title": "The Revenant",
-      "year": 2015,
-      "creator": "Alejandro G. I\u001a\u001arritu",
-      "durationMin": 156,
-      "genres": [
-        "Acción",
-        "Aventura",
-        "Drama"
-      ],
-      "synopsis": "El renacido es una película estadounidense semi-biográfica estrenada en diciembre de 2015, producida y dirigida por el mexicano Alejandro González Iñárritu. El guion fue escrito por Mark L. Smith y posteriormente reescrito por este y González Iñárritu, adaptado de la novela de Michael Punke, del mismo nombre. La película es un remake de El hombre de una tierra salvaje (1971).Los protagonistas de El renacido son Leonardo DiCaprio, Tom Hardy, Domhnall Gleeson y Will Poulter. Está basada en un personaje histórico, Hugh Glass, trampero y explorador de inicios del siglo XIX (1823) en el que se inspiró Michael Punke para escribir la novela.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BMDE5OWMzM2QtOTU2ZS00NzAyLWI2MDEtOTRlYjIxZGM0OWRjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 80,
-      "wikidataId": "Q18002795",
-      "tmdbId": 281957,
-      "voteAvg": 7.8,
-      "voteCount": 404,
-      "wikiLangs": 73,
-      "originCountry": [
-        "Q30"
-      ],
-      "basedOn": "Q18286924",
-      "awards": [
-        "Q131520",
-        "Q103360",
-        "Q103916",
-        "Q139184"
-      ],
-      "keywords": [
-        "action",
-        "adventure",
-        "drama",
-        "Q4139550"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
       "id": "movie:the-perks-of-being-a-wallflower-2012",
       "type": "movie",
       "title": "The Perks of Being a Wallflower",
@@ -22251,59 +19487,6 @@
         "keywords": "wikidata",
         "synopsis": "wikipedia",
         "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:black-swan-2010",
-      "type": "movie",
-      "title": "Black Swan",
-      "year": 2010,
-      "creator": "Darren Aronofsky",
-      "durationMin": 108,
-      "genres": [
-        "Drama",
-        "Thriller"
-      ],
-      "synopsis": "Black Swan es una película estadounidense de terror psicológico psicológico dirigida en 2010 por Darren Aronofsky. Está protagonizada por Natalie Portman, Vincent Cassel, Mila Kunis, Barbara Hershey y Winona Ryder. Portman ganó el Óscar, el Globo de Oro y el Premio de la Asociación de Críticos y Guionistas estadounidenses por su actuación en este filme. Además, el filme obtuvo nominaciones a los BAFTA, a los Globos de Oro y a los Premios Óscar en la categoría de mejor película.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNzY2NzI4OTE5MF5BMl5BanBnXkFtZTcwMjMyNDY4Mw@@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 80,
-      "wikidataId": "Q180214",
-      "tmdbId": 44214,
-      "voteAvg": 8.2,
-      "voteCount": 322,
-      "wikiLangs": 74,
-      "originCountry": [
-        "Q30"
-      ],
-      "awards": [
-        "Q103618",
-        "Q28026019",
-        "Q45769590"
-      ],
-      "keywords": [
-        "drama",
-        "thriller",
-        "Q1121749",
-        "Q170082",
-        "Q41425",
-        "Q199786",
-        "Q461363",
-        "Q130741",
-        "Q6649"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
       }
     },
     {
@@ -23934,63 +21117,6 @@
       }
     },
     {
-      "id": "movie:twelve-monkeys-1995",
-      "type": "movie",
-      "title": "Twelve Monkeys",
-      "year": 1995,
-      "creator": "Terry Gilliam",
-      "durationMin": 129,
-      "genres": [
-        "Misterio",
-        "Ciencia ficción",
-        "Thriller"
-      ],
-      "synopsis": "Doce monos es una película estadounidense de ciencia ficción de 1995. Está protagonizada por Bruce Willis, Madeleine Stowe y Brad Pitt.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/12singes.PNG?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 80,
-      "wikidataId": "Q175038",
-      "tmdbId": 63,
-      "voteAvg": 7.6,
-      "voteCount": 20,
-      "wikiLangs": 65,
-      "originCountry": [
-        "Q30"
-      ],
-      "basedOn": "Q451434",
-      "awards": [
-        "Q723830",
-        "Q1131772"
-      ],
-      "keywords": [
-        "mystery",
-        "sci-fi",
-        "thriller",
-        "Q44512",
-        "Q182154",
-        "Q24949638",
-        "Q7867",
-        "Q317309",
-        "Q336",
-        "Q252000"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
       "id": "movie:k-kaku-kid-tai-1995",
       "type": "movie",
       "title": "K\u001akaku Kid\u001atai",
@@ -24495,56 +21621,6 @@
       }
     },
     {
-      "id": "movie:the-princess-bride-1987",
-      "type": "movie",
-      "title": "The Princess Bride",
-      "year": 1987,
-      "creator": "Rob Reiner",
-      "durationMin": 98,
-      "genres": [
-        "Aventura",
-        "Familiar",
-        "Fantasía"
-      ],
-      "synopsis": "The Princess Bride es una película estadounidense de 1987, dirigida por Rob Reiner y protagonizada por Cary Elwes, Robin Wright, Chris Sarandon, Mandy Patinkin, Wallace Shawn, Christopher Guest y André el Gigante. Está basada en el libro homónimo de 1973, escrito por William Goldman. Fue estrenada en español con los títulos La princesa prometida, La princesa que quería soñar y Caballero negro.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Fantasy%20Worlds%20of%20Myth%20and%20Magic%2C%20EMP%2C%20Seattle%20-%20The%20Princess%20Bride%20(15197708304).jpg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 80,
-      "wikidataId": "Q506418",
-      "tmdbId": 2493,
-      "voteAvg": 8.4,
-      "voteCount": 84,
-      "wikiLangs": 47,
-      "originCountry": [
-        "Q30"
-      ],
-      "basedOn": "Q1935913",
-      "awards": [
-        "Q3414212"
-      ],
-      "keywords": [
-        "adventure",
-        "family",
-        "fantasy",
-        "Q45393"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
       "id": "movie:der-himmel-ber-berlin-1987",
       "type": "movie",
       "title": "Der Himmel \u001aber Berlin",
@@ -24883,62 +21959,6 @@
         "keywords": "wikidata",
         "synopsis": "wikipedia",
         "posterUrl": "seed"
-      }
-    },
-    {
-      "id": "movie:jaws-1975",
-      "type": "movie",
-      "title": "Jaws",
-      "year": 1975,
-      "creator": "Steven Spielberg",
-      "durationMin": 124,
-      "genres": [
-        "Aventura",
-        "Thriller"
-      ],
-      "synopsis": "Tiburón es una película estadounidense de terror, suspense y aventuras de 1975, dirigida por Steven Spielberg y basada en la novela homónima de Peter Benchley. En la historia, un enorme tiburón blanco devorador de hombres ataca a los bañistas en las playas de Amity Island, lo cual lleva al jefe de la policía local a emprender la caza del escualo junto a un biólogo marino y un marinero profesional. El actor Roy Scheider interpreta al jefe de policía Martin Brody, Richard Dreyfuss al oceanógrafo Matt Hooper, Robert Shaw al marinero Quint, Murray Hamilton al alcalde de Amity Island y Lorraine Gary a Ellen, esposa de Brody. El guion está acreditado tanto al propio Benchley, que elaboró los borradores iniciales, como al actor y guionista Carl Gottlieb, que lo reescribió durante el rodaje.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jaws%20movie%20poster.png?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 80,
-      "wikidataId": "Q189505",
-      "tmdbId": 578,
-      "voteAvg": 9.3,
-      "voteCount": 146,
-      "wikiLangs": 72,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q6166233",
-      "basedOn": "Q1322449",
-      "awards": [
-        "Q281939",
-        "Q22235329",
-        "Q830079"
-      ],
-      "keywords": [
-        "adventure",
-        "thriller",
-        "Q129026",
-        "Q7372",
-        "Q351363",
-        "Q900214",
-        "Q189447",
-        "Q187588"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
       }
     },
     {
@@ -27556,61 +24576,6 @@
         "Q259065",
         "Q2763",
         "Q362"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "movie:arrival-2016",
-      "type": "movie",
-      "title": "Arrival",
-      "year": 2016,
-      "creator": "Denis Villeneuve",
-      "durationMin": 116,
-      "genres": [
-        "Drama",
-        "Ciencia ficción"
-      ],
-      "synopsis": "La llegada es una película estadounidense de drama y ciencia ficción, dirigida por Denis Villeneuve y escrita por Eric Heisserer. Con Amy Adams y Jeremy Renner en los papeles principales, está basada en el premiado relato La historia de tu vida de Ted Chiang. Fue estrenada mundialmente el 1 de septiembre de 2016 en el Festival Internacional de Cine de Venecia.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Arrival%202016%20Film.png?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 79,
-      "wikidataId": "Q20382729",
-      "tmdbId": 329865,
-      "voteAvg": 8.4,
-      "voteCount": 441,
-      "wikiLangs": 66,
-      "originCountry": [
-        "Q30"
-      ],
-      "basedOn": "Q7620415",
-      "awards": [
-        "Q19878150",
-        "Q488645",
-        "Q1966965",
-        "Q1056240"
-      ],
-      "keywords": [
-        "drama",
-        "sci-fi",
-        "Q193203",
-        "Q2421041",
-        "Q14841174",
-        "Q15206825",
-        "Q8162"
       ],
       "imageSrc": "wikimedia",
       "imageCredit": "Wikimedia Commons",
@@ -32574,61 +29539,6 @@
       "popularity": 78
     },
     {
-      "id": "movie:la-grande-bellezza-2013",
-      "type": "movie",
-      "title": "La grande bellezza",
-      "year": 2013,
-      "creator": "Paolo Sorrentino",
-      "durationMin": 141,
-      "genres": [
-        "Drama"
-      ],
-      "synopsis": "La gran belleza es una película italiana de 2013 coescrita y dirigida por Paolo Sorrentino. Recibió grandes elogios de la crítica y ganó diversos galardones como el premio Oscar a la mejor película extranjera.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20grande%20bellezza%20logo.svg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 78,
-      "wikidataId": "Q6379279",
-      "tmdbId": 179144,
-      "voteAvg": 8,
-      "voteCount": 135,
-      "wikiLangs": 47,
-      "originCountry": [
-        "Q38"
-      ],
-      "collection": "Q26705935",
-      "basedOn": "Q114867824",
-      "awards": [
-        "Q17748520",
-        "Q105304",
-        "Q387380",
-        "Q2925687",
-        "Q777921",
-        "Q1377755",
-        "Q932281",
-        "Q609977",
-        "Q3703463",
-        "Q61748103"
-      ],
-      "keywords": [
-        "drama"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
       "id": "movie:the-lunchbox-2013",
       "type": "movie",
       "title": "The Lunchbox",
@@ -34043,57 +30953,6 @@
         "comedy",
         "mystery",
         "Q484188"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
-      "id": "movie:the-curious-case-of-benjamin-button-2008",
-      "type": "movie",
-      "title": "The Curious Case of Benjamin Button",
-      "year": 2008,
-      "creator": "David Fincher",
-      "durationMin": 166,
-      "genres": [
-        "Drama",
-        "Fantasía",
-        "Romance"
-      ],
-      "synopsis": "El curioso caso de Benjamin Button—título original; The Curious Case of Benjamin Button— es una película estadounidense del 2008 dirigida por David Fincher, con guion de Eric Roth y protagonizada por Brad Pitt y Cate Blanchett.",
-      "posterUrl": "https://m.media-amazon.com/images/M/MV5BNjQ0NTY2ODY2M15BMl5BanBnXkFtZTgwMjE4MzkxMDE@._V1_.jpg",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 78,
-      "wikidataId": "Q183239",
-      "tmdbId": 4922,
-      "voteAvg": 7.1,
-      "voteCount": 257,
-      "wikiLangs": 63,
-      "originCountry": [
-        "Q30"
-      ],
-      "basedOn": "Q2574830",
-      "awards": [
-        "Q487136",
-        "Q277751",
-        "Q393686",
-        "Q1966965"
-      ],
-      "keywords": [
-        "drama",
-        "fantasy",
-        "romance",
-        "Q362"
       ],
       "src": {
         "wikidataId": "wikidata",
@@ -36414,81 +33273,6 @@
       }
     },
     {
-      "id": "movie:e-t-the-extra-terrestrial-1982",
-      "type": "movie",
-      "title": "E.T. the Extra-Terrestrial",
-      "year": 1982,
-      "creator": "Steven Spielberg",
-      "durationMin": 115,
-      "genres": [
-        "Familiar",
-        "Ciencia ficción"
-      ],
-      "synopsis": "E. T., el extraterrestre es una película estadounidense de ciencia ficción de 1982 dirigida por Steven Spielberg, escrita por Melissa Mathison, protagonizada por Henry Thomas y distribuida por Universal Pictures. La cinta está basada en un amigo imaginario del propio director, creado tras el divorcio de sus padres. En 1980, Spielberg conoció a Mathison y empezaron a desarrollar la historia, tras el proyecto estancado Night Skies.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/E.T.%20figure%20at%20Madame%20Tussauds%20London.jpg?width=600",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 78,
-      "wikidataId": "Q11621",
-      "tmdbId": 601,
-      "voteAvg": 9.3,
-      "voteCount": 465000,
-      "wikiLangs": 69,
-      "originCountry": [
-        "Q30"
-      ],
-      "awards": [
-        "Q1131772",
-        "Q1011509",
-        "Q1422140",
-        "Q488651",
-        "Q787098",
-        "Q393686",
-        "Q830079",
-        "Q488645",
-        "Q8555",
-        "Q1315008",
-        "Q505449",
-        "Q4376972",
-        "Q952914",
-        "Q3703465",
-        "Q1757366",
-        "Q981030",
-        "Q652644",
-        "Q499789",
-        "Q1270715",
-        "Q1966965"
-      ],
-      "keywords": [
-        "family",
-        "sci-fi",
-        "Q181508",
-        "Q12566483",
-        "Q1595931",
-        "Q182263",
-        "Q11024",
-        "Q491",
-        "Q96280219",
-        "Q1518105",
-        "Q8436",
-        "Q5401971"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
       "id": "movie:kramer-vs-kramer-1979",
       "type": "movie",
       "title": "Kramer vs. Kramer",
@@ -38683,63 +35467,6 @@
         "Prime Video"
       ],
       "popularity": 77
-    },
-    {
-      "id": "movie:the-social-network-2010",
-      "type": "movie",
-      "title": "The Social Network",
-      "year": 2010,
-      "creator": "David Fincher",
-      "durationMin": 120,
-      "genres": [
-        "Biografía",
-        "Drama"
-      ],
-      "synopsis": "The Social Network es una película biográfica dirigida por David Fincher, estrenada el 24 de septiembre de 2010, en el Festival de Cine de Nueva York. Esta narra un drama de tribunales, sobre las implicaciones morales del entonces ascendente Mark Zuckerberg, cuyas peripecias lo encaminaron en la construcción de un imperio billonario, y de cómo alguien poco sociable logró conectar a cientos de millones de personas a través de su creación, Facebook.",
-      "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/La_red_social.jpg/330px-La_red_social.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "platforms": [
-        "Netflix",
-        "Prime Video"
-      ],
-      "popularity": 77,
-      "wikidataId": "Q185888",
-      "tmdbId": 37799,
-      "voteAvg": 9,
-      "voteCount": 334,
-      "wikiLangs": 74,
-      "originCountry": [
-        "Q30"
-      ],
-      "collection": "Q26705935",
-      "basedOn": "Q2977762",
-      "awards": [
-        "Q900414",
-        "Q281939",
-        "Q107258",
-        "Q488651",
-        "Q1966965",
-        "Q1789102",
-        "Q5211226",
-        "Q26705935"
-      ],
-      "keywords": [
-        "biography",
-        "drama",
-        "Q355",
-        "Q380"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikipedia / Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
     },
     {
       "id": "movie:x-first-class-2011",
@@ -53909,65 +50636,6 @@
       }
     },
     {
-      "id": "series:game-of-thrones-2011",
-      "type": "series",
-      "title": "Game of Thrones",
-      "year": 2011,
-      "creator": "HBO",
-      "durationMin": 61,
-      "genres": [
-        "Drama",
-        "Aventura",
-        "Fantasía"
-      ],
-      "synopsis": "Game of Thrones es una serie de televisión de drama y fantasía medieval desarrollada por David Benioff y D. B. Weiss y producida por la cadena HBO. Su argumento está inspirado en la serie de novelas Canción de hielo y fuego, escrita por el estadounidense George R. R. Martin, y relata las vivencias de un grupo de personajes de distintas casas nobiliarias en el continente ficticio de Poniente para tener el control del Trono de Hierro y gobernar los siete reinos que conforman el territorio.",
-      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/498/1245274.jpg",
-      "platforms": [
-        "HBO Max"
-      ],
-      "popularity": 95,
-      "wikidataId": "Q23572",
-      "tmdbId": 1399,
-      "voteAvg": 8,
-      "voteCount": 16680,
-      "wikiLangs": 139,
-      "originCountry": [
-        "Q30"
-      ],
-      "basedOn": "Q45875",
-      "awards": [
-        "Q7243505",
-        "Q1286639",
-        "Q7243513",
-        "Q2558222",
-        "Q7243504",
-        "Q7669614",
-        "Q7669624",
-        "Q3002949",
-        "Q7669620",
-        "Q989438",
-        "Q430910",
-        "Q430910",
-        "Q2558222"
-      ],
-      "keywords": [
-        "drama",
-        "adventure",
-        "fantasy",
-        "Q21015762"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
-      }
-    },
-    {
       "id": "series:the-simpsons-1989",
       "type": "series",
       "title": "The Simpsons",
@@ -58028,55 +54696,6 @@
         "keywords": "wikidata",
         "synopsis": "wikidata",
         "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "series:rick-and-morty-2013",
-      "type": "series",
-      "title": "Rick and Morty",
-      "year": 2013,
-      "creator": "Adult Swim",
-      "durationMin": 30,
-      "genres": [
-        "Comedia",
-        "Aventura",
-        "Science-Fiction"
-      ],
-      "synopsis": "Rick y Morty es una serie de televisión estadounidense de animación para adultos creada por Justin Roiland y Dan Harmon en 2013 para Adult Swim, también se emitió en Cartoon Network. La serie sigue las desventuras de un científico, Rick Sánchez, y su fácilmente influenciable nieto, Morty, quienes pasan el tiempo entre la vida doméstica y los viajes espaciales e intergalácticos. Dan Harmon, el cocreador de la serie y Justin Roiland son los encargados de las voces principales de Morty y Rick, la serie también incluye las voces de Chris Parnell, Spencer Grammer y Sarah Chalke.",
-      "posterUrl": "https://static.tvmaze.com/uploads/images/original_untouched/626/1566363.jpg",
-      "platforms": [
-        "Prime Video"
-      ],
-      "popularity": 95,
-      "wikidataId": "Q15659308",
-      "tmdbId": 60625,
-      "voteAvg": 9.5,
-      "voteCount": 9120,
-      "wikiLangs": 76,
-      "originCountry": [
-        "Q30"
-      ],
-      "awards": [
-        "Q7502282",
-        "Q463702"
-      ],
-      "keywords": [
-        "comedy",
-        "adventure",
-        "science-fiction",
-        "Q906343",
-        "Q24925",
-        "Q2051667"
-      ],
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "seed"
       }
     },
     {
@@ -63242,49 +59861,6 @@
       }
     },
     {
-      "id": "series:six-feet-under-2001",
-      "type": "series",
-      "title": "Six Feet Under",
-      "year": 2001,
-      "creator": "HBO",
-      "durationMin": 60,
-      "genres": [
-        "Drama",
-        "Comedia"
-      ],
-      "synopsis": "Six Feet Under es una serie de televisión estadounidense creada, escrita y producida por Alan Ball y transmitida originalmente desde el 3 de junio de 2001 hasta el 21 de agosto de 2005 por la cadena HBO. Consta de 63 episodios, de unos 55 minutos cada uno, agrupados en cinco temporadas y sigue a los Fisher, una familia que posee y dirige una empresa funeraria.",
-      "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Six_Feet_Under_House.jpg/330px-Six_Feet_Under_House.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-      "platforms": [
-        "HBO Max"
-      ],
-      "popularity": 95,
-      "wikidataId": "Q216919",
-      "tmdbId": 1274,
-      "voteAvg": 9.5,
-      "voteCount": 5040,
-      "wikiLangs": 42,
-      "originCountry": [
-        "Q30"
-      ],
-      "keywords": [
-        "drama",
-        "comedy",
-        "Q906343"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikipedia / Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
       "id": "series:red-dwarf-1988",
       "type": "series",
       "title": "Red Dwarf",
@@ -65506,61 +62082,6 @@
       ],
       "imageSrc": "wikimedia",
       "imageCredit": "Wikipedia / Wikimedia Commons",
-      "src": {
-        "wikidataId": "wikidata",
-        "tmdbId": "wikidata",
-        "imdbId": "wikidata",
-        "voteAvg": "wikidata",
-        "voteCount": "wikidata",
-        "keywords": "wikidata",
-        "synopsis": "wikipedia",
-        "posterUrl": "wikimedia"
-      }
-    },
-    {
-      "id": "series:the-x-files-1993",
-      "type": "series",
-      "title": "The X-Files",
-      "year": 1993,
-      "creator": "FOX",
-      "durationMin": 60,
-      "genres": [
-        "Drama",
-        "Crimen",
-        "Science-Fiction"
-      ],
-      "synopsis": "The X-Files es una serie de televisión estadounidense de ciencia ficción y misterio, emitida por Fox y creada por Chris Carter, cuyo argumento se centra en los casos inusuales que investigan dos agentes del FBI, clasificados como «expedientes X»: fenómenos paranormales, avistamiento de ovnis y criaturas extrañas, a menudo involucrados crímenes sin resolver. El primer episodio fue estrenado el 10 de septiembre de 1993.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20X-Files%20Office.jpg?width=600",
-      "platforms": [
-        "Prime Video"
-      ],
-      "popularity": 95,
-      "wikidataId": "Q2744",
-      "tmdbId": 4087,
-      "voteAvg": 9.5,
-      "voteCount": 10800,
-      "wikiLangs": 90,
-      "originCountry": [
-        "Q30"
-      ],
-      "awards": [
-        "Q1255198",
-        "Q1255198",
-        "Q1255198",
-        "Q1263057"
-      ],
-      "keywords": [
-        "drama",
-        "crime",
-        "science-fiction",
-        "Q495304",
-        "Q332102",
-        "Q8333",
-        "Q892757",
-        "Q646988"
-      ],
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
       "src": {
         "wikidataId": "wikidata",
         "tmdbId": "wikidata",
@@ -82065,8 +78586,6 @@
         "Prime Video"
       ],
       "popularity": 46,
-      "wikidataId": "Q16994143",
-      "tmdbId": 62187,
       "voteAvg": 4.6,
       "voteCount": 960,
       "wikiLangs": 8,
@@ -91462,53 +87981,6 @@
         "biographie",
         "politique et morale",
         "philosophie politique"
-      ],
-      "imageSrc": "openlibrary",
-      "imageCredit": "Open Library",
-      "src": {
-        "olid": "openlibrary",
-        "readers": "openlibrary",
-        "voteAvg": "openlibrary",
-        "subjects": "openlibrary",
-        "posterUrl": "openlibrary"
-      }
-    },
-    {
-      "id": "book:frankenstein-or-the-modern-prometheus-1818",
-      "type": "book",
-      "title": "Frankenstein; or, The Modern Prometheus",
-      "year": 1818,
-      "creator": "Mary Shelley",
-      "pages": 320,
-      "depth": "media",
-      "genres": [
-        "Novela",
-        "Literatura"
-      ],
-      "synopsis": "Obra de Mary Shelley publicada originalmente en 1818.",
-      "posterUrl": "https://covers.openlibrary.org/b/id/12356249-L.jpg",
-      "popularity": 85,
-      "wikidataId": "Q140532091",
-      "olid": "OL450063W",
-      "readers": 2683,
-      "voteAvg": 7.9,
-      "voteCount": 228,
-      "keywords": [
-        "frankenstein (fictitious character)",
-        "frankenstein's monster (fictitious character)",
-        "fiction",
-        "victor frankenstein (fictitious character)",
-        "scientists",
-        "monsters",
-        "fiction, horror",
-        "frankenstein (fictitious character), fiction",
-        "physicians, fiction",
-        "british fiction (fictional works by one author)",
-        "scientists, fiction",
-        "geneva (switzerland), fiction",
-        "horror stories",
-        "fiction, science fiction, general",
-        "fiction, general"
       ],
       "imageSrc": "openlibrary",
       "imageCredit": "Open Library",
@@ -145413,7 +141885,6 @@
       "synopsis": "Captain Swallow has always dreamed of pocketing a large nest egg in order to retire on a remote island – but he never counted on stiff competition from Captains Stanley Rackum, Dirk Chivers and others, greedy and cruel enemies who always manage to attack the same ships as him. If...",
       "posterUrl": "https://cf.geekdo-images.com/LeUx57CGYdnIEsnGebOB0A__original/img/ZMdpuswDvVy-I97-ws45isBIRO4=/0x0/filters:format(jpeg)/pic1326136.jpg",
       "popularity": 69,
-      "wikidataId": "Q135472914",
       "bggId": "356033",
       "voteAvg": 6.9,
       "voteCount": 50,
@@ -167478,11 +163949,6 @@
           "at": 1767967371821
         },
         {
-          "itemId": "movie:gisaengchung-2019",
-          "status": "pending",
-          "at": 1785411053881
-        },
-        {
           "itemId": "movie:gongdong-gyeongbi-guyeok-jsa-2000",
           "status": "seen",
           "score": 8.5,
@@ -167507,7 +163973,7 @@
           "at": 1787960688237
         },
         {
-          "itemId": "movie:jaws-1975",
+          "itemId": "movie:tiburon-1975",
           "status": "pending",
           "at": 1756835465891
         },
@@ -168242,7 +164708,7 @@
           "at": 1788378201852
         },
         {
-          "itemId": "series:the-x-files-1993",
+          "itemId": "series:expediente-x-1993",
           "status": "seen",
           "score": 8,
           "at": 1790172591137
@@ -168781,7 +165247,7 @@
           "at": 1778152907536
         },
         {
-          "itemId": "movie:ah-ga-ssi-2016",
+          "itemId": "movie:la-doncella-2016",
           "status": "pending",
           "at": 1758428229935
         },
@@ -168828,7 +165294,7 @@
           "at": 1789597472777
         },
         {
-          "itemId": "movie:black-swan-2010",
+          "itemId": "movie:cisne-negro-2010",
           "status": "seen",
           "score": 9,
           "at": 1767676679218
@@ -168878,7 +165344,7 @@
           "at": 1760771661791
         },
         {
-          "itemId": "movie:citizen-kane-1941",
+          "itemId": "movie:ciudadano-kane-1941",
           "status": "seen",
           "score": 8,
           "at": 1758765439587
@@ -168894,7 +165360,7 @@
           "at": 1776178126677
         },
         {
-          "itemId": "movie:dead-poets-society-1989",
+          "itemId": "movie:el-club-de-los-poetas-muertos-1989",
           "status": "seen",
           "score": 8.5,
           "at": 1751621025443
@@ -168991,12 +165457,6 @@
           "at": 1781159623664
         },
         {
-          "itemId": "movie:gisaengchung-2019",
-          "status": "seen",
-          "score": 7.5,
-          "at": 1791231323327
-        },
-        {
           "itemId": "movie:hamlet-1996",
           "status": "pending",
           "at": 1775399271807
@@ -169091,7 +165551,7 @@
           "at": 1773640514399
         },
         {
-          "itemId": "movie:no-country-for-old-men-2007",
+          "itemId": "movie:no-es-pais-para-viejos-2007",
           "status": "seen",
           "score": 8.5,
           "at": 1774325246820
@@ -169212,12 +165672,12 @@
           "at": 1791620295098
         },
         {
-          "itemId": "movie:the-departed-2006",
+          "itemId": "movie:infiltrados-2006",
           "status": "pending",
           "at": 1764611092254
         },
         {
-          "itemId": "movie:the-godfather-1972",
+          "itemId": "movie:el-padrino-1972",
           "status": "pending",
           "at": 1781559339290
         },
@@ -169249,12 +165709,6 @@
           "status": "seen",
           "score": 8.5,
           "at": 1758797198526
-        },
-        {
-          "itemId": "movie:the-shawshank-redemption-1994",
-          "status": "seen",
-          "score": 8,
-          "at": 1785304102515
         },
         {
           "itemId": "movie:the-sixth-sense-1999",
@@ -169659,7 +166113,7 @@
           "at": 1756171143536
         },
         {
-          "itemId": "movie:eternal-sunshine-of-the-spotless-mind-2004",
+          "itemId": "movie:olvidate-de-mi-2004",
           "status": "seen",
           "score": 10,
           "at": 1792038239530
@@ -169746,7 +166200,7 @@
           "at": 1747782876141
         },
         {
-          "itemId": "movie:nuovo-cinema-paradiso-1988",
+          "itemId": "movie:cinema-paradiso-1988",
           "status": "seen",
           "score": 10,
           "at": 1769963045824
@@ -170884,16 +167338,10 @@
           "at": 1763665268363
         },
         {
-          "itemId": "movie:inception-2010",
+          "itemId": "movie:origen-2010",
           "status": "seen",
           "score": 8.5,
           "at": 1779045447033
-        },
-        {
-          "itemId": "movie:indiana-jones-and-the-last-crusade-1989",
-          "status": "seen",
-          "score": 8,
-          "at": 1750141166664
         },
         {
           "itemId": "movie:indiana-jones-y-la-ultima-cruzada-1989",
@@ -171026,7 +167474,7 @@
           "at": 1769420236206
         },
         {
-          "itemId": "movie:psycho-1960",
+          "itemId": "movie:psicosis-1960",
           "status": "seen",
           "score": 9,
           "at": 1789200107453
@@ -171067,12 +167515,6 @@
           "at": 1789446332814
         },
         {
-          "itemId": "movie:spider-man-into-the-spider-verse-2018",
-          "status": "seen",
-          "score": 9,
-          "at": 1790423655799
-        },
-        {
           "itemId": "movie:spider-man-un-nuevo-universo-2018",
           "status": "seen",
           "score": 9,
@@ -171100,12 +167542,6 @@
           "status": "seen",
           "score": 8,
           "at": 1776384398968
-        },
-        {
-          "itemId": "movie:terminator-2-judgment-day-1991",
-          "status": "seen",
-          "score": 8,
-          "at": 1767217523944
         },
         {
           "itemId": "movie:the-boondock-saints-1999",
@@ -171139,12 +167575,6 @@
           "itemId": "movie:the-lord-of-the-rings-the-two-towers-2002",
           "status": "pending",
           "at": 1747775593410
-        },
-        {
-          "itemId": "movie:the-matrix-1999",
-          "status": "seen",
-          "score": 9,
-          "at": 1767761352255
         },
         {
           "itemId": "movie:the-silence-of-the-lambs-1991",
@@ -171181,11 +167611,6 @@
           "status": "seen",
           "score": 9,
           "at": 1753003192034
-        },
-        {
-          "itemId": "movie:twelve-monkeys-1995",
-          "status": "pending",
-          "at": 1771241208654
         },
         {
           "itemId": "movie:up-2009",
@@ -171729,12 +168154,6 @@
           "itemId": "series:pushing-daisies-2007",
           "status": "pending",
           "at": 1790977283128
-        },
-        {
-          "itemId": "series:rick-and-morty-2013",
-          "status": "seen",
-          "score": 8,
-          "at": 1788887658618
         },
         {
           "itemId": "series:rick-y-morty-2013",
@@ -174085,12 +170504,6 @@
           "at": 1789484121221
         },
         {
-          "itemId": "movie:django-unchained-2012",
-          "status": "seen",
-          "score": 9.5,
-          "at": 1753509410275
-        },
-        {
           "itemId": "movie:do-the-right-thing-1989",
           "status": "pending",
           "at": 1756658612458
@@ -174158,12 +170571,6 @@
           "at": 1790137827127
         },
         {
-          "itemId": "movie:il-buono-il-brutto-il-cattivo-1966",
-          "status": "seen",
-          "score": 8,
-          "at": 1786334795623
-        },
-        {
           "itemId": "movie:it-s-a-wonderful-life-1946",
           "status": "pending",
           "at": 1780772400582
@@ -174179,12 +170586,6 @@
           "status": "seen",
           "score": 9,
           "at": 1749606025639
-        },
-        {
-          "itemId": "movie:la-grande-bellezza-2013",
-          "status": "seen",
-          "score": 8.5,
-          "at": 1782874604643
         },
         {
           "itemId": "movie:la-lista-de-schindler-1993",
@@ -174270,11 +170671,6 @@
           "status": "seen",
           "score": 9.5,
           "at": 1766257634111
-        },
-        {
-          "itemId": "movie:saving-private-ryan-1998",
-          "status": "pending",
-          "at": 1786581474850
         },
         {
           "itemId": "movie:seven-1995",
@@ -174374,12 +170770,6 @@
           "itemId": "movie:the-wild-bunch-1969",
           "status": "pending",
           "at": 1772763784834
-        },
-        {
-          "itemId": "movie:unforgiven-1992",
-          "status": "seen",
-          "score": 9,
-          "at": 1769564376518
         },
         {
           "itemId": "movie:uno-de-los-nuestros-1990",

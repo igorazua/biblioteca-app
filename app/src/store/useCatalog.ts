@@ -3,6 +3,7 @@ import { persist, createJSONStorage, type StateStorage } from 'zustand/middlewar
 import { get, set, del } from 'idb-keyval'
 import { supabase } from '../lib/supabase'
 import type { Item } from '../types'
+import { isAlias } from '../data/aliases'
 
 const memoryStore = new Map<string, string>()
 
@@ -69,7 +70,8 @@ export const useCatalog = create<CatalogState>()(
           const next = { ...state.items }
           let changed = false
           for (const item of newItems) {
-            if (item && item.id) {
+            // la nube aún puede devolver la gemela fusionada (p. ej. «inception-2010»): la del seed ya la cubre
+            if (item && item.id && !isAlias(item.id)) {
               next[item.id] = item
               changed = true
             }

@@ -1,5 +1,6 @@
 import { supabase } from './supabase'
 import { getItem } from '../data/catalog'
+import { canonicalId } from '../data/aliases'
 import { useStore } from '../store/useStore'
 import { useAuth } from '../store/useAuth'
 import { useCatalog } from '../store/useCatalog'
@@ -123,12 +124,15 @@ export async function pullCloudEntries(userId: string) {
 
   if (error || !data || data.length === 0) return
 
+  // Filas guardadas con el id de una gemela ya fusionada: cuentan como la obra que se conservó
+  const rows = (data as CloudEntry[]).map((r) => ({ ...r, item_id: canonicalId(r.item_id) }))
+
   // Asegurar que las obras existen en catálogo antes de procesar
-  const allIds = (data as CloudEntry[]).map((r) => r.item_id)
+  const allIds = rows.map((r) => r.item_id)
   await useCatalog.getState().ensureItems(allIds)
 
   const store = useStore.getState()
-  const { entries, rankings } = mergeCloudAndLocal(store.entries, store.rankings, data as CloudEntry[])
+  const { entries, rankings } = mergeCloudAndLocal(store.entries, store.rankings, rows)
   useStore.setState({ entries, rankings })
 }
 

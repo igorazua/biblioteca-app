@@ -1,6 +1,7 @@
 // Links compartibles sin backend: los datos viajan dentro de la URL (JSON compacto + lz-string).
 import LZString from 'lz-string'
 import type { ShelfType } from '../types'
+import { canonicalId } from '../data/aliases'
 
 export interface SharedList {
   t: string // título
@@ -38,7 +39,7 @@ export function decodeList(payload: string, isKnown: (id: string) => boolean): D
   const l = decode<SharedList>(payload)
   if (!l || typeof l.t !== 'string' || !Array.isArray(l.i)) return null
   const valid = l.i.filter((e) => Array.isArray(e) && typeof e[0] === 'string')
-  const items = valid.filter(([id]) => isKnown(id))
+  const items = valid.filter(([id]) => isKnown(id)).map((e): [string, string?] => [canonicalId(e[0]), ...e.slice(1)] as [string, string?])
   return { list: { ...l, a: l.a || 'Alguien', c: l.c || '#F5B544' }, items, missing: valid.length - items.length }
 }
 
@@ -47,7 +48,7 @@ export function decodeProfile(payload: string, isKnown: (id: string) => boolean)
   if (!p || p.k !== 'p' || typeof p.n !== 'string' || typeof p.top !== 'object' || !p.top) return null
   const top: SharedProfile['top'] = {}
   for (const [shelf, ids] of Object.entries(p.top))
-    if (Array.isArray(ids)) top[shelf as ShelfType] = ids.filter((id) => typeof id === 'string' && isKnown(id))
+    if (Array.isArray(ids)) top[shelf as ShelfType] = ids.filter((id) => typeof id === 'string' && isKnown(id)).map(canonicalId)
   return { ...p, c: p.c || '#F5B544', top }
 }
 

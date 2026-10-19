@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { items, getItem } from '../data/catalog'
+import { canonicalizeUserData } from '../data/aliases'
 import { clampStars, insertAt, starBand } from '../lib/ranking'
 import { SHELVES, type List, type Profile, type Settings, type ShelfType, type Stars, type Status, type UserEntry } from '../types'
 import { track } from './useEvents'
@@ -275,8 +276,8 @@ export const useStore = create<State>()(
     }),
     {
       name: 'biblioteca-v1',
-      version: 2,
-      migrate: (persistedState: unknown) => {
+      version: 3,
+      migrate: (persistedState: unknown, version: number) => {
         const state = persistedState as Partial<State>
         if (state && state.rankings) {
           for (const shelf of SHELVES) {
@@ -284,6 +285,14 @@ export const useStore = create<State>()(
               state.rankings[shelf] = []
             }
           }
+        }
+        // v3: gemelas fusionadas (aliases.json) → las entradas, rankings y listas pasan a la obra que se conserva
+        if (version < 3 && state?.entries && state.rankings) {
+          const c = canonicalizeUserData({ entries: state.entries, rankings: state.rankings, lists: state.lists ?? [] })
+          state.entries = c.entries
+          state.rankings = c.rankings
+          state.lists = c.lists
+          state.history = []
         }
         return state
       },
