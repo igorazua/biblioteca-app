@@ -72,3 +72,39 @@ export function canonicalizeUserData(data: {
 
   return { entries, rankings, lists, changed }
 }
+
+interface CloudLikeRow {
+  item_id: string
+  score: number | null
+  comment: string | null
+  rank_position: number | null
+  updated_at: string
+}
+
+/**
+ * Filas de la nube (biblio_entries) con ids antiguos: se pasan al id conservado y, si estaban las dos gemelas, se
+ * quedan en una con la misma prioridad que en local (con nota, ordenada, más reciente) y el comentario de la otra.
+ * Sin esto, al bajar de la nube una fila sin nota más reciente pisaría la entrada ya fusionada.
+ */
+export function collapseCloudRows<R extends CloudLikeRow>(rows: R[]): R[] {
+  const byId = new Map<string, R>()
+  for (const raw of rows) {
+    const row = { ...raw, item_id: canonicalId(raw.item_id) }
+    const prev = byId.get(row.item_id)
+    if (!prev) {
+      byId.set(row.item_id, row)
+      continue
+    }
+    const rank = (r: R) => (r.score ? 4 : 0) + (r.rank_position ? 2 : 0)
+    const newer = new Date(row.updated_at).getTime() > new Date(prev.updated_at).getTime()
+    const win = rank(row) > rank(prev) || (rank(row) === rank(prev) && newer) ? row : prev
+    const lose = win === row ? prev : row
+    const positions = [win.rank_position, lose.rank_position].filter((p): p is number => !!p)
+    byId.set(row.item_id, {
+      ...win,
+      comment: win.comment || lose.comment,
+      rank_position: positions.length ? Math.min(...positions) : null,
+    })
+  }
+  return [...byId.values()]
+}

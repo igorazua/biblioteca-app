@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { canonicalId, canonicalizeUserData } from './aliases'
+import { canonicalId, canonicalizeUserData, collapseCloudRows } from './aliases'
+import { mergeCloudAndLocal } from '../lib/sync'
 import { getItem, items } from './catalog'
 import type { ShelfType, UserEntry } from '../types'
 
@@ -60,5 +61,28 @@ describe('Gemelas fusionadas (aliases)', () => {
     const c = canonicalizeUserData({ entries: { [ES]: entry(ES) }, rankings, lists })
     expect(c.changed).toBe(false)
     expect(c.lists[0]).toBe(lists[0])
+  })
+
+  it('nube: una fila sin nota más reciente de la otra gemela no pisa la entrada fusionada', () => {
+    const local = canonicalizeUserData({
+      entries: { [EN]: entry(EN, { stars: 5, ranked: true, updatedAt: 1000 }), [ES]: entry(ES, { comment: 'me marcó', updatedAt: 500 }) },
+      rankings: { ...empty(), movie: [EN] },
+      lists: [],
+    })
+    const row = (item_id: string, patch: object) => ({
+      id: item_id, user_id: 'u', item_id, shelf: 'movie', status: 'seen' as const,
+      score: null, comment: null, rank_position: null, updated_at: new Date(1000).toISOString(), ...patch,
+    })
+    const rows = collapseCloudRows([
+      row(ES, { comment: 'me marcó', updated_at: new Date(5000).toISOString() }),
+      row(EN, { score: 5, rank_position: 1, updated_at: new Date(1000).toISOString() }),
+    ])
+    expect(rows).toHaveLength(1)
+    expect(rows[0]).toMatchObject({ item_id: ES, score: 5, comment: 'me marcó', rank_position: 1 })
+
+    const merged = mergeCloudAndLocal(local.entries, local.rankings, rows)
+    expect(merged.entries[ES]).toMatchObject({ stars: 5, comment: 'me marcó' })
+    expect(merged.entries[EN]).toBeUndefined()
+    expect(merged.rankings.movie).toEqual([ES])
   })
 })

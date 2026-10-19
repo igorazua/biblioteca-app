@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { items, getItem } from '../data/catalog'
-import { canonicalizeUserData } from '../data/aliases'
+import { canonicalId, canonicalizeUserData } from '../data/aliases'
 import { clampStars, insertAt, starBand } from '../lib/ranking'
 import { SHELVES, type List, type Profile, type Settings, type ShelfType, type Stars, type Status, type UserEntry } from '../types'
 import { track } from './useEvents'
@@ -293,6 +293,7 @@ export const useStore = create<State>()(
           state.rankings = c.rankings
           state.lists = c.lists
           state.history = []
+          if (state.pendingSave) state.pendingSave = { ...state.pendingSave, ids: [...new Set(state.pendingSave.ids.map(canonicalId))] }
         }
         return state
       },

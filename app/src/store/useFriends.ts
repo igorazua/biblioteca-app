@@ -71,7 +71,7 @@ export const useFriends = create<FriendsState>((set, get) => ({
       const colors = ['#F5B544', '#5B9CF5', '#3EC878', '#FF6B6B', '#A78BFA', '#F472B6']
 
       const mappedFriends: Friend[] = (profiles || []).map((p, idx) => {
-        const friendEntries: FriendEntry[] = (entries || [])
+        const all: FriendEntry[] = (entries || [])
           .filter((e) => e.user_id === p.id && (e.status === 'seen' || e.status === 'pending'))
           .map((e) => ({
             itemId: canonicalId(e.item_id),
@@ -79,6 +79,13 @@ export const useFriends = create<FriendsState>((set, get) => ({
             score: e.score ? Number(e.score) : undefined,
             comment: e.comment || undefined,
           }))
+        // si guardó las dos gemelas, una sola entrada: vista antes que pendiente, luego la de más nota
+        const best = new Map<string, FriendEntry>()
+        for (const e of all) {
+          const b = best.get(e.itemId)
+          if (!b || (e.status !== b.status ? e.status === 'seen' : (e.score ?? 0) > (b.score ?? 0))) best.set(e.itemId, e)
+        }
+        const friendEntries = all.filter((e) => best.get(e.itemId) === e)
 
         return {
           id: p.id,
