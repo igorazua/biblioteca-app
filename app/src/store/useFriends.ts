@@ -5,6 +5,7 @@ import { friends as seedFriends, setFriendHitsProvider } from '../data/catalog'
 import { useCatalog } from './useCatalog'
 import { canonicalId } from '../data/aliases'
 import type { Friend, FriendEntry } from '../types'
+import { isMissingFunction } from '../lib/contacts'
 
 export interface FriendHit {
   friend: Friend
@@ -107,14 +108,18 @@ export const useFriends = create<FriendsState>((set, get) => ({
     const user = useAuth.getState().user
     if (!supabase || !user) return null
 
-    const code = Math.random().toString(36).substring(2, 8).toUpperCase()
-    const { error } = await supabase.from('biblio_invites').insert({
-      code,
-      creator_id: user.id,
-    })
-
-    if (error) {
-      console.error('Error creating invite:', error)
+    // Invitación individual de un solo uso: el código lo genera el servidor (0006)
+    let code: string | null = null
+    const rpc = await supabase.rpc('biblio_create_invite')
+    if (!rpc.error) code = rpc.data as string
+    else if (isMissingFunction(rpc.error)) {
+      // migración 0006 aún sin aplicar: camino antiguo
+      code = Math.random().toString(36).substring(2, 8).toUpperCase()
+      const { error } = await supabase.from('biblio_invites').insert({ code, creator_id: user.id })
+      if (error) code = null
+    }
+    if (!code) {
+      console.error('Error creating invite:', rpc.error)
       return null
     }
 
@@ -127,7 +132,15 @@ export const useFriends = create<FriendsState>((set, get) => ({
     const user = useAuth.getState().user
     if (!supabase || !user) return { success: false, error: 'Inicia sesión para unirte' }
 
-    // 1. Buscar la invitación
+    const rpc = await supabase.rpc('biblio_accept_invite', { p_code: code })
+    if (!rpc.error) {
+      const row = (rpc.data as { creator_name: string | null }[] | null)?.[0]
+      await get().loadFriends()
+      return { success: true, creatorName: row?.creator_name || 'tu amigo' }
+    }
+    if (!isMissingFunction(rpc.error)) return { success: false, error: rpc.error.message || 'Invitación no válida o caducada' }
+
+    // migración 0006 aún sin aplicar: camino antiguo
     const { data: invite, error } = await supabase
       .from('biblio_invites')
       .select('id, creator_id, expires_at')
@@ -137,22 +150,18 @@ export const useFriends = create<FriendsState>((set, get) => ({
     if (error || !invite) return { success: false, error: 'Invitación no válida o caducada' }
     if (invite.creator_id === user.id) return { success: false, error: 'Es tu propio enlace de invitación' }
 
-    // 2. Crear amistad bidireccional
     await supabase.from('biblio_friends').upsert([
       { user_id: user.id, friend_id: invite.creator_id, status: 'accepted' },
       { user_id: invite.creator_id, friend_id: user.id, status: 'accepted' },
     ], { onConflict: 'user_id,friend_id' })
 
-    // 3. Obtener nombre del creador
     const { data: creatorProfile } = await supabase
       .from('biblio_profiles')
       .select('display_name')
       .eq('id', invite.creator_id)
       .single()
 
-    // Recargar amigos
     await get().loadFriends()
-
     return { success: true, creatorName: creatorProfile?.display_name || 'tu amigo' }
   },
 

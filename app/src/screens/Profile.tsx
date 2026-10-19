@@ -18,6 +18,7 @@ import { Icon } from '../components/Icon'
 import { useAuth, checkHandleAvailability } from '../store/useAuth'
 import { useFriends } from '../store/useFriends'
 import { supabase } from '../lib/supabase'
+import { FindFriends } from '../components/FindFriends'
 
 async function processAvatarImage(file: File): Promise<Blob> {
   return new Promise((resolve, reject) => {
@@ -63,12 +64,12 @@ export function Profile() {
   const ranks = useRanks()
 
   const { user, profile: authProfile } = useAuth()
-  const { realFriends, createInvite } = useFriends()
+  const { realFriends } = useFriends()
 
   const [toast, setToast] = useState<string | null>(null)
   const [colorOpen, setColorOpen] = useState(false)
   const [link, setLink] = useState<string | null>(null)
-  const [inviting, setInviting] = useState(false)
+  const [findFriends, setFindFriends] = useState(false)
   const [generatingCard, setGeneratingCard] = useState(false)
 
   // Subir avatar
@@ -222,27 +223,6 @@ export function Profile() {
       setToast('Error al generar la tarjeta')
     } finally {
       setGeneratingCard(false)
-    }
-  }
-
-  const handleInviteFriend = async () => {
-    setInviting(true)
-    try {
-      const inviteUrl = await createInvite()
-      if (inviteUrl) {
-        const r = await shareOrCopy({
-          title: `Únete a ${APP_NAME}`,
-          text: `He creado mi biblioteca personal en ${APP_NAME}. Conéctate y miramos nuestra afinidad:`,
-          url: inviteUrl,
-        })
-        if (r === 'copied') setToast('Enlace de invitación copiado')
-      } else {
-        setToast('Inicia sesión para generar enlaces de invitación')
-      }
-    } catch {
-      setToast('Error generando invitación')
-    } finally {
-      setInviting(false)
     }
   }
 
@@ -416,12 +396,11 @@ export function Profile() {
             <h2 className="serif text-[22px] font-semibold">Amigos</h2>
             {user && (
               <button
-                onClick={handleInviteFriend}
-                disabled={inviting}
+                onClick={() => setFindFriends(true)}
                 className="min-h-[36px] px-3.5 rounded-full bg-accent text-accent-ink text-xs font-semibold inline-flex items-center gap-1.5 active:scale-95 transition-transform"
               >
                 <Icon name="plus" size={14} />
-                {inviting ? 'Generando…' : 'Invitar amigo'}
+                Añadir amigos
               </button>
             )}
           </div>
@@ -452,7 +431,7 @@ export function Profile() {
               </div>
               <div className="font-semibold text-sm">Sin amigos conectados</div>
               <p className="text-xs text-mute max-w-xs mx-auto leading-relaxed">
-                Invita a tus amigos con tu enlace. Al registrarse veréis vuestro porcentaje de afinidad y opiniones mutuas.
+                Invita a tus amigos uno a uno o búscalos en tus contactos. Al conectar veréis vuestra afinidad y qué os recomendáis.
               </p>
             </div>
           )}
@@ -523,6 +502,7 @@ export function Profile() {
         </Sheet>
       )}
 
+      {findFriends && <FindFriends onClose={() => setFindFriends(false)} onToast={setToast} />}
       <AnimatePresence>
         {toast && <Toast key={toast} message={toast} onDone={() => setToast(null)} />}
       </AnimatePresence>

@@ -3,8 +3,17 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { useAuth } from '../store/useAuth'
 import { useFriends } from '../store/useFriends'
 import { supabase } from '../lib/supabase'
+import { isMissingFunction } from '../lib/contacts'
 import { Avatar, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
+
+type InviteStatus = 'ok' | 'used' | 'expired' | 'missing'
+
+const STATUS_TEXT: Record<Exclude<InviteStatus, 'ok'>, string> = {
+  used: 'Esta invitación ya la ha usado otra persona. Pídele a quien te la mandó una nueva: cada enlace es para una sola persona.',
+  expired: 'Esta invitación ha caducado. Pídele a quien te la mandó una nueva.',
+  missing: 'No encontramos esta invitación. Revisa que el enlace esté completo.',
+}
 
 export function JoinInvite() {
   const { code } = useParams<{ code: string }>()
@@ -18,6 +27,8 @@ export function JoinInvite() {
   const [emailSent, setEmailSent] = useState(false)
   const [toast, setToast] = useState<string | null>(null)
   const [joining, setJoining] = useState(false)
+  const [creatorAvatar, setCreatorAvatar] = useState<string | null>(null)
+  const [inviteStatus, setInviteStatus] = useState<InviteStatus>('ok')
 
   useEffect(() => {
     if (!code || !supabase) {
@@ -25,26 +36,24 @@ export function JoinInvite() {
       return
     }
 
-    // Buscar información de la invitación
-    supabase
-      .from('biblio_invites')
-      .select('creator_id')
-      .eq('code', code.toUpperCase())
-      .single()
-      .then(async ({ data: invite }) => {
+    // Quién invita y si la invitación sigue valiendo (0006: la tabla ya no se lee directamente)
+    ;(async () => {
+      const rpc = await supabase!.rpc('biblio_invite_preview', { p_code: code })
+      if (!rpc.error) {
+        const row = (rpc.data as { creator_name: string | null; creator_avatar: string | null; status: InviteStatus }[] | null)?.[0]
+        if (row?.creator_name) setCreatorName(row.creator_name)
+        if (row?.creator_avatar) setCreatorAvatar(row.creator_avatar)
+        setInviteStatus(row ? row.status : 'missing')
+      } else if (isMissingFunction(rpc.error)) {
+        // migración 0006 aún sin aplicar: camino antiguo
+        const { data: invite } = await supabase!.from('biblio_invites').select('creator_id').eq('code', code.toUpperCase()).single()
         if (invite) {
-          const { data: profile } = await supabase!
-            .from('biblio_profiles')
-            .select('display_name')
-            .eq('id', invite.creator_id)
-            .single()
-
-          if (profile?.display_name) {
-            setCreatorName(profile.display_name)
-          }
+          const { data: profile } = await supabase!.from('biblio_profiles').select('display_name').eq('id', invite.creator_id).single()
+          if (profile?.display_name) setCreatorName(profile.display_name)
         }
-        setLoading(false)
-      })
+      }
+      setLoading(false)
+    })()
   }, [code])
 
   const handleAccept = async () => {
@@ -77,7 +86,7 @@ export function JoinInvite() {
     <div className="h-full flex flex-col items-center justify-center p-6 bg-bg text-ink text-center">
       <div className="w-full max-w-sm bg-surface border border-line rounded-3xl p-6 shadow-2xl space-y-5">
         <div className="flex justify-center">
-          <Avatar name={creatorName} color="#F5B544" size={72} className="shadow-lg ring-4 ring-accent/20" />
+          <Avatar name={creatorName} url={creatorAvatar} color="#F5B544" size={72} className="shadow-lg ring-4 ring-accent/20" />
         </div>
 
         <div>
@@ -89,6 +98,11 @@ export function JoinInvite() {
 
         {loading ? (
           <div className="py-4 text-mute text-sm">Cargando invitación...</div>
+        ) : inviteStatus !== 'ok' ? (
+          <div className="space-y-3 pt-2">
+            <p className="text-sm text-ink/90 leading-relaxed">{STATUS_TEXT[inviteStatus]}</p>
+            <button onClick={() => navigate('/')} className="w-full min-h-[44px] rounded-2xl bg-surface2 text-sm font-medium">Ir a la app</button>
+          </div>
         ) : user ? (
           <div className="space-y-3 pt-2">
             <button

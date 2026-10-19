@@ -11,6 +11,7 @@ import { Icon } from '../components/Icon'
 import { pushLocalEntriesToCloud, pullCloudEntries } from '../lib/sync'
 import { subscribeToPush, isPushSupported } from '../lib/push'
 import { supabase } from '../lib/supabase'
+import { PhoneDiscovery } from '../components/PhoneDiscovery'
 
 function Toggle({ on, onChange, label }: { on: boolean; onChange: (v: boolean) => void; label: string }) {
   return (
@@ -210,6 +211,14 @@ export function Settings() {
             )}
           </div>
         </section>
+
+        {/* Amigos: encontrarte por tu teléfono (solo con cuenta) */}
+        {user && (
+          <section aria-label="Amigos">
+            <h2 className="serif text-[20px] font-semibold mb-2.5">Amigos</h2>
+            <PhoneDiscovery onToast={setToast} />
+          </section>
+        )}
 
         {/* 2. Importar listas */}
         <section aria-label="Importar listas">
