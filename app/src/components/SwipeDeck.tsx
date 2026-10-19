@@ -86,7 +86,7 @@ export const SwipeDeck = forwardRef<DeckHandle, Props>(function SwipeDeck({ deck
     if (busy.current || !top) return
     busy.current = true
     const { W, H } = size()
-    haptic('success')
+    haptic('tap')
     const opts = { duration: 0.26, ease: 'easeIn' as const }
     const c =
       dir === 'up'
