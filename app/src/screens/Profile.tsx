@@ -361,7 +361,7 @@ export function Profile() {
                       return (
                         <Link key={id} to={`/i/${encodeURIComponent(id)}`}>
                           <div className="relative">
-                            <Poster item={it} showTitle={false} layoutId={posterLayoutId(it.id)} style={{ borderRadius: 16 }} className="w-full aspect-[2/3] border border-line" />
+                            <Poster item={it} layoutId={posterLayoutId(it.id)} style={{ borderRadius: 16 }} className="w-full aspect-[2/3] border border-line" />
                             <span className="absolute top-1.5 left-1.5 w-6 h-6 rounded-full bg-accent text-accent-ink text-xs font-bold flex items-center justify-center">
                               {i + 1}
                             </span>

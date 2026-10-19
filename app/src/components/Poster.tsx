@@ -23,19 +23,6 @@ const PALETTES: [string, string, string][] = [
 
 /** Transición del póster que «vuela» entre pantallas (biblioteca/mazo → ficha) con el mismo `layoutId`. */
 export const POSTER_FLIGHT: Transition = { type: 'spring', stiffness: 420, damping: 40, mass: 0.9 }
-// Pelis, series y libros: la portada es vertical. Muchas imágenes de Wikimedia son logos o fotos apaisadas
-// (el logo de «El padrino», el reparto de «Origen»); con esas queda mejor la portada generada.
-const PORTRAIT_SHELVES = new Set(['movie', 'series', 'book'])
-const LOGO_FILE = /\.svg|logo|wordmark|title[ _-]?(card|screen)/i
-/** Imagen que no sirve como portada aunque cargue: un logo por nombre de archivo o una imagen que no es vertical. */
-export function isNotPoster(type: string, src: string, size?: { w: number; h: number }): boolean {
-  if (!PORTRAIT_SHELVES.has(type)) return false
-  let file = src
-  try { file = decodeURIComponent(src) } catch { /* url mal codificada: se mira tal cual */ }
-  if (LOGO_FILE.test(file)) return true
-  return Boolean(size && size.h > 0 && size.w / size.h > 0.9)
-}
-
 export const posterLayoutId = (itemId: string) => `poster-${itemId}`
 
 const GRAIN = "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")"
@@ -52,13 +39,11 @@ export function Poster({ item, className = '', style, alt, showTitle = true, lay
   // fade: solo si llegó por red después de montar; si ya estaba en caché aparece sin animación
   const [loaded, setLoaded] = useState<{ src: string; fade: boolean } | null>(null)
   const imgRef = useRef<HTMLImageElement>(null)
-  const src = item?.posterUrl && !isNotPoster(item.type, item.posterUrl) ? item.posterUrl : null
+  const src = item?.posterUrl ?? null
   // una imagen ya en caché puede haber cargado antes de enganchar onLoad: sin esto se quedaría con el brillo
   useLayoutEffect(() => {
     const img = imgRef.current
-    if (!src || !img?.complete || img.naturalWidth === 0) return
-    if (item && isNotPoster(item.type, src, { w: img.naturalWidth, h: img.naturalHeight })) setImgError(true)
-    else setLoaded({ src, fade: false })
+    if (src && img?.complete && img.naturalWidth > 0) setLoaded({ src, fade: false })
   }, [src])
   const flight = layoutId ? { layoutId, transition: { layout: POSTER_FLIGHT } } : {}
   if (!item) {
@@ -77,11 +62,7 @@ export function Poster({ item, className = '', style, alt, showTitle = true, lay
         ref={imgRef}
         src={src}
         alt={alt ?? `Portada de ${item.title}`}
-        onLoad={(e) => {
-          const img = e.currentTarget
-          if (isNotPoster(item.type, src, { w: img.naturalWidth, h: img.naturalHeight })) setImgError(true)
-          else setLoaded((l) => (l?.src === src ? l : { src, fade: true }))
-        }}
+        onLoad={() => setLoaded((l) => (l?.src === src ? l : { src, fade: true }))}
         onError={() => setImgError(true)}
         draggable={false}
         className={`object-cover ${done ? (loaded.fade ? 'img-in' : '') : 'skeleton'} ${className}`}
