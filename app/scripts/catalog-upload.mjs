@@ -145,6 +145,18 @@ if (!supabaseUrl || !serviceRoleKey) {
 
 const supabase = createClient(supabaseUrl, serviceRoleKey)
 
+// Antes de subir, las gemelas que ya estén en la tabla (p. ej. creadas por la Edge Function con el título en inglés)
+// sueltan sus ids externos; si no, la gemela española de un lote anterior chocaría con el índice único (type, wikidata_id).
+const twinIds = rows.filter((r) => r.wikidata_id === null && items.find((it) => it.id === r.id)?.wikidataId).map((r) => r.id)
+if (twinIds.length) {
+  const { error } = await supabase.from('biblio_catalog').update({ wikidata_id: null, tmdb_id: null, imdb_id: null }).in('id', twinIds)
+  if (error) {
+    console.error('Error liberando ids de las gemelas:', error.message)
+    process.exit(1)
+  }
+  console.log(`Gemelas sin ids externos: ${twinIds.length}`)
+}
+
 console.log('Subiendo filas a public.biblio_catalog en lotes de 100...')
 const BATCH_SIZE = 100
 let uploaded = 0
