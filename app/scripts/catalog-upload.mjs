@@ -105,23 +105,40 @@ console.log(`Obras sin id externo registradas en ${SIN_ID_FILE}: ${sinId.length}
 
 // 4. Preparar filas para biblio_catalog
 const nowIso = new Date().toISOString()
-// Gemelas (misma obra en español y en inglés): los índices únicos (type, wikidata_id) y (type, tmdb_id) solo admiten una.
+// Gemelas (misma obra en español y en inglés): los índices únicos (type, wikidata_id), (type, tmdb_id), (imdb_id), (ol_work) solo admiten una.
 // Se queda los ids la primera en el orden del seed (la del título en español), igual que la migración 0005.
-const seenExt = new Set()
+const seenWiki = new Set()
+const seenTmdb = new Set()
+const seenImdb = new Set()
+const seenOl = new Set()
+
 const rows = items.map((it) => {
   const isEnriched = enrichedIds.has(it.id)
-  const extKey = it.wikidataId ? `${it.type}|${it.wikidataId}` : null
-  const twin = extKey !== null && seenExt.has(extKey)
-  if (extKey) seenExt.add(extKey)
+
+  const wikiKey = it.wikidataId ? `${it.type}|${it.wikidataId}` : null
+  const tmdbKey = it.tmdbId ? `${it.type}|${it.tmdbId}` : null
+  const imdbKey = it.imdbId ? String(it.imdbId).trim() : null
+  const olKey = it.olid ? String(it.olid).trim() : null
+
+  const dupWiki = wikiKey !== null && seenWiki.has(wikiKey)
+  const dupTmdb = tmdbKey !== null && seenTmdb.has(tmdbKey)
+  const dupImdb = imdbKey !== null && seenImdb.has(imdbKey)
+  const dupOl = olKey !== null && seenOl.has(olKey)
+
+  if (wikiKey) seenWiki.add(wikiKey)
+  if (tmdbKey) seenTmdb.add(tmdbKey)
+  if (imdbKey) seenImdb.add(imdbKey)
+  if (olKey) seenOl.add(olKey)
+
   return {
     id: it.id,
     type: it.type,
-    tmdb_id: twin ? null : it.tmdbId || null,
-    imdb_id: twin ? null : it.imdbId || null,
-    ol_work: it.olid || null,
+    tmdb_id: dupTmdb ? null : it.tmdbId || null,
+    imdb_id: dupImdb ? null : it.imdbId || null,
+    ol_work: dupOl ? null : it.olid || null,
     isbn13: null,
     mbid: it.mbid || null,
-    wikidata_id: twin ? null : it.wikidataId || null,
+    wikidata_id: dupWiki ? null : it.wikidataId || null,
     data: it,
     source: 'seed',
     enriched_at: isEnriched ? nowIso : null,
