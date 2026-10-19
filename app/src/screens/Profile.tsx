@@ -250,15 +250,15 @@ export function Profile() {
 
   return (
     <div className="h-full scroll-y pb-8">
-      {/* Cabecera con botón de Ajustes */}
+      {/* Cabecera con botón visible de Ajustes */}
       <header className="safe-top px-5 pb-3 flex items-center justify-between min-h-[52px]">
         <span className="label-caps text-mute">Tu perfil público</span>
         <Link
           to="/ajustes"
-          aria-label="Ajustes"
-          className="w-10 h-10 rounded-full bg-surface border border-line flex items-center justify-center text-mute hover:text-ink active:scale-90 transition-transform"
+          className="min-h-[38px] px-3.5 rounded-full bg-surface border border-line flex items-center gap-1.5 text-xs font-semibold text-ink/80 hover:text-ink active:scale-95 transition-all shadow-sm"
         >
-          <Icon name="gear" size={20} />
+          <Icon name="gear" size={16} />
+          <span>Ajustes</span>
         </Link>
       </header>
 
