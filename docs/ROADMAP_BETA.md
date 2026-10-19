@@ -1,5 +1,7 @@
 # Hoja de ruta — de la demo a la beta (17/10/2026)
 
+> ⚠️ **19/10/2026: NO hay API de TMDB.** Todo lo que este documento dice de TMDB queda sustituido por Wikidata + TVmaze (ver `docs/PLAN_MEJORAS.md` §0 y §1.1).
+
 > Dos objetivos distintos:
 > - **Beta con amigos**: la PWA actual, abierta a quien tenga el enlace, para aprender de uso real. Es lo que se construye ahora.
 > - **Lanzamiento público / tiendas**: más adelante, puede ser otra app (nativa) con nombre propio.

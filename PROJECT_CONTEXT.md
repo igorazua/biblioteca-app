@@ -18,14 +18,16 @@
 5. `docs/COMPETENCIA.md` — competidores, cifras, viabilidad y análisis de pivote.
 6. `docs/ROADMAP_BETA.md` — hoja de ruta de la demo a la beta con amigos y, después, al lanzamiento público (17/10/2026).
 7. `docs/SISTEMA_BETA.md` — diseño técnico de la beta, listo para construir: catálogo vivo, cuentas, aviso de versión, botón «Todas», imports, foto de perfil y mejora visual.
-8. `docs/antigravity/` — manifiesto previo hecho con Antigravity (`VISION_Y_FEATURES.md`) y mockup de UI.
+8. `docs/PLAN_MEJORAS.md` — mejoras tras revisar la app (19/10/2026): catálogo sin TMDB, portadas, onboarding, Perfil/Ajustes, recordatorios y notificaciones, animaciones.
+9. `docs/antigravity/` — manifiesto previo hecho con Antigravity (`VISION_Y_FEATURES.md`) y mockup de UI.
 
 ## Estructura
 - `demo/mockup.html` — demo antigua de Antigravity (solo referencia visual; no reutilizar).
 - `app/` — la demo nueva: Vite + React + TS + Tailwind v4 + framer-motion + zustand. Ver `app/README.md` (arrancar, probar en móvil, regenerar `seed.json`). `npm run dev`, `npm test`, `npm run seed`.
 
 ## Reglas
-- Catálogo solo de fuentes abiertas o con licencia (TMDB, Open Library, Wikidata…); no raspar webs.
+- Catálogo solo de fuentes abiertas o con licencia (Wikidata, TVmaze, Open Library, MusicBrainz); no raspar webs.
+- **No hay API de TMDB**: no pedirla ni depender de ella.
 - Claves en `app/.env.local`, nunca en el repositorio ni en el navegador.
 - Desplegar solo con confirmación de Igor.
 

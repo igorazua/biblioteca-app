@@ -1,5 +1,7 @@
 # SISTEMA_BETA — Diseño técnico de la beta con amigos (v1, 17/10/2026)
 
+> ⚠️ **19/10/2026: NO hay API de TMDB.** Todo lo que este documento dice de TMDB queda sustituido por Wikidata + TVmaze (ver `docs/PLAN_MEJORAS.md` §0 y §1.1).
+
 > Documento para quien construya (probablemente Gemini en Antigravity). Autocontenido: rutas, tablas, contratos y criterios de aceptación.
 > Qué y por qué: `docs/ROADMAP_BETA.md`. Producto: `docs/IDEA.md`. Motor: `docs/MOTOR.md`.
 
