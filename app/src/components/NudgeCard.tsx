@@ -56,31 +56,30 @@ export function NudgeCard({ nudge, onAction, onDismiss, variant = 'banner' }: Pr
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -12 }}
       transition={{ duration: 0.22, ease: 'easeOut' }}
-      className="mx-5 mb-3 p-3.5 rounded-2xl bg-surface border border-accent/35 flex items-center gap-3 shadow-lg relative overflow-hidden"
+      className="mx-5 mb-3 p-3.5 pr-2 rounded-2xl bg-surface border border-accent/35 flex items-start gap-3 shadow-lg relative overflow-hidden"
     >
       <div className="w-9 h-9 rounded-xl bg-accent/15 text-accent flex items-center justify-center shrink-0">
         <Icon name="sparkle" size={18} />
       </div>
 
-      <div className="flex-1 min-w-0 pr-1">
-        <p className="text-xs text-ink/90 leading-snug line-clamp-2">{nudge.message}</p>
-      </div>
-
-      <div className="flex items-center gap-1.5 shrink-0">
+      {/* el mensaje entero (antes se cortaba con el botón al lado) y la acción debajo */}
+      <div className="flex-1 min-w-0 pt-0.5">
+        <p className="text-[13px] text-ink/90 leading-snug" style={{ textWrap: 'pretty' } as React.CSSProperties}>{nudge.message}</p>
         <button
           onClick={onAction}
-          className="min-h-[34px] px-3 rounded-xl bg-accent text-accent-ink text-xs font-semibold active:scale-95 transition-transform"
+          className="mt-2.5 min-h-[40px] px-4 rounded-xl bg-accent text-accent-ink text-[13px] font-semibold active:scale-95 transition-transform"
         >
           {nudge.actionLabel}
         </button>
-        <button
-          onClick={onDismiss}
-          aria-label="Cerrar recordatorio"
-          className="w-8 h-8 rounded-full flex items-center justify-center text-mute hover:text-ink active:scale-90"
-        >
-          <Icon name="x" size={15} />
-        </button>
       </div>
+
+      <button
+        onClick={onDismiss}
+        aria-label="Cerrar recordatorio"
+        className="w-9 h-9 -mt-1 rounded-full flex items-center justify-center text-mute hover:text-ink active:scale-90 shrink-0"
+      >
+        <Icon name="x" size={15} />
+      </button>
     </motion.div>
   )
 }
