@@ -547,7 +547,7 @@
         "Prime Video"
       ],
       "popularity": 88,
-      "wikidataId": "Q109331",
+      "wikidataId": "Q91540",
       "tmdbId": 165,
       "voteAvg": 6.3,
       "voteCount": 63,
@@ -717,7 +717,7 @@
         "Movistar+"
       ],
       "popularity": 85,
-      "wikidataId": "Q897685",
+      "wikidataId": "Q133654",
       "voteAvg": 8.5,
       "voteCount": 3600,
       "wikiLangs": 30,
@@ -799,7 +799,7 @@
         "Movistar+"
       ],
       "popularity": 82,
-      "wikidataId": "Q141536718",
+      "wikidataId": "Q132351",
       "voteAvg": 8.2,
       "voteCount": 100,
       "wikiLangs": 0,
@@ -2055,7 +2055,8 @@
         "Movistar+"
       ],
       "popularity": 85,
-      "originalTitle": "Mad Max: Fury Road"
+      "originalTitle": "Mad Max: Fury Road",
+      "wikidataId": "Q1757288"
     },
     {
       "id": "movie:john-wick-2014",
@@ -5873,7 +5874,7 @@
         "Movistar+"
       ],
       "popularity": 85,
-      "wikidataId": "Q3041350",
+      "wikidataId": "Q21935651",
       "tmdbId": 17720,
       "voteAvg": 6,
       "voteCount": 5,
@@ -44751,7 +44752,7 @@
       ],
       "popularity": 83,
       "tvmazeId": 677,
-      "wikidataId": "Q220",
+      "wikidataId": "Q209878",
       "voteAvg": 8.3,
       "voteCount": 41280,
       "wikiLangs": 344,

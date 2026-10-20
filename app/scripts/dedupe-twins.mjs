@@ -17,6 +17,18 @@ const ALIASES_FILE = join(here, '..', 'src', 'data', 'aliases.json')
 const seed = JSON.parse(readFileSync(SEED_FILE, 'utf-8'))
 const aliases = existsSync(ALIASES_FILE) ? JSON.parse(readFileSync(ALIASES_FILE, 'utf-8')) : {}
 
+// Wikidata IDs mal puestos en el seed, comprobados a mano contra Wikidata (20/10/2026): al fusionar por título se
+// quedó la obra con portada, pero su ID apuntaba a otra cosa (la secuela, la película de 1958, la ciudad de Roma…).
+const WIKIDATA_FIXES = {
+  'movie:regreso-al-futuro-1985': 'Q91540',
+  'movie:dunkerque-2017': 'Q21935651',
+  'movie:mad-max-furia-en-la-carretera-2015': 'Q1757288',
+  'movie:el-silencio-de-los-corderos-1991': 'Q133654',
+  'movie:sospechosos-habituales-1995': 'Q132351',
+  'series:roma-2005': 'Q209878',
+}
+for (const it of seed.items) if (WIKIDATA_FIXES[it.id]) it.wikidataId = WIKIDATA_FIXES[it.id]
+
 const keeperByExt = new Map()
 const kept = []
 let removed = 0

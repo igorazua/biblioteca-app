@@ -494,22 +494,27 @@ async function resolveRefs(supabase: Supa, refs: any[]): Promise<any[]> {
 
       const normNew = normTitle(newItem.title)
       const matchedSeed = (candidates || []).find((c: any) => {
-        const itemTitleNorm = normTitle(c.data?.title || '')
+        // el seed muestra el título de España («Regreso al futuro») y guarda el original («Back to the Future»)
+        const sameTitle = [c.data?.title, c.data?.originalTitle].some((t: string | undefined) => t && normTitle(t) === normNew)
         const itemYear = c.data?.year
         const yearDiff = Math.abs((itemYear || 0) - newItem.year)
         const yearMatch = type === 'series' ? yearDiff <= 1 : yearDiff === 0
-        return itemTitleNorm === normNew && yearMatch
+        return sameTitle && yearMatch
       })
 
       if (matchedSeed) {
-        const updatedData = { ...matchedSeed.data, ...newItem, id: matchedSeed.id }
+        // Lo del seed manda (título de España, portada, sinopsis revisada); la fuente solo rellena lo que falte
+        const filled = Object.fromEntries(
+          Object.entries(newItem).filter(([k, v]) => v !== null && v !== undefined && v !== '' && matchedSeed.data?.[k] == null)
+        )
+        const updatedData = { ...matchedSeed.data, ...filled, id: matchedSeed.id }
         await supabase
           .from('biblio_catalog')
           .update({
-            wikidata_id: wikidataId ?? matchedSeed.wikidata_id,
-            imdb_id: imdbId ?? matchedSeed.imdb_id,
-            ol_work: olWork ?? matchedSeed.ol_work,
-            mbid: mbid ?? matchedSeed.mbid,
+            wikidata_id: matchedSeed.wikidata_id ?? wikidataId,
+            imdb_id: matchedSeed.imdb_id ?? imdbId,
+            ol_work: matchedSeed.ol_work ?? olWork,
+            mbid: matchedSeed.mbid ?? mbid,
             data: updatedData,
             updated_at: new Date().toISOString(),
           })
@@ -610,7 +615,9 @@ async function matchRow(supabase: Supa, row: any, type: string, qids: Map<string
   query = year ? query.in('data->>year', yearsAround(year)) : query.ilike('data->>title', row.title)
   const { data: catMatches } = await query.limit(1000)
   const sureMatches = (catMatches || []).filter(
-    (c: any) => titles.includes(normTitle(c.data?.title || '')) && sameYear(type, year, c.data?.year)
+    (c: any) =>
+      (titles.includes(normTitle(c.data?.title || '')) || titles.includes(normTitle(c.data?.originalTitle || ''))) &&
+      sameYear(type, year, c.data?.year)
   )
   if (sureMatches.length === 1) return { status: 'sure', item: sureMatches[0].data }
 
