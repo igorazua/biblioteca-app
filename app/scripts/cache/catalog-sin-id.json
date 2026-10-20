@@ -112,20 +112,6 @@
     "creator": "Celine Song"
   },
   {
-    "id": "movie:schindler-s-list-1993",
-    "type": "movie",
-    "title": "Schindler's List",
-    "year": 1993,
-    "creator": "Steven Spielberg"
-  },
-  {
-    "id": "movie:fight-club-1999",
-    "type": "movie",
-    "title": "Fight Club",
-    "year": 1999,
-    "creator": "David Fincher"
-  },
-  {
     "id": "movie:hamilton-2020",
     "type": "movie",
     "title": "Hamilton",
@@ -142,7 +128,7 @@
   {
     "id": "movie:star-wars-1977",
     "type": "movie",
-    "title": "Star Wars",
+    "title": "La guerra de las galaxias",
     "year": 1977,
     "creator": "George Lucas"
   },
@@ -154,16 +140,9 @@
     "creator": "Luc Besson"
   },
   {
-    "id": "movie:the-lion-king-1994",
-    "type": "movie",
-    "title": "The Lion King",
-    "year": 1994,
-    "creator": "Roger Allers"
-  },
-  {
     "id": "movie:modern-times-1936",
     "type": "movie",
-    "title": "Modern Times",
+    "title": "Tiempos modernos",
     "year": 1936,
     "creator": "Charles Chaplin"
   },
@@ -173,13 +152,6 @@
     "title": "Capharna\u001am",
     "year": 2018,
     "creator": "Nadine Labaki"
-  },
-  {
-    "id": "movie:wall-e-2008-208",
-    "type": "movie",
-    "title": "WALL\u001aE",
-    "year": 2008,
-    "creator": "Andrew Stanton"
   },
   {
     "id": "movie:jodaeiye-nader-az-simin-2011",
@@ -215,13 +187,6 @@
     "title": "Per qualche dollaro in pi\u001a",
     "year": 1965,
     "creator": "Sergio Leone"
-  },
-  {
-    "id": "movie:vertigo-1958-256",
-    "type": "movie",
-    "title": "Vertigo",
-    "year": 1958,
-    "creator": "Alfred Hitchcock"
   },
   {
     "id": "movie:m-eine-stadt-sucht-einen-m-rder-1931",
@@ -345,7 +310,7 @@
   {
     "id": "movie:in-the-name-of-the-father-1993",
     "type": "movie",
-    "title": "In the Name of the Father",
+    "title": "En el nombre del padre",
     "year": 1993,
     "creator": "Jim Sheridan"
   },
@@ -373,7 +338,7 @@
   {
     "id": "movie:cool-hand-luke-1967",
     "type": "movie",
-    "title": "Cool Hand Luke",
+    "title": "La leyenda del indomable",
     "year": 1967,
     "creator": "Stuart Rosenberg"
   },
@@ -401,7 +366,7 @@
   {
     "id": "movie:white-heat-1949",
     "type": "movie",
-    "title": "White Heat",
+    "title": "Al rojo vivo",
     "year": 1949,
     "creator": "Raoul Walsh"
   },
@@ -499,7 +464,7 @@
   {
     "id": "movie:beauty-and-the-beast-1991",
     "type": "movie",
-    "title": "Beauty and the Beast",
+    "title": "La bella y la bestia",
     "year": 1991,
     "creator": "Gary Trousdale"
   },
@@ -520,7 +485,7 @@
   {
     "id": "movie:the-sound-of-music-1965",
     "type": "movie",
-    "title": "The Sound of Music",
+    "title": "Sonrisas y lágrimas",
     "year": 1965,
     "creator": "Robert Wise"
   },
@@ -583,7 +548,7 @@
   {
     "id": "movie:the-wizard-of-oz-1939",
     "type": "movie",
-    "title": "The Wizard of Oz",
+    "title": "El mago de Oz",
     "year": 1939,
     "creator": "Victor Fleming"
   },
@@ -625,7 +590,7 @@
   {
     "id": "movie:ying-xiong-2002",
     "type": "movie",
-    "title": "Ying xiong",
+    "title": "Hero",
     "year": 2002,
     "creator": "Yimou Zhang"
   },
@@ -660,7 +625,7 @@
   {
     "id": "movie:harvey-1950",
     "type": "movie",
-    "title": "Harvey",
+    "title": "El invisible Harvey",
     "year": 1950,
     "creator": "Henry Koster"
   },
@@ -800,7 +765,7 @@
   {
     "id": "movie:pride-prejudice-2005",
     "type": "movie",
-    "title": "Pride & Prejudice",
+    "title": "Orgullo y prejuicio",
     "year": 2005,
     "creator": "Joe Wright"
   },
@@ -898,7 +863,7 @@
   {
     "id": "movie:ghostbusters-1984",
     "type": "movie",
-    "title": "Ghostbusters",
+    "title": "Cazafantasmas",
     "year": 1984,
     "creator": "Ivan Reitman"
   },
@@ -947,14 +912,14 @@
   {
     "id": "movie:bonnie-and-clyde-1967",
     "type": "movie",
-    "title": "Bonnie and Clyde",
+    "title": "Bonnie y Clyde",
     "year": 1967,
     "creator": "Arthur Penn"
   },
   {
     "id": "movie:the-longest-day-1962",
     "type": "movie",
-    "title": "The Longest Day",
+    "title": "El día más largo",
     "year": 1962,
     "creator": "Ken Annakin"
   },
@@ -968,7 +933,7 @@
   {
     "id": "movie:stagecoach-1939",
     "type": "movie",
-    "title": "Stagecoach",
+    "title": "La diligencia",
     "year": 1939,
     "creator": "John Ford"
   },
@@ -1302,13 +1267,6 @@
     "creator": "Greg Daniels"
   },
   {
-    "id": "series:como-conoci-a-vuestra-madre-2005",
-    "type": "series",
-    "title": "Cómo conocí a vuestra madre",
-    "year": 2005,
-    "creator": "Carter Bays y Craig Thomas"
-  },
-  {
     "id": "series:the-big-bang-theory-2007",
     "type": "series",
     "title": "The Big Bang Theory",
@@ -1351,13 +1309,6 @@
     "creator": "Miguel Ángel Bernardeau"
   },
   {
-    "id": "series:hermanos-de-sangre-2001",
-    "type": "series",
-    "title": "Hermanos de sangre",
-    "year": 2001,
-    "creator": "Tom Hanks y Steven Spielberg"
-  },
-  {
     "id": "series:puente-de-resund-2011",
     "type": "series",
     "title": "Puente de Øresund",
@@ -1367,7 +1318,7 @@
   {
     "id": "series:attack-on-titan-2013",
     "type": "series",
-    "title": "Attack on Titan",
+    "title": "Ataque a los titanes",
     "year": 2013,
     "creator": "Hajime Isayama"
   },
@@ -1423,7 +1374,7 @@
   {
     "id": "series:invincible-2021",
     "type": "series",
-    "title": "Invincible",
+    "title": "Invencible",
     "year": 2021,
     "creator": "Robert Kirkman"
   },
@@ -1617,13 +1568,6 @@
     "creator": "NTV"
   },
   {
-    "id": "series:vikings-2013",
-    "type": "series",
-    "title": "Vikings",
-    "year": 2013,
-    "creator": "History"
-  },
-  {
     "id": "series:resurrection-2014",
     "type": "series",
     "title": "Resurrection",
@@ -1666,25 +1610,11 @@
     "creator": "ABC"
   },
   {
-    "id": "series:utopia-2013-202",
-    "type": "series",
-    "title": "Utopia",
-    "year": 2013,
-    "creator": "Channel 4"
-  },
-  {
     "id": "series:the-goldbergs-2013",
     "type": "series",
     "title": "The Goldbergs",
     "year": 2013,
     "creator": "ABC"
-  },
-  {
-    "id": "series:family-guy-1999",
-    "type": "series",
-    "title": "Family Guy",
-    "year": 1999,
-    "creator": "FOX"
   },
   {
     "id": "series:a-to-z-2014",
@@ -2389,7 +2319,7 @@
   {
     "id": "series:avatar-the-last-airbender-2005",
     "type": "series",
-    "title": "Avatar: The Last Airbender",
+    "title": "Avatar: la leyenda de Aang",
     "year": 2005,
     "creator": "Nickelodeon"
   },
@@ -2431,7 +2361,7 @@
   {
     "id": "series:everybody-loves-raymond-1996",
     "type": "series",
-    "title": "Everybody Loves Raymond",
+    "title": "Todo el mundo quiere a Raymond",
     "year": 1996,
     "creator": "CBS"
   },
@@ -4744,6 +4674,13 @@
     "title": "Valeria: Card Kingdoms",
     "year": 2016,
     "creator": "Isaias Vallejo"
+  },
+  {
+    "id": "boardgame:libertalia-2012",
+    "type": "boardgame",
+    "title": "Libertalia",
+    "year": 2012,
+    "creator": "Paolo Mori"
   },
   {
     "id": "boardgame:etherfields-2020",
