@@ -19,7 +19,8 @@
 6. `docs/ROADMAP_BETA.md` — hoja de ruta de la demo a la beta con amigos y, después, al lanzamiento público (17/10/2026).
 7. `docs/SISTEMA_BETA.md` — diseño técnico de la beta, listo para construir: catálogo vivo, cuentas, aviso de versión, botón «Todas», imports, foto de perfil y mejora visual.
 8. `docs/PLAN_MEJORAS.md` — mejoras tras revisar la app (19/10/2026): catálogo sin TMDB, portadas, onboarding, Perfil/Ajustes, recordatorios y notificaciones, animaciones.
-9. `docs/antigravity/` — manifiesto previo hecho con Antigravity (`VISION_Y_FEATURES.md`) y mockup de UI.
+9. `docs/APP_NATIVA.md` — lo que exige la app nativa sea cual sea la tecnología: permisos de contactos, tiendas y la política de contactos de Google Play, RGPD, login nativo y límites de 0006 (20/10/2026).
+10. `docs/antigravity/` — manifiesto previo hecho con Antigravity (`VISION_Y_FEATURES.md`) y mockup de UI.
 
 ## Estructura
 - `demo/mockup.html` — demo antigua de Antigravity (solo referencia visual; no reutilizar).
@@ -30,6 +31,7 @@
 - **No hay API de TMDB**: no pedirla ni depender de ella.
 - Claves en `app/.env.local`, nunca en el repositorio ni en el navegador.
 - Desplegar solo con confirmación de Igor.
+- **App nativa:** se programará desde cero en React Native o en nativo iOS (por decidir). No se envuelve la PWA (nada de Capacitor ni similares). La PWA sigue siendo la versión web. Requisitos en `docs/APP_NATIVA.md`.
 
 ## Proyectos relacionados
 - `scratch/juegos-mesa-app/` — idea derivada: la misma mecánica aplicada a juegos de mesa.
