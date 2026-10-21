@@ -162,16 +162,29 @@ if (!supabaseUrl || !serviceRoleKey) {
 
 const supabase = createClient(supabaseUrl, serviceRoleKey)
 
-// Antes de subir, las gemelas que ya estén en la tabla (p. ej. creadas por la Edge Function con el título en inglés)
-// sueltan sus ids externos; si no, la gemela española de un lote anterior chocaría con el índice único (type, wikidata_id).
+const ALIASES_FILE = join(ROOT, 'src', 'data', 'aliases.json')
+const aliases = existsSync(ALIASES_FILE) ? JSON.parse(readFileSync(ALIASES_FILE, 'utf-8')) : {}
+const aliasOldIds = Object.keys(aliases)
+
+// Antes de subir, las gemelas y alias que ya estén en la tabla sueltan sus ids externos
 const twinIds = rows.filter((r) => r.wikidata_id === null && items.find((it) => it.id === r.id)?.wikidataId).map((r) => r.id)
-if (twinIds.length) {
-  const { error } = await supabase.from('biblio_catalog').update({ wikidata_id: null, tmdb_id: null, imdb_id: null }).in('id', twinIds)
-  if (error) {
-    console.error('Error liberando ids de las gemelas:', error.message)
-    process.exit(1)
+const allOldIds = Array.from(new Set([...twinIds, ...aliasOldIds]))
+if (allOldIds.length) {
+  for (let i = 0; i < allOldIds.length; i += 200) {
+    const chunk = allOldIds.slice(i, i + 200)
+    const { error } = await supabase.from('biblio_catalog').update({
+      wikidata_id: null,
+      tmdb_id: null,
+      imdb_id: null,
+      ol_work: null,
+      mbid: null,
+      isbn13: null,
+    }).in('id', chunk)
+    if (error) {
+      console.warn('Aviso liberando ids antiguos:', error.message)
+    }
   }
-  console.log(`Gemelas sin ids externos: ${twinIds.length}`)
+  console.log(`Gemelas y alias sin ids externos en BD: ${allOldIds.length}`)
 }
 
 console.log('Subiendo filas a public.biblio_catalog en lotes de 100...')

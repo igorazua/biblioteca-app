@@ -21,46 +21,11 @@
     "creator": "George Lucas"
   },
   {
-    "id": "movie:la-la-land-2016",
-    "type": "movie",
-    "title": "La La Land",
-    "year": 2016,
-    "creator": "Damien Chazelle"
-  },
-  {
     "id": "movie:mad-max-furia-en-la-carretera-2015",
     "type": "movie",
     "title": "Mad Max: Furia en la carretera",
     "year": 2015,
     "creator": "George Miller"
-  },
-  {
-    "id": "movie:barbie-2023",
-    "type": "movie",
-    "title": "Barbie",
-    "year": 2023,
-    "creator": "Greta Gerwig"
-  },
-  {
-    "id": "movie:coco-2017",
-    "type": "movie",
-    "title": "Coco",
-    "year": 2017,
-    "creator": "Lee Unkrich"
-  },
-  {
-    "id": "movie:akira-1988",
-    "type": "movie",
-    "title": "Akira",
-    "year": 1988,
-    "creator": "Katsuhiro Otomo"
-  },
-  {
-    "id": "movie:drive-2011",
-    "type": "movie",
-    "title": "Drive",
-    "year": 2011,
-    "creator": "Nicolas Winding Refn"
   },
   {
     "id": "movie:spider-man-cruzando-el-multiverso-2023",
@@ -91,13 +56,6 @@
     "creator": "Alejandro González Iñárritu"
   },
   {
-    "id": "movie:casino-1995",
-    "type": "movie",
-    "title": "Casino",
-    "year": 1995,
-    "creator": "Martin Scorsese"
-  },
-  {
     "id": "movie:el-truco-final-el-prestigio-2006",
     "type": "movie",
     "title": "El truco final (El prestigio)",
@@ -112,13 +70,6 @@
     "creator": "Celine Song"
   },
   {
-    "id": "movie:hamilton-2020",
-    "type": "movie",
-    "title": "Hamilton",
-    "year": 2020,
-    "creator": "Thomas Kail"
-  },
-  {
     "id": "movie:la-vita-bella-1997",
     "type": "movie",
     "title": "La vita \u001a bella",
@@ -126,25 +77,11 @@
     "creator": "Roberto Benigni"
   },
   {
-    "id": "movie:star-wars-1977",
-    "type": "movie",
-    "title": "La guerra de las galaxias",
-    "year": 1977,
-    "creator": "George Lucas"
-  },
-  {
     "id": "movie:l-on-1994",
     "type": "movie",
     "title": "L\u001aon",
     "year": 1994,
     "creator": "Luc Besson"
-  },
-  {
-    "id": "movie:modern-times-1936",
-    "type": "movie",
-    "title": "Tiempos modernos",
-    "year": 1936,
-    "creator": "Charles Chaplin"
   },
   {
     "id": "movie:capharna-m-2018",
@@ -194,27 +131,6 @@
     "title": "M - Eine Stadt sucht einen M\u001arder",
     "year": 1931,
     "creator": "Fritz Lang"
-  },
-  {
-    "id": "movie:warrior-2011",
-    "type": "movie",
-    "title": "Warrior",
-    "year": 2011,
-    "creator": "Gavin O'Connor"
-  },
-  {
-    "id": "movie:black-2005",
-    "type": "movie",
-    "title": "Black",
-    "year": 2005,
-    "creator": "Sanjay Leela Bhansali"
-  },
-  {
-    "id": "movie:ran-1985",
-    "type": "movie",
-    "title": "Ran",
-    "year": 1985,
-    "creator": "Akira Kurosawa"
   },
   {
     "id": "movie:h-stsonaten-1978",
@@ -308,13 +224,6 @@
     "creator": "Hideaki Anno"
   },
   {
-    "id": "movie:in-the-name-of-the-father-1993",
-    "type": "movie",
-    "title": "En el nombre del padre",
-    "year": 1993,
-    "creator": "Jim Sheridan"
-  },
-  {
     "id": "movie:d-h-ng-denglong-gaogao-gu-1991",
     "type": "movie",
     "title": "D\u001a h\u001ang denglong gaogao gu\u001a",
@@ -322,25 +231,11 @@
     "creator": "Yimou Zhang"
   },
   {
-    "id": "movie:rocky-1976",
-    "type": "movie",
-    "title": "Rocky",
-    "year": 1976,
-    "creator": "John G. Avildsen"
-  },
-  {
     "id": "movie:le-samoura-1967",
     "type": "movie",
     "title": "Le samoura\u001a",
     "year": 1967,
     "creator": "Jean-Pierre Melville"
-  },
-  {
-    "id": "movie:cool-hand-luke-1967",
-    "type": "movie",
-    "title": "La leyenda del indomable",
-    "year": 1967,
-    "creator": "Stuart Rosenberg"
   },
   {
     "id": "movie:el-ngel-exterminador-1962",
@@ -362,27 +257,6 @@
     "title": "Kumonosu-j\u001a",
     "year": 1957,
     "creator": "Akira Kurosawa"
-  },
-  {
-    "id": "movie:white-heat-1949",
-    "type": "movie",
-    "title": "Al rojo vivo",
-    "year": 1949,
-    "creator": "Raoul Walsh"
-  },
-  {
-    "id": "movie:togo-2019",
-    "type": "movie",
-    "title": "Togo",
-    "year": 2019,
-    "creator": "Ericson Core"
-  },
-  {
-    "id": "movie:baby-2015",
-    "type": "movie",
-    "title": "Baby",
-    "year": 2015,
-    "creator": "Neeraj Pandey"
   },
   {
     "id": "movie:lion-2016",
@@ -434,13 +308,6 @@
     "creator": "Ki-duk Kim"
   },
   {
-    "id": "movie:magnolia-1999",
-    "type": "movie",
-    "title": "Magnolia",
-    "year": 1999,
-    "creator": "Paul Thomas Anderson"
-  },
-  {
     "id": "movie:p-fekuto-bur-1997",
     "type": "movie",
     "title": "P\u001afekuto bur\u001a",
@@ -448,25 +315,11 @@
     "creator": "Satoshi Kon"
   },
   {
-    "id": "movie:knockin-on-heaven-s-door-1997",
-    "type": "movie",
-    "title": "Knockin' on Heaven's Door",
-    "year": 1997,
-    "creator": "Thomas Jahn"
-  },
-  {
     "id": "movie:k-kaku-kid-tai-1995",
     "type": "movie",
     "title": "K\u001akaku Kid\u001atai",
     "year": 1995,
     "creator": "Mamoru Oshii"
-  },
-  {
-    "id": "movie:beauty-and-the-beast-1991",
-    "type": "movie",
-    "title": "La bella y la bestia",
-    "year": 1991,
-    "creator": "Gary Trousdale"
   },
   {
     "id": "movie:der-himmel-ber-berlin-1987",
@@ -481,13 +334,6 @@
     "title": "Tenk\u001a no shiro Rapyuta",
     "year": 1986,
     "creator": "Hayao Miyazaki"
-  },
-  {
-    "id": "movie:the-sound-of-music-1965",
-    "type": "movie",
-    "title": "Sonrisas y lágrimas",
-    "year": 1965,
-    "creator": "Robert Wise"
   },
   {
     "id": "movie:8-1963",
@@ -539,20 +385,6 @@
     "creator": "Nicholas Ray"
   },
   {
-    "id": "movie:laura-1944",
-    "type": "movie",
-    "title": "Laura",
-    "year": 1944,
-    "creator": "Otto Preminger"
-  },
-  {
-    "id": "movie:the-wizard-of-oz-1939",
-    "type": "movie",
-    "title": "El mago de Oz",
-    "year": 1939,
-    "creator": "Victor Fleming"
-  },
-  {
     "id": "movie:la-r-gle-du-jeu-1939",
     "type": "movie",
     "title": "La r\u001agle du jeu",
@@ -565,13 +397,6 @@
     "title": "Un proph\u001ate",
     "year": 2009,
     "creator": "Jacques Audiard"
-  },
-  {
-    "id": "movie:moon-2009",
-    "type": "movie",
-    "title": "Moon",
-    "year": 2009,
-    "creator": "Duncan Jones"
   },
   {
     "id": "movie:l-t-den-r-tte-komma-in-2008",
@@ -588,32 +413,11 @@
     "creator": "Cristian Mungiu"
   },
   {
-    "id": "movie:ying-xiong-2002",
-    "type": "movie",
-    "title": "Hero",
-    "year": 2002,
-    "creator": "Yimou Zhang"
-  },
-  {
     "id": "movie:j-b-ninp-ch-1993",
     "type": "movie",
     "title": "J\u001ab\u001a ninp\u001ach\u001a",
     "year": 1993,
     "creator": "Yoshiaki Kawajiri"
-  },
-  {
-    "id": "movie:brazil-1985",
-    "type": "movie",
-    "title": "Brazil",
-    "year": 1985,
-    "creator": "Terry Gilliam"
-  },
-  {
-    "id": "movie:manhattan-1979",
-    "type": "movie",
-    "title": "Manhattan",
-    "year": 1979,
-    "creator": "Woody Allen"
   },
   {
     "id": "movie:la-monta-a-sagrada-1973",
@@ -679,13 +483,6 @@
     "creator": "Asghar Farhadi"
   },
   {
-    "id": "movie:kokuhaku-2010",
-    "type": "movie",
-    "title": "Kokuhaku",
-    "year": 2010,
-    "creator": "Tetsuya Nakashima"
-  },
-  {
     "id": "movie:ang-ma-reul-bo-at-da-2010",
     "type": "movie",
     "title": "Ang-ma-reul bo-at-da",
@@ -735,13 +532,6 @@
     "creator": "Niels Arden Oplev"
   },
   {
-    "id": "movie:once-2007",
-    "type": "movie",
-    "title": "Once",
-    "year": 2007,
-    "creator": "John Carney"
-  },
-  {
     "id": "movie:mr-nobody-2009",
     "type": "movie",
     "title": "Mr. Nobody",
@@ -761,13 +551,6 @@
     "title": "Adams \u001abler",
     "year": 2005,
     "creator": "Anders Thomas Jensen"
-  },
-  {
-    "id": "movie:pride-prejudice-2005",
-    "type": "movie",
-    "title": "Orgullo y prejuicio",
-    "year": 2005,
-    "creator": "Joe Wright"
   },
   {
     "id": "movie:t-ky-goddof-z-zu-2003",
@@ -861,13 +644,6 @@
     "creator": "Sam Raimi"
   },
   {
-    "id": "movie:ghostbusters-1984",
-    "type": "movie",
-    "title": "Cazafantasmas",
-    "year": 1984,
-    "creator": "Ivan Reitman"
-  },
-  {
     "id": "movie:days-of-heaven-1978",
     "type": "movie",
     "title": "Days of Heaven",
@@ -903,39 +679,11 @@
     "creator": "Ren\u001a Laloux"
   },
   {
-    "id": "movie:cabaret-1972",
-    "type": "movie",
-    "title": "Cabaret",
-    "year": 1972,
-    "creator": "Bob Fosse"
-  },
-  {
-    "id": "movie:bonnie-and-clyde-1967",
-    "type": "movie",
-    "title": "Bonnie y Clyde",
-    "year": 1967,
-    "creator": "Arthur Penn"
-  },
-  {
-    "id": "movie:the-longest-day-1962",
-    "type": "movie",
-    "title": "El día más largo",
-    "year": 1962,
-    "creator": "Ken Annakin"
-  },
-  {
     "id": "movie:bout-de-souffle-1960",
     "type": "movie",
     "title": "\u001a bout de souffle",
     "year": 1960,
     "creator": "Jean-Luc Godard"
-  },
-  {
-    "id": "movie:stagecoach-1939",
-    "type": "movie",
-    "title": "La diligencia",
-    "year": 1939,
-    "creator": "John Ford"
   },
   {
     "id": "movie:scarface-the-shame-of-the-nation-1932",
@@ -1029,13 +777,6 @@
     "creator": "Matthew Vaughn"
   },
   {
-    "id": "movie:skyfall-2012",
-    "type": "movie",
-    "title": "Skyfall",
-    "year": 2012,
-    "creator": "Sam Mendes"
-  },
-  {
     "id": "movie:papurika-2006",
     "type": "movie",
     "title": "Papurika",
@@ -1099,25 +840,11 @@
     "creator": "Bob Gale"
   },
   {
-    "id": "movie:happiness-1998",
-    "type": "movie",
-    "title": "Happiness",
-    "year": 1998,
-    "creator": "Todd Solondz"
-  },
-  {
     "id": "movie:le-d-ner-de-cons-1998",
     "type": "movie",
     "title": "Le d\u001aner de cons",
     "year": 1998,
     "creator": "Francis Veber"
-  },
-  {
-    "id": "movie:shine-1996",
-    "type": "movie",
-    "title": "Shine",
-    "year": 1996,
-    "creator": "Scott Hicks"
   },
   {
     "id": "movie:primal-fear-1996",
@@ -1225,13 +952,6 @@
     "creator": "Tyler Nilson"
   },
   {
-    "id": "movie:victoria-2015",
-    "type": "movie",
-    "title": "Victoria",
-    "year": 2015,
-    "creator": "Sebastian Schipper"
-  },
-  {
     "id": "series:mad-men-2007",
     "type": "series",
     "title": "Mad Men",
@@ -1267,34 +987,6 @@
     "creator": "Greg Daniels"
   },
   {
-    "id": "series:the-big-bang-theory-2007",
-    "type": "series",
-    "title": "The Big Bang Theory",
-    "year": 2007,
-    "creator": "Chuck Lorre y Bill Prady"
-  },
-  {
-    "id": "series:chernobil-2019",
-    "type": "series",
-    "title": "Chernóbil",
-    "year": 2019,
-    "creator": "Craig Mazin"
-  },
-  {
-    "id": "series:house-2004",
-    "type": "series",
-    "title": "House",
-    "year": 2004,
-    "creator": "David Shore"
-  },
-  {
-    "id": "series:gambito-de-dama-2020",
-    "type": "series",
-    "title": "Gambito de dama",
-    "year": 2020,
-    "creator": "Scott Frank y Allan Scott"
-  },
-  {
     "id": "series:elite-2018",
     "type": "series",
     "title": "Élite",
@@ -1314,27 +1006,6 @@
     "title": "Puente de Øresund",
     "year": 2011,
     "creator": "Hans Rosenfeldt"
-  },
-  {
-    "id": "series:attack-on-titan-2013",
-    "type": "series",
-    "title": "Ataque a los titanes",
-    "year": 2013,
-    "creator": "Hajime Isayama"
-  },
-  {
-    "id": "series:death-note-2006",
-    "type": "series",
-    "title": "Death Note",
-    "year": 2006,
-    "creator": "Tetsuro Araki"
-  },
-  {
-    "id": "series:barry-2018",
-    "type": "series",
-    "title": "Barry",
-    "year": 2018,
-    "creator": "Bill Hader y Alec Berg"
   },
   {
     "id": "series:arcane-2021",
@@ -1358,39 +1029,11 @@
     "creator": "Hideaki Anno"
   },
   {
-    "id": "series:demon-slayer-kimetsu-no-yaiba-2019",
-    "type": "series",
-    "title": "Demon Slayer: Kimetsu no Yaiba",
-    "year": 2019,
-    "creator": "Haruo Sotozaki"
-  },
-  {
     "id": "series:monster-2004",
     "type": "series",
     "title": "Monster",
     "year": 2004,
     "creator": "Masayuki Kojima"
-  },
-  {
-    "id": "series:invincible-2021",
-    "type": "series",
-    "title": "Invencible",
-    "year": 2021,
-    "creator": "Robert Kirkman"
-  },
-  {
-    "id": "series:andor-2022",
-    "type": "series",
-    "title": "Andor",
-    "year": 2022,
-    "creator": "Tony Gilroy"
-  },
-  {
-    "id": "series:silo-2023",
-    "type": "series",
-    "title": "Silo",
-    "year": 2023,
-    "creator": "Graham Yost"
   },
   {
     "id": "series:the-shield-2002",
@@ -1421,20 +1064,6 @@
     "creator": "Javier Calvo y Javier Ambrossi"
   },
   {
-    "id": "series:la-mesias-2023",
-    "type": "series",
-    "title": "La Mesías",
-    "year": 2023,
-    "creator": "Javier Calvo y Javier Ambrossi"
-  },
-  {
-    "id": "series:vigil-2021",
-    "type": "series",
-    "title": "Vigil",
-    "year": 2021,
-    "creator": "Tom Edge"
-  },
-  {
     "id": "series:the-fall-la-caza-2013",
     "type": "series",
     "title": "The Fall (La caza)",
@@ -1461,20 +1090,6 @@
     "title": "Hannibal",
     "year": 2013,
     "creator": "Bryan Fuller"
-  },
-  {
-    "id": "series:new-girl-2011",
-    "type": "series",
-    "title": "New Girl",
-    "year": 2011,
-    "creator": "Elizabeth Meriwether"
-  },
-  {
-    "id": "series:schitt-s-creek-2015",
-    "type": "series",
-    "title": "Schitt's Creek",
-    "year": 2015,
-    "creator": "Dan Levy y Eugene Levy"
   },
   {
     "id": "series:the-it-crowd-los-informaticos-2006",
@@ -1519,20 +1134,6 @@
     "creator": "David Benioff, D. B. Weiss y Alexander Woo"
   },
   {
-    "id": "series:hierro-2019",
-    "type": "series",
-    "title": "Hierro",
-    "year": 2019,
-    "creator": "Pepe Coira"
-  },
-  {
-    "id": "series:constantine-2014",
-    "type": "series",
-    "title": "Constantine",
-    "year": 2014,
-    "creator": "NBC"
-  },
-  {
     "id": "series:the-strain-2014",
     "type": "series",
     "title": "The Strain",
@@ -1554,34 +1155,6 @@
     "creator": "HBO"
   },
   {
-    "id": "series:hellsing-2001",
-    "type": "series",
-    "title": "Hellsing",
-    "year": 2001,
-    "creator": "Fuji TV"
-  },
-  {
-    "id": "series:berserk-1997",
-    "type": "series",
-    "title": "Berserk",
-    "year": 1997,
-    "creator": "NTV"
-  },
-  {
-    "id": "series:resurrection-2014",
-    "type": "series",
-    "title": "Resurrection",
-    "year": 2014,
-    "creator": "ABC"
-  },
-  {
-    "id": "series:forever-2014",
-    "type": "series",
-    "title": "Forever",
-    "year": 2014,
-    "creator": "ABC"
-  },
-  {
     "id": "series:madam-secretary-2014",
     "type": "series",
     "title": "Madam Secretary",
@@ -1601,20 +1174,6 @@
     "title": "The Knick",
     "year": 2014,
     "creator": "Cinemax"
-  },
-  {
-    "id": "series:black-ish-2014",
-    "type": "series",
-    "title": "black-ish",
-    "year": 2014,
-    "creator": "ABC"
-  },
-  {
-    "id": "series:the-goldbergs-2013",
-    "type": "series",
-    "title": "The Goldbergs",
-    "year": 2013,
-    "creator": "ABC"
   },
   {
     "id": "series:a-to-z-2014",
@@ -1643,41 +1202,6 @@
     "title": "Star Wars: Rebels",
     "year": 2014,
     "creator": "Disney XD"
-  },
-  {
-    "id": "series:2-broke-girls-2011",
-    "type": "series",
-    "title": "2 Broke Girls",
-    "year": 2011,
-    "creator": "CBS"
-  },
-  {
-    "id": "series:mom-2013",
-    "type": "series",
-    "title": "Mom",
-    "year": 2013,
-    "creator": "CBS"
-  },
-  {
-    "id": "series:marry-me-2014",
-    "type": "series",
-    "title": "Marry Me",
-    "year": 2014,
-    "creator": "NBC"
-  },
-  {
-    "id": "series:about-a-boy-2014",
-    "type": "series",
-    "title": "About a Boy",
-    "year": 2014,
-    "creator": "NBC"
-  },
-  {
-    "id": "series:the-millers-2013",
-    "type": "series",
-    "title": "The Millers",
-    "year": 2013,
-    "creator": "CBS"
   },
   {
     "id": "series:elementary-2012",
@@ -1736,20 +1260,6 @@
     "creator": "Nickelodeon"
   },
   {
-    "id": "series:believe-2014",
-    "type": "series",
-    "title": "Believe",
-    "year": 2014,
-    "creator": "NBC"
-  },
-  {
-    "id": "series:the-carrie-diaries-2013",
-    "type": "series",
-    "title": "The Carrie Diaries",
-    "year": 2013,
-    "creator": "The CW"
-  },
-  {
     "id": "series:graceland-2013",
     "type": "series",
     "title": "Graceland",
@@ -1771,13 +1281,6 @@
     "creator": "Syfy"
   },
   {
-    "id": "series:american-dad-2005",
-    "type": "series",
-    "title": "American Dad!",
-    "year": 2005,
-    "creator": "FOX"
-  },
-  {
     "id": "series:crossing-lines-2013",
     "type": "series",
     "title": "Crossing Lines",
@@ -1790,34 +1293,6 @@
     "title": "Rectify",
     "year": 2013,
     "creator": "SundanceTV"
-  },
-  {
-    "id": "series:the-crazy-ones-2013",
-    "type": "series",
-    "title": "The Crazy Ones",
-    "year": 2013,
-    "creator": "CBS"
-  },
-  {
-    "id": "series:vegas-2012",
-    "type": "series",
-    "title": "Vegas",
-    "year": 2012,
-    "creator": "CBS"
-  },
-  {
-    "id": "series:dallas-2012",
-    "type": "series",
-    "title": "Dallas",
-    "year": 2012,
-    "creator": "TNT"
-  },
-  {
-    "id": "series:conan-2010",
-    "type": "series",
-    "title": "Conan",
-    "year": 2010,
-    "creator": "TBS"
   },
   {
     "id": "series:town-of-the-living-dead-2014",
@@ -1834,67 +1309,11 @@
     "creator": "BBC Two"
   },
   {
-    "id": "series:the-colbert-report-2005",
-    "type": "series",
-    "title": "The Colbert Report",
-    "year": 2005,
-    "creator": "Comedy Central"
-  },
-  {
     "id": "series:world-series-of-poker-2006",
     "type": "series",
     "title": "World Series of Poker",
     "year": 2006,
     "creator": "PokerGO"
-  },
-  {
-    "id": "series:glue-2014",
-    "type": "series",
-    "title": "Glue",
-    "year": 2014,
-    "creator": "E4"
-  },
-  {
-    "id": "series:the-driver-2014",
-    "type": "series",
-    "title": "The Driver",
-    "year": 2014,
-    "creator": "BBC One"
-  },
-  {
-    "id": "series:last-week-tonight-with-john-oliver-2014",
-    "type": "series",
-    "title": "Last Week Tonight with John Oliver",
-    "year": 2014,
-    "creator": "HBO"
-  },
-  {
-    "id": "series:mount-pleasant-2011",
-    "type": "series",
-    "title": "Mount Pleasant",
-    "year": 2011,
-    "creator": "Sky Showcase"
-  },
-  {
-    "id": "series:saving-hope-2012",
-    "type": "series",
-    "title": "Saving Hope",
-    "year": 2012,
-    "creator": "CTV"
-  },
-  {
-    "id": "series:brickleberry-2012",
-    "type": "series",
-    "title": "Brickleberry",
-    "year": 2012,
-    "creator": "Comedy Central"
-  },
-  {
-    "id": "series:real-time-with-bill-maher-2003",
-    "type": "series",
-    "title": "Real Time with Bill Maher",
-    "year": 2003,
-    "creator": "HBO"
   },
   {
     "id": "series:faking-it-2014",
@@ -1925,53 +1344,11 @@
     "creator": "Comedy Central"
   },
   {
-    "id": "series:american-idol-2002",
-    "type": "series",
-    "title": "American Idol",
-    "year": 2002,
-    "creator": "ABC"
-  },
-  {
-    "id": "series:america-s-got-talent-2006",
-    "type": "series",
-    "title": "America's Got Talent",
-    "year": 2006,
-    "creator": "NBC"
-  },
-  {
     "id": "series:the-new-celebrity-apprentice-2008",
     "type": "series",
     "title": "The NEW Celebrity Apprentice",
     "year": 2008,
     "creator": "NBC"
-  },
-  {
-    "id": "series:top-chef-2006",
-    "type": "series",
-    "title": "Top Chef",
-    "year": 2006,
-    "creator": "Bravo"
-  },
-  {
-    "id": "series:top-gear-2010",
-    "type": "series",
-    "title": "Top Gear",
-    "year": 2010,
-    "creator": "History"
-  },
-  {
-    "id": "series:undateable-2014",
-    "type": "series",
-    "title": "Undateable",
-    "year": 2014,
-    "creator": "NBC"
-  },
-  {
-    "id": "series:matador-2014",
-    "type": "series",
-    "title": "Matador",
-    "year": 2014,
-    "creator": "El Rey Network"
   },
   {
     "id": "series:married-2014",
@@ -2002,48 +1379,6 @@
     "creator": "Channel 4"
   },
   {
-    "id": "series:aquarius-2015",
-    "type": "series",
-    "title": "Aquarius",
-    "year": 2015,
-    "creator": "NBC"
-  },
-  {
-    "id": "series:atlantis-2013",
-    "type": "series",
-    "title": "Atlantis",
-    "year": 2013,
-    "creator": "BBC One"
-  },
-  {
-    "id": "series:hot-in-cleveland-2010",
-    "type": "series",
-    "title": "Hot in Cleveland",
-    "year": 2010,
-    "creator": "TV Land"
-  },
-  {
-    "id": "series:last-comic-standing-2003",
-    "type": "series",
-    "title": "Last Comic Standing",
-    "year": 2003,
-    "creator": "NBC"
-  },
-  {
-    "id": "series:the-exes-2011",
-    "type": "series",
-    "title": "The Exes",
-    "year": 2011,
-    "creator": "TV Land"
-  },
-  {
-    "id": "series:man-down-2013",
-    "type": "series",
-    "title": "Man Down",
-    "year": 2013,
-    "creator": "Channel 4"
-  },
-  {
     "id": "series:triptank-2014",
     "type": "series",
     "title": "TripTank",
@@ -2051,32 +1386,11 @@
     "creator": "Comedy Central"
   },
   {
-    "id": "series:late-night-with-seth-meyers-2014",
-    "type": "series",
-    "title": "Late Night with Seth Meyers",
-    "year": 2014,
-    "creator": "NBC"
-  },
-  {
     "id": "series:the-after-2014",
     "type": "series",
     "title": "The After",
     "year": 2014,
     "creator": "Prime Video"
-  },
-  {
-    "id": "series:workaholics-2011",
-    "type": "series",
-    "title": "Workaholics",
-    "year": 2011,
-    "creator": "Comedy Central"
-  },
-  {
-    "id": "series:birds-of-a-feather-1989",
-    "type": "series",
-    "title": "Birds of a Feather",
-    "year": 1989,
-    "creator": "ITV1"
   },
   {
     "id": "series:gravity-falls-2012",
@@ -2121,13 +1435,6 @@
     "creator": "Sky Arts"
   },
   {
-    "id": "series:touch-2012",
-    "type": "series",
-    "title": "Touch",
-    "year": 2012,
-    "creator": "FOX"
-  },
-  {
     "id": "series:derek-2012",
     "type": "series",
     "title": "Derek",
@@ -2142,13 +1449,6 @@
     "creator": "Discovery"
   },
   {
-    "id": "series:whitney-2011",
-    "type": "series",
-    "title": "Whitney",
-    "year": 2011,
-    "creator": "NBC"
-  },
-  {
     "id": "series:slednecks-2014",
     "type": "series",
     "title": "Slednecks",
@@ -2161,13 +1461,6 @@
     "title": "The People Remember",
     "year": 2014,
     "creator": "BBC One"
-  },
-  {
-    "id": "series:angel-1999",
-    "type": "series",
-    "title": "Angel",
-    "year": 1999,
-    "creator": "The WB"
   },
   {
     "id": "series:the-universe-2007",
@@ -2191,13 +1484,6 @@
     "creator": "UPN"
   },
   {
-    "id": "series:witchblade-2000",
-    "type": "series",
-    "title": "Witchblade",
-    "year": 2000,
-    "creator": "TNT"
-  },
-  {
     "id": "series:painkiller-jane-2007",
     "type": "series",
     "title": "Painkiller Jane",
@@ -2205,53 +1491,11 @@
     "creator": "Syfy"
   },
   {
-    "id": "series:v-2009",
-    "type": "series",
-    "title": "V",
-    "year": 2009,
-    "creator": "ABC"
-  },
-  {
-    "id": "series:naruto-2002",
-    "type": "series",
-    "title": "Naruto",
-    "year": 2002,
-    "creator": "TV Tokyo"
-  },
-  {
-    "id": "series:100-things-to-do-before-high-school-2014",
-    "type": "series",
-    "title": "100 Things to Do Before High School",
-    "year": 2014,
-    "creator": "Nickelodeon"
-  },
-  {
     "id": "series:dogs-of-war-2014",
     "type": "series",
     "title": "Dogs of War",
     "year": 2014,
     "creator": "A&E"
-  },
-  {
-    "id": "series:married-with-children-1987",
-    "type": "series",
-    "title": "Married... with Children",
-    "year": 1987,
-    "creator": "FOX"
-  },
-  {
-    "id": "series:the-grid-2004",
-    "type": "series",
-    "title": "The Grid",
-    "year": 2004,
-    "creator": "TNT"
-  },
-  {
-    "id": "series:jessie-2011",
-    "type": "series",
-    "title": "Jessie",
-    "year": 2011,
-    "creator": "Disney Channel"
   },
   {
     "id": "series:preachers-of-l-a-2013",
@@ -2289,60 +1533,11 @@
     "creator": "TLC"
   },
   {
-    "id": "series:the-it-crowd-2006",
-    "type": "series",
-    "title": "The IT Crowd",
-    "year": 2006,
-    "creator": "Channel 4"
-  },
-  {
-    "id": "series:babylon-2014",
-    "type": "series",
-    "title": "Babylon",
-    "year": 2014,
-    "creator": "Channel 4"
-  },
-  {
-    "id": "series:will-grace-1998",
-    "type": "series",
-    "title": "Will & Grace",
-    "year": 1998,
-    "creator": "NBC"
-  },
-  {
     "id": "series:the-king-of-queens-1998",
     "type": "series",
     "title": "The King of Queens",
     "year": 1998,
     "creator": "CBS"
-  },
-  {
-    "id": "series:avatar-the-last-airbender-2005",
-    "type": "series",
-    "title": "Avatar: la leyenda de Aang",
-    "year": 2005,
-    "creator": "Nickelodeon"
-  },
-  {
-    "id": "series:alias-2001",
-    "type": "series",
-    "title": "Alias",
-    "year": 2001,
-    "creator": "ABC"
-  },
-  {
-    "id": "series:malcolm-in-the-middle-2000",
-    "type": "series",
-    "title": "Malcolm in the Middle",
-    "year": 2000,
-    "creator": "FOX"
-  },
-  {
-    "id": "series:dharma-greg-1997",
-    "type": "series",
-    "title": "Dharma & Greg",
-    "year": 1997,
-    "creator": "ABC"
   },
   {
     "id": "series:nypd-blue-1993",
@@ -2366,46 +1561,11 @@
     "creator": "CBS"
   },
   {
-    "id": "series:fawlty-towers-1975",
-    "type": "series",
-    "title": "Fawlty Towers",
-    "year": 1975,
-    "creator": "BBC Two"
-  },
-  {
-    "id": "series:raising-hope-2010",
-    "type": "series",
-    "title": "Raising Hope",
-    "year": 2010,
-    "creator": "FOX"
-  },
-  {
-    "id": "series:that-70s-show-1998",
-    "type": "series",
-    "title": "That '70s Show",
-    "year": 1998,
-    "creator": "FOX"
-  },
-  {
-    "id": "series:boston-legal-2004",
-    "type": "series",
-    "title": "Boston Legal",
-    "year": 2004,
-    "creator": "ABC"
-  },
-  {
     "id": "series:hair-jacked-2014",
     "type": "series",
     "title": "Hair Jacked",
     "year": 2014,
     "creator": "truTV"
-  },
-  {
-    "id": "series:crowd-control-2014",
-    "type": "series",
-    "title": "Crowd Control",
-    "year": 2014,
-    "creator": "National Geographic"
   },
   {
     "id": "series:godfather-of-pittsburgh-2014",
@@ -2427,20 +1587,6 @@
     "title": "Air Warriors",
     "year": 2014,
     "creator": "Smithsonian Channel"
-  },
-  {
-    "id": "series:wake-up-call-2014",
-    "type": "series",
-    "title": "Wake Up Call",
-    "year": 2014,
-    "creator": "TNT"
-  },
-  {
-    "id": "series:sons-of-liberty-2015",
-    "type": "series",
-    "title": "Sons of Liberty",
-    "year": 2015,
-    "creator": "History"
   },
   {
     "id": "series:street-art-throwdown-2015",
@@ -2485,25 +1631,11 @@
     "creator": "NewsNation"
   },
   {
-    "id": "series:hindsight-2015",
-    "type": "series",
-    "title": "Hindsight",
-    "year": 2015,
-    "creator": "VH1"
-  },
-  {
     "id": "series:polka-kings-2015",
     "type": "series",
     "title": "Polka Kings",
     "year": 2015,
     "creator": "REELZ"
-  },
-  {
-    "id": "series:dig-2015",
-    "type": "series",
-    "title": "Dig",
-    "year": 2015,
-    "creator": "USA Network"
   },
   {
     "id": "series:rock-this-boat-new-kids-on-the-block-2015",
@@ -2532,20 +1664,6 @@
     "title": "Momsters: When Moms Go Bad",
     "year": 2014,
     "creator": "Investigation Discovery"
-  },
-  {
-    "id": "series:love-the-way-you-lie-2014",
-    "type": "series",
-    "title": "Love the Way You Lie",
-    "year": 2014,
-    "creator": "Investigation Discovery"
-  },
-  {
-    "id": "series:ascension-2014",
-    "type": "series",
-    "title": "Ascension",
-    "year": 2014,
-    "creator": "Syfy"
   },
   {
     "id": "series:sacred-journeys-with-bruce-feiler-2014",
@@ -2597,13 +1715,6 @@
     "creator": "TLC"
   },
   {
-    "id": "series:joey-2004",
-    "type": "series",
-    "title": "Joey",
-    "year": 2004,
-    "creator": "NBC"
-  },
-  {
     "id": "series:teenage-mutant-ninja-turtles-2012",
     "type": "series",
     "title": "Teenage Mutant Ninja Turtles",
@@ -2646,39 +1757,11 @@
     "creator": "TNT"
   },
   {
-    "id": "series:boy-meets-world-1993",
-    "type": "series",
-    "title": "Boy Meets World",
-    "year": 1993,
-    "creator": "ABC"
-  },
-  {
     "id": "series:jeeves-wooster-1990",
     "type": "series",
     "title": "Jeeves & Wooster",
     "year": 1990,
     "creator": "ITV1"
-  },
-  {
-    "id": "series:durarara-2010",
-    "type": "series",
-    "title": "Durarara!!",
-    "year": 2010,
-    "creator": "MBS"
-  },
-  {
-    "id": "series:gold-rush-2010",
-    "type": "series",
-    "title": "Gold Rush",
-    "year": 2010,
-    "creator": "Discovery"
-  },
-  {
-    "id": "series:qi-2003",
-    "type": "series",
-    "title": "QI",
-    "year": 2003,
-    "creator": "BBC iPlayer"
   },
   {
     "id": "series:an-idiot-abroad-2010",
@@ -2723,13 +1806,6 @@
     "creator": "History"
   },
   {
-    "id": "series:are-you-smarter-than-a-5th-grader-2007",
-    "type": "series",
-    "title": "Are You Smarter Than a 5th Grader?",
-    "year": 2007,
-    "creator": "FOX"
-  },
-  {
     "id": "series:kill-la-kill-2013",
     "type": "series",
     "title": "Kill la Kill",
@@ -2749,48 +1825,6 @@
     "title": "Not Going Out",
     "year": 2006,
     "creator": "BBC iPlayer"
-  },
-  {
-    "id": "series:good-luck-charlie-2010",
-    "type": "series",
-    "title": "Good Luck Charlie",
-    "year": 2010,
-    "creator": "Disney Channel"
-  },
-  {
-    "id": "series:planet-earth-2006",
-    "type": "series",
-    "title": "Planet Earth",
-    "year": 2006,
-    "creator": "BBC One"
-  },
-  {
-    "id": "series:private-practice-2007",
-    "type": "series",
-    "title": "Private Practice",
-    "year": 2007,
-    "creator": "ABC"
-  },
-  {
-    "id": "series:the-cleveland-show-2009",
-    "type": "series",
-    "title": "The Cleveland Show",
-    "year": 2009,
-    "creator": "FOX"
-  },
-  {
-    "id": "series:merlin-2008",
-    "type": "series",
-    "title": "Merlin",
-    "year": 2008,
-    "creator": "BBC One"
-  },
-  {
-    "id": "series:the-tonight-show-with-jay-leno-1992",
-    "type": "series",
-    "title": "The Tonight Show with Jay Leno",
-    "year": 1992,
-    "creator": "NBC"
   },
   {
     "id": "series:jersey-shore-2009",
@@ -2821,60 +1855,11 @@
     "creator": "Cinemax"
   },
   {
-    "id": "series:kitchen-nightmares-2007",
-    "type": "series",
-    "title": "Kitchen Nightmares",
-    "year": 2007,
-    "creator": "FOX"
-  },
-  {
-    "id": "series:wizards-of-waverly-place-2007",
-    "type": "series",
-    "title": "Wizards of Waverly Place",
-    "year": 2007,
-    "creator": "Disney Channel"
-  },
-  {
-    "id": "series:suburgatory-2011",
-    "type": "series",
-    "title": "Suburgatory",
-    "year": 2011,
-    "creator": "ABC"
-  },
-  {
     "id": "series:so-you-think-you-can-dance-2005",
     "type": "series",
     "title": "So You Think You Can Dance",
     "year": 2005,
     "creator": "FOX"
-  },
-  {
-    "id": "series:hung-2009",
-    "type": "series",
-    "title": "Hung",
-    "year": 2009,
-    "creator": "HBO"
-  },
-  {
-    "id": "series:the-secret-circle-2011",
-    "type": "series",
-    "title": "The Secret Circle",
-    "year": 2011,
-    "creator": "The CW"
-  },
-  {
-    "id": "series:boss-2011",
-    "type": "series",
-    "title": "Boss",
-    "year": 2011,
-    "creator": "STARZ"
-  },
-  {
-    "id": "series:late-night-with-conan-o-brien-1993",
-    "type": "series",
-    "title": "Late Night with Conan O'Brien",
-    "year": 1993,
-    "creator": "NBC"
   },
   {
     "id": "series:geordie-shore-2011",
@@ -2933,20 +1918,6 @@
     "creator": "ITV1"
   },
   {
-    "id": "series:outcasts-2011",
-    "type": "series",
-    "title": "Outcasts",
-    "year": 2011,
-    "creator": "BBC One"
-  },
-  {
-    "id": "series:secret-diary-of-a-call-girl-2007",
-    "type": "series",
-    "title": "Secret Diary of a Call Girl",
-    "year": 2007,
-    "creator": "ITV2"
-  },
-  {
     "id": "series:extreme-weight-loss-2011",
     "type": "series",
     "title": "Extreme Weight Loss",
@@ -2982,20 +1953,6 @@
     "creator": "National Geographic"
   },
   {
-    "id": "series:hard-knocks-2001",
-    "type": "series",
-    "title": "Hard Knocks",
-    "year": 2001,
-    "creator": "HBO"
-  },
-  {
-    "id": "series:the-haunted-2009",
-    "type": "series",
-    "title": "The Haunted",
-    "year": 2009,
-    "creator": "Animal Planet"
-  },
-  {
     "id": "series:rake-2014",
     "type": "series",
     "title": "Rake",
@@ -3022,34 +1979,6 @@
     "title": "Don't Tell the Bride",
     "year": 2007,
     "creator": "E4"
-  },
-  {
-    "id": "series:antiques-roadshow-1979",
-    "type": "series",
-    "title": "Antiques Roadshow",
-    "year": 1979,
-    "creator": "BBC One"
-  },
-  {
-    "id": "series:beavis-and-butt-head-1992",
-    "type": "series",
-    "title": "Beavis and Butt-Head",
-    "year": 1992,
-    "creator": "MTV"
-  },
-  {
-    "id": "series:some-girls-2012",
-    "type": "series",
-    "title": "Some Girls",
-    "year": 2012,
-    "creator": "BBC Three"
-  },
-  {
-    "id": "series:man-vs-wild-2006",
-    "type": "series",
-    "title": "Man vs. Wild",
-    "year": 2006,
-    "creator": "Discovery"
   },
   {
     "id": "series:naked-and-afraid-uncensored-2013",
@@ -3087,81 +2016,11 @@
     "creator": "USA Network"
   },
   {
-    "id": "series:my-wife-and-kids-2001",
-    "type": "series",
-    "title": "My Wife and Kids",
-    "year": 2001,
-    "creator": "ABC"
-  },
-  {
-    "id": "book:harry-potter-y-la-piedra-filosofal-1997",
-    "type": "book",
-    "title": "Harry Potter y la piedra filosofal",
-    "year": 1997,
-    "creator": "J. K. Rowling"
-  },
-  {
-    "id": "book:el-codigo-da-vinci-2003",
-    "type": "book",
-    "title": "El código Da Vinci",
-    "year": 2003,
-    "creator": "Dan Brown"
-  },
-  {
-    "id": "book:el-guardian-entre-el-centeno-1951",
-    "type": "book",
-    "title": "El guardián entre el centeno",
-    "year": 1951,
-    "creator": "J. D. Salinger"
-  },
-  {
-    "id": "book:el-extranjero-1942",
-    "type": "book",
-    "title": "El extranjero",
-    "year": 1942,
-    "creator": "Albert Camus"
-  },
-  {
-    "id": "book:los-juegos-del-hambre-2008",
-    "type": "book",
-    "title": "Los juegos del hambre",
-    "year": 2008,
-    "creator": "Suzanne Collins"
-  },
-  {
     "id": "book:pensar-rapido-pensar-despacio-2011",
     "type": "book",
     "title": "Pensar rápido, pensar despacio",
     "year": 2011,
     "creator": "Daniel Kahneman"
-  },
-  {
-    "id": "book:el-hombre-en-busca-de-sentido-1946",
-    "type": "book",
-    "title": "El hombre en busca de sentido",
-    "year": 1946,
-    "creator": "Viktor Frankl"
-  },
-  {
-    "id": "book:armas-germenes-y-acero-1997",
-    "type": "book",
-    "title": "Armas, gérmenes y acero",
-    "year": 1997,
-    "creator": "Jared Diamond"
-  },
-  {
-    "id": "book:21-lecciones-para-el-siglo-xxi-2018",
-    "type": "book",
-    "title": "21 lecciones para el siglo XXI",
-    "year": 2018,
-    "creator": "Yuval Noah Harari"
-  },
-  {
-    "id": "book:breve-historia-del-tiempo-1988",
-    "type": "book",
-    "title": "Breve historia del tiempo",
-    "year": 1988,
-    "creator": "Stephen Hawking"
   },
   {
     "id": "book:el-elogio-de-la-locura-1511",
@@ -3171,94 +2030,10 @@
     "creator": "Erasmo de Róterdam"
   },
   {
-    "id": "book:por-que-fracasan-los-paises-2012",
-    "type": "book",
-    "title": "Por qué fracasan los países",
-    "year": 2012,
-    "creator": "Daron Acemoglu y James A. Robinson"
-  },
-  {
-    "id": "book:la-verdad-sobre-el-caso-harry-quebert-2012",
-    "type": "book",
-    "title": "La verdad sobre el caso Harry Quebert",
-    "year": 2012,
-    "creator": "Joël Dicker"
-  },
-  {
-    "id": "book:el-paciente-ingles-1992",
-    "type": "book",
-    "title": "El paciente inglés",
-    "year": 1992,
-    "creator": "Michael Ondaatje"
-  },
-  {
-    "id": "book:kafka-en-la-orilla-2002",
-    "type": "book",
-    "title": "Kafka en la orilla",
-    "year": 2002,
-    "creator": "Haruki Murakami"
-  },
-  {
-    "id": "book:la-carretera-2006",
-    "type": "book",
-    "title": "La carretera",
-    "year": 2006,
-    "creator": "Cormac McCarthy"
-  },
-  {
-    "id": "book:meridiano-de-sangre-1985",
-    "type": "book",
-    "title": "Meridiano de sangre",
-    "year": 1985,
-    "creator": "Cormac McCarthy"
-  },
-  {
-    "id": "book:el-clan-del-oso-cavernario-1980",
-    "type": "book",
-    "title": "El clan del oso cavernario",
-    "year": 1980,
-    "creator": "Jean M. Auel"
-  },
-  {
-    "id": "book:el-nombre-del-viento-2007",
-    "type": "book",
-    "title": "El nombre del viento",
-    "year": 2007,
-    "creator": "Patrick Rothfuss"
-  },
-  {
-    "id": "book:el-temor-de-un-hombre-sabio-2011",
-    "type": "book",
-    "title": "El temor de un hombre sabio",
-    "year": 2011,
-    "creator": "Patrick Rothfuss"
-  },
-  {
-    "id": "book:la-sociedad-del-cansancio-2010",
-    "type": "book",
-    "title": "La sociedad del cansancio",
-    "year": 2010,
-    "creator": "Byung-Chul Han"
-  },
-  {
-    "id": "book:el-aroma-del-tiempo-2009",
-    "type": "book",
-    "title": "El aroma del tiempo",
-    "year": 2009,
-    "creator": "Byung-Chul Han"
-  },
-  {
     "id": "book:diez-negritos-y-no-quedo-ninguno-1939",
     "type": "book",
     "title": "Diez negritos (Y no quedó ninguno)",
     "year": 1939,
-    "creator": "Agatha Christie"
-  },
-  {
-    "id": "book:asesinato-en-el-orient-express-1934",
-    "type": "book",
-    "title": "Asesinato en el Orient Express",
-    "year": 1934,
     "creator": "Agatha Christie"
   },
   {
@@ -3267,27 +2042,6 @@
     "title": "El asesinato de Roger Ackroyd",
     "year": 1926,
     "creator": "Agatha Christie"
-  },
-  {
-    "id": "book:muerte-en-el-nilo-1937",
-    "type": "book",
-    "title": "Muerte en el Nilo",
-    "year": 1937,
-    "creator": "Agatha Christie"
-  },
-  {
-    "id": "book:el-dragon-rojo-1981",
-    "type": "book",
-    "title": "El dragón rojo",
-    "year": 1981,
-    "creator": "Thomas Harris"
-  },
-  {
-    "id": "book:la-campana-de-cristal-1963",
-    "type": "book",
-    "title": "La campana de cristal",
-    "year": 1963,
-    "creator": "Sylvia Plath"
   },
   {
     "id": "book:gunaho-ka-devta-2020",
@@ -3423,11 +2177,32 @@
     "creator": "Randy Flynn"
   },
   {
+    "id": "boardgame:anachrony-2017",
+    "type": "boardgame",
+    "title": "Anachrony",
+    "year": 2017,
+    "creator": "Dávid Turczi, Richard Ámann"
+  },
+  {
+    "id": "boardgame:lisboa-2017",
+    "type": "boardgame",
+    "title": "Lisboa",
+    "year": 2017,
+    "creator": "Vital Lacerda"
+  },
+  {
     "id": "boardgame:great-western-trail-new-zealand-2023",
     "type": "boardgame",
     "title": "Great Western Trail: New Zealand",
     "year": 2023,
     "creator": "Alexander Pfister"
+  },
+  {
+    "id": "boardgame:voidfall-2023",
+    "type": "boardgame",
+    "title": "Voidfall",
+    "year": 2023,
+    "creator": "Dávid Turczi, Nigel Buckle"
   },
   {
     "id": "boardgame:le-havre-2008",
@@ -3465,6 +2240,13 @@
     "creator": "Elizabeth Hargrave"
   },
   {
+    "id": "boardgame:maracaibo-2019",
+    "type": "boardgame",
+    "title": "Maracaibo",
+    "year": 2019,
+    "creator": "Alexander Pfister"
+  },
+  {
     "id": "boardgame:concordia-venus-2018",
     "type": "boardgame",
     "title": "Concordia Venus",
@@ -3484,6 +2266,20 @@
     "title": "Teotihuacan: City of Gods",
     "year": 2018,
     "creator": "Daniele Tascini"
+  },
+  {
+    "id": "boardgame:beyond-the-sun-2020",
+    "type": "boardgame",
+    "title": "Beyond the Sun",
+    "year": 2020,
+    "creator": "Dennis K. Chan"
+  },
+  {
+    "id": "boardgame:the-search-for-planet-x-2020",
+    "type": "boardgame",
+    "title": "The Search for Planet X",
+    "year": 2020,
+    "creator": "Ben Rosset, Matthew O'Malley"
   },
   {
     "id": "boardgame:7-wonders-2010",
@@ -3547,6 +2343,13 @@
     "title": "Aeon's End: War Eternal",
     "year": 2017,
     "creator": "Jenny Iglesias, Kevin Riley"
+  },
+  {
+    "id": "boardgame:rising-sun-2018",
+    "type": "boardgame",
+    "title": "Rising Sun",
+    "year": 2018,
+    "creator": "Eric M. Lang"
   },
   {
     "id": "boardgame:vinhos-deluxe-edition-2016",
@@ -3654,6 +2457,13 @@
     "creator": "Chris Leder, Justin D. Jacobson"
   },
   {
+    "id": "boardgame:praga-caput-regni-2020",
+    "type": "boardgame",
+    "title": "Praga Caput Regni",
+    "year": 2020,
+    "creator": "Vladimír Suchý"
+  },
+  {
     "id": "boardgame:xia-legends-of-a-drift-system-2014",
     "type": "boardgame",
     "title": "Xia: Legends of a Drift System",
@@ -3710,11 +2520,25 @@
     "creator": "Carl de Visser, Jarratt Gray"
   },
   {
+    "id": "boardgame:earth-2023",
+    "type": "boardgame",
+    "title": "Earth",
+    "year": 2023,
+    "creator": "Maxime Tardif"
+  },
+  {
     "id": "boardgame:john-company-second-edition-2022",
     "type": "boardgame",
     "title": "John Company: Second Edition",
     "year": 2022,
     "creator": "Cole Wehrle"
+  },
+  {
+    "id": "boardgame:meadow-2021",
+    "type": "boardgame",
+    "title": "Meadow",
+    "year": 2021,
+    "creator": "Klemens Kalicki"
   },
   {
     "id": "boardgame:thunder-road-vendetta-2023",
@@ -3759,6 +2583,13 @@
     "creator": "Christian T. Petersen"
   },
   {
+    "id": "boardgame:horrified-2019",
+    "type": "boardgame",
+    "title": "Horrified",
+    "year": 2019,
+    "creator": "Peter Lee, Prospero Hall"
+  },
+  {
     "id": "boardgame:nemesis-retaliation-2025",
     "type": "boardgame",
     "title": "Nemesis: Retaliation",
@@ -3794,6 +2625,13 @@
     "creator": "Eric M. Lang"
   },
   {
+    "id": "boardgame:nidavellir-2020",
+    "type": "boardgame",
+    "title": "Nidavellir",
+    "year": 2020,
+    "creator": "Serge Laget"
+  },
+  {
     "id": "boardgame:aeon-s-end-legacy-2019",
     "type": "boardgame",
     "title": "Aeon's End: Legacy",
@@ -3806,6 +2644,13 @@
     "title": "So Clover!",
     "year": 2021,
     "creator": "François Romain"
+  },
+  {
+    "id": "boardgame:coimbra-2018",
+    "type": "boardgame",
+    "title": "Coimbra",
+    "year": 2018,
+    "creator": "Flaminia Brasini, Virginio Gigli"
   },
   {
     "id": "boardgame:star-realms-colony-wars-2015",
@@ -3850,6 +2695,13 @@
     "creator": "Daniele Tascini, Simone Luciani"
   },
   {
+    "id": "boardgame:dinosaur-island-2017",
+    "type": "boardgame",
+    "title": "Dinosaur Island",
+    "year": 2017,
+    "creator": "Brian Lewis, Jonathan Gilmour-Long"
+  },
+  {
     "id": "boardgame:unmatched-battle-of-legends-volume-one-2019",
     "type": "boardgame",
     "title": "Unmatched: Battle of Legends, Volume One",
@@ -3864,11 +2716,39 @@
     "creator": "Tobey Ho"
   },
   {
+    "id": "boardgame:unconscious-mind-2024",
+    "type": "boardgame",
+    "title": "Unconscious Mind",
+    "year": 2024,
+    "creator": "Antonio Zax, Jonny Pac"
+  },
+  {
+    "id": "boardgame:monikers-2015",
+    "type": "boardgame",
+    "title": "Monikers",
+    "year": 2015,
+    "creator": "Alex Hague, Justin Vickers"
+  },
+  {
     "id": "boardgame:aeon-s-end-the-new-age-2019",
     "type": "boardgame",
     "title": "Aeon's End: The New Age",
     "year": 2019,
     "creator": "Jenny Iglesias, Kevin Riley"
+  },
+  {
+    "id": "boardgame:vindication-2018",
+    "type": "boardgame",
+    "title": "Vindication",
+    "year": 2018,
+    "creator": "Marc Neidlinger"
+  },
+  {
+    "id": "boardgame:hallertau-2020",
+    "type": "boardgame",
+    "title": "Hallertau",
+    "year": 2020,
+    "creator": "Uwe Rosenberg"
   },
   {
     "id": "boardgame:bitoku-2021",
@@ -3941,11 +2821,25 @@
     "creator": "Adam Carlson, Josh J. Carlson"
   },
   {
+    "id": "boardgame:battle-line-2000",
+    "type": "boardgame",
+    "title": "Battle Line",
+    "year": 2000,
+    "creator": "Reiner Knizia"
+  },
+  {
     "id": "boardgame:imperium-classics-2021",
     "type": "boardgame",
     "title": "Imperium: Classics",
     "year": 2021,
     "creator": "Dávid Turczi, Nigel Buckle"
+  },
+  {
+    "id": "boardgame:bora-bora-2013",
+    "type": "boardgame",
+    "title": "Bora Bora",
+    "year": 2013,
+    "creator": "Stefan Feld"
   },
   {
     "id": "boardgame:marvel-united-2020",
@@ -3981,6 +2875,13 @@
     "title": "Keep the Heroes Out!",
     "year": 2022,
     "creator": "Luís Brueh"
+  },
+  {
+    "id": "boardgame:the-gang-2024",
+    "type": "boardgame",
+    "title": "The Gang",
+    "year": 2024,
+    "creator": "John Cooper, Kory Heath"
   },
   {
     "id": "boardgame:the-great-zimbabwe-2012",
@@ -4053,6 +2954,20 @@
     "creator": "Muneyuki Yokouchi (横内宗幸)"
   },
   {
+    "id": "boardgame:chinatown-1999",
+    "type": "boardgame",
+    "title": "Chinatown",
+    "year": 1999,
+    "creator": "Karsten Hartwig"
+  },
+  {
+    "id": "boardgame:nusfjord-2017",
+    "type": "boardgame",
+    "title": "Nusfjord",
+    "year": 2017,
+    "creator": "Uwe Rosenberg"
+  },
+  {
     "id": "boardgame:sidereal-confluence-2017",
     "type": "boardgame",
     "title": "Sidereal Confluence",
@@ -4107,6 +3022,13 @@
     "title": "Fury of Dracula (Third/Fourth Edition)",
     "year": 2015,
     "creator": "Frank Brooks, Kevin Wilson"
+  },
+  {
+    "id": "boardgame:furnace-2020",
+    "type": "boardgame",
+    "title": "Furnace",
+    "year": 2020,
+    "creator": "Ivan Lashin"
   },
   {
     "id": "boardgame:awkward-guests-the-walton-case-2016",
@@ -4172,6 +3094,13 @@
     "creator": "Daniele Tascini, Dávid Turczi"
   },
   {
+    "id": "boardgame:above-and-below-2015",
+    "type": "boardgame",
+    "title": "Above and Below",
+    "year": 2015,
+    "creator": "Ryan Laukat"
+  },
+  {
     "id": "boardgame:mission-red-planet-second-third-edition-2015",
     "type": "boardgame",
     "title": "Mission: Red Planet (Second/Third Edition)",
@@ -4207,6 +3136,13 @@
     "creator": "Adam Sadler, Andrew Fischer"
   },
   {
+    "id": "boardgame:antiquity-2004",
+    "type": "boardgame",
+    "title": "Antiquity",
+    "year": 2004,
+    "creator": "Jeroen Doumen, Joris Wiersinga"
+  },
+  {
     "id": "boardgame:pagan-fate-of-roanoke-2022",
     "type": "boardgame",
     "title": "Pagan: Fate of Roanoke",
@@ -4221,11 +3157,25 @@
     "creator": "Dávid Turczi, Nigel Buckle"
   },
   {
+    "id": "boardgame:moon-colony-bloodbath-2025",
+    "type": "boardgame",
+    "title": "Moon Colony Bloodbath",
+    "year": 2025,
+    "creator": "Donald X. Vaccarino"
+  },
+  {
     "id": "boardgame:smartphone-inc-2018",
     "type": "boardgame",
     "title": "Smartphone Inc.",
     "year": 2018,
     "creator": "Ivan Lashin"
+  },
+  {
+    "id": "boardgame:pan-am-2020",
+    "type": "boardgame",
+    "title": "Pan Am",
+    "year": 2020,
+    "creator": "Peter Lee, Prospero Hall"
   },
   {
     "id": "boardgame:life-of-the-amazonia-2023",
@@ -4242,6 +3192,13 @@
     "creator": "John Brieger, Jordy Adan"
   },
   {
+    "id": "boardgame:ezra-and-nehemiah-2024",
+    "type": "boardgame",
+    "title": "Ezra and Nehemiah",
+    "year": 2024,
+    "creator": "S J Macdonald, Shem Phillips"
+  },
+  {
     "id": "boardgame:the-godfather-corleone-s-empire-2017",
     "type": "boardgame",
     "title": "The Godfather: Corleone's Empire",
@@ -4254,6 +3211,13 @@
     "title": "BattleLore: Second Edition",
     "year": 2013,
     "creator": "Richard Borg, Robert A. Kouba"
+  },
+  {
+    "id": "boardgame:the-resistance-2009",
+    "type": "boardgame",
+    "title": "The Resistance",
+    "year": 2009,
+    "creator": "Don Eskridge"
   },
   {
     "id": "boardgame:horizons-of-spirit-island-2022",
@@ -4277,6 +3241,13 @@
     "creator": "Wolfgang Warsch"
   },
   {
+    "id": "boardgame:honey-buzz-2020",
+    "type": "boardgame",
+    "title": "Honey Buzz",
+    "year": 2020,
+    "creator": "Paul Salomon"
+  },
+  {
     "id": "boardgame:imperial-struggle-2020",
     "type": "boardgame",
     "title": "Imperial Struggle",
@@ -4289,6 +3260,13 @@
     "title": "Scholars of the South Tigris",
     "year": 2023,
     "creator": "S J Macdonald, Shem Phillips"
+  },
+  {
+    "id": "boardgame:knarr-2023",
+    "type": "boardgame",
+    "title": "Knarr",
+    "year": 2023,
+    "creator": "Thomas Dupont"
   },
   {
     "id": "boardgame:unmatched-adventures-tales-to-amaze-2023",
@@ -4319,6 +3297,13 @@
     "creator": "Adam Kwapiński"
   },
   {
+    "id": "boardgame:the-loop-2020",
+    "type": "boardgame",
+    "title": "The LOOP",
+    "year": 2020,
+    "creator": "Maxime Rambourg, Théo Rivière"
+  },
+  {
     "id": "boardgame:blitzkrieg-world-war-two-in-20-minutes-2019",
     "type": "boardgame",
     "title": "Blitzkrieg!: World War Two in 20 Minutes",
@@ -4338,6 +3323,13 @@
     "title": "Caper: Europe",
     "year": 2022,
     "creator": "Unai Rubio"
+  },
+  {
+    "id": "boardgame:the-great-wall-2021",
+    "type": "boardgame",
+    "title": "The Great Wall",
+    "year": 2021,
+    "creator": "Kamil 'Sanex' Cieśla, Robert Plesowicz"
   },
   {
     "id": "boardgame:san-juan-second-edition-2014",
@@ -4380,6 +3372,13 @@
     "title": "Eternal Decks",
     "year": 2025,
     "creator": "Hiroken"
+  },
+  {
+    "id": "boardgame:santa-maria-2017",
+    "type": "boardgame",
+    "title": "Santa Maria",
+    "year": 2017,
+    "creator": "Eilif Svensson, Kristian Amundsen Østby"
   },
   {
     "id": "boardgame:black-orchestra-2016",
@@ -4459,6 +3458,13 @@
     "creator": "Gary Grady, Jérôme Ropert"
   },
   {
+    "id": "boardgame:mandala-2019",
+    "type": "boardgame",
+    "title": "Mandala",
+    "year": 2019,
+    "creator": "Brett J. Gilbert, Trevor Benjamin"
+  },
+  {
     "id": "boardgame:fantastic-factories-2019",
     "type": "boardgame",
     "title": "Fantastic Factories",
@@ -4466,11 +3472,25 @@
     "creator": "Joseph Z. Chen, Justin Faulkner"
   },
   {
+    "id": "boardgame:clash-of-cultures-2012",
+    "type": "boardgame",
+    "title": "Clash of Cultures",
+    "year": 2012,
+    "creator": "Christian Marcussen"
+  },
+  {
     "id": "boardgame:splendor-marvel-2020",
     "type": "boardgame",
     "title": "Splendor: Marvel",
     "year": 2020,
     "creator": "Marc André"
+  },
+  {
+    "id": "boardgame:aquatica-2019",
+    "type": "boardgame",
+    "title": "Aquatica",
+    "year": 2019,
+    "creator": "Ivan Tuzovsky"
   },
   {
     "id": "boardgame:heroscape-master-set-rise-of-the-valkyrie-2004",
@@ -4485,6 +3505,13 @@
     "title": "Aeon Trespass: Odyssey",
     "year": 2022,
     "creator": "Marcin Wełnicki"
+  },
+  {
+    "id": "boardgame:hadara-2019",
+    "type": "boardgame",
+    "title": "Hadara",
+    "year": 2019,
+    "creator": "Benjamin Schwer"
   },
   {
     "id": "boardgame:undaunted-north-africa-2020",
@@ -4529,11 +3556,25 @@
     "creator": "Marco Montanaro"
   },
   {
+    "id": "boardgame:friday-2011",
+    "type": "boardgame",
+    "title": "Friday",
+    "year": 2011,
+    "creator": "Friedemann Friese"
+  },
+  {
     "id": "boardgame:middara-unintentional-malum-act-1-2019",
     "type": "boardgame",
     "title": "Middara: Unintentional Malum – Act 1",
     "year": 2019,
     "creator": "Brenna Moncur, Brooklynn Lundberg"
+  },
+  {
+    "id": "boardgame:canvas-2021",
+    "type": "boardgame",
+    "title": "Canvas",
+    "year": 2021,
+    "creator": "Andrew Nerger, Jeff Chin"
   },
   {
     "id": "boardgame:lords-of-vegas-2010",
@@ -4550,11 +3591,32 @@
     "creator": "Ignacy Trzewiczek, Joanna Kijanka"
   },
   {
+    "id": "boardgame:lacrimosa-2022",
+    "type": "boardgame",
+    "title": "Lacrimosa",
+    "year": 2022,
+    "creator": "Ferran Renalias, Gerard Ascensi"
+  },
+  {
     "id": "boardgame:galaxy-trucker-second-edition-2021",
     "type": "boardgame",
     "title": "Galaxy Trucker (Second Edition)",
     "year": 2021,
     "creator": "Vlaada Chvátil"
+  },
+  {
+    "id": "boardgame:junk-art-2016",
+    "type": "boardgame",
+    "title": "Junk Art",
+    "year": 2016,
+    "creator": "Jay Cormier, Sen-Foong Lim"
+  },
+  {
+    "id": "boardgame:qe-2019",
+    "type": "boardgame",
+    "title": "QE",
+    "year": 2019,
+    "creator": "Gavin Birnbaum"
   },
   {
     "id": "boardgame:betrayal-legacy-2018",
@@ -4732,6 +3794,13 @@
     "creator": "Helmut Ohley"
   },
   {
+    "id": "boardgame:my-father-s-work-2022",
+    "type": "boardgame",
+    "title": "My Father's Work",
+    "year": 2022,
+    "creator": "T. C. Petty III"
+  },
+  {
     "id": "boardgame:undaunted-stalingrad-2022",
     "type": "boardgame",
     "title": "Undaunted: Stalingrad",
@@ -4760,11 +3829,25 @@
     "creator": "Dom Rougier, Jon Manker"
   },
   {
+    "id": "boardgame:in-the-hall-of-the-mountain-king-2019",
+    "type": "boardgame",
+    "title": "In the Hall of the Mountain King",
+    "year": 2019,
+    "creator": "Graeme Jahns, Jay Cormier"
+  },
+  {
     "id": "boardgame:shikoku-1889-2004",
     "type": "boardgame",
     "title": "Shikoku 1889",
     "year": 2004,
     "creator": "Yasutaka Ikeda"
+  },
+  {
+    "id": "boardgame:madeira-2013",
+    "type": "boardgame",
+    "title": "Madeira",
+    "year": 2013,
+    "creator": "Nuno Bizarro Sentieiro, Paulo Soledade"
   },
   {
     "id": "boardgame:dice-throne-season-one-2018",
@@ -4788,11 +3871,25 @@
     "creator": "Mike Fitzgerald"
   },
   {
+    "id": "boardgame:weather-machine-2022",
+    "type": "boardgame",
+    "title": "Weather Machine",
+    "year": 2022,
+    "creator": "Vital Lacerda"
+  },
+  {
     "id": "boardgame:pathfinder-adventure-card-game-rise-of-the-runelords-base-set-2013",
     "type": "boardgame",
     "title": "Pathfinder Adventure Card Game: Rise of the Runelords – Base Set",
     "year": 2013,
     "creator": "Chad Brown, Gaby Weidling"
+  },
+  {
+    "id": "boardgame:skyrise-2024",
+    "type": "boardgame",
+    "title": "Skyrise",
+    "year": 2024,
+    "creator": "Adam Wyse, Gavan Brown"
   },
   {
     "id": "boardgame:brian-boru-high-king-of-ireland-2021",
@@ -4823,6 +3920,27 @@
     "creator": "Scott Almes"
   },
   {
+    "id": "boardgame:cooper-island-2019",
+    "type": "boardgame",
+    "title": "Cooper Island",
+    "year": 2019,
+    "creator": "Andreas Odendahl"
+  },
+  {
+    "id": "boardgame:three-sisters-2022",
+    "type": "boardgame",
+    "title": "Three Sisters",
+    "year": 2022,
+    "creator": "Ben Pinchback, Matt Riddle"
+  },
+  {
+    "id": "boardgame:vinhos-2010",
+    "type": "boardgame",
+    "title": "Vinhos",
+    "year": 2010,
+    "creator": "Vital Lacerda"
+  },
+  {
     "id": "boardgame:pax-porfiriana-2012",
     "type": "boardgame",
     "title": "Pax Porfiriana",
@@ -4837,6 +3955,13 @@
     "creator": "Faouzi Boughida, Mathieu Rivero"
   },
   {
+    "id": "boardgame:unstoppable-2025",
+    "type": "boardgame",
+    "title": "Unstoppable",
+    "year": 2025,
+    "creator": "John D. Clair"
+  },
+  {
     "id": "boardgame:yellow-yangtze-2018",
     "type": "boardgame",
     "title": "Yellow & Yangtze",
@@ -4844,11 +3969,25 @@
     "creator": "Reiner Knizia"
   },
   {
+    "id": "boardgame:whitehall-mystery-2017",
+    "type": "boardgame",
+    "title": "Whitehall Mystery",
+    "year": 2017,
+    "creator": "Gabriele Mari, Gianluca Santopietro"
+  },
+  {
     "id": "boardgame:inventions-evolution-of-ideas-2024",
     "type": "boardgame",
     "title": "Inventions: Evolution of Ideas",
     "year": 2024,
     "creator": "Vital Lacerda"
+  },
+  {
+    "id": "boardgame:paperback-2014",
+    "type": "boardgame",
+    "title": "Paperback",
+    "year": 2014,
+    "creator": "Tim Fowers"
   },
   {
     "id": "boardgame:telestrations-12-player-party-pack-2011",
@@ -4870,6 +4009,13 @@
     "title": "Struggle of Empires",
     "year": 2004,
     "creator": "Martin Wallace"
+  },
+  {
+    "id": "boardgame:francis-drake-2013",
+    "type": "boardgame",
+    "title": "Francis Drake",
+    "year": 2013,
+    "creator": "Peter Hawes"
   },
   {
     "id": "boardgame:cthulhu-death-may-die-fear-of-the-unknown-2024",
@@ -4933,6 +4079,13 @@
     "title": "Leviathan Wilds",
     "year": 2024,
     "creator": "Justin Kemppainen"
+  },
+  {
+    "id": "boardgame:moonrakers-2020",
+    "type": "boardgame",
+    "title": "Moonrakers",
+    "year": 2020,
+    "creator": "Austin Harrison, Max Anderson"
   },
   {
     "id": "boardgame:railroad-ink-challenge-lush-green-edition-2021",
@@ -5026,11 +4179,32 @@
     "creator": "Clarissa A. Wilson, James A. Wilson"
   },
   {
+    "id": "boardgame:the-oracle-of-delphi-2016",
+    "type": "boardgame",
+    "title": "The Oracle of Delphi",
+    "year": 2016,
+    "creator": "Stefan Feld"
+  },
+  {
+    "id": "boardgame:churchill-2015",
+    "type": "boardgame",
+    "title": "Churchill",
+    "year": 2015,
+    "creator": "Mark Herman"
+  },
+  {
     "id": "boardgame:unlock-timeless-adventures-2019",
     "type": "boardgame",
     "title": "Unlock!: Timeless Adventures",
     "year": 2019,
     "creator": "Aristide Bruyant, Cyril Demaegd"
+  },
+  {
+    "id": "boardgame:fort-2020",
+    "type": "boardgame",
+    "title": "Fort",
+    "year": 2020,
+    "creator": "Grant Rodiek"
   },
   {
     "id": "boardgame:creature-caravan-2024",
@@ -5061,11 +4235,25 @@
     "creator": "Kristian Amundsen Østby"
   },
   {
+    "id": "boardgame:the-estates-2018",
+    "type": "boardgame",
+    "title": "The Estates",
+    "year": 2018,
+    "creator": "Klaus Zoch"
+  },
+  {
     "id": "boardgame:blood-bowl-2016-edition-2016",
     "type": "boardgame",
     "title": "Blood Bowl (2016 Edition)",
     "year": 2016,
     "creator": "Andy Hoare, James M. Hewitt"
+  },
+  {
+    "id": "boardgame:the-magnificent-2019",
+    "type": "boardgame",
+    "title": "The Magnificent",
+    "year": 2019,
+    "creator": "Eilif Svensson, Kristian Amundsen Østby"
   },
   {
     "id": "boardgame:disney-villainous-evil-comes-prepared-2019",
@@ -5094,6 +4282,27 @@
     "title": "Tiny Epic Dungeons",
     "year": 2021,
     "creator": "Scott Almes"
+  },
+  {
+    "id": "boardgame:maquis-2013",
+    "type": "boardgame",
+    "title": "Maquis",
+    "year": 2013,
+    "creator": "Jake Staines"
+  },
+  {
+    "id": "boardgame:shakespeare-2015",
+    "type": "boardgame",
+    "title": "Shakespeare",
+    "year": 2015,
+    "creator": "Hervé Rigal"
+  },
+  {
+    "id": "boardgame:whistle-mountain-2020",
+    "type": "boardgame",
+    "title": "Whistle Mountain",
+    "year": 2020,
+    "creator": "Luke Laurie, Scott Caputo"
   },
   {
     "id": "boardgame:river-valley-glassworks-2024",
@@ -5131,6 +4340,13 @@
     "creator": "Shadi Torbey"
   },
   {
+    "id": "boardgame:snowdonia-2012",
+    "type": "boardgame",
+    "title": "Snowdonia",
+    "year": 2012,
+    "creator": "Tony Boydell"
+  },
+  {
     "id": "boardgame:love-letter-batman-2015",
     "type": "boardgame",
     "title": "Love Letter: Batman",
@@ -5152,11 +4368,46 @@
     "creator": "Raúl Fernández Aparicio, Vladimír Suchý"
   },
   {
+    "id": "boardgame:yamatai-2017",
+    "type": "boardgame",
+    "title": "Yamataï",
+    "year": 2017,
+    "creator": "Bruno Cathala, Marc Paquien"
+  },
+  {
+    "id": "boardgame:galileo-galilei-2024",
+    "type": "boardgame",
+    "title": "Galileo Galilei",
+    "year": 2024,
+    "creator": "Tomáš Holek"
+  },
+  {
     "id": "boardgame:clever-cubed-2020",
     "type": "boardgame",
     "title": "Clever Cubed",
     "year": 2020,
     "creator": "Wolfgang Warsch"
+  },
+  {
+    "id": "boardgame:crystal-palace-2019",
+    "type": "boardgame",
+    "title": "Crystal Palace",
+    "year": 2019,
+    "creator": "Carsten Lauber"
+  },
+  {
+    "id": "boardgame:spots-2022",
+    "type": "boardgame",
+    "title": "Spots",
+    "year": 2022,
+    "creator": "Alex Hague, Jon Perry"
+  },
+  {
+    "id": "boardgame:luna-2010",
+    "type": "boardgame",
+    "title": "Luna",
+    "year": 2010,
+    "creator": "Stefan Feld"
   },
   {
     "id": "boardgame:gloomhaven-buttons-bugs-2024",
@@ -5187,11 +4438,25 @@
     "creator": "Emerson Matsuuchi"
   },
   {
+    "id": "boardgame:evacuation-2023",
+    "type": "boardgame",
+    "title": "Evacuation",
+    "year": 2023,
+    "creator": "Vladimír Suchý"
+  },
+  {
     "id": "boardgame:trismegistus-the-ultimate-formula-2019",
     "type": "boardgame",
     "title": "Trismegistus: The Ultimate Formula",
     "year": 2019,
     "creator": "Daniele Tascini, Federico Pierlorenzi"
+  },
+  {
+    "id": "boardgame:saltfjord-2024",
+    "type": "boardgame",
+    "title": "Saltfjord",
+    "year": 2024,
+    "creator": "Eilif Svensson, Kristian Amundsen Østby"
   },
   {
     "id": "boardgame:fury-of-dracula-second-edition-2005",
@@ -5213,6 +4478,13 @@
     "title": "Hoplomachus: Victorum",
     "year": 2023,
     "creator": "Adam Carlson, Josh J. Carlson"
+  },
+  {
+    "id": "boardgame:coal-baron-2013",
+    "type": "boardgame",
+    "title": "Coal Baron",
+    "year": 2013,
+    "creator": "Michael Kiesling, Wolfgang Kramer"
   },
   {
     "id": "boardgame:the-networks-primetime-2016",
@@ -5250,11 +4522,25 @@
     "creator": "Emerson Matsuuchi"
   },
   {
+    "id": "boardgame:blue-lagoon-2018",
+    "type": "boardgame",
+    "title": "Blue Lagoon",
+    "year": 2018,
+    "creator": "Reiner Knizia"
+  },
+  {
     "id": "boardgame:circadians-first-light-2019",
     "type": "boardgame",
     "title": "Circadians: First Light",
     "year": 2019,
     "creator": "S J Macdonald"
+  },
+  {
+    "id": "boardgame:santiago-2003",
+    "type": "boardgame",
+    "title": "Santiago",
+    "year": 2003,
+    "creator": "Claudia Hely, Roman Pelek"
   },
   {
     "id": "boardgame:steampunk-rally-2015",
@@ -5278,11 +4564,32 @@
     "creator": "Emerson Matsuuchi"
   },
   {
+    "id": "boardgame:pret-a-porter-2010",
+    "type": "boardgame",
+    "title": "Prêt-à-Porter",
+    "year": 2010,
+    "creator": "Ignacy Trzewiczek, Piotr Haraszczak"
+  },
+  {
     "id": "boardgame:warhammer-quest-the-adventure-card-game-2015",
     "type": "boardgame",
     "title": "Warhammer Quest: The Adventure Card Game",
     "year": 2015,
     "creator": "Adam Sadler, Brady Sadler"
+  },
+  {
+    "id": "boardgame:leaving-earth-2015",
+    "type": "boardgame",
+    "title": "Leaving Earth",
+    "year": 2015,
+    "creator": "Joseph Fatula"
+  },
+  {
+    "id": "boardgame:new-york-zoo-2020",
+    "type": "boardgame",
+    "title": "New York Zoo",
+    "year": 2020,
+    "creator": "Uwe Rosenberg"
   },
   {
     "id": "boardgame:unmatched-houdini-vs-the-genie-2022",
@@ -5339,6 +4646,20 @@
     "title": "Advanced Squad Leader: Starter Kit #1",
     "year": 2004,
     "creator": "Ken Dunn, Pete Shelling"
+  },
+  {
+    "id": "boardgame:the-pursuit-of-happiness-2015",
+    "type": "boardgame",
+    "title": "The Pursuit of Happiness",
+    "year": 2015,
+    "creator": "Adrian Abela, David Chircop"
+  },
+  {
+    "id": "boardgame:zhanguo-2014",
+    "type": "boardgame",
+    "title": "ZhanGuo",
+    "year": 2014,
+    "creator": "Marco Canetta, Stefania Niccolini"
   },
   {
     "id": "boardgame:black-sonata-2017",
@@ -5404,6 +4725,13 @@
     "creator": "Bryan Bornmueller"
   },
   {
+    "id": "boardgame:red7-2014",
+    "type": "boardgame",
+    "title": "Red7",
+    "year": 2014,
+    "creator": "Carl Chudyk, Chris Cieslik"
+  },
+  {
     "id": "boardgame:dice-hospital-2018",
     "type": "boardgame",
     "title": "Dice Hospital",
@@ -5432,6 +4760,13 @@
     "creator": "Glenn Drover"
   },
   {
+    "id": "boardgame:ex-libris-2017",
+    "type": "boardgame",
+    "title": "Ex Libris",
+    "year": 2017,
+    "creator": "Adam P. McIver"
+  },
+  {
     "id": "boardgame:saint-petersburg-second-edition-2014",
     "type": "boardgame",
     "title": "Saint Petersburg (Second Edition)",
@@ -5446,11 +4781,32 @@
     "creator": "Gérald Cattiaux, Jean-Louis Roubira"
   },
   {
+    "id": "boardgame:merchants-cove-2021",
+    "type": "boardgame",
+    "title": "Merchants Cove",
+    "year": 2021,
+    "creator": "Carl Van Ostrand, Drake Villareal"
+  },
+  {
     "id": "boardgame:clinic-deluxe-edition-2019",
     "type": "boardgame",
     "title": "Clinic: Deluxe Edition",
     "year": 2019,
     "creator": "Alban Viard"
+  },
+  {
+    "id": "boardgame:shipyard-2009",
+    "type": "boardgame",
+    "title": "Shipyard",
+    "year": 2009,
+    "creator": "Vladimír Suchý"
+  },
+  {
+    "id": "boardgame:panamax-2014",
+    "type": "boardgame",
+    "title": "Panamax",
+    "year": 2014,
+    "creator": "Gil d'Orey, Nuno Bizarro Sentieiro"
   },
   {
     "id": "boardgame:rumble-nation-2017",
@@ -5472,5 +4828,26 @@
     "title": "Rihanna",
     "year": 2005,
     "creator": "Saint Michael, Barbados"
+  },
+  {
+    "id": "book:el-legado-en-los-huesos-2013",
+    "type": "book",
+    "title": "El legado en los huesos",
+    "year": 2013,
+    "creator": "Dolores Redondo"
+  },
+  {
+    "id": "series:vis-a-vis-2015",
+    "type": "series",
+    "title": "Vis a vis",
+    "year": 2015,
+    "creator": "Álex Pina"
+  },
+  {
+    "id": "series:el-internado-laguna-negra-2007",
+    "type": "series",
+    "title": "El internado: Laguna Negra",
+    "year": 2007,
+    "creator": "Laura Belloso"
   }
 ]
