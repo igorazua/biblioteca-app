@@ -37,6 +37,24 @@ export function eraFactor(
 ): number {
   if (!birthYear) return 0.75
 
+  // Para artistas con peakDecades, evaluar si alguna década de éxito coincide con la ventana formativa (MOTOR §2b.4, T13)
+  if (item?.type === 'artist' && Array.isArray(item?.peakDecades) && item.peakDecades.length > 0) {
+    const [wMin, wMax] = PARAMS.ERA_WINDOW
+    for (const dec of item.peakDecades) {
+      const match = dec.match(/^(\d{4})/)
+      if (match) {
+        const midDecadeYear = parseInt(match[1], 10) + 5
+        const ageAtPeak = midDecadeYear - birthYear
+        if (ageAtPeak >= wMin && ageAtPeak <= wMax) {
+          return 1.0
+        }
+        if (ageAtPeak >= wMin - 2 && ageAtPeak <= wMax + 10) {
+          return 0.90
+        }
+      }
+    }
+  }
+
   const e = year - birthYear
   const isCanonOrSchool = Boolean(
     item?.isCanon ||

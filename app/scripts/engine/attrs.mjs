@@ -114,6 +114,86 @@ export const ATTRS = {
     minCoverage: 0.85,
     refresh: 'weekly',
   },
+  seasons: {
+    type: 'number',
+    shelves: ['series'],
+    consumers: ['filtros', 'R', 'Decidir'],
+    sources: ['tvmaze', 'wikidata', 'tmdb'],
+    minCoverage: 0.85,
+    refresh: 'yearly',
+  },
+  episodes: {
+    type: 'number',
+    shelves: ['series'],
+    consumers: ['filtros', 'R'],
+    sources: ['tvmaze', 'wikidata', 'tmdb'],
+    minCoverage: 0.80,
+    refresh: 'yearly',
+  },
+  network: {
+    type: 'string',
+    shelves: ['series'],
+    consumers: ['filtros', 'D'],
+    sources: ['tvmaze', 'wikidata'],
+    minCoverage: 0.70,
+    refresh: 'never',
+  },
+  ongoing: {
+    type: 'bool',
+    shelves: ['series'],
+    consumers: ['filtros', 'D'],
+    sources: ['tvmaze', 'wikidata', 'computed'],
+    minCoverage: 0.85,
+    refresh: 'monthly',
+  },
+  weight: {
+    type: 'number',
+    shelves: ['boardgame'],
+    consumers: ['filtros', 'R', 'Decidir'],
+    sources: ['bgg', 'wikidata', 'llm-infer'],
+    minCoverage: 0.75,
+    refresh: 'never',
+  },
+  minAge: {
+    type: 'number',
+    shelves: ['boardgame'],
+    consumers: ['filtros', 'Decidir'],
+    sources: ['bgg', 'wikidata'],
+    minCoverage: 0.75,
+    refresh: 'never',
+  },
+  cooperative: {
+    type: 'bool',
+    shelves: ['boardgame'],
+    consumers: ['filtros', 'Decidir'],
+    sources: ['bgg', 'wikidata', 'llm-infer'],
+    minCoverage: 0.85,
+    refresh: 'never',
+  },
+  mechanics: {
+    type: 'string[]',
+    shelves: ['boardgame'],
+    consumers: ['filtros', 'Decidir', 'R'],
+    sources: ['bgg', 'wikidata'],
+    minCoverage: 0.75,
+    refresh: 'never',
+  },
+  cast: {
+    type: 'string[]',
+    shelves: ['movie'],
+    consumers: ['R', 'filtros', 'búsqueda'],
+    sources: ['wikidata', 'tmdb'],
+    minCoverage: 0.70,
+    refresh: 'never',
+  },
+  peakDecades: {
+    type: 'string[]',
+    shelves: ['artist'],
+    consumers: ['R', 'era', 'popPct'],
+    sources: ['wikidata', 'llm-infer', 'computed'],
+    minCoverage: 0.80,
+    refresh: 'never',
+  },
 }
 
 export function validateAttrValue(attrName, val, evidence, source) {
@@ -178,6 +258,24 @@ export function validateAttrValue(attrName, val, evidence, source) {
         return { valid: false, error: `Mapa de visitas por idioma esperado: ${JSON.stringify(val)}` }
       }
       return { valid: true, value: val }
+
+    case 'number':
+      if (typeof val !== 'number' || isNaN(val)) {
+        return { valid: false, error: `Número esperado: ${val}` }
+      }
+      return { valid: true, value: val }
+
+    case 'string':
+      if (typeof val !== 'string' || !val.trim()) {
+        return { valid: false, error: `Texto no vacío esperado: ${val}` }
+      }
+      return { valid: true, value: val.trim() }
+
+    case 'string[]':
+      if (!Array.isArray(val) || val.some((s) => typeof s !== 'string' || !s.trim())) {
+        return { valid: false, error: `Lista de textos esperada: ${JSON.stringify(val)}` }
+      }
+      return { valid: true, value: val.map((s) => s.trim()) }
 
     default:
       return { valid: true, value: val }

@@ -2,5 +2,6 @@
 scripts/cache/context/
 scripts/cache/vectors/
 scripts/cache/sources/
+scripts/cache/tvmaze/
 
 scripts/cache/llm/enriched/

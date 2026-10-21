@@ -11,8 +11,16 @@ export interface Item {
   creator: string
   durationMin?: number
   seasons?: number
+  episodes?: number
+  network?: string
   pages?: number
   players?: string // solo juegos de mesa: '2-4', '1-6'
+  minAge?: number // edad mínima (juegos de mesa / películas)
+  weight?: number // complejidad / peso BGG 1.0 - 5.0
+  cooperative?: boolean
+  mechanics?: string[]
+  cast?: string[] // reparto principal
+  peakDecades?: string[] // décadas de éxito para artistas
   depth?: Depth // solo libros
   genres: string[]
   synopsis: string
