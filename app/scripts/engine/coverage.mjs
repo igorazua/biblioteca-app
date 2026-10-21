@@ -11,6 +11,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { ATTRS } from './attrs.mjs'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(here, '..', '..')
@@ -127,6 +128,48 @@ let prevMd = ''
 if (existsSync(COVERAGE_MD)) prevMd = readFileSync(COVERAGE_MD, 'utf8')
 writeFileSync(COVERAGE_MD, `${mdEntry}\n\n${prevMd}`, 'utf8')
 console.log(`Histórico actualizado en scripts/cache/coverage.md\n`)
+
+// Tabla de «Huecos» (MOTOR v2 §2b.2 / TAREAS_MOTOR_V2.md T3)
+const gaps = []
+for (const [attrName, def] of Object.entries(ATTRS)) {
+  const minTarget = def.minCoverage || 0.9
+  for (const shelf of def.shelves) {
+    const shelfItems = byShelf[shelf] || []
+    if (!shelfItems.length) continue
+
+    const covered = shelfItems.filter((i) => {
+      const v = i[attrName]
+      if (v === undefined || v === null) return false
+      if (Array.isArray(v) && !v.length) return false
+      if (typeof v === 'object' && !Object.keys(v).length) return false
+      return true
+    }).length
+
+    const ratio = covered / shelfItems.length
+    if (ratio < minTarget) {
+      const cmd = `node scripts/engine/fill-attr.mjs --attr ${attrName} --shelf ${shelf} --mode agent`
+      gaps.push({
+        attr: attrName,
+        shelf,
+        cov: pct(covered, shelfItems.length),
+        target: `${(minTarget * 100).toFixed(0)}%`,
+        cmd,
+      })
+    }
+  }
+}
+
+if (gaps.length) {
+  console.log('📌 TABLA DE HUECOS (atributos por debajo del objetivo mínimo en ATTRS):\n')
+  console.log('| Atributo | Estantería | Cobertura | Objetivo | Comando para rellenarlo |')
+  console.log('|---|---|---|---|---|')
+  for (const g of gaps) {
+    console.log(`| \`${g.attr}\` | **${g.shelf}** | ${g.cov} | ${g.target} | \`${g.cmd}\` |`)
+  }
+  console.log('')
+} else {
+  console.log('✨ No hay huecos: todos los atributos registrados cumplen o superan su cobertura objetivo.\n')
+}
 
 if (isStrict) {
   // Comprobar umbrales si se pasó --strict

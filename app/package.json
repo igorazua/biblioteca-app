@@ -11,6 +11,7 @@
     "seed": "node --env-file-if-exists=.env.local scripts/build-seed.mjs --fast && node --env-file-if-exists=.env.local scripts/engine/additions.mjs && node scripts/engine/build.mjs && node scripts/localize-titles.mjs && node scripts/dedupe-twins.mjs",
     "icons": "node scripts/make-icons.mjs",
     "engine:sources": "node --env-file-if-exists=.env.local scripts/engine/sources.mjs",
+    "engine:covers": "node --env-file-if-exists=.env.local scripts/engine/covers.mjs",
     "engine:build": "node scripts/engine/build.mjs",
     "engine:graph": "node scripts/engine/graph-import.mjs",
     "engine:context": "node scripts/engine/context.mjs",

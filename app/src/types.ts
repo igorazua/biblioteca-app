@@ -29,6 +29,19 @@ export interface Item {
   originCountry?: string[]
   originalLanguage?: string
   collection?: string
+  basedOn?: string
+  awards?: string[]
+  imageSrc?: string
+  imageCredit?: string
+  titles?: Record<string, string>
+  popPct?: number // percentil dentro de su estantería (0-100)
+  notoriety?: Record<string, number> | number // por país o recortado a número para el mercado activo
+  trend?: Record<string, number> | number
+  isCanon?: boolean
+  schoolReading?: Record<string, boolean> | boolean
+  pageviews?: Record<string, number> | number
+  src?: Record<string, string> // procedencia de cada metadato
+  conf?: Record<string, number> // nivel de confianza (0-1)
   providers?: Record<string, string[]>
   releasedIn?: string[]
   cert?: Record<string, string>
