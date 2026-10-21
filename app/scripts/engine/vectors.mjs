@@ -17,7 +17,9 @@ const here = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(here, '..', '..')
 const SEED_FILE = join(ROOT, 'src', 'data', 'seed.json')
 const CONTEXT_DIR = join(here, '..', 'cache', 'context')
+const ENRICHED_DIR = join(here, '..', 'cache', 'llm', 'enriched')
 const VECTORS_DIR = join(here, '..', 'cache', 'vectors')
+const CONTENT_VECTORS_DIR = join(VECTORS_DIR, 'content')
 
 const args = process.argv.slice(2)
 const FILTER_SHELF = args.includes('--shelf') ? args[args.indexOf('--shelf') + 1] : null
@@ -58,34 +60,64 @@ async function main() {
 
   for (const item of itemsToProcess) {
     const slug = item.id.replace(/^[^:]+:/, '')
+    const contentShelfDir = join(CONTENT_VECTORS_DIR, item.type)
     const shelfDir = join(VECTORS_DIR, item.type)
+    ensureDir(contentShelfDir)
     ensureDir(shelfDir)
-    const targetFile = join(shelfDir, `${slug}.json`)
+    const targetFile = join(contentShelfDir, `${slug}.json`)
+    const legacyFile = join(shelfDir, `${slug}.json`)
 
     if (!REFRESH && existsSync(targetFile)) {
       cached++
       continue
     }
 
-    // Buscar contexto
+    // Buscar enriquecimiento LLM (T5.5: ficha de experiencia + temas + momentos)
     let textToEmbed = ''
-    const contextPath = join(CONTEXT_DIR, item.type, `${slug}.txt`)
-    if (existsSync(contextPath)) {
-      textToEmbed = readFileSync(contextPath, 'utf8')
-    } else {
-      // Fallback: construir texto desde los campos del item
-      textToEmbed = `ID: ${item.id}\nTÍTULO: ${item.title} (${item.year})\nCREADOR: ${item.creator || ''}\nGÉNEROS: ${(item.genres || []).join(', ')}\nSINOPSIS: ${item.synopsis || ''}`
+    const enrichedPath = join(ENRICHED_DIR, item.type, `${slug}.json`)
+
+    if (existsSync(enrichedPath)) {
+      try {
+        const enriched = JSON.parse(readFileSync(enrichedPath, 'utf8'))
+        const exp = enriched.experience || {}
+        const parts = [
+          `TÍTULO: ${item.title} (${item.year || ''})`,
+          enriched.oneLiner ? `RESUMEN: ${enriched.oneLiner}` : '',
+          exp.plot ? `DE QUÉ VA: ${exp.plot}` : '',
+          exp.feeling ? `CÓMO SE SIENTE: ${exp.feeling}` : '',
+          exp.hook ? `POR QUÉ ENGANCHA: ${exp.hook}` : '',
+          exp.notFor ? `A QUIÉN NO LE GUSTARÁ: ${exp.notFor}` : '',
+          exp.similar?.length ? `SIMILARES: ${exp.similar.join(', ')}` : '',
+          exp.context ? `CONTEXTO: ${exp.context}` : '',
+          enriched.themes?.length ? `TEMAS: ${enriched.themes.join(', ')}` : '',
+          enriched.moments?.length ? `MOMENTOS: ${enriched.moments.join(', ')}` : '',
+        ].filter(Boolean)
+        textToEmbed = parts.join('\n')
+      } catch (err) {
+        console.warn(`Error leyendo enriquecimiento de ${item.id}:`, err.message)
+      }
     }
 
-    // Agregar oneLiner o temas si existen
-    if (item.oneLiner) textToEmbed += `\nRESUMEN: ${item.oneLiner}`
-    if (item.themes?.length) textToEmbed += `\nTEMAS: ${item.themes.join(', ')}`
-    if (item.moments?.length) textToEmbed += `\nMOMENTOS: ${item.moments.join(', ')}`
+    if (!textToEmbed) {
+      // Fallback a contexto compacto E5
+      const contextPath = join(CONTEXT_DIR, item.type, `${slug}.txt`)
+      if (existsSync(contextPath)) {
+        textToEmbed = readFileSync(contextPath, 'utf8')
+      } else {
+        // Fallback: construir texto desde los campos del item
+        textToEmbed = `ID: ${item.id}\nTÍTULO: ${item.title} (${item.year})\nCREADOR: ${item.creator || ''}\nGÉNEROS: ${(item.genres || []).join(', ')}\nSINOPSIS: ${item.synopsis || ''}`
+      }
+      if (item.oneLiner) textToEmbed += `\nRESUMEN: ${item.oneLiner}`
+      if (item.themes?.length) textToEmbed += `\nTEMAS: ${item.themes.join(', ')}`
+      if (item.moments?.length) textToEmbed += `\nMOMENTOS: ${item.moments.join(', ')}`
+    }
 
     const output = await extractor(textToEmbed.slice(0, 1500), { pooling: 'mean', normalize: true })
     const vector = Array.from(output.data)
 
-    writeFileSync(targetFile, JSON.stringify({ id: item.id, vector }), 'utf8')
+    const payload = JSON.stringify({ id: item.id, vector })
+    writeFileSync(targetFile, payload, 'utf8')
+    writeFileSync(legacyFile, payload, 'utf8') // Compatibilidad
     processed++
 
     if (processed % 25 === 0 || processed === itemsToProcess.length - cached) {

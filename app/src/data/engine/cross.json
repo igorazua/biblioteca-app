@@ -67,30 +67,6 @@
       "reason": "Misma afinidad estética y universo temático"
     }
   ],
-  "movie:the-shawshank-redemption-1994": [
-    {
-      "id": "series:the-walking-dead-2010",
-      "kind": "pick",
-      "w": 0.85,
-      "reason": "Misma afinidad estética y universo temático"
-    }
-  ],
-  "movie:the-dark-knight-2008": [
-    {
-      "id": "series:batman-beyond-1999",
-      "kind": "pick",
-      "w": 0.85,
-      "reason": "Misma afinidad estética y universo temático"
-    }
-  ],
-  "movie:star-wars-episode-v-the-empire-strikes-back-1980": [
-    {
-      "id": "series:star-wars-the-clone-wars-2008",
-      "kind": "pick",
-      "w": 0.85,
-      "reason": "Misma afinidad estética y universo temático"
-    }
-  ],
   "movie:cidade-de-deus-2002": [
     {
       "id": "series:antidisturbios-2020",
@@ -127,25 +103,9 @@
       "reason": "Misma afinidad estética y universo temático"
     }
   ],
-  "movie:terminator-2-judgment-day-1991": [
-    {
-      "id": "series:terminator-the-sarah-connor-chronicles-2008",
-      "kind": "pick",
-      "w": 0.85,
-      "reason": "Misma afinidad estética y universo temático"
-    }
-  ],
   "movie:hotaru-no-haka-1988": [
     {
       "id": "series:durarara-2010",
-      "kind": "pick",
-      "w": 0.85,
-      "reason": "Misma afinidad estética y universo temático"
-    }
-  ],
-  "movie:psycho-1960": [
-    {
-      "id": "series:bates-motel-2013",
       "kind": "pick",
       "w": 0.85,
       "reason": "Misma afinidad estética y universo temático"
@@ -427,14 +387,6 @@
       "reason": "Misma afinidad estética y universo temático"
     }
   ],
-  "movie:twelve-monkeys-1995": [
-    {
-      "id": "series:12-monkeys-2015",
-      "kind": "pick",
-      "w": 0.85,
-      "reason": "Misma afinidad estética y universo temático"
-    }
-  ],
   "movie:dil-bechara-2020": [
     {
       "id": "series:el-juego-del-calamar-2021",
@@ -644,12 +596,6 @@
       "id": "movie:the-green-mile-1999",
       "kind": "pick",
       "w": 0.85,
-      "reason": "Misma afinidad estética y universo temático"
-    },
-    {
-      "id": "movie:the-shawshank-redemption-1994",
-      "kind": "pick",
-      "w": 0.75,
       "reason": "Misma afinidad estética y universo temático"
     },
     {
@@ -868,14 +814,6 @@
   "series:bodyguard-2018": [
     {
       "id": "movie:gangs-of-wasseypur-2012",
-      "kind": "pick",
-      "w": 0.85,
-      "reason": "Misma afinidad estética y universo temático"
-    }
-  ],
-  "series:bates-motel-2013": [
-    {
-      "id": "movie:psycho-1960",
       "kind": "pick",
       "w": 0.85,
       "reason": "Misma afinidad estética y universo temático"
@@ -1377,14 +1315,6 @@
       "reason": "Misma afinidad estética y universo temático"
     }
   ],
-  "series:terminator-the-sarah-connor-chronicles-2008": [
-    {
-      "id": "movie:terminator-2-judgment-day-1991",
-      "kind": "pick",
-      "w": 0.85,
-      "reason": "Misma afinidad estética y universo temático"
-    }
-  ],
   "series:the-4400-2004": [
     {
       "id": "movie:ajeossi-2010",
@@ -1437,12 +1367,6 @@
       "reason": "Misma afinidad estética y universo temático"
     },
     {
-      "id": "movie:the-dark-knight-2008",
-      "kind": "pick",
-      "w": 0.75,
-      "reason": "Misma afinidad estética y universo temático"
-    },
-    {
       "id": "movie:batman-begins-2005",
       "kind": "pick",
       "w": 0.65,
@@ -1489,12 +1413,6 @@
       "kind": "pick",
       "w": 0.85,
       "reason": "Misma afinidad estética y universo temático"
-    },
-    {
-      "id": "movie:star-wars-episode-v-the-empire-strikes-back-1980",
-      "kind": "pick",
-      "w": 0.75,
-      "reason": "Misma afinidad estética y universo temático"
     }
   ],
   "series:fake-off-2014": [
@@ -1514,14 +1432,6 @@
       "id": "movie:rockstar-2011",
       "kind": "pick",
       "w": 0.65,
-      "reason": "Misma afinidad estética y universo temático"
-    }
-  ],
-  "series:12-monkeys-2015": [
-    {
-      "id": "movie:twelve-monkeys-1995",
-      "kind": "pick",
-      "w": 0.85,
       "reason": "Misma afinidad estética y universo temático"
     }
   ],

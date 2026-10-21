@@ -245,6 +245,50 @@ async function resolveMovieOrSeries(item) {
   }
 }
 
+async function resolveBoardgame(item) {
+  let wikidataId = item.wikidataId || null
+  let synopsis = null
+  let posterUrl = null
+  let commonsImage = null
+  let originCountry = item.originCountry || null
+
+  if (wikidataId) {
+    const entity = await resolveWikidataEntity(wikidataId)
+    if (entity) {
+      const claims = entity.claims || {}
+      if (claims.P18?.[0]?.mainsnak?.datavalue?.value) {
+        commonsImage = claims.P18[0].mainsnak.datavalue.value
+      }
+      const sitelinks = entity.sitelinks || {}
+      if (sitelinks.eswiki?.title) {
+        const sum = await fetchWikiSummary(sitelinks.eswiki.title, 'es')
+        if (sum?.extract) synopsis = sum.extract
+        if (!commonsImage && sum?.thumbnail) commonsImage = sum.thumbnail
+      } else if (sitelinks.enwiki?.title) {
+        const sum = await fetchWikiSummary(sitelinks.enwiki.title, 'en')
+        if (sum?.extract && !synopsis) synopsis = sum.extract
+        if (!commonsImage && sum?.thumbnail) commonsImage = sum.thumbnail
+      }
+    }
+  }
+
+  posterUrl = commonsImage
+    ? commonsImage.startsWith('http')
+      ? commonsImage
+      : `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(commonsImage)}?width=600`
+    : null
+
+  return {
+    wikidataId,
+    genres: item.genres || ['Juego de mesa'],
+    synopsis: synopsis || `${item.title} (${item.year || ''}), juego de mesa popular.`,
+    posterUrl,
+    imageSrc: posterUrl ? 'wikimedia' : undefined,
+    imageCredit: posterUrl ? 'Wikimedia Commons' : undefined,
+    originCountry: originCountry || ['ES'],
+  }
+}
+
 async function resolveBook(item) {
   let wikidataId = item.wikidataId || null
   let olid = item.olid || null
@@ -353,7 +397,7 @@ async function main() {
     console.log(`\nRevisando ${file} (${additionsList.length} propuestas)...`)
 
     for (const raw of additionsList) {
-      const type = raw.type
+      const type = raw.type || file.replace('.json', '')
       const title = raw.title?.trim()
       const year = raw.year
       const slug = type === 'artist' ? slugify(title) : `${slugify(title)}-${year}`
@@ -400,6 +444,8 @@ async function main() {
           resolved = await resolveMovieOrSeries(raw)
         } else if (type === 'book') {
           resolved = await resolveBook(raw)
+        } else if (type === 'boardgame') {
+          resolved = await resolveBoardgame(raw)
         }
         await sleep(150)
       }

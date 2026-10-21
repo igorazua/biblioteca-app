@@ -296,10 +296,7 @@ export function nextDuel(
     entries,
     items,
     deckLearn,
-    friends: friends?.map((f) => ({
-      id: f.id,
-      entries: f.entries.map((e) => ({ itemId: e.itemId, status: e.status })),
-    })),
+    friends,
   }
 
   const recogMap = new Map<string, number>()
@@ -396,6 +393,7 @@ export function nextDuel(
     const score = info * Math.sqrt(rA * rB) * creatorPenalty
 
     candidatePairs.push({ a, b, score, info })
+    if (candidatePairs.length >= 25) break
   }
 
   if (candidatePairs.length === 0) {

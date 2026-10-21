@@ -187,11 +187,13 @@ async function main() {
     }
   }
 
-  // Cargar vectores
+  // Cargar vectores (prioriza embContent enriquecidos de MOTOR §2c.1)
   const rawVectors = new Map()
   for (const it of items) {
     const slug = it.id.replace(/^[^:]+:/, '')
-    const vFile = join(VECTORS_DIR, it.type, `${slug}.json`)
+    const vContent = join(VECTORS_DIR, 'content', it.type, `${slug}.json`)
+    const vLegacy = join(VECTORS_DIR, it.type, `${slug}.json`)
+    const vFile = existsSync(vContent) ? vContent : vLegacy
     if (existsSync(vFile)) {
       try {
         const d = JSON.parse(readFileSync(vFile, 'utf8'))

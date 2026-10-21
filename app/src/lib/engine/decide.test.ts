@@ -362,4 +362,55 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
       expect(duel.phase).toBe('coarse')
     }
   })
+
+  it('T2c: en Decidir con perfil nuevo, al menos 9 de cada 10 duelos en boardgame y series tienen una obra reconocible', async () => {
+    const seed = (await import('../../data/seed.json')).default as { items: Item[] }
+    const { recog } = await import('./recog')
+
+    for (const shelf of ['boardgame', 'series'] as const) {
+      const shelfItems = seed.items.filter((it) => it.type === shelf)
+      expect(shelfItems.length).toBeGreaterThan(100)
+
+      const input: DecideInput = {
+        shelf,
+        items: seed.items,
+        entries: {},
+        rankings: { movie: [], series: [], book: [], artist: [], boardgame: [] },
+        profile: { ...mockProfile, country: 'ES', lang: 'es' },
+        friends: [],
+        answers: {},
+        affinity: () => null,
+        friendPct: () => null,
+      }
+
+      const state = initDecideSession(input)
+      const shown = new Set<string>()
+      let recognizedCount = 0
+      const totalDuels = 10
+      const ctx = { user: input.profile, entries: {}, items: seed.items }
+
+      for (let i = 0; i < totalDuels; i++) {
+        const pair = nextDuel(state, seed.items, shown)
+        if (!pair) break
+        shown.add(pair.a.id)
+        shown.add(pair.b.id)
+        state.shown.push(pair.a.id, pair.b.id)
+
+        const rA = recog(pair.a, ctx)
+        const rB = recog(pair.b, ctx)
+        const notA = typeof pair.a.notoriety === 'number' ? pair.a.notoriety : pair.a.notoriety?.ES ?? 0
+        const notB = typeof pair.b.notoriety === 'number' ? pair.b.notoriety : pair.b.notoriety?.ES ?? 0
+        const isRecognized =
+          rA >= 0.5 ||
+          rB >= 0.5 ||
+          notA >= 0.5 ||
+          notB >= 0.5 ||
+          (pair.a.popPct ?? 0) >= 70 ||
+          (pair.b.popPct ?? 0) >= 70
+        if (isRecognized) recognizedCount++
+      }
+
+      expect(recognizedCount).toBeGreaterThanOrEqual(9)
+    }
+  }, 15000)
 })

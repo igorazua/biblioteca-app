@@ -1,215 +1,210 @@
 /**
- * Motor R: Reconocibilidad unificada (MOTOR.md §2b.4)
- * Calcula cuán reconocible es una obra para un usuario basándose en datos:
- * - base: notoriedad en su país (notoriety[país]) o popPct
- * - era: edad del usuario al estreno (ventana formativa PARAMS.ERA_WINDOW)
- * - zona: tasa aprendida del mazo (deckLearn) por macro y década
- * - social: amigos que la conocen
+ * recog.ts — Motor R: Reconocibilidad de obras para un usuario (MOTOR.md §2b.4, §2b.3).
+ *
+ * Fuente única de reconocibilidad en la app. La usan:
+ * 1. Selección de orientadores en Decidir (duelos).
+ * 2. Cupo seen_likely en el mazo de Descubrir.
  */
 
-import type { Item, Status, UserEntry, DeckLearnShelf } from '../../types'
+import type { Friend, Item, Profile, UserEntry, DeckLearnShelf } from '../../types'
 import { PARAMS } from './params'
 
 export interface RecogFriend {
   id: string
-  entries: { itemId: string; status: Status }[]
+  entries: { itemId: string; status: 'pending' | 'seen' | string }[]
   affinity?: number
 }
 
 export interface RecogContext {
-  user: {
-    country?: string
-    lang?: string
-    birthYear?: number
-  }
+  country?: string
+  birthYear?: number
+  user?: Partial<Profile>
   entries?: Record<string, UserEntry>
+  friends?: (Friend | RecogFriend)[]
+  affinity?: (friendId: string) => number | null
+  deckLearn?: Record<string, { shown: number; seen: number }> | DeckLearnShelf
   items?: Item[]
-  deckLearn?: DeckLearnShelf
-  friends?: RecogFriend[]
 }
 
 /**
- * Curva de época formativa según la edad del usuario al estreno (e = year - birthYear).
- * Usa PARAMS.ERA_WINDOW como única fuente de verdad del proyecto.
+ * Calcula el factor de época según la edad del usuario al estreno de la obra (MOTOR §2b.4).
  */
 export function eraFactor(
-  year: number | undefined,
-  birthYear: number | undefined,
-  item?: Pick<Item, 'type' | 'isCanon' | 'schoolReading'>
+  year: number,
+  birthYear?: number,
+  item?: Partial<Item>,
+  country = 'ES'
 ): number {
-  if (!year || !birthYear) return 0.75
-  if (item?.type === 'boardgame') return 0.8 // Los juegos envejecen diferente
+  if (!birthYear) return 0.75
 
   const e = year - birthYear
-  const isCanon = Boolean(item?.isCanon || item?.schoolReading)
+  const isCanonOrSchool = Boolean(
+    item?.isCanon ||
+    (item as Record<string, unknown>)?.schoolReading === true ||
+    ((item as Record<string, unknown>)?.schoolReading as Record<string, boolean>)?.[country]
+  )
 
   if (e < 0) {
-    if (isCanon) return 0.9
-    if (e <= -2) return 0.35
-    // Transición suave entre -2 y 0 de 0.35 a 0.7
-    return 0.35 + ((e + 2) / 2) * (0.7 - 0.35)
+    return isCanonOrSchool ? 0.90 : 0.35
   }
 
-  if (e < 12) {
-    // Transición suave de infancia 0 a 11: 0.7 a 1.0
-    return 0.7 + (e / 12) * (1.0 - 0.7)
-  }
-
+  // Curva generacional con transiciones lineales suaves de 2 años (MOTOR §2b.4, PARAMS.ERA_WINDOW [12, 25])
   const [wMin, wMax] = PARAMS.ERA_WINDOW
-  if (e >= wMin && e <= wMax) {
-    // Ventana formativa (12-25)
+
+  if (e < wMin) {
+    // 0..11 años: base 0.70 transicionando a 1.0 entre (wMin-2) y wMin
+    if (e >= wMin - 2) {
+      const t = (e - (wMin - 2)) / 2
+      return 0.70 + t * 0.30
+    }
+    return 0.70
+  }
+
+  if (e <= wMax) {
+    // Ventana formativa principal: 1.0
     return 1.0
   }
 
   if (e <= 35) {
-    // Transición suave 26 a 35: 1.0 a 0.85
-    return 1.0 - ((e - wMax) / (35 - wMax)) * (1.0 - 0.85)
+    // 26..35 años: 0.85 con transición desde 1.0 entre wMax y (wMax+2)
+    if (e <= wMax + 2) {
+      const t = (e - wMax) / 2
+      return 1.0 - t * 0.15
+    }
+    return 0.85
   }
 
+  // > 35 años: 0.70 con transición desde 0.85
   if (e <= 37) {
-    // Transición suave 35 a 37: 0.85 a 0.7
-    return 0.85 - ((e - 35) / 2) * (0.85 - 0.7)
+    const t = (e - 35) / 2
+    return 0.85 - t * 0.15
   }
 
-  return 0.7
+  return 0.70
 }
 
 /**
- * Infiere el año de nacimiento a partir de la tasa «la vi» por década del mazo (MOTOR §2b.3).
- * No usa los años de lo visto directamente para evitar retroalimentación.
+ * Infiere el año de nacimiento del usuario a partir de deckLearn o de sus obras vistas (MOTOR §2b.3).
+ * Acotado a [1940, 2012].
  */
 export function inferBirthYear(
-  entries?: Record<string, UserEntry>,
-  items?: Item[],
-  deckLearn?: DeckLearnShelf
-): number | undefined {
-  if (deckLearn?.byDecade) {
-    const currentYear = new Date().getFullYear()
-    const validDecades = Object.entries(deckLearn.byDecade).filter(([decade, stats]) => {
-      const dNum = parseInt(decade, 10)
-      return !isNaN(dNum) && dNum <= currentYear - 2 && stats.shown >= 5
-    })
+  entries: Record<string, UserEntry>,
+  items: Item[],
+  deckLearn?: Record<string, { shown: number; seen: number }>
+): number | null {
+  const medianAge = PARAMS.ERA_MEDIAN_AGE || 25
 
-    const totalShown = validDecades.reduce((acc, [, s]) => acc + s.shown, 0)
-    if (totalShown >= 60 && validDecades.length >= 3) {
-      let bestRate = -1
-      let bestDecade = 1990
-      for (const [decade, stats] of validDecades) {
-        const rate = stats.seen / stats.shown
-        if (rate > bestRate) {
-          bestRate = rate
-          bestDecade = parseInt(decade, 10)
-        }
+  // 1. Si tenemos datos de deckLearn por década (§2b.3)
+  if (deckLearn) {
+    const decadeRates: { decade: number; rate: number; count: number }[] = []
+    for (const [key, stats] of Object.entries(deckLearn)) {
+      const match = key.match(/^(\d{4})s?$/)
+      if (match && stats.shown >= 10) {
+        const decade = parseInt(match[1], 10)
+        decadeRates.push({
+          decade,
+          rate: stats.seen / stats.shown,
+          count: stats.shown,
+        })
       }
-      const inferred = bestDecade + 5 - PARAMS.ERA_MEDIAN_AGE
-      return Math.max(1940, Math.min(2012, Math.round(inferred)))
+    }
+
+    if (decadeRates.length >= 3) {
+      decadeRates.sort((a, b) => b.rate - a.rate)
+      const top = decadeRates[0]
+      const inferred = top.decade + 5 - medianAge
+      return Math.min(2012, Math.max(1940, Math.round(inferred)))
     }
   }
 
-  // Fallback si no hay suficientes tarjetas de mazo pero sí entradas manuales
-  if (entries && items && items.length > 0) {
-    const itemMap = new Map<string, Item>(items.map((it) => [it.id, it]))
-    const decadeCounts: Record<string, { seen: number; total: number }> = {}
+  // 2. Fallback: calcular a partir de las obras vistas (seen)
+  const itemsById = new Map(items.map((i) => [i.id, i]))
+  const seenYears: number[] = []
 
-    for (const [id, entry] of Object.entries(entries)) {
-      if (entry.status !== 'seen') continue
-      const it = itemMap.get(id)
-      if (!it?.year) continue
-      const dec = String(Math.floor(it.year / 10) * 10)
-      if (!decadeCounts[dec]) decadeCounts[dec] = { seen: 0, total: 0 }
-      decadeCounts[dec].seen++
-    }
-
-    const decades = Object.entries(decadeCounts).filter(([, c]) => c.seen >= 3)
-    const totalSeen = decades.reduce((acc, [, c]) => acc + c.seen, 0)
-    if (totalSeen >= 15 && decades.length >= 3) {
-      let maxCount = -1
-      let bestDec = 1990
-      for (const [dec, c] of decades) {
-        if (c.seen > maxCount) {
-          maxCount = c.seen
-          bestDec = parseInt(dec, 10)
-        }
+  for (const [id, entry] of Object.entries(entries)) {
+    if (entry.status === 'seen') {
+      const item = itemsById.get(id)
+      if (item?.year && !item.isCanon) {
+        seenYears.push(item.year)
       }
-      const inferred = bestDec + 5 - PARAMS.ERA_MEDIAN_AGE
-      return Math.max(1940, Math.min(2012, Math.round(inferred)))
     }
   }
 
-  return undefined
+  if (seenYears.length < 5) return null
+
+  seenYears.sort((a, b) => a - b)
+  const midYear = seenYears[Math.floor(seenYears.length / 2)]
+  const inferred = midYear - medianAge
+
+  return Math.min(2012, Math.max(1940, Math.round(inferred)))
 }
 
 /**
- * Calcula la reconocibilidad R de una obra para un usuario (MOTOR §2b.4).
+ * Reconocibilidad R de una obra para un usuario (MOTOR §2b.4).
+ * Devuelve un número continuo en [0, 1].
  */
 export function recog(item: Item, ctx: RecogContext): number {
-  // 1. Estados directos del usuario
-  if (ctx.entries) {
-    const userEntry = ctx.entries[item.id]
-    if (userEntry?.status === 'seen') return 1.0
-    if (userEntry?.status === 'pending') return 0.9
-    // descartada no cuenta: «no me interesa» no significa «la conozco»
-  }
+  const entries = ctx.entries || {}
+  const status = entries[item.id]?.status
 
-  // 2. Base: notoriedad por país o popPct
-  const country = ctx.user?.country || 'ES'
-  const notMap = item.notoriety as Record<string, number> | undefined
-  let base: number
-  if (notMap?.[country] != null) {
-    base = notMap[country]
+  // Obras ya interactuadas
+  if (status === 'seen') return 1.0
+  if (status === 'pending') return 0.9
+  // Descartada no cuenta: «no me interesa» no significa «la conozco»
+
+  const country = ctx.country ?? ctx.user?.country ?? 'ES'
+  const birthYear =
+    ctx.birthYear ??
+    ctx.user?.birthYear ??
+    (ctx.items && ctx.entries ? inferBirthYear(ctx.entries, ctx.items) ?? undefined : undefined)
+
+  // Notoriedad base
+  let base = 0.5
+  if (typeof item.notoriety === 'number') {
+    base = item.notoriety
+  } else if (item.notoriety && typeof item.notoriety === 'object') {
+    const byCountry = (item.notoriety as Record<string, number>)[country]
+    if (byCountry != null) base = byCountry
   } else if (item.popPct != null) {
     base = (item.popPct / 100) * 0.8
-  } else {
-    base = ((item.popularity || 50) / 100) * 0.8
+  } else if (item.popularity != null) {
+    base = (item.popularity / 100) * 0.8
   }
 
-  // 3. Época: año de nacimiento declarado manda, si no inferido
-  const birthYear = ctx.user?.birthYear ?? inferBirthYear(ctx.entries, ctx.items, ctx.deckLearn)
-  const era = eraFactor(item.year, birthYear, item)
+  // Factor época
+  const era = eraFactor(item.year || 2000, birthYear, item, country)
 
-  // 4. Zona: tasa de «la vi» de deckLearn (§7.6) en el macro y década
+  // Factor zona (deckLearn)
   let zona = 0.5
   if (ctx.deckLearn) {
-    const macro = item.genres?.[0] || 'General'
-    const decade = item.year ? String(Math.floor(item.year / 10) * 10) : 'unknown'
-
-    const macroStats = ctx.deckLearn.byMacro?.[macro]
-    const decadeStats = ctx.deckLearn.byDecade?.[decade]
-
-    let sum = 0
-    let count = 0
-    if (macroStats && macroStats.shown > 0) {
-      sum += (macroStats.seen + 1) / (macroStats.shown + 2) // Suavizado bayesiano
-      count++
+    const decadeStr = `${Math.floor((item.year || 2000) / 10) * 10}s`
+    const stats = (ctx.deckLearn as Record<string, { shown: number; seen: number } | undefined>)[decadeStr]
+    if (stats && stats.shown > 0) {
+      zona = stats.seen / stats.shown
     }
-    if (decadeStats && decadeStats.shown > 0) {
-      sum += (decadeStats.seen + 1) / (decadeStats.shown + 2)
-      count++
-    }
-
-    if (count > 0) zona = sum / count
   }
 
-  // 5. Social: amigos que la tienen vista o pendiente
-  let social = 0
-  if (ctx.friends && ctx.friends.length > 0) {
-    let socialProd = 1.0
-    for (const f of ctx.friends) {
-      const fe = f.entries.find((e) => e.itemId === item.id)
-      if (fe && (fe.status === 'seen' || fe.status === 'pending')) {
-        const aff = f.affinity ?? 50
-        const wf = 0.5 + (aff / 100) * 0.5
-        socialProd *= 1 - PARAMS.R_W.socialFriendRate * wf
-      }
+  // Factor social (amigos que la tienen vista o pendiente)
+  let socialProduct = 1.0
+  const friends = ctx.friends || []
+  const socialRate = PARAMS.R_W?.socialFriendRate || 0.35
+
+  for (const f of friends) {
+    const hasWork = f.entries?.some(
+      (e) => e.itemId === item.id && (e.status === 'seen' || e.status === 'pending')
+    )
+    if (hasWork) {
+      const aff = ctx.affinity ? ctx.affinity(f.id) : null
+      const wf = 0.5 + (aff ?? 50) / 100
+      socialProduct *= Math.max(0, 1 - socialRate * (wf / 1.5))
     }
-    social = 1 - socialProd
   }
+  const social = 1.0 - socialProduct
 
-  // 6. Fórmula R (MOTOR §2b.4):
-  // R = 1 - (1 - base · era · (0.6 + 0.4·zona)) · (1 - social)
-  const zCoeff = PARAMS.R_W.zona
-  const familiarTerm = base * era * (zCoeff[0] + zCoeff[1] * zona)
-  const r = 1 - (1 - familiarTerm) * (1 - social)
+  // R = 1 − (1 − base · era · (0.6 + 0.4·zona)) · (1 − social)
+  const [zBase, zScale] = PARAMS.R_W?.zona || [0.6, 0.4]
+  const personalKnown = base * era * (zBase + zScale * zona)
+  const r = 1.0 - (1.0 - personalKnown) * (1.0 - social)
 
-  return Math.max(0, Math.min(1, r))
+  return Math.min(1.0, Math.max(0.01, r))
 }

@@ -171,6 +171,21 @@ if (gaps.length) {
   console.log('✨ No hay huecos: todos los atributos registrados cumplen o superan su cobertura objetivo.\n')
 }
 
+// Comprobación de tipos de Wikidata (T2b)
+const BAD_TYPES_CACHE = join(CACHE_DIR, 'wikidata-tipo-equivocado-nuevo.json')
+if (existsSync(BAD_TYPES_CACHE)) {
+  try {
+    const badData = JSON.parse(readFileSync(BAD_TYPES_CACHE, 'utf8'))
+    const totalBad = Object.values(badData).reduce((sum, arr) => sum + (arr?.length || 0), 0)
+    if (totalBad > 0) {
+      console.error(`❌ Fallo T2b: ${totalBad} obras tienen un tipo erróneo de Wikidata en caché.`)
+      if (isStrict) process.exit(1)
+    } else {
+      console.log('✓ T2b: 0 obras con tipo erróneo de Wikidata verificado.\n')
+    }
+  } catch {}
+}
+
 if (isStrict) {
   // Comprobar umbrales si se pasó --strict
   let failed = false

@@ -1,0 +1,2519 @@
+[
+  {
+    "type": "boardgame",
+    "title": "Parchís",
+    "year": 1900,
+    "creator": "Tradicional",
+    "durationMin": 45,
+    "players": "2-4",
+    "genres": [
+      "Clásico",
+      "Familiar",
+      "Carreras"
+    ],
+    "popularity": 99,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Parchís"
+    },
+    "wikidataId": "Q1065171"
+  },
+  {
+    "type": "boardgame",
+    "title": "Juego de la oca",
+    "year": 1850,
+    "creator": "Tradicional",
+    "durationMin": 30,
+    "players": "2-6",
+    "genres": [
+      "Clásico",
+      "Familiar",
+      "Infantil"
+    ],
+    "popularity": 98,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "El juego de la oca"
+    },
+    "wikidataId": "Q749463"
+  },
+  {
+    "type": "boardgame",
+    "title": "Ajedrez",
+    "year": 1475,
+    "creator": "Tradicional",
+    "durationMin": 60,
+    "players": "2",
+    "genres": [
+      "Clásico",
+      "Estrategia",
+      "Abstracto"
+    ],
+    "popularity": 99,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Ajedrez"
+    },
+    "wikidataId": "Q718"
+  },
+  {
+    "type": "boardgame",
+    "title": "Damas",
+    "year": 1500,
+    "creator": "Tradicional",
+    "durationMin": 30,
+    "players": "2",
+    "genres": [
+      "Clásico",
+      "Estrategia",
+      "Abstracto"
+    ],
+    "popularity": 97,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Damas"
+    },
+    "wikidataId": "Q106752"
+  },
+  {
+    "type": "boardgame",
+    "title": "Dominó",
+    "year": 1700,
+    "creator": "Tradicional",
+    "durationMin": 30,
+    "players": "2-4",
+    "genres": [
+      "Clásico",
+      "Familiar",
+      "Abstracto"
+    ],
+    "popularity": 98,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Dominó"
+    },
+    "wikidataId": "Q32907"
+  },
+  {
+    "type": "boardgame",
+    "title": "Baraja española",
+    "year": 1500,
+    "creator": "Heraclio Fournier",
+    "durationMin": 45,
+    "players": "2-6",
+    "genres": [
+      "Cartas",
+      "Clásico",
+      "Tradicional"
+    ],
+    "popularity": 99,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Baraja española"
+    },
+    "wikidataId": "Q2537750"
+  },
+  {
+    "type": "boardgame",
+    "title": "Tres en raya",
+    "year": 1800,
+    "creator": "Tradicional",
+    "durationMin": 5,
+    "players": "2",
+    "genres": [
+      "Clásico",
+      "Abstracto"
+    ],
+    "popularity": 95,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Tres en raya"
+    },
+    "wikidataId": "Q210"
+  },
+  {
+    "type": "boardgame",
+    "title": "Mikado",
+    "year": 1936,
+    "creator": "Tradicional",
+    "durationMin": 15,
+    "players": "2-6",
+    "genres": [
+      "Habilidad",
+      "Clásico",
+      "Familiar"
+    ],
+    "popularity": 90,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Mikado"
+    },
+    "wikidataId": "Q735876"
+  },
+  {
+    "type": "boardgame",
+    "title": "Backgammon",
+    "year": 1600,
+    "creator": "Tradicional",
+    "durationMin": 30,
+    "players": "2",
+    "genres": [
+      "Clásico",
+      "Estrategia",
+      "Dados"
+    ],
+    "popularity": 92,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Backgammon"
+    },
+    "wikidataId": "Q11411"
+  },
+  {
+    "type": "boardgame",
+    "title": "Mahjong",
+    "year": 1850,
+    "creator": "Tradicional",
+    "durationMin": 60,
+    "players": "4",
+    "genres": [
+      "Clásico",
+      "Familiar",
+      "Estrategia"
+    ],
+    "popularity": 90,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Mahjong"
+    },
+    "wikidataId": "Q12270"
+  },
+  {
+    "type": "boardgame",
+    "title": "Go",
+    "year": -500,
+    "creator": "Tradicional",
+    "durationMin": 60,
+    "players": "2",
+    "genres": [
+      "Clásico",
+      "Estrategia",
+      "Milenario"
+    ],
+    "popularity": 90,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Go"
+    },
+    "wikidataId": "Q2534"
+  },
+  {
+    "type": "boardgame",
+    "title": "Juegos Reunidos Geyper",
+    "year": 1955,
+    "creator": "Geyper",
+    "durationMin": 45,
+    "players": "1-8",
+    "genres": [
+      "Clásico",
+      "Familiar",
+      "Compilación"
+    ],
+    "popularity": 94,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Juegos Reunidos Geyper"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Monopoly",
+    "year": 1935,
+    "creator": "Charles Darrow / Elizabeth Magie",
+    "durationMin": 90,
+    "players": "2-8",
+    "genres": [
+      "Familiar",
+      "Finanzas",
+      "Clásico"
+    ],
+    "popularity": 99,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Monopoly"
+    },
+    "wikidataId": "Q17200"
+  },
+  {
+    "type": "boardgame",
+    "title": "Trivial Pursuit",
+    "year": 1981,
+    "creator": "Scott Abbott y Chris Haney",
+    "durationMin": 90,
+    "players": "2-6",
+    "genres": [
+      "Preguntas",
+      "Familiar",
+      "Cultura"
+    ],
+    "popularity": 98,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Trivial Pursuit"
+    },
+    "wikidataId": "Q172440"
+  },
+  {
+    "type": "boardgame",
+    "title": "Cluedo",
+    "year": 1949,
+    "creator": "Anthony E. Pratt",
+    "durationMin": 45,
+    "players": "3-6",
+    "genres": [
+      "Misterio",
+      "Deducción",
+      "Familiar"
+    ],
+    "popularity": 98,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Cluedo"
+    },
+    "wikidataId": "Q172460"
+  },
+  {
+    "type": "boardgame",
+    "title": "Scrabble",
+    "year": 1948,
+    "creator": "Alfred Mosher Butts",
+    "durationMin": 60,
+    "players": "2-4",
+    "genres": [
+      "Palabras",
+      "Familiar",
+      "Educativo"
+    ],
+    "popularity": 97,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Scrabble"
+    },
+    "wikidataId": "Q170436"
+  },
+  {
+    "type": "boardgame",
+    "title": "Pictionary",
+    "year": 1985,
+    "creator": "Rob Angel",
+    "durationMin": 45,
+    "players": "3-12",
+    "genres": [
+      "Fiesta",
+      "Dibujo",
+      "Familiar"
+    ],
+    "popularity": 97,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Pictionary"
+    },
+    "wikidataId": "Q1065543"
+  },
+  {
+    "type": "boardgame",
+    "title": "Tabú",
+    "year": 1989,
+    "creator": "Brian Hersch",
+    "durationMin": 30,
+    "players": "4-10",
+    "genres": [
+      "Fiesta",
+      "Palabras",
+      "Familiar"
+    ],
+    "popularity": 98,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Tabú"
+    },
+    "wikidataId": "Q1067644"
+  },
+  {
+    "type": "boardgame",
+    "title": "Scattergories",
+    "year": 1988,
+    "creator": "Milton Bradley",
+    "durationMin": 30,
+    "players": "2-6",
+    "genres": [
+      "Palabras",
+      "Fiesta",
+      "Familiar"
+    ],
+    "popularity": 95,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Scattergories"
+    },
+    "wikidataId": "Q1768822"
+  },
+  {
+    "type": "boardgame",
+    "title": "Party & Co",
+    "year": 1991,
+    "creator": "Diset",
+    "durationMin": 45,
+    "players": "4-20",
+    "genres": [
+      "Fiesta",
+      "Mímica",
+      "Preguntas"
+    ],
+    "popularity": 98,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Party & Co"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Party & Co Extreme",
+    "year": 2002,
+    "creator": "Diset",
+    "durationMin": 45,
+    "players": "4-20",
+    "genres": [
+      "Fiesta",
+      "Pruebas",
+      "Humor"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "Party & Co Extreme"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Party & Co Junior",
+    "year": 2000,
+    "creator": "Diset",
+    "durationMin": 40,
+    "players": "4-20",
+    "genres": [
+      "Infantil",
+      "Fiesta",
+      "Familiar"
+    ],
+    "popularity": 90,
+    "titles": {
+      "es-ES": "Party & Co Junior"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Jenga",
+    "year": 1983,
+    "creator": "Leslie Scott",
+    "durationMin": 20,
+    "players": "1-8",
+    "genres": [
+      "Habilidad",
+      "Fiesta",
+      "Familiar"
+    ],
+    "popularity": 97,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Jenga"
+    },
+    "wikidataId": "Q172477"
+  },
+  {
+    "type": "boardgame",
+    "title": "Hundir la flota",
+    "year": 1967,
+    "creator": "Milton Bradley",
+    "durationMin": 30,
+    "players": "2",
+    "genres": [
+      "Estrategia",
+      "Clásico",
+      "Deducción"
+    ],
+    "popularity": 96,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Hundir la flota"
+    },
+    "wikidataId": "Q172485"
+  },
+  {
+    "type": "boardgame",
+    "title": "Conecta 4",
+    "year": 1974,
+    "creator": "Howard Wexler",
+    "durationMin": 15,
+    "players": "2",
+    "genres": [
+      "Abstracto",
+      "Clásico",
+      "Familiar"
+    ],
+    "popularity": 96,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Conecta 4"
+    },
+    "wikidataId": "Q172480"
+  },
+  {
+    "type": "boardgame",
+    "title": "Operación",
+    "year": 1965,
+    "creator": "John Spinello",
+    "durationMin": 20,
+    "players": "1-6",
+    "genres": [
+      "Habilidad",
+      "Infantil",
+      "Familiar"
+    ],
+    "popularity": 95,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Operación"
+    },
+    "wikidataId": "Q172490"
+  },
+  {
+    "type": "boardgame",
+    "title": "Tragabolas",
+    "year": 1978,
+    "creator": "Fred Kroll",
+    "durationMin": 15,
+    "players": "2-4",
+    "genres": [
+      "Habilidad",
+      "Infantil",
+      "Acción"
+    ],
+    "popularity": 95,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Tragabolas"
+    },
+    "wikidataId": "Q1626248"
+  },
+  {
+    "type": "boardgame",
+    "title": "Quién es quién",
+    "year": 1979,
+    "creator": "Ora y Theo Coster",
+    "durationMin": 15,
+    "players": "2",
+    "genres": [
+      "Deducción",
+      "Infantil",
+      "Familiar"
+    ],
+    "popularity": 97,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "¿Quién es quién?"
+    },
+    "wikidataId": "Q172495"
+  },
+  {
+    "type": "boardgame",
+    "title": "Twister",
+    "year": 1966,
+    "creator": "Charles Foley y Neil Rabens",
+    "durationMin": 20,
+    "players": "2-6",
+    "genres": [
+      "Habilidad",
+      "Fiesta",
+      "Físico"
+    ],
+    "popularity": 96,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Twister"
+    },
+    "wikidataId": "Q172500"
+  },
+  {
+    "type": "boardgame",
+    "title": "Hotel",
+    "year": 1986,
+    "creator": "Milton Bradley",
+    "durationMin": 60,
+    "players": "2-4",
+    "genres": [
+      "Familiar",
+      "Finanzas",
+      "Construcción"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "Hotel"
+    },
+    "wikidataId": "Q1630800"
+  },
+  {
+    "type": "boardgame",
+    "title": "Risk",
+    "year": 1957,
+    "creator": "Albert Lamorisse",
+    "durationMin": 120,
+    "players": "2-6",
+    "genres": [
+      "Estrategia",
+      "Guerra",
+      "Conquista"
+    ],
+    "popularity": 96,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Risk"
+    },
+    "wikidataId": "Q172502"
+  },
+  {
+    "type": "boardgame",
+    "title": "Stratego",
+    "year": 1946,
+    "creator": "Jacques Johan Mogendorff",
+    "durationMin": 45,
+    "players": "2",
+    "genres": [
+      "Estrategia",
+      "Deducción",
+      "Militar"
+    ],
+    "popularity": 90,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Stratego"
+    },
+    "wikidataId": "Q838706"
+  },
+  {
+    "type": "boardgame",
+    "title": "Rummikub",
+    "year": 1977,
+    "creator": "Ephraim Hertzano",
+    "durationMin": 45,
+    "players": "2-4",
+    "genres": [
+      "Números",
+      "Familiar",
+      "Lógica"
+    ],
+    "popularity": 95,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Rummikub"
+    },
+    "wikidataId": "Q1139414"
+  },
+  {
+    "type": "boardgame",
+    "title": "UNO",
+    "year": 1971,
+    "creator": "Merle Robbins",
+    "durationMin": 20,
+    "players": "2-10",
+    "genres": [
+      "Cartas",
+      "Familiar",
+      "Fiesta"
+    ],
+    "popularity": 99,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "UNO"
+    },
+    "wikidataId": "Q172505"
+  },
+  {
+    "type": "boardgame",
+    "title": "Mastermind",
+    "year": 1970,
+    "creator": "Mordecai Meirowitz",
+    "durationMin": 20,
+    "players": "2",
+    "genres": [
+      "Lógica",
+      "Deducción",
+      "Abstracto"
+    ],
+    "popularity": 93,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Mastermind"
+    },
+    "wikidataId": "Q724397"
+  },
+  {
+    "type": "boardgame",
+    "title": "El Lince",
+    "year": 1978,
+    "creator": "Educa Borras",
+    "durationMin": 20,
+    "players": "2-8",
+    "genres": [
+      "Reflejos",
+      "Infantil",
+      "Familiar"
+    ],
+    "popularity": 94,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "El Lince"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Simón",
+    "year": 1978,
+    "creator": "Ralph Baer y Howard J. Morrison",
+    "durationMin": 10,
+    "players": "1-4",
+    "genres": [
+      "Memoria",
+      "Electrónico",
+      "Habilidad"
+    ],
+    "popularity": 94,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Simón"
+    },
+    "wikidataId": "Q633909"
+  },
+  {
+    "type": "boardgame",
+    "title": "Magia Borras",
+    "year": 1933,
+    "creator": "Educa Borras",
+    "durationMin": 45,
+    "players": "1-6",
+    "genres": [
+      "Magia",
+      "Infantil",
+      "Familiar"
+    ],
+    "popularity": 95,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Magia Borras"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "La herencia de tía Ágata",
+    "year": 1996,
+    "creator": "Milton Bradley",
+    "durationMin": 45,
+    "players": "2-4",
+    "genres": [
+      "Trampas",
+      "Familiar",
+      "Humor"
+    ],
+    "popularity": 91,
+    "titles": {
+      "es-ES": "La herencia de tía Ágata"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Pasapalabra",
+    "year": 2005,
+    "creator": "Diset",
+    "durationMin": 45,
+    "players": "2-6",
+    "genres": [
+      "Palabras",
+      "Televisión",
+      "Preguntas"
+    ],
+    "popularity": 94,
+    "titles": {
+      "es-ES": "Pasapalabra"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Saber y Ganar",
+    "year": 2010,
+    "creator": "Diset",
+    "durationMin": 45,
+    "players": "2-6",
+    "genres": [
+      "Preguntas",
+      "Televisión",
+      "Cultura"
+    ],
+    "popularity": 90,
+    "titles": {
+      "es-ES": "Saber y Ganar"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Atrapa un millón",
+    "year": 2012,
+    "creator": "Diset",
+    "durationMin": 30,
+    "players": "2-6",
+    "genres": [
+      "Preguntas",
+      "Apuestas",
+      "Televisión"
+    ],
+    "popularity": 89,
+    "titles": {
+      "es-ES": "Atrapa un millón"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "La ruleta de la suerte",
+    "year": 2011,
+    "creator": "Falomir",
+    "durationMin": 30,
+    "players": "2-4",
+    "genres": [
+      "Palabras",
+      "Televisión",
+      "Familiar"
+    ],
+    "popularity": 90,
+    "titles": {
+      "es-ES": "La ruleta de la suerte"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Cifras y letras",
+    "year": 1995,
+    "creator": "Falomir",
+    "durationMin": 30,
+    "players": "2-6",
+    "genres": [
+      "Lógica",
+      "Palabras",
+      "Matemáticas"
+    ],
+    "popularity": 89,
+    "titles": {
+      "es-ES": "Cifras y letras"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Telesketch",
+    "year": 1960,
+    "creator": "André Cassagnes",
+    "durationMin": 15,
+    "players": "1",
+    "genres": [
+      "Dibujo",
+      "Clásico",
+      "Infantil"
+    ],
+    "popularity": 91,
+    "titles": {
+      "es-ES": "Telesketch"
+    },
+    "wikidataId": "Q1140026"
+  },
+  {
+    "type": "boardgame",
+    "title": "Virus!",
+    "year": 2015,
+    "creator": "Domingo Cabrero, Carlos López y Santi Santisteban",
+    "durationMin": 20,
+    "players": "2-6",
+    "genres": [
+      "Cartas",
+      "Familiar",
+      "Fiesta"
+    ],
+    "popularity": 98,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Virus!"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Virus! 2 Evolution",
+    "year": 2018,
+    "creator": "Tranjis Games",
+    "durationMin": 20,
+    "players": "2-6",
+    "genres": [
+      "Cartas",
+      "Familiar",
+      "Expansión"
+    ],
+    "popularity": 90,
+    "titles": {
+      "es-ES": "Virus! 2 Evolution"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Dobble",
+    "year": 2009,
+    "creator": "Denis Blanchot y Jacques Cottereau",
+    "durationMin": 15,
+    "players": "2-8",
+    "genres": [
+      "Velocidad",
+      "Familiar",
+      "Infantil"
+    ],
+    "popularity": 97,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Dobble"
+    },
+    "wikidataId": "Q172520"
+  },
+  {
+    "type": "boardgame",
+    "title": "Jungle Speed",
+    "year": 1997,
+    "creator": "Thomas Vuarchex y Pierric Yakovenko",
+    "durationMin": 15,
+    "players": "2-8",
+    "genres": [
+      "Velocidad",
+      "Reflejos",
+      "Fiesta"
+    ],
+    "popularity": 96,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Jungle Speed"
+    },
+    "wikidataId": "Q172525"
+  },
+  {
+    "type": "boardgame",
+    "title": "Exploding Kittens",
+    "year": 2015,
+    "creator": "Elan Lee y Matthew Inman",
+    "durationMin": 15,
+    "players": "2-5",
+    "genres": [
+      "Cartas",
+      "Humor",
+      "Fiesta"
+    ],
+    "popularity": 95,
+    "titles": {
+      "es-ES": "Exploding Kittens"
+    },
+    "wikidataId": "Q19360067"
+  },
+  {
+    "type": "boardgame",
+    "title": "Unstable Unicorns",
+    "year": 2017,
+    "creator": "Ramy Badie",
+    "durationMin": 30,
+    "players": "2-8",
+    "genres": [
+      "Cartas",
+      "Humor",
+      "Estrategia"
+    ],
+    "popularity": 90,
+    "titles": {
+      "es-ES": "Unstable Unicorns"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Catan",
+    "year": 1995,
+    "creator": "Klaus Teuber",
+    "durationMin": 75,
+    "players": "3-4",
+    "genres": [
+      "Estrategia",
+      "Comercio",
+      "Familiar"
+    ],
+    "popularity": 98,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Catan"
+    },
+    "wikidataId": "Q172510"
+  },
+  {
+    "type": "boardgame",
+    "title": "Catan: Navegantes",
+    "year": 1997,
+    "creator": "Klaus Teuber",
+    "durationMin": 90,
+    "players": "3-4",
+    "genres": [
+      "Estrategia",
+      "Comercio",
+      "Expansión"
+    ],
+    "popularity": 90,
+    "titles": {
+      "es-ES": "Catan: Navegantes"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Catan: Ciudades y Caballeros",
+    "year": 1998,
+    "creator": "Klaus Teuber",
+    "durationMin": 100,
+    "players": "3-4",
+    "genres": [
+      "Estrategia",
+      "Expansión"
+    ],
+    "popularity": 91,
+    "titles": {
+      "es-ES": "Catan: Ciudades y Caballeros"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Catan Junior",
+    "year": 2012,
+    "creator": "Klaus Teuber",
+    "durationMin": 30,
+    "players": "2-4",
+    "genres": [
+      "Infantil",
+      "Familiar"
+    ],
+    "popularity": 88,
+    "titles": {
+      "es-ES": "Catan Junior"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Carcassonne",
+    "year": 2000,
+    "creator": "Klaus-Jürgen Wrede",
+    "durationMin": 40,
+    "players": "2-5",
+    "genres": [
+      "Estrategia",
+      "Losetas",
+      "Familiar"
+    ],
+    "popularity": 97,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Carcassonne"
+    },
+    "wikidataId": "Q172515"
+  },
+  {
+    "type": "boardgame",
+    "title": "Carcassonne Junior",
+    "year": 2009,
+    "creator": "Marco Teubner",
+    "durationMin": 20,
+    "players": "2-4",
+    "genres": [
+      "Infantil",
+      "Familiar"
+    ],
+    "popularity": 88,
+    "titles": {
+      "es-ES": "Carcassonne Junior"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Dixit",
+    "year": 2008,
+    "creator": "Jean-Louis Roubira",
+    "durationMin": 30,
+    "players": "3-6",
+    "genres": [
+      "Creatividad",
+      "Deducción",
+      "Familiar"
+    ],
+    "popularity": 96,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Dixit"
+    },
+    "wikidataId": "Q172530"
+  },
+  {
+    "type": "boardgame",
+    "title": "Dixit Odyssey",
+    "year": 2011,
+    "creator": "Jean-Louis Roubira",
+    "durationMin": 30,
+    "players": "3-12",
+    "genres": [
+      "Creatividad",
+      "Fiesta",
+      "Familiar"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "Dixit Odyssey"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Código Secreto",
+    "year": 2015,
+    "creator": "Vlaada Chvátil",
+    "durationMin": 15,
+    "players": "2-8",
+    "genres": [
+      "Palabras",
+      "Deducción",
+      "Fiesta"
+    ],
+    "popularity": 96,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Código Secreto"
+    },
+    "wikidataId": "Q21175653"
+  },
+  {
+    "type": "boardgame",
+    "title": "Código Secreto: Dúo",
+    "year": 2017,
+    "creator": "Vlaada Chvátil y Scot Eaton",
+    "durationMin": 15,
+    "players": "2",
+    "genres": [
+      "Cooperativo",
+      "Palabras",
+      "2 Jugadores"
+    ],
+    "popularity": 91,
+    "titles": {
+      "es-ES": "Código Secreto: Dúo"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Time's Up!",
+    "year": 1999,
+    "creator": "Peter Sarrett",
+    "durationMin": 45,
+    "players": "4-12",
+    "genres": [
+      "Fiesta",
+      "Mímica",
+      "Palabras"
+    ],
+    "popularity": 95,
+    "titles": {
+      "es-ES": "Time's Up!"
+    },
+    "wikidataId": "Q3528919"
+  },
+  {
+    "type": "boardgame",
+    "title": "Time's Up! Party",
+    "year": 2008,
+    "creator": "Peter Sarrett",
+    "durationMin": 45,
+    "players": "4-12",
+    "genres": [
+      "Fiesta",
+      "Mímica",
+      "Humor"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "Time's Up! Party"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Story Cubes",
+    "year": 2005,
+    "creator": "Rory O’Connor",
+    "durationMin": 15,
+    "players": "1-10",
+    "genres": [
+      "Creatividad",
+      "Narrativo",
+      "Familiar"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "Story Cubes"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Bang!",
+    "year": 2002,
+    "creator": "Emiliano Sciarra",
+    "durationMin": 30,
+    "players": "4-7",
+    "genres": [
+      "Roles ocultos",
+      "Cartas",
+      "Faroleo"
+    ],
+    "popularity": 95,
+    "titles": {
+      "es-ES": "Bang!"
+    },
+    "wikidataId": "Q806429"
+  },
+  {
+    "type": "boardgame",
+    "title": "Saboteur",
+    "year": 2004,
+    "creator": "Frederic Moyersoen",
+    "durationMin": 30,
+    "players": "3-10",
+    "genres": [
+      "Roles ocultos",
+      "Cartas",
+      "Faroleo"
+    ],
+    "popularity": 94,
+    "titles": {
+      "es-ES": "Saboteur"
+    },
+    "wikidataId": "Q684820"
+  },
+  {
+    "type": "boardgame",
+    "title": "Sushi Go!",
+    "year": 2013,
+    "creator": "Phil Walker-Harding",
+    "durationMin": 20,
+    "players": "2-5",
+    "genres": [
+      "Draft",
+      "Cartas",
+      "Familiar"
+    ],
+    "popularity": 94,
+    "titles": {
+      "es-ES": "Sushi Go!"
+    },
+    "wikidataId": "Q18415707"
+  },
+  {
+    "type": "boardgame",
+    "title": "Sushi Go Party!",
+    "year": 2016,
+    "creator": "Phil Walker-Harding",
+    "durationMin": 25,
+    "players": "2-8",
+    "genres": [
+      "Draft",
+      "Cartas",
+      "Fiesta"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "Sushi Go Party!"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Fantasma Blitz",
+    "year": 2010,
+    "creator": "Jacques Zeimet",
+    "durationMin": 20,
+    "players": "2-8",
+    "genres": [
+      "Velocidad",
+      "Infantil",
+      "Familiar"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "Fantasma Blitz"
+    },
+    "wikidataId": "Q1471389"
+  },
+  {
+    "type": "boardgame",
+    "title": "Taco Gato Cabra Queso Pizza",
+    "year": 2018,
+    "creator": "Dave Campbell",
+    "durationMin": 15,
+    "players": "2-8",
+    "genres": [
+      "Velocidad",
+      "Fiesta",
+      "Cartas"
+    ],
+    "popularity": 94,
+    "titles": {
+      "es-ES": "Taco Gato Cabra Queso Pizza"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Los hombres lobo de Castronegro",
+    "year": 2001,
+    "creator": "Philippe des Phallières y Hervé Marly",
+    "durationMin": 30,
+    "players": "8-18",
+    "genres": [
+      "Roles ocultos",
+      "Faroleo",
+      "Fiesta"
+    ],
+    "popularity": 97,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Los hombres lobo de Castronegro"
+    },
+    "wikidataId": "Q1499540"
+  },
+  {
+    "type": "boardgame",
+    "title": "¡Aventureros al tren!",
+    "year": 2004,
+    "creator": "Alan R. Moon",
+    "durationMin": 45,
+    "players": "2-5",
+    "genres": [
+      "Estrategia",
+      "Rutas",
+      "Familiar"
+    ],
+    "popularity": 97,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "¡Aventureros al tren!"
+    },
+    "wikidataId": "Q172535"
+  },
+  {
+    "type": "boardgame",
+    "title": "¡Aventureros al tren! Europa",
+    "year": 2005,
+    "creator": "Alan R. Moon",
+    "durationMin": 50,
+    "players": "2-5",
+    "genres": [
+      "Estrategia",
+      "Rutas",
+      "Familiar"
+    ],
+    "popularity": 96,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "¡Aventureros al tren! Europa"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "7 Wonders",
+    "year": 2010,
+    "creator": "Antoine Bauza",
+    "durationMin": 30,
+    "players": "2-7",
+    "genres": [
+      "Draft",
+      "Estrategia",
+      "Civilización"
+    ],
+    "popularity": 95,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "7 Wonders"
+    },
+    "wikidataId": "Q270034"
+  },
+  {
+    "type": "boardgame",
+    "title": "7 Wonders Duel",
+    "year": 2015,
+    "creator": "Antoine Bauza y Bruno Cathala",
+    "durationMin": 30,
+    "players": "2",
+    "genres": [
+      "Estrategia",
+      "2 Jugadores",
+      "Civilización"
+    ],
+    "popularity": 96,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "7 Wonders Duel"
+    },
+    "wikidataId": "Q21655452"
+  },
+  {
+    "type": "boardgame",
+    "title": "Azul",
+    "year": 2017,
+    "creator": "Michael Kiesling",
+    "durationMin": 35,
+    "players": "2-4",
+    "genres": [
+      "Abstracto",
+      "Patrones",
+      "Familiar"
+    ],
+    "popularity": 96,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Azul"
+    },
+    "wikidataId": "Q47005119"
+  },
+  {
+    "type": "boardgame",
+    "title": "Azul: Pabellón de Verano",
+    "year": 2019,
+    "creator": "Michael Kiesling",
+    "durationMin": 40,
+    "players": "2-4",
+    "genres": [
+      "Abstracto",
+      "Patrones"
+    ],
+    "popularity": 90,
+    "titles": {
+      "es-ES": "Azul: Pabellón de Verano"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Cascadia",
+    "year": 2021,
+    "creator": "Randy Flynn",
+    "durationMin": 35,
+    "players": "1-4",
+    "genres": [
+      "Losetas",
+      "Naturaleza",
+      "Familiar"
+    ],
+    "popularity": 93,
+    "titles": {
+      "es-ES": "Cascadia"
+    },
+    "wikidataId": "Q112074744"
+  },
+  {
+    "type": "boardgame",
+    "title": "The Mind",
+    "year": 2018,
+    "creator": "Wolfgang Warsch",
+    "durationMin": 20,
+    "players": "2-4",
+    "genres": [
+      "Cooperativo",
+      "Cartas",
+      "Deducción"
+    ],
+    "popularity": 94,
+    "titles": {
+      "es-ES": "The Mind"
+    },
+    "wikidataId": "Q54622146"
+  },
+  {
+    "type": "boardgame",
+    "title": "Secret Hitler",
+    "year": 2016,
+    "creator": "Tommy Maranges, Max Temkin y Mac Schubert",
+    "durationMin": 45,
+    "players": "5-10",
+    "genres": [
+      "Roles ocultos",
+      "Deducción",
+      "Política"
+    ],
+    "popularity": 94,
+    "titles": {
+      "es-ES": "Secret Hitler"
+    },
+    "wikidataId": "Q24037525"
+  },
+  {
+    "type": "boardgame",
+    "title": "Ciudadelas",
+    "year": 2000,
+    "creator": "Bruno Faidutti",
+    "durationMin": 45,
+    "players": "2-8",
+    "genres": [
+      "Roles",
+      "Construcción",
+      "Faroleo"
+    ],
+    "popularity": 95,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Ciudadelas"
+    },
+    "wikidataId": "Q1093551"
+  },
+  {
+    "type": "boardgame",
+    "title": "Love Letter",
+    "year": 2012,
+    "creator": "Seiji Kanai",
+    "durationMin": 20,
+    "players": "2-4",
+    "genres": [
+      "Cartas",
+      "Deducción",
+      "Faroleo"
+    ],
+    "popularity": 94,
+    "titles": {
+      "es-ES": "Love Letter"
+    },
+    "wikidataId": "Q16661386"
+  },
+  {
+    "type": "boardgame",
+    "title": "Camel Up",
+    "year": 2014,
+    "creator": "Steffen Bogen",
+    "durationMin": 30,
+    "players": "2-8",
+    "genres": [
+      "Apuestas",
+      "Carreras",
+      "Familiar"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "Camel Up"
+    },
+    "wikidataId": "Q171431"
+  },
+  {
+    "type": "boardgame",
+    "title": "King of Tokyo",
+    "year": 2011,
+    "creator": "Richard Garfield",
+    "durationMin": 30,
+    "players": "2-6",
+    "genres": [
+      "Dados",
+      "Combate",
+      "Familiar"
+    ],
+    "popularity": 94,
+    "titles": {
+      "es-ES": "King of Tokyo"
+    },
+    "wikidataId": "Q3197042"
+  },
+  {
+    "type": "boardgame",
+    "title": "Splendor",
+    "year": 2014,
+    "creator": "Marc André",
+    "durationMin": 30,
+    "players": "2-4",
+    "genres": [
+      "Gestión de recursos",
+      "Estrategia",
+      "Familiar"
+    ],
+    "popularity": 95,
+    "titles": {
+      "es-ES": "Splendor"
+    },
+    "wikidataId": "Q17053424"
+  },
+  {
+    "type": "boardgame",
+    "title": "Splendor Duel",
+    "year": 2022,
+    "creator": "Marc André y Bruno Cathala",
+    "durationMin": 30,
+    "players": "2",
+    "genres": [
+      "Estrategia",
+      "2 Jugadores"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "Splendor Duel"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Wingspan",
+    "year": 2019,
+    "creator": "Elizabeth Hargrave",
+    "durationMin": 60,
+    "players": "1-5",
+    "genres": [
+      "Motor de cartas",
+      "Aves",
+      "Estrategia"
+    ],
+    "popularity": 95,
+    "titles": {
+      "es-ES": "Wingspan"
+    },
+    "wikidataId": "Q65063073"
+  },
+  {
+    "type": "boardgame",
+    "title": "Terraforming Mars",
+    "year": 2016,
+    "creator": "Jacob Fryxelius",
+    "durationMin": 120,
+    "players": "1-5",
+    "genres": [
+      "Ciencia ficción",
+      "Estrategia",
+      "Gestión"
+    ],
+    "popularity": 95,
+    "titles": {
+      "es-ES": "Terraforming Mars"
+    },
+    "wikidataId": "Q28127393"
+  },
+  {
+    "type": "boardgame",
+    "title": "Black Stories",
+    "year": 2004,
+    "creator": "Holger Bösch",
+    "durationMin": 20,
+    "players": "2-15",
+    "genres": [
+      "Misterio",
+      "Acertijos",
+      "Fiesta"
+    ],
+    "popularity": 93,
+    "titles": {
+      "es-ES": "Black Stories"
+    },
+    "wikidataId": "Q880562"
+  },
+  {
+    "type": "boardgame",
+    "title": "Guatafac",
+    "year": 2019,
+    "creator": "Guatafac",
+    "durationMin": 20,
+    "players": "3-15",
+    "genres": [
+      "Fiesta",
+      "Humor",
+      "Adultos"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "Guatafac"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Yo fui a EGB",
+    "year": 2014,
+    "creator": "Borras",
+    "durationMin": 45,
+    "players": "2-6",
+    "genres": [
+      "Nostalgia",
+      "Trivia",
+      "Familiar"
+    ],
+    "popularity": 91,
+    "titles": {
+      "es-ES": "Yo fui a EGB"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Patchwork",
+    "year": 2014,
+    "creator": "Uwe Rosenberg",
+    "durationMin": 30,
+    "players": "2",
+    "genres": [
+      "Losetas",
+      "2 Jugadores",
+      "Abstracto"
+    ],
+    "popularity": 93,
+    "titles": {
+      "es-ES": "Patchwork"
+    },
+    "wikidataId": "Q18415849"
+  },
+  {
+    "type": "boardgame",
+    "title": "Kingdomino",
+    "year": 2016,
+    "creator": "Bruno Cathala",
+    "durationMin": 15,
+    "players": "2-4",
+    "genres": [
+      "Losetas",
+      "Familiar",
+      "Estrategia"
+    ],
+    "popularity": 93,
+    "titles": {
+      "es-ES": "Kingdomino"
+    },
+    "wikidataId": "Q28859187"
+  },
+  {
+    "type": "boardgame",
+    "title": "Queendomino",
+    "year": 2017,
+    "creator": "Bruno Cathala",
+    "durationMin": 30,
+    "players": "2-4",
+    "genres": [
+      "Losetas",
+      "Familiar",
+      "Construcción"
+    ],
+    "popularity": 89,
+    "titles": {
+      "es-ES": "Queendomino"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Hanabi",
+    "year": 2010,
+    "creator": "Antoine Bauza",
+    "durationMin": 25,
+    "players": "2-5",
+    "genres": [
+      "Cooperativo",
+      "Deducción",
+      "Cartas"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "Hanabi"
+    },
+    "wikidataId": "Q1574221"
+  },
+  {
+    "type": "boardgame",
+    "title": "Just One",
+    "year": 2018,
+    "creator": "Ludovic Roudy y Bruno Sautter",
+    "durationMin": 20,
+    "players": "3-7",
+    "genres": [
+      "Cooperativo",
+      "Palabras",
+      "Fiesta"
+    ],
+    "popularity": 93,
+    "titles": {
+      "es-ES": "Just One"
+    },
+    "wikidataId": "Q64177439"
+  },
+  {
+    "type": "boardgame",
+    "title": "Decrypto",
+    "year": 2018,
+    "creator": "Thomas Dagenais-Lespérance",
+    "durationMin": 30,
+    "players": "3-8",
+    "genres": [
+      "Palabras",
+      "Deducción",
+      "Equipos"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "Decrypto"
+    },
+    "wikidataId": "Q55609277"
+  },
+  {
+    "type": "boardgame",
+    "title": "La Resistencia",
+    "year": 2009,
+    "creator": "Don Eskridge",
+    "durationMin": 30,
+    "players": "5-10",
+    "genres": [
+      "Roles ocultos",
+      "Deducción",
+      "Faroleo"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "La Resistencia"
+    },
+    "wikidataId": "Q7760334"
+  },
+  {
+    "type": "boardgame",
+    "title": "Avalon",
+    "year": 2012,
+    "creator": "Don Eskridge",
+    "durationMin": 30,
+    "players": "5-10",
+    "genres": [
+      "Roles ocultos",
+      "Deducción",
+      "Fantasía"
+    ],
+    "popularity": 93,
+    "titles": {
+      "es-ES": "Avalon"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Skull",
+    "year": 2011,
+    "creator": "Hervé Marly",
+    "durationMin": 25,
+    "players": "3-6",
+    "genres": [
+      "Faroleo",
+      "Apuestas",
+      "Fiesta"
+    ],
+    "popularity": 91,
+    "titles": {
+      "es-ES": "Skull"
+    },
+    "wikidataId": "Q3486337"
+  },
+  {
+    "type": "boardgame",
+    "title": "Coup",
+    "year": 2012,
+    "creator": "Rikki Tahta",
+    "durationMin": 15,
+    "players": "2-6",
+    "genres": [
+      "Faroleo",
+      "Roles ocultos",
+      "Cartas"
+    ],
+    "popularity": 93,
+    "titles": {
+      "es-ES": "Coup"
+    },
+    "wikidataId": "Q16952763"
+  },
+  {
+    "type": "boardgame",
+    "title": "Jaipur",
+    "year": 2009,
+    "creator": "Sébastien Pauchon",
+    "durationMin": 30,
+    "players": "2",
+    "genres": [
+      "Comercio",
+      "Cartas",
+      "2 Jugadores"
+    ],
+    "popularity": 93,
+    "titles": {
+      "es-ES": "Jaipur"
+    },
+    "wikidataId": "Q1429996"
+  },
+  {
+    "type": "boardgame",
+    "title": "Port Royal",
+    "year": 2014,
+    "creator": "Alexander Pfister",
+    "durationMin": 30,
+    "players": "2-5",
+    "genres": [
+      "Cartas",
+      "Piratas",
+      "Tentando la suerte"
+    ],
+    "popularity": 90,
+    "titles": {
+      "es-ES": "Port Royal"
+    },
+    "wikidataId": "Q18415848"
+  },
+  {
+    "type": "boardgame",
+    "title": "Hive",
+    "year": 2001,
+    "creator": "John Yianni",
+    "durationMin": 20,
+    "players": "2",
+    "genres": [
+      "Abstracto",
+      "Insectos",
+      "2 Jugadores"
+    ],
+    "popularity": 91,
+    "titles": {
+      "es-ES": "Hive"
+    },
+    "wikidataId": "Q1188365"
+  },
+  {
+    "type": "boardgame",
+    "title": "Polilla tramposa",
+    "year": 2011,
+    "creator": "Emely Brand y Lukas Brand",
+    "durationMin": 20,
+    "players": "3-5",
+    "genres": [
+      "Cartas",
+      "Trampas",
+      "Humor"
+    ],
+    "popularity": 91,
+    "titles": {
+      "es-ES": "Polilla tramposa"
+    },
+    "wikidataId": "Q1942187"
+  },
+  {
+    "type": "boardgame",
+    "title": "¡Toma 6!",
+    "year": 1994,
+    "creator": "Wolfgang Kramer",
+    "durationMin": 45,
+    "players": "2-10",
+    "genres": [
+      "Cartas",
+      "Números",
+      "Fiesta"
+    ],
+    "popularity": 91,
+    "titles": {
+      "es-ES": "¡Toma 6!"
+    },
+    "wikidataId": "Q257140"
+  },
+  {
+    "type": "boardgame",
+    "title": "No Gracias",
+    "year": 2004,
+    "creator": "Thorsten Gimmler",
+    "durationMin": 20,
+    "players": "3-7",
+    "genres": [
+      "Cartas",
+      "Tentando la suerte",
+      "Familiar"
+    ],
+    "popularity": 90,
+    "titles": {
+      "es-ES": "No Gracias"
+    },
+    "wikidataId": "Q1503378"
+  },
+  {
+    "type": "boardgame",
+    "title": "La isla prohibida",
+    "year": 2010,
+    "creator": "Matt Leacock",
+    "durationMin": 30,
+    "players": "2-4",
+    "genres": [
+      "Cooperativo",
+      "Aventura",
+      "Familiar"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "La isla prohibida"
+    },
+    "wikidataId": "Q1437435"
+  },
+  {
+    "type": "boardgame",
+    "title": "El desierto prohibido",
+    "year": 2013,
+    "creator": "Matt Leacock",
+    "durationMin": 45,
+    "players": "2-5",
+    "genres": [
+      "Cooperativo",
+      "Aventura",
+      "Supervivencia"
+    ],
+    "popularity": 90,
+    "titles": {
+      "es-ES": "El desierto prohibido"
+    },
+    "wikidataId": "Q18415715"
+  },
+  {
+    "type": "boardgame",
+    "title": "Pandemic",
+    "year": 2008,
+    "creator": "Matt Leacock",
+    "durationMin": 45,
+    "players": "2-4",
+    "genres": [
+      "Cooperativo",
+      "Estrategia",
+      "Epidemias"
+    ],
+    "popularity": 95,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Pandemic"
+    },
+    "wikidataId": "Q172540"
+  },
+  {
+    "type": "boardgame",
+    "title": "El monstruo de colores",
+    "year": 2018,
+    "creator": "Josep M. Allué y Dani Gómez",
+    "durationMin": 20,
+    "players": "2-5",
+    "genres": [
+      "Infantil",
+      "Emociones",
+      "Cooperativo"
+    ],
+    "popularity": 93,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "El monstruo de colores"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Everdell",
+    "year": 2018,
+    "creator": "James A. Wilson",
+    "durationMin": 60,
+    "players": "1-4",
+    "genres": [
+      "Colocación de trabajadores",
+      "Animales",
+      "Fantasía"
+    ],
+    "popularity": 94,
+    "titles": {
+      "es-ES": "Everdell"
+    },
+    "wikidataId": "Q87625126"
+  },
+  {
+    "type": "boardgame",
+    "title": "Heat: Pedal to the Metal",
+    "year": 2022,
+    "creator": "Asger Harding Granerud y Daniel Skjold Pedersen",
+    "durationMin": 60,
+    "players": "1-6",
+    "genres": [
+      "Carreras",
+      "Cartas",
+      "Estrategia"
+    ],
+    "popularity": 93,
+    "titles": {
+      "es-ES": "Heat: Pedal to the Metal"
+    },
+    "wikidataId": "Q117323893"
+  },
+  {
+    "type": "boardgame",
+    "title": "Dune: Imperium",
+    "year": 2020,
+    "creator": "Paul Dennen",
+    "durationMin": 90,
+    "players": "1-4",
+    "genres": [
+      "Estrategia",
+      "Ciencia ficción",
+      "Deckbuilding"
+    ],
+    "popularity": 94,
+    "titles": {
+      "es-ES": "Dune: Imperium"
+    },
+    "wikidataId": "Q104866030"
+  },
+  {
+    "type": "boardgame",
+    "title": "Las ruinas perdidas de Arnak",
+    "year": 2020,
+    "creator": "Mín y Elwen",
+    "durationMin": 90,
+    "players": "1-4",
+    "genres": [
+      "Aventura",
+      "Estrategia",
+      "Exploración"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "Las ruinas perdidas de Arnak"
+    },
+    "wikidataId": "Q104866045"
+  },
+  {
+    "type": "boardgame",
+    "title": "Ark Nova",
+    "year": 2021,
+    "creator": "Mathias Wigge",
+    "durationMin": 120,
+    "players": "1-4",
+    "genres": [
+      "Zoo",
+      "Estrategia",
+      "Gestión"
+    ],
+    "popularity": 94,
+    "titles": {
+      "es-ES": "Ark Nova"
+    },
+    "wikidataId": "Q110609340"
+  },
+  {
+    "type": "boardgame",
+    "title": "Brass: Birmingham",
+    "year": 2018,
+    "creator": "Gavan Brown, Matt Tolman y Martin Wallace",
+    "durationMin": 120,
+    "players": "2-4",
+    "genres": [
+      "Económico",
+      "Industria",
+      "Estrategia"
+    ],
+    "popularity": 95,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Brass: Birmingham"
+    },
+    "wikidataId": "Q58880620"
+  },
+  {
+    "type": "boardgame",
+    "title": "Gloomhaven",
+    "year": 2017,
+    "creator": "Isaac Childres",
+    "durationMin": 120,
+    "players": "1-4",
+    "genres": [
+      "Mazmorras",
+      "Cooperativo",
+      "Campaña"
+    ],
+    "popularity": 95,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Gloomhaven"
+    },
+    "wikidataId": "Q28956920"
+  },
+  {
+    "type": "boardgame",
+    "title": "Gloomhaven: Fauces del León",
+    "year": 2020,
+    "creator": "Isaac Childres",
+    "durationMin": 60,
+    "players": "1-4",
+    "genres": [
+      "Mazmorras",
+      "Cooperativo",
+      "Fantasía"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "Gloomhaven: Fauces del León"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Scythe",
+    "year": 2016,
+    "creator": "Jamey Stegmaier",
+    "durationMin": 115,
+    "players": "1-5",
+    "genres": [
+      "Ucronía",
+      "Mechs",
+      "Estrategia"
+    ],
+    "popularity": 94,
+    "titles": {
+      "es-ES": "Scythe"
+    },
+    "wikidataId": "Q24951475"
+  },
+  {
+    "type": "boardgame",
+    "title": "Root",
+    "year": 2018,
+    "creator": "Cole Wehrle",
+    "durationMin": 90,
+    "players": "2-4",
+    "genres": [
+      "Asimétrico",
+      "Bosque",
+      "Guerra"
+    ],
+    "popularity": 93,
+    "titles": {
+      "es-ES": "Root"
+    },
+    "wikidataId": "Q59670068"
+  },
+  {
+    "type": "boardgame",
+    "title": "HeroQuest",
+    "year": 1989,
+    "creator": "Stephen Baker",
+    "durationMin": 90,
+    "players": "2-5",
+    "genres": [
+      "Mazmorras",
+      "Fantasía",
+      "Clásico"
+    ],
+    "popularity": 95,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "HeroQuest"
+    },
+    "wikidataId": "Q1420794"
+  },
+  {
+    "type": "boardgame",
+    "title": "Warhammer 40.000",
+    "year": 1987,
+    "creator": "Rick Priestley",
+    "durationMin": 120,
+    "players": "2",
+    "genres": [
+      "Miniaturas",
+      "Ciencia ficción",
+      "Guerra"
+    ],
+    "popularity": 95,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Warhammer 40.000"
+    },
+    "wikidataId": "Q588134"
+  },
+  {
+    "type": "boardgame",
+    "title": "Magic: The Gathering",
+    "year": 1993,
+    "creator": "Richard Garfield",
+    "durationMin": 20,
+    "players": "2",
+    "genres": [
+      "Cartas coleccionables",
+      "Fantasía",
+      "Duelo"
+    ],
+    "popularity": 98,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Magic: El encuentro"
+    },
+    "wikidataId": "Q217215"
+  },
+  {
+    "type": "boardgame",
+    "title": "Pokémon TCG",
+    "year": 1996,
+    "creator": "Creatures Inc.",
+    "durationMin": 20,
+    "players": "2",
+    "genres": [
+      "Cartas coleccionables",
+      "Duelo",
+      "Infantil"
+    ],
+    "popularity": 97,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Juego de cartas coleccionables Pokémon"
+    },
+    "wikidataId": "Q1048689"
+  },
+  {
+    "type": "boardgame",
+    "title": "Yu-Gi-Oh! TCG",
+    "year": 1999,
+    "creator": "Kazuki Takahashi",
+    "durationMin": 20,
+    "players": "2",
+    "genres": [
+      "Cartas coleccionables",
+      "Duelo",
+      "Anime"
+    ],
+    "popularity": 95,
+    "titles": {
+      "es-ES": "Yu-Gi-Oh! Juego de cartas coleccionables"
+    },
+    "wikidataId": "Q839121"
+  },
+  {
+    "type": "boardgame",
+    "title": "Castillos de Borgoña",
+    "year": 2011,
+    "creator": "Stefan Feld",
+    "durationMin": 90,
+    "players": "2-4",
+    "genres": [
+      "Estrategia",
+      "Gestión",
+      "Dados"
+    ],
+    "popularity": 93,
+    "titles": {
+      "es-ES": "Los Castillos de Borgoña"
+    },
+    "wikidataId": "Q1208572"
+  },
+  {
+    "type": "boardgame",
+    "title": "Agrícola",
+    "year": 2007,
+    "creator": "Uwe Rosenberg",
+    "durationMin": 90,
+    "players": "1-5",
+    "genres": [
+      "Granja",
+      "Gestión de recursos",
+      "Estrategia"
+    ],
+    "popularity": 94,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Agrícola"
+    },
+    "wikidataId": "Q396590"
+  },
+  {
+    "type": "boardgame",
+    "title": "Puerto Rico",
+    "year": 2002,
+    "creator": "Andreas Seyfarth",
+    "durationMin": 90,
+    "players": "2-5",
+    "genres": [
+      "Comercio",
+      "Estrategia",
+      "Roles"
+    ],
+    "popularity": 93,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Puerto Rico"
+    },
+    "wikidataId": "Q1417036"
+  },
+  {
+    "type": "boardgame",
+    "title": "Concordia",
+    "year": 2013,
+    "creator": "Mac Gerdts",
+    "durationMin": 90,
+    "players": "2-5",
+    "genres": [
+      "Roma",
+      "Comercio",
+      "Estrategia"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "Concordia"
+    },
+    "wikidataId": "Q16661390"
+  },
+  {
+    "type": "boardgame",
+    "title": "Viticulture",
+    "year": 2013,
+    "creator": "Jamey Stegmaier y Alan Stone",
+    "durationMin": 80,
+    "players": "1-6",
+    "genres": [
+      "Vino",
+      "Colocación de trabajadores",
+      "Estrategia"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "Viticulture"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Spirit Island",
+    "year": 2017,
+    "creator": "R. Eric Reuss",
+    "durationMin": 100,
+    "players": "1-4",
+    "genres": [
+      "Cooperativo",
+      "Espíritus",
+      "Estrategia"
+    ],
+    "popularity": 93,
+    "titles": {
+      "es-ES": "Spirit Island"
+    },
+    "wikidataId": "Q65245893"
+  },
+  {
+    "type": "boardgame",
+    "title": "Clank!",
+    "year": 2016,
+    "creator": "Paul Dennen",
+    "durationMin": 60,
+    "players": "2-4",
+    "genres": [
+      "Deckbuilding",
+      "Mazmorras",
+      "Aventura"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "Clank!"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Mansiones de la Locura",
+    "year": 2011,
+    "creator": "Corey Konieczka",
+    "durationMin": 120,
+    "players": "1-5",
+    "genres": [
+      "Lovecraft",
+      "Misterio",
+      "Terror"
+    ],
+    "popularity": 93,
+    "titles": {
+      "es-ES": "Las Mansiones de la Locura"
+    },
+    "wikidataId": "Q6751765"
+  },
+  {
+    "type": "boardgame",
+    "title": "Arkham Horror",
+    "year": 1987,
+    "creator": "Richard Launius",
+    "durationMin": 150,
+    "players": "1-6",
+    "genres": [
+      "Lovecraft",
+      "Cooperativo",
+      "Terror"
+    ],
+    "popularity": 93,
+    "isCanon": true,
+    "titles": {
+      "es-ES": "Arkham Horror"
+    },
+    "wikidataId": "Q673522"
+  },
+  {
+    "type": "boardgame",
+    "title": "Eldritch Horror",
+    "year": 2013,
+    "creator": "Corey Konieczka y Nikki Valens",
+    "durationMin": 150,
+    "players": "1-8",
+    "genres": [
+      "Lovecraft",
+      "Cooperativo",
+      "Mundo"
+    ],
+    "popularity": 92,
+    "titles": {
+      "es-ES": "Eldritch Horror"
+    },
+    "wikidataId": "Q18415725"
+  },
+  {
+    "type": "boardgame",
+    "title": "Hanamikoji",
+    "year": 2013,
+    "creator": "Kota Nakayama",
+    "durationMin": 15,
+    "players": "2",
+    "genres": [
+      "Cartas",
+      "2 Jugadores",
+      "Control de área"
+    ],
+    "popularity": 90,
+    "titles": {
+      "es-ES": "Hanamikoji"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Ikonikus",
+    "year": 2013,
+    "creator": "Manu Sánchez Montero",
+    "durationMin": 15,
+    "players": "2-8",
+    "genres": [
+      "Emociones",
+      "Fiesta",
+      "Cartas"
+    ],
+    "popularity": 89,
+    "titles": {
+      "es-ES": "Ikonikus"
+    }
+  },
+  {
+    "type": "boardgame",
+    "title": "Enredos",
+    "year": 1970,
+    "creator": "MB",
+    "durationMin": 20,
+    "players": "2-6",
+    "genres": [
+      "Físico",
+      "Fiesta",
+      "Familiar"
+    ],
+    "popularity": 91,
+    "titles": {
+      "es-ES": "Enredos"
+    }
+  }
+]
