@@ -52,6 +52,7 @@ describe('metrics.ts', () => {
     expect(m.discoveryRate).toBe(33) // 1/3
     expect(m.dismissRate).toBe(33) // 1/3
     expect(m.avgMsPerCard).toBe(1000) // (1200+800+1000)/3
+    expect(m.aucR).toBeDefined()
     expect(m.byBucket.seen_likely.right).toBe(1)
     expect(m.byBucket.social.up).toBe(1)
     expect(m.byBucket.explore.left).toBe(1)
@@ -62,8 +63,8 @@ describe('metrics.ts', () => {
     const events: EngineEvent[] = [
       // Sesión exitosa
       { t: t0, v: 'm1.0', sid: 'dec_1', type: 'dec_start', shelf: 'movie' },
-      { t: t0 + 1000, v: 'm1.0', sid: 'dec_1', type: 'dec_duel', shelf: 'movie', data: { infoGain: 0.8 } },
-      { t: t0 + 2000, v: 'm1.0', sid: 'dec_1', type: 'dec_duel', shelf: 'movie', data: { infoGain: 0.6 } },
+      { t: t0 + 1000, v: 'm1.0', sid: 'dec_1', type: 'dec_duel', shelf: 'movie', data: { infoGain: 0.8, ms: 1400 } },
+      { t: t0 + 2000, v: 'm1.0', sid: 'dec_1', type: 'dec_duel', shelf: 'movie', data: { infoGain: 0.6, ms: 1800 } },
       { t: t0 + 3000, v: 'm1.0', sid: 'dec_1', type: 'dec_accept', shelf: 'movie', itemId: 'movie:1', data: { round: 1 } },
       // Sesión abandonada
       { t: t0 + 4000, v: 'm1.0', sid: 'dec_2', type: 'dec_start', shelf: 'movie' },
@@ -80,6 +81,7 @@ describe('metrics.ts', () => {
     expect(m.abandonRate).toBe(50)
     expect(m.avgDuels).toBe(2)
     expect(m.avgInfoGain).toBe(0.7) // (0.8 + 0.6)/2
+    expect(m.medianDuelMs).toBe(1800)
     expect(m.acceptedItemsCount).toBe(1)
     expect(m.realSuccessRate14d).toBe(100)
     expect(m.realAvgPercentile).toBe(0.92)

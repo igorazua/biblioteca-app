@@ -11,6 +11,7 @@ export interface DeckMetrics {
   seenRate: number // % right sobre total swipes (0-100)
   avgCardsPerSession: number
   avgMsPerCard: number
+  aucR: number // AUC de R frente a vistos (0.0 - 1.0)
   byBucket: Record<
     Bucket,
     {
@@ -31,6 +32,7 @@ export interface DecideMetrics {
   avgRejects: number // media de dec_reject por sesión
   avgDuels: number // media de duelos por sesión aceptada
   avgInfoGain: number // infoGain medio en dec_duel
+  medianDuelMs: number // mediana de dec_duel.ms en milisegundos
   acceptedItemsCount: number
   realSuccessRate14d: number // % de aceptadas que pasaron a seen en 14 días
   realAvgPercentile: number // percentil medio con el que acaban en ranking
@@ -128,6 +130,38 @@ export function calcDeckMetrics(events: EngineEvent[]): DeckMetrics {
   const totalSwipes = swipes.length
   const totalSessions = sessionSwipes.size
 
+  // Calcular AUC de R vs right (MOTOR §2c.4, T11.4)
+  const shownMap = new Map<string, number>()
+  for (const e of events) {
+    if (e.type === 'deck_shown' && typeof e.data?.r === 'number' && e.itemId) {
+      shownMap.set(`${e.sid}|${e.itemId}`, e.data.r)
+    }
+  }
+
+  const rPairs: { r: number; y: number }[] = []
+  for (const s of swipes) {
+    if (s.itemId) {
+      const rVal = shownMap.get(`${s.sid}|${s.itemId}`) ?? (typeof s.data?.r === 'number' ? s.data.r : undefined)
+      if (rVal != null) {
+        rPairs.push({ r: rVal, y: s.data?.dir === 'right' ? 1 : 0 })
+      }
+    }
+  }
+
+  let aucR = 0.5
+  const pos = rPairs.filter((p) => p.y === 1)
+  const neg = rPairs.filter((p) => p.y === 0)
+  if (pos.length > 0 && neg.length > 0) {
+    let concordant = 0
+    for (const p of pos) {
+      for (const n of neg) {
+        if (p.r > n.r) concordant += 1
+        else if (p.r === n.r) concordant += 0.5
+      }
+    }
+    aucR = Math.round((concordant / (pos.length * neg.length)) * 1000) / 1000
+  }
+
   return {
     totalSwipes,
     totalSessions,
@@ -137,6 +171,7 @@ export function calcDeckMetrics(events: EngineEvent[]): DeckMetrics {
     seenRate: totalSwipes > 0 ? Math.round((rightCount / totalSwipes) * 100) : 0,
     avgCardsPerSession: totalSessions > 0 ? Math.round((totalSwipes / totalSessions) * 10) / 10 : 0,
     avgMsPerCard: msCount > 0 ? Math.round(totalMs / msCount) : 0,
+    aucR,
     byBucket,
   }
 }
@@ -161,6 +196,7 @@ export function calcDecideMetrics(events: EngineEvent[]): DecideMetrics {
   let totalDuels = 0
   let totalInfoGain = 0
   let duelCount = 0
+  const duelMsList: number[] = []
 
   const acceptedItems = new Map<string, { itemId: string; acceptedAt: number }>()
 
@@ -175,6 +211,8 @@ export function calcDecideMetrics(events: EngineEvent[]): DecideMetrics {
         const ig = typeof e.data?.infoGain === 'number' ? e.data.infoGain : 0
         totalInfoGain += ig
         duelCount++
+        const ms = typeof e.data?.ms === 'number' ? e.data.ms : undefined
+        if (ms != null && ms > 0) duelMsList.push(ms)
       } else if (e.type === 'dec_reject') {
         sessionRejects++
       } else if (e.type === 'dec_accept') {
@@ -219,6 +257,9 @@ export function calcDecideMetrics(events: EngineEvent[]): DecideMetrics {
     }
   }
 
+  duelMsList.sort((a, b) => a - b)
+  const medianDuelMs = duelMsList.length > 0 ? duelMsList[Math.floor(duelMsList.length / 2)] : 0
+
   const totalSessions = sessions.size
 
   return {
@@ -229,6 +270,7 @@ export function calcDecideMetrics(events: EngineEvent[]): DecideMetrics {
     avgRejects: totalSessions > 0 ? Math.round((totalRejects / totalSessions) * 10) / 10 : 0,
     avgDuels: acceptedCount > 0 ? Math.round((totalDuels / acceptedCount) * 10) / 10 : 0,
     avgInfoGain: duelCount > 0 ? Math.round((totalInfoGain / duelCount) * 100) / 100 : 0,
+    medianDuelMs,
     acceptedItemsCount: acceptedItems.size,
     realSuccessRate14d: acceptedItems.size > 0 ? Math.round((convertedToSeen14d / acceptedItems.size) * 100) : 0,
     realAvgPercentile: rankedCount > 0 ? Math.round((totalPctSum / rankedCount) * 100) / 100 : 0,
