@@ -2,6 +2,7 @@ import type { Friend, Item, Profile, ShelfType, UserEntry, DeckLearnShelf } from
 import { PARAMS, type Bucket } from './params'
 import { centroid, simWithCentroid } from './features'
 import { recog } from './recog'
+import { computeUserVector, cosineWithUser } from './userVec'
 
 export interface DeckSessionState {
   countsByDecade: Record<string, { seen: number; up: number; left: number; shown: number }>
@@ -35,6 +36,7 @@ export interface DeckInput {
   friendPct: (friend: Friend, itemId: string) => number | null
   session?: DeckSessionState
   deckLearn?: DeckLearnShelf
+  userVec?: Float32Array | number[] | null
   now?: number
   seed?: number
 }
@@ -165,6 +167,13 @@ export function nextCards(input: DeckInput, already: string[] = [], n = 20): Dec
   const topN = Math.max(1, Math.floor(userRanked.length * 0.2))
   const userTopIds = userRanked.slice(0, topN)
   const userCentroid = userTopIds.length > 0 ? centroid(shelf, userTopIds) : null
+  const userVec = input.userVec
+    ? (input.userVec instanceof Float32Array ? input.userVec : Float32Array.from(input.userVec))
+    : computeUserVector({
+        shelf,
+        entries,
+        ranking: userRanked,
+      })
 
   const recogCtx = {
     user: profile,
@@ -217,7 +226,9 @@ export function nextCards(input: DeckInput, already: string[] = [], n = 20): Dec
     const social = 1 - socialProd
     const adaptSeen = calcAdapt(it, session, true)
     const adaptOther = calcAdapt(it, session, false)
-    const taste = userCentroid ? simWithCentroid(shelf, userCentroid, it.id) : 0.5
+    const taste = userVec
+      ? cosineWithUser(userVec, shelf, it.id)
+      : (userCentroid ? simWithCentroid(shelf, userCentroid, it.id) : 0.5)
     const novelty = 1.0 - pop * 0.4
 
     // Cálculo por cupos

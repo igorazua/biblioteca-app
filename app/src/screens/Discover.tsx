@@ -30,6 +30,7 @@ export function Discover() {
   const entries = useStore((s) => s.entries)
   const profile = useStore((s) => s.profile)
   const rankings = useStore((s) => s.rankings)
+  const userVectors = useStore((s) => s.userVectors)
   const ranks = useRanks()
   const swipe = useStore((s) => s.swipe)
   const settings = useStore((s) => s.settings)
@@ -81,8 +82,9 @@ export function Discover() {
       affinity: getAffinity,
       friendPct: getFriendPct,
       session: sessionStateRef.current,
+      userVec: userVectors?.[shelf],
     }, Array.from(existingIds), count)
-  }, [shelf, entries, rankings, profile, activeFriends, getAffinity, getFriendPct])
+  }, [shelf, entries, rankings, profile, activeFriends, getAffinity, getFriendPct, userVectors])
 
   // Inicializar o recargar mazo al cambiar estantería
   useEffect(() => {

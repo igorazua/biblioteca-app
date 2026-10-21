@@ -135,6 +135,7 @@ export function Metrics() {
 
           <div className="grid grid-cols-2 gap-2">
             <KpiCard label="Acierto primeras 20" value={`${kpis.deck.first20Accuracy}%`} sub="Tarjetas marcadas vistas" />
+            <KpiCard label="AUC de R" value={`${kpis.deck.aucR}`} sub="Discriminación de R vs 'la vi'" />
             <KpiCard label="Tasa de guardado" value={`${kpis.deck.discoveryRate}%`} sub="Añadidas a pendientes (arriba)" />
             <KpiCard label="Tasa de descarte" value={`${kpis.deck.dismissRate}%`} sub="Descartadas (izquierda)" />
             <KpiCard label="Ritmo medio" value={`${kpis.deck.avgMsPerCard > 0 ? (kpis.deck.avgMsPerCard / 1000).toFixed(1) : 0}s`} sub="Tiempo por tarjeta" />
@@ -174,6 +175,7 @@ export function Metrics() {
             <KpiCard label="Aceptación 1ª ronda" value={`${kpis.decide.firstRoundAcceptRate}%`} sub="Eligieron la primera propuesta" />
             <KpiCard label="Tasa de abandono" value={`${kpis.decide.abandonRate}%`} sub="Salieron sin elegir obra" />
             <KpiCard label="Duelos por sesión" value={`${kpis.decide.avgDuels}`} sub="Media hasta aceptar" />
+            <KpiCard label="Latencia duelo" value={`${kpis.decide.medianDuelMs > 0 ? (kpis.decide.medianDuelMs / 1000).toFixed(1) + 's' : '—'}`} sub="Mediana de decisión" />
             <KpiCard label="InfoGain duelos" value={`${kpis.decide.avgInfoGain}`} sub="Poder discriminatorio" />
           </div>
 

@@ -127,6 +127,7 @@ export function WhatToWatch() {
       data: { answers: a },
     })
 
+    const userVec = useStore.getState().userVectors?.[shelf]
     const state = initDecideSession({
       shelf,
       items,
@@ -139,6 +140,7 @@ export function WhatToWatch() {
       friendPct: getFriendPct,
       deckLearn: useStore.getState().deckLearn?.[shelf],
       recentOrienters: useStore.getState().recentOrienters?.[shelf],
+      userVec,
     })
     setDecideState(state)
 

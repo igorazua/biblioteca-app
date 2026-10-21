@@ -4,6 +4,7 @@ import { items, getItem } from '../data/catalog'
 import { canonicalId, canonicalizeUserData } from '../data/aliases'
 import { clampStars, insertAt, starBand } from '../lib/ranking'
 import { SHELVES, type List, type Profile, type Settings, type ShelfType, type Stars, type Status, type UserEntry, type DeckLearn, type DeckLearnShelf } from '../types'
+import { computeUserVector } from '../lib/engine/userVec'
 import { track } from './useEvents'
 
 interface HistoryItem {
@@ -28,6 +29,7 @@ interface State {
   nudgeDismiss: Record<string, { count: number; lastDismissedAt: number }>
   deckLearn: DeckLearn
   recentOrienters: Record<ShelfType, string[][]>
+  userVectors: Record<ShelfType, number[] | null>
 
   completeOnboarding: (p: Partial<Profile>) => void
   setProfile: (p: Partial<Profile>) => void
@@ -35,6 +37,7 @@ interface State {
   dismissNudge: (id: string) => void
   decayDeckLearn: (shelf?: ShelfType) => void
   recordOrienters: (shelf: ShelfType, ids: string[]) => void
+  recomputeUserVectors: () => void
   swipe: (itemId: string, dir: 'left' | 'right' | 'up') => void
   undoSwipe: () => string | null
   rate: (itemId: string, patch: { stars?: Stars | null; comment?: string }) => void
@@ -79,11 +82,27 @@ const defaults = () => ({
     artist: [],
     boardgame: [],
   } as Record<ShelfType, string[][]>,
+  userVectors: {
+    movie: null,
+    series: null,
+    book: null,
+    artist: null,
+    boardgame: null,
+  } as Record<ShelfType, number[] | null>,
 })
 
 export const shelfOf = (id: string, entry?: UserEntry): ShelfType =>
   (entry?.shelf ?? useStore.getState?.()?.entries?.[id]?.shelf ?? getItem(id)?.type ?? 'movie') as ShelfType
 const uid = () => Math.random().toString(36).slice(2, 10)
+
+function recomputeVectorForShelf(entries: Record<string, UserEntry>, rankings: Record<ShelfType, string[]>, shelf: ShelfType): number[] | null {
+  const vec = computeUserVector({
+    shelf,
+    entries,
+    ranking: rankings[shelf] || [],
+  })
+  return vec ? Array.from(vec) : null
+}
 
 export const useStore = create<State>()(
   persist(
@@ -146,6 +165,15 @@ export const useStore = create<State>()(
           }
         }),
 
+      recomputeUserVectors: () =>
+        set((s) => {
+          const userVectors = { ...s.userVectors }
+          for (const shelf of SHELVES) {
+            userVectors[shelf] = recomputeVectorForShelf(s.entries, s.rankings, shelf)
+          }
+          return { userVectors }
+        }),
+
       swipe: (itemId, dir) =>
         set((s) => {
           const prevEntry = s.entries[itemId]
@@ -202,7 +230,13 @@ export const useStore = create<State>()(
             data: { from: prevEntry?.status ?? null, to: newStatus, via: 'deck' },
           })
 
-          return { entries: { ...s.entries, [itemId]: entry }, history, deckLearn }
+          const nextEntries = { ...s.entries, [itemId]: entry }
+          const userVectors = {
+            ...s.userVectors,
+            [shelf]: recomputeVectorForShelf(nextEntries, s.rankings, shelf),
+          }
+
+          return { entries: nextEntries, history, deckLearn, userVectors }
         }),
 
       undoSwipe: () => {
@@ -213,7 +247,12 @@ export const useStore = create<State>()(
           const entries = { ...s.entries }
           if (last.prev) entries[last.itemId] = last.prev
           else delete entries[last.itemId]
-          return { entries, rankings: { ...s.rankings, [last.shelf]: last.prevRanking ?? [] }, history: h.slice(0, -1) }
+          const nextRankings = { ...s.rankings, [last.shelf]: last.prevRanking ?? [] }
+          const userVectors = {
+            ...s.userVectors,
+            [last.shelf]: recomputeVectorForShelf(entries, nextRankings, last.shelf),
+          }
+          return { entries, rankings: nextRankings, history: h.slice(0, -1), userVectors }
         })
         return last.itemId
       },
@@ -226,7 +265,12 @@ export const useStore = create<State>()(
           if (patch.stars === null) { delete next.stars }
           else if (patch.stars !== undefined) next.stars = patch.stars
           if (patch.comment !== undefined) { const c = patch.comment.trim(); if (c) next.comment = c; else delete next.comment }
-          return { entries: { ...s.entries, [itemId]: next } }
+          const nextEntries = { ...s.entries, [itemId]: next }
+          const userVectors = {
+            ...s.userVectors,
+            [shelf]: recomputeVectorForShelf(nextEntries, s.rankings, shelf),
+          }
+          return { entries: nextEntries, userVectors }
         }),
 
       setStatus: (itemId, status) =>
@@ -250,7 +294,12 @@ export const useStore = create<State>()(
               data: { from: cur?.status ?? null, to: status, via: 'other' },
             })
           }
-          return { entries, rankings: { ...s.rankings, [shelf]: ranking } }
+          const nextRankings = { ...s.rankings, [shelf]: ranking }
+          const userVectors = {
+            ...s.userVectors,
+            [shelf]: recomputeVectorForShelf(entries, nextRankings, shelf),
+          }
+          return { entries, rankings: nextRankings, userVectors }
         }),
 
       // §5.3: manda el A/B; las estrellas de cada item se ajustan a las de sus vecinos
@@ -274,7 +323,12 @@ export const useStore = create<State>()(
               data: { pos, total, pct },
             })
           }
-          return { entries, rankings: { ...s.rankings, [shelf]: ranking } }
+          const nextRankings = { ...s.rankings, [shelf]: ranking }
+          const userVectors = {
+            ...s.userVectors,
+            [shelf]: recomputeVectorForShelf(entries, nextRankings, shelf),
+          }
+          return { entries, rankings: nextRankings, userVectors }
         }),
 
       // Colocación provisional SIN comparaciones: con estrellas, en el límite inferior de su franja (Comparar la afina)
@@ -294,7 +348,13 @@ export const useStore = create<State>()(
             itemId,
             data: { pos, total, pct },
           })
-          return { entries: { ...s.entries, [itemId]: { ...e, shelf, ranked: true, provisional: true } }, rankings: { ...s.rankings, [shelf]: ranking } }
+          const nextEntries = { ...s.entries, [itemId]: { ...e, shelf, ranked: true, provisional: true } }
+          const nextRankings = { ...s.rankings, [shelf]: ranking }
+          const userVectors = {
+            ...s.userVectors,
+            [shelf]: recomputeVectorForShelf(nextEntries, nextRankings, shelf),
+          }
+          return { entries: nextEntries, rankings: nextRankings, userVectors }
         }),
 
       bumpCompared: (ids) =>
@@ -336,13 +396,19 @@ export const useStore = create<State>()(
         let n = 0
         set((s) => {
           const entries = { ...s.entries }
+          const affectedShelves = new Set<ShelfType>()
           for (const id of ids)
             if (!entries[id] || entries[id].status === 'dismissed') {
               const shelf = shelfOf(id, entries[id])
+              affectedShelves.add(shelf)
               entries[id] = { itemId: id, shelf, status: 'pending', ranked: false, origin, updatedAt: Date.now() }
               n++
             }
-          return { entries }
+          const userVectors = { ...s.userVectors }
+          for (const sh of affectedShelves) {
+            userVectors[sh] = recomputeVectorForShelf(entries, s.rankings, sh)
+          }
+          return { entries, userVectors }
         })
         return n
       },
@@ -363,7 +429,11 @@ export const useStore = create<State>()(
             const pool = items.filter((i) => i.type === t && !entries[i.id]).sort((a, b) => b.popularity - a.popularity).slice(0, quota[t])
             for (const it of pool) entries[it.id] = { itemId: it.id, status: 'seen', ranked: false, updatedAt: Date.now() }
           }
-          return { entries }
+          const userVectors = { ...s.userVectors }
+          for (const t of SHELVES) {
+            userVectors[t] = recomputeVectorForShelf(entries, s.rankings, t)
+          }
+          return { entries, userVectors }
         }),
 
       resetAll: () => set({ ...defaults() }),
@@ -399,10 +469,18 @@ export const useStore = create<State>()(
             mergedRankings[shelf] = []
           }
         }
+        const mergedEntries = (p.entries as Record<string, UserEntry>) || currentState.entries || {}
+        const mergedVectors = { ...currentState.userVectors, ...(p.userVectors || {}) }
+        for (const shelf of SHELVES) {
+          if (!mergedVectors[shelf] && Object.values(mergedEntries).some((e) => e.shelf === shelf)) {
+            mergedVectors[shelf] = recomputeVectorForShelf(mergedEntries, mergedRankings, shelf)
+          }
+        }
         return {
           ...currentState,
           ...p,
           rankings: mergedRankings,
+          userVectors: mergedVectors,
         }
       },
     },

@@ -5,6 +5,7 @@ import { MOOD_GENRES, NONFICTION_GENRES } from '../../data/questions'
 import { friendRanks } from '../rank'
 import { sim as engineSim, vecOf } from './features'
 import { recog, type RecogContext } from './recog'
+import { computeUserVector, cosineWithUser } from './userVec'
 
 export type Answers = Record<string, string | string[] | undefined>
 
@@ -26,6 +27,7 @@ export interface DecideState {
   friends?: Friend[]
   deckLearn?: DeckLearnShelf
   recentOrienters?: string[][]
+  userVec?: Float32Array | number[] | null
 }
 
 export interface DuelPair {
@@ -54,6 +56,7 @@ export interface DecideInput {
   friendPct: (friend: Friend, itemId: string) => number | null
   deckLearn?: DeckLearnShelf
   recentOrienters?: string[][]
+  userVec?: Float32Array | number[] | null
 }
 
 const asStr = (v: Answers[string]): string | undefined => (typeof v === 'string' ? v : undefined)
@@ -160,7 +163,7 @@ export function calcSimilarity(a: Item, b: Item): number {
  * Inicializa la sesión de Decidir (§8.1, §8.2, §8.3)
  */
 export function initDecideSession(input: DecideInput): DecideState {
-  const { shelf, items, entries, answers, profile, friends, affinity, friendPct } = input
+  const { shelf, items, entries, rankings = { movie: [], series: [], book: [], artist: [], boardgame: [] }, answers, profile, friends, affinity, friendPct } = input
   const plats = Array.isArray(answers.platforms) ? answers.platforms : profile.platforms ?? []
   const source = asStr(answers.source)
   const isRepeat = asStr(answers.seen) === 'vista'
@@ -186,7 +189,16 @@ export function initDecideSession(input: DecideInput): DecideState {
     rawCandidates = items.filter((it) => it.type === shelf)
   }
 
-  // 2. Puntuación previa (§8.3)
+  // 2. Vector de preferencia inicial (MOTOR §2c.5, T9.2, T11.1)
+  const initialPref = input.userVec
+    ? (input.userVec instanceof Float32Array ? new Float32Array(input.userVec) : Float32Array.from(input.userVec))
+    : computeUserVector({
+        shelf,
+        entries,
+        ranking: rankings[shelf] || [],
+      })
+
+  // 3. Puntuación previa (§8.3)
   const prior: Record<string, number> = {}
   const mVotes = PARAMS.Q_PRIOR_VOTES
   const mood = asStr(answers.mood)
@@ -220,8 +232,8 @@ export function initDecideSession(input: DecideInput): DecideState {
       moodScore = Math.min(1.0, matchCount / Math.min(2, moodGenres.length))
     }
 
-    // Gusto general (taste)
-    const taste = 0.5
+    // Gusto general (taste en espacio único MOTOR §2c.4, §2c.5)
+    const taste = initialPref ? cosineWithUser(initialPref, shelf, it.id) : 0.5
 
     // Boost por pendiente propio o de amigo + tendencia
     const isPending = entries[it.id]?.status === 'pending'
@@ -259,7 +271,7 @@ export function initDecideSession(input: DecideInput): DecideState {
     pool,
     prior,
     post,
-    pref: null,
+    pref: initialPref ? new Float32Array(initialPref) : null,
     prefAxes: {},
     duels: [],
     shown: [],
