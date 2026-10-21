@@ -1,0 +1,3858 @@
+{
+ "movie": [
+  {
+   "id": "movie:seven-1995",
+   "title": "Seven",
+   "wikidataId": "Q908659",
+   "synopsis": "Seven Network es un canal de televisión de Australia, propiedad de Seven West Media. Nace "
+  },
+  {
+   "id": "movie:iron-man-2008",
+   "title": "Iron Man",
+   "wikidataId": "Q1369354",
+   "synopsis": "Iron Man es un videojuego de acción y aventura beat 'em up basado en la película de 2008 d"
+  },
+  {
+   "id": "movie:la-la-land-2016",
+   "title": "La La Land",
+   "wikidataId": "Q65",
+   "synopsis": "Los Ángeles oficialmente y abreviado LA, es la ciudad más poblada del estado de California"
+  },
+  {
+   "id": "movie:barbie-2023",
+   "title": "Barbie",
+   "wikidataId": "Q167447",
+   "synopsis": "Barbie es una marca de muñecas perteneciente a la empresa estadounidense de juguetes Matte"
+  },
+  {
+   "id": "movie:coco-2017",
+   "title": "Coco",
+   "wikidataId": "Q20000249",
+   "synopsis": "nombre femenino"
+  },
+  {
+   "id": "movie:akira-1988",
+   "title": "Akira",
+   "wikidataId": "Q29563874",
+   "synopsis": "nombre masculino (章)"
+  },
+  {
+   "id": "movie:drive-2011",
+   "title": "Drive",
+   "wikidataId": "Q1758479",
+   "synopsis": "álbum de Alan Jackson"
+  },
+  {
+   "id": "movie:wall-e-2008",
+   "title": "WALL·E",
+   "wikidataId": "Q20749440",
+   "synopsis": "WALL·E es el personaje principal de la película animada de Disney/Pixar de 2008 del mismo "
+  },
+  {
+   "id": "movie:casino-1995",
+   "title": "Casino",
+   "wikidataId": "Q133215",
+   "synopsis": "Un casino es un establecimiento que permite participar en juegos de azar y de apuestas. Lo"
+  },
+  {
+   "id": "movie:hamilton-2020",
+   "title": "Hamilton",
+   "wikidataId": "Q200028",
+   "synopsis": "Hamilton constituye la cuarta área metropolitana de Nueva Zelanda. Se encuentra en el dist"
+  },
+  {
+   "id": "movie:star-wars-1977",
+   "title": "La guerra de las galaxias",
+   "wikidataId": "Q22092344",
+   "synopsis": "serie cinematográfica"
+  },
+  {
+   "id": "movie:modern-times-1936",
+   "title": "Tiempos modernos",
+   "wikidataId": "Q1324012",
+   "synopsis": "Modern Times —en español: Tiempos modernos— es el trigésimo segundo álbum de estudio del m"
+  },
+  {
+   "id": "movie:anand-1971",
+   "title": "Anand",
+   "wikidataId": "Q106376312",
+   "synopsis": "The story of a terminally ill man who wishes to live life to the fullest before the inevit"
+  },
+  {
+   "id": "movie:queen-2013",
+   "title": "Queen",
+   "wikidataId": "Q15862",
+   "synopsis": "Queen es una banda británica de rock formada en 1970 en Londres integrada originalmente po"
+  },
+  {
+   "id": "movie:warrior-2011",
+   "title": "Warrior",
+   "wikidataId": "Q210905",
+   "synopsis": "Warrior es el segundo álbum de estudio de la artista estadounidense Kesha. Fue lanzado el "
+  },
+  {
+   "id": "movie:black-2005",
+   "title": "Black",
+   "wikidataId": "Q2662465",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "movie:ran-1985",
+   "title": "Ran",
+   "wikidataId": "Q83172",
+   "synopsis": "La Academia de Ciencias de Rusia es la organización científica nacional de Rusia que reagr"
+  },
+  {
+   "id": "movie:pink-2016",
+   "title": "Pink",
+   "wikidataId": "Q160009",
+   "synopsis": "Alecia Beth Moore-Hart, conocida artísticamente como Pink, es una cantante, compositora, b"
+  },
+  {
+   "id": "movie:in-the-name-of-the-father-1993",
+   "title": "En el nombre del padre",
+   "wikidataId": "Q12259571",
+   "synopsis": "A man's coerced confession to an I.R.A. bombing he did not commit results in the imprisonm"
+  },
+  {
+   "id": "movie:rocky-1976",
+   "title": "Rocky",
+   "wikidataId": "Q1078084",
+   "synopsis": "Rocky es una saga de populares películas de boxeo, escritas y estelarizadas por Sylvester "
+  },
+  {
+   "id": "movie:cool-hand-luke-1967",
+   "title": "La leyenda del indomable",
+   "wikidataId": "Q5167304",
+   "synopsis": "A laid back Southern man is sentenced to two years in a rural prison, but refuses to confo"
+  },
+  {
+   "id": "movie:white-heat-1949",
+   "title": "Al rojo vivo",
+   "wikidataId": "Q104418913",
+   "synopsis": "A psychopathic criminal with a mother complex makes a daring break from prison and leads h"
+  },
+  {
+   "id": "movie:togo-2019",
+   "title": "Togo",
+   "wikidataId": "Q945",
+   "synopsis": "Togo es un país de África occidental. Limita con Ghana al oeste, Benín al este y Burkina F"
+  },
+  {
+   "id": "movie:baby-2015",
+   "title": "Baby",
+   "wikidataId": "Q797838",
+   "synopsis": "comuna francesa (Sena y Marne)"
+  },
+  {
+   "id": "movie:magnolia-1999",
+   "title": "Magnolia",
+   "wikidataId": "Q157017",
+   "synopsis": "Magnolia es un género con alrededor de 120 especies de plantas de la familia Magnoliaceae."
+  },
+  {
+   "id": "movie:knockin-on-heaven-s-door-1997",
+   "title": "Knockin' on Heaven's Door",
+   "wikidataId": "Q743986",
+   "synopsis": "«Knockin’ on Heaven’s Door» o en español «Llamando a las puertas del cielo» es una canción"
+  },
+  {
+   "id": "movie:beauty-and-the-beast-1991",
+   "title": "La bella y la bestia",
+   "wikidataId": "Q61349854",
+   "synopsis": "A prince cursed to spend his days as a hideous monster sets out to regain his humanity by "
+  },
+  {
+   "id": "movie:the-sound-of-music-1965",
+   "title": "Sonrisas y lágrimas",
+   "wikidataId": "Q1759905",
+   "synopsis": "A woman leaves an Austrian convent to become a governess to the children of a Naval office"
+  },
+  {
+   "id": "movie:laura-1944",
+   "title": "Laura",
+   "wikidataId": "Q429948",
+   "synopsis": "nombre femenino"
+  },
+  {
+   "id": "movie:the-wizard-of-oz-1939",
+   "title": "El mago de Oz",
+   "wikidataId": "Q7775381",
+   "synopsis": "Dorothy Gale is swept away from a farm in Kansas to a magical land of Oz in a tornado and "
+  },
+  {
+   "id": "movie:moon-2009",
+   "title": "Moon",
+   "wikidataId": "Q16877383",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "movie:ying-xiong-2002",
+   "title": "Hero",
+   "wikidataId": "Q104610421",
+   "synopsis": "investigador"
+  },
+  {
+   "id": "movie:brazil-1985",
+   "title": "Brazil",
+   "wikidataId": "Q155",
+   "synopsis": "Brasil, oficialmente República Federativa de Brasil, es un país soberano de América del Su"
+  },
+  {
+   "id": "movie:manhattan-1979",
+   "title": "Manhattan",
+   "wikidataId": "Q11299",
+   "synopsis": "Manhattan es una isla situada en la desembocadura del río Hudson en el norte del puerto de"
+  },
+  {
+   "id": "movie:harvey-1950",
+   "title": "El invisible Harvey",
+   "wikidataId": "Q19767733",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "movie:kokuhaku-2010",
+   "title": "Kokuhaku",
+   "wikidataId": "Q1115136",
+   "synopsis": "A psychological thriller of a grieving mother turned cold-blooded avenger with a twisty ma"
+  },
+  {
+   "id": "movie:once-2007",
+   "title": "Once",
+   "wikidataId": "Q628963",
+   "synopsis": "Once es el quinto álbum de la banda finesa de metal sinfónico Nightwish, lanzado el 7 de j"
+  },
+  {
+   "id": "movie:pride-prejudice-2005",
+   "title": "Orgullo y prejuicio",
+   "wikidataId": "Q4143921",
+   "synopsis": "Sparks fly when spirited Elizabeth Bennet meets single, rich, and proud Mr. Darcy. But Mr."
+  },
+  {
+   "id": "movie:ghostbusters-1984",
+   "title": "Cazafantasmas",
+   "wikidataId": "Q1392942",
+   "synopsis": "«Ghostbusters» es una canción compuesta y lanzada en 1984 por el cantautor estadounidense "
+  },
+  {
+   "id": "movie:cabaret-1972",
+   "title": "Cabaret",
+   "wikidataId": "Q131183",
+   "synopsis": "El término cabaré es una palabra de origen francés cuyo significado original era «taberna»"
+  },
+  {
+   "id": "movie:bonnie-and-clyde-1967",
+   "title": "Bonnie y Clyde",
+   "wikidataId": "Q219937",
+   "synopsis": "Bonnie Parker y Clyde Barrow fueron dos fugitivos, ladrones y criminales de los Estados Un"
+  },
+  {
+   "id": "movie:the-longest-day-1962",
+   "title": "El día más largo",
+   "wikidataId": "Q125549361",
+   "synopsis": "The events of D-Day, told on a grand scale from both the Allied and German points of view."
+  },
+  {
+   "id": "movie:stagecoach-1939",
+   "title": "La diligencia",
+   "wikidataId": "Q7596836",
+   "synopsis": "Stagecoach es un lugar designado por el censo en el condado de Lyon en el estado estadouni"
+  },
+  {
+   "id": "movie:skyfall-2012",
+   "title": "Skyfall",
+   "wikidataId": "Q326790",
+   "synopsis": "«Skyfall» es una canción interpretada por la cantautora británica Adele, compuesta como te"
+  },
+  {
+   "id": "movie:kung-fu-2004",
+   "title": "Kung Fu Sion",
+   "wikidataId": "Q1247186",
+   "synopsis": "Kung fu es una serie de televisión estadounidense producida entre 1972 y 1975 protagonizad"
+  },
+  {
+   "id": "movie:happiness-1998",
+   "title": "Happiness",
+   "wikidataId": "Q3783260",
+   "synopsis": "álbum de The Beloved"
+  },
+  {
+   "id": "movie:shine-1996",
+   "title": "Shine",
+   "wikidataId": "Q24250811",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "movie:victoria-2015",
+   "title": "Victoria",
+   "wikidataId": "Q36687",
+   "synopsis": "Victoria es uno de los seis estados que, junto con los dos territorios continentales y los"
+  },
+  {
+   "id": "movie:el-dia-de-la-bestia-1995",
+   "title": "El día de la bestia",
+   "wikidataId": "Q131291",
+   "synopsis": "Las hemodoráceas forman una familia de plantas monocotiledóneas que crecen típicamente en "
+  },
+  {
+   "id": "movie:el-verdugo-1963",
+   "title": "El verdugo",
+   "wikidataId": "Q947083",
+   "synopsis": "George Quayle Cannon fue un periodista, político y religioso estadounidense. Fue editor y "
+  },
+  {
+   "id": "movie:los-santos-inocentes-1984",
+   "title": "Los santos inocentes",
+   "wikidataId": "Q1630034",
+   "synopsis": "Los santos inocentes (1984), obra de Mario Camus."
+  },
+  {
+   "id": "movie:alcarras-2022",
+   "title": "Alcarràs",
+   "wikidataId": "Q107621676",
+   "synopsis": "Alcarràs (2022), obra de Carla Simón."
+  }
+ ],
+ "series": [
+  {
+   "id": "series:the-big-bang-theory-2007",
+   "title": "The Big Bang Theory",
+   "wikidataId": "Q55759004",
+   "synopsis": "duodécima temporada de The Big Bang Theory"
+  },
+  {
+   "id": "series:chernobil-2019",
+   "title": "Chernóbil",
+   "wikidataId": "Q129677",
+   "synopsis": "Chernóbil es una ciudad situada al norte de Ucrania, en la óblast de Kiev, cerca de la fro"
+  },
+  {
+   "id": "series:house-2004",
+   "title": "House",
+   "wikidataId": "Q20502",
+   "synopsis": "La música house es un género de la música electrónica que se originó en Chicago, Estados U"
+  },
+  {
+   "id": "series:gambito-de-dama-2020",
+   "title": "Gambito de dama",
+   "wikidataId": "Q107925",
+   "synopsis": "El gambito de dama es una apertura de ajedrez. Se caracteriza por los movimientos siguient"
+  },
+  {
+   "id": "series:puente-de-resund-2011",
+   "title": "Puente de Øresund",
+   "wikidataId": "Q297871",
+   "synopsis": "El puente-túnel de Øresund o de Öresund es un puente-túnel que conecta las dos áreas metro"
+  },
+  {
+   "id": "series:attack-on-titan-2013",
+   "title": "Ataque a los titanes",
+   "wikidataId": "Q586025",
+   "synopsis": "Shingeki no Kyojin , también conocida como Ataque a los titanes en España y Ataque de los "
+  },
+  {
+   "id": "series:death-note-2006",
+   "title": "Death Note",
+   "wikidataId": "Q1834",
+   "synopsis": "Death Note  es una serie de manga escrita por Tsugumi Ōba e ilustrada por Takeshi Obata, y"
+  },
+  {
+   "id": "series:barry-2018",
+   "title": "Barry",
+   "wikidataId": "Q808995",
+   "synopsis": "nombre masculino"
+  },
+  {
+   "id": "series:demon-slayer-kimetsu-no-yaiba-2019",
+   "title": "Demon Slayer: Kimetsu no Yaiba",
+   "wikidataId": "Q24862683",
+   "synopsis": "Kimetsu no Yaiba , también conocida bajo su nombre en inglés Demon Slayer, o en español Gu"
+  },
+  {
+   "id": "series:monster-2004",
+   "title": "Monster",
+   "wikidataId": "Q969531",
+   "synopsis": "pueblo neerlandés"
+  },
+  {
+   "id": "series:invincible-2021",
+   "title": "Invencible",
+   "wikidataId": "Q1638157",
+   "synopsis": "Invencible es una serie de cómics de superhéroes estadounidense publicado mensualmente del"
+  },
+  {
+   "id": "series:andor-2022",
+   "title": "Andor",
+   "wikidataId": "Q492347",
+   "synopsis": "nombre masculino"
+  },
+  {
+   "id": "series:silo-2023",
+   "title": "Silo",
+   "wikidataId": "Q213643",
+   "synopsis": "Un silo es una construcción confeccionada para almacenar grano y otros materiales a granel"
+  },
+  {
+   "id": "series:la-mesias-2023",
+   "title": "La Mesías",
+   "wikidataId": "Q123282458",
+   "synopsis": "El vídeo viral de un grupo de música pop cristiana despierta los fantasmas infantiles de u"
+  },
+  {
+   "id": "series:vigil-2021",
+   "title": "Vigil",
+   "wikidataId": "Q16878937",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "series:new-girl-2011",
+   "title": "New Girl",
+   "wikidataId": "Q13410713",
+   "synopsis": "temporada de serie de televisión"
+  },
+  {
+   "id": "series:schitt-s-creek-2015",
+   "title": "Schitt's Creek",
+   "wikidataId": "Q63524406",
+   "synopsis": "Una familia multimillonaria arruinada tiene que mudarse al único bien que les queda: un pu"
+  },
+  {
+   "id": "series:la-maldicion-de-hill-house-2018",
+   "title": "La maldición de Hill House",
+   "wikidataId": "Q43379503",
+   "synopsis": "La Maldición De Hill House es una serie de televisión web estadounidense de horror creada "
+  },
+  {
+   "id": "series:fallout-2024",
+   "title": "Fallout",
+   "wikidataId": "Q998908",
+   "synopsis": "\"Fallout\" es el decimoprimer episodio de la serie de televisión de drama y ciencia ficción"
+  },
+  {
+   "id": "series:hierro-2019",
+   "title": "Hierro",
+   "wikidataId": "Q677",
+   "synopsis": "El hierro es un elemento químico de número atómico 26 situado en el grupo 8, periodo 4 de "
+  },
+  {
+   "id": "series:constantine-2014",
+   "title": "Constantine",
+   "wikidataId": "Q187346",
+   "synopsis": "Constantina es el nombre de una ciudad en el noreste de Argelia, capital de la provincia o"
+  },
+  {
+   "id": "series:hellsing-2001",
+   "title": "Hellsing",
+   "wikidataId": "Q223155",
+   "synopsis": "Hellsing  es una serie de manga escrita e ilustrada por Kōta Hirano que posteriormente tuv"
+  },
+  {
+   "id": "series:berserk-1997",
+   "title": "Berserk",
+   "wikidataId": "Q18558978",
+   "synopsis": "Berserk  es un manga creado por Kentaro Miura y posteriormente adaptado en anime, con un e"
+  },
+  {
+   "id": "series:resurrection-2014",
+   "title": "Resurrection",
+   "wikidataId": "Q1989576",
+   "synopsis": "álbum de Common"
+  },
+  {
+   "id": "series:forever-2014",
+   "title": "Forever",
+   "wikidataId": "Q3748044",
+   "synopsis": "álbum de Medina"
+  },
+  {
+   "id": "series:black-ish-2014",
+   "title": "black-ish",
+   "wikidataId": "Q26237540",
+   "synopsis": "Andre 'Dre' Johnson has a great job, a beautiful wife, Rainbow, four kids, and a colonial "
+  },
+  {
+   "id": "series:dancing-with-the-stars-2005",
+   "title": "Dancing with the Stars",
+   "wikidataId": "Q2674710",
+   "synopsis": "Dancing with the Stars es un programa de telerrealidad estadounidense de baile que fue est"
+  },
+  {
+   "id": "series:the-goldbergs-2013",
+   "title": "The Goldbergs",
+   "wikidataId": "Q27000095",
+   "synopsis": "Before there were parenting blogs, trophies for showing up and peanut allergies, there was"
+  },
+  {
+   "id": "series:america-s-next-top-model-2003",
+   "title": "America's Next Top Model",
+   "wikidataId": "Q31426",
+   "synopsis": "America's Next Top Model es un programa de telerrealidad estadounidense y una competencia "
+  },
+  {
+   "id": "series:survivor-2000",
+   "title": "Survivor",
+   "wikidataId": "Q28856068",
+   "synopsis": "Eighteen to twenty castaways will compete against each other on Survivor. All castaways wi"
+  },
+  {
+   "id": "series:2-broke-girls-2011",
+   "title": "2 Broke Girls",
+   "wikidataId": "Q4633303",
+   "synopsis": "2 Broke Girls is a comedy about two young women waitressing at a greasy spoon diner who st"
+  },
+  {
+   "id": "series:mom-2013",
+   "title": "Mom",
+   "wikidataId": "Q37549723",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "series:marry-me-2014",
+   "title": "Marry Me",
+   "wikidataId": "Q4340668",
+   "synopsis": "canción de Krista Siegfrids de 2013"
+  },
+  {
+   "id": "series:about-a-boy-2014",
+   "title": "About a Boy",
+   "wikidataId": "Q16207626",
+   "synopsis": "Will Freeman lives a charmed existence as the ultimate man-child. After writing a hit song"
+  },
+  {
+   "id": "series:the-millers-2013",
+   "title": "The Millers",
+   "wikidataId": "Q16553850",
+   "synopsis": "The Millers follows Nathan Miller, a recently divorced local roving news reporter looking "
+  },
+  {
+   "id": "series:believe-2014",
+   "title": "Believe",
+   "wikidataId": "Q815612",
+   "synopsis": "Believe es el tercer álbum de estudio del cantante y compositor canadiense Justin Bieber. "
+  },
+  {
+   "id": "series:the-carrie-diaries-2013",
+   "title": "The Carrie Diaries",
+   "wikidataId": "Q3730148",
+   "synopsis": "It's the summer of 1985, and, for the first time, 17-year-old Carrie Bradshaw can call Man"
+  },
+  {
+   "id": "series:american-dad-2005",
+   "title": "American Dad!",
+   "wikidataId": "Q3727579",
+   "synopsis": "In American Dad!, Stan Smith leads the all-American family in this animated sitcom filled "
+  },
+  {
+   "id": "series:the-crazy-ones-2013",
+   "title": "The Crazy Ones",
+   "wikidataId": "Q15733420",
+   "synopsis": "The Crazy Ones is a comedy about a larger-than-life advertising genius whose unorthodox me"
+  },
+  {
+   "id": "series:vegas-2012",
+   "title": "Vegas",
+   "wikidataId": "Q37478664",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "series:dallas-2012",
+   "title": "Dallas",
+   "wikidataId": "Q16557",
+   "synopsis": "Dallas es una ciudad ubicada en el condado de Dallas y algunas partes de la ciudad se sitú"
+  },
+  {
+   "id": "series:conan-2010",
+   "title": "Conan",
+   "wikidataId": "Q1161994",
+   "synopsis": " Conan  es una población y comuna francesa, en la región de Centro, departamento de Loir y"
+  },
+  {
+   "id": "series:the-colbert-report-2005",
+   "title": "The Colbert Report",
+   "wikidataId": "Q16000932",
+   "synopsis": "Feel the news along with Stephen Colbert, America's ballsiest pundit."
+  },
+  {
+   "id": "series:world-series-of-poker-2006",
+   "title": "World Series of Poker",
+   "wikidataId": "Q819961",
+   "synopsis": "La Serie Mundial de Póquer es el mayor conjunto de torneos de póquer del mundo. Está compu"
+  },
+  {
+   "id": "series:glue-2014",
+   "title": "Glue",
+   "wikidataId": "Q49697881",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "series:the-driver-2014",
+   "title": "The Driver",
+   "wikidataId": "Q7731037",
+   "synopsis": "álbum de Buddy Rich"
+  },
+  {
+   "id": "series:last-week-tonight-with-john-oliver-2014",
+   "title": "Last Week Tonight with John Oliver",
+   "wikidataId": "Q121409308",
+   "synopsis": "On Last Week Tonight with John Oliver, John Oliver presents a satirical look at the week i"
+  },
+  {
+   "id": "series:mount-pleasant-2011",
+   "title": "Mount Pleasant",
+   "wikidataId": "Q613167",
+   "synopsis": "Mount Pleasant es una ciudad ubicada en el condado de Henry en el estado estadounidense de"
+  },
+  {
+   "id": "series:saving-hope-2012",
+   "title": "Saving Hope",
+   "wikidataId": "Q3015329",
+   "synopsis": "When Hope Zion Hospital's Chief of Surgery, Charlie Harris ends up in a coma, he finds him"
+  },
+  {
+   "id": "series:brickleberry-2012",
+   "title": "Brickleberry",
+   "wikidataId": "Q16552665",
+   "synopsis": "Brickleberry follows the hapless rangers at Brickleberry National Park as they do their wo"
+  },
+  {
+   "id": "series:face-off-2011",
+   "title": "Face Off",
+   "wikidataId": "Q2706864",
+   "synopsis": "Face Off es un programa de televisión estadounidense de la compañía de cable Syfy, en el q"
+  },
+  {
+   "id": "series:real-time-with-bill-maher-2003",
+   "title": "Real Time with Bill Maher",
+   "wikidataId": "Q6595534",
+   "synopsis": "Real Time with Bill Maher includes an opening monologue, roundtable discussions with panel"
+  },
+  {
+   "id": "series:american-idol-2002",
+   "title": "American Idol",
+   "wikidataId": "Q2583334",
+   "synopsis": "American Idol is an American singing competition show, where contestants perform in front "
+  },
+  {
+   "id": "series:america-s-got-talent-2006",
+   "title": "America's Got Talent",
+   "wikidataId": "Q54896994",
+   "synopsis": "With the talent search open to acts of all ages, America's Got Talent has brought the vari"
+  },
+  {
+   "id": "series:the-new-celebrity-apprentice-2008",
+   "title": "The NEW Celebrity Apprentice",
+   "wikidataId": "Q22341611",
+   "synopsis": "Sixteen celebrities are set to compete for their favorite charities when The NEW Celebrity"
+  },
+  {
+   "id": "series:top-chef-2006",
+   "title": "Top Chef",
+   "wikidataId": "Q15711745",
+   "synopsis": "Top Chef: New Orleans es la undécima temporada del reality show estadounidense Top Chef, t"
+  },
+  {
+   "id": "series:top-gear-2010",
+   "title": "Top Gear",
+   "wikidataId": "Q3993398",
+   "synopsis": "Top Gear es una serie de videojuegos de carreras publicados por Kemco."
+  },
+  {
+   "id": "series:undateable-2014",
+   "title": "Undateable",
+   "wikidataId": "Q30900195",
+   "synopsis": "Undateable is a comedy series about a group of friends who are this close to finding a rel"
+  },
+  {
+   "id": "series:matador-2014",
+   "title": "Matador",
+   "wikidataId": "Q2412523",
+   "synopsis": "nombre de los toreros o rejoneadores que matan toros"
+  },
+  {
+   "id": "series:rogue-2013",
+   "title": "Rogue",
+   "wikidataId": "Q1404450",
+   "synopsis": "empresa productora de cine estadounidense"
+  },
+  {
+   "id": "series:aquarius-2015",
+   "title": "Aquarius",
+   "wikidataId": "Q10576",
+   "synopsis": "Acuario o Aquarius es una de las 88 constelaciones reconocidas por la astronomía moderna, "
+  },
+  {
+   "id": "series:atlantis-2013",
+   "title": "Atlantis",
+   "wikidataId": "Q2869414",
+   "synopsis": "A fantasy drama set in a world of legendary heroes and mythical creatures. Far from home, "
+  },
+  {
+   "id": "series:hot-in-cleveland-2010",
+   "title": "Hot in Cleveland",
+   "wikidataId": "Q3728695",
+   "synopsis": "Hot in Cleveland revolves around three fabulous L.A. women of a certain age who are best f"
+  },
+  {
+   "id": "series:last-comic-standing-2003",
+   "title": "Last Comic Standing",
+   "wikidataId": "Q6494251",
+   "synopsis": "Who will get the last laugh on Last Comic Standing? With hilarious celebrity judges, all-s"
+  },
+  {
+   "id": "series:the-exes-2011",
+   "title": "The Exes",
+   "wikidataId": "Q18389643",
+   "synopsis": "The Exes revolves around three divorced men, ladies man Phil, homebody Haskell and newly-s"
+  },
+  {
+   "id": "series:man-down-2013",
+   "title": "Man Down",
+   "wikidataId": "Q583423",
+   "synopsis": "cancion de Rihanna de 2011"
+  },
+  {
+   "id": "series:late-night-with-seth-meyers-2014",
+   "title": "Late Night with Seth Meyers",
+   "wikidataId": "Q18702314",
+   "synopsis": "Seth Meyers, who is Saturday Night Live's longest serving anchor on the show's wildly popu"
+  },
+  {
+   "id": "series:the-after-2014",
+   "title": "The After",
+   "wikidataId": "Q28797340",
+   "synopsis": "The Afterlove —literalmente en español: después del amor— es el quinto álbum de estudio de"
+  },
+  {
+   "id": "series:workaholics-2011",
+   "title": "Workaholics",
+   "wikidataId": "Q17991618",
+   "synopsis": "Graduating from college and entering the real world isn't easy, especially for these three"
+  },
+  {
+   "id": "series:birds-of-a-feather-1989",
+   "title": "Birds of a Feather",
+   "wikidataId": "Q25095111",
+   "synopsis": "álbum de Carmen McRae"
+  },
+  {
+   "id": "series:touch-2012",
+   "title": "Touch",
+   "wikidataId": "Q619500",
+   "synopsis": "Touch es el nombre de una de las series más conocidas del mangaka Mitsuru Adachi, autor de"
+  },
+  {
+   "id": "series:derek-2012",
+   "title": "Derek",
+   "wikidataId": "Q11740724",
+   "synopsis": "nombre masculino"
+  },
+  {
+   "id": "series:whitney-2011",
+   "title": "Whitney",
+   "wikidataId": "Q17144522",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "series:slednecks-2014",
+   "title": "Slednecks",
+   "wikidataId": "Q18392076",
+   "synopsis": "MTV is heading to Alaska with new series, Slednecks. The weekly half-hour comedic docu-ser"
+  },
+  {
+   "id": "series:kourtney-khloe-take-the-hamptons-2014",
+   "title": "Kourtney & Khloe Take the Hamptons",
+   "wikidataId": "Q17182552",
+   "synopsis": "Kourtney and Kim Take The Hamptons es una serie de telerrealidad estadounidense que se est"
+  },
+  {
+   "id": "series:angel-1999",
+   "title": "Angel",
+   "wikidataId": "Q235113",
+   "synopsis": "Un ángel es un ser sobrenatural presente en varias religiones y mitologías, cuya función p"
+  },
+  {
+   "id": "series:once-a-thief-1997",
+   "title": "Once a Thief",
+   "wikidataId": "Q2390111",
+   "synopsis": "película de 1991 dirigida por John Woo"
+  },
+  {
+   "id": "series:witchblade-2000",
+   "title": "Witchblade",
+   "wikidataId": "Q848381",
+   "synopsis": "Witchblade es una serie cómic estadounidense publicada por Top Cow Productions, un sello e"
+  },
+  {
+   "id": "series:birds-of-prey-2002",
+   "title": "Birds of Prey",
+   "wikidataId": "Q15993780",
+   "synopsis": "episodio de Arrow"
+  },
+  {
+   "id": "series:v-2009",
+   "title": "V",
+   "wikidataId": "Q130",
+   "synopsis": "El viernes es el quinto día de la semana según el calendario gregoriano, y sexto para las "
+  },
+  {
+   "id": "series:naruto-2002",
+   "title": "Naruto",
+   "wikidataId": "Q26971382",
+   "synopsis": "Naruto  es una serie de manga escrita e ilustrada por Masashi Kishimoto, posteriormente ad"
+  },
+  {
+   "id": "series:100-things-to-do-before-high-school-2014",
+   "title": "100 Things to Do Before High School",
+   "wikidataId": "Q124815051",
+   "synopsis": "100 Things to Do Before High School was created by Big Time Rush executive producer and cr"
+  },
+  {
+   "id": "series:dogs-of-war-2014",
+   "title": "Dogs of War",
+   "wikidataId": "Q2707102",
+   "synopsis": "Dogs of War es el duodécimo álbum de estudio de la banda británica de heavy metal Saxon, p"
+  },
+  {
+   "id": "series:married-with-children-1987",
+   "title": "Married... with Children",
+   "wikidataId": "Q3469110",
+   "synopsis": "The less-than-lovable Bundys are a radical departure from the saccharine-sweet TV families"
+  },
+  {
+   "id": "series:the-lost-world-1999",
+   "title": "The Lost World",
+   "wikidataId": "Q1219739",
+   "synopsis": "The Lost World es un telefilme británico dividido en dos partes de 75 minutos cada una, pr"
+  },
+  {
+   "id": "series:the-grid-2004",
+   "title": "The Grid",
+   "wikidataId": "Q5670135",
+   "synopsis": "The Grid es un juego de arcade desarrollado por Midway y publicado en 2001. Se trata de un"
+  },
+  {
+   "id": "series:jessie-2011",
+   "title": "Jessie",
+   "wikidataId": "Q16277375",
+   "synopsis": "nombre femenino"
+  },
+  {
+   "id": "series:bad-girls-club-2006",
+   "title": "Bad Girls Club",
+   "wikidataId": "Q3234160",
+   "synopsis": "The Bad Girls Club o El Club de las Chicas Malas es un programa de telerrealidad estadouni"
+  },
+  {
+   "id": "series:the-it-crowd-2006",
+   "title": "The IT Crowd",
+   "wikidataId": "Q61970204",
+   "synopsis": "The comedic misadventures of Roy, Moss and their grifting supervisor Jen, a rag-tag team o"
+  },
+  {
+   "id": "series:frasier-1993",
+   "title": "Frasier",
+   "wikidataId": "Q4405761",
+   "synopsis": "El doctor Frasier Winslow Crane es un personaje ficticio interpretado por Kelsey Grammer e"
+  },
+  {
+   "id": "series:babylon-2014",
+   "title": "Babylon",
+   "wikidataId": "Q1750870",
+   "synopsis": "Babylon es una ciudad ubicado en el condado de Suffolk en el estado estadounidense de Nuev"
+  },
+  {
+   "id": "series:will-grace-1998",
+   "title": "Will & Grace",
+   "wikidataId": "Q3730556",
+   "synopsis": "Every straight girl needs a gay best friend, and interior designer Grace Adler found an ul"
+  },
+  {
+   "id": "series:the-king-of-queens-1998",
+   "title": "The King of Queens",
+   "wikidataId": "Q3730219",
+   "synopsis": "Set in the working-class suburb of Queens, New York, the show follows Doug Heffernan, an a"
+  },
+  {
+   "id": "series:avatar-the-last-airbender-2005",
+   "title": "Avatar: la leyenda de Aang",
+   "wikidataId": "Q16453000",
+   "synopsis": "La serie de cómics Avatar: la leyenda de Aang es una continuación de la serie animada del "
+  },
+  {
+   "id": "series:alias-2001",
+   "title": "Alias",
+   "wikidataId": "Q61002",
+   "synopsis": "Un alias es una denominación de persona usada como alternativa a su nombre, al que puede a"
+  },
+  {
+   "id": "series:malcolm-in-the-middle-2000",
+   "title": "Malcolm in the Middle",
+   "wikidataId": "Q6941857",
+   "synopsis": "In the words of They Might Be Giants' rollicking Grammy-winning theme song, \"life is unfai"
+  },
+  {
+   "id": "series:dharma-greg-1997",
+   "title": "Dharma & Greg",
+   "wikidataId": "Q16552833",
+   "synopsis": "When free-spirited yoga instructor Dharma Finkelstein meets conservative attorney Greg Mon"
+  },
+  {
+   "id": "series:fawlty-towers-1975",
+   "title": "Fawlty Towers",
+   "wikidataId": "Q3728413",
+   "synopsis": "Fawlty Towers is set in a fictional hotel in the seaside town of Torquay. The plots centre"
+  },
+  {
+   "id": "series:raising-hope-2010",
+   "title": "Raising Hope",
+   "wikidataId": "Q2715613",
+   "synopsis": "At 23 years old, Jimmy Chance is going nowhere in life. He skims pools for a living, parti"
+  },
+  {
+   "id": "series:that-70s-show-1998",
+   "title": "That '70s Show",
+   "wikidataId": "Q3468905",
+   "synopsis": "Crank up the 8-track and flash back to a time when platform shoes and puka shells were all"
+  },
+  {
+   "id": "series:boston-legal-2004",
+   "title": "Boston Legal",
+   "wikidataId": "Q3727849",
+   "synopsis": "Sometimes irreverent and funny, sometimes intense and moving, Boston Legal prides itself o"
+  },
+  {
+   "id": "series:crowd-control-2014",
+   "title": "Crowd Control",
+   "wikidataId": "Q10462004",
+   "synopsis": "In Crowd Control, viewers will discover that sometimes all you need is a little science to"
+  },
+  {
+   "id": "series:booze-traveler-2014",
+   "title": "Booze Traveler",
+   "wikidataId": "Q25339900",
+   "synopsis": "While working in the bars of South Boston, Jack Maxwell learned one thing - sit down with "
+  },
+  {
+   "id": "series:wake-up-call-2014",
+   "title": "Wake Up Call",
+   "wikidataId": "Q2016218",
+   "synopsis": "«Wake up Call» es el segundo sencillo del disco It Won't Be Soon Before Long de la agrupac"
+  },
+  {
+   "id": "series:sons-of-liberty-2015",
+   "title": "Sons of Liberty",
+   "wikidataId": "Q2302373",
+   "synopsis": "The three-night, six-hour event follows a defiant and radical group of young men - Sam Ada"
+  },
+  {
+   "id": "series:hindsight-2015",
+   "title": "Hindsight",
+   "wikidataId": "Q730853",
+   "synopsis": "Hindsight es el octavo álbum de estudio de la banda británica Anathema que fue lanzado el "
+  },
+  {
+   "id": "series:dig-2015",
+   "title": "Dig",
+   "wikidataId": "Q1097288",
+   "synopsis": "álbum de Miles Davis featuring Sonny Rollins"
+  },
+  {
+   "id": "series:love-the-way-you-lie-2014",
+   "title": "Love the Way You Lie",
+   "wikidataId": "Q155006",
+   "synopsis": "«Love the Way You Lie» es una canción del rapero norteamericano Eminem lanzada el 17 de ag"
+  },
+  {
+   "id": "series:ascension-2014",
+   "title": "Ascension",
+   "wikidataId": "Q2990967",
+   "synopsis": "El Municipio de Ascensión es uno de los 67 municipios en que se encuentra dividido el esta"
+  },
+  {
+   "id": "series:hitler-the-junkie-2014",
+   "title": "Hitler the Junkie",
+   "wikidataId": "Q132643457",
+   "synopsis": "Hitler the Junkie is a hard-hitting and in-depth special examines the medications Hitler w"
+  },
+  {
+   "id": "series:risking-it-all-2014",
+   "title": "Risking It All",
+   "wikidataId": "Q42125514",
+   "synopsis": "artículo científico publicado en 1999"
+  },
+  {
+   "id": "series:country-buck-2014",
+   "title": "Country Buck$",
+   "wikidataId": "Q27645628",
+   "synopsis": "Country Buck$ follows the Busbice family who founded Wildgame Innovations, a small hunting"
+  },
+  {
+   "id": "series:joey-2004",
+   "title": "Joey",
+   "wikidataId": "Q18385316",
+   "synopsis": "nombre ambiguo"
+  },
+  {
+   "id": "series:boy-meets-world-1993",
+   "title": "Boy Meets World",
+   "wikidataId": "Q16953256",
+   "synopsis": "Cory is your average guy. He has a best friend from the other side of the tracks, a teache"
+  },
+  {
+   "id": "series:durarara-2010",
+   "title": "Durarara!!",
+   "wikidataId": "Q495094",
+   "synopsis": "Durarara!! , comúnmente abreviada como DRRR!!, es una serie de novelas ligeras japonesas e"
+  },
+  {
+   "id": "series:the-x-factor-2004",
+   "title": "The X Factor",
+   "wikidataId": "Q4431988",
+   "synopsis": "The X Factor UK es una competencia británica de reality show de música para encontrar nuev"
+  },
+  {
+   "id": "series:gold-rush-2010",
+   "title": "Gold Rush",
+   "wikidataId": "Q104120185",
+   "synopsis": "Gold Rush follows six men who, in the face of an economic meltdown, risk everything - thei"
+  },
+  {
+   "id": "series:qi-2003",
+   "title": "QI",
+   "wikidataId": "Q4505485",
+   "synopsis": "apellido 齐"
+  },
+  {
+   "id": "series:the-tonight-show-starring-jimmy-fallon-2014",
+   "title": "The Tonight Show Starring Jimmy Fallon",
+   "wikidataId": "Q48742021",
+   "synopsis": "Emmy Award and Grammy Award winner Jimmy Fallon brought NBC's \"The Tonight Show\" back to i"
+  },
+  {
+   "id": "series:are-you-smarter-than-a-5th-grader-2007",
+   "title": "Are You Smarter Than a 5th Grader?",
+   "wikidataId": "Q108370550",
+   "synopsis": "serie de videojuegos"
+  },
+  {
+   "id": "series:10-things-i-hate-about-you-2009",
+   "title": "10 razones para odiarte",
+   "wikidataId": "Q169082",
+   "synopsis": "10 Things I Hate About You es una película estadounidense de comedia adolescente de 1999, "
+  },
+  {
+   "id": "series:naked-and-afraid-2013",
+   "title": "Naked and Afraid",
+   "wikidataId": "Q17104499",
+   "synopsis": "Naked and Afraid es un reality estadounidense que se transmite por Discovery Channel. Cada"
+  },
+  {
+   "id": "series:good-luck-charlie-2010",
+   "title": "Good Luck Charlie",
+   "wikidataId": "Q3727874",
+   "synopsis": "temporada de Good Luck Charlie"
+  },
+  {
+   "id": "series:planet-earth-2006",
+   "title": "Planet Earth",
+   "wikidataId": "Q2",
+   "synopsis": "La Tierra es el planeta del sistema solar donde habita la humanidad y que orbita alrededor"
+  },
+  {
+   "id": "series:private-practice-2007",
+   "title": "Private Practice",
+   "wikidataId": "Q11828160",
+   "synopsis": "Private Practice is the story of a team of gifted doctors working together to change the l"
+  },
+  {
+   "id": "series:the-cleveland-show-2009",
+   "title": "The Cleveland Show",
+   "wikidataId": "Q3730156",
+   "synopsis": "Everyone's favorite soft-spoken neighbor, Cleveland Brown, is on the move after he decides"
+  },
+  {
+   "id": "series:merlin-2008",
+   "title": "Merlin",
+   "wikidataId": "Q16279386",
+   "synopsis": "nombre masculino"
+  },
+  {
+   "id": "series:the-tonight-show-with-jay-leno-1992",
+   "title": "The Tonight Show with Jay Leno",
+   "wikidataId": "Q17033725",
+   "synopsis": "The Tonight Show with Jay Leno is an American late-night talk show currently hosted by Jay"
+  },
+  {
+   "id": "series:kitchen-nightmares-2007",
+   "title": "Kitchen Nightmares",
+   "wikidataId": "Q133273761",
+   "synopsis": "Chef Gordon Ramsay of Hell's Kitchen fame is back, and this time he's hitting the road, ex"
+  },
+  {
+   "id": "series:wizards-of-waverly-place-2007",
+   "title": "Wizards of Waverly Place",
+   "wikidataId": "Q2275924",
+   "synopsis": "temporada televisiva"
+  },
+  {
+   "id": "series:suburgatory-2011",
+   "title": "Suburgatory",
+   "wikidataId": "Q48465963",
+   "synopsis": "Single father George Altman is doing his best to raise his sixteen-year-old daughter Tessa"
+  },
+  {
+   "id": "series:hung-2009",
+   "title": "Hung",
+   "wikidataId": "Q28",
+   "synopsis": "Hungría es uno de los veintisiete Estados soberanos que forman la Unión Europea. Está situ"
+  },
+  {
+   "id": "series:the-secret-circle-2011",
+   "title": "The Secret Circle",
+   "wikidataId": "Q2529037",
+   "synopsis": "The Secret Circle es una serie estadounidense de novelas de ficción creada por L. J. Smith"
+  },
+  {
+   "id": "series:boss-2011",
+   "title": "Boss",
+   "wikidataId": "Q103660865",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "series:late-night-with-conan-o-brien-1993",
+   "title": "Late Night with Conan O'Brien",
+   "wikidataId": "Q6576456",
+   "synopsis": "\"Keep Cool My Babies!\" Smart-alecky, ribald and whimsical, Late Night with Conan O'Brien r"
+  },
+  {
+   "id": "series:sinbad-2012",
+   "title": "Sinbad",
+   "wikidataId": "Q558324",
+   "synopsis": "David Adkins, más conocido por su nombre artístico Sinbad, es un comediante y actor estado"
+  },
+  {
+   "id": "series:outcasts-2011",
+   "title": "Outcasts",
+   "wikidataId": "Q18163033",
+   "synopsis": "A group of courageous pioneers face a unique opportunity: the chance to build a new and be"
+  },
+  {
+   "id": "series:the-firm-2012",
+   "title": "The Firm",
+   "wikidataId": "Q821692",
+   "synopsis": "The Firm es una película estadounidense de 1993, dirigida por Sydney Pollack y protagoniza"
+  },
+  {
+   "id": "series:secret-diary-of-a-call-girl-2007",
+   "title": "Secret Diary of a Call Girl",
+   "wikidataId": "Q3728247",
+   "synopsis": "Drama series based on the best-selling, real life diaries of an upmarket escort. This prog"
+  },
+  {
+   "id": "series:project-runway-threads-2014",
+   "title": "Project Runway: Threads",
+   "wikidataId": "Q18344857",
+   "synopsis": "Project Runway: Threads is a competition series showcasing America's most talented young f"
+  },
+  {
+   "id": "series:hard-knocks-2001",
+   "title": "Hard Knocks",
+   "wikidataId": "Q1584985",
+   "synopsis": "Hard Knocks es el vigesimosegundo álbum de estudio del músico británico Joe Cocker, public"
+  },
+  {
+   "id": "series:the-haunted-2009",
+   "title": "The Haunted",
+   "wikidataId": "Q1339989",
+   "synopsis": "banda de heavy metal"
+  },
+  {
+   "id": "series:antiques-roadshow-1979",
+   "title": "Antiques Roadshow",
+   "wikidataId": "Q48456805",
+   "synopsis": "Antiques Roadshow experts examine and value antiques and collectables."
+  },
+  {
+   "id": "series:beavis-and-butt-head-1992",
+   "title": "Beavis and Butt-Head",
+   "wikidataId": "Q108370594",
+   "synopsis": "serie de videojuegos"
+  },
+  {
+   "id": "series:some-girls-2012",
+   "title": "Some Girls",
+   "wikidataId": "Q7559399",
+   "synopsis": "canción de Madonna"
+  },
+  {
+   "id": "series:man-vs-wild-2006",
+   "title": "Man vs. Wild",
+   "wikidataId": "Q114448288",
+   "synopsis": "Join survival expert Bear Grylls as he takes on some of the harshest locations on the plan"
+  },
+  {
+   "id": "series:ridiculousness-2011",
+   "title": "Ridiculousness",
+   "wikidataId": "Q2404067",
+   "synopsis": "Ridiculousness fue un programa de televisión producido por la cadena estadounidense MTV de"
+  },
+  {
+   "id": "series:the-hills-2006",
+   "title": "The Hills",
+   "wikidataId": "Q1347219",
+   "synopsis": "The Hills es un programa de telerrealidad original de MTV una secuela del popular show Lag"
+  },
+  {
+   "id": "series:la-ink-2007",
+   "title": "LA Ink",
+   "wikidataId": "Q582380",
+   "synopsis": "In her time on LA Ink, fans have watched Kat go from celebrated tattoo artist to fully dev"
+  },
+  {
+   "id": "series:saving-grace-2007",
+   "title": "Saving Grace",
+   "wikidataId": "Q83791",
+   "synopsis": "película de 2000 dirigida por Nigel Cole"
+  },
+  {
+   "id": "series:my-wife-and-kids-2001",
+   "title": "My Wife and Kids",
+   "wikidataId": "Q39075298",
+   "synopsis": "Michael Kyle longs for a traditional life, but his day-trader wife Janet, gangsta rap-wors"
+  },
+  {
+   "id": "series:vis-a-vis-2015",
+   "title": "Vis a vis",
+   "wikidataId": "Q19366639",
+   "synopsis": "Vis a vis (2015), obra de Álex Pina."
+  },
+  {
+   "id": "series:machos-alfa-2022",
+   "title": "Machos alfa",
+   "wikidataId": "Q115977843",
+   "synopsis": "La temporada 2023 del fútbol ecuatoriano abarcó todas las actividades deportivas relaciona"
+  },
+  {
+   "id": "series:30-monedas-2020",
+   "title": "30 monedas",
+   "wikidataId": "Q85819039",
+   "synopsis": "30 monedas (2020), obra de Álex de la Iglesia."
+  },
+  {
+   "id": "series:el-internado-laguna-negra-2007",
+   "title": "El internado: Laguna Negra",
+   "wikidataId": "Q83783",
+   "synopsis": "El internado: Laguna Negra (2007), obra de Laura Belloso."
+  }
+ ],
+ "book": [
+  {
+   "id": "book:la-sombra-del-viento-2001",
+   "title": "La sombra del viento",
+   "wikidataId": "Q125210024",
+   "synopsis": "Un niño descubre en el Cementerio de los Libros Olvidados una novela cuyo autor parece bor"
+  },
+  {
+   "id": "book:el-hobbit-1937",
+   "title": "El Hobbit",
+   "wikidataId": "Q92076495",
+   "synopsis": "Bilbo Bolsón sale de su agujero para ayudar a unos enanos a recuperar su tesoro de un drag"
+  },
+  {
+   "id": "book:rayuela-1963",
+   "title": "Rayuela",
+   "wikidataId": "Q126707253",
+   "synopsis": "Una novela que se puede leer en varios órdenes, entre París y Buenos Aires, siguiendo a Ho"
+  },
+  {
+   "id": "book:marina-1999",
+   "title": "Marina",
+   "wikidataId": "Q2604473",
+   "synopsis": "Óscar, interno en Barcelona, conoce a Marina y a su padre, y se adentran en un secreto de "
+  },
+  {
+   "id": "book:homo-deus-2015",
+   "title": "Homo Deus",
+   "wikidataId": "Q122118309",
+   "synopsis": "Una mirada hacia el futuro de la humanidad y los nuevos retos biotecnológicos y de intelig"
+  },
+  {
+   "id": "book:el-arte-de-la-guerra--500",
+   "title": "El arte de la guerra",
+   "wikidataId": "Q106628836",
+   "synopsis": "Tratado militar milenario sobre estrategia, psicología del conflicto y victoria sin combat"
+  },
+  {
+   "id": "book:steve-jobs-2011",
+   "title": "Steve Jobs",
+   "wikidataId": "Q17300367",
+   "synopsis": "La biografía definitiva y sin concesiones del fundador de Apple y visionario de la tecnolo"
+  },
+  {
+   "id": "book:cosmos-1980",
+   "title": "Cosmos",
+   "wikidataId": "Q126182987",
+   "synopsis": "La gran aventura científica y cósmica del ser humano en quince mil millones de años de evo"
+  },
+  {
+   "id": "book:los-renglones-torcidos-de-dios-1979",
+   "title": "Los renglones torcidos de Dios",
+   "wikidataId": "Q116193132",
+   "synopsis": "Una detective privada se interna voluntariamente en un psiquiátrico para investigar un hom"
+  },
+  {
+   "id": "book:frankenstein-1818",
+   "title": "Frankenstein",
+   "wikidataId": "Q140532091",
+   "synopsis": "Un científico desafía a la naturaleza creando un ser vivo a partir de restos humanos y huy"
+  },
+  {
+   "id": "book:el-aleph-1949",
+   "title": "El Aleph",
+   "wikidataId": "Q126697962",
+   "synopsis": "Colección de relatos filosóficos que incluye el punto en el sótano donde se observan todos"
+  },
+  {
+   "id": "book:cronica-de-una-muerte-anunciada-1981",
+   "title": "Crónica de una muerte anunciada",
+   "wikidataId": "Q126707254",
+   "synopsis": "La reconstrucción de un asesinato sabido por todo un pueblo que nadie hizo nada por evitar"
+  },
+  {
+   "id": "book:cinco-horas-con-mario-1966",
+   "title": "Cinco horas con Mario",
+   "wikidataId": "Q125537634",
+   "synopsis": "Una mujer vela en soledad el cadáver de su marido mientras desahoga sus frustraciones e in"
+  },
+  {
+   "id": "book:loba-negra-2019",
+   "title": "Loba negra",
+   "wikidataId": "Q107297839",
+   "synopsis": "Antonia Scott y Jon Gutiérrez se enfrentan a la mafia rusa en la Costa del Sol mientras pr"
+  },
+  {
+   "id": "book:rey-blanco-2020",
+   "title": "Rey blanco",
+   "wikidataId": "Q107297841",
+   "synopsis": "La batalla final entre Antonia Scott y el misterioso cerebro criminal conocido como el Señ"
+  },
+  {
+   "id": "book:todo-esto-te-dare-2016",
+   "title": "Todo esto te daré",
+   "wikidataId": "Q125847700",
+   "synopsis": "Un escritor descubre la doble vida y los oscuros secretos aristocráticos de la familia de "
+  },
+  {
+   "id": "book:las-venas-abiertas-de-america-latina-1971",
+   "title": "Las venas abiertas de América Latina",
+   "wikidataId": "Q126696209",
+   "synopsis": "Una crónica apasionada y documentada sobre cinco siglos de expolio colonial y económico en"
+  },
+  {
+   "id": "book:solaris-1961",
+   "title": "Solaris",
+   "wikidataId": "Q122096415",
+   "synopsis": "Científicos en una estación espacial orbitan un planeta cubierto por un océano vivo que ma"
+  },
+  {
+   "id": "book:la-guerra-de-los-mundos-1898",
+   "title": "La guerra de los mundos",
+   "wikidataId": "Q116194513",
+   "synopsis": "Monstruosos trípodes marcianos invaden la Inglaterra victoriana sembrando el pánico con ra"
+  },
+  {
+   "id": "book:the-48-laws-of-power-1998",
+   "title": "Las 48 leyes del poder",
+   "wikidataId": "Q126124243",
+   "synopsis": "Obra de Robert Greene publicada originalmente en 1998."
+  },
+  {
+   "id": "book:rich-dad-poor-dad-1990",
+   "title": "Rich Dad, Poor Dad",
+   "wikidataId": "Q126110862",
+   "synopsis": "Obra de Robert T. Kiyosaki publicada originalmente en 1990."
+  },
+  {
+   "id": "book:harry-potter-and-the-philosopher-s-stone-1997",
+   "title": "Harry Potter and the Philosopher's Stone",
+   "wikidataId": "Q58464958",
+   "synopsis": "Obra de J. K. Rowling publicada originalmente en 1997."
+  },
+  {
+   "id": "book:think-and-grow-rich-1937",
+   "title": "Think and Grow Rich",
+   "wikidataId": "Q125961616",
+   "synopsis": "Obra de Napoleon Hill publicada originalmente en 1937."
+  },
+  {
+   "id": "book:this-thing-called-love-2024",
+   "title": "This Thing Called love",
+   "wikidataId": "Q51591034",
+   "synopsis": "Obra de Deblina Bhattacharya publicada originalmente en 2024."
+  },
+  {
+   "id": "book:nineteen-eighty-four-1949",
+   "title": "Nineteen Eighty-Four",
+   "wikidataId": "Q125695902",
+   "synopsis": "Obra de George Orwell publicada originalmente en 1949."
+  },
+  {
+   "id": "book:the-power-of-your-subconscious-mind-1963",
+   "title": "The Power of Your Subconscious Mind",
+   "wikidataId": "Q60907502",
+   "synopsis": "Obra de Joseph Murphy publicada originalmente en 1963."
+  },
+  {
+   "id": "book:pride-and-prejudice-1813",
+   "title": "Pride and Prejudice",
+   "wikidataId": "Q125657707",
+   "synopsis": "Obra de Jane Austen publicada originalmente en 1813."
+  },
+  {
+   "id": "book:diary-of-a-wimpy-kid-2007",
+   "title": "Diary of a Wimpy Kid",
+   "wikidataId": "Q77268165",
+   "synopsis": "Obra de Jeff Kinney publicada originalmente en 2007."
+  },
+  {
+   "id": "book:the-hunger-games-2008",
+   "title": "The Hunger Games",
+   "wikidataId": "Q69891774",
+   "synopsis": "Obra de Suzanne Collins publicada originalmente en 2008."
+  },
+  {
+   "id": "book:trotzdem-ja-zum-leben-sagen-1946",
+   "title": "... Trotzdem Ja zum Leben sagen",
+   "wikidataId": "Q125766933",
+   "synopsis": "Obra de Viktor Emil Frankl publicada originalmente en 1946."
+  },
+  {
+   "id": "book:thinking-fast-and-slow-2011",
+   "title": "Thinking, fast and slow",
+   "wikidataId": "Q27342054",
+   "synopsis": "Obra de Daniel Kahneman publicada originalmente en 2011."
+  },
+  {
+   "id": "book:a-game-of-thrones-1996",
+   "title": "A Game of Thrones",
+   "wikidataId": "Q105357180",
+   "synopsis": "Obra de George R. R. Martin publicada originalmente en 1996."
+  },
+  {
+   "id": "book:metamorphosis-1915",
+   "title": "Metamorphosis",
+   "wikidataId": "Q18916287",
+   "synopsis": "Obra de Franz Kafka publicada originalmente en 1915."
+  },
+  {
+   "id": "book:wuthering-heights-1846",
+   "title": "Wuthering Heights",
+   "wikidataId": "Q137599413",
+   "synopsis": "Obra de Emily Brontë publicada originalmente en 1846."
+  },
+  {
+   "id": "book:the-art-of-seduction-2001",
+   "title": "The Art of Seduction",
+   "wikidataId": "Q141678296",
+   "synopsis": "Obra de Robert Greene publicada originalmente en 2001."
+  },
+  {
+   "id": "book:ikigai-2016",
+   "title": "Ikigai",
+   "wikidataId": "Q122005276",
+   "synopsis": "Obra de Héctor García publicada originalmente en 2016."
+  },
+  {
+   "id": "book:twilight-2005",
+   "title": "Twilight",
+   "wikidataId": "Q116449889",
+   "synopsis": "Obra de Stephenie Meyer publicada originalmente en 2005."
+  },
+  {
+   "id": "book:harry-potter-and-the-chamber-of-secrets-1998",
+   "title": "Harry Potter y la cámara secreta",
+   "wikidataId": "Q82772000",
+   "synopsis": "Obra de J. K. Rowling publicada originalmente en 1998."
+  },
+  {
+   "id": "book:powerless-2023",
+   "title": "Powerless",
+   "wikidataId": "Q24050200",
+   "synopsis": "Obra de Lauren Roberts publicada originalmente en 2023."
+  },
+  {
+   "id": "book:-2013",
+   "title": "嫌われる勇気",
+   "wikidataId": "Q125766333",
+   "synopsis": "Obra de Ichirō Kishimi publicada originalmente en 2013."
+  },
+  {
+   "id": "book:sapiens-2011",
+   "title": "Sapiens",
+   "wikidataId": "Q110257350",
+   "synopsis": "Obra de Yuval Noah Harari publicada originalmente en 2011."
+  },
+  {
+   "id": "book:project-hail-mary-2021",
+   "title": "Proyecto Hail Mary",
+   "wikidataId": "Q136606176",
+   "synopsis": "Obra de Andy Weir publicada originalmente en 2021."
+  },
+  {
+   "id": "book:the-art-of-being-alone-2023",
+   "title": "The Art of Being Alone",
+   "wikidataId": "Q136195461",
+   "synopsis": "Obra de Renuka Gavrani publicada originalmente en 2023."
+  },
+  {
+   "id": "book:harry-potter-and-the-order-of-the-phoenix-2003",
+   "title": "Harry Potter y la Orden del Fénix",
+   "wikidataId": "Q101092399",
+   "synopsis": "Obra de J. K. Rowling publicada originalmente en 2003."
+  },
+  {
+   "id": "book:shatter-me-2011",
+   "title": "Shatter Me",
+   "wikidataId": "Q58884997",
+   "synopsis": "Obra de Tahereh Mafi publicada originalmente en 2011."
+  },
+  {
+   "id": "book:the-great-gatsby-1920",
+   "title": "The Great Gatsby",
+   "wikidataId": "Q118180494",
+   "synopsis": "Obra de F. Scott Fitzgerald publicada originalmente en 1920."
+  },
+  {
+   "id": "book:the-kite-runner-2003",
+   "title": "The Kite Runner",
+   "wikidataId": "Q118894980",
+   "synopsis": "Obra de Khaled Hosseini publicada originalmente en 2003."
+  },
+  {
+   "id": "book:emotional-intelligence-1995",
+   "title": "Emotional Intelligence",
+   "wikidataId": "Q125956321",
+   "synopsis": "Obra de Daniel Goleman publicada originalmente en 1995."
+  },
+  {
+   "id": "book:the-secret-2000",
+   "title": "The Secret",
+   "wikidataId": "Q118945677",
+   "synopsis": "Obra de Rhonda Byrne publicada originalmente en 2000."
+  },
+  {
+   "id": "book:harry-potter-and-the-deathly-hallows-2007",
+   "title": "Harry Potter and the Deathly Hallows",
+   "wikidataId": "Q58241871",
+   "synopsis": "Obra de J. K. Rowling publicada originalmente en 2007."
+  },
+  {
+   "id": "book:fifty-shades-of-grey-2000",
+   "title": "Fifty Shades of Grey",
+   "wikidataId": "Q118540793",
+   "synopsis": "Obra de E. L. James publicada originalmente en 2000."
+  },
+  {
+   "id": "book:and-then-there-were-none-1939",
+   "title": "And Then There Were None",
+   "wikidataId": "Q108525401",
+   "synopsis": "Obra de Agatha Christie publicada originalmente en 1939."
+  },
+  {
+   "id": "book:the-da-vinci-code-2003",
+   "title": "The Da Vinci Code",
+   "wikidataId": "Q124474978",
+   "synopsis": "Obra de Dan Brown publicada originalmente en 2003."
+  },
+  {
+   "id": "book:the-lord-of-the-rings-1954",
+   "title": "The Lord of the Rings",
+   "wikidataId": "Q22122681",
+   "synopsis": "Obra de J.R.R. Tolkien publicada originalmente en 1954."
+  },
+  {
+   "id": "book:lolita-1777",
+   "title": "Lolita",
+   "wikidataId": "Q47007804",
+   "synopsis": "Obra de Vladimir Nabokov publicada originalmente en 1777."
+  },
+  {
+   "id": "book:bible-1200",
+   "title": "Bible",
+   "wikidataId": "Q117229017",
+   "synopsis": "Obra de Bible publicada originalmente en 1200."
+  },
+  {
+   "id": "book:trading-in-the-zone-2001",
+   "title": "Trading in the zone",
+   "wikidataId": "Q125819544",
+   "synopsis": "Obra de Mark Douglas publicada originalmente en 2001."
+  },
+  {
+   "id": "book:the-sea-of-monsters-2005",
+   "title": "The Sea of Monsters",
+   "wikidataId": "Q119854077",
+   "synopsis": "Obra de Rick Riordan publicada originalmente en 2005."
+  },
+  {
+   "id": "book:moby-dick-1851",
+   "title": "Moby Dick",
+   "wikidataId": "Q123965738",
+   "synopsis": "Obra de Herman Melville publicada originalmente en 1851."
+  },
+  {
+   "id": "book:alice-s-adventures-in-wonderland-1865",
+   "title": "Alice's Adventures in Wonderland",
+   "wikidataId": "Q109614340",
+   "synopsis": "Obra de Lewis Carroll publicada originalmente en 1865."
+  },
+  {
+   "id": "book:-1883",
+   "title": "कामसूत्र",
+   "wikidataId": "Q86019415",
+   "synopsis": "Obra de Vatsyāyana publicada originalmente en 1883."
+  },
+  {
+   "id": "book:the-fellowship-of-the-ring-1954",
+   "title": "The Fellowship of the Ring",
+   "wikidataId": "Q63439313",
+   "synopsis": "Obra de J.R.R. Tolkien publicada originalmente en 1954."
+  },
+  {
+   "id": "book:the-body-keeps-the-score-2014",
+   "title": "The Body Keeps the Score",
+   "wikidataId": "Q141430030",
+   "synopsis": "Obra de Bessel van der Kolk publicada originalmente en 2014."
+  },
+  {
+   "id": "book:the-secret-garden-1911",
+   "title": "The Secret Garden",
+   "wikidataId": "Q108917831",
+   "synopsis": "Obra de Frances Hodgson Burnett publicada originalmente en 1911."
+  },
+  {
+   "id": "book:het-achterhuis-1944",
+   "title": "Het Achterhuis",
+   "wikidataId": "Q29562896",
+   "synopsis": "Obra de Anne Frank publicada originalmente en 1944."
+  },
+  {
+   "id": "book:the-hitchhiker-s-guide-to-the-galaxy-1979",
+   "title": "The Hitchhiker's Guide to the Galaxy",
+   "wikidataId": "Q116980478",
+   "synopsis": "Obra de Douglas Adams publicada originalmente en 1979."
+  },
+  {
+   "id": "book:the-battle-of-the-labyrinth-2005",
+   "title": "The Battle of the Labyrinth",
+   "wikidataId": "Q121811289",
+   "synopsis": "Obra de Rick Riordan publicada originalmente en 2005."
+  },
+  {
+   "id": "book:the-book-thief-1998",
+   "title": "The Book Thief",
+   "wikidataId": "Q126700519",
+   "synopsis": "Obra de Markus Zusak publicada originalmente en 1998."
+  },
+  {
+   "id": "book:fire-blood-2014",
+   "title": "Fire & Blood",
+   "wikidataId": "Q105975360",
+   "synopsis": "Obra de George R. R. Martin publicada originalmente en 2014."
+  },
+  {
+   "id": "book:-2015",
+   "title": "コーヒーが冷めないうちに",
+   "wikidataId": "Q141145035",
+   "synopsis": "Obra de 川口俊和 publicada originalmente en 2015."
+  },
+  {
+   "id": "book:the-lost-hero-2010",
+   "title": "The Lost Hero",
+   "wikidataId": "Q122211899",
+   "synopsis": "Obra de Rick Riordan publicada originalmente en 2010."
+  },
+  {
+   "id": "book:the-yellow-wallpaper-1892",
+   "title": "The Yellow Wallpaper",
+   "wikidataId": "Q23791006",
+   "synopsis": "Obra de Charlotte Perkins Gilman publicada originalmente en 1892."
+  },
+  {
+   "id": "book:the-strange-case-of-dr-jekyll-and-mr-hyde-1875",
+   "title": "The Strange Case of Dr. Jekyll and Mr. Hyde",
+   "wikidataId": "Q61943597",
+   "synopsis": "Obra de Robert Louis Stevenson publicada originalmente en 1875."
+  },
+  {
+   "id": "book:things-fall-apart-1958",
+   "title": "Things Fall Apart",
+   "wikidataId": "Q126696029",
+   "synopsis": "Obra de Chinua Achebe publicada originalmente en 1958."
+  },
+  {
+   "id": "book:the-catcher-in-the-rye-1945",
+   "title": "The Catcher in the Rye",
+   "wikidataId": "Q125291968",
+   "synopsis": "Obra de J. D. Salinger publicada originalmente en 1945."
+  },
+  {
+   "id": "book:the-giver-1993",
+   "title": "The Giver",
+   "wikidataId": "Q107195536",
+   "synopsis": "Obra de Lois Lowry publicada originalmente en 1993."
+  },
+  {
+   "id": "book:the-art-of-loving-1956",
+   "title": "The Art of Loving",
+   "wikidataId": "Q126080481",
+   "synopsis": "Obra de Erich Fromm publicada originalmente en 1956."
+  },
+  {
+   "id": "book:i-robot-1950",
+   "title": "I, Robot",
+   "wikidataId": "Q126110960",
+   "synopsis": "Obra de Isaac Asimov publicada originalmente en 1950."
+  },
+  {
+   "id": "book:the-war-of-the-worlds-2005",
+   "title": "The War of the Worlds",
+   "wikidataId": "Q116195359",
+   "synopsis": "Obra de H. G. Wells publicada originalmente en 2005."
+  },
+  {
+   "id": "book:the-power-of-positive-thinking-1952",
+   "title": "The Power of Positive Thinking",
+   "wikidataId": "Q7757960",
+   "synopsis": "Obra de Norman Vincent Peale publicada originalmente en 1952."
+  },
+  {
+   "id": "book:red-rising-2014",
+   "title": "Red Rising",
+   "wikidataId": "Q137597438",
+   "synopsis": "Obra de Pierce Brown publicada originalmente en 2014."
+  },
+  {
+   "id": "book:the-housemaid-s-secret-2023",
+   "title": "The Housemaid's Secret",
+   "wikidataId": "Q127896403",
+   "synopsis": "Obra de Freida McFadden publicada originalmente en 2023."
+  },
+  {
+   "id": "book:ego-is-the-enemy-2016",
+   "title": "Ego is the Enemy",
+   "wikidataId": "Q141056842",
+   "synopsis": "Obra de Ryan Holiday publicada originalmente en 2016."
+  },
+  {
+   "id": "book:emma-1815",
+   "title": "Emma",
+   "wikidataId": "Q83699540",
+   "synopsis": "Obra de Jane Austen publicada originalmente en 1815."
+  },
+  {
+   "id": "book:dog-days-2007",
+   "title": "Dog Days",
+   "wikidataId": "Q77268330",
+   "synopsis": "Obra de Jeff Kinney publicada originalmente en 2007."
+  },
+  {
+   "id": "book:the-power-of-habit-2012",
+   "title": "The Power of Habit",
+   "wikidataId": "Q126678212",
+   "synopsis": "Obra de Charles Duhigg publicada originalmente en 2012."
+  },
+  {
+   "id": "book:-1488",
+   "title": "Ὀδύσσεια",
+   "wikidataId": "Q125623135",
+   "synopsis": "Obra de Ὅμηρος publicada originalmente en 1488."
+  },
+  {
+   "id": "book:charlie-and-the-chocolate-factory-1964",
+   "title": "Charlie and the Chocolate Factory",
+   "wikidataId": "Q126687689",
+   "synopsis": "Obra de Roald Dahl publicada originalmente en 1964."
+  },
+  {
+   "id": "book:salem-s-lot-1959",
+   "title": "'Salem’s Lot",
+   "wikidataId": "Q116184458",
+   "synopsis": "Obra de Stephen King publicada originalmente en 1959."
+  },
+  {
+   "id": "book:sense-and-sensibility-1811",
+   "title": "Sense and Sensibility",
+   "wikidataId": "Q83616342",
+   "synopsis": "Obra de Jane Austen publicada originalmente en 1811."
+  },
+  {
+   "id": "book:games-people-play-1964",
+   "title": "Games People Play",
+   "wikidataId": "Q126453376",
+   "synopsis": "Obra de Eric Berne publicada originalmente en 1964."
+  },
+  {
+   "id": "book:rodrick-rules-2007",
+   "title": "Rodrick Rules",
+   "wikidataId": "Q67949851",
+   "synopsis": "Obra de Jeff Kinney publicada originalmente en 2007."
+  },
+  {
+   "id": "book:the-gunslinger-1976",
+   "title": "The Gunslinger",
+   "wikidataId": "Q126453576",
+   "synopsis": "Obra de Stephen King publicada originalmente en 1976."
+  },
+  {
+   "id": "book:a-court-of-mist-and-fury-2014",
+   "title": "A Court of Mist and Fury",
+   "wikidataId": "Q117312848",
+   "synopsis": "Obra de Sarah J. Maas publicada originalmente en 2014."
+  },
+  {
+   "id": "book:pet-sematary-1983",
+   "title": "Pet Sematary",
+   "wikidataId": "Q58879302",
+   "synopsis": "Obra de Stephen King publicada originalmente en 1983."
+  },
+  {
+   "id": "book:the-long-haul-2014",
+   "title": "The Long Haul",
+   "wikidataId": "Q126697823",
+   "synopsis": "Obra de Jeff Kinney publicada originalmente en 2014."
+  },
+  {
+   "id": "book:matilda-1988",
+   "title": "Matilda",
+   "wikidataId": "Q118423210",
+   "synopsis": "Obra de Roald Dahl publicada originalmente en 1988."
+  },
+  {
+   "id": "book:mockingjay-2010",
+   "title": "Mockingjay",
+   "wikidataId": "Q70471056",
+   "synopsis": "Obra de Suzanne Collins publicada originalmente en 2010."
+  },
+  {
+   "id": "book:the-lean-startup-2011",
+   "title": "The Lean Startup",
+   "wikidataId": "Q126045327",
+   "synopsis": "Obra de Eric Ries publicada originalmente en 2011."
+  },
+  {
+   "id": "book:the-secret-history-1992",
+   "title": "The Secret History",
+   "wikidataId": "Q125933635",
+   "synopsis": "Obra de Donna Tartt publicada originalmente en 1992."
+  },
+  {
+   "id": "book:holes-1988",
+   "title": "Holes",
+   "wikidataId": "Q125166785",
+   "synopsis": "Obra de Louis Sachar publicada originalmente en 1988."
+  },
+  {
+   "id": "book:deception-point-2001",
+   "title": "Deception Point",
+   "wikidataId": "Q116476202",
+   "synopsis": "Obra de Dan Brown publicada originalmente en 2001."
+  },
+  {
+   "id": "book:a-short-history-of-nearly-everything-2003",
+   "title": "A short history of nearly everything",
+   "wikidataId": "Q126014312",
+   "synopsis": "Obra de Bill Bryson publicada originalmente en 2003."
+  },
+  {
+   "id": "book:the-lion-the-witch-and-the-wardrobe-1950",
+   "title": "The Lion, the Witch and the Wardrobe",
+   "wikidataId": "Q79290525",
+   "synopsis": "Obra de C. S. Lewis publicada originalmente en 1950."
+  },
+  {
+   "id": "book:percy-jackson-s-greek-gods-2006",
+   "title": "Percy Jackson's Greek Gods",
+   "wikidataId": "Q117865387",
+   "synopsis": "Obra de Rick Riordan publicada originalmente en 2006."
+  },
+  {
+   "id": "book:the-long-walk-1979",
+   "title": "The Long Walk",
+   "wikidataId": "Q126025041",
+   "synopsis": "Obra de Stephen King publicada originalmente en 1979."
+  },
+  {
+   "id": "book:foundation-1951",
+   "title": "Foundation",
+   "wikidataId": "Q121267668",
+   "synopsis": "Obra de Isaac Asimov publicada originalmente en 1951."
+  },
+  {
+   "id": "book:blood-meridian-1985",
+   "title": "Blood Meridian",
+   "wikidataId": "Q126077999",
+   "synopsis": "Obra de Cormac McCarthy publicada originalmente en 1985."
+  },
+  {
+   "id": "book:women-who-run-with-the-wolves-1982",
+   "title": "Women Who Run with the Wolves",
+   "wikidataId": "Q126697347",
+   "synopsis": "Obra de Clarissa Pinkola Estés publicada originalmente en 1982."
+  },
+  {
+   "id": "book:norwegian-wood-1987",
+   "title": "Norwegian Wood",
+   "wikidataId": "Q126543895",
+   "synopsis": "Obra de 村上春樹 publicada originalmente en 1987."
+  },
+  {
+   "id": "book:the-return-of-the-king-1950",
+   "title": "The Return of the King",
+   "wikidataId": "Q121942951",
+   "synopsis": "Obra de J.R.R. Tolkien publicada originalmente en 1950."
+  },
+  {
+   "id": "book:new-moon-2006",
+   "title": "New Moon",
+   "wikidataId": "Q116200196",
+   "synopsis": "Obra de Stephenie Meyer publicada originalmente en 2006."
+  },
+  {
+   "id": "book:divergent-2010",
+   "title": "Divergent",
+   "wikidataId": "Q115954601",
+   "synopsis": "Obra de Veronica Roth publicada originalmente en 2010."
+  },
+  {
+   "id": "book:the-nightingale-2000",
+   "title": "The Nightingale",
+   "wikidataId": "Q116225524",
+   "synopsis": "Obra de Kristin Hannah publicada originalmente en 2000."
+  },
+  {
+   "id": "book:the-road-2006",
+   "title": "The Road",
+   "wikidataId": "Q91332039",
+   "synopsis": "Obra de Cormac McCarthy publicada originalmente en 2006."
+  },
+  {
+   "id": "book:the-lost-symbol-2009",
+   "title": "The Lost Symbol",
+   "wikidataId": "Q125388063",
+   "synopsis": "Obra de Dan Brown publicada originalmente en 2009."
+  },
+  {
+   "id": "book:the-curious-incident-of-the-dog-in-the-night-time-2002",
+   "title": "The Curious Incident of the Dog in the Night-Time",
+   "wikidataId": "Q60232970",
+   "synopsis": "Obra de Mark Haddon publicada originalmente en 2002."
+  },
+  {
+   "id": "book:a-christmas-carol-1843",
+   "title": "A Christmas Carol",
+   "wikidataId": "Q20872993",
+   "synopsis": "Obra de Charles Dickens publicada originalmente en 1843."
+  },
+  {
+   "id": "book:le-tour-du-monde-en-quatre-vingts-jours-1872",
+   "title": "Le Tour du Monde en Quatre-Vingts Jours",
+   "wikidataId": "Q79290290",
+   "synopsis": "Obra de Jules Verne publicada originalmente en 1872."
+  },
+  {
+   "id": "book:le-deuxieme-sexe-1949",
+   "title": "Le Deuxième Sexe",
+   "wikidataId": "Q140985812",
+   "synopsis": "Obra de Simone de Beauvoir publicada originalmente en 1949."
+  },
+  {
+   "id": "book:la-peste-1942",
+   "title": "La Peste",
+   "wikidataId": "Q140592214",
+   "synopsis": "Obra de Albert Camus publicada originalmente en 1942."
+  },
+  {
+   "id": "book:the-33-strategies-of-war-1998",
+   "title": "The 33 Strategies of War",
+   "wikidataId": "Q60852010",
+   "synopsis": "Obra de Robert Greene publicada originalmente en 1998."
+  },
+  {
+   "id": "book:the-silmarillion-1977",
+   "title": "The Silmarillion",
+   "wikidataId": "Q106751213",
+   "synopsis": "Obra de J.R.R. Tolkien publicada originalmente en 1977."
+  },
+  {
+   "id": "book:heart-of-darkness-1899",
+   "title": "Heart of Darkness",
+   "wikidataId": "Q140199204",
+   "synopsis": "Obra de Joseph Conrad publicada originalmente en 1899."
+  },
+  {
+   "id": "book:a-midsummer-night-s-dream-1600",
+   "title": "A Midsummer Night's Dream",
+   "wikidataId": "Q108540646",
+   "synopsis": "Obra de William Shakespeare publicada originalmente en 1600."
+  },
+  {
+   "id": "book:the-last-straw-2008",
+   "title": "The Last Straw",
+   "wikidataId": "Q76886195",
+   "synopsis": "Obra de Jeff Kinney publicada originalmente en 2008."
+  },
+  {
+   "id": "book:a-clash-of-kings-1998",
+   "title": "A Clash of Kings",
+   "wikidataId": "Q105394547",
+   "synopsis": "Obra de George R. R. Martin publicada originalmente en 1998."
+  },
+  {
+   "id": "book:hard-luck-2013",
+   "title": "Hard Luck",
+   "wikidataId": "Q126687744",
+   "synopsis": "Obra de Jeff Kinney publicada originalmente en 2013."
+  },
+  {
+   "id": "book:voyage-au-centre-de-la-terre-1867",
+   "title": "Voyage au Centre de la Terre",
+   "wikidataId": "Q108525600",
+   "synopsis": "Obra de Jules Verne publicada originalmente en 1867."
+  },
+  {
+   "id": "book:se-questo-e-un-uomo-1947",
+   "title": "Se questo è un uomo",
+   "wikidataId": "Q116676811",
+   "synopsis": "Obra de Primo Levi publicada originalmente en 1947."
+  },
+  {
+   "id": "book:dark-matter-2016",
+   "title": "Dark Matter",
+   "wikidataId": "Q116191910",
+   "synopsis": "Obra de Blake Crouch publicada originalmente en 2016."
+  },
+  {
+   "id": "book:la-chute-1917",
+   "title": "La chute",
+   "wikidataId": "Q126601112",
+   "synopsis": "Obra de Albert Camus publicada originalmente en 1917."
+  },
+  {
+   "id": "book:la-divina-commedia-1472",
+   "title": "La Divina Commedia",
+   "wikidataId": "Q21190964",
+   "synopsis": "Obra de Dante Alighieri publicada originalmente en 1472."
+  },
+  {
+   "id": "book:the-ugly-truth-2010",
+   "title": "The Ugly Truth",
+   "wikidataId": "Q76885913",
+   "synopsis": "Obra de Jeff Kinney publicada originalmente en 2010."
+  },
+  {
+   "id": "book:a-room-of-one-s-own-1929",
+   "title": "A Room of One's Own",
+   "wikidataId": "Q109228993",
+   "synopsis": "Obra de Virginia Woolf publicada originalmente en 1929."
+  },
+  {
+   "id": "book:slaughterhouse-five-1956",
+   "title": "Slaughterhouse-Five",
+   "wikidataId": "Q125476563",
+   "synopsis": "Obra de Kurt Vonnegut publicada originalmente en 1956."
+  },
+  {
+   "id": "book:the-colour-of-magic-1983",
+   "title": "The Colour of Magic",
+   "wikidataId": "Q110503593",
+   "synopsis": "Obra de Terry Pratchett publicada originalmente en 1983."
+  },
+  {
+   "id": "book:ulysses-1914",
+   "title": "Ulysses",
+   "wikidataId": "Q15996608",
+   "synopsis": "Obra de James Joyce publicada originalmente en 1914."
+  },
+  {
+   "id": "book:dune-messiah-1969",
+   "title": "Dune Messiah",
+   "wikidataId": "Q110919481",
+   "synopsis": "Obra de Frank Herbert publicada originalmente en 1969."
+  },
+  {
+   "id": "book:the-god-of-small-things-1997",
+   "title": "The God of Small Things",
+   "wikidataId": "Q124960158",
+   "synopsis": "Obra de Arundhati Roy publicada originalmente en 1997."
+  },
+  {
+   "id": "book:tao-te-ching-1842",
+   "title": "Tao te Ching",
+   "wikidataId": "Q65965749",
+   "synopsis": "Obra de 老子 publicada originalmente en 1842."
+  },
+  {
+   "id": "book:a-knight-of-the-seven-kingdoms-2013",
+   "title": "A Knight of the Seven Kingdoms",
+   "wikidataId": "Q105967821",
+   "synopsis": "Obra de George R. R. Martin publicada originalmente en 2013."
+  },
+  {
+   "id": "book:fantastic-mr-fox-1970",
+   "title": "Fantastic Mr Fox",
+   "wikidataId": "Q126696579",
+   "synopsis": "Obra de Roald Dahl publicada originalmente en 1970."
+  },
+  {
+   "id": "book:purple-hibiscus-2003",
+   "title": "Purple Hibiscus",
+   "wikidataId": "Q126602728",
+   "synopsis": "Obra de Chimamanda Ngozi Adichie publicada originalmente en 2003."
+  },
+  {
+   "id": "book:-1505",
+   "title": "Ἰλιάς",
+   "wikidataId": "Q125521511",
+   "synopsis": "Obra de Ὅμηρος publicada originalmente en 1505."
+  },
+  {
+   "id": "book:the-bad-beginning-1999",
+   "title": "The Bad Beginning",
+   "wikidataId": "Q126698108",
+   "synopsis": "Obra de Lemony Snicket publicada originalmente en 1999."
+  },
+  {
+   "id": "book:nesnesitelna-lehkost-byti-1984",
+   "title": "Nesnesitelná lehkost bytí",
+   "wikidataId": "Q50326877",
+   "synopsis": "Obra de Milan Kundera publicada originalmente en 1984."
+  },
+  {
+   "id": "book:man-som-hatar-kvinnor-2005",
+   "title": "Män som hatar kvinnor",
+   "wikidataId": "Q126697637",
+   "synopsis": "Obra de Stieg Larsson publicada originalmente en 2005."
+  },
+  {
+   "id": "book:the-psychology-of-everyday-things-1988",
+   "title": "The Psychology of Everyday Things",
+   "wikidataId": "Q111719385",
+   "synopsis": "Obra de Donald A. Norman publicada originalmente en 1988."
+  },
+  {
+   "id": "book:hacking-2003",
+   "title": "Hacking",
+   "wikidataId": "Q5637304",
+   "synopsis": "Obra de Jon Erickson publicada originalmente en 2003."
+  },
+  {
+   "id": "book:midnight-sun-2020",
+   "title": "Midnight Sun",
+   "wikidataId": "Q126687997",
+   "synopsis": "Obra de Stephenie Meyer publicada originalmente en 2020."
+  },
+  {
+   "id": "book:-2008",
+   "title": "三体",
+   "wikidataId": "Q54810596",
+   "synopsis": "Obra de 刘慈欣 publicada originalmente en 2008."
+  },
+  {
+   "id": "book:nonviolent-communication-1999",
+   "title": "Nonviolent Communication",
+   "wikidataId": "Q121975064",
+   "synopsis": "Obra de Marshall B. Rosenberg publicada originalmente en 1999."
+  },
+  {
+   "id": "book:a-dance-with-dragons-2008",
+   "title": "A Dance With Dragons",
+   "wikidataId": "Q70469944",
+   "synopsis": "Obra de George R. R. Martin publicada originalmente en 2008."
+  },
+  {
+   "id": "book:red-white-royal-blue-2019",
+   "title": "Red, White & Royal Blue",
+   "wikidataId": "Q123263122",
+   "synopsis": "Obra de Casey McQuiston publicada originalmente en 2019."
+  },
+  {
+   "id": "book:the-call-of-the-wild-1903",
+   "title": "The Call of the Wild",
+   "wikidataId": "Q116220302",
+   "synopsis": "Obra de Jack London publicada originalmente en 1903."
+  },
+  {
+   "id": "book:the-secret-agent-1907",
+   "title": "The Secret Agent",
+   "wikidataId": "Q140172388",
+   "synopsis": "Obra de Joseph Conrad publicada originalmente en 1907."
+  },
+  {
+   "id": "book:circe-2018",
+   "title": "Circe",
+   "wikidataId": "Q102078304",
+   "synopsis": "Obra de Madeline Miller publicada originalmente en 2018."
+  },
+  {
+   "id": "book:the-artist-s-way-1992",
+   "title": "The Artist's Way",
+   "wikidataId": "Q113950679",
+   "synopsis": "Obra de Julia Cameron publicada originalmente en 1992."
+  },
+  {
+   "id": "book:through-the-looking-glass-1865",
+   "title": "Through the Looking-Glass",
+   "wikidataId": "Q78928474",
+   "synopsis": "Obra clásica de clásico escrita por Lewis Carroll."
+  },
+  {
+   "id": "book:walden-1854",
+   "title": "Walden",
+   "wikidataId": "Q140668403",
+   "synopsis": "Obra clásica de clásico escrita por Henry David Thoreau."
+  },
+  {
+   "id": "book:three-men-in-a-boat-to-say-nothing-of-the-dog-1889",
+   "title": "Three Men in a Boat (to say nothing of the dog)",
+   "wikidataId": "Q126500580",
+   "synopsis": "Obra clásica de clásico escrita por Jerome Klapka Jérôme."
+  },
+  {
+   "id": "book:richard-iii-1597",
+   "title": "Richard III",
+   "wikidataId": "Q124958454",
+   "synopsis": "Obra clásica de clásico escrita por William Shakespeare."
+  },
+  {
+   "id": "book:a-portrait-of-the-artist-as-a-young-man-1818",
+   "title": "A Portrait of the Artist as a Young Man",
+   "wikidataId": "Q123127959",
+   "synopsis": "Obra clásica de clásico escrita por James Joyce."
+  },
+  {
+   "id": "book:tess-of-the-d-urbervilles-1707",
+   "title": "Tess of the d'Urbervilles",
+   "wikidataId": "Q123174052",
+   "synopsis": "Obra clásica de clásico escrita por Thomas Hardy."
+  },
+  {
+   "id": "book:decamerone-1516",
+   "title": "Decamerone",
+   "wikidataId": "Q43374361",
+   "synopsis": "Obra clásica de clásico escrita por Giovanni Boccaccio."
+  },
+  {
+   "id": "book:the-pilgrim-s-progress-1678",
+   "title": "The Pilgrim's Progress",
+   "wikidataId": "Q21175970",
+   "synopsis": "Obra clásica de clásico escrita por John Bunyan."
+  },
+  {
+   "id": "book:alice-s-adventures-in-wonderland-through-the-looking-glass-1889",
+   "title": "Alice's Adventures in Wonderland / Through the Looking Glass",
+   "wikidataId": "Q56856641",
+   "synopsis": "Obra clásica de clásico escrita por Lewis Carroll."
+  },
+  {
+   "id": "book:adam-bede-1800",
+   "title": "Adam Bede",
+   "wikidataId": "Q23779408",
+   "synopsis": "Obra clásica de clásico escrita por George Eliot."
+  },
+  {
+   "id": "book:the-pickwick-papers-1800",
+   "title": "The Pickwick Papers",
+   "wikidataId": "Q126687687",
+   "synopsis": "Obra clásica de clásico escrita por Charles Dickens."
+  },
+  {
+   "id": "book:the-jungle-book-1893",
+   "title": "The Jungle Book",
+   "wikidataId": "Q116212148",
+   "synopsis": "Obra clásica de clásico escrita por Rudyard Kipling."
+  },
+  {
+   "id": "book:twelve-years-a-slave-1853",
+   "title": "Twelve years a slave",
+   "wikidataId": "Q23048162",
+   "synopsis": "Obra clásica de historia escrita por Solomon Northup."
+  },
+  {
+   "id": "book:the-merchant-of-venice-1600",
+   "title": "The Merchant of Venice",
+   "wikidataId": "Q125361319",
+   "synopsis": "Obra clásica de historia escrita por William Shakespeare."
+  },
+  {
+   "id": "book:a-connecticut-yankee-in-king-arthur-s-court-1889",
+   "title": "A Connecticut Yankee in King Arthur's Court",
+   "wikidataId": "Q104554190",
+   "synopsis": "Obra clásica de historia escrita por Mark Twain."
+  },
+  {
+   "id": "book:my-bondage-and-my-freedom-1815",
+   "title": "My bondage and my freedom",
+   "wikidataId": "Q63441215",
+   "synopsis": "Obra clásica de historia escrita por Frederick Douglass."
+  },
+  {
+   "id": "book:la-poetica-1479",
+   "title": "La Poetica",
+   "wikidataId": "Q56660480",
+   "synopsis": "Obra clásica de ensayo escrita por Aristotle."
+  },
+  {
+   "id": "book:nicomachean-ethics-1558",
+   "title": "Nicomachean Ethics",
+   "wikidataId": "Q113057935",
+   "synopsis": "Obra clásica de ensayo escrita por Aristotle."
+  },
+  {
+   "id": "book:poetics-1536",
+   "title": "Poetics",
+   "wikidataId": "Q108837858",
+   "synopsis": "Obra clásica de ensayo escrita por Aristotle."
+  },
+  {
+   "id": "book:tractatus-logico-philosophicus-1921",
+   "title": "Tractatus logico-philosophicus",
+   "wikidataId": "Q111256216",
+   "synopsis": "Obra clásica de ensayo escrita por Ludwig Wittgenstein."
+  },
+  {
+   "id": "book:moralia-1500",
+   "title": "Moralia",
+   "wikidataId": "Q56563197",
+   "synopsis": "Obra clásica de ensayo escrita por Plutarch."
+  },
+  {
+   "id": "book:unto-this-last-1860",
+   "title": "Unto This Last",
+   "wikidataId": "Q140954949",
+   "synopsis": "Obra clásica de ensayo escrita por John Ruskin."
+  },
+  {
+   "id": "book:sein-und-zeit-1927",
+   "title": "Sein und Zeit",
+   "wikidataId": "Q66501514",
+   "synopsis": "Obra clásica de ensayo escrita por Martin Heidegger."
+  },
+  {
+   "id": "book:a-treatise-of-human-nature-1739",
+   "title": "A treatise of human nature",
+   "wikidataId": "Q113015918",
+   "synopsis": "Obra clásica de ensayo escrita por David Hume."
+  },
+  {
+   "id": "book:dieu-et-l-etat-1882",
+   "title": "Dieu et l'Etat",
+   "wikidataId": "Q139890444",
+   "synopsis": "Obra clásica de ensayo escrita por Mikhail Aleksandrovich Bakunin."
+  },
+  {
+   "id": "book:r-u-r-and-the-insect-play-1920",
+   "title": "R.U.R. and The insect play",
+   "wikidataId": "Q114596715",
+   "synopsis": "Obra clásica de ciencia ficción escrita por Karel Čapek."
+  },
+  {
+   "id": "book:the-martian-chronicles-1950",
+   "title": "The Martian Chronicles",
+   "wikidataId": "Q126698142",
+   "synopsis": "Obra clásica de ciencia ficción escrita por Ray Bradbury."
+  },
+  {
+   "id": "book:the-restaurant-at-the-end-of-the-universe-1980",
+   "title": "The Restaurant at the End of the Universe",
+   "wikidataId": "Q117025247",
+   "synopsis": "Obra clásica de ciencia ficción escrita por Douglas Adams."
+  },
+  {
+   "id": "book:the-left-hand-of-darkness-1969",
+   "title": "The Left Hand of Darkness",
+   "wikidataId": "Q106508710",
+   "synopsis": "Obra clásica de ciencia ficción escrita por Ursula K. Le Guin."
+  },
+  {
+   "id": "book:do-androids-dream-of-electric-sheep-1968",
+   "title": "Do Androids Dream of Electric Sheep?",
+   "wikidataId": "Q113378460",
+   "synopsis": "Obra clásica de ciencia ficción escrita por Philip K. Dick."
+  },
+  {
+   "id": "book:the-blind-assassin-2000",
+   "title": "The Blind Assassin",
+   "wikidataId": "Q58879506",
+   "synopsis": "Obra clásica de ciencia ficción escrita por Margaret Atwood."
+  },
+  {
+   "id": "book:the-amber-spyglass-1999",
+   "title": "The Amber Spyglass",
+   "wikidataId": "Q85522562",
+   "synopsis": "Obra clásica de ciencia ficción escrita por Philip Pullman."
+  },
+  {
+   "id": "book:cat-s-cradle-1963",
+   "title": "Cat's Cradle",
+   "wikidataId": "Q70548832",
+   "synopsis": "Obra clásica de ciencia ficción escrita por Kurt Vonnegut."
+  },
+  {
+   "id": "book:foundation-and-empire-1945",
+   "title": "Foundation and Empire",
+   "wikidataId": "Q126698129",
+   "synopsis": "Obra clásica de ciencia ficción escrita por Isaac Asimov."
+  },
+  {
+   "id": "book:childhood-s-end-1952",
+   "title": "Childhood’s End",
+   "wikidataId": "Q140837042",
+   "synopsis": "Obra clásica de ciencia ficción escrita por Arthur C. Clarke."
+  },
+  {
+   "id": "book:stranger-in-a-strange-land-1961",
+   "title": "Stranger in a Strange Land",
+   "wikidataId": "Q123684511",
+   "synopsis": "Obra clásica de ciencia ficción escrita por Robert A. Heinlein."
+  },
+  {
+   "id": "book:firestarter-1980",
+   "title": "Firestarter",
+   "wikidataId": "Q126698123",
+   "synopsis": "Obra clásica de ciencia ficción escrita por Stephen King."
+  },
+  {
+   "id": "book:children-of-dune-1976",
+   "title": "Children of Dune",
+   "wikidataId": "Q117841812",
+   "synopsis": "Obra clásica de ciencia ficción escrita por Frank Herbert."
+  },
+  {
+   "id": "book:white-fang-1905",
+   "title": "White Fang",
+   "wikidataId": "Q116212226",
+   "synopsis": "Obra clásica de thriller escrita por Jack London."
+  },
+  {
+   "id": "book:la-chica-de-nieve-2020",
+   "title": "La chica de nieve",
+   "wikidataId": "Q116392244",
+   "synopsis": "La chica de nieve (2020), novela de Javier Castillo."
+  },
+  {
+   "id": "book:el-dia-que-se-perdio-la-cordura-2017",
+   "title": "El día que se perdió la cordura",
+   "wikidataId": "Q116680459",
+   "synopsis": "El día que se perdió la cordura (2017), novela de Javier Castillo."
+  },
+  {
+   "id": "book:el-corazon-helado-2007",
+   "title": "El corazón helado",
+   "wikidataId": "Q5824479",
+   "synopsis": "El corazón helado (2007), novela de Almudena Grandes."
+  },
+  {
+   "id": "book:roma-soy-yo-2022",
+   "title": "Roma soy yo",
+   "wikidataId": "Q111660395",
+   "synopsis": "Roma soy yo (2022), novela de Santiago Posteguillo."
+  },
+  {
+   "id": "book:africanus-el-hijo-del-consul-2006",
+   "title": "Africanus: El hijo del cónsul",
+   "wikidataId": "Q5659728",
+   "synopsis": "Africanus: El hijo del cónsul (2006), novela de Santiago Posteguillo."
+  },
+  {
+   "id": "book:la-novia-gitana-2018",
+   "title": "La novia gitana",
+   "wikidataId": "Q88280016",
+   "synopsis": "La novia gitana (2018), novela de Carmen Mola."
+  },
+  {
+   "id": "book:memorias-de-idhun-la-resistencia-2004",
+   "title": "Memorias de Idhún: La Resistencia",
+   "wikidataId": "Q3305541",
+   "synopsis": "Memorias de Idhún: La Resistencia (2004), novela de Laura Gallego."
+  },
+  {
+   "id": "book:el-capitan-alatriste-1996",
+   "title": "El capitán Alatriste",
+   "wikidataId": "Q2113337",
+   "synopsis": "El capitán Alatriste (1996), novela de Arturo Pérez-Reverte."
+  },
+  {
+   "id": "book:la-reina-del-sur-2002",
+   "title": "La reina del sur",
+   "wikidataId": "Q1645229",
+   "synopsis": "La reina del sur (2002), novela de Arturo Pérez-Reverte."
+  },
+  {
+   "id": "book:la-tabla-de-flandes-1990",
+   "title": "La tabla de Flandes",
+   "wikidataId": "Q2632289",
+   "synopsis": "La tabla de Flandes (1990), novela de Arturo Pérez-Reverte."
+  },
+  {
+   "id": "book:el-legado-en-los-huesos-2013",
+   "title": "El legado en los huesos",
+   "wikidataId": "Q18644304",
+   "synopsis": "Carlos Eugenio Lavín García-Huidobro es un ingeniero comercial y empresario chileno. En 20"
+  },
+  {
+   "id": "book:un-mundo-sin-fin-2007",
+   "title": "Un mundo sin fin",
+   "wikidataId": "Q1102283",
+   "synopsis": "Timothy A. \"Tim\" Boetsch es un artista marcial mixto estadounidense que actualmente compit"
+  },
+  {
+   "id": "book:el-juego-del-angel-2008",
+   "title": "El juego del ángel",
+   "wikidataId": "Q1192323",
+   "synopsis": "El juego del ángel (2008), novela de Carlos Ruiz Zafón."
+  },
+  {
+   "id": "book:el-chico-que-dibujaba-constelaciones-2018",
+   "title": "El chico que dibujaba constelaciones",
+   "wikidataId": "Q117070104",
+   "synopsis": "El chico que dibujaba constelaciones (2018), novela de Alice Kellen."
+  },
+  {
+   "id": "book:sin-noticias-de-gurb-1991",
+   "title": "Sin noticias de Gurb",
+   "wikidataId": "Q1765175",
+   "synopsis": "Lights Out es un juego electrónico de rompecabezas desarrollado por Tiger Electronics y co"
+  }
+ ],
+ "boardgame": [
+  {
+   "id": "boardgame:concordia-2013",
+   "title": "Concordia",
+   "wikidataId": "Q52578",
+   "synopsis": "Concordia, formalmente llamada San Antonio de Padua de la Concordia, es una ciudad y munic"
+  },
+  {
+   "id": "boardgame:root-2018",
+   "title": "Root",
+   "wikidataId": "Q947171",
+   "synopsis": "El sistema ROOT es un framework para el desarrollo de aplicaciones de análisis de datos ci"
+  },
+  {
+   "id": "boardgame:orleans-2014",
+   "title": "Orléans",
+   "wikidataId": "Q6548",
+   "synopsis": "Orleans es una ciudad francesa, capital administrativa de la región de Centro-Valle de Loi"
+  },
+  {
+   "id": "boardgame:barrage-2019",
+   "title": "Barrage",
+   "wikidataId": "Q12323",
+   "synopsis": "Una presa o represa es una barrera construida sobre un río o arroyo, cuya finalidad es emb"
+  },
+  {
+   "id": "boardgame:puerto-rico-2002",
+   "title": "Puerto Rico",
+   "wikidataId": "Q1183",
+   "synopsis": "Puerto Rico, oficialmente el Estado Libre Asociado de Puerto Rico, es uno de los catorce t"
+  },
+  {
+   "id": "boardgame:anachrony-2017",
+   "title": "Anachrony",
+   "wikidataId": "Q5674254",
+   "synopsis": "En teoría literaria se llama anacronía a la alteración del orden cronológico de los suceso"
+  },
+  {
+   "id": "boardgame:obsession-2018",
+   "title": "Obsession",
+   "wikidataId": "Q3880630",
+   "synopsis": "álbum de Shayne Ward"
+  },
+  {
+   "id": "boardgame:lisboa-2017",
+   "title": "Lisboa",
+   "wikidataId": "Q597",
+   "synopsis": "Lisboa es la capital y la ciudad más poblada de Portugal.Está situada en la desembocadura "
+  },
+  {
+   "id": "boardgame:voidfall-2023",
+   "title": "Voidfall",
+   "wikidataId": "Q125810534",
+   "synopsis": "For centuries, the Novarchs, descendants of the royal House of Novarchon, have ruled with "
+  },
+  {
+   "id": "boardgame:maracaibo-2019",
+   "title": "Maracaibo",
+   "wikidataId": "Q171632",
+   "synopsis": "Maracaibo es una ciudad venezolana capital del Estado Zulia ubicada en el noroeste de Vene"
+  },
+  {
+   "id": "boardgame:arcs-2024",
+   "title": "Arcs",
+   "wikidataId": "Q2617855",
+   "synopsis": "Arc System Works es una desarrolladora y distribuidora de videojuegos japonesa, especialme"
+  },
+  {
+   "id": "boardgame:scout-2019",
+   "title": "SCOUT",
+   "wikidataId": "Q56363333",
+   "synopsis": "SCOUT is a ladder-climbing game in which cards have two potential values, players may not "
+  },
+  {
+   "id": "boardgame:ra-1999",
+   "title": "Ra",
+   "wikidataId": "Q1128",
+   "synopsis": "El radio es un elemento químico de la tabla periódica. Su símbolo es Ra y su número atómic"
+  },
+  {
+   "id": "boardgame:beyond-the-sun-2020",
+   "title": "Beyond the Sun",
+   "wikidataId": "Q4035076",
+   "synopsis": "Beyond the Sun es el undécimo álbum de estudio del cantautor estadounidense Chris Isaak. F"
+  },
+  {
+   "id": "boardgame:the-search-for-planet-x-2020",
+   "title": "The Search for Planet X",
+   "wikidataId": "Q90235622",
+   "synopsis": "artículo científico publicado en 2016"
+  },
+  {
+   "id": "boardgame:inis-2016",
+   "title": "Inis",
+   "wikidataId": "Q5972831",
+   "synopsis": "iNiS Corporation  es un estudio desarrollador de videojuegos japonés que se especializa en"
+  },
+  {
+   "id": "boardgame:carnegie-2022",
+   "title": "Carnegie",
+   "wikidataId": "Q31892236",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "boardgame:rising-sun-2018",
+   "title": "Rising Sun",
+   "wikidataId": "Q1921486",
+   "synopsis": "Rising Sun es una ciudad ubicada en el condado de Ohio en el estado estadounidense de Indi"
+  },
+  {
+   "id": "boardgame:yokohama-2016",
+   "title": "Yokohama",
+   "wikidataId": "Q38283",
+   "synopsis": "Yokohama  es una ciudad japonesa ubicada en la región de Kantō, isla de Honshū. Es la capi"
+  },
+  {
+   "id": "boardgame:iberia-2016",
+   "title": "Iberia",
+   "wikidataId": "Q12837",
+   "synopsis": "La península ibérica, conocida en la Antigüedad como Iberia por los griegos, es una peníns"
+  },
+  {
+   "id": "boardgame:targi-2012",
+   "title": "Targi",
+   "wikidataId": "Q57305",
+   "synopsis": "Una feria de muestras es un encuentro realizado en forma anual generalmente de una semana "
+  },
+  {
+   "id": "boardgame:parks-2019",
+   "title": "Parks",
+   "wikidataId": "Q27237735",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "boardgame:war-chest-2018",
+   "title": "War Chest",
+   "wikidataId": "Q1788785",
+   "synopsis": "War Chest is an all-new bag-building war game! At the start of the game, raise your banner"
+  },
+  {
+   "id": "boardgame:vantage-2025",
+   "title": "Vantage",
+   "wikidataId": "Q1514736",
+   "synopsis": "Vantage es un lugar designado por el censo ubicado en el condado de Kittitas en el estado "
+  },
+  {
+   "id": "boardgame:it-s-a-wonderful-world-2019",
+   "title": "It's a Wonderful World",
+   "wikidataId": "Q1079967",
+   "synopsis": "álbum de Mr.Children"
+  },
+  {
+   "id": "boardgame:watergate-2019",
+   "title": "Watergate",
+   "wikidataId": "Q42761",
+   "synopsis": "El escándalo Watergate fue un escándalo político que tuvo lugar en los Estados Unidos a pr"
+  },
+  {
+   "id": "boardgame:istanbul-2014",
+   "title": "Istanbul",
+   "wikidataId": "Q406",
+   "synopsis": "Estambul es la ciudad más poblada de Turquía y el centro histórico, cultural y económico d"
+  },
+  {
+   "id": "boardgame:praga-caput-regni-2020",
+   "title": "Praga Caput Regni",
+   "wikidataId": "Q1085",
+   "synopsis": "Praga es la capital de la República Checa y de la región de Bohemia. Situada a orillas del"
+  },
+  {
+   "id": "boardgame:kemet-2012",
+   "title": "Kemet",
+   "wikidataId": "Q11768",
+   "synopsis": "El Antiguo Egipto fue una civilización de la Antigüedad que se originó a lo largo del cauc"
+  },
+  {
+   "id": "boardgame:earth-2023",
+   "title": "Earth",
+   "wikidataId": "Q2",
+   "synopsis": "La Tierra es el planeta del sistema solar donde habita la humanidad y que orbita alrededor"
+  },
+  {
+   "id": "boardgame:speakeasy-2025",
+   "title": "Speakeasy",
+   "wikidataId": "Q11894287",
+   "synopsis": "Speakeasy will transport you to the roaring 1920s during the era of Prohibition. Manhattan"
+  },
+  {
+   "id": "boardgame:meadow-2021",
+   "title": "Meadow",
+   "wikidataId": "Q22791145",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "boardgame:modern-art-1992",
+   "title": "Modern Art",
+   "wikidataId": "Q3317861",
+   "synopsis": "álbum de Art Farmer"
+  },
+  {
+   "id": "boardgame:paleo-2020",
+   "title": "Paleo",
+   "wikidataId": "Q3361733",
+   "synopsis": "revista científica"
+  },
+  {
+   "id": "boardgame:horrified-2019",
+   "title": "Horrified",
+   "wikidataId": "Q3140723",
+   "synopsis": "Imagine living in a place so wretched that it's not plagued by one, two, or even three mon"
+  },
+  {
+   "id": "boardgame:village-2011",
+   "title": "Village",
+   "wikidataId": "Q532",
+   "synopsis": "asentamiento más grande que una aldea pero más pequeño que una villa"
+  },
+  {
+   "id": "boardgame:nidavellir-2020",
+   "title": "Nidavellir",
+   "wikidataId": "Q1465128",
+   "synopsis": "De acuerdo con el Völuspá, los Nidavellir son un lugar habitado por los enanos en la mitol"
+  },
+  {
+   "id": "boardgame:ticket-to-ride-2004",
+   "title": "Ticket to Ride",
+   "wikidataId": "Q60608326",
+   "synopsis": "With elegantly simple gameplay, Ticket to Ride can be learned in under 15 minutes. Players"
+  },
+  {
+   "id": "boardgame:coimbra-2018",
+   "title": "Coimbra",
+   "wikidataId": "Q45412",
+   "synopsis": "Coímbra es una ciudad portuguesa, capital del distrito homónimo, en Beira Litoral, situada"
+  },
+  {
+   "id": "boardgame:calico-2020",
+   "title": "Calico",
+   "wikidataId": "Q1132695",
+   "synopsis": "El calicó, a veces llamado impropiamente percal, es un tejido de algodón, realizado con li"
+  },
+  {
+   "id": "boardgame:nations-2013",
+   "title": "Nations",
+   "wikidataId": "Q26213387",
+   "synopsis": "From the humble beginnings of civilization through the historical ages of progress, mankin"
+  },
+  {
+   "id": "boardgame:samurai-1998",
+   "title": "Samurai",
+   "wikidataId": "Q38142",
+   "synopsis": "Los samuráis  eran hombres que pertenecían a la aristocracia guerrera del Japón preindustr"
+  },
+  {
+   "id": "boardgame:dinosaur-island-2017",
+   "title": "Dinosaur Island",
+   "wikidataId": "Q3595085",
+   "synopsis": "película de 2002 dirigida por Will Meugniot"
+  },
+  {
+   "id": "boardgame:unconscious-mind-2024",
+   "title": "Unconscious Mind",
+   "wikidataId": "Q192105",
+   "synopsis": "En el lenguaje corriente, el término inconsciente se utiliza como adjetivo para calificar "
+  },
+  {
+   "id": "boardgame:indonesia-2005",
+   "title": "Indonesia",
+   "wikidataId": "Q252",
+   "synopsis": "Indonesia, oficialmente la República de Indonesia, es un país ubicado al sudeste de Asia y"
+  },
+  {
+   "id": "boardgame:monikers-2015",
+   "title": "Monikers",
+   "wikidataId": "Q6900243",
+   "synopsis": "Monikers is a party game based on the public domain game Celebrities, where players take t"
+  },
+  {
+   "id": "boardgame:tapestry-2019",
+   "title": "Tapestry",
+   "wikidataId": "Q411032",
+   "synopsis": "álbum de estudio de 1971 de Carole King"
+  },
+  {
+   "id": "boardgame:vindication-2018",
+   "title": "Vindication",
+   "wikidataId": "Q7932349",
+   "synopsis": "Vindication (formerly Epoch: The Awakening) is a highly strategic, fantasy-based tabletop "
+  },
+  {
+   "id": "boardgame:hallertau-2020",
+   "title": "Hallertau",
+   "wikidataId": "Q707665",
+   "synopsis": "Hallertau es una región de Baviera, en Alemania. Es la zona de plantaciones de lúpulo más "
+  },
+  {
+   "id": "boardgame:santorini-2016",
+   "title": "Santorini",
+   "wikidataId": "Q129296",
+   "synopsis": "Santorín, Santorini que es el nombre que aparece en los mapas; o Tera, Thera o Thira que e"
+  },
+  {
+   "id": "boardgame:goa-2004",
+   "title": "Goa",
+   "wikidataId": "Q28018111",
+   "synopsis": "proporciona anotaciones de ontología génica de alta calidad para proteínas en UniProtKB"
+  },
+  {
+   "id": "boardgame:shogun-2006",
+   "title": "Shogun",
+   "wikidataId": "Q131767",
+   "synopsis": "En la historia de Japón, el término shōgun , hispanizado como sogúno shogún, era un título"
+  },
+  {
+   "id": "boardgame:rebirth-2024",
+   "title": "Rebirth",
+   "wikidataId": "Q754161",
+   "synopsis": "Rebirth—en español: Renacimiento— es el cuarto álbum de estudio de la cantante estadounide"
+  },
+  {
+   "id": "boardgame:battle-line-2000",
+   "title": "Battle Line",
+   "wikidataId": "Q11327917",
+   "synopsis": "Two opponents face off across a 'battle line' and attempt to win the battle by taking 5 of"
+  },
+  {
+   "id": "boardgame:oath-2021",
+   "title": "Oath",
+   "wikidataId": "Q552982",
+   "synopsis": "«Oath» —en español: «Juramento»— es una canción de la cantante inglesa Cher Lloyd, con la "
+  },
+  {
+   "id": "boardgame:bora-bora-2013",
+   "title": "Bora Bora",
+   "wikidataId": "Q183113",
+   "synopsis": "atolón de la Polinesia francesa"
+  },
+  {
+   "id": "boardgame:rococo-2013",
+   "title": "Rococo",
+   "wikidataId": "Q122960",
+   "synopsis": "El Rococó es un movimiento artístico nacido en Francia, que se desarrolló de una forma pro"
+  },
+  {
+   "id": "boardgame:steam-2009",
+   "title": "Steam",
+   "wikidataId": "Q337535",
+   "synopsis": "Steam es una plataforma de distribución digital de videojuegos desarrollada por Valve Corp"
+  },
+  {
+   "id": "boardgame:the-gang-2024",
+   "title": "The Gang",
+   "wikidataId": "Q3758082",
+   "synopsis": "Round up your gang and get ready to pull off a series of bank heists using the power of po"
+  },
+  {
+   "id": "boardgame:seasons-2012",
+   "title": "Seasons",
+   "wikidataId": "Q1539532",
+   "synopsis": "The greatest sorcerers of the kingdom have gathered at the heart of the Argos forest, wher"
+  },
+  {
+   "id": "boardgame:dead-reckoning-2022",
+   "title": "Dead Reckoning",
+   "wikidataId": "Q3933336",
+   "synopsis": "libro de Charlaine Harris"
+  },
+  {
+   "id": "boardgame:navegador-2010",
+   "title": "Navegador",
+   "wikidataId": "Q6368",
+   "synopsis": "Un navegador web o explorador de internet es un software, aplicación o programa que permit"
+  },
+  {
+   "id": "boardgame:innovation-2010",
+   "title": "Innovation",
+   "wikidataId": "Q15817027",
+   "synopsis": "revista científica"
+  },
+  {
+   "id": "boardgame:expeditions-2023",
+   "title": "Expeditions",
+   "wikidataId": "Q29580145",
+   "synopsis": "The sequel to Scythe sends players on a new adventure into Siberia, where a massive meteor"
+  },
+  {
+   "id": "boardgame:imperial-2006",
+   "title": "Imperial",
+   "wikidataId": "Q189022",
+   "synopsis": "Imperial College London —en español, Universidad Imperial de Londres—, oficialmente Imperi"
+  },
+  {
+   "id": "boardgame:chinatown-1999",
+   "title": "Chinatown",
+   "wikidataId": "Q644987",
+   "synopsis": "Chinatown es una película estadounidense de cine negro-dramática de 1974 dirigida por Roma"
+  },
+  {
+   "id": "boardgame:nusfjord-2017",
+   "title": "Nusfjord",
+   "wikidataId": "Q1783413",
+   "synopsis": "Nusfjord is a tranquil fishing village in the Lofoten archipelago in northern Norway. Fift"
+  },
+  {
+   "id": "boardgame:bruges-2013",
+   "title": "Bruges",
+   "wikidataId": "Q327025",
+   "synopsis": " Bruges  es una población y comuna francesa, situada en la región de Aquitania, departamen"
+  },
+  {
+   "id": "boardgame:small-world-2009",
+   "title": "Small World",
+   "wikidataId": "Q111017485",
+   "synopsis": "In Small World, players vie for conquest and control of a world that is simply too small t"
+  },
+  {
+   "id": "boardgame:furnace-2020",
+   "title": "Furnace",
+   "wikidataId": "Q37487721",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "boardgame:bonfire-2020",
+   "title": "Bonfire",
+   "wikidataId": "Q682299",
+   "synopsis": "Bonfire es una banda alemana de heavy metal, fundada en 1972."
+  },
+  {
+   "id": "boardgame:above-and-below-2015",
+   "title": "Above and Below",
+   "wikidataId": "Q21608733",
+   "synopsis": "película de 2015 dirigida por Nicolas Steiner"
+  },
+  {
+   "id": "boardgame:maria-2009",
+   "title": "Maria",
+   "wikidataId": "Q325872",
+   "synopsis": "nombre femenino (Maria)"
+  },
+  {
+   "id": "boardgame:arboretum-2015",
+   "title": "Arboretum",
+   "wikidataId": "Q272231",
+   "synopsis": "Un arboreto o arboretum es un jardín botánico dedicado primordialmente a árboles y otras p"
+  },
+  {
+   "id": "boardgame:bus-1999",
+   "title": "Bus",
+   "wikidataId": "Q5638",
+   "synopsis": "Un autobús, bus, ruta, camión, colectivo, flota, bondi, guagua, micro, villavesa u ómnibus"
+  },
+  {
+   "id": "boardgame:akropolis-2022",
+   "title": "Akropolis",
+   "wikidataId": "Q41371493",
+   "synopsis": "The most talented architects in ancient Greece stand ready to achieve this goal. Build hou"
+  },
+  {
+   "id": "boardgame:san-juan-2004",
+   "title": "San Juan",
+   "wikidataId": "Q44241",
+   "synopsis": "San Juan, o ciudad de San Juan, es un área urbana o área metropolitana de Argentina, capit"
+  },
+  {
+   "id": "boardgame:antiquity-2004",
+   "title": "Antiquity",
+   "wikidataId": "Q4775205",
+   "synopsis": "Antiquity es una revista académica y de investigación dedicada al tema de la arqueología. "
+  },
+  {
+   "id": "boardgame:moon-colony-bloodbath-2025",
+   "title": "Moon Colony Bloodbath",
+   "wikidataId": "Q6907456",
+   "synopsis": "Cities on the moon! This will be humanity's crowning achievement. At last, no longer bound"
+  },
+  {
+   "id": "boardgame:pan-am-2020",
+   "title": "Pan Am",
+   "wikidataId": "Q8681",
+   "synopsis": "Pan American World Airways, más conocida como PanAm, fue la aerolínea internacional más im"
+  },
+  {
+   "id": "boardgame:carpe-diem-2018",
+   "title": "Carpe Diem",
+   "wikidataId": "Q16536205",
+   "synopsis": "álbum de Keen'V"
+  },
+  {
+   "id": "boardgame:ezra-and-nehemiah-2024",
+   "title": "Ezra and Nehemiah",
+   "wikidataId": "Q117237916",
+   "synopsis": "In his first year as king of Persia, Cyrus the Great issued a decree in writing to the Isr"
+  },
+  {
+   "id": "boardgame:ghost-stories-2008",
+   "title": "Ghost Stories",
+   "wikidataId": "Q15885808",
+   "synopsis": "Ghost Stories es el sexto álbum de estudio de la banda británica Coldplay. Fue publicado e"
+  },
+  {
+   "id": "boardgame:the-resistance-2009",
+   "title": "The Resistance",
+   "wikidataId": "Q205168",
+   "synopsis": "The Resistance —en español: La resistencia— es el nombre del quinto álbum de estudio de la"
+  },
+  {
+   "id": "boardgame:honey-buzz-2020",
+   "title": "Honey Buzz",
+   "wikidataId": "Q170466",
+   "synopsis": "El abejero europeo es una especie de ave accipitriforme de la familia Accipitridae; habita"
+  },
+  {
+   "id": "boardgame:notre-dame-2007",
+   "title": "Notre Dame",
+   "wikidataId": "Q746071",
+   "synopsis": "Notre Dame es un lugar designado por el censo al norte de South Bend, en el condado de St."
+  },
+  {
+   "id": "boardgame:trio-2021",
+   "title": "Trio",
+   "wikidataId": "Q252401",
+   "synopsis": "Trio es un álbum de estudio que lanzaron en 1987 tres de las más exitosas cantantes de mús"
+  },
+  {
+   "id": "boardgame:iki-2015",
+   "title": "IKI",
+   "wikidataId": "Q861519",
+   "synopsis": "Iki  es una ciudad en la isla de Iki, en la prefectura de Nagasaki, Japón. En junio de 201"
+  },
+  {
+   "id": "boardgame:newton-2018",
+   "title": "Newton",
+   "wikidataId": "Q19828994",
+   "synopsis": "nombre masculino"
+  },
+  {
+   "id": "boardgame:knarr-2023",
+   "title": "Knarr",
+   "wikidataId": "Q1163179",
+   "synopsis": "Un knarr es un tipo de barco mercante nórdico usado por los vikingos. El knarr es del mism"
+  },
+  {
+   "id": "boardgame:altiplano-2017",
+   "title": "Altiplano",
+   "wikidataId": "Q878223",
+   "synopsis": "Un altiplano o altiplanicie también es conocido como meseta del tipo intermontano elevado,"
+  },
+  {
+   "id": "boardgame:saint-petersburg-2004",
+   "title": "Saint Petersburg",
+   "wikidataId": "Q656",
+   "synopsis": "San Petersburgo, anteriormente conocida como Leningrado (Ленинград) y Petrogrado (Петрогра"
+  },
+  {
+   "id": "boardgame:zenith-2025",
+   "title": "Zenith",
+   "wikidataId": "Q25414946",
+   "synopsis": "Zenith es el sexto álbum de estudio de la artista sueca de synth-pop Molly Nilsson, editad"
+  },
+  {
+   "id": "boardgame:skull-2011",
+   "title": "Skull",
+   "wikidataId": "Q12603651",
+   "synopsis": "cantante surcoreano"
+  },
+  {
+   "id": "boardgame:the-loop-2020",
+   "title": "The LOOP",
+   "wikidataId": "Q2225459",
+   "synopsis": "The Loop es un circuito ferroviario elevado que constituye la columna vertebral del Metro "
+  },
+  {
+   "id": "boardgame:cubitos-2021",
+   "title": "Cubitos",
+   "wikidataId": "Q21029371",
+   "synopsis": "género de moluscos"
+  },
+  {
+   "id": "boardgame:endeavor-2009",
+   "title": "Endeavor",
+   "wikidataId": "Q1340293",
+   "synopsis": "organización internacional sin fines de lucro"
+  },
+  {
+   "id": "boardgame:the-great-wall-2021",
+   "title": "The Great Wall",
+   "wikidataId": "Q19587336",
+   "synopsis": "La gran muralla es una película chino-estadounidense de fantasía, acción y aventuras dirig"
+  },
+  {
+   "id": "boardgame:pitchcar-1995",
+   "title": "PitchCar",
+   "wikidataId": "Q7854871",
+   "synopsis": "This game entry refers to two nearly identical games that are not compatible with one anot"
+  },
+  {
+   "id": "boardgame:high-society-1995",
+   "title": "High Society",
+   "wikidataId": "Q2970847",
+   "synopsis": "álbum de High Contrast"
+  },
+  {
+   "id": "boardgame:wavelength-2019",
+   "title": "Wavelength",
+   "wikidataId": "Q5221609",
+   "synopsis": "Wavelength es el décimo álbum de estudio del músico norirlandés Van Morrison, publicado po"
+  },
+  {
+   "id": "boardgame:regicide-2020",
+   "title": "Regicide",
+   "wikidataId": "Q1528789",
+   "synopsis": "Regicide es una banda de gothic metal formada en Baja Sajonia, Alemania."
+  },
+  {
+   "id": "boardgame:santa-maria-2017",
+   "title": "Santa Maria",
+   "wikidataId": "Q345",
+   "synopsis": "María fue una mujer judía, esposa de José y madre de Jesús de Nazaret según diversos pasaj"
+  },
+  {
+   "id": "boardgame:fresco-2010",
+   "title": "Fresco",
+   "wikidataId": "Q134194",
+   "synopsis": "Un fresco es una pintura realizada sobre una superficie cubierta con dos capas de mortero "
+  },
+  {
+   "id": "boardgame:trekking-through-history-2022",
+   "title": "Trekking Through History",
+   "wikidataId": "Q136284877",
+   "synopsis": "libro editado publicado por Columbia University Press (2002)"
+  },
+  {
+   "id": "boardgame:barcelona-2023",
+   "title": "Barcelona",
+   "wikidataId": "Q1492",
+   "synopsis": "Barcelona es una ciudad de España, capital de Cataluña, de la provincia de Barcelona y de "
+  },
+  {
+   "id": "boardgame:nippon-2015",
+   "title": "Nippon",
+   "wikidataId": "Q17",
+   "synopsis": "Japón es un país insular en Asia Oriental ubicado en el noroeste del océano Pacífico. Limi"
+  },
+  {
+   "id": "boardgame:mandala-2019",
+   "title": "Mandala",
+   "wikidataId": "Q37184856",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "boardgame:clash-of-cultures-2012",
+   "title": "Clash of Cultures",
+   "wikidataId": "Q17658761",
+   "synopsis": "artículo de Wikinoticias"
+  },
+  {
+   "id": "boardgame:aquatica-2019",
+   "title": "Aquatica",
+   "wikidataId": "Q21445993",
+   "synopsis": "género de insectos"
+  },
+  {
+   "id": "boardgame:hadara-2019",
+   "title": "Hadara",
+   "wikidataId": "Q2709331",
+   "synopsis": "Hadara carries you off into the world of cultures and countries of this earth. Over three "
+  },
+  {
+   "id": "boardgame:lancaster-2011",
+   "title": "Lancaster",
+   "wikidataId": "Q168052",
+   "synopsis": "distrito con estatus de ciudad en Lancashire, Inglaterra"
+  },
+  {
+   "id": "boardgame:claustrophobia-2009",
+   "title": "Claustrophobia",
+   "wikidataId": "Q58023202",
+   "synopsis": "Claustrophobia is a miniatures-based survival game set within the universe of Hell Dorado."
+  },
+  {
+   "id": "boardgame:glen-more-2010",
+   "title": "Glen More",
+   "wikidataId": "Q403657",
+   "synopsis": "El Great Glen o Gran Glen, también conocido como Glen Albyn, Glen More o depresión de Glen"
+  },
+  {
+   "id": "boardgame:friday-2011",
+   "title": "Friday",
+   "wikidataId": "Q130",
+   "synopsis": "El viernes es el quinto día de la semana según el calendario gregoriano, y sexto para las "
+  },
+  {
+   "id": "boardgame:canvas-2021",
+   "title": "Canvas",
+   "wikidataId": "Q1033960",
+   "synopsis": "VRT Canvas es un canal de televisión belga producido por el ente público de radiodifusión "
+  },
+  {
+   "id": "boardgame:alhambra-2003",
+   "title": "Alhambra",
+   "wikidataId": "Q47476",
+   "synopsis": "La Alhambra es un complejo monumental sobre una ciudad palatina andalusí situada en Granad"
+  },
+  {
+   "id": "boardgame:deus-2014",
+   "title": "Deus",
+   "wikidataId": "Q219944",
+   "synopsis": "Deus es un grupo de música, de indie rock y art rock, de Amberes, Bélgica, formado actualm"
+  },
+  {
+   "id": "boardgame:lacrimosa-2022",
+   "title": "Lacrimosa",
+   "wikidataId": "Q625529",
+   "synopsis": "Lacrimosa es una banda alemana de metal gótico establecida en Suiza, fundada en 1990 por T"
+  },
+  {
+   "id": "boardgame:amerigo-2013",
+   "title": "Amerigo",
+   "wikidataId": "Q18206201",
+   "synopsis": "nombre masculino"
+  },
+  {
+   "id": "boardgame:junk-art-2016",
+   "title": "Junk Art",
+   "wikidataId": "Q1713618",
+   "synopsis": "In Junk Art, players are presented with junk from which they must create art. Thus the nam"
+  },
+  {
+   "id": "boardgame:qe-2019",
+   "title": "QE",
+   "wikidataId": "Q874727",
+   "synopsis": "La expansión cuantitativa (EC) en menor medida, flexibilización cuantitativa (FC) es una h"
+  },
+  {
+   "id": "boardgame:las-vegas-2012",
+   "title": "Las Vegas",
+   "wikidataId": "Q23768",
+   "synopsis": "Las Vegas es la ciudad más poblada del estado de Nevada, en Estados Unidos. Ubicada en el "
+  },
+  {
+   "id": "boardgame:port-royal-2014",
+   "title": "Port Royal",
+   "wikidataId": "Q926275",
+   "synopsis": "Port Royal es una localidad situada en el condado de Beaufort, Carolina del Sur, Estados U"
+  },
+  {
+   "id": "boardgame:oceans-2020",
+   "title": "Oceans",
+   "wikidataId": "Q18162891",
+   "synopsis": "Oceans (Where Feet May Fail) (en español, «Océanos (donde los pies pueden fallar)») es una"
+  },
+  {
+   "id": "boardgame:raptor-2015",
+   "title": "Raptor",
+   "wikidataId": "Q683300",
+   "synopsis": "Raptor es una montaña rusa que se encuentra en el parque de atracciones de Cedar Point, Oh"
+  },
+  {
+   "id": "boardgame:jamaica-2007",
+   "title": "Jamaica",
+   "wikidataId": "Q766",
+   "synopsis": "Jamaica es uno de los trece países que forman la América insular, Antillas o islas del mar"
+  },
+  {
+   "id": "boardgame:elysium-2015",
+   "title": "Elysium",
+   "wikidataId": "Q5368575",
+   "synopsis": "álbum de The Velvet Teen"
+  },
+  {
+   "id": "boardgame:vikings-2007",
+   "title": "Vikings",
+   "wikidataId": "Q12009789",
+   "synopsis": "Vikings is a fast economic game. Despite the nominal \"Viking\" theme, no actual exploration"
+  },
+  {
+   "id": "boardgame:my-father-s-work-2022",
+   "title": "My Father's Work",
+   "wikidataId": "Q119783406",
+   "synopsis": "The walls were lined with iron shelves, each metal slat overfilled with glass jars contain"
+  },
+  {
+   "id": "boardgame:tag-team-2025",
+   "title": "Tag Team",
+   "wikidataId": "Q1066670",
+   "synopsis": "En la lucha libre profesional, un tag team consta de dos luchadores que están trabajando j"
+  },
+  {
+   "id": "boardgame:taj-mahal-2000",
+   "title": "Taj Mahal",
+   "wikidataId": "Q9141",
+   "synopsis": "El Taj Mahal es un monumento funerario construido entre 1632 y 1654 en la ciudad de Agra, "
+  },
+  {
+   "id": "boardgame:london-2010",
+   "title": "London",
+   "wikidataId": "Q84",
+   "synopsis": "Londres es la capital y la mayor ciudad de Inglaterra y de Reino Unido. Ubicada a orillas "
+  },
+  {
+   "id": "boardgame:in-the-hall-of-the-mountain-king-2019",
+   "title": "In the Hall of the Mountain King",
+   "wikidataId": "Q956115",
+   "synopsis": "«En la gruta del rey de la montaña» es un fragmento de música incidental parte de Peer Gyn"
+  },
+  {
+   "id": "boardgame:federation-2022",
+   "title": "Federation",
+   "wikidataId": "Q253414",
+   "synopsis": "La Federación Internacional de Fútbol Asociación, conocida por sus siglas en francés FIFA,"
+  },
+  {
+   "id": "boardgame:madeira-2013",
+   "title": "Madeira",
+   "wikidataId": "Q26253",
+   "synopsis": "Madeira es un archipiélago macaronésico de origen volcánico del océano Atlántico que, junt"
+  },
+  {
+   "id": "boardgame:weather-machine-2022",
+   "title": "Weather Machine",
+   "wikidataId": "Q15564291",
+   "synopsis": "“Natural disasters will soon be a thing of the past!” proclaimed Professor Sêni Lativ, Pro"
+  },
+  {
+   "id": "boardgame:colosseum-2007",
+   "title": "Colosseum",
+   "wikidataId": "Q1111834",
+   "synopsis": "Colosseum es una banda británica de jazz rock y jazz fusión, que estuvo activa entre 1968 "
+  },
+  {
+   "id": "boardgame:coup-2012",
+   "title": "Coup",
+   "wikidataId": "Q45382",
+   "synopsis": "Un golpe de Estado es la toma y destitución del gobierno y los poderes de un Estado. Norma"
+  },
+  {
+   "id": "boardgame:medici-1995",
+   "title": "Medici",
+   "wikidataId": "Q23039018",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "boardgame:skyrise-2024",
+   "title": "Skyrise",
+   "wikidataId": "Q18158083",
+   "synopsis": "The Mayor has enlisted some of humanity's greatest visionaries to help build Skyrise: a ma"
+  },
+  {
+   "id": "boardgame:cooper-island-2019",
+   "title": "Cooper Island",
+   "wikidataId": "Q5167712",
+   "synopsis": "In the age of exploration the players arrive at a new home far away from their homeland. T"
+  },
+  {
+   "id": "boardgame:three-sisters-2022",
+   "title": "Three Sisters",
+   "wikidataId": "Q104899860",
+   "synopsis": "Three Sisters es una película surcoreana de 2020, escrita y dirigida por Lee Seung-won, y "
+  },
+  {
+   "id": "boardgame:vinhos-2010",
+   "title": "Vinhos",
+   "wikidataId": "Q1022669",
+   "synopsis": "Vinhós es una freguesia portuguesa del concelho de Fafe, con 2,18 km² de superficie y 688 "
+  },
+  {
+   "id": "boardgame:golem-2021",
+   "title": "Golem",
+   "wikidataId": "Q37565611",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "boardgame:cuba-libre-2013",
+   "title": "Cuba Libre",
+   "wikidataId": "Q22915669",
+   "synopsis": "Opera de Cong Su"
+  },
+  {
+   "id": "boardgame:sanctuary-2025",
+   "title": "Sanctuary",
+   "wikidataId": "Q69917013",
+   "synopsis": "In Sanctuary, you will plan and design a modern, scientifically-managed zoo for animals an"
+  },
+  {
+   "id": "boardgame:unstoppable-2025",
+   "title": "Unstoppable",
+   "wikidataId": "Q4006076",
+   "synopsis": "On the city-planet of Ceres II, every alleyway invites a quick and quiet death. In the lus"
+  },
+  {
+   "id": "boardgame:whitehall-mystery-2017",
+   "title": "Whitehall Mystery",
+   "wikidataId": "Q7995997",
+   "synopsis": "October 1888: During the construction of the Metropolitan Police headquarters near Whiteha"
+  },
+  {
+   "id": "boardgame:paperback-2014",
+   "title": "Paperback",
+   "wikidataId": "Q193934",
+   "synopsis": "La encuadernación en rústica, conocida popularmente como «encuadernación de tapa blanda», "
+  },
+  {
+   "id": "boardgame:automobile-2009",
+   "title": "Automobile",
+   "wikidataId": "Q1420",
+   "synopsis": "El automóvil, también conocido como auto, coche o carro en algunos países, es un vehículo "
+  },
+  {
+   "id": "boardgame:thebes-2007",
+   "title": "Thebes",
+   "wikidataId": "Q83442013",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "boardgame:francis-drake-2013",
+   "title": "Francis Drake",
+   "wikidataId": "Q36517",
+   "synopsis": "Francis Drake fue un corsario, explorador, comerciante, político y vicealmirante inglés. D"
+  },
+  {
+   "id": "boardgame:quantum-2013",
+   "title": "Quantum",
+   "wikidataId": "Q1133068",
+   "synopsis": "Un punto cuántico generalmente es una nanoestructura semiconductora que confina el movimie"
+  },
+  {
+   "id": "boardgame:cacao-2015",
+   "title": "Cacao",
+   "wikidataId": "Q208008",
+   "synopsis": "Un grano de cacao es la semilla fermentada y secada del Theobroma cacao, del cual se extra"
+  },
+  {
+   "id": "boardgame:evolution-2014",
+   "title": "Evolution",
+   "wikidataId": "Q4038411",
+   "synopsis": "Evolution: International Journal of Organic Evolution, es una revista científica mensual q"
+  },
+  {
+   "id": "boardgame:moonrakers-2020",
+   "title": "Moonrakers",
+   "wikidataId": "Q3323601",
+   "synopsis": "Moonrakers is a game of shipbuilding, temporary alliances, and shrewd negotiation set in a"
+  },
+  {
+   "id": "boardgame:top-ten-2020",
+   "title": "Top Ten",
+   "wikidataId": "Q6148952",
+   "synopsis": "Top Ten fue un programa de televisión mexicano producido y transmitido por la cadena de te"
+  },
+  {
+   "id": "boardgame:babylonia-2019",
+   "title": "Babylonia",
+   "wikidataId": "Q3632470",
+   "synopsis": "género de moluscos"
+  },
+  {
+   "id": "boardgame:the-oracle-of-delphi-2016",
+   "title": "The Oracle of Delphi",
+   "wikidataId": "Q3204631",
+   "synopsis": "cortometraje de 1903"
+  },
+  {
+   "id": "boardgame:churchill-2015",
+   "title": "Churchill",
+   "wikidataId": "Q16865587",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "boardgame:fort-2020",
+   "title": "Fort",
+   "wikidataId": "Q16869997",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "boardgame:mexica-2002",
+   "title": "Mexica",
+   "wikidataId": "Q96",
+   "synopsis": "México, oficialmente Estados Unidos Mexicanos, es un país soberano ubicado en la parte mer"
+  },
+  {
+   "id": "boardgame:the-estates-2018",
+   "title": "The Estates",
+   "wikidataId": "Q7888561",
+   "synopsis": "The City Council recently approved the zoning map for a new urban development — The Estate"
+  },
+  {
+   "id": "boardgame:evergreen-2022",
+   "title": "Evergreen",
+   "wikidataId": "Q2111166",
+   "synopsis": "Evergreen es un lugar designado por el censo ubicado en el condado de Jefferson en el esta"
+  },
+  {
+   "id": "boardgame:treasure-island-2018",
+   "title": "Treasure Island",
+   "wikidataId": "Q185118",
+   "synopsis": "La isla del tesoro es una novela de aventuras escrita por el escocés Robert Louis Stevenso"
+  },
+  {
+   "id": "boardgame:the-magnificent-2019",
+   "title": "The Magnificent",
+   "wikidataId": "Q16954955",
+   "synopsis": "The Magnificent is a tightly designed Eurogame from the creators of Santa Maria set in a m"
+  },
+  {
+   "id": "boardgame:maquis-2013",
+   "title": "Maquis",
+   "wikidataId": "Q212948",
+   "synopsis": "La guerra de guerrillas es una estrategia militar conformada por guerrilleros, pequeños gr"
+  },
+  {
+   "id": "boardgame:shakespeare-2015",
+   "title": "Shakespeare",
+   "wikidataId": "Q20997880",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "boardgame:torres-1999",
+   "title": "Torres",
+   "wikidataId": "Q12518",
+   "synopsis": "Una torre es un edificio mucho más alto que ancho. Sus funciones pueden ser diferentes, pe"
+  },
+  {
+   "id": "boardgame:whistle-mountain-2020",
+   "title": "Whistle Mountain",
+   "wikidataId": "Q49089095",
+   "synopsis": "Whistle Stop designer Scott Caputo has teamed up with Luke Laurie (Manhattan Project: Ener"
+  },
+  {
+   "id": "boardgame:spicy-2020",
+   "title": "Spicy",
+   "wikidataId": "Q98546107",
+   "synopsis": "Once upon a time, three big cats became exhausted fighting to be top cat. They agreed to q"
+  },
+  {
+   "id": "boardgame:cuba-2007",
+   "title": "Cuba",
+   "wikidataId": "Q241",
+   "synopsis": "Cuba, oficialmente República de Cuba, es un Estado soberano e insular ubicado en las Antil"
+  },
+  {
+   "id": "boardgame:snowdonia-2012",
+   "title": "Snowdonia",
+   "wikidataId": "Q867913",
+   "synopsis": "Eryri es una región montañosa en el noroeste de Gales y un parque nacional de 823 millas c"
+  },
+  {
+   "id": "boardgame:yamatai-2017",
+   "title": "Yamataï",
+   "wikidataId": "Q844295",
+   "synopsis": "In Yamatai, 2-4 players compete to build palaces, torii, and their own buildings in the la"
+  },
+  {
+   "id": "boardgame:belfort-2011",
+   "title": "Belfort",
+   "wikidataId": "Q171545",
+   "synopsis": "Belfort es una ciudad y comuna francesa situada en el departamento del Territorio de Belfo"
+  },
+  {
+   "id": "boardgame:galileo-galilei-2024",
+   "title": "Galileo Galilei",
+   "wikidataId": "Q307",
+   "synopsis": "Galileo di Vincenzo Bonaiuti de' Galilei  fue un astrónomo, ingeniero, matemático y físico"
+  },
+  {
+   "id": "boardgame:crystal-palace-2019",
+   "title": "Crystal Palace",
+   "wikidataId": "Q676281",
+   "synopsis": "In Crystal Palace, players take on the role of a nation at the time of the first World Fai"
+  },
+  {
+   "id": "boardgame:spots-2022",
+   "title": "Spots",
+   "wikidataId": "Q1796979",
+   "synopsis": "suburbio de la ciudad de Melbourne, en el estado de Victoria, Australia"
+  },
+  {
+   "id": "boardgame:luna-2010",
+   "title": "Luna",
+   "wikidataId": "Q405",
+   "synopsis": "La Luna es el único satélite natural de la Tierra. Con un diámetro ecuatorial de 3474,8 km"
+  },
+  {
+   "id": "boardgame:evacuation-2023",
+   "title": "Evacuation",
+   "wikidataId": "Q606332",
+   "synopsis": "En su sentido más frecuente, evacuación,  se refiere a la acción o al efecto de retirar pe"
+  },
+  {
+   "id": "boardgame:saltfjord-2024",
+   "title": "Saltfjord",
+   "wikidataId": "Q3470235",
+   "synopsis": "The generations before you have relied on harvesting the oceans. But as the 19th century e"
+  },
+  {
+   "id": "boardgame:diamant-2005",
+   "title": "Diamant",
+   "wikidataId": "Q36979085",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "boardgame:new-frontiers-2018",
+   "title": "New Frontiers",
+   "wikidataId": "Q45356",
+   "synopsis": "El programa New Frontiers consiste en una serie de misiones de exploración espacial que se"
+  },
+  {
+   "id": "boardgame:coal-baron-2013",
+   "title": "Coal Baron",
+   "wikidataId": "Q131870316",
+   "synopsis": "Coal Baron – or Glück Auf in German, after a greeting German miners use when wishing one a"
+  },
+  {
+   "id": "boardgame:finca-2009",
+   "title": "Finca",
+   "wikidataId": "Q1416696",
+   "synopsis": "Una finca, también denominada en derecho fundo o predio, es una propiedad inmueble que se "
+  },
+  {
+   "id": "boardgame:k2-2010",
+   "title": "K2",
+   "wikidataId": "Q43512",
+   "synopsis": "El K2 es una montaña perteneciente a la cordillera del Karakórum, en el sistema de los Him"
+  },
+  {
+   "id": "boardgame:blue-lagoon-2018",
+   "title": "Blue Lagoon",
+   "wikidataId": "Q655261",
+   "synopsis": "grupo musical"
+  },
+  {
+   "id": "boardgame:santiago-2003",
+   "title": "Santiago",
+   "wikidataId": "Q2887",
+   "synopsis": "Santiago, también conocido como Santiago de Chile, es la capital y ciudad más poblada del "
+  },
+  {
+   "id": "boardgame:reef-2018",
+   "title": "Reef",
+   "wikidataId": "Q37489542",
+   "synopsis": "apellido"
+  },
+  {
+   "id": "boardgame:villagers-2019",
+   "title": "Villagers",
+   "wikidataId": "Q284905",
+   "synopsis": "grupo musical"
+  },
+  {
+   "id": "boardgame:pret-a-porter-2010",
+   "title": "Prêt-à-Porter",
+   "wikidataId": "Q2912428",
+   "synopsis": "Prêt-à-porter es una expresión francesa que significa textualmente Listo para llevar. Se r"
+  },
+  {
+   "id": "boardgame:leaving-earth-2015",
+   "title": "Leaving Earth",
+   "wikidataId": "Q56019037",
+   "synopsis": "The year is 1956. Mankind stands at the dawn of a new age, the Space Age, when the flying "
+  },
+  {
+   "id": "boardgame:new-york-zoo-2020",
+   "title": "New York Zoo",
+   "wikidataId": "Q2118246",
+   "synopsis": "La Wildlife Conservation Society (WCS) es una ONG estadounidense cuyo objetivo es la conse"
+  },
+  {
+   "id": "boardgame:sail-2023",
+   "title": "Sail",
+   "wikidataId": "Q19731789",
+   "synopsis": "pueblo de Indonesia"
+  },
+  {
+   "id": "boardgame:eminent-domain-2011",
+   "title": "Eminent Domain",
+   "wikidataId": "Q5372496",
+   "synopsis": "película de John Irvin (1990)"
+  },
+  {
+   "id": "boardgame:the-pursuit-of-happiness-2015",
+   "title": "The Pursuit of Happiness",
+   "wikidataId": "Q7758826",
+   "synopsis": "We all have one common desire: the desire for happiness. As we build our life, taking step"
+  },
+  {
+   "id": "boardgame:zhanguo-2014",
+   "title": "ZhanGuo",
+   "wikidataId": "Q50282479",
+   "synopsis": "Between 230 and 221 B.C., the ambitious and extremely young king of Qin, Ying Zheng, unifi"
+  },
+  {
+   "id": "boardgame:cities-2024",
+   "title": "Cities",
+   "wikidataId": "Q515",
+   "synopsis": "Una ciudad es un asentamiento humano de tamaño considerable. El término «ciudad» tiene dif"
+  },
+  {
+   "id": "boardgame:red7-2014",
+   "title": "Red7",
+   "wikidataId": "Q55440584",
+   "synopsis": "The rules of \"Red\" are simple: highest card wins! But \"Red\" is just one of seven games you"
+  },
+  {
+   "id": "boardgame:beast-2023",
+   "title": "Beast",
+   "wikidataId": "Q269595",
+   "synopsis": "Highlight, anteriormente conocido como Beast, es un grupo masculino surcoreano formado ori"
+  },
+  {
+   "id": "boardgame:ex-libris-2017",
+   "title": "Ex Libris",
+   "wikidataId": "Q188456",
+   "synopsis": "Exlibris o ex libris es una marca de propiedad que normalmente consiste en una estampa (gr"
+  },
+  {
+   "id": "boardgame:not-alone-2016",
+   "title": "Not Alone",
+   "wikidataId": "Q2300310",
+   "synopsis": "«Not Alone» –en español «No estás solo»– es una canción de la banda estadounidense Linkin "
+  },
+  {
+   "id": "boardgame:wallenstein-2002",
+   "title": "Wallenstein",
+   "wikidataId": "Q525580",
+   "synopsis": "Wallenstein es la denominación popular de una trilogía de dramas del escritor alemán Fried"
+  },
+  {
+   "id": "boardgame:merchants-cove-2021",
+   "title": "Merchants Cove",
+   "wikidataId": "Q49384909",
+   "synopsis": "Welcome ashore! Merchants Cove is a highly asymmetrical eurogame where each player assumes"
+  },
+  {
+   "id": "boardgame:celestia-2015",
+   "title": "Celestia",
+   "wikidataId": "Q63387961",
+   "synopsis": "La parada de ACTV en Venecia"
+  },
+  {
+   "id": "boardgame:fuse-2015",
+   "title": "FUSE",
+   "wikidataId": "Q14924805",
+   "synopsis": "álbum de Keith Urban"
+  },
+  {
+   "id": "boardgame:world-without-end-2009",
+   "title": "World Without End",
+   "wikidataId": "Q168349",
+   "synopsis": "Un mundo sin fin es una miniserie de televisión de ocho episodios de 2012 basada en la nov"
+  },
+  {
+   "id": "boardgame:shipyard-2009",
+   "title": "Shipyard",
+   "wikidataId": "Q190928",
+   "synopsis": "El astillero naval o atarazana es una instalación industrial donde se construyen y reparan"
+  },
+  {
+   "id": "boardgame:ohanami-2019",
+   "title": "Ohanami",
+   "wikidataId": "Q210150",
+   "synopsis": "Hanami  es la tradición japonesa de observar la belleza de las flores, que florecen los ce"
+  },
+  {
+   "id": "boardgame:parade-2007",
+   "title": "Parade",
+   "wikidataId": "Q3895002",
+   "synopsis": "Parade es el cuarto álbum de estudio de la banda de pop inglesa Spandau Ballet, publicado "
+  },
+  {
+   "id": "boardgame:panamax-2014",
+   "title": "Panamax",
+   "wikidataId": "Q852387",
+   "synopsis": "Los barcos de la clase Panamax son aquellos diseñados para ajustarse a las dimensiones máx"
+  },
+  {
+   "id": "boardgame:uno-1971",
+   "title": "UNO",
+   "wikidataId": "Q7897207",
+   "synopsis": "solitario en grupo"
+  }
+ ],
+ "artist": [
+  {
+   "id": "artist:seguridad-social",
+   "title": "Seguridad Social",
+   "wikidataId": "Q2483208",
+   "synopsis": "La seguridad social o el seguro social, también llamada previsión social, es un sistema de"
+  },
+  {
+   "id": "artist:ska-p",
+   "title": "Ska-P",
+   "wikidataId": "Q460674",
+   "synopsis": "El ska-punk es la fusión de los géneros musicales ska y punk. Las primeras combinaciones d"
+  },
+  {
+   "id": "artist:dover",
+   "title": "Dover",
+   "wikidataId": "Q179224",
+   "synopsis": "Dover, en el condado de Kent, es el mayor puerto del canal de la Mancha en Inglaterra. Seg"
+  },
+  {
+   "id": "artist:cupido",
+   "title": "Cupido",
+   "wikidataId": "Q286700",
+   "synopsis": "Cupido is a genus of butterflies in the family Lycaenidae. The subgenus Everes is included"
+  },
+  {
+   "id": "artist:mora",
+   "title": "Mora",
+   "wikidataId": "Q368256",
+   "synopsis": "mora  is an online music and video store for the Japanese market operated by Sony Music So"
+  },
+  {
+   "id": "artist:duran-duran",
+   "title": "Duran Duran",
+   "wikidataId": "Q5316176",
+   "synopsis": "Duran Duran is a video compilation, by the band of the same name, that is sometimes unoffi"
+  },
+  {
+   "id": "artist:sade",
+   "title": "Sade",
+   "wikidataId": "Q96626951",
+   "synopsis": "Sade es un artista/grupo musical."
+  },
+  {
+   "id": "artist:slowdive",
+   "title": "Slowdive",
+   "wikidataId": "Q139821453",
+   "synopsis": "Slowdive es un artista/grupo musical."
+  }
+ ]
+}

@@ -23,6 +23,7 @@ import { PublicList, PublicProfile } from './screens/Public'
 import { JoinInvite } from './screens/JoinInvite'
 import { Metrics } from './screens/Metrics'
 import { Settings } from './screens/Settings'
+import { EditProfile } from './screens/EditProfile'
 
 function Frame() {
   const onboarded = useStore((s) => s.onboarded)
@@ -45,6 +46,7 @@ function Frame() {
           <Route path="lista/:id" element={<ListEditor />} />
           <Route path="importar" element={<Import />} />
           <Route path="ajustes" element={<Settings />} />
+          <Route path="perfil/editar" element={<EditProfile />} />
           <Route path="metricas" element={<Metrics />} />
           <Route path="onboarding" element={<Onboarding />} />
           <Route path="*" element={<Navigate to="/" replace />} />

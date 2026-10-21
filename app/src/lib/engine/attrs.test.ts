@@ -1,4 +1,5 @@
 import { describe, it, expect } from 'vitest'
+// @ts-expect-error JS module without type declaration
 import { ATTRS, SOURCE_HIERARCHY, isMoreAuthoritative, validateAttrValue } from '../../../scripts/engine/attrs.mjs'
 
 describe('Motor v2: Registro de Atributos (ATTRS)', () => {

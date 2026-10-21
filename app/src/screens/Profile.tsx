@@ -1,9 +1,10 @@
 // app/src/screens/Profile.tsx
-import { useMemo, useRef, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+// Perfil: lo que ven los demás de ti. Aquí no se edita nada: «Editar perfil» abre tus datos y el engranaje, los Ajustes.
+import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { friends, getItem } from '../data/catalog'
-import { APP_NAME, AVATAR_COLORS } from '../config'
+import { APP_NAME } from '../config'
 import { useStore } from '../store/useStore'
 import { useRanks } from '../store/useScores'
 import { friendRanks } from '../lib/rank'
@@ -12,53 +13,16 @@ import { affinity } from '../lib/affinity'
 import { profileUrl, type SharedProfile } from '../lib/share'
 import { shareOrCopy } from '../lib/shareUi'
 import { generateShareCard, shareOrDownloadCard } from '../lib/shareCard'
+import { countryName } from '../lib/countries'
 import { Poster, posterLayoutId } from '../components/Poster'
 import { Avatar, Sheet, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
-import { useAuth, checkHandleAvailability } from '../store/useAuth'
+import { useAuth } from '../store/useAuth'
 import { useFriends } from '../store/useFriends'
-import { supabase } from '../lib/supabase'
 import { FindFriends } from '../components/FindFriends'
 
-async function processAvatarImage(file: File): Promise<Blob> {
-  return new Promise((resolve, reject) => {
-    const img = new Image()
-    const url = URL.createObjectURL(file)
-    img.onload = () => {
-      URL.revokeObjectURL(url)
-      const canvas = document.createElement('canvas')
-      canvas.width = 256
-      canvas.height = 256
-      const ctx = canvas.getContext('2d')
-      if (!ctx) {
-        reject(new Error('Canvas context error'))
-        return
-      }
-      const size = Math.min(img.naturalWidth, img.naturalHeight)
-      const sx = (img.naturalWidth - size) / 2
-      const sy = (img.naturalHeight - size) / 2
-      ctx.drawImage(img, sx, sy, size, size, 0, 0, 256, 256)
-      canvas.toBlob(
-        (blob) => {
-          if (blob) resolve(blob)
-          else reject(new Error('Failed to create blob'))
-        },
-        'image/webp',
-        0.85
-      )
-    }
-    img.onerror = (err) => {
-      URL.revokeObjectURL(url)
-      reject(err)
-    }
-    img.src = url
-  })
-}
-
 export function Profile() {
-  const nav = useNavigate()
   const profile = useStore((s) => s.profile)
-  const setProfile = useStore((s) => s.setProfile)
   const entries = useStore((s) => s.entries)
   const rankings = useStore((s) => s.rankings)
   const ranks = useRanks()
@@ -67,88 +31,9 @@ export function Profile() {
   const { realFriends } = useFriends()
 
   const [toast, setToast] = useState<string | null>(null)
-  const [colorOpen, setColorOpen] = useState(false)
-  const [link, setLink] = useState<string | null>(null)
+  const [shareOpen, setShareOpen] = useState(false)
   const [findFriends, setFindFriends] = useState(false)
   const [generatingCard, setGeneratingCard] = useState(false)
-
-  // Subir avatar
-  const avatarInputRef = useRef<HTMLInputElement>(null)
-  const [uploadingAvatar, setUploadingAvatar] = useState(false)
-
-  const handleAvatarFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
-    if (!file) return
-    setUploadingAvatar(true)
-    try {
-      const blob = await processAvatarImage(file)
-      if (user && supabase) {
-        const filePath = `${user.id}/avatar.webp`
-        const { error: uploadError } = await supabase.storage
-          .from('biblio-avatars')
-          .upload(filePath, blob, { contentType: 'image/webp', upsert: true })
-        if (uploadError) throw uploadError
-
-        const { data: { publicUrl } } = supabase.storage
-          .from('biblio-avatars')
-          .getPublicUrl(filePath)
-        const avatarUrl = `${publicUrl}?v=${Date.now()}`
-
-        await supabase
-          .from('biblio_profiles')
-          .update({ avatar_url: avatarUrl })
-          .eq('id', user.id)
-
-        useAuth.setState((s) => ({
-          profile: s.profile ? { ...s.profile, avatarUrl } : null,
-        }))
-        setProfile({ avatarUrl })
-        setToast('Foto de perfil actualizada')
-      } else {
-        const reader = new FileReader()
-        reader.onload = () => {
-          const avatarUrl = reader.result as string
-          setProfile({ avatarUrl })
-          setToast('Foto de perfil actualizada')
-        }
-        reader.readAsDataURL(blob)
-      }
-    } catch {
-      setToast('Error al subir la foto')
-    } finally {
-      setUploadingAvatar(false)
-      if (avatarInputRef.current) avatarInputRef.current.value = ''
-    }
-  }
-
-  // Handle @usuario
-  const [handleInput, setHandleInput] = useState(authProfile?.handle || '')
-  const [handleCheck, setHandleCheck] = useState<{ checked: boolean; available?: boolean; message?: string }>({ checked: false })
-  const [savingHandle, setSavingHandle] = useState(false)
-
-  const handleSaveHandle = async () => {
-    if (!user || !handleInput.trim() || savingHandle) return
-    setSavingHandle(true)
-    try {
-      const h = handleInput.trim().toLowerCase()
-      const res = await checkHandleAvailability(h, user.id)
-      setHandleCheck({ checked: true, ...res })
-      if (res.available && supabase) {
-        await supabase
-          .from('biblio_profiles')
-          .update({ handle: h })
-          .eq('id', user.id)
-        useAuth.setState((s) => ({
-          profile: s.profile ? { ...s.profile, handle: h } : null,
-        }))
-        setToast(`@${h} guardado como tu usuario`)
-      }
-    } catch {
-      setToast('Error al guardar el @usuario')
-    } finally {
-      setSavingHandle(false)
-    }
-  }
 
   // Estadísticas
   const stats = useMemo(() => {
@@ -157,6 +42,8 @@ export function Profile() {
     for (const t of SHELVES) {
       perShelf[t] = list.filter((e) => e.status === 'seen' && (e.shelf ?? getItem(e.itemId)?.type) === t).length
     }
+    const seen = list.filter((e) => e.status === 'seen').length
+    const pending = list.filter((e) => e.status === 'pending').length
     const genreCounts: Record<string, number> = {}
     for (const e of list) {
       if (e.status !== 'seen') continue
@@ -164,11 +51,11 @@ export function Profile() {
       for (const g of it?.genres ?? []) genreCounts[g] = (genreCounts[g] ?? 0) + 1
     }
     const topGenre = Object.entries(genreCounts).sort((a, b) => b[1] - a[1])[0]?.[0]
-    return { perShelf, topGenre }
+    return { perShelf, seen, pending, topGenre }
   }, [entries])
 
   // Afinidad con amigos
-  const activeFriends = realFriends.length > 0 ? realFriends : (user ? [] : friends)
+  const activeFriends = realFriends.length > 0 ? realFriends : user ? [] : friends
   const aff = useMemo(() => {
     const mine = Object.fromEntries(Object.entries(ranks).map(([id, r]) => [id, r.pct]))
     return activeFriends
@@ -188,14 +75,14 @@ export function Profile() {
     return { k: 'p', n: profile.name, c: profile.avatarColor, top }
   }
 
-  const shareProfile = async () => {
+  const shareLink = async () => {
+    setShareOpen(false)
     const url = profileUrl(location.origin, sharedProfile())
-    setLink(url)
     const r = await shareOrCopy({ title: `Perfil de ${profile.name} en ${APP_NAME}`, text: `Lo que más me ha formado según ${APP_NAME}`, url })
     if (r === 'copied') setToast('Enlace de tu perfil copiado')
   }
 
-  const handleShareStoryCard = async () => {
+  const shareStoryCard = async () => {
     setGeneratingCard(true)
     try {
       const topIds: string[] = []
@@ -208,130 +95,85 @@ export function Profile() {
       }
       const topItems = topIds.map(getItem).filter(Boolean) as any[]
       if (topItems.length === 0) {
-        setToast('Ordena alguna obra antes de generar tu tarjeta')
+        setToast('Ordena alguna obra antes de crear tu tarjeta')
         return
       }
       const url = profileUrl(location.origin, sharedProfile())
-      const blob = await generateShareCard({
-        title: 'Lo que más me marcó',
-        author: profile.name,
-        items: topItems,
-        shareUrl: url,
-      })
+      const blob = await generateShareCard({ title: 'Lo que más me marcó', author: profile.name, items: topItems, shareUrl: url })
       await shareOrDownloadCard(blob, `biblioteca-${profile.name.toLowerCase().replace(/\s+/g, '-')}.png`)
+      setShareOpen(false)
     } catch {
-      setToast('Error al generar la tarjeta')
+      setToast('No se pudo crear la tarjeta')
     } finally {
       setGeneratingCard(false)
     }
   }
 
   const hasTop = SHELVES.some((t) => (rankings[t] ?? []).length > 0)
+  const place = countryName(profile.country)
+  const unnamed = !profile.name || profile.name === 'Tú'
 
   return (
     <div className="h-full scroll-y pb-8">
-      {/* Cabecera con botón visible de Ajustes */}
-      <header className="safe-top px-5 pb-3 flex items-center justify-between min-h-[52px]">
-        <span className="label-caps text-mute">Tu perfil público</span>
-        <Link
-          to="/ajustes"
-          className="min-h-[38px] px-3.5 rounded-full bg-surface border border-line flex items-center gap-1.5 text-xs font-semibold text-ink/80 hover:text-ink active:scale-95 transition-all shadow-sm"
-        >
-          <Icon name="gear" size={16} />
-          <span>Ajustes</span>
+      <header className="safe-top px-5 pb-2 flex items-center justify-between min-h-[52px]">
+        <h1 className="text-xl font-semibold">Perfil</h1>
+        <Link to="/ajustes" aria-label="Ajustes" className="w-11 h-11 -mr-2 rounded-full flex items-center justify-center text-ink/80 active:bg-surface2">
+          <Icon name="gear" size={22} />
         </Link>
       </header>
 
-      <div className="px-5 space-y-6">
-        {/* Cabecera del usuario: Foto, Nombre y Handle */}
-        <div className="flex items-center gap-4">
-          <div className="relative group">
-            <Avatar name={profile.name} color={profile.avatarColor} url={profile.avatarUrl} size={68} />
-            <input
-              type="file"
-              ref={avatarInputRef}
-              onChange={handleAvatarFile}
-              accept="image/*"
-              className="hidden"
-            />
-            <button
-              onClick={() => avatarInputRef.current?.click()}
-              disabled={uploadingAvatar}
-              aria-label="Cambiar foto de perfil"
-              className="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-surface border border-line flex items-center justify-center text-ink shadow active:scale-90 transition-transform"
-            >
-              {uploadingAvatar ? (
-                <span className="w-3.5 h-3.5 border-2 border-accent border-t-transparent rounded-full animate-spin" />
-              ) : (
-                <Icon name="camera" size={13} />
-              )}
-            </button>
-          </div>
-
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2">
-              <input
-                value={profile.name}
-                onChange={(e) => setProfile({ name: e.target.value })}
-                placeholder="Tu nombre"
-                className="serif text-[24px] font-bold bg-transparent border-b border-transparent focus:border-accent focus:outline-none w-full"
-              />
+      <div className="px-5 space-y-7">
+        {/* Cabecera: foto, nombre, @usuario, país y contadores */}
+        <div>
+          <div className="flex items-center gap-4">
+            <Avatar name={profile.name} color={profile.avatarColor} url={profile.avatarUrl} size={80} />
+            <div className="flex-1 grid grid-cols-3 text-center">
+              <Counter value={stats.seen} label="vistas" />
+              <Counter value={stats.pending} label="pendientes" />
+              <Counter value={realFriends.length} label="amigos" />
             </div>
-            {user && (
-              <div className="text-xs text-mute mt-0.5">
-                {authProfile?.handle ? `@${authProfile.handle}` : 'Sin @usuario configurado'}
-              </div>
-            )}
-            <button
-              onClick={() => setColorOpen(true)}
-              className="text-xs text-accent mt-1 hover:underline inline-block"
+          </div>
+          <div className="mt-3">
+            <div className="serif text-[22px] font-bold leading-tight">{unnamed ? 'Sin nombre' : profile.name}</div>
+            <div className="text-xs text-mute mt-0.5">
+              {[authProfile?.handle ? `@${authProfile.handle}` : null, place ?? null].filter(Boolean).join(' · ')}
+            </div>
+          </div>
+          <div className="flex gap-2 mt-4">
+            <Link
+              to="/perfil/editar"
+              className="flex-1 min-h-[40px] rounded-xl bg-surface2 border border-line text-sm font-semibold flex items-center justify-center active:scale-[0.98] transition-transform"
             >
-              Cambiar color del avatar
+              Editar perfil
+            </Link>
+            <button
+              onClick={() => setShareOpen(true)}
+              className="flex-1 min-h-[40px] rounded-xl bg-surface2 border border-line text-sm font-semibold flex items-center justify-center gap-1.5 active:scale-[0.98] transition-transform"
+            >
+              <Icon name="share" size={15} />
+              Compartir
             </button>
           </div>
+          {(unnamed || (user && !authProfile?.handle)) && (
+            <Link to="/perfil/editar" className="mt-3 flex items-center gap-3 p-3 rounded-2xl bg-accent/10 border border-accent/30 text-sm">
+              <Icon name="edit" size={16} className="text-accent shrink-0" />
+              <span className="flex-1">{unnamed ? 'Pon tu nombre para que tus amigos te reconozcan' : 'Elige tu @usuario para que te encuentren'}</span>
+              <Icon name="chevron" size={16} className="text-mute" />
+            </Link>
+          )}
         </div>
 
-        {/* Configurar handle si está logueado y no tiene */}
-        {user && !authProfile?.handle && (
-          <div className="p-3.5 rounded-2xl bg-surface border border-line space-y-2">
-            <span className="text-xs font-semibold text-mute">Elige tu @usuario para compartir:</span>
-            <div className="flex gap-2">
-              <div className="relative flex-1">
-                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-mute text-xs">@</span>
-                <input
-                  type="text"
-                  value={handleInput}
-                  onChange={(e) => setHandleInput(e.target.value.toLowerCase().replace(/[^a-z0-9_]/g, ''))}
-                  placeholder="tu_usuario"
-                  maxLength={20}
-                  className="w-full bg-surface2 border border-line rounded-xl pl-7 pr-3 min-h-[38px] text-xs focus:outline-none focus:border-accent"
-                />
-              </div>
-              <button
-                onClick={handleSaveHandle}
-                disabled={savingHandle || !handleInput.trim()}
-                className="px-3 rounded-xl bg-accent text-accent-ink text-xs font-semibold active:scale-95 transition-transform disabled:opacity-50"
-              >
-                {savingHandle ? 'Guardando…' : 'Guardar'}
-              </button>
-            </div>
-            {handleCheck.checked && !handleCheck.available && (
-              <p className="text-[11px] text-stamp-red">{handleCheck.message}</p>
-            )}
-          </div>
-        )}
-
-        {/* «Lo que más me marcó» (Top 3 por estantería) */}
+        {/* «Lo que más me marcó» (top 3 por estantería) */}
         <section aria-label="Lo que más me marcó">
-          <h2 className="serif text-[22px] font-semibold mb-3">Lo que más me marcó</h2>
+          <h2 className="serif text-[20px] font-semibold mb-3">Lo que más me marcó</h2>
           {hasTop ? (
             <div className="space-y-4">
               {SHELVES.filter((t) => (rankings[t] ?? []).length > 0).map((t) => (
-                <div key={t} className="rounded-3xl bg-surface border border-line p-4">
-                  <div className="flex items-center justify-between mb-3">
+                <div key={t}>
+                  <div className="flex items-center justify-between mb-2">
                     <span className="label-caps text-mute">{SHELF_LABEL[t].plural}</span>
                     <Link to={`/estanteria/${t}`} className="text-xs text-accent font-semibold flex items-center gap-1">
-                      Ver ranking <Icon name="chevron" size={14} />
+                      Ranking completo <Icon name="chevron" size={14} />
                     </Link>
                   </div>
                   <div className="grid grid-cols-3 gap-3">
@@ -341,10 +183,8 @@ export function Profile() {
                       return (
                         <Link key={id} to={`/i/${encodeURIComponent(id)}`}>
                           <div className="relative">
-                            <Poster item={it} layoutId={posterLayoutId(it.id)} style={{ borderRadius: 16 }} className="w-full aspect-[2/3] border border-line" />
-                            <span className="absolute top-1.5 left-1.5 w-6 h-6 rounded-full bg-accent text-accent-ink text-xs font-bold flex items-center justify-center">
-                              {i + 1}
-                            </span>
+                            <Poster item={it} layoutId={posterLayoutId(it.id)} style={{ borderRadius: 14 }} className="w-full aspect-[2/3] border border-line" />
+                            <span className="absolute top-1.5 left-1.5 w-6 h-6 rounded-full bg-accent text-accent-ink text-xs font-bold flex items-center justify-center">{i + 1}</span>
                           </div>
                           <div className="serif text-sm font-semibold leading-tight mt-1.5 line-clamp-2">{it.title}</div>
                         </Link>
@@ -353,54 +193,42 @@ export function Profile() {
                   </div>
                 </div>
               ))}
-
-              <div className="flex gap-2 pt-1">
-                <button
-                  onClick={shareProfile}
-                  className="flex-1 min-h-[44px] rounded-2xl bg-surface border border-line text-xs font-semibold flex items-center justify-center gap-1.5 active:scale-95 transition-transform"
-                >
-                  <Icon name="share" size={16} />
-                  Compartir enlace
-                </button>
-                <button
-                  onClick={handleShareStoryCard}
-                  disabled={generatingCard}
-                  className="flex-1 min-h-[44px] rounded-2xl bg-accent text-accent-ink text-xs font-semibold flex items-center justify-center gap-1.5 active:scale-95 transition-transform"
-                >
-                  <Icon name="cards" size={16} />
-                  {generatingCard ? 'Creando…' : 'Tarjeta para Story'}
-                </button>
-              </div>
             </div>
           ) : (
-            <p className="text-sm text-mute rounded-3xl border border-dashed border-line p-4">
-              Cuando ordenes tus obras con Comparar, aquí aparecerá el top 3 de cada estantería.
-            </p>
+            <Link to="/comparar" className="block text-sm text-mute rounded-3xl border border-dashed border-line p-4">
+              Cuando ordenes tus obras en <span className="text-accent font-semibold">Comparar</span>, aquí saldrá tu top 3 de cada estantería.
+            </Link>
           )}
         </section>
 
         {/* Mis números */}
         <section aria-label="Estadísticas">
-          <h2 className="serif text-[22px] font-semibold mb-3">Mis números</h2>
+          <h2 className="serif text-[20px] font-semibold mb-3">Mis números</h2>
           <div className="grid grid-cols-2 gap-2.5">
             {SHELVES.map((t) => (
-              <Stat key={t} label={`${SHELF_LABEL[t].plural} ${SHELF_LABEL[t].seen}`} value={String(stats.perShelf[t] ?? 0)} />
+              <Link key={t} to={`/estanteria/${t}`} className="bg-surface rounded-2xl border border-line p-3 active:bg-surface2">
+                <div className="text-2xl font-bold tabular-nums leading-none">{stats.perShelf[t] ?? 0}</div>
+                <div className="text-xs text-mute mt-1 truncate">{`${SHELF_LABEL[t].plural} ${SHELF_LABEL[t].seen}`}</div>
+              </Link>
             ))}
-            <Stat label="Género más frecuente" value={stats.topGenre ?? '—'} small className="col-span-2" />
+            <div className="bg-surface rounded-2xl border border-line p-3">
+              <div className="text-lg font-bold leading-none truncate">{stats.topGenre ?? '—'}</div>
+              <div className="text-xs text-mute mt-1">Tu género más frecuente</div>
+            </div>
           </div>
         </section>
 
         {/* Amigos y afinidad */}
         <section aria-label="Amigos">
           <div className="flex items-center justify-between mb-3">
-            <h2 className="serif text-[22px] font-semibold">Amigos</h2>
+            <h2 className="serif text-[20px] font-semibold">Amigos</h2>
             {user && (
               <button
                 onClick={() => setFindFriends(true)}
                 className="min-h-[36px] px-3.5 rounded-full bg-accent text-accent-ink text-xs font-semibold inline-flex items-center gap-1.5 active:scale-95 transition-transform"
               >
                 <Icon name="plus" size={14} />
-                Añadir amigos
+                Añadir
               </button>
             )}
           </div>
@@ -411,7 +239,9 @@ export function Profile() {
                 <li key={f.id} className="flex items-center gap-3 bg-surface rounded-2xl border border-line p-3">
                   <Avatar name={f.name} color={f.avatarColor} url={f.avatarUrl} size={40} />
                   <div className="flex-1 min-w-0">
-                    <div className="font-semibold text-sm">{f.name} {!user && <span className="text-[10px] text-mute font-normal">(ejemplo)</span>}</div>
+                    <div className="font-semibold text-sm">
+                      {f.name} {!user && <span className="text-[10px] text-mute font-normal">(ejemplo)</span>}
+                    </div>
                     {a !== null ? (
                       <div className="h-1.5 rounded-full bg-line mt-1.5 overflow-hidden">
                         <div className="h-full bg-accent rounded-full" style={{ width: `${a}%` }} />
@@ -431,90 +261,46 @@ export function Profile() {
               </div>
               <div className="font-semibold text-sm">Sin amigos conectados</div>
               <p className="text-xs text-mute max-w-xs mx-auto leading-relaxed">
-                Invita a tus amigos uno a uno o búscalos en tus contactos. Al conectar veréis vuestra afinidad y qué os recomendáis.
+                {user
+                  ? 'Invita a tus amigos uno a uno o búscalos en tus contactos. Veréis vuestra afinidad y qué os recomendáis.'
+                  : 'Entra con tu cuenta desde Ajustes para conectar con tus amigos.'}
               </p>
             </div>
           )}
         </section>
-
-        {/* Acceso a Importar y Ajustes */}
-        <section className="space-y-2.5 pt-2">
-          <Link
-            to="/importar"
-            className="flex items-center justify-between p-4 rounded-3xl bg-surface border border-line hover:border-accent active:bg-surface2 transition-colors"
-          >
-            <div className="flex items-center gap-3">
-              <span className="w-9 h-9 rounded-xl bg-accent/15 text-accent flex items-center justify-center">
-                <Icon name="sparkle" size={18} />
-              </span>
-              <div>
-                <div className="font-semibold text-sm">Importar mis listas</div>
-                <div className="text-xs text-mute">Letterboxd, IMDb, Goodreads o Netflix</div>
-              </div>
-            </div>
-            <Icon name="chevron" size={16} className="text-mute" />
-          </Link>
-
-          <Link
-            to="/ajustes"
-            className="flex items-center justify-between p-4 rounded-3xl bg-surface border border-line hover:border-accent active:bg-surface2 transition-colors"
-          >
-            <div className="flex items-center gap-3">
-              <span className="w-9 h-9 rounded-xl bg-surface2 text-mute flex items-center justify-center">
-                <Icon name="gear" size={18} />
-              </span>
-              <div>
-                <div className="font-semibold text-sm">Ajustes y cuenta</div>
-                <div className="text-xs text-mute">Preferencias, plataformas, nube y avisos</div>
-              </div>
-            </div>
-            <Icon name="chevron" size={16} className="text-mute" />
-          </Link>
-        </section>
-
-        {link && (
-          <div className="rounded-2xl bg-surface2 p-3 text-xs break-all select-text">
-            <div className="text-mute mb-1">Enlace de tu perfil:</div>
-            <a href={link} className="text-accent underline">{link}</a>
-          </div>
-        )}
       </div>
 
-      {colorOpen && (
-        <Sheet label="Color del avatar" onClose={() => setColorOpen(false)} height="auto">
-          <h3 className="serif text-lg font-bold mb-3">Elige tu color</h3>
-          <div className="flex gap-3 flex-wrap justify-center py-2">
-            {AVATAR_COLORS.map((c) => (
-              <button
-                key={c}
-                aria-label={`Color ${c}`}
-                onClick={() => {
-                  setProfile({ avatarColor: c })
-                  setColorOpen(false)
-                }}
-                className={`w-12 h-12 rounded-full border-2 transition-transform ${
-                  c === profile.avatarColor ? 'border-white scale-110' : 'border-transparent'
-                }`}
-                style={{ background: c }}
-              />
-            ))}
+      {shareOpen && (
+        <Sheet label="Compartir perfil" onClose={() => setShareOpen(false)} height="auto">
+          <h3 className="serif text-lg font-bold mb-3">Compartir tu perfil</h3>
+          <div className="space-y-2.5 pb-2">
+            <button onClick={shareLink} className="w-full min-h-[52px] rounded-2xl bg-surface2 border border-line px-4 flex items-center gap-3 text-sm font-semibold active:scale-[0.98] transition-transform">
+              <Icon name="link" size={18} />
+              Enviar enlace
+            </button>
+            <button
+              onClick={shareStoryCard}
+              disabled={generatingCard}
+              className="w-full min-h-[52px] rounded-2xl bg-accent text-accent-ink px-4 flex items-center gap-3 text-sm font-semibold active:scale-[0.98] transition-transform disabled:opacity-60"
+            >
+              <Icon name="cards" size={18} />
+              {generatingCard ? 'Creando la tarjeta…' : 'Tarjeta para Story'}
+            </button>
           </div>
         </Sheet>
       )}
 
       {findFriends && <FindFriends onClose={() => setFindFriends(false)} onToast={setToast} />}
-      <AnimatePresence>
-        {toast && <Toast key={toast} message={toast} onDone={() => setToast(null)} />}
-      </AnimatePresence>
+      <AnimatePresence>{toast && <Toast key={toast} message={toast} onDone={() => setToast(null)} />}</AnimatePresence>
     </div>
   )
 }
 
-function Stat({ label, value, small, className = '' }: { label: string; value: string; small?: boolean; className?: string }) {
+function Counter({ value, label }: { value: number; label: string }) {
   return (
-    <div className={`bg-surface rounded-2xl border border-line p-3 ${className}`}>
-      <div className={`font-bold tabular-nums leading-none ${small ? 'text-lg' : 'text-2xl'}`}>{value}</div>
-      <div className="text-xs text-mute mt-1 truncate">{label}</div>
+    <div>
+      <div className="text-lg font-bold tabular-nums leading-none">{value}</div>
+      <div className="text-[11px] text-mute mt-1">{label}</div>
     </div>
   )
 }

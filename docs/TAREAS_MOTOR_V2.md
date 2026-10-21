@@ -146,6 +146,44 @@
 
 ---
 
+# ⚠️ URGENTE (21/10/2026, Igor probó la app) — hacer antes de seguir con T5
+
+## T2b — Fichas enlazadas a la cosa equivocada de Wikidata
+
+**Qué pasa:** muchas obras apuntan a un elemento de Wikidata que no es la obra: el juego *Earth* apunta al planeta Tierra (Q2) y enseña su foto y su descripción; *Orléans*, *Lisboa*, *Concordia*, *Maracaibo* apuntan a ciudades; *Barrage* a una presa; la serie *Chernóbil* a la ciudad; la peli *La La Land* a Los Ángeles (Q65). Todo lo que cuelga de ese id (sinopsis, portada, visitas, notoriedad, idioma, país) es basura y envenena el cerebro.
+
+**Medido** con `app/scripts/engine/check-wikidata-type.mjs` (comprueba con SPARQL que el id sea instancia, directa o por subclase, del tipo de su categoría: peli Q11424; serie Q5398426/Q526877/Q1259759; libro Q47461344/Q7725634/Q571; juego Q11410; artista Q5/Q2088357/Q215380). Lista completa en `app/scripts/cache/wikidata-tipo-equivocado.json`:
+
+| Categoría | Mal enlazadas |
+|---|---|
+| Juegos | **213 / 705** |
+| Series | 155 / 865 |
+| Pelis | 52 / 803 |
+| Libros | 213 / 442 (muchos apuntan a una **edición** concreta en vez de a la obra: también hay que corregirlos, porque las ediciones no tienen artículos ni visitas) |
+| Artistas | 8 / 400 (*Dover* → la ciudad, *Cupido* → el dios) |
+
+**Arreglo:**
+1. Mete la comprobación de tipo **dentro del resolutor** (E1): un candidato de Wikidata solo se acepta si es del tipo de su categoría. En libros, si el candidato es una edición (P31 = Q3331189), se sube a la obra con P629 («edición de»).
+2. Para cada obra de la lista: borra el `wikidataId` y **todo lo que vino de él** (los campos con `src` = `wikidata`/`wikipedia`/`wikimedia`: sinopsis, portada, visitas, `wikiLangs`, país, idioma, premios, notoriedad) y vuelve a resolver con el filtro de tipo. Lo que no se resuelva queda sin id y va a `sin-resolver.md`; su sinopsis y portada salen de otra fuente o de la ficha del LLM (T5).
+3. `coverage.mjs` ejecuta la comprobación y **falla si hay alguna** mal enlazada.
+
+**Hecho cuando:** `check-wikidata-type.mjs` da 0 en todas las categorías y la ficha de *Earth* enseña el juego.
+
+## T2c — Faltan los clásicos que conoce todo el mundo
+
+**Qué pasa:** en Decidir, Igor no reconoce casi ningún orientador de juegos ni de series. Dos causas:
+- **El catálogo de juegos es de jugones**: la popularidad viene de la comunidad de BGG (*Brass*, *Ark Nova*, *Gloomhaven* arriba). *Monopoly* tiene 50 y *Catan* 69; **no existen** Tabú, Trivial Pursuit, Parchís, Cluedo, Pictionary, Jenga, Dobble, Jungle Speed, Virus!, ajedrez, damas, dominó, la oca, Hundir la flota, Conecta 4, Party & Co, Scattergories, Hotel, Mikado… Y los que hay están en inglés (*Ticket to Ride* en vez de *¡Aventureros al tren!*).
+- **Las series vienen de un volcado de TVmaze de ~2010-2015** con popularidad 95 para casi todo (*Helix*, *Bitten*, *Continuum* empatadas con *Breaking Bad*).
+
+**Arreglo:**
+1. Juegos: añade por `additions/boardgame.json` (T2) los **~150 juegos de mesa más conocidos en España por el público general** (de familia, de fiesta, clásicos de toda la vida y los «de tienda» de gran consumo: los de arriba, más UNO, Monopoly, Risk, Scrabble, Dixit, Carcassonne, Catan, Código Secreto, Exploding Kittens, Time's Up, Story Cubes, Bang!, Saboteur, Virus!, Sushi Go…). Fuente de la lista: listas raspadas de los más vendidos en España (jugueterías y grandes superficies) más el LLM con búsqueda para completar. Títulos en español (`titles.es-ES`) para todos.
+2. Series: añade las ~200 series más vistas en España de cada época (TV abierta española y plataformas), igual por `additions/series.json`.
+3. Hasta que la reconocibilidad (R) de T8 use la notoriedad, **el resultado no cambiará en Decidir**. Además, el código actual saca los orientadores **de fuera del pool**, y el pool se queda con las 300 mejores, así que los orientadores son justo las menos conocidas. Por eso **adelanta T8 y la parte de orientadores de T9** (elegibles incluido el pool, sorteo con papeletas por R) en cuanto acabe T2b, sin esperar al bloque B.
+
+**Hecho cuando:** en Decidir con un perfil nuevo, de 10 duelos de juegos y 10 de series, Igor reconoce al menos una de las dos obras en 9 de cada 10.
+
+---
+
 # Bloque B — El cerebro (MOTOR §2c)
 
 > Lo más importante del encargo. Antes era «rellenar ejes»; ahora es construir un espacio único de contenido + comportamiento que aprende (decisión de Igor, 21/10/2026). **Lee MOTOR §2c entero antes de empezar.**
