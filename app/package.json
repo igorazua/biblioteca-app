@@ -15,6 +15,8 @@
     "engine:attrs": "node scripts/engine/fill-attr.mjs",
     "engine:books": "node scripts/engine/enrich-books-wikidata.mjs",
     "engine:pageviews": "node scripts/engine/enrich-pageviews.mjs",
+    "brain:users": "node scripts/brain/test-users.mjs",
+    "brain:eval": "node scripts/brain/eval-brain.mjs",
     "engine:build": "node scripts/engine/build.mjs",
     "engine:graph": "node scripts/engine/graph-import.mjs",
     "engine:context": "node scripts/engine/context.mjs",

@@ -4,6 +4,8 @@
   "scripts": {
     "build": "cd app && npm run build",
     "dev": "cd app && npm run dev",
-    "test": "cd app && npm test"
+    "test": "cd app && npm test",
+    "brain:users": "cd app && npm run brain:users",
+    "brain:eval": "cd app && npm run brain:eval"
   }
 }
