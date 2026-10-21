@@ -302,7 +302,7 @@ async function main() {
     }
   }
 
-  writeFileSync(SEED_FILE, JSON.stringify(seed))
+  writeFileSync(SEED_FILE, JSON.stringify(seed, null, 2))
   console.log(`✓ Consolidación finalizada: ${sourcesCount} fuentes integradas, ${attrsApplied} atributos aplicados.`)
   console.log(`✓ popPct, notoriety y trend calculados para las ${items.length} obras.`)
 }
