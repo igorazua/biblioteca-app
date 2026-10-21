@@ -1,5 +1,6 @@
 import type { Friend, Item, ReaderProfile, UserEntry } from '../types'
 import { bookFit } from './reader'
+import { PARAMS } from './engine/params'
 
 /** Ruido estable 0-5 a partir del id (no cambia entre renders ni sesiones). */
 export function stableNoise(id: string): number {
@@ -24,7 +25,7 @@ export function deckScore(it: Item, ctx: Pick<DeckCtx, 'birthYear' | 'platforms'
     // los libros mejor valorados primero, y los que encajan con el test de lector
     s += 6 * (ctx.quality?.(it.id) ?? it.popularity / 10) + 30 * bookFit(it, ctx.reader)
   }
-  if (ctx.birthYear && it.year >= ctx.birthYear + 12 && it.year <= ctx.birthYear + 25) s += 20
+  if (ctx.birthYear && it.year && it.year >= ctx.birthYear + PARAMS.ERA_WINDOW[0] && it.year <= ctx.birthYear + PARAMS.ERA_WINDOW[1]) s += 20
   if (it.platforms?.some((p) => ctx.platforms.includes(p))) s += 10
   return s + stableNoise(it.id)
 }

@@ -301,4 +301,65 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
     // Con solo Netflix marcada, no pasa
     expect(passesFilters(skyItem, {}, ['Netflix'])).toBe(false)
   })
+
+  it('con la estantería de artistas siempre hay pareja y nunca falla por año indefinido', () => {
+    const mockArtists: Item[] = [
+      {
+        id: 'artist:rosalia',
+        type: 'artist',
+        title: 'Rosalía',
+        year: 0,
+        creator: 'Rosalía',
+        genres: ['Flamenco', 'Pop'],
+        synopsis: 'Cantante española',
+        posterUrl: null,
+        popularity: 95,
+        notoriety: { ES: 0.95 },
+      },
+      {
+        id: 'artist:c-tangana',
+        type: 'artist',
+        title: 'C. Tangana',
+        year: 0,
+        creator: 'C. Tangana',
+        genres: ['Urbano', 'Pop'],
+        synopsis: 'Músico madrileño',
+        posterUrl: null,
+        popularity: 92,
+        notoriety: { ES: 0.92 },
+      },
+      {
+        id: 'artist:quevedo',
+        type: 'artist',
+        title: 'Quevedo',
+        year: 0,
+        creator: 'Quevedo',
+        genres: ['Reggaeton', 'Trap'],
+        synopsis: 'Cantante canario',
+        posterUrl: null,
+        popularity: 90,
+        notoriety: { ES: 0.90 },
+      },
+    ]
+
+    const input: DecideInput = {
+      shelf: 'artist',
+      items: mockArtists,
+      entries: {},
+      rankings: { movie: [], series: [], book: [], artist: [], boardgame: [] },
+      profile: mockProfile,
+      friends: [],
+      answers: {},
+      affinity: () => null,
+      friendPct: () => null,
+    }
+
+    const state = initDecideSession(input)
+    const duel = nextDuel(state, mockArtists, new Set(), () => 0.2)
+    expect(duel).not.toBeNull()
+    if (duel) {
+      expect(duel.a.id).not.toBe(duel.b.id)
+      expect(duel.phase).toBe('coarse')
+    }
+  })
 })

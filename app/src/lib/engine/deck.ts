@@ -1,6 +1,7 @@
-import type { Friend, Item, Profile, ShelfType, UserEntry } from '../../types'
+import type { Friend, Item, Profile, ShelfType, UserEntry, DeckLearnShelf } from '../../types'
 import { PARAMS, type Bucket } from './params'
 import { centroid, simWithCentroid } from './features'
+import { recog } from './recog'
 
 export interface DeckSessionState {
   countsByDecade: Record<string, { seen: number; up: number; left: number; shown: number }>
@@ -31,6 +32,7 @@ export interface DeckInput {
   affinity: (friendId: string) => number | null
   friendPct: (friend: Friend, itemId: string) => number | null
   session?: DeckSessionState
+  deckLearn?: DeckLearnShelf
   now?: number
   seed?: number
 }
@@ -159,34 +161,21 @@ export function nextCards(input: DeckInput, already: string[] = [], n = 20): Dec
   const userTopIds = userRanked.slice(0, topN)
   const userCentroid = userTopIds.length > 0 ? centroid(shelf, userTopIds) : null
 
+  const recogCtx = {
+    user: profile,
+    entries,
+    items,
+    deckLearn: input.deckLearn,
+    friends: friends.map((f) => ({
+      id: f.id,
+      entries: f.entries.map((e) => ({ itemId: e.itemId, status: e.status })),
+      affinity: affinity(f.id) ?? undefined,
+    })),
+  }
+
   for (const it of eligible) {
     const pop = (it.popularity || 50) / 100
     const votes = Math.log(1 + (it.voteCount || it.readers || 0)) / logMaxVotes
-
-    // Señal regional
-    let region = 0
-    if (it.providers?.[country]?.length) region += 0.5
-    if (it.releasedIn?.includes(country)) region += 0.3
-    if (it.wikiLocal?.includes(lang)) region += 0.2
-    if (it.originalLanguage === lang) region += 0.2
-    if (shelf === 'boardgame') region = 0.5
-    if (shelf === 'artist') region = Math.min(1, region * 2)
-    region = Math.min(1, region)
-
-    // Señal de época
-    let era = 0.5
-    if (profile.birthYear && it.year) {
-      const minAge = profile.birthYear + 12
-      const maxAge = profile.birthYear + 25
-      if (it.year >= minAge && it.year <= maxAge) {
-        era = 1.0
-      } else if (it.year < minAge) {
-        era = Math.max(0, 1 - (minAge - it.year) / 10)
-      } else {
-        era = Math.max(0, 1 - (it.year - maxAge) / 10)
-      }
-    }
-    if (shelf === 'boardgame') era = 0.5
 
     // Plataforma del usuario
     const plat = it.platforms?.some((p) => profile.platforms.includes(p)) ? 1.0 : 0.0
@@ -227,9 +216,9 @@ export function nextCards(input: DeckInput, already: string[] = [], n = 20): Dec
     const novelty = 1.0 - pop * 0.4
 
     // Cálculo por cupos
-    // 1. seen_likely
-    const popWeight = shelf === 'book' ? 0.3 : 0.4
-    const seenLikelyScore = (popWeight * pop + 0.15 * votes + 0.2 * region + 0.2 * era + 0.05 * plat) * adaptSeen
+    // 1. seen_likely = recog(it) · adapt (MOTOR §2b.6)
+    const r = recog(it, recogCtx)
+    const seenLikelyScore = (r * 0.95 + 0.05 * plat) * adaptSeen
 
     // 2. social (solo si social > 0)
     let socialScore = 0

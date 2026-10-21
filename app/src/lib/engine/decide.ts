@@ -1,9 +1,10 @@
-import type { Friend, Item, Profile, ShelfType, UserEntry } from '../../types'
+import type { Friend, Item, Profile, ShelfType, UserEntry, DeckLearnShelf } from '../../types'
 import { PLATFORMS } from '../../config'
 import { PARAMS } from './params'
 import { MOOD_GENRES, NONFICTION_GENRES } from '../../data/questions'
 import { friendRanks } from '../rank'
 import { sim as engineSim } from './features'
+import { recog, type RecogContext } from './recog'
 
 export type Answers = Record<string, string | string[] | undefined>
 
@@ -20,6 +21,11 @@ export interface DecideState {
   rejected: string[]             // propuestas rechazadas con «Seguir buscando»
   round: number
   duelsInRound: number
+  profile?: Profile
+  entries?: Record<string, UserEntry>
+  friends?: Friend[]
+  deckLearn?: DeckLearnShelf
+  recentOrienters?: string[][]
 }
 
 export interface DuelPair {
@@ -46,6 +52,8 @@ export interface DecideInput {
   answers: Answers
   affinity: (friendId: string) => number | null
   friendPct: (friend: Friend, itemId: string) => number | null
+  deckLearn?: DeckLearnShelf
+  recentOrienters?: string[][]
 }
 
 const asStr = (v: Answers[string]): string | undefined => (typeof v === 'string' ? v : undefined)
@@ -135,8 +143,7 @@ export function calcSimilarity(a: Item, b: Item): number {
   const creatorSim = a.creator && b.creator && a.creator === b.creator ? 1.0 : 0
 
   // 3. Proximidad de año (década)
-  const yearDiff = Math.abs(a.year - b.year)
-  const yearSim = Math.max(0, 1 - yearDiff / 30)
+  const yearSim = a.year != null && b.year != null ? Math.max(0, 1 - Math.abs(a.year - b.year) / 30) : 0.5
 
   // 4. Misma saga/colección
   const collectionSim = a.collection && b.collection && a.collection === b.collection ? 1.0 : 0
@@ -216,7 +223,7 @@ export function initDecideSession(input: DecideInput): DecideState {
     // Gusto general (taste)
     const taste = 0.5
 
-    // Boost por pendiente propio o de amigo
+    // Boost por pendiente propio o de amigo + tendencia
     const isPending = entries[it.id]?.status === 'pending'
     let boost = isPending ? 0.15 : 0
     if (!boost) {
@@ -227,6 +234,9 @@ export function initDecideSession(input: DecideInput): DecideState {
         }
       }
     }
+    const country = profile.country || 'ES'
+    const trendVal = (it.trend as Record<string, number> | undefined)?.[country] ?? 0
+    boost += PARAMS.TREND_BOOST * trendVal
 
     const priorVal = (0.35 * moodScore + 0.25 * taste + 0.40 * quality) * (1 + boost)
     prior[it.id] = Math.max(0.0001, priorVal)
@@ -256,6 +266,11 @@ export function initDecideSession(input: DecideInput): DecideState {
     rejected: [],
     round: 1,
     duelsInRound: 0,
+    profile,
+    entries,
+    friends,
+    deckLearn: input.deckLearn,
+    recentOrienters: input.recentOrienters,
   }
 }
 
@@ -268,19 +283,78 @@ export function nextDuel(
   shownIds: Set<string>,
   rng = Math.random
 ): DuelPair | null {
-  const { shelf, pool, post, duels } = state
-  const poolSet = new Set(pool)
+  const { shelf, pool, post, duels, profile, entries, friends, deckLearn, recentOrienters } = state
   const shown = new Set([...state.shown, ...shownIds])
 
-  // Bolsa O de orientadores (§8.4)
-  const orienters = items.filter((it) => it.type === shelf && !poolSet.has(it.id) && !shown.has(it.id))
+  // Bolsa O de orientadores (§8.4) - elegibles = toda la estantería sin las enseñadas en la sesión (INCLUIDO EL POOL)
+  const orienters = items.filter((it) => it.type === shelf && !shown.has(it.id))
   if (orienters.length < 2) return null
 
-  // Reconocibilidad recog de cada orientador
+  // Reconocibilidad recog de cada orientador con Motor R (§2b.4)
+  const recogCtx: RecogContext = {
+    user: profile ?? { country: 'ES', lang: 'es' },
+    entries,
+    items,
+    deckLearn,
+    friends: friends?.map((f) => ({
+      id: f.id,
+      entries: f.entries.map((e) => ({ itemId: e.itemId, status: e.status })),
+    })),
+  }
+
   const recogMap = new Map<string, number>()
   for (const it of orienters) {
-    const pop = (it.popularity || 50) / 100
-    recogMap.set(it.id, 0.6 + 0.4 * pop)
+    recogMap.set(it.id, recog(it, recogCtx))
+  }
+
+  // Suelo relativo por percentil (ORIENTER_R_PCT = 70, ORIENTER_MIN = 40)
+  const sortedByR = [...orienters].sort((a, b) => (recogMap.get(b.id) ?? 0) - (recogMap.get(a.id) ?? 0))
+  let eligibleOrienters = orienters
+
+  if (orienters.length > PARAMS.ORIENTER_MIN) {
+    let pct = PARAMS.ORIENTER_R_PCT
+    while (pct > 0) {
+      const idx = Math.min(sortedByR.length - 1, Math.floor(((100 - pct) / 100) * sortedByR.length))
+      const cutoffR = recogMap.get(sortedByR[idx].id) ?? 0
+      const subset = orienters.filter((it) => (recogMap.get(it.id) ?? 0) >= cutoffR)
+      if (subset.length >= PARAMS.ORIENTER_MIN) {
+        eligibleOrienters = subset
+        break
+      }
+      pct -= 10
+    }
+  }
+
+  if (eligibleOrienters.length < 2) eligibleOrienters = orienters
+
+  // Rotación de orientadores de las últimas 3 sesiones (rotDecay = 0.5)
+  const recentIds = new Set<string>()
+  if (recentOrienters?.length) {
+    for (const sessionIds of recentOrienters) {
+      for (const id of sessionIds) recentIds.add(id)
+    }
+  }
+
+  // Sorteo con papeletas proporcional a (R_a * R_b)^k
+  const k = PARAMS.ORIENTER_K
+  const ticketWeights = new Map<string, number>()
+  let totalTickets = 0
+  for (const it of eligibleOrienters) {
+    const r = recogMap.get(it.id) ?? 0.5
+    const rotMult = recentIds.has(it.id) ? PARAMS.ORIENTER_ROTATION.decay : 1.0
+    const w = Math.pow(Math.max(0.01, r), k / 2) * Math.sqrt(rotMult)
+    ticketWeights.set(it.id, w)
+    totalTickets += w
+  }
+
+  const drawTicket = (): Item => {
+    let rand = rng() * totalTickets
+    for (const it of eligibleOrienters) {
+      const w = ticketWeights.get(it.id) ?? 0
+      if (rand <= w) return it
+      rand -= w
+    }
+    return eligibleOrienters[eligibleOrienters.length - 1]
   }
 
   const phase: 'coarse' | 'fine' = duels.length < 2 ? 'coarse' : 'fine'
@@ -288,18 +362,18 @@ export function nextDuel(
   // Muestrear parejas candidatas (hasta 250) (§8.5)
   const poolItems = pool.map((id) => items.find((i) => i.id === id)).filter(Boolean) as Item[]
   const candidatePairs: { a: Item; b: Item; score: number; info: number }[] = []
-  const maxTries = Math.min(250, orienters.length * 3)
+  const maxTries = Math.min(250, eligibleOrienters.length * 4)
 
   for (let t = 0; t < maxTries; t++) {
-    const a = orienters[Math.floor(rng() * orienters.length)]
-    const b = orienters[Math.floor(rng() * orienters.length)]
+    const a = drawTicket()
+    const b = drawTicket()
     if (a.id === b.id) continue
 
     const macroA = a.genres?.[0] || 'General'
     const macroB = b.genres?.[0] || 'General'
 
     if (phase === 'coarse') {
-      if (macroA === macroB) continue
+      if (macroA === macroB && eligibleOrienters.length > 5) continue
     } else {
       const sim = calcSimilarity(a, b)
       if (sim < 0.40 || sim > 0.88) continue
@@ -325,10 +399,9 @@ export function nextDuel(
   }
 
   if (candidatePairs.length === 0) {
-    // Fallback: tomar 2 orientadores con mayor popularidad
-    const sortedO = [...orienters].sort((x, y) => y.popularity - x.popularity)
-    const a = sortedO[0]
-    const b = sortedO[1]
+    // Fallback: tomar 2 orientadores con mayor R
+    const a = sortedByR[0]
+    const b = sortedByR[1] ?? sortedByR[0]
     return { a, b, phase, infoGain: 0.5 }
   }
 

@@ -3,7 +3,7 @@ import { persist } from 'zustand/middleware'
 import { items, getItem } from '../data/catalog'
 import { canonicalId, canonicalizeUserData } from '../data/aliases'
 import { clampStars, insertAt, starBand } from '../lib/ranking'
-import { SHELVES, type List, type Profile, type Settings, type ShelfType, type Stars, type Status, type UserEntry } from '../types'
+import { SHELVES, type List, type Profile, type Settings, type ShelfType, type Stars, type Status, type UserEntry, type DeckLearn, type DeckLearnShelf } from '../types'
 import { track } from './useEvents'
 
 interface HistoryItem {
@@ -26,11 +26,15 @@ interface State {
   history: HistoryItem[]
   pendingSave: PendingSave | null
   nudgeDismiss: Record<string, { count: number; lastDismissedAt: number }>
+  deckLearn: DeckLearn
+  recentOrienters: Record<ShelfType, string[][]>
 
   completeOnboarding: (p: Partial<Profile>) => void
   setProfile: (p: Partial<Profile>) => void
   setSettings: (s: Partial<Settings>) => void
   dismissNudge: (id: string) => void
+  decayDeckLearn: (shelf?: ShelfType) => void
+  recordOrienters: (shelf: ShelfType, ids: string[]) => void
   swipe: (itemId: string, dir: 'left' | 'right' | 'up') => void
   undoSwipe: () => string | null
   rate: (itemId: string, patch: { stars?: Stars | null; comment?: string }) => void
@@ -61,6 +65,20 @@ const defaults = () => ({
   history: [] as HistoryItem[],
   pendingSave: null as PendingSave | null,
   nudgeDismiss: {} as Record<string, { count: number; lastDismissedAt: number }>,
+  deckLearn: {
+    movie: { byMacro: {}, byDecade: {} },
+    series: { byMacro: {}, byDecade: {} },
+    book: { byMacro: {}, byDecade: {} },
+    artist: { byMacro: {}, byDecade: {} },
+    boardgame: { byMacro: {}, byDecade: {} },
+  } as DeckLearn,
+  recentOrienters: {
+    movie: [],
+    series: [],
+    book: [],
+    artist: [],
+    boardgame: [],
+  } as Record<ShelfType, string[][]>,
 })
 
 export const shelfOf = (id: string, entry?: UserEntry): ShelfType =>
@@ -86,6 +104,48 @@ export const useStore = create<State>()(
           }
         }),
 
+      decayDeckLearn: (shelf) =>
+        set((s) => {
+          const shelvesToDecay: ShelfType[] = shelf ? [shelf] : (Object.keys(s.deckLearn || {}) as ShelfType[])
+          const nextLearn = { ...s.deckLearn }
+          for (const sh of shelvesToDecay) {
+            const cur = nextLearn[sh]
+            if (!cur) continue
+            const byMacro: Record<string, any> = {}
+            for (const [m, stat] of Object.entries(cur.byMacro || {})) {
+              byMacro[m] = {
+                shown: stat.shown * 0.8,
+                seen: stat.seen * 0.8,
+                up: stat.up * 0.8,
+                left: stat.left * 0.8,
+              }
+            }
+            const byDecade: Record<string, any> = {}
+            for (const [d, stat] of Object.entries(cur.byDecade || {})) {
+              byDecade[d] = {
+                shown: stat.shown * 0.8,
+                seen: stat.seen * 0.8,
+                up: stat.up * 0.8,
+                left: stat.left * 0.8,
+              }
+            }
+            nextLearn[sh] = { byMacro, byDecade }
+          }
+          return { deckLearn: nextLearn }
+        }),
+
+      recordOrienters: (shelf, ids) =>
+        set((s) => {
+          const prev = s.recentOrienters?.[shelf] || []
+          const updated = [ids, ...prev].slice(0, 3)
+          return {
+            recentOrienters: {
+              ...s.recentOrienters,
+              [shelf]: updated,
+            },
+          }
+        }),
+
       swipe: (itemId, dir) =>
         set((s) => {
           const prevEntry = s.entries[itemId]
@@ -102,13 +162,47 @@ export const useStore = create<State>()(
           }
           const history = [...s.history, { itemId, prev: prevEntry ?? null, prevRanking: s.rankings[shelf] ?? [], shelf }].slice(-20)
 
+          // Actualizar deckLearn (MOTOR §7.6)
+          const it = getItem(itemId)
+          const macro = it?.genres?.[0] || 'General'
+          const decade = it?.year ? String(Math.floor(it.year / 10) * 10) : 'unknown'
+          const prevShelfLearn = s.deckLearn?.[shelf] || { byMacro: {}, byDecade: {} }
+          const macroStat = prevShelfLearn.byMacro[macro] || { shown: 0, seen: 0, up: 0, left: 0 }
+          const decadeStat = prevShelfLearn.byDecade[decade] || { shown: 0, seen: 0, up: 0, left: 0 }
+
+          const updatedShelfLearn: DeckLearnShelf = {
+            byMacro: {
+              ...prevShelfLearn.byMacro,
+              [macro]: {
+                shown: macroStat.shown + 1,
+                seen: macroStat.seen + (dir === 'right' ? 1 : 0),
+                up: macroStat.up + (dir === 'up' ? 1 : 0),
+                left: macroStat.left + (dir === 'left' ? 1 : 0),
+              },
+            },
+            byDecade: {
+              ...prevShelfLearn.byDecade,
+              [decade]: {
+                shown: decadeStat.shown + 1,
+                seen: decadeStat.seen + (dir === 'right' ? 1 : 0),
+                up: decadeStat.up + (dir === 'up' ? 1 : 0),
+                left: decadeStat.left + (dir === 'left' ? 1 : 0),
+              },
+            },
+          }
+
+          const deckLearn = {
+            ...s.deckLearn,
+            [shelf]: updatedShelfLearn,
+          }
+
           track('entry_status', {
             shelf,
             itemId,
             data: { from: prevEntry?.status ?? null, to: newStatus, via: 'deck' },
           })
 
-          return { entries: { ...s.entries, [itemId]: entry }, history }
+          return { entries: { ...s.entries, [itemId]: entry }, history, deckLearn }
         }),
 
       undoSwipe: () => {

@@ -224,3 +224,18 @@ export const SHELF_LABEL: Record<ShelfType, ShelfTerms> = {
     pendingPlural: 'lo tienen pendiente',
   },
 }
+
+export interface DeckLearnStats {
+  shown: number
+  seen: number
+  up: number
+  left: number
+}
+
+export interface DeckLearnShelf {
+  byMacro: Record<string, DeckLearnStats>
+  byDecade: Record<string, DeckLearnStats>
+}
+
+export type DeckLearn = Record<ShelfType, DeckLearnShelf>
+

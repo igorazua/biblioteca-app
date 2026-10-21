@@ -53,6 +53,34 @@ export interface EngineParams {
   /** Limpieza de pendientes */
   CLEANUP_MIN: number
   CLEANUP_RECENT_D: number
+
+  /** Reconocibilidad (R) y época (v2) */
+  ERA_WINDOW: [number, number]
+  ERA_MEDIAN_AGE: number
+  R_W: {
+    base: number
+    era: number
+    zona: [number, number]
+    socialFriendRate: number
+  }
+  NOTORIETY_W: {
+    vis: number
+    local: number
+    lista: number
+    llm: number
+  }
+
+  /** Orientadores de Decidir (v2) */
+  ORIENTER_R_PCT: number
+  ORIENTER_MIN: number
+  ORIENTER_K: number
+  ORIENTER_ROTATION: {
+    sessions: number
+    decay: number
+  }
+
+  /** Boost por tendencia en el país */
+  TREND_BOOST: number
 }
 
 export const PARAMS: EngineParams = {
@@ -106,6 +134,31 @@ export const PARAMS: EngineParams = {
 
   CLEANUP_MIN: 3,
   CLEANUP_RECENT_D: 60,
+
+  ERA_WINDOW: [12, 25],
+  ERA_MEDIAN_AGE: 25,
+  R_W: {
+    base: 1.0,
+    era: 1.0,
+    zona: [0.6, 0.4],
+    socialFriendRate: 0.35,
+  },
+  NOTORIETY_W: {
+    vis: 0.45,
+    local: 0.15,
+    lista: 0.15,
+    llm: 0.25,
+  },
+
+  ORIENTER_R_PCT: 70,
+  ORIENTER_MIN: 40,
+  ORIENTER_K: 2,
+  ORIENTER_ROTATION: {
+    sessions: 3,
+    decay: 0.5,
+  },
+
+  TREND_BOOST: 0.05,
 }
 
 /** Devuelve el valor o variante para pruebas A/B futuras */

@@ -137,6 +137,8 @@ export function WhatToWatch() {
       answers: a,
       affinity: getAffinity,
       friendPct: getFriendPct,
+      deckLearn: useStore.getState().deckLearn?.[shelf],
+      recentOrienters: useStore.getState().recentOrienters?.[shelf],
     })
     setDecideState(state)
 
@@ -197,6 +199,7 @@ export function WhatToWatch() {
     if (shouldPropose(updatedState)) {
       const prop = getProposal(updatedState, itemsById, activeFriends, profile)
       if (prop) {
+        useStore.getState().recordOrienters(shelf, updatedState.shown)
         setProposal(prop)
         setCurrent(prop.item.id)
         setPair(null)
@@ -224,6 +227,7 @@ export function WhatToWatch() {
     } else {
       const prop = getProposal(updatedState, itemsById, activeFriends, profile)
       if (prop) {
+        useStore.getState().recordOrienters(shelf, updatedState.shown)
         setProposal(prop)
         setCurrent(prop.item.id)
         setPair(null)
