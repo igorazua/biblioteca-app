@@ -14,13 +14,20 @@
 
 **El cerebro (21/10/2026, Igor):** el motor pasa a ser un espacio único que aprende: contenido (ficha de experiencia escrita por LLM) + comportamiento prestado (clickstream de Wikipedia y listas públicas raspadas) + vector de cada usuario + un modelo que aprende a ordenar. Se evalúa con perfiles públicos como usuarios de prueba. Diseño en `docs/MOTOR.md` §2c (con costes estimados); licencias aparcadas hasta que funcione con usuarios.
 
-**Estado real del motor (medido el 21/10/2026):**
-- Los vectores y vecinos de `src/data/engine/*.json` son reales (los vecinos de *Toy Story* son *Ratatouille*, *Up*, *Shrek*…).
-- **Los ejes, temas y momentos son relleno**: el 100 % de los ejes vale 3 y `conf = 0`. Todo lo que depende de ejes (mood por ejes, duelos `fine`, motivos) funciona en vacío. Es la prioridad n.º 1.
-- Los JSON del motor son del 16/10: les faltan las obras añadidas después.
-- `seed.json` pesa 5,4 MB: lo nuevo no puede engordarlo (los datos que la app no lee se quedan en `scripts/cache/`).
-- Faltan en todo el catálogo: `originalLanguage` (0 %), país de origen en libros (1 %) y juegos (0 %), títulos por país, notoriedad por mercado y tendencia.
-- Plan de trabajo para Gemini: **`docs/TAREAS_MOTOR_V2.md`**.
+**Estado real del motor (21/10/2026 - T0 a T13 completados y verificados):**
+- **Cerebro (Capas 1, 2 y 3):** MiniLM 384d + Grafo Clickstream Wikipedia (2.611 aristas PPMI) + Fusión de difusión y PCA Int8 48d (`cross.json` y `engine/<shelf>.json` todos <= 350 KB).
+- **Motores R, A y D:**
+  - **R (`recog.ts`):** Reconocibilidad unificada con ventana formativa [12, 25], social boost, inferencia de edad y décadas de éxito de artistas.
+  - **A (`decide.ts`):** Orientadores sobre todo el pool, re-muestreo tras 3.er duelo / «Seguir buscando», parada adaptativa, tracking de latencia en ms.
+  - **D (`deck.ts`):** Mazo Descubrir con ranker calibrado, señales `r` y `s`, y exploración adaptativa.
+- **Capa 4 (`userVec.ts`, `ranker.ts`, `metrics.ts`):** Vector de usuario u en R^48 en Zustand store con decaimiento reactivo de 365 días; ranker logístico reentrenado sobre 56k eventos (AUC 0.795); métricas de AUC de R y latencia mediana de duelos en `/metricas`.
+- **Registro de atributos y metadatos (T12 y T13):**
+  - Libros: `schoolReading.ES` (100% cubierto, 53 curriculares contrastados con listas oficiales).
+  - Series: TVmaze integrado al 91,7% (`seasons`, `episodes`, `network`, `ongoing`).
+  - Juegos: `weight` (1.0-5.0), `minAge`, `cooperative`, `mechanics` al 100%.
+  - Pelis: `cast` principal vía Wikidata SPARQL P161 (79,9% de películas).
+  - Música: `peakDecades` al 100% de artistas.
+- **Tests y compilación:** 19/19 archivos de tests y 125/125 tests en verde. PWA compila limpia sin errores.
 
 ## Documentos (leer en este orden)
 1. `docs/IDEA.md` — la idea, decisiones tomadas (✅) y debates abiertos. **Fuente de verdad.**
