@@ -31,9 +31,29 @@ Estilo: editorial y «brutalista»: titulares enormes en mayúsculas condensadas
 
 ---
 
-## Lo que más valor tendría (propuesta de Claude, por orden)
-1. **S3, cuadrícula de «las que has visto»** al empezar: cero fricción y el mejor dato para R y el cerebro.
-2. **S1/S2, Conectar en vez de Importar**, empezando por las fuentes que solo piden tu usuario.
-3. **S8, ranking por niveles y después duelos dentro del nivel.**
-4. **P2, hoja de obra con «Recomendar a un amigo».**
-5. **S6, estados de ánimo en chips** en Decidir.
+## Achriom (21/10/2026) — artículo «best all-in-one media tracker»
+Competidor directo: pelis, series, libros, música, anime, videojuegos y podcasts en una biblioteca.
+- **Importa casi de todo:** Letterboxd (zip, CSV **o solo el usuario**), Goodreads, StoryGraph, IMDb, Trakt, Apple Music, AniList, Kitsu, MyAnimeList y «pegar una lista». **AniList, Kitsu y Trakt se sincronizan a diario** tras la primera importación.
+- **Entrada:** búsqueda, enlace, escaneo de ISBN y **foto de una estantería o de cajas de juegos**.
+- **«Bibliotecario» con IA** que responde sobre toda tu biblioteca («¿qué conecta mis pelis y libros favoritos?»), y un **retrato de gustos** entre formatos.
+- Seguimiento de series por episodio y calendario de estrenos.
+- Perfil privado por defecto; **exportación completa a CSV**. Gratis; Pro (9,99 $/mes) solo amplía la IA.
+- **Blog y SEO muy trabajados** (visto por Igor): artículos de comparativa entre otras dos apps («X vs Y») en los que meten la suya, y guías tipo «el mejor tracker todo en uno». Es la forma de aparecer en Google y en las respuestas de los LLM cuando alguien pregunta por alternativas. A copiar cuando haya producto público (nombre decidido y dominio).
+- **Bibliotecario con IA y conexión con ChatGPT/Claude:** muy buena idea para nosotros (el cerebro ya sabe responder «¿qué conecta lo que me gusta?»), con cuidado de coste por usuario y de no inventar datos. No sabemos cuántos usuarios ni de pago tienen.
+- **Nuestra ventaja:** amigos reales con su puesto y comentario en cada tarjeta, swipe, ranking por duelos y Decidir. **Lo que nos llevamos:** sincronización continua, foto de estantería, exportarlo todo y el retrato de gustos (sale gratis del cerebro).
+
+---
+
+## Decisiones de Igor (21/10/2026)
+- ❌ **Ranking por niveles (S8): no.**
+- **Cuadrícula de «las que has visto» (S3):** como mucho en la bienvenida, nunca como acción principal; el swipe sigue siendo lo principal.
+- ✅ **Lo mejor para empezar es conectar otra plataforma** y que se mantenga al día por API (como Spotify en Shelf). Conectar (S1/S2) con sincronización continua donde haya API (Spotify, Trakt) y por usuario donde haya feed público (Letterboxd, Goodreads, BGG, Last.fm); el archivo, como último recurso.
+- **Diseño:** Shelf y Achriom se ven más limpios que nuestra app (mejor separación entre elementos, más legibilidad). Pendiente una pasada de limpieza visual.
+- **Duelo A/B:** los pósteres salen cortados por la diagonal y con el título encima. Claude propone 3 alternativas (lado a lado, filas apiladas, cartas en abanico) e Igor elige.
+
+## Prioridad actual
+1. Conectar plataformas con sincronización (Spotify, Trakt, Letterboxd, Goodreads, BGG, Last.fm).
+2. Nuevo diseño del duelo A/B (la propuesta que elija Igor).
+3. Pasada de limpieza visual en toda la app.
+4. Hoja de obra con «Recomendar a un amigo» (P2).
+5. Estados de ánimo en chips en Decidir (S6).

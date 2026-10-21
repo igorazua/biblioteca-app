@@ -1,12 +1,52 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
-import { AnimatePresence, motion, useMotionValue, useTransform } from 'framer-motion'
+import { AnimatePresence, motion, useMotionValue, useTransform, animate, type MotionValue } from 'framer-motion'
 import { APP_NAME } from '../config'
 import { useStore } from '../store/useStore'
 import { useAuth } from '../store/useAuth'
-import { SHELVES, SHELF_LABEL, type ShelfType } from '../types'
-import { Icon } from '../components/Icon'
+import { getItem } from '../data/catalog'
+import { SHELVES, SHELF_LABEL, type Item, type ShelfType } from '../types'
+import { Poster } from '../components/Poster'
+import { Icon, type IconName } from '../components/Icon'
+import { Avatar } from '../components/ui'
 import { haptic } from '../lib/haptics'
+
+const SHELF_ICONS: Record<ShelfType, IconName> = {
+  movie: 'film',
+  series: 'tv',
+  book: 'bookOpen',
+  boardgame: 'cards',
+  artist: 'sparkle',
+}
+
+// Obras emblemáticas reales del catálogo para el tutorial interactivo
+const TUTORIAL_ITEMS: Item[] = [
+  getItem('movie:el-padrino-1972'),
+  getItem('movie:pulp-fiction-1994'),
+  getItem('series:breaking-bad-2008'),
+  getItem('book:1984-1949'),
+].filter(Boolean) as Item[]
+
+function Stamp({
+  label,
+  color,
+  opacity,
+  className,
+}: {
+  label: string
+  color: string
+  opacity: MotionValue<number>
+  className: string
+}) {
+  return (
+    <motion.div
+      style={{ opacity, color, borderColor: color }}
+      className={`absolute z-20 border-[3.5px] rounded-xl px-3 py-1 text-[20px] font-black tracking-wider whitespace-nowrap pointer-events-none select-none shadow-lg ${className}`}
+    >
+      {label}
+    </motion.div>
+  )
+}
 
 export function Onboarding() {
   const nav = useNavigate()
@@ -15,10 +55,10 @@ export function Onboarding() {
   const complete = useStore((s) => s.completeOnboarding)
   const { signInWithGoogle } = useAuth()
 
-  // 0: Qué es, 1: Gestos práctica, 2: Ranking duelos, 3: Amigos, 4: Cómo empezar, 5: Elegir estanterías
+  // 0: Bienvenida, 1: Práctica 3 gestos, 2: Ranking A/B, 3: Amigos, 4: Registro / Inicio, 5: Selección de estanterías
   const [step, setStep] = useState(0)
 
-  // Práctica de gestos
+  // Estado de los 3 gestos completados
   const [gestures, setGestures] = useState<{ left: boolean; right: boolean; up: boolean }>({
     left: false,
     right: false,
@@ -28,22 +68,49 @@ export function Onboarding() {
   // Estanterías elegidas en paso 5
   const [selectedShelves, setSelectedShelves] = useState<ShelfType[]>([...SHELVES])
 
-  // Drag motion values para la tarjeta de práctica
-  const cardX = useMotionValue(0)
-  const cardY = useMotionValue(0)
-  const cardRotate = useTransform(cardX, [-180, 0, 180], [-12, 0, 12])
+  // Tarjeta actual de práctica en paso 1
+  const [itemIndex, setItemIndex] = useState(0)
+  const currentCard = TUTORIAL_ITEMS[itemIndex % TUTORIAL_ITEMS.length]
+
+  // Física de arrastre para la tarjeta real
+  const x = useMotionValue(0)
+  const y = useMotionValue(0)
+  const rotate = useTransform(x, [-200, 0, 200], [-14, 0, 14])
+
+  // Opacidad de sellos y resplandores reactivos
+  const rightO = useTransform(x, [20, 100], [0, 1])
+  const leftO = useTransform(x, [-20, -100], [0, 1])
+  const upO = useTransform(y, [-20, -90], [0, 1])
+
+  const isBusy = useRef(false)
+
+  // Duelo simulado en paso 2
+  const [winner, setWinner] = useState<'a' | 'b' | null>(null)
 
   const finish = (skip = false, redirectTarget?: string) => {
     complete({})
-    const target = redirectTarget || (next && next !== '/' && next.startsWith('/') && !next.startsWith('/onboarding') ? next : '/descubrir')
+    const target =
+      redirectTarget ||
+      (next && next !== '/' && next.startsWith('/') && !next.startsWith('/onboarding') ? next : '/descubrir')
     nav(target, { replace: true })
   }
 
-  const handlePracticeSwipe = (dir: 'left' | 'right' | 'up') => {
+  const flingCard = (dir: 'left' | 'right' | 'up') => {
+    if (isBusy.current) return
+    isBusy.current = true
     haptic('tap')
     setGestures((prev) => ({ ...prev, [dir]: true }))
-    cardX.set(0)
-    cardY.set(0)
+
+    const exitX = dir === 'right' ? 380 : dir === 'left' ? -380 : 0
+    const exitY = dir === 'up' ? -420 : 30
+
+    animate(x, exitX, { duration: 0.24, ease: 'easeIn' })
+    animate(y, exitY, { duration: 0.24, ease: 'easeIn' }).then(() => {
+      setItemIndex((i) => i + 1)
+      x.set(0)
+      y.set(0)
+      isBusy.current = false
+    })
   }
 
   const allGesturesTried = gestures.left && gestures.right && gestures.up
@@ -59,13 +126,13 @@ export function Onboarding() {
   }
 
   return (
-    <div className="h-full flex flex-col px-6 safe-top pb-6 bg-bg overflow-y-auto">
-      {/* Cabecera común con botón atrás, puntos de progreso y Saltar */}
-      <div className="flex items-center justify-between h-12 shrink-0">
+    <div className="h-full flex flex-col px-5 safe-top pb-6 bg-bg overflow-y-auto select-none">
+      {/* Cabecera común de navegación */}
+      <div className="flex items-center justify-between h-14 shrink-0">
         {step > 0 ? (
           <button
             onClick={() => setStep(step - 1)}
-            className="text-xs font-semibold text-mute flex items-center gap-1 min-h-[44px]"
+            className="text-xs font-semibold text-mute flex items-center gap-1.5 min-h-[44px] px-2 active:opacity-60 transition-opacity"
           >
             <Icon name="back" size={16} /> Atrás
           </button>
@@ -73,12 +140,13 @@ export function Onboarding() {
           <span className="w-12" />
         )}
 
-        <div className="flex gap-1.5" aria-label={`Paso ${step + 1} de 6`}>
+        {/* Indicadores de progreso modernos tipo cápsula */}
+        <div className="flex items-center gap-1.5" aria-label={`Paso ${step + 1} de 6`}>
           {[0, 1, 2, 3, 4, 5].map((i) => (
             <span
               key={i}
               className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === step ? 'w-6 bg-accent' : i < step ? 'w-2.5 bg-accent/50' : 'w-2 bg-line'
+                i === step ? 'w-6 bg-accent' : i < step ? 'w-2 bg-accent/50' : 'w-1.5 bg-line'
               }`}
             />
           ))}
@@ -86,58 +154,87 @@ export function Onboarding() {
 
         <button
           onClick={() => finish(true)}
-          className="text-xs font-medium text-mute hover:text-ink px-2 min-h-[44px]"
+          className="text-xs font-semibold text-mute hover:text-ink px-2 min-h-[44px] transition-colors"
         >
           Saltar
         </button>
       </div>
 
-      <div className="flex-1 min-h-0 flex flex-col justify-center py-4">
+      {/* Contenedor central animado */}
+      <div className="flex-1 min-h-0 flex flex-col justify-center py-2 max-w-sm w-full mx-auto">
         <AnimatePresence mode="wait">
           <motion.div
             key={step}
-            initial={{ opacity: 0, y: 12 }}
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.22, ease: 'easeOut' }}
-            className="w-full max-w-sm mx-auto"
+            exit={{ opacity: 0, y: -14 }}
+            transition={{ duration: 0.22, ease: [0.23, 1, 0.32, 1] }}
+            className="w-full flex flex-col items-center"
           >
-            {/* Paso 0: Qué es */}
+            {/* ============================================================== */}
+            {/* PASO 0: BIENVENIDA & MANIFIESTO                                */}
+            {/* ============================================================== */}
             {step === 0 && (
-              <div className="space-y-6 text-center">
-                <div className="w-16 h-16 mx-auto rounded-3xl bg-accent/15 text-accent flex items-center justify-center shadow-lg shadow-accent/10">
-                  <span className="text-3xl">📚</span>
+              <div className="w-full space-y-7 text-center">
+                {/* Composición tridimensional de portadas reales */}
+                <div className="relative h-44 w-full flex items-center justify-center pt-2">
+                  <motion.div
+                    initial={{ rotate: -14, x: -50 }}
+                    animate={{ rotate: -10, x: -44 }}
+                    className="absolute w-24 h-36 rounded-2xl overflow-hidden shadow-2xl border border-white/10 z-10"
+                  >
+                    <Poster item={TUTORIAL_ITEMS[1]} showTitle={false} className="w-full h-full object-cover" />
+                  </motion.div>
+                  <motion.div
+                    initial={{ scale: 0.95, y: 10 }}
+                    animate={{ scale: 1, y: 0 }}
+                    className="relative w-28 h-40 rounded-2xl overflow-hidden shadow-2xl border border-white/20 z-20"
+                  >
+                    <Poster item={TUTORIAL_ITEMS[0]} showTitle={false} className="w-full h-full object-cover" />
+                  </motion.div>
+                  <motion.div
+                    initial={{ rotate: 14, x: 50 }}
+                    animate={{ rotate: 10, x: 44 }}
+                    className="absolute w-24 h-36 rounded-2xl overflow-hidden shadow-2xl border border-white/10 z-10"
+                  >
+                    <Poster item={TUTORIAL_ITEMS[2]} showTitle={false} className="w-full h-full object-cover" />
+                  </motion.div>
                 </div>
-                <div>
-                  <div className="text-accent text-xs font-bold tracking-widest uppercase mb-2">
+
+                <div className="space-y-2">
+                  <div className="text-accent text-[11px] font-bold tracking-[0.2em] uppercase">
                     {APP_NAME}
                   </div>
-                  <h1 className="serif text-[32px] leading-[1.1] font-semibold text-ink">
-                    Tus pelis, series, libros, música y juegos en estanterías.
+                  <h1 className="serif text-[32px] leading-[1.08] font-bold text-ink">
+                    Lo que te ha formado, ordenado por ti.
                   </h1>
-                  <p className="text-mute text-base mt-3 leading-relaxed">
-                    Lo que te ha formado, ordenado por ti. Todo en un único lugar sin notas vacías.
+                  <p className="text-mute text-sm max-w-xs mx-auto leading-relaxed pt-1">
+                    Películas, series, libros, música y juegos de mesa. En estanterías compartidas y sin notas numéricas vacías.
                   </p>
                 </div>
 
-                {/* Estanterías miniatura */}
-                <div className="grid grid-cols-5 gap-2 pt-2">
+                {/* Resumen de las 5 estanterías con iconos profesionales */}
+                <div className="grid grid-cols-5 gap-2 pt-1 w-full">
                   {SHELVES.map((s) => (
-                    <div key={s} className="flex flex-col items-center gap-1.5 p-2 rounded-2xl bg-surface border border-line">
-                      <span className="text-lg">
-                        {s === 'movie' ? '🎬' : s === 'series' ? '📺' : s === 'book' ? '📖' : s === 'artist' ? '🎵' : '🎲'}
-                      </span>
-                      <span className="text-[10px] font-medium text-mute truncate max-w-full">
+                    <div
+                      key={s}
+                      className="flex flex-col items-center gap-1.5 py-2.5 px-1 rounded-2xl bg-surface border border-line"
+                    >
+                      <Icon name={SHELF_ICONS[s]} size={19} className="text-accent" />
+                      <span className="text-[10px] font-medium text-mute tracking-tight truncate max-w-full">
                         {SHELF_LABEL[s].plural}
                       </span>
                     </div>
                   ))}
                 </div>
 
-                <div className="pt-4">
+                <div className="pt-2 w-full">
                   <button
-                    onClick={() => setStep(1)}
-                    className="w-full min-h-[50px] rounded-2xl bg-accent text-accent-ink font-semibold text-sm active:scale-95 transition-transform"
+                    onClick={() => {
+                      haptic('tap')
+                      setStep(1)
+                    }}
+                    className="w-full min-h-[52px] rounded-2xl bg-accent text-accent-ink font-bold text-sm tracking-wide active:scale-[0.98] transition-transform shadow-lg shadow-accent/15"
                   >
                     Empezar tutorial
                   </button>
@@ -145,197 +242,336 @@ export function Onboarding() {
               </div>
             )}
 
-            {/* Paso 1: Los 3 gestos, practicando */}
+            {/* ============================================================== */}
+            {/* PASO 1: LOS 3 GESTOS CON TARJETA REAL Y FÍSICA AUTÉNTICA       */}
+            {/* ============================================================== */}
             {step === 1 && (
-              <div className="space-y-4">
-                <div className="text-center">
-                  <h1 className="serif text-[26px] leading-tight font-semibold text-ink">
-                    Descubre con 3 gestos
-                  </h1>
-                  <p className="text-mute text-xs mt-1">
-                    Prueba a deslizar o pulsa los botones para familiarizarte.
+              <div className="w-full space-y-4">
+                <div className="text-center space-y-1">
+                  <h2 className="serif text-[26px] leading-tight font-bold text-ink">
+                    Descubre con tres gestos
+                  </h2>
+                  <p className="text-mute text-xs">
+                    Desliza la tarjeta en cualquier dirección o pulsa los botones.
                   </p>
                 </div>
 
-                {/* Tarjeta interactiva de práctica */}
-                <div className="relative h-60 w-full rounded-2xl bg-surface border border-line p-4 flex flex-col justify-between overflow-hidden shadow-xl">
+                {/* Tarjeta real con proporciones auténticas y sellos */}
+                <div className="relative h-[290px] w-full max-w-[270px] mx-auto">
+                  {/* Tarjeta del fondo para dar sensación de mazo */}
+                  <div className="absolute inset-0 rounded-[24px] bg-surface2 border border-line scale-95 translate-y-3 opacity-60 pointer-events-none" />
+
+                  {/* Tarjeta interactiva arrastrable */}
                   <motion.div
-                    style={{ x: cardX, y: cardY, rotate: cardRotate }}
+                    style={{ x, y, rotate }}
                     drag
-                    dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                    dragElastic={0.9}
                     onDragEnd={(_, info) => {
-                      if (info.offset.x > 80) handlePracticeSwipe('right')
-                      else if (info.offset.x < -80) handlePracticeSwipe('left')
-                      else if (info.offset.y < -60) handlePracticeSwipe('up')
-                      else {
-                        cardX.set(0)
-                        cardY.set(0)
+                      const ox = info.offset.x
+                      const oy = info.offset.y
+                      if (Math.abs(ox) > 85) {
+                        flingCard(ox > 0 ? 'right' : 'left')
+                      } else if (oy < -70) {
+                        flingCard('up')
+                      } else {
+                        animate(x, 0, { type: 'spring', stiffness: 420, damping: 28 })
+                        animate(y, 0, { type: 'spring', stiffness: 420, damping: 28 })
                       }
                     }}
-                    className="absolute inset-0 bg-gradient-to-t from-black via-zinc-900 to-zinc-800 p-5 flex flex-col justify-between cursor-grab active:cursor-grabbing select-none"
+                    className="absolute inset-0 rounded-[24px] overflow-hidden bg-surface border border-line shadow-2xl shadow-black/70 cursor-grab active:cursor-grabbing touch-none select-none"
                   >
-                    <div className="flex items-center justify-between text-xs text-white/70">
-                      <span>🎬 Película de ejemplo</span>
-                      <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded-full">Práctica</span>
-                    </div>
-                    <div>
-                      <h3 className="serif text-2xl font-bold text-white leading-tight">El Padrino</h3>
-                      <p className="text-xs text-white/70 mt-1">1972 · Francis Ford Coppola</p>
+                    {/* Póster de alta calidad alojado */}
+                    <Poster item={currentCard} showTitle={false} className="absolute inset-0 w-full h-full object-cover" />
+
+                    {/* Degradado cinematográfico */}
+                    <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/95 via-black/60 to-transparent pointer-events-none" />
+                    <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/40 to-transparent pointer-events-none" />
+
+                    {/* Sellos de swipe reactivos */}
+                    <Stamp
+                      label="LA HE VISTO"
+                      color="var(--color-stamp-green, #3ec878)"
+                      opacity={rightO}
+                      className="top-[24%] left-4 -rotate-12 border-emerald-400 text-emerald-400 bg-black/40 backdrop-blur-xs"
+                    />
+                    <Stamp
+                      label="NO ME INTERESA"
+                      color="var(--color-stamp-red, #ef4b4b)"
+                      opacity={leftO}
+                      className="top-[24%] right-4 rotate-12 border-rose-500 text-rose-500 bg-black/40 backdrop-blur-xs"
+                    />
+                    <Stamp
+                      label="PENDIENTE"
+                      color="var(--color-stamp-blue, #5b9cf5)"
+                      opacity={upO}
+                      className="top-[32%] left-1/2 -translate-x-1/2 -rotate-6 border-sky-400 text-sky-400 bg-black/40 backdrop-blur-xs"
+                    />
+
+                    {/* Resplandores reactivos */}
+                    <motion.div
+                      style={{ opacity: rightO }}
+                      className="absolute inset-0 bg-emerald-500/20 pointer-events-none"
+                    />
+                    <motion.div
+                      style={{ opacity: leftO }}
+                      className="absolute inset-0 bg-rose-500/20 pointer-events-none"
+                    />
+                    <motion.div
+                      style={{ opacity: upO }}
+                      className="absolute inset-0 bg-sky-500/20 pointer-events-none"
+                    />
+
+                    {/* Metadatos de la tarjeta real */}
+                    <div className="absolute bottom-0 inset-x-0 p-4 text-white">
+                      <div className="text-[10px] uppercase font-bold tracking-widest text-accent">
+                        {SHELF_LABEL[currentCard.type]?.singular || 'Obra'} · {currentCard.year}
+                      </div>
+                      <h3 className="serif text-xl font-bold leading-tight mt-0.5 line-clamp-2">
+                        {currentCard.title}
+                      </h3>
+                      <p className="text-xs text-white/70 truncate mt-0.5">{currentCard.creator}</p>
                     </div>
                   </motion.div>
                 </div>
 
-                {/* Checklist de 3 gestos */}
-                <div className="grid grid-cols-3 gap-2">
+                {/* Indicadores de los 3 gestos con botones de disparo directo */}
+                <div className="grid grid-cols-3 gap-2 pt-1">
                   <button
-                    onClick={() => handlePracticeSwipe('left')}
-                    className={`p-2.5 rounded-2xl border flex flex-col items-center gap-1 transition-all ${
+                    onClick={() => flingCard('left')}
+                    className={`py-2 px-1.5 rounded-2xl border flex flex-col items-center gap-1 transition-all active:scale-95 ${
                       gestures.left
-                        ? 'bg-rose-500/15 border-rose-500 text-rose-400'
+                        ? 'bg-rose-500/15 border-rose-500 text-rose-400 shadow-sm'
                         : 'bg-surface border-line text-mute'
                     }`}
                   >
-                    <span className="text-base font-bold">← {gestures.left ? '✓' : '✕'}</span>
-                    <span className="text-[11px] font-medium leading-tight text-center">No me interesa</span>
+                    <div className="flex items-center gap-1 font-bold text-xs">
+                      <span>←</span>
+                      <Icon name="x" size={14} strokeWidth={2.5} />
+                    </div>
+                    <span className="text-[11px] font-semibold text-center leading-tight">No me interesa</span>
                   </button>
 
                   <button
-                    onClick={() => handlePracticeSwipe('up')}
-                    className={`p-2.5 rounded-2xl border flex flex-col items-center gap-1 transition-all ${
+                    onClick={() => flingCard('up')}
+                    className={`py-2 px-1.5 rounded-2xl border flex flex-col items-center gap-1 transition-all active:scale-95 ${
                       gestures.up
-                        ? 'bg-blue-500/15 border-blue-500 text-blue-400'
+                        ? 'bg-sky-500/15 border-sky-500 text-sky-400 shadow-sm'
                         : 'bg-surface border-line text-mute'
                     }`}
                   >
-                    <span className="text-base font-bold">↑ {gestures.up ? '✓' : '🔖'}</span>
-                    <span className="text-[11px] font-medium leading-tight text-center">Pendiente</span>
+                    <div className="flex items-center gap-1 font-bold text-xs">
+                      <span>↑</span>
+                      <Icon name="bookmark" size={13} strokeWidth={2.5} />
+                    </div>
+                    <span className="text-[11px] font-semibold text-center leading-tight">Pendiente</span>
                   </button>
 
                   <button
-                    onClick={() => handlePracticeSwipe('right')}
-                    className={`p-2.5 rounded-2xl border flex flex-col items-center gap-1 transition-all ${
+                    onClick={() => flingCard('right')}
+                    className={`py-2 px-1.5 rounded-2xl border flex flex-col items-center gap-1 transition-all active:scale-95 ${
                       gestures.right
-                        ? 'bg-emerald-500/15 border-emerald-500 text-emerald-400'
+                        ? 'bg-emerald-500/15 border-emerald-500 text-emerald-400 shadow-sm'
                         : 'bg-surface border-line text-mute'
                     }`}
                   >
-                    <span className="text-base font-bold">→ {gestures.right ? '✓' : '★'}</span>
-                    <span className="text-[11px] font-medium leading-tight text-center">La he visto</span>
+                    <div className="flex items-center gap-1 font-bold text-xs">
+                      <span>→</span>
+                      <Icon name="check" size={14} strokeWidth={2.5} />
+                    </div>
+                    <span className="text-[11px] font-semibold text-center leading-tight">La he visto</span>
                   </button>
                 </div>
 
-                <button
-                  onClick={() => setStep(2)}
-                  className={`w-full min-h-[50px] rounded-2xl font-semibold text-sm transition-all ${
-                    allGesturesTried
-                      ? 'bg-accent text-accent-ink active:scale-95'
-                      : 'bg-surface2 text-mute border border-line'
-                  }`}
-                >
-                  {allGesturesTried ? '¡Listo! Continuar' : 'Prueba los 3 gestos para continuar'}
-                </button>
-              </div>
-            )}
-
-            {/* Paso 2: Tu ranking */}
-            {step === 2 && (
-              <div className="space-y-6 text-center">
-                <div className="flex items-center justify-center gap-3 py-2">
-                  <div className="w-24 h-36 rounded-2xl bg-surface border border-line p-3 flex flex-col justify-between shadow-lg rotate-[-6deg]">
-                    <span className="text-xs font-bold text-accent">Obra A</span>
-                    <span className="text-2xl">⚖️</span>
-                    <span className="text-[11px] text-mute">¿Cuál prefieres?</span>
-                  </div>
-                  <span className="text-xl font-black text-mute">VS</span>
-                  <div className="w-24 h-36 rounded-2xl bg-surface border border-line p-3 flex flex-col justify-between shadow-lg rotate-[6deg]">
-                    <span className="text-xs font-bold text-accent">Obra B</span>
-                    <span className="text-2xl">⚖️</span>
-                    <span className="text-[11px] text-mute">¿Cuál prefieres?</span>
-                  </div>
-                </div>
-
-                <div>
-                  <h1 className="serif text-[28px] leading-tight font-semibold text-ink">
-                    Tu ranking sin poner notas
-                  </h1>
-                  <p className="text-mute text-sm mt-2.5 leading-relaxed">
-                    Poner un 7 o un 8 no dice nada. En Biblioteca eliges entre dos y la app ordena tu lista con precisión matemática.
-                  </p>
-                </div>
-
-                <div className="bg-surface rounded-2xl border border-line p-3.5 flex items-center justify-around text-xs text-mute">
-                  <span>🏆 nº 1 Favorita</span>
-                  <span>•</span>
-                  <span>🥈 nº 2 Gran recuerdo</span>
-                  <span>•</span>
-                  <span>🥉 nº 3 Notable</span>
-                </div>
-
-                <button
-                  onClick={() => setStep(3)}
-                  className="w-full min-h-[50px] rounded-2xl bg-accent text-accent-ink font-semibold text-sm active:scale-95 transition-transform"
-                >
-                  Siguiente
-                </button>
-              </div>
-            )}
-
-            {/* Paso 3: Amigos */}
-            {step === 3 && (
-              <div className="space-y-6 text-center">
-                <div className="w-full py-4 flex items-center justify-center">
-                  <div className="relative rounded-2xl bg-surface border border-line p-4 w-64 shadow-xl">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs font-semibold text-ink">Parásitos</span>
-                      <span className="text-xs text-accent font-bold">2019</span>
-                    </div>
-                    <div className="flex items-center gap-2 pt-2 border-t border-line/60">
-                      <div className="w-8 h-8 rounded-full bg-amber-500/30 text-amber-300 font-bold text-xs flex items-center justify-center">
-                        C
-                      </div>
-                      <div className="w-8 h-8 rounded-full bg-sky-500/30 text-sky-300 font-bold text-xs flex items-center justify-center">
-                        L
-                      </div>
-                      <span className="text-xs text-mute font-medium">Carlos y Laura la han visto</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <h1 className="serif text-[28px] leading-tight font-semibold text-ink">
-                    La opinión de tus amigos
-                  </h1>
-                  <p className="text-mute text-sm mt-2.5 leading-relaxed">
-                    Ves directamente qué han visto tus amigos, qué puesto le dan y sus comentarios honestos sin algoritmos extraños.
-                  </p>
-                </div>
-
-                <button
-                  onClick={() => setStep(4)}
-                  className="w-full min-h-[50px] rounded-2xl bg-accent text-accent-ink font-semibold text-sm active:scale-95 transition-transform"
-                >
-                  Siguiente
-                </button>
-              </div>
-            )}
-
-            {/* Paso 4: Cómo empezar */}
-            {step === 4 && (
-              <div className="space-y-4">
-                <div className="text-center mb-2">
-                  <h1 className="serif text-[28px] leading-tight font-semibold text-ink">
-                    ¿Cómo quieres empezar?
-                  </h1>
-                  <p className="text-mute text-xs mt-1">
-                    Elige cómo prefieres comenzar tu biblioteca.
-                  </p>
-                </div>
-
-                {/* Opción 1: Google */}
-                <div className="bg-surface border border-line rounded-3xl p-4 space-y-2 hover:border-accent/40 transition-colors">
+                <div className="pt-2">
                   <button
-                    onClick={() => signInWithGoogle()}
-                    className="w-full min-h-[46px] rounded-2xl bg-white text-black text-sm font-semibold flex items-center justify-center gap-2.5 active:scale-95 transition-transform shadow"
+                    onClick={() => {
+                      haptic('tap')
+                      setStep(2)
+                    }}
+                    className={`w-full min-h-[50px] rounded-2xl font-bold text-sm transition-all shadow-md ${
+                      allGesturesTried
+                        ? 'bg-accent text-accent-ink active:scale-[0.98]'
+                        : 'bg-surface2 text-mute border border-line'
+                    }`}
+                  >
+                    {allGesturesTried ? 'Continuar al ranking' : 'Prueba los 3 gestos para continuar'}
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* ============================================================== */}
+            {/* PASO 2: TU RANKING SIN NOTAS VACÍAS (DUELO REAL A/B)           */}
+            {/* ============================================================== */}
+            {step === 2 && (
+              <div className="w-full space-y-6 text-center">
+                <div className="space-y-1">
+                  <h2 className="serif text-[28px] leading-tight font-bold text-ink">
+                    Tu ranking sin poner notas
+                  </h2>
+                  <p className="text-mute text-xs leading-relaxed max-w-xs mx-auto">
+                    Poner un 7 o un 8 no define tu gusto. En Biblioteca eliges entre dos y el motor ordena tu lista de forma natural.
+                  </p>
+                </div>
+
+                {/* Comparación visual viva entre dos obras reales */}
+                <div className="py-2 flex items-center justify-center gap-3 w-full">
+                  {/* Tarjeta A */}
+                  <motion.div
+                    whileTap={{ scale: 0.96 }}
+                    onClick={() => {
+                      haptic('tick')
+                      setWinner('a')
+                    }}
+                    className={`relative w-36 h-52 rounded-2xl overflow-hidden border cursor-pointer transition-all duration-300 shadow-xl ${
+                      winner === 'a'
+                        ? 'border-accent ring-2 ring-accent scale-105 z-20'
+                        : winner === 'b'
+                        ? 'opacity-40 scale-95 border-line'
+                        : 'border-line rotate-[-4deg]'
+                    }`}
+                  >
+                    <Poster item={TUTORIAL_ITEMS[0]} showTitle={false} className="w-full h-full object-cover" />
+                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/60 to-transparent p-3 flex flex-col justify-end text-left text-white">
+                      <div className="text-[10px] font-bold text-accent">#1</div>
+                      <div className="text-xs font-bold truncate leading-tight">{TUTORIAL_ITEMS[0].title}</div>
+                      <div className="text-[10px] text-white/70">{TUTORIAL_ITEMS[0].year}</div>
+                    </div>
+                    {winner === 'a' && (
+                      <div className="absolute top-2 right-2 bg-accent text-accent-ink p-1 rounded-full shadow">
+                        <Icon name="check" size={14} strokeWidth={3} />
+                      </div>
+                    )}
+                  </motion.div>
+
+                  <div className="text-xs font-black text-mute px-1">VS</div>
+
+                  {/* Tarjeta B */}
+                  <motion.div
+                    whileTap={{ scale: 0.96 }}
+                    onClick={() => {
+                      haptic('tick')
+                      setWinner('b')
+                    }}
+                    className={`relative w-36 h-52 rounded-2xl overflow-hidden border cursor-pointer transition-all duration-300 shadow-xl ${
+                      winner === 'b'
+                        ? 'border-accent ring-2 ring-accent scale-105 z-20'
+                        : winner === 'a'
+                        ? 'opacity-40 scale-95 border-line'
+                        : 'border-line rotate-[4deg]'
+                    }`}
+                  >
+                    <Poster item={TUTORIAL_ITEMS[1]} showTitle={false} className="w-full h-full object-cover" />
+                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/60 to-transparent p-3 flex flex-col justify-end text-left text-white">
+                      <div className="text-[10px] font-bold text-accent">#2</div>
+                      <div className="text-xs font-bold truncate leading-tight">{TUTORIAL_ITEMS[1].title}</div>
+                      <div className="text-[10px] text-white/70">{TUTORIAL_ITEMS[1].year}</div>
+                    </div>
+                    {winner === 'b' && (
+                      <div className="absolute top-2 right-2 bg-accent text-accent-ink p-1 rounded-full shadow">
+                        <Icon name="check" size={14} strokeWidth={3} />
+                      </div>
+                    )}
+                  </motion.div>
+                </div>
+
+                <div className="text-xs text-mute font-medium">
+                  {winner ? '¡Elegida! Con pocos duelos tu lista queda perfectamente ordenada.' : 'Toca la que más te guste para probar'}
+                </div>
+
+                <div className="pt-2">
+                  <button
+                    onClick={() => {
+                      haptic('tap')
+                      setStep(3)
+                    }}
+                    className="w-full min-h-[50px] rounded-2xl bg-accent text-accent-ink font-bold text-sm active:scale-[0.98] transition-transform shadow-lg shadow-accent/15"
+                  >
+                    Siguiente
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* ============================================================== */}
+            {/* PASO 3: AMIGOS Y CRÍTICA HONESTA                               */}
+            {/* ============================================================== */}
+            {step === 3 && (
+              <div className="w-full space-y-6 text-center">
+                <div className="space-y-1">
+                  <h2 className="serif text-[28px] leading-tight font-bold text-ink">
+                    El criterio de tus amigos
+                  </h2>
+                  <p className="text-mute text-xs leading-relaxed max-w-xs mx-auto">
+                    Sin algoritmos comerciales. Ves quién la ha visto, en qué puesto de su ranking la coloca y sus notas reales.
+                  </p>
+                </div>
+
+                {/* Tarjeta de muestra con presencia social real */}
+                <div className="w-full max-w-[270px] mx-auto rounded-3xl bg-surface border border-line p-4 shadow-xl text-left space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-16 rounded-xl overflow-hidden shrink-0 border border-line">
+                      <Poster item={TUTORIAL_ITEMS[0]} showTitle={false} className="w-full h-full object-cover" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="text-xs font-bold text-ink truncate">{TUTORIAL_ITEMS[0].title}</div>
+                      <div className="text-[11px] text-mute">{TUTORIAL_ITEMS[0].year} · Coppola</div>
+                      <div className="flex items-center gap-1.5 mt-1.5">
+                        <Avatar name="Carlos" color="#f59e0b" size={24} />
+                        <Avatar name="Laura" color="#3b82f6" size={24} />
+                        <span className="text-[11px] text-mute font-medium">La tienen en su top</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-surface2 rounded-2xl p-3 border border-line text-xs space-y-1">
+                    <div className="flex items-center justify-between text-[11px]">
+                      <span className="font-semibold text-ink">Carlos</span>
+                      <span className="text-accent font-bold">Puesto #1</span>
+                    </div>
+                    <p className="text-mute text-[11px] leading-snug">
+                      «Una obra maestra absoluta de ritmo y fotografía.»
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <button
+                    onClick={() => {
+                      haptic('tap')
+                      setStep(4)
+                    }}
+                    className="w-full min-h-[50px] rounded-2xl bg-accent text-accent-ink font-bold text-sm active:scale-[0.98] transition-transform shadow-lg shadow-accent/15"
+                  >
+                    Siguiente
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* ============================================================== */}
+            {/* PASO 4: CÓMO EMPEZAR                                           */}
+            {/* ============================================================== */}
+            {step === 4 && (
+              <div className="w-full space-y-4">
+                <div className="text-center space-y-1 mb-2">
+                  <h2 className="serif text-[28px] leading-tight font-bold text-ink">
+                    ¿Cómo quieres empezar?
+                  </h2>
+                  <p className="text-mute text-xs">
+                    Elige cómo prefieres comenzar a guardar tus obras.
+                  </p>
+                </div>
+
+                {/* Opción 1: Google con branding oficial limpio */}
+                <div className="bg-surface border border-line rounded-3xl p-4 space-y-2 hover:border-accent/40 transition-colors shadow-sm">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      haptic('tap')
+                      signInWithGoogle()
+                    }}
+                    className="w-full min-h-[48px] rounded-2xl bg-white text-black text-sm font-semibold flex items-center justify-center gap-2.5 active:scale-[0.98] transition-transform shadow"
                   >
                     <svg width="18" height="18" viewBox="0 0 24 24">
                       <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
@@ -345,86 +581,112 @@ export function Onboarding() {
                     </svg>
                     Entrar con Google
                   </button>
-                  <p className="text-[12px] text-mute text-center px-1 leading-snug">
-                    Sincroniza tus notas en la nube de forma segura y no pierdas tus datos.
+                  <p className="text-[11px] text-mute text-center px-1 leading-snug">
+                    Sincroniza tus listas en la nube de forma segura para no perder tus datos.
                   </p>
                 </div>
 
                 {/* Opción 2: Importar */}
-                <div className="bg-surface border border-line rounded-3xl p-4 space-y-2 hover:border-accent/40 transition-colors">
+                <div className="bg-surface border border-line rounded-3xl p-4 space-y-2 hover:border-accent/40 transition-colors shadow-sm">
                   <button
-                    onClick={() => finish(true, '/importar')}
-                    className="w-full min-h-[46px] rounded-2xl bg-surface2 border border-line text-sm font-semibold flex items-center justify-center gap-2 active:scale-95 transition-transform text-ink"
+                    type="button"
+                    onClick={() => {
+                      haptic('tap')
+                      finish(true, '/importar')
+                    }}
+                    className="w-full min-h-[48px] rounded-2xl bg-surface2 border border-line text-sm font-semibold flex items-center justify-center gap-2 active:scale-[0.98] transition-transform text-ink"
                   >
                     <Icon name="sparkle" size={17} className="text-accent" />
-                    Importar mis listas
+                    Importar mis listas existentes
                   </button>
-                  <p className="text-[12px] text-mute text-center px-1 leading-snug">
-                    Trae tu historial de Letterboxd, IMDb, Goodreads o Netflix en 1 minuto.
+                  <p className="text-[11px] text-mute text-center px-1 leading-snug">
+                    Trae tu historial de Letterboxd, IMDb, Goodreads o Netflix en segundos.
                   </p>
                 </div>
 
                 {/* Opción 3: Explorar */}
-                <div className="bg-surface/50 border border-line/60 rounded-3xl p-4 space-y-2">
+                <div className="bg-surface/50 border border-line/60 rounded-3xl p-3.5 space-y-1.5">
                   <button
-                    onClick={() => setStep(5)}
-                    className="w-full min-h-[46px] rounded-2xl bg-transparent border border-line text-sm font-semibold flex items-center justify-center gap-1.5 active:scale-95 transition-transform text-mute hover:text-ink"
+                    type="button"
+                    onClick={() => {
+                      haptic('tap')
+                      setStep(5)
+                    }}
+                    className="w-full min-h-[44px] rounded-2xl bg-transparent text-sm font-semibold flex items-center justify-center gap-1.5 active:scale-[0.98] transition-transform text-mute hover:text-ink"
                   >
                     Explorar sin cuenta
-                    <span className="text-xs">›</span>
+                    <Icon name="chevron" size={14} />
                   </button>
-                  <p className="text-[12px] text-mute/80 text-center px-1 leading-snug">
-                    Pruébala directamente; tus notas se guardan en este dispositivo.
+                  <p className="text-[11px] text-mute/80 text-center px-1 leading-snug">
+                    Pruébala directamente en tu móvil sin iniciar sesión.
                   </p>
                 </div>
               </div>
             )}
 
-            {/* Paso 5: Elegir estanterías que te interesan */}
+            {/* ============================================================== */}
+            {/* PASO 5: ELECCIÓN DE ESTANTERÍAS                                */}
+            {/* ============================================================== */}
             {step === 5 && (
-              <div className="space-y-6">
-                <div className="text-center">
-                  <h1 className="serif text-[28px] leading-tight font-semibold text-ink">
+              <div className="w-full space-y-5">
+                <div className="text-center space-y-1">
+                  <h2 className="serif text-[28px] leading-tight font-bold text-ink">
                     ¿Qué te interesa guardar?
-                  </h1>
-                  <p className="text-mute text-sm mt-1.5">
-                    Elige qué estanterías quieres tener visibles (puedes cambiarlas en cualquier momento).
+                  </h2>
+                  <p className="text-mute text-xs">
+                    Elige qué estanterías quieres tener activas en tu biblioteca.
                   </p>
                 </div>
 
-                <div className="space-y-2.5">
+                <div className="space-y-2">
                   {SHELVES.map((s) => {
                     const active = selectedShelves.includes(s)
                     return (
                       <button
                         key={s}
-                        onClick={() => toggleShelf(s)}
-                        className={`w-full min-h-[56px] rounded-2xl px-4 flex items-center justify-between border transition-all ${
+                        type="button"
+                        onClick={() => {
+                          haptic('tap')
+                          toggleShelf(s)
+                        }}
+                        className={`w-full min-h-[52px] rounded-2xl px-4 flex items-center justify-between border transition-all active:scale-[0.99] ${
                           active
-                            ? 'bg-accent/15 border-accent text-ink font-semibold'
+                            ? 'bg-accent/10 border-accent text-ink font-semibold'
                             : 'bg-surface border-line text-mute'
                         }`}
                       >
                         <span className="flex items-center gap-3">
-                          <span className="text-xl">
-                            {s === 'movie' ? '🎬' : s === 'series' ? '📺' : s === 'book' ? '📖' : s === 'artist' ? '🎵' : '🎲'}
-                          </span>
-                          <span>{SHELF_LABEL[s].plural}</span>
+                          <Icon
+                            name={SHELF_ICONS[s]}
+                            size={18}
+                            className={active ? 'text-accent' : 'text-mute'}
+                          />
+                          <span className="text-sm">{SHELF_LABEL[s].plural}</span>
                         </span>
-                        <span className="w-6 h-6 rounded-full border flex items-center justify-center text-xs">
-                          {active ? '✓' : ''}
+                        <span
+                          className={`w-5 h-5 rounded-full border flex items-center justify-center text-xs transition-colors ${
+                            active ? 'bg-accent border-accent text-accent-ink' : 'border-line text-transparent'
+                          }`}
+                        >
+                          ✓
                         </span>
                       </button>
                     )
                   })}
                 </div>
 
-                <button
-                  onClick={() => finish(false)}
-                  className="w-full min-h-[50px] rounded-2xl bg-accent text-accent-ink font-semibold text-sm active:scale-95 transition-transform"
-                >
-                  Entrar a mi biblioteca
-                </button>
+                <div className="pt-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      haptic('tap')
+                      finish(false)
+                    }}
+                    className="w-full min-h-[52px] rounded-2xl bg-accent text-accent-ink font-bold text-sm tracking-wide active:scale-[0.98] transition-transform shadow-lg shadow-accent/15"
+                  >
+                    Entrar a mi biblioteca
+                  </button>
+                </div>
               </div>
             )}
           </motion.div>

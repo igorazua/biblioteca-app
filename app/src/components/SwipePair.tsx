@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { animate, motion, useMotionValue, useTransform, type MotionValue } from 'framer-motion'
 import { haptic } from '../lib/haptics'
+import { DUEL_STYLES, DuelFan, FullPoster, useDuelStyle } from './DuelVariants'
 
 export interface Side {
   key: string
@@ -23,7 +24,40 @@ const BAND = 46 // px de la banda de color con la flecha
  * Al arrastrar, la del lado elegido se ilumina y crece; la otra se apaga. Tocar una tarjeta también la elige.
  * Ocupa todo el ancho de la pantalla (se come el padding horizontal del contenedor con -mx-4).
  */
-export function SwipePair({ left, right, onChoose, between }: { left: Side; right: Side; onChoose: (w: 'a' | 'b') => void; between?: [string, string] }) {
+export function SwipePair(props: { left: Side; right: Side; onChoose: (w: 'a' | 'b') => void; between?: [string, string] }) {
+  const [style, nextStyle] = useDuelStyle()
+  const [label, setLabel] = useState<string | null>(null)
+  const question = props.between?.[0]
+  const body =
+    style === 'abanico' ? <DuelFan {...props} question={question} />
+    : style === 'entero' ? <SwipePairDiagonal {...props} full />
+    : <SwipePairDiagonal {...props} />
+  return (
+    <div className="relative flex-1 min-h-0 flex flex-col">
+      {body}
+      {/* Selector de diseños (pruebas): pastilla pequeña abajo a la derecha; cada toque pasa al siguiente. */}
+      <button
+        type="button"
+        aria-label="Cambiar diseño del duelo"
+        onClick={() => {
+          nextStyle()
+          const i = DUEL_STYLES.findIndex((s) => s.id === style)
+          setLabel(DUEL_STYLES[(i + 1) % DUEL_STYLES.length].name)
+          setTimeout(() => setLabel(null), 1600)
+        }}
+        className="absolute bottom-1 right-1 z-30 min-h-[32px] px-3 rounded-full bg-surface2/90 border border-line text-[11px] font-semibold text-ink/80 flex items-center gap-1.5 active:scale-95"
+      >
+        Diseño {DUEL_STYLES.findIndex((s) => s.id === style) + 1}/{DUEL_STYLES.length}
+        <span aria-hidden>›</span>
+      </button>
+      {label && (
+        <div className="absolute bottom-11 right-1 z-30 rounded-full bg-ink text-bg text-xs font-semibold px-3 py-1.5 pointer-events-none">{label}</div>
+      )}
+    </div>
+  )
+}
+
+function SwipePairDiagonal({ left, right, onChoose, between, full }: { left: Side; right: Side; onChoose: (w: 'a' | 'b') => void; between?: [string, string]; full?: boolean }) {
   const box = useRef<HTMLDivElement>(null)
   const x = useMotionValue(0)
   const [picked, setPicked] = useState<null | 'a' | 'b'>(null)
@@ -62,15 +96,15 @@ export function SwipePair({ left, right, onChoose, between }: { left: Side; righ
       role="group"
       aria-label="Desliza a la izquierda para elegir la de arriba, o a la derecha para la de abajo"
     >
-      <DuelCard side={left} which="a" p={p} picked={picked} onTap={() => { if (!dragged.current) choose('a') }} />
-      <DuelCard side={right} which="b" p={p} picked={picked} onTap={() => { if (!dragged.current) choose('b') }} />
+      <DuelCard side={left} which="a" full={full} p={p} picked={picked} onTap={() => { if (!dragged.current) choose('a') }} />
+      <DuelCard side={right} which="b" full={full} p={p} picked={picked} onTap={() => { if (!dragged.current) choose('b') }} />
       <CenterHint p={p} picked={picked} between={between} />
       <motion.div className="absolute inset-0 z-20 pointer-events-none rounded-[34px]" style={{ opacity: ringO, boxShadow: 'inset 0 0 0 1.5px rgba(255,255,255,0.5), inset 0 0 0 5px rgba(255,255,255,0.07)' }} />
     </motion.div>
   )
 }
 
-function DuelCard({ side, which, p, picked, onTap }: { side: Side; which: 'a' | 'b'; p: MotionValue<number>; picked: null | 'a' | 'b'; onTap: () => void }) {
+function DuelCard({ side, which, full, p, picked, onTap }: { side: Side; which: 'a' | 'b'; full?: boolean; p: MotionValue<number>; picked: null | 'a' | 'b'; onTap: () => void }) {
   const top = which === 'a'
   const color = top ? DUEL_LEFT : DUEL_RIGHT
   // t: 0 neutro, 1 = este lado elegido, -1 = el otro lado elegido
@@ -118,8 +152,24 @@ function DuelCard({ side, which, p, picked, onTap }: { side: Side; which: 'a' | 
         className={`absolute overflow-hidden bg-surface ${top ? 'left-0 top-0 rounded-r-[30px]' : 'right-0 bottom-0 rounded-l-[30px]'}`}
         style={{ height: cardH, ...(top ? { right: inset, borderTopLeftRadius: rFlush, borderBottomLeftRadius: rFlush } : { left: inset, borderTopRightRadius: rFlush, borderBottomRightRadius: rFlush }) }}
       >
-        <div className="absolute inset-0 [&_img]:object-[center_22%]">{side.bg}</div>
-        <div className={`absolute inset-0 ${top ? 'bg-gradient-to-b from-black/10 via-black/20 to-black/90' : 'bg-gradient-to-t from-black/10 via-black/20 to-black/90'}`} />
+        {full ? (
+          <>
+            {/* Diseño 2: fondo difuminado y el póster entero en un marco que crece con la tarjeta al elegirla */}
+            <div className="absolute -inset-8 blur-2xl opacity-60 scale-110">{side.bg}</div>
+            <div className="absolute inset-0 bg-black/45" />
+            <div
+              className={`absolute aspect-[2/3] h-[72%] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/15 ${top ? 'top-[5%]' : 'bottom-[5%]'}`}
+              style={top ? { left: BAND + 10 } : { right: BAND + 10 }}
+            >
+              <FullPoster side={side} />
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="absolute inset-0 [&_img]:object-[center_22%]">{side.bg}</div>
+            <div className={`absolute inset-0 ${top ? 'bg-gradient-to-b from-black/10 via-black/20 to-black/90' : 'bg-gradient-to-t from-black/10 via-black/20 to-black/90'}`} />
+          </>
+        )}
         <motion.div className="absolute inset-0 pointer-events-none rounded-[inherit]" style={{ opacity: glow, boxShadow: `inset 0 0 0 1.5px rgba(255,255,255,0.55), inset 0 0 0 5px rgba(255,255,255,0.08), inset 0 0 46px ${color}40` }} />
 
         {/* Banda de color con flecha, en el borde al que pertenece */}
@@ -147,9 +197,9 @@ function DuelCard({ side, which, p, picked, onTap }: { side: Side; which: 'a' | 
         {/* Texto: en la zona libre de la tarjeta, lejos del corte */}
         <div
           className={`absolute ${top ? 'top-3 right-3 text-right' : 'bottom-4 left-3 text-left'} w-fit rounded-xl bg-black/35 backdrop-blur-xl ring-1 ring-white/15 px-3 py-2 shadow-lg shadow-black/30`}
-          style={{ maxWidth: `calc(100% - ${BAND + 24}px)` }}
+          style={{ maxWidth: full ? '36%' : `calc(100% - ${BAND + 24}px)` }}
         >
-          <div className="serif text-[20px] leading-[1.05] font-semibold text-white line-clamp-3" style={{ textWrap: 'balance' } as React.CSSProperties}>
+          <div className={`serif ${full ? "text-[17px] break-words hyphens-auto" : "text-[20px]"} leading-[1.05] font-semibold text-white line-clamp-3`} lang="es" style={{ textWrap: 'balance' } as React.CSSProperties}>
             {side.title}
           </div>
           {side.subtitle && <div className="text-[11.5px] text-white/75 mt-0.5 line-clamp-1">{side.subtitle}</div>}
