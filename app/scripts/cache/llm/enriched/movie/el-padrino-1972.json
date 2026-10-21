@@ -1,0 +1,46 @@
+{
+  "id": "movie:el-padrino-1972",
+  "title": "El padrino",
+  "experience": {
+    "plot": "El patriarca de una dinastía de la mafia neoyorquina transfiere a regañadientes el control de su imperio clandestino a su hijo menor. A medida que las tensiones entre familias escalan, el joven se adentra irremediablemente en la espiral de violencia y poder.",
+    "feeling": "Solemne, majestuosa, con un ritmo ceremonioso pero implacable y una atmósfera de tragedia shakespeariana. Te deja sobrecogido ante la inexorable corrupción moral del poder.",
+    "hook": "La hipnótica interpretación de Marlon Brando y Al Pacino, la fotografía en claroscuro de Gordon Willis y la disección quirúrgica de la lealtad familiar.",
+    "notFor": "Quien busque acción rápida contemporánea, tiros constantes o una trama ligera sin peso dramático.",
+    "similar": [
+      "El padrino Parte II",
+      "Uno de los nuestros",
+      "Érase una vez en América",
+      "Gangs of New York"
+    ],
+    "context": "Clásico absoluto del cine estadounidense de 1972, obra cumbre de Francis Ford Coppola que redefinió el género de gánsteres."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "mafia",
+    "familia",
+    "crimen",
+    "ambicion",
+    "traicion",
+    "corrupcion_politica"
+  ],
+  "moments": [
+    "noche_tarde",
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Monumental tragedia sobre la familia, la ambición y el peso corruptor del poder.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

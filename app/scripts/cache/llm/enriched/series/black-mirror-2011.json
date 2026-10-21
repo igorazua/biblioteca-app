@@ -1,0 +1,48 @@
+{
+  "id": "series:black-mirror-2011",
+  "title": "Black Mirror",
+  "experience": {
+    "plot": "Serie antológica de historias independientes que exploran el lado más siniestro, perturbador e inquietante de la dependencia tecnológica contemporánea. Muestra futuros cercanos donde el progreso digital saca a relucir lo peor de la condición humana.",
+    "feeling": "Inquietante, claustrofóbica, pesimista y lúcida como una pesadilla lúcida. Provoca una profunda desazón con ganas de apagar las pantallas.",
+    "hook": "Premisas brillantes y aterradoras de Charlie Brooker que a menudo parecen profetizar el presente inmediato.",
+    "notFor": "Quienes busquen finales felices o un tono reconfortante y esperanzador sobre el futuro.",
+    "similar": [
+      "The Twilight Zone",
+      "Severance",
+      "Her",
+      "Ex Machina"
+    ],
+    "context": "Referente absoluto de la distopía tecnológica contemporánea, nacida en Channel 4 británico antes de pasar a Netflix."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 1,
+    "enganche": 4,
+    "formato": 1
+  },
+  "themes": [
+    "distopia",
+    "ia_y_tecnologia",
+    "conspiracion",
+    "satira",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "pasar_miedo",
+    "solo",
+    "enganche"
+  ],
+  "oneLiner": "Relatos oscuros y visionarios sobre los peligros de nuestra adicción digital.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "movie:forrest-gump-1994",
+  "title": "Forrest Gump",
+  "experience": {
+    "plot": "Un bondadoso joven de Alabama con leve discapacidad intelectual presencia y protagoniza los acontecimientos más cruciales de la historia de EE. UU. Sin embargo, su único deseo verdadero es permanecer cerca de su amor de la infancia.",
+    "feeling": "Emotiva, entrañable, nostálgica y llena de un optimismo contagioso. Deja el corazón encogido de ternura y una sonrisa imborrable.",
+    "hook": "La magistral actuación de Tom Hanks, el ingenioso viaje por décadas históricas y la pureza conmovedora del protagonista.",
+    "notFor": "Quienes sospechen del sentimentalismo cinematográfico o busquen una mirada ácida y crítica de la historia.",
+    "similar": [
+      "El curioso caso de Benjamin Button",
+      "Big Fish",
+      "La vida es bella",
+      "Cadena perpetua"
+    ],
+    "context": "Gran triunfadora de los Óscar en 1994, clásico popular universal que dejó huella profunda en la cultura popular."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "amor",
+    "amistad",
+    "guerra",
+    "duelo",
+    "infancia",
+    "viajes_por_carretera"
+  ],
+  "moments": [
+    "familia",
+    "llorar",
+    "para_repetir",
+    "domingo_tarde"
+  ],
+  "oneLiner": "Emoción pura, ternura y un viaje inolvidable por la bondad humana a través de la historia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

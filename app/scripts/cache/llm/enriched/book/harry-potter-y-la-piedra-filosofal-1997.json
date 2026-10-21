@@ -1,0 +1,44 @@
+{
+  "id": "book:harry-potter-y-la-piedra-filosofal-1997",
+  "title": "Harry Potter y la piedra filosofal",
+  "experience": {
+    "plot": "Un niño huérfano y maltratado por sus tíos descubre en su undécimo cumpleaños que es mago y ha sido aceptado en el Colegio Hogwarts de Magia y Hechicería. Junto a sus inseparables amigos Ron y Hermione, descubrirá los secretos de su pasado y un oscuro complot.",
+    "feeling": "Mágica, chispeante, reconfortante y acogedora. Despierta de inmediato la ilusión infantil de pertenecer a un mundo prodigioso.",
+    "hook": "El fascinante universo de hechizos, banquetes y pasadizos secretos, y el poder de la amistad frente a la soledad.",
+    "notFor": "Lectores adultos que busquen exclusivamente fantasía oscura, compleja y descarnada.",
+    "similar": [
+      "Percy Jackson",
+      "Matilda",
+      "El Hobbit",
+      "Las crónicas de Narnia"
+    ],
+    "context": "Inicio del mayor fenómeno editorial de todos los tiempos que devolvió el hábito de la lectura a millones de niños y jóvenes."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 5,
+    "escala": 2,
+    "ideas": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "fantasia_epica",
+    "infancia",
+    "mayoria_de_edad",
+    "aventura"
+  ],
+  "moments": [
+    "desconectar",
+    "antes_de_dormir",
+    "emocionarse",
+    "viaje"
+  ],
+  "oneLiner": "La puerta de entrada a un universo mágico inolvidable donde la amistad lo vence todo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

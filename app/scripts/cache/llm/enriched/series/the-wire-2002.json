@@ -1,0 +1,47 @@
+{
+  "id": "series:the-wire-2002",
+  "title": "The Wire",
+  "experience": {
+    "plot": "A través de escuchas telefónicas policiales, se retrata el tráfico de drogas en Baltimore desde múltiples perspectivas institucionales: traficantes, policías, estibadores del puerto, políticos municipales, el sistema escolar y la prensa escrita.",
+    "feeling": "Cruda, hiperrealista, desapasionada pero éticamente demoledora. Te deja con una visión lúcida y trágica del colapso de las instituciones urbanas.",
+    "hook": "Un realismo documental sin artificios, personajes inolvidables como Omar Little y Stringer Bell, y una crítica social feroz.",
+    "notFor": "Espectadores que busquen resoluciones policiales sencillas con buenos y malos claros o giros espectaculares.",
+    "similar": [
+      "Los Soprano",
+      "The Shield",
+      "Treme",
+      "Show Me a Hero"
+    ],
+    "context": "Creación del periodista David Simon para HBO, consagrada como el tratado sociológico más lúcido de la ficción seriada."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 1,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "crimen_organizado",
+    "investigacion_policial",
+    "politica_y_poder",
+    "drogas_y_narcos",
+    "lucha_de_clases"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "maraton"
+  ],
+  "oneLiner": "Catedral televisiva del realismo social: la radiografía más certera de la ciudad moderna.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

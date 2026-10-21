@@ -1,0 +1,45 @@
+{
+  "id": "movie:salvar-al-soldado-ryan-1998",
+  "title": "Salvar al soldado Ryan",
+  "experience": {
+    "plot": "Tras el cruento desembarco en las playas de Normandía, un capitán del ejército estadounidense lidera a un pelotón tras las líneas enemigas para encontrar y rescatar a un soldado cuyos tres hermanos han muerto en combate.",
+    "feeling": "Inmersiva, brutal, conmovedora y profundamente solemne. Traslada la crudeza física y el pavor psicológico del combate como ninguna otra obra bélica.",
+    "hook": "Los primeros 25 minutos del Día D en Omaha Beach, la cámara al hombro vanguardista y el dilema moral sobre el valor de una vida.",
+    "notFor": "Personas con aversión a la sangre, amputaciones o representaciones hiperrealistas de la guerra.",
+    "similar": [
+      "Hermanos de sangre",
+      "1917",
+      "La delgada línea roja",
+      "Dunkerque"
+    ],
+    "context": "El referente moderno definitivo del cine bélico que cambió la estética de las batallas contemporáneas."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "sacrificio",
+    "amistad",
+    "duelo",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "noche_tarde"
+  ],
+  "oneLiner": "Realismo bélico demoledor y un conmovedor tributo a la hermandad bajo el fuego.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "artist:led-zeppelin-1968",
+  "title": "Led Zeppelin",
+  "experience": {
+    "plot": "Cuarteto británico que cimentó las bases del hard rock y el heavy metal fusionando el blues más electrizante con la mitología celta y ritmos atronadores de batería.",
+    "feeling": "Poderosa, mística, volcánica y visceral. Transmite una fuerza física arrolladora y un virtuosismo musical sobrehumano.",
+    "hook": "La contundencia inimitable de John Bonham a la batería, los riffs legendarios de Jimmy Page y los aullidos de Robert Plant.",
+    "notFor": "Quienes busquen producciones pop delicadas o música tranquila para relajarse.",
+    "similar": [
+      "Deep Purple",
+      "Black Sabbath",
+      "The Who",
+      "Jimi Hendrix"
+    ],
+    "context": "La banda de rock más grande y arrolladora de los años 70, piedra de toque de toda la música pesada moderna."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 3,
+    "bailable": 2,
+    "organico": 5,
+    "intensidad": 5,
+    "fondo": 1,
+    "complejidad": 4
+  },
+  "themes": [
+    "rock_clasico",
+    "blues",
+    "himnos_estadio",
+    "metal"
+  ],
+  "moments": [
+    "viaje_coche",
+    "entrenar",
+    "escucha_atenta",
+    "fiesta"
+  ],
+  "oneLiner": "Poderío eléctrico, misticismo y la fuerza fundacional del rock más salvaje.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

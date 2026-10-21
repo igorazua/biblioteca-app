@@ -18,13 +18,33 @@ for (const [type, roots] of Object.entries(ROOTS)) {
     const vals = chunk.map((i) => 'wd:' + i.wikidataId).join(' ')
     const rootVals = roots.map((r) => 'wd:' + r).join(' ')
     const q = `SELECT DISTINCT ?item WHERE { VALUES ?item { ${vals} } VALUES ?root { ${rootVals} } ?item wdt:P31/wdt:P279* ?root . }`
-    const r = await fetch('https://query.wikidata.org/sparql?format=json&query=' + encodeURIComponent(q), {
-      headers: { 'User-Agent': 'biblioteca-app-check/0.1 (igorazua@gmail.com)', Accept: 'application/sparql-results+json' },
-    })
-    if (!r.ok) { console.error(type, k, r.status); continue }
-    const j = await r.json()
-    for (const b of j.results.bindings) ok.add(b.item.value.split('/').pop())
-    await new Promise((res) => setTimeout(res, 1200))
+    let j = null
+    for (let attempt = 1; attempt <= 5; attempt++) {
+      try {
+        const r = await fetch('https://query.wikidata.org/sparql?format=json&query=' + encodeURIComponent(q), {
+          headers: { 'User-Agent': 'biblioteca-app-check/0.2 (igorazua@gmail.com)', Accept: 'application/sparql-results+json' },
+        })
+        if (r.status === 429 || r.status >= 500) {
+          const waitMs = attempt * 3000
+          console.warn(`[SPARQL 429/5xx] ${type} chunk ${k}, intento ${attempt}, esperando ${waitMs}ms...`)
+          await new Promise((res) => setTimeout(res, waitMs))
+          continue
+        }
+        if (!r.ok) {
+          console.error(type, k, r.status)
+          break
+        }
+        j = await r.json()
+        break
+      } catch (err) {
+        if (attempt === 5) console.error(`Error en chunk ${k}:`, err.message)
+        await new Promise((res) => setTimeout(res, attempt * 2000))
+      }
+    }
+    if (j?.results?.bindings) {
+      for (const b of j.results.bindings) ok.add(b.item.value.split('/').pop())
+    }
+    await new Promise((res) => setTimeout(res, 2000))
   }
   const bad = items.filter((i) => !ok.has(i.wikidataId))
   out[type] = bad.map((i) => ({ id: i.id, title: i.title, wikidataId: i.wikidataId, synopsis: (i.synopsis || '').slice(0, 90) }))

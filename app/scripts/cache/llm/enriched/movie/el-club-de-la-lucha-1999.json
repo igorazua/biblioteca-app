@@ -1,0 +1,46 @@
+{
+  "id": "movie:el-club-de-la-lucha-1999",
+  "title": "El club de la lucha",
+  "experience": {
+    "plot": "Un oficinista hastiado y consumido por el insomnio conoce a un carismático y rebelde vendedor de jabón con una visión nihilista del mundo. Juntos fundan un club de peleas clandestino que pronto muta en una peligrosa organización terrorista anticapitalista.",
+    "feeling": "Visceral, provocadora, frenética y oscura como el asfalto. Provoca una sacudida mental sobre la alienación del consumo moderno.",
+    "hook": "El montaje afilado de David Fincher, la química incendiaria de Pitt y Norton y una crítica social feroz con giro de antología.",
+    "notFor": "Espectadores sensibles a la agresividad física o que busquen complacencia moral en sus protagonistas.",
+    "similar": [
+      "Taxi Driver",
+      "Seven",
+      "American Psycho",
+      "Memento"
+    ],
+    "context": "Película de culto generacional estrenada en 1999 basada en la novela de Chuck Palahniuk, emblema de la angustia de fin de milenio."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 1
+  },
+  "themes": [
+    "salud_mental",
+    "obsesion",
+    "lucha_de_clases",
+    "identidad",
+    "satira_social",
+    "existencialismo"
+  ],
+  "moments": [
+    "noche_tarde",
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Explosiva, corrosiva y de culto absoluto: una bofetada a la sociedad de consumo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

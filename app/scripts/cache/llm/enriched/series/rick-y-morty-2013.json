@@ -1,0 +1,49 @@
+{
+  "id": "series:rick-y-morty-2013",
+  "title": "Rick y Morty",
+  "experience": {
+    "plot": "Un científico alcohólico, nihilista y el ser más inteligente del universo arrastra a su tímido nieto en peligrosas aventuras interdimensionales por el cosmos. Entre caos y monstruos, la disfuncional familia lidia con la insignificancia de la existencia.",
+    "feeling": "Alocada, alucinógena, trágica en el fondo y mentalmente estimulante. Mezcla el delirio sci-fi con punzadas de existencialismo demoledor.",
+    "hook": "La inventiva visual desbordante, conceptos cuánticos ingeniosos y el cinismo conmovedor de Rick Sanchez.",
+    "notFor": "Quienes busquen animación inocente o se sientan abrumados por diálogos frenéticos y caos constante.",
+    "similar": [
+      "Futurama",
+      "Hora de aventuras",
+      "Bojack Horseman",
+      "Solar Opposites"
+    ],
+    "context": "Serie de culto de Adult Swim creada por Dan Harmon y Justin Roiland que se convirtió en fenómeno pop planetario."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 5,
+    "tension": 3,
+    "fantasia": 5,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 5,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "animacion",
+    "espacio",
+    "viaje_en_el_tiempo",
+    "ia_y_tecnologia",
+    "satira",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "pensar",
+    "maraton",
+    "desconectar"
+  ],
+  "oneLiner": "Ciencia ficción desquiciada, delirio interdimensional y nihilismo existencial.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

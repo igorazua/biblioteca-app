@@ -1,0 +1,40 @@
+{
+  "id": "boardgame:the-lord-of-the-rings-duel-for-middle-earth-2024",
+  "title": "The Lord of the Rings: Duel for Middle-earth",
+  "experience": {
+    "plot": "Reinvención del galardonado sistema 7 Wonders Duel en la Tierra Media. Un jugador comanda la Compañía del Anillo y los Pueblos Libres mientras el otro encarna a Sauron y sus secuaces, disputándose la victoria por tres caminos: militar, alianzas raciales o el destino del Anillo.",
+    "feeling": "Rápida, directa, tensa y adictiva. Cada robo de carta es un pulso psicológico frente a tu rival.",
+    "hook": "Las tres condiciones de victoria inmediata que obligan a vigilar constantemente cada movimiento del contrario.",
+    "notFor": "Mesas de más de dos personas; es un juego estrictamente diseñado para parejas.",
+    "similar": [
+      "7 Wonders Duel",
+      "War of the Ring",
+      "Jaipur",
+      "Star Wars: The Deckbuilding Game"
+    ],
+    "context": "Éxito unánime de 2024 de Antoine Bauza y Bruno Cathala ambientado con maestría en el mundo de Tolkien."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 5,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "fantasia_medieval",
+    "draft_de_cartas",
+    "control_de_areas"
+  ],
+  "moments": [
+    "pareja",
+    "pique_sano",
+    "rapido_filler"
+  ],
+  "oneLiner": "Duelo vertiginoso y adictivo para dos jugadores por el destino de la Tierra Media.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "series:friends-1994",
+  "title": "Friends",
+  "experience": {
+    "plot": "Seis amigos veinteañeros conviven, trabajan y buscan el amor en la ciudad de Manhattan mientras comparten cafés diarios en el Central Perk. A lo largo de una década, sus vidas sentimentales y laborales evolucionan sin romper su unión.",
+    "feeling": "Acogedora, entrañable, ligera y desternillante. Funciona como un auténtico refugio emocional y un bálsamo reconfortante.",
+    "hook": "La sincronía cómica perfecta entre los seis actores, el romance intermitente de Ross y Rachel y gags que nunca caducan.",
+    "notFor": "Quienes busquen humor negro transgresor, formatos arriesgados o historias con carga dramática seria.",
+    "similar": [
+      "Cómo conocí a vuestra madre",
+      "Seinfeld",
+      "The Big Bang Theory",
+      "New Girl"
+    ],
+    "context": "La telecomedia de mayor impacto e identificación generacional de la historia, emitida durante 10 temporadas (1994-2004)."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 5,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 1,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 2
+  },
+  "themes": [
+    "amistad",
+    "amor",
+    "sitcom_cotidiana",
+    "familia"
+  ],
+  "moments": [
+    "confort",
+    "reir",
+    "desconectar",
+    "para_repetir"
+  ],
+  "oneLiner": "El refugio televisivo por excelencia: seis amigos de Manhattan que ya son familia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

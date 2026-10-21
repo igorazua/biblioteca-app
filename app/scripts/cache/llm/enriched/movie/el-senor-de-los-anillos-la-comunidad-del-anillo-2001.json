@@ -1,0 +1,47 @@
+{
+  "id": "movie:el-senor-de-los-anillos-la-comunidad-del-anillo-2001",
+  "title": "El señor de los anillos: La comunidad del anillo",
+  "experience": {
+    "plot": "Un tímido hobbit hereda un anillo mágico que encierra el poder del Señor Oscuro y debe emprender un viaje épico a través de la Tierra Media para destruirlo. Lo acompaña una comunidad diversa de guerreros, magos y amigos dispuestos a dar la vida por la misión.",
+    "feeling": "Mágica, sobrecogedora, entrañable y de una grandeza inaudita. Te sumerge por completo en un universo mitológico vivo y majestuoso.",
+    "hook": "La insuperable ambientación de Nueva Zelanda, la épica banda sonora de Howard Shore y la pureza del vínculo fraternal entre sus personajes.",
+    "notFor": "Quienes no tengan paciencia para narraciones pausadas de larga duración o sientan aversión a la alta fantasía.",
+    "similar": [
+      "El retorno del rey",
+      "Las dos torres",
+      "Star Wars: Una nueva esperanza",
+      "Gladiator"
+    ],
+    "context": "Arranque de la trilogía más laureada y querida de la historia del cine moderno, dirigida con maestría por Peter Jackson."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 4
+  },
+  "themes": [
+    "mitologia",
+    "amistad",
+    "exploracion",
+    "sacrificio",
+    "guerra",
+    "viajes_por_carretera"
+  ],
+  "moments": [
+    "desconectar",
+    "para_repetir",
+    "amigos",
+    "familia"
+  ],
+  "oneLiner": "La mayor cumbre del cine de fantasía: épica, mitología y una amistad indestructible.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

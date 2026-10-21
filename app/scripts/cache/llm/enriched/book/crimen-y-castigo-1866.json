@@ -1,0 +1,46 @@
+{
+  "id": "book:crimen-y-castigo-1866",
+  "title": "Crimen y castigo",
+  "experience": {
+    "plot": "Raskólnikov, un joven estudiante sumido en la miseria en San Petersburgo, concibe una teoría según la cual los hombres extraordinarios tienen derecho a transgredir la ley moral. Bajo esta premisa comete un crimen atroz, pero la culpa y el remordimiento devoran su alma.",
+    "feeling": "Febril, claustrofóbica, angustiosa y espiritualmente catártica. Es una autopsia desgarradora de la culpa y la desesperación moral.",
+    "hook": "La profundidad psicológica insuperable de Fiódor Dostoyevski y el asfixiante duelo dialéctico entre el asesino y el juez de instrucción.",
+    "notFor": "Quienes busquen una lectura ligera o no soporten la inmersión en tormentos mentales y dilemas teológicos.",
+    "similar": [
+      "Los hermanos Karamazov",
+      "El idiota",
+      "El proceso",
+      "El extranjero"
+    ],
+    "context": "Cumbre de la novela psicológica universal publicada en 1866, testimonio eterno del abismo moral y la redención."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 2,
+    "emocion": 5,
+    "densidad": 5,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "filosofia",
+    "psicologia",
+    "opresion",
+    "soledad",
+    "espiritualidad"
+  ],
+  "moments": [
+    "concentracion",
+    "para_subrayar",
+    "emocionarse",
+    "club_de_lectura"
+  ],
+  "oneLiner": "Monumental disección psicológica de la culpa, el remordimiento y la búsqueda de redención.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

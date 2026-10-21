@@ -1,0 +1,40 @@
+{
+  "id": "boardgame:through-the-ages-a-new-story-of-civilization-2015",
+  "title": "Through the Ages: A New Story of Civilization",
+  "experience": {
+    "plot": "Guía a tu civilización desde la Antigüedad hasta la Era Moderna. Desarrolla tecnologías, construye maravillas, elige a líderes históricos y gestiona la cultura y el ejército para dejar una huella imborrable en la historia.",
+    "feeling": "Monumental, exigente, cerebral y profundamente épica. Ver florecer a tu civilización frente a los rivales es una experiencia inolvidable.",
+    "hook": "El sistema de draft de cartas en una hilera móvil y la tensión de no descuidar jamás la fuerza militar.",
+    "notFor": "Partidas improvisadas o jugadores que odien la contabilidad continua de recursos y población.",
+    "similar": [
+      "Civilization",
+      "Nations",
+      "Terraforming Mars",
+      "7 Wonders"
+    ],
+    "context": "Cima del diseño de civilizaciones en cartas creada por el célebre autor checo Vlaada Chvátil."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 4,
+    "azar": 1,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 1,
+    "familiar": 1
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "draft_de_cartas",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "estrategia_dura",
+    "jugones",
+    "sesion_tarde"
+  ],
+  "oneLiner": "El juego de civilizaciones definitivo: desde la rueda hasta el viaje espacial.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

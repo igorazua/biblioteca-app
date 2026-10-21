@@ -1,0 +1,47 @@
+{
+  "id": "movie:cadena-perpetua-1994",
+  "title": "Cadena perpetua",
+  "experience": {
+    "plot": "Un banquero condenado injustamente a dos cadenas perpetuas en la prisión de Shawshank entabla amistad con un recluso veterano. A lo largo de los años, su dignidad inquebrantable y su silenciosa esperanza transforman su entorno.",
+    "feeling": "Esperanzadora, cálida, reflexiva y profundamente humana. Proporciona una de las catarsis emocionales más liberadoras y reconfortantes del cine.",
+    "hook": "La entrañable complicidad entre Tim Robbins y Morgan Freeman y el magistral tratamiento de la paciencia y la redención.",
+    "notFor": "Quien busque acción carcelaria frenética, peleas constantes o un thriller efectista.",
+    "similar": [
+      "La milla verde",
+      "Alcatraz",
+      "En nombre del padre",
+      "Doce hombres sin piedad"
+    ],
+    "context": "Top 1 histórico de IMDb desde hace décadas, venerada mundialmente como el gran clásico de la esperanza carcelaria."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "amistad",
+    "justicia",
+    "libertad",
+    "redencion",
+    "supervivencia",
+    "soledad"
+  ],
+  "moments": [
+    "pensar",
+    "llorar",
+    "para_repetir",
+    "solo"
+  ],
+  "oneLiner": "Un himno a la paciencia, la amistad verdadera y la dignidad frente a la injusticia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

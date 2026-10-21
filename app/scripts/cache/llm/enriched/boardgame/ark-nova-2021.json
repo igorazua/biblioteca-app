@@ -1,0 +1,42 @@
+{
+  "id": "boardgame:ark-nova-2021",
+  "title": "Ark Nova",
+  "experience": {
+    "plot": "Diseña y gestiona un zoológico moderno y científicamente avanzado con el objetivo de liderar proyectos de conservación. Deberás construir recintos adaptados, acoger especies de los cinco continentes y colaborar con patrocinadores de todo el mundo.",
+    "feeling": "Absorbente, enriquecedora, competitiva y muy satisfactoria al ver crecer tu parque. Te atrapa buscando el combo perfecto de cartas.",
+    "hook": "El genial sistema de 5 cartas de acción numeradas cuya potencia aumenta según la posición en que se encuentren en tu tablero.",
+    "notFor": "Quienes busquen interacción directa destructiva o partidas breves de menos de dos horas.",
+    "similar": [
+      "Terraforming Mars",
+      "Wingspan",
+      "Agricola",
+      "Castillos de Borgoña"
+    ],
+    "context": "El mayor fenómeno eurogame de la década de 2020, aupado velozmente a los puestos más altos de BGG."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "gestion_de_recursos",
+    "deckbuilding",
+    "puzzles_y_losetas"
+  ],
+  "moments": [
+    "jugones",
+    "estrategia_dura",
+    "sesion_tarde",
+    "pareja"
+  ],
+  "oneLiner": "El eurogame moderno definitivo sobre gestión de zoológicos y proyectos de conservación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

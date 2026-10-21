@@ -1,0 +1,45 @@
+{
+  "id": "book:fahrenheit-451-1953",
+  "title": "Fahrenheit 451",
+  "experience": {
+    "plot": "Guy Montag es un bombero cuyo trabajo no es sofocar incendios, sino quemar libros, prohibidos por el gobierno para evitar que la gente piense y sufra. El contacto con una joven vecina inconformista enciende en él la chispa de la duda y la rebelión.",
+    "feeling": "Lírica, urgente, ardiente y esperanzadora a pesar de las cenizas. Provoca un amor visceral e inquebrantable por los libros y la memoria.",
+    "hook": "La prosa poética e hipnótica de Ray Bradbury, el Sabueso Mecánico y la conmovedora imagen de los hombres-libro.",
+    "notFor": "Quienes busquen explicaciones científicas duras o ritmos de novela de acción frenética.",
+    "similar": [
+      "1984",
+      "Un mundo feliz",
+      "Crónicas marcianas",
+      "El dador de recuerdos"
+    ],
+    "context": "La gran oda distópica a la palabra escrita, nacida en plena Guerra Fría y caza de brujas en Estados Unidos."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 3,
+    "escala": 2,
+    "ideas": 5,
+    "reconfort": 3
+  },
+  "themes": [
+    "distopia",
+    "arte_y_literatura",
+    "libertad",
+    "memoria",
+    "opresion"
+  ],
+  "moments": [
+    "absorbente",
+    "para_subrayar",
+    "emocionarse",
+    "concentracion"
+  ],
+  "oneLiner": "Un grito apasionado en defensa de los libros frente al fuego de la ignorancia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

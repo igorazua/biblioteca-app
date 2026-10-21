@@ -1,0 +1,44 @@
+{
+  "id": "book:los-hombres-que-no-amaban-a-las-mujeres-2005",
+  "title": "Los hombres que no amaban a las mujeres",
+  "experience": {
+    "plot": "El periodista de investigación Mikael Blomkvist y la indómita hacker tatuada Lisbeth Salander son contratados para resolver la desaparición de una joven ocurrida cuarenta años atrás en una remota isla sueca. Sus pesquisas desentierran oscuros secretos familiares.",
+    "feeling": "Tensa, fría, adictiva y moralmente implacable. Te sumerge en la nieve y la podredumbre moral de la aristocracia financiera.",
+    "hook": "El fascinante y demoledor magnetismo de Lisbeth Salander, una heroína punk con un código ético propio e inquebrantable.",
+    "notFor": "Lectores sensibles a la violencia sexual o que se atranquen con el arranque pausado de intriga financiera de los primeros capítulos.",
+    "similar": [
+      "La chica que soñaba con una cerilla y un bidón de gasolina",
+      "El silencio de los corderos",
+      "Perdida",
+      "El muñeco de nieve"
+    ],
+    "context": "El fenómeno nórdico por excelencia de la serie Millennium de Stieg Larsson que revolucionó el thriller contemporáneo."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 4,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "misterio",
+    "opresion",
+    "familia",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente",
+    "concentracion",
+    "club_de_lectura"
+  ],
+  "oneLiner": "Misterio nórdico implacable y el nacimiento de la inolvidable justiciera Lisbeth Salander.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "book:la-sombra-del-viento-2001",
+  "title": "La sombra del viento",
+  "experience": {
+    "plot": "En la Barcelona de posguerra, un niño es llevado por su padre al misterioso Cementerio de los Libros Olvidados para elegir un tomo maldito. Su obsesión por el desconocido autor del libro desatará una trama de amores oscuros, venganzas y crímenes.",
+    "feeling": "Mágica, envolvente, gótica y desbordante de pasión literaria. Te atrapa con una atmósfera lluviosa y misteriosa que no se olvida.",
+    "hook": "El amor reverencial por los libros físicos, la prosa melódica de Carlos Ruiz Zafón y el inolvidable Fermín Romero de Torres.",
+    "notFor": "Quienes busquen vanguardia formal minimalista o rechacen los giros melodramáticos del folletín clásico.",
+    "similar": [
+      "El juego del ángel",
+      "El nombre de la rosa",
+      "El cuento número trece",
+      "Los renglones torcidos de Dios"
+    ],
+    "context": "Fenómeno editorial español más internacional del siglo XXI, traducido a más de 50 idiomas con millones de lectores."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 5,
+    "densidad": 3,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "misterio",
+    "amor",
+    "arte_y_literatura",
+    "memoria",
+    "crimen",
+    "historia"
+  ],
+  "moments": [
+    "absorbente",
+    "lluvia_manta",
+    "emocionarse",
+    "viaje"
+  ],
+  "oneLiner": "Intriga gótica y amor por la literatura en una Barcelona de secretos y fantasmas.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

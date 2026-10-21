@@ -1,0 +1,40 @@
+{
+  "id": "boardgame:seti-search-for-extraterrestrial-intelligence-2024",
+  "title": "SETI: Search for Extraterrestrial Intelligence",
+  "experience": {
+    "plot": "Los jugadores lideran agencias científicas espaciales dedicadas a explorar el sistema solar y escudriñar el espacio profundo en busca de señales de vida extraterrestre mediante sondas, telescopios y análisis de datos.",
+    "feeling": "Científica, fascinante, optimista y meticulosa. Transmite con rigor la emoción del descubrimiento astronómico.",
+    "hook": "El tablero con órbitas planetarias giratorias que cambian las distancias y costes de lanzamiento en tiempo real.",
+    "notFor": "Jugadores que busquen fantasía o combates espaciales bélicos.",
+    "similar": [
+      "Terraforming Mars",
+      "Ark Nova",
+      "High Frontier",
+      "On Mars"
+    ],
+    "context": "Gran éxito de la feria de Essen Spiel 2024 diseñado por Tomáš Holek y editado por CGE."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "ciencia_ficcion_espacial",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "jugones",
+    "estrategia_dura",
+    "sesion_tarde"
+  ],
+  "oneLiner": "Rigor científico y fascinación astronómica explorando el cosmos en busca de vida.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

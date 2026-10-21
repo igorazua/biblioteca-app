@@ -1,0 +1,40 @@
+{
+  "id": "artist:bon-jovi-1983",
+  "title": "Bon Jovi",
+  "experience": {
+    "plot": "Banda de Nueva Jersey capitaneada por Jon Bon Jovi que perfeccionó el pop-metal de estadio, combinando melodías irresistibles con letras sobre el optimismo y la clase trabajadora.",
+    "feeling": "Radiante, emotiva, contagiosa y llena de euforia. Diseñada para corear con miles de personas con los brazos en alto.",
+    "hook": "Estribillos colosales como Livin' on a Prayer y It's My Life, y un encanto pop infalible.",
+    "notFor": "Puristas del rock oscuro o quienes eviten las producciones pop-rock comerciales.",
+    "similar": [
+      "Bryan Adams",
+      "Def Leppard",
+      "Aerosmith",
+      "Europe"
+    ],
+    "context": "Superestrellas mundiales que llenaron estadios durante cuatro décadas consecutivas."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 5,
+    "bailable": 4,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "himnos_estadio"
+  ],
+  "moments": [
+    "para_cantar",
+    "viaje_coche",
+    "fiesta",
+    "despertar"
+  ],
+  "oneLiner": "Himnos imparables de estadio, optimismo desbordante y la voz de Nueva Jersey.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "series:chernobil-2019",
+  "title": "Chernóbil",
+  "experience": {
+    "plot": "Recreación minuciosa de la catástrofe de la central nuclear de Chernóbil en 1986 y los desesperados esfuerzos de científicos y operarios por contener el desastre. Mientras tanto, la burocracia soviética intenta ocultar la verdad a costa de vidas humanas.",
+    "feeling": "Aterradora, asfixiante, rigurosa y profundamente conmovedora. Muestra el horror invisible de la radiación con un pulso dramático magistral.",
+    "hook": "La tensión palpable en cada minuto, la banda sonora con sonidos industriales reales y el mensaje demoledor sobre el coste de las mentiras.",
+    "notFor": "Quien busque evasión o le afecten las escenas de enfermedad por radiación y angustia médica.",
+    "similar": [
+      "The Looming Tower",
+      "Spotlight",
+      "Cuando el viento sopla",
+      "Band of Brothers"
+    ],
+    "context": "Aclamadísima miniserie de Craig Mazin para HBO (2019), ganadora de múltiples premios Emmy y Globos de Oro."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 1,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "epoca_historica",
+    "politica_y_poder",
+    "supervivencia",
+    "duelo"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "maraton"
+  ],
+  "oneLiner": "Tensa, verídica y desoladora crónica del peor desastre nuclear y las mentiras del poder.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

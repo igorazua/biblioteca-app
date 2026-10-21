@@ -284,3 +284,12 @@ export const THEMES_BY_SHELF = {
     'vanguardia',
   ],
 }
+
+export const CONTROLLED_VOCAB = {
+  movie: { themes: THEMES_BY_SHELF.movie, moments: MOMENTS_BY_SHELF.movie },
+  series: { themes: THEMES_BY_SHELF.series, moments: MOMENTS_BY_SHELF.series },
+  book: { themes: THEMES_BY_SHELF.book, moments: MOMENTS_BY_SHELF.book },
+  boardgame: { themes: THEMES_BY_SHELF.boardgame, moments: MOMENTS_BY_SHELF.boardgame },
+  artist: { themes: THEMES_BY_SHELF.artist, moments: MOMENTS_BY_SHELF.artist },
+}
+

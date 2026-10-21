@@ -1,0 +1,47 @@
+{
+  "id": "series:the-big-bang-theory-2007",
+  "title": "The Big Bang Theory",
+  "experience": {
+    "plot": "Dos físicos superdotados que comparten piso en Pasadena ven alterado su mundo de cómics, videojuegos y ciencia cuando una extrovertida camarera y aspirante a actriz se muda al apartamento de enfrente.",
+    "feeling": "Accesible, desenfadada, ingeniosa y de risa fácil. Ofrece entretenimiento ligero y familiar sin complicaciones.",
+    "hook": "Las excentricidades obsesivo-compulsivas de Sheldon Cooper interpretado magistralmente por Jim Parsons.",
+    "notFor": "Quienes busquen humor sutil sin risas enlatadas o rechacen los estereotipos de la cultura friki.",
+    "similar": [
+      "Friends",
+      "Silicon Valley",
+      "Cómo conocí a vuestra madre",
+      "Modern Family"
+    ],
+    "context": "La telecomedia en abierto más exitosa de la televisión de la década de 2010 con 12 temporadas en antena."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 5,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 1,
+    "reconfort": 5,
+    "enganche": 3,
+    "formato": 1
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "amor",
+    "ia_y_tecnologia"
+  ],
+  "moments": [
+    "desconectar",
+    "reir",
+    "capitulo_cena",
+    "confort"
+  ],
+  "oneLiner": "Risas garantizadas y choque cultural entre genios de la física y el mundo real.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "boardgame:the-castles-of-burgundy-2011",
+  "title": "The Castles of Burgundy",
+  "experience": {
+    "plot": "Ambientado en la región de Borgoña en el siglo XV, los jugadores son príncipes que expanden sus asentamientos construyendo castillos, granjas, minas de plata y rutas comerciales mediante la colocación de losetas guiadas por dados.",
+    "feeling": "Fluida, placentera, adictiva y reconfortante. Encadenar acciones y completar distritos genera una satisfacción lúdica insuperable.",
+    "hook": "La brillante mitigación del azar de los dados usando trabajadores para ajustar los valores numéricos a tu conveniencia.",
+    "notFor": "Amantes de temáticas de fantasía vibrantes o que busquen enfrentamientos bélicos directos.",
+    "similar": [
+      "Carcassonne",
+      "Concordia",
+      "Puerto Rico",
+      "Grand Austria Hotel"
+    ],
+    "context": "La obra maestra de Stefan Feld, clásico imperecedero del diseño de juegos de mesa alemán."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 1,
+    "familiar": 4
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "puzzles_y_losetas",
+    "dados_y_push_your_luck",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "pareja",
+    "sesion_tarde",
+    "sobremesa"
+  ],
+  "oneLiner": "Elegancia alemana insuperable en la gestión de dados y colocación de losetas.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

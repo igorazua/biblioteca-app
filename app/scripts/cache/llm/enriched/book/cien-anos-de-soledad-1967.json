@@ -1,0 +1,45 @@
+{
+  "id": "book:cien-anos-de-soledad-1967",
+  "title": "Cien años de soledad",
+  "experience": {
+    "plot": "Crónica épica de siete generaciones de la familia Buendía en el pueblo caribeño de Macondo, fundado en mitad de la selva. Sus destinos se entrelazan entre prodigios fantásticos, guerras civiles y una irremediable soledad.",
+    "feeling": "Torrencial, poética, envolvente y agridulce. Deja la sensación de haber recorrido un siglo entero en un suspiro.",
+    "hook": "El realismo mágico insuperable de García Márquez, donde lo insólito es cotidiano y el lenguaje hipnotiza en cada página.",
+    "notFor": "Lectores que busquen tramas lineales sencillas, poca densidad de personajes o realismo estricto.",
+    "similar": [
+      "Pedro Páramo",
+      "La casa de los espíritus",
+      "El amor en los tiempos del cólera",
+      "Ficciones"
+    ],
+    "context": "Obra maestra del boom latinoamericano y cumbre del Premio Nobel Gabriel García Márquez (1967)."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 5,
+    "densidad": 4,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 4,
+    "escala": 5,
+    "ideas": 5,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "memoria",
+    "soledad",
+    "realismo_magico",
+    "historia"
+  ],
+  "moments": [
+    "emocionarse",
+    "absorbente",
+    "para_subrayar",
+    "pausado"
+  ],
+  "oneLiner": "Mítica, torrencial y fascinante epopeya sobre el destino y la memoria en Macondo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

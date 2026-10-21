@@ -1,0 +1,46 @@
+{
+  "id": "book:1984-1949",
+  "title": "1984",
+  "experience": {
+    "plot": "En un Londres futurista gobernado por el Partido y la figura omnipresente del Gran Hermano, Winston Smith trabaja reescribiendo la historia en el Ministerio de la Verdad. En secreto, comete el crimen de pensar por su cuenta y busca el amor prohibido.",
+    "feeling": "Opresiva, angustiosa, asfixiante y estremecedoramente lúcida. Instala una paranoia constante ante la vigilancia y la pérdida de la verdad.",
+    "hook": "Conceptos sociopolíticos imborrables como la 'neolengua', la 'policía del pensamiento' y la habitación 101.",
+    "notFor": "Quienes busquen escapismo reconfortante o no toleren finales desoladores sin atisbo de victoria heroica.",
+    "similar": [
+      "Un mundo feliz",
+      "Fahrenheit 451",
+      "Rebelión en la granja",
+      "El cuento de la criada"
+    ],
+    "context": "La distopía política más influyente de la era moderna, escrita por George Orwell al término de la Segunda Guerra Mundial."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 5,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 5,
+    "reconfort": 1
+  },
+  "themes": [
+    "distopia",
+    "opresion",
+    "libertad",
+    "politica",
+    "lenguaje",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente",
+    "para_subrayar",
+    "concentracion",
+    "club_de_lectura"
+  ],
+  "oneLiner": "La advertencia política más lúcida y aterradora jamás escrita contra el totalitarismo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

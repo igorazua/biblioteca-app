@@ -1,0 +1,45 @@
+{
+  "id": "movie:sospechosos-habituales-1995",
+  "title": "Sospechosos habituales",
+  "experience": {
+    "plot": "Cinco delincuentes profesionales son detenidos para una rueda de reconocimiento y deciden aliarse para dar un golpe conjunto. Pronto descubren que están siendo manipulados por una figura mítica del hampa apodada Keyser Söze.",
+    "feeling": "Enigmática, laberíntica, inteligente y desbordante de suspense. Mantiene al espectador teorizando continuamente en cada interrogatorio.",
+    "hook": "La narración hipnótica del tullido Verbal Kint y el desenlace sorpresa más celebrado y parodiado del cine de los 90.",
+    "notFor": "Quien se distraiga con facilidad con relatos basados en trampas temporales y testimonios poco fiables.",
+    "similar": [
+      "Memento",
+      "L.A. Confidential",
+      "Reservoir Dogs",
+      "El golpe"
+    ],
+    "context": "Ganadora de 2 Óscar (guion original y actor de reparto), estandarte del thriller de giros argumentales."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "atraco",
+    "investigacion",
+    "conspiracion",
+    "traicion"
+  ],
+  "moments": [
+    "pensar",
+    "noche_tarde",
+    "amigos"
+  ],
+  "oneLiner": "Juego de prestidigitación criminal con el enigma y el giro más brillante de los 90.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

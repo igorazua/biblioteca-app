@@ -1,0 +1,47 @@
+{
+  "id": "series:los-simpson-1989",
+  "title": "Los Simpson",
+  "experience": {
+    "plot": "Sátira animada sobre una peculiar familia de clase trabajadora que vive en el pueblo ficticio de Springfield. A través de sus disparatadas aventuras cotidianas, la serie disecciona la sociedad, la política y la cultura contemporánea.",
+    "feeling": "Ingeniosa, anárquica, ácida y nostálgica. Especialmente en sus primeras temporadas, es una ametralladora ininterrumpida de humor sublime.",
+    "hook": "Personajes secundarios legendarios, dobles lecturas sociológicas y un legado de citas memorables que forman parte del lenguaje común.",
+    "notFor": "Quienes busquen continuidad dramática estricta o juzguen la serie solo por sus temporadas más recientes.",
+    "similar": [
+      "Futurama",
+      "Padre de familia",
+      "South Park",
+      "Bob's Burgers"
+    ],
+    "context": "La serie de animación más longeva e influyente del mundo, creada por Matt Groening en 1989."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 1,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 5,
+    "enganche": 3,
+    "formato": 1
+  },
+  "themes": [
+    "animacion",
+    "familia",
+    "satira",
+    "sitcom_cotidiana"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "de_fondo",
+    "para_repetir"
+  ],
+  "oneLiner": "La sátira familiar definitiva: treinta años marcando el humor de generaciones enteras.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

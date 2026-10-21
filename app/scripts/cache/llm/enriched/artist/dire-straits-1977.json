@@ -1,0 +1,41 @@
+{
+  "id": "artist:dire-straits-1977",
+  "title": "Dire Straits",
+  "experience": {
+    "plot": "Liderada por el virtuoso guitarrista y compositor Mark Knopfler, la banda británica deslumbró al mundo con un rock pausado, elegante y narrativo tocado con la técnica de 'fingerpicking'.",
+    "feeling": "Exquisita, sobria, hipnótica y cálida. Su música suena a noche en la carretera y a melancolía reconfortante.",
+    "hook": "El timbre limpio e inconfundible de la Fender Stratocaster de Knopfler y clásicos monumentales como Sultans of Swing.",
+    "notFor": "Oyentes que busquen ritmos frenéticos de baile o distorsiones de guitarra agresivas.",
+    "similar": [
+      "Eric Clapton",
+      "The Police",
+      "Bob Dylan",
+      "Pink Floyd"
+    ],
+    "context": "Autores de Brothers in Arms (1985), el álbum que popularizó el formato Compact Disc en todo el mundo."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 3,
+    "bailable": 2,
+    "organico": 5,
+    "intensidad": 3,
+    "fondo": 3,
+    "complejidad": 4
+  },
+  "themes": [
+    "rock_clasico",
+    "blues",
+    "letras_poeticas",
+    "acustico"
+  ],
+  "moments": [
+    "viaje_coche",
+    "relax",
+    "escucha_atenta",
+    "atardecer"
+  ],
+  "oneLiner": "Elegancia pura, guitarra mágica con los dedos y relatos que suenan a carretera.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

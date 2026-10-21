@@ -1,0 +1,41 @@
+{
+  "id": "boardgame:dune-imperium-uprising-2023",
+  "title": "Dune: Imperium – Uprising",
+  "experience": {
+    "plot": "Lidera una de las grandes casas del Imperio en la guerra total por el control del planeta Arrakis. Utiliza tropas, espías y pactos con los Fremen para dominar la cosecha de especia y reclamar la supremacía militar y política.",
+    "feeling": "Tensísima, letal, elegante y sumamente competitiva. La incertidumbre de los combates al final de ronda dispara la adrenalina en la mesa.",
+    "hook": "La fusión magistral entre construcción de mazos (deckbuilding) y colocación de trabajadores, enriquecida con gusanos de arena.",
+    "notFor": "Quienes detesten el faroleo en combate, el bloqueo de casillas o el conflicto directo entre jugadores.",
+    "similar": [
+      "Dune: Imperium",
+      "Clank!",
+      "Ruinas Perdidas de Arnak",
+      "Scythe"
+    ],
+    "context": "Evolución refinada e independiente de Dune: Imperium que consolidó la saga en lo más alto del ranking moderno."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 5,
+    "azar": 2,
+    "confrontacion": 5,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "ciencia_ficcion_espacial",
+    "colocacion_de_trabajadores",
+    "deckbuilding",
+    "control_de_areas"
+  ],
+  "moments": [
+    "pique_sano",
+    "jugones",
+    "sesion_tarde"
+  ],
+  "oneLiner": "Tensión política y batallas despiadadas por la especia en el desierto de Arrakis.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

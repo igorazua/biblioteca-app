@@ -1,0 +1,40 @@
+{
+  "id": "artist:ac-dc-1973",
+  "title": "AC/DC",
+  "experience": {
+    "plot": "Los hermanos Young fundaron en Australia la máquina definitiva del hard rock: riffs cortantes, base rítmica de precisión de acero y una fidelidad inquebrantable al rock más directo.",
+    "feeling": "Pura adrenalina, electricidad sin tregua, fiesta desenfrenada y potencia motora. Es imposible no mover la cabeza al compás.",
+    "hook": "Los acordes demoledores de Angus Young en uniforme escolar y estribillos masivos diseñados para corearse a voz en grito.",
+    "notFor": "Quienes busquen experimentación sonora compleja, baladas intimistas o variedad estilística.",
+    "similar": [
+      "Guns N' Roses",
+      "Airbourne",
+      "KISS",
+      "Motorhead"
+    ],
+    "context": "Autores de Back in Black, uno de los discos más vendidos de la historia de la humanidad."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 4,
+    "bailable": 3,
+    "organico": 5,
+    "intensidad": 5,
+    "fondo": 2,
+    "complejidad": 1
+  },
+  "themes": [
+    "rock_clasico",
+    "metal",
+    "himnos_estadio"
+  ],
+  "moments": [
+    "entrenar",
+    "fiesta",
+    "viaje_coche",
+    "para_cantar"
+  ],
+  "oneLiner": "Electricidad de alto voltaje: los riffs más demoledores y directos del rock.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

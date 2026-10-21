@@ -1,0 +1,46 @@
+{
+  "id": "movie:la-lista-de-schindler-1993",
+  "title": "La lista de Schindler",
+  "experience": {
+    "plot": "En la Polonia ocupada por los nazis durante la Segunda Guerra Mundial, un vanidoso empresario alemán utiliza a prisioneros judíos como mano de obra barata. Al presenciar la barbarie del genocidio, gasta toda su fortuna en protegerlos y salvar más de un millar de vidas.",
+    "feeling": "Devastadora, sobrecogedora, sobria y de una desgarradora humanidad. Te confronta con la crueldad absoluta y la nobleza más heroica.",
+    "hook": "La magistral fotografía en blanco y negro de Kaminski, la partitura melancólica de John Williams con Itzhak Perlman y la transformación moral de Liam Neeson.",
+    "notFor": "Tardes ligeras o momentos de ánimo bajo; es una experiencia emocionalmente dolorosa y exigente.",
+    "similar": [
+      "El pianista",
+      "La vida es bella",
+      "El hijo de Saúl",
+      "Salvar al soldado Ryan"
+    ],
+    "context": "Magnum opus dramática de Steven Spielberg ganadora de 7 premios Óscar, documento cinematográfico fundamental sobre la memoria del siglo XX."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 5,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "racismo",
+    "justicia",
+    "redencion",
+    "supervivencia",
+    "sacrificio"
+  ],
+  "moments": [
+    "pensar",
+    "llorar",
+    "solo"
+  ],
+  "oneLiner": "Inconmensurable testimonio de horror y compasión humana en el corazón del Holocausto.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

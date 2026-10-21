@@ -1,0 +1,49 @@
+{
+  "id": "series:succession-2018",
+  "title": "Succession",
+  "experience": {
+    "plot": "Los cuatro hijos del anciano magnate de los medios Logan Roy conspiran y se apuñalan por la espalda para heredar el control del imperio familiar. Cada reunión corporativa es una carnicería psicológica de lealtades cambiantes.",
+    "feeling": "Mordaz, adictiva, fastuosa y trágicamente patética. Es un placer culpable ver a multimillonarios desdichados destrozarse con frases viperinas.",
+    "hook": "Diálogos afilados como cuchillas, la inolvidable banda sonora de piano y cuerdas de Nicholas Britell y actuaciones colosales.",
+    "notFor": "Quien necesite personajes empáticos o se canse de las intrigas de oficinas y salones de juntas de lujo.",
+    "similar": [
+      "Mad Men",
+      "Billions",
+      "El rey Lear",
+      "House of Cards"
+    ],
+    "context": "Fenómeno de prestigio de HBO creado por Jesse Armstrong, ganadora recurrente de los premios Emmy a mejor drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 1,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 2,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "negocios_y_corporaciones",
+    "familia",
+    "politica_y_poder",
+    "ambicion",
+    "traicion",
+    "satira"
+  ],
+  "moments": [
+    "maraton",
+    "pensar",
+    "solo",
+    "enganche"
+  ],
+  "oneLiner": "Shakespeariana, venenosa y brillante lucha dinástica entre tiburones corporativos.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

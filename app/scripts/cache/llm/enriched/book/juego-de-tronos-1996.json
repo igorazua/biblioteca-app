@@ -1,0 +1,44 @@
+{
+  "id": "book:juego-de-tronos-1996",
+  "title": "Juego de tronos",
+  "experience": {
+    "plot": "Lord Eddard Stark acepta el cargo de Mano del Rey en Desembarco del Rey para investigar la muerte de su predecesor, viéndose atrapado en un nido de víboras políticas. Mientras, en el remoto Muro, su hijo bastardo vigila una amenaza olvidada.",
+    "feeling": "Implacable, adictiva, sombría y de una crudeza descarnada. No da tregua al lector al desmantelar sin miramientos los tópicos de la fantasía.",
+    "hook": "La impecable polifonía de capítulos en primera persona (POV), la astucia de los complots políticos y el realismo medieval sin concesiones.",
+    "notFor": "Lectores sensibles a la violencia cruda, incesto o la muerte de personajes principales.",
+    "similar": [
+      "Choque de reyes",
+      "Los pilares de la Tierra",
+      "La primera ley",
+      "Dune"
+    ],
+    "context": "Primer tomo de la saga Canción de hielo y fuego de George R.R. Martin que revolucionó la literatura fantástica a finales de los 90."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 5,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 3,
+    "escala": 5,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "fantasia_epica",
+    "politica",
+    "guerra",
+    "familia",
+    "crimen"
+  ],
+  "moments": [
+    "absorbente",
+    "concentracion",
+    "club_de_lectura"
+  ],
+  "oneLiner": "Fantasía política descarnada y adictiva donde quien juega a gobernar o vence o muere.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

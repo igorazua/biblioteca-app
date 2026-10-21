@@ -1,0 +1,49 @@
+{
+  "id": "series:peaky-blinders-2013",
+  "title": "Peaky Blinders",
+  "experience": {
+    "plot": "En el Birmingham de 1919 tras la Gran Guerra, el veterano condecorado Tommy Shelby lidera a su peligrosa banda callejera familiar. Con astucia despiadada, expande sus negocios ilegales enfrentándose a mafias rivales y al gobierno.",
+    "feeling": "Macarra, estilizada, violenta y cautivadora. Te contagia el carisma magnético de sus gabardinas, humo y rock alternativo de fondo.",
+    "hook": "La hipnótica mirada de Cillian Murphy, la ambientación industrial llena de chispas y barro, y antagonistas inolvidables.",
+    "notFor": "Audiencias sensibles a la violencia callejera o que prefieran dramas históricos de corte más sobrio y purista.",
+    "similar": [
+      "Boardwalk Empire",
+      "Hijos de la Anarquía",
+      "Taboo",
+      "Gangs of London"
+    ],
+    "context": "Icono de la televisión británica creado por Steven Knight con un impacto masivo en la moda y la música pop."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 2,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "crimen_organizado",
+    "mafia",
+    "familia",
+    "epoca_historica",
+    "venganza",
+    "politica_y_poder"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "solo",
+    "desconectar"
+  ],
+  "oneLiner": "Estilo puro, humo y violencia callejera bajo la implacable ambición de Tommy Shelby.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

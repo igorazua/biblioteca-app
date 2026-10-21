@@ -1,0 +1,39 @@
+{
+  "id": "artist:kiss-1973",
+  "title": "Kiss",
+  "experience": {
+    "plot": "Banda neoyorquina de hard rock famosa por su maquillaje teatral de cómic, plataformas y espectáculos con fuego y sangre, convertida en un imperio del espectáculo.",
+    "feeling": "Festiva, grandilocuente, pirotécnica y desenfadada. Te traslada de inmediato a una fiesta masiva de rock de estadio.",
+    "hook": "Sus himnos coreables como Rock and Roll All Nite y una imaginería visual que cautivó a legiones de seguidores en todo el mundo.",
+    "notFor": "Críticos que exijan complejidad vanguardista o lirismo intimista y solemne.",
+    "similar": [
+      "Alice Cooper",
+      "Aerosmith",
+      "Def Leppard",
+      "Motley Crue"
+    ],
+    "context": "Pioneros del marketing y del espectáculo en vivo en el rock estadounidense de los años 70."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 5,
+    "bailable": 4,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 3,
+    "complejidad": 1
+  },
+  "themes": [
+    "rock_clasico",
+    "himnos_estadio",
+    "pop"
+  ],
+  "moments": [
+    "fiesta",
+    "para_cantar",
+    "viaje_coche"
+  ],
+  "oneLiner": "Pirotecnia, maquillaje y los himnos festivos más multitudinarios del rock.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

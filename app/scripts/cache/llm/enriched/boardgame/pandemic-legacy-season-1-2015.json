@@ -1,0 +1,40 @@
+{
+  "id": "boardgame:pandemic-legacy-season-1-2015",
+  "title": "Pandemic Legacy: Season 1",
+  "experience": {
+    "plot": "Un equipo de especialistas médicos de élite intenta contener cuatro plagas mortales que asolan el planeta a lo largo de un año natural. Cada mes trae nuevas crisis, mutaciones del virus y reglas permanentes que cambian físicamente el tablero para siempre.",
+    "feeling": "Angustiosa, memorable, épica y de tensión cooperativa máxima. Deja momentos imborrables grabados en la memoria de los jugadores.",
+    "hook": "La revolucionaria mecánica de destruir cartas, abrir cajas secretas y pegar adhesivos permanentes que alteran el destino de la campaña.",
+    "notFor": "Jugadores que no puedan reunir al mismo grupo fijo para completar las 12-24 partidas o no soporten alterar componentes del juego.",
+    "similar": [
+      "Pandemic",
+      "Gloomhaven",
+      "Clank! Legacy",
+      "T.I.M.E Stories"
+    ],
+    "context": "Pionero absoluto de los juegos 'legacy' narrativos que ocupó durante años el trono de número 1 mundial en BGG."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 5,
+    "azar": 3,
+    "confrontacion": 1,
+    "cooperacion": 5,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "cooperativo_pandemia",
+    "gestion_de_mano",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "cooperativo",
+    "sesion_tarde",
+    "jugones"
+  ],
+  "oneLiner": "Una campaña cooperativa inolvidable donde cada decisión marca el tablero para siempre.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

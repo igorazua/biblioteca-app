@@ -1,0 +1,42 @@
+{
+  "id": "boardgame:frosthaven-2022",
+  "title": "Frosthaven",
+  "experience": {
+    "plot": "En las gélidas e inhóspitas tierras del norte, un grupo de mercenarios defiende y expande el último puesto de avanzada de la civilización. Además de combatir en mazmorras heladas, deberás reconstruir el pueblo entre estaciones.",
+    "feeling": "Titánica, desafiante, absorbente y épica. El peso de cada victoria sobre el frío y las bestias se siente colosal.",
+    "hook": "La combinación del combate táctico perfeccionado de Gloomhaven con una fase de gestión de asentamiento y crafteo de equipo.",
+    "notFor": "Quienes no dispongan de un espacio permanente de juego y decenas de horas para una campaña masiva.",
+    "similar": [
+      "Gloomhaven",
+      "Gloomhaven: Jaws of the Lion",
+      "Mage Knight",
+      "Sleeping Gods"
+    ],
+    "context": "La campaña de Kickstarter más exitosa de la historia de los juegos de mesa (13 millones de dólares), diseñada por Isaac Childres."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 4,
+    "azar": 1,
+    "confrontacion": 1,
+    "cooperacion": 5,
+    "tema": 5,
+    "risas": 1,
+    "familiar": 1
+  },
+  "themes": [
+    "fantasia_medieval",
+    "construccion_de_ciudades",
+    "gestion_de_mano",
+    "exploracion_y_mapas"
+  ],
+  "moments": [
+    "estrategia_dura",
+    "cooperativo",
+    "sesion_tarde",
+    "jugones"
+  ],
+  "oneLiner": "La evolución del mazmorreo: supervivencia, gestión y combate en el norte helado.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "series:juego-de-tronos-2011",
+  "title": "Juego de tronos",
+  "experience": {
+    "plot": "Nueve familias nobles se disputan a sangre y fuego el Trono de Hierro del continente de Poniente mientras antiguas conspiraciones amenazan la paz. Entretanto, un peligro ancestral de hielo avanza desde el norte y una reina exiliada cría tres dragones.",
+    "feeling": "Épica, salvaje, maquiavélica y colosal. Te mantiene en vilo con la certeza de que ningún personaje querido está a salvo de una muerte atroz.",
+    "hook": "Conspiraciones palaciegas brutales, personajes grises fascinantes y escenas de batalla de escala cinematográfica sin precedentes.",
+    "notFor": "Espectadores sensibles a la violencia explícita o decepcionados de antemano por las polémicas temporadas finales.",
+    "similar": [
+      "Vikingos",
+      "El señor de los anillos",
+      "Roma",
+      "La casa del dragón"
+    ],
+    "context": "El mayor fenómeno de televisión global de la década de 2010 basado en las novelas de George R.R. Martin."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 5,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 5,
+    "reconfort": 2,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "fantasia_epica",
+    "politica_y_poder",
+    "traicion",
+    "guerra",
+    "venganza",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "solo",
+    "desconectar"
+  ],
+  "oneLiner": "Poder, traición y sangre en el mayor fenómeno televisivo de fantasía de la historia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

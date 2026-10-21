@@ -1,0 +1,41 @@
+{
+  "id": "artist:queen-1970",
+  "title": "Queen",
+  "experience": {
+    "plot": "Banda británica liderada por el inigualable Freddie Mercury que fusionó el hard rock con la grandilocuencia operística, el pop y armonías vocales teatrales de escala épica.",
+    "feeling": "Teatral, triunfal, exuberante y arrolladora. Desata una euforia colectiva inmediata y ganas irresistibles de cantar a coro.",
+    "hook": "El registro vocal prodigioso de Mercury, la guitarra inconfundible de Brian May y los himnos de estadio más universales del planeta.",
+    "notFor": "Quienes prefieran el minimalismo austero, el lo-fi o aborrezcan la pompa operística.",
+    "similar": [
+      "David Bowie",
+      "Elton John",
+      "Led Zeppelin",
+      "The Darkness"
+    ],
+    "context": "Gigantes del rock británico de los 70 y 80, autores de himnos que siguen sonando en estadios de todo el mundo."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 4,
+    "bailable": 4,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 1,
+    "complejidad": 4
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "himnos_estadio",
+    "vanguardia"
+  ],
+  "moments": [
+    "para_cantar",
+    "fiesta",
+    "viaje_coche",
+    "entrenar"
+  ],
+  "oneLiner": "Teatralidad operística, carisma inigualable e himnos eternos para la humanidad.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

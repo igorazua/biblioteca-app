@@ -1,0 +1,45 @@
+{
+  "id": "book:orgullo-y-prejuicio-1813",
+  "title": "Orgullo y prejuicio",
+  "experience": {
+    "plot": "En la Inglaterra rural de principios del siglo XIX, la vivaz e inteligente Elizabeth Bennet debe lidiar con las presiones de su madre para casar a sus hijas. Al conocer al altivo y acaudalado señor Darcy, ambos deberán superar sus prejuicios para descubrir su amor mutuo.",
+    "feeling": "Brillante, ingeniosa, reconfortante y deliciosa. Despierta una sonrisa constante ante la agudeza de sus diálogos y la ironía social.",
+    "hook": "La deslumbrante química dialéctica entre Elizabeth y Darcy y la crítica mordaz e inteligente a las convenciones de clase.",
+    "notFor": "Lectores alérgicos a las novelas de costumbres de época o al romance clásico refinado.",
+    "similar": [
+      "Sentido y sensibilidad",
+      "Jane Eyre",
+      "Emma",
+      "Mujercitas"
+    ],
+    "context": "La obra más célebre de Jane Austen publicada en 1813, canon absoluto de la literatura romántica e ingeniosa en lengua inglesa."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 3,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "sociedad",
+    "humor_y_satira",
+    "mayoria_de_edad"
+  ],
+  "moments": [
+    "desconectar",
+    "lluvia_manta",
+    "emocionarse",
+    "antes_de_dormir"
+  ],
+  "oneLiner": "Ironía, elegancia y uno de los romances más chispeantes y perfectos jamás escritos.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

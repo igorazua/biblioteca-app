@@ -1,0 +1,44 @@
+{
+  "id": "book:yo-robot-1950",
+  "title": "Yo, robot",
+  "experience": {
+    "plot": "Colección de relatos hilados por las memorias de la robopsicóloga Susan Calvin en el siglo XXI. A través de distintos casos clínicos e incidentes, se exploran las paradójicas grietas de las Tres Leyes de la Robótica ideadas para proteger a los humanos.",
+    "feeling": "Ingeniosa, analítica, elegante y estimulante. Cada relato funciona como un fascinante acertijo lógico de inteligencia artificial y ética.",
+    "hook": "El rigor filosófico de las Tres Leyes y la sorprendente humanidad que destilan las máquinas en sus dilemas de programación.",
+    "notFor": "Quienes busquen la película de acción de Will Smith; el libro es una obra pausada de misterios lógicos y deducción.",
+    "similar": [
+      "Fundación",
+      "2001: Una odisea espacial",
+      "¿Sueñan los androides con ovejas eléctricas?",
+      "El hombre bicentenario"
+    ],
+    "context": "La obra que cimentó el concepto moderno de la robótica en la literatura y la ciencia, publicada por Asimov en 1950."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 2,
+    "densidad": 3,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 3,
+    "escala": 3,
+    "ideas": 5,
+    "reconfort": 4
+  },
+  "themes": [
+    "tecnologia_futuro",
+    "ciencia_y_universo",
+    "filosofia",
+    "misterio",
+    "lenguaje"
+  ],
+  "moments": [
+    "aprender",
+    "desconectar",
+    "concentracion"
+  ],
+  "oneLiner": "Elegantes acertijos éticos y lógicos que sentaron las bases de la inteligencia artificial.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "movie:braveheart-1995",
+  "title": "Braveheart",
+  "experience": {
+    "plot": "En el siglo XIII, el rebelde escocés William Wallace lidera a sus compatriotas en una feroz revuelta contra la tiranía del rey Eduardo I de Inglaterra. La venganza personal por la muerte de su esposa se convierte en una apasionada gesta por la libertad de Escocia.",
+    "feeling": "Ferviente, brutal, épica y de una intensidad pasional desbordante. Despierta emociones exaltadas de patriotismo y sacrificio colectivo.",
+    "hook": "Las memorables batallas campales con barro y espadas, los discursos inflamados a caballo y la música celta de James Horner.",
+    "notFor": "Historiadores rigurosos o personas sensibles a desmembramientos bélicos medievales.",
+    "similar": [
+      "Gladiator",
+      "El patriota",
+      "El señor de los anillos",
+      "300"
+    ],
+    "context": "Ganadora de 5 premios Óscar incluyendo mejor película y director para Mel Gibson en 1995."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 3
+  },
+  "themes": [
+    "libertad",
+    "guerra",
+    "venganza",
+    "amor",
+    "sacrificio"
+  ],
+  "moments": [
+    "pensar",
+    "amigos",
+    "solo"
+  ],
+  "oneLiner": "Gesta medieval de pasión incontenible, batallas colosales y el grito eterno de libertad.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

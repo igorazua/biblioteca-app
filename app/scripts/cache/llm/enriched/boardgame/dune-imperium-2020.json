@@ -1,0 +1,41 @@
+{
+  "id": "boardgame:dune-imperium-2020",
+  "title": "Dune: Imperium",
+  "experience": {
+    "plot": "Ponte al frente de una facción noble en Arrakis y compite por la especia y la lealtad de la Bene Gesserit, la Cofradía Espacial y el Emperador. Deberás equilibrar la influencia diplomática con el envío de tropas al conflicto armado.",
+    "feeling": "Afilada, vibrante, calculadora y emocionante. Cada carta jugada genera dudas tácticas y cada escaramuza puede cambiar la partida.",
+    "hook": "El ingenioso sistema donde cada carta de tu mano determina a qué casillas puedes enviar tus agentes y qué fuerza tendrás en la batalla.",
+    "notFor": "Jugadores pacifistas que prefieran construir sus motores de recursos sin interferencias ni robos ajenos.",
+    "similar": [
+      "Dune: Imperium - Uprising",
+      "Ruinas Perdidas de Arnak",
+      "Concordia",
+      "Blood Rage"
+    ],
+    "context": "Uno de los mayores éxitos de diseño de juegos de mesa de 2020 creado por Paul Dennen bajo la licencia de Frank Herbert."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "ciencia_ficcion_espacial",
+    "colocacion_de_trabajadores",
+    "deckbuilding",
+    "control_de_areas"
+  ],
+  "moments": [
+    "jugones",
+    "pique_sano",
+    "sesion_tarde"
+  ],
+  "oneLiner": "Magistral fusión de construcción de mazos e intriga militar en el universo de Dune.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

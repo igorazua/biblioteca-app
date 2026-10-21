@@ -1,0 +1,39 @@
+{
+  "id": "artist:the-rolling-stones-1962",
+  "title": "The Rolling Stones",
+  "experience": {
+    "plot": "Epitafio viviente del rock and roll: una máquina de rhythm and blues sucio, descarado y peligroso que ha recorrido más de seis décadas sobre los escenarios de todo el planeta.",
+    "feeling": "Chulesca, contagiosa, cruda y electrizante. Despide sudor, juventud rebelde y pura actitud rockera.",
+    "hook": "Los riffs inmortales de Keith Richards en afinación abierta y el movimiento electrizante de Mick Jagger.",
+    "notFor": "Quienes busquen pulcritud de conservatorio o producciones sintéticas impecables y asépticas.",
+    "similar": [
+      "The Beatles",
+      "The Who",
+      "The Kinks",
+      "Aerosmith"
+    ],
+    "context": "La mayor y más longeva banda de rock and roll del mundo, sinónimo indiscutible del género desde 1962."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 4,
+    "bailable": 4,
+    "organico": 5,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "blues",
+    "himnos_estadio"
+  ],
+  "moments": [
+    "fiesta",
+    "viaje_coche",
+    "para_cantar"
+  ],
+  "oneLiner": "Pura actitud, rebeldía y el pulso más longevo y contagioso del rock and roll.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

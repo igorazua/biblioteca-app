@@ -1,0 +1,41 @@
+{
+  "id": "boardgame:star-wars-rebellion-2016",
+  "title": "Star Wars: Rebellion",
+  "experience": {
+    "plot": "El Imperio Galáctico despliega su abrumadora flota para encontrar y aniquilar la base secreta rebelde oculta en algún planeta de la galaxia. La Alianza Rebelde, con recursos mínimos, debe recurrir a la guerrilla, el sabotaje y la esperanza.",
+    "feeling": "Cinematográfica, trepidante, llena de suspense y emoción de película. Una partida recrea la trilogía clásica entera en tu mesa.",
+    "hook": "El juego del escondite a escala galáctica: el jugador imperial interroga y rastrea mientras el rebelde resiste con audacia.",
+    "notFor": "Grupos numerosos, ya que brilla casi exclusivamente como duelo para dos jugadores.",
+    "similar": [
+      "War of the Ring",
+      "Twilight Struggle",
+      "Star Wars: Imperial Assault",
+      "Nemesis"
+    ],
+    "context": "La experiencia de mesa definitiva de Star Wars, un hito del catálogo temático de Fantasy Flight Games."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 5,
+    "azar": 3,
+    "confrontacion": 5,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "ciencia_ficcion_espacial",
+    "control_de_areas",
+    "misterio_y_deduccion",
+    "faroleo_y_enganos"
+  ],
+  "moments": [
+    "pareja",
+    "jugones",
+    "sesion_tarde"
+  ],
+  "oneLiner": "Toda la emoción de la trilogía clásica de Star Wars en un duelo galáctico sin igual.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

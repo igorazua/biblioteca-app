@@ -1,0 +1,46 @@
+{
+  "id": "movie:el-silencio-de-los-corderos-1991",
+  "title": "El silencio de los corderos",
+  "experience": {
+    "plot": "Una brillante pero inexperta agente en formación del FBI es enviada a entrevistar al brillante y encarcelado psiquiatra caníbal Hannibal Lecter. Con sus ambiguas pistas psicológicas, debe atrapar a un sádico asesino que despelleja a sus víctimas.",
+    "feeling": "Perturbadora, tensa, quirúrgica y fascinante. Mantiene un escalofrío helado en la espalda con cada primer plano.",
+    "hook": "El electrizante juego del gato y el ratón entre Anthony Hopkins y Jodie Foster a través de un cristal de máxima seguridad.",
+    "notFor": "Espectadores aprensivos al terror psicológico, la psicopatía médica o el suspense claustrofóbico.",
+    "similar": [
+      "Seven",
+      "Zodiac",
+      "Mindhunter",
+      "Prisioneros"
+    ],
+    "context": "Una de las tres únicas películas en la historia en ganar los cinco grandes premios Óscar (película, director, guion, actor y actriz)."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 1
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "asesino_en_serie",
+    "salud_mental",
+    "justicia"
+  ],
+  "moments": [
+    "noche_tarde",
+    "pasar_miedo",
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Duelo psicológico aterrador e impecable entre una novata del FBI y el caníbal más culto.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

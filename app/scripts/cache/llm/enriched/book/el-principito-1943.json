@@ -1,0 +1,45 @@
+{
+  "id": "book:el-principito-1943",
+  "title": "El principito",
+  "experience": {
+    "plot": "Un aviador perdido en el desierto del Sahara se encuentra con un pequeño príncipe venido de un diminuto asteroide. A través de sus relatos sobre su flor y sus viajes por otros mundos, el niño desvela verdades esenciales sobre el alma humana.",
+    "feeling": "Poética, delicada, melancólica y de una sencillez luminosa. Llega directo al corazón como un recordatorio de lo que realmente importa.",
+    "hook": "Aforismos eternos como 'lo esencial es invisible a los ojos' y las acuarelas originales del propio autor que enternecen a cualquier edad.",
+    "notFor": "Lectores cínicos que desestimen la literatura de tono infantil o las fábulas filosóficas alegóricas.",
+    "similar": [
+      "Alicia en el país de las maravillas",
+      "Juan Salvador Gaviota",
+      "Momo",
+      "El profeta"
+    ],
+    "context": "La obra literaria francesa más leída y traducida del planeta, escrita por Antoine de Saint-Exupéry durante la guerra."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 5,
+    "densidad": 1,
+    "humor": 3,
+    "tension": 1,
+    "fantasia": 4,
+    "escala": 2,
+    "ideas": 5,
+    "reconfort": 5
+  },
+  "themes": [
+    "infancia",
+    "amor",
+    "filosofia",
+    "soledad",
+    "viaje_interior"
+  ],
+  "moments": [
+    "emocionarse",
+    "antes_de_dormir",
+    "para_subrayar",
+    "pausado"
+  ],
+  "oneLiner": "Fábula universal y poética sobre ver con el corazón aquello que es invisible a los ojos.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

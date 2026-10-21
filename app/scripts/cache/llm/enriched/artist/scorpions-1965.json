@@ -1,0 +1,39 @@
+{
+  "id": "artist:scorpions-1965",
+  "title": "Scorpions",
+  "experience": {
+    "plot": "Desde Hannover, la banda alemana más internacional conquistó el mundo con su mezcla de heavy metal melódico, guitarras gemelas y las baladas de rock más coreadas de la historia.",
+    "feeling": "Épica, emotiva, potente y nostálgica. Capaz de pasar del rugido de las guitarras a la emoción colectiva de un himno por la paz.",
+    "hook": "La voz aguda inconfundible de Klaus Meine, el silbido histórico de Wind of Change y baladas universales como Still Loving You.",
+    "notFor": "Quienes busquen metal extremo y gutural o rechacen las 'power ballads' de los años 80.",
+    "similar": [
+      "Bon Jovi",
+      "Europe",
+      "Def Leppard",
+      "Judas Priest"
+    ],
+    "context": "Pioneros del rock duro europeo en triunfar en EE. UU., su música simbolizó la caída del Muro de Berlín."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 2,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 3
+  },
+  "themes": [
+    "rock_clasico",
+    "metal",
+    "himnos_estadio"
+  ],
+  "moments": [
+    "para_cantar",
+    "viaje_coche",
+    "melancolia"
+  ],
+  "oneLiner": "El poder del metal alemán hermanado con las baladas de rock más míticas y universales.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

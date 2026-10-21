@@ -1,0 +1,40 @@
+{
+  "id": "artist:the-doors-1965",
+  "title": "The Doors",
+  "experience": {
+    "plot": "Formación angelina liderada por el poeta Jim Morrison que combinó el blues rock con la poesía simbolista, el misticismo chamánico y el hipnótico teclado de Ray Manzarek.",
+    "feeling": "Oscura, sensual, hipnótica y chamánica. Te arrastra a un trance nocturno entre el delirio y la lucidez poética.",
+    "hook": "El carisma oscuro y la voz barítona de Morrison y el bajo inexistente suplido por el teclado psicodélico de Manzarek.",
+    "notFor": "Oyentes que busquen optimismo radiante o estructuras convencionales de música pop complaciente.",
+    "similar": [
+      "The Velvet Underground",
+      "Jimi Hendrix",
+      "Jefferson Airplane",
+      "Patti Smith"
+    ],
+    "context": "Banda icónica de la contracultura de finales de los sesenta en California, leyenda eterna del rock maldito."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 2,
+    "bailable": 2,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 1,
+    "complejidad": 4
+  },
+  "themes": [
+    "rock_clasico",
+    "psicodelia",
+    "blues",
+    "letras_poeticas"
+  ],
+  "moments": [
+    "escucha_atenta",
+    "melancolia",
+    "relax"
+  ],
+  "oneLiner": "Poesía chamánica, misterio nocturno y psicodelia oscura desde California.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "series:breaking-bad-2008",
+  "title": "Breaking Bad",
+  "experience": {
+    "plot": "Un modesto profesor de química de instituto con cáncer terminal entra en el narcotráfico cocinando metanfetamina de máxima pureza para asegurar a su familia. Su descenso al crimen despierta a Heisenberg, un monstruo implacable.",
+    "feeling": "Electrizante, angustiosa, con una tensión calculada al milímetro y una adicción imparable. Te deja temblando al borde del asiento en cada final de episodio.",
+    "hook": "La prodigiosa metamorfosis moral de Bryan Cranston, la química con Aaron Paul y cliffhangers insuperables.",
+    "notFor": "Quienes busquen ligereza, optimismo moral o no soporten la degradación humana prolongada.",
+    "similar": [
+      "Better Call Saul",
+      "Ozark",
+      "Los Soprano",
+      "The Wire"
+    ],
+    "context": "Considerada unánimemente una de las mejores series de televisión de la historia, emitida entre 2008 y 2013."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 1,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "crimen_organizado",
+    "drogas_y_narcos",
+    "familia",
+    "ambicion",
+    "politica_y_poder"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "solo",
+    "pensar"
+  ],
+  "oneLiner": "La caída a los infiernos más adictiva y magistralmente construida de la televisión.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

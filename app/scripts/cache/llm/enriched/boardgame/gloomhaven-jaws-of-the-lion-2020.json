@@ -1,0 +1,40 @@
+{
+  "id": "boardgame:gloomhaven-jaws-of-the-lion-2020",
+  "title": "Gloomhaven: Jaws of the Lion",
+  "experience": {
+    "plot": "Versión accesible y guiada del universo de Gloomhaven centrada en cuatro nuevos mercenarios que investigan una oleada de desapariciones en los bajos fondos de la ciudad. El libro de escenarios sirve como propio tablero de juego.",
+    "feeling": "Ágil, estimulante, adictiva y muy gratificante. Elimina la tediosa preparación del juego original para centrarse en la diversión.",
+    "hook": "Un tutorial en cinco misiones maestras que enseña a jugar sin tener que leer un manual de 50 páginas de golpe.",
+    "notFor": "Veteranos del Gloomhaven original que busquen exactamente la misma inmensidad y centenar de misiones del primero.",
+    "similar": [
+      "Gloomhaven",
+      "Frosthaven",
+      "Mice and Mystics",
+      "HeroQuest"
+    ],
+    "context": "La puerta de entrada ideal al mejor sistema de mazmorreo táctico moderno, aclamado por crítica y público."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 1,
+    "confrontacion": 1,
+    "cooperacion": 5,
+    "tema": 5,
+    "risas": 1,
+    "familiar": 3
+  },
+  "themes": [
+    "fantasia_medieval",
+    "gestion_de_mano",
+    "exploracion_y_mapas"
+  ],
+  "moments": [
+    "cooperativo",
+    "pareja",
+    "jugones"
+  ],
+  "oneLiner": "La mejor puerta de entrada al universo Gloomhaven: táctico, directo y adictivo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

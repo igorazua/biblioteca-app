@@ -1,0 +1,48 @@
+{
+  "id": "series:stranger-things-2016",
+  "title": "Stranger Things",
+  "experience": {
+    "plot": "En un tranquilo pueblo de Indiana en los años 80, la misteriosa desaparición de un niño desvela experimentos secretos del gobierno y la fuga de una niña con poderes telequinéticos. Sus amigos se unen para rescatarlo de una oscura dimensión paralela.",
+    "feeling": "Misteriosa, electrizante, rebosante de amistad y pura nostalgia ochentera. Te hace sentir de nuevo en una bicicleta recorriendo el bosque con tus amigos.",
+    "hook": "El carisma absoluto del grupo de niños, los monstruos inspirados en D&D y la evocadora banda sonora de sintetizadores.",
+    "notFor": "Quien huya del homenaje nostálgico explícito o no disfrute de las historias de aventuras juveniles fantásticas.",
+    "similar": [
+      "Los Goonies",
+      "E.T. el extraterrestre",
+      "Cuenta conmigo",
+      "Dark"
+    ],
+    "context": "Fenómeno global masivo de Netflix desde 2016 que catapultó la estética y cultura pop de los ochenta."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 4,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "monstruos_y_terror",
+    "misterio_pueblo_pequeno",
+    "adolescencia",
+    "conspiracion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "desconectar",
+    "confort"
+  ],
+  "oneLiner": "Aventura ochentera de amistad inquebrantable, bicicletas y horrores sobrenaturales.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

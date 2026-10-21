@@ -1,0 +1,41 @@
+{
+  "id": "boardgame:terraforming-mars-2016",
+  "title": "Terraforming Mars",
+  "experience": {
+    "plot": "Megacorporaciones rivales colaboran y compiten para hacer habitable el planeta Marte aumentando la temperatura, el nivel de oxígeno y la cobertura de los océanos. Para ganar, deberán gestionar recursos, patentes y proyectos científicos colosales.",
+    "feeling": "Adelantada, apasionante, adictiva y llena de satisfacción por construir un motor de cartas imparable turno a turno.",
+    "hook": "Las más de doscientas cartas únicas de proyectos que garantizan que ninguna partida ni estrategia sea idéntica a la anterior.",
+    "notFor": "Jugadores que prioricen la alta calidad plástica de componentes sobre el diseño mecánico y matemático.",
+    "similar": [
+      "Ark Nova",
+      "Through the Ages",
+      "Gaia Project",
+      "Race for the Galaxy"
+    ],
+    "context": "Uno de los juegos más influyentes y jugados en todo el mundo desde su lanzamiento en 2016 por FryxGames."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "ciencia_ficcion_espacial",
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "puzzles_y_losetas"
+  ],
+  "moments": [
+    "jugones",
+    "sesion_tarde",
+    "pareja"
+  ],
+  "oneLiner": "Ciencia ficción dura y satisfacción pura construyendo motores para hacer habitable Marte.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

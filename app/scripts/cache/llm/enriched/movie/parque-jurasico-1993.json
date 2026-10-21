@@ -1,0 +1,46 @@
+{
+  "id": "movie:parque-jurasico-1993",
+  "title": "Parque Jurásico",
+  "experience": {
+    "plot": "Un excéntrico multimillonario logra clonar dinosaurios a partir de ADN prehistórico e invita a un grupo de científicos a un parque temático secreto antes de su apertura. Cuando un sabotaje desconecta los sistemas de seguridad, los visitantes quedan a merced de los depredadores.",
+    "feeling": "Fascinante, trepidante, aterradora por momentos y repleta de asombro infantil. Una clase magistral de tensión y aventura pura.",
+    "hook": "El mítico primer encuentro con el Brachiosaurus, el ataque nocturno del T-Rex y los dinosaurios más realistas jamás creados.",
+    "notFor": "Público infantil muy pequeño debido a secuencias de suspense y terror moderadamente intenso.",
+    "similar": [
+      "Tiburón",
+      "King Kong",
+      "Alien",
+      "En busca del arca perdida"
+    ],
+    "context": "Obra maestra del cine de entretenimiento de Steven Spielberg de 1993 que revolucionó los efectos digitales en Hollywood."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 5,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "supervivencia",
+    "monstruos",
+    "exploracion",
+    "conspiracion"
+  ],
+  "moments": [
+    "familia",
+    "amigos",
+    "desconectar",
+    "para_repetir"
+  ],
+  "oneLiner": "Puro cine de evasión y prodigio técnico que devolvió la vida a los dinosaurios.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

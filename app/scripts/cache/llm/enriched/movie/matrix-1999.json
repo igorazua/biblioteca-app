@@ -1,0 +1,47 @@
+{
+  "id": "movie:matrix-1999",
+  "title": "Matrix",
+  "experience": {
+    "plot": "Un programador informático descubre que la realidad cotidiana en la que vive es una simulación virtual creada por inteligencias artificiales para someter a la humanidad. Reclutado por la resistencia, aprende a desafiar las leyes de la física para liderar la rebelión.",
+    "feeling": "Visionaria, cerebral, adrenalínica y de un estilazo cyberpunk irrepetible. Deja la cabeza llena de preguntas filosóficas sobre la percepción y la libertad.",
+    "hook": "Las secuencias de acción revolucionarias con 'bullet time', la mitología transgresora y el choque entre tecnología y conciencia.",
+    "notFor": "Quien prefiera dramas cotidianos intimistas o no disfrute con la ciencia ficción densa y el cine de artes marciales.",
+    "similar": [
+      "Terminator 2",
+      "Inception",
+      "Dark City",
+      "Blade Runner"
+    ],
+    "context": "Hito absoluto de la ciencia ficción de finales de los 90 de las hermanas Wachowski, cambió para siempre los efectos visuales."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "distopia",
+    "libertad",
+    "identidad",
+    "existencialismo",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "noche_tarde",
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Revolución visual y filosófica que redefinió para siempre el cine de ciencia ficción.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "boardgame:twilight-imperium-fourth-edition-2017",
+  "title": "Twilight Imperium: Fourth Edition",
+  "experience": {
+    "plot": "Diecisiete civilizaciones alienígenas únicas compiten por llenar el vacío de poder del extinto Imperio Lazax en el trono galáctico de Mecatol Rex. Mediante diplomacia, guerras estelares y comercio, buscan erigirse en los nuevos emperadores de la galaxia.",
+    "feeling": "Monstruosamente épica, operística, teatral y agotadoramente maravillosa. Una jornada completa de traiciones y alianzas interestelares.",
+    "hook": "La fase de agenda política donde se votan leyes galácticas en vivo, la asimetría total de las razas y batallas con cientos de miniaturas.",
+    "notFor": "Cualquiera que no pueda dedicar 6 a 10 horas seguidas a una sola partida con un grupo de cuatro a seis amigos.",
+    "similar": [
+      "Eclipse",
+      "Star Wars: Rebellion",
+      "Nemesis",
+      "Terra Mystica"
+    ],
+    "context": "La experiencia cósmica 4X definitiva en formato tablero, un clásico de culto insustituible publicado por Fantasy Flight Games."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 5,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 3,
+    "familiar": 1
+  },
+  "themes": [
+    "ciencia_ficcion_espacial",
+    "imperios_y_civilizaciones",
+    "control_de_areas",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "jugones",
+    "estrategia_dura",
+    "sesion_tarde"
+  ],
+  "oneLiner": "La ópera espacial definitiva: 8 horas de diplomacia, guerras galácticas y pura épica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

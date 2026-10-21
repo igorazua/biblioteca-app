@@ -1,0 +1,48 @@
+{
+  "id": "series:better-call-saul-2015",
+  "title": "Better Call Saul",
+  "experience": {
+    "plot": "Precuela centrada en la vida del abogado de poca monta Jimmy McGill mientras lucha por ganarse el respeto de su prestigioso hermano. Poco a poco, la frustración y la picaresca lo van moldeando en el desvergonzado Saul Goodman.",
+    "feeling": "Tragicómica, elegante, minuciosa y con una profunda ternura melancólica. Construye una empatía sobrecogedora por sus derrotas morales.",
+    "hook": "La sutileza de los detalles, la desgarradora relación con Kim Wexler y la dirección visual más cuidada de la pequeña pantalla.",
+    "notFor": "Quienes busquen tiroteos constantes y acción inmediata al ritmo vertiginoso de los últimos compases de Breaking Bad.",
+    "similar": [
+      "Breaking Bad",
+      "Fargo",
+      "Succession",
+      "Mad Men"
+    ],
+    "context": "Aclamada obra maestra que igualó e incluso superó en sensibilidad a su serie madre a lo largo de seis temporadas."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "abogados_y_juicios",
+    "crimen_organizado",
+    "familia",
+    "ambicion",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "enganche",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Tragedia íntima y estilizada sobre la dignidad, el engaño y el amor entre dos abogados.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

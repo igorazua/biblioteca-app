@@ -1,0 +1,46 @@
+{
+  "id": "movie:shrek-2001",
+  "title": "Shrek",
+  "experience": {
+    "plot": "Un ogro huraño y solitario ve invadida su tranquila ciénaga por personajes de cuentos de hadas desterrados por un tirano. Para recuperar su hogar, acepta rescatar a una princesa custodiada por un dragón, acompañado de un asno parlanchín.",
+    "feeling": "Descarada, divertidísima, irreverente y sorprendentemente tierna. Rompe clichés con una frescura cómica que divierte a niños y adultos.",
+    "hook": "La sátira demoledora a los cuentos de hadas tradicionales, la música rock y el trío inolvidable de Shrek, Asno y Fiona.",
+    "notFor": "Puristas de los cuentos clásicos que prefieran la solemnidad y el lirismo de Disney tradicional.",
+    "similar": [
+      "Monstruos S.A.",
+      "Toy Story",
+      "Enredados",
+      "Ice Age"
+    ],
+    "context": "Ganadora del primer Óscar a la Mejor Película de Animación en 2001, buque insignia de DreamWorks Animation."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 1,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 5,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "parodia",
+    "amistad",
+    "amor",
+    "identidad",
+    "satira_social"
+  ],
+  "moments": [
+    "familia",
+    "reir",
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Parodia gamberra e ingeniosa que puso patas arriba los cuentos de hadas con gran corazón.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

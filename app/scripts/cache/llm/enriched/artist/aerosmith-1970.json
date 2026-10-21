@@ -1,0 +1,40 @@
+{
+  "id": "artist:aerosmith-1970",
+  "title": "Aerosmith",
+  "experience": {
+    "plot": "La icónica banda de Boston que definió el hard rock estadounidense de los 70 y renació en los 80 y 90 combinando rhythm and blues con poderío pop y baladas memorables.",
+    "feeling": "Gamberra, rítmica, marchosa y llena de energía contagiosa. Invita a cantar y moverse al son de sus ritmos pegadizos.",
+    "hook": "La inconfundible voz elástica de Steven Tyler y los afilados riffs funk-rock de Joe Perry.",
+    "notFor": "Quienes prefieran el rock sobrio e introspectivo o huyan de las grandes baladas radiables de los noventa.",
+    "similar": [
+      "Guns N' Roses",
+      "The Rolling Stones",
+      "Kiss",
+      "Bon Jovi"
+    ],
+    "context": "Conocidos como 'los chicos malos de Boston', una de las bandas de rock más vendedoras de la historia."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 4,
+    "bailable": 4,
+    "organico": 5,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 3
+  },
+  "themes": [
+    "rock_clasico",
+    "blues",
+    "himnos_estadio",
+    "pop"
+  ],
+  "moments": [
+    "viaje_coche",
+    "fiesta",
+    "para_cantar"
+  ],
+  "oneLiner": "Riffs ardientes, actitud canalla y el carisma acrobático e incombustible de Steven Tyler.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "movie:titanic-1997",
+  "title": "Titanic",
+  "experience": {
+    "plot": "A bordo del transatlántico más majestuoso del mundo, una joven de alta sociedad asfixiada por las convenciones se enamora de un pintor bohemio de tercera clase. Su apasionado romance se convierte en una lucha desesperada por sobrevivir al colapso del navío.",
+    "feeling": "Romántica, apabullante, trágica y espectacular. Te transporta a la Belle Époque antes de sumergirte en el terror de la catástrofe.",
+    "hook": "La arrebatadora química de DiCaprio y Winslet, la reconstrucción histórica faraónica y el dramatismo del hundimiento minuto a minuto.",
+    "notFor": "Espectadores contrarios a los melodramas románticos de gran presupuesto o con alergia a las baladas de Celine Dion.",
+    "similar": [
+      "Lo que el viento se llevó",
+      "Avatar",
+      "El curioso caso de Benjamin Button",
+      "Pearl Harbor"
+    ],
+    "context": "Ganadora de 11 premios Óscar y récord histórico de taquilla en 1997, un icono indeleble del cine contemporáneo."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 3
+  },
+  "themes": [
+    "amor",
+    "lucha_de_clases",
+    "supervivencia",
+    "duelo",
+    "desamor"
+  ],
+  "moments": [
+    "pareja",
+    "llorar",
+    "domingo_tarde",
+    "para_repetir"
+  ],
+  "oneLiner": "Un coloso cinematográfico donde el romance más puro choca contra la catástrofe naval.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

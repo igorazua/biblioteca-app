@@ -1,0 +1,46 @@
+{
+  "id": "series:south-park-1997",
+  "title": "South Park",
+  "experience": {
+    "plot": "Cuatro niños malhablados de un gélido pueblo de Colorado presencian y desatan situaciones surrealistas que parodian sin piedad la actualidad política, las modas sociales y las mayores hipocresías del mundo occidental.",
+    "feeling": "Salvaje, corrosiva, desvergonzada e inteligentemente provocadora. Desafía todos los tabúes con una franqueza desternillante.",
+    "hook": "Su capacidad única para escribir y emitir episodios en seis días reaccionando en tiempo real a las noticias mundiales.",
+    "notFor": "Personas de moral susceptible o con aversión al lenguaje soez, el escatologismo y la irreverencia religiosa.",
+    "similar": [
+      "Padre de familia",
+      "Rick y Morty",
+      "Los Simpson",
+      "Robot Chicken"
+    ],
+    "context": "Creada por Trey Parker y Matt Stone en 1997, icono absoluto de la animación satírica para adultos."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 1,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 1,
+    "fantasia": 3,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 2,
+    "enganche": 3,
+    "formato": 1
+  },
+  "themes": [
+    "animacion",
+    "satira",
+    "politica_y_poder",
+    "adolescencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "para_repetir"
+  ],
+  "oneLiner": "Sátira sin filtros ni piedad que no deja títere con cabeza en la sociedad actual.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

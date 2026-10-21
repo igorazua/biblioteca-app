@@ -1,0 +1,40 @@
+{
+  "id": "artist:the-who-1964",
+  "title": "The Who",
+  "experience": {
+    "plot": "Banda británica emblema del movimiento mod que llevó el rock a la intensidad máxima, pioneros de las óperas rock conceptuales y famosos por destrozar sus instrumentos en escena.",
+    "feeling": "Explosiva, furiosa, teatral y catártica. Desprende una adrenalina rebelde cargada de energía adolescente.",
+    "hook": "Los molinetes de guitarra de Pete Townshend, el salvajismo caótico de Keith Moon a la batería y canciones catárticas como Baba O'Riley.",
+    "notFor": "Quienes busquen sutileza acústica relajada o melodías de fondo suaves.",
+    "similar": [
+      "The Rolling Stones",
+      "The Kinks",
+      "Led Zeppelin",
+      "The Clash"
+    ],
+    "context": "Gigantes de la invasión británica de los 60, creadores de las primeras y más famosas óperas rock (Tommy, Quadrophenia)."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 5,
+    "intensidad": 5,
+    "fondo": 1,
+    "complejidad": 4
+  },
+  "themes": [
+    "rock_clasico",
+    "punk",
+    "himnos_estadio",
+    "protesta_social"
+  ],
+  "moments": [
+    "viaje_coche",
+    "entrenar",
+    "para_cantar"
+  ],
+  "oneLiner": "Furia eléctrica, catarsis y la energía más volcánica de la invasión británica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

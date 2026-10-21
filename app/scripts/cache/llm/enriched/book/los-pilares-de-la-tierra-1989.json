@@ -1,0 +1,46 @@
+{
+  "id": "book:los-pilares-de-la-tierra-1989",
+  "title": "Los pilares de la Tierra",
+  "experience": {
+    "plot": "A lo largo de varias décadas de guerra civil y hambruna en la Inglaterra medieval, el maestro cantero Tom Builder y el prior Philip luchan por levantar la catedral gótica más gloriosa de la cristiandad. En torno a los andamios se tejen pasiones, celos y venganzas.",
+    "feeling": "Adulterada por una épica desbordante, ritmo absorbente y un suspense continuo. Te hace vivir y oler cada piedra y cada traición.",
+    "hook": "La artesanía narrativa de Ken Follett para mantener el enganche durante mil páginas con villanos odiosos y héroes inolvidables.",
+    "notFor": "Quienes busquen prosa poética introspectiva o no quieran comprometerse con una lectura muy voluminosa.",
+    "similar": [
+      "Un mundo sin fin",
+      "El médico",
+      "La catedral del mar",
+      "Ivanhoe"
+    ],
+    "context": "El superventas histórico por antonomasia de los últimos 35 años, querido por millones de lectores en España."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 5,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "escala": 5,
+    "ideas": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "historia",
+    "sociedad",
+    "amor",
+    "familia",
+    "espiritualidad",
+    "guerra"
+  ],
+  "moments": [
+    "absorbente",
+    "verano",
+    "viaje",
+    "desconectar"
+  ],
+  "oneLiner": "La construcción de una catedral gótica como eje de pasiones, venganzas y superación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

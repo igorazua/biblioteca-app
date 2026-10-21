@@ -1,0 +1,45 @@
+{
+  "id": "movie:toy-story-1995",
+  "title": "Toy Story",
+  "experience": {
+    "plot": "Woody, el juguete favorito de Andy, ve tambalearse su liderazgo cuando llega Buzz Lightyear, una figura espacial que cree ser un héroe real. Tras perderse accidentalmente, deberán colaborar para regresar antes de que la familia se mude.",
+    "feeling": "Cálida, vibrante, ingeniosa y entrañable. Despierta una oleada de nostalgia por la inocencia de los juegos infantiles.",
+    "hook": "El hilarante choque de personalidades entre el vaquero y el astronauta y el prodigio de ver cobrar vida a los juguetes.",
+    "notFor": "Quien busque cine de autor introspectivo o tramas complejas para adultos.",
+    "similar": [
+      "Monstruos S.A.",
+      "Buscando a Nemo",
+      "Shrek",
+      "E.T. el extraterrestre"
+    ],
+    "context": "El primer largometraje animado totalmente por ordenador de Pixar en 1995, que cambió el cine para siempre."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 1,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "amistad",
+    "infancia",
+    "mayoria_de_edad",
+    "exploracion"
+  ],
+  "moments": [
+    "familia",
+    "reir",
+    "desconectar",
+    "para_repetir"
+  ],
+  "oneLiner": "Aventura pionera y deslumbrante que demostró que los juguetes tienen alma.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "movie:el-rey-leon-1994",
+  "title": "El rey león",
+  "experience": {
+    "plot": "Un joven cachorro de león destinado a gobernar la sabana es engañado por su malvado tío tras la trágica muerte de su padre y huye al exilio. Al madurar con nuevos amigos, deberá asumir su responsabilidad y reclamar su reino.",
+    "feeling": "Épica, conmovedora, visualmente deslumbrante y musicalmente triunfal. Evoca la emoción infantil de la pérdida y el renacer maduro.",
+    "hook": "La colosal música de Hans Zimmer y Elton John, la imponente animación tradicional y el arquetipo universal del ciclo de la vida.",
+    "notFor": "Espectadores adultos que busquen exclusivamente animación experimental o temáticas adultas.",
+    "similar": [
+      "Bambi",
+      "Tarzán",
+      "El príncipe de Egipto",
+      "El viaje de Chihiro"
+    ],
+    "context": "La cumbre del Renacimiento de Disney en 1994 y una de las películas animadas más taquilleras e influyentes de la historia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 3,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "duelo",
+    "amistad",
+    "venganza",
+    "mayoria_de_edad",
+    "traicion"
+  ],
+  "moments": [
+    "familia",
+    "llorar",
+    "reir",
+    "para_repetir"
+  ],
+  "oneLiner": "Mágica, grandiosa e imperecedera fábula sobre el deber, la pérdida y el perdón.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

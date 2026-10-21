@@ -1,0 +1,40 @@
+{
+  "id": "artist:jimi-hendrix-1966",
+  "title": "Jimi Hendrix",
+  "experience": {
+    "plot": "Virtuoso guitarrista zurdo de Seattle que reinventó por completo las posibilidades sonoras de la guitarra eléctrica mediante el uso pionero de distorsión, wah-wah y acoples.",
+    "feeling": "Incendiaria, cósmica, libre y salvajemente expresiva. Parece hacer hablar a la guitarra con un lenguaje mágico nunca antes oído.",
+    "hook": "Un dominio técnico y expresivo irrepetible sobre las seis cuerdas y un directo legendario que desafió todas las convenciones.",
+    "notFor": "Oídos que rechacen la distorsión analógica agresiva o la improvisación instrumental extendida.",
+    "similar": [
+      "Cream",
+      "The Doors",
+      "Stevie Ray Vaughan",
+      "Led Zeppelin"
+    ],
+    "context": "Considerado por consenso unánime de músicos y crítica como el mejor guitarrista eléctrico de todos los tiempos."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 3,
+    "bailable": 2,
+    "organico": 4,
+    "intensidad": 5,
+    "fondo": 1,
+    "complejidad": 5
+  },
+  "themes": [
+    "rock_clasico",
+    "blues",
+    "psicodelia",
+    "experimentacion"
+  ],
+  "moments": [
+    "escucha_atenta",
+    "viaje_coche",
+    "entrenar"
+  ],
+  "oneLiner": "El guitarrista definitivo: reinventó la electricidad en un torrente de fuego y psicodelia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

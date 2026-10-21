@@ -1,0 +1,46 @@
+{
+  "id": "book:dune-1965",
+  "title": "Dune",
+  "experience": {
+    "plot": "El joven Paul Atreides se traslada con su familia al hostil planeta desértico Arrakis, la única fuente conocida de la especia melange, la sustancia más codiciada del cosmos. Víctimas de una sangrienta traición imperial, Paul deberá buscar refugio entre los nativos Fremen.",
+    "feeling": "Mesmérica, filosófica, trascendente y sofocante como el desierto. Te envuelve en una mitología de profecías, ecología y poder.",
+    "hook": "La colosal construcción de mundo (worldbuilding), los gusanos gigantes de arena y la advertencia sobre los peligros del mesianismo.",
+    "notFor": "Quienes busquen ciencia ficción ligera de naves espaciales y batallas láser convencionales.",
+    "similar": [
+      "Fundación",
+      "El señor de los anillos",
+      "Hyperion",
+      "El juego de Ender"
+    ],
+    "context": "Premio Hugo y Nébula, considerada la cima indiscutible de la ciencia ficción ecológica y espacial escrita por Frank Herbert."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 5,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 4,
+    "escala": 5,
+    "ideas": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "ciencia_y_universo",
+    "politica",
+    "filosofia",
+    "espiritualidad",
+    "naturaleza",
+    "guerra"
+  ],
+  "moments": [
+    "concentracion",
+    "absorbente",
+    "para_subrayar",
+    "club_de_lectura"
+  ],
+  "oneLiner": "Monumento de la ciencia ficción: ecología, misticismo y profecías en el desierto.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

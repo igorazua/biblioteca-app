@@ -1,0 +1,46 @@
+{
+  "id": "movie:seven-1995",
+  "title": "Seven",
+  "experience": {
+    "plot": "Dos detectives de homicidios, uno al borde de la jubilación y otro joven impulsivo, investigan los macabros crímenes de un asesino en serie meticuloso. Cada ejecución reproduce uno de los siete pecados capitales en una ciudad sumida en la lluvia perpetua.",
+    "feeling": "Opresiva, sombría, implacable y sórdida. Te deja un poso amargo y una desasosegante sensación de vulnerabilidad.",
+    "hook": "La atmósfera pluviosa y claustrofóbica creada por David Fincher y uno de los desenlaces más desgarradores de la historia del cine.",
+    "notFor": "Sensibles a la degradación moral o quienes necesiten resoluciones reconfortantes y justicieras.",
+    "similar": [
+      "Zodiac",
+      "El silencio de los corderos",
+      "Prisoners",
+      "Memories of Murder"
+    ],
+    "context": "Thriller fundamental de 1995 que consagró el estilo visual de David Fincher e influyó en todo el noir moderno."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 1
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "asesino_en_serie",
+    "justicia",
+    "venganza"
+  ],
+  "moments": [
+    "noche_tarde",
+    "pasar_miedo",
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Un descenso asfixiante y lluvioso a las profundidades de la maldad y el pecado.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

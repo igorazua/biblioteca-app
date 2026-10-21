@@ -1,0 +1,45 @@
+{
+  "id": "book:el-senor-de-los-anillos-1954",
+  "title": "El Señor de los Anillos",
+  "experience": {
+    "plot": "Frodo Bolsón debe cruzar tierras hostiles para arrojar el Anillo Único en las entrañas del Monte del Destino, el único lugar donde puede ser destruido. Al mismo tiempo, los pueblos libres de la Tierra Media libran su última batalla contra las tinieblas de Sauron.",
+    "feeling": "Colosal, mitológica, conmovedora y de una belleza poética inagotable. Produce una reverencia absoluta ante la escala de su mundo ficticio.",
+    "hook": "La riqueza lingüística y geográfica sin igual, el heroísmo de los humildes y una melancolía crepuscular por el fin de una era.",
+    "notFor": "Lectores impacientes con las descripciones paisajísticas minuciosas, canciones y genealogías extensas.",
+    "similar": [
+      "El Silmarillion",
+      "Canción de hielo y fuego",
+      "El nombre del viento",
+      "La rueda del tiempo"
+    ],
+    "context": "El pilar indiscutible sobre el que descansa toda la fantasía moderna, escrita por J.R.R. Tolkien a lo largo de doce años."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 5,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 5,
+    "escala": 5,
+    "ideas": 5,
+    "reconfort": 4
+  },
+  "themes": [
+    "fantasia_epica",
+    "guerra",
+    "mitologia",
+    "memoria",
+    "viaje_interior"
+  ],
+  "moments": [
+    "absorbente",
+    "concentracion",
+    "emocionarse",
+    "viaje"
+  ],
+  "oneLiner": "El monumento cumbre de la fantasía heroica: mito, lealtad y esperanza contra el abismo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

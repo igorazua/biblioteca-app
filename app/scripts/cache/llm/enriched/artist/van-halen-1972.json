@@ -1,0 +1,41 @@
+{
+  "id": "artist:van-halen-1972",
+  "title": "Van Halen",
+  "experience": {
+    "plot": "Liderada por el virtuoso Eddie Van Halen y el histriónico cantante David Lee Roth, la banda revolucionó la guitarra eléctrica en 1978 con el tapping y un hard rock festivo y soleado.",
+    "feeling": "Alegre, brillante, hiperbólica y de un virtuosismo deslumbrante. Transmite la calidez del verano californiano y la fiesta constante.",
+    "hook": "La técnica pirotécnica de guitarra de Eddie Van Halen en pistas como Eruption y el sonido de sintetizador en Jump.",
+    "notFor": "Oyentes que busquen atmósferas sombrías o letras poéticas de corte melancólico.",
+    "similar": [
+      "Guns N' Roses",
+      "Aerosmith",
+      "Def Leppard",
+      "Bon Jovi"
+    ],
+    "context": "Revolución absoluta de la técnica de guitarra en el rock y reyes del sonido californiano de los 80."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 5,
+    "bailable": 4,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 4
+  },
+  "themes": [
+    "rock_clasico",
+    "himnos_estadio",
+    "metal",
+    "sintetizadores"
+  ],
+  "moments": [
+    "fiesta",
+    "entrenar",
+    "viaje_coche",
+    "despertar"
+  ],
+  "oneLiner": "Fiesta californiana y la técnica de guitarra más influyente y deslumbrante del rock.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

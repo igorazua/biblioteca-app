@@ -1,0 +1,41 @@
+{
+  "id": "boardgame:brass-birmingham-2018",
+  "title": "Brass: Birmingham",
+  "experience": {
+    "plot": "Los jugadores asumen el papel de magnates industriales durante la Revolución Industrial en las Midlands inglesas. Desarrollan fábricas de algodón, manufacturas y cervecerías mientras construyen canales y ferrocarriles compitiendo por la supremacía del carbón y el hierro.",
+    "feeling": "Cerebral, implacable, profundamente satisfactoria y de alta exigencia mental. Cada turno se siente crucial y matemáticamente ajustado.",
+    "hook": "Una economía interconectada donde usar los recursos del rival beneficia a ambos y un sistema de doble era de canales y vías insuperable.",
+    "notFor": "Jugadores casuales, familias o quienes busquen partidas cortas con poco análisis y decisiones sencillas.",
+    "similar": [
+      "Brass: Lancashire",
+      "Concordia",
+      "Terraforming Mars",
+      "Barrage"
+    ],
+    "context": "Clasificado como el juego de mesa número 1 de la historia en BoardGameGeek, obra maestra de Martin Wallace y Gavan Brown."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 4,
+    "azar": 1,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 1,
+    "familiar": 1
+  },
+  "themes": [
+    "comercio_y_rutas",
+    "gestion_de_recursos",
+    "trenes_y_ferrocarril",
+    "control_de_areas"
+  ],
+  "moments": [
+    "jugones",
+    "estrategia_dura",
+    "sesion_tarde"
+  ],
+  "oneLiner": "La cumbre de la estrategia económica moderna: carbón, cerveza y vías industriales.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

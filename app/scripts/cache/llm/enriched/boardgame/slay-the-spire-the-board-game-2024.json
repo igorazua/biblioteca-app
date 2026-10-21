@@ -1,0 +1,40 @@
+{
+  "id": "boardgame:slay-the-spire-the-board-game-2024",
+  "title": "Slay the Spire: The Board Game",
+  "experience": {
+    "plot": "Adaptación del aclamado videojuego roguelike en el que un grupo de guerreros asciende una aguja cambiante combatiendo criaturas grotescas, mejorando su baraja de cartas y adquiriendo reliquias para derrotar al jefe final.",
+    "feeling": "Frenética, cooperativa, muy satisfactoria y llena de combos sinérgicos. Traslada la adicción del videojuego a la mesa con amigos.",
+    "hook": "La excelente traducción de las cartas enfundadas que se actualizan físicamente y la cooperación total entre héroes.",
+    "notFor": "Quienes busquen partidas relajadas y no toleren perder por una mala decisión táctica en el último turno.",
+    "similar": [
+      "Gloomhaven",
+      "Clank!",
+      "Aeon's End",
+      "Too Many Bones"
+    ],
+    "context": "Exitosísima campaña de micromecenazgo que logró una de las mejores adaptaciones de videojuego a tablero de 2024."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 5,
+    "azar": 3,
+    "confrontacion": 1,
+    "cooperacion": 5,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 2
+  },
+  "themes": [
+    "fantasia_medieval",
+    "deckbuilding",
+    "dados_y_push_your_luck"
+  ],
+  "moments": [
+    "cooperativo",
+    "sesion_tarde",
+    "pique_sano"
+  ],
+  "oneLiner": "La adicción pura del deckbuilding roguelike adaptada con maestría a la mesa.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

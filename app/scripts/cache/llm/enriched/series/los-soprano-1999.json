@@ -1,0 +1,48 @@
+{
+  "id": "series:los-soprano-1999",
+  "title": "Los Soprano",
+  "experience": {
+    "plot": "Tony Soprano, capo de la mafia de Nueva Jersey, comienza a sufrir ataques de pánico y decide acudir secretamente a terapia con una psiquiatra. Allí lidia con el estrés de compaginar su peligrosa vida delictiva con sus problemas domésticos y familiares.",
+    "feeling": "Compleja, mordaz, psicoanalítica y dolorosamente lúcida. Abre una ventana inigualable a la psicología de un criminal entrañable y temible.",
+    "hook": "El monumental retrato de James Gandolfini, el guion revolucionario de David Chase y la mezcla de humor negro con crisis existencial.",
+    "notFor": "Quien espere una serie de acción mafiosa lineal y no tenga interés en las sesiones de terapia o el costumbrismo.",
+    "similar": [
+      "The Wire",
+      "Mad Men",
+      "Breaking Bad",
+      "Uno de los nuestros"
+    ],
+    "context": "La serie fundacional que dio origen a la Tercera Edad de Oro de la televisión por cable estadounidense (HBO, 1999)."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "mafia",
+    "familia",
+    "salud_mental",
+    "crimen_organizado",
+    "ambicion"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "maraton",
+    "capitulo_cena"
+  ],
+  "oneLiner": "El psicoanálisis definitivo de la mafia moderna: el pilar que cambió la televisión.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

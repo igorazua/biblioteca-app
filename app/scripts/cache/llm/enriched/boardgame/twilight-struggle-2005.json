@@ -1,0 +1,40 @@
+{
+  "id": "boardgame:twilight-struggle-2005",
+  "title": "Twilight Struggle",
+  "experience": {
+    "plot": "Simulación para dos jugadores de la Guerra Fría entre Estados Unidos y la Unión Soviética desde 1945 hasta la caída del Muro de Berlín. Las dos superpotencias compiten por la hegemonía mundial mediante golpes de estado, espionaje y la carrera espacial sin provocar una guerra nuclear.",
+    "feeling": "Tensión histórica insoportable, paranoia constante y decisiones agónicas. Cada carta jugada del rival te hace sudar frío.",
+    "hook": "Tener que jugar cartas que favorecen al enemigo y decidir cómo mitigar el daño mientras evitas llegar a Defcon 1.",
+    "notFor": "Quien no disfrute con duelos directos de suma cero donde cada error se paga muy caro.",
+    "similar": [
+      "War of the Ring",
+      "1989: Dawn of Freedom",
+      "Watergate",
+      "Wir sind das Volk!"
+    ],
+    "context": "El juego de simulación histórica para dos jugadores más influyente y valorado de la historia de GMT Games."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 5,
+    "azar": 2,
+    "confrontacion": 5,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 1,
+    "familiar": 1
+  },
+  "themes": [
+    "guerra_historica",
+    "control_de_areas",
+    "gestion_de_mano"
+  ],
+  "moments": [
+    "pareja",
+    "estrategia_dura",
+    "jugones"
+  ],
+  "oneLiner": "El duelo definitivo de la Guerra Fría: paranoia, espionaje y el abismo nuclear.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

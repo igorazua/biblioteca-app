@@ -1,0 +1,46 @@
+{
+  "id": "movie:regreso-al-futuro-1985",
+  "title": "Regreso al futuro",
+  "experience": {
+    "plot": "Un adolescente de los años 80 es enviado accidentalmente a 1955 a bordo de un DeLorean modificado por su excéntrico amigo científico. Allí debe conseguir que sus futuros padres se enamoren para no desvanecerse de la existencia y poder volver a su tiempo.",
+    "feeling": "Perfectamente calibrada, rebosante de encanto, dinamismo y nostalgia luminosa. Pone de buen humor de principio a fin.",
+    "hook": "Un guion de relojería sin una sola escena sobrante, la irresistible pareja Marty McFly y Doc Brown y el ritmo contagioso.",
+    "notFor": "Quien busque ciencia ficción dura y austera con leyes de la física implacables.",
+    "similar": [
+      "Los Cazafantasmas",
+      "Indiana Jones",
+      "Atrapado en el tiempo",
+      "Men in Black"
+    ],
+    "context": "La cumbre de la comedia fantástica de los 80 producida por Amblin y dirigida por Robert Zemeckis."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 1,
+    "humor": 5,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "viaje_en_el_tiempo",
+    "amistad",
+    "familia",
+    "juventud_rebelde",
+    "mayoria_de_edad"
+  ],
+  "moments": [
+    "familia",
+    "reir",
+    "desconectar",
+    "para_repetir"
+  ],
+  "oneLiner": "Una de las comedias de aventuras más perfectas, chispeantes y redondas de la historia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

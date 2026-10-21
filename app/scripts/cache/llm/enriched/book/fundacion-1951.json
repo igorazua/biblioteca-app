@@ -1,0 +1,45 @@
+{
+  "id": "book:fundacion-1951",
+  "title": "Fundación",
+  "experience": {
+    "plot": "Ante la inevitable caída del milenario Imperio Galáctico, el matemático Hari Seldon desarrolla la 'psicohistoria', una ciencia que predice el futuro de las masas. Para reducir la barbarie venidera, establece una comunidad de científicos en el confín de la galaxia.",
+    "feeling": "Cerebral, lúcida, visionaria y majestuosa. Cautiva por su inmenso alcance temporal y la victoria de la inteligencia sobre la fuerza bruta.",
+    "hook": "El fascinante concepto de la psicohistoria, las crisis históricas resueltas con diplomacia y el juego intelectual de Isaac Asimov.",
+    "notFor": "Lectores que busquen desarrollo emocional íntimo de personajes o romance novelesco.",
+    "similar": [
+      "Dune",
+      "Yo, robot",
+      "El fin de la eternidad",
+      "Cita con Rama"
+    ],
+    "context": "Galardonada con el Premio Hugo a la mejor serie de ciencia ficción de todos los tiempos, hito cumbre de la Edad de Oro del género."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 2,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 5,
+    "ideas": 5,
+    "reconfort": 3
+  },
+  "themes": [
+    "ciencia_y_universo",
+    "historia",
+    "politica",
+    "sociedad",
+    "filosofia"
+  ],
+  "moments": [
+    "aprender",
+    "desconectar",
+    "para_subrayar",
+    "concentracion"
+  ],
+  "oneLiner": "Gran epopeya intelectual sobre el auge, caída y renacer de las civilizaciones galácticas.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

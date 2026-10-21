@@ -1,0 +1,46 @@
+{
+  "id": "movie:pulp-fiction-1994",
+  "title": "Pulp Fiction",
+  "experience": {
+    "plot": "Las vidas de dos matones a sueldo, la esposa de un gánster, un boxeador en declive y una pareja de atracadores novatos se entrelazan en Los Ángeles. Una serie de incidentes absurdos y sangrientos alteran sus destinos de forma imprevisible.",
+    "feeling": "Electrizante, desenfadada, rabiosamente cínica y adictiva. Te deja con una inyección de pura energía cinéfila y ganas de citar cada diálogo.",
+    "hook": "Sus diálogos memorables cargados de humor negro, su estructura coral no lineal y una banda sonora inolvidable.",
+    "notFor": "Espectadores reacios a la violencia gráfica desenfadada o a los relatos desestructurados en el tiempo.",
+    "similar": [
+      "Reservoir Dogs",
+      "Snatch",
+      "Fargo",
+      "Uno de los nuestros"
+    ],
+    "context": "Palma de Oro en Cannes 1994, fenómeno pop absoluto que consagró a Quentin Tarantino y transformó el cine independiente de los 90."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 5,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "mafia",
+    "venganza",
+    "redencion",
+    "satira_social",
+    "atraco"
+  ],
+  "moments": [
+    "amigos",
+    "noche_tarde",
+    "para_repetir"
+  ],
+  "oneLiner": "Pólvora pop, diálogos míticos y humor negro en un clásico revolucionario del cine.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

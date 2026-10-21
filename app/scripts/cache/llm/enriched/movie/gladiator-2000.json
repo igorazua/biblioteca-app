@@ -1,0 +1,47 @@
+{
+  "id": "movie:gladiator-2000",
+  "title": "Gladiator",
+  "experience": {
+    "plot": "Un leal general romano traicionado tras el asesinato del emperador es vendido como esclavo y forzado a convertirse en gladiador. Su habilidad en la arena le permite ascender hasta el Coliseo de Roma para vengar la muerte de su familia y la gloria de Roma.",
+    "feeling": "Fiera, trágica, emocionante y triunfante. Eleva el pulso con el rugido de la arena y conmueve con su anhelo de paz y justicia.",
+    "hook": "La icónica y estoica presencia de Russell Crowe, el carismático villano de Joaquin Phoenix y la arrolladora dirección de Ridley Scott.",
+    "notFor": "Quien busque rigor histórico estricto o no tolere la violencia sanguinaria de los combates cuerpo a cuerpo.",
+    "similar": [
+      "Braveheart",
+      "Troya",
+      "Espartaco",
+      "El reino de los cielos"
+    ],
+    "context": "Ganadora de 5 premios Óscar en el año 2000, resucitó en solitario el género del péplum a escala global."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 3
+  },
+  "themes": [
+    "venganza",
+    "justicia",
+    "guerra",
+    "familia",
+    "traicion",
+    "sacrificio"
+  ],
+  "moments": [
+    "pensar",
+    "amigos",
+    "noche_tarde",
+    "solo"
+  ],
+  "oneLiner": "Furia, honor y venganza en la arena romana con una fuerza dramática colosal.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "artist:guns-n-roses-1985",
+  "title": "Guns N' Roses",
+  "experience": {
+    "plot": "Irrumpieron en Los Ángeles a finales de los 80 recuperando el peligro, la crudeza y el exceso del hard rock callejero frente a la edulcorada escena del glam metal.",
+    "feeling": "Salvaje, explosiva, apasionada y rebelde. Te contagia una furia callejera mezclada con una inesperada delicadeza en sus baladas.",
+    "hook": "La desgarrada y volcánica voz de Axl Rose, los solos legendarios con chistera de Slash y melodías imbatibles.",
+    "notFor": "Quienes busquen música tranquila o no toleren los excesos temperamentales del rock de estadio.",
+    "similar": [
+      "Aerosmith",
+      "AC/DC",
+      "Motley Crue",
+      "Velvet Revolver"
+    ],
+    "context": "Autores de Appetite for Destruction (1987), el disco debut más vendido de la historia de los Estados Unidos."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 5,
+    "intensidad": 5,
+    "fondo": 2,
+    "complejidad": 3
+  },
+  "themes": [
+    "rock_clasico",
+    "metal",
+    "himnos_estadio"
+  ],
+  "moments": [
+    "viaje_coche",
+    "entrenar",
+    "para_cantar",
+    "fiesta"
+  ],
+  "oneLiner": "Peligro callejero, baladas épicas y la furia indómita de Axl Rose y Slash.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

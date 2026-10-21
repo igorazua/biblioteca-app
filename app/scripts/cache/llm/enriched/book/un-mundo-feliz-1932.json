@@ -1,0 +1,45 @@
+{
+  "id": "book:un-mundo-feliz-1932",
+  "title": "Un mundo feliz",
+  "experience": {
+    "plot": "En una sociedad futura hipertecnificada, los seres humanos son cultivados genéticamente en castas y condicionados para ser felices mediante el consumo y una droga llamada soma. La llegada de un 'salvaje' criado fuera del sistema pone en jaque la utopía.",
+    "feeling": "Irónica, gélida, intelectualmente deslumbrante y profundamente profética. Produce escalofríos al reconocer nuestro presente en su sociedad anestesiada.",
+    "hook": "La brillante inversión del totalitarismo: no es el dolor lo que somete a la población, sino el placer banal organizado por el Estado.",
+    "notFor": "Lectores que prefieran tramas de aventura física trepidante en vez de debates ideológicos y filosóficos.",
+    "similar": [
+      "1984",
+      "Fahrenheit 451",
+      "La isla",
+      "Nosotros"
+    ],
+    "context": "Clásico monumental de Aldous Huxley publicado en 1932, piedra angular de la ciencia ficción especulativa del siglo XX."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 3,
+    "escala": 4,
+    "ideas": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "distopia",
+    "sociedad",
+    "filosofia",
+    "tecnologia_futuro",
+    "libertad"
+  ],
+  "moments": [
+    "aprender",
+    "para_subrayar",
+    "club_de_lectura",
+    "concentracion"
+  ],
+  "oneLiner": "Profecía sobre cómo la búsqueda del placer vacío puede destruir la libertad humana.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

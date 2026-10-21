@@ -1,0 +1,39 @@
+{
+  "id": "artist:deep-purple-1968",
+  "title": "Deep Purple",
+  "experience": {
+    "plot": "Pioneros británicos del hard rock y heavy metal clásico que unieron la contundencia de la guitarra eléctrica con el órgano Hammond distorsionado y elementos clásicos.",
+    "feeling": "Enérgica, virtuosa, potente y vibrante. Desprende una maestría instrumental que desafía al oyente a seguir su ritmo trepidante.",
+    "hook": "El riff más conocido del mundo en Smoke on the Water y los vertiginosos duelos entre la guitarra de Ritchie Blackmore y el teclado de Jon Lord.",
+    "notFor": "Aficionados al pop acústico suave o a producciones minimalistas contemporáneas.",
+    "similar": [
+      "Black Sabbath",
+      "Led Zeppelin",
+      "Rainbow",
+      "Uriah Heep"
+    ],
+    "context": "Parte de la 'Santísima Trinidad' del hard rock británico de los años 70 junto a Zeppelin y Sabbath."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 3,
+    "bailable": 2,
+    "organico": 5,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 4
+  },
+  "themes": [
+    "rock_clasico",
+    "metal",
+    "himnos_estadio"
+  ],
+  "moments": [
+    "viaje_coche",
+    "entrenar",
+    "escucha_atenta"
+  ],
+  "oneLiner": "Duelos virtuosos de guitarra y órgano Hammond en la forja dorada del hard rock.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

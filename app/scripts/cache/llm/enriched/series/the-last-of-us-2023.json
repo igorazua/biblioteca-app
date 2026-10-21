@@ -1,0 +1,48 @@
+{
+  "id": "series:the-last-of-us-2023",
+  "title": "The Last of Us",
+  "experience": {
+    "plot": "Veinte años después de que una infección fúngica arrase la civilización, un endurecido contrabandista debe escoltar a una adolescente inmune a través de unos Estados Unidos postapocalípticos. En el camino forjarán un vínculo paternofilial indestructible.",
+    "feeling": "Dolorosa, tensa, íntima y hermosa en mitad de la desolación. Conmueve hasta las lágrimas con el renacer del afecto en un mundo en ruinas.",
+    "hook": "La extraordinaria química entre Pedro Pascal y Bella Ramsey y una fidelidad reverencial pero enriquecida al videojuego original.",
+    "notFor": "Espectadores asustadizos ante zombis fúngicos o con rechazo a los dramas de supervivencia cruenta.",
+    "similar": [
+      "The Walking Dead",
+      "Hijos de los hombres",
+      "La carretera",
+      "Estación Once"
+    ],
+    "context": "La adaptación de videojuegos más premiada y celebrada de la historia de la televisión, producida por HBO."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 3,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "apocalipsis",
+    "supervivencia",
+    "familia",
+    "duelo",
+    "monstruos_y_terror"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "solo",
+    "confort"
+  ],
+  "oneLiner": "Dramática, desgarradora y humana travesía sobre el amor y el duelo en el fin del mundo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

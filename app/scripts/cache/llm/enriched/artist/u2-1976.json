@@ -1,0 +1,40 @@
+{
+  "id": "artist:u2-1976",
+  "title": "U2",
+  "experience": {
+    "plot": "Cuarteto dublinés que pasó del post-punk combativo de sus inicios a convertirse en la banda de rock de estadio más grande del planeta, con un sonido de guitarras con delay y gran fervor humanitario.",
+    "feeling": "Espiritual, apasionada, grandiosa y emotiva. Sus canciones elevan el espíritu con un lirismo esperanzador y trascendente.",
+    "hook": "La voz poderosa de Bono, los ecos de guitarra infinitos de The Edge y la épica de discos como The Joshua Tree y Achtung Baby.",
+    "notFor": "Quienes sientan hastío de los grandes gestos mesiánicos del rock masivo o busquen géneros urbanos.",
+    "similar": [
+      "R.E.M.",
+      "Coldplay",
+      "Simple Minds",
+      "The Police"
+    ],
+    "context": "La banda de rock más premiada de los premios Grammy y un icono incontestable de la música global."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 4,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 3
+  },
+  "themes": [
+    "rock_clasico",
+    "himnos_estadio",
+    "protesta_social",
+    "letras_poeticas"
+  ],
+  "moments": [
+    "para_cantar",
+    "viaje_coche",
+    "escucha_atenta"
+  ],
+  "oneLiner": "Épica trascendente, guitarras atmosféricas y el pulso espiritual de Dublín al mundo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

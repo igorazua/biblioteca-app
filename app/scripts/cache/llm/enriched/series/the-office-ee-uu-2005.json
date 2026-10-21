@@ -1,0 +1,47 @@
+{
+  "id": "series:the-office-ee-uu-2005",
+  "title": "The Office (EE. UU.)",
+  "experience": {
+    "plot": "En formato de falso documental, se muestra la rutina diaria de los peculiares empleados de una sucursal papelera en Pensilvania bajo el mando de Michael Scott, un jefe tan incompetente como desesperado por ser querido por su equipo.",
+    "feeling": "Divertida, a ratos de vergüenza ajena insoportable y profundamente entrañable. Deja una sensación de calor de hogar inigualable.",
+    "hook": "La inolvidable actuación de Steve Carell, las miradas a cámara y el romance más querido de la televisión entre Jim y Pam.",
+    "notFor": "Personas con baja tolerancia al 'cringe comedy' o que no soporten el estilo de falso documental con cámara en mano.",
+    "similar": [
+      "Parks and Recreation",
+      "Brooklyn Nine-Nine",
+      "Abbott Elementary",
+      "Community"
+    ],
+    "context": "Adaptación del formato británico de Ricky Gervais que se convirtió en la serie más vista en streaming de la historia."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 1,
+    "humor": 5,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 1,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 2
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "amor",
+    "satira"
+  ],
+  "moments": [
+    "confort",
+    "reir",
+    "desconectar",
+    "para_repetir"
+  ],
+  "oneLiner": "Vergüenza ajena hilarante y un corazón gigantesco en la oficina más famosa del mundo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "artist:black-sabbath-1968",
+  "title": "Black Sabbath",
+  "experience": {
+    "plot": "Desde la deprimida ciudad industrial de Birmingham, cuatro jóvenes crearon un sonido oscuro y afinado en tonos graves que dio origen al heavy metal y el doom metal.",
+    "feeling": "Tenebrosa, pesada, hipnótica y opresiva. Los riffs monolíticos de Tony Iommi se sienten como un martillo de forja implacable.",
+    "hook": "La atmósfera de terror gótico, los riffs eternos de Iommi y la voz agónica y electrizante de Ozzy Osbourne.",
+    "notFor": "Oyentes sensibles a la distorsión pesada o que busquen melodías pop ligeras y despreocupadas.",
+    "similar": [
+      "Led Zeppelin",
+      "Deep Purple",
+      "Judas Priest",
+      "Iron Maiden"
+    ],
+    "context": "Los padres fundadores indiscutibles del heavy metal con álbumes legendarios como Paranoid y Master of Reality."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 1,
+    "bailable": 1,
+    "organico": 5,
+    "intensidad": 5,
+    "fondo": 1,
+    "complejidad": 3
+  },
+  "themes": [
+    "metal",
+    "rock_clasico",
+    "letras_poeticas"
+  ],
+  "moments": [
+    "entrenar",
+    "escucha_atenta",
+    "melancolia"
+  ],
+  "oneLiner": "Los arquitectos del heavy metal: riffs oscuros, pesadez industrial y sombras góticas.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

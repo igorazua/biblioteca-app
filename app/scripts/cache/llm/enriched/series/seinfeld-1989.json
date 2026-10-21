@@ -1,0 +1,46 @@
+{
+  "id": "series:seinfeld-1989",
+  "title": "Seinfeld",
+  "experience": {
+    "plot": "Un cómico de monólogos y sus tres neuróticos y egoístas amigos navegan por los absurdos dilemas cotidianos de la vida en Nueva York. La serie se jacta célebremente de no tratar sobre 'nada' en particular.",
+    "feeling": "Cínica, hilarante, mordaz y veloz. Provoca carcajadas ante la mezquindad y las manías más inconfesables del ser humano.",
+    "hook": "Las tramas paralelas que colisionan de forma milimétrica al final de cada episodio y la total ausencia de lecciones morales.",
+    "notFor": "Espectadores que necesiten encariñarse con personajes bondadosos o busquen momentos melodramáticos.",
+    "similar": [
+      "Curb Your Enthusiasm",
+      "Friends",
+      "Colgados en Filadelfia",
+      "Arrested Development"
+    ],
+    "context": "La sitcom que revolucionó la comedia estadounidense en los 90, creada por Larry David y Jerry Seinfeld."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 1,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 1,
+    "reconfort": 4,
+    "enganche": 3,
+    "formato": 1
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "satira"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "capitulo_cena",
+    "para_repetir"
+  ],
+  "oneLiner": "Comedia de ingenio puro y neurosis desternillante sobre las miserias cotidianas.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}
