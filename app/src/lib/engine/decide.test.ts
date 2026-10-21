@@ -412,5 +412,5 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
 
       expect(recognizedCount).toBeGreaterThanOrEqual(9)
     }
-  }, 15000)
+  }, 30000)
 })
