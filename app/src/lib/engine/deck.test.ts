@@ -49,6 +49,8 @@ describe('nextCards (MOTOR.md §7)', () => {
     expect(cards.length).toBe(5)
     for (const c of cards) {
       expect(['seen_likely', 'social']).toContain(c.bucket)
+      expect(typeof c.r).toBe('number')
+      expect(typeof c.s).toBe('number')
     }
   })
 

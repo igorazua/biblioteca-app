@@ -20,6 +20,8 @@ export interface DeckCard {
   bucket: Bucket
   score: number
   reason?: { friendId?: string; comment?: string }
+  r?: number
+  s?: number
 }
 
 export interface DeckInput {
@@ -149,7 +151,10 @@ export function nextCards(input: DeckInput, already: string[] = [], n = 20): Dec
   const logMaxVotes = Math.log(1 + maxVotes)
 
   // 2. Puntuación dentro de cada cupo por obra
-  const scoredByBucket: Record<Bucket, { item: Item; score: number; reason?: { friendId?: string; comment?: string } }[]> = {
+  const scoredByBucket: Record<
+    Bucket,
+    { item: Item; score: number; reason?: { friendId?: string; comment?: string }; r: number }[]
+  > = {
     seen_likely: [],
     social: [],
     friend_gem: [],
@@ -174,7 +179,7 @@ export function nextCards(input: DeckInput, already: string[] = [], n = 20): Dec
   }
 
   for (const it of eligible) {
-    const pop = (it.popularity || 50) / 100
+    const pop = it.popPct != null ? it.popPct / 100 : (it.popularity || 50) / 100
     const votes = Math.log(1 + (it.voteCount || it.readers || 0)) / logMaxVotes
 
     // Plataforma del usuario
@@ -260,6 +265,7 @@ export function nextCards(input: DeckInput, already: string[] = [], n = 20): Dec
       item: it,
       score: bestScore,
       reason: bestBucket === 'friend_gem' ? { friendId: gemFriendId, comment: gemComment } : undefined,
+      r,
     })
   }
 
@@ -305,7 +311,14 @@ export function nextCards(input: DeckInput, already: string[] = [], n = 20): Dec
       let pickIdx = pool.findIndex((cand) => checkDiversity(cand.item, result))
       if (pickIdx === -1) pickIdx = 0
       const [top] = pool.splice(pickIdx, 1)
-      result.push({ item: top.item, bucket: 'seen_likely', score: top.score, reason: top.reason })
+      result.push({
+        item: top.item,
+        bucket: 'seen_likely',
+        score: top.score,
+        reason: top.reason,
+        r: top.r,
+        s: top.score,
+      })
     }
   }
 
@@ -344,6 +357,8 @@ export function nextCards(input: DeckInput, already: string[] = [], n = 20): Dec
           bucket: chosenBucket,
           score: chosen.score,
           reason: chosen.reason,
+          r: chosen.r,
+          s: chosen.score,
         })
         picked = true
         break
@@ -360,6 +375,8 @@ export function nextCards(input: DeckInput, already: string[] = [], n = 20): Dec
         bucket: fallbackBucket,
         score: chosen.score,
         reason: chosen.reason,
+        r: chosen.r,
+        s: chosen.score,
       })
     }
   }

@@ -3,7 +3,7 @@ import { PLATFORMS } from '../../config'
 import { PARAMS } from './params'
 import { MOOD_GENRES, NONFICTION_GENRES } from '../../data/questions'
 import { friendRanks } from '../rank'
-import { sim as engineSim } from './features'
+import { sim as engineSim, vecOf } from './features'
 import { recog, type RecogContext } from './recog'
 
 export type Answers = Record<string, string | string[] | undefined>
@@ -16,7 +16,7 @@ export interface DecideState {
   post: Record<string, number>   // probabilidad actual (suma 1)
   pref: Float32Array | null      // vector de gusto de la sesión
   prefAxes: Record<string, number> // dirección en ejes (−1..1 por eje)
-  duels: { a: string; b: string; winner: string; phase: 'coarse' | 'fine'; infoGain?: number }[]
+  duels: { a: string; b: string; winner: string; phase: 'coarse' | 'fine'; infoGain?: number; ms?: number }[]
   shown: string[]                // orientadores ya usados (no se repiten)
   rejected: string[]             // propuestas rechazadas con «Seguir buscando»
   round: number
@@ -414,19 +414,82 @@ export function nextDuel(
 }
 
 /**
+ * Re-muestreo del pool en todo el catálogo según cercanía a pref (MOTOR §2c.5, T9.3)
+ */
+export function resamplePool(
+  state: DecideState,
+  items: Item[],
+  targetSize = 300
+): DecideState {
+  if (!state.pref) return state
+
+  const rejectedSet = new Set(state.rejected)
+  const poolFilter = (it: Item) =>
+    it.type === state.shelf &&
+    !rejectedSet.has(it.id) &&
+    passesFilters(it, state.answers, state.profile?.platforms ?? [])
+
+  const candidates = items.filter(poolFilter)
+  if (candidates.length <= targetSize) return state
+
+  const oldPostMap = new Map(Object.entries(state.post))
+  const scored: { id: string; score: number }[] = []
+
+  for (const it of candidates) {
+    const v = vecOf(state.shelf, it.id)
+    let cosSim = 0.5
+    if (v && state.pref) {
+      let dot = 0
+      let normV = 0
+      for (let i = 0; i < v.length; i++) {
+        const val = v[i] / 127
+        dot += val * state.pref[i]
+        normV += val * val
+      }
+      cosSim = dot / (Math.sqrt(normV) || 1)
+    }
+    const priorScore = state.prior[it.id] ?? 0.01
+    const combinedScore = 0.7 * Math.max(0, (cosSim + 1) / 2) + 0.3 * priorScore
+    scored.push({ id: it.id, score: combinedScore })
+  }
+
+  scored.sort((a, b) => b.score - a.score)
+  const newPool = scored.slice(0, targetSize).map((s) => s.id)
+
+  // Conservar la masa de probabilidad relativa de las que ya estaban
+  const newPost: Record<string, number> = {}
+  let totalPost = 0
+  for (const id of newPool) {
+    const p = oldPostMap.get(id) ?? (state.prior[id] || 0.001)
+    newPost[id] = p
+    totalPost += p
+  }
+  for (const id of newPool) {
+    newPost[id] = (newPost[id] || 0) / (totalPost || 1)
+  }
+
+  return {
+    ...state,
+    pool: newPool,
+    post: newPost,
+  }
+}
+
+/**
  * Aplica el resultado de un duelo y actualiza post (§8.6)
  */
 export function applyDuelChoice(
   state: DecideState,
   winner: Item,
   loser: Item,
-  itemsById: Map<string, Item>
+  itemsById: Map<string, Item>,
+  ms?: number
 ): DecideState {
   const phase: 'coarse' | 'fine' = state.duels.length < 2 ? 'coarse' : 'fine'
   const newShown = Array.from(new Set([...state.shown, winner.id, loser.id]))
   const newDuels = [
     ...state.duels,
-    { a: winner.id, b: loser.id, winner: winner.id, phase },
+    { a: winner.id, b: loser.id, winner: winner.id, phase, ...(ms != null ? { ms } : {}) },
   ]
 
   // Actualización bayesiana de post(c) con beta = 1.5
@@ -451,13 +514,53 @@ export function applyDuelChoice(
     newPost[cId] = (newPost[cId] || 0) / (totalNewPost || 1)
   }
 
-  return {
+  // Actualizar vector de preferencia `pref` de la sesión (MOTOR §2c.5)
+  let winnerVec = vecOf(state.shelf, winner.id)
+  let loserVec = vecOf(state.shelf, loser.id)
+
+  if (!winnerVec) {
+    // Fallback degradado cuando la obra no está en engine (ej. mock o catálogo vivo reciente)
+    const fallback = new Int8Array(48)
+    for (let i = 0; i < 48; i++) {
+      fallback[i] = Math.round(Math.sin((winner.id.charCodeAt(i % winner.id.length) + i) * 17) * 60)
+    }
+    winnerVec = fallback
+  }
+
+  let newPref: Float32Array | null = state.pref ? new Float32Array(state.pref) : null
+
+  if (winnerVec) {
+    if (!newPref) {
+      newPref = new Float32Array(winnerVec.length)
+      for (let i = 0; i < winnerVec.length; i++) {
+        newPref[i] = winnerVec[i] / 127
+      }
+    } else {
+      for (let i = 0; i < newPref.length; i++) {
+        newPref[i] += 0.3 * (winnerVec[i] / 127) - (loserVec ? 0.15 * (loserVec[i] / 127) : 0)
+      }
+    }
+    let normSq = 0
+    for (let i = 0; i < newPref.length; i++) normSq += newPref[i] * newPref[i]
+    const norm = Math.sqrt(normSq) || 1
+    for (let i = 0; i < newPref.length; i++) newPref[i] /= norm
+  }
+
+  let updatedState: DecideState = {
     ...state,
     post: newPost,
     duels: newDuels,
     shown: newShown,
     duelsInRound: state.duelsInRound + 1,
+    pref: newPref,
   }
+
+  // MOTOR §2c.5: Tras el 3.er duelo, re-muestrear el pool con todo el catálogo
+  if (updatedState.duels.length === 3) {
+    updatedState = resamplePool(updatedState, Array.from(itemsById.values()), 300)
+  }
+
+  return updatedState
 }
 
 /**
@@ -617,13 +720,22 @@ export function formatReasons(
 }
 
 /**
- * Acción «Seguir buscando» (§8.8)
+ * Acción «Seguir buscando» (§8.8, MOTOR §2c.5)
  */
-export function rejectAndContinue(state: DecideState, rejectedId: string): DecideState {
-  return {
+export function rejectAndContinue(
+  state: DecideState,
+  rejectedId: string,
+  allItems?: Item[]
+): DecideState {
+  const nextState: DecideState = {
     ...state,
     rejected: [...state.rejected, rejectedId],
     round: state.round + 1,
     duelsInRound: 0,
   }
+
+  if (allItems?.length) {
+    return resamplePool(nextState, allItems, 300)
+  }
+  return nextState
 }

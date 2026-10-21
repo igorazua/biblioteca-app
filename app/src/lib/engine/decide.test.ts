@@ -248,6 +248,38 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
     expect(next.rejected).toContain('m1')
   })
 
+  it('resamplePool y movimiento de pref en el espacio único (T9)', () => {
+    const input: DecideInput = {
+      shelf: 'movie',
+      items: mockItems,
+      entries: {},
+      rankings: { movie: [], series: [], book: [], artist: [], boardgame: [] },
+      profile: mockProfile,
+      friends: mockFriends,
+      answers: {},
+      affinity: () => 50,
+      friendPct: () => null,
+    }
+    let state = initDecideSession(input)
+    const itemsMap = new Map(mockItems.map((i) => [i.id, i]))
+
+    // 1er duelo con tiempo de respuesta ms
+    state = applyDuelChoice(state, mockItems[0], mockItems[1], itemsMap, 1500)
+    expect(state.pref).not.toBeNull()
+    expect(state.duels[0].ms).toBe(1500)
+
+    // 2do y 3er duelo (desencadena resamplePool)
+    state = applyDuelChoice(state, mockItems[2], mockItems[3], itemsMap)
+    state = applyDuelChoice(state, mockItems[4], mockItems[1], itemsMap)
+    expect(state.duels.length).toBe(3)
+    expect(state.pool.length).toBeGreaterThan(0)
+
+    // rejectAndContinue con allItems
+    const nextState = rejectAndContinue(state, mockItems[4].id, mockItems)
+    expect(nextState.round).toBe(2)
+    expect(nextState.rejected).toContain(mockItems[4].id)
+  })
+
   it('does not throw with an item absent from data/engine/*.json (live catalog fallback)', () => {
     const liveItem: Item = {
       id: 'movie:obra-viva-decide-2026',
