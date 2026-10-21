@@ -32,7 +32,7 @@
   - Pelis: póster de Wikidata solo si es de verdad un póster (propiedad P3383 «film poster»).
   - Si no hay póster legal: **portada tipográfica generada** en `components/Poster.tsx` con título, año y creador, en el color de la estantería y un fondo con textura. Debe verse intencionada, no como un hueco.
 - **Script** `app/scripts/fix-posters.mjs`: limpia `posterUrl` en la semilla y en `biblio_catalog`. Quita las de Wikimedia que no vengan de P3383 y las de Amazon, y rellena con TVmaze o P3383.
-- **Decisión de Igor pendiente:** quitar ya las de Amazon (más legal, más portadas generadas) o mantenerlas durante la beta privada.
+- ~~Decisión de Igor pendiente~~ **Decidido (21/10/2026):** se mantienen las imágenes reales, raspadas si hace falta, pero **descargadas y alojadas por nosotros** (PROJECT_CONTEXT, Reglas; `docs/TAREAS_MOTOR_V2.md` T1).
 
 ### 1.3 Catálogo en español
 - **Géneros:** mapa fijo inglés→español en `scripts/engine/genres-es.mjs` (Drama→Drama, Comedy→Comedia, Sci-Fi→Ciencia ficción, Crime→Crimen, Adventure→Aventura, Biography→Biografía, Film-Noir→Cine negro, War→Bélica…), aplicado a la semilla y a `biblio_catalog`. Hoy el 90 % de pelis y series lo tiene en inglés y los filtros de Decidir se confunden.
@@ -144,3 +144,31 @@ Con framer-motion y respetando `prefers-reduced-motion`:
 
 ## Descartado por ahora
 Entrar directo al swipe sin onboarding, swipe sin hoja de valoración, pestaña Amigos en lugar de Comparar, invitación tras la décima vista (queda solo como recordatorio `invite`).
+
+
+## 6. Motor y Catálogo: Localización, Edad, Amigos y Modas en Decidir (20/10/2026, Igor)
+
+> **Principio irrenunciable:** En «Qué ver» (`decide.ts`), los duelos A/B son **filtradores o guiadores de tipo («más tipo esto o tipo lo otro»)**. No son la obra propuesta final. Para que el usuario pueda orientar la sesión, **debe conocer las obras enfrentadas**.
+
+> ⚠️ **Sustituido el 21/10/2026** por `docs/MOTOR.md` §2b/§8.4 (v2) y `docs/TAREAS_MOTOR_V2.md`. Revisión de Claude: el catálogo de 6.1.4 inventó popularidad, notas y votos, enlazaba portadas de Goodreads/Amazon que dan 403 y editaba `seed.json` por fuera de `npm run seed` (se perdía al regenerar); la detección de idioma por regex del título fallaba («A sangre fría» como inglés). Se rehace en las tareas T1-T3 y T8 del nuevo documento.
+
+### 6.1 Lo implementado
+1. **`calcRecognizability(it, state)` en `lib/engine/decide.ts`:**
+   - Vistas por el usuario: `recog = 1.0`.
+   - Pendientes del usuario: `recog = 0.92`.
+   - Vistas por amigos: boost `+0.20`.
+   - Localización a España: títulos en español y obras nacionales (`originCountry: 'ES'`) `+0.10`. Obras en inglés no traducidas sufren penalización de reconocibilidad (`× 0.45`).
+   - Sintonía generacional (`profile.birthYear`): obras de su época de juventud `+0.10`; obras viejas no clásicas `-0.15`.
+2. **Muestreo selectivo de orientadores:**
+   - La bolsa de orientadores se filtra previamente para quedarse solo con el top de reconocibilidad (`recog ≥ 0.65`), impidiendo duelos con libros de nicho anglosajón o series desconocidas.
+3. **Salvaguarda de categorías:**
+   - Si una categoría tiene pocas obras fuera del `pool` (como pasaba en Música), se rescatan anclas culturales del catálogo general fuera del top 5 de candidatas inmediatas.
+4. **Catálogo ampliado y localizado (`scripts/enrich-catalogo-es.mjs`):**
+   - Libros: traducidos más de 25 títulos anglosajones populares, eliminados duplicados en inglés e incorporados superventas españoles (Javier Castillo, Almudena Grandes, Santiago Posteguillo, Carmen Mola, Laura Gallego, Arturo Pérez-Reverte, Juan Gómez-Jurado, Dolores Redondo, Ken Follett, Carlos Ruiz Zafón).
+   - Series: incorporadas las series icónicas de la televisión española (*Los Serrano*, *La que se avecina*, *Patria*, *Vis a vis*, *Aída*, *La Mesías*, *Poquita fe*, *Machos alfa*, *30 monedas*, *El internado*, *Física o Química*, *Verano azul*).
+   - Películas: incorporados los clásicos del cine español (*El día de la bestia*, *El verdugo*, *Los santos inocentes*, *Amanece, que no es poco*, *[REC]*, *Torrente*, *Airbag*, *Alcarràs*).
+   - Música: ampliada de 261 a 395 artistas, cubriendo pop, rock, indie, urbano y leyendas nacionales e internacionales.
+
+### 6.2 Próximos pasos para Claude
+- Mantener siempre el catálogo por encima de 400 obras por categoría.
+- Enriquecer continuamente las señales de modas/tendencias en España para novedades literarias, musicales y audiovisuales.

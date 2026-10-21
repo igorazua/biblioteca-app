@@ -104,7 +104,7 @@ Aparece una tarjeta de la estantería en la que estés. Gestos:
 - **Unas 5 preguntas propias de cada categoría** ✅, que **avanzan solas al tocar** una respuesta (sin botón aceptar). Deben incluir el **mood** (ej. en pelis: acción, romántica, profunda, me da igual…). Las preguntas concretas se pulirán más adelante.
 - **Las preguntas hablan de lo que quieres ahora**, no de quién eres ✅: en Libros, sobre la **siguiente lectura** (qué te apetece, extensión, ficción o no, ritmo, parecido a lo que te gusta o salir de tu zona), nada de «un sábado perfecto».
 - **Después, duelos, nunca una recomendación directa** ✅: **mínimo 5 duelos**; luego «Te propongo esta». Si dices «Seguir buscando», más duelos y nueva propuesta, en bucle.
-- **Duelos «orientadores»** ✅ (D19 cerrado): «¿Te apetece más **algo como esto** o **algo como esto**?». Siempre **obras concretas de la misma categoría** (si buscas libro, libros), **nunca tipos ni géneros**. No son candidatas a la propuesta: sirven para **orientar** lo que buscas. Con lo elegido, la app busca en el catálogo (primero tus pendientes).
+- **Duelos «orientadores»** ✅ (D19 cerrado): «¿Te apetece más **algo como esto** o **algo como esto**?». Siempre **obras concretas de la misma categoría** (si buscas libro, libros), **nunca tipos ni géneros**. Sirven para **orientar** lo que buscas; si uno de ellos acaba siendo la mejor propuesta, se propone (21/10/2026). Tienen que ser **muy reconocibles** desde el primer duelo, sin botón de «no conozco ninguna» (D28). Con lo elegido, la app busca en el catálogo (primero tus pendientes).
 - Futuro (D24): con un contexto global de cada obra (IA), los orientadores podrían cruzar categorías («para elegir libro: ¿algo tipo *Interstellar* o tipo *Asterios Polyp*?»).
 - **Pendientes sin ordenar** ✅ (D26): no se ordenan a mano; para elegir entre ellas ya está el asistente. Se ven en cada estantería (acceso directo «N pendientes»).
 - **Modo grupo**: futuro.
@@ -125,6 +125,10 @@ Aparece una tarjeta de la estantería en la que estés. Gestos:
 - Importar **guardados de Instagram, TikTok y X/Twitter** mediante las descargas de datos oficiales de cada plataforma.
 
 ---
+
+
+> [!IMPORTANT]
+> **Especificación Maestra de los Tres Motores (20/10/2026, Igor):** La arquitectura detallada de atributos requeridos en obras, usuarios y amigos para los tres cálculos (1. Reconocibilidad de Orientadores A/B, 2. Afinidad de Propuesta Ganadora, y 3. Mazo de Descubrir por Cupos) está fijada en **`docs/MOTOR.md` §2b**.
 
 ## 7b. El motor: el pegamento y el cerebro de la app (16/10/2026)
 
@@ -239,7 +243,7 @@ Ver `docs/antigravity/VISION_Y_FEATURES.md`: validador previo «¿quién lo vio 
 | D16 | Modelo de negocio | ⏸️ más adelante, por separado |
 | D17 | **Nombre** | 🟡 abierto (primera ronda descartada: Canon, Poso, Acervo, Ex Libris, Huella, Baúl) |
 | D18 | **Competencia y viabilidad** | 🟡 en debate |
-| D19 | Duelos del asistente | ✅ Orientadores: obras concretas de la misma categoría, no candidatas, nunca tipos ni géneros |
+| D19 | Duelos del asistente | ✅ Orientadores: obras concretas de la misma categoría, nunca tipos ni géneros. **21/10/2026:** un orientador **puede** acabar siendo la propuesta; lo que se evalúa es si orienta bien |
 | D20 | **Agenda e Instagram**: importar contactos reales y escribir a amigos que vienen de Instagram | 🟡 abierto (ver §6b) |
 | D21 | **Preguntas de cada categoría** para el asistente | ⏸️ se piensan más adelante |
 | D22 | **Nombre del asistente** (provisional «Decidir»; candidatos: «Elige por mí», «¿Y ahora qué?», «Asistente») | 🟡 abierto |

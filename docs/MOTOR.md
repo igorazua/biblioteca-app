@@ -1,6 +1,7 @@
 # Diseño técnico del motor — Biblioteca
 
 > **Para quién:** el agente que lo construya. Las decisiones de producto están en `docs/IDEA.md` §7b (fuente de verdad). Aquí está el **cómo**.
+> **v2 (21/10/2026):** §2b y §8.4 reescritos; **§2c nuevo: el cerebro** (espacio único de contenido + comportamiento, vector de usuario y modelo que aprende a ordenar) (los tres motores, registro de atributos, R única para duelos y mazo). Las tareas para construirlo están en `docs/TAREAS_MOTOR_V2.md`. **No hay API de TMDB** (PLAN_MEJORAS §0): las menciones a TMDB de este documento son históricas.
 > **Estado:** v1.1 (16/10/2026). Construidos F-Backend, F0, F1 (scripts), F4, F5 y F6. **F1 no se ha ejecutado de verdad y F2-F3 no existen**: los motores funcionan en modo degradado. El enriquecimiento se ejecuta con `docs/ENRIQUECIMIENTO.md`, que además añade el **grafo importado** (E4) y la **elección de vecinos con LLM** (E8) y sustituye la fórmula de §6.2.
 > **Alcance:** la demo sigue siendo una PWA sin backend (`app/`). Todo el motor corre **en el navegador** con datos precalculados por scripts offline. §11 dice qué cambia cuando haya Supabase.
 
@@ -18,7 +19,7 @@
    - lanzar el lote completo del LLM (cuesta dinero: §5.6);
    - añadir dependencias pesadas;
    - desplegar.
-8. **Catálogo legal**: solo fuentes abiertas o con licencia (TMDB, Wikidata, Open Library, MusicBrainz/ListenBrainz). Ver §4.4 sobre las fuentes actuales de la semilla. Comprueba en los términos de TMDB:
+8. ⚠️ **Sustituida el 21/10/2026** por la regla de catálogo de `PROJECT_CONTEXT.md` (se permite raspar con imágenes alojadas por nosotros y procedencia; no hay TMDB: donde este documento dice TMDB, léase Wikidata/TVmaze/Open Library/MusicBrainz o raspado). Texto antiguo: **Catálogo legal**: solo fuentes abiertas o con licencia (TMDB, Wikidata, Open Library, MusicBrainz/ListenBrainz). Ver §4.4 sobre las fuentes actuales de la semilla. Comprueba en los términos de TMDB:
    - si el uso comercial necesita un acuerdo aparte;
    - cómo hay que citar a JustWatch en los datos de dónde verla.
 
@@ -72,6 +73,276 @@
   - `seed.json` sigue con los datos de la ficha.
   - Lo del motor va en `src/data/engine/<shelf>.json`, cargado con `import()` dinámico al entrar en una estantería, para no inflar la carga inicial.
 - Un único comando regenera todo: `npm run engine` (= sources → llm → vectors → build). Cada paso también se puede lanzar suelto: `npm run engine:sources`, etc.
+
+---
+
+
+## 2b. Los tres motores y sus datos (v2, 21/10/2026)
+
+> Sustituye a la «Especificación Maestra» del 20/10. Decisiones de Igor: cero fricción, **los mejores motores que existan** y **la ficha de obra con más metadatos que exista**; se itera lo que haga falta. Las tareas para construirlo están en `docs/TAREAS_MOTOR_V2.md`.
+
+### 2b.0 Principios
+1. **Tres puntuaciones, cada una con su trabajo:**
+   - **R — reconocibilidad**: probabilidad de que *este usuario* conozca la obra. Elige los orientadores de los duelos y ordena el cupo `seen_likely` del mazo. **Es una sola función** (`lib/engine/recog.ts`) para los dos sitios.
+   - **A — propuesta**: qué obra proponer hoy en Decidir (encaje × calidad). **No lleva reconocibilidad**: una propuesta desconocida puede ser justo el descubrimiento.
+   - **D — posición en el mazo**: orden de Descubrir por cupos (§7), donde `seen_likely` usa R.
+2. **Primero los datos, después las fórmulas.** Una fórmula fina sobre datos de relleno no vale nada. Hoy (21/10) los ejes, temas y momentos son relleno (todo a 3): llenarlos va antes que afinar pesos.
+3. **Nada de umbrales absolutos sobre datos con escalas distintas.** Cada señal se pasa a **percentil dentro de su estantería** antes de usarse (la popularidad mediana de series es 92 y la de juegos 70: un «≥ 90» significa cosas distintas en cada una).
+4. **Nada de adivinar por el texto del título.** Idioma, país y título local salen de datos (Wikidata, Open Library, MusicBrainz) o del registro de atributos (§2b.2), nunca de una regex.
+5. **Todo número ajustable en `params.ts`** y todo cambio sube `ENGINE_VERSION` y se mide (§2b.7).
+6. **Cero fricción:** no se pregunta nada que se pueda deducir (año de nacimiento, país, plataformas se infieren o se preguntan solo cuando hacen falta), y no hay botón «no conozco ninguna» (D28): los orientadores tienen que ser reconocibles desde el primer duelo.
+
+### 2b.1 La ficha de obra (`Item`)
+Campos que leen los motores, la ficha o el LLM. Todos opcionales. **Cada valor importado lleva su procedencia** en `Item.src[campo]` y, si no viene de una fuente dura, su confianza en `Item.conf[campo]` (0-1).
+
+| Bloque | Campo | Tipo | Fuente preferida → alternativas | Lo usa |
+|---|---|---|---|---|
+| Identidad | `id`, `type`, `title`, `year`, `creator` | — | semilla | todo |
+| | `originalTitle` | string | Wikidata label original · OL · MusicBrainz | imports, ficha |
+| | `titles` | `Record<locale, string>` (`es-ES`, `es-MX`…) | Wikidata label@es · ediciones de OL · raspado · LLM | título por mercado; señal de «se estrenó/tradujo aquí» |
+| | `originalLanguage` | ISO-639-1 | Wikidata P364/P407 · MusicBrainz · LLM | R (local), D (`region`) |
+| | `originCountry` | ISO-3166[] | Wikidata P495 · nacionalidad del autor P27 (libros) · MusicBrainz área (artistas) · LLM | R, D |
+| | `collection` | string | Wikidata P179 · LLM | diversidad, aristas `saga` |
+| | `wikidataId`, `olid`, `mbid`, `tvmazeId`, `imdbId`, `bggId` | — | resolutores | cruce de fuentes e imports |
+| Notoriedad | `popPct` | 0-100, **percentil en su estantería** | se calcula (§2b.4) | R, D |
+| | `notoriety` | `Record<país, 0..1>` | se calcula por mercado (§2b.4) | R |
+| | `trend` | `Record<país, 0..1>` + fecha | visitas recientes de Wikipedia vs su media · listas raspadas | D (`social`/`explore`), A (empujón pequeño) |
+| | `isCanon` | bool | listas de canon (escolar, «1001…», AFI, etc.) · LLM | R (no penaliza por antigüedad) |
+| | `schoolReading` | `Record<país, bool>` | listas de lecturas de instituto · LLM con búsqueda | R (libros: casi todo el mundo los conoce) |
+| | `wikiLangs`, `wikiLocal`, `pageviews` | número / idiomas / `Record<lang, nº 12 meses>` | Wikidata sitelinks · API de visitas de Wikimedia | `notoriety`, `popPct` |
+| | `voteAvg`, `voteCount`, `readers` | — | Wikidata · OL · raspado | calidad (A), `votes` (D) |
+| | `awards` | string[] | Wikidata P166 | calidad de respaldo, ficha, LLM |
+| Consumo | `durationMin`, `pages`, `seasons`, `episodes`, `ongoing`, `players`, `minAge`, `weight` | — | semilla · Wikidata · TVmaze · raspado · LLM | filtros de Decidir |
+| | `providers` | `Record<país, string[]>` | raspado (sin TMDB no hay fuente abierta) · LLM con búsqueda | empuja en D, filtra en Decidir |
+| Sensación | `axes`, `themes`, `moments`, `oneLiner` | §5 | LLM (E6) | mood, `taste`, duelos `fine`, motivos |
+| | vector, vecinos, `macro`/`micro` | §6 | vectores locales + LLM (E7-E9) | todo lo de similitud |
+| Imagen | `posterUrl`, `imageSrc`, `imageCredit` | — | **alojada por nosotros** (PROJECT_CONTEXT, Reglas) | ficha, tarjetas |
+
+**Al navegador solo va lo que lee la app.** Los mapas por mercado (`notoriety`, `trend`, `titles`, `providers`) se recortan en el build al mercado activo (hoy `ES`); el resto vive en las cachés de `scripts/cache/` y, cuando haya catálogo vivo, en `biblio_catalog`.
+
+### 2b.2 Registro de atributos y relleno de huecos
+Para que añadir un dato nuevo («¿estuvo más de un mes en cines en España?», «¿es lectura de instituto?») sea **una entrada en una tabla y un comando**, no un script nuevo.
+
+**Registro** `app/scripts/engine/attrs.mjs`:
+```js
+export const ATTRS = {
+  originalLanguage: {
+    type: 'lang', shelves: ['movie', 'series', 'book', 'artist'],
+    consumers: ['R', 'D'],
+    sources: ['wikidata', 'openlibrary', 'musicbrainz', 'llm-infer'],   // orden de preferencia
+    minCoverage: 0.95,
+    refresh: 'never',
+  },
+  schoolReading: {
+    type: 'map<country,bool>', shelves: ['book'], consumers: ['R'],
+    question: '¿Es (o ha sido) lectura habitual en institutos de {country}?',
+    sources: ['scrape:listas-lecturas', 'llm-search'],
+    needsEvidence: true,      // dato factual: el LLM tiene que buscar y citar una URL
+    minCoverage: 1.0, refresh: 'yearly',
+  },
+  // …
+}
+```
+
+**Valores** en `app/scripts/cache/attrs/<atributo>.jsonl`, una línea por obra:
+```json
+{"id":"book:la-colmena-1951","value":{"ES":true},"src":"llm-search","conf":0.9,"evidence":"https://…","at":"2026-10-21"}
+```
+
+**Reglas:**
+- **Orden de fuentes** (de más a menos fiable): fuente dura (Wikidata, OL, MusicBrainz, TVmaze) > raspado > `llm-search` (con URL de prueba) > `llm-infer` (lo deduce sin buscar). **Un valor de menos fiabilidad nunca pisa uno de más.**
+- **Datos factuales** (fechas, cifras, listas, «estuvo en cines») van con `needsEvidence: true`: sin URL, no entran.
+- **Calibración antes del lote**: si el atributo ya tiene valores de una fuente dura en parte del catálogo, se rellena primero una muestra de 50 de esas obras con el LLM y se compara. Solo se acepta el lote si coincide ≥ 90 % (booleanos y categorías) o con error medio ≤ 0,15 (escalas 0-1). Si no hay valores duros con los que comparar, Igor revisa 30 al azar con su prueba.
+- **Modos de relleno** (`scripts/engine/fill-attr.mjs --attr X --shelf Y --mode …`):
+  - `agent`: exporta bloques de ~40 obras a `cache/attrs/agent-in/`; el agente (Gemini) escribe la respuesta en `agent-out/`; `--mode import` la valida (tipo, rango, enum, prueba si hace falta). Igual que ENRIQUECIMIENTO §5b.
+  - `api`: lo mismo por API de un LLM (pide confirmación de coste a Igor).
+  - `search`: modo agente con búsqueda en internet obligatoria; cada valor lleva `evidence`.
+- **El build** (`npm run engine:build`, que la tarea T2 mete dentro de `npm run seed`) fusiona: por cada obra y atributo coge el valor de la fuente más fiable, rellena `src` y `conf` y recorta los mapas al mercado activo.
+- **Huecos a la vista**: `npm run engine:coverage` lee `minCoverage` de cada atributo e imprime la tabla **«Huecos»** (atributo · estantería · cobertura · objetivo · comando para rellenarlo). Esa tabla es el aviso para que Igor ponga a un LLM a rellenar.
+
+### 2b.3 Usuario y amigos
+| Campo | Cómo se obtiene (sin preguntar si se puede) | Lo usa |
+|---|---|---|
+| `country`, `lang` | `navigator.language` / zona horaria (§4.3); editable en Ajustes | R, D, títulos |
+| `birthYear` | declarado en Ajustes; si no, **inferido** (abajo). El declarado manda | R (`era`), D |
+| `platforms` | se pregunta la primera vez en Decidir (PLAN_MEJORAS §2) | Decidir, D |
+| entradas (`seen`, `pending`, `dismissed`, rankings, notas, comentarios) | uso normal | todo |
+| `deckLearn[shelf]` (§7.6) | **aprendido del mazo**: por `macro` y por década, cuántas tarjetas le salieron y cuántas marcó «la vi» (suavizado, con decaimiento ×0,8 por sesión) | R (`zona`), año inferido |
+| amigos: afinidad, puesto, comentario, fecha | §7.3 | R (`social`), A, D |
+
+**Año de nacimiento inferido** (`inferBirthYear`): se calcula con la **tasa** de «la vi» por década del mazo (`seen / shown` de `deckLearn`, sin canon ni obras de los últimos 2 años), **no** con los años de las obras vistas: si no, se retroalimenta (el mazo enseña más de la época supuesta, el usuario marca más de esa época y la suposición se confirma sola). Se busca la década con la tasa más alta y `birthYear ≈ inicio de esa década + 5 − PARAMS.ERA_MEDIAN_AGE` (25 de partida), acotado a [1940, 2012]. Hace falta ≥ 60 tarjetas vistas repartidas en ≥ 3 décadas; confianza baja hasta 150. Se recalcula al abrir Decidir o Descubrir. Se valida con los usuarios que sí lo declaran (error medio objetivo ≤ 6 años).
+
+### 2b.4 Motor R — reconocibilidad
+**Notoriedad por mercado** (`notoriety[país]`, la calcula el build, no la app). Responde a «¿y si abrimos en otros países?»: no hay un dato «España», hay un mapa por país y abrir un país nuevo es calcular su clave.
+```
+señales para el país P con idioma L (todas a percentil dentro de la estantería):
+  vis   = visitas de los últimos 12 meses al artículo en la Wikipedia de L
+  local = [originCountry ∋ P] · 1  +  [titles tiene título para P o artículo en la Wikipedia de L] · 0.5   (tope 1)
+  lista = aparece en listas raspadas de P (taquilla, más vendidos, audiencias, lecturas escolares)
+  llm   = estimación del LLM: «¿qué parte de los adultos de P la reconocería?» en 0 / .25 / .5 / .75 / 1
+notoriety[P] = 0.45·vis + 0.15·local + 0.15·lista + 0.25·llm      (pesos en params; se recalibran con datos, §2b.7)
+```
+Limitación conocida: las visitas de Wikipedia son por idioma, no por país (España y México comparten la Wikipedia en español). Para distinguirlos pesan más `local`, `lista` y `llm`.
+
+**Popularidad**: `popPct` = percentil dentro de la estantería de una mezcla de visitas de Wikipedia (todas las lenguas), `voteCount`/`readers` y `wikiLangs`. Sustituye a `popularity` en los motores (que se queda solo por compatibilidad). Nunca se escribe a mano.
+
+**R de una obra para un usuario** (`recog(item, user)` en `lib/engine/recog.ts`):
+```
+si la tiene vista                → R = 1
+si la tiene pendiente            → R = 0.9
+(descartada no cuenta: «no me interesa» no significa «la conozco»)
+
+base   = notoriety[user.country]           (si falta: popPct/100 · 0.8)
+era    = curva por la edad del usuario al estreno, e = year − birthYear (birthYear declarado o inferido):
+           e < 0   → 0.35   (0.9 si isCanon o schoolReading)
+           0–11    → 0.7
+           12–25   → 1.0     (ventana formativa: PARAMS.ERA_WINDOW, la única definición del proyecto)
+           26–35   → 0.85
+           > 35    → 0.7
+           tramos con transición lineal de 2 años; sin birthYear → 0.75
+zona   = tasa de «la vi» de deckLearn (§7.6) en el macro y de la década de la obra (0.5 sin datos)
+social = 1 − Π(1 − 0.35·wf) sobre los amigos que la tienen vista o pendiente   (wf como en §7.3)
+
+R = 1 − (1 − base · era · (0.6 + 0.4·zona)) · (1 − social)
+```
+- **Arranque en frío** (usuario nuevo, sin nada): R ≈ notoriedad en su país × su época. Los primeros orientadores y las primeras tarjetas del mazo son lo más conocido de su país y su generación: «muy reconocibles desde el principio», sin botón.
+- **Aprende sin preguntar**: cada «la vi» del mazo es una etiqueta gratis de «la conoce». Con ≥ 2.000 eventos de mazo (`deck_shown` con su R + `deck_swipe`), un script offline ajusta los pesos (regresión logística) y se compara con la fórmula a mano (§2b.7).
+
+### 2b.5 Motor A — propuesta de Decidir
+La de §8.3 y §8.8, sin cambios de fondo:
+```
+final = fit^0.6 · quality^0.4 · (1 + boost) · (1 − 0.6·maxSim(c, rechazadas))
+boost = 0.15 si es pendiente tuya + 0.05 si la tiene pendiente un amigo con afinidad ≥ 50 + PARAMS.TREND_BOOST·trend[país] (0.05)
+```
+- **No lleva reconocibilidad, idioma ni época** (se quita el `geoEraBoost` que añadió Gemini al `prior`). El idioma solo filtra si el usuario lo pide en las preguntas.
+- Un orientador **puede** ser la propuesta (D19, 21/10/2026).
+- Depende de que haya ejes, temas y vecinos reales: hasta las tareas T5-T7 de `TAREAS_MOTOR_V2.md`, `fit` sale casi solo de géneros y vecinos.
+
+### 2b.6 Motor D — mazo de Descubrir
+El de §7, con estos cambios:
+- `seen_likely` = **R · adapt** (sustituye a la suma `pop + votes + region + era + plat`; la plataforma sigue empujando un 5 %).
+- `explore` y `friend_gem` usan `popPct` (percentil), no `popularity`.
+- Cada `deck_shown` guarda el R de la tarjeta, para medir R (§2b.7).
+
+### 2b.7 Medir e iterar
+Cada cambio sube `ENGINE_VERSION` y se compara en `/metricas` y con los scripts offline.
+
+| Motor | Métrica principal | Objetivo inicial |
+|---|---|---|
+| R | **AUC** de R prediciendo «la vi» en el mazo (`deck_shown`.R vs `deck_swipe` = right) | ≥ 0.80 |
+| R | % de «la vi» en las 20 primeras tarjetas de usuarios nuevos | ≥ 50 % |
+| R (duelos) | mediana del tiempo de respuesta del duelo (`dec_duel.ms`) y abandono en duelos | baja con cada versión |
+| A | aceptación a la primera; **acierto real** (aceptada → vista → percentil en su ranking) | §3.2 |
+| D | recall@50 (`eval-deck.mjs`), «la vi» en las 20 primeras, guardadas por sesión | §3.2 |
+| Datos | tabla «Huecos» de `engine:coverage` vacía para los atributos con `minCoverage` | 0 huecos |
+
+---
+
+## 2c. El cerebro: un espacio único que aprende (v2, 21/10/2026)
+
+> Decisión de Igor (21/10/2026): el motor tiene que ser un **cerebro** que aprende y se adapta, no una suma de atributos. Los atributos de §2b.1 sirven para filtros y para R; **el gusto sale del cerebro**. Tareas en `docs/TAREAS_MOTOR_V2.md` (bloque B, T4-T7, y T11).
+
+### 2c.0 Idea
+Cada obra es un punto en un espacio de muchas dimensiones, y la distancia entre dos puntos es el peso de su conexión: todas las obras quedan conectadas con todas. Ese espacio se construye con dos fuentes:
+- **qué es la obra** (contenido): de qué va y cómo se siente;
+- **qué hace la gente con ella** (comportamiento): quién la ve, guarda o pone alta junto a qué otras. Es la parte que lo convierte en aprendizaje automático y la que más vale.
+
+Los tres motores son **preguntas al mismo cerebro**: R = «¿la conoce?», A = «¿le va a gustar hoy?», D = la mezcla para el mazo. Todas las categorías comparten el mismo espacio (un libro puede quedar cerca de una peli).
+
+### 2c.1 Capa 1 — Contenido: ficha de experiencia
+- **Qué es:** por obra, el LLM escribe una **ficha de experiencia** en español (≤ 1.200 caracteres, uso interno, no se publica) a partir del contexto de E5 (sinopsis, Wikipedia, keywords, premios, relacionadas). Estructura fija:
+  1. de qué va, sin spoilers (2 frases);
+  2. cómo se siente (tono, ritmo, intensidad, humor, qué te deja);
+  3. por qué engancha y a quién le gusta;
+  4. a quién no le va a gustar;
+  5. 3-5 obras con las que se compara (de cualquier categoría, con nombre);
+  6. contexto (época, fenómeno, culto, clásico).
+- En la **misma llamada** salen los ejes, temas, momentos y `oneLiner` de §5 (sustituye al relleno actual). Un solo esquema JSON, una sola validación.
+- **Embedding de contenido** (`embContent`): de la ficha de experiencia + temas + momentos, con el modelo multilingüe local de §6.1 (gratis). Si la QA no llega, se prueba un modelo de pago (Voyage, unos 5-15 $ para 200.000 obras); se elige el que gane la evaluación de §2c.6.
+- **Modelo del LLM:** muestra de 100 obras con Haiku 5.5 y con Sonnet 5.5; Igor compara a ojo y se elige. Beta (5.000 obras): Gemini en modo agente o API; catálogo grande: API por lotes (§2c.7).
+
+### 2c.2 Capa 2 — Comportamiento prestado: el grafo de co-consumo
+Sin usuarios propios todavía, se aprende del comportamiento público. Cada fuente da **aristas obra–obra con un peso** = cuánta gente las junta.
+
+| Fuente | Señal | Categorías | Cómo |
+|---|---|---|---|
+| **Clickstream de Wikipedia** (dumps mensuales, CC0, incluida la Wikipedia en español) | personas que pasan del artículo A al B | todas | descarga mensual; se cruzan los artículos con nuestras obras por sitelinks de Wikidata |
+| **Listas públicas de Letterboxd** | dos pelis en la misma lista | pelis (y series) | raspado de listas populares y recientes |
+| **Estanterías y listas de Goodreads** | dos libros en la misma lista o estantería | libros | raspado de listas («Listopia») |
+| **Colecciones y «fans also like» de BGG** | dos juegos en la misma colección | juegos | raspado |
+| **Last.fm / «fans también escuchan»** | artistas similares por escuchas | artistas | raspado |
+| **Nuestros usuarios** (cuando haya) | top 30 % del mismo ranking, ganadoras de la misma sesión de Decidir, aceptada → vista | todas | eventos de F0 |
+
+Reglas:
+- **Solo se guardan recuentos agregados** (`a`, `b`, `fuente`, `n`); nunca nombres de usuario ni listas identificables.
+- Peso de la arista: **PMI positivo** (cuánto más aparecen juntas de lo esperable por su popularidad), para que las obras muy populares no se conecten con todo.
+- Ritmo ≤ 1 petición/s por dominio, con caché y reanudable (puede tardar días en segundo plano).
+- Archivo: `app/scripts/cache/graph/cooc-<fuente>.jsonl`. Las obras de las listas que no están en el catálogo van a `outside.json` (candidatas a ampliar el catálogo, ordenadas por número de conexiones).
+- **Embedding de comportamiento** (`embBehavior`): node2vec / item2vec sobre el grafo de co-consumo (un script de Python o Node, minutos u horas en un portátil).
+
+### 2c.3 Capa 3 — Fusión: el espacio único
+```
+vec(obra) = normalizar( α·embContent  ⊕  β·embBehavior  ⊕  γ·embRelaciones )
+  embRelaciones = node2vec sobre las aristas duras de E4 (saga, adaptación, mismo creador, influencia)
+  β depende del soporte de la obra: crece con su nº de aristas de comportamiento (0 si no tiene, β_max con ≥ 50)
+  → una obra de nicho se apoya en su contenido; una muy vista, en el comportamiento
+```
+- Los pesos (α, β_max, γ) se eligen con la evaluación de §2c.6, no a mano.
+- Para el navegador: PCA a 48-64 dimensiones, cuantizado (como §6.3), vecinos (`nn`) y clústeres recalculados sobre `vec`.
+- La similitud de E9 (`sim(a,b)`) pasa a ser el coseno sobre `vec` más el empujón de las aristas `pick` del LLM (que siguen dando el **motivo** en texto).
+- Se recalcula **cada semana**, solo lo que cambia (por hash).
+
+### 2c.4 Capa 4 — Tú dentro del espacio y un modelo que aprende a ordenar
+- **Vector de usuario** `u` por estantería, en el mismo espacio, persistido en el store y en Supabase:
+  ```
+  u = normalizar( Σ peso(acción) · vec(obra) )   con decaimiento por antigüedad (vida media 1 año)
+  peso: puesto en el ranking (top 10 % = 3, resto de vistas = 1 escalado por percentil), pendiente = 0.5,
+        descartada = −0.5, ganadora de duelo = +0.3, perdedora = −0.15, propuesta rechazada = −0.3
+  ```
+  Se actualiza en el móvil en cada acción (milisegundos). El vector de la sesión de Decidir (`pref`, §8.6) parte de `u` en lugar de cero.
+- **Modelo que aprende a ordenar** (`lib/engine/ranker.ts`, uno por motor): regresión logística sobre señales ya calculadas:
+  - `cos(u, vec)`, R, calidad, social, `popPct`, `trend`, encaje con el mood, plataforma, novedad;
+  - objetivo: D → «la vi» o «la guardo»; A → «aceptada y luego vista con percentil ≥ 50»; R → «la vi».
+  - Arranca con los pesos a mano de §2b y §7; `scripts/engine/fit-ranker.mjs` los reentrena offline con los eventos (≥ 2.000 por objetivo) y **propone**; Igor decide si se aplican (sube `ENGINE_VERSION`).
+  - Más adelante, si hay volumen: árboles (LightGBM) en lugar de logística, y pesos personales ligeros por usuario.
+- **Exploración (bandit):** en `explore` y en el 10 % de `social`, muestreo de Thompson sobre la incertidumbre de cada zona del espacio: se prueban de vez en cuando zonas poco vistas para seguir aprendiendo y no encerrar al usuario.
+
+### 2c.5 Qué cambia en cada motor
+- **R:** `zona` (§2b.4) pasa a ser también la cercanía a lo que ya conoces en el espacio (`cos(u, vec)` de tus vistas). Los pesos de R los ajusta `fit-ranker`.
+- **A (Decidir):**
+  - `taste` = `cos(u, vec)`; los duelos mueven `pref` en el espacio único;
+  - **re-muestreo del pool:** tras el 3.er duelo, y en cada «Seguir buscando», se vuelve a buscar en **todo el catálogo** las 300 más cercanas a `pref` que pasen los filtros (el pool inicial pudo dejar fuera la buena);
+  - parada adaptativa (`DECIDE_MODE = 'adaptive'`, §8.7) cuando una candidata concentra la probabilidad.
+- **D (Descubrir):** `taste` y `novelty` sobre el espacio único; el bandit en `explore`.
+- **Además:** «si te gustó este libro → esta peli» (D24) y los vecinos de la ficha salen gratis del espacio único.
+
+### 2c.6 Evaluar con usuarios reales antes de tenerlos
+- **Usuarios de prueba:** ~2.000 perfiles públicos raspados (Letterboxd para pelis, Goodreads para libros; solo sus listas de vistas y notas, con un id interno anónimo y sin nombre). Se **separan de los que alimentan el grafo** de §2c.2, para no hacer trampa.
+- Por cada uno: se esconde el 20 % de lo que ha visto (lo más reciente) y se mide si el motor lo recupera:
+  - **recall@50 y NDCG@50** del mazo;
+  - **hit@5** de Decidir (simulador de §8.11 usando ese usuario);
+  - **AUC de R** (obras vistas frente a no vistas de la misma época).
+- `scripts/engine/eval-brain.mjs` imprime la tabla por versión y por estantería, y se guarda en `scripts/cache/eval/historico.md`. **Ningún cambio del cerebro se aplica si empeora esta tabla.**
+- Línea base: el sistema actual (vectores solo de texto). Objetivo de la primera versión: +30 % de recall@50 sobre la línea base.
+
+### 2c.7 Magnitudes (estimación del 21/10/2026)
+| | Beta (~5.000 obras) | Producto (~200.000 obras) |
+|---|---|---|
+| Portadas (~40 KB por obra) | 200 MB | 8 GB |
+| Fichas, vectores y grafo | < 50 MB | ~1 GB |
+| Alojamiento | gratis (Supabase) | ~25 $/mes (Supabase Pro); portadas en Cloudflare R2 cuando haya tráfico (descarga gratis) |
+| LLM, una vez (ficha + ejes + vecinos) | 4 $ (Haiku) – 80 $ (Sonnet) | 160 $ (Haiku) – 3.200 $ (Sonnet), en lotes |
+| LLM, cada atributo deducido | céntimos | ~6 $ (Haiku) |
+| LLM con búsqueda web obra a obra | ~60 $ por atributo | ~2.400 $ por atributo → **se evita: se raspan listas, no obras** |
+| Embeddings y entrenamiento | 0 $ (modelo local, portátil) | 0 $ local (horas de CPU) o 5-15 $ |
+| Raspado | 1 PC en segundo plano | 1 PC o un servidor de ~5 $/mes; días de trabajo a 1 petición/s |
+| Por usuario | un vector (< 2 KB) y unos pocos pesos | igual: el cerebro es compartido |
+
+- Los vectores caben en el navegador hasta ~50.000 obras por estantería; por encima, búsqueda en el servidor con pgvector.
+- Mantenimiento: obras nuevas y tendencias cada semana, < 30 $/mes de LLM.
+
+### 2c.8 Licencias
+Aparcado por decisión de Igor (21/10/2026) hasta que la app funcione con usuarios. Para no cerrarse puertas: todo dato e imagen lleva su procedencia (`src`, `imageSrc`), los datos de comportamiento solo se guardan agregados y sin personas, y lo que se publica (fichas, motivos) lo escribe nuestro LLM. Con eso, `purge-source.mjs` puede sustituir cualquier fuente el día que haga falta.
 
 ---
 
@@ -411,7 +682,7 @@ pop      = percentil de popularity en la estantería
 votes    = log(1+voteCount) / log(1+max)                     (o readers en libros)
 region   = 0.5·[providers[country] no vacío] + 0.3·[releasedIn ∋ country] + 0.2·[wikiLocal ∋ lang]
            + 0.2·[originalLanguage == lang] (tope 1)
-era      = 1 si year ∈ [birthYear+12, birthYear+25]; decae lineal a 0 en ±10 años; 0.5 si no hay birthYear
+era      = ⚠️ v2: sustituido por la curva `era` de §2b.4 (PARAMS.ERA_WINDOW)
 plat     = [providers[country] ∩ profile.platforms ≠ ∅]      ← solo empuja; NUNCA filtra (IDEA §7b.1)
 
 Para cada amigo f que tiene la obra:
@@ -429,7 +700,7 @@ adapt    = multiplicador de sesión (§7.6), 0.5-1.3
 
 | Cupo | Puntuación |
 |---|---|
-| `seen_likely` | (0.40·pop + 0.15·votes + 0.20·region + 0.20·era + 0.05·plat) · adapt |
+| `seen_likely` | ⚠️ v2: **R · adapt** + 0.05·plat (§2b.6). Antes: (0.40·pop + 0.15·votes + 0.20·region + 0.20·era + 0.05·plat) · adapt |
 | `social` | (0.70·social + 0.15·taste + 0.10·pop + 0.05·plat) · adapt. Solo si `social > 0` |
 | `friend_gem` | (0.75·gem + 0.25·taste) · adapt. Solo si `gem > 0` |
 | `explore` | (0.45·novelty + 0.30·votes·(voteAvg/10) + 0.25·taste) · adapt, **con calidad mínima**: voteAvg ≥ 6.5 o un amigo con pct ≥ 0.6. Lejos de lo tuyo, sí; malo, no |
@@ -538,13 +809,18 @@ prior   = (0.35·mood + 0.25·taste + 0.40·quality) · (1 + boost)
 post    = prior normalizado
 ```
 
-### 8.4 Orientadores: de dónde salen
-Bolsa `O`, con un `recog` (reconocibilidad) por obra:
-- **Tus vistas** de la estantería: `recog = 1`. Las del top 30 % de tu ranking valen como guía positiva más clara.
-- **Tus descartadas**: `recog = 0.8`.
-- **Clásicos**: obras con `pop ≥ p85` y `votes ≥ p80` de la estantería: `recog = 0.6 + 0.4·pop`.
+### 8.4 Orientadores: de dónde salen (v2, 21/10/2026)
 
-Ninguna obra de `pool` puede ser orientador (D19: los orientadores no son candidatas). Si una vista tuya está en `pool` porque se eligió «repetir», ese día los orientadores salen solo de clásicos y descartadas.
+> **Regla de producto (Igor):** los orientadores son guías de tipo («¿más tipo esto o tipo lo otro?»). Para que sirvan, **el usuario tiene que reconocerlos desde el primer duelo**, sin botón de «no conozco ninguna» (D28). Si un orientador acaba siendo la mejor propuesta, se propone (D19).
+
+- **Elegibles**: todas las obras de la estantería no enseñadas en esta sesión, **incluidas las del `pool`**. Ya no hace falta ninguna salvaguarda para estanterías pequeñas.
+- **Reconocibilidad**: `R = recog(item, user)` de §2b.4 (la misma función que ordena `seen_likely` en el mazo).
+- **Suelo relativo**: entran las obras con R en el percentil ≥ `PARAMS.ORIENTER_R_PCT` (70) de la estantería para ese usuario; si quedan menos de `PARAMS.ORIENTER_MIN` (40), se baja el percentil de 10 en 10.
+- **Sorteo con papeletas** (lo que pidió Igor: las de arriba tienen más papeletas, pero puede salir cualquiera del grupo): se muestrean hasta 250 parejas con probabilidad ∝ `(R_a · R_b)^PARAMS.ORIENTER_K` (k = 2). No se corta a un «top 80» fijo, para que no salgan siempre las mismas obras de sesión en sesión.
+- **Rotación entre sesiones**: las obras que hicieron de orientador en las últimas 3 sesiones de esa estantería llevan ×0.5 en sus papeletas.
+- **Tus vistas valen doble como guía**: las del top 30 % de tu ranking orientan con más claridad; R = 1 ya las favorece en el sorteo.
+- Después, la pareja se puntúa como en §8.5 (`info · (R_a·R_b)^0.5 · penalización por mismo creador`) y se elige entre las 3 mejores al azar.
+- El evento `dec_duel` guarda también `ms` (tiempo hasta responder): un duelo lento es la señal, sin preguntar, de que no se reconocían.
 
 ### 8.5 Elegir la pareja: de lo grueso a lo fino, máxima información
 Para cada duelo:
@@ -646,7 +922,8 @@ Todo lo ajustable, con un comentario de qué hace cada valor:
 - `DECIDE_MODE`;
 - `TAU` (0.05), `BETA` (1.5), `ETA`;
 - umbrales de la propuesta adaptativa;
-- `CLEANUP_MIN` (3), `CLEANUP_RECENT_D` (60).
+- `CLEANUP_MIN` (3), `CLEANUP_RECENT_D` (60);
+- v2 (§2b): `ERA_WINDOW` (la curva de `era`, **única definición** de la ventana formativa en todo el proyecto), `ERA_MEDIAN_AGE` (25), `R_W` (pesos de R), `NOTORIETY_W` (pesos de la notoriedad, que también usa el build), `ORIENTER_R_PCT` (70), `ORIENTER_MIN` (40), `ORIENTER_K` (2), `ORIENTER_ROTATION` (3 sesiones, ×0.5), `TREND_BOOST` (0.05).
 
 ---
 
@@ -686,7 +963,6 @@ Tests mínimos por motor:
 - casos límite: estantería vacía, sin amigos, sin `ShelfEngine`, todo descartado, una sola candidata;
 - reglas de diversidad;
 - que las plataformas **no filtran** en Descubrir;
-- que los orientadores nunca son candidatas;
 - que el degradado sin motor da el comportamiento de hoy.
 
 ---

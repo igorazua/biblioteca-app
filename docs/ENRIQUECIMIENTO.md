@@ -2,6 +2,7 @@
 
 > **Para quién:** el agente que lo ejecute (Gemini u otro). Es un **manual de ejecución** encima de `docs/MOTOR.md` §4-§6, que sigue siendo la especificación. Donde este documento cambia algo de MOTOR, se dice.
 > **Estado:** v1.0 (16/10/2026).
+> ⚠️ **21/10/2026:** las reglas de licencia de §0.4, §2.3, §4 y E3 quedan **sustituidas** por la regla de catálogo de `PROJECT_CONTEXT.md` (raspado permitido con imágenes alojadas por nosotros y procedencia). No hay TMDB. Los huecos de datos se rellenan con el registro de atributos de `docs/MOTOR.md` §2b.2. El orden de trabajo vigente está en `docs/TAREAS_MOTOR_V2.md`.
 > **Objetivo:** que cada obra de todas las categorías tenga los datos que **consumen los motores** (Descubrir y Decidir) y el contexto que necesita el LLM para describirla bien. **No se trata de bajar todo lo que exista**: si un campo no lo lee ningún motor, ni la ficha, ni el LLM, no se descarga (§3).
 
 ---
