@@ -9,8 +9,8 @@ Versión de catálogo: 4345 obras (4345 vectores iniciales)
 
 | Plataforma | Usuarios evaluados | Hit@10 | Hit@20 | NDCG@20 | Diversidad | Sorpresa / Serendipia |
 |---|---|---|---|---|---|---|
-| **letterboxd** | 500 | 35.8% | 53.4% | 0.051 | 0.273 | 91.7% |
-| **goodreads** | 500 | 46.0% | 67.8% | 0.081 | 0.325 | 99.5% |
+| **letterboxd** | 500 | 33.2% | 57.6% | 0.045 | 0.345 | 85.6% |
+| **goodreads** | 500 | 39.2% | 67.0% | 0.062 | 0.343 | 100.0% |
 
 ### Criterios y Definiciones
 - **Hit@K**: Porcentaje de usuarios en los que al menos una obra oculta del conjunto de prueba (20% más reciente) aparece en el top K recomendado.

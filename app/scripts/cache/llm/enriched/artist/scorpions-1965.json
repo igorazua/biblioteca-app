@@ -1,39 +1,36 @@
 {
   "id": "artist:scorpions-1965",
-  "title": "Scorpions",
   "experience": {
-    "plot": "Desde Hannover, la banda alemana más internacional conquistó el mundo con su mezcla de heavy metal melódico, guitarras gemelas y las baladas de rock más coreadas de la historia.",
-    "feeling": "Épica, emotiva, potente y nostálgica. Capaz de pasar del rugido de las guitarras a la emoción colectiva de un himno por la paz.",
-    "hook": "La voz aguda inconfundible de Klaus Meine, el silbido histórico de Wind of Change y baladas universales como Still Loving You.",
-    "notFor": "Quienes busquen metal extremo y gutural o rechacen las 'power ballads' de los años 80.",
+    "plot": "Scorpions (Hannover, Alemania), icono de Hard rock, Heavy metal desde 1965.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Hannover, Alemania, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Hard rock / Heavy metal.",
     "similar": [
-      "Bon Jovi",
-      "Europe",
-      "Def Leppard",
-      "Judas Priest"
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
     ],
-    "context": "Pioneros del rock duro europeo en triunfar en EE. UU., su música simbolizó la caída del Muro de Berlín."
+    "context": "Creada en 1965, una referencia indispensable obra de Hannover, Alemania dentro de su disciplina."
   },
   "axes": {
-    "energia": 4,
-    "valencia": 3,
-    "bailable": 2,
-    "organico": 4,
-    "intensidad": 4,
-    "fondo": 2,
-    "complejidad": 3
+    "energia": 5,
+    "valencia": 4,
+    "bailable": 5,
+    "organico": 5,
+    "intensidad": 5,
+    "fondo": 1,
+    "complejidad": 2
   },
   "themes": [
     "rock_clasico",
-    "metal",
-    "himnos_estadio"
+    "pop",
+    "metal"
   ],
   "moments": [
-    "para_cantar",
-    "viaje_coche",
-    "melancolia"
+    "de_fondo"
   ],
-  "oneLiner": "El poder del metal alemán hermanado con las baladas de rock más míticas y universales.",
+  "oneLiner": "Scorpions: destacada artist (1965) obra de Hannover, Alemania.",
   "confidence": "alta",
   "src": "llm-agent"
 }

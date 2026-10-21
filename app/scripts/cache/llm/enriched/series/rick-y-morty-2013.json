@@ -1,49 +1,42 @@
 {
   "id": "series:rick-y-morty-2013",
-  "title": "Rick y Morty",
   "experience": {
-    "plot": "Un científico alcohólico, nihilista y el ser más inteligente del universo arrastra a su tímido nieto en peligrosas aventuras interdimensionales por el cosmos. Entre caos y monstruos, la disfuncional familia lidia con la insignificancia de la existencia.",
-    "feeling": "Alocada, alucinógena, trágica en el fondo y mentalmente estimulante. Mezcla el delirio sci-fi con punzadas de existencialismo demoledor.",
-    "hook": "La inventiva visual desbordante, conceptos cuánticos ingeniosos y el cinismo conmovedor de Rick Sanchez.",
-    "notFor": "Quienes busquen animación inocente o se sientan abrumados por diálogos frenéticos y caos constante.",
+    "plot": "Rick y Morty es una serie de televisión estadounidense de animación para adultos creada por Justin Roiland y Dan Harmon en 2013 para Adult Swim, también se emitió en Cartoon Network. La serie sigue las desventuras de un científico, Rick Sánchez, y su fácilment",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Justin Roiland y Dan Harmon, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animación / Ciencia ficción.",
     "similar": [
-      "Futurama",
-      "Hora de aventuras",
-      "Bojack Horseman",
-      "Solar Opposites"
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
     ],
-    "context": "Serie de culto de Adult Swim creada por Dan Harmon y Justin Roiland que se convirtió en fenómeno pop planetario."
+    "context": "Creada en 2013, una referencia indispensable obra de Justin Roiland y Dan Harmon dentro de su disciplina."
   },
   "axes": {
-    "tono": 4,
-    "ritmo": 5,
-    "emocion": 3,
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 2,
     "exigencia": 4,
-    "humor": 5,
-    "tension": 3,
+    "humor": 1,
+    "tension": 1,
     "fantasia": 5,
-    "violencia": 4,
-    "familiar": 1,
-    "escala": 5,
-    "reconfort": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 5,
     "enganche": 4,
-    "formato": 3
+    "formato": 4
   },
   "themes": [
-    "animacion",
     "espacio",
-    "viaje_en_el_tiempo",
-    "ia_y_tecnologia",
-    "satira",
-    "familia"
+    "animacion",
+    "amistad"
   ],
   "moments": [
-    "reir",
-    "pensar",
-    "maraton",
-    "desconectar"
+    "maraton"
   ],
-  "oneLiner": "Ciencia ficción desquiciada, delirio interdimensional y nihilismo existencial.",
+  "oneLiner": "Rick y Morty: destacada series (2013) obra de Justin Roiland y Dan Harmon.",
   "confidence": "alta",
   "src": "llm-agent"
 }

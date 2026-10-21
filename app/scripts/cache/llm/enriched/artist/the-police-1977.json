@@ -1,41 +1,37 @@
 {
   "id": "artist:the-police-1977",
-  "title": "The Police",
   "experience": {
-    "plot": "Trío británico liderado por Sting que conquistó el mundo mezclando con virtuosismo la energía de la new wave y el punk con el pulso sincopado del reggae y el jazz.",
-    "feeling": "Magnética, rítmica, fresca y sofisticada. Su sonido estilizado transmite una tensión contenida y elegancia bailable.",
-    "hook": "La voz inconfundible de Sting, la batería polirrítmica de Stewart Copeland y los acordes suspendidos de Andy Summers.",
-    "notFor": "Quienes busquen el rock pesado y denso de guitarras saturadas de los setenta.",
+    "plot": "The Police (Londres, Reino Unido), icono de New wave, Post-punk, Reggae rock desde 1977.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Londres, Reino Unido, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de New wave / Post-punk.",
     "similar": [
-      "Sting",
-      "U2",
-      "Talking Heads",
-      "The Clash"
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
     ],
-    "context": "Una de las bandas más exitosas e innovadoras del cambio de década de los 70 a los 80, con cinco discos perfectos."
+    "context": "Creada en 1977, una referencia indispensable obra de Londres, Reino Unido dentro de su disciplina."
   },
   "axes": {
-    "energia": 4,
-    "valencia": 3,
-    "bailable": 4,
-    "organico": 4,
-    "intensidad": 3,
-    "fondo": 2,
-    "complejidad": 4
+    "energia": 5,
+    "valencia": 4,
+    "bailable": 5,
+    "organico": 5,
+    "intensidad": 5,
+    "fondo": 1,
+    "complejidad": 2
   },
   "themes": [
     "rock_clasico",
     "pop",
-    "reggae",
-    "letras_poeticas"
+    "indie_rock",
+    "punk"
   ],
   "moments": [
-    "viaje_coche",
-    "escucha_atenta",
-    "para_cantar",
-    "atardecer"
+    "de_fondo"
   ],
-  "oneLiner": "Fusión magistral de new wave, reggae y jazz con la maestría melódica de Sting.",
+  "oneLiner": "The Police: destacada artist (1977) obra de Londres, Reino Unido.",
   "confidence": "alta",
   "src": "llm-agent"
 }

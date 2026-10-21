@@ -1,48 +1,44 @@
 {
   "id": "series:the-last-of-us-2023",
-  "title": "The Last of Us",
   "experience": {
-    "plot": "Veinte años después de que una infección fúngica arrase la civilización, un endurecido contrabandista debe escoltar a una adolescente inmune a través de unos Estados Unidos postapocalípticos. En el camino forjarán un vínculo paternofilial indestructible.",
-    "feeling": "Dolorosa, tensa, íntima y hermosa en mitad de la desolación. Conmueve hasta las lágrimas con el renacer del afecto en un mundo en ruinas.",
-    "hook": "La extraordinaria química entre Pedro Pascal y Bella Ramsey y una fidelidad reverencial pero enriquecida al videojuego original.",
-    "notFor": "Espectadores asustadizos ante zombis fúngicos o con rechazo a los dramas de supervivencia cruenta.",
+    "plot": "The Last of Us es una serie de televisión estadounidense de drama postapocalíptica creado por Craig Mazin y Neil Druckmann para HBO. Basada en el videojuego de 2013 del mismo nombre desarrollado por Naughty Dog, la serie se ambienta veinte años después de una ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Craig Mazin y Neil Druckmann, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Terror.",
     "similar": [
-      "The Walking Dead",
-      "Hijos de los hombres",
-      "La carretera",
-      "Estación Once"
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
     ],
-    "context": "La adaptación de videojuegos más premiada y celebrada de la historia de la televisión, producida por HBO."
+    "context": "Creada en 2023, una referencia indispensable obra de Craig Mazin y Neil Druckmann dentro de su disciplina."
   },
   "axes": {
-    "tono": 4,
-    "ritmo": 3,
+    "tono": 5,
+    "ritmo": 2,
     "emocion": 5,
-    "exigencia": 3,
-    "humor": 2,
+    "exigencia": 1,
+    "humor": 1,
     "tension": 5,
-    "fantasia": 3,
+    "fantasia": 1,
     "violencia": 4,
-    "familiar": 2,
-    "escala": 4,
-    "reconfort": 2,
-    "enganche": 5,
-    "formato": 5
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 1,
+    "enganche": 4,
+    "formato": 2
   },
   "themes": [
-    "apocalipsis",
-    "supervivencia",
-    "familia",
-    "duelo",
-    "monstruos_y_terror"
+    "adolescencia",
+    "monstruos_y_terror",
+    "amistad"
   ],
   "moments": [
     "maraton",
     "enganche",
-    "solo",
-    "confort"
+    "pasar_miedo"
   ],
-  "oneLiner": "Dramática, desgarradora y humana travesía sobre el amor y el duelo en el fin del mundo.",
+  "oneLiner": "The Last of Us: destacada series (2023) obra de Craig Mazin y Neil Druckmann.",
   "confidence": "alta",
   "src": "llm-agent"
 }

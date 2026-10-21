@@ -1,44 +1,39 @@
 {
   "id": "book:juego-de-tronos-1996",
-  "title": "Juego de tronos",
   "experience": {
-    "plot": "Lord Eddard Stark acepta el cargo de Mano del Rey en Desembarco del Rey para investigar la muerte de su predecesor, viéndose atrapado en un nido de víboras políticas. Mientras, en el remoto Muro, su hijo bastardo vigila una amenaza olvidada.",
-    "feeling": "Implacable, adictiva, sombría y de una crudeza descarnada. No da tregua al lector al desmantelar sin miramientos los tópicos de la fantasía.",
-    "hook": "La impecable polifonía de capítulos en primera persona (POV), la astucia de los complots políticos y el realismo medieval sin concesiones.",
-    "notFor": "Lectores sensibles a la violencia cruda, incesto o la muerte de personajes principales.",
+    "plot": "Primer volumen de Canción de hielo y fuego: intrigas por el trono de Poniente y un invierno que se acerca.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de George R. R. Martin, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Aventura.",
     "similar": [
-      "Choque de reyes",
-      "Los pilares de la Tierra",
-      "La primera ley",
-      "Dune"
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
     ],
-    "context": "Primer tomo de la saga Canción de hielo y fuego de George R.R. Martin que revolucionó la literatura fantástica a finales de los 90."
+    "context": "Creada en 1996, una referencia indispensable obra de George R. R. Martin dentro de su disciplina."
   },
   "axes": {
-    "tono": 5,
-    "ritmo": 4,
-    "emocion": 5,
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 2,
     "densidad": 4,
-    "humor": 2,
-    "tension": 5,
-    "fantasia": 3,
+    "humor": 1,
+    "tension": 1,
+    "fantasia": 5,
     "escala": 5,
-    "ideas": 4,
-    "reconfort": 2
+    "ideas": 2,
+    "reconfort": 5
   },
   "themes": [
-    "fantasia_epica",
-    "politica",
-    "guerra",
-    "familia",
-    "crimen"
+    "aventura",
+    "sociedad",
+    "identidad"
   ],
   "moments": [
-    "absorbente",
-    "concentracion",
-    "club_de_lectura"
+    "absorbente"
   ],
-  "oneLiner": "Fantasía política descarnada y adictiva donde quien juega a gobernar o vence o muere.",
+  "oneLiner": "Juego de tronos: destacada book (1996) obra de George R. R. Martin.",
   "confidence": "alta",
   "src": "llm-agent"
 }

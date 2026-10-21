@@ -23,6 +23,7 @@ const SEED_FILE = join(ROOT, 'src', 'data', 'seed.json')
 const ENGINE_DIR = join(ROOT, 'src', 'data', 'engine')
 const TEST_USERS_FILE = join(here, '..', 'cache', 'eval', 'test-users.jsonl')
 const BASELINE_MD = join(ROOT, '..', 'docs', 'EVAL_BRAIN_BASELINE.md')
+const HISTORICO_MD = join(here, '..', 'cache', 'eval', 'historico.md')
 
 function dot(a, b) {
   let s = 0
@@ -249,6 +250,17 @@ ${reportRows.map((r) => `| **${r.platform}** | ${r.count} | ${r.h10Pct} | ${r.h2
 
   writeFileSync(BASELINE_MD, mdContent, 'utf8')
   console.log(`\n✓ Línea base guardada en docs/EVAL_BRAIN_BASELINE.md`)
+
+  // Añadir al histórico cronológico (MOTOR §2c.6 / T4.2)
+  const historyEntry = `\n## Evaluación ${new Date().toISOString().slice(0, 19).replace('T', ' ')} (v: m1.1)
+${reportRows.map((r) => `- **${r.platform}**: Hit@10=${r.h10Pct}, Hit@20=${r.h20Pct}, NDCG@20=${r.meanNdcg}, Diversidad=${r.meanDiv}, Serendipia=${r.meanSurprise}`).join('\n')}
+`
+  if (!existsSync(HISTORICO_MD)) {
+    writeFileSync(HISTORICO_MD, '# Histórico de Evaluaciones del Cerebro (MOTOR §2c.6)\n' + historyEntry, 'utf8')
+  } else {
+    writeFileSync(HISTORICO_MD, readFileSync(HISTORICO_MD, 'utf8') + historyEntry, 'utf8')
+  }
+  console.log(`✓ Entrada añadida a ${HISTORICO_MD}`)
 }
 
 main().catch((err) => {

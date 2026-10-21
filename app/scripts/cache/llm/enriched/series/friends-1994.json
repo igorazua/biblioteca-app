@@ -1,18 +1,17 @@
 {
   "id": "series:friends-1994",
-  "title": "Friends",
   "experience": {
-    "plot": "Seis amigos veinteañeros conviven, trabajan y buscan el amor en la ciudad de Manhattan mientras comparten cafés diarios en el Central Perk. A lo largo de una década, sus vidas sentimentales y laborales evolucionan sin romper su unión.",
-    "feeling": "Acogedora, entrañable, ligera y desternillante. Funciona como un auténtico refugio emocional y un bálsamo reconfortante.",
-    "hook": "La sincronía cómica perfecta entre los seis actores, el romance intermitente de Ross y Rachel y gags que nunca caducan.",
-    "notFor": "Quienes busquen humor negro transgresor, formatos arriesgados o historias con carga dramática seria.",
+    "plot": "Seis amigos treintañeros comparten risas, amores y cafés en el Nueva York de los noventa.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de David Crane y Marta Kauffman, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Romance.",
     "similar": [
-      "Cómo conocí a vuestra madre",
-      "Seinfeld",
-      "The Big Bang Theory",
-      "New Girl"
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
     ],
-    "context": "La telecomedia de mayor impacto e identificación generacional de la historia, emitida durante 10 temporadas (1994-2004)."
+    "context": "Creada en 1994, una referencia indispensable obra de David Crane y Marta Kauffman dentro de su disciplina."
   },
   "axes": {
     "tono": 1,
@@ -23,25 +22,22 @@
     "tension": 1,
     "fantasia": 1,
     "violencia": 1,
-    "familiar": 5,
-    "escala": 1,
+    "familiar": 4,
+    "escala": 2,
     "reconfort": 5,
     "enganche": 4,
-    "formato": 2
+    "formato": 4
   },
   "themes": [
     "amistad",
-    "amor",
     "sitcom_cotidiana",
     "familia"
   ],
   "moments": [
-    "confort",
     "reir",
-    "desconectar",
-    "para_repetir"
+    "capitulo_cena"
   ],
-  "oneLiner": "El refugio televisivo por excelencia: seis amigos de Manhattan que ya son familia.",
+  "oneLiner": "Friends: destacada series (1994) obra de David Crane y Marta Kauffman.",
   "confidence": "alta",
   "src": "llm-agent"
 }

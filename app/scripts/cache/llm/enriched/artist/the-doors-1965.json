@@ -1,40 +1,38 @@
 {
   "id": "artist:the-doors-1965",
-  "title": "The Doors",
   "experience": {
-    "plot": "Formación angelina liderada por el poeta Jim Morrison que combinó el blues rock con la poesía simbolista, el misticismo chamánico y el hipnótico teclado de Ray Manzarek.",
-    "feeling": "Oscura, sensual, hipnótica y chamánica. Te arrastra a un trance nocturno entre el delirio y la lucidez poética.",
-    "hook": "El carisma oscuro y la voz barítona de Morrison y el bajo inexistente suplido por el teclado psicodélico de Manzarek.",
-    "notFor": "Oyentes que busquen optimismo radiante o estructuras convencionales de música pop complaciente.",
+    "plot": "The Doors (Los Ángeles, EE. UU.), icono de Rock psicodélico, Blues rock desde 1965.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Los Ángeles, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Rock psicodélico / Blues rock.",
     "similar": [
-      "The Velvet Underground",
-      "Jimi Hendrix",
-      "Jefferson Airplane",
-      "Patti Smith"
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
     ],
-    "context": "Banda icónica de la contracultura de finales de los sesenta en California, leyenda eterna del rock maldito."
+    "context": "Creada en 1965, una referencia indispensable obra de Los Ángeles, EE. UU. dentro de su disciplina."
   },
   "axes": {
-    "energia": 3,
-    "valencia": 2,
-    "bailable": 2,
-    "organico": 4,
-    "intensidad": 4,
+    "energia": 5,
+    "valencia": 4,
+    "bailable": 5,
+    "organico": 5,
+    "intensidad": 5,
     "fondo": 1,
-    "complejidad": 4
+    "complejidad": 2
   },
   "themes": [
     "rock_clasico",
-    "psicodelia",
+    "pop",
     "blues",
-    "letras_poeticas"
+    "metal",
+    "punk"
   ],
   "moments": [
-    "escucha_atenta",
-    "melancolia",
-    "relax"
+    "de_fondo"
   ],
-  "oneLiner": "Poesía chamánica, misterio nocturno y psicodelia oscura desde California.",
+  "oneLiner": "The Doors: destacada artist (1965) obra de Los Ángeles, EE. UU..",
   "confidence": "alta",
   "src": "llm-agent"
 }

@@ -1,47 +1,43 @@
 {
   "id": "series:the-crown-2016",
-  "title": "The Crown",
   "experience": {
-    "plot": "Crónica de la vida de la reina Isabel II de Inglaterra desde su boda en 1947 hasta el siglo XXI, desvelando las intrigas políticas, los sacrificios personales y los escándalos familiares que moldearon la monarquía británica contemporánea.",
-    "feeling": "Regia, majestuosa, contenida y melancólica. Retrata con enorme sutileza el peso aplastante del deber sobre la propia felicidad.",
-    "hook": "El fastuoso vestuario y diseño de producción británico, cambios de reparto estelares cada dos temporadas y rigor dramático.",
-    "notFor": "Quien busque acción acelerada o no sienta ningún interés por la política británica y la realeza europea.",
+    "plot": "The Crown es una serie de televisión estadounidense/británica para emisión en streaming de drama histórico acerca del reinado de la reina Isabel II, creada y escrita principalmente por Peter Morgan, y producida por Left Bank Pictures y Sony Pictures Television",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Peter Morgan, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Histórica.",
     "similar": [
-      "Downton Abbey",
-      "La favorita",
-      "El discurso del rey",
-      "Mad Men"
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
     ],
-    "context": "Superproducción insignia de Netflix y una de las series históricas más premiadas de los últimos años."
+    "context": "Creada en 2016, una referencia indispensable obra de Peter Morgan dentro de su disciplina."
   },
   "axes": {
-    "tono": 3,
+    "tono": 4,
     "ritmo": 2,
-    "emocion": 4,
-    "exigencia": 3,
-    "humor": 2,
-    "tension": 2,
+    "emocion": 5,
+    "exigencia": 1,
+    "humor": 1,
+    "tension": 1,
     "fantasia": 1,
     "violencia": 1,
-    "familiar": 3,
-    "escala": 4,
-    "reconfort": 4,
-    "enganche": 3,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 1,
+    "enganche": 4,
     "formato": 4
   },
   "themes": [
-    "realeza",
-    "epoca_historica",
-    "politica_y_poder",
-    "familia"
+    "amistad",
+    "familia",
+    "ambicion"
   ],
   "moments": [
-    "pensar",
-    "capitulo_cena",
-    "confort",
-    "solo"
+    "maraton",
+    "enganche"
   ],
-  "oneLiner": "Fascinante y aristocrática mirada al deber institucional y las grietas de la corona.",
+  "oneLiner": "The Crown: destacada series (2016) obra de Peter Morgan.",
   "confidence": "alta",
   "src": "llm-agent"
 }

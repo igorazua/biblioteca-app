@@ -1,40 +1,39 @@
 {
   "id": "boardgame:through-the-ages-a-new-story-of-civilization-2015",
-  "title": "Through the Ages: A New Story of Civilization",
   "experience": {
-    "plot": "Guía a tu civilización desde la Antigüedad hasta la Era Moderna. Desarrolla tecnologías, construye maravillas, elige a líderes históricos y gestiona la cultura y el ejército para dejar una huella imborrable en la historia.",
-    "feeling": "Monumental, exigente, cerebral y profundamente épica. Ver florecer a tu civilización frente a los rivales es una experiencia inolvidable.",
-    "hook": "El sistema de draft de cartas en una hilera móvil y la tensión de no descuidar jamás la fuerza militar.",
-    "notFor": "Partidas improvisadas o jugadores que odien la contabilidad continua de recursos y población.",
+    "plot": "Through the Ages: A New Story of Civilization es una reconocida boardgame que explora temáticas de Cartas, Civilización, Económico. Destaca por su personalidad propia y su conexión directa con el público.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Vlaada Chvátil, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Civilización.",
     "similar": [
-      "Civilization",
-      "Nations",
-      "Terraforming Mars",
-      "7 Wonders"
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
     ],
-    "context": "Cima del diseño de civilizaciones en cartas creada por el célebre autor checo Vlaada Chvátil."
+    "context": "Creada en 2015, una referencia indispensable obra de Vlaada Chvátil dentro de su disciplina."
   },
   "axes": {
-    "peso": 5,
-    "interaccion": 4,
+    "peso": 4,
+    "interaccion": 3,
     "azar": 1,
-    "confrontacion": 4,
+    "confrontacion": 1,
     "cooperacion": 1,
-    "tema": 5,
+    "tema": 2,
     "risas": 1,
     "familiar": 1
   },
   "themes": [
     "imperios_y_civilizaciones",
+    "ciencia_ficcion_espacial",
+    "naturaleza_y_animales",
     "draft_de_cartas",
-    "gestion_de_recursos"
+    "palabras_y_asociacion"
   ],
   "moments": [
-    "estrategia_dura",
-    "jugones",
-    "sesion_tarde"
+    "jugones"
   ],
-  "oneLiner": "El juego de civilizaciones definitivo: desde la rueda hasta el viaje espacial.",
-  "confidence": "alta",
+  "oneLiner": "Through the Ages: A New Story of Civilization (2015): notable e inspiradora creación.",
+  "confidence": "media",
   "src": "llm-agent"
 }

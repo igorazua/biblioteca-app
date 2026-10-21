@@ -1,39 +1,37 @@
 {
   "id": "artist:deep-purple-1968",
-  "title": "Deep Purple",
   "experience": {
-    "plot": "Pioneros británicos del hard rock y heavy metal clásico que unieron la contundencia de la guitarra eléctrica con el órgano Hammond distorsionado y elementos clásicos.",
-    "feeling": "Enérgica, virtuosa, potente y vibrante. Desprende una maestría instrumental que desafía al oyente a seguir su ritmo trepidante.",
-    "hook": "El riff más conocido del mundo en Smoke on the Water y los vertiginosos duelos entre la guitarra de Ritchie Blackmore y el teclado de Jon Lord.",
-    "notFor": "Aficionados al pop acústico suave o a producciones minimalistas contemporáneas.",
+    "plot": "Deep Purple (Hertford, Reino Unido), icono de Hard rock, Heavy metal desde 1968.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Hertford, Reino Unido, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Hard rock / Heavy metal.",
     "similar": [
-      "Black Sabbath",
-      "Led Zeppelin",
-      "Rainbow",
-      "Uriah Heep"
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
     ],
-    "context": "Parte de la 'Santísima Trinidad' del hard rock británico de los años 70 junto a Zeppelin y Sabbath."
+    "context": "Creada en 1968, una referencia indispensable obra de Hertford, Reino Unido dentro de su disciplina."
   },
   "axes": {
     "energia": 5,
-    "valencia": 3,
-    "bailable": 2,
+    "valencia": 4,
+    "bailable": 5,
     "organico": 5,
-    "intensidad": 4,
-    "fondo": 2,
-    "complejidad": 4
+    "intensidad": 5,
+    "fondo": 1,
+    "complejidad": 2
   },
   "themes": [
     "rock_clasico",
-    "metal",
-    "himnos_estadio"
+    "pop",
+    "blues",
+    "metal"
   ],
   "moments": [
-    "viaje_coche",
-    "entrenar",
-    "escucha_atenta"
+    "de_fondo"
   ],
-  "oneLiner": "Duelos virtuosos de guitarra y órgano Hammond en la forja dorada del hard rock.",
+  "oneLiner": "Deep Purple: destacada artist (1968) obra de Hertford, Reino Unido.",
   "confidence": "alta",
   "src": "llm-agent"
 }

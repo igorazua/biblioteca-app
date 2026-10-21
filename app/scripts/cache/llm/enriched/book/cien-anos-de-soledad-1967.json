@@ -1,45 +1,40 @@
 {
   "id": "book:cien-anos-de-soledad-1967",
-  "title": "Cien años de soledad",
   "experience": {
-    "plot": "Crónica épica de siete generaciones de la familia Buendía en el pueblo caribeño de Macondo, fundado en mitad de la selva. Sus destinos se entrelazan entre prodigios fantásticos, guerras civiles y una irremediable soledad.",
-    "feeling": "Torrencial, poética, envolvente y agridulce. Deja la sensación de haber recorrido un siglo entero en un suspiro.",
-    "hook": "El realismo mágico insuperable de García Márquez, donde lo insólito es cotidiano y el lenguaje hipnotiza en cada página.",
-    "notFor": "Lectores que busquen tramas lineales sencillas, poca densidad de personajes o realismo estricto.",
+    "plot": "Siete generaciones de los Buendía en Macondo, entre lo cotidiano y lo prodigioso.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Gabriel García Márquez, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Realismo mágico.",
     "similar": [
-      "Pedro Páramo",
-      "La casa de los espíritus",
-      "El amor en los tiempos del cólera",
-      "Ficciones"
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito",
+      "1984"
     ],
-    "context": "Obra maestra del boom latinoamericano y cumbre del Premio Nobel Gabriel García Márquez (1967)."
+    "context": "Creada en 1967, una referencia indispensable obra de Gabriel García Márquez dentro de su disciplina."
   },
   "axes": {
-    "tono": 3,
-    "ritmo": 3,
-    "emocion": 5,
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
     "densidad": 4,
-    "humor": 3,
-    "tension": 2,
-    "fantasia": 4,
-    "escala": 5,
-    "ideas": 5,
-    "reconfort": 3
+    "humor": 1,
+    "tension": 1,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 2,
+    "reconfort": 5
   },
   "themes": [
-    "familia",
-    "memoria",
+    "duelo",
+    "amor",
     "soledad",
-    "realismo_magico",
-    "historia"
+    "fantasia_epica"
   ],
   "moments": [
-    "emocionarse",
-    "absorbente",
-    "para_subrayar",
-    "pausado"
+    "absorbente"
   ],
-  "oneLiner": "Mítica, torrencial y fascinante epopeya sobre el destino y la memoria en Macondo.",
+  "oneLiner": "Cien años de soledad: destacada book (1967) obra de Gabriel García Márquez.",
   "confidence": "alta",
   "src": "llm-agent"
 }

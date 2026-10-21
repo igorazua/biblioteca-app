@@ -1,45 +1,40 @@
 {
   "id": "book:don-quijote-de-la-mancha-1605",
-  "title": "Don Quijote de la Mancha",
   "experience": {
-    "plot": "Un hidalgo manchego pierde el juicio de tanto leer novelas de caballerías y decide armarse caballero andante para deshacer agravios por el mundo. Acompañado de su leal escudero Sancho Panza, protagoniza aventuras cómicas y desatinadas.",
-    "feeling": "Sabia, desternillante, conmovedora y profundamente humanista. Combina la carcajada ante la locura con una ternura infinita hacia los ideales.",
-    "hook": "La entrañable dualidad entre idealismo y realismo en la pareja protagonista y un juego metaliterario asombrosamente moderno.",
-    "notFor": "Lectores impacientes ante el castellano del Siglo de Oro o las novelas extensas por entregas episódicas.",
+    "plot": "Un hidalgo enloquecido por los libros de caballerías sale a deshacer entuertos con su fiel Sancho.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Miguel de Cervantes, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Clásico.",
     "similar": [
-      "Gargantúa y Pantagruel",
-      "Tristram Shandy",
-      "Los papeles del club Pickwick",
-      "El idiota"
+      "Cien años de soledad",
+      "La sombra del viento",
+      "El principito",
+      "1984"
     ],
-    "context": "Considerada la primera novela moderna y cumbre indiscutible de la literatura en lengua española por Miguel de Cervantes."
+    "context": "Creada en 1605, una referencia indispensable obra de Miguel de Cervantes dentro de su disciplina."
   },
   "axes": {
     "tono": 2,
-    "ritmo": 3,
-    "emocion": 4,
+    "ritmo": 2,
+    "emocion": 2,
     "densidad": 4,
-    "humor": 5,
-    "tension": 2,
-    "fantasia": 2,
-    "escala": 4,
-    "ideas": 5,
+    "humor": 1,
+    "tension": 1,
+    "fantasia": 1,
+    "escala": 5,
+    "ideas": 2,
     "reconfort": 5
   },
   "themes": [
-    "locura",
-    "filosofia",
-    "humor_y_satira",
-    "metaficcion",
-    "aventura"
+    "sociedad",
+    "identidad",
+    "historia"
   ],
   "moments": [
-    "aprender",
-    "desconectar",
-    "para_subrayar",
-    "emocionarse"
+    "absorbente",
+    "para_subrayar"
   ],
-  "oneLiner": "La mayor novela de todos los tiempos: risas, quijotadas y un canto al idealismo puro.",
+  "oneLiner": "Don Quijote de la Mancha: destacada book (1605) obra de Miguel de Cervantes.",
   "confidence": "alta",
   "src": "llm-agent"
 }

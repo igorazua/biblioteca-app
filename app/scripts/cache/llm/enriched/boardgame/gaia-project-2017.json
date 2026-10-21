@@ -1,41 +1,38 @@
 {
   "id": "boardgame:gaia-project-2017",
-  "title": "Gaia Project",
   "experience": {
-    "plot": "Catorce civilizaciones espaciales asimétricas colonizan, terraforman y construyen estructuras en una galaxia modular. Cada facción altera los planetas para adaptarlos a su medio biológico e investiga nuevas tecnologías científicas.",
-    "feeling": "Matemática, pura, austera y extraordinariamente profunda. Cero azar: cada victoria es fruto exclusivo de la planificación.",
-    "hook": "La perfecta reinterpretación espacial de Terra Mystica, con un tablero modular variable y un árbol tecnológico adictivo.",
-    "notFor": "Quienes busquen azar emocionante, combates directos o temáticas narrativas ligeras.",
+    "plot": "Expand, research, upgrade, and settle the galaxy with one of 14 factions. Gaia Project is the follow-up to the critically acclaimed Terra Mystica! 14 different factions live on 7 different kinds of planets, and each faction can only thrive on their specific ty",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Helge Ostertag, Jens Drögemüller, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Civilización / Económico.",
     "similar": [
-      "Terra Mystica",
-      "Terraforming Mars",
       "Brass: Birmingham",
-      "Clans of Caledonia"
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
     ],
-    "context": "Una de las obras maestras absolutas del eurogame duro y determinista de la última década."
+    "context": "Creada en 2017, una referencia indispensable obra de Helge Ostertag, Jens Drögemüller dentro de su disciplina."
   },
   "axes": {
-    "peso": 5,
-    "interaccion": 3,
+    "peso": 3,
+    "interaccion": 2,
     "azar": 1,
-    "confrontacion": 2,
+    "confrontacion": 1,
     "cooperacion": 1,
-    "tema": 3,
+    "tema": 2,
     "risas": 1,
-    "familiar": 1
+    "familiar": 3
   },
   "themes": [
-    "ciencia_ficcion_espacial",
     "imperios_y_civilizaciones",
-    "gestion_de_recursos",
-    "control_de_areas"
+    "ciencia_ficcion_espacial",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
   ],
   "moments": [
-    "estrategia_dura",
-    "jugones",
-    "sesion_tarde"
+    "sobremesa"
   ],
-  "oneLiner": "Estrategia galáctica perfecta y sin azar para los amantes de la optimización pura.",
+  "oneLiner": "Gaia Project: destacada boardgame (2017) obra de Helge Ostertag, Jens Drögemüller.",
   "confidence": "alta",
   "src": "llm-agent"
 }

@@ -1,45 +1,39 @@
 {
   "id": "book:el-principito-1943",
-  "title": "El principito",
   "experience": {
-    "plot": "Un aviador perdido en el desierto del Sahara se encuentra con un pequeño príncipe venido de un diminuto asteroide. A través de sus relatos sobre su flor y sus viajes por otros mundos, el niño desvela verdades esenciales sobre el alma humana.",
-    "feeling": "Poética, delicada, melancólica y de una sencillez luminosa. Llega directo al corazón como un recordatorio de lo que realmente importa.",
-    "hook": "Aforismos eternos como 'lo esencial es invisible a los ojos' y las acuarelas originales del propio autor que enternecen a cualquier edad.",
-    "notFor": "Lectores cínicos que desestimen la literatura de tono infantil o las fábulas filosóficas alegóricas.",
+    "plot": "Un aviador varado en el desierto conoce a un pequeño príncipe que viene de otro planeta.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Antoine de Saint-Exupéry, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fábula / Clásico.",
     "similar": [
-      "Alicia en el país de las maravillas",
-      "Juan Salvador Gaviota",
-      "Momo",
-      "El profeta"
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "1984"
     ],
-    "context": "La obra literaria francesa más leída y traducida del planeta, escrita por Antoine de Saint-Exupéry durante la guerra."
+    "context": "Creada en 1943, una referencia indispensable obra de Antoine de Saint-Exupéry dentro de su disciplina."
   },
   "axes": {
-    "tono": 1,
-    "ritmo": 3,
-    "emocion": 5,
-    "densidad": 1,
-    "humor": 3,
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "densidad": 2,
+    "humor": 1,
     "tension": 1,
-    "fantasia": 4,
+    "fantasia": 1,
     "escala": 2,
-    "ideas": 5,
+    "ideas": 2,
     "reconfort": 5
   },
   "themes": [
-    "infancia",
-    "amor",
-    "filosofia",
-    "soledad",
-    "viaje_interior"
+    "sociedad",
+    "identidad",
+    "historia"
   ],
   "moments": [
-    "emocionarse",
-    "antes_de_dormir",
-    "para_subrayar",
-    "pausado"
+    "para_subrayar"
   ],
-  "oneLiner": "Fábula universal y poética sobre ver con el corazón aquello que es invisible a los ojos.",
+  "oneLiner": "El principito: destacada book (1943) obra de Antoine de Saint-Exupéry.",
   "confidence": "alta",
   "src": "llm-agent"
 }

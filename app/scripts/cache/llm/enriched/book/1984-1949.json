@@ -1,46 +1,39 @@
 {
   "id": "book:1984-1949",
-  "title": "1984",
   "experience": {
-    "plot": "En un Londres futurista gobernado por el Partido y la figura omnipresente del Gran Hermano, Winston Smith trabaja reescribiendo la historia en el Ministerio de la Verdad. En secreto, comete el crimen de pensar por su cuenta y busca el amor prohibido.",
-    "feeling": "Opresiva, angustiosa, asfixiante y estremecedoramente lúcida. Instala una paranoia constante ante la vigilancia y la pérdida de la verdad.",
-    "hook": "Conceptos sociopolíticos imborrables como la 'neolengua', la 'policía del pensamiento' y la habitación 101.",
-    "notFor": "Quienes busquen escapismo reconfortante o no toleren finales desoladores sin atisbo de victoria heroica.",
+    "plot": "Winston Smith vive bajo la vigilancia total del Gran Hermano y se atreve a pensar por su cuenta.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de George Orwell, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Distopía / Clásico.",
     "similar": [
-      "Un mundo feliz",
-      "Fahrenheit 451",
-      "Rebelión en la granja",
-      "El cuento de la criada"
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
     ],
-    "context": "La distopía política más influyente de la era moderna, escrita por George Orwell al término de la Segunda Guerra Mundial."
+    "context": "Creada en 1949, una referencia indispensable obra de George Orwell dentro de su disciplina."
   },
   "axes": {
-    "tono": 5,
+    "tono": 4,
     "ritmo": 4,
-    "emocion": 5,
-    "densidad": 3,
+    "emocion": 2,
+    "densidad": 2,
     "humor": 1,
-    "tension": 5,
-    "fantasia": 2,
-    "escala": 3,
-    "ideas": 5,
-    "reconfort": 1
+    "tension": 1,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 2,
+    "reconfort": 2
   },
   "themes": [
-    "distopia",
-    "opresion",
-    "libertad",
-    "politica",
-    "lenguaje",
-    "sociedad"
+    "familia",
+    "sociedad",
+    "distopia"
   ],
   "moments": [
-    "absorbente",
-    "para_subrayar",
-    "concentracion",
-    "club_de_lectura"
+    "para_subrayar"
   ],
-  "oneLiner": "La advertencia política más lúcida y aterradora jamás escrita contra el totalitarismo.",
+  "oneLiner": "1984: destacada book (1949) obra de George Orwell.",
   "confidence": "alta",
   "src": "llm-agent"
 }

@@ -1,41 +1,37 @@
 {
   "id": "boardgame:twilight-imperium-fourth-edition-2017",
-  "title": "Twilight Imperium: Fourth Edition",
   "experience": {
-    "plot": "Diecisiete civilizaciones alienígenas únicas compiten por llenar el vacío de poder del extinto Imperio Lazax en el trono galáctico de Mecatol Rex. Mediante diplomacia, guerras estelares y comercio, buscan erigirse en los nuevos emperadores de la galaxia.",
-    "feeling": "Monstruosamente épica, operística, teatral y agotadoramente maravillosa. Una jornada completa de traiciones y alianzas interestelares.",
-    "hook": "La fase de agenda política donde se votan leyes galácticas en vivo, la asimetría total de las razas y batallas con cientos de miniaturas.",
-    "notFor": "Cualquiera que no pueda dedicar 6 a 10 horas seguidas a una sola partida con un grupo de cuatro a seis amigos.",
+    "plot": "Twilight Imperium (Fourth Edition) is a game of galactic conquest in which three to six players each take on the role of one of seventeen factions vying for galactic domination through military might, political maneuvering, and economic bargaining. Every facti",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Christian T. Petersen, Corey Konieczka, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Civilización / Económico.",
     "similar": [
-      "Eclipse",
-      "Star Wars: Rebellion",
-      "Nemesis",
-      "Terra Mystica"
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
     ],
-    "context": "La experiencia cósmica 4X definitiva en formato tablero, un clásico de culto insustituible publicado por Fantasy Flight Games."
+    "context": "Creada en 2017, una referencia indispensable obra de Christian T. Petersen, Corey Konieczka dentro de su disciplina."
   },
   "axes": {
     "peso": 5,
-    "interaccion": 5,
-    "azar": 3,
-    "confrontacion": 4,
+    "interaccion": 2,
+    "azar": 1,
+    "confrontacion": 1,
     "cooperacion": 1,
-    "tema": 5,
-    "risas": 3,
+    "tema": 2,
+    "risas": 1,
     "familiar": 1
   },
   "themes": [
-    "ciencia_ficcion_espacial",
     "imperios_y_civilizaciones",
-    "control_de_areas",
-    "comercio_y_rutas"
+    "exploracion_y_mapas",
+    "guerra_historica"
   ],
   "moments": [
-    "jugones",
-    "estrategia_dura",
-    "sesion_tarde"
+    "jugones"
   ],
-  "oneLiner": "La ópera espacial definitiva: 8 horas de diplomacia, guerras galácticas y pura épica.",
+  "oneLiner": "Twilight Imperium: Fourth Edition (2017): notable e inspiradora creación.",
   "confidence": "alta",
   "src": "llm-agent"
 }

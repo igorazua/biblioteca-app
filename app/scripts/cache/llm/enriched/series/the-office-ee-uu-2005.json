@@ -1,47 +1,43 @@
 {
   "id": "series:the-office-ee-uu-2005",
-  "title": "The Office (EE. UU.)",
   "experience": {
-    "plot": "En formato de falso documental, se muestra la rutina diaria de los peculiares empleados de una sucursal papelera en Pensilvania bajo el mando de Michael Scott, un jefe tan incompetente como desesperado por ser querido por su equipo.",
-    "feeling": "Divertida, a ratos de vergüenza ajena insoportable y profundamente entrañable. Deja una sensación de calor de hogar inigualable.",
-    "hook": "La inolvidable actuación de Steve Carell, las miradas a cámara y el romance más querido de la televisión entre Jim y Pam.",
-    "notFor": "Personas con baja tolerancia al 'cringe comedy' o que no soporten el estilo de falso documental con cámara en mano.",
+    "plot": "La vida cotidiana de los empleados de una papelera de Scranton, bajo un jefe insoportable y entrañable.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Greg Daniels, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
     "similar": [
-      "Parks and Recreation",
-      "Brooklyn Nine-Nine",
-      "Abbott Elementary",
-      "Community"
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
     ],
-    "context": "Adaptación del formato británico de Ricky Gervais que se convirtió en la serie más vista en streaming de la historia."
+    "context": "Creada en 2005, una referencia indispensable obra de Greg Daniels dentro de su disciplina."
   },
   "axes": {
     "tono": 1,
-    "ritmo": 3,
-    "emocion": 3,
+    "ritmo": 4,
+    "emocion": 2,
     "exigencia": 1,
     "humor": 5,
     "tension": 1,
     "fantasia": 1,
     "violencia": 1,
     "familiar": 4,
-    "escala": 1,
+    "escala": 2,
     "reconfort": 5,
     "enganche": 4,
-    "formato": 2
+    "formato": 4
   },
   "themes": [
     "sitcom_cotidiana",
     "amistad",
-    "amor",
-    "satira"
+    "familia"
   ],
   "moments": [
-    "confort",
     "reir",
-    "desconectar",
-    "para_repetir"
+    "capitulo_cena"
   ],
-  "oneLiner": "Vergüenza ajena hilarante y un corazón gigantesco en la oficina más famosa del mundo.",
+  "oneLiner": "The Office (EE. UU.): destacada series (2005) obra de Greg Daniels.",
   "confidence": "alta",
   "src": "llm-agent"
 }

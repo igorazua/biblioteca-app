@@ -1,44 +1,39 @@
 {
   "id": "book:el-codigo-da-vinci-2003",
-  "title": "El código Da Vinci",
   "experience": {
-    "plot": "El catedrático de simbología Robert Langdon es convocado al Museo del Louvre tras el asesinato del conservador, hallado cubierto de símbolos crípticos. Junto a una criptóloga francesa, emprende una vertiginosa huida descifrando enigmas ocultos en la historia cristiana.",
-    "feeling": "Frenética, adictiva, conspirativa y entretenidísima. Imposible de soltar gracias a capítulos cortísimos con giros en cada página.",
-    "hook": "La mezcla de misterios artísticos en obras de Da Vinci, sociedades secretas históricas y persecuciones a contra reloj.",
-    "notFor": "Lectores en busca de verosimilitud histórica rigurosa o de prosa literaria refinada.",
+    "plot": "Un simbólogo de Harvard descifra pistas ocultas en el arte para hallar un secreto milenario.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Dan Brown, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Thriller / Misterio.",
     "similar": [
-      "Ángeles y demonios",
-      "El nombre de la rosa",
-      "El ocho",
-      "La catedral del mar"
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
     ],
-    "context": "Uno de los mayores bestsellers mundiales del siglo XXI que desató debates globales y vendió más de 80 millones de copias."
+    "context": "Creada en 2003, una referencia indispensable obra de Dan Brown dentro de su disciplina."
   },
   "axes": {
-    "tono": 3,
-    "ritmo": 5,
+    "tono": 2,
+    "ritmo": 2,
     "emocion": 2,
-    "densidad": 2,
+    "densidad": 4,
     "humor": 1,
-    "tension": 4,
-    "fantasia": 2,
-    "escala": 3,
-    "ideas": 3,
-    "reconfort": 3
+    "tension": 5,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 2,
+    "reconfort": 5
   },
   "themes": [
     "misterio",
-    "crimen",
-    "historia",
-    "aventura",
-    "espiritualidad"
+    "sociedad",
+    "identidad"
   ],
   "moments": [
-    "absorbente",
-    "viaje",
-    "desconectar"
+    "absorbente"
   ],
-  "oneLiner": "Thriller vertiginoso de sociedades secretas y enigmas ocultos en la historia del arte.",
+  "oneLiner": "El código Da Vinci: destacada book (2003) obra de Dan Brown.",
   "confidence": "alta",
   "src": "llm-agent"
 }

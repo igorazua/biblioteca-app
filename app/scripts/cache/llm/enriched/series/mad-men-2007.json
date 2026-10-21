@@ -1,47 +1,43 @@
 {
   "id": "series:mad-men-2007",
-  "title": "Mad Men",
   "experience": {
-    "plot": "Ambientada en la avenida Madison de Nueva York en la década de 1960, sigue la vida del enigmático ejecutivo publicitario Don Draper. Entre humo de tabaco, copas de whisky y campañas brillantes, los personajes navegan los cambios sociales de la época.",
-    "feeling": "Melancólica, elegante, sofisticada y existencialmente punzante. Deja un anhelo nostálgico teñido de vacío interior.",
-    "hook": "El diseño de producción exquisito, la sutileza psicológica de Don y Peggy y los agudos comentarios sobre el sueño americano.",
-    "notFor": "Quienes busquen giros de trama rápidos o tramas guiadas por la acción externa en lugar del conflicto interior.",
+    "plot": "Don Draper y los publicistas de Madison Avenue en los años sesenta, entre éxito y secretos.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Matthew Weiner, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama.",
     "similar": [
-      "Los Soprano",
-      "Succession",
-      "The Crown",
-      "Halt and Catch Fire"
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
     ],
-    "context": "Ganadora de 4 premios Emmy consecutivos a Mejor Serie Dramática, icono de sofisticación narrativa de AMC."
+    "context": "Creada en 2007, una referencia indispensable obra de Matthew Weiner dentro de su disciplina."
   },
   "axes": {
-    "tono": 3,
+    "tono": 4,
     "ritmo": 2,
-    "emocion": 4,
-    "exigencia": 4,
-    "humor": 3,
-    "tension": 2,
+    "emocion": 5,
+    "exigencia": 1,
+    "humor": 1,
+    "tension": 1,
     "fantasia": 1,
     "violencia": 1,
     "familiar": 1,
     "escala": 2,
-    "reconfort": 3,
-    "enganche": 3,
+    "reconfort": 1,
+    "enganche": 4,
     "formato": 4
   },
   "themes": [
-    "identidad",
-    "ambicion",
-    "epoca_historica",
-    "negocios_y_corporaciones",
-    "amor"
+    "amistad",
+    "familia",
+    "ambicion"
   ],
   "moments": [
-    "pensar",
-    "solo",
-    "capitulo_cena"
+    "maraton",
+    "enganche"
   ],
-  "oneLiner": "Elegancia, humo y melancolía en la edad dorada de la publicidad neoyorquina.",
+  "oneLiner": "Mad Men: destacada series (2007) obra de Matthew Weiner.",
   "confidence": "alta",
   "src": "llm-agent"
 }

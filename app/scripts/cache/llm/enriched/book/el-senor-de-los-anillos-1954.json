@@ -1,45 +1,39 @@
 {
   "id": "book:el-senor-de-los-anillos-1954",
-  "title": "El Señor de los Anillos",
   "experience": {
-    "plot": "Frodo Bolsón debe cruzar tierras hostiles para arrojar el Anillo Único en las entrañas del Monte del Destino, el único lugar donde puede ser destruido. Al mismo tiempo, los pueblos libres de la Tierra Media libran su última batalla contra las tinieblas de Sauron.",
-    "feeling": "Colosal, mitológica, conmovedora y de una belleza poética inagotable. Produce una reverencia absoluta ante la escala de su mundo ficticio.",
-    "hook": "La riqueza lingüística y geográfica sin igual, el heroísmo de los humildes y una melancolía crepuscular por el fin de una era.",
-    "notFor": "Lectores impacientes con las descripciones paisajísticas minuciosas, canciones y genealogías extensas.",
+    "plot": "La gran epopeya de la Tierra Media en torno al Anillo Único y la caída de Sauron.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de J. R. R. Tolkien, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Aventura.",
     "similar": [
-      "El Silmarillion",
-      "Canción de hielo y fuego",
-      "El nombre del viento",
-      "La rueda del tiempo"
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
     ],
-    "context": "El pilar indiscutible sobre el que descansa toda la fantasía moderna, escrita por J.R.R. Tolkien a lo largo de doce años."
+    "context": "Creada en 1954, una referencia indispensable obra de J. R. R. Tolkien dentro de su disciplina."
   },
   "axes": {
-    "tono": 3,
-    "ritmo": 3,
-    "emocion": 5,
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 2,
     "densidad": 4,
-    "humor": 2,
-    "tension": 4,
+    "humor": 1,
+    "tension": 1,
     "fantasia": 5,
     "escala": 5,
-    "ideas": 5,
-    "reconfort": 4
+    "ideas": 2,
+    "reconfort": 5
   },
   "themes": [
-    "fantasia_epica",
-    "guerra",
-    "mitologia",
-    "memoria",
-    "viaje_interior"
+    "aventura",
+    "sociedad",
+    "identidad"
   ],
   "moments": [
-    "absorbente",
-    "concentracion",
-    "emocionarse",
-    "viaje"
+    "absorbente"
   ],
-  "oneLiner": "El monumento cumbre de la fantasía heroica: mito, lealtad y esperanza contra el abismo.",
+  "oneLiner": "El Señor de los Anillos: destacada book (1954) obra de J. R. R. Tolkien.",
   "confidence": "alta",
   "src": "llm-agent"
 }

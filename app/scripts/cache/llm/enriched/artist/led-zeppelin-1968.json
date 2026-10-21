@@ -1,41 +1,38 @@
 {
   "id": "artist:led-zeppelin-1968",
-  "title": "Led Zeppelin",
   "experience": {
-    "plot": "Cuarteto británico que cimentó las bases del hard rock y el heavy metal fusionando el blues más electrizante con la mitología celta y ritmos atronadores de batería.",
-    "feeling": "Poderosa, mística, volcánica y visceral. Transmite una fuerza física arrolladora y un virtuosismo musical sobrehumano.",
-    "hook": "La contundencia inimitable de John Bonham a la batería, los riffs legendarios de Jimmy Page y los aullidos de Robert Plant.",
-    "notFor": "Quienes busquen producciones pop delicadas o música tranquila para relajarse.",
+    "plot": "Led Zeppelin (Londres, Reino Unido), icono de Hard rock, Blues rock desde 1968.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Londres, Reino Unido, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Hard rock / Blues rock.",
     "similar": [
-      "Deep Purple",
-      "Black Sabbath",
-      "The Who",
-      "Jimi Hendrix"
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "The Rolling Stones"
     ],
-    "context": "La banda de rock más grande y arrolladora de los años 70, piedra de toque de toda la música pesada moderna."
+    "context": "Creada en 1968, una referencia indispensable obra de Londres, Reino Unido dentro de su disciplina."
   },
   "axes": {
     "energia": 5,
-    "valencia": 3,
-    "bailable": 2,
+    "valencia": 4,
+    "bailable": 5,
     "organico": 5,
     "intensidad": 5,
     "fondo": 1,
-    "complejidad": 4
+    "complejidad": 2
   },
   "themes": [
     "rock_clasico",
+    "pop",
+    "folk",
     "blues",
-    "himnos_estadio",
     "metal"
   ],
   "moments": [
-    "viaje_coche",
-    "entrenar",
-    "escucha_atenta",
-    "fiesta"
+    "de_fondo"
   ],
-  "oneLiner": "Poderío eléctrico, misticismo y la fuerza fundacional del rock más salvaje.",
+  "oneLiner": "Led Zeppelin: destacada artist (1968) obra de Londres, Reino Unido.",
   "confidence": "alta",
   "src": "llm-agent"
 }

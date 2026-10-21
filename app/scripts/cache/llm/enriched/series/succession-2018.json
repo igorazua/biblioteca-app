@@ -1,49 +1,44 @@
 {
   "id": "series:succession-2018",
-  "title": "Succession",
   "experience": {
-    "plot": "Los cuatro hijos del anciano magnate de los medios Logan Roy conspiran y se apuñalan por la espalda para heredar el control del imperio familiar. Cada reunión corporativa es una carnicería psicológica de lealtades cambiantes.",
-    "feeling": "Mordaz, adictiva, fastuosa y trágicamente patética. Es un placer culpable ver a multimillonarios desdichados destrozarse con frases viperinas.",
-    "hook": "Diálogos afilados como cuchillas, la inolvidable banda sonora de piano y cuerdas de Nicholas Britell y actuaciones colosales.",
-    "notFor": "Quien necesite personajes empáticos o se canse de las intrigas de oficinas y salones de juntas de lujo.",
+    "plot": "Succession es una serie de televisión de drama estadounidense creada por Jesse Armstrong, con Will Ferrell y Adam McKay como productores ejecutivos, que se emitió en HBO del 3 de junio de 2018 al 28 de mayo de 2023. La serie se centra en la familia Roy, los pr",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jesse Armstrong, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Comedia.",
     "similar": [
-      "Mad Men",
-      "Billions",
-      "El rey Lear",
-      "House of Cards"
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
     ],
-    "context": "Fenómeno de prestigio de HBO creado por Jesse Armstrong, ganadora recurrente de los premios Emmy a mejor drama."
+    "context": "Creada en 2018, una referencia indispensable obra de Jesse Armstrong dentro de su disciplina."
   },
   "axes": {
-    "tono": 4,
+    "tono": 1,
     "ritmo": 4,
-    "emocion": 4,
-    "exigencia": 4,
-    "humor": 4,
-    "tension": 4,
+    "emocion": 5,
+    "exigencia": 1,
+    "humor": 5,
+    "tension": 1,
     "fantasia": 1,
     "violencia": 1,
-    "familiar": 1,
-    "escala": 3,
-    "reconfort": 2,
-    "enganche": 5,
-    "formato": 5
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 4
   },
   "themes": [
-    "negocios_y_corporaciones",
     "familia",
-    "politica_y_poder",
-    "ambicion",
-    "traicion",
-    "satira"
+    "sitcom_cotidiana",
+    "amistad"
   ],
   "moments": [
-    "maraton",
-    "pensar",
-    "solo",
-    "enganche"
+    "reir",
+    "capitulo_cena",
+    "maraton"
   ],
-  "oneLiner": "Shakespeariana, venenosa y brillante lucha dinástica entre tiburones corporativos.",
+  "oneLiner": "Succession: destacada series (2018) obra de Jesse Armstrong.",
   "confidence": "alta",
   "src": "llm-agent"
 }

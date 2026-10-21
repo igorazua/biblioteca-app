@@ -1,39 +1,36 @@
 {
   "id": "artist:kiss-1973",
-  "title": "Kiss",
   "experience": {
-    "plot": "Banda neoyorquina de hard rock famosa por su maquillaje teatral de cómic, plataformas y espectáculos con fuego y sangre, convertida en un imperio del espectáculo.",
-    "feeling": "Festiva, grandilocuente, pirotécnica y desenfadada. Te traslada de inmediato a una fiesta masiva de rock de estadio.",
-    "hook": "Sus himnos coreables como Rock and Roll All Nite y una imaginería visual que cautivó a legiones de seguidores en todo el mundo.",
-    "notFor": "Críticos que exijan complejidad vanguardista o lirismo intimista y solemne.",
+    "plot": "Kiss (Nueva York, EE. UU.), icono de Hard rock, Glam rock desde 1973.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Nueva York, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Hard rock / Glam rock.",
     "similar": [
-      "Alice Cooper",
-      "Aerosmith",
-      "Def Leppard",
-      "Motley Crue"
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
     ],
-    "context": "Pioneros del marketing y del espectáculo en vivo en el rock estadounidense de los años 70."
+    "context": "Creada en 1973, una referencia indispensable obra de Nueva York, EE. UU. dentro de su disciplina."
   },
   "axes": {
     "energia": 5,
-    "valencia": 5,
-    "bailable": 4,
-    "organico": 4,
-    "intensidad": 4,
-    "fondo": 3,
-    "complejidad": 1
+    "valencia": 4,
+    "bailable": 5,
+    "organico": 5,
+    "intensidad": 5,
+    "fondo": 1,
+    "complejidad": 2
   },
   "themes": [
     "rock_clasico",
-    "himnos_estadio",
-    "pop"
+    "pop",
+    "metal"
   ],
   "moments": [
-    "fiesta",
-    "para_cantar",
-    "viaje_coche"
+    "de_fondo"
   ],
-  "oneLiner": "Pirotecnia, maquillaje y los himnos festivos más multitudinarios del rock.",
+  "oneLiner": "Kiss: destacada artist (1973) obra de Nueva York, EE. UU..",
   "confidence": "alta",
   "src": "llm-agent"
 }

@@ -1,46 +1,43 @@
 {
   "id": "series:seinfeld-1989",
-  "title": "Seinfeld",
   "experience": {
-    "plot": "Un cómico de monólogos y sus tres neuróticos y egoístas amigos navegan por los absurdos dilemas cotidianos de la vida en Nueva York. La serie se jacta célebremente de no tratar sobre 'nada' en particular.",
-    "feeling": "Cínica, hilarante, mordaz y veloz. Provoca carcajadas ante la mezquindad y las manías más inconfesables del ser humano.",
-    "hook": "Las tramas paralelas que colisionan de forma milimétrica al final de cada episodio y la total ausencia de lecciones morales.",
-    "notFor": "Espectadores que necesiten encariñarse con personajes bondadosos o busquen momentos melodramáticos.",
+    "plot": "La comedia «sobre nada» de un cómico neoyorquino y sus amigos neuróticos.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Larry David y Jerry Seinfeld, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
     "similar": [
-      "Curb Your Enthusiasm",
-      "Friends",
-      "Colgados en Filadelfia",
-      "Arrested Development"
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
     ],
-    "context": "La sitcom que revolucionó la comedia estadounidense en los 90, creada por Larry David y Jerry Seinfeld."
+    "context": "Creada en 1989, una referencia indispensable obra de Larry David y Jerry Seinfeld dentro de su disciplina."
   },
   "axes": {
-    "tono": 2,
+    "tono": 1,
     "ritmo": 4,
-    "emocion": 1,
-    "exigencia": 2,
+    "emocion": 2,
+    "exigencia": 1,
     "humor": 5,
     "tension": 1,
     "fantasia": 1,
     "violencia": 1,
-    "familiar": 3,
-    "escala": 1,
-    "reconfort": 4,
-    "enganche": 3,
-    "formato": 1
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 4
   },
   "themes": [
-    "sitcom_cotidiana",
     "amistad",
-    "satira"
+    "sitcom_cotidiana",
+    "familia"
   ],
   "moments": [
     "reir",
-    "desconectar",
-    "capitulo_cena",
-    "para_repetir"
+    "capitulo_cena"
   ],
-  "oneLiner": "Comedia de ingenio puro y neurosis desternillante sobre las miserias cotidianas.",
+  "oneLiner": "Seinfeld: destacada series (1989) obra de Larry David y Jerry Seinfeld.",
   "confidence": "alta",
   "src": "llm-agent"
 }

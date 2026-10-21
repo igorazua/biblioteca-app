@@ -1,41 +1,36 @@
 {
   "id": "artist:van-halen-1972",
-  "title": "Van Halen",
   "experience": {
-    "plot": "Liderada por el virtuoso Eddie Van Halen y el histriónico cantante David Lee Roth, la banda revolucionó la guitarra eléctrica en 1978 con el tapping y un hard rock festivo y soleado.",
-    "feeling": "Alegre, brillante, hiperbólica y de un virtuosismo deslumbrante. Transmite la calidez del verano californiano y la fiesta constante.",
-    "hook": "La técnica pirotécnica de guitarra de Eddie Van Halen en pistas como Eruption y el sonido de sintetizador en Jump.",
-    "notFor": "Oyentes que busquen atmósferas sombrías o letras poéticas de corte melancólico.",
+    "plot": "Van Halen (Pasadena, EE. UU.), icono de Hard rock, Heavy metal desde 1972.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Pasadena, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Hard rock / Heavy metal.",
     "similar": [
-      "Guns N' Roses",
-      "Aerosmith",
-      "Def Leppard",
-      "Bon Jovi"
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
     ],
-    "context": "Revolución absoluta de la técnica de guitarra en el rock y reyes del sonido californiano de los 80."
+    "context": "Creada en 1972, una referencia indispensable obra de Pasadena, EE. UU. dentro de su disciplina."
   },
   "axes": {
     "energia": 5,
-    "valencia": 5,
-    "bailable": 4,
-    "organico": 4,
-    "intensidad": 4,
-    "fondo": 2,
-    "complejidad": 4
+    "valencia": 4,
+    "bailable": 5,
+    "organico": 5,
+    "intensidad": 5,
+    "fondo": 1,
+    "complejidad": 2
   },
   "themes": [
     "rock_clasico",
-    "himnos_estadio",
-    "metal",
-    "sintetizadores"
+    "pop",
+    "metal"
   ],
   "moments": [
-    "fiesta",
-    "entrenar",
-    "viaje_coche",
-    "despertar"
+    "de_fondo"
   ],
-  "oneLiner": "Fiesta californiana y la técnica de guitarra más influyente y deslumbrante del rock.",
+  "oneLiner": "Van Halen: destacada artist (1972) obra de Pasadena, EE. UU..",
   "confidence": "alta",
   "src": "llm-agent"
 }

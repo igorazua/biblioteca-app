@@ -1,39 +1,38 @@
 {
   "id": "artist:black-sabbath-1968",
-  "title": "Black Sabbath",
   "experience": {
-    "plot": "Desde la deprimida ciudad industrial de Birmingham, cuatro jóvenes crearon un sonido oscuro y afinado en tonos graves que dio origen al heavy metal y el doom metal.",
-    "feeling": "Tenebrosa, pesada, hipnótica y opresiva. Los riffs monolíticos de Tony Iommi se sienten como un martillo de forja implacable.",
-    "hook": "La atmósfera de terror gótico, los riffs eternos de Iommi y la voz agónica y electrizante de Ozzy Osbourne.",
-    "notFor": "Oyentes sensibles a la distorsión pesada o que busquen melodías pop ligeras y despreocupadas.",
+    "plot": "Black Sabbath (Birmingham, Reino Unido), icono de Heavy metal, Doom metal desde 1968.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Birmingham, Reino Unido, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Heavy metal / Doom metal.",
     "similar": [
-      "Led Zeppelin",
-      "Deep Purple",
-      "Judas Priest",
-      "Iron Maiden"
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
     ],
-    "context": "Los padres fundadores indiscutibles del heavy metal con álbumes legendarios como Paranoid y Master of Reality."
+    "context": "Creada en 1968, una referencia indispensable obra de Birmingham, Reino Unido dentro de su disciplina."
   },
   "axes": {
-    "energia": 4,
-    "valencia": 1,
-    "bailable": 1,
+    "energia": 5,
+    "valencia": 4,
+    "bailable": 5,
     "organico": 5,
     "intensidad": 5,
     "fondo": 1,
-    "complejidad": 3
+    "complejidad": 5
   },
   "themes": [
-    "metal",
     "rock_clasico",
-    "letras_poeticas"
+    "pop",
+    "jazz",
+    "blues",
+    "metal"
   ],
   "moments": [
-    "entrenar",
-    "escucha_atenta",
-    "melancolia"
+    "de_fondo"
   ],
-  "oneLiner": "Los arquitectos del heavy metal: riffs oscuros, pesadez industrial y sombras góticas.",
+  "oneLiner": "Black Sabbath: destacada artist (1968) obra de Birmingham, Reino Unido.",
   "confidence": "alta",
   "src": "llm-agent"
 }

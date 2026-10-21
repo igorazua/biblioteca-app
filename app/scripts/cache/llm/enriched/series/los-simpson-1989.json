@@ -1,47 +1,43 @@
 {
   "id": "series:los-simpson-1989",
-  "title": "Los Simpson",
   "experience": {
-    "plot": "Sátira animada sobre una peculiar familia de clase trabajadora que vive en el pueblo ficticio de Springfield. A través de sus disparatadas aventuras cotidianas, la serie disecciona la sociedad, la política y la cultura contemporánea.",
-    "feeling": "Ingeniosa, anárquica, ácida y nostálgica. Especialmente en sus primeras temporadas, es una ametralladora ininterrumpida de humor sublime.",
-    "hook": "Personajes secundarios legendarios, dobles lecturas sociológicas y un legado de citas memorables que forman parte del lenguaje común.",
-    "notFor": "Quienes busquen continuidad dramática estricta o juzguen la serie solo por sus temporadas más recientes.",
+    "plot": "Los Simpson —en inglés: The Simpsons— es una serie estadounidense de comedia en formato de animación, creada por Matt Groening para Fox Broadcasting Company y emitida en varios países del mundo. La serie es una sátira de la sociedad estadounidense que narra la",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Matt Groening, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animación / Comedia.",
     "similar": [
-      "Futurama",
-      "Padre de familia",
-      "South Park",
-      "Bob's Burgers"
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
     ],
-    "context": "La serie de animación más longeva e influyente del mundo, creada por Matt Groening en 1989."
+    "context": "Creada en 1989, una referencia indispensable obra de Matt Groening dentro de su disciplina."
   },
   "axes": {
-    "tono": 2,
+    "tono": 1,
     "ritmo": 4,
-    "emocion": 3,
-    "exigencia": 2,
+    "emocion": 2,
+    "exigencia": 1,
     "humor": 5,
     "tension": 1,
-    "fantasia": 2,
+    "fantasia": 1,
     "violencia": 1,
     "familiar": 4,
     "escala": 2,
     "reconfort": 5,
-    "enganche": 3,
-    "formato": 1
+    "enganche": 4,
+    "formato": 4
   },
   "themes": [
-    "animacion",
     "familia",
-    "satira",
-    "sitcom_cotidiana"
+    "sitcom_cotidiana",
+    "animacion"
   ],
   "moments": [
     "reir",
-    "desconectar",
-    "de_fondo",
-    "para_repetir"
+    "capitulo_cena"
   ],
-  "oneLiner": "La sátira familiar definitiva: treinta años marcando el humor de generaciones enteras.",
+  "oneLiner": "Los Simpson: destacada series (1989) obra de Matt Groening.",
   "confidence": "alta",
   "src": "llm-agent"
 }

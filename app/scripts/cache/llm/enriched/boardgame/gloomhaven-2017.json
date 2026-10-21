@@ -1,41 +1,39 @@
 {
   "id": "boardgame:gloomhaven-2017",
-  "title": "Gloomhaven",
   "experience": {
-    "plot": "En una lúgubre y peligrosa ciudad fronteriza, un grupo de mercenarios con pasados oscuros acepta contratos en mazmorras, criptas y bosques olvidados. A medida que completan misiones, desvelan una vasta conspiración que sacude el destino del continente.",
-    "feeling": "Táctica, monumental, inmersiva y de una profundidad titánica. Sientes el sudor de cada combate táctico gestionando tus últimas cartas.",
-    "hook": "El magistral combate euro sin dados basado en la gestión de mano y un mundo persistente en una caja colosal de 10 kilos.",
-    "notFor": "Grupos sin espacio para dejar montado el tablero o con poco tiempo para comprometerse con decenas de sesiones.",
+    "plot": "Gloomhaven es un juego de tablero cooperativo de género fantástico diseñado por Isaac Childres y publicado en 2017 por Cephalofair Games. Se trata de un juego de mazmorras basado en campañas con una historia en árbol que dispone de 95 escenarios diferentes, 17",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Isaac Childres, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Exploración.",
     "similar": [
-      "Frosthaven",
-      "Mage Knight",
-      "Descent",
-      "Arkham Horror LCG"
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Dune: Imperium – Uprising"
     ],
-    "context": "El rey indiscutible de las campañas de mazmorreo táctico que reinó en la cima de BoardGameGeek durante un lustro."
+    "context": "Creada en 2017, una referencia indispensable obra de Isaac Childres dentro de su disciplina."
   },
   "axes": {
-    "peso": 4,
-    "interaccion": 4,
+    "peso": 3,
+    "interaccion": 3,
     "azar": 1,
     "confrontacion": 1,
     "cooperacion": 5,
-    "tema": 5,
+    "tema": 2,
     "risas": 1,
-    "familiar": 1
+    "familiar": 3
   },
   "themes": [
     "fantasia_medieval",
-    "gestion_de_mano",
-    "exploracion_y_mapas"
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "draft_de_cartas"
   ],
   "moments": [
-    "estrategia_dura",
-    "cooperativo",
-    "sesion_tarde",
-    "jugones"
+    "cooperativo"
   ],
-  "oneLiner": "El coloso del mazmorreo táctico cooperativo con combate de precisión matemática.",
+  "oneLiner": "Gloomhaven: destacada boardgame (2017) obra de Isaac Childres.",
   "confidence": "alta",
   "src": "llm-agent"
 }

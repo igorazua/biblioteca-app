@@ -1,42 +1,37 @@
 {
   "id": "boardgame:ark-nova-2021",
-  "title": "Ark Nova",
   "experience": {
-    "plot": "Diseña y gestiona un zoológico moderno y científicamente avanzado con el objetivo de liderar proyectos de conservación. Deberás construir recintos adaptados, acoger especies de los cinco continentes y colaborar con patrocinadores de todo el mundo.",
-    "feeling": "Absorbente, enriquecedora, competitiva y muy satisfactoria al ver crecer tu parque. Te atrapa buscando el combo perfecto de cartas.",
-    "hook": "El genial sistema de 5 cartas de acción numeradas cuya potencia aumenta según la posición en que se encuentren en tu tablero.",
-    "notFor": "Quienes busquen interacción directa destructiva o partidas breves de menos de dos horas.",
+    "plot": "In Ark Nova, you will plan and design a modern, scientifically managed zoo. With the ultimate goal of owning the most successful zoological establishment, you will build enclosures, accommodate animals, and support conservation projects all over the world. Spe",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Mathias Wigge, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Cartas.",
     "similar": [
-      "Terraforming Mars",
-      "Wingspan",
-      "Agricola",
-      "Castillos de Borgoña"
+      "Brass: Birmingham",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven",
+      "Dune: Imperium – Uprising"
     ],
-    "context": "El mayor fenómeno eurogame de la década de 2020, aupado velozmente a los puestos más altos de BGG."
+    "context": "Creada en 2021, una referencia indispensable obra de Mathias Wigge dentro de su disciplina."
   },
   "axes": {
     "peso": 4,
-    "interaccion": 2,
-    "azar": 2,
+    "interaccion": 3,
+    "azar": 1,
     "confrontacion": 1,
     "cooperacion": 1,
-    "tema": 4,
+    "tema": 2,
     "risas": 1,
-    "familiar": 2
+    "familiar": 1
   },
   "themes": [
     "naturaleza_y_animales",
-    "gestion_de_recursos",
-    "deckbuilding",
-    "puzzles_y_losetas"
+    "draft_de_cartas",
+    "gestion_de_recursos"
   ],
   "moments": [
-    "jugones",
-    "estrategia_dura",
-    "sesion_tarde",
-    "pareja"
+    "sobremesa"
   ],
-  "oneLiner": "El eurogame moderno definitivo sobre gestión de zoológicos y proyectos de conservación.",
+  "oneLiner": "Ark Nova: destacada boardgame (2021) obra de Mathias Wigge.",
   "confidence": "alta",
   "src": "llm-agent"
 }

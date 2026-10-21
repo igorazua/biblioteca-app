@@ -1,40 +1,37 @@
 {
   "id": "boardgame:slay-the-spire-the-board-game-2024",
-  "title": "Slay the Spire: The Board Game",
   "experience": {
-    "plot": "Adaptación del aclamado videojuego roguelike en el que un grupo de guerreros asciende una aguja cambiante combatiendo criaturas grotescas, mejorando su baraja de cartas y adquiriendo reliquias para derrotar al jefe final.",
-    "feeling": "Frenética, cooperativa, muy satisfactoria y llena de combos sinérgicos. Traslada la adicción del videojuego a la mesa con amigos.",
-    "hook": "La excelente traducción de las cartas enfundadas que se actualizan físicamente y la cooperación total entre héroes.",
-    "notFor": "Quienes busquen partidas relajadas y no toleren perder por una mala decisión táctica en el último turno.",
+    "plot": "Slay the Spire: The Board Game is a co-operative deck-building, dungeon-crawling adventure. Craft a unique deck, encounter bizarre creatures, discover relics of immense power, and finally become strong enough to slay the Spire! Each player starts with a charac",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Anthony Giovannetti, Casey Yano, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Cartas.",
     "similar": [
-      "Gloomhaven",
-      "Clank!",
-      "Aeon's End",
-      "Too Many Bones"
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
     ],
-    "context": "Exitosísima campaña de micromecenazgo que logró una de las mejores adaptaciones de videojuego a tablero de 2024."
+    "context": "Creada en 2024, una referencia indispensable obra de Anthony Giovannetti, Casey Yano dentro de su disciplina."
   },
   "axes": {
-    "peso": 3,
-    "interaccion": 5,
-    "azar": 3,
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 1,
     "confrontacion": 1,
-    "cooperacion": 5,
-    "tema": 4,
-    "risas": 3,
-    "familiar": 2
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 1,
+    "familiar": 5
   },
   "themes": [
-    "fantasia_medieval",
-    "deckbuilding",
-    "dados_y_push_your_luck"
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "gestion_de_recursos"
   ],
   "moments": [
-    "cooperativo",
-    "sesion_tarde",
-    "pique_sano"
+    "sobremesa"
   ],
-  "oneLiner": "La adicción pura del deckbuilding roguelike adaptada con maestría a la mesa.",
+  "oneLiner": "Slay the Spire: The Board Game (2024): notable e inspiradora creación.",
   "confidence": "alta",
   "src": "llm-agent"
 }

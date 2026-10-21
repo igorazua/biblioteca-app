@@ -1,40 +1,38 @@
 {
   "id": "boardgame:twilight-struggle-2005",
-  "title": "Twilight Struggle",
   "experience": {
-    "plot": "Simulación para dos jugadores de la Guerra Fría entre Estados Unidos y la Unión Soviética desde 1945 hasta la caída del Muro de Berlín. Las dos superpotencias compiten por la hegemonía mundial mediante golpes de estado, espionaje y la carrera espacial sin provocar una guerra nuclear.",
-    "feeling": "Tensión histórica insoportable, paranoia constante y decisiones agónicas. Cada carta jugada del rival te hace sudar frío.",
-    "hook": "Tener que jugar cartas que favorecen al enemigo y decidir cómo mitigar el daño mientras evitas llegar a Defcon 1.",
-    "notFor": "Quien no disfrute con duelos directos de suma cero donde cada error se paga muy caro.",
+    "plot": "Now the trumpet summons us again, not as a call to bear arms, though arms we need; not as a call to battle, though embattled we are – but a call to bear the burden of a long twilight struggle. – John F. Kennedy In 1945, unlikely allies toppled Hitler's war mac",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ananda Gupta, Jason Matthews, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Modern Warfare / Political.",
     "similar": [
-      "War of the Ring",
-      "1989: Dawn of Freedom",
-      "Watergate",
-      "Wir sind das Volk!"
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
     ],
-    "context": "El juego de simulación histórica para dos jugadores más influyente y valorado de la historia de GMT Games."
+    "context": "Creada en 2005, una referencia indispensable obra de Ananda Gupta, Jason Matthews dentro de su disciplina."
   },
   "axes": {
     "peso": 4,
-    "interaccion": 5,
-    "azar": 2,
+    "interaccion": 2,
+    "azar": 1,
     "confrontacion": 5,
     "cooperacion": 1,
-    "tema": 5,
+    "tema": 2,
     "risas": 1,
     "familiar": 1
   },
   "themes": [
+    "imperios_y_civilizaciones",
     "guerra_historica",
-    "control_de_areas",
-    "gestion_de_mano"
+    "gestion_de_recursos"
   ],
   "moments": [
     "pareja",
-    "estrategia_dura",
     "jugones"
   ],
-  "oneLiner": "El duelo definitivo de la Guerra Fría: paranoia, espionaje y el abismo nuclear.",
+  "oneLiner": "Twilight Struggle: destacada boardgame (2005) obra de Ananda Gupta, Jason Matthews.",
   "confidence": "alta",
   "src": "llm-agent"
 }

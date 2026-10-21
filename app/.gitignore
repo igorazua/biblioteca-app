@@ -2,3 +2,5 @@
 scripts/cache/context/
 scripts/cache/vectors/
 scripts/cache/sources/
+
+scripts/cache/llm/enriched/

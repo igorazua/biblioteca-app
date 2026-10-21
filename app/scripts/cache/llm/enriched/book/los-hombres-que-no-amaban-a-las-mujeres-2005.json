@@ -1,44 +1,39 @@
 {
   "id": "book:los-hombres-que-no-amaban-a-las-mujeres-2005",
-  "title": "Los hombres que no amaban a las mujeres",
   "experience": {
-    "plot": "El periodista de investigación Mikael Blomkvist y la indómita hacker tatuada Lisbeth Salander son contratados para resolver la desaparición de una joven ocurrida cuarenta años atrás en una remota isla sueca. Sus pesquisas desentierran oscuros secretos familiares.",
-    "feeling": "Tensa, fría, adictiva y moralmente implacable. Te sumerge en la nieve y la podredumbre moral de la aristocracia financiera.",
-    "hook": "El fascinante y demoledor magnetismo de Lisbeth Salander, una heroína punk con un código ético propio e inquebrantable.",
-    "notFor": "Lectores sensibles a la violencia sexual o que se atranquen con el arranque pausado de intriga financiera de los primeros capítulos.",
+    "plot": "Un periodista y una hacker investigan una desaparición ocurrida hace cuarenta años en una familia de industriales.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Stieg Larsson, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Thriller / Crimen.",
     "similar": [
-      "La chica que soñaba con una cerilla y un bidón de gasolina",
-      "El silencio de los corderos",
-      "Perdida",
-      "El muñeco de nieve"
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
     ],
-    "context": "El fenómeno nórdico por excelencia de la serie Millennium de Stieg Larsson que revolucionó el thriller contemporáneo."
+    "context": "Creada en 2005, una referencia indispensable obra de Stieg Larsson dentro de su disciplina."
   },
   "axes": {
     "tono": 5,
-    "ritmo": 4,
-    "emocion": 4,
-    "densidad": 3,
+    "ritmo": 2,
+    "emocion": 2,
+    "densidad": 4,
     "humor": 1,
     "tension": 5,
     "fantasia": 1,
-    "escala": 2,
-    "ideas": 4,
+    "escala": 5,
+    "ideas": 2,
     "reconfort": 2
   },
   "themes": [
-    "crimen",
-    "misterio",
-    "opresion",
     "familia",
+    "misterio",
     "sociedad"
   ],
   "moments": [
-    "absorbente",
-    "concentracion",
-    "club_de_lectura"
+    "absorbente"
   ],
-  "oneLiner": "Misterio nórdico implacable y el nacimiento de la inolvidable justiciera Lisbeth Salander.",
+  "oneLiner": "Los hombres que no amaban a las mujeres: destacada book (2005) obra de Stieg Larsson.",
   "confidence": "alta",
   "src": "llm-agent"
 }

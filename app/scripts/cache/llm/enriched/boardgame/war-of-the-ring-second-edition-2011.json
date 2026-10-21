@@ -1,41 +1,37 @@
 {
   "id": "boardgame:war-of-the-ring-second-edition-2011",
-  "title": "War of the Ring: Second Edition",
   "experience": {
-    "plot": "Un enfrentamiento asimétrico para dos jugadores donde uno comanda las oscuras e infinitas huestes de Sauron y el otro lidera a los Pueblos Libres mientras la Compañía del Anillo avanza furtivamente hacia el Monte del Destino.",
-    "feeling": "Dramática, exhaustiva, fiel al milímetro al libro y de un suspense titánico. Cada tirada de dados de acción escribe una novela.",
-    "hook": "La tensión insoportable entre la guerra militar en las murallas de Minas Tirith y la caza silenciosa del Anillo.",
-    "notFor": "Quien busque juegos rápidos y con reglas sencillas; exige unas tres horas y una curva de aprendizaje considerable.",
+    "plot": "In War of the Ring, one player takes control of the Free Peoples (FP) while the other player controls Shadow Armies (SA). Initially, the Free People Nations are reluctant to take arms against Sauron, so they must be attacked by Sauron or persuaded by Gandalf o",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Francesco Nepitello, Marco Maggi, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Fighting.",
     "similar": [
-      "Star Wars: Rebellion",
-      "Twilight Struggle",
-      "El Señor de los Anillos: LCG",
-      "Dune"
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
     ],
-    "context": "Considerado por consenso la adaptación lúdica más magistral jamás creada de la obra de Tolkien."
+    "context": "Creada en 2011, una referencia indispensable obra de Francesco Nepitello, Marco Maggi dentro de su disciplina."
   },
   "axes": {
-    "peso": 4,
-    "interaccion": 5,
-    "azar": 3,
-    "confrontacion": 5,
+    "peso": 5,
+    "interaccion": 2,
+    "azar": 1,
+    "confrontacion": 1,
     "cooperacion": 1,
-    "tema": 5,
+    "tema": 2,
     "risas": 1,
     "familiar": 1
   },
   "themes": [
-    "fantasia_medieval",
-    "guerra_historica",
-    "control_de_areas",
-    "dados_y_push_your_luck"
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "comercio_y_rutas"
   ],
   "moments": [
-    "pareja",
-    "estrategia_dura",
     "jugones"
   ],
-  "oneLiner": "La traslación definitiva de la épica de Tolkien a un duelo militar y narrativo colosal.",
+  "oneLiner": "War of the Ring: Second Edition (2011): notable e inspiradora creación.",
   "confidence": "alta",
   "src": "llm-agent"
 }

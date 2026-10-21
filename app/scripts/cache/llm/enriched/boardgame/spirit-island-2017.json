@@ -1,41 +1,37 @@
 {
   "id": "boardgame:spirit-island-2017",
-  "title": "Spirit Island",
   "experience": {
-    "plot": "Ponte en la piel de espíritus elementales ancestrales de una isla virgen para defenderla de la invasión de colonos europeos destructores. Desata plagas, tormentas y pesadillas guiando a la tribu nativa Dahan para expulsar a los barcos invasores.",
-    "feeling": "Desafiante, sesuda, catártica y profundamente cooperativa. Exige una sincronía mental total para no sucumbir a la plaga.",
-    "hook": "El giro temático anticolonialista brillante y la satisfacción inmensa de crecer de una chispa débil a una tormenta devastadora.",
-    "notFor": "Jugadores que se agobien con el análisis-parálisis o busquen un cooperativo relajado y permisivo.",
+    "plot": "Spirit Island es una reconocida boardgame que explora temáticas de Medio ambiente, Fantasía, Mythology. Destaca por su personalidad propia y su conexión directa con el público.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de R. Eric Reuss, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Medio ambiente / Fantasía.",
     "similar": [
-      "Pandemic",
-      "Gloomhaven",
-      "Robinson Crusoe",
-      "Mage Knight"
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
     ],
-    "context": "Aclamado como el juego cooperativo más profundo e inteligente del mercado moderno, diseñado por R. Eric Reuss."
+    "context": "Creada en 2017, una referencia indispensable obra de R. Eric Reuss dentro de su disciplina."
   },
   "axes": {
     "peso": 4,
-    "interaccion": 5,
+    "interaccion": 2,
     "azar": 1,
     "confrontacion": 1,
-    "cooperacion": 5,
-    "tema": 5,
+    "cooperacion": 1,
+    "tema": 2,
     "risas": 1,
     "familiar": 1
   },
   "themes": [
-    "fantasia_medieval",
-    "gestion_de_mano",
-    "control_de_areas"
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
   ],
   "moments": [
-    "cooperativo",
-    "estrategia_dura",
-    "jugones",
-    "pareja"
+    "sobremesa"
   ],
-  "oneLiner": "Poderosa subversión anticolonial: espíritus desatando la furia de la naturaleza.",
-  "confidence": "alta",
+  "oneLiner": "Spirit Island: destacada boardgame (2017) obra de R. Eric Reuss.",
+  "confidence": "media",
   "src": "llm-agent"
 }

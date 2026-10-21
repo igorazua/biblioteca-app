@@ -1,44 +1,39 @@
 {
   "id": "book:el-hobbit-1937",
-  "title": "El Hobbit",
   "experience": {
-    "plot": "Bilbo Bolsón, un pacífico y comodón hobbit de la Comarca, ve rota su tranquila rutina cuando el mago Gandalf y trece enanos lo reclutan para saquear el tesoro del dragón Smaug en la Montaña Solitaria. En el camino encontrará un misterioso anillo dorado.",
-    "feeling": "Aventurera, entrañable, mágica y divertida. Desprende el aroma a chimenea encendida, té caliente y caminos de leyenda.",
-    "hook": "El tono cálido de cuento de hadas de Tolkien, el ingenioso combate de acertijos con Gollum y la transformación de Bilbo en un héroe valeroso.",
-    "notFor": "Lectores que busquen la gravedad solemne y la oscuridad apocalíptica de El Señor de los Anillos.",
+    "plot": "El hobbit es una novela fantástica del filólogo y escritor británico J. R. R. Tolkien. Fue escrita por partes desde finales de los años 1920 hasta principios de los años 1930 y, en un principio, tan solo tenía el objetivo de divertir a los hijos pequeños de To",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de J. R. R. Tolkien, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Aventura.",
     "similar": [
-      "El Señor de los Anillos",
-      "Las crónicas de Narnia",
-      "Stardust",
-      "La historia interminable"
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
     ],
-    "context": "La obra que dio origen al legendarium de la Tierra Media en 1937, una joya atemporal de la literatura fantástica universal."
+    "context": "Creada en 1937, una referencia indispensable obra de J. R. R. Tolkien dentro de su disciplina."
   },
   "axes": {
     "tono": 2,
     "ritmo": 4,
-    "emocion": 3,
+    "emocion": 2,
     "densidad": 2,
-    "humor": 4,
-    "tension": 3,
+    "humor": 1,
+    "tension": 1,
     "fantasia": 5,
-    "escala": 3,
-    "ideas": 3,
+    "escala": 2,
+    "ideas": 2,
     "reconfort": 5
   },
   "themes": [
-    "fantasia_epica",
     "aventura",
-    "mitologia",
-    "viaje_interior"
+    "sociedad",
+    "identidad"
   ],
   "moments": [
-    "desconectar",
-    "antes_de_dormir",
-    "viaje",
-    "emocionarse"
+    "absorbente"
   ],
-  "oneLiner": "La entrañable y chispeante aventura que abrió las puertas de la Tierra Media.",
+  "oneLiner": "El Hobbit: destacada book (1937) obra de J. R. R. Tolkien.",
   "confidence": "alta",
   "src": "llm-agent"
 }

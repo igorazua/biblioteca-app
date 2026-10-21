@@ -1,41 +1,37 @@
 {
   "id": "boardgame:star-wars-rebellion-2016",
-  "title": "Star Wars: Rebellion",
   "experience": {
-    "plot": "El Imperio Galáctico despliega su abrumadora flota para encontrar y aniquilar la base secreta rebelde oculta en algún planeta de la galaxia. La Alianza Rebelde, con recursos mínimos, debe recurrir a la guerrilla, el sabotaje y la esperanza.",
-    "feeling": "Cinematográfica, trepidante, llena de suspense y emoción de película. Una partida recrea la trilogía clásica entera en tu mesa.",
-    "hook": "El juego del escondite a escala galáctica: el jugador imperial interroga y rastrea mientras el rebelde resiste con audacia.",
-    "notFor": "Grupos numerosos, ya que brilla casi exclusivamente como duelo para dos jugadores.",
+    "plot": "Star Wars: Rebellion es una reconocida boardgame que explora temáticas de Civil War, Movies / TV / Radio theme, Ciencia ficción. Destaca por su personalidad propia y su conexión directa con el público.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Corey Konieczka, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Civil War / Movies / TV / Radio theme.",
     "similar": [
-      "War of the Ring",
-      "Twilight Struggle",
-      "Star Wars: Imperial Assault",
-      "Nemesis"
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
     ],
-    "context": "La experiencia de mesa definitiva de Star Wars, un hito del catálogo temático de Fantasy Flight Games."
+    "context": "Creada en 2016, una referencia indispensable obra de Corey Konieczka dentro de su disciplina."
   },
   "axes": {
-    "peso": 4,
-    "interaccion": 5,
-    "azar": 3,
-    "confrontacion": 5,
+    "peso": 5,
+    "interaccion": 2,
+    "azar": 1,
+    "confrontacion": 1,
     "cooperacion": 1,
-    "tema": 5,
-    "risas": 2,
-    "familiar": 2
+    "tema": 2,
+    "risas": 1,
+    "familiar": 1
   },
   "themes": [
-    "ciencia_ficcion_espacial",
-    "control_de_areas",
-    "misterio_y_deduccion",
-    "faroleo_y_enganos"
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
   ],
   "moments": [
-    "pareja",
-    "jugones",
-    "sesion_tarde"
+    "jugones"
   ],
-  "oneLiner": "Toda la emoción de la trilogía clásica de Star Wars en un duelo galáctico sin igual.",
-  "confidence": "alta",
+  "oneLiner": "Star Wars: Rebellion: destacada boardgame (2016) obra de Corey Konieczka.",
+  "confidence": "media",
   "src": "llm-agent"
 }

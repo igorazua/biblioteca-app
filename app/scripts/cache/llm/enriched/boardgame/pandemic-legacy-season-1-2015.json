@@ -1,40 +1,37 @@
 {
   "id": "boardgame:pandemic-legacy-season-1-2015",
-  "title": "Pandemic Legacy: Season 1",
   "experience": {
-    "plot": "Un equipo de especialistas médicos de élite intenta contener cuatro plagas mortales que asolan el planeta a lo largo de un año natural. Cada mes trae nuevas crisis, mutaciones del virus y reglas permanentes que cambian físicamente el tablero para siempre.",
-    "feeling": "Angustiosa, memorable, épica y de tensión cooperativa máxima. Deja momentos imborrables grabados en la memoria de los jugadores.",
-    "hook": "La revolucionaria mecánica de destruir cartas, abrir cajas secretas y pegar adhesivos permanentes que alteran el destino de la campaña.",
-    "notFor": "Jugadores que no puedan reunir al mismo grupo fijo para completar las 12-24 partidas o no soporten alterar componentes del juego.",
+    "plot": "Pandemic Legacy is a co-operative campaign game, with an overarching story arc played through 12-24 sessions, depending on how well your group does at the game. At the beginning, the game starts in a very similar fashion as basic Pandemic, in which your team o",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Matt Leacock, Rob Daviau, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Medio ambiente / Medical.",
     "similar": [
-      "Pandemic",
+      "Brass: Birmingham",
+      "Ark Nova",
       "Gloomhaven",
-      "Clank! Legacy",
-      "T.I.M.E Stories"
+      "Dune: Imperium – Uprising"
     ],
-    "context": "Pionero absoluto de los juegos 'legacy' narrativos que ocupó durante años el trono de número 1 mundial en BGG."
+    "context": "Creada en 2015, una referencia indispensable obra de Matt Leacock, Rob Daviau dentro de su disciplina."
   },
   "axes": {
     "peso": 3,
-    "interaccion": 5,
-    "azar": 3,
+    "interaccion": 2,
+    "azar": 1,
     "confrontacion": 1,
-    "cooperacion": 5,
-    "tema": 5,
-    "risas": 2,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 1,
     "familiar": 3
   },
   "themes": [
     "cooperativo_pandemia",
-    "gestion_de_mano",
-    "gestion_de_recursos"
+    "gestion_de_recursos",
+    "draft_de_cartas"
   ],
   "moments": [
-    "cooperativo",
-    "sesion_tarde",
-    "jugones"
+    "sobremesa"
   ],
-  "oneLiner": "Una campaña cooperativa inolvidable donde cada decisión marca el tablero para siempre.",
+  "oneLiner": "Pandemic Legacy: Season 1: destacada boardgame (2015) obra de Matt Leacock, Rob Daviau.",
   "confidence": "alta",
   "src": "llm-agent"
 }

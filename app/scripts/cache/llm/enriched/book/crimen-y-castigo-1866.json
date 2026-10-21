@@ -1,46 +1,40 @@
 {
   "id": "book:crimen-y-castigo-1866",
-  "title": "Crimen y castigo",
   "experience": {
-    "plot": "Raskólnikov, un joven estudiante sumido en la miseria en San Petersburgo, concibe una teoría según la cual los hombres extraordinarios tienen derecho a transgredir la ley moral. Bajo esta premisa comete un crimen atroz, pero la culpa y el remordimiento devoran su alma.",
-    "feeling": "Febril, claustrofóbica, angustiosa y espiritualmente catártica. Es una autopsia desgarradora de la culpa y la desesperación moral.",
-    "hook": "La profundidad psicológica insuperable de Fiódor Dostoyevski y el asfixiante duelo dialéctico entre el asesino y el juez de instrucción.",
-    "notFor": "Quienes busquen una lectura ligera o no soporten la inmersión en tormentos mentales y dilemas teológicos.",
+    "plot": "Un estudiante pobre comete un asesinato y se hunde en la culpa mientras un juez lo acorrala.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Fiódor Dostoievski, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Clásico.",
     "similar": [
-      "Los hermanos Karamazov",
-      "El idiota",
-      "El proceso",
-      "El extranjero"
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
     ],
-    "context": "Cumbre de la novela psicológica universal publicada en 1866, testimonio eterno del abismo moral y la redención."
+    "context": "Creada en 1866, una referencia indispensable obra de Fiódor Dostoievski dentro de su disciplina."
   },
   "axes": {
-    "tono": 5,
+    "tono": 2,
     "ritmo": 2,
-    "emocion": 5,
-    "densidad": 5,
+    "emocion": 2,
+    "densidad": 4,
     "humor": 1,
-    "tension": 5,
+    "tension": 1,
     "fantasia": 1,
-    "escala": 2,
-    "ideas": 5,
-    "reconfort": 2
+    "escala": 5,
+    "ideas": 2,
+    "reconfort": 5
   },
   "themes": [
-    "crimen",
-    "filosofia",
-    "psicologia",
-    "opresion",
-    "soledad",
-    "espiritualidad"
+    "familia",
+    "misterio",
+    "sociedad"
   ],
   "moments": [
-    "concentracion",
-    "para_subrayar",
-    "emocionarse",
-    "club_de_lectura"
+    "absorbente",
+    "para_subrayar"
   ],
-  "oneLiner": "Monumental disección psicológica de la culpa, el remordimiento y la búsqueda de redención.",
+  "oneLiner": "Crimen y castigo: destacada book (1866) obra de Fiódor Dostoievski.",
   "confidence": "alta",
   "src": "llm-agent"
 }

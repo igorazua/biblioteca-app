@@ -1,41 +1,37 @@
 {
   "id": "boardgame:dune-imperium-uprising-2023",
-  "title": "Dune: Imperium – Uprising",
   "experience": {
-    "plot": "Lidera una de las grandes casas del Imperio en la guerra total por el control del planeta Arrakis. Utiliza tropas, espías y pactos con los Fremen para dominar la cosecha de especia y reclamar la supremacía militar y política.",
-    "feeling": "Tensísima, letal, elegante y sumamente competitiva. La incertidumbre de los combates al final de ronda dispara la adrenalina en la mesa.",
-    "hook": "La fusión magistral entre construcción de mazos (deckbuilding) y colocación de trabajadores, enriquecida con gusanos de arena.",
-    "notFor": "Quienes detesten el faroleo en combate, el bloqueo de casillas o el conflicto directo entre jugadores.",
+    "plot": "In Dune: Imperium Uprising, you want to continue to balance military might with political intrigue, wielding new tools in pursuit of victory. Spies will shore up your plans, vital contracts will expand your resources, or you can learn the ways of the Fremen an",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Paul Dennen, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Movies / TV / Radio theme / Novel-based.",
     "similar": [
-      "Dune: Imperium",
-      "Clank!",
-      "Ruinas Perdidas de Arnak",
-      "Scythe"
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
     ],
-    "context": "Evolución refinada e independiente de Dune: Imperium que consolidó la saga en lo más alto del ranking moderno."
+    "context": "Creada en 2023, una referencia indispensable obra de Paul Dennen dentro de su disciplina."
   },
   "axes": {
     "peso": 3,
-    "interaccion": 5,
-    "azar": 2,
-    "confrontacion": 5,
+    "interaccion": 2,
+    "azar": 1,
+    "confrontacion": 1,
     "cooperacion": 1,
-    "tema": 5,
-    "risas": 2,
-    "familiar": 2
+    "tema": 2,
+    "risas": 1,
+    "familiar": 3
   },
   "themes": [
-    "ciencia_ficcion_espacial",
-    "colocacion_de_trabajadores",
-    "deckbuilding",
-    "control_de_areas"
+    "imperios_y_civilizaciones",
+    "guerra_historica",
+    "gestion_de_recursos"
   ],
   "moments": [
-    "pique_sano",
-    "jugones",
-    "sesion_tarde"
+    "sobremesa"
   ],
-  "oneLiner": "Tensión política y batallas despiadadas por la especia en el desierto de Arrakis.",
+  "oneLiner": "Dune: Imperium – Uprising: destacada boardgame (2023) obra de Paul Dennen.",
   "confidence": "alta",
   "src": "llm-agent"
 }

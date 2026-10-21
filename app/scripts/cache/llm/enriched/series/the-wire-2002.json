@@ -1,47 +1,43 @@
 {
   "id": "series:the-wire-2002",
-  "title": "The Wire",
   "experience": {
-    "plot": "A través de escuchas telefónicas policiales, se retrata el tráfico de drogas en Baltimore desde múltiples perspectivas institucionales: traficantes, policías, estibadores del puerto, políticos municipales, el sistema escolar y la prensa escrita.",
-    "feeling": "Cruda, hiperrealista, desapasionada pero éticamente demoledora. Te deja con una visión lúcida y trágica del colapso de las instituciones urbanas.",
-    "hook": "Un realismo documental sin artificios, personajes inolvidables como Omar Little y Stringer Bell, y una crítica social feroz.",
-    "notFor": "Espectadores que busquen resoluciones policiales sencillas con buenos y malos claros o giros espectaculares.",
+    "plot": "The Wire es una serie de televisión estadounidense ambientada en Baltimore, Maryland, cuyo hilo conductor son las intervenciones telefónicas judiciales encomendadas a un grupo policial. Fue ideada, escrita y producida por el periodista y escritor David Simon, ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de David Simon, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Crimen / Drama.",
     "similar": [
-      "Los Soprano",
-      "The Shield",
-      "Treme",
-      "Show Me a Hero"
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
     ],
-    "context": "Creación del periodista David Simon para HBO, consagrada como el tratado sociológico más lúcido de la ficción seriada."
+    "context": "Creada en 2002, una referencia indispensable obra de David Simon dentro de su disciplina."
   },
   "axes": {
-    "tono": 5,
+    "tono": 4,
     "ritmo": 2,
-    "emocion": 4,
-    "exigencia": 5,
-    "humor": 2,
-    "tension": 4,
+    "emocion": 5,
+    "exigencia": 1,
+    "humor": 1,
+    "tension": 1,
     "fantasia": 1,
     "violencia": 4,
     "familiar": 1,
-    "escala": 4,
+    "escala": 2,
     "reconfort": 1,
-    "enganche": 4,
-    "formato": 5
+    "enganche": 5,
+    "formato": 4
   },
   "themes": [
-    "crimen_organizado",
     "investigacion_policial",
-    "politica_y_poder",
-    "drogas_y_narcos",
-    "lucha_de_clases"
+    "amistad",
+    "familia"
   ],
   "moments": [
-    "pensar",
-    "solo",
-    "maraton"
+    "maraton",
+    "enganche"
   ],
-  "oneLiner": "Catedral televisiva del realismo social: la radiografía más certera de la ciudad moderna.",
+  "oneLiner": "The Wire: destacada series (2002) obra de David Simon.",
   "confidence": "alta",
   "src": "llm-agent"
 }

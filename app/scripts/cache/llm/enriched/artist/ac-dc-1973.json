@@ -1,40 +1,37 @@
 {
   "id": "artist:ac-dc-1973",
-  "title": "AC/DC",
   "experience": {
-    "plot": "Los hermanos Young fundaron en Australia la máquina definitiva del hard rock: riffs cortantes, base rítmica de precisión de acero y una fidelidad inquebrantable al rock más directo.",
-    "feeling": "Pura adrenalina, electricidad sin tregua, fiesta desenfrenada y potencia motora. Es imposible no mover la cabeza al compás.",
-    "hook": "Los acordes demoledores de Angus Young en uniforme escolar y estribillos masivos diseñados para corearse a voz en grito.",
-    "notFor": "Quienes busquen experimentación sonora compleja, baladas intimistas o variedad estilística.",
+    "plot": "AC/DC (Sídney, Australia), icono de Hard rock, Heavy metal desde 1973.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Sídney, Australia, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Hard rock / Heavy metal.",
     "similar": [
-      "Guns N' Roses",
-      "Airbourne",
-      "KISS",
-      "Motorhead"
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
     ],
-    "context": "Autores de Back in Black, uno de los discos más vendidos de la historia de la humanidad."
+    "context": "Creada en 1973, una referencia indispensable obra de Sídney, Australia dentro de su disciplina."
   },
   "axes": {
     "energia": 5,
     "valencia": 4,
-    "bailable": 3,
+    "bailable": 5,
     "organico": 5,
     "intensidad": 5,
-    "fondo": 2,
-    "complejidad": 1
+    "fondo": 1,
+    "complejidad": 2
   },
   "themes": [
     "rock_clasico",
-    "metal",
-    "himnos_estadio"
+    "pop",
+    "blues",
+    "metal"
   ],
   "moments": [
-    "entrenar",
-    "fiesta",
-    "viaje_coche",
-    "para_cantar"
+    "de_fondo"
   ],
-  "oneLiner": "Electricidad de alto voltaje: los riffs más demoledores y directos del rock.",
+  "oneLiner": "AC/DC: destacada artist (1973) obra de Sídney, Australia.",
   "confidence": "alta",
   "src": "llm-agent"
 }

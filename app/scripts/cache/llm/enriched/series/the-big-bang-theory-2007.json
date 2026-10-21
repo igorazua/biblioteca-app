@@ -1,18 +1,17 @@
 {
   "id": "series:the-big-bang-theory-2007",
-  "title": "The Big Bang Theory",
   "experience": {
-    "plot": "Dos físicos superdotados que comparten piso en Pasadena ven alterado su mundo de cómics, videojuegos y ciencia cuando una extrovertida camarera y aspirante a actriz se muda al apartamento de enfrente.",
-    "feeling": "Accesible, desenfadada, ingeniosa y de risa fácil. Ofrece entretenimiento ligero y familiar sin complicaciones.",
-    "hook": "Las excentricidades obsesivo-compulsivas de Sheldon Cooper interpretado magistralmente por Jim Parsons.",
-    "notFor": "Quienes busquen humor sutil sin risas enlatadas o rechacen los estereotipos de la cultura friki.",
+    "plot": "The Big Bang Theory es una comedia de situación estadounidense creada por Chuck Lorre y Bill Prady, quienes se desempeñaron como productores ejecutivos y escritores principales de la serie, junto con Steven Molaro. Se emitió en CBS del 24 de septiembre de 2007",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Chuck Lorre y Bill Prady, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
     "similar": [
-      "Friends",
-      "Silicon Valley",
-      "Cómo conocí a vuestra madre",
-      "Modern Family"
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
     ],
-    "context": "La telecomedia en abierto más exitosa de la televisión de la década de 2010 con 12 temporadas en antena."
+    "context": "Creada en 2007, una referencia indispensable obra de Chuck Lorre y Bill Prady dentro de su disciplina."
   },
   "axes": {
     "tono": 1,
@@ -23,25 +22,22 @@
     "tension": 1,
     "fantasia": 1,
     "violencia": 1,
-    "familiar": 5,
-    "escala": 1,
+    "familiar": 4,
+    "escala": 2,
     "reconfort": 5,
-    "enganche": 3,
-    "formato": 1
+    "enganche": 4,
+    "formato": 4
   },
   "themes": [
     "sitcom_cotidiana",
     "amistad",
-    "amor",
-    "ia_y_tecnologia"
+    "familia"
   ],
   "moments": [
-    "desconectar",
     "reir",
-    "capitulo_cena",
-    "confort"
+    "capitulo_cena"
   ],
-  "oneLiner": "Risas garantizadas y choque cultural entre genios de la física y el mundo real.",
+  "oneLiner": "The Big Bang Theory: destacada series (2007) obra de Chuck Lorre y Bill Prady.",
   "confidence": "alta",
   "src": "llm-agent"
 }

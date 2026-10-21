@@ -1,42 +1,37 @@
 {
   "id": "boardgame:frosthaven-2022",
-  "title": "Frosthaven",
   "experience": {
-    "plot": "En las gélidas e inhóspitas tierras del norte, un grupo de mercenarios defiende y expande el último puesto de avanzada de la civilización. Además de combatir en mazmorras heladas, deberás reconstruir el pueblo entre estaciones.",
-    "feeling": "Titánica, desafiante, absorbente y épica. El peso de cada victoria sobre el frío y las bestias se siente colosal.",
-    "hook": "La combinación del combate táctico perfeccionado de Gloomhaven con una fase de gestión de asentamiento y crafteo de equipo.",
-    "notFor": "Quienes no dispongan de un espacio permanente de juego y decenas de horas para una campaña masiva.",
+    "plot": "Frosthaven is the story of a small outpost far to the north of the capital city of White Oak. It's an outpost barely surviving the harsh weather let alone invasions from forces both known and unknown. However, a group of mercenaries, at the end of their rope, ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Isaac Childres, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Exploración.",
     "similar": [
-      "Gloomhaven",
-      "Gloomhaven: Jaws of the Lion",
-      "Mage Knight",
-      "Sleeping Gods"
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
     ],
-    "context": "La campaña de Kickstarter más exitosa de la historia de los juegos de mesa (13 millones de dólares), diseñada por Isaac Childres."
+    "context": "Creada en 2022, una referencia indispensable obra de Isaac Childres dentro de su disciplina."
   },
   "axes": {
-    "peso": 5,
-    "interaccion": 4,
+    "peso": 4,
+    "interaccion": 2,
     "azar": 1,
     "confrontacion": 1,
-    "cooperacion": 5,
-    "tema": 5,
+    "cooperacion": 1,
+    "tema": 2,
     "risas": 1,
     "familiar": 1
   },
   "themes": [
-    "fantasia_medieval",
-    "construccion_de_ciudades",
-    "gestion_de_mano",
-    "exploracion_y_mapas"
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
   ],
   "moments": [
-    "estrategia_dura",
-    "cooperativo",
-    "sesion_tarde",
-    "jugones"
+    "sobremesa"
   ],
-  "oneLiner": "La evolución del mazmorreo: supervivencia, gestión y combate en el norte helado.",
+  "oneLiner": "Frosthaven: destacada boardgame (2022) obra de Isaac Childres.",
   "confidence": "alta",
   "src": "llm-agent"
 }

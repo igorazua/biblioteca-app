@@ -1,40 +1,37 @@
 {
   "id": "artist:aerosmith-1970",
-  "title": "Aerosmith",
   "experience": {
-    "plot": "La icónica banda de Boston que definió el hard rock estadounidense de los 70 y renació en los 80 y 90 combinando rhythm and blues con poderío pop y baladas memorables.",
-    "feeling": "Gamberra, rítmica, marchosa y llena de energía contagiosa. Invita a cantar y moverse al son de sus ritmos pegadizos.",
-    "hook": "La inconfundible voz elástica de Steven Tyler y los afilados riffs funk-rock de Joe Perry.",
-    "notFor": "Quienes prefieran el rock sobrio e introspectivo o huyan de las grandes baladas radiables de los noventa.",
+    "plot": "Aerosmith (Boston, EE. UU.), icono de Hard rock, Blues rock desde 1970.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Boston, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Hard rock / Blues rock.",
     "similar": [
-      "Guns N' Roses",
-      "The Rolling Stones",
-      "Kiss",
-      "Bon Jovi"
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
     ],
-    "context": "Conocidos como 'los chicos malos de Boston', una de las bandas de rock más vendedoras de la historia."
+    "context": "Creada en 1970, una referencia indispensable obra de Boston, EE. UU. dentro de su disciplina."
   },
   "axes": {
-    "energia": 4,
+    "energia": 5,
     "valencia": 4,
-    "bailable": 4,
+    "bailable": 5,
     "organico": 5,
-    "intensidad": 4,
-    "fondo": 2,
-    "complejidad": 3
+    "intensidad": 5,
+    "fondo": 1,
+    "complejidad": 2
   },
   "themes": [
     "rock_clasico",
+    "pop",
     "blues",
-    "himnos_estadio",
-    "pop"
+    "metal"
   ],
   "moments": [
-    "viaje_coche",
-    "fiesta",
-    "para_cantar"
+    "de_fondo"
   ],
-  "oneLiner": "Riffs ardientes, actitud canalla y el carisma acrobático e incombustible de Steven Tyler.",
+  "oneLiner": "Aerosmith: destacada artist (1970) obra de Boston, EE. UU..",
   "confidence": "alta",
   "src": "llm-agent"
 }

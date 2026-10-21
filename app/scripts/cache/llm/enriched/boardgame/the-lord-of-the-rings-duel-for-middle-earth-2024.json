@@ -1,40 +1,37 @@
 {
   "id": "boardgame:the-lord-of-the-rings-duel-for-middle-earth-2024",
-  "title": "The Lord of the Rings: Duel for Middle-earth",
   "experience": {
-    "plot": "Reinvención del galardonado sistema 7 Wonders Duel en la Tierra Media. Un jugador comanda la Compañía del Anillo y los Pueblos Libres mientras el otro encarna a Sauron y sus secuaces, disputándose la victoria por tres caminos: militar, alianzas raciales o el destino del Anillo.",
-    "feeling": "Rápida, directa, tensa y adictiva. Cada robo de carta es un pulso psicológico frente a tu rival.",
-    "hook": "Las tres condiciones de victoria inmediata que obligan a vigilar constantemente cada movimiento del contrario.",
-    "notFor": "Mesas de más de dos personas; es un juego estrictamente diseñado para parejas.",
+    "plot": "A dark rumour rises from Mordor. The Eye turns to Middle-earth. The hour has come. The Fellowship is reunited. The Heroes prepare for battle. Will you play as the Fellowship of the Ring to defend the free races and destroy the One Ring? Or will you play as Sau",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Antoine Bauza, Bruno Cathala, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
     "similar": [
-      "7 Wonders Duel",
-      "War of the Ring",
-      "Jaipur",
-      "Star Wars: The Deckbuilding Game"
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
     ],
-    "context": "Éxito unánime de 2024 de Antoine Bauza y Bruno Cathala ambientado con maestría en el mundo de Tolkien."
+    "context": "Creada en 2024, una referencia indispensable obra de Antoine Bauza, Bruno Cathala dentro de su disciplina."
   },
   "axes": {
     "peso": 2,
-    "interaccion": 5,
-    "azar": 2,
-    "confrontacion": 4,
+    "interaccion": 3,
+    "azar": 1,
+    "confrontacion": 1,
     "cooperacion": 1,
-    "tema": 5,
-    "risas": 2,
-    "familiar": 4
+    "tema": 2,
+    "risas": 1,
+    "familiar": 5
   },
   "themes": [
-    "fantasia_medieval",
     "draft_de_cartas",
-    "control_de_areas"
+    "gestion_de_recursos",
+    "comercio_y_rutas"
   ],
   "moments": [
-    "pareja",
-    "pique_sano",
-    "rapido_filler"
+    "pareja"
   ],
-  "oneLiner": "Duelo vertiginoso y adictivo para dos jugadores por el destino de la Tierra Media.",
+  "oneLiner": "The Lord of the Rings: Duel for Middle-earth (2024): notable e inspiradora creación.",
   "confidence": "alta",
   "src": "llm-agent"
 }

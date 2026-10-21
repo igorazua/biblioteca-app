@@ -1,46 +1,39 @@
 {
   "id": "book:el-nombre-de-la-rosa-1980",
-  "title": "El nombre de la rosa",
   "experience": {
-    "plot": "En el invierno de 1327, el fraile franciscano Guillermo de Baskerville y su novicio Adso llegan a una remota abadía en el norte de Italia sacudida por una serie de muertes misteriosas. Sus pesquisas lo llevan al laberinto de la mayor biblioteca de la cristiandad.",
-    "feeling": "Erudita, misteriosa, densa y fascinantemente gótica. Recompensa al lector exigente con un banquete de enigmas medievales e historia.",
-    "hook": "La mezcla perfecta entre novela policíaca de corte sherlockiano, filosofía escolástica y secretos eclesiásticos.",
-    "notFor": "Lectores que rehúyan las digresiones teológicas en latín o los ritmos narrativos reposados y detallistas.",
+    "plot": "Un monje franciscano investiga unas muertes misteriosas en una abadía medieval y su biblioteca.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Umberto Eco, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Misterio / Histórica.",
     "similar": [
-      "El péndulo de Foucault",
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
       "La sombra del viento",
-      "El código Da Vinci",
-      "Q"
+      "El principito"
     ],
-    "context": "Primera novela del semiólogo italiano Umberto Eco, convertida de inmediato en un fenómeno literario mundial sin precedentes."
+    "context": "Creada en 1980, una referencia indispensable obra de Umberto Eco dentro de su disciplina."
   },
   "axes": {
-    "tono": 4,
+    "tono": 2,
     "ritmo": 2,
-    "emocion": 3,
-    "densidad": 5,
-    "humor": 3,
-    "tension": 4,
+    "emocion": 2,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 5,
     "fantasia": 1,
-    "escala": 3,
-    "ideas": 5,
-    "reconfort": 3
+    "escala": 2,
+    "ideas": 2,
+    "reconfort": 5
   },
   "themes": [
+    "duelo",
     "misterio",
-    "crimen",
-    "filosofia",
-    "historia",
-    "arte_y_literatura",
-    "espiritualidad"
+    "sociedad"
   ],
   "moments": [
-    "concentracion",
-    "aprender",
-    "lluvia_manta",
-    "para_subrayar"
+    "absorbente"
   ],
-  "oneLiner": "Crimen, teología y laberintos bibliófilos en una fascinante abadía del siglo XIV.",
+  "oneLiner": "El nombre de la rosa: destacada book (1980) obra de Umberto Eco.",
   "confidence": "alta",
   "src": "llm-agent"
 }

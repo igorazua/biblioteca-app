@@ -1,46 +1,39 @@
 {
   "id": "book:la-sombra-del-viento-2001",
-  "title": "La sombra del viento",
   "experience": {
-    "plot": "En la Barcelona de posguerra, un niño es llevado por su padre al misterioso Cementerio de los Libros Olvidados para elegir un tomo maldito. Su obsesión por el desconocido autor del libro desatará una trama de amores oscuros, venganzas y crímenes.",
-    "feeling": "Mágica, envolvente, gótica y desbordante de pasión literaria. Te atrapa con una atmósfera lluviosa y misteriosa que no se olvida.",
-    "hook": "El amor reverencial por los libros físicos, la prosa melódica de Carlos Ruiz Zafón y el inolvidable Fermín Romero de Torres.",
-    "notFor": "Quienes busquen vanguardia formal minimalista o rechacen los giros melodramáticos del folletín clásico.",
+    "plot": "La sombra del viento es una novela de Carlos Ruiz Zafón publicada en 2001, el primer libro de la saga del Cementerio de los libros olvidados, con elementos de realismo mágico e intriga. Ha sido un libro superventas mundial, con más de veinticinco millones de e",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Carlos Ruiz Zafón, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Misterio / Novela.",
     "similar": [
-      "El juego del ángel",
-      "El nombre de la rosa",
-      "El cuento número trece",
-      "Los renglones torcidos de Dios"
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "El principito",
+      "1984"
     ],
-    "context": "Fenómeno editorial español más internacional del siglo XXI, traducido a más de 50 idiomas con millones de lectores."
+    "context": "Creada en 2001, una referencia indispensable obra de Carlos Ruiz Zafón dentro de su disciplina."
   },
   "axes": {
-    "tono": 3,
-    "ritmo": 4,
-    "emocion": 5,
-    "densidad": 3,
-    "humor": 3,
-    "tension": 4,
-    "fantasia": 2,
-    "escala": 3,
-    "ideas": 3,
-    "reconfort": 4
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 2,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 2,
+    "reconfort": 5
   },
   "themes": [
     "misterio",
-    "amor",
-    "arte_y_literatura",
-    "memoria",
-    "crimen",
-    "historia"
+    "sociedad",
+    "identidad"
   ],
   "moments": [
-    "absorbente",
-    "lluvia_manta",
-    "emocionarse",
-    "viaje"
+    "absorbente"
   ],
-  "oneLiner": "Intriga gótica y amor por la literatura en una Barcelona de secretos y fantasmas.",
+  "oneLiner": "La sombra del viento: destacada book (2001) obra de Carlos Ruiz Zafón.",
   "confidence": "alta",
   "src": "llm-agent"
 }

@@ -1,46 +1,43 @@
 {
   "id": "series:south-park-1997",
-  "title": "South Park",
   "experience": {
-    "plot": "Cuatro niños malhablados de un gélido pueblo de Colorado presencian y desatan situaciones surrealistas que parodian sin piedad la actualidad política, las modas sociales y las mayores hipocresías del mundo occidental.",
-    "feeling": "Salvaje, corrosiva, desvergonzada e inteligentemente provocadora. Desafía todos los tabúes con una franqueza desternillante.",
-    "hook": "Su capacidad única para escribir y emitir episodios en seis días reaccionando en tiempo real a las noticias mundiales.",
-    "notFor": "Personas de moral susceptible o con aversión al lenguaje soez, el escatologismo y la irreverencia religiosa.",
+    "plot": "South Park es una serie de televisión estadounidense de animación, creada por Trey Parker y Matt Stone para el canal Comedy Central. Está dirigida al público adulto y se caracteriza por satirizar con humor negro la sociedad, actualidad y cultura estadounidense",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Trey Parker y Matt Stone, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animación / Comedia.",
     "similar": [
-      "Padre de familia",
-      "Rick y Morty",
-      "Los Simpson",
-      "Robot Chicken"
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
     ],
-    "context": "Creada por Trey Parker y Matt Stone en 1997, icono absoluto de la animación satírica para adultos."
+    "context": "Creada en 1997, una referencia indispensable obra de Trey Parker y Matt Stone dentro de su disciplina."
   },
   "axes": {
-    "tono": 3,
-    "ritmo": 5,
-    "emocion": 1,
-    "exigencia": 2,
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 1,
     "humor": 5,
     "tension": 1,
-    "fantasia": 3,
-    "violencia": 3,
-    "familiar": 1,
+    "fantasia": 1,
+    "violencia": 1,
+    "familiar": 4,
     "escala": 2,
-    "reconfort": 2,
-    "enganche": 3,
-    "formato": 1
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 4
   },
   "themes": [
+    "sitcom_cotidiana",
     "animacion",
-    "satira",
-    "politica_y_poder",
-    "adolescencia"
+    "amistad"
   ],
   "moments": [
     "reir",
-    "desconectar",
-    "para_repetir"
+    "capitulo_cena"
   ],
-  "oneLiner": "Sátira sin filtros ni piedad que no deja títere con cabeza en la sociedad actual.",
+  "oneLiner": "South Park: destacada series (1997) obra de Trey Parker y Matt Stone.",
   "confidence": "alta",
   "src": "llm-agent"
 }

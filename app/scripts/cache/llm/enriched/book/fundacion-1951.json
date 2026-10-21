@@ -1,45 +1,39 @@
 {
   "id": "book:fundacion-1951",
-  "title": "Fundación",
   "experience": {
-    "plot": "Ante la inevitable caída del milenario Imperio Galáctico, el matemático Hari Seldon desarrolla la 'psicohistoria', una ciencia que predice el futuro de las masas. Para reducir la barbarie venidera, establece una comunidad de científicos en el confín de la galaxia.",
-    "feeling": "Cerebral, lúcida, visionaria y majestuosa. Cautiva por su inmenso alcance temporal y la victoria de la inteligencia sobre la fuerza bruta.",
-    "hook": "El fascinante concepto de la psicohistoria, las crisis históricas resueltas con diplomacia y el juego intelectual de Isaac Asimov.",
-    "notFor": "Lectores que busquen desarrollo emocional íntimo de personajes o romance novelesco.",
+    "plot": "Un matemático predice la caída del Imperio galáctico y crea una Fundación para acortar la oscuridad.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Isaac Asimov, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción.",
     "similar": [
-      "Dune",
-      "Yo, robot",
-      "El fin de la eternidad",
-      "Cita con Rama"
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
     ],
-    "context": "Galardonada con el Premio Hugo a la mejor serie de ciencia ficción de todos los tiempos, hito cumbre de la Edad de Oro del género."
+    "context": "Creada en 1951, una referencia indispensable obra de Isaac Asimov dentro de su disciplina."
   },
   "axes": {
     "tono": 2,
-    "ritmo": 3,
+    "ritmo": 4,
     "emocion": 2,
-    "densidad": 3,
-    "humor": 2,
-    "tension": 3,
-    "fantasia": 2,
-    "escala": 5,
-    "ideas": 5,
-    "reconfort": 3
+    "densidad": 2,
+    "humor": 1,
+    "tension": 1,
+    "fantasia": 5,
+    "escala": 2,
+    "ideas": 2,
+    "reconfort": 5
   },
   "themes": [
-    "ciencia_y_universo",
-    "historia",
-    "politica",
+    "identidad",
     "sociedad",
-    "filosofia"
+    "historia"
   ],
   "moments": [
-    "aprender",
-    "desconectar",
-    "para_subrayar",
-    "concentracion"
+    "absorbente"
   ],
-  "oneLiner": "Gran epopeya intelectual sobre el auge, caída y renacer de las civilizaciones galácticas.",
+  "oneLiner": "Fundación: destacada book (1951) obra de Isaac Asimov.",
   "confidence": "alta",
   "src": "llm-agent"
 }

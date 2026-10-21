@@ -1,41 +1,36 @@
 {
   "id": "artist:pink-floyd-1965",
-  "title": "Pink Floyd",
   "experience": {
-    "plot": "Pioneros del rock psicodélico y progresivo británico que construyeron álbumes conceptuales monumentales sobre la locura, el tiempo, la codicia y la alienación humana.",
-    "feeling": "Hipnótica, cósmica, introspectiva y profundamente emotiva. Te sumerge en un viaje cerebral y sonoro de una belleza melancólica única.",
-    "hook": "Los solos desgarradores y expresivos de David Gilmour y la cuidada producción sonora con paisajes de sintetizadores.",
-    "notFor": "Oyentes que busquen singles pop de tres minutos o música festiva y bailable.",
+    "plot": "Pink Floyd (Londres, Reino Unido), icono de Rock progresivo, Psicodelia desde 1965.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Londres, Reino Unido, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Rock progresivo / Psicodelia.",
     "similar": [
-      "Genesis",
-      "King Crimson",
-      "David Bowie",
-      "Radiohead"
+      "The Beatles",
+      "Queen",
+      "Led Zeppelin",
+      "The Rolling Stones"
     ],
-    "context": "Arquitectos de álbumes cumbre como The Dark Side of the Moon y The Wall, cumbres del rock progresivo."
+    "context": "Creada en 1965, una referencia indispensable obra de Londres, Reino Unido dentro de su disciplina."
   },
   "axes": {
-    "energia": 3,
-    "valencia": 2,
-    "bailable": 1,
-    "organico": 4,
-    "intensidad": 3,
+    "energia": 5,
+    "valencia": 4,
+    "bailable": 5,
+    "organico": 5,
+    "intensidad": 5,
     "fondo": 1,
     "complejidad": 5
   },
   "themes": [
     "rock_clasico",
-    "psicodelia",
-    "experimentacion",
-    "letras_poeticas"
+    "pop",
+    "blues"
   ],
   "moments": [
-    "escucha_atenta",
-    "melancolia",
-    "relax",
-    "viaje_coche"
+    "de_fondo"
   ],
-  "oneLiner": "Viaje sónico monumental hacia los confines del espacio, la mente y la melancolía.",
+  "oneLiner": "Pink Floyd: destacada artist (1965) obra de Londres, Reino Unido.",
   "confidence": "alta",
   "src": "llm-agent"
 }

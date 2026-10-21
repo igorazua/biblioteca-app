@@ -57,6 +57,23 @@ async function main() {
   console.log(`Procesando ${itemsToProcess.length} obras...`)
   let processed = 0
   let cached = 0
+  const BATCH_SIZE = 32
+  const pendingItems = []
+
+  async function processBatch(batch) {
+    const texts = batch.map((b) => b.text)
+    const output = await extractor(texts, { pooling: 'mean', normalize: true })
+    const list = output.tolist()
+    for (let i = 0; i < batch.length; i++) {
+      const { item, targetFile, legacyFile } = batch[i]
+      const vector = list[i]
+      const payload = JSON.stringify({ id: item.id, vector })
+      writeFileSync(targetFile, payload, 'utf8')
+      writeFileSync(legacyFile, payload, 'utf8') // Compatibilidad
+      processed++
+    }
+    process.stdout.write(`[${processed + cached}/${itemsToProcess.length}] Vectorizados hasta: ${batch[batch.length - 1].item.title}\n`)
+  }
 
   for (const item of itemsToProcess) {
     const slug = item.id.replace(/^[^:]+:/, '')
@@ -112,17 +129,17 @@ async function main() {
       if (item.moments?.length) textToEmbed += `\nMOMENTOS: ${item.moments.join(', ')}`
     }
 
-    const output = await extractor(textToEmbed.slice(0, 1500), { pooling: 'mean', normalize: true })
-    const vector = Array.from(output.data)
+    pendingItems.push({ item, slug, targetFile, legacyFile, text: textToEmbed.slice(0, 1500) })
 
-    const payload = JSON.stringify({ id: item.id, vector })
-    writeFileSync(targetFile, payload, 'utf8')
-    writeFileSync(legacyFile, payload, 'utf8') // Compatibilidad
-    processed++
-
-    if (processed % 25 === 0 || processed === itemsToProcess.length - cached) {
-      process.stdout.write(`[${processed + cached}/${itemsToProcess.length}] Vectorizado: ${item.title}\n`)
+    if (pendingItems.length >= BATCH_SIZE) {
+      await processBatch(pendingItems)
+      pendingItems.length = 0
     }
+  }
+
+  if (pendingItems.length > 0) {
+    await processBatch(pendingItems)
+    pendingItems.length = 0
   }
 
   console.log(`\n--- Vectorización completada ---`)

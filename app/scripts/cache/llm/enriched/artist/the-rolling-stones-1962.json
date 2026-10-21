@@ -1,39 +1,36 @@
 {
   "id": "artist:the-rolling-stones-1962",
-  "title": "The Rolling Stones",
   "experience": {
-    "plot": "Epitafio viviente del rock and roll: una máquina de rhythm and blues sucio, descarado y peligroso que ha recorrido más de seis décadas sobre los escenarios de todo el planeta.",
-    "feeling": "Chulesca, contagiosa, cruda y electrizante. Despide sudor, juventud rebelde y pura actitud rockera.",
-    "hook": "Los riffs inmortales de Keith Richards en afinación abierta y el movimiento electrizante de Mick Jagger.",
-    "notFor": "Quienes busquen pulcritud de conservatorio o producciones sintéticas impecables y asépticas.",
+    "plot": "The Rolling Stones (Londres, Reino Unido), icono de Rock and roll, Blues rock desde 1962.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Londres, Reino Unido, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Rock and roll / Blues rock.",
     "similar": [
       "The Beatles",
-      "The Who",
-      "The Kinks",
-      "Aerosmith"
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
     ],
-    "context": "La mayor y más longeva banda de rock and roll del mundo, sinónimo indiscutible del género desde 1962."
+    "context": "Creada en 1962, una referencia indispensable obra de Londres, Reino Unido dentro de su disciplina."
   },
   "axes": {
-    "energia": 4,
+    "energia": 5,
     "valencia": 4,
-    "bailable": 4,
+    "bailable": 5,
     "organico": 5,
-    "intensidad": 4,
-    "fondo": 2,
+    "intensidad": 5,
+    "fondo": 1,
     "complejidad": 2
   },
   "themes": [
     "rock_clasico",
-    "blues",
-    "himnos_estadio"
+    "pop",
+    "blues"
   ],
   "moments": [
-    "fiesta",
-    "viaje_coche",
-    "para_cantar"
+    "de_fondo"
   ],
-  "oneLiner": "Pura actitud, rebeldía y el pulso más longevo y contagioso del rock and roll.",
+  "oneLiner": "The Rolling Stones: destacada artist (1962) obra de Londres, Reino Unido.",
   "confidence": "alta",
   "src": "llm-agent"
 }

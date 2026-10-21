@@ -1,41 +1,37 @@
 {
   "id": "boardgame:dune-imperium-2020",
-  "title": "Dune: Imperium",
   "experience": {
-    "plot": "Ponte al frente de una facción noble en Arrakis y compite por la especia y la lealtad de la Bene Gesserit, la Cofradía Espacial y el Emperador. Deberás equilibrar la influencia diplomática con el envío de tropas al conflicto armado.",
-    "feeling": "Afilada, vibrante, calculadora y emocionante. Cada carta jugada genera dudas tácticas y cada escaramuza puede cambiar la partida.",
-    "hook": "El ingenioso sistema donde cada carta de tu mano determina a qué casillas puedes enviar tus agentes y qué fuerza tendrás en la batalla.",
-    "notFor": "Jugadores pacifistas que prefieran construir sus motores de recursos sin interferencias ni robos ajenos.",
+    "plot": "Dune: Imperium is a game that uses deck building to add a hidden information angle to traditional worker placement. It finds inspiration in elements and characters from the Dune legacy, both the new film from Legendary Pictures and the seminal literary series ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Paul Dennen, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Movies / TV / Radio theme / Novel-based.",
     "similar": [
-      "Dune: Imperium - Uprising",
-      "Ruinas Perdidas de Arnak",
-      "Concordia",
-      "Blood Rage"
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
     ],
-    "context": "Uno de los mayores éxitos de diseño de juegos de mesa de 2020 creado por Paul Dennen bajo la licencia de Frank Herbert."
+    "context": "Creada en 2020, una referencia indispensable obra de Paul Dennen dentro de su disciplina."
   },
   "axes": {
     "peso": 3,
-    "interaccion": 4,
-    "azar": 2,
-    "confrontacion": 4,
+    "interaccion": 2,
+    "azar": 1,
+    "confrontacion": 1,
     "cooperacion": 1,
-    "tema": 5,
-    "risas": 2,
-    "familiar": 2
+    "tema": 2,
+    "risas": 1,
+    "familiar": 3
   },
   "themes": [
-    "ciencia_ficcion_espacial",
-    "colocacion_de_trabajadores",
-    "deckbuilding",
-    "control_de_areas"
+    "imperios_y_civilizaciones",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
   ],
   "moments": [
-    "jugones",
-    "pique_sano",
-    "sesion_tarde"
+    "sobremesa"
   ],
-  "oneLiner": "Magistral fusión de construcción de mazos e intriga militar en el universo de Dune.",
+  "oneLiner": "Dune: Imperium: destacada boardgame (2020) obra de Paul Dennen.",
   "confidence": "alta",
   "src": "llm-agent"
 }

@@ -1,48 +1,43 @@
 {
   "id": "series:breaking-bad-2008",
-  "title": "Breaking Bad",
   "experience": {
-    "plot": "Un modesto profesor de química de instituto con cáncer terminal entra en el narcotráfico cocinando metanfetamina de máxima pureza para asegurar a su familia. Su descenso al crimen despierta a Heisenberg, un monstruo implacable.",
-    "feeling": "Electrizante, angustiosa, con una tensión calculada al milímetro y una adicción imparable. Te deja temblando al borde del asiento en cada final de episodio.",
-    "hook": "La prodigiosa metamorfosis moral de Bryan Cranston, la química con Aaron Paul y cliffhangers insuperables.",
-    "notFor": "Quienes busquen ligereza, optimismo moral o no soporten la degradación humana prolongada.",
+    "plot": "Breaking Bad es una serie de televisión estadounidense que se emitió entre 2008 y 2013, creada y producida por Vince Gilligan. Narra la historia de Walter White, un profesor de química con dificultades económicas a quien le diagnostican un cáncer de pulmón ino",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Vince Gilligan, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Crimen.",
     "similar": [
       "Better Call Saul",
-      "Ozark",
+      "Juego de tronos",
       "Los Soprano",
       "The Wire"
     ],
-    "context": "Considerada unánimemente una de las mejores series de televisión de la historia, emitida entre 2008 y 2013."
+    "context": "Creada en 2008, una referencia indispensable obra de Vince Gilligan dentro de su disciplina."
   },
   "axes": {
-    "tono": 5,
-    "ritmo": 4,
+    "tono": 4,
+    "ritmo": 2,
     "emocion": 5,
-    "exigencia": 4,
-    "humor": 2,
-    "tension": 5,
+    "exigencia": 1,
+    "humor": 1,
+    "tension": 1,
     "fantasia": 1,
     "violencia": 4,
     "familiar": 1,
-    "escala": 3,
+    "escala": 2,
     "reconfort": 1,
     "enganche": 5,
-    "formato": 5
+    "formato": 4
   },
   "themes": [
-    "crimen_organizado",
-    "drogas_y_narcos",
+    "investigacion_policial",
     "familia",
-    "ambicion",
-    "politica_y_poder"
+    "amistad"
   ],
   "moments": [
     "maraton",
-    "enganche",
-    "solo",
-    "pensar"
+    "enganche"
   ],
-  "oneLiner": "La caída a los infiernos más adictiva y magistralmente construida de la televisión.",
+  "oneLiner": "Breaking Bad: destacada series (2008) obra de Vince Gilligan.",
   "confidence": "alta",
   "src": "llm-agent"
 }

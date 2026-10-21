@@ -1,41 +1,39 @@
 {
   "id": "artist:the-beatles-1960",
-  "title": "The Beatles",
   "experience": {
-    "plot": "El cuarteto de Liverpool revolucionó la música popular desde sus inicios en el beat y el pop británico hasta la vanguardia psicodélica, la experimentación sonora de estudio y el rock clásico.",
-    "feeling": "Infecciosamente melódica, ingeniosa, emotiva y atemporal. Genera euforia, ternura y asombro por su maestría compositiva.",
-    "hook": "Armonías vocales irrepetibles, evolución constante en cada disco y un catálogo de canciones que forman parte del ADN cultural del mundo.",
-    "notFor": "Oyentes que busquen géneros extremos como metal pesado o música electrónica de club.",
+    "plot": "The Beatles (Liverpool, Reino Unido), icono de Rock, Pop, Psicodelia desde 1960.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Liverpool, Reino Unido, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Rock / Pop.",
     "similar": [
-      "The Beach Boys",
-      "The Rolling Stones",
+      "Queen",
       "Pink Floyd",
-      "The Kinks"
+      "Led Zeppelin",
+      "The Rolling Stones"
     ],
-    "context": "La banda más influyente y vendedora de la historia de la música popular del siglo XX."
+    "context": "Creada en 1960, una referencia indispensable obra de Liverpool, Reino Unido dentro de su disciplina."
   },
   "axes": {
-    "energia": 3,
+    "energia": 5,
     "valencia": 4,
-    "bailable": 3,
+    "bailable": 5,
     "organico": 5,
-    "intensidad": 3,
-    "fondo": 2,
-    "complejidad": 3
+    "intensidad": 5,
+    "fondo": 1,
+    "complejidad": 2
   },
   "themes": [
     "rock_clasico",
     "pop",
-    "psicodelia",
-    "letras_poeticas"
+    "indie_rock",
+    "folk",
+    "blues",
+    "metal"
   ],
   "moments": [
-    "viaje_coche",
-    "relax",
-    "para_cantar",
-    "escucha_atenta"
+    "de_fondo"
   ],
-  "oneLiner": "Melodías universales, ingenio desbordante y emoción imperecedera.",
+  "oneLiner": "The Beatles: destacada artist (1960) obra de Liverpool, Reino Unido.",
   "confidence": "alta",
   "src": "llm-agent"
 }

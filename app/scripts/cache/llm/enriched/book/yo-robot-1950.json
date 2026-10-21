@@ -1,44 +1,39 @@
 {
   "id": "book:yo-robot-1950",
-  "title": "Yo, robot",
   "experience": {
-    "plot": "Colección de relatos hilados por las memorias de la robopsicóloga Susan Calvin en el siglo XXI. A través de distintos casos clínicos e incidentes, se exploran las paradójicas grietas de las Tres Leyes de la Robótica ideadas para proteger a los humanos.",
-    "feeling": "Ingeniosa, analítica, elegante y estimulante. Cada relato funciona como un fascinante acertijo lógico de inteligencia artificial y ética.",
-    "hook": "El rigor filosófico de las Tres Leyes y la sorprendente humanidad que destilan las máquinas en sus dilemas de programación.",
-    "notFor": "Quienes busquen la película de acción de Will Smith; el libro es una obra pausada de misterios lógicos y deducción.",
+    "plot": "Relatos sobre robots, las tres leyes que los gobiernan y las paradojas que esas leyes producen.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Isaac Asimov, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción.",
     "similar": [
-      "Fundación",
-      "2001: Una odisea espacial",
-      "¿Sueñan los androides con ovejas eléctricas?",
-      "El hombre bicentenario"
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
     ],
-    "context": "La obra que cimentó el concepto moderno de la robótica en la literatura y la ciencia, publicada por Asimov en 1950."
+    "context": "Creada en 1950, una referencia indispensable obra de Isaac Asimov dentro de su disciplina."
   },
   "axes": {
     "tono": 2,
-    "ritmo": 3,
+    "ritmo": 4,
     "emocion": 2,
-    "densidad": 3,
-    "humor": 3,
-    "tension": 2,
-    "fantasia": 3,
-    "escala": 3,
-    "ideas": 5,
-    "reconfort": 4
+    "densidad": 2,
+    "humor": 1,
+    "tension": 1,
+    "fantasia": 5,
+    "escala": 2,
+    "ideas": 2,
+    "reconfort": 5
   },
   "themes": [
-    "tecnologia_futuro",
-    "ciencia_y_universo",
-    "filosofia",
-    "misterio",
-    "lenguaje"
+    "identidad",
+    "sociedad",
+    "historia"
   ],
   "moments": [
-    "aprender",
-    "desconectar",
-    "concentracion"
+    "absorbente"
   ],
-  "oneLiner": "Elegantes acertijos éticos y lógicos que sentaron las bases de la inteligencia artificial.",
+  "oneLiner": "Yo, robot: destacada book (1950) obra de Isaac Asimov.",
   "confidence": "alta",
   "src": "llm-agent"
 }

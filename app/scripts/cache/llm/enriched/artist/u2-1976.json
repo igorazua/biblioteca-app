@@ -1,40 +1,38 @@
 {
   "id": "artist:u2-1976",
-  "title": "U2",
   "experience": {
-    "plot": "Cuarteto dublinés que pasó del post-punk combativo de sus inicios a convertirse en la banda de rock de estadio más grande del planeta, con un sonido de guitarras con delay y gran fervor humanitario.",
-    "feeling": "Espiritual, apasionada, grandiosa y emotiva. Sus canciones elevan el espíritu con un lirismo esperanzador y trascendente.",
-    "hook": "La voz poderosa de Bono, los ecos de guitarra infinitos de The Edge y la épica de discos como The Joshua Tree y Achtung Baby.",
-    "notFor": "Quienes sientan hastío de los grandes gestos mesiánicos del rock masivo o busquen géneros urbanos.",
+    "plot": "U2 (Dublín, Irlanda), icono de Rock, Post-punk, Alt-rock desde 1976.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Dublín, Irlanda, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Rock / Post-punk.",
     "similar": [
-      "R.E.M.",
-      "Coldplay",
-      "Simple Minds",
-      "The Police"
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
     ],
-    "context": "La banda de rock más premiada de los premios Grammy y un icono incontestable de la música global."
+    "context": "Creada en 1976, una referencia indispensable obra de Dublín, Irlanda dentro de su disciplina."
   },
   "axes": {
-    "energia": 4,
+    "energia": 5,
     "valencia": 4,
-    "bailable": 3,
-    "organico": 4,
-    "intensidad": 4,
-    "fondo": 2,
-    "complejidad": 3
+    "bailable": 5,
+    "organico": 1,
+    "intensidad": 5,
+    "fondo": 1,
+    "complejidad": 2
   },
   "themes": [
     "rock_clasico",
-    "himnos_estadio",
-    "protesta_social",
-    "letras_poeticas"
+    "pop",
+    "indie_rock",
+    "electronica",
+    "punk"
   ],
   "moments": [
-    "para_cantar",
-    "viaje_coche",
-    "escucha_atenta"
+    "de_fondo"
   ],
-  "oneLiner": "Épica trascendente, guitarras atmosféricas y el pulso espiritual de Dublín al mundo.",
+  "oneLiner": "U2: destacada artist (1976) obra de Dublín, Irlanda.",
   "confidence": "alta",
   "src": "llm-agent"
 }
