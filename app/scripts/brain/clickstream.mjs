@@ -118,86 +118,99 @@ async function getOrBuildSitelinks(items) {
 }
 
 function streamClickstream(month, lang, sitelinkMap, coocCounts, itemTotals, totalClicksRef) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const url = `https://dumps.wikimedia.org/other/clickstream/${month}/clickstream-${lang}wiki-${month}.tsv.gz`
     console.log(`Descargando y procesando: ${url}...`)
 
-    const req = https.get(
-      url,
-      {
-        headers: {
-          'User-Agent': USER_AGENT,
+    function fetchDump(targetUrl) {
+      const req = https.get(
+        targetUrl,
+        {
+          headers: {
+            'User-Agent': USER_AGENT,
+          },
         },
-      },
-      (res) => {
-        if (res.statusCode !== 200) {
-          console.warn(`  ⚠️ HTTP ${res.statusCode} al descargar ${url}`)
-          return resolve()
+        (res) => {
+          if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+            console.log(`  Redirigiendo a: ${res.headers.location}`)
+            return fetchDump(res.headers.location)
+          }
+
+          if (res.statusCode !== 200) {
+            console.warn(`  ⚠️ HTTP ${res.statusCode} al descargar ${targetUrl}`)
+            return resolve()
+          }
+
+          const gunzip = zlib.createGunzip()
+          res.pipe(gunzip)
+
+          const rl = readline.createInterface({ input: gunzip })
+          let linesCount = 0
+          let matchesCount = 0
+
+          rl.on('line', (line) => {
+            linesCount++
+            if (linesCount % 2000000 === 0) {
+              process.stdout.write(`  ...procesadas ${(linesCount / 1000000).toFixed(0)}M líneas (${matchesCount} pares)\r`)
+            }
+
+            const tab1 = line.indexOf('\t')
+            if (tab1 === -1) return
+            const tab2 = line.indexOf('\t', tab1 + 1)
+            if (tab2 === -1) return
+            const tab3 = line.indexOf('\t', tab2 + 1)
+            if (tab3 === -1) return
+
+            const type = line.slice(tab2 + 1, tab3)
+            if (type !== 'link') return
+
+            const prev = line.slice(0, tab1)
+            const curr = line.slice(tab1 + 1, tab2)
+            const count = parseInt(line.slice(tab3 + 1), 10) || 0
+
+            const idA = sitelinkMap[prev]
+            const idB = sitelinkMap[curr]
+
+            if (idA) {
+              itemTotals[idA] = (itemTotals[idA] || 0) + count
+              totalClicksRef.val += count
+            }
+            if (idB) {
+              itemTotals[idB] = (itemTotals[idB] || 0) + count
+              totalClicksRef.val += count
+            }
+
+            if (idA && idB && idA !== idB) {
+              const pairKey = idA < idB ? `${idA}|${idB}` : `${idB}|${idA}`
+              coocCounts[pairKey] = (coocCounts[pairKey] || 0) + count
+              matchesCount++
+            }
+          })
+
+          rl.on('close', () => {
+            console.log(`  Procesadas ${linesCount.toLocaleString()} líneas. Coincidencias catálogo: ${matchesCount}`)
+            resolve()
+          })
+
+          rl.on('error', (err) => {
+            console.error(`  Error leyendo stream:`, err.message)
+            resolve()
+          })
+
+          gunzip.on('error', (err) => {
+            console.error(`  Error descompresión:`, err.message)
+            resolve()
+          })
         }
+      )
 
-        const gunzip = zlib.createGunzip()
-        res.pipe(gunzip)
+      req.on('error', (err) => {
+        console.error(`  Error de conexión para ${targetUrl}:`, err.message)
+        resolve()
+      })
+    }
 
-        const rl = readline.createInterface({ input: gunzip })
-        let linesCount = 0
-        let matchesCount = 0
-
-        rl.on('line', (line) => {
-          linesCount++
-          const tab1 = line.indexOf('\t')
-          if (tab1 === -1) return
-          const tab2 = line.indexOf('\t', tab1 + 1)
-          if (tab2 === -1) return
-          const tab3 = line.indexOf('\t', tab2 + 1)
-          if (tab3 === -1) return
-
-          const type = line.slice(tab2 + 1, tab3)
-          if (type !== 'link') return
-
-          const prev = line.slice(0, tab1)
-          const curr = line.slice(tab1 + 1, tab2)
-          const count = parseInt(line.slice(tab3 + 1), 10) || 0
-
-          const idA = sitelinkMap[prev]
-          const idB = sitelinkMap[curr]
-
-          if (idA) {
-            itemTotals[idA] = (itemTotals[idA] || 0) + count
-            totalClicksRef.val += count
-          }
-          if (idB) {
-            itemTotals[idB] = (itemTotals[idB] || 0) + count
-            totalClicksRef.val += count
-          }
-
-          if (idA && idB && idA !== idB) {
-            const pairKey = idA < idB ? `${idA}|${idB}` : `${idB}|${idA}`
-            coocCounts[pairKey] = (coocCounts[pairKey] || 0) + count
-            matchesCount++
-          }
-        })
-
-        rl.on('close', () => {
-          console.log(`  Procesadas ${linesCount.toLocaleString()} líneas. Coincidencias catálogo: ${matchesCount}`)
-          resolve()
-        })
-
-        rl.on('error', (err) => {
-          console.error(`  Error leyendo stream:`, err.message)
-          resolve() // continuar con el siguiente
-        })
-
-        gunzip.on('error', (err) => {
-          console.error(`  Error descompresión:`, err.message)
-          resolve()
-        })
-      }
-    )
-
-    req.on('error', (err) => {
-      console.error(`  Error de conexión para ${url}:`, err.message)
-      resolve()
-    })
+    fetchDump(url)
   })
 }
 
@@ -238,14 +251,15 @@ async function main() {
 
     const pmi = Math.log((n * N) / (countA * countB))
     const ppmi = Math.max(0, pmi)
+    const roundedPpmi = Number(ppmi.toFixed(4))
 
-    if (ppmi > 0) {
+    if (roundedPpmi > 0) {
       edges.push({
         a,
         b,
         source: 'wikipedia-clickstream',
         n,
-        ppmi: Number(ppmi.toFixed(4)),
+        ppmi: roundedPpmi,
       })
     }
   }

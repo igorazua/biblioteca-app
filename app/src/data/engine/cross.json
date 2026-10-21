@@ -1695,14 +1695,6 @@
       "reason": "Misma afinidad estética y universo temático"
     }
   ],
-  "book:harry-potter-and-the-philosopher-s-stone-1997": [
-    {
-      "id": "movie:harry-potter-and-the-deathly-hallows-part-1-2010",
-      "kind": "pick",
-      "w": 0.85,
-      "reason": "Adaptación y espíritu cinematográfico compartido"
-    }
-  ],
   "book:harry-potter-and-the-deathly-hallows-2007": [
     {
       "id": "movie:harry-potter-and-the-deathly-hallows-part-1-2010",
