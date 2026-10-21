@@ -8,7 +8,7 @@
  *   node --env-file-if-exists=.env.local scripts/engine/covers.mjs [--sample 20]
  */
 
-import { existsSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createClient } from '@supabase/supabase-js'
@@ -17,6 +17,7 @@ import sharp from 'sharp'
 const here = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(here, '..', '..')
 const SEED_FILE = join(ROOT, 'src', 'data', 'seed.json')
+const CACHE_DIR = join(ROOT, 'scripts', 'cache', 'covers')
 
 const args = process.argv.slice(2)
 const sampleIdx = args.indexOf('--sample')
@@ -53,14 +54,32 @@ function hash(s) {
   return h >>> 0
 }
 
+function createNativeFallbackBuffer(item) {
+  const h = hash(item.id)
+  const [deep, mid] = PALETTES[h % PALETTES.length]
+  const r = parseInt(deep.slice(1, 3), 16)
+  const g = parseInt(deep.slice(3, 5), 16)
+  const b = parseInt(deep.slice(5, 7), 16)
+  return sharp({
+    create: {
+      width: 342,
+      height: 513,
+      channels: 4,
+      background: { r, g, b, alpha: 1 },
+    },
+  })
+    .webp({ quality: 80 })
+    .toBuffer()
+}
+
 function generateSvgCover(item) {
   const h = hash(item.id)
   const [deep, mid, light] = PALETTES[h % PALETTES.length]
-  const angle = 155 + ((h >> 5) % 50)
   const cx = 25 + ((h >> 9) % 50)
   const cy = 18 + ((h >> 13) % 30)
   const shape = (h >> 17) % 3
   const safeTitle = (item.title || '')
+    .replace(/[\x00-\x1F\x7F-\x9F]/g, '')
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -89,14 +108,12 @@ function generateSvgCover(item) {
       <text x="24" y="440" font-family="sans-serif" font-weight="bold" font-size="24" fill="#ffffff" width="294">
         ${safeTitle.length > 32 ? safeTitle.slice(0, 30) + '...' : safeTitle}
       </text>
-      <text x="24" y="475" font-family="sans-serif" font-size="14" fill="#cbd5e1">
-        ${item.creator || item.year || ''}
-      </text>
     </svg>
   `.trim()
 }
 
 async function fetchBufferWithTimeout(url, timeoutMs = 8000) {
+  if (!url || typeof url !== 'string' || !url.startsWith('http')) return null
   const controller = new AbortController()
   const id = setTimeout(() => controller.abort(), timeoutMs)
   try {
@@ -104,7 +121,8 @@ async function fetchBufferWithTimeout(url, timeoutMs = 8000) {
       signal: controller.signal,
       headers: {
         'User-Agent':
-          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+        'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
       },
     })
     clearTimeout(id)
@@ -114,6 +132,21 @@ async function fetchBufferWithTimeout(url, timeoutMs = 8000) {
   } catch {
     clearTimeout(id)
     return null
+  }
+}
+
+async function uploadWithRetry(storagePath, buffer, retries = 3) {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    const { error } = await supabase.storage.from(BUCKET).upload(storagePath, buffer, {
+      contentType: 'image/webp',
+      upsert: true,
+    })
+    if (!error) return true
+    if (attempt < retries) {
+      await new Promise((r) => setTimeout(r, 600 * attempt))
+    } else {
+      throw error
+    }
   }
 }
 
@@ -127,75 +160,100 @@ async function processItem(item) {
     return { status: 'skipped', id: item.id, url: currentUrl }
   }
 
-  let imageBuffer = null
+  const shelfCacheDir = join(CACHE_DIR, shelf)
+  mkdirSync(shelfCacheDir, { recursive: true })
+  const localCachePath = join(shelfCacheDir, `${slug}.webp`)
+
+  let webpBuffer = null
   let isGenerated = false
 
-  // 1. Intentar descargar URL actual si existe y no es de Amazon/Goodreads rota
-  if (currentUrl && !currentUrl.includes('goodreads.com') && !currentUrl.includes('media-amazon.com')) {
-    imageBuffer = await fetchBufferWithTimeout(currentUrl)
-  }
+  if (existsSync(localCachePath)) {
+    webpBuffer = readFileSync(localCachePath)
+  } else {
+    let imageBuffer = null
 
-  // 2. Si no pudimos descargar, buscar en Wikimedia Commons si tiene wikidataId
-  if (!imageBuffer && item.wikidataId) {
-    try {
-      const entityUrl = `https://www.wikidata.org/wiki/Special:EntityData/${item.wikidataId}.json`
-      const wData = await (await fetch(entityUrl)).json()
-      const p18 = wData.entities?.[item.wikidataId]?.claims?.P18?.[0]?.mainsnak?.datavalue?.value
-      if (p18) {
-        const commonsUrl = `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(p18)}?width=500`
-        imageBuffer = await fetchBufferWithTimeout(commonsUrl)
-      }
-    } catch {}
-  }
-
-  // 3. Si es libro y tiene olid
-  if (!imageBuffer && item.type === 'book' && item.olid) {
-    const olUrl = `https://covers.openlibrary.org/b/olid/${item.olid}-L.jpg`
-    imageBuffer = await fetchBufferWithTimeout(olUrl)
-  }
-
-  // 4. Si aún no hay imagen, generar portada SVG
-  if (!imageBuffer) {
-    const svg = generateSvgCover(item)
-    imageBuffer = Buffer.from(svg)
-    isGenerated = true
-  }
-
-  // 5. Convertir a WebP 342px de ancho con sharp
-  let webpBuffer = null
-  try {
-    if (isGenerated) {
-      webpBuffer = await sharp(imageBuffer).webp({ quality: 85 }).toBuffer()
-    } else {
-      webpBuffer = await sharp(imageBuffer)
-        .resize({ width: 342, withoutEnlargement: true })
-        .webp({ quality: 80 })
-        .toBuffer()
+    // 1. Intentar descargar URL actual
+    if (currentUrl) {
+      imageBuffer = await fetchBufferWithTimeout(currentUrl)
     }
-  } catch (err) {
-    // Si falla el procesamiento con sharp (e.g. buffer corrupto), fallback a portada generada
-    const svg = generateSvgCover(item)
-    webpBuffer = await sharp(Buffer.from(svg)).webp({ quality: 85 }).toBuffer()
-    isGenerated = true
+
+    // 2. Si es serie y no hubo imagen, TVmaze
+    if (!imageBuffer && item.type === 'series') {
+      try {
+        const tvUrl = `https://api.tvmaze.com/singlesearch/shows?q=${encodeURIComponent(item.title)}`
+        const tvRes = await fetch(tvUrl, { headers: { 'User-Agent': 'Biblioteca/0.1' } })
+        if (tvRes.ok) {
+          const show = await tvRes.json()
+          const imgUrl = show.image?.original || show.image?.medium
+          if (imgUrl) imageBuffer = await fetchBufferWithTimeout(imgUrl)
+        }
+      } catch {}
+    }
+
+    // 3. Si tiene wikidataId, buscar P3383 (cartel) o P18 (imagen)
+    if (!imageBuffer && item.wikidataId) {
+      try {
+        const entityUrl = `https://www.wikidata.org/wiki/Special:EntityData/${item.wikidataId}.json`
+        const wData = await (await fetch(entityUrl)).json()
+        const claims = wData.entities?.[item.wikidataId]?.claims
+        const p3383 = claims?.P3383?.[0]?.mainsnak?.datavalue?.value
+        const p18 = claims?.P18?.[0]?.mainsnak?.datavalue?.value
+        const targetImg = p3383 || p18
+        if (targetImg) {
+          const commonsUrl = `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(targetImg)}?width=500`
+          imageBuffer = await fetchBufferWithTimeout(commonsUrl)
+        }
+      } catch {}
+    }
+
+    // 4. Si es libro y tiene olid
+    if (!imageBuffer && item.type === 'book' && item.olid) {
+      const olUrl = `https://covers.openlibrary.org/b/olid/${item.olid}-L.jpg`
+      imageBuffer = await fetchBufferWithTimeout(olUrl)
+    }
+
+    // Convertir a WebP
+    try {
+      if (imageBuffer) {
+        webpBuffer = await sharp(imageBuffer)
+          .resize({ width: 342, withoutEnlargement: true })
+          .webp({ quality: 80 })
+          .toBuffer()
+      } else {
+        const svg = generateSvgCover(item)
+        webpBuffer = await sharp(Buffer.from(svg)).webp({ quality: 85 }).toBuffer()
+        isGenerated = true
+      }
+    } catch {
+      webpBuffer = await createNativeFallbackBuffer(item)
+      isGenerated = true
+    }
+
+    writeFileSync(localCachePath, webpBuffer)
   }
 
-  // 6. Subir a Supabase Storage
-  const storagePath = isGenerated ? `generated/${slug}.webp` : `${shelf}/${slug}.webp`
-
-  const { error: uploadError } = await supabase.storage.from(BUCKET).upload(storagePath, webpBuffer, {
-    contentType: 'image/webp',
-    upsert: true,
-  })
-
-  if (uploadError) {
-    throw new Error(`Upload error para ${item.id}: ${uploadError.message}`)
-  }
+  // Subir a Supabase Storage
+  const storagePath = `${shelf}/${slug}.webp`
+  await uploadWithRetry(storagePath, webpBuffer)
 
   const { data: publicData } = supabase.storage.from(BUCKET).getPublicUrl(storagePath)
   const newUrl = publicData.publicUrl
 
   item.posterUrl = newUrl
   return { status: 'uploaded', id: item.id, url: newUrl, isGenerated }
+}
+
+async function runPool(items, concurrency, fn) {
+  const results = []
+  let index = 0
+  const workers = Array.from({ length: concurrency }, async () => {
+    while (index < items.length) {
+      const i = index++
+      results[i] = await fn(items[i], i)
+    }
+  })
+  await Promise.all(workers)
+  return results
 }
 
 async function main() {
@@ -211,15 +269,15 @@ async function main() {
 
   let targets = items
   if (SAMPLE_LIMIT) {
-    console.log(`Modo muestra activado: procesando ${SAMPLE_LIMIT} obras...`)
-    // Tomar una muestra representativa de cada estantería
-    const sampleItems = []
+    console.log(`Modo muestra activado: procesando ${SAMPLE_LIMIT} obras pendientes...`)
     const byType = {}
     for (const it of items) {
+      if (it.posterUrl && it.posterUrl.includes('/biblio-covers/')) continue
       byType[it.type] = byType[it.type] || []
       byType[it.type].push(it)
     }
-    const perShelf = Math.ceil(SAMPLE_LIMIT / Object.keys(byType).length)
+    const sampleItems = []
+    const perShelf = Math.ceil(SAMPLE_LIMIT / (Object.keys(byType).length || 1))
     for (const shelfItems of Object.values(byType)) {
       sampleItems.push(...shelfItems.slice(0, perShelf))
     }
@@ -228,38 +286,41 @@ async function main() {
 
   console.log(`Total a procesar: ${targets.length} obras.`)
 
-  let count = 0
   let uploaded = 0
   let skipped = 0
+  let errors = 0
   const sampleResults = []
 
-  for (const item of targets) {
+  const CONCURRENCY = 4
+  let done = 0
+
+  await runPool(targets, CONCURRENCY, async (item) => {
     try {
       const res = await processItem(item)
-      count++
+      done++
       if (res.status === 'uploaded') {
         uploaded++
-        if (SAMPLE_LIMIT) {
-          sampleResults.push(res)
-          console.log(`  [${count}/${targets.length}] Subida ${res.id} (${res.isGenerated ? 'generada' : 'real'}): ${res.url}`)
-        } else if (count % 50 === 0 || count === targets.length) {
-          console.log(`  Progreso: ${count}/${targets.length} (subidas: ${uploaded}, existentes: ${skipped})`)
-        }
+        if (sampleResults.length < 10) sampleResults.push(res)
       } else {
         skipped++
       }
+      if (done % 100 === 0 || done === targets.length) {
+        console.log(`  [${done}/${targets.length}] subidas: ${uploaded}, existentes: ${skipped}, errores: ${errors}`)
+      }
     } catch (e) {
-      console.warn(`  Error en ${item.id}:`, e.message)
+      errors++
+      done++
+      console.warn(`  [${done}/${targets.length}] Error en ${item.id}:`, e.message)
     }
-  }
+  })
 
-  // Guardar seed.json actualizado con las URLs de Supabase
-  writeFileSync(SEED_FILE, JSON.stringify(seed))
-  console.log(`\n✓ Portadas actualizadas en seed.json. Subidas: ${uploaded}, Saltadas: ${skipped}.`)
+  // Guardar seed.json con formato bonito
+  writeFileSync(SEED_FILE, JSON.stringify(seed, null, 2), 'utf8')
+  console.log(`\n✓ Portadas actualizadas en seed.json. Subidas: ${uploaded}, Saltadas: ${skipped}, Errores: ${errors}.`)
 
-  if (SAMPLE_LIMIT) {
-    console.log('\n--- URLs DE MUESTRA PARA COMPROBAR EN SUPABASE ---')
-    sampleResults.slice(0, 10).forEach((r) => console.log(`- ${r.id}: ${r.url}`))
+  if (sampleResults.length > 0) {
+    console.log('\n--- URLs DE MUESTRA SUBIDAS A SUPABASE ---')
+    sampleResults.forEach((r) => console.log(`- ${r.id}: ${r.url} (${r.isGenerated ? 'generada' : 'real'})`))
   }
 }
 

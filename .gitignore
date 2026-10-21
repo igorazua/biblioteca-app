@@ -8,3 +8,4 @@ dist
 supabase/.temp/
 app/scripts/cache/seed-antes-T2.json
 app/scripts/cache/eval/
+app/scripts/cache/covers/
