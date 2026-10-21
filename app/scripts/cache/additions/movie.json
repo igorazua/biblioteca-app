@@ -1,0 +1,58 @@
+[
+  {
+    "type": "movie",
+    "title": "El día de la bestia",
+    "year": 1995,
+    "creator": "Álex de la Iglesia",
+    "wikidataId": "Q131291"
+  },
+  {
+    "type": "movie",
+    "title": "El verdugo",
+    "year": 1963,
+    "creator": "Luis García Berlanga",
+    "wikidataId": "Q947083"
+  },
+  {
+    "type": "movie",
+    "title": "Los santos inocentes",
+    "year": 1984,
+    "creator": "Mario Camus",
+    "wikidataId": "Q1630034"
+  },
+  {
+    "type": "movie",
+    "title": "Amanece, que no es poco",
+    "year": 1989,
+    "creator": "José Luis Cuerda",
+    "wikidataId": "Q4739943"
+  },
+  {
+    "type": "movie",
+    "title": "[REC]",
+    "year": 2007,
+    "creator": "Jaume Balagueró y Paco Plaza",
+    "wikidataId": "Q754474"
+  },
+  {
+    "type": "movie",
+    "title": "Torrente, el brazo tonto de la ley",
+    "year": 1998,
+    "creator": "Santiago Segura",
+    "wikidataId": "Q1050105"
+  },
+  {
+    "type": "movie",
+    "title": "Airbag",
+    "year": 1997,
+    "creator": "Juanma Bajo Ulloa",
+    "wikidataId": "Q2828262"
+  },
+  {
+    "type": "movie",
+    "title": "Alcarràs",
+    "year": 2022,
+    "creator": "Carla Simón",
+    "wikidataId": "Q107621676"
+  }
+]

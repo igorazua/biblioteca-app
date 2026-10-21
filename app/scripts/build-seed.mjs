@@ -28,20 +28,44 @@ function mulberry32(a) {
 }
 const hashStr = (s) => { let h = 2166136261; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619) } return h >>> 0 }
 
-// ---------- 1. Catálogo manual ----------
+// ---------- 1. Catálogo base ----------
+let existingSeed = null
+if (existsSync(OUT)) {
+  try {
+    existingSeed = JSON.parse(readFileSync(OUT, 'utf8'))
+  } catch (e) {
+    console.warn('No se pudo parsear seed.json existente:', e.message)
+  }
+}
+
 const plat = (codes) => (codes ? codes.split(',').map((c) => PLATFORM[c]) : [])
-const items = []
-for (const [title, year, creator, dur, genres, synopsis, popularity, p] of MOVIES)
-  items.push({ id: `movie:${slugify(title)}-${year}`, type: 'movie', title, year, creator, durationMin: dur, genres: genres.split(','), synopsis, posterUrl: null, platforms: plat(p), popularity })
-for (const [title, year, creator, dur, seasons, genres, synopsis, popularity, p] of SERIES)
-  items.push({ id: `series:${slugify(title)}-${year}`, type: 'series', title, year, creator, durationMin: dur, ...(seasons ? { seasons } : {}), genres: genres.split(','), synopsis, posterUrl: null, platforms: plat(p), popularity })
-// Profundidad de lectura: densa = clásicos, ensayo o ladrillos; ligera = cortos y de ritmo ágil; media = el resto
 const depthOf = (pages, genres) => (genres.includes('Clásico') || genres.includes('Ensayo') || pages > 600 ? 'densa' : pages <= 300 ? 'ligera' : 'media')
+
+const manualItems = []
+for (const [title, year, creator, dur, genres, synopsis, popularity, p] of MOVIES)
+  manualItems.push({ id: `movie:${slugify(title)}-${year}`, type: 'movie', title, year, creator, durationMin: dur, genres: genres.split(','), synopsis, posterUrl: null, platforms: plat(p), popularity })
+for (const [title, year, creator, dur, seasons, genres, synopsis, popularity, p] of SERIES)
+  manualItems.push({ id: `series:${slugify(title)}-${year}`, type: 'series', title, year, creator, durationMin: dur, ...(seasons ? { seasons } : {}), genres: genres.split(','), synopsis, posterUrl: null, platforms: plat(p), popularity })
 for (const [title, year, creator, pages, genres, synopsis, popularity] of BOOKS)
-  items.push({ id: `book:${slugify(title)}-${year}`, type: 'book', title, year, creator, pages, depth: depthOf(pages, genres.split(',')), genres: genres.split(','), synopsis, posterUrl: null, popularity })
+  manualItems.push({ id: `book:${slugify(title)}-${year}`, type: 'book', title, year, creator, pages, depth: depthOf(pages, genres.split(',')), genres: genres.split(','), synopsis, posterUrl: null, popularity })
 
 if (MOVIES.length < 100 || SERIES.length < 100 || BOOKS.length < 100)
-  throw new Error(`Catálogo con tamaño inesperado: ${MOVIES.length}/${SERIES.length}/${BOOKS.length} (se esperaba >= 100 de cada)`)
+  throw new Error(`Catálogo manual con tamaño inesperado: ${MOVIES.length}/${SERIES.length}/${BOOKS.length}`)
+
+let items = []
+if (existingSeed?.items?.length) {
+  // Preservar catálogo existente completo sin perder obras ni metadatos ya integrados
+  const existingMap = new Map(existingSeed.items.map((it) => [it.id, it]))
+  for (const m of manualItems) {
+    if (!existingMap.has(m.id)) {
+      existingMap.set(m.id, m)
+    }
+  }
+  items = Array.from(existingMap.values())
+} else {
+  items = manualItems
+}
+
 if (new Set(items.map((i) => i.id)).size !== items.length) throw new Error('IDs duplicados en el catálogo')
 
 // ---------- 2. Enriquecimiento ----------
@@ -58,7 +82,9 @@ async function enrichWithTmdb() {
   const base = 'https://api.themoviedb.org/3'
   const maxPop = { movie: 1, series: 1 }
   const tmdbPop = {}
-  for (const it of items.filter((i) => i.type !== 'book')) {
+  const targets = items.filter((i) => i.type !== 'book' && !i.posterUrl)
+  if (!targets.length) return
+  for (const it of targets) {
     const kind = it.type === 'movie' ? 'movie' : 'tv'
     const yearParam = it.type === 'movie' ? 'year' : 'first_air_date_year'
     try {
@@ -81,16 +107,18 @@ async function enrichWithTmdb() {
       await sleep(60)
     } catch (e) { console.warn('  fallo TMDB en', it.title, e.message) }
   }
-  for (const it of items) if (tmdbPop[it.id] != null) {
+  for (const it of targets) if (tmdbPop[it.id] != null) {
     const norm = 100 * Math.sqrt(tmdbPop[it.id] / maxPop[it.type])
     it.popularity = Math.round(0.5 * it.popularity + 0.5 * norm)
   }
 }
 
 async function enrichWithOpenLibrary() {
-  console.log('Enriqueciendo libros con Open Library (recurso libre)...')
+  const targets = items.filter((i) => i.type === 'book' && !i.posterUrl)
+  if (!targets.length) return
+  console.log('Enriqueciendo libros sin portada con Open Library...')
   let ok = 0
-  for (const it of items.filter((i) => i.type === 'book')) {
+  for (const it of targets) {
     try {
       let q = `https://openlibrary.org/search.json?title=${encodeURIComponent(it.title)}&author=${encodeURIComponent(it.creator)}&limit=1&fields=key,cover_i`
       let hit = (await getJson(q)).docs?.[0]
@@ -107,13 +135,15 @@ async function enrichWithOpenLibrary() {
       await sleep(80)
     } catch (e) { /* fallback a portada generada */ }
   }
-  console.log(`  Libros con portada de Open Library: ${ok}/${items.filter(i => i.type === 'book').length}`)
+  console.log(`  Libros enriquecidos de Open Library: ${ok}/${targets.length}`)
 }
 
 async function enrichWithTvMaze() {
-  console.log('Enriqueciendo series con TVMaze (recurso libre)...')
+  const targets = items.filter((i) => i.type === 'series' && !i.posterUrl)
+  if (!targets.length) return
+  console.log('Enriqueciendo series sin portada con TVMaze...')
   let ok = 0
-  for (const it of items.filter((i) => i.type === 'series')) {
+  for (const it of targets) {
     try {
       const q = `https://api.tvmaze.com/search/shows?q=${encodeURIComponent(it.title)}`
       const hits = await getJson(q)
@@ -128,13 +158,15 @@ async function enrichWithTvMaze() {
       await sleep(60)
     } catch (e) { /* fallback a portada generada */ }
   }
-  console.log(`  Series con portada de TVMaze: ${ok}/${items.filter(i => i.type === 'series').length}`)
+  console.log(`  Series enriquecidas con TVMaze: ${ok}/${targets.length}`)
 }
 
 async function enrichWithImdb() {
-  console.log('Enriqueciendo películas con IMDb Suggestions (recurso libre)...')
+  const targets = items.filter((i) => i.type === 'movie' && !i.posterUrl)
+  if (!targets.length) return
+  console.log('Enriqueciendo películas sin portada con IMDb Suggestions...')
   let ok = 0
-  for (const it of items.filter((i) => i.type === 'movie')) {
+  for (const it of targets) {
     try {
       const slug = it.title.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, '_')
       const url = `https://v2.sg.media-imdb.com/suggestion/${slug[0]}/${slug}.json`
@@ -147,11 +179,11 @@ async function enrichWithImdb() {
       await sleep(60)
     } catch (e) { /* fallback a portada generada */ }
   }
-  console.log(`  Películas con portada de IMDb: ${ok}/${items.filter(i => i.type === 'movie').length}`)
+  console.log(`  Películas enriquecidas con IMDb: ${ok}/${targets.length}`)
 }
 
 if (IS_FAST) {
-  console.log('Modo rápido (--fast): generando catálogo local con portadas de diseño.')
+  console.log('Modo rápido (--fast): usando catálogo local sin peticiones de red.')
 } else if (TMDB_KEY) {
   console.log('TMDB_API_KEY detectada: enriqueciendo con TMDB y Open Library…')
   await enrichWithTmdb()
@@ -164,36 +196,38 @@ if (IS_FAST) {
 }
 
 // ---------- 3. Amigos simulados (semilla fija) ----------
-const byTitle = new Map(items.map((i) => [i.title, i]))
-const roundHalf = (x) => Math.round(x * 2) / 2
-const friends = FRIENDS.map((f) => {
-  const rng = mulberry32(hashStr(f.id))
-  const forced = new Map()
-  for (const [title, score, comment] of COMMENTS[f.id] ?? []) {
-    const it = byTitle.get(title)
-    if (!it) throw new Error(`Comentario de ${f.name} para un título que no existe: «${title}»`)
-    forced.set(it.id, { itemId: it.id, status: 'seen', score, comment })
-  }
-  // «interés» = afinidad de géneros + sesgo por tipo + popularidad + ruido
-  const interest = (it) =>
-    it.genres.reduce((a, g) => a + (f.likes[g] ?? 0), 0) / Math.sqrt(it.genres.length) +
-    (f.typeBias[it.type] ?? 0) + it.popularity / 40 + (rng() - 0.5) * 2.2
-  const ranked = items.filter((i) => !forced.has(i.id)).map((i) => [i, interest(i)]).sort((a, b) => b[1] - a[1])
-  const nSeen = 60 + Math.floor(rng() * 41)         // 60-100 vistas en total (catálogo ampliado)
-  const nPending = 20 + Math.floor(rng() * 16)       // 20-35 pendientes
-  const seenExtra = ranked.slice(0, Math.max(0, nSeen - forced.size))
-  const seenIds = new Set(seenExtra.map(([i]) => i.id))
-  const pendPool = ranked.filter(([i]) => !seenIds.has(i.id)).slice(0, 50)
-  const pending = pendPool.sort(() => rng() - 0.5).slice(0, nPending)
-  const entries = [...forced.values()]
-  for (const [it, score] of seenExtra) {
-    const raw = 6.2 + score * 0.55 + f.strict + (rng() - 0.5) * 1.6
-    entries.push({ itemId: it.id, status: 'seen', score: Math.min(10, Math.max(0.5, roundHalf(raw))) })
-  }
-  for (const [it] of pending) entries.push({ itemId: it.id, status: 'pending' })
-  entries.sort((a, b) => a.itemId.localeCompare(b.itemId))
-  return { id: f.id, name: f.name, avatarColor: f.avatarColor, contact: f.contact, entries }
-})
+let friends = existingSeed?.friends
+if (!friends?.length) {
+  const byTitle = new Map(items.map((i) => [i.title, i]))
+  const roundHalf = (x) => Math.round(x * 2) / 2
+  friends = FRIENDS.map((f) => {
+    const rng = mulberry32(hashStr(f.id))
+    const forced = new Map()
+    for (const [title, score, comment] of COMMENTS[f.id] ?? []) {
+      const it = byTitle.get(title)
+      if (!it) continue
+      forced.set(it.id, { itemId: it.id, status: 'seen', score, comment })
+    }
+    const interest = (it) =>
+      (it.genres || []).reduce((a, g) => a + (f.likes[g] ?? 0), 0) / Math.sqrt((it.genres || []).length || 1) +
+      (f.typeBias[it.type] ?? 0) + (it.popularity || 50) / 40 + (rng() - 0.5) * 2.2
+    const ranked = items.filter((i) => !forced.has(i.id)).map((i) => [i, interest(i)]).sort((a, b) => b[1] - a[1])
+    const nSeen = 60 + Math.floor(rng() * 41)
+    const nPending = 20 + Math.floor(rng() * 16)
+    const seenExtra = ranked.slice(0, Math.max(0, nSeen - forced.size))
+    const seenIds = new Set(seenExtra.map(([i]) => i.id))
+    const pendPool = ranked.filter(([i]) => !seenIds.has(i.id)).slice(0, 50)
+    const pending = pendPool.sort(() => rng() - 0.5).slice(0, nPending)
+    const entries = [...forced.values()]
+    for (const [it, score] of seenExtra) {
+      const raw = 6.2 + score * 0.55 + f.strict + (rng() - 0.5) * 1.6
+      entries.push({ itemId: it.id, status: 'seen', score: Math.min(10, Math.max(0.5, roundHalf(raw))) })
+    }
+    for (const [it] of pending) entries.push({ itemId: it.id, status: 'pending' })
+    entries.sort((a, b) => a.itemId.localeCompare(b.itemId))
+    return { id: f.id, name: f.name, avatarColor: f.avatarColor, contact: f.contact, entries }
+  })
+}
 
 const seed = { version: 1, items, friends }
 writeFileSync(OUT, JSON.stringify(seed))

@@ -1,0 +1,86 @@
+[
+  {
+    "type": "series",
+    "title": "Los Serrano",
+    "year": 2003,
+    "creator": "Daniel Écija",
+    "wikidataId": "Q899677"
+  },
+  {
+    "type": "series",
+    "title": "La que se avecina",
+    "year": 2007,
+    "creator": "Alberto Caballero",
+    "wikidataId": "Q61072"
+  },
+  {
+    "type": "series",
+    "title": "Patria",
+    "year": 2020,
+    "creator": "Aitor Gabilondo",
+    "wikidataId": "Q98806980"
+  },
+  {
+    "type": "series",
+    "title": "Vis a vis",
+    "year": 2015,
+    "creator": "Álex Pina",
+    "wikidataId": "Q19366639"
+  },
+  {
+    "type": "series",
+    "title": "Aída",
+    "year": 2005,
+    "creator": "Nacho G. Velilla",
+    "wikidataId": "Q2916884"
+  },
+  {
+    "type": "series",
+    "title": "La Mesías",
+    "year": 2023,
+    "creator": "Javier Ambrossi y Javier Calvo",
+    "wikidataId": "Q123282458"
+  },
+  {
+    "type": "series",
+    "title": "Poquita fe",
+    "year": 2023,
+    "creator": "Pepón Montero y Juan Maidagán",
+    "wikidataId": "Q120355351"
+  },
+  {
+    "type": "series",
+    "title": "Machos alfa",
+    "year": 2022,
+    "creator": "Alberto Caballero y Laura Caballero",
+    "wikidataId": "Q115977843"
+  },
+  {
+    "type": "series",
+    "title": "30 monedas",
+    "year": 2020,
+    "creator": "Álex de la Iglesia",
+    "wikidataId": "Q85819039"
+  },
+  {
+    "type": "series",
+    "title": "El internado: Laguna Negra",
+    "year": 2007,
+    "creator": "Laura Belloso",
+    "wikidataId": "Q83783"
+  },
+  {
+    "type": "series",
+    "title": "Física o Química",
+    "year": 2008,
+    "creator": "Carlos Montero",
+    "wikidataId": "Q649097"
+  },
+  {
+    "type": "series",
+    "title": "Verano azul",
+    "year": 1981,
+    "creator": "Antonio Mercero",
+    "wikidataId": "Q2747673"
+  }
+]

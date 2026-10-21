@@ -13,9 +13,11 @@ import { fileURLToPath } from 'node:url'
 const here = dirname(fileURLToPath(import.meta.url))
 const SEED_FILE = join(here, '..', 'src', 'data', 'seed.json')
 const ALIASES_FILE = join(here, '..', 'src', 'data', 'aliases.json')
+const MANUAL_TWINS_FILE = join(here, 'cache', 'twins-manual.json')
 
 const seed = JSON.parse(readFileSync(SEED_FILE, 'utf-8'))
 const aliases = existsSync(ALIASES_FILE) ? JSON.parse(readFileSync(ALIASES_FILE, 'utf-8')) : {}
+const manualTwins = existsSync(MANUAL_TWINS_FILE) ? JSON.parse(readFileSync(MANUAL_TWINS_FILE, 'utf-8')) : {}
 
 // Wikidata IDs mal puestos en el seed, comprobados a mano contra Wikidata (20/10/2026): al fusionar por título se
 // quedó la obra con portada, pero su ID apuntaba a otra cosa (la secuela, la película de 1958, la ciudad de Roma…).
@@ -29,10 +31,26 @@ const WIKIDATA_FIXES = {
 }
 for (const it of seed.items) if (WIKIDATA_FIXES[it.id]) it.wikidataId = WIKIDATA_FIXES[it.id]
 
+// Fusión de gemelos manuales (cache/twins-manual.json)
+const itemsById = new Map(seed.items.map((it) => [it.id, it]))
+for (const [dupId, canonId] of Object.entries(manualTwins)) {
+  const dup = itemsById.get(dupId)
+  const canonItem = itemsById.get(canonId)
+  if (dup && canonItem) {
+    if (!canonItem.wikidataId && dup.wikidataId) canonItem.wikidataId = dup.wikidataId
+    if (!canonItem.posterUrl && dup.posterUrl) canonItem.posterUrl = dup.posterUrl
+    aliases[dupId] = canonId
+  }
+}
+
 const keeperByExt = new Map()
 const kept = []
 let removed = 0
 for (const it of seed.items) {
+  if (manualTwins[it.id] && itemsById.has(manualTwins[it.id])) {
+    removed++
+    continue
+  }
   const key = it.wikidataId ? `${it.type}|${it.wikidataId}` : null
   const keeper = key ? keeperByExt.get(key) : undefined
   if (keeper) {

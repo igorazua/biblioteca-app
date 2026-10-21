@@ -19,7 +19,7 @@ const TITLES_DIR = join(here, 'cache', 'titles')
 const seed = JSON.parse(readFileSync(SEED_FILE, 'utf-8'))
 let changed = 0
 const unused = []
-for (const type of ['movie', 'series']) {
+for (const type of ['movie', 'series', 'book', 'boardgame']) {
   const file = join(TITLES_DIR, `es-${type}.json`)
   if (!existsSync(file)) continue
   const map = JSON.parse(readFileSync(file, 'utf-8'))

@@ -85,4 +85,11 @@ describe('Gemelas fusionadas (aliases)', () => {
     expect(merged.entries[EN]).toBeUndefined()
     expect(merged.rankings.movie).toEqual([ES])
   })
+
+  it('los ids eliminados por duplicado manual (twins-manual) resuelven a su gemela', () => {
+    expect(canonicalId('book:the-hobbit-1937')).toBe('book:el-hobbit-1937')
+    expect(canonicalId('book:the-art-of-war-1900')).toBe('book:el-arte-de-la-guerra--500')
+    expect(canonicalId('book:the-picture-of-dorian-gray-1890')).toBe('book:el-retrato-de-dorian-gray-1890')
+    expect(canonicalId('book:the-prince-1515')).toBe('book:el-principe-1532')
+  })
 })

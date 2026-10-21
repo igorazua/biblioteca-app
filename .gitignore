@@ -6,3 +6,4 @@ dist
 .DS_Store
 .claude/
 supabase/.temp/
+app/scripts/cache/seed-antes-T2.json

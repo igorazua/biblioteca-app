@@ -1,0 +1,128 @@
+[
+  {
+    "type": "book",
+    "title": "La chica de nieve",
+    "year": 2020,
+    "creator": "Javier Castillo",
+    "wikidataId": "Q116392244"
+  },
+  {
+    "type": "book",
+    "title": "El día que se perdió la cordura",
+    "year": 2017,
+    "creator": "Javier Castillo",
+    "wikidataId": "Q116680459"
+  },
+  {
+    "type": "book",
+    "title": "El corazón helado",
+    "year": 2007,
+    "creator": "Almudena Grandes",
+    "wikidataId": "Q5824479"
+  },
+  {
+    "type": "book",
+    "title": "Roma soy yo",
+    "year": 2022,
+    "creator": "Santiago Posteguillo",
+    "wikidataId": "Q111660395"
+  },
+  {
+    "type": "book",
+    "title": "Africanus: El hijo del cónsul",
+    "year": 2006,
+    "creator": "Santiago Posteguillo",
+    "wikidataId": "Q5659728"
+  },
+  {
+    "type": "book",
+    "title": "La novia gitana",
+    "year": 2018,
+    "creator": "Carmen Mola",
+    "wikidataId": "Q88280016"
+  },
+  {
+    "type": "book",
+    "title": "Memorias de Idhún: La Resistencia",
+    "year": 2004,
+    "creator": "Laura Gallego",
+    "wikidataId": "Q3305541"
+  },
+  {
+    "type": "book",
+    "title": "El capitán Alatriste",
+    "year": 1996,
+    "creator": "Arturo Pérez-Reverte",
+    "wikidataId": "Q2113337"
+  },
+  {
+    "type": "book",
+    "title": "La reina del sur",
+    "year": 2002,
+    "creator": "Arturo Pérez-Reverte",
+    "wikidataId": "Q1645229"
+  },
+  {
+    "type": "book",
+    "title": "La tabla de Flandes",
+    "year": 1990,
+    "creator": "Arturo Pérez-Reverte",
+    "wikidataId": "Q2632289"
+  },
+  {
+    "type": "book",
+    "title": "Loba Negra",
+    "year": 2019,
+    "creator": "Juan Gómez-Jurado",
+    "wikidataId": "Q107297839"
+  },
+  {
+    "type": "book",
+    "title": "Rey Blanco",
+    "year": 2020,
+    "creator": "Juan Gómez-Jurado",
+    "wikidataId": "Q107297841"
+  },
+  {
+    "type": "book",
+    "title": "El legado en los huesos",
+    "year": 2013,
+    "creator": "Dolores Redondo",
+    "wikidataId": "Q18644304"
+  },
+  {
+    "type": "book",
+    "title": "Un mundo sin fin",
+    "year": 2007,
+    "creator": "Ken Follett",
+    "wikidataId": "Q1102283"
+  },
+  {
+    "type": "book",
+    "title": "El juego del ángel",
+    "year": 2008,
+    "creator": "Carlos Ruiz Zafón",
+    "wikidataId": "Q1192323"
+  },
+  {
+    "type": "book",
+    "title": "Marina",
+    "year": 1999,
+    "creator": "Carlos Ruiz Zafón",
+    "wikidataId": "Q2604473"
+  },
+  {
+    "type": "book",
+    "title": "El chico que dibujaba constelaciones",
+    "year": 2018,
+    "creator": "Alice Kellen",
+    "wikidataId": "Q117070104"
+  },
+  {
+    "type": "book",
+    "title": "Sin noticias de Gurb",
+    "year": 1991,
+    "creator": "Eduardo Mendoza",
+    "wikidataId": "Q1765175"
+  }
+]
