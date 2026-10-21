@@ -1,7 +1,7 @@
 {
   "source": "openlibrary",
   "olid": "OL34766796W",
-  "wikidataId": null,
+  "wikidataId": "Q25338",
   "voteAvg": 7.7,
   "voteCount": 14,
   "readers": 374,
@@ -15,6 +15,7 @@
     "readers": "openlibrary",
     "voteAvg": "openlibrary",
     "subjects": "openlibrary",
-    "posterUrl": "openlibrary"
+    "posterUrl": "openlibrary",
+    "wikidataId": "wikidata"
   }
 }

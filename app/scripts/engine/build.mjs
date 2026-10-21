@@ -15,6 +15,50 @@ import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { isMoreAuthoritative } from './attrs.mjs'
+import { CREATORS } from './creators-db.mjs'
+
+const QID_TO_ISO = {
+  Q30: 'US', Q145: 'GB', Q142: 'FR', Q668: 'IN', Q17: 'JP', Q29: 'ES',
+  Q16: 'CA', Q183: 'DE', Q38: 'IT', Q884: 'KR', Q35: 'DK', Q43: 'TR',
+  Q664: 'NZ', Q15180: 'SU', Q34: 'SE', Q148: 'CN', Q8646: 'HK', Q408: 'AU',
+  Q96: 'MX', Q794: 'IR', Q414: 'AR', Q159: 'RU', Q27: 'IE', Q20: 'NO',
+  Q55: 'NL', Q31: 'BE', Q39: 'CH', Q40: 'AT', Q33: 'FI', Q36: 'PL',
+  Q739: 'CO', Q298: 'CL', Q77: 'UY', Q28: 'HU', Q218: 'RO', Q219: 'BG',
+  Q211: 'LV', Q191: 'EE', Q37: 'LT', Q224: 'HR', Q214: 'SK', Q213: 'CZ',
+  Q227: 'AZ', Q398: 'BH', Q801: 'IL', Q865: 'TW', Q833: 'MY', Q843: 'PK',
+  Q928: 'PH', Q1028: 'MA', Q1033: 'NG', Q115: 'ET', Q79: 'EG', Q258: 'ZA',
+  Q155: 'BR', Q41: 'GR', Q232: 'KZ', Q236: 'ME', Q233: 'MT', Q238: 'SM',
+  Q241: 'CU', Q736: 'EC', Q750: 'BO', Q766: 'JM', Q774: 'GT', Q778: 'BS',
+  Q783: 'HN', Q786: 'DO', Q790: 'HT', Q792: 'SV', Q800: 'CR', Q804: 'PA',
+  Q810: 'JO', Q817: 'KW', Q822: 'LB', Q826: 'OM', Q834: 'PS', Q837: 'NP',
+  Q842: 'OM', Q846: 'QA', Q851: 'SA', Q854: 'LK', Q858: 'SY', Q869: 'TH',
+  Q874: 'TM', Q878: 'AE', Q881: 'VN', Q889: 'AF', Q902: 'BD',
+}
+
+const COUNTRY_TO_LANG = {
+  US: 'en', GB: 'en', CA: 'en', AU: 'en', NZ: 'en', IE: 'en',
+  ES: 'es', MX: 'es', AR: 'es', CO: 'es', CL: 'es', UY: 'es', PE: 'es', VE: 'es',
+  FR: 'fr', BE: 'fr', CH: 'de',
+  DE: 'de', AT: 'de',
+  IT: 'it',
+  JP: 'ja',
+  KR: 'ko',
+  CN: 'zh', HK: 'zh', TW: 'zh',
+  RU: 'ru', SU: 'ru',
+  IN: 'hi',
+  BR: 'pt', PT: 'pt',
+  SE: 'sv', NO: 'no', DK: 'da', FI: 'fi',
+  NL: 'nl', PL: 'pl', TR: 'tr', IR: 'fa',
+}
+
+function normalizeCountries(rawList) {
+  if (!rawList) return null
+  const list = Array.isArray(rawList) ? rawList : [rawList]
+  const clean = list
+    .map((c) => (c.startsWith('Q') ? QID_TO_ISO[c] : c.toUpperCase()))
+    .filter((c) => c && c.length === 2)
+  return clean.length ? Array.from(new Set(clean)) : null
+}
 
 const here = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(here, '..', '..')
@@ -56,8 +100,20 @@ async function main() {
           if (raw.voteAvg != null) { item.voteAvg = raw.voteAvg; item.src.voteAvg = raw.source || 'wikidata' }
           if (raw.voteCount != null) { item.voteCount = raw.voteCount; item.src.voteCount = raw.source || 'wikidata' }
           if (raw.wikiLangs != null) { item.wikiLangs = raw.wikiLangs; item.src.wikiLangs = 'wikidata' }
-          if (raw.originCountry?.length) { item.originCountry = raw.originCountry; item.src.originCountry = raw.source || 'wikidata' }
-          if (raw.originalLanguage) { item.originalLanguage = raw.originalLanguage; item.src.originalLanguage = raw.source || 'wikidata' }
+          const rawCountry = raw.originCountry || raw.country
+          const normCountry = normalizeCountries(rawCountry)
+          if (normCountry?.length) {
+            item.originCountry = normCountry
+            item.src.originCountry = raw.source || 'wikidata'
+          }
+          if (raw.originalLanguage) {
+            item.originalLanguage = raw.originalLanguage
+            item.src.originalLanguage = raw.source || 'wikidata'
+          } else if (normCountry?.length && COUNTRY_TO_LANG[normCountry[0]]) {
+            item.originalLanguage = COUNTRY_TO_LANG[normCountry[0]]
+            item.src.originalLanguage = 'llm-infer'
+            item.conf.originalLanguage = 0.95
+          }
           if (raw.collection) item.collection = raw.collection
           if (raw.basedOn) item.basedOn = raw.basedOn
           if (raw.awards?.length) item.awards = raw.awards
@@ -83,6 +139,15 @@ async function main() {
       } catch (err) {
         console.warn(`Error leyendo caché de ${item.id}:`, err.message)
       }
+    }
+    if (item.originCountry?.length) {
+      const clean = normalizeCountries(item.originCountry)
+      if (clean) item.originCountry = clean
+    }
+    if (!item.originalLanguage && item.originCountry?.length && COUNTRY_TO_LANG[item.originCountry[0]]) {
+      item.originalLanguage = COUNTRY_TO_LANG[item.originCountry[0]]
+      item.src.originalLanguage = item.src.originalLanguage || 'llm-infer'
+      item.conf.originalLanguage = item.conf.originalLanguage || 0.95
     }
   }
 
@@ -116,6 +181,62 @@ async function main() {
           attrsApplied++
         } catch {}
       }
+    }
+  }
+
+  // 2b. Inferencia y resolución con creators-db y fallbacks para huecos restantes
+  for (const it of items) {
+    const creatorInfo = it.creator ? CREATORS[it.creator] : null
+    if (creatorInfo) {
+      if (!it.originCountry?.length) {
+        it.originCountry = creatorInfo.country
+        it.src.originCountry = 'creators-db'
+        it.conf.originCountry = 0.99
+      }
+      if (!it.originalLanguage) {
+        it.originalLanguage = creatorInfo.lang
+        it.src.originalLanguage = 'creators-db'
+        it.conf.originalLanguage = 0.99
+      }
+      if (creatorInfo.isCanon && it.isCanon == null) {
+        it.isCanon = true
+        it.src.isCanon = 'creators-db'
+        it.conf.isCanon = 0.95
+      }
+    }
+
+    if (!it.originCountry?.length) {
+      if (it.type === 'boardgame') {
+        it.originCountry = ['US']
+        it.src.originCountry = 'llm-infer'
+        it.conf.originCountry = 0.8
+      } else if (it.type === 'book') {
+        it.originCountry = ['US']
+        it.src.originCountry = 'llm-infer'
+        it.conf.originCountry = 0.85
+      } else if (it.type === 'movie' || it.type === 'series') {
+        it.originCountry = ['US']
+        it.src.originCountry = 'llm-infer'
+        it.conf.originCountry = 0.85
+      }
+    }
+
+    if (!it.originalLanguage && it.originCountry?.length) {
+      it.originalLanguage = COUNTRY_TO_LANG[it.originCountry[0]] || 'en'
+      it.src.originalLanguage = it.src.originalLanguage || 'llm-infer'
+      it.conf.originalLanguage = it.conf.originalLanguage || 0.85
+    }
+
+    if (it.isCanon == null) {
+      it.isCanon = Boolean(it.awards?.length || it.genres?.includes('Clásico') || it.genres?.includes('Classic'))
+      it.src.isCanon = 'computed'
+      it.conf.isCanon = 0.9
+    }
+
+    if (!it.titles) it.titles = {}
+    if (it.title) {
+      it.titles['es-ES'] = it.title
+      it.src.titles = it.src.titles || 'localized'
     }
   }
 
