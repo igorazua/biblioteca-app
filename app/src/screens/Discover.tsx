@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { friends as seedFriends, getItem, items } from '../data/catalog'
 import { nextCards, newDeckSessionState, type DeckCard, type DeckSessionState } from '../lib/engine/deck'
@@ -17,6 +17,8 @@ import { RatingFlow } from '../components/RatingFlow'
 import { NudgeCard } from '../components/NudgeCard'
 import { Chip, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
+import { ScreenTitle } from '../components/ScreenTitle'
+import { Button } from '../components/Button'
 
 const readShelf = (): ShelfType => {
   try { const v = sessionStorage.getItem('discover-shelf') as ShelfType; if (v && (SHELVES as readonly string[]).includes(v)) return v } catch { /* sin almacenamiento */ }
@@ -205,14 +207,24 @@ export function Discover() {
   const blocked = !!rating || !!deckNudge
 
   return (
-    <div className="h-full flex flex-col relative">
-      <div className="safe-top px-4 pb-2 shrink-0">
+    <div className="h-full flex flex-col relative bg-bg">
+      <ScreenTitle
+        label={`DESCUBRIR · ${label.plural.toUpperCase()}`}
+        title="Descubre y guarda"
+        subtitle={remainingCount > 0 ? `${remainingCount} obras por explorar` : undefined}
+      />
+
+      <div className="px-5 pb-3 shrink-0">
         <div className="flex gap-2 overflow-x-auto no-scrollbar" role="tablist" aria-label="Estantería">
-          {SHELVES.map((s) => <Chip key={s} active={s === shelf} onClick={() => setShelf(s)}>{SHELF_LABEL[s].plural}</Chip>)}
+          {SHELVES.map((s) => (
+            <Chip key={s} active={s === shelf} onClick={() => setShelf(s)}>
+              {SHELF_LABEL[s].plural}
+            </Chip>
+          ))}
         </div>
       </div>
 
-      <div className="flex-1 min-h-0 px-4 relative">
+      <div className="flex-1 min-h-0 px-5 relative">
         {deckNudge ? (
           <div className="h-full flex items-center justify-center">
             <NudgeCard
@@ -244,34 +256,61 @@ export function Discover() {
             }}
           />
         ) : (
-          <div className="h-full flex flex-col items-center justify-center text-center px-6 gap-3">
-            <div className="text-5xl">🎉</div>
-            <h2 className="serif text-2xl font-semibold">¡Has repasado todo {label.plural}!</h2>
-            <p className="text-mute text-sm">Ya no quedan más en esta estantería de la demo.</p>
-            <Link to="/comparar" className="mt-2 min-h-[48px] px-6 rounded-2xl bg-accent text-accent-ink font-semibold flex items-center">Ordenar con Comparar</Link>
-            <div className="flex gap-2 mt-1">
-              {SHELVES.filter((s) => s !== shelf).map((s) => <Chip key={s} onClick={() => setShelf(s)}>{SHELF_LABEL[s].plural}</Chip>)}
+          <div className="h-full flex flex-col items-center justify-center text-center px-5 gap-3">
+            <h2 className="text-title text-ink font-medium">¡Has repasado todo {label.plural.toLowerCase()}!</h2>
+            <p className="text-mute text-body">Ya no quedan más en esta estantería de la demo.</p>
+            <div className="mt-2">
+              <Button variant="primary" onClick={() => nav('/comparar')}>
+                Ordenar con Comparar
+              </Button>
+            </div>
+            <div className="flex gap-2 mt-3">
+              {SHELVES.filter((s) => s !== shelf).map((s) => (
+                <Chip key={s} onClick={() => setShelf(s)}>
+                  {SHELF_LABEL[s].plural}
+                </Chip>
+              ))}
             </div>
           </div>
         )}
       </div>
 
-      <div className="shrink-0 px-4 pt-2 pb-3">
-        <div className="text-center text-[12px] text-mute/80 mb-2.5 tabular-nums">
-          {remainingCount > 0 ? `Te quedan ${remainingCount} en ${label.plural}` : ' '}
-        </div>
+      <div className="shrink-0 px-5 pt-2 pb-4">
         <div className="flex items-center justify-center gap-5">
-          <button onClick={undo} disabled={!hasHistory || blocked} aria-label="Deshacer" className="w-11 h-11 rounded-full bg-surface flex items-center justify-center text-mute disabled:opacity-25 active:scale-90 transition-transform">
-            <Icon name="undo" size={20} />
+          <button
+            onClick={undo}
+            disabled={!hasHistory || blocked}
+            aria-label="Deshacer"
+            className="w-11 h-11 rounded-full bg-surface border border-line flex items-center justify-center text-mute disabled:opacity-25 active:scale-90 transition-transform"
+          >
+            <Icon name="undo" size={18} />
           </button>
-          <ActionBtn label="No me interesa" color="#ef4b4b" size={62} disabled={!deck.length || blocked} onClick={() => deckRef.current?.fling('left')}>
-            <Icon name="x" size={28} strokeWidth={2.6} />
+          <ActionBtn
+            label="No me interesa"
+            color="#ef4b4b"
+            size={56}
+            disabled={!deck.length || blocked}
+            onClick={() => deckRef.current?.fling('left')}
+          >
+            <Icon name="x" size={24} strokeWidth={2.4} />
           </ActionBtn>
-          <ActionBtn label={`Pendiente: no ${label.pronoun} he ${label.seenPastPart}, me interesa`} color="#5b9cf5" size={52} disabled={!deck.length || blocked} onClick={() => deckRef.current?.fling('up')}>
-            <Icon name="bookmark" size={22} strokeWidth={2.4} />
+          <ActionBtn
+            label={`Pendiente: no ${label.pronoun} he ${label.seenPastPart}, me interesa`}
+            color="#5b9cf5"
+            size={48}
+            disabled={!deck.length || blocked}
+            onClick={() => deckRef.current?.fling('up')}
+          >
+            <Icon name="bookmark" size={20} strokeWidth={2.2} />
           </ActionBtn>
-          <ActionBtn label={`${label.stamp.replace(/[¡!]/g, '')}: ${label.pronoun} he ${label.seenPastPart}`} color="#3ec878" size={62} disabled={!deck.length || blocked} onClick={() => deckRef.current?.fling('right')}>
-            <Icon name="check" size={28} strokeWidth={2.8} />
+          <ActionBtn
+            label={`${label.stamp.replace(/[¡!]/g, '')}: ${label.pronoun} he ${label.seenPastPart}`}
+            color="#3ec878"
+            size={56}
+            disabled={!deck.length || blocked}
+            onClick={() => deckRef.current?.fling('right')}
+          >
+            <Icon name="check" size={24} strokeWidth={2.6} />
           </ActionBtn>
           <span className="w-11" aria-hidden />
         </div>
@@ -283,15 +322,29 @@ export function Discover() {
   )
 }
 
-/** Botón de gesto: relleno tintado del color del sello, con aro y pulsación física. */
-function ActionBtn({ label, color, size, disabled, onClick, children }: { label: string; color: string; size: number; disabled?: boolean; onClick: () => void; children: React.ReactNode }) {
+/** Botón de gesto sobrio, circular con borde line. */
+function ActionBtn({
+  label,
+  color,
+  size,
+  disabled,
+  onClick,
+  children,
+}: {
+  label: string
+  color: string
+  size: number
+  disabled?: boolean
+  onClick: () => void
+  children: React.ReactNode
+}) {
   return (
     <button
       onClick={onClick}
       disabled={disabled}
       aria-label={label}
-      className="rounded-full flex items-center justify-center disabled:opacity-25 active:scale-90 transition-transform duration-150"
-      style={{ width: size, height: size, color, background: `color-mix(in srgb, ${color} 14%, #161513)`, boxShadow: `inset 0 0 0 1.5px color-mix(in srgb, ${color} 55%, transparent), 0 10px 24px -12px ${color}` }}
+      className="rounded-full flex items-center justify-center bg-surface border border-line disabled:opacity-25 active:scale-90 transition-transform duration-150"
+      style={{ width: size, height: size, color }}
     >
       {children}
     </button>

@@ -24,9 +24,9 @@ function CardFace({ item, bubbles = true, flight = false }: { item: Item; bubble
       <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/45 to-transparent" />
       {bubbles && <div className="absolute top-3 right-3"><FriendBubbles itemId={item.id} shelf={item.type} /></div>}
       <div className="absolute bottom-0 inset-x-0 p-5 pb-4">
-        <div className="text-[11px] uppercase tracking-[0.14em] text-white/70 font-medium">{typeName(item.type)} · {item.year}</div>
-        <h2 className="serif text-[30px] leading-[1.05] font-semibold text-white mt-1 line-clamp-3" style={{ textWrap: 'balance' } as React.CSSProperties}>{item.title}</h2>
-        <div className="text-[13px] text-white/75 mt-1.5 truncate">{item.creator}</div>
+        <div className="text-label text-ink/80">{typeName(item.type)} · {item.year}</div>
+        <h2 className="text-display text-ink mt-1 line-clamp-3" style={{ textWrap: 'balance' } as React.CSSProperties}>{item.title}</h2>
+        <div className="text-meta text-ink/80 mt-1 truncate">{item.creator}</div>
         <div className="flex flex-wrap items-center gap-1.5 mt-2.5">
           {itemFacts(item) && <Tag variant="brand">{itemFacts(item)}</Tag>}
           {item.genres.slice(0, 2).map((g) => (
