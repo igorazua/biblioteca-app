@@ -4,7 +4,8 @@ import { collapseCloudRows } from '../data/aliases'
 import { useStore } from '../store/useStore'
 import { useAuth } from '../store/useAuth'
 import { useCatalog } from '../store/useCatalog'
-import type { ShelfType, UserEntry } from '../types'
+import { SHELVES, type ShelfType, type UserEntry, type DuelRecord } from '../types'
+import { pairKey } from './ranking'
 
 const resolveShelf = (itemId: string, shelfFromEntry?: string): ShelfType | undefined => {
   if (shelfFromEntry && shelfFromEntry in { movie: 1, series: 1, book: 1, artist: 1, boardgame: 1 }) {
@@ -191,15 +192,148 @@ export async function sendCloudEvent(event: {
   }
 }
 
-/** Escucha cambios en useStore para sincronizar entradas individuales si hay usuario conectado */
+export interface CloudDuel {
+  id?: string
+  user_id: string
+  shelf: string
+  a: string
+  b: string
+  winner: string
+  at: string
+}
+
+/** Sube el historial de duelos local a Supabase */
+export async function pushLocalDuelsToCloud(userId: string): Promise<number> {
+  if (!supabase) return 0
+  const { duels } = useStore.getState()
+  const rows: CloudDuel[] = []
+  for (const s of SHELVES) {
+    const shelfDuels = duels[s] || {}
+    for (const [key, rec] of Object.entries(shelfDuels)) {
+      const parts = key.split('|')
+      if (parts.length !== 2) continue
+      const [a, b] = parts
+      rows.push({
+        user_id: userId,
+        shelf: s,
+        a,
+        b,
+        winner: rec.w,
+        at: new Date(rec.at || Date.now()).toISOString(),
+      })
+    }
+  }
+  if (rows.length === 0) return 0
+  for (let i = 0; i < rows.length; i += 100) {
+    const chunk = rows.slice(i, i + 100)
+    await supabase.from('biblio_duels').upsert(chunk, { onConflict: 'user_id,shelf,a,b' })
+  }
+  return rows.length
+}
+
+/** Descarga los duelos de Supabase y los fusiona con el store local */
+export async function pullCloudDuels(userId: string) {
+  if (!supabase) return
+  const { data, error } = await supabase
+    .from('biblio_duels')
+    .select('*')
+    .eq('user_id', userId)
+
+  if (error || !data || data.length === 0) return
+
+  const store = useStore.getState()
+  const nextDuels = {
+    movie: { ...(store.duels.movie || {}) },
+    series: { ...(store.duels.series || {}) },
+    book: { ...(store.duels.book || {}) },
+    artist: { ...(store.duels.artist || {}) },
+    boardgame: { ...(store.duels.boardgame || {}) },
+  }
+
+  for (const row of data as CloudDuel[]) {
+    const shelf = row.shelf as ShelfType
+    if (!nextDuels[shelf]) continue
+    const key = pairKey(row.a, row.b)
+    const existing = nextDuels[shelf][key]
+    const rowAt = new Date(row.at).getTime()
+    if (!existing || rowAt > existing.at) {
+      nextDuels[shelf][key] = { w: row.winner, at: rowAt }
+    }
+  }
+
+  useStore.setState({ duels: nextDuels })
+}
+
+/** Guarda un único duelo en Supabase si hay usuario conectado */
+export async function syncSingleDuel(
+  userId: string,
+  shelf: ShelfType,
+  a: string,
+  b: string,
+  winner: string,
+  at: number,
+) {
+  if (!supabase) return
+  const [canA, canB] = a < b ? [a, b] : [b, a]
+  await supabase.from('biblio_duels').upsert(
+    {
+      user_id: userId,
+      shelf,
+      a: canA,
+      b: canB,
+      winner,
+      at: new Date(at).toISOString(),
+    },
+    { onConflict: 'user_id,shelf,a,b' },
+  )
+}
+
+/** Borra un duelo de Supabase si hay usuario conectado (deshacer) */
+export async function deleteCloudDuel(userId: string, shelf: ShelfType, a: string, b: string) {
+  if (!supabase) return
+  const [canA, canB] = a < b ? [a, b] : [b, a]
+  await supabase
+    .from('biblio_duels')
+    .delete()
+    .eq('user_id', userId)
+    .eq('shelf', shelf)
+    .eq('a', canA)
+    .eq('b', canB)
+}
+
+/** Escucha cambios en useStore para sincronizar entradas y duelos si hay usuario conectado */
 export function initStoreSync() {
   return useStore.subscribe((state, prevState) => {
+    const user = useAuth.getState().user
+    if (!user) return
+
     if (state.entries !== prevState.entries) {
-      const user = useAuth.getState().user
-      if (!user) return
       for (const [id, entry] of Object.entries(state.entries)) {
         if (entry !== prevState.entries[id]) {
           syncSingleEntry(user.id, entry)
+        }
+      }
+    }
+
+    if (state.duels !== prevState.duels) {
+      for (const s of SHELVES) {
+        const curShelf = state.duels[s] || {}
+        const prevShelf = prevState.duels[s] || {}
+        if (curShelf !== prevShelf) {
+          // Duelos creados o actualizados
+          for (const [key, rec] of Object.entries(curShelf)) {
+            if (rec !== prevShelf[key]) {
+              const [a, b] = key.split('|')
+              if (a && b) syncSingleDuel(user.id, s, a, b, rec.w, rec.at)
+            }
+          }
+          // Duelos eliminados (p. ej. deshacer)
+          for (const key of Object.keys(prevShelf)) {
+            if (!curShelf[key]) {
+              const [a, b] = key.split('|')
+              if (a && b) deleteCloudDuel(user.id, s, a, b)
+            }
+          }
         }
       }
     }

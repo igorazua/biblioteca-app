@@ -441,7 +441,6 @@ export function WhatToWatch() {
     body = (
       <div className="flex-1 min-h-0 flex flex-col px-5 pb-6">
         <SwipePair left={shaperSide(pair[0])} right={shaperSide(pair[1])} onChoose={onShaperChoose} kind="decide" />
-        <p className="text-meta text-center mt-3 select-none">Desliza hacia la que prefieras</p>
       </div>
     )
   } else if (phase === 'propose' && currentItem) {

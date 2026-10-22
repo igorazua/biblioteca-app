@@ -2,8 +2,8 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { items, getItem } from '../data/catalog'
 import { canonicalId, canonicalizeUserData } from '../data/aliases'
-import { clampStars, insertAt, starBand } from '../lib/ranking'
-import { SHELVES, type List, type Profile, type Settings, type ShelfType, type Stars, type Status, type UserEntry, type DeckLearn, type DeckLearnShelf } from '../types'
+import { clampStars, insertAt, starBand, pairKey } from '../lib/ranking'
+import { SHELVES, type List, type Profile, type Settings, type ShelfType, type Stars, type Status, type UserEntry, type DeckLearn, type DeckLearnShelf, type DuelRecord } from '../types'
 import { computeUserVector } from '../lib/engine/userVec'
 import { track } from './useEvents'
 
@@ -30,6 +30,8 @@ interface State {
   deckLearn: DeckLearn
   recentOrienters: Record<ShelfType, string[][]>
   userVectors: Record<ShelfType, number[] | null>
+  duels: Record<ShelfType, Record<string, DuelRecord>>
+  lastCompared: Record<ShelfType, number>
 
   completeOnboarding: (p: Partial<Profile>) => void
   setProfile: (p: Partial<Profile>) => void
@@ -38,6 +40,9 @@ interface State {
   decayDeckLearn: (shelf?: ShelfType) => void
   recordOrienters: (shelf: ShelfType, ids: string[]) => void
   recomputeUserVectors: () => void
+  recordDuel: (shelf: ShelfType, a: string, b: string, winner: string) => void
+  deleteDuel: (shelf: ShelfType, a: string, b: string) => void
+  touchLastCompared: (shelf: ShelfType) => void
   swipe: (itemId: string, dir: 'left' | 'right' | 'up') => void
   undoSwipe: () => string | null
   rate: (itemId: string, patch: { stars?: Stars | null; comment?: string }) => void
@@ -89,6 +94,20 @@ const defaults = () => ({
     artist: null,
     boardgame: null,
   } as Record<ShelfType, number[] | null>,
+  duels: {
+    movie: {},
+    series: {},
+    book: {},
+    artist: {},
+    boardgame: {},
+  } as Record<ShelfType, Record<string, DuelRecord>>,
+  lastCompared: {
+    movie: 0,
+    series: 0,
+    book: 0,
+    artist: 0,
+    boardgame: 0,
+  } as Record<ShelfType, number>,
 })
 
 export const shelfOf = (id: string, entry?: UserEntry): ShelfType =>
@@ -102,6 +121,36 @@ function recomputeVectorForShelf(entries: Record<string, UserEntry>, rankings: R
     ranking: rankings[shelf] || [],
   })
   return vec ? Array.from(vec) : null
+}
+
+export function migrateStore(persistedState: unknown, version: number) {
+  const state = persistedState as Partial<State>
+  if (state && state.rankings) {
+    for (const shelf of SHELVES) {
+      if (!Array.isArray(state.rankings[shelf])) {
+        state.rankings[shelf] = []
+      }
+    }
+  }
+  // v3: gemelas fusionadas (aliases.json) → las entradas, rankings y listas pasan a la obra que se conserva
+  if (version < 3 && state?.entries && state.rankings) {
+    const c = canonicalizeUserData({ entries: state.entries, rankings: state.rankings, lists: state.lists ?? [] })
+    state.entries = c.entries
+    state.rankings = c.rankings
+    state.lists = c.lists
+    state.history = []
+    if (state.pendingSave) state.pendingSave = { ...state.pendingSave, ids: [...new Set(state.pendingSave.ids.map(canonicalId))] }
+  }
+  // v4: historial de duelos persistido y última sesión por estantería (T16)
+  if (version < 4 && state) {
+    if (!state.duels) {
+      state.duels = { movie: {}, series: {}, book: {}, artist: {}, boardgame: {} }
+    }
+    if (!state.lastCompared) {
+      state.lastCompared = { movie: 0, series: 0, book: 0, artist: 0, boardgame: 0 }
+    }
+  }
+  return state
 }
 
 export const useStore = create<State>()(
@@ -173,6 +222,44 @@ export const useStore = create<State>()(
           }
           return { userVectors }
         }),
+
+      recordDuel: (shelf, a, b, winner) =>
+        set((s) => {
+          const key = pairKey(a, b)
+          const shelfDuels = { ...(s.duels?.[shelf] || {}) }
+          shelfDuels[key] = { w: winner, at: Date.now() }
+          return {
+            duels: {
+              ...(s.duels || {}),
+              [shelf]: shelfDuels,
+            },
+            lastCompared: {
+              ...(s.lastCompared || {}),
+              [shelf]: Date.now(),
+            },
+          }
+        }),
+
+      deleteDuel: (shelf, a, b) =>
+        set((s) => {
+          const key = pairKey(a, b)
+          const shelfDuels = { ...(s.duels?.[shelf] || {}) }
+          delete shelfDuels[key]
+          return {
+            duels: {
+              ...(s.duels || {}),
+              [shelf]: shelfDuels,
+            },
+          }
+        }),
+
+      touchLastCompared: (shelf) =>
+        set((s) => ({
+          lastCompared: {
+            ...(s.lastCompared || {}),
+            [shelf]: Date.now(),
+          },
+        })),
 
       swipe: (itemId, dir) =>
         set((s) => {
@@ -440,27 +527,8 @@ export const useStore = create<State>()(
     }),
     {
       name: 'biblioteca-v1',
-      version: 3,
-      migrate: (persistedState: unknown, version: number) => {
-        const state = persistedState as Partial<State>
-        if (state && state.rankings) {
-          for (const shelf of SHELVES) {
-            if (!Array.isArray(state.rankings[shelf])) {
-              state.rankings[shelf] = []
-            }
-          }
-        }
-        // v3: gemelas fusionadas (aliases.json) → las entradas, rankings y listas pasan a la obra que se conserva
-        if (version < 3 && state?.entries && state.rankings) {
-          const c = canonicalizeUserData({ entries: state.entries, rankings: state.rankings, lists: state.lists ?? [] })
-          state.entries = c.entries
-          state.rankings = c.rankings
-          state.lists = c.lists
-          state.history = []
-          if (state.pendingSave) state.pendingSave = { ...state.pendingSave, ids: [...new Set(state.pendingSave.ids.map(canonicalId))] }
-        }
-        return state
-      },
+      version: 4,
+      migrate: migrateStore,
       merge: (persistedState: unknown, currentState: State) => {
         const p = (persistedState as Partial<State>) ?? {}
         const mergedRankings = { ...currentState.rankings, ...(p.rankings || {}) }
@@ -476,11 +544,21 @@ export const useStore = create<State>()(
             mergedVectors[shelf] = recomputeVectorForShelf(mergedEntries, mergedRankings, shelf)
           }
         }
+        const mergedDuels = { ...currentState.duels, ...(p.duels || {}) }
+        for (const shelf of SHELVES) {
+          if (!mergedDuels[shelf]) mergedDuels[shelf] = {}
+        }
+        const mergedLastCompared = { ...currentState.lastCompared, ...(p.lastCompared || {}) }
+        for (const shelf of SHELVES) {
+          if (typeof mergedLastCompared[shelf] !== 'number') mergedLastCompared[shelf] = 0
+        }
         return {
           ...currentState,
           ...p,
           rankings: mergedRankings,
           userVectors: mergedVectors,
+          duels: mergedDuels,
+          lastCompared: mergedLastCompared,
         }
       },
     },

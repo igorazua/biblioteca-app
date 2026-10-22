@@ -2,8 +2,11 @@ import { describe, expect, it } from 'vitest'
 import {
   answerPlacement, answerRefine, clampStars, finishPlacement, formatScore, insertAt, newRefineState,
   nextRefinePair, placementOpponent, scoresForShelf, startPlacement, starBand,
+  pairKey, planNextDuel, advancePlacementWithDuels,
   type Placement, type RefineState, type StarsOf,
 } from './ranking'
+import { useStore, migrateStore } from '../store/useStore'
+import type { DuelRecord } from '../types'
 
 const mulberry = (a: number) => () => {
   a |= 0; a = (a + 0x6d2b79f5) | 0
@@ -228,5 +231,123 @@ describe('nota 0-10', () => {
   it('formatea con una coma decimal', () => {
     expect(formatScore(8.25)).toBe('8,3')
     expect(formatScore(10)).toBe('10,0')
+  })
+})
+
+describe('T16 — Lógica de duelos y planNextDuel', () => {
+  it('planNextDuel nunca devuelve una pareja que ya está en el historial (simulación 300 duelos)', () => {
+    const ranking = Array.from({ length: 30 }, (_, i) => `item_${i}`)
+    const duels: Record<string, DuelRecord> = {}
+    const cmp: Record<string, number> = {}
+
+    for (let step = 0; step < 300; step++) {
+      const planned = planNextDuel({
+        ranking,
+        duels,
+        cmp,
+      })
+      expect(planned).not.toBeNull()
+      if (!planned) break
+
+      const key = pairKey(planned.a, planned.b)
+      // Comprobar que NUNCA se repite ninguna pareja
+      expect(duels[key]).toBeUndefined()
+
+      // Registrar respuesta al azar
+      const winner = Math.random() < 0.5 ? planned.a : planned.b
+      duels[key] = { w: winner, at: Date.now() }
+      cmp[planned.a] = (cmp[planned.a] ?? 0) + 1
+      cmp[planned.b] = (cmp[planned.b] ?? 0) + 1
+    }
+  })
+
+  it('con todas las parejas jugadas devuelve null', () => {
+    const ranking = ['a', 'b', 'c']
+    const duels: Record<string, DuelRecord> = {
+      [pairKey('a', 'b')]: { w: 'a', at: 1 },
+      [pairKey('a', 'c')]: { w: 'a', at: 2 },
+      [pairKey('b', 'c')]: { w: 'b', at: 3 },
+    }
+    const planned = planNextDuel({ ranking, duels, cmp: {} })
+    expect(planned).toBeNull()
+  })
+
+  it('la colocación salta a los rivales ya jugados y usa su resultado', () => {
+    const ranking = ['a', 'b', 'c', 'd', 'e']
+    const duels: Record<string, DuelRecord> = {
+      // 'x' ya se enfrentó a 'c' y le ganó
+      [pairKey('x', 'c')]: { w: 'x', at: 100 },
+    }
+
+    const p = startPlacement(ranking, () => undefined, 'x')
+    // Inicialmente el rival del medio es 'c'
+    expect(placementOpponent(p)).toBe('c')
+
+    // Al avanzar con duels, 'c' se salta automáticamente usando el resultado guardado
+    const pAdv = advancePlacementWithDuels(p, duels)
+    expect(placementOpponent(pAdv)).not.toBe('c')
+    expect(pAdv.comparisons).toBe(1)
+    expect(pAdv.hi).toBe(2) // Al ganar a 'c', la cota superior baja a 2
+
+    // Y planNextDuel devuelve directamente el siguiente rival no jugado
+    const planned = planNextDuel({
+      ranking,
+      unranked: [{ itemId: 'x' }],
+      duels,
+      cmp: {},
+      sessionIndex: 0,
+    })
+    expect(planned).not.toBeNull()
+    expect(planned?.kind).toBe('place')
+    expect(planned?.opponent).not.toBe('c')
+  })
+
+  it('deshacer quita el registro del duelo', () => {
+    const st = useStore.getState()
+    st.recordDuel('movie', 'peli1', 'peli2', 'peli1')
+    const key = pairKey('peli1', 'peli2')
+    expect(useStore.getState().duels.movie[key]).toEqual({ w: 'peli1', at: expect.any(Number) })
+
+    st.deleteDuel('movie', 'peli1', 'peli2')
+    expect(useStore.getState().duels.movie[key]).toBeUndefined()
+  })
+
+  it('la migración del store conserva las entradas y rankings y crea duels vacío', () => {
+    const v3State = {
+      entries: {
+        'movie:el-padrino-1972': {
+          itemId: 'movie:el-padrino-1972',
+          status: 'seen',
+          ranked: true,
+          updatedAt: 1000,
+        },
+      },
+      rankings: {
+        movie: ['movie:el-padrino-1972'],
+        series: [],
+        book: [],
+        artist: [],
+        boardgame: [],
+      },
+    }
+
+    const migrated = migrateStore(v3State, 3)
+    expect(migrated).toBeDefined()
+    expect(migrated?.entries?.['movie:el-padrino-1972']).toBeDefined()
+    expect(migrated?.rankings?.movie).toEqual(['movie:el-padrino-1972'])
+    expect(migrated?.duels).toEqual({
+      movie: {},
+      series: {},
+      book: {},
+      artist: {},
+      boardgame: {},
+    })
+    expect(migrated?.lastCompared).toEqual({
+      movie: 0,
+      series: 0,
+      book: 0,
+      artist: 0,
+      boardgame: 0,
+    })
   })
 })

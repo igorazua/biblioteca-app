@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { getItem } from '../data/catalog'
 import { useStore, starsOfEntries } from '../store/useStore'
-import { answerPlacement, finishPlacement, placementOpponent, startPlacement, type Placement } from '../lib/ranking'
+import { answerPlacement, advancePlacementWithDuels, finishPlacement, placementOpponent, startPlacement, type Placement } from '../lib/ranking'
 import { SHELF_LABEL } from '../types'
 import { Portal } from './ui'
 import { Poster } from './Poster'
@@ -28,7 +28,8 @@ export function PlaceFlow({ itemId, onDone }: { itemId: string; onDone: (msg?: s
     const base = ranking.filter((x) => x !== itemId)
     const stars = st.entries[itemId]?.stars
     if (base.length < 2) { onDone('Guardada ✓'); return }
-    const start = startPlacement(ranking, starsOfEntries(st.entries), itemId, stars ?? undefined)
+    let start = startPlacement(ranking, starsOfEntries(st.entries), itemId, stars ?? undefined)
+    start = advancePlacementWithDuels(start, st.duels?.[item.type])
     if (start.done) { st.applyRanking(item.type, finishPlacement(start), itemId); onDone('Guardada ✓'); return }
     setP(start)
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -42,7 +43,12 @@ export function PlaceFlow({ itemId, onDone }: { itemId: string; onDone: (msg?: s
 
   const onChoose = (w: 'a' | 'b') => {
     const won = (w === 'a') === newOnTop
-    const next = answerPlacement(p, won)
+    const winnerId = won ? itemId : opp
+    const st = useStore.getState()
+    st.recordDuel(item.type, itemId, opp, winnerId)
+    st.bumpCompared([itemId, opp])
+    let next = answerPlacement(p, won)
+    next = advancePlacementWithDuels(next, st.duels?.[item.type])
     if (next.done) {
       useStore.getState().applyRanking(item.type, finishPlacement(next), itemId)
       onDone('Guardada ✓')

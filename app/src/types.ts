@@ -64,6 +64,11 @@ export type Depth = 'ligera' | 'media' | 'densa'
 export type Status = 'seen' | 'pending' | 'dismissed'
 export type Stars = 1 | 2 | 3 | 4 | 5
 
+export interface DuelRecord {
+  w: string // id ganador
+  at: number // timestamp
+}
+
 export interface UserEntry {
   itemId: string
   shelf?: ShelfType

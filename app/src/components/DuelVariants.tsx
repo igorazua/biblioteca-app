@@ -174,15 +174,6 @@ export function PickRing({ color, box, texts, title, reduce }: { color: string; 
 export function PickStrip({ color, card, texts, title, reduce }: { color: string; card: { left: number; top: number; w: number; h: number; r: number }; texts: DuelTexts; title: string; reduce: boolean | null }) {
   return (
     <>
-      <div className="absolute inset-0 z-[6] pointer-events-none">
-        <motion.div
-          className="absolute"
-          style={{ left: card.left, top: card.top, width: card.w, height: card.h, borderRadius: card.r, border: `2px solid ${color}` }}
-          initial={reduce ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.2 }}
-        />
-      </div>
       <PickBadge color={color} texts={texts} title={title} reduce={reduce} />
     </>
   )
@@ -224,8 +215,8 @@ const lerp = (a: number, b: number, k: number) => a + (b - a) * k
 /** Reparto de la mesa del abanico según el tamaño disponible. */
 function fanLayout(w: number, h: number) {
   const padTop = 8
-  const qH = 30 // alto de la pregunta
-  const qGap = 8 // poco espacio entre la pregunta y las cartas: forman un solo bloque
+  const qH = 0 // la pregunta va en la cabecera de la pantalla (SISTEMA_DISENO §5.5)
+  const qGap = 0
   const hintH = 64 // hueco de la pista inferior (y de la pastilla de diseño)
   const titleH = 56
   const gap = 14
@@ -317,13 +308,6 @@ export function DuelFan({ left, right, onChoose, texts }: { left: Side; right: S
       <FanBackdrop side={left} g={gA} />
       <FanBackdrop side={right} g={gB} />
 
-      <motion.p
-        className="absolute inset-x-4 serif text-[22px] font-semibold text-center leading-none flex items-end justify-center pointer-events-none"
-        style={{ top: L.qTop, height: L.qH, opacity: uiOp, filter: uiBlur }}
-      >
-        {texts.question}
-      </motion.p>
-
       <FanCard side={left} which="a" g={gA} og={gB} lay={lay} picked={picked} onTap={() => { if (!dragged.current) choose('a') }} />
       <FanCard side={right} which="b" g={gB} og={gA} lay={lay} picked={picked} onTap={() => { if (!dragged.current) choose('b') }} />
 
@@ -345,13 +329,6 @@ export function DuelFan({ left, right, onChoose, texts }: { left: Side; right: S
         )
       })}
 
-      <motion.p
-        className="absolute inset-x-4 text-center text-xs text-mute pointer-events-none"
-        style={{ top: L.titleTop + 62, opacity: uiOp, filter: uiBlur }}
-      >
-        Empuja hacia el centro la que prefieras
-      </motion.p>
-
       {picked && (
         <PickStrip
           color={picked === 'a' ? '#F5B544' : '#9A86FF'} // DUEL_LEFT / DUEL_RIGHT (SwipePair.tsx)
@@ -369,8 +346,8 @@ function FanBackdrop({ side, g }: { side: Side; g: MotionValue<number> }) {
   const opacity = useTransform(g, (v) => clamp01(v) * 0.95)
   return (
     <motion.div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ opacity }} aria-hidden>
-      <div className="absolute -inset-8 blur-2xl scale-110">{side.bg}</div>
-      <div className="absolute inset-0 bg-black/55" />
+      {/* fondo liso que tapa la mesa mientras la elegida crece (sin desenfoques: SISTEMA_DISENO §1.3) */}
+      <div className="absolute inset-0 bg-bg" />
     </motion.div>
   )
 }
@@ -432,8 +409,9 @@ function FanCard({
         touchAction: 'pan-y',
       }}
     >
+      {/* póster a sangre, sin marco ni relleno difuminado alrededor (los pósteres ya son verticales, T14) */}
       <div className="absolute inset-0 overflow-hidden" style={{ borderRadius: 'inherit' }}>
-        <FullPoster side={side} />
+        {side.bg}
       </div>
     </motion.button>
   )

@@ -438,3 +438,9 @@ T1 puede ir en paralelo a T2-T7. Nada de esto se despliega sin el OK de Igor.
 4. Si algo falla en la función (formato del RSS, CORS), arréglalo en `index.ts` y vuelve a desplegar.
 
 **Hecho cuando:** la tabla existe con RLS, la función responde con datos reales en los dos servicios y todo está commiteado. No despliegues la app en Vercel sin el OK de Igor.
+
+---
+
+# T16 — Comparar: pantalla inicial y duelos que no se repiten
+
+Encargo completo en **`docs/TAREA_T16_COMPARAR.md`** (22/10/2026). Hazla después de T15.

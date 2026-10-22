@@ -1,6 +1,6 @@
 // Motor de valoración a pares. Funciones PURAS: la UI conduce las máquinas de estados.
 // Convenciones: `ranking` es una lista de itemIds, mejor primero. `starsOf` da las estrellas de un item.
-import type { Stars } from '../types'
+import type { Stars, DuelRecord, ShelfType } from '../types'
 
 export type StarsOf = (id: string) => number | undefined
 export type Rng = () => number
@@ -229,3 +229,347 @@ export function scoresForShelf(ranking: readonly string[], starsOf: StarsOf): Re
 
 /** `8,3` */
 export const formatScore = (x: number) => (Math.round(x * 10) / 10).toFixed(1).replace('.', ',')
+
+/* ============================ T16: Historial de duelos y planNextDuel ============================ */
+
+/** Clave canónica de un par de obras (orden alfabético para evitar asimetrías). */
+export function pairKey(a: string, b: string): string {
+  return a < b ? `${a}|${b}` : `${b}|${a}`
+}
+
+/**
+ * Avanza una colocación binaria saltando rivales a los que esta obra ya se enfrentó en el historial.
+ * Si todos los rivales restantes ya se jugaron, devuelve la colocación terminada (`p.done === true`).
+ */
+export function advancePlacementWithDuels(
+  placement: Placement,
+  duels?: Record<string, DuelRecord>,
+): Placement {
+  if (!duels) return placement
+  let cur = placement
+  while (!cur.done) {
+    const opp = placementOpponent(cur)
+    if (!opp) break
+    const key = pairKey(cur.id, opp)
+    const rec = duels[key]
+    if (!rec) break
+    const won = rec.w === cur.id
+    cur = answerPlacement(cur, won)
+  }
+  return cur
+}
+
+export interface UnrankedItem {
+  itemId: string
+  stars?: number
+}
+
+export interface PlannedDuel {
+  a: string
+  b: string
+  kind: 'place' | 'boot' | 'refine'
+  subject: string
+  opponent: string
+  placement?: Placement
+  pair?: RefinePair
+  refinePair?: RefinePair
+}
+
+export interface PlanNextDuelInput {
+  shelf?: ShelfType
+  ranking: readonly string[]
+  unranked?: readonly (string | UnrankedItem)[]
+  duels?: Record<string, DuelRecord>
+  cmp?: Record<string, number>
+  sessionIndex?: number
+  activePlacement?: Placement | null
+  refineState?: RefineState | null
+  starsOf?: StarsOf
+  rng?: Rng
+}
+
+/**
+ * Pulir: elige la pareja más útil que nunca se haya jugado en el historial.
+ * docs/TAREA_T16_COMPARAR.md §1.3
+ */
+export function planRefineDuel(
+  ranking: readonly string[],
+  duels: Record<string, DuelRecord> = {},
+  cmp: Record<string, number> = {},
+  refineState?: RefineState | null,
+  rng: Rng = Math.random,
+): PlannedDuel | null {
+  const n = ranking.length
+  if (n < 2) return null
+
+  // 1. Rachas (jumpUp / jumpDown o racha de vecinos)
+  if (refineState?.subject && ranking.includes(refineState.subject)) {
+    const sj = refineState.subject
+    const idx = ranking.indexOf(sj)
+    const quart = Math.max(2, Math.ceil(n / 4))
+
+    if (refineState.wins >= STREAK_TRIGGER) {
+      const target = Math.max(0, idx - quart)
+      // Buscar el rival k < idx más cercano al objetivo que no esté en el historial
+      let bestK = -1
+      let bestDist = Infinity
+      for (let k = 0; k < idx; k++) {
+        const key = pairKey(sj, ranking[k])
+        if (!duels[key]) {
+          const d = Math.abs(k - target)
+          if (d < bestDist) {
+            bestDist = d
+            bestK = k
+          }
+        }
+      }
+      if (bestK >= 0) {
+        const opp = ranking[bestK]
+        return {
+          kind: 'refine',
+          pair: { subject: sj, opponent: opp, kind: 'jumpUp', target: bestK },
+          a: sj,
+          b: opp,
+          subject: sj,
+          opponent: opp,
+        }
+      }
+    } else if (refineState.losses >= STREAK_TRIGGER) {
+      const target = Math.min(n - 1, idx + quart)
+      let bestK = -1
+      let bestDist = Infinity
+      for (let k = idx + 1; k < n; k++) {
+        const key = pairKey(sj, ranking[k])
+        if (!duels[key]) {
+          const d = Math.abs(k - target)
+          if (d < bestDist) {
+            bestDist = d
+            bestK = k
+          }
+        }
+      }
+      if (bestK >= 0) {
+        const opp = ranking[bestK]
+        return {
+          kind: 'refine',
+          pair: { subject: sj, opponent: opp, kind: 'jumpDown', target: bestK },
+          a: sj,
+          b: opp,
+          subject: sj,
+          opponent: opp,
+        }
+      }
+    } else if (refineState.wins > 0) {
+      // Continuación de racha contra vecino hacia arriba
+      let bestK = -1
+      let bestDist = Infinity
+      for (let k = idx - 1; k >= 0; k--) {
+        const key = pairKey(sj, ranking[k])
+        if (!duels[key]) {
+          const d = idx - k
+          if (d < bestDist) {
+            bestDist = d
+            bestK = k
+          }
+        }
+      }
+      if (bestK >= 0) {
+        const opp = ranking[bestK]
+        return {
+          kind: 'refine',
+          pair: { subject: sj, opponent: opp, kind: 'neighbor' },
+          a: sj,
+          b: opp,
+          subject: sj,
+          opponent: opp,
+        }
+      }
+    } else if (refineState.losses > 0) {
+      // Continuación de racha contra vecino hacia abajo
+      let bestK = -1
+      let bestDist = Infinity
+      for (let k = idx + 1; k < n; k++) {
+        const key = pairKey(sj, ranking[k])
+        if (!duels[key]) {
+          const d = k - idx
+          if (d < bestDist) {
+            bestDist = d
+            bestK = k
+          }
+        }
+      }
+      if (bestK >= 0) {
+        const opp = ranking[bestK]
+        return {
+          kind: 'refine',
+          pair: { subject: sj, opponent: opp, kind: 'neighbor' },
+          a: sj,
+          b: opp,
+          subject: sj,
+          opponent: opp,
+        }
+      }
+    }
+  }
+
+  // 2. Candidatas: parejas (i, j) del ranking que no estén en el historial
+  const top20Limit = n * 0.2
+  const findCandidates = (maxDist: number) => {
+    const list: { i: number; j: number; util: number }[] = []
+    for (let i = 0; i < n; i++) {
+      const maxJ = maxDist === Infinity ? n : Math.min(n, i + maxDist + 1)
+      for (let j = i + 1; j < maxJ; j++) {
+        const a = ranking[i]
+        const b = ranking[j]
+        const key = pairKey(a, b)
+        if (duels[key]) continue
+
+        const dist = j - i
+        const cercania = 1 / dist
+        const cmpA = cmp[a] ?? 0
+        const cmpB = cmp[b] ?? 0
+        const novedad = 1 / (1 + Math.min(cmpA, cmpB))
+        const pesoArriba = i < top20Limit && j < top20Limit ? 1.5 : 1
+        const util = cercania * novedad * pesoArriba
+        list.push({ i, j, util })
+      }
+    }
+    return list
+  }
+
+  // Progresión de distancias: <= 3, luego <= 6, luego cualquier distancia
+  let candidates = findCandidates(3)
+  if (candidates.length === 0) candidates = findCandidates(6)
+  if (candidates.length === 0) candidates = findCandidates(Infinity)
+  if (candidates.length === 0) return null
+
+  // Ordenar de mayor a menor utilidad
+  candidates.sort((x, y) => y.util - x.util)
+
+  // Elegir al azar entre las hasta 3 mejores
+  const top3 = candidates.slice(0, 3)
+  const chosen = top3[Math.floor(rng() * top3.length)]
+  const subject = ranking[chosen.i]
+  const opponent = ranking[chosen.j]
+
+  return {
+    kind: 'refine',
+    pair: { subject, opponent, kind: 'neighbor' },
+    a: subject,
+    b: opponent,
+    subject,
+    opponent,
+  }
+}
+
+/**
+ * Función pura que planifica el siguiente duelo sin modificar nada.
+ * docs/TAREA_T16_COMPARAR.md §1.3
+ */
+export function planNextDuel(input: PlanNextDuelInput): PlannedDuel | null {
+  const ranking = [...input.ranking]
+  const duels = input.duels ?? {}
+  const cmp = input.cmp ?? {}
+  const rng = input.rng ?? Math.random
+  const starsOf = input.starsOf ?? (() => undefined)
+
+  // 1. Si hay una colocación activa en curso
+  if (input.activePlacement && !input.activePlacement.done) {
+    const adv = advancePlacementWithDuels(input.activePlacement, duels)
+    if (!adv.done) {
+      const opp = placementOpponent(adv)
+      if (opp) {
+        return {
+          kind: 'place',
+          placement: adv,
+          a: adv.id,
+          b: opp,
+          subject: adv.id,
+          opponent: opp,
+        }
+      }
+    }
+  }
+
+  // 2. Normalizar la lista de obras sin ordenar
+  const unrankedList: UnrankedItem[] = (input.unranked ?? []).map((u) =>
+    typeof u === 'string' ? { itemId: u } : u,
+  )
+
+  // 3. Patrón de sesión: C C P C C P P (si unranked > 0 y ranking >= 6)
+  const hasUnranked = unrankedList.length > 0
+  let mode: 'C' | 'P' = 'P'
+  if (hasUnranked) {
+    if (ranking.length >= 6) {
+      const pattern = ['C', 'C', 'P', 'C', 'C', 'P', 'P'] as const
+      const idx = (input.sessionIndex ?? 0) % 7
+      mode = pattern[idx]
+    } else {
+      mode = 'C'
+    }
+  } else {
+    mode = 'P'
+  }
+
+  // 4. Intentar colocar
+  if (mode === 'C') {
+    if (ranking.length === 0) {
+      if (unrankedList.length >= 2) {
+        const a = unrankedList[0].itemId
+        const b = unrankedList[1].itemId
+        const key = pairKey(a, b)
+        if (duels[key]) {
+          // Duelo ya registrado: aplicar y continuar
+          const winner = duels[key].w
+          const loser = winner === a ? b : a
+          return planNextDuel({
+            ...input,
+            ranking: [winner, loser],
+            unranked: unrankedList.slice(2),
+          })
+        }
+        return { kind: 'boot', a, b, subject: a, opponent: b }
+      }
+      return null
+    }
+
+    let tempRanking = [...ranking]
+    for (let i = 0; i < unrankedList.length; i++) {
+      const u = unrankedList[i]
+      let p = startPlacement(tempRanking, starsOf, u.itemId, u.stars)
+      p = advancePlacementWithDuels(p, duels)
+      if (p.done) {
+        tempRanking = finishPlacement(p)
+        continue
+      }
+      const opp = placementOpponent(p)
+      if (opp) {
+        return {
+          kind: 'place',
+          placement: p,
+          a: u.itemId,
+          b: opp,
+          subject: u.itemId,
+          opponent: opp,
+        }
+      }
+    }
+
+    // Todas las sin ordenar se colocaron con el historial: pulir sobre el ranking actualizado
+    return planRefineDuel(tempRanking, duels, cmp, input.refineState, rng)
+  }
+
+  // 5. Modo 'P' (pulir)
+  const ref = planRefineDuel(ranking, duels, cmp, input.refineState, rng)
+  if (ref) return ref
+
+  // Si no se puede pulir más (estantería pequeña con todo jugado) y quedan sin ordenar, colocar
+  if (hasUnranked) {
+    return planNextDuel({
+      ...input,
+      sessionIndex: 0,
+    })
+  }
+
+  return null
+}
