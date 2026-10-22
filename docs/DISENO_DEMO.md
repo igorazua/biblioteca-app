@@ -2,7 +2,7 @@
 
 > **Para quien construya la demo (otra sesión de Claude u otra persona):** este documento es autosuficiente. Antes de empezar, lee también `docs/IDEA.md` (la idea completa y las decisiones tomadas). Si algo de aquí contradice a `IDEA.md`, manda `IDEA.md` y avisa a Igor.
 >
-> Versión **1.3** · 15/10/2026 · ⚠️ **Las secciones §12, §13 y §14 (cambios tras probar la demo) mandan sobre las anteriores** donde se contradigan; la más reciente manda.
+> Versión **1.4** · 22/10/2026 · ⚠️ **Las secciones §12, §13, §14 y §15 (cambios tras probar la demo y pulido de UI) mandan sobre las anteriores** donde se contradigan; la más reciente manda.
 >
 > Versión 1.0 · 15/10/2026 · Nombre del producto aún sin decidir (D17): usar **«Biblioteca»** como nombre provisional en toda la interfaz, centralizado en una constante para cambiarlo luego.
 
@@ -229,9 +229,9 @@ Por estantería, para cada item ordenado en la posición `i` de `n`:
 
 ### 6.1 Ficha de una obra
 Se abre al tocar cualquier tarjeta o item. Pantalla completa con:
-- Póster grande con degradado; título, año, creador, duración/temporadas/páginas, géneros, **plataformas** (chips).
+- Póster grande con degradado; título, año, creador, duración/temporadas/páginas, géneros y plataformas en etiquetas visuales pasivas (`<Tag>`).
 - Sinopsis.
-- **Tu estado**: botones de estado (Vista / Pendiente / No me interesa); si está vista, estrellas, nota calculada, posición («nº 3 de tus series») y tu comentario, editable.
+- **Tu estado**: botones de acción táctiles dispuestos en el orden exacto del swipe (§15.1): 1. **«No me interesa»** (izquierda), 2. **«Guardar»** (centro), 3. **«Vista»** (derecha); si está vista, estrellas, posición («nº 3 de tus series») y tu comentario, editable.
 - **Tus amigos** («¿Quién la vio antes que yo?»): lista con avatar, nombre, **nota** y **comentario** completo; los que la tienen pendiente aparte («La tienen pendiente: Marta, Javi»).
   - Botón por amigo: **«Pregúntale»** → abre WhatsApp (`https://wa.me/?text=...`) con un texto prellenado: «Oye Laura, he visto que le pusiste un 9 a *Dark*, ¿me la recomiendas?». Es lo que hace real lo social de la idea.
 - Botón **«Añadir a una lista»**.
@@ -512,3 +512,31 @@ Objetivo: que deje de parecer una maqueta. **Se hace en esta ronda, después de 
   - Perfil: sin «Nota media que pones»; el top 3 solo con su número.
 - **Percentil interno** (`lib/rank.ts`): 1º = 100, último = 0. Se usa para la **afinidad** (100 − media de |diferencia de percentil| en obras comunes), para la «media de amigos» que pesa en recomendaciones y en el orden del mazo, y nunca se enseña.
 - Los amigos simulados de la semilla siguen trayendo nota; su ranking se deriva ordenando esas notas.
+
+
+---
+
+## 15. Cambios v1.4 — Coherencia de gestos, botones y diseño de etiquetas (22/10/2026)
+
+### 15.1 Reordenación de botones de acción en la Ficha (`ItemDetail`)
+Los 3 botones de acción en la ficha de obra se reordenan de izquierda a derecha para reflejar exactamente la memoria muscular y dirección física de los gestos del mazo de swipe:
+1. **Izquierda (Swipe Izquierda): «No me interesa»** (`status === 'dismissed'`) — icono `x`, iluminación semántica *rose* (`bg-rose-500/15 border-rose-500/60 text-rose-400`).
+2. **Centro (Swipe Arriba): «Guardar»** (`status === 'pending'`) — icono `bookmark`, iluminación semántica *sky* (`bg-sky-500/15 border-sky-500/60 text-sky-400`).
+3. **Derecha (Swipe Derecha): «Vista» / «{label.actionPast}»** (`status === 'seen'`) — icono `check`, iluminación semántica *emerald* (`bg-emerald-500/15 border-emerald-500/60 text-emerald-400`).
+
+### 15.2 Sistema de Diseño: Diferenciación estricta entre Botones y Etiquetas
+Se resuelve la ambigüedad donde metadatos pasivos y controles interactivos compartían la misma apariencia (píldoras `rounded-full` con fondos idénticos):
+- **Etiquetas (`<Tag>` en `ui.tsx`):**
+  - **Uso:** Metadatos informativos no interactivos (géneros, plataformas, hechos/duración).
+  - **Apariencia:** Cajas rectangulares con esquinas suavizadas (`rounded-lg`, 6-8px), tipografía compacta (`text-[11px] font-medium`), borde fino (`border-white/10`) y fondo discreto (`bg-white/[0.05]`).
+  - **Propósito:** Se identifican al instante como etiquetas de lectura pasiva, evitando que el usuario intente pulsarlas.
+- **Botones de acción táctiles:**
+  - **Uso:** Acciones directas sobre la obra (marcar estado, añadir a listas).
+  - **Apariencia:** Controles táctiles prominentes (`rounded-2xl`, altura $\ge 52\text{ px}$), iconos vectoriales claros, respuesta elástica al toque (`active:scale-95`) e iluminación temática reactiva por estado.
+- **Pastillas de filtrado (`<Chip>`):**
+  - **Uso:** Exclusivamente para selección de pestañas o filtros de catálogo (`Todas`, `Películas`, `Series`...).
+
+### 15.3 Rediseño del Onboarding / Tutorial interactivo
+- Paso 1 del tutorial recreado con una tarjeta real a sangre extraída del catálogo, con física háptica de resorte y cabeceo 3D (`tilt`).
+- Eliminación de emojis informales a favor de sellos tipográficos limpios y una iconografía lineal profesional.
+- Duelo A/B del Paso 2 con portadas auténticas y mecánicas idénticas al motor de comparación real.
