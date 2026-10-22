@@ -28,6 +28,7 @@
   - Pelis: `cast` principal vía Wikidata SPARQL P161 (79,9% de películas).
   - Música: `peakDecades` al 100% de artistas.
 - **Portadas reales y verticales (T1 y T14 completados):** 100 % de las 4.345 obras con póster oficial vertical (600 px WebP, `?v=2`) alojadas en Supabase Storage (`biblio-covers`) y sincronizadas con `biblio_catalog`. Control de forma con 0 imágenes incorrectas y recuperación desde fuentes originales (IMDb, TVmaze, OL, BGG, Deezer).
+- **Conectar y sincronización (T15 completado):** Tabla iblio_connections creada con RLS activa (las 4 operaciones restringidas a uth.uid() = user_id) en Supabase. Función Edge iblio-connect desplegada y operativa para Letterboxd y Goodreads (probada con perfiles reales y control de errores sin 500).
 - **Tests y compilación:** 19/19 archivos de tests y 125/125 tests en verde. PWA compila limpia sin errores.
 
 ## Documentos (leer en este orden)
