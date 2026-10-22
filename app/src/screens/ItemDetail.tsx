@@ -104,8 +104,8 @@ export function ItemDetail() {
 
   return (
     <div className="h-full relative bg-bg">
-      <button onClick={goBack} aria-label="Volver" className="absolute left-3 z-20 w-11 h-11 rounded-full bg-black/45 backdrop-blur-xl ring-1 ring-white/20 flex items-center justify-center active:scale-95 transition-transform" style={{ top: 'max(env(safe-area-inset-top), 12px)' }}>
-        <Icon name="back" />
+      <button onClick={goBack} aria-label="Volver" className="absolute left-4 z-20 w-10 h-10 rounded-full bg-bg/85 border border-line flex items-center justify-center text-ink active:scale-95 transition-transform" style={{ top: 'max(env(safe-area-inset-top), 16px)' }}>
+        <Icon name="back" size={20} />
       </button>
       <div className="h-full scroll-y pb-10">
         <div className="relative h-[430px]">
@@ -113,29 +113,29 @@ export function ItemDetail() {
           {/* el degradado y el título entran cuando el póster ya casi ha llegado */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.25, delay: 0.12 }} className="absolute inset-0 bg-gradient-to-t from-bg via-bg/50 to-black/30" />
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.16 }} className="absolute bottom-0 inset-x-0 px-5">
-            <div className="text-[11px] uppercase tracking-[0.14em] text-white/70">{typeName(item.type)} · {item.year}</div>
-            <h1 className="serif text-[32px] leading-[1.05] font-semibold mt-1">{item.title}</h1>
-            <div className="text-sm text-white/75 mt-1">{item.creator}{itemFacts(item) ? ` · ${itemFacts(item)}` : ''}</div>
+            <div className="text-label text-ink/80">{typeName(item.type)} · {item.year}</div>
+            <h1 className="text-display text-ink mt-1">{item.title}</h1>
+            <div className="text-meta text-ink/80 mt-1">{item.creator}{itemFacts(item) ? ` · ${itemFacts(item)}` : ''}</div>
           </motion.div>
         </div>
 
-        <div className="px-5 mt-3 space-y-5">
+        <div className="px-5 mt-4 space-y-5">
           <div className="flex flex-wrap gap-1.5">
             {item.genres.map((g) => <Tag key={g}>{g}</Tag>)}
             {item.platforms?.map((p) => <Tag key={p} variant="accent">{p}</Tag>)}
           </div>
-          <p className="text-[15px] leading-relaxed text-ink/90">{item.synopsis}</p>
+          <p className="text-body leading-relaxed text-ink/90">{item.synopsis}</p>
 
           <section aria-label="Tu estado">
-            <h2 className="text-sm font-semibold text-mute uppercase tracking-wide mb-2.5">Tu estado</h2>
+            <h2 className="text-label text-mute uppercase mb-2.5">Tu estado</h2>
             <div className="grid grid-cols-3 gap-2">
               <button
                 type="button"
                 onClick={() => toggle('dismissed')}
                 className={`min-h-[52px] px-2 py-2.5 rounded-2xl border flex flex-col items-center justify-center gap-1 transition-all active:scale-95 ${
                   status === 'dismissed'
-                    ? 'bg-rose-500/15 border-rose-500/60 text-rose-400 shadow-sm shadow-rose-950/40 ring-1 ring-rose-500/30 font-semibold'
-                    : 'bg-surface2/60 border-white/[0.08] text-white/70 hover:bg-surface2 hover:text-white font-medium'
+                    ? 'bg-rose-500/15 border-rose-500/60 text-rose-400 font-medium'
+                    : 'bg-surface border-line text-mute hover:text-ink font-medium'
                 }`}
               >
                 <Icon
@@ -144,7 +144,7 @@ export function ItemDetail() {
                   className={status === 'dismissed' ? 'text-rose-400' : 'text-mute'}
                   strokeWidth={status === 'dismissed' ? 2.5 : 2}
                 />
-                <span className="text-xs tracking-tight">No me interesa</span>
+                <span className="text-meta tracking-tight">No me interesa</span>
               </button>
 
               <button
@@ -152,8 +152,8 @@ export function ItemDetail() {
                 onClick={() => toggle('pending')}
                 className={`min-h-[52px] px-2 py-2.5 rounded-2xl border flex flex-col items-center justify-center gap-1 transition-all active:scale-95 ${
                   status === 'pending'
-                    ? 'bg-sky-500/15 border-sky-500/60 text-sky-400 shadow-sm shadow-sky-950/40 ring-1 ring-sky-500/30 font-semibold'
-                    : 'bg-surface2/60 border-white/[0.08] text-white/70 hover:bg-surface2 hover:text-white font-medium'
+                    ? 'bg-sky-500/15 border-sky-500/60 text-sky-400 font-medium'
+                    : 'bg-surface border-line text-mute hover:text-ink font-medium'
                 }`}
               >
                 <Icon
@@ -163,7 +163,7 @@ export function ItemDetail() {
                   strokeWidth={status === 'pending' ? 2.5 : 2}
                   fill={status === 'pending' ? 'currentColor' : 'none'}
                 />
-                <span className="text-xs tracking-tight">Guardar</span>
+                <span className="text-meta tracking-tight">Guardar</span>
               </button>
 
               <button
@@ -171,8 +171,8 @@ export function ItemDetail() {
                 onClick={() => toggle('seen')}
                 className={`min-h-[52px] px-2 py-2.5 rounded-2xl border flex flex-col items-center justify-center gap-1 transition-all active:scale-95 ${
                   status === 'seen'
-                    ? 'bg-emerald-500/15 border-emerald-500/60 text-emerald-400 shadow-sm shadow-emerald-950/40 ring-1 ring-emerald-500/30 font-semibold'
-                    : 'bg-surface2/60 border-white/[0.08] text-white/70 hover:bg-surface2 hover:text-white font-medium'
+                    ? 'bg-emerald-500/15 border-emerald-500/60 text-emerald-400 font-medium'
+                    : 'bg-surface border-line text-mute hover:text-ink font-medium'
                 }`}
               >
                 <Icon
@@ -181,51 +181,51 @@ export function ItemDetail() {
                   className={status === 'seen' ? 'text-emerald-400' : 'text-mute'}
                   strokeWidth={status === 'seen' ? 2.5 : 2}
                 />
-                <span className="text-xs tracking-tight truncate max-w-full">{label.actionPast}</span>
+                <span className="text-meta tracking-tight truncate max-w-full">{label.actionPast}</span>
               </button>
             </div>
-            {entry?.origin && status === 'pending' && <div className="text-xs text-mute mt-2">Te {label.pronoun} pasó {entry.origin}</div>}
+            {entry?.origin && status === 'pending' && <div className="text-meta text-mute mt-2">Te {label.pronoun} pasó {entry.origin}</div>}
             {status === 'seen' && (
-              <div className="mt-3 rounded-3xl bg-surface border border-line p-4">
+              <div className="mt-3 rounded-2xl bg-surface border border-line p-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-mute">Tu puesto</span>
-                  {entry?.ranked && myRank ? <RankBadge pos={myRank.pos} className="!text-sm !px-2.5 !py-1" /> : null}
+                  <span className="text-meta text-mute">Tu puesto</span>
+                  {entry?.ranked && myRank ? <RankBadge pos={myRank.pos} className="!text-xs !px-2.5 !py-1" /> : null}
                 </div>
-                {pos >= 0 && <div className="text-sm text-mute mt-1">nº <b className="text-ink">{pos + 1}</b> de tus {(rankings[item.type] ?? []).length} {label.plural.toLowerCase()}</div>}
-                {entry?.comment && <p className="mt-2 text-[15px] serif italic text-ink/90">«{entry.comment}»</p>}
-                <button onClick={() => setRating(true)} className="mt-3 min-h-[44px] px-4 rounded-xl bg-surface2 text-sm font-medium flex items-center gap-2"><Icon name="edit" size={16} /> {entry?.comment ? 'Editar comentario' : entry?.stars ? 'Añadir comentario' : 'Valorar'}</button>
+                {pos >= 0 && <div className="text-meta text-mute mt-1">nº <b className="text-ink">{pos + 1}</b> de tus {(rankings[item.type] ?? []).length} {label.plural.toLowerCase()}</div>}
+                {entry?.comment && <p className="mt-2 text-body serif italic text-ink/90">«{entry.comment}»</p>}
+                <button onClick={() => setRating(true)} className="mt-3 min-h-[44px] px-4 rounded-xl bg-surface2 border border-line text-meta text-ink font-medium flex items-center gap-2"><Icon name="edit" size={16} /> {entry?.comment ? 'Editar comentario' : entry?.stars ? 'Añadir comentario' : 'Valorar'}</button>
               </div>
             )}
           </section>
 
           <section aria-label="Tus amigos">
-            <h2 className="text-sm font-semibold text-mute uppercase tracking-wide mb-2">¿Quién {label.pronoun} {label.verbPast} antes que yo?</h2>
-            {seenBy.length === 0 && <p className="text-sm text-mute">Ninguno de tus amigos {label.verbPerfSingular} todavía.</p>}
+            <h2 className="text-label text-mute uppercase mb-2">¿Quién {label.pronoun} {label.verbPast} antes que yo?</h2>
+            {seenBy.length === 0 && <p className="text-meta text-mute">Ninguno de tus amigos {label.verbPerfSingular} todavía.</p>}
             <ul className="space-y-3">
               {seenBy.map(({ friend, entry: e }) => {
                 const r = friendRank(friend, item.id, item.type)
                 return (
-                  <li key={friend.id} className="rounded-3xl bg-surface border border-line p-3.5">
+                  <li key={friend.id} className="rounded-2xl bg-surface border border-line p-3.5">
                     <div className="flex items-center gap-3">
-                      <Avatar name={friend.name} color={friend.avatarColor} size={38} />
+                      <Avatar name={friend.name} color={friend.avatarColor} size={36} />
                       <div className="flex-1 min-w-0">
-                        <div className="font-semibold">{friend.name}</div>
-                        {r && <div className="text-xs text-mute">nº {r.pos} de sus {r.total} {label.plural.toLowerCase()}</div>}
+                        <div className="font-semibold text-body text-ink">{friend.name}</div>
+                        {r && <div className="text-meta text-mute">nº {r.pos} de sus {r.total} {label.plural.toLowerCase()}</div>}
                       </div>
-                      {r && <span className="shrink-0 rounded-full bg-accent text-accent-ink font-bold text-sm px-2.5 py-1 tabular-nums">nº {r.pos}</span>}
+                      {r && <span className="shrink-0 rounded-full bg-accent text-accent-ink font-bold text-xs px-2.5 py-1 tabular-nums">nº {r.pos}</span>}
                     </div>
-                    {e.comment && <p className="mt-2 text-[15px] text-ink/90 serif italic">«{e.comment}»</p>}
+                    {e.comment && <p className="mt-2 text-body text-ink/90 serif italic">«{e.comment}»</p>}
                     {r && <AskFriend friend={friend} message={askText(friend.name, r.pos)} onNotify={setToast} />}
                   </li>
                 )
               })}
             </ul>
             {pendingBy.length > 0 && (
-              <p className="text-sm text-mute mt-3 flex items-center gap-1.5"><Icon name="bookmark" size={15} /> {label.pendingPlural}: {pendingBy.map((h) => h.friend.name).join(', ')}</p>
+              <p className="text-meta text-mute mt-3 flex items-center gap-1.5"><Icon name="bookmark" size={15} /> {label.pendingPlural}: {pendingBy.map((h) => h.friend.name).join(', ')}</p>
             )}
           </section>
 
-          <button onClick={() => setListSheet(true)} className="w-full min-h-[50px] rounded-2xl border border-line bg-surface font-medium flex items-center justify-center gap-2">
+          <button onClick={() => setListSheet(true)} className="w-full min-h-[48px] rounded-2xl border border-line bg-surface text-ink font-medium flex items-center justify-center gap-2 hover:bg-surface2 active:scale-98 transition-all">
             <Icon name="plus" size={18} /> Añadir a una lista
           </button>
         </div>

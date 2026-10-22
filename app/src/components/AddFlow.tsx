@@ -338,7 +338,9 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
               {results.length === 0 && !searchingRemote && remoteResults.length === 0 && (
                 searchError ? (
                   <li className="text-center text-mute py-12 px-4 space-y-3">
-                    <div className="text-3xl">📡</div>
+                    <div className="w-10 h-10 rounded-full bg-surface2 border border-line flex items-center justify-center mx-auto text-mute">
+                      <Icon name="search" size={20} />
+                    </div>
                     <div className="text-sm font-semibold text-ink">No he podido conectar con el catálogo</div>
                     <p className="text-xs text-mute max-w-xs mx-auto">Comprueba tu conexión a internet o vuelve a intentarlo.</p>
                     <button
@@ -350,7 +352,9 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
                   </li>
                 ) : (
                   <li className="text-center text-mute py-12">
-                    <div className="text-4xl mb-2">🔎</div>
+                    <div className="w-10 h-10 rounded-full bg-surface2 border border-line flex items-center justify-center mx-auto text-mute mb-2">
+                      <Icon name="search" size={20} />
+                    </div>
                     No está en nuestro catálogo todavía
                   </li>
                 )

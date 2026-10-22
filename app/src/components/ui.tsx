@@ -83,9 +83,9 @@ export function Tag({
 }) {
   const base = 'inline-flex items-center text-[11px] font-medium px-2.5 py-0.5 rounded-lg tracking-wide border select-none leading-relaxed'
   const variants = {
-    default: 'bg-white/[0.05] text-white/75 border-white/10',
+    default: 'bg-surface text-ink/75 border-line',
     accent: 'bg-accent/15 text-accent border-accent/30',
-    brand: 'bg-white/15 text-white/95 backdrop-blur-sm border-white/15',
+    brand: 'bg-surface2 text-ink border-line',
     subtle: 'bg-surface2/60 text-mute border-line/60',
   }
   return <span className={`${base} ${variants[variant]} ${className}`}>{children}</span>
@@ -304,7 +304,7 @@ export function Sheet({ children, onClose, height = '48%', label }: { children: 
     <Portal><div className="absolute inset-0 z-40" role="dialog" aria-modal="true" aria-label={label}>
       <motion.div className="absolute inset-0 bg-black/60" initial={{ opacity: 0 }} animate={{ opacity: 1 }} onClick={close} />
       <motion.div
-        className="absolute bottom-0 inset-x-0 bg-surface/90 backdrop-blur-2xl rounded-t-[28px] border-t border-white/10 shadow-2xl flex flex-col"
+        className="absolute bottom-0 inset-x-0 bg-surface rounded-t-[24px] border-t border-line shadow-2xl flex flex-col"
         style={{ y, minHeight: height, maxHeight: '88%', touchAction: 'none' }}
         initial={{ y: 600 }}
         animate={{ y: 0 }}

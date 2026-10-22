@@ -3,6 +3,7 @@ import { getItem } from '../data/catalog'
 import { useStore } from '../store/useStore'
 import { Poster } from './Poster'
 import { Sheet, StarRating } from './ui'
+import { Button } from './Button'
 import { SHELF_LABEL, type Stars } from '../types'
 import { haptic } from '../lib/haptics'
 
@@ -40,10 +41,10 @@ export function RatingFlow({ itemId, onDone, withStars }: { itemId: string; onDo
   return (
     <Sheet label="Valorar" onClose={finish} height={stars0 ? '46%' : '36%'}>
       <div className="flex gap-3 items-center">
-        <Poster item={item} className="w-14 h-20 rounded-xl shrink-0" />
+        <Poster item={item} className="w-14 aspect-[2/3] rounded-[8px] shrink-0 object-cover" />
         <div className="min-w-0">
-          <div className="text-xs text-mute uppercase tracking-wide">{label.actionPast}</div>
-          <div className="serif text-xl font-semibold leading-tight line-clamp-2">{item.title}</div>
+          <div className="text-label text-mute uppercase">{label.actionPast}</div>
+          <div className="serif text-title font-medium text-ink leading-tight line-clamp-2 mt-0.5">{item.title}</div>
         </div>
       </div>
       {stars0 && (
@@ -56,18 +57,20 @@ export function RatingFlow({ itemId, onDone, withStars }: { itemId: string; onDo
         onChange={(e) => setComment(e.target.value)}
         rows={2}
         placeholder="¿Qué significó para ti? (opcional)"
-        className="mt-2 w-full bg-surface2 border border-line rounded-2xl px-4 py-3 text-[15px] resize-none placeholder:text-mute/70 focus:outline-none focus:border-accent"
+        className="mt-3 w-full bg-surface2 border border-line rounded-2xl px-4 py-3 text-body resize-none placeholder:text-mute/70 focus:outline-none focus:border-accent"
       />
       {stars0 && (
-        <label className="flex items-center gap-3 mt-2 min-h-[40px] text-sm text-mute">
+        <label className="flex items-center gap-3 mt-2 min-h-[40px] text-meta text-mute">
           <input type="checkbox" checked={never} onChange={(e) => setNever(e.target.checked)} className="w-5 h-5 accent-[#F5B544]" />
           No preguntar más al guardar (se reactiva en Perfil)
         </label>
       )}
-      <button onClick={finish} className="mt-3 min-h-[50px] rounded-2xl bg-accent text-accent-ink font-semibold text-base active:scale-[0.98] transition-transform">
-        Guardar
-      </button>
-      <div className="text-center text-[11px] text-mute mt-2">Desliza hacia abajo para cerrar: se guarda lo que haya</div>
+      <div className="mt-3">
+        <Button variant="primary" onClick={finish} className="w-full">
+          Guardar
+        </Button>
+      </div>
+      <div className="text-center text-meta text-mute mt-2">Desliza hacia abajo para cerrar: se guarda lo que haya</div>
     </Sheet>
   )
 }
@@ -89,19 +92,23 @@ export function CommentSheet({ itemId, onClose }: { itemId: string; onClose: () 
   }
   return (
     <Sheet label="Comentario" onClose={finish} height="34%">
-      <h3 className="serif text-xl font-semibold leading-tight">¿Algo que decir de <i>{item.title}</i>?</h3>
+      <h3 className="serif text-title font-medium text-ink leading-tight">¿Algo que decir de <i>{item.title}</i>?</h3>
       <textarea
         value={comment}
         onChange={(e) => setComment(e.target.value)}
         rows={2}
         placeholder="Tu comentario (opcional)"
-        className="mt-3 w-full bg-surface2 border border-line rounded-2xl px-4 py-3 text-[15px] resize-none placeholder:text-mute/70 focus:outline-none focus:border-accent"
+        className="mt-3 w-full bg-surface2 border border-line rounded-2xl px-4 py-3 text-body resize-none placeholder:text-mute/70 focus:outline-none focus:border-accent"
       />
-      <label className="flex items-center gap-3 mt-3 min-h-[44px] text-sm text-mute">
+      <label className="flex items-center gap-3 mt-3 min-h-[44px] text-meta text-mute">
         <input type="checkbox" checked={never} onChange={(e) => setNever(e.target.checked)} className="w-5 h-5 accent-[#F5B544]" />
         No preguntar más
       </label>
-      <button onClick={finish} className="mt-1 min-h-[50px] rounded-2xl bg-accent text-accent-ink font-semibold">Guardar</button>
+      <div className="mt-2">
+        <Button variant="primary" onClick={finish} className="w-full">
+          Guardar
+        </Button>
+      </div>
     </Sheet>
   )
 }
