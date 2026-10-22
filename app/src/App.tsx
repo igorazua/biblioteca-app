@@ -19,6 +19,8 @@ import { WhatToWatch } from './screens/WhatToWatch'
 import { Profile } from './screens/Profile'
 import { Onboarding } from './screens/Onboarding'
 import { Import } from './screens/Import'
+import { Connect } from './screens/Connect'
+import { ConnectSpotify } from './screens/ConnectSpotify'
 import { ListEditor } from './screens/ListEditor'
 import { PublicList, PublicProfile } from './screens/Public'
 import { JoinInvite } from './screens/JoinInvite'
@@ -45,6 +47,8 @@ function Frame() {
           <Route path="estanteria/:type" element={<Shelf />} />
           <Route path="i/:id" element={<ItemDetail />} />
           <Route path="lista/:id" element={<ListEditor />} />
+          <Route path="conectar" element={<Connect />} />
+          <Route path="conectar/spotify" element={<ConnectSpotify />} />
           <Route path="importar" element={<Import />} />
           <Route path="ajustes" element={<Settings />} />
           <Route path="perfil/editar" element={<EditProfile />} />

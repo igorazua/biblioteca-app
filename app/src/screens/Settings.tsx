@@ -181,7 +181,7 @@ export function Settings() {
 
         {/* Tus listas */}
         <Group title="Tus listas">
-          <Row icon="sparkle" title="Importar listas" sub="Letterboxd, IMDb, Goodreads o Netflix" to="/importar" />
+          <Row icon="sparkle" title="Conectar" sub="Letterboxd, Goodreads, Spotify, Netflix y más" to="/conectar" />
         </Group>
 
         {/* Uso de la app */}

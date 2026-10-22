@@ -25,6 +25,7 @@ export type EventType =
   // Importación
   | 'import_started' // data: { source }
   | 'import_done' // data: { source, total, sure, doubt, none }
+  | 'connect_interest' // «Avísame» de un servicio próximo; data: { service }
   // Resultado a posteriori
   | 'entry_status' // data: { from, to, via: 'deck'|'decide'|'clean'|'add'|'other' }
   | 'entry_ranked' // data: { pos, total, pct }
