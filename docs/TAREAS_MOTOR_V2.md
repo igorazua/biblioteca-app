@@ -422,3 +422,19 @@ T1 puede ir en paralelo a T2-T7. Nada de esto se despliega sin el OK de Igor.
 - las 11 obras de la lista tienen su póster oficial;
 - en la app (Comparar → duelos a pantalla completa) ninguna sale apaisada ni con una foto que no sea la portada;
 - `npm run seed` no vuelve a estropearlo: `covers.mjs` usa `original.json` primero y el control de forma.
+
+---
+
+# T15 — Conectar: base de datos y función del servidor (22/10/2026, OK de Igor)
+
+**Contexto:** la página Conectar ya está escrita (código sin commitear de Claude): `app/src/screens/Connect.tsx`, `app/src/lib/connect/*`, `supabase/functions/biblio-connect/index.ts` y `supabase/migrations/0008_biblio_connections.sql`. Diseño en `docs/CONECTAR.md`. **Igor da el OK para tocar Supabase en esta tarea.**
+
+1. **Commit** primero del código de Conectar y de los duelos que hay sin commitear (`App.tsx`, `Connect.tsx`, `ConnectSpotify.tsx`, `ImportFlowView.tsx`, `lib/import/useImportFlow.ts`, `lib/import/storygraph.ts`, `lib/connect/`, `Import.tsx`, `Settings.tsx`, `useEvents.ts`, `SwipePair.tsx`, `DuelVariants.tsx`, `Compare.tsx`, `WhatToWatch.tsx`, `PlaceFlow.tsx`, `supabase/functions/biblio-connect/`, `supabase/migrations/0008_biblio_connections.sql`, `docs/CONECTAR.md`, `CLAUDE.md`) en commits separados por tema. **Revisa antes la migración:** numeración correcta respecto a las que ya hay, RLS en las cuatro operaciones (cada usuario solo ve y toca las suyas) y que no rompa nada de lo existente.
+2. **Ejecuta la migración** `0008_biblio_connections.sql` en el proyecto `pvewnpemlwmvaduzhjso` con el mismo método que usaste para las anteriores (token en la memoria de Igor: `SUPABASE_ACCESS_TOKEN`). Comprueba que la tabla existe y que las políticas RLS están activas.
+3. **Despliega** la función `biblio-connect`, con verificación de JWT igual que `biblio-catalog`. Pruébala con `curl`:
+   - `?service=letterboxd&user=<un usuario público real>` → devuelve filas con título, año, nota y fecha;
+   - `?service=goodreads&user=<id numérico de un perfil público>` → devuelve libros de la estantería `read`;
+   - un usuario que no existe → error claro, no un 500.
+4. Si algo falla en la función (formato del RSS, CORS), arréglalo en `index.ts` y vuelve a desplegar.
+
+**Hecho cuando:** la tabla existe con RLS, la función responde con datos reales en los dos servicios y todo está commiteado. No despliegues la app en Vercel sin el OK de Igor.
