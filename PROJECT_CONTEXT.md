@@ -37,7 +37,10 @@
   - **Fase 5 (Ficha y hojas):** ItemDetail.tsx, RatingFlow.tsx, AddFlow.tsx y Sheet (ui.tsx) con radio superior de 24 px, sin backdrop-blur ni brillos de color.
   - **Fase 6 (Perfil, Ajustes y Conectar):** Profile.tsx, EditProfile.tsx, Settings.tsx y Connect.tsx con cabeceras ScreenTitle, botones estándar y rejilla de 4 px.
   - **Fase 7 (Bienvenida y públicas):** Onboarding.tsx, Public.tsx y JoinInvite.tsx sin emojis en UI, sin anillos decorativos y con escala tipográfica cerrada.
-- **Tests y compilación:** 19/19 archivos de tests y 125/125 tests en verde. PWA compila limpia sin errores.
+- **T16 — Comparar: pantalla inicial y duelos sin repetición (22/10/2026 - Completado):**
+  - **Parte 1 (Lógica y persistencia):** Store migrado a v4 con `duels: Record<ShelfType, Record<string, DuelRecord>>` y `lastCompared`. Función pura `planNextDuel` intercalando colocar y pulir (patrón C C P C C P P), saltando rivales ya enfrentados en colocación binaria y puntuando parejas para pulir según cercanía, novedad y peso superior sin repetir ninguna pareja jamás. Sincronización en `lib/sync.ts` con tabla `biblio_duels` (migración `0009_biblio_duels.sql` con RLS). Cálculo reactivo de métricas de estantería en `lib/compareOverview.ts`.
+  - **Parte 2 (Pantallas y flujo):** `/comparar` abre `CompareHome` con los 4 diseños (1. Índice de revista, 2. El próximo duelo con pósteres a 2:3 inclinados, 3. Estanterías con lomos, 4. Mapa de tu ranking), selector de pruebas `Portada n/4 ›` persistido y pestañas de ordenación («Más por ordenar · Recientes · Fijo»). Duelos en `/comparar/:shelf` (`CompareSession`) sin chips de categorías, con contador `3 de 7`, botón de deshacer activo y resumen final con «Seguir con…» y «Elegir otra estantería».
+- **Tests y compilación:** 20/20 archivos de tests y 132/132 tests en verde. PWA compila limpia sin errores.
 
 ## Documentos (leer en este orden)
 1. `docs/IDEA.md` — la idea, decisiones tomadas (✅) y debates abiertos. **Fuente de verdad.**
