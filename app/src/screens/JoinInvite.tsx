@@ -6,6 +6,7 @@ import { supabase } from '../lib/supabase'
 import { isMissingFunction } from '../lib/contacts'
 import { Avatar, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
+import { Button } from '../components/Button'
 
 type InviteStatus = 'ok' | 'used' | 'expired' | 'missing'
 
@@ -84,41 +85,45 @@ export function JoinInvite() {
 
   return (
     <div className="h-full flex flex-col items-center justify-center p-6 bg-bg text-ink text-center">
-      <div className="w-full max-w-sm bg-surface border border-line rounded-3xl p-6 shadow-2xl space-y-5">
+      <div className="w-full max-w-sm bg-surface border border-line rounded-2xl p-6 shadow-xl space-y-5">
         <div className="flex justify-center">
-          <Avatar name={creatorName} url={creatorAvatar} color="#F5B544" size={72} className="shadow-lg ring-4 ring-accent/20" />
+          <Avatar name={creatorName} url={creatorAvatar} color="#F5B544" size={64} />
         </div>
 
         <div>
-          <h1 className="serif text-2xl font-bold">{creatorName} te invita a su biblioteca</h1>
-          <p className="text-sm text-mute mt-2">
+          <h1 className="text-title font-medium text-ink">{creatorName} te invita a su biblioteca</h1>
+          <p className="text-body text-mute mt-2">
             Descubre qué pelis, series, libros y juegos le han marcado y comparte tus gustos.
           </p>
         </div>
 
         {loading ? (
-          <div className="py-4 text-mute text-sm">Cargando invitación...</div>
+          <div className="py-4 text-meta text-mute">Cargando invitación...</div>
         ) : inviteStatus !== 'ok' ? (
           <div className="space-y-3 pt-2">
-            <p className="text-sm text-ink/90 leading-relaxed">{STATUS_TEXT[inviteStatus]}</p>
-            <button onClick={() => navigate('/')} className="w-full min-h-[44px] rounded-2xl bg-surface2 text-sm font-medium">Ir a la app</button>
+            <p className="text-body text-ink/90 leading-relaxed">{STATUS_TEXT[inviteStatus]}</p>
+            <Button variant="secondary" onClick={() => navigate('/')} className="w-full">
+              Ir a la app
+            </Button>
           </div>
         ) : user ? (
           <div className="space-y-3 pt-2">
-            <button
+            <Button
+              variant="primary"
               onClick={handleAccept}
               disabled={joining}
-              className="w-full min-h-[48px] rounded-2xl bg-accent text-accent-ink font-semibold flex items-center justify-center gap-2 active:scale-95 transition-transform disabled:opacity-50"
+              icon={<Icon name="check" size={18} />}
+              className="w-full"
             >
-              <Icon name="check" size={20} strokeWidth={2.5} />
               {joining ? 'Conectando...' : `Aceptar y conectar con ${creatorName}`}
-            </button>
-            <button
+            </Button>
+            <Button
+              variant="text"
               onClick={() => navigate('/')}
-              className="w-full min-h-[44px] text-sm text-mute hover:text-ink transition-colors"
+              className="w-full"
             >
               Ir a mi biblioteca
-            </button>
+            </Button>
           </div>
         ) : (
           <div className="space-y-4 pt-2">

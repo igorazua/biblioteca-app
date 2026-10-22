@@ -9,6 +9,7 @@ import { SHELVES, SHELF_LABEL, type Item, type ShelfType } from '../types'
 import { Poster } from '../components/Poster'
 import { Icon, type IconName } from '../components/Icon'
 import { Avatar } from '../components/ui'
+import { Button } from '../components/Button'
 import { haptic } from '../lib/haptics'
 
 const SHELF_ICONS: Record<ShelfType, IconName> = {
@@ -41,7 +42,7 @@ function Stamp({
   return (
     <motion.div
       style={{ opacity, color, borderColor: color }}
-      className={`absolute z-20 border-[3.5px] rounded-xl px-3 py-1 text-[20px] font-black tracking-wider whitespace-nowrap pointer-events-none select-none shadow-lg ${className}`}
+      className={`absolute z-20 border-[3px] rounded-xl px-3 py-1 text-[18px] font-bold tracking-wider whitespace-nowrap pointer-events-none select-none ${className}`}
     >
       {label}
     </motion.div>
@@ -234,7 +235,7 @@ export function Onboarding() {
                       haptic('tap')
                       setStep(1)
                     }}
-                    className="w-full min-h-[52px] rounded-2xl bg-accent text-accent-ink font-bold text-sm tracking-wide active:scale-[0.98] transition-transform shadow-lg shadow-accent/15"
+                    className="w-full min-h-[48px] rounded-2xl bg-accent text-accent-ink font-semibold text-sm tracking-wide active:scale-[0.98] transition-transform"
                   >
                     Empezar tutorial
                   </button>
@@ -292,19 +293,19 @@ export function Onboarding() {
                       label="LA HE VISTO"
                       color="var(--color-stamp-green, #3ec878)"
                       opacity={rightO}
-                      className="top-[24%] left-4 -rotate-12 border-emerald-400 text-emerald-400 bg-black/40 backdrop-blur-xs"
+                      className="top-[24%] left-4 -rotate-12 border-emerald-400 text-emerald-400 bg-black/60"
                     />
                     <Stamp
                       label="NO ME INTERESA"
                       color="var(--color-stamp-red, #ef4b4b)"
                       opacity={leftO}
-                      className="top-[24%] right-4 rotate-12 border-rose-500 text-rose-500 bg-black/40 backdrop-blur-xs"
+                      className="top-[24%] right-4 rotate-12 border-rose-500 text-rose-500 bg-black/60"
                     />
                     <Stamp
                       label="PENDIENTE"
                       color="var(--color-stamp-blue, #5b9cf5)"
                       opacity={upO}
-                      className="top-[32%] left-1/2 -translate-x-1/2 -rotate-6 border-sky-400 text-sky-400 bg-black/40 backdrop-blur-xs"
+                      className="top-[32%] left-1/2 -translate-x-1/2 -rotate-6 border-sky-400 text-sky-400 bg-black/60"
                     />
 
                     {/* Resplandores reactivos */}
@@ -425,7 +426,7 @@ export function Onboarding() {
                     }}
                     className={`relative w-36 h-52 rounded-2xl overflow-hidden border cursor-pointer transition-all duration-300 shadow-xl ${
                       winner === 'a'
-                        ? 'border-accent ring-2 ring-accent scale-105 z-20'
+                        ? 'border-accent scale-105 z-20'
                         : winner === 'b'
                         ? 'opacity-40 scale-95 border-line'
                         : 'border-line rotate-[-4deg]'
@@ -455,7 +456,7 @@ export function Onboarding() {
                     }}
                     className={`relative w-36 h-52 rounded-2xl overflow-hidden border cursor-pointer transition-all duration-300 shadow-xl ${
                       winner === 'b'
-                        ? 'border-accent ring-2 ring-accent scale-105 z-20'
+                        ? 'border-accent scale-105 z-20'
                         : winner === 'a'
                         ? 'opacity-40 scale-95 border-line'
                         : 'border-line rotate-[4deg]'
@@ -485,7 +486,7 @@ export function Onboarding() {
                       haptic('tap')
                       setStep(3)
                     }}
-                    className="w-full min-h-[50px] rounded-2xl bg-accent text-accent-ink font-bold text-sm active:scale-[0.98] transition-transform shadow-lg shadow-accent/15"
+                    className="w-full min-h-[48px] rounded-2xl bg-accent text-accent-ink font-semibold text-sm active:scale-[0.98] transition-transform"
                   >
                     Siguiente
                   </button>
@@ -541,7 +542,7 @@ export function Onboarding() {
                       haptic('tap')
                       setStep(4)
                     }}
-                    className="w-full min-h-[50px] rounded-2xl bg-accent text-accent-ink font-bold text-sm active:scale-[0.98] transition-transform shadow-lg shadow-accent/15"
+                    className="w-full min-h-[48px] rounded-2xl bg-accent text-accent-ink font-semibold text-sm active:scale-[0.98] transition-transform"
                   >
                     Siguiente
                   </button>
@@ -682,7 +683,7 @@ export function Onboarding() {
                       haptic('tap')
                       finish(false)
                     }}
-                    className="w-full min-h-[52px] rounded-2xl bg-accent text-accent-ink font-bold text-sm tracking-wide active:scale-[0.98] transition-transform shadow-lg shadow-accent/15"
+                    className="w-full min-h-[48px] rounded-2xl bg-accent text-accent-ink font-semibold text-sm tracking-wide active:scale-[0.98] transition-transform"
                   >
                     Entrar a mi biblioteca
                   </button>
