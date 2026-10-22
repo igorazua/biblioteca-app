@@ -14,6 +14,7 @@ import { Avatar, Sheet, Toast } from '../components/ui'
 import { AddFlow } from '../components/AddFlow'
 import { NudgeCard } from '../components/NudgeCard'
 import { Icon } from '../components/Icon'
+import { ScreenTitle } from '../components/ScreenTitle'
 
 const FUTURE_SHELVES: [string, number][] = [
   ['Documentales', 214], ['Anime', 187], ['Podcasts', 163], ['Videojuegos', 241],
@@ -90,28 +91,26 @@ export function Library() {
   }
 
   return (
-    <div className="h-full scroll-y pb-6">
-      <header className="safe-top px-5 pb-4">
-        <div className="flex items-center justify-between min-h-[48px]">
-          <Link to="/perfil" className="flex items-center gap-2.5 min-h-[44px]" aria-label="Tu perfil">
-            <Avatar name={profile.name} color={profile.avatarColor} url={profile.avatarUrl} size={36} />
-            <span className="label-caps text-mute">Tu biblioteca</span>
-          </Link>
+    <div className="h-full scroll-y pb-6 bg-bg">
+      <ScreenTitle
+        label="TU BIBLIOTECA"
+        title={`Hola, ${profile.name.split(' ')[0]}.`}
+        subtitle={`${seen} en tu biblioteca · ${pending} pendientes`}
+        action={
           <div className="flex items-center gap-2">
+            <Link to="/perfil" className="active:opacity-80 transition-opacity" aria-label="Tu perfil">
+              <Avatar name={profile.name} color={profile.avatarColor} url={profile.avatarUrl} size={32} />
+            </Link>
             <button
               onClick={() => setAdd({})}
               aria-label="Añadir a mano"
-              className="w-11 h-11 rounded-full bg-accent text-accent-ink flex items-center justify-center shadow-[0_8px_24px_-8px_rgb(245_181_68/0.7)] active:scale-90 transition-transform"
+              className="w-9 h-9 rounded-full bg-accent text-accent-ink flex items-center justify-center active:scale-95 transition-transform"
             >
-              <Icon name="plus" size={22} strokeWidth={2.5} />
+              <Icon name="plus" size={18} strokeWidth={2.5} />
             </button>
           </div>
-        </div>
-        <h1 className="serif text-[34px] leading-[1.02] font-semibold mt-3">Hola, {profile.name.split(' ')[0]}.</h1>
-        <p className="text-mute mt-1.5 text-[15px]">
-          <b className="text-ink font-semibold">{seen}</b> en tu biblioteca · <b className="text-ink font-semibold">{pending}</b> pendientes
-        </p>
-      </header>
+        }
+      />
 
       {/* Recordatorio inteligente contextual (§5) */}
       <AnimatePresence>
@@ -135,8 +134,8 @@ export function Library() {
             <section key={t} aria-label={SHELF_LABEL[t].plural}>
               <div className="flex items-center justify-between px-5 mb-2.5 min-h-[44px] gap-2">
                 <Link to={`/estanteria/${t}`} className="flex-1 flex items-center justify-between min-h-[44px]">
-                  <h2 className="serif text-[24px] font-semibold">{SHELF_LABEL[t].plural}</h2>
-                  <span className="text-xs text-mute flex items-center gap-1">{rk.length + unrankedCount} <Icon name="chevron" size={14} /></span>
+                  <h2 className="text-title font-medium text-ink">{SHELF_LABEL[t].plural}</h2>
+                  <span className="text-meta text-mute flex items-center gap-1">{rk.length + unrankedCount} <Icon name="chevron" size={14} /></span>
                 </Link>
                 {pendingCount > 0 && (
                   <Link to={`/estanteria/${t}?seg=pend`} className="shrink-0 min-h-[36px] px-3 rounded-full bg-surface text-[13px] text-ink/85 flex items-center gap-1.5" aria-label={`${pendingCount} pendientes en ${SHELF_LABEL[t].plural}`}>
@@ -161,7 +160,7 @@ export function Library() {
                   <Link to={`/descubrir`} className="rounded-3xl bg-surface p-4 flex items-center gap-4 active:scale-[0.99] transition-transform">
                     <span className="flex -space-x-5 shrink-0" aria-hidden>
                       {items.filter((it) => it.type === t).slice(0, 3).map((it, i) => (
-                        <Poster key={it.id} item={it} showTitle={false} className="w-11 aspect-[2/3] rounded-lg ring-2 ring-surface" style={{ transform: `rotate(${(i - 1) * 7}deg)` }} />
+                        <Poster key={it.id} item={it} showTitle={false} className="w-11 aspect-[2/3] rounded-[8px] border border-line" style={{ transform: `rotate(${(i - 1) * 7}deg)` }} />
                       ))}
                     </span>
                     <span className="flex-1 text-sm text-mute leading-snug">Aún está vacía. <span className="text-ink font-medium">Haz swipe en Descubrir</span> y se llena sola.</span>
