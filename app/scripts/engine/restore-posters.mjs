@@ -472,6 +472,19 @@ async function uploadWithRetry(path, buffer, retries = 5) {
   }
 }
 
+let isSaving = false
+function saveSeedSafe() {
+  if (isSaving) return
+  isSaving = true
+  try {
+    writeFileSync(SEED_FILE, JSON.stringify(seed, null, 2))
+  } catch (err) {
+    // ignorar colisión temporal, se reintentará en el siguiente lote
+  } finally {
+    isSaving = false
+  }
+}
+
 async function worker() {
   while (index < targets.length) {
     const it = targets[index++]
@@ -495,11 +508,11 @@ async function worker() {
       writeFileSync(join(cacheDir, `${it.id.replace(/^[^:]+:/, '')}.webp`), webp)
 
       ok++
-      if (ok % 15 === 0 || ok === targets.length) {
+      if (ok % 20 === 0 || ok === targets.length) {
         console.log(`  [${ONLY || 'all'}] ${ok}/${targets.length} completados`)
-        writeFileSync(SEED_FILE, JSON.stringify(seed, null, 2))
+        saveSeedSafe()
       }
-      await new Promise((r) => setTimeout(r, 150))
+      await new Promise((r) => setTimeout(r, 120))
     } catch (e) {
       console.error(`  Error en ${it.id}:`, e.message)
       failed.push(it.id)

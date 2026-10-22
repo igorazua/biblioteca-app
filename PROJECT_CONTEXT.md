@@ -27,7 +27,7 @@
   - Juegos: `weight` (1.0-5.0), `minAge`, `cooperative`, `mechanics` al 100%.
   - Pelis: `cast` principal vía Wikidata SPARQL P161 (79,9% de películas).
   - Música: `peakDecades` al 100% de artistas.
-- **Portadas alojadas (T1 completado):** 100 % de las 4.345 obras alojadas en Supabase Storage (`biblio-covers`) en formato WebP optimizado (342 px), eliminando enlaces externos rotos o bloqueados (0 dependencias externas, 100 % respuestas 200 OK).
+- **Portadas reales y verticales (T1 y T14 completados):** 100 % de las 4.345 obras con póster oficial vertical (600 px WebP, `?v=2`) alojadas en Supabase Storage (`biblio-covers`) y sincronizadas con `biblio_catalog`. Control de forma con 0 imágenes incorrectas y recuperación desde fuentes originales (IMDb, TVmaze, OL, BGG, Deezer).
 - **Tests y compilación:** 19/19 archivos de tests y 125/125 tests en verde. PWA compila limpia sin errores.
 
 ## Documentos (leer en este orden)
