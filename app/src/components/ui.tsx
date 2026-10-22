@@ -67,6 +67,30 @@ export function RankBadge({ pos, className = '' }: { pos: number; className?: st
   return <span className={`inline-flex items-center whitespace-nowrap rounded-full bg-accent text-accent-ink font-bold px-1.5 py-[1px] text-[10px] tabular-nums ${className}`}>nº {pos}</span>
 }
 
+/**
+ * Etiqueta informativa / metadato no interactivo (géneros, plataformas, hechos).
+ * Diseño: rectangular suave (rounded-lg) con tipografía compacta (text-[11px] font-medium),
+ * claramente diferenciada de los botones interactivos táctiles (rounded-2xl / rounded-full de acción).
+ */
+export function Tag({
+  children,
+  variant = 'default',
+  className = '',
+}: {
+  children: ReactNode
+  variant?: 'default' | 'accent' | 'brand' | 'subtle'
+  className?: string
+}) {
+  const base = 'inline-flex items-center text-[11px] font-medium px-2.5 py-0.5 rounded-lg tracking-wide border select-none leading-relaxed'
+  const variants = {
+    default: 'bg-white/[0.05] text-white/75 border-white/10',
+    accent: 'bg-accent/15 text-accent border-accent/30',
+    brand: 'bg-white/15 text-white/95 backdrop-blur-sm border-white/15',
+    subtle: 'bg-surface2/60 text-mute border-line/60',
+  }
+  return <span className={`${base} ${variants[variant]} ${className}`}>{children}</span>
+}
+
 export function Chip({ active, onClick, children, className = '' }: { active?: boolean; onClick?: () => void; children: ReactNode; className?: string }) {
   return (
     <button

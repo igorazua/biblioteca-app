@@ -366,3 +366,59 @@ T1 puede ir en paralelo a T2-T7. Nada de esto se despliega sin el OK de Igor.
 - Pesos finales de R, de la fusión y del ranker: los deciden `brain:eval` y las métricas de T11.
 - Qué mercados abrir después de España: cuando Igor lo diga, se calcula `notoriety[país]`, `trend[país]` y `titles[locale]` para ese país (MOTOR §2b.4).
 - Licencias: aparcadas hasta que funcione con usuarios (MOTOR §2c.8). Mantén siempre la procedencia para poder sustituir fuentes.
+
+---
+
+# ⚠️⚠️ URGENTE (21/10/2026, noche) — T14: recuperar los pósteres reales
+
+**Hazla antes que cualquier otra cosa.** Igor ve pósteres que no son pósteres: *Seven* enseña un canal de televisión australiano, *Malditos bastardos* una foto de Tarantino, *Casablanca* un fotograma, *Infiltrados* y *Nightcrawler* un logo, *Apocalypse Now* y *Forrest Gump* fotos sueltas. En los duelos a pantalla completa queda fatal.
+
+## Qué pasó (no lo repitas)
+- Hasta el commit `a2fd1f2` la semilla tenía pósteres reales: **IMDb** (`m.media-amazon.com`) en 994 pelis, **TVmaze** en 984 series, **Open Library** en 956 libros, **BGG** (`cf.geekdo-images.com`) en 1014 juegos y **Deezer** en 259 artistas.
+- El commit `1e74270` (16/10, «complete full catalog enrichment») los **sustituyó por la imagen principal de Wikidata (P18)**, que en una obra suele ser cualquier cosa: una foto del director, un fotograma, un logo o, si el id estaba mal enlazado, otra cosa entera.
+- Después, T1 (`covers.mjs`) subió esas imágenes malas a `biblio-covers`, porque usaba la `posterUrl` actual como primera fuente y P18 como alternativa.
+
+## Lo que ya está hecho (por Claude, sin commitear)
+- `app/scripts/cache/posters/original.json`: **4207 pósteres originales** (id → URL) sacados de `a2fd1f2`. Es la fuente buena. **Versiónalo.**
+- `app/scripts/engine/restore-posters.mjs`: descarga el original, lo pasa a WebP de **600 px de ancho** (los de 342 px se ven borrosos a pantalla completa), lo sube a `biblio-covers/<tipo>/<slug>.webp` sustituyendo la imagen mala, pone `posterUrl` con `?v=2` (para saltarse la caché), `imageSrc` y `src.posterUrl`, y reescribe la caché local de `covers.mjs`. Las que ya tienen `?v=2` las salta. Resuelve los alias de `aliases.json`.
+- **Pelis: 846 de 934 ya recuperadas** (están en `seed.json`, sin commitear). Quedaron 78 fallidas por tiempo de espera de IMDb y 10 sin original.
+- `covers.mjs` usa ya `original.json` como **primera fuente** (paso 0).
+
+## Lo que tienes que hacer
+1. **Commitea** primero lo de arriba (`seed.json`, `original.json`, `restore-posters.mjs`, `covers.mjs`) con el mensaje `fix(portadas): recuperar los pósteres originales (IMDb, TVmaze, OL, BGG, Deezer)`.
+2. **El resto de categorías**, de una en una:
+   ```
+   cd app
+   node --env-file-if-exists=.env.local scripts/engine/restore-posters.mjs --only series
+   node --env-file-if-exists=.env.local scripts/engine/restore-posters.mjs --only book
+   node --env-file-if-exists=.env.local scripts/engine/restore-posters.mjs --only boardgame
+   node --env-file-if-exists=.env.local scripts/engine/restore-posters.mjs --only artist
+   node --env-file-if-exists=.env.local scripts/engine/restore-posters.mjs --only movie   # reintenta las 78
+   ```
+   Si siguen fallando por tiempo, baja los hilos de 6 a 2 y sube el tiempo de espera de 15 s a 30 s en el script.
+3. **Las que no tienen original** (fallidas definitivas y obras añadidas después del 16/10, como los clásicos de T2c). Prueba estas fuentes **en este orden** y quédate con la primera que pase el control del punto 4:
+   - **Pelis:** Wikidata **P3383** («cartel de la película»), nunca P18 → página de IMDb del `imdbId` (Wikidata P345): la imagen de `og:image` → si no, portada generada.
+   - **Series:** TVmaze por `tvmazeId` o por título + año (`image.original`) → IMDb `og:image` → generada.
+   - **Libros:** Open Library por `olid` (`-L.jpg`) o por ISBN → generada.
+   - **Juegos:** página de BGG del `bggId`: `og:image` (es la caja) → generada.
+   - **Artistas:** Deezer (`api.deezer.com/search/artist?q=`, `picture_xl`) → Wikidata P18 (aquí sí vale: es una foto de la persona o del grupo) → generada.
+   - **Prohibido usar Wikidata P18 en pelis, series, libros y juegos.**
+4. **Control de forma.** Mide cada imagen con `sharp().metadata()` antes de subirla:
+   - pelis, series y libros: **alto/ancho entre 1,3 y 1,65** (vertical, de póster o de portada);
+   - juegos: entre 0,7 y 1,5 (las cajas pueden ser cuadradas);
+   - artistas: cualquiera.
+
+   Si no cumple, se descarta y se prueba la siguiente fuente. Añade este control a `restore-posters.mjs` **y** a `covers.mjs`, y aplícalo también a las 846 pelis ya subidas: las que no cumplan, vuelven a la cola.
+5. **Script de comprobación** `app/scripts/engine/check-posters.mjs`. Por categoría debe informar de:
+   - cuántas obras tienen póster alojado en `biblio-covers`, cuántas portada generada y cuántas siguen sin `?v=2`;
+   - la lista de las que no cumplen la forma (debe salir **vacía**);
+   - el póster de estas obras, que **tiene que ser el oficial y vertical**: *Seven*, *Apocalypse Now*, *Forrest Gump*, *Casablanca*, *Malditos bastardos*, *Nightcrawler*, *Infiltrados*, *El señor de los anillos: La comunidad del anillo*, *Interstellar*, *Matrix*, *El caballero oscuro*. Para cada una imprime la URL de origen (`src.posterUrl`) y su proporción.
+6. Ejecuta `check-posters.mjs` y pega su salida en `app/scripts/cache/posters/report.md`.
+7. **Catálogo vivo:** sube los cambios de `posterUrl` a `biblio_catalog` con `catalog-upload.mjs` (Igor lo autoriza para esta tarea).
+8. Commit: `fix(portadas): T14 pósteres reales y verticales en todas las categorías`.
+
+**Hecho cuando:**
+- `check-posters.mjs` da 0 imágenes con forma incorrecta;
+- las 11 obras de la lista tienen su póster oficial;
+- en la app (Comparar → duelos a pantalla completa) ninguna sale apaisada ni con una foto que no sea la portada;
+- `npm run seed` no vuelve a estropearlo: `covers.mjs` usa `original.json` primero y el control de forma.

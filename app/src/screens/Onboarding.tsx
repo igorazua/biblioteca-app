@@ -363,7 +363,7 @@ export function Onboarding() {
                       <span>↑</span>
                       <Icon name="bookmark" size={13} strokeWidth={2.5} />
                     </div>
-                    <span className="text-[11px] font-semibold text-center leading-tight">Pendiente</span>
+                    <span className="text-[11px] font-semibold text-center leading-tight">Guardar</span>
                   </button>
 
                   <button

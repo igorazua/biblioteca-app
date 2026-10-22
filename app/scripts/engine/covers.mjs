@@ -1,11 +1,18 @@
 /**
- * covers.mjs — Sube las portadas de seed.json a Supabase Storage (biblio-covers)
- * convertidas a WebP a 342px de ancho.
+ * covers.mjs — Procesa y aloja portadas en Supabase Storage (biblio-covers)
  *
- * MOTOR v2 §2b / TAREAS_MOTOR_V2.md T1
+ * Cumple con las reglas de T1 y T14:
+ *   1. Usa original.json como primera fuente (pósteres originales IMDb, TVmaze, OL, BGG, Deezer).
+ *   2. Prohibido usar Wikidata P18 en pelis, series, libros y juegos (solo permitido en artistas).
+ *   3. Control de forma con sharp().metadata():
+ *      - pelis, series, libros: 1.3 <= ratio <= 1.65 (vertical)
+ *      - juegos: 0.7 <= ratio <= 1.5
+ *      - artistas: cualquier proporción
+ *   4. Ancho estándar de 600 px (calidad 82), nunca degradando a 342 px.
+ *   5. Portada generada SVG si ninguna fuente cumple la forma.
  *
  * Uso:
- *   node --env-file-if-exists=.env.local scripts/engine/covers.mjs [--sample 20]
+ *   node --env-file-if-exists=.env.local scripts/engine/covers.mjs [--dry] [--shelf movie]
  */
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
@@ -18,34 +25,43 @@ const here = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(here, '..', '..')
 const SEED_FILE = join(ROOT, 'src', 'data', 'seed.json')
 const CACHE_DIR = join(ROOT, 'scripts', 'cache', 'covers')
-
-const args = process.argv.slice(2)
-const sampleIdx = args.indexOf('--sample')
-const SAMPLE_LIMIT = sampleIdx !== -1 ? parseInt(args[sampleIdx + 1], 10) : null
+const ORIGINAL_FILE = join(ROOT, 'scripts', 'cache', 'posters', 'original.json')
+const ORIGINAL_POSTERS = existsSync(ORIGINAL_FILE) ? JSON.parse(readFileSync(ORIGINAL_FILE, 'utf8')) : {}
 
 const SUPABASE_URL = process.env.VITE_SUPABASE_URL
-const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.VITE_SUPABASE_ANON_KEY
+const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY
 
 if (!SUPABASE_URL || !SUPABASE_KEY) {
-  console.error('Error: Faltan VITE_SUPABASE_URL o SUPABASE_SERVICE_ROLE_KEY en el entorno.')
+  console.error('Faltan variables de entorno VITE_SUPABASE_URL o SUPABASE_SERVICE_ROLE_KEY.')
   process.exit(1)
 }
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY)
-const ORIGINAL_FILE = join(ROOT, 'scripts', 'cache', 'posters', 'original.json')
-const ORIGINAL_POSTERS = existsSync(ORIGINAL_FILE) ? JSON.parse(readFileSync(ORIGINAL_FILE, 'utf8')) : {}
 const BUCKET = 'biblio-covers'
 
-const PALETTES = [
-  ['#0d1b2a', '#1b4965', '#5fa8d3'],
-  ['#1a0b10', '#6d1a36', '#e07a5f'],
-  ['#0b1a14', '#1f4d3a', '#8cc084'],
-  ['#160f24', '#45306b', '#b392f0'],
-  ['#1f1206', '#7a4210', '#f2a541'],
-  ['#0a1416', '#16525a', '#7ad3c9'],
-  ['#1c0a06', '#8c2f1b', '#f28c5e'],
-  ['#101010', '#3a3a46', '#c9c3b6'],
+export const PALETTES = [
+  ['#1a1008', '#8c4a20', '#f5b544'],
+  ['#0a1820', '#1b4d63', '#4fc3dc'],
+  ['#160b1c', '#532168', '#c97be4'],
+  ['#0d1a10', '#255431', '#6cd489'],
+  ['#1c0f0a', '#6d2e1b', '#f27348'],
+  ['#12131a', '#34385a', '#8a94d8'],
 ]
+
+export function isValidAspect(type, meta) {
+  if (!meta || !meta.width || !meta.height) return false
+  const ratio = meta.height / meta.width
+  if (type === 'movie' || type === 'series' || type === 'book') {
+    return ratio >= 1.3 && ratio <= 1.65
+  }
+  if (type === 'boardgame') {
+    return ratio >= 0.7 && ratio <= 1.5
+  }
+  if (type === 'artist') {
+    return true
+  }
+  return true
+}
 
 function hash(s) {
   let h = 2166136261
@@ -56,25 +72,7 @@ function hash(s) {
   return h >>> 0
 }
 
-function createNativeFallbackBuffer(item) {
-  const h = hash(item.id)
-  const [deep, mid] = PALETTES[h % PALETTES.length]
-  const r = parseInt(deep.slice(1, 3), 16)
-  const g = parseInt(deep.slice(3, 5), 16)
-  const b = parseInt(deep.slice(5, 7), 16)
-  return sharp({
-    create: {
-      width: 342,
-      height: 513,
-      channels: 4,
-      background: { r, g, b, alpha: 1 },
-    },
-  })
-    .webp({ quality: 80 })
-    .toBuffer()
-}
-
-function generateSvgCover(item) {
+export function generateSvgCover(item) {
   const h = hash(item.id)
   const [deep, mid, light] = PALETTES[h % PALETTES.length]
   const cx = 25 + ((h >> 9) % 50)
@@ -89,32 +87,32 @@ function generateSvgCover(item) {
 
   let shapeElement = ''
   if (shape === 0) {
-    shapeElement = `<circle cx="${cx * 3.42}" cy="${cy * 5.13}" r="${31 * 3.42}" fill="${light}" opacity="0.45" />`
+    shapeElement = `<circle cx="${cx * 6.0}" cy="${cy * 9.0}" r="${31 * 6.0}" fill="${light}" opacity="0.45" />`
   } else if (shape === 1) {
-    shapeElement = `<circle cx="${cx * 3.42}" cy="${(cy - 10) * 5.13}" r="${55 * 3.42}" fill="none" stroke="${light}" stroke-width="15" opacity="0.3" />`
+    shapeElement = `<circle cx="${cx * 6.0}" cy="${(cy - 10) * 9.0}" r="${55 * 6.0}" fill="none" stroke="${light}" stroke-width="26" opacity="0.3" />`
   } else {
-    shapeElement = `<rect x="-50" y="${(cy + 8) * 5.13}" width="450" height="110" fill="${light}" opacity="0.25" transform="rotate(${-18 + ((h >> 3) % 36)} 171 256)" />`
+    shapeElement = `<rect x="-90" y="${(cy + 8) * 9.0}" width="780" height="190" fill="${light}" opacity="0.25" transform="rotate(${-18 + ((h >> 3) % 36)} 300 450)" />`
   }
 
   return `
-    <svg xmlns="http://www.w3.org/2000/svg" width="342" height="513" viewBox="0 0 342 513">
+    <svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900">
       <defs>
         <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stop-color="${mid}" />
           <stop offset="72%" stop-color="${deep}" />
         </linearGradient>
       </defs>
-      <rect width="342" height="513" fill="url(#bg)" />
+      <rect width="600" height="900" fill="url(#bg)" />
       ${shapeElement}
-      <rect width="342" height="513" fill="black" opacity="0.25" />
-      <text x="24" y="440" font-family="sans-serif" font-weight="bold" font-size="24" fill="#ffffff" width="294">
+      <rect width="600" height="900" fill="black" opacity="0.25" />
+      <text x="40" y="780" font-family="sans-serif" font-weight="bold" font-size="38" fill="#ffffff" width="520">
         ${safeTitle.length > 32 ? safeTitle.slice(0, 30) + '...' : safeTitle}
       </text>
     </svg>
   `.trim()
 }
 
-async function fetchBufferWithTimeout(url, timeoutMs = 8000) {
+async function fetchBufferWithTimeout(url, timeoutMs = 25000) {
   if (!url || typeof url !== 'string' || !url.startsWith('http')) return null
   const controller = new AbortController()
   const id = setTimeout(() => controller.abort(), timeoutMs)
@@ -155,86 +153,140 @@ async function uploadWithRetry(storagePath, buffer, retries = 3) {
 async function processItem(item) {
   const shelf = item.type
   const slug = item.id.replace(/^[^:]+:/, '')
-  const currentUrl = item.posterUrl
-
-  // Si ya está en Supabase Storage biblio-covers, no hacer nada
-  if (currentUrl && currentUrl.includes('/biblio-covers/')) {
-    return { status: 'skipped', id: item.id, url: currentUrl }
-  }
-
-  const shelfCacheDir = join(CACHE_DIR, shelf)
-  mkdirSync(shelfCacheDir, { recursive: true })
-  const localCachePath = join(shelfCacheDir, `${slug}.webp`)
+  const cacheDir = join(CACHE_DIR, shelf)
+  mkdirSync(cacheDir, { recursive: true })
+  const localCachePath = join(cacheDir, `${slug}.webp`)
 
   let webpBuffer = null
   let isGenerated = false
+  let imageSource = 'seed'
 
+  // Si ya existe en caché local, verificar su aspect ratio antes de darlo por bueno
   if (existsSync(localCachePath)) {
-    webpBuffer = readFileSync(localCachePath)
-  } else {
-    let imageBuffer = null
+    const cachedBuf = readFileSync(localCachePath)
+    try {
+      const meta = await sharp(cachedBuf).metadata()
+      if (isValidAspect(item.type, meta)) {
+        webpBuffer = cachedBuf
+      }
+    } catch {}
+  }
 
-    // 0. El póster original de la semilla (IMDb, TVmaze, Open Library, BGG, Deezer), guardado por restore-posters.mjs.
-    //    Va siempre primero: la imagen de Wikidata (P18) muchas veces no es el póster.
-    if (ORIGINAL_POSTERS[item.id]) {
-      imageBuffer = await fetchBufferWithTimeout(ORIGINAL_POSTERS[item.id])
+  if (!webpBuffer) {
+    let candidateBuf = null
+
+    // 0. Póster original de la semilla
+    const origUrl = ORIGINAL_POSTERS[item.id]
+    if (origUrl) {
+      const b = await fetchBufferWithTimeout(origUrl)
+      if (b) {
+        try {
+          const meta = await sharp(b).metadata()
+          if (isValidAspect(item.type, meta)) {
+            candidateBuf = b
+            imageSource = new URL(origUrl).hostname
+          }
+        } catch {}
+      }
     }
 
-    // 1. Intentar descargar URL actual
-    if (!imageBuffer && currentUrl) {
-      imageBuffer = await fetchBufferWithTimeout(currentUrl)
-    }
-
-    // 2. Si es serie y no hubo imagen, TVmaze
-    if (!imageBuffer && item.type === 'series') {
+    // 1. TVmaze para series
+    if (!candidateBuf && item.type === 'series') {
       try {
-        const tvUrl = `https://api.tvmaze.com/singlesearch/shows?q=${encodeURIComponent(item.title)}`
+        const tvUrl = item.tvmazeId
+          ? `https://api.tvmaze.com/shows/${item.tvmazeId}`
+          : `https://api.tvmaze.com/singlesearch/shows?q=${encodeURIComponent(item.title)}`
         const tvRes = await fetch(tvUrl, { headers: { 'User-Agent': 'Biblioteca/0.1' } })
         if (tvRes.ok) {
           const show = await tvRes.json()
           const imgUrl = show.image?.original || show.image?.medium
-          if (imgUrl) imageBuffer = await fetchBufferWithTimeout(imgUrl)
+          if (imgUrl) {
+            const b = await fetchBufferWithTimeout(imgUrl)
+            if (b) {
+              const meta = await sharp(b).metadata()
+              if (isValidAspect(item.type, meta)) {
+                candidateBuf = b
+                imageSource = 'static.tvmaze.com'
+              }
+            }
+          }
         }
       } catch {}
     }
 
-    // 3. Si tiene wikidataId, buscar P3383 (cartel) o P18 (imagen)
-    if (!imageBuffer && item.wikidataId) {
+    // 2. Wikidata: P3383 (cartel) para pelis, o P18 SOLO para artistas
+    if (!candidateBuf && item.wikidataId) {
       try {
         const entityUrl = `https://www.wikidata.org/wiki/Special:EntityData/${item.wikidataId}.json`
         const wData = await (await fetch(entityUrl)).json()
         const claims = wData.entities?.[item.wikidataId]?.claims
         const p3383 = claims?.P3383?.[0]?.mainsnak?.datavalue?.value
-        const p18 = claims?.P18?.[0]?.mainsnak?.datavalue?.value
+        const p18 = item.type === 'artist' ? claims?.P18?.[0]?.mainsnak?.datavalue?.value : null
         const targetImg = p3383 || p18
         if (targetImg) {
-          const commonsUrl = `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(targetImg)}?width=500`
-          imageBuffer = await fetchBufferWithTimeout(commonsUrl)
+          const commonsUrl = `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(targetImg)}?width=1000`
+          const b = await fetchBufferWithTimeout(commonsUrl)
+          if (b) {
+            const meta = await sharp(b).metadata()
+            if (isValidAspect(item.type, meta)) {
+              candidateBuf = b
+              imageSource = 'commons.wikimedia.org'
+            }
+          }
         }
       } catch {}
     }
 
-    // 4. Si es libro y tiene olid
-    if (!imageBuffer && item.type === 'book' && item.olid) {
-      const olUrl = `https://covers.openlibrary.org/b/olid/${item.olid}-L.jpg`
-      imageBuffer = await fetchBufferWithTimeout(olUrl)
+    // 3. Open Library para libros
+    if (!candidateBuf && item.type === 'book' && item.olid) {
+      const olUrl = `https://covers.openlibrary.org/b/olid/${item.olid}-L.jpg?default=false`
+      const b = await fetchBufferWithTimeout(olUrl)
+      if (b) {
+        try {
+          const meta = await sharp(b).metadata()
+          if (meta.width > 50 && meta.height > 50 && isValidAspect(item.type, meta)) {
+            candidateBuf = b
+            imageSource = 'covers.openlibrary.org'
+          }
+        } catch {}
+      }
     }
 
-    // Convertir a WebP
-    try {
-      if (imageBuffer) {
-        webpBuffer = await sharp(imageBuffer)
-          .resize({ width: 342, withoutEnlargement: true })
-          .webp({ quality: 80 })
+    // 4. Deezer para artistas
+    if (!candidateBuf && item.type === 'artist') {
+      try {
+        const dzRes = await fetch(`https://api.deezer.com/search/artist?q=${encodeURIComponent(item.title)}`)
+        if (dzRes.ok) {
+          const dz = await dzRes.json()
+          const dzImg = dz.data?.[0]?.picture_xl || dz.data?.[0]?.picture_big
+          if (dzImg) {
+            const b = await fetchBufferWithTimeout(dzImg)
+            if (b) {
+              candidateBuf = b
+              imageSource = 'cdn-images.dzcdn.net'
+            }
+          }
+        }
+      } catch {}
+    }
+
+    // Convertir a WebP 600px o generar SVG si no hubo imagen válida
+    if (candidateBuf) {
+      try {
+        webpBuffer = await sharp(candidateBuf)
+          .resize({ width: 600, withoutEnlargement: true })
+          .webp({ quality: 82 })
           .toBuffer()
-      } else {
-        const svg = generateSvgCover(item)
-        webpBuffer = await sharp(Buffer.from(svg)).webp({ quality: 85 }).toBuffer()
-        isGenerated = true
+      } catch {
+        candidateBuf = null
       }
-    } catch {
-      webpBuffer = await createNativeFallbackBuffer(item)
+    }
+
+    if (!candidateBuf) {
+      const svg = generateSvgCover(item)
+      webpBuffer = await sharp(Buffer.from(svg)).webp({ quality: 85 }).toBuffer()
       isGenerated = true
+      imageSource = 'generated'
     }
 
     writeFileSync(localCachePath, webpBuffer)
@@ -245,9 +297,11 @@ async function processItem(item) {
   await uploadWithRetry(storagePath, webpBuffer)
 
   const { data: publicData } = supabase.storage.from(BUCKET).getPublicUrl(storagePath)
-  const newUrl = publicData.publicUrl
+  const newUrl = `${publicData.publicUrl}?v=2`
 
   item.posterUrl = newUrl
+  item.imageSrc = imageSource
+  item.src = { ...(item.src ?? {}), posterUrl: isGenerated ? 'generated' : 'scrape:' + imageSource }
   return { status: 'uploaded', id: item.id, url: newUrl, isGenerated }
 }
 
@@ -265,74 +319,42 @@ async function runPool(items, concurrency, fn) {
 }
 
 async function main() {
-  console.log('--- Proceso de Portadas en Supabase Storage (covers.mjs) ---')
+  const args = process.argv.slice(2)
+  const dryRun = args.includes('--dry')
+  const shelfIndex = args.indexOf('--shelf')
+  const targetShelf = shelfIndex !== -1 ? args[shelfIndex + 1] : null
 
-  if (!existsSync(SEED_FILE)) {
-    console.error('No se encontró seed.json')
-    process.exit(1)
+  const seed = JSON.parse(readFileSync(SEED_FILE, 'utf-8'))
+  let items = seed.items
+
+  if (targetShelf) {
+    items = items.filter((it) => it.type === targetShelf)
   }
 
-  const seed = JSON.parse(readFileSync(SEED_FILE, 'utf8'))
-  const items = seed.items || []
+  console.log(`[covers] Procesando ${items.length} obras${targetShelf ? ` de ${targetShelf}` : ''}...`)
 
-  let targets = items
-  if (SAMPLE_LIMIT) {
-    console.log(`Modo muestra activado: procesando ${SAMPLE_LIMIT} obras pendientes...`)
-    const byType = {}
-    for (const it of items) {
-      if (it.posterUrl && it.posterUrl.includes('/biblio-covers/')) continue
-      byType[it.type] = byType[it.type] || []
-      byType[it.type].push(it)
-    }
-    const sampleItems = []
-    const perShelf = Math.ceil(SAMPLE_LIMIT / (Object.keys(byType).length || 1))
-    for (const shelfItems of Object.values(byType)) {
-      sampleItems.push(...shelfItems.slice(0, perShelf))
-    }
-    targets = sampleItems.slice(0, SAMPLE_LIMIT)
+  if (dryRun) {
+    console.log('[covers] Modo DRY RUN, saliendo sin modificar.')
+    process.exit(0)
   }
 
-  console.log(`Total a procesar: ${targets.length} obras.`)
-
-  let uploaded = 0
-  let skipped = 0
-  let errors = 0
-  const sampleResults = []
-
-  const CONCURRENCY = 4
-  let done = 0
-
-  await runPool(targets, CONCURRENCY, async (item) => {
+  const results = await runPool(items, 6, async (item, i) => {
     try {
-      const res = await processItem(item)
-      done++
-      if (res.status === 'uploaded') {
-        uploaded++
-        if (sampleResults.length < 10) sampleResults.push(res)
-      } else {
-        skipped++
+      const r = await processItem(item)
+      if ((i + 1) % 50 === 0 || i === items.length - 1) {
+        console.log(`[covers] ${i + 1}/${items.length} procesados.`)
       }
-      if (done % 100 === 0 || done === targets.length) {
-        console.log(`  [${done}/${targets.length}] subidas: ${uploaded}, existentes: ${skipped}, errores: ${errors}`)
-      }
+      return r
     } catch (e) {
-      errors++
-      done++
-      console.warn(`  [${done}/${targets.length}] Error en ${item.id}:`, e.message)
+      console.error(`[covers] Error en ${item.id}:`, e.message)
+      return { status: 'error', id: item.id }
     }
   })
 
-  // Guardar seed.json con formato bonito
-  writeFileSync(SEED_FILE, JSON.stringify(seed, null, 2), 'utf8')
-  console.log(`\n✓ Portadas actualizadas en seed.json. Subidas: ${uploaded}, Saltadas: ${skipped}, Errores: ${errors}.`)
-
-  if (sampleResults.length > 0) {
-    console.log('\n--- URLs DE MUESTRA SUBIDAS A SUPABASE ---')
-    sampleResults.forEach((r) => console.log(`- ${r.id}: ${r.url} (${r.isGenerated ? 'generada' : 'real'})`))
-  }
+  writeFileSync(SEED_FILE, JSON.stringify(seed, null, 2))
+  console.log(`[covers] Finalizado. Éxito: ${results.filter((r) => r?.status === 'uploaded').length}`)
 }
 
-main().catch((err) => {
-  console.error('Error fatal en covers.mjs:', err)
-  process.exit(1)
-})
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
+  main().catch(console.error)
+}

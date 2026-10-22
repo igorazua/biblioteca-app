@@ -6,7 +6,7 @@ import { useStore } from '../store/useStore'
 import { useCatalog } from '../store/useCatalog'
 import { useRanks } from '../store/useScores'
 import { Poster, posterLayoutId } from '../components/Poster'
-import { Avatar, Chip, RankBadge, Sheet, Toast } from '../components/ui'
+import { Avatar, RankBadge, Sheet, Tag, Toast } from '../components/ui'
 import { RatingFlow } from '../components/RatingFlow'
 import { AskFriend } from '../components/AskFriend'
 import { Icon } from '../components/Icon'
@@ -121,17 +121,68 @@ export function ItemDetail() {
 
         <div className="px-5 mt-3 space-y-5">
           <div className="flex flex-wrap gap-1.5">
-            {item.genres.map((g) => <span key={g} className="text-xs bg-surface2 rounded-full px-3 py-1.5">{g}</span>)}
-            {item.platforms?.map((p) => <span key={p} className="text-xs border border-accent/50 text-accent rounded-full px-3 py-1.5">{p}</span>)}
+            {item.genres.map((g) => <Tag key={g}>{g}</Tag>)}
+            {item.platforms?.map((p) => <Tag key={p} variant="accent">{p}</Tag>)}
           </div>
           <p className="text-[15px] leading-relaxed text-ink/90">{item.synopsis}</p>
 
           <section aria-label="Tu estado">
-            <h2 className="text-sm font-semibold text-mute uppercase tracking-wide mb-2">Tu estado</h2>
-            <div className="flex gap-2">
-              <Chip active={status === 'seen'} onClick={() => toggle('seen')} className="flex-1">{label.actionPast}</Chip>
-              <Chip active={status === 'pending'} onClick={() => toggle('pending')} className="flex-1">Pendiente</Chip>
-              <Chip active={status === 'dismissed'} onClick={() => toggle('dismissed')} className="flex-1">No me interesa</Chip>
+            <h2 className="text-sm font-semibold text-mute uppercase tracking-wide mb-2.5">Tu estado</h2>
+            <div className="grid grid-cols-3 gap-2">
+              <button
+                type="button"
+                onClick={() => toggle('dismissed')}
+                className={`min-h-[52px] px-2 py-2.5 rounded-2xl border flex flex-col items-center justify-center gap-1 transition-all active:scale-95 ${
+                  status === 'dismissed'
+                    ? 'bg-rose-500/15 border-rose-500/60 text-rose-400 shadow-sm shadow-rose-950/40 ring-1 ring-rose-500/30 font-semibold'
+                    : 'bg-surface2/60 border-white/[0.08] text-white/70 hover:bg-surface2 hover:text-white font-medium'
+                }`}
+              >
+                <Icon
+                  name="x"
+                  size={16}
+                  className={status === 'dismissed' ? 'text-rose-400' : 'text-mute'}
+                  strokeWidth={status === 'dismissed' ? 2.5 : 2}
+                />
+                <span className="text-xs tracking-tight">No me interesa</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => toggle('pending')}
+                className={`min-h-[52px] px-2 py-2.5 rounded-2xl border flex flex-col items-center justify-center gap-1 transition-all active:scale-95 ${
+                  status === 'pending'
+                    ? 'bg-sky-500/15 border-sky-500/60 text-sky-400 shadow-sm shadow-sky-950/40 ring-1 ring-sky-500/30 font-semibold'
+                    : 'bg-surface2/60 border-white/[0.08] text-white/70 hover:bg-surface2 hover:text-white font-medium'
+                }`}
+              >
+                <Icon
+                  name="bookmark"
+                  size={16}
+                  className={status === 'pending' ? 'text-sky-400' : 'text-mute'}
+                  strokeWidth={status === 'pending' ? 2.5 : 2}
+                  fill={status === 'pending' ? 'currentColor' : 'none'}
+                />
+                <span className="text-xs tracking-tight">Guardar</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => toggle('seen')}
+                className={`min-h-[52px] px-2 py-2.5 rounded-2xl border flex flex-col items-center justify-center gap-1 transition-all active:scale-95 ${
+                  status === 'seen'
+                    ? 'bg-emerald-500/15 border-emerald-500/60 text-emerald-400 shadow-sm shadow-emerald-950/40 ring-1 ring-emerald-500/30 font-semibold'
+                    : 'bg-surface2/60 border-white/[0.08] text-white/70 hover:bg-surface2 hover:text-white font-medium'
+                }`}
+              >
+                <Icon
+                  name="check"
+                  size={16}
+                  className={status === 'seen' ? 'text-emerald-400' : 'text-mute'}
+                  strokeWidth={status === 'seen' ? 2.5 : 2}
+                />
+                <span className="text-xs tracking-tight truncate max-w-full">{label.actionPast}</span>
+              </button>
             </div>
             {entry?.origin && status === 'pending' && <div className="text-xs text-mute mt-2">Te {label.pronoun} pasó {entry.origin}</div>}
             {status === 'seen' && (
