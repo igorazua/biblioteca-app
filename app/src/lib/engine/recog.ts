@@ -158,15 +158,24 @@ export function inferBirthYear(
 }
 
 /**
- * Reconocibilidad R de una obra para un usuario (MOTOR §2b.4).
- * Devuelve un número continuo en [0, 1].
+ * Reconocibilidad R de una obra para un usuario (MOTOR §2b.4, T17 §A.4).
+ * Devuelve una probabilidad calibrada en [0.01, 1.0].
  */
 export function recog(item: Item, ctx: RecogContext): number {
   const entries = ctx.entries || {}
-  const status = entries[item.id]?.status
+  const entry = entries[item.id]
+  const status = entry?.status
 
-  // Obras ya interactuadas
-  if (status === 'seen') return 1.0
+  // 1. Lo del usuario manda: vista, valorada, comparada o en su ranking -> R = 1.0; pendiente -> 0.9
+  if (
+    status === 'seen' ||
+    entry?.rating != null ||
+    (entry as Record<string, unknown>)?.compared != null ||
+    (entry as Record<string, unknown>)?.ranked === true ||
+    (entry as Record<string, unknown>)?.rankingPosition != null
+  ) {
+    return 1.0
+  }
   if (status === 'pending') return 0.9
   // Descartada no cuenta: «no me interesa» no significa «la conozco»
 
@@ -175,6 +184,12 @@ export function recog(item: Item, ctx: RecogContext): number {
     ctx.birthYear ??
     ctx.user?.birthYear ??
     (ctx.items && ctx.entries ? inferBirthYear(ctx.entries, ctx.items) ?? undefined : undefined)
+
+  // Nivel de fama calibrado (fameTier: 1..4)
+  const tierVal = typeof item.fameTier === 'object' && item.fameTier !== null
+    ? (item.fameTier as Record<string, number>)[country] ?? 4
+    : (item.fameTier ?? 4)
+  const fameTier = typeof tierVal === 'number' ? tierVal : 4
 
   // Notoriedad base
   let base = 0.5
@@ -189,20 +204,31 @@ export function recog(item: Item, ctx: RecogContext): number {
     base = (item.popularity / 100) * 0.8
   }
 
-  // Factor época
-  const era = eraFactor(item.year || 2000, birthYear, item, country)
+  // 2. Factor época (§A.4)
+  // Sin año de nacimiento: 1.0 para niveles 1 y 2, 0.9 para el resto
+  // Con año: curva actual, pero a las de nivel 1 nunca se les baja de 0.95
+  let era = 1.0
+  if (!birthYear) {
+    era = fameTier === 1 || fameTier === 2 ? 1.0 : 0.9
+  } else {
+    const rawEra = eraFactor(item.year || 2000, birthYear, item, country)
+    era = fameTier === 1 ? Math.max(0.95, rawEra) : rawEra
+  }
 
-  // Factor zona (deckLearn)
-  let zona = 0.5
+  // 3. Factor zona neutra si no hay datos (§A.4)
+  // Si la década de la obra tiene menos de 10 tarjetas vistas en el mazo -> zonaMult = 1
+  // Si no -> tasa = (seen + 2) / (shown + 4), zonaMult = clamp(0.75, 1.1, 0.8 + 0.4 * tasa)
+  let zonaMult = 1.0
   if (ctx.deckLearn) {
     const decadeStr = `${Math.floor((item.year || 2000) / 10) * 10}s`
     const stats = (ctx.deckLearn as Record<string, { shown: number; seen: number } | undefined>)[decadeStr]
-    if (stats && stats.shown > 0) {
-      zona = stats.seen / stats.shown
+    if (stats && stats.shown >= 10) {
+      const tasa = (stats.seen + 2) / (stats.shown + 4)
+      zonaMult = Math.min(1.1, Math.max(0.75, 0.8 + 0.4 * tasa))
     }
   }
 
-  // Factor social (amigos que la tienen vista o pendiente)
+  // 4. Factor social (amigos que la tienen vista o pendiente)
   let socialProduct = 1.0
   const friends = ctx.friends || []
   const socialRate = PARAMS.R_W?.socialFriendRate || 0.35
@@ -219,9 +245,8 @@ export function recog(item: Item, ctx: RecogContext): number {
   }
   const social = 1.0 - socialProduct
 
-  // R = 1 − (1 − base · era · (0.6 + 0.4·zona)) · (1 − social)
-  const [zBase, zScale] = PARAMS.R_W?.zona || [0.6, 0.4]
-  const personalKnown = base * era * (zBase + zScale * zona)
+  // 5. Fórmula (§A.4): R = 1 - (1 - base · época · zonaMult) · (1 - social)
+  const personalKnown = base * era * zonaMult
   const r = 1.0 - (1.0 - personalKnown) * (1.0 - social)
 
   return Math.min(1.0, Math.max(0.01, r))

@@ -186,12 +186,269 @@ if (existsSync(BAD_TYPES_CACHE)) {
   } catch {}
 }
 
+// ==============================================================================
+// COMPROBACIONES AUTOMÁTICAS T17.0 (docs/TAREA_T17_DECIDIR.md)
+// ==============================================================================
+console.log('🔍 COMPROBACIONES AUTOMÁTICAS T17 (MOTOR v2 §2b.4, §5.5, §8):\n')
+
+export const GOLDEN_LIST = {
+  movie: {
+    tier1: [
+      { title: 'Titanic', id: 'movie:titanic-1997', expectedQid: 'Q44578' },
+      { title: 'El padrino', id: 'movie:el-padrino-1972', expectedQid: 'Q47703' },
+      { title: 'La guerra de las galaxias', id: 'movie:star-wars-1977', expectedQid: 'Q17738' },
+      { title: 'El rey león', id: 'movie:el-rey-leon-1994', expectedQid: 'Q36479' },
+      { title: 'Harry Potter y la piedra filosofal', id: 'movie:harry-potter-and-the-philosopher-s-stone-2001', expectedQid: 'Q102438' },
+      { title: 'Avatar', id: 'movie:avatar-2009', expectedQid: 'Q24871' },
+      { title: 'Torrente', id: 'movie:torrente-el-brazo-tonto-de-la-ley-1998', expectedQid: 'Q1050105' },
+    ],
+    low: [
+      { title: 'Kai po che!', id: 'movie:kai-po-che-2013', note: 'sustituto de Paterson (no en catálogo)' },
+      { title: 'The Man from Earth', id: 'movie:the-man-from-earth-2007', note: 'sustituto de Under the Silver Lake (no en catálogo)' },
+    ],
+  },
+  series: {
+    tier1: [
+      { title: 'Friends', id: 'series:friends-1994', expectedQid: 'Q79784' },
+      { title: 'Los Simpson', id: 'series:los-simpson-1989', expectedQid: 'Q886' },
+      { title: 'La casa de papel', id: 'series:la-casa-de-papel-2017', expectedQid: 'Q29647346' },
+      { title: 'Juego de tronos', id: 'series:juego-de-tronos-2011', expectedQid: 'Q23572' },
+      { title: 'Aída', id: 'series:aida-2005', expectedQid: 'Q2916884' },
+    ],
+    low: [
+      { title: 'Halt and Catch Fire', id: 'series:halt-and-catch-fire-2014' },
+      { title: 'Banshee', id: 'series:banshee-2013' },
+    ],
+  },
+  book: {
+    tier1: [
+      { title: 'Harry Potter y la piedra filosofal', id: 'book:harry-potter-y-la-piedra-filosofal-1997', expectedQid: 'Q43361' },
+      { title: 'Don Quijote', id: 'book:don-quijote-de-la-mancha-1605', expectedQid: 'Q480' },
+      { title: '1984', id: 'book:1984-1949', expectedQid: 'Q208460' },
+      { title: 'El principito', id: 'book:el-principito-1943', expectedQid: 'Q25338' },
+      { title: 'Cien años de soledad', id: 'book:cien-anos-de-soledad-1967', expectedQid: 'Q178869' },
+    ],
+    low: [
+      { title: 'El paciente inglés', id: 'book:el-paciente-ingles-1992', note: 'sustituto de Stoner (no en catálogo)' },
+      { title: 'El elogio de la locura', id: 'book:el-elogio-de-la-locura-1511', note: 'sustituto de Gilead (no en catálogo)' },
+    ],
+  },
+  boardgame: {
+    tier1: [
+      { title: 'Monopoly', id: 'boardgame:monopoly-1935', expectedQid: 'Q17243' },
+      { title: 'Parchís', id: 'boardgame:parchis-1900', expectedQid: 'Q2051664' },
+      { title: 'Trivial Pursuit', id: 'boardgame:trivial-pursuit-1981', expectedQid: 'Q172440' },
+      { title: 'UNO', id: 'boardgame:uno-1971', expectedQid: 'Q17267' },
+      { title: 'Cluedo', id: 'boardgame:cluedo-1949', expectedQid: 'Q172460' },
+      { title: 'Ajedrez', id: 'boardgame:ajedrez-1475', expectedQid: 'Q718' },
+    ],
+    low: [
+      { title: 'Ra', id: 'boardgame:ra-1999' },
+      { title: 'Taj Mahal', id: 'boardgame:taj-mahal-2000' },
+      { title: 'Stationfall', id: 'boardgame:stationfall-2023' },
+    ],
+  },
+  artist: {
+    tier1: [
+      { title: 'Queen', id: 'artist:queen-1970', expectedQid: 'Q15862' },
+      { title: 'The Beatles', id: 'artist:the-beatles-1960', expectedQid: 'Q1299' },
+      { title: 'Michael Jackson', id: 'artist:michael-jackson-1971', expectedQid: 'Q2831' },
+      { title: 'Shakira', id: 'artist:shakira-1990', expectedQid: 'Q34424' },
+      { title: 'Rosalía', id: 'artist:rosalia-2017', expectedQid: 'Q28843759' },
+      { title: 'Alejandro Sanz', id: 'artist:alejandro-sanz-1989', expectedQid: 'Q276170' },
+    ],
+    low: [
+      { title: 'Slowdive', id: 'artist:slowdive' },
+      { title: 'Khruangbin', id: 'artist:khruangbin' },
+    ],
+  },
+}
+
+const t17Failures = []
+const t17Successes = []
+
+// 1. Cobertura de pageviews por estantería (≥ 90 % de las que tienen wikidataId)
+console.log('1. Cobertura de pageviews (≥ 90 % de las obras con wikidataId):')
+for (const shelf of ['movie', 'series', 'book', 'boardgame', 'artist']) {
+  const shelfItems = byShelf[shelf] || []
+  const withWiki = shelfItems.filter((i) => Boolean(i.wikidataId))
+  const withPv = withWiki.filter((i) => {
+    if (!i.pageviews) return false
+    if (typeof i.pageviews === 'number') return i.pageviews > 0
+    if (typeof i.pageviews === 'object') return Object.values(i.pageviews).some((v) => v > 0)
+    return false
+  })
+  const ratio = withWiki.length > 0 ? withPv.length / withWiki.length : 1
+  const pctStr = pct(withPv.length, withWiki.length)
+  if (ratio < 0.9) {
+    const msg = `❌ Pageviews en '${shelf}': ${pctStr} (${withPv.length}/${withWiki.length}) < 90% requerido`
+    t17Failures.push(msg)
+    console.log(`   ${msg}`)
+  } else {
+    const msg = `✓ Pageviews en '${shelf}': ${pctStr} (≥ 90%)`
+    t17Successes.push(msg)
+    console.log(`   ${msg}`)
+  }
+}
+console.log('')
+
+// 2. Concentración de cada eje (≤ 60 % en un mismo valor)
+console.log('2. Concentración de ejes sensoriales (≤ 60 % en un mismo valor):')
+for (const shelf of ['movie', 'series', 'book', 'boardgame', 'artist']) {
+  const enginePath = join(ROOT, 'src', 'data', 'engine', `${shelf}.json`)
+  if (!existsSync(enginePath)) {
+    t17Failures.push(`Motor no encontrado para ${shelf}`)
+    continue
+  }
+  const eng = JSON.parse(readFileSync(enginePath, 'utf8'))
+  if (!eng.axes || !eng.axisIds) continue
+  const buf = Buffer.from(eng.axes, 'base64')
+  const nAxes = eng.axisIds.length
+  const nItems = eng.ids.length
+
+  let shelfAxesOk = true
+  for (let aIdx = 0; aIdx < nAxes; aIdx++) {
+    const axisId = eng.axisIds[aIdx]
+    const valCounts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 }
+    for (let i = 0; i < nItems; i++) {
+      const v = buf[i * nAxes + aIdx]
+      valCounts[v] = (valCounts[v] || 0) + 1
+    }
+    const maxVal = Math.max(...Object.values(valCounts))
+    const ratio = maxVal / nItems
+    if (ratio > 0.6) {
+      shelfAxesOk = false
+      const msg = `❌ Eje '${axisId}' en '${shelf}': ${(ratio * 100).toFixed(1)}% concentrado en un solo valor (> 60%)`
+      t17Failures.push(msg)
+      console.log(`   ${msg}`)
+    }
+  }
+  if (shelfAxesOk) {
+    const msg = `✓ Todos los ejes de '${shelf}' tienen ≤ 60% en un solo valor`
+    t17Successes.push(msg)
+    console.log(`   ${msg}`)
+  }
+}
+console.log('')
+
+// 3. Obras de la lista de oro sin id o con id de otro tipo
+console.log('3. IDs de la lista de oro:')
+const itemMap = new Map(items.map((i) => [i.id, i]))
+const aliasesPath = join(ROOT, 'src', 'data', 'aliases.json')
+if (existsSync(aliasesPath)) {
+  try {
+    const aliases = JSON.parse(readFileSync(aliasesPath, 'utf8'))
+    for (const [alias, target] of Object.entries(aliases)) {
+      if (itemMap.has(target) && !itemMap.has(alias)) {
+        itemMap.set(alias, itemMap.get(target))
+      }
+    }
+  } catch {}
+}
+for (const [shelf, def] of Object.entries(GOLDEN_LIST)) {
+  for (const entry of def.tier1) {
+    const it = itemMap.get(entry.id)
+    if (!it) {
+      const msg = `❌ Lista de oro: falta '${entry.title}' (${entry.id}) en catálogo '${shelf}'`
+      t17Failures.push(msg)
+      console.log(`   ${msg}`)
+    } else if (!it.wikidataId) {
+      const msg = `❌ Lista de oro: '${it.title}' (${it.id}) no tiene wikidataId`
+      t17Failures.push(msg)
+      console.log(`   ${msg}`)
+    } else if (entry.expectedQid && it.wikidataId !== entry.expectedQid) {
+      const msg = `❌ Lista de oro: '${it.title}' apunta a ${it.wikidataId} (esperado: ${entry.expectedQid})`
+      t17Failures.push(msg)
+      console.log(`   ${msg}`)
+    } else {
+      console.log(`   ✓ ${entry.title} (${it.wikidataId}) en ${shelf}`)
+    }
+  }
+}
+console.log('')
+
+// 4. La lista de oro: Tier 1 en el 5% superior, Tier 1 > Low, y Low en fameTier >= 3 (A.5)
+console.log('4. Reglas de notoriedad y nivel de fama de la lista de oro (A.5):')
+const getNotoriety = (it) => {
+  if (it.notoriety && typeof it.notoriety === 'object') return it.notoriety.ES || 0
+  return typeof it.notoriety === 'number' ? it.notoriety : 0
+}
+
+for (const [shelf, def] of Object.entries(GOLDEN_LIST)) {
+  const shelfItems = (byShelf[shelf] || []).slice().sort((a, b) => getNotoriety(b) - getNotoriety(a))
+  const n = shelfItems.length
+  if (n === 0) continue
+
+  const p95Idx = Math.max(1, Math.floor(n * 0.05))
+  const p95Threshold = getNotoriety(shelfItems[p95Idx - 1])
+
+  const tier1Items = def.tier1.map((e) => itemMap.get(e.id)).filter(Boolean)
+  const lowItems = def.low.map((e) => itemMap.get(e.id)).filter(Boolean)
+
+  // Todas las de Tier 1 tienen fameTier = 1 y están en el 5% de arriba
+  for (const it of tier1Items) {
+    const notVal = getNotoriety(it)
+    const tier = it.fameTier?.ES ?? it.fameTier
+    if (tier !== 1) {
+      const msg = `❌ Lista de oro '${it.title}' (${shelf}) tiene fameTier=${tier || 'ninguno'} (requerido: 1)`
+      t17Failures.push(msg)
+      console.log(`   ${msg}`)
+    }
+    if (notVal < p95Threshold) {
+      const msg = `❌ Lista de oro '${it.title}' (${shelf}) notoriedad=${notVal} < percentil 95 (${p95Threshold})`
+      t17Failures.push(msg)
+      console.log(`   ${msg}`)
+    }
+  }
+
+  // Tier 1 por encima de Low
+  const minTier1 = tier1Items.length ? Math.min(...tier1Items.map(getNotoriety)) : 0
+  const maxLow = lowItems.length ? Math.max(...lowItems.map(getNotoriety)) : 0
+  if (minTier1 <= maxLow && tier1Items.length && lowItems.length) {
+    const msg = `❌ Lista de oro en '${shelf}': menor notoriedad Tier 1 (${minTier1}) ≤ mayor notoriedad Low (${maxLow})`
+    t17Failures.push(msg)
+    console.log(`   ${msg}`)
+  } else if (tier1Items.length && lowItems.length) {
+    console.log(`   ✓ En '${shelf}': Tier 1 (mín ${minTier1}) > Low (máx ${maxLow})`)
+  }
+
+  // Las bajas tienen fameTier >= 3
+  for (const it of lowItems) {
+    const tier = it.fameTier?.ES ?? it.fameTier
+    if (tier == null || tier < 3) {
+      const msg = `❌ Obra baja '${it.title}' (${shelf}) tiene fameTier=${tier || 'ninguno'} (requerido: ≥ 3)`
+      t17Failures.push(msg)
+      console.log(`   ${msg}`)
+    }
+  }
+}
+console.log('')
+
+// Actualizar reporte en coverage.md con la sección T17
+const t17Report = `
+### Controles automáticos T17 (22/10/2026)
+- **Fallas detectadas:** ${t17Failures.length}
+- **Aprobadas:** ${t17Successes.length}
+
+${t17Failures.length ? '#### Fallas:\n' + t17Failures.map((f) => `- ${f}`).join('\n') : '✨ ¡Todos los controles T17 aprobados!'}
+`
+writeFileSync(COVERAGE_MD, `${mdEntry}\n${t17Report}\n\n${prevMd}`, 'utf8')
+
+if (t17Failures.length > 0) {
+  console.error(`❌ T17: ${t17Failures.length} comprobaciones fallaron. Resumen añadido a coverage.md`)
+  if (isStrict) {
+    process.exit(1)
+  }
+} else {
+  console.log('✨ ¡Todas las comprobaciones T17 superadas!')
+}
+
 if (isStrict) {
   // Comprobar umbrales si se pasó --strict
   let failed = false
   const movies = results.movie
   if (movies && pctVal(movies.wikidataId, movies.total) < 85) failed = true
-  if (failed) {
+  if (failed || t17Failures.length > 0) {
     console.error('❌ No se alcanzaron los umbrales mínimos estrictos de cobertura.')
     process.exit(1)
   }

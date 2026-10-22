@@ -101,4 +101,39 @@ describe('Motor R: Reconocibilidad (recog.ts)', () => {
     const inferred = inferBirthYear(entries, items)
     expect(inferred).toBe(1981)
   })
+
+  it('usuario nuevo (contexto vacío, España): nivel 1 con notoriedad >= 0.9 da R >= 0.85, nivel 4 da R < 0.5 (T17 §A.4)', () => {
+    const itemNivel1: Item = {
+      id: 'movie:titanic-1997',
+      type: 'movie',
+      title: 'Titanic',
+      year: 1997,
+      creator: 'James Cameron',
+      genres: ['Drama', 'Romance'],
+      synopsis: 'Titanic',
+      posterUrl: null,
+      notoriety: 0.95,
+      fameTier: 1,
+    }
+
+    const itemNivel4: Item = {
+      id: 'movie:obscure-2010',
+      type: 'movie',
+      title: 'Obra oscura',
+      year: 2010,
+      creator: 'Indie',
+      genres: ['Drama'],
+      synopsis: 'Poco conocida',
+      posterUrl: null,
+      notoriety: 0.30,
+      fameTier: 4,
+    }
+
+    // Contexto completamente vacío (usuario recién llegado)
+    const rNivel1 = recog(itemNivel1, {})
+    const rNivel4 = recog(itemNivel4, {})
+
+    expect(rNivel1).toBeGreaterThanOrEqual(0.85)
+    expect(rNivel4).toBeLessThan(0.50)
+  })
 })

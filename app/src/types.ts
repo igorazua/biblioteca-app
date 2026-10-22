@@ -44,6 +44,8 @@ export interface Item {
   titles?: Record<string, string>
   popPct?: number // percentil dentro de su estantería (0-100)
   notoriety?: Record<string, number> | number // por país o recortado a número para el mercado activo
+  fameLlm?: Record<string, number> | number // qué parte de 18-60 la reconoce (0, 0.25, 0.5, 0.75, 1)
+  fameTier?: Record<string, 1 | 2 | 3 | 4> | 1 | 2 | 3 | 4 // nivel de fama calibrado (1=superfamosa a 4=nicho)
   trend?: Record<string, number> | number
   isCanon?: boolean
   schoolReading?: Record<string, boolean> | boolean

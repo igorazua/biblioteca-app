@@ -444,3 +444,9 @@ T1 puede ir en paralelo a T2-T7. Nada de esto se despliega sin el OK de Igor.
 # T16 — Comparar: pantalla inicial y duelos que no se repiten
 
 Encargo completo en **`docs/TAREA_T16_COMPARAR.md`** (22/10/2026). Hazla después de T15.
+
+---
+
+# T17 — Decidir: duelos con obras que conoces y que se distinguen, y R arreglada
+
+Encargo completo en **`docs/TAREA_T17_DECIDIR.md`** (22/10/2026). **Empieza por T17.0 y la parte A (datos y R) antes que T16:** no dependen de nada y arreglan también el mazo de Descubrir. Las partes B y C, después de T16.

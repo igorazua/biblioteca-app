@@ -173,6 +173,8 @@ export const ATTRS = {
 **Año de nacimiento inferido** (`inferBirthYear`): se calcula con la **tasa** de «la vi» por década del mazo (`seen / shown` de `deckLearn`, sin canon ni obras de los últimos 2 años), **no** con los años de las obras vistas: si no, se retroalimenta (el mazo enseña más de la época supuesta, el usuario marca más de esa época y la suposición se confirma sola). Se busca la década con la tasa más alta y `birthYear ≈ inicio de esa década + 5 − PARAMS.ERA_MEDIAN_AGE` (25 de partida), acotado a [1940, 2012]. Hace falta ≥ 60 tarjetas vistas repartidas en ≥ 3 décadas; confianza baja hasta 150. Se recalcula al abrir Decidir o Descubrir. Se valida con los usuarios que sí lo declaran (error medio objetivo ≤ 6 años).
 
 ### 2b.4 Motor R — reconocibilidad
+
+> ⚠️ **22/10/2026:** la fórmula de la notoriedad, la zona neutra y los niveles de fama quedan **sustituidos por `docs/TAREA_T17_DECIDIR.md` (parte A)**. R pasa a ser una probabilidad calibrada y se permiten umbrales absolutos.
 **Notoriedad por mercado** (`notoriety[país]`, la calcula el build, no la app). Responde a «¿y si abrimos en otros países?»: no hay un dato «España», hay un mapa por país y abrir un país nuevo es calcular su clave.
 ```
 señales para el país P con idioma L (todas a percentil dentro de la estantería):
@@ -811,6 +813,8 @@ post    = prior normalizado
 
 ### 8.4 Orientadores: de dónde salen (v2, 21/10/2026)
 
+> ⚠️ **22/10/2026:** el suelo por percentil y el sorteo con papeletas quedan **sustituidos por `docs/TAREA_T17_DECIDIR.md` §C.1** (conjuntos F1-F3 por nivel de fama y obras propias).
+
 > **Regla de producto (Igor):** los orientadores son guías de tipo («¿más tipo esto o tipo lo otro?»). Para que sirvan, **el usuario tiene que reconocerlos desde el primer duelo**, sin botón de «no conozco ninguna» (D28). Si un orientador acaba siendo la mejor propuesta, se propone (D19).
 
 - **Elegibles**: todas las obras de la estantería no enseñadas en esta sesión, **incluidas las del `pool`**. Ya no hace falta ninguna salvaguarda para estanterías pequeñas.
@@ -823,6 +827,8 @@ post    = prior normalizado
 - El evento `dec_duel` guarda también `ms` (tiempo hasta responder): un duelo lento es la señal, sin preguntar, de que no se reconocían.
 
 ### 8.5 Elegir la pareja: de lo grueso a lo fino, máxima información
+
+> ⚠️ **22/10/2026:** las fases `coarse`/`fine` quedan **sustituidas por `docs/TAREA_T17_DECIDIR.md` §C.2-C.4** (contraste por dimensiones, afinar, parecidas, y preferencias explícitas).
 Para cada duelo:
 1. **Fase**: `coarse` en los 2 primeros duelos de la ronda 1; `fine` en el resto.
 2. **Candidatas a pareja**: muestrea hasta 250 parejas (a, b) de `O` sin repetir `shown`:

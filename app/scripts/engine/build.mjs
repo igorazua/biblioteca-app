@@ -228,7 +228,7 @@ async function main() {
     }
 
     if (it.isCanon == null) {
-      it.isCanon = Boolean(it.awards?.length || it.genres?.includes('Clásico') || it.genres?.includes('Classic'))
+      it.isCanon = Boolean(it.genres?.includes('Clásico') || it.genres?.includes('Classic'))
       it.src.isCanon = 'computed'
       it.conf.isCanon = 0.9
     }
@@ -240,7 +240,7 @@ async function main() {
     }
   }
 
-  // 3. Calcular percentil relativo por estantería: popPct (0-100)
+  // 3. Calcular percentil relativo por estantería: popPct (0-100) sin la popularity antigua (T17 §A.3)
   const byShelf = {}
   for (const it of items) {
     byShelf[it.type] = byShelf[it.type] || []
@@ -255,12 +255,11 @@ async function main() {
         ? Object.values(it.pageviews).reduce((a, b) => a + b, 0)
         : (typeof it.pageviews === 'number' ? it.pageviews : 0)
 
-      // Mezcla logarítmica de señales duras de notoriedad abierta
+      // Señales duras de notoriedad abierta (sin popularity antigua de BGG/inventada)
       const score =
-        Math.log10(votes + 1) * 2.2 +
+        Math.log10(votes + 1) * 2.5 +
         Math.log10(langs + 1) * 3.5 +
-        Math.log10(pv + 1) * 1.8 +
-        (it.popularity || 50) * 0.04
+        Math.log10(pv + 1) * 2.0
 
       return { item: it, score }
     })
@@ -275,30 +274,80 @@ async function main() {
     }
   }
 
-  // 4. Calcular notoriedad de mercado (notoriety.ES) y tendencia (trend.ES)
-  for (const it of items) {
-    const vis = (it.popPct || 50) / 100
-    const local = it.originCountry?.includes('ES')
-      ? 1.0
-      : it.originalLanguage === 'es'
-      ? 0.6
-      : 0.0
+  // 4. Calcular visW, visES, notoriedad de mercado (notoriety.ES) y nivel de fama (fameTier) (T17 §A.3)
+  for (const [shelf, shelfItems] of Object.entries(byShelf)) {
+    const n = shelfItems.length
 
-    const isCanon = Boolean(it.isCanon || it.awards?.length)
-    const lista = isCanon ? 0.9 : 0.0
-    const popFactor = (it.popularity || 50) / 100
+    // 4a. Percentil mundial de visitas: visW = percentil de log(1 + suma de 6 idiomas)
+    const scoredW = shelfItems.map((it) => {
+      const pv = typeof it.pageviews === 'object' && it.pageviews !== null
+        ? Object.values(it.pageviews).reduce((a, b) => a + b, 0)
+        : (typeof it.pageviews === 'number' ? it.pageviews : 0)
+      return { item: it, score: Math.log1p(pv) }
+    })
+    scoredW.sort((a, b) => a.score - b.score)
+    const pctWMap = new Map()
+    for (let i = 0; i < n; i++) {
+      const pct = n > 1 ? (i / (n - 1)) * 100 : 50
+      pctWMap.set(scoredW[i].item.id, pct)
+    }
 
-    // notoriety[ES] = 0.45*vis + 0.25*local + 0.15*lista + 0.15*pop
-    const rawNotoriety = 0.45 * vis + 0.25 * local + 0.15 * lista + 0.15 * popFactor
-    const clampedNotoriety = Math.min(1.0, Math.max(0.05, Math.round(rawNotoriety * 100) / 100))
+    // 4b. Percentil en español: visES = percentil de log(1 + pageviews.es)
+    const scoredES = shelfItems.map((it) => {
+      const pvEs = typeof it.pageviews === 'object' && it.pageviews !== null
+        ? (it.pageviews.es || 0)
+        : 0
+      return { item: it, score: Math.log1p(pvEs) }
+    })
+    scoredES.sort((a, b) => a.score - b.score)
+    const pctESMap = new Map()
+    for (let i = 0; i < n; i++) {
+      const pct = n > 1 ? (i / (n - 1)) * 100 : 50
+      pctESMap.set(scoredES[i].item.id, pct)
+    }
 
-    // Recortado a número para el mercado activo (ES)
-    it.notoriety = clampedNotoriety
-    it.src.notoriety = 'computed'
+    // 4c. Notoriety.ES y fameTier (1..4)
+    for (const it of shelfItems) {
+      const pW = pctWMap.get(it.id) ?? 50
+      const pES = pctESMap.get(it.id) ?? 50
+      const visW = pW / 100
+      const visES = pES / 100
 
-    if (it.trend == null) {
-      it.trend = 0.0
-      it.src.trend = 'computed'
+      const llmVal = it.fameLlm?.ES ?? (typeof it.fameLlm === 'number' ? it.fameLlm : null)
+      const llm = llmVal != null ? llmVal : 0.0
+
+      // notoriety.ES = 0.45·llm + 0.30·visW + 0.25·visES
+      // Sin extra por ser de aquí ni por canon: la fama local ya la recogen visES y llm.
+      const rawNotoriety = 0.45 * llm + 0.30 * visW + 0.25 * visES
+      const clampedNotoriety = Math.min(1.0, Math.max(0.01, Math.round(rawNotoriety * 100) / 100))
+
+      it.notoriety = clampedNotoriety
+      it.src.notoriety = 'computed'
+
+      // fameTier (1 a 4 por país):
+      // - 1, «la conoce todo el mundo»: llm ≥ 0.75 y max(visW, visES) ≥ 90 (percentil)
+      // - 2: llm ≥ 0.5 y max(visW, visES) ≥ 70
+      // - 3: llm ≥ 0.25 o max(visW, visES) ≥ 50
+      // - 4: el resto
+      const maxVisPct = Math.max(pW, pES)
+      let tier = 4
+      if (llm >= 0.75 && maxVisPct >= 90) {
+        tier = 1
+      } else if (llm >= 0.50 && maxVisPct >= 70) {
+        tier = 2
+      } else if (llm >= 0.25 || maxVisPct >= 50) {
+        tier = 3
+      } else {
+        tier = 4
+      }
+
+      it.fameTier = tier
+      it.src.fameTier = 'computed'
+
+      if (it.trend == null) {
+        it.trend = 0.0
+        it.src.trend = 'computed'
+      }
     }
   }
 

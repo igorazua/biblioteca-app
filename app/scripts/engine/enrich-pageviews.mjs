@@ -1,11 +1,9 @@
 /**
- * enrich-pageviews.mjs — Descarga visitas de Wikipedia en español e inglés (12 meses)
- * a través de la API REST de Wikimedia a partir de los sitelinks de Wikidata.
+ * enrich-pageviews.mjs — Descarga visitas de Wikipedia en 6 idiomas (12 meses)
+ * (es, en, fr, de, it, pt) a través de la API REST de Wikimedia con agent=user
+ * a partir de los sitelinks de Wikidata.
  *
- * MOTOR v2 §2b.2 / T3.2: Objetivo ≥ 85% de las obras con wikidataId.
- *
- * Uso:
- *   node scripts/engine/enrich-pageviews.mjs [--sample 50]
+ * MOTOR v2 §2b.2 / T17 §A.2.2: Objetivo ≥ 90% de las obras con wikidataId.
  */
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync, appendFileSync } from 'node:fs'
@@ -17,152 +15,141 @@ const ROOT = join(here, '..', '..')
 const SEED_FILE = join(ROOT, 'src', 'data', 'seed.json')
 const CACHE_ATTRS_DIR = join(here, '..', 'cache', 'attrs')
 const PAGEVIEWS_FILE = join(CACHE_ATTRS_DIR, 'pageviews.jsonl')
+const SITELINKS_CACHE = join(CACHE_ATTRS_DIR, 'sitelinks-cache.json')
 
 const USER_AGENT = 'BibliotecaSocial/1.0.0 ( contact@biblioteca-social.vercel.app )'
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
-const args = process.argv.slice(2)
-const sampleIdx = args.indexOf('--sample')
-const SAMPLE = sampleIdx !== -1 ? parseInt(args[sampleIdx + 1], 10) : null
-
-async function fetchJson(url) {
-  const maxRetries = 3
-  for (let attempt = 1; attempt <= maxRetries; attempt++) {
-    try {
-      const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT } })
-      if (!res.ok) {
-        if (res.status === 404) return null
-        if (res.status === 429) {
-          await sleep(attempt * 1500)
-          continue
-        }
-        return null
-      }
-      return await res.json()
-    } catch {
-      if (attempt === maxRetries) return null
-      await sleep(attempt * 400)
-    }
-  }
-  return null
-}
+const LANGS = ['es', 'en', 'fr', 'de', 'it', 'pt']
 
 async function getPageviews(articleTitle, lang = 'es') {
   if (!articleTitle) return 0
   const normalized = articleTitle.replace(/ /g, '_')
-  const url = `https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/${lang}.wikipedia/all-access/all-agents/${encodeURIComponent(
+  const url = `https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/${lang}.wikipedia/all-access/user/${encodeURIComponent(
     normalized
   )}/monthly/20251001/20261001`
-  const data = await fetchJson(url)
-  if (!data?.items?.length) return 0
-  return data.items.reduce((acc, row) => acc + (row.views || 0), 0)
+
+  for (let attempt = 1; attempt <= 4; attempt++) {
+    try {
+      const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT } })
+      if (!res.ok) {
+        if (res.status === 404) return 0
+        if (res.status === 429) {
+          await sleep(attempt * 1500)
+          continue
+        }
+        return 0
+      }
+      const data = await res.json()
+      if (!data?.items?.length) return 0
+      return data.items.reduce((acc, row) => acc + (row.views || 0), 0)
+    } catch {
+      if (attempt === 4) return 0
+      await sleep(attempt * 400)
+    }
+  }
+  return 0
 }
 
 async function main() {
-  console.log('--- Descarga de Pageviews Wikimedia (enrich-pageviews.mjs) ---')
+  console.log('--- Descarga de Pageviews Wikimedia 6 idiomas (enrich-pageviews.mjs) ---')
 
   if (!existsSync(CACHE_ATTRS_DIR)) mkdirSync(CACHE_ATTRS_DIR, { recursive: true })
 
   const seed = JSON.parse(readFileSync(SEED_FILE, 'utf8'))
   const items = seed.items || []
-  const withWiki = items.filter((i) => i.wikidataId)
+  const withWiki = items.filter((i) => Boolean(i.wikidataId))
 
-  // Cargar existentes
-  const known = new Set()
+  const sitelinks = JSON.parse(readFileSync(SITELINKS_CACHE, 'utf8'))
+
+  // Cargar existentes que ya tengan visitas > 0
+  const knownGood = new Set()
   if (existsSync(PAGEVIEWS_FILE)) {
     const lines = readFileSync(PAGEVIEWS_FILE, 'utf8').split('\n').filter(Boolean)
     for (const l of lines) {
       try {
         const p = JSON.parse(l)
-        if (p.id) known.add(p.id)
+        if (p.id && p.value) {
+          const total = Object.values(p.value).reduce((a, b) => a + b, 0)
+          if (total > 0) {
+            knownGood.add(p.id)
+          }
+        }
       } catch {}
     }
   }
 
-  const targets = withWiki.filter((i) => !known.has(i.id))
-  console.log(`Obras con wikidataId: ${withWiki.length}. Ya procesadas: ${known.size}. Faltan: ${targets.length}`)
-
-  let toProcess = targets
-  if (SAMPLE) {
-    console.log(`Modo muestra: procesando ${SAMPLE} obras...`)
-    toProcess = toProcess.slice(0, SAMPLE)
-  }
-
-  // 1. Obtener sitelinks en bloques de 50 QIDs
-  const qidToItem = new Map()
-  for (const it of toProcess) {
-    qidToItem.set(it.wikidataId, it)
-  }
-
-  const qids = Array.from(qidToItem.keys())
-  const sitelinksMap = new Map()
-
-  console.log(`\nConsultando sitelinks de Wikidata para ${qids.length} entidades...`)
-  const CHUNK_SIZE = 50
-  for (let i = 0; i < qids.length; i += CHUNK_SIZE) {
-    const chunk = qids.slice(i, i + CHUNK_SIZE)
-    const url = `https://www.wikidata.org/w/api.php?action=wbgetentities&ids=${chunk.join('|')}&props=sitelinks&format=json`
-    const data = await fetchJson(url)
-    await sleep(150)
-
-    if (data?.entities) {
-      for (const [qid, ent] of Object.entries(data.entities)) {
-        const eswiki = ent.sitelinks?.eswiki?.title || null
-        const enwiki = ent.sitelinks?.enwiki?.title || null
-        sitelinksMap.set(qid, { eswiki, enwiki })
-      }
-    }
-    if ((i + CHUNK_SIZE) % 250 === 0 || i + CHUNK_SIZE >= qids.length) {
-      console.log(`  Sitelinks obtenidos: ${Math.min(i + CHUNK_SIZE, qids.length)}/${qids.length}`)
+  // Filtrar targets: solo los que faltan o tenían 0 y tienen títulos
+  const targets = []
+  for (const it of withWiki) {
+    if (knownGood.has(it.id)) continue
+    const sl = sitelinks[it.wikidataId]
+    const hasAnyTitle = sl && Object.values(sl).some(Boolean)
+    if (hasAnyTitle) {
+      targets.push(it)
     }
   }
 
-  // 2. Descargar pageviews con concurrencia de 10
-  console.log(`\nDescargando visitas mensuales de Wikimedia API...`)
-  let processed = 0
-  let withViews = 0
+  console.log(`Obras con wikidataId: ${withWiki.length}`)
+  console.log(`Ya con visitas verificadas (> 0): ${knownGood.size}. Pendientes con títulos: ${targets.length}`)
+
+  if (targets.length === 0) {
+    console.log('✓ Todas las obras ya tienen visitas descargadas.')
+    return
+  }
+
+  // Worker pool concurrente (8 workers con 40ms sleep para no exceder rate limit)
   const CONCURRENCY = 8
+  let targetIdx = 0
+  let done = 0
+  let withViews = 0
+  const startTime = Date.now()
 
-  for (let i = 0; i < toProcess.length; i += CONCURRENCY) {
-    const chunk = toProcess.slice(i, i + CONCURRENCY)
-    await Promise.all(
-      chunk.map(async (item) => {
-        const links = sitelinksMap.get(item.wikidataId) || {}
-        let esViews = 0
-        let enViews = 0
+  async function worker() {
+    while (targetIdx < targets.length) {
+      const it = targets[targetIdx++]
+      if (!it) break
 
-        if (links.eswiki) {
-          esViews = await getPageviews(links.eswiki, 'es')
-          await sleep(60)
+      const sl = sitelinks[it.wikidataId] || {}
+      const views = { es: 0, en: 0, fr: 0, de: 0, it: 0, pt: 0 }
+
+      for (const lang of LANGS) {
+        if (sl[lang]) {
+          views[lang] = await getPageviews(sl[lang], lang)
+          await sleep(25)
         }
-        if (links.enwiki) {
-          enViews = await getPageviews(links.enwiki, 'en')
-          await sleep(60)
-        }
+      }
 
-        const views = { es: esViews, en: enViews }
-        const line = JSON.stringify({
-          id: item.id,
-          value: views,
-          src: 'wikimedia-api',
-          conf: 1.0,
-          at: new Date().toISOString().slice(0, 10),
-        })
-        appendFileSync(PAGEVIEWS_FILE, line + '\n', 'utf8')
-        processed++
-        if (esViews > 0 || enViews > 0) withViews++
+      done++
+      const totalViews = Object.values(views).reduce((a, b) => a + b, 0)
+      if (totalViews > 0) withViews++
+
+      // Guardar incrementalmente
+      const line = JSON.stringify({
+        id: it.id,
+        value: views,
+        src: 'wikimedia-api',
+        conf: 1.0,
+        at: new Date().toISOString().slice(0, 10),
       })
-    )
+      appendFileSync(PAGEVIEWS_FILE, line + '\n', 'utf8')
 
-    if (processed % 100 === 0 || processed >= toProcess.length) {
-      console.log(`  Progreso visitas: ${processed}/${toProcess.length} (${withViews} con visitas > 0)`)
+      if (done % 50 === 0 || done >= targets.length) {
+        const elapsedSec = Math.max(1, (Date.now() - startTime) / 1000)
+        const rate = (done / elapsedSec).toFixed(1)
+        console.log(`  [${done}/${targets.length}] procesadas (${withViews} con visitas > 0) [${rate} obras/s]`)
+      }
+
+      await sleep(40)
     }
   }
 
-  console.log(`\n✓ Finalizado: ${processed} obras procesadas y guardadas en ${PAGEVIEWS_FILE}`)
+  await Promise.all(Array.from({ length: CONCURRENCY }, () => worker()))
+
+  console.log(`\n✓ Descarga finalizada: ${done} obras procesadas (${withViews} con visitas > 0).`)
 }
 
 main().catch((err) => {
-  console.error('Error fatal:', err)
+  console.error('Error fatal en enrich-pageviews.mjs:', err)
   process.exit(1)
 })
