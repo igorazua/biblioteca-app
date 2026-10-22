@@ -120,13 +120,12 @@ function PickBadge({ color, texts, title, reduce }: { color: string; texts: Duel
   return (
     <div className="absolute inset-0 z-30 pointer-events-none flex items-center justify-center px-6" aria-live="polite">
       <div
-        className="max-w-full flex flex-col items-center gap-3 rounded-[26px] bg-black/60 backdrop-blur-xl px-6 pt-4 pb-3.5"
-        style={{ boxShadow: `0 18px 50px -12px rgba(0,0,0,0.85), 0 0 0 1px ${color}55` }}
+        className="max-w-full flex flex-col items-center gap-3 rounded-2xl bg-bg/85 border border-line px-6 pt-4 pb-3.5 shadow-2xl"
       >
-        <div className="text-center text-[24px] leading-[1.15] text-white line-clamp-3" style={{ textWrap: 'balance' } as React.CSSProperties}>
+        <div className="text-center text-[22px] leading-[1.15] text-ink line-clamp-3" style={{ textWrap: 'balance' } as React.CSSProperties}>
           <Chosen texts={texts} title={title} />
         </div>
-        <svg viewBox="0 0 36 36" width="30" height="30" fill="none" aria-hidden>
+        <svg viewBox="0 0 36 36" width="28" height="28" fill="none" aria-hidden>
           <motion.circle
             cx="18" cy="18" r="15.5"
             stroke={color} strokeWidth="2.2" strokeLinecap="round"
@@ -153,20 +152,17 @@ export function PickCheck(props: { color: string; texts: DuelTexts; title: strin
   return <PickBadge {...props} />
 }
 
-/** Diseño 2: anillo de color con pulso de brillo alrededor del póster elegido, más la confirmación común. */
+/** Diseño 2: borde en el póster elegido, más la confirmación común. */
 export function PickRing({ color, box, texts, title, reduce }: { color: string; box: { left: number; top: number; w: number; h: number }; areaH?: number; texts: DuelTexts; title: string; reduce: boolean | null }) {
-  const off = `0 0 0px 0px ${color}00, inset 0 0 0px 0px ${color}00`
-  const peak = `0 0 34px 4px ${color}cc, inset 0 0 26px 2px ${color}66`
-  const rest = `0 0 16px 2px ${color}77, inset 0 0 12px 0px ${color}33`
   return (
     <>
       <div className="absolute inset-0 z-30 pointer-events-none">
         <motion.div
           className="absolute"
-          style={{ left: box.left, top: box.top, width: box.w, height: box.h, borderRadius: 20, border: `3px solid ${color}` }}
-          initial={reduce ? false : { opacity: 0, boxShadow: off }}
-          animate={reduce ? { opacity: 1, boxShadow: rest } : { opacity: [0, 1, 1], boxShadow: [off, peak, rest] }}
-          transition={reduce ? { duration: 0 } : { duration: 0.7, times: [0, 0.45, 1], ease: 'easeOut' }}
+          style={{ left: box.left, top: box.top, width: box.w, height: box.h, borderRadius: 20, border: `2.5px solid ${color}` }}
+          initial={reduce ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.2 }}
         />
       </div>
       <PickBadge color={color} texts={texts} title={title} reduce={reduce} />
@@ -174,19 +170,17 @@ export function PickRing({ color, box, texts, title, reduce }: { color: string; 
   )
 }
 
-/** Diseño 3: destello breve en el borde de la carta elegida, más la confirmación común. */
+/** Diseño 3: borde en la carta elegida, más la confirmación común. */
 export function PickStrip({ color, card, texts, title, reduce }: { color: string; card: { left: number; top: number; w: number; h: number; r: number }; texts: DuelTexts; title: string; reduce: boolean | null }) {
-  const off = `0 0 0px 0px ${color}00`
-  const peak = `0 0 30px 5px ${color}dd`
   return (
     <>
       <div className="absolute inset-0 z-[6] pointer-events-none">
         <motion.div
           className="absolute"
-          style={{ left: card.left, top: card.top, width: card.w, height: card.h, borderRadius: card.r, border: `2.5px solid ${color}` }}
-          initial={reduce ? false : { opacity: 0, boxShadow: off }}
-          animate={reduce ? { opacity: 0.8, boxShadow: off } : { opacity: [0, 1, 0.55], boxShadow: [off, peak, off] }}
-          transition={reduce ? { duration: 0 } : { duration: 0.55, delay: 0.12, times: [0, 0.35, 1], ease: 'easeOut' }}
+          style={{ left: card.left, top: card.top, width: card.w, height: card.h, borderRadius: card.r, border: `2px solid ${color}` }}
+          initial={reduce ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.2 }}
         />
       </div>
       <PickBadge color={color} texts={texts} title={title} reduce={reduce} />

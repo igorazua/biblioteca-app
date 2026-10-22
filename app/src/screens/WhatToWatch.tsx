@@ -24,8 +24,10 @@ import { SHELVES, SHELF_LABEL, type Friend, type Item, type ShelfType } from '..
 import { Poster, posterLayoutId } from '../components/Poster'
 import { SwipePair, type Side } from '../components/SwipePair'
 import { RatingFlow } from '../components/RatingFlow'
-import { Chip, PlatformPicker, Toast } from '../components/ui'
+import { PlatformPicker, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
+import { ScreenTitle } from '../components/ScreenTitle'
+import { Button } from '../components/Button'
 
 export type Answers = Record<string, string | string[] | undefined>
 
@@ -197,7 +199,6 @@ export function WhatToWatch() {
       },
     })
 
-    // ¿Momento de proponer? (§8.7)
     if (shouldPropose(updatedState)) {
       const prop = getProposal(updatedState, itemsById, activeFriends, profile)
       if (prop) {
@@ -220,7 +221,6 @@ export function WhatToWatch() {
       }
     }
 
-    // Siguiente duelo
     const next = nextDuel(updatedState, items, new Set(updatedState.shown))
     if (next) {
       setPair([next.a, next.b])
@@ -232,7 +232,6 @@ export function WhatToWatch() {
         useStore.getState().recordOrienters(shelf, updatedState.shown)
         setProposal(prop)
         setCurrent(prop.item.id)
-        setPair(null)
         setPhase('propose')
       } else {
         setPhase('none')
@@ -253,7 +252,6 @@ export function WhatToWatch() {
     setPhase('done')
   }
 
-  // «Seguir buscando»: 3 duelos orientadores en fase fine y nueva propuesta (§8.7, §8.8)
   const seguir = () => {
     if (!current || !shelf || !decideState) return
     track('dec_reject', {
@@ -273,7 +271,7 @@ export function WhatToWatch() {
     if (next) {
       setPair([next.a, next.b])
       setDuelPhase(next.phase)
-      setDuel({ n: 0, of: 3 }) // 3 duelos en cada «Seguir buscando» (§8.7)
+      setDuel({ n: 0, of: 3 })
       setPhase('shape')
     } else {
       const prop = getProposal(updatedState, itemsById, activeFriends, profile)
@@ -287,7 +285,6 @@ export function WhatToWatch() {
     }
   }
 
-  // Reiniciar vuelve siempre a elegir categoría (§13.2)
   const reset = () => {
     if (shelf && phase !== 'done' && phase !== 'shelf') {
       track('dec_abandon', {
@@ -309,36 +306,49 @@ export function WhatToWatch() {
 
   const shelfTerms = shelf ? SHELF_LABEL[shelf] : SHELF_LABEL.movie
   const currentItem = proposal?.item ?? (current ? getItem(current) : null)
-
-  const shaperSide = (it: Item): Side => ({ key: it.id, title: it.title, subtitle: `${it.year} · ${it.creator}`, bg: <Poster item={it} showTitle={false} className="absolute inset-0 w-full h-full" /> })
+  const shaperSide = (it: Item): Side => ({
+    key: it.id,
+    title: it.title,
+    subtitle: `${it.year} · ${it.creator}`,
+    bg: <Poster item={it} showTitle={false} className="absolute inset-0 w-full h-full" />,
+  })
 
   /* --------------------------------- pantallas --------------------------------- */
+  let header: React.ReactNode = null
   let body: React.ReactNode = null
 
   if (phase === 'shelf') {
+    header = (
+      <ScreenTitle
+        label="DECIDIR"
+        title="¿Por dónde tiramos hoy?"
+        subtitle="Elige qué te apetece y te hago unas preguntas rápidas."
+      />
+    )
     body = (
-      <div className="flex-1 min-h-0 flex flex-col px-4 pb-5 gap-3">
-        <p className="text-mute text-[15px] px-1 -mt-1">Elige qué te apetece y te hago unas preguntas rápidas.</p>
+      <div className="flex-1 min-h-0 flex flex-col px-5 pb-6 gap-3">
         {SHELVES.map((s, i) => {
           const cover = items.filter((it) => it.type === s).sort((a, b) => b.popularity - a.popularity).slice(0, 3)
           return (
             <motion.button
               key={s}
-              initial={{ opacity: 0, y: 14 }}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.06, duration: 0.24 }}
+              transition={{ delay: i * 0.05, duration: 0.2 }}
               onClick={() => { setShelf(s); setPhase('ask'); setQi(0) }}
-              className="relative flex-1 min-h-[120px] rounded-[26px] overflow-hidden border border-line text-left active:scale-[0.985] transition-transform"
+              className="relative flex-1 min-h-[110px] rounded-2xl overflow-hidden border border-line text-left active:scale-[0.985] transition-transform bg-surface"
             >
-              <div className="absolute inset-0 grid grid-cols-3 gap-px bg-black">
+              <div className="absolute inset-0 grid grid-cols-3 gap-px opacity-30">
                 {cover.map((it) => <Poster key={it.id} item={it} showTitle={false} className="w-full h-full" />)}
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-bg via-bg/80 to-transparent" />
               <div className="absolute inset-y-0 left-0 flex flex-col justify-center px-5">
-                <span className="serif text-[30px] font-semibold leading-none">{SHELF_LABEL[s].plural}</span>
-                <span className="text-sm text-white/75 mt-1.5">{titleOf(s)}</span>
+                <span className="text-title text-ink font-semibold">{SHELF_LABEL[s].plural}</span>
+                <span className="text-meta mt-1">{titleOf(s)}</span>
               </div>
-              <span className="absolute right-4 bottom-4 w-10 h-10 rounded-full bg-accent text-accent-ink flex items-center justify-center"><Icon name="chevron" size={18} /></span>
+              <span className="absolute right-4 bottom-4 w-9 h-9 rounded-full bg-surface2 border border-line text-ink flex items-center justify-center">
+                <Icon name="chevron" size={16} />
+              </span>
             </motion.button>
           )
         })}
@@ -346,108 +356,185 @@ export function WhatToWatch() {
     )
   } else if (phase === 'ask' && shelf) {
     const q = questions[qi]
-    const val = answers[q.id]
+    const val = answers[q?.id]
+    header = (
+      <ScreenTitle
+        label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`}
+        step={{ current: qi + 1, total: questions.length }}
+        title={q?.q || 'Pregunta'}
+        action={
+          <Button variant="text" onClick={reset}>
+            Reiniciar
+          </Button>
+        }
+      />
+    )
     body = (
-      <div className="flex-1 min-h-0 flex flex-col px-5 pb-4">
-        <div className="flex gap-1 mb-4" aria-label={`Pregunta ${qi + 1} de ${questions.length}`}>
-          {questions.map((_, i) => <span key={i} className={`h-1.5 flex-1 rounded-full ${i <= qi ? 'bg-accent' : 'bg-line'}`} />)}
-        </div>
+      <div className="flex-1 min-h-0 flex flex-col px-5 pb-5">
         <AnimatePresence mode="wait">
-          <motion.div key={q.id} initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -24 }} transition={{ duration: 0.16 }} className="flex-1 min-h-0 scroll-y">
-            <div className="text-xs text-accent font-semibold uppercase tracking-wider">Pregunta {qi + 1} de {questions.length}</div>
-            <h2 className="serif text-[28px] leading-tight font-semibold mt-1 mb-4">{q.q}</h2>
-            {q.multi ? (
-              <div>
-                <PlatformPicker
-                  value={(val as string[]) ?? []}
-                  onChange={(newPlatforms) => setAnswers({ ...answers, [q.id]: newPlatforms })}
-                />
-                <p className="text-xs text-mute mt-3">Sin ninguna o con todas marcadas, no filtramos por plataforma.</p>
-                <button onClick={() => (qi + 1 >= questions.length ? startShaping(answers, 5) : setQi(qi + 1))} className="mt-6 w-full min-h-[52px] rounded-2xl bg-accent text-accent-ink font-semibold">Seguir</button>
-              </div>
-            ) : (
-              <div className="space-y-2.5">
-                {q.options.map((o) => (
-                  <button key={o.id} onClick={() => answer(q, o.id)} aria-pressed={val === o.id}
-                    className={`w-full text-left rounded-3xl border px-4 min-h-[60px] py-2.5 transition-colors ${val === o.id ? 'bg-accent text-accent-ink border-accent' : 'bg-surface border-line active:bg-surface2'}`}>
-                    <div className="text-[17px] font-semibold">{o.label}</div>
-                    {o.sub && <div className={`text-sm ${val === o.id ? 'text-accent-ink/75' : 'text-mute'}`}>{o.sub}</div>}
-                  </button>
-                ))}
-              </div>
-            )}
-          </motion.div>
+          {q && (
+            <motion.div
+              key={q.id}
+              initial={{ opacity: 0, x: 16 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -16 }}
+              transition={{ duration: 0.16 }}
+              className="flex-1 min-h-0 scroll-y"
+            >
+              {q.multi ? (
+                <div>
+                  <PlatformPicker
+                    value={(val as string[]) ?? []}
+                    onChange={(newPlatforms) => setAnswers({ ...answers, [q.id]: newPlatforms })}
+                  />
+                  <p className="text-meta mt-3">Sin ninguna o con todas marcadas, no filtramos por plataforma.</p>
+                  <Button
+                    variant="primary"
+                    onClick={() => (qi + 1 >= questions.length ? startShaping(answers, 5) : setQi(qi + 1))}
+                    className="mt-6 w-full"
+                  >
+                    Seguir
+                  </Button>
+                </div>
+              ) : (
+                <div className="space-y-3">
+                  {q.options.map((o) => (
+                    <button
+                      key={o.id}
+                      onClick={() => answer(q, o.id)}
+                      aria-pressed={val === o.id}
+                      className={`w-full text-left rounded-2xl border px-5 py-4 min-h-[56px] transition-colors ${
+                        val === o.id
+                          ? 'bg-surface2 border-accent text-ink'
+                          : 'bg-surface border-line active:bg-surface2 text-ink'
+                      }`}
+                    >
+                      <div className="text-body font-medium">{o.label}</div>
+                      {o.sub && <div className="text-meta mt-0.5">{o.sub}</div>}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </motion.div>
+          )}
         </AnimatePresence>
-        <div className="mt-3 flex">
-          <button onClick={() => (qi > 0 ? setQi(qi - 1) : reset())} className="min-h-[46px] px-5 rounded-2xl bg-surface border border-line text-sm">{qi > 0 ? 'Atrás' : 'Cambiar categoría'}</button>
+        <div className="mt-4 flex">
+          <Button variant="secondary" onClick={() => (qi > 0 ? setQi(qi - 1) : reset())}>
+            {qi > 0 ? 'Atrás' : 'Cambiar categoría'}
+          </Button>
         </div>
       </div>
     )
   } else if (phase === 'shape' && pair) {
+    header = (
+      <ScreenTitle
+        label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`}
+        step={{ current: duel.n + 1, total: duel.of }}
+        title={duelPhase === 'coarse' ? '¿Por dónde tiramos hoy?' : 'Afinando el tiro'}
+        action={
+          <Button variant="text" onClick={reset}>
+            Reiniciar
+          </Button>
+        }
+      />
+    )
     body = (
-      <div className="flex-1 min-h-0 flex flex-col px-4 pb-5 -mt-1">
-        <div className="flex items-center justify-center gap-1.5 pb-2" aria-label={`Duelo ${duel.n + 1} de ${duel.of}`}>
-          {Array.from({ length: duel.of }).map((_, i) => <span key={i} className={`h-1 rounded-full transition-all ${i === duel.n ? 'w-6 bg-accent' : i < duel.n ? 'w-3 bg-accent/60' : 'w-3 bg-line'}`} />)}
-        </div>
+      <div className="flex-1 min-h-0 flex flex-col px-5 pb-6">
         <SwipePair left={shaperSide(pair[0])} right={shaperSide(pair[1])} onChoose={onShaperChoose} kind="decide" />
+        <p className="text-meta text-center mt-3 select-none">Desliza hacia la que prefieras</p>
       </div>
     )
   } else if (phase === 'propose' && currentItem) {
     const reasonsText = proposal?.reasons.join(' · ') || 'Sugerencia basada en tus respuestas'
+    header = (
+      <ScreenTitle
+        label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`}
+        title="Te propongo esta"
+        action={
+          <Button variant="text" onClick={reset}>
+            Reiniciar
+          </Button>
+        }
+      />
+    )
     body = (
-      <div className="flex-1 min-h-0 flex flex-col px-4 pb-8">
-        <Link to={`/i/${encodeURIComponent(currentItem.id)}`} key={currentItem.id} className="relative flex-1 min-h-0 rounded-[28px] overflow-hidden border border-line shadow-2xl block pop">
+      <div className="flex-1 min-h-0 flex flex-col px-5 pb-6">
+        <Link
+          to={`/i/${encodeURIComponent(currentItem.id)}`}
+          key={currentItem.id}
+          className="relative flex-1 min-h-0 rounded-2xl overflow-hidden border border-line bg-surface block"
+        >
           <Poster item={currentItem} showTitle={false} layoutId={posterLayoutId(currentItem.id)} className="absolute inset-0 w-full h-full" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
-          <div className="absolute top-3 left-3 bg-accent text-accent-ink text-xs font-bold px-3 py-1.5 rounded-full">Te propongo esta</div>
+          <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/40 to-transparent" />
           <div className="absolute bottom-0 inset-x-0 p-5">
-            <div className="text-[11px] uppercase tracking-[0.14em] text-white/70">{typeName(currentItem.type)} · {currentItem.year} · {itemFacts(currentItem)}</div>
-            <h2 className="serif text-[30px] leading-[1.05] font-semibold mt-1">{currentItem.title}</h2>
-            <p className="text-sm text-accent mt-2 font-medium">{reasonsText}</p>
-            <p className="text-sm text-white/75 mt-1.5 line-clamp-2">{currentItem.synopsis}</p>
+            <div className="text-label text-mute">
+              {typeName(currentItem.type)} · {currentItem.year} · {itemFacts(currentItem)}
+            </div>
+            <h2 className="text-display text-ink mt-1">{currentItem.title}</h2>
+            <p className="text-meta text-accent mt-2 font-medium">{reasonsText}</p>
+            <p className="text-body text-mute mt-1.5 line-clamp-2">{currentItem.synopsis}</p>
           </div>
         </Link>
-        <div className="flex gap-2 mt-3">
-          <button onClick={seguir} className="flex-1 min-h-[54px] rounded-2xl bg-surface border border-line font-semibold">Seguir buscando</button>
-          <button onClick={handleAccept} className="flex-[1.2] min-h-[54px] rounded-2xl bg-accent text-accent-ink font-semibold text-lg">¡Esta!</button>
+        <div className="flex gap-3 mt-4">
+          <Button variant="secondary" onClick={seguir} className="flex-1">
+            Seguir buscando
+          </Button>
+          <Button variant="primary" onClick={handleAccept} className="flex-[1.2]">
+            ¡Esta!
+          </Button>
         </div>
       </div>
     )
   } else if (phase === 'done' && currentItem) {
     const plat = currentItem.platforms?.find((p) => profile.platforms.includes(p)) ?? currentItem.platforms?.[0]
+    header = (
+      <ScreenTitle
+        label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`}
+        title={shelf === 'book' ? 'A leer' : shelf === 'boardgame' ? 'A jugar' : shelf === 'artist' ? 'A escuchar' : 'A disfrutar'}
+        subtitle={currentItem.title}
+      />
+    )
     body = (
-      <div className="flex-1 min-h-0 flex flex-col items-center justify-center px-6 text-center gap-3">
-        <Poster item={currentItem} className="w-36 aspect-[2/3] rounded-2xl shadow-2xl" />
-        <h2 className="serif text-3xl font-semibold mt-2">{shelf === 'book' ? 'A leer 📖' : shelf === 'boardgame' ? 'A jugar 🎲' : shelf === 'artist' ? 'A escuchar 🎧' : 'A disfrutar 🍿'}</h2>
-        <p className="text-mute">{currentItem.title}</p>
-        {!isBook && plat && (
-          <button onClick={() => setToast('En la demo no abre la plataforma')} className="min-h-[52px] px-6 rounded-2xl bg-accent text-accent-ink font-semibold flex items-center gap-2"><Icon name="tv" size={20} /> Abrir en {plat}</button>
-        )}
-        <button onClick={() => { setStatus(currentItem.id, 'seen'); setRating(currentItem.id) }} className="min-h-[48px] px-6 rounded-2xl bg-surface border border-line font-medium">Ya {shelfTerms.pronoun} he {shelfTerms.seenPastPart}: valorar</button>
-        <button onClick={reset} className="text-sm text-mute underline underline-offset-2 mt-1">Empezar de nuevo</button>
+      <div className="flex-1 min-h-0 flex flex-col items-center justify-center px-6 text-center gap-4">
+        <Poster item={currentItem} className="w-36 aspect-[2/3] rounded-2xl border border-line" />
+        <div className="flex flex-col gap-2.5 w-full max-w-xs mt-2">
+          {!isBook && plat && (
+            <Button variant="primary" onClick={() => setToast('En la demo no abre la plataforma')} icon={<Icon name="tv" size={18} />}>
+              Abrir en {plat}
+            </Button>
+          )}
+          <Button variant="secondary" onClick={() => { setStatus(currentItem.id, 'seen'); setRating(currentItem.id) }}>
+            Ya {shelfTerms.pronoun} he {shelfTerms.seenPastPart}: valorar
+          </Button>
+          <Button variant="text" onClick={reset}>
+            Empezar de nuevo
+          </Button>
+        </div>
       </div>
     )
   } else if (phase === 'none') {
+    header = (
+      <ScreenTitle
+        label="DECIDIR"
+        title="Se acabaron las candidatas"
+        subtitle="Prueba con otras respuestas, o guarda más pendientes en Descubrir."
+      />
+    )
     body = (
       <div className="flex-1 flex flex-col items-center justify-center text-center px-6 gap-3">
-        <div className="text-5xl">🤷</div>
-        <h2 className="serif text-2xl font-semibold">Se acabaron las candidatas</h2>
-        <p className="text-mute text-sm">Prueba con otras respuestas, o guarda más pendientes en Descubrir.</p>
-        <button onClick={reset} className="min-h-[50px] px-6 rounded-2xl bg-accent text-accent-ink font-semibold">Empezar de nuevo</button>
-        <button onClick={() => nav('/descubrir')} className="text-sm text-mute underline underline-offset-2">Ir a Descubrir</button>
+        <Button variant="primary" onClick={reset}>
+          Empezar de nuevo
+        </Button>
+        <Button variant="text" onClick={() => nav('/descubrir')}>
+          Ir a Descubrir
+        </Button>
       </div>
     )
   }
 
   return (
-    <div className="h-full flex flex-col relative">
-      <div className="safe-top px-5 pb-3 shrink-0 flex items-center justify-between">
-        <div>
-          <h1 className="text-xl font-semibold">{WIZARD_TITLE}</h1>
-          {shelf && <div className="text-xs text-accent font-medium mt-0.5">{SHELF_LABEL[shelf].plural} · {titleOf(shelf)}</div>}
-        </div>
-        {shelf && phase !== 'shelf' && <button onClick={reset} className="min-h-[40px] px-4 rounded-full bg-surface2 border border-line text-sm font-medium flex items-center gap-1.5 active:scale-95 transition-transform"><Icon name="undo" size={15} /> Empezar de nuevo</button>}
-      </div>
+    <div className="h-full flex flex-col relative bg-bg">
+      {header}
       {body}
       {rating && <RatingFlow key={rating} itemId={rating} withStars onDone={(m) => { setRating(null); if (m) setToast(m); reset() }} />}
       <AnimatePresence>{toast && <Toast key={toast} message={toast} onDone={() => setToast(null)} />}</AnimatePresence>

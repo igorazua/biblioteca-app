@@ -54,6 +54,9 @@ export function SwipePair(props: { left: Side; right: Side; onChoose: Choose; ki
   return (
     <div className="relative flex-1 min-h-0 flex flex-col">
       {body}
+      <p className="text-center text-meta text-mute py-1.5 pointer-events-none select-none shrink-0">
+        Desliza hacia la que prefieras
+      </p>
       <DuelPicker kind={kind} style={style} setStyle={setStyle} copy={copy} setCopy={setCopy} />
     </div>
   )
@@ -145,7 +148,6 @@ function SwipePairDiagonal({ left, right, onChoose, texts, full }: { left: Side;
   useEffect(() => { setPicked(null); x.set(0) }, [left.key, right.key, x])
 
   // progreso -1 (elige arriba/izquierda) … 1 (elige abajo/derecha)
-  const ringO = useTransform(x, (v) => Math.min(1, Math.abs(v) / (W() * COMMIT)))
   const p = useTransform(x, (v) => Math.max(-1, Math.min(1, v / (W() * COMMIT))))
 
   const choose = (w: 'a' | 'b') => {
@@ -181,7 +183,6 @@ function SwipePairDiagonal({ left, right, onChoose, texts, full }: { left: Side;
       <DuelCard side={left} which="a" full={full} dims={dims} p={p} picked={picked} onTap={() => { if (!dragged.current) choose('a') }} />
       <DuelCard side={right} which="b" full={full} dims={dims} p={p} picked={picked} onTap={() => { if (!dragged.current) choose('b') }} />
       <CenterHint p={p} picked={picked} texts={texts} />
-      {!full && <motion.div className="absolute inset-0 z-20 pointer-events-none rounded-[34px]" style={{ opacity: ringO, boxShadow: 'inset 0 0 0 1.5px rgba(255,255,255,0.5), inset 0 0 0 5px rgba(255,255,255,0.07)' }} />}
       {/* Confirmación al elegir: distinta en cada diseño (1: círculo con ✓; 2: anillo en el póster y pastilla) */}
       {pickedSide && !full && <PickCheck color={pickedColor} texts={texts} title={pickedSide.title} reduce={reduce} />}
       {pickedSide && lay && (
@@ -222,7 +223,6 @@ function DuelCard({ side, which, full, dims, p, picked, onTap }: { side: Side; w
   const e = useTransform(t, (v) => Math.max(0, Math.min(1, v)))
   const bright = useTransform(t, [-1, 0, 1], [0.42, 0.92, 1.12])
   const filter = useTransform(bright, (b) => `brightness(${b}) saturate(${0.6 + b * 0.4})`)
-  const glow = useTransform(t, [0, 1], [0, 1])
   const bandOp = useTransform(e, [0, 1], [1, 0]) // a pantalla completa no queda nada encima del póster
   // texto (título, año, pistas): se difumina y desaparece según crece la elegida; el perdedor también se apaga
   const textOp = useTransform(t, (v) => (v >= 0 ? Math.max(0, 1 - v * 1.5) : 1 + v * 0.9))
@@ -280,17 +280,14 @@ function DuelCard({ side, which, full, dims, p, picked, onTap }: { side: Side; w
           <>
             <div className="absolute inset-0 [&_img]:object-[center_22%]">{side.bg}</div>
             <div className={`absolute inset-0 ${top ? 'bg-gradient-to-b from-black/10 via-black/20 to-black/90' : 'bg-gradient-to-t from-black/10 via-black/20 to-black/90'}`} />
-            <motion.div className="absolute inset-0 pointer-events-none rounded-[inherit]" style={{ opacity: glow, boxShadow: `inset 0 0 0 1.5px rgba(255,255,255,0.55), inset 0 0 0 5px rgba(255,255,255,0.08), inset 0 0 46px ${color}40` }} />
 
             {/* Banda de color con flecha, en el borde al que pertenece */}
             <motion.div
-              className={`absolute inset-y-0 flex flex-col items-center justify-center gap-3 backdrop-blur-xl ${top ? 'left-0' : 'right-0'}`}
+              className={`absolute inset-y-0 flex flex-col items-center justify-center gap-3 ${top ? 'left-0' : 'right-0'}`}
               style={{
                 width: bandW,
-                background: `linear-gradient(${top ? '90deg' : '270deg'}, ${color}38, rgba(255,255,255,0.06))`,
+                background: `linear-gradient(${top ? '90deg' : '270deg'}, ${color}30, transparent)`,
                 opacity: bandOp,
-                WebkitMaskImage: `linear-gradient(${top ? 'to right' : 'to left'}, #000 0%, #000 50%, transparent 100%)`,
-                maskImage: `linear-gradient(${top ? 'to right' : 'to left'}, #000 0%, #000 50%, transparent 100%)`,
                 boxShadow: `inset ${top ? '' : '-'}2px 0 0 ${color}`,
               }}
             >
@@ -306,13 +303,13 @@ function DuelCard({ side, which, full, dims, p, picked, onTap }: { side: Side; w
 
             {/* Texto: en la zona libre de la tarjeta, lejos del corte; se desvanece al crecer */}
             <motion.div
-              className={`absolute ${top ? 'top-3 right-3 text-right' : 'bottom-4 left-3 text-left'} w-fit rounded-xl bg-black/35 backdrop-blur-xl ring-1 ring-white/15 px-3 py-2 shadow-lg shadow-black/30`}
+              className={`absolute ${top ? 'top-3 right-3 text-right' : 'bottom-4 left-3 text-left'} w-fit rounded-xl bg-bg/85 border border-line px-3 py-2 shadow-md`}
               style={{ maxWidth: `calc(100% - ${BAND + 24}px)`, opacity: textOp, filter: textBlur }}
             >
-              <div className="serif text-[20px] leading-[1.05] font-semibold text-white line-clamp-3" lang="es" style={{ textWrap: 'balance' } as React.CSSProperties}>
+              <div className="serif text-[18px] leading-[1.1] font-semibold text-ink line-clamp-3" lang="es" style={{ textWrap: 'balance' } as React.CSSProperties}>
                 {side.title}
               </div>
-              {side.subtitle && <div className="text-[11.5px] text-white/75 mt-0.5 line-clamp-1">{side.subtitle}</div>}
+              {side.subtitle && <div className="text-meta mt-0.5 line-clamp-1">{side.subtitle}</div>}
             </motion.div>
           </>
         )}
@@ -350,22 +347,16 @@ function DuelCard({ side, which, full, dims, p, picked, onTap }: { side: Side; w
 
 const lerp = (a: number, b: number, k: number) => a + (b - a) * k
 
-/** Centro del corte: la pregunta en cristal con la línea pequeña de qué hace cada lado. */
-function CenterHint({ p, picked, texts }: { p: MotionValue<number>; picked: null | 'a' | 'b'; texts: DuelTexts }) {
-  const l = useTransform(p, [-1, 0], [1, 0.55])
-  const r = useTransform(p, [0, 1], [0.55, 1])
-  // el cristal se difumina y desaparece a medida que crece la elegida
-  const fade = useTransform(p, (v) => Math.max(0, 1 - Math.abs(v) * 1.4))
-  const blurF = useTransform(p, (v) => `blur(${Math.min(1, Math.abs(v)) * 10}px)`)
+/** Centro del corte: §5.5 solo una «o» pequeña en serif sobre un círculo bg con borde line. */
+function CenterHint({ p, picked }: { p: MotionValue<number>; picked: null | 'a' | 'b'; texts?: DuelTexts }) {
+  const fade = useTransform(p, (v) => Math.max(0, 1 - Math.abs(v) * 1.5))
   if (picked) return null
   return (
-    <motion.div style={{ opacity: fade, filter: blurF }} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-[3deg] z-10 pointer-events-none rounded-[22px] bg-white/[0.12] backdrop-blur-2xl ring-1 ring-white/35 px-5 py-2.5 shadow-[0_10px_40px_-8px_rgba(0,0,0,0.7),0_0_36px_-8px_rgba(245,181,68,0.55)] text-center whitespace-nowrap">
-      <div className="serif text-[19px] leading-none font-semibold text-white">{texts.question}</div>
-      <div className="mt-1.5 text-[12px] font-semibold tracking-wide flex items-center justify-center gap-2">
-        <motion.span style={{ color: DUEL_LEFT, opacity: l }}>{texts.hint[0]}</motion.span>
-        <span className="text-white/40">·</span>
-        <motion.span style={{ color: DUEL_RIGHT, opacity: r }}>{texts.hint[1]}</motion.span>
-      </div>
+    <motion.div
+      style={{ opacity: fade }}
+      className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none w-8 h-8 rounded-full bg-bg border border-line flex items-center justify-center shadow-md"
+    >
+      <span className="serif italic text-[14px] text-mute">o</span>
     </motion.div>
   )
 }

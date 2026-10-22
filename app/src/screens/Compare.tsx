@@ -13,6 +13,9 @@ import { Poster } from '../components/Poster'
 import { CommentSheet } from '../components/RatingFlow'
 import { Chip, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
+import { ScreenTitle } from '../components/ScreenTitle'
+import { Button } from '../components/Button'
+import { Group, Row } from '../components/Group'
 
 export const PAIRS_PER_SESSION = 7
 
@@ -162,58 +165,77 @@ export function Compare() {
   }, [summary])
 
   return (
-    <div className="h-full flex flex-col relative">
-      <div className="safe-top px-4 pb-1.5 shrink-0">
-        <div className="flex gap-2 overflow-x-auto no-scrollbar">
-          {SHELVES.map((s) => <Chip key={s} active={s === shelf} onClick={() => choose(s)}>{SHELF_LABEL[s].plural}</Chip>)}
-        </div>
-        {current?.kind !== 'empty' && (
-          <div className="flex items-center gap-3 mt-2">
-            <div className="flex-1">
-              <div className="flex items-center justify-between text-xs text-mute mb-1">
-                <span>Comparación <b className="text-ink">{Math.min(count + (summary ? 0 : 1), PAIRS_PER_SESSION)} / {PAIRS_PER_SESSION}</b></span>
-                <span>{ranking.length + pending} en tu ranking</span>
-              </div>
-              <div className="h-1.5 rounded-full bg-line overflow-hidden" role="progressbar" aria-valuemin={0} aria-valuemax={PAIRS_PER_SESSION} aria-valuenow={count}>
-                <div className="h-full bg-accent rounded-full transition-all" style={{ width: `${(count / PAIRS_PER_SESSION) * 100}%` }} />
-              </div>
-            </div>
-            <button onClick={doUndo} disabled={!undo} className="min-h-[36px] px-3 rounded-full bg-surface border border-line text-mute text-xs flex items-center gap-1.5 disabled:opacity-30">
-              <Icon name="undo" size={15} /> Deshacer
+    <div className="h-full flex flex-col relative bg-bg">
+      <ScreenTitle
+        label={`COMPARAR · ${SHELF_LABEL[shelf].plural.toUpperCase()}`}
+        step={
+          current?.kind !== 'empty' && !summary
+            ? { current: Math.min(count + 1, PAIRS_PER_SESSION), total: PAIRS_PER_SESSION }
+            : undefined
+        }
+        title={summary ? 'Sesión completada' : current?.kind === 'empty' ? 'Tu ranking' : '¿Cuál te gustó más?'}
+        subtitle={
+          summary
+            ? `${PAIRS_PER_SESSION} comparaciones en ${SHELF_LABEL[shelf].plural.toLowerCase()}`
+            : current?.kind !== 'empty'
+            ? `${ranking.length + pending} obras en tu ranking`
+            : undefined
+        }
+        action={
+          undo && !summary ? (
+            <button
+              onClick={doUndo}
+              className="text-meta text-mute hover:text-ink hover:underline flex items-center gap-1 active:scale-95"
+            >
+              <Icon name="undo" size={14} /> Deshacer
             </button>
-          </div>
-        )}
+          ) : undefined
+        }
+      />
+
+      <div className="px-5 pb-3 shrink-0">
+        <div className="flex gap-2 overflow-x-auto no-scrollbar">
+          {SHELVES.map((s) => (
+            <Chip key={s} active={s === shelf} onClick={() => choose(s)}>
+              {SHELF_LABEL[s].plural}
+            </Chip>
+          ))}
+        </div>
       </div>
 
-      <div className="flex-1 min-h-0 px-4 pb-8 pt-2 flex flex-col">
+      <div className="flex-1 min-h-0 px-5 pb-6 flex flex-col">
         {summary && moves ? (
           <div className="flex-1 min-h-0 flex flex-col pop">
-            <div className="p-4 rounded-3xl bg-accent/15 border border-accent/40 mb-3 flex items-center gap-3.5">
-              <span className="text-3xl">🎉</span>
-              <div>
-                <h2 className="serif text-[26px] font-bold leading-tight text-ink">¡Sesión completada!</h2>
-                <p className="text-mute text-xs mt-0.5">{PAIRS_PER_SESSION} comparaciones en {SHELF_LABEL[shelf].plural.toLowerCase()}.</p>
-              </div>
-            </div>
-            <div className="flex-1 min-h-0 scroll-y mt-2 space-y-4">
+            <div className="flex-1 min-h-0 scroll-y space-y-4">
               <MoveList title="Han subido" arrow="▲" color="#3ec878" rows={moves.up} />
               <MoveList title="Han bajado" arrow="▼" color="#ef4b4b" rows={moves.down} />
               <MoveList title="Nuevas en tu ranking" arrow="★" color="#F5B544" rows={moves.added} />
-              {!moves.up.length && !moves.down.length && !moves.added.length && <p className="text-sm text-mute">Tu ranking se ha confirmado: no ha cambiado nada.</p>}
+              {!moves.up.length && !moves.down.length && !moves.added.length && (
+                <p className="text-body text-mute py-4">Tu ranking se ha confirmado: no ha cambiado nada.</p>
+              )}
             </div>
-            <div className="flex gap-2 mt-3">
-              <button onClick={() => nav(`/estanteria/${shelf}`)} className="flex-1 min-h-[52px] rounded-2xl bg-surface border border-line font-semibold">Ver mi ranking</button>
-              <button onClick={resetSession} className="flex-1 min-h-[52px] rounded-2xl bg-accent text-accent-ink font-semibold">Seguir valorando</button>
+            <div className="flex gap-3 mt-4">
+              <Button variant="secondary" onClick={() => nav(`/estanteria/${shelf}`)} className="flex-1">
+                Ver mi ranking
+              </Button>
+              <Button variant="primary" onClick={resetSession} className="flex-1">
+                Seguir valorando
+              </Button>
             </div>
           </div>
         ) : pair ? (
           <SwipePair left={sideOf(pair.left)} right={sideOf(pair.right)} onChoose={onChoose} kind="rank" />
         ) : current?.kind === 'empty' ? (
-          <div className="flex-1 flex flex-col items-center justify-center text-center gap-3 px-4">
-            <div className="text-5xl">⚖️</div>
-            <h2 className="serif text-2xl font-semibold">Nada que comparar en {SHELF_LABEL[shelf].plural}</h2>
-            <p className="text-mute text-sm">Necesitas al menos dos {SHELF_LABEL[shelf].seen} para ordenarlas. Haz swipe en Descubrir o carga unos datos de ejemplo.</p>
-            <button onClick={loadSample} className="mt-1 min-h-[50px] px-6 rounded-2xl bg-accent text-accent-ink font-semibold">Importar datos de ejemplo</button>
+          <div className="flex-1 flex flex-col items-center justify-center text-center gap-3 px-5">
+            <h2 className="text-title text-ink">Nada que comparar en {SHELF_LABEL[shelf].plural.toLowerCase()}</h2>
+            <p className="text-mute text-body max-w-sm">
+              Necesitas al menos dos {SHELF_LABEL[shelf].seen} para ordenarlas. Haz swipe en Descubrir o carga unos datos de ejemplo.
+            </p>
+            <div className="mt-2">
+              <Button variant="primary" onClick={loadSample}>
+                Importar datos de ejemplo
+              </Button>
+            </div>
           </div>
         ) : null}
       </div>
@@ -227,20 +249,26 @@ export function Compare() {
 function MoveList({ title, arrow, color, rows }: { title: string; arrow: string; color: string; rows: { id: string; delta: number | null }[] }) {
   if (!rows.length) return null
   return (
-    <section>
-      <h3 className="text-xs font-semibold uppercase tracking-wider text-mute mb-1.5">{title}</h3>
-      <ul className="space-y-1.5">
-        {rows.map((r) => {
-          const it = getItem(r.id)!
-          return (
-            <li key={r.id} className="flex items-center gap-3 bg-surface rounded-2xl border border-line p-2">
-              <Poster item={it} className="w-9 h-[54px] rounded-lg shrink-0" />
-              <span className="flex-1 min-w-0 serif font-semibold leading-tight line-clamp-2">{it.title}</span>
-              <span className="font-bold tabular-nums text-sm" style={{ color }}>{arrow} {r.delta ? Math.abs(r.delta) : ''}</span>
-            </li>
-          )
-        })}
-      </ul>
-    </section>
+    <Group title={title}>
+      {rows.map((r) => {
+        const it = getItem(r.id)!
+        return (
+          <Row
+            key={r.id}
+            title={
+              <div className="flex items-center gap-3">
+                <Poster item={it} className="w-8 h-12 rounded-[6px] shrink-0 object-cover" />
+                <span className="serif text-item font-medium line-clamp-1">{it.title}</span>
+              </div>
+            }
+            right={
+              <span className="font-semibold tabular-nums text-sm text-right shrink-0" style={{ color }}>
+                {arrow} {r.delta ? Math.abs(r.delta) : ''}
+              </span>
+            }
+          />
+        )
+      })}
+    </Group>
   )
 }
