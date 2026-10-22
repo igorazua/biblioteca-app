@@ -4,7 +4,7 @@ import { Icon } from './Icon'
 export interface ScreenTitleProps {
   label?: string
   step?: { current: number; total: number }
-  title: string
+  title?: string
   subtitle?: string
   action?: ReactNode
   onBack?: () => void
@@ -57,7 +57,7 @@ export function ScreenTitle({
       )}
 
       {/* Título display principal (máx 2 líneas, alineado a la izquierda) */}
-      <h1 className="text-display text-ink text-balance">{title}</h1>
+      {title && <h1 className="text-display text-ink text-balance">{title}</h1>}
 
       {/* Subtítulo opcional */}
       {subtitle && <p className="text-meta mt-1.5 text-balance">{subtitle}</p>}

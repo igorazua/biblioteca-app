@@ -14,7 +14,8 @@ import { Discover } from './screens/Discover'
 import { Library } from './screens/Library'
 import { Shelf } from './screens/Shelf'
 import { ItemDetail } from './screens/ItemDetail'
-import { Compare } from './screens/Compare'
+import { CompareHome } from './screens/CompareHome'
+import { CompareSession } from './screens/CompareSession'
 import { WhatToWatch } from './screens/WhatToWatch'
 import { Profile } from './screens/Profile'
 import { Onboarding } from './screens/Onboarding'
@@ -41,7 +42,8 @@ function Frame() {
             <Route path="descubrir" element={<Discover />} />
             <Route path="decidir" element={<WhatToWatch />} />
             <Route path="que-vemos" element={<Navigate to="/decidir" replace />} />
-            <Route path="comparar" element={<Compare />} />
+            <Route path="comparar" element={<CompareHome />} />
+            <Route path="comparar/:shelf" element={<CompareSession />} />
             <Route path="perfil" element={<Profile />} />
           </Route>
           <Route path="estanteria/:type" element={<Shelf />} />
