@@ -12,6 +12,8 @@ import { COUNTRIES } from '../lib/countries'
 import { Avatar, PlatformPicker, Toast } from '../components/ui'
 import { Group } from '../components/Group'
 import { Icon } from '../components/Icon'
+import { ScreenTitle } from '../components/ScreenTitle'
+import { Button } from '../components/Button'
 
 async function processAvatarImage(file: File): Promise<Blob> {
   return new Promise((resolve, reject) => {
@@ -144,20 +146,21 @@ export function EditProfile() {
   }
 
   return (
-    <div className="h-full scroll-y pb-12">
-      <header className="safe-top px-3 pb-3 flex items-center gap-1 min-h-[52px]">
-        <button onClick={() => nav(-1)} className="min-h-[44px] px-2 text-sm font-semibold text-mute hover:text-ink">
-          Cancelar
-        </button>
-        <h1 className="flex-1 text-center text-base font-bold">Editar perfil</h1>
-        <button
-          onClick={save}
-          disabled={saving || yearInvalid}
-          className="min-h-[44px] px-2 text-sm font-bold text-accent disabled:opacity-40"
-        >
-          {saving ? 'Guardando…' : 'Guardar'}
-        </button>
-      </header>
+    <div className="h-full scroll-y pb-12 bg-bg">
+      <ScreenTitle
+        label="PERFIL"
+        title="Editar perfil"
+        onBack={() => nav(-1)}
+        action={
+          <button
+            onClick={save}
+            disabled={saving || yearInvalid}
+            className="text-meta font-medium text-accent hover:underline disabled:opacity-40"
+          >
+            {saving ? 'Guardando…' : 'Guardar'}
+          </button>
+        }
+      />
 
       <div className="px-5 space-y-6">
         {/* Foto y color */}

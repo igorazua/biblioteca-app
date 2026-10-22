@@ -2,9 +2,10 @@
 // Cada servicio acaba devolviendo ImportRow[]; el emparejado, la revisión y la aplicación son los de lib/import.
 import { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ScreenHeader, Sheet, Tag, Toast } from '../components/ui'
+import { Sheet, Tag, Toast } from '../components/ui'
 import { Group } from '../components/Group'
 import { ImportFlowView } from '../components/ImportFlowView'
+import { ScreenTitle } from '../components/ScreenTitle'
 import { track } from '../store/useEvents'
 import { useImportFlow } from '../lib/import/useImportFlow'
 import { parseLetterboxd } from '../lib/import/letterboxd'
@@ -92,7 +93,11 @@ export function Connect() {
 
   return (
     <div className="h-full flex flex-col bg-bg text-ink scroll-y">
-      <ScreenHeader title="Conectar" onBack={() => (inFlow ? flow.reset() : nav(-1))} />
+      <ScreenTitle
+        label="CONECTAR"
+        title="Conectar"
+        onBack={() => (inFlow ? flow.reset() : nav(-1))}
+      />
 
       {inFlow ? (
         <ImportFlowView flow={flow} />

@@ -9,6 +9,7 @@ import { useAuth } from '../store/useAuth'
 import { Confirm, Sheet, Toast } from '../components/ui'
 import { Group, Row, Toggle } from '../components/Group'
 import { Icon } from '../components/Icon'
+import { ScreenTitle } from '../components/ScreenTitle'
 import { pushLocalEntriesToCloud, pullCloudEntries } from '../lib/sync'
 import { subscribeToPush, isPushSupported } from '../lib/push'
 import { supabase } from '../lib/supabase'
@@ -94,13 +95,12 @@ export function Settings() {
   }
 
   return (
-    <div className="h-full scroll-y pb-12">
-      <header className="safe-top px-3 pb-3 flex items-center gap-1 min-h-[52px]">
-        <button onClick={() => nav(-1)} aria-label="Volver" className="w-11 h-11 flex items-center justify-center rounded-full active:bg-surface2">
-          <Icon name="back" />
-        </button>
-        <h1 className="text-xl font-semibold flex-1">Ajustes</h1>
-      </header>
+    <div className="h-full scroll-y pb-12 bg-bg">
+      <ScreenTitle
+        label="AJUSTES"
+        title="Ajustes"
+        onBack={() => nav(-1)}
+      />
 
       <div className="px-5 space-y-7">
         {/* Cuenta */}

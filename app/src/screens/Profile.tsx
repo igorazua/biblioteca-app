@@ -1,7 +1,7 @@
 // app/src/screens/Profile.tsx
 // Perfil: lo que ven los demás de ti. Aquí no se edita nada: «Editar perfil» abre tus datos y el engranaje, los Ajustes.
 import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { friends, getItem } from '../data/catalog'
 import { APP_NAME } from '../config'
@@ -17,11 +17,14 @@ import { countryName } from '../lib/countries'
 import { Poster, posterLayoutId } from '../components/Poster'
 import { Avatar, Sheet, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
+import { ScreenTitle } from '../components/ScreenTitle'
+import { Button } from '../components/Button'
 import { useAuth } from '../store/useAuth'
 import { useFriends } from '../store/useFriends'
 import { FindFriends } from '../components/FindFriends'
 
 export function Profile() {
+  const nav = useNavigate()
   const profile = useStore((s) => s.profile)
   const entries = useStore((s) => s.entries)
   const rankings = useStore((s) => s.rankings)
@@ -114,48 +117,48 @@ export function Profile() {
   const unnamed = !profile.name || profile.name === 'Tú'
 
   return (
-    <div className="h-full scroll-y pb-8">
-      <header className="safe-top px-5 pb-2 flex items-center justify-between min-h-[52px]">
-        <h1 className="text-xl font-semibold">Perfil</h1>
-        <Link to="/ajustes" aria-label="Ajustes" className="w-11 h-11 -mr-2 rounded-full flex items-center justify-center text-ink/80 active:bg-surface2">
-          <Icon name="gear" size={22} />
-        </Link>
-      </header>
+    <div className="h-full scroll-y pb-8 bg-bg">
+      <ScreenTitle
+        label="PERFIL"
+        title={unnamed ? 'Tu perfil' : profile.name}
+        subtitle={[authProfile?.handle ? `@${authProfile.handle}` : null, place ?? null].filter(Boolean).join(' · ')}
+        action={
+          <Link to="/ajustes" aria-label="Ajustes" className="w-9 h-9 rounded-full flex items-center justify-center text-mute hover:text-ink active:scale-95 transition-transform">
+            <Icon name="gear" size={20} />
+          </Link>
+        }
+      />
 
       <div className="px-5 space-y-7">
-        {/* Cabecera: foto, nombre, @usuario, país y contadores */}
+        {/* Cabecera: foto y contadores */}
         <div>
           <div className="flex items-center gap-4">
-            <Avatar name={profile.name} color={profile.avatarColor} url={profile.avatarUrl} size={80} />
+            <Avatar name={profile.name} color={profile.avatarColor} url={profile.avatarUrl} size={72} />
             <div className="flex-1 grid grid-cols-3 text-center">
               <Counter value={stats.seen} label="vistas" />
               <Counter value={stats.pending} label="pendientes" />
               <Counter value={realFriends.length} label="amigos" />
             </div>
           </div>
-          <div className="mt-3">
-            <div className="serif text-[22px] font-bold leading-tight">{unnamed ? 'Sin nombre' : profile.name}</div>
-            <div className="text-xs text-mute mt-0.5">
-              {[authProfile?.handle ? `@${authProfile.handle}` : null, place ?? null].filter(Boolean).join(' · ')}
-            </div>
-          </div>
-          <div className="flex gap-2 mt-4">
-            <Link
-              to="/perfil/editar"
-              className="flex-1 min-h-[40px] rounded-xl bg-surface2 border border-line text-sm font-semibold flex items-center justify-center active:scale-[0.98] transition-transform"
+          <div className="flex gap-2.5 mt-4">
+            <Button
+              variant="secondary"
+              onClick={() => nav('/perfil/editar')}
+              className="flex-1"
             >
               Editar perfil
-            </Link>
-            <button
+            </Button>
+            <Button
+              variant="secondary"
               onClick={() => setShareOpen(true)}
-              className="flex-1 min-h-[40px] rounded-xl bg-surface2 border border-line text-sm font-semibold flex items-center justify-center gap-1.5 active:scale-[0.98] transition-transform"
+              className="flex-1"
+              icon={<Icon name="share" size={16} />}
             >
-              <Icon name="share" size={15} />
               Compartir
-            </button>
+            </Button>
           </div>
           {(unnamed || (user && !authProfile?.handle)) && (
-            <Link to="/perfil/editar" className="mt-3 flex items-center gap-3 p-3 rounded-2xl bg-accent/10 border border-accent/30 text-sm">
+            <Link to="/perfil/editar" className="mt-3 flex items-center gap-3 p-3 rounded-2xl bg-surface border border-line text-meta text-mute hover:text-ink">
               <Icon name="edit" size={16} className="text-accent shrink-0" />
               <span className="flex-1">{unnamed ? 'Pon tu nombre para que tus amigos te reconozcan' : 'Elige tu @usuario para que te encuentren'}</span>
               <Icon name="chevron" size={16} className="text-mute" />
@@ -165,7 +168,7 @@ export function Profile() {
 
         {/* «Lo que más me marcó» (top 3 por estantería) */}
         <section aria-label="Lo que más me marcó">
-          <h2 className="serif text-[20px] font-semibold mb-3">Lo que más me marcó</h2>
+          <h2 className="text-title font-medium text-ink mb-3">Lo que más me marcó</h2>
           {hasTop ? (
             <div className="space-y-4">
               {SHELVES.filter((t) => (rankings[t] ?? []).length > 0).map((t) => (
@@ -183,10 +186,10 @@ export function Profile() {
                       return (
                         <Link key={id} to={`/i/${encodeURIComponent(id)}`}>
                           <div className="relative">
-                            <Poster item={it} layoutId={posterLayoutId(it.id)} style={{ borderRadius: 14 }} className="w-full aspect-[2/3] border border-line" />
-                            <span className="absolute top-1.5 left-1.5 w-6 h-6 rounded-full bg-accent text-accent-ink text-xs font-bold flex items-center justify-center">{i + 1}</span>
+                            <Poster item={it} layoutId={posterLayoutId(it.id)} style={{ borderRadius: 10 }} className="w-full aspect-[2/3] rounded-[10px]" />
+                            <span className="absolute top-1.5 left-1.5 w-5 h-5 rounded-full bg-accent text-accent-ink text-[11px] font-bold flex items-center justify-center tabular-nums">{i + 1}</span>
                           </div>
-                          <div className="serif text-sm font-semibold leading-tight mt-1.5 line-clamp-2">{it.title}</div>
+                          <div className="serif text-item text-ink leading-tight mt-1.5 line-clamp-2">{it.title}</div>
                         </Link>
                       )
                     })}
@@ -195,25 +198,25 @@ export function Profile() {
               ))}
             </div>
           ) : (
-            <Link to="/comparar" className="block text-sm text-mute rounded-3xl border border-dashed border-line p-4">
-              Cuando ordenes tus obras en <span className="text-accent font-semibold">Comparar</span>, aquí saldrá tu top 3 de cada estantería.
+            <Link to="/comparar" className="block text-body text-mute rounded-2xl border border-dashed border-line p-4">
+              Cuando ordenes tus obras en <span className="text-accent font-medium">Comparar</span>, aquí saldrá tu top 3 de cada estantería.
             </Link>
           )}
         </section>
 
         {/* Mis números */}
         <section aria-label="Estadísticas">
-          <h2 className="serif text-[20px] font-semibold mb-3">Mis números</h2>
+          <h2 className="text-title font-medium text-ink mb-3">Mis números</h2>
           <div className="grid grid-cols-2 gap-2.5">
             {SHELVES.map((t) => (
               <Link key={t} to={`/estanteria/${t}`} className="bg-surface rounded-2xl border border-line p-3 active:bg-surface2">
-                <div className="text-2xl font-bold tabular-nums leading-none">{stats.perShelf[t] ?? 0}</div>
-                <div className="text-xs text-mute mt-1 truncate">{`${SHELF_LABEL[t].plural} ${SHELF_LABEL[t].seen}`}</div>
+                <div className="text-2xl font-semibold tabular-nums leading-none text-ink">{stats.perShelf[t] ?? 0}</div>
+                <div className="text-meta text-mute mt-1.5 truncate">{`${SHELF_LABEL[t].plural} ${SHELF_LABEL[t].seen}`}</div>
               </Link>
             ))}
             <div className="bg-surface rounded-2xl border border-line p-3">
-              <div className="text-lg font-bold leading-none truncate">{stats.topGenre ?? '—'}</div>
-              <div className="text-xs text-mute mt-1">Tu género más frecuente</div>
+              <div className="text-lg font-semibold leading-none truncate text-ink">{stats.topGenre ?? '—'}</div>
+              <div className="text-meta text-mute mt-1.5">Tu género más frecuente</div>
             </div>
           </div>
         </section>
@@ -221,7 +224,7 @@ export function Profile() {
         {/* Amigos y afinidad */}
         <section aria-label="Amigos">
           <div className="flex items-center justify-between mb-3">
-            <h2 className="serif text-[20px] font-semibold">Amigos</h2>
+            <h2 className="text-title font-medium text-ink">Amigos</h2>
             {user && (
               <button
                 onClick={() => setFindFriends(true)}
