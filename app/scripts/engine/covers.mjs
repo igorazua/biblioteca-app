@@ -32,6 +32,8 @@ if (!SUPABASE_URL || !SUPABASE_KEY) {
 }
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY)
+const ORIGINAL_FILE = join(ROOT, 'scripts', 'cache', 'posters', 'original.json')
+const ORIGINAL_POSTERS = existsSync(ORIGINAL_FILE) ? JSON.parse(readFileSync(ORIGINAL_FILE, 'utf8')) : {}
 const BUCKET = 'biblio-covers'
 
 const PALETTES = [
@@ -172,8 +174,14 @@ async function processItem(item) {
   } else {
     let imageBuffer = null
 
+    // 0. El póster original de la semilla (IMDb, TVmaze, Open Library, BGG, Deezer), guardado por restore-posters.mjs.
+    //    Va siempre primero: la imagen de Wikidata (P18) muchas veces no es el póster.
+    if (ORIGINAL_POSTERS[item.id]) {
+      imageBuffer = await fetchBufferWithTimeout(ORIGINAL_POSTERS[item.id])
+    }
+
     // 1. Intentar descargar URL actual
-    if (currentUrl) {
+    if (!imageBuffer && currentUrl) {
       imageBuffer = await fetchBufferWithTimeout(currentUrl)
     }
 
