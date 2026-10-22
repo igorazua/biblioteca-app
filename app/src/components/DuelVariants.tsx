@@ -1,7 +1,7 @@
 // app/src/components/DuelVariants.tsx
 // Diseños del duelo A/B para probarlos en el móvil (REFERENCIAS_UI, 21/10/2026). Igor quiere que todos respondan
 // al gesto (se ve qué estás votando mientras arrastras) y que el póster se vea entero, nunca recortado.
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState, type RefObject } from 'react'
 import { animate, motion, useMotionValue, useTransform, type MotionValue } from 'framer-motion'
 import { haptic } from '../lib/haptics'
 import type { Side } from './SwipePair'
@@ -60,143 +60,220 @@ export function FullPoster({ side, className = '' }: { side: Side; className?: s
   )
 }
 
-const FAN_COMMIT = 0.55 // progreso a partir del cual soltar la carta la elige
+/** Tamaño en px de una caja (se actualiza al girar el móvil o cambiar la ventana). */
+export function useBoxSize(ref: RefObject<HTMLElement | null>) {
+  const [size, setSize] = useState({ w: 375, h: 600 })
+  useLayoutEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const upd = () => setSize((o) => (o.w === el.offsetWidth && o.h === el.offsetHeight ? o : { w: el.offsetWidth, h: el.offsetHeight }))
+    upd()
+    const ro = new ResizeObserver(upd)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [ref])
+  return size
+}
 
-/* 3 · Cartas en abanico: se arrastra la carta hacia el centro (o hacia arriba) y crece mientras la arrastras;
-   pasado el umbral, al soltarla ocupa toda la pantalla y la otra desaparece. Tocarla también la elige. */
+const FAN_COMMIT = 0.28 // fracción del ancho para elegir al soltar (igual que el diseño 1)
+const clamp01 = (v: number) => Math.max(0, Math.min(1, v))
+const lerp = (a: number, b: number, k: number) => a + (b - a) * k
+
+/** Reparto de la mesa del abanico según el tamaño disponible. */
+function fanLayout(w: number, h: number) {
+  const qTop = 64 // hueco de la pregunta
+  const hintH = 64 // hueco de la pista inferior (y de la pastilla de diseño)
+  const titleH = 56
+  const gap = 14
+  const availH = Math.max(220, h - qTop - hintH)
+  const cardW = Math.min(w * 0.48, (availH - titleH - gap) / 1.5)
+  const cardH = cardW * 1.5
+  const top = qTop + (availH - (cardH + gap + titleH)) / 2
+  return {
+    w,
+    h,
+    cardW,
+    cardH,
+    cy: top + cardH / 2,
+    titleTop: top + cardH + gap,
+    cx: { a: w * 0.3, b: w * 0.7 },
+    fitW: Math.min(w, h / 1.5), // el póster entero, de borde a borde en ancho o en alto
+  }
+}
+type FanLayout = ReturnType<typeof fanLayout>
+
+/**
+ * 3 · Cartas en abanico, sin arrastre libre. Se desliza en horizontal en cualquier parte: a la derecha elige la carta
+ * de la izquierda, a la izquierda la de la derecha («empujarla hacia el centro»). La elegida sigue una trayectoria fija
+ * hacia el centro, se endereza y crece hasta casi llenar la pantalla; la otra se apaga. Todo va ligado al progreso del gesto.
+ */
 export function DuelFan({ left, right, onChoose, question }: { left: Side; right: Side; onChoose: (w: 'a' | 'b') => void; question?: string }) {
   const box = useRef<HTMLDivElement>(null)
-  const pA = useMotionValue(0)
-  const pB = useMotionValue(0)
+  const size = useBoxSize(box)
+  const L = fanLayout(size.w, size.h)
+  const lay = useRef(L)
+  lay.current = L
+  const x = useMotionValue(0)
   const [picked, setPicked] = useState<null | 'a' | 'b'>(null)
+  const dragged = useRef(false)
+  const W = () => box.current?.offsetWidth ?? lay.current.w
+
   useEffect(() => {
     setPicked(null)
-    pA.set(0)
-    pB.set(0)
-  }, [left.key, right.key, pA, pB])
+    x.set(0)
+  }, [left.key, right.key, x])
+
+  // q: -1 (elige la de la derecha) … 1 (elige la de la izquierda)
+  const q = useTransform(x, (v) => Math.max(-1, Math.min(1, v / (W() * FAN_COMMIT))))
+  const gA = useTransform(q, (v) => Math.max(0, v))
+  const gB = useTransform(q, (v) => Math.max(0, -v))
+  const any = useTransform(q, (v) => Math.abs(v))
+  const uiOp = useTransform(any, (v) => clamp01(1 - v * 1.7))
+  const uiBlur = useTransform(any, (v) => `blur(${Math.min(1, v) * 9}px)`)
 
   const choose = (w: 'a' | 'b') => {
     if (picked) return
     setPicked(w)
     haptic('success')
-    setTimeout(() => onChoose(w), 520)
+    animate(x, w === 'a' ? W() * FAN_COMMIT : -W() * FAN_COMMIT, { type: 'spring', stiffness: 300, damping: 30 })
+    setTimeout(() => onChoose(w), 420)
   }
 
   return (
-    <div className="flex-1 min-h-0 flex flex-col gap-3 select-none">
-      <p className="serif text-[22px] font-semibold text-center leading-tight shrink-0">{question ?? '¿Cuál prefieres?'}</p>
-      <div ref={box} className="relative flex-1 min-h-0 -mx-4">
-        <FanCard side={left} w="a" me={pA} other={pB} picked={picked} box={box} onChoose={choose} />
-        <FanCard side={right} w="b" me={pB} other={pA} picked={picked} box={box} onChoose={choose} />
-      </div>
-      <p className="text-center text-xs text-mute shrink-0 mb-10">Arrastra hacia el centro la que prefieras</p>
-    </div>
-  )
-}
-
-function FanCard({
-  side,
-  w,
-  me,
-  other,
-  picked,
-  box,
-  onChoose,
-}: {
-  side: Side
-  w: 'a' | 'b'
-  me: MotionValue<number>
-  other: MotionValue<number>
-  picked: null | 'a' | 'b'
-  box: React.RefObject<HTMLDivElement | null>
-  onChoose: (w: 'a' | 'b') => void
-}) {
-  const isLeft = w === 'a'
-  const card = useRef<HTMLButtonElement>(null)
-  const x = useMotionValue(0)
-  const y = useMotionValue(0)
-  const grow = useMotionValue(0) // 0 → tamaño de carta, 1 → pantalla completa
-  const dragged = useRef(false)
-
-  // Progreso del gesto: hacia el centro (x) o hacia arriba (y).
-  useEffect(() => {
-    const upd = () => {
-      const W = box.current?.offsetWidth ?? 360
-      const toward = (isLeft ? x.get() : -x.get()) / (W * 0.32)
-      const up = -y.get() / (W * 0.45)
-      me.set(Math.max(0, Math.min(1, Math.max(toward, up))))
-    }
-    const a = x.on('change', upd)
-    const b = y.on('change', upd)
-    return () => {
-      a()
-      b()
-    }
-  }, [x, y, me, isLeft, box])
-
-  useEffect(() => {
-    x.set(0)
-    y.set(0)
-    grow.set(0)
-  }, [side.key, x, y, grow])
-
-  const rotate = useTransform([me, grow], ([p, g]: number[]) => (isLeft ? -7 : 7) * (1 - p) * (1 - g))
-  const scale = useTransform([me, grow], ([p, g]: number[]) => 1 + p * 0.22 + g * 0.55)
-  const opacity = useTransform(other, [0, 1], [1, 0.25])
-  const zIndex = useTransform(me, (p) => (p > 0.02 ? 3 : 2))
-
-  const expand = () => {
-    const W = box.current?.offsetWidth ?? 360
-    const r = card.current?.getBoundingClientRect()
-    const b = box.current?.getBoundingClientRect()
-    // llevar el centro de la carta al centro de la caja
-    const dx = r && b ? b.left + b.width / 2 - (r.left + r.width / 2) + x.get() : isLeft ? W * 0.2 : -W * 0.2
-    const dy = r && b ? b.top + b.height / 2 - (r.top + r.height / 2) + y.get() : 0
-    animate(x, dx, { type: 'spring', stiffness: 260, damping: 28 })
-    animate(y, dy, { type: 'spring', stiffness: 260, damping: 28 })
-    animate(me, 1, { duration: 0.2 })
-    animate(grow, 1, { type: 'spring', stiffness: 220, damping: 26 })
-    onChoose(w)
-  }
-
-  const won = picked === w
-  const lost = picked !== null && !won
-
-  return (
-    <motion.button
-      ref={card}
-      type="button"
-      drag={!picked}
-      dragMomentum={false}
-      dragElastic={0.9}
-      onDragStart={() => {
+    <motion.div
+      ref={box}
+      className="relative flex-1 min-h-0 -mx-4 overflow-hidden select-none"
+      style={{ touchAction: 'pan-y' }}
+      onPanStart={() => {
         dragged.current = true
       }}
-      onDragEnd={() => {
-        if (me.get() >= FAN_COMMIT) expand()
-        else {
-          animate(x, 0, { type: 'spring', stiffness: 380, damping: 30 })
-          animate(y, 0, { type: 'spring', stiffness: 380, damping: 30 })
+      onPan={(_, info) => {
+        if (!picked) x.set(info.offset.x)
+      }}
+      onPanEnd={(_, info) => {
+        const ox = info.offset.x
+        if (!picked) {
+          if (Math.abs(ox) > W() * FAN_COMMIT || Math.abs(info.velocity.x) > 650) choose(ox > 0 ? 'a' : 'b')
+          else animate(x, 0, { type: 'spring', stiffness: 420, damping: 32 })
         }
         setTimeout(() => {
           dragged.current = false
         }, 60)
       }}
-      onClick={() => {
-        if (!dragged.current && !picked) expand()
-      }}
-      animate={lost ? { opacity: 0, y: 60 } : undefined}
-      className={`absolute top-[4%] w-[47%] aspect-[2/3] ${isLeft ? 'left-[6%] origin-bottom-right' : 'right-[6%] origin-bottom-left'}`}
-      style={{ x, y, rotate, scale, opacity: lost ? undefined : opacity, zIndex: won ? 5 : zIndex, touchAction: 'none' }}
-      aria-label={`Elegir ${side.title}`}
+      role="group"
+      aria-label="Desliza a la derecha para elegir la carta de la izquierda, o a la izquierda para la de la derecha"
     >
-      <div className={`absolute inset-0 rounded-2xl overflow-hidden border-2 shadow-2xl ${won ? 'border-accent' : 'border-surface'}`}>
+      {/* Fondo difuminado de la elegida: aparece a medida que crece, para que no queden huecos vacíos */}
+      <FanBackdrop side={left} g={gA} />
+      <FanBackdrop side={right} g={gB} />
+
+      <motion.p
+        className="absolute inset-x-4 top-3 serif text-[22px] font-semibold text-center leading-tight pointer-events-none"
+        style={{ opacity: uiOp, filter: uiBlur }}
+      >
+        {question ?? '¿Cuál prefieres?'}
+      </motion.p>
+
+      <FanCard side={left} which="a" g={gA} og={gB} lay={lay} picked={picked} onTap={() => { if (!dragged.current) choose('a') }} />
+      <FanCard side={right} which="b" g={gB} og={gA} lay={lay} picked={picked} onTap={() => { if (!dragged.current) choose('b') }} />
+
+      {/* Títulos: texto liso bajo cada carta, que se desvanece al crecer la elegida */}
+      {(['a', 'b'] as const).map((k) => {
+        const s = k === 'a' ? left : right
+        const tw = L.w * 0.4
+        return (
+          <motion.div
+            key={k}
+            className="absolute pointer-events-none text-center"
+            style={{ left: L.cx[k] - tw / 2, width: tw, top: L.titleTop, opacity: uiOp, filter: uiBlur }}
+          >
+            <div className="serif text-[16px] font-semibold leading-tight line-clamp-2" lang="es" style={{ textWrap: 'balance' } as React.CSSProperties}>
+              {s.title}
+            </div>
+            {s.subtitle && <div className="text-[11.5px] text-mute mt-0.5 line-clamp-1">{s.subtitle}</div>}
+          </motion.div>
+        )
+      })}
+
+      <motion.p
+        className="absolute inset-x-4 bottom-12 text-center text-xs text-mute pointer-events-none"
+        style={{ opacity: uiOp, filter: uiBlur }}
+      >
+        Empuja hacia el centro la que prefieras
+      </motion.p>
+    </motion.div>
+  )
+}
+
+function FanBackdrop({ side, g }: { side: Side; g: MotionValue<number> }) {
+  const opacity = useTransform(g, (v) => clamp01(v) * 0.95)
+  return (
+    <motion.div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ opacity }} aria-hidden>
+      <div className="absolute -inset-8 blur-2xl scale-110">{side.bg}</div>
+      <div className="absolute inset-0 bg-black/55" />
+    </motion.div>
+  )
+}
+
+function FanCard({
+  side,
+  which,
+  g,
+  og,
+  lay,
+  picked,
+  onTap,
+}: {
+  side: Side
+  which: 'a' | 'b'
+  g: MotionValue<number>
+  og: MotionValue<number>
+  lay: RefObject<FanLayout>
+  picked: null | 'a' | 'b'
+  onTap: () => void
+}) {
+  const isLeft = which === 'a'
+  const L = lay.current
+  const rot0 = isLeft ? -6 : 6
+  // Trayectoria fija: del sitio de reposo al centro, en línea recta; no depende del dedo en vertical.
+  const tx = useTransform(g, (v) => (lay.current.w / 2 - lay.current.cx[which]) * v)
+  const ty = useTransform(g, (v) => (lay.current.h / 2 - lay.current.cy) * v)
+  const rotate = useTransform(g, (v) => rot0 * (1 - v))
+  const grow = useTransform(g, (v) => lerp(1, lay.current.fitW / lay.current.cardW, v))
+  // la otra se aparta y se apaga
+  const ox = useTransform(og, (v) => (isLeft ? -1 : 1) * lay.current.w * 0.22 * v)
+  const oScale = useTransform(og, (v) => 1 - 0.1 * v)
+  const x = useTransform([tx, ox] as MotionValue<number>[], ([a, b]: number[]) => a + b)
+  const scale = useTransform([grow, oScale] as MotionValue<number>[], ([a, b]: number[]) => a * b)
+  const opacity = useTransform(og, (v) => clamp01(1 - v * 1.15))
+  const zIndex = useTransform(g, (v) => (v > 0.01 ? 4 : 2))
+  const shadow = useTransform(g, (v) => `0 ${lerp(18, 6, v)}px ${lerp(36, 20, v)}px -10px rgba(0,0,0,${lerp(0.65, 0.4, v)})`)
+
+  return (
+    <motion.button
+      type="button"
+      onClick={onTap}
+      aria-label={`Elegir ${side.title}`}
+      disabled={!!picked}
+      className="absolute outline-none"
+      style={{
+        left: L.cx[which] - L.cardW / 2,
+        top: L.cy - L.cardH / 2,
+        width: L.cardW,
+        height: L.cardH,
+        x,
+        y: ty,
+        rotate,
+        scale,
+        opacity,
+        zIndex,
+        boxShadow: shadow,
+        borderRadius: 18,
+        touchAction: 'pan-y',
+      }}
+    >
+      <div className="absolute inset-0 overflow-hidden" style={{ borderRadius: 'inherit' }}>
         <FullPoster side={side} />
-      </div>
-      {/* título bajo la carta, sobre fondo liso */}
-      <div className={`absolute top-full mt-3 w-[120%] ${isLeft ? 'left-0 text-left' : 'right-0 text-right'}`}>
-        <div className="serif text-[16px] font-semibold leading-tight line-clamp-2">{side.title}</div>
-        {side.subtitle && <div className="text-[11px] text-mute mt-0.5 line-clamp-1">{side.subtitle}</div>}
       </div>
     </motion.button>
   )
