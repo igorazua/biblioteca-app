@@ -1,9 +1,9 @@
 @import 'tailwindcss';
-@import '@fontsource-variable/outfit';
+@import '@fontsource-variable/inter';
 @import '@fontsource-variable/fraunces';
 
 @theme {
-  --font-sans: 'Outfit Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-serif: 'Fraunces Variable', Georgia, serif;
   --color-bg: #100e0c;
   --color-surface: #1a1816;
@@ -23,6 +23,54 @@
   --color-shelf-book: #e37d8c;
   --color-shelf-artist: #9d8cff;
   --color-shelf-boardgame: #4fd1a5;
+}
+
+@utility text-display {
+  font-family: var(--font-serif);
+  font-size: 30px;
+  line-height: 1.05;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+@utility text-title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+@utility text-item {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+@utility text-body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+@utility text-meta {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(--color-mute);
+}
+
+@utility text-label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-mute);
 }
 
 html, body, #root { height: 100%; }
