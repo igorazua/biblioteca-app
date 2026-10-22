@@ -29,6 +29,14 @@
   - Música: `peakDecades` al 100% de artistas.
 - **Portadas reales y verticales (T1 y T14 completados):** 100 % de las 4.345 obras con póster oficial vertical (600 px WebP, `?v=2`) alojadas en Supabase Storage (`biblio-covers`) y sincronizadas con `biblio_catalog`. Control de forma con 0 imágenes incorrectas y recuperación desde fuentes originales (IMDb, TVmaze, OL, BGG, Deezer).
 - **Conectar y sincronización (T15 completado):** Tabla iblio_connections creada con RLS activa (las 4 operaciones restringidas a uth.uid() = user_id) en Supabase. Función Edge iblio-connect desplegada y operativa para Letterboxd y Goodreads (probada con perfiles reales y control de errores sin 500).
+- **Sistema de diseño «Editorial sobria» (22/10/2026 - Completado en 7 fases):**
+  - **Fase 1 (Base):** Tokens tipográficos en index.css (text-display, text-title, text-item, text-body, text-meta, text-label), fuente @fontsource-variable/inter instalada, y componentes base ScreenTitle, Button y PosterCard.
+  - **Fase 2 (Decidir y duelos):** WhatToWatch.tsx, SwipePair.tsx, DuelVariants.tsx, Compare.tsx y PlaceFlow.tsx adaptados a la propuesta A: pregunta en cabecera ScreenTitle, centro con «o» serif sutil, confirmación limpia sobre tarjeta opaca al 85% sin desenfoque ni anillo.
+  - **Fase 3 (Descubrir):** Discover.tsx y SwipeDeck.tsx con ScreenTitle, CardFace editorial, eliminación de resplandores en botones y márgenes de 20 px (px-5).
+  - **Fase 4 (Biblioteca y estanterías):** Library.tsx, Shelf.tsx y ItemRow.tsx con filas de 56 px agrupadas, pósteres proporción 2:3 limpios rounded-[10px] sin anillos ni sombras artificiales.
+  - **Fase 5 (Ficha y hojas):** ItemDetail.tsx, RatingFlow.tsx, AddFlow.tsx y Sheet (ui.tsx) con radio superior de 24 px, sin backdrop-blur ni brillos de color.
+  - **Fase 6 (Perfil, Ajustes y Conectar):** Profile.tsx, EditProfile.tsx, Settings.tsx y Connect.tsx con cabeceras ScreenTitle, botones estándar y rejilla de 4 px.
+  - **Fase 7 (Bienvenida y públicas):** Onboarding.tsx, Public.tsx y JoinInvite.tsx sin emojis en UI, sin anillos decorativos y con escala tipográfica cerrada.
 - **Tests y compilación:** 19/19 archivos de tests y 125/125 tests en verde. PWA compila limpia sin errores.
 
 ## Documentos (leer en este orden)
