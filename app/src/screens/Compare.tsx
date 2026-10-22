@@ -207,7 +207,7 @@ export function Compare() {
             </div>
           </div>
         ) : pair ? (
-          <SwipePair left={sideOf(pair.left)} right={sideOf(pair.right)} onChoose={onChoose} />
+          <SwipePair left={sideOf(pair.left)} right={sideOf(pair.right)} onChoose={onChoose} kind="rank" />
         ) : current?.kind === 'empty' ? (
           <div className="flex-1 flex flex-col items-center justify-center text-center gap-3 px-4">
             <div className="text-5xl">⚖️</div>

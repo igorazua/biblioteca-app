@@ -52,14 +52,15 @@ export function PlaceFlow({ itemId, onDone }: { itemId: string; onDone: (msg?: s
     <Portal>
       <div className="absolute inset-0 z-40 bg-bg flex flex-col" role="dialog" aria-label="Colocar en tu ranking">
         <div className="safe-top px-5 pb-3 shrink-0 text-center">
+          {/* la pregunta la pone el propio duelo («¿Cuál te gustó más?»): aquí solo el contexto */}
           <div className="text-[11px] text-accent font-semibold uppercase tracking-[0.18em]">Colocando en tus {SHELF_LABEL[item.type].plural.toLowerCase()} · {p.comparisons + 1}</div>
-          <h2 className="serif text-[22px] font-semibold leading-tight mt-1">¿Cuál te gustó más?</h2>
         </div>
         <div className="flex-1 min-h-0 px-4 pb-6 flex flex-col">
           <SwipePair
             left={sideOf(newOnTop ? itemId : opp)}
             right={sideOf(newOnTop ? opp : itemId)}
             onChoose={onChoose}
+            kind="rank"
           />
         </div>
       </div>

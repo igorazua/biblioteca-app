@@ -2,7 +2,7 @@
 // Diseños del duelo A/B para probarlos en el móvil (REFERENCIAS_UI, 21/10/2026). Igor quiere que todos respondan
 // al gesto (se ve qué estás votando mientras arrastras) y que el póster se vea entero, nunca recortado.
 import { useEffect, useLayoutEffect, useRef, useState, type RefObject } from 'react'
-import { animate, motion, useMotionValue, useTransform, type MotionValue } from 'framer-motion'
+import { animate, motion, useMotionValue, useReducedMotion, useTransform, type MotionValue } from 'framer-motion'
 import { haptic } from '../lib/haptics'
 import type { Side } from './SwipePair'
 
@@ -17,24 +17,14 @@ const KEY = 'biblioteca-duel-style'
 const EVT = 'duel-style-change'
 
 /** Estilo elegido, guardado en este móvil (es solo para pruebas; no va al store ni a la nube). */
-export function useDuelStyle(): [DuelStyle, () => void] {
-  const read = (): DuelStyle => {
-    try {
-      const v = localStorage.getItem(KEY) as DuelStyle | null
-      return DUEL_STYLES.some((s) => s.id === v) ? (v as DuelStyle) : 'diagonal'
-    } catch {
-      return 'diagonal'
-    }
-  }
-  const [style, setStyle] = useState<DuelStyle>(read)
+export function useDuelStyle(): [DuelStyle, (s: DuelStyle) => void] {
+  const [style, setStyle] = useState<DuelStyle>(readStyle)
   useEffect(() => {
-    const on = () => setStyle(read())
+    const on = () => setStyle(readStyle())
     window.addEventListener(EVT, on)
     return () => window.removeEventListener(EVT, on)
   }, [])
-  const next = () => {
-    const i = DUEL_STYLES.findIndex((s) => s.id === style)
-    const n = DUEL_STYLES[(i + 1) % DUEL_STYLES.length].id
+  const set = (n: DuelStyle) => {
     try {
       localStorage.setItem(KEY, n)
     } catch {
@@ -43,7 +33,165 @@ export function useDuelStyle(): [DuelStyle, () => void] {
     setStyle(n)
     window.dispatchEvent(new Event(EVT))
   }
-  return [style, next]
+  return [style, set]
+}
+
+function readStyle(): DuelStyle {
+  try {
+    const v = localStorage.getItem(KEY) as DuelStyle | null
+    return DUEL_STYLES.some((s) => s.id === v) ? (v as DuelStyle) : 'diagonal'
+  } catch {
+    return 'diagonal'
+  }
+}
+
+// ── Textos del duelo ────────────────────────────────────────────────────────────────────────────
+export type DuelKind = 'rank' | 'decide'
+export type DuelCopy = 'A' | 'B' | 'C'
+export interface DuelTexts {
+  /** pregunta del centro (diseños 1 y 2) o de encima de las cartas (diseño 3) */
+  question: string
+  /** línea pequeña: qué hace cada lado */
+  hint: [string, string]
+  /** texto al elegir: «{prefix}<título>» */
+  prefix: string
+  /** texto corto de la pastilla del diseño 2 (si es null, se usa el texto al elegir) */
+  pill: string | null
+}
+export const DUEL_COPIES: { id: DuelCopy; name: string; texts: DuelTexts }[] = [
+  { id: 'A', name: 'Sensación', texts: { question: 'Hoy me apetece más…', hint: ['← algo así', 'algo así →'], prefix: 'Más tipo ', pill: null } },
+  { id: 'B', name: 'Rumbo', texts: { question: '¿Por dónde tiramos hoy?', hint: ['← por aquí', 'por aquí →'], prefix: 'Vamos por ', pill: null } },
+  { id: 'C', name: 'Ambiente', texts: { question: 'Elige el ambiente', hint: ['← este rollo', 'este rollo →'], prefix: 'Apuntado: rollo ', pill: null } },
+]
+const RANK_TEXTS: DuelTexts = { question: '¿Cuál te gustó más?', hint: ['← esta', 'esta →'], prefix: 'Gana ', pill: '¡Genial!' }
+export function duelTexts(kind: DuelKind, copy: DuelCopy): DuelTexts {
+  return kind === 'rank' ? RANK_TEXTS : (DUEL_COPIES.find((c) => c.id === copy) ?? DUEL_COPIES[0]).texts
+}
+
+const COPY_KEY = 'biblioteca-duel-copy'
+const COPY_EVT = 'duel-copy-change'
+function readCopy(): DuelCopy {
+  try {
+    const v = localStorage.getItem(COPY_KEY) as DuelCopy | null
+    return DUEL_COPIES.some((c) => c.id === v) ? (v as DuelCopy) : 'A'
+  } catch {
+    return 'A'
+  }
+}
+/** Variante de texto de «Decidir», guardada en este móvil (solo para pruebas con usuarios). */
+export function useDuelCopy(): [DuelCopy, (c: DuelCopy) => void] {
+  const [copy, setCopy] = useState<DuelCopy>(readCopy)
+  useEffect(() => {
+    const on = () => setCopy(readCopy())
+    window.addEventListener(COPY_EVT, on)
+    return () => window.removeEventListener(COPY_EVT, on)
+  }, [])
+  const set = (c: DuelCopy) => {
+    try {
+      localStorage.setItem(COPY_KEY, c)
+    } catch {
+      /* sin almacenamiento */
+    }
+    setCopy(c)
+    window.dispatchEvent(new Event(COPY_EVT))
+  }
+  return [copy, set]
+}
+
+/** Milisegundos que dura la confirmación antes de pasar al siguiente duelo (el ✓ se dibuja despacio). */
+export const pickDelay = (reduce: boolean | null) => (reduce ? 600 : 1050)
+
+/** «Gana *título*» con el título en cursiva serif. */
+export function Chosen({ texts, title }: { texts: DuelTexts; title: string }) {
+  return (
+    <>
+      {texts.prefix}
+      <em className="serif italic font-semibold">{title}</em>
+    </>
+  )
+}
+
+// ── Confirmaciones al elegir ────────────────────────────────────────────────────────────────────
+/**
+ * Común a los tres diseños, en el centro de la pantalla: el texto («Gana *título*») sale al instante y grande, y
+ * debajo un ✓ pequeño que se dibuja despacio (primero el círculo, luego el tick).
+ */
+function PickBadge({ color, texts, title, reduce }: { color: string; texts: DuelTexts; title: string; reduce: boolean | null }) {
+  return (
+    <div className="absolute inset-0 z-30 pointer-events-none flex items-center justify-center px-6" aria-live="polite">
+      <div
+        className="max-w-full flex flex-col items-center gap-3 rounded-[26px] bg-black/60 backdrop-blur-xl px-6 pt-4 pb-3.5"
+        style={{ boxShadow: `0 18px 50px -12px rgba(0,0,0,0.85), 0 0 0 1px ${color}55` }}
+      >
+        <div className="text-center text-[24px] leading-[1.15] text-white line-clamp-3" style={{ textWrap: 'balance' } as React.CSSProperties}>
+          <Chosen texts={texts} title={title} />
+        </div>
+        <svg viewBox="0 0 36 36" width="30" height="30" fill="none" aria-hidden>
+          <motion.circle
+            cx="18" cy="18" r="15.5"
+            stroke={color} strokeWidth="2.2" strokeLinecap="round"
+            transform="rotate(-90 18 18)"
+            initial={reduce ? false : { pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 0.5, delay: 0.08, ease: 'easeInOut' }}
+          />
+          <motion.path
+            d="M11.5 18.5 L16 23 L24.5 13.5"
+            stroke={color} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"
+            initial={reduce ? false : { pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 0.36, delay: 0.56, ease: 'easeOut' }}
+          />
+        </svg>
+      </div>
+    </div>
+  )
+}
+
+/** Diseño 1: solo la confirmación común. */
+export function PickCheck(props: { color: string; texts: DuelTexts; title: string; reduce: boolean | null }) {
+  return <PickBadge {...props} />
+}
+
+/** Diseño 2: anillo de color con pulso de brillo alrededor del póster elegido, más la confirmación común. */
+export function PickRing({ color, box, texts, title, reduce }: { color: string; box: { left: number; top: number; w: number; h: number }; areaH?: number; texts: DuelTexts; title: string; reduce: boolean | null }) {
+  const off = `0 0 0px 0px ${color}00, inset 0 0 0px 0px ${color}00`
+  const peak = `0 0 34px 4px ${color}cc, inset 0 0 26px 2px ${color}66`
+  const rest = `0 0 16px 2px ${color}77, inset 0 0 12px 0px ${color}33`
+  return (
+    <>
+      <div className="absolute inset-0 z-30 pointer-events-none">
+        <motion.div
+          className="absolute"
+          style={{ left: box.left, top: box.top, width: box.w, height: box.h, borderRadius: 20, border: `3px solid ${color}` }}
+          initial={reduce ? false : { opacity: 0, boxShadow: off }}
+          animate={reduce ? { opacity: 1, boxShadow: rest } : { opacity: [0, 1, 1], boxShadow: [off, peak, rest] }}
+          transition={reduce ? { duration: 0 } : { duration: 0.7, times: [0, 0.45, 1], ease: 'easeOut' }}
+        />
+      </div>
+      <PickBadge color={color} texts={texts} title={title} reduce={reduce} />
+    </>
+  )
+}
+
+/** Diseño 3: destello breve en el borde de la carta elegida, más la confirmación común. */
+export function PickStrip({ color, card, texts, title, reduce }: { color: string; card: { left: number; top: number; w: number; h: number; r: number }; texts: DuelTexts; title: string; reduce: boolean | null }) {
+  const off = `0 0 0px 0px ${color}00`
+  const peak = `0 0 30px 5px ${color}dd`
+  return (
+    <>
+      <div className="absolute inset-0 z-[6] pointer-events-none">
+        <motion.div
+          className="absolute"
+          style={{ left: card.left, top: card.top, width: card.w, height: card.h, borderRadius: card.r, border: `2.5px solid ${color}` }}
+          initial={reduce ? false : { opacity: 0, boxShadow: off }}
+          animate={reduce ? { opacity: 0.8, boxShadow: off } : { opacity: [0, 1, 0.55], boxShadow: [off, peak, off] }}
+          transition={reduce ? { duration: 0 } : { duration: 0.55, delay: 0.12, times: [0, 0.35, 1], ease: 'easeOut' }}
+        />
+      </div>
+      <PickBadge color={color} texts={texts} title={title} reduce={reduce} />
+    </>
+  )
 }
 
 /**
@@ -81,19 +229,25 @@ const lerp = (a: number, b: number, k: number) => a + (b - a) * k
 
 /** Reparto de la mesa del abanico según el tamaño disponible. */
 function fanLayout(w: number, h: number) {
-  const qTop = 64 // hueco de la pregunta
+  const padTop = 8
+  const qH = 30 // alto de la pregunta
+  const qGap = 8 // poco espacio entre la pregunta y las cartas: forman un solo bloque
   const hintH = 64 // hueco de la pista inferior (y de la pastilla de diseño)
   const titleH = 56
   const gap = 14
-  const availH = Math.max(220, h - qTop - hintH)
-  const cardW = Math.min(w * 0.48, (availH - titleH - gap) / 1.5)
+  const availH = Math.max(220, h - padTop - hintH)
+  const cardW = Math.min(w * 0.48, (availH - qH - qGap - titleH - gap) / 1.5)
   const cardH = cardW * 1.5
-  const top = qTop + (availH - (cardH + gap + titleH)) / 2
+  const blockH = qH + qGap + cardH + gap + titleH
+  const qTop = padTop + Math.max(0, (availH - blockH) / 2)
+  const top = qTop + qH + qGap
   return {
     w,
     h,
     cardW,
     cardH,
+    qTop,
+    qH,
     cy: top + cardH / 2,
     titleTop: top + cardH + gap,
     cx: { a: w * 0.3, b: w * 0.7 },
@@ -107,7 +261,8 @@ type FanLayout = ReturnType<typeof fanLayout>
  * de la izquierda, a la izquierda la de la derecha («empujarla hacia el centro»). La elegida sigue una trayectoria fija
  * hacia el centro, se endereza y crece hasta casi llenar la pantalla; la otra se apaga. Todo va ligado al progreso del gesto.
  */
-export function DuelFan({ left, right, onChoose, question }: { left: Side; right: Side; onChoose: (w: 'a' | 'b') => void; question?: string }) {
+export function DuelFan({ left, right, onChoose, texts }: { left: Side; right: Side; onChoose: (w: 'a' | 'b') => void; texts: DuelTexts }) {
+  const reduce = useReducedMotion()
   const box = useRef<HTMLDivElement>(null)
   const size = useBoxSize(box)
   const L = fanLayout(size.w, size.h)
@@ -135,8 +290,9 @@ export function DuelFan({ left, right, onChoose, question }: { left: Side; right
     if (picked) return
     setPicked(w)
     haptic('success')
-    animate(x, w === 'a' ? W() * FAN_COMMIT : -W() * FAN_COMMIT, { type: 'spring', stiffness: 300, damping: 30 })
-    setTimeout(() => onChoose(w), 420)
+    const to = w === 'a' ? W() * FAN_COMMIT : -W() * FAN_COMMIT
+    animate(x, to, reduce ? { duration: 0 } : { type: 'spring', stiffness: 300, damping: 30 })
+    setTimeout(() => onChoose(w), pickDelay(reduce))
   }
 
   return (
@@ -168,10 +324,10 @@ export function DuelFan({ left, right, onChoose, question }: { left: Side; right
       <FanBackdrop side={right} g={gB} />
 
       <motion.p
-        className="absolute inset-x-4 top-3 serif text-[22px] font-semibold text-center leading-tight pointer-events-none"
-        style={{ opacity: uiOp, filter: uiBlur }}
+        className="absolute inset-x-4 serif text-[22px] font-semibold text-center leading-none flex items-end justify-center pointer-events-none"
+        style={{ top: L.qTop, height: L.qH, opacity: uiOp, filter: uiBlur }}
       >
-        {question ?? '¿Cuál prefieres?'}
+        {texts.question}
       </motion.p>
 
       <FanCard side={left} which="a" g={gA} og={gB} lay={lay} picked={picked} onTap={() => { if (!dragged.current) choose('a') }} />
@@ -196,11 +352,21 @@ export function DuelFan({ left, right, onChoose, question }: { left: Side; right
       })}
 
       <motion.p
-        className="absolute inset-x-4 bottom-12 text-center text-xs text-mute pointer-events-none"
-        style={{ opacity: uiOp, filter: uiBlur }}
+        className="absolute inset-x-4 text-center text-xs text-mute pointer-events-none"
+        style={{ top: L.titleTop + 62, opacity: uiOp, filter: uiBlur }}
       >
         Empuja hacia el centro la que prefieras
       </motion.p>
+
+      {picked && (
+        <PickStrip
+          color={picked === 'a' ? '#F5B544' : '#9A86FF'} // DUEL_LEFT / DUEL_RIGHT (SwipePair.tsx)
+          card={{ left: (L.w - L.fitW) / 2, top: (L.h - L.fitW * 1.5) / 2, w: L.fitW, h: L.fitW * 1.5, r: 18 * (L.fitW / L.cardW) }}
+          texts={texts}
+          title={(picked === 'a' ? left : right).title}
+          reduce={reduce}
+        />
+      )}
     </motion.div>
   )
 }

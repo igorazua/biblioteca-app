@@ -1,7 +1,21 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
-import { animate, motion, useMotionValue, useTransform, type MotionValue } from 'framer-motion'
+import { animate, AnimatePresence, motion, useMotionValue, useReducedMotion, useTransform, type MotionValue } from 'framer-motion'
 import { haptic } from '../lib/haptics'
-import { DUEL_STYLES, DuelFan, FullPoster, useBoxSize, useDuelStyle } from './DuelVariants'
+import {
+  DUEL_COPIES,
+  DUEL_STYLES,
+  DuelFan,
+  FullPoster,
+  PickCheck,
+  PickRing,
+  duelTexts,
+  pickDelay,
+  useBoxSize,
+  useDuelCopy,
+  useDuelStyle,
+  type DuelKind,
+  type DuelTexts,
+} from './DuelVariants'
 
 export interface Side {
   key: string
@@ -18,48 +32,111 @@ const SLANT = 9 // % de alto que baja la diagonal de un lado a otro
 const GAP = 1.6 // % de alto del hueco diagonal entre las dos tarjetas
 const BAND = 46 // px de la banda de color con la flecha
 
+type Choose = (w: 'a' | 'b') => void
+
 /**
  * Duelo (§13.3): la opción de ARRIBA se elige deslizando a la IZQUIERDA (pegada al borde izquierdo, ámbar, ◀)
  * y la de ABAJO deslizando a la DERECHA (pegada al borde derecho, violeta, ▶). Las separa un corte diagonal grueso.
  * Al arrastrar, la del lado elegido se ilumina y crece; la otra se apaga. Tocar una tarjeta también la elige.
  * Ocupa todo el ancho de la pantalla (se come el padding horizontal del contenedor con -mx-4).
+ *
+ * `kind`: «rank» (comparar/colocar: ¿cuál te gustó más?) o «decide» (orientar qué ver hoy: «más tipo esto»).
  */
-export function SwipePair(props: { left: Side; right: Side; onChoose: (w: 'a' | 'b') => void; between?: [string, string] }) {
-  const [style, nextStyle] = useDuelStyle()
-  const [label, setLabel] = useState<string | null>(null)
-  const question = props.between?.[0]
+export function SwipePair(props: { left: Side; right: Side; onChoose: Choose; kind?: DuelKind }) {
+  const { kind = 'rank', ...rest } = props
+  const [style, setStyle] = useDuelStyle()
+  const [copy, setCopy] = useDuelCopy()
+  const texts = duelTexts(kind, copy)
   const body =
-    style === 'abanico' ? <DuelFan {...props} question={question} />
-    : style === 'entero' ? <SwipePairDiagonal {...props} full />
-    : <SwipePairDiagonal {...props} />
+    style === 'abanico' ? <DuelFan {...rest} texts={texts} />
+    : style === 'entero' ? <SwipePairDiagonal {...rest} texts={texts} full />
+    : <SwipePairDiagonal {...rest} texts={texts} />
   return (
     <div className="relative flex-1 min-h-0 flex flex-col">
       {body}
-      {/* Selector de diseños (pruebas): pastilla pequeña abajo a la derecha; cada toque pasa al siguiente. */}
-      <button
-        type="button"
-        aria-label="Cambiar diseño del duelo"
-        onClick={() => {
-          nextStyle()
-          const i = DUEL_STYLES.findIndex((s) => s.id === style)
-          setLabel(DUEL_STYLES[(i + 1) % DUEL_STYLES.length].name)
-          setTimeout(() => setLabel(null), 1600)
-        }}
-        className="absolute bottom-1 right-1 z-30 min-h-[32px] px-3 rounded-full bg-surface2/90 border border-line text-[11px] font-semibold text-ink/80 flex items-center gap-1.5 active:scale-95"
-      >
-        Diseño {DUEL_STYLES.findIndex((s) => s.id === style) + 1}/{DUEL_STYLES.length}
-        <span aria-hidden>›</span>
-      </button>
-      {label && (
-        <div className="absolute bottom-11 right-1 z-30 rounded-full bg-ink text-bg text-xs font-semibold px-3 py-1.5 pointer-events-none">{label}</div>
-      )}
+      <DuelPicker kind={kind} style={style} setStyle={setStyle} copy={copy} setCopy={setCopy} />
     </div>
   )
 }
 
-function SwipePairDiagonal({ left, right, onChoose, between, full }: { left: Side; right: Side; onChoose: (w: 'a' | 'b') => void; between?: [string, string]; full?: boolean }) {
+/** Selector de pruebas: pastilla abajo a la derecha que abre un menú pequeño encima (Diseño 1·2·3 y, en Decidir, Texto A·B·C). */
+function DuelPicker({ kind, style, setStyle, copy, setCopy }: { kind: DuelKind; style: ReturnType<typeof useDuelStyle>[0]; setStyle: ReturnType<typeof useDuelStyle>[1]; copy: ReturnType<typeof useDuelCopy>[0]; setCopy: ReturnType<typeof useDuelCopy>[1] }) {
+  const [open, setOpen] = useState(false)
+  const reduce = useReducedMotion()
+  const n = DUEL_STYLES.findIndex((s) => s.id === style) + 1
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(false) }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [open])
+
+  const Row = ({ label, children }: { label: string; children: ReactNode }) => (
+    <div className="flex items-center gap-3">
+      <span className="w-[52px] text-[11px] font-semibold uppercase tracking-wider text-mute">{label}</span>
+      <div className="flex gap-1.5">{children}</div>
+    </div>
+  )
+  const Chip = ({ on, onClick, children, label }: { on: boolean; onClick: () => void; children: ReactNode; label: string }) => (
+    <button
+      type="button"
+      aria-label={label}
+      aria-pressed={on}
+      onClick={onClick}
+      className={`min-w-[40px] min-h-[36px] rounded-xl text-[13px] font-semibold border transition-colors active:scale-95 ${on ? 'bg-accent text-accent-ink border-accent' : 'bg-surface border-line text-ink/80'}`}
+    >
+      {children}
+    </button>
+  )
+
+  return (
+    <>
+      {open && <div className="fixed inset-0 z-30" onClick={() => setOpen(false)} aria-hidden />}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            role="dialog"
+            aria-label="Pruebas del duelo"
+            initial={reduce ? false : { opacity: 0, y: 8, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={reduce ? { opacity: 0 } : { opacity: 0, y: 6, scale: 0.97 }}
+            transition={{ type: 'spring', stiffness: 460, damping: 32 }}
+            style={{ transformOrigin: 'bottom right' }}
+            className="absolute bottom-11 right-1 z-40 rounded-2xl bg-surface2 border border-line shadow-[0_16px_40px_-10px_rgba(0,0,0,0.7)] p-3 flex flex-col gap-2.5"
+          >
+            <Row label="Diseño">
+              {DUEL_STYLES.map((s, i) => (
+                <Chip key={s.id} on={s.id === style} onClick={() => setStyle(s.id)} label={`Diseño ${s.name}`}>{i + 1}</Chip>
+              ))}
+            </Row>
+            {kind === 'decide' && (
+              <Row label="Texto">
+                {DUEL_COPIES.map((c) => (
+                  <Chip key={c.id} on={c.id === copy} onClick={() => setCopy(c.id)} label={`Texto ${c.id}: ${c.name}`}>{c.id}</Chip>
+                ))}
+              </Row>
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <button
+        type="button"
+        aria-label="Probar otros diseños del duelo"
+        aria-expanded={open}
+        onClick={() => setOpen((o) => !o)}
+        className="absolute bottom-1 right-1 z-40 min-h-[32px] px-3 rounded-full bg-surface2/90 border border-line text-[11px] font-semibold text-ink/80 flex items-center gap-1.5 active:scale-95"
+      >
+        Diseño {n}{kind === 'decide' && <> · Texto {copy}</>}
+        <span aria-hidden className={`transition-transform ${open ? 'rotate-90' : '-rotate-90'}`}>›</span>
+      </button>
+    </>
+  )
+}
+
+function SwipePairDiagonal({ left, right, onChoose, texts, full }: { left: Side; right: Side; onChoose: Choose; texts: DuelTexts; full?: boolean }) {
   const box = useRef<HTMLDivElement>(null)
   const x = useMotionValue(0)
+  const reduce = useReducedMotion()
   const [picked, setPicked] = useState<null | 'a' | 'b'>(null)
   const dragged = useRef(false)
   const W = () => box.current?.offsetWidth ?? 380
@@ -75,9 +152,13 @@ function SwipePairDiagonal({ left, right, onChoose, between, full }: { left: Sid
     if (picked) return
     setPicked(w)
     haptic('success')
-    animate(x, w === 'a' ? -W() * COMMIT : W() * COMMIT, { duration: 0.16, ease: 'easeOut' })
-    setTimeout(() => onChoose(w), 420)
+    animate(x, w === 'a' ? -W() * COMMIT : W() * COMMIT, reduce ? { duration: 0 } : { duration: 0.16, ease: 'easeOut' })
+    setTimeout(() => onChoose(w), pickDelay(reduce))
   }
+
+  const pickedSide = picked === 'a' ? left : picked === 'b' ? right : null
+  const pickedColor = picked === 'a' ? DUEL_LEFT : DUEL_RIGHT
+  const lay = full && picked ? wholeLayout(dims.w, dims.h, picked === 'a') : null
 
   return (
     <motion.div
@@ -99,11 +180,24 @@ function SwipePairDiagonal({ left, right, onChoose, between, full }: { left: Sid
     >
       <DuelCard side={left} which="a" full={full} dims={dims} p={p} picked={picked} onTap={() => { if (!dragged.current) choose('a') }} />
       <DuelCard side={right} which="b" full={full} dims={dims} p={p} picked={picked} onTap={() => { if (!dragged.current) choose('b') }} />
-      <CenterHint p={p} picked={picked} between={between} />
+      <CenterHint p={p} picked={picked} texts={texts} />
       {!full && <motion.div className="absolute inset-0 z-20 pointer-events-none rounded-[34px]" style={{ opacity: ringO, boxShadow: 'inset 0 0 0 1.5px rgba(255,255,255,0.5), inset 0 0 0 5px rgba(255,255,255,0.07)' }} />}
+      {/* Confirmación al elegir: distinta en cada diseño (1: círculo con ✓; 2: anillo en el póster y pastilla) */}
+      {pickedSide && !full && <PickCheck color={pickedColor} texts={texts} title={pickedSide.title} reduce={reduce} />}
+      {pickedSide && lay && (
+        <PickRing
+          color={pickedColor}
+          box={{ left: (lay.w - lay.fitW) / 2, top: (lay.h - lay.fitH) / 2, w: lay.fitW, h: lay.fitH }}
+          areaH={lay.h}
+          texts={texts}
+          title={pickedSide.title}
+          reduce={reduce}
+        />
+      )}
     </motion.div>
   )
 }
+
 
 /** Reparto del diseño 2: el póster entero en reposo (lo más grande que quepa en su mitad) y a pantalla completa al elegirlo. */
 function wholeLayout(w: number, h: number, top: boolean) {
@@ -256,8 +350,8 @@ function DuelCard({ side, which, full, dims, p, picked, onTap }: { side: Side; w
 
 const lerp = (a: number, b: number, k: number) => a + (b - a) * k
 
-/** Centro del corte: texto en cristal («tipo esto / o tipo esto») o, sin texto, flechas tenues. */
-function CenterHint({ p, picked, between }: { p: MotionValue<number>; picked: null | 'a' | 'b'; between?: [string, string] }) {
+/** Centro del corte: la pregunta en cristal con la línea pequeña de qué hace cada lado. */
+function CenterHint({ p, picked, texts }: { p: MotionValue<number>; picked: null | 'a' | 'b'; texts: DuelTexts }) {
   const l = useTransform(p, [-1, 0], [1, 0.55])
   const r = useTransform(p, [0, 1], [0.55, 1])
   // el cristal se difumina y desaparece a medida que crece la elegida
@@ -266,18 +360,12 @@ function CenterHint({ p, picked, between }: { p: MotionValue<number>; picked: nu
   if (picked) return null
   return (
     <motion.div style={{ opacity: fade, filter: blurF }} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-[3deg] z-10 pointer-events-none rounded-[22px] bg-white/[0.12] backdrop-blur-2xl ring-1 ring-white/35 px-5 py-2.5 shadow-[0_10px_40px_-8px_rgba(0,0,0,0.7),0_0_36px_-8px_rgba(245,181,68,0.55)] text-center whitespace-nowrap">
-      {between ? (
-        <>
-          <div className="serif text-[19px] leading-none font-semibold text-white">{between[0]}</div>
-          <div className="mt-1.5 text-[12px] font-semibold tracking-wide flex items-center justify-center gap-2">
-            <motion.span style={{ color: DUEL_LEFT, opacity: l }}>{between[1].split('·')[0].trim()}</motion.span>
-            <span className="text-white/40">·</span>
-            <motion.span style={{ color: DUEL_RIGHT, opacity: r }}>{(between[1].split('·')[1] ?? '').trim()}</motion.span>
-          </div>
-        </>
-      ) : (
-        <span className="serif italic text-[15px] text-white/90">o</span>
-      )}
+      <div className="serif text-[19px] leading-none font-semibold text-white">{texts.question}</div>
+      <div className="mt-1.5 text-[12px] font-semibold tracking-wide flex items-center justify-center gap-2">
+        <motion.span style={{ color: DUEL_LEFT, opacity: l }}>{texts.hint[0]}</motion.span>
+        <span className="text-white/40">·</span>
+        <motion.span style={{ color: DUEL_RIGHT, opacity: r }}>{texts.hint[1]}</motion.span>
+      </div>
     </motion.div>
   )
 }

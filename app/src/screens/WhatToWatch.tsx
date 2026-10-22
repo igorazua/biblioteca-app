@@ -389,7 +389,7 @@ export function WhatToWatch() {
         <div className="flex items-center justify-center gap-1.5 pb-2" aria-label={`Duelo ${duel.n + 1} de ${duel.of}`}>
           {Array.from({ length: duel.of }).map((_, i) => <span key={i} className={`h-1 rounded-full transition-all ${i === duel.n ? 'w-6 bg-accent' : i < duel.n ? 'w-3 bg-accent/60' : 'w-3 bg-line'}`} />)}
         </div>
-        <SwipePair left={shaperSide(pair[0])} right={shaperSide(pair[1])} onChoose={onShaperChoose} between={['Me siento más…', '← como esta  ·  como esta →']} />
+        <SwipePair left={shaperSide(pair[0])} right={shaperSide(pair[1])} onChoose={onShaperChoose} kind="decide" />
       </div>
     )
   } else if (phase === 'propose' && currentItem) {
