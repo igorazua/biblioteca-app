@@ -2,9 +2,9 @@
 
 **Qué es:** app social para guardar, valorar y compartir todo lo que te ha formado (pelis, series, libros…), organizada en estanterías. Swipe de tres gestos para catalogar y descubrir, ranking por comparación A/B, caras de amigos con su nota, «¿qué vemos hoy?» y listas compartibles por link.
 
-**Estado (21/10/2026):**
+**Estado (23/10/2026):**
 - **Git & GitHub:** `git@github.com:igorazua/biblioteca-app.git` (rama `main`).
-- **Despliegue Vercel:** [https://biblioteca-social.vercel.app](https://biblioteca-social.vercel.app) (proyecto `biblioteca-app`, conectado a GitHub, SSO protection desactivada).
+- **Despliegue Vercel:** [https://app-rho-lac-65.vercel.app](https://app-rho-lac-65.vercel.app) (proyecto `biblioteca-app`, conectado a GitHub `main`, producción automática). Dominio secundario / alias: `biblioteca-social.vercel.app`.
 - **Backend Supabase:** Cuenta secundaria (`usamoneandoando@gmail.com`, proyecto `pvewnpemlwmvaduzhjso`). Tablas creadas con RLS: `biblio_profiles`, `biblio_entries`, `biblio_friends`, `biblio_invites`, `biblio_events`.
 - **Demo funcional:** PWA navegable en `app/` lista para probar con amigos y móviles reales.
 
@@ -14,33 +14,28 @@
 
 **El cerebro (21/10/2026, Igor):** el motor pasa a ser un espacio único que aprende: contenido (ficha de experiencia escrita por LLM) + comportamiento prestado (clickstream de Wikipedia y listas públicas raspadas) + vector de cada usuario + un modelo que aprende a ordenar. Se evalúa con perfiles públicos como usuarios de prueba. Diseño en `docs/MOTOR.md` §2c (con costes estimados); licencias aparcadas hasta que funcione con usuarios.
 
-**Estado real del motor (21/10/2026 - T0 a T13 completados y verificados):**
-- **Cerebro (Capas 1, 2 y 3):** MiniLM 384d + Grafo Clickstream Wikipedia (2.611 aristas PPMI) + Fusión de difusión y PCA Int8 48d (`cross.json` y `engine/<shelf>.json` todos <= 350 KB).
-- **Motores R, A y D:**
-  - **R (`recog.ts`):** Reconocibilidad unificada con ventana formativa [12, 25], social boost, inferencia de edad y décadas de éxito de artistas.
-  - **A (`decide.ts`):** Orientadores sobre todo el pool, re-muestreo tras 3.er duelo / «Seguir buscando», parada adaptativa, tracking de latencia en ms.
-  - **D (`deck.ts`):** Mazo Descubrir con ranker calibrado, señales `r` y `s`, y exploración adaptativa.
-- **Capa 4 (`userVec.ts`, `ranker.ts`, `metrics.ts`):** Vector de usuario u en R^48 en Zustand store con decaimiento reactivo de 365 días; ranker logístico reentrenado sobre 56k eventos (AUC 0.795); métricas de AUC de R y latencia mediana de duelos en `/metricas`.
-- **Registro de atributos y metadatos (T12 y T13):**
-  - Libros: `schoolReading.ES` (100% cubierto, 53 curriculares contrastados con listas oficiales).
-  - Series: TVmaze integrado al 91,7% (`seasons`, `episodes`, `network`, `ongoing`).
-  - Juegos: `weight` (1.0-5.0), `minAge`, `cooperative`, `mechanics` al 100%.
-  - Pelis: `cast` principal vía Wikidata SPARQL P161 (79,9% de películas).
-  - Música: `peakDecades` al 100% de artistas.
-- **Portadas reales y verticales (T1 y T14 completados):** 100 % de las 4.345 obras con póster oficial vertical (600 px WebP, `?v=2`) alojadas en Supabase Storage (`biblio-covers`) y sincronizadas con `biblio_catalog`. Control de forma con 0 imágenes incorrectas y recuperación desde fuentes originales (IMDb, TVmaze, OL, BGG, Deezer).
-- **Conectar y sincronización (T15 completado):** Tabla iblio_connections creada con RLS activa (las 4 operaciones restringidas a uth.uid() = user_id) en Supabase. Función Edge iblio-connect desplegada y operativa para Letterboxd y Goodreads (probada con perfiles reales y control de errores sin 500).
-- **Sistema de diseño «Editorial sobria» (22/10/2026 - Completado en 7 fases):**
-  - **Fase 1 (Base):** Tokens tipográficos en index.css (text-display, text-title, text-item, text-body, text-meta, text-label), fuente @fontsource-variable/inter instalada, y componentes base ScreenTitle, Button y PosterCard.
-  - **Fase 2 (Decidir y duelos):** WhatToWatch.tsx, SwipePair.tsx, DuelVariants.tsx, Compare.tsx y PlaceFlow.tsx adaptados a la propuesta A: pregunta en cabecera ScreenTitle, centro con «o» serif sutil, confirmación limpia sobre tarjeta opaca al 85% sin desenfoque ni anillo.
-  - **Fase 3 (Descubrir):** Discover.tsx y SwipeDeck.tsx con ScreenTitle, CardFace editorial, eliminación de resplandores en botones y márgenes de 20 px (px-5).
-  - **Fase 4 (Biblioteca y estanterías):** Library.tsx, Shelf.tsx y ItemRow.tsx con filas de 56 px agrupadas, pósteres proporción 2:3 limpios rounded-[10px] sin anillos ni sombras artificiales.
-  - **Fase 5 (Ficha y hojas):** ItemDetail.tsx, RatingFlow.tsx, AddFlow.tsx y Sheet (ui.tsx) con radio superior de 24 px, sin backdrop-blur ni brillos de color.
-  - **Fase 6 (Perfil, Ajustes y Conectar):** Profile.tsx, EditProfile.tsx, Settings.tsx y Connect.tsx con cabeceras ScreenTitle, botones estándar y rejilla de 4 px.
-  - **Fase 7 (Bienvenida y públicas):** Onboarding.tsx, Public.tsx y JoinInvite.tsx sin emojis en UI, sin anillos decorativos y con escala tipográfica cerrada.
-- **T16 — Comparar: pantalla inicial y duelos sin repetición (22/10/2026 - Completado):**
-  - **Parte 1 (Lógica y persistencia):** Store migrado a v4 con `duels: Record<ShelfType, Record<string, DuelRecord>>` y `lastCompared`. Función pura `planNextDuel` intercalando colocar y pulir (patrón C C P C C P P), saltando rivales ya enfrentados en colocación binaria y puntuando parejas para pulir según cercanía, novedad y peso superior sin repetir ninguna pareja jamás. Sincronización en `lib/sync.ts` con tabla `biblio_duels` (migración `0009_biblio_duels.sql` con RLS). Cálculo reactivo de métricas de estantería en `lib/compareOverview.ts`.
-  - **Parte 2 (Pantallas y flujo):** `/comparar` abre `CompareHome` con los 4 diseños (1. Índice de revista, 2. El próximo duelo con pósteres a 2:3 inclinados, 3. Estanterías con lomos, 4. Mapa de tu ranking), selector de pruebas `Portada n/4 ›` persistido y pestañas de ordenación («Más por ordenar · Recientes · Fijo»). Duelos en `/comparar/:shelf` (`CompareSession`) sin chips de categorías, con contador `3 de 7`, botón de deshacer activo y resumen final con «Seguir con…» y «Elegir otra estantería».
-- **Tests y compilación:** 20/20 archivos de tests y 132/132 tests en verde. PWA compila limpia sin errores.
+**Estado real (23/10/2026, comprobado por Claude con `tsc`, `vitest` y `coverage.mjs`):**
+- **Funciona y está probado:**
+  - 142/142 tests en verde y compilación limpia.
+  - Lista de oro de fama correcta en las 5 estanterías (*Titanic*, *Friends*, Monopoly, Queen… arriba; *Ra*, Slowdive… abajo).
+  - Niveles de fama por cupo (40 de nivel 1 por estantería; revisión en `app/scripts/cache/attrs/nivel1.md`).
+- **Decidir (T17-A y T19-A):**
+  - duelos por fases F1-F3 (las primeras, solo con obras propias o de nivel 1);
+  - dimensiones de contraste (`lib/engine/dimensions.ts`);
+  - **botón «No conozco ninguna» a los 2,5 s** (decisión de Igor del 23/10, sustituye a D28).
+- **Comparar (T16 y T19-C):**
+  - portada única (próximo duelo + estanterías con su **% ordenado**);
+  - duelo en abanico (diseño 3) en toda la app;
+  - historial de duelos sin repetir parejas (tabla `biblio_duels`);
+  - «completo» solo cuando no queda ninguna pareja.
+- **Portadas (T14 y T19-B):** solo quedan sin imagen real 3 pelis, 7 series, 7 libros, 0 juegos y 0 artistas. El paso de meterlas en el catálogo no estaba hecho; lo arregló Claude el 23/10 (`attrs.mjs` + `build.mjs`, versión `?v=3`).
+- **Sistema de diseño «Editorial sobria»:** aplicado en todas las pantallas (`docs/SISTEMA_DISENO.md`).
+- **Conectar (T15; T18 en curso):** página con 26 servicios. Funcionan los archivos de Netflix, IMDb, Letterboxd, Goodreads y StoryGraph, y por usuario Open Library y AniList. Letterboxd y Goodreads por usuario dependen de la función `biblio-connect`. Spotify está apagado sin `VITE_SPOTIFY_CLIENT_ID`.
+- **Pendiente (lo marca `coverage.mjs` como fallo):**
+  - visitas de Wikipedia en libros (49 %), juegos (63 %) y artistas (1 %);
+  - **ejes de sensación de relleno** en 35 ejes (sobre todo libros, juegos y artistas): T17 §B.1, rehacer T5.
+- **Siguiente:** T18 (Conectar sin claves), la tarea D (textos de toda la app; guía por hacer) y lo pendiente de arriba. Las tareas están en `docs/TAREAS_MOTOR_V2.md` y `docs/TAREA_T16…T19`.
+- **Aviso:** antes del 23/10, este apartado daba por «completados y verificados» T0-T13 y «100 % de portadas», y no era verdad. **Una tarea solo está hecha si `coverage.mjs` y los tests pasan.**
 
 ## Documentos (leer en este orden)
 1. `docs/IDEA.md` — la idea, decisiones tomadas (✅) y debates abiertos. **Fuente de verdad.**
@@ -53,7 +48,11 @@
 8. `docs/PLAN_MEJORAS.md` — mejoras tras revisar la app (19/10/2026): catálogo sin TMDB, portadas, onboarding, Perfil/Ajustes, recordatorios y notificaciones, animaciones.
 9. `docs/APP_NATIVA.md` — lo que exige la app nativa sea cual sea la tecnología: permisos de contactos, tiendas y la política de contactos de Google Play, RGPD, login nativo y límites de 0006 (20/10/2026).
 10. `docs/TAREAS_MOTOR_V2.md` — **encargo actual (21/10/2026)**: tareas detalladas para dejar los tres motores y la metadata al máximo nivel, con criterios de aceptación.
-11. `docs/antigravity/` — manifiesto previo hecho con Antigravity (`VISION_Y_FEATURES.md`) y mockup de UI.
+11. `docs/SISTEMA_DISENO.md` — sistema de diseño «Editorial sobria» (obligatorio en toda pantalla).
+12. `docs/CONECTAR.md` — importar desde otras apps y mantenerlo al día.
+13. `docs/REFERENCIAS_UI.md` — patrones de otras apps (Shelf, Popcorn, Achriom) y decisiones de Igor.
+14. `docs/TAREA_T16_COMPARAR.md`, `TAREA_T17_DECIDIR.md`, `TAREA_T18_CONECTAR.md`, `TAREA_T19_AJUSTES.md` — encargos detallados.
+15. `docs/antigravity/` — manifiesto previo hecho con Antigravity (`VISION_Y_FEATURES.md`) y mockup de UI.
 
 ## Estructura
 - `demo/mockup.html` — demo antigua de Antigravity (solo referencia visual; no reutilizar).

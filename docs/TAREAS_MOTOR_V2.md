@@ -450,3 +450,15 @@ Encargo completo en **`docs/TAREA_T16_COMPARAR.md`** (22/10/2026). Hazla despué
 # T17 — Decidir: duelos con obras que conoces y que se distinguen, y R arreglada
 
 Encargo completo en **`docs/TAREA_T17_DECIDIR.md`** (22/10/2026). **Empieza por T17.0 y la parte A (datos y R) antes que T16:** no dependen de nada y arreglan también el mazo de Descubrir. Las partes B y C, después de T16.
+
+---
+
+# T18 — Conectar: que funcionen las plataformas importantes
+
+Encargo completo en **`docs/TAREA_T18_CONECTAR.md`** (23/10/2026). Va después de T17.
+
+---
+
+# T19 — Duelos solo con obras conocidas, portadas, «ranking completo» y portada final de Comparar
+
+Encargo completo en **`docs/TAREA_T19_AJUSTES.md`** (23/10/2026). **Va antes que las partes B y C de T17** y las corrige.

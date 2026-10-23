@@ -104,7 +104,7 @@ Aparece una tarjeta de la estantería en la que estés. Gestos:
 - **Unas 5 preguntas propias de cada categoría** ✅, que **avanzan solas al tocar** una respuesta (sin botón aceptar). Deben incluir el **mood** (ej. en pelis: acción, romántica, profunda, me da igual…). Las preguntas concretas se pulirán más adelante.
 - **Las preguntas hablan de lo que quieres ahora**, no de quién eres ✅: en Libros, sobre la **siguiente lectura** (qué te apetece, extensión, ficción o no, ritmo, parecido a lo que te gusta o salir de tu zona), nada de «un sábado perfecto».
 - **Después, duelos, nunca una recomendación directa** ✅: **mínimo 5 duelos**; luego «Te propongo esta». Si dices «Seguir buscando», más duelos y nueva propuesta, en bucle.
-- **Duelos «orientadores»** ✅ (D19 cerrado): «¿Te apetece más **algo como esto** o **algo como esto**?». Siempre **obras concretas de la misma categoría** (si buscas libro, libros), **nunca tipos ni géneros**. Sirven para **orientar** lo que buscas; si uno de ellos acaba siendo la mejor propuesta, se propone (21/10/2026). Tienen que ser **muy reconocibles** desde el primer duelo, sin botón de «no conozco ninguna» (D28). Con lo elegido, la app busca en el catálogo (primero tus pendientes).
+- **Duelos «orientadores»** ✅ (D19 cerrado): «¿Te apetece más **algo como esto** o **algo como esto**?». Siempre **obras concretas de la misma categoría** (si buscas libro, libros), **nunca tipos ni géneros**. Sirven para **orientar** lo que buscas; si uno de ellos acaba siendo la mejor propuesta, se propone (21/10/2026). Tienen que ser **muy reconocibles** desde el primer duelo; si aun así no conoce ninguna, a los 2,5 s aparece «No conozco ninguna» (D28, 23/10/2026). Con lo elegido, la app busca en el catálogo (primero tus pendientes).
 - Futuro (D24): con un contexto global de cada obra (IA), los orientadores podrían cruzar categorías («para elegir libro: ¿algo tipo *Interstellar* o tipo *Asterios Polyp*?»).
 - **Pendientes sin ordenar** ✅ (D26): no se ordenan a mano; para elegir entre ellas ya está el asistente. Se ven en cada estantería (acceso directo «N pendientes»).
 - **Modo grupo**: futuro.
@@ -252,7 +252,7 @@ Ver `docs/antigravity/VISION_Y_FEATURES.md`: validador previo «¿quién lo vio 
 | D25 | ¿Nota o puesto? | ✅ **Puesto** en toda la interfaz («nº 3 de 42»); la nota 0-10 desaparece. Por dentro se usa el **percentil** (1º = 100, último = 0) para comparar rankings de distinto tamaño (afinidad, recomendaciones, orden del mazo) |
 | D26 | ¿Ordenar los pendientes? | ✅ No; el asistente elige entre ellos |
 | D27 | Red de obras: ¿con qué datos? | ✅ Por capas: fuentes abiertas → LLM con ejes de sensación propios → vectores de cercanía → colaborativo con usuarios (§7b.1) |
-| D28 | Decidir: orientadores y propuesta | ✅ Vistas del usuario + clásicos; de lo grueso a lo fino; sin «no conozco ninguna»; siempre una propuesta (encaje × calidad) (§7b.3). Nº de duelos adaptativo: a probar |
+| D28 | Decidir: orientadores y propuesta | ✅ Vistas del usuario + obras de nivel de fama 1; un duelo por dimensión con obras opuestas y parecidas solo al final; preferencias explícitas; siempre una propuesta (encaje × calidad) (§7b.3). **23/10/2026: sí hay botón «No conozco ninguna», que aparece a los 2,5 s sin elegir** (decisión de Igor; detalle en `docs/TAREA_T17_DECIDIR.md` y `TAREA_T19_AJUSTES.md`) |
 | D29 | Guardados olvidados | ✅ Botón «Lanzar limpieza» en Pendientes con swipe (§7b.4) |
 | D30 | Métricas del motor | ✅ Cada motor con sus métricas y versión registrada (§7b.5) |
 
