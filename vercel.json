@@ -3,5 +3,11 @@
   "framework": "vite",
   "buildCommand": "cd app && npm run build",
   "outputDirectory": "app/dist",
-  "installCommand": "cd app && npm install"
+  "installCommand": "cd app && npm install",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
