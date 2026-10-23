@@ -435,7 +435,7 @@ export function Onboarding() {
                       Tu ranking sin poner notas
                     </h2>
                     <p className="text-mute text-xs leading-relaxed max-w-xs mx-auto">
-                      Poner un 7 o un 8 no define tu gusto. En los duelos eliges entre dos y tu ranking se ordena solo.
+                      Poner un 7 o un 8 no define tu gusto. Al comparar eliges entre dos y tu top se ordena solo.
                     </p>
                   </div>
 

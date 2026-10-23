@@ -281,7 +281,7 @@ export function CleanupFlow({ shelf, onClose }: CleanupFlowProps) {
 
               <button
                 onClick={() => deckRef.current?.fling('left')}
-                aria-label="Fuera (descartar)"
+                aria-label="No me interesa"
                 className="w-14 h-14 rounded-full bg-surface border-2 border-line text-stamp-red flex items-center justify-center active:scale-90 transition-transform"
               >
                 <Icon name="x" size={26} strokeWidth={2.6} />

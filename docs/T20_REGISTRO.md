@@ -413,3 +413,20 @@ artist ids del motor = ids del seed: true (410/410)
 ### Comprobación de compilación y tests:
 - `npx --prefix app tsc -p app/tsconfig.json --noEmit`: 0 errores
 - `npm --prefix app test`: 148 passed (21 test files)
+
+
+---
+
+## T20.8 — Textos de toda la app (tarea D)
+
+### Procedimiento
+1. Se auditó toda la base de código de interfaz (`app/src/screens/` y `app/src/components/`) para identificar textos visibles disonantes con la guía editorial de `docs/TAREA_T20_CIERRE.md`:
+   - Eliminación del término «duelo» en la interfaz visible en favor de «comparar» o «elección».
+   - Eliminación del término «descartar» en favor de «No me interesa».
+   - Reemplazo de botones genéricos «Enviar» por verbos de acción específicos («Enviar enlace»).
+   - En Onboarding, unificación de textos pedagógicos: «Al comparar eliges entre dos y tu top se ordena solo».
+2. Se documentaron todas las transformaciones antes/después en el documento específico `docs/T20_TEXTOS.md`.
+
+### Comprobación de compilación y tests:
+- `npx --prefix app tsc -p app/tsconfig.json --noEmit`: 0 errores
+- `npm --prefix app test`: 148 passed (21 test files)

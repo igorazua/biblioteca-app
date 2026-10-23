@@ -153,7 +153,7 @@ export function Settings() {
                   disabled={emailSent}
                   className="min-h-[42px] px-3.5 rounded-2xl bg-surface2 border border-line text-xs font-semibold text-accent disabled:opacity-50"
                 >
-                  {emailSent ? 'Enviado ✓' : 'Enviar'}
+                  {emailSent ? 'Enviado' : 'Enviar enlace'}
                 </button>
               </div>
             </div>
@@ -189,7 +189,7 @@ export function Settings() {
           <Row
             icon="message"
             title="Comentario al comparar"
-            sub="Ofrece escribir una nota breve tras cada duelo"
+            sub="Ofrece escribir una nota breve tras comparar dos obras"
             right={<Toggle on={settings.commentBoxInPairs} onChange={(commentBoxInPairs) => setSettings({ commentBoxInPairs })} label="Comentario al comparar" />}
           />
         </Group>

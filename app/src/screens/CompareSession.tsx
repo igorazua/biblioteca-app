@@ -341,7 +341,7 @@ export function CompareSession() {
           undo && !summary ? (
             <button
               onClick={doUndo}
-              aria-label="Deshacer el último duelo"
+              aria-label="Deshacer la última elección"
               title="Deshacer"
               className="w-9 h-9 rounded-full bg-accent text-accent-ink flex items-center justify-center active:scale-90 transition-transform"
             >
