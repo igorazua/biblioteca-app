@@ -24,6 +24,7 @@ export interface RecogContext {
   affinity?: (friendId: string) => number | null
   deckLearn?: Record<string, { shown: number; seen: number }> | DeckLearnShelf
   items?: Item[]
+  doubtfulItems?: Record<string, number>
 }
 
 /**
@@ -169,10 +170,9 @@ export function recog(item: Item, ctx: RecogContext): number {
   // 1. Lo del usuario manda: vista, valorada, comparada o en su ranking -> R = 1.0; pendiente -> 0.9
   if (
     status === 'seen' ||
-    entry?.rating != null ||
-    (entry as Record<string, unknown>)?.compared != null ||
-    (entry as Record<string, unknown>)?.ranked === true ||
-    (entry as Record<string, unknown>)?.rankingPosition != null
+    entry?.stars != null ||
+    (entry?.cmp ?? 0) > 0 ||
+    entry?.ranked === true
   ) {
     return 1.0
   }
@@ -249,5 +249,11 @@ export function recog(item: Item, ctx: RecogContext): number {
   const personalKnown = base * era * zonaMult
   const r = 1.0 - (1.0 - personalKnown) * (1.0 - social)
 
-  return Math.min(1.0, Math.max(0.01, r))
+  // 6. Red de seguridad: si la obra fue marcada como dudosa (duelo > 6s en los últimos 90 días), R x 0.5 (T19 §1.3)
+  const doubtfulTs = ctx.doubtfulItems?.[item.id]
+  const NINETY_DAYS_MS = 90 * 24 * 60 * 60 * 1000
+  const isDoubtful = doubtfulTs != null && Date.now() - doubtfulTs < NINETY_DAYS_MS
+  const finalR = isDoubtful ? r * 0.5 : r
+
+  return Math.min(1.0, Math.max(0.01, finalR))
 }

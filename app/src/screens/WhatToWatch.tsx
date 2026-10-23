@@ -13,6 +13,7 @@ import {
   rejectAndContinue,
   type DecideProposal,
   type DecideState,
+  type DuelPair,
 } from '../lib/engine/decide'
 import { useStore } from '../store/useStore'
 import { useFriends } from '../store/useFriends'
@@ -92,6 +93,8 @@ export function WhatToWatch() {
   const sessionSid = useRef(newSession('dec'))
   const roundRef = useRef(1)
   const duelStepRef = useRef(0)
+  const duelStartTimeRef = useRef<number>(performance.now())
+  const currentDuelPairRef = useRef<DuelPair | null>(null)
 
   const getFriendPct = useCallback((friend: Friend, itemId: string) => {
     return friendRanks(friend, getItem)[itemId]?.pct ?? null
@@ -159,8 +162,10 @@ export function WhatToWatch() {
       return
     }
 
+    currentDuelPairRef.current = next
+    duelStartTimeRef.current = performance.now()
     setPair([next.a, next.b])
-    setDuelPhase(next.phase)
+    setDuelPhase(next.phase as any)
     setDuel({ n: 0, of: targetDuels })
     setPhase('shape')
   }
@@ -181,11 +186,21 @@ export function WhatToWatch() {
     const winner = w === 'a' ? a : b
     const loser = w === 'a' ? b : a
 
-    const updatedState = applyDuelChoice(decideState, winner, loser, itemsById)
+    const elapsedMs = Math.round(performance.now() - duelStartTimeRef.current)
+    const currentDuel = currentDuelPairRef.current
+
+    const updatedState = applyDuelChoice(
+      decideState,
+      winner,
+      loser,
+      itemsById,
+      elapsedMs,
+      currentDuel?.dimension
+    )
     setDecideState(updatedState)
     duelStepRef.current++
 
-    const infoGain = Math.round((0.5 + Math.abs(a.popularity - b.popularity) / 200) * 100) / 100
+    const infoGain = currentDuel?.infoGain ?? (Math.round((0.5 + Math.abs(a.popularity - b.popularity) / 200) * 100) / 100)
     track('dec_duel', {
       shelf,
       sid: sessionSid.current,
@@ -194,7 +209,15 @@ export function WhatToWatch() {
         b: b.id,
         winner: winner.id,
         step: duelStepRef.current,
-        phase: duelPhase,
+        phase: currentDuel?.phase || duelPhase,
+        dimension: currentDuel?.dimension,
+        rA: currentDuel?.rA,
+        rB: currentDuel?.rB,
+        tierA: currentDuel?.tierA,
+        tierB: currentDuel?.tierB,
+        isOwnA: currentDuel?.isOwnA,
+        isOwnB: currentDuel?.isOwnB,
+        ms: elapsedMs,
         infoGain,
       },
     })
@@ -223,8 +246,10 @@ export function WhatToWatch() {
 
     const next = nextDuel(updatedState, items, new Set(updatedState.shown))
     if (next) {
+      currentDuelPairRef.current = next
+      duelStartTimeRef.current = performance.now()
       setPair([next.a, next.b])
-      setDuelPhase(next.phase)
+      setDuelPhase(next.phase as any)
       setDuel((d) => ({ ...d, n: d.n + 1 }))
     } else {
       const prop = getProposal(updatedState, itemsById, activeFriends, profile)
@@ -269,8 +294,10 @@ export function WhatToWatch() {
 
     const next = nextDuel(updatedState, items, new Set(updatedState.shown))
     if (next) {
+      currentDuelPairRef.current = next
+      duelStartTimeRef.current = performance.now()
       setPair([next.a, next.b])
-      setDuelPhase(next.phase)
+      setDuelPhase(next.phase as any)
       setDuel({ n: 0, of: 3 })
       setPhase('shape')
     } else {

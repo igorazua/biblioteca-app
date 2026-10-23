@@ -183,7 +183,7 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
     if (!duel) return
 
     expect(duel.a.id).not.toBe(duel.b.id)
-    expect(duel.phase).toBe('coarse')
+    expect(['F1', 'coarse']).toContain(duel.phase)
 
     // Aplicar ganador
     const nextState = applyDuelChoice(state, duel.a, duel.b, itemsMap)
@@ -391,7 +391,7 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
     expect(duel).not.toBeNull()
     if (duel) {
       expect(duel.a.id).not.toBe(duel.b.id)
-      expect(duel.phase).toBe('coarse')
+      expect(['F1', 'coarse']).toContain(duel.phase)
     }
   })
 
@@ -445,4 +445,138 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
       expect(recognizedCount).toBeGreaterThanOrEqual(9)
     }
   }, 30000)
+
+  describe('T19 §1.4 Tests de duelos con obras conocidas', { timeout: 30000 }, () => {
+    it('Usuario nuevo en libros: los 5 primeros duelos solo tienen obras de nivel 1', async () => {
+      const seed = (await import('../../data/seed.json')).default as { items: Item[] }
+      const input: DecideInput = {
+        shelf: 'book',
+        items: seed.items,
+        entries: {},
+        rankings: { movie: [], series: [], book: [], artist: [], boardgame: [] },
+        profile: { ...mockProfile, country: 'ES', lang: 'es' },
+        friends: [],
+        answers: {},
+        affinity: () => null,
+        friendPct: () => null,
+      }
+      let state = initDecideSession(input)
+      const shown = new Set<string>()
+      const itemsMap = new Map(seed.items.map((it) => [it.id, it]))
+
+      for (let i = 0; i < 5; i++) {
+        const duel = nextDuel(state, seed.items, shown)
+        expect(duel).not.toBeNull()
+        if (!duel) break
+        expect(duel.phase).toBe('F1')
+        expect(duel.tierA).toBe(1)
+        expect(duel.tierB).toBe(1)
+        expect(duel.a.fameTier).toBe(1)
+        expect(duel.b.fameTier).toBe(1)
+
+        shown.add(duel.a.id)
+        shown.add(duel.b.id)
+        state = applyDuelChoice(state, duel.a, duel.b, itemsMap, 2500, duel.dimension)
+      }
+    })
+
+    it('Usuario con 10 libros propios: en F1, al menos 1 de cada pareja es suya', async () => {
+      const seed = (await import('../../data/seed.json')).default as { items: Item[] }
+      const bookItems = seed.items.filter((it) => it.type === 'book')
+      const ownBooks = bookItems.slice(0, 10)
+      const ownIds = new Set(ownBooks.map((b) => b.id))
+      const entries: Record<string, any> = {}
+      for (const b of ownBooks) {
+        entries[b.id] = { status: 'seen', stars: 4, updatedAt: Date.now() }
+      }
+
+      const input: DecideInput = {
+        shelf: 'book',
+        items: seed.items,
+        entries,
+        rankings: { movie: [], series: [], book: ownBooks.map((b) => b.id), artist: [], boardgame: [] },
+        profile: { ...mockProfile, country: 'ES', lang: 'es' },
+        friends: [],
+        answers: {},
+        affinity: () => null,
+        friendPct: () => null,
+      }
+      let state = initDecideSession(input)
+      const shown = new Set<string>()
+      const itemsMap = new Map(seed.items.map((it) => [it.id, it]))
+
+      for (let i = 0; i < 5; i++) {
+        const duel = nextDuel(state, seed.items, shown)
+        expect(duel).not.toBeNull()
+        if (!duel) break
+        expect(duel.phase).toBe('F1')
+
+        const hasOwn = ownIds.has(duel.a.id) || ownIds.has(duel.b.id)
+        expect(hasOwn).toBe(true)
+
+        shown.add(duel.a.id)
+        shown.add(duel.b.id)
+        state = applyDuelChoice(state, duel.a, duel.b, itemsMap, 2500, duel.dimension)
+      }
+    })
+
+    it('Un duelo lento (>6s): las dos obras quedan marcadas como dudosas y el siguiente duelo sale de las 20 más famosas', async () => {
+      const seed = (await import('../../data/seed.json')).default as { items: Item[] }
+      const input: DecideInput = {
+        shelf: 'book',
+        items: seed.items,
+        entries: {},
+        rankings: { movie: [], series: [], book: [], artist: [], boardgame: [] },
+        profile: { ...mockProfile, country: 'ES', lang: 'es' },
+        friends: [],
+        answers: {},
+        affinity: () => null,
+        friendPct: () => null,
+      }
+      let state = initDecideSession(input)
+      const shown = new Set<string>()
+      const itemsMap = new Map(seed.items.map((it) => [it.id, it]))
+
+      const firstDuel = nextDuel(state, seed.items, shown)
+      expect(firstDuel).not.toBeNull()
+      if (!firstDuel) return
+
+      shown.add(firstDuel.a.id)
+      shown.add(firstDuel.b.id)
+
+      // Duelo que tarda más de 6 segundos (6500 ms)
+      const slowState = applyDuelChoice(state, firstDuel.a, firstDuel.b, itemsMap, 6500, firstDuel.dimension)
+      expect(slowState.doubtfulItems?.[firstDuel.a.id]).toBeDefined()
+      expect(slowState.doubtfulItems?.[firstDuel.b.id]).toBeDefined()
+      expect(slowState.preferFameOrOwn).toBe(true)
+
+      // Verificar que recog aplica R * 0.5 para obras dudosas
+      const { recog } = await import('./recog')
+      const recogCtx = {
+        user: { country: 'ES', lang: 'es' },
+        entries: {},
+        doubtfulItems: slowState.doubtfulItems,
+      }
+      const normalR = recog(firstDuel.a, { user: { country: 'ES', lang: 'es' } })
+      const doubtfulR = recog(firstDuel.a, recogCtx)
+      expect(doubtfulR).toBeCloseTo(normalR * 0.5, 2)
+
+      // El siguiente duelo debe salir de las 20 obras más famosas de nivel 1 (o propias)
+      const getNotoriety = (it: Item) => typeof it.notoriety === 'number' ? it.notoriety : ((it.notoriety as any)?.ES ?? 0)
+      const top20FamousIds = new Set(
+        seed.items
+          .filter((it) => it.type === 'book' && it.fameTier === 1 && !shown.has(it.id))
+          .sort((a, b) => getNotoriety(b) - getNotoriety(a))
+          .slice(0, 20)
+          .map((it) => it.id)
+      )
+
+      const nextD = nextDuel(slowState, seed.items, shown)
+      expect(nextD).not.toBeNull()
+      if (!nextD) return
+
+      expect(top20FamousIds.has(nextD.a.id)).toBe(true)
+      expect(top20FamousIds.has(nextD.b.id)).toBe(true)
+    })
+  })
 })

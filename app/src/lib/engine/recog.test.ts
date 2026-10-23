@@ -112,6 +112,7 @@ describe('Motor R: Reconocibilidad (recog.ts)', () => {
       genres: ['Drama', 'Romance'],
       synopsis: 'Titanic',
       posterUrl: null,
+      popularity: 95,
       notoriety: 0.95,
       fameTier: 1,
     }
@@ -125,6 +126,7 @@ describe('Motor R: Reconocibilidad (recog.ts)', () => {
       genres: ['Drama'],
       synopsis: 'Poco conocida',
       posterUrl: null,
+      popularity: 20,
       notoriety: 0.30,
       fameTier: 4,
     }

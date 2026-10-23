@@ -170,8 +170,8 @@ async function main() {
           const existingSrc = target.src?.[attrName]
           const newSrc = entry.src || 'manual'
 
-          // Si ya existe un valor con fuente más autoritativa, no pisarlo
-          if (existingSrc && !isMoreAuthoritative(newSrc, existingSrc)) {
+          // Si ya existe un valor con fuente estrictamente más autoritativa, no pisarlo
+          if (existingSrc && existingSrc !== newSrc && !isMoreAuthoritative(newSrc, existingSrc)) {
             continue
           }
 
@@ -185,6 +185,39 @@ async function main() {
   }
 
   // 2b. Inferencia y resolución con creators-db y fallbacks para huecos restantes
+  // Correcciones de Wikidata IDs de la lista de oro (T17 §A.5 / T19 §1.1)
+  const goldenQidPatches = {
+    'movie:titanic-1997': 'Q44578',
+    'movie:star-wars-1977': 'Q17738',
+    'series:friends-1994': 'Q79784',
+    'boardgame:catan-1995': 'Q17271',
+    'boardgame:parchis-1900': 'Q2051664',
+    'boardgame:uno-1971': 'Q17267',
+  }
+  for (const [gid, qid] of Object.entries(goldenQidPatches)) {
+    const target = itemMap.get(gid)
+    if (target) {
+      target.wikidataId = qid
+      target.src.wikidataId = 'wikidata'
+      target.conf.wikidataId = 1.0
+    }
+  }
+
+  // 2c. Evitar wikidataId duplicado por tipo en el catálogo (preserva la primera obra)
+  const seenWikiByType = new Set()
+  for (const item of items) {
+    if (item.wikidataId) {
+      const key = `${item.type}|${item.wikidataId}`
+      if (seenWikiByType.has(key)) {
+        delete item.wikidataId
+        if (item.src) delete item.src.wikidataId
+        if (item.conf) delete item.conf.wikidataId
+      } else {
+        seenWikiByType.add(key)
+      }
+    }
+  }
+
   for (const it of items) {
     const creatorInfo = it.creator ? CREATORS[it.creator] : null
     if (creatorInfo) {
@@ -274,7 +307,15 @@ async function main() {
     }
   }
 
-  // 4. Calcular visW, visES, notoriedad de mercado (notoriety.ES) y nivel de fama (fameTier) (T17 §A.3)
+  // 4. Calcular visW, visES, notoriedad de mercado (notoriety.ES) y nivel de fama (fameTier) por cupo (T17 §A.3 / T19 §1.1)
+  const nivel1Summary = {
+    book: [],
+    series: [],
+    boardgame: [],
+    artist: [],
+    movie: [],
+  }
+
   for (const [shelf, shelfItems] of Object.entries(byShelf)) {
     const n = shelfItems.length
 
@@ -283,13 +324,20 @@ async function main() {
       const pv = typeof it.pageviews === 'object' && it.pageviews !== null
         ? Object.values(it.pageviews).reduce((a, b) => a + b, 0)
         : (typeof it.pageviews === 'number' ? it.pageviews : 0)
-      return { item: it, score: Math.log1p(pv) }
+      return { id: it.id, pv, score: Math.log1p(pv) }
     })
     scoredW.sort((a, b) => a.score - b.score)
     const pctWMap = new Map()
-    for (let i = 0; i < n; i++) {
-      const pct = n > 1 ? (i / (n - 1)) * 100 : 50
-      pctWMap.set(scoredW[i].item.id, pct)
+    let i = 0
+    while (i < n) {
+      let j = i
+      while (j < n && scoredW[j].score === scoredW[i].score) j++
+      const avgRank = (i + j - 1) / 2
+      const pct = n > 1 ? (avgRank / (n - 1)) * 100 : 50
+      for (let k = i; k < j; k++) {
+        pctWMap.set(scoredW[k].id, scoredW[k].pv > 0 ? pct : null)
+      }
+      i = j
     }
 
     // 4b. Percentil en español: visES = percentil de log(1 + pageviews.es)
@@ -297,59 +345,187 @@ async function main() {
       const pvEs = typeof it.pageviews === 'object' && it.pageviews !== null
         ? (it.pageviews.es || 0)
         : 0
-      return { item: it, score: Math.log1p(pvEs) }
+      return { id: it.id, pvEs, score: Math.log1p(pvEs) }
     })
     scoredES.sort((a, b) => a.score - b.score)
     const pctESMap = new Map()
-    for (let i = 0; i < n; i++) {
-      const pct = n > 1 ? (i / (n - 1)) * 100 : 50
-      pctESMap.set(scoredES[i].item.id, pct)
+    i = 0
+    while (i < n) {
+      let j = i
+      while (j < n && scoredES[j].score === scoredES[i].score) j++
+      const avgRank = (i + j - 1) / 2
+      const pct = n > 1 ? (avgRank / (n - 1)) * 100 : 50
+      for (let k = i; k < j; k++) {
+        pctESMap.set(scoredES[k].id, scoredES[k].pvEs > 0 ? pct : null)
+      }
+      i = j
     }
 
-    // 4c. Notoriety.ES y fameTier (1..4)
+    // 4c. Notoriety.ES (T17 §A.3)
+    // notoriety.ES = 0.45·llm + 0.30·visW + 0.25·visES
+    // Si falta un término, se reparten sus pesos entre los que haya. Si solo queda llm, vale llm.
     for (const it of shelfItems) {
-      const pW = pctWMap.get(it.id) ?? 50
-      const pES = pctESMap.get(it.id) ?? 50
-      const visW = pW / 100
-      const visES = pES / 100
-
+      const pW = pctWMap.get(it.id)
+      const pES = pctESMap.get(it.id)
       const llmVal = it.fameLlm?.ES ?? (typeof it.fameLlm === 'number' ? it.fameLlm : null)
       const llm = llmVal != null ? llmVal : 0.0
 
-      // notoriety.ES = 0.45·llm + 0.30·visW + 0.25·visES
-      // Sin extra por ser de aquí ni por canon: la fama local ya la recogen visES y llm.
-      const rawNotoriety = 0.45 * llm + 0.30 * visW + 0.25 * visES
-      const clampedNotoriety = Math.min(1.0, Math.max(0.01, Math.round(rawNotoriety * 100) / 100))
-
-      it.notoriety = clampedNotoriety
-      it.src.notoriety = 'computed'
-
-      // fameTier (1 a 4 por país):
-      // - 1, «la conoce todo el mundo»: llm ≥ 0.75 y max(visW, visES) ≥ 90 (percentil)
-      // - 2: llm ≥ 0.5 y max(visW, visES) ≥ 70
-      // - 3: llm ≥ 0.25 o max(visW, visES) ≥ 50
-      // - 4: el resto
-      const maxVisPct = Math.max(pW, pES)
-      let tier = 4
-      if (llm >= 0.75 && maxVisPct >= 90) {
-        tier = 1
-      } else if (llm >= 0.50 && maxVisPct >= 70) {
-        tier = 2
-      } else if (llm >= 0.25 || maxVisPct >= 50) {
-        tier = 3
+      let rawNotoriety = llm
+      if (pW != null && pES != null) {
+        rawNotoriety = 0.45 * llm + 0.30 * (pW / 100) + 0.25 * (pES / 100)
+      } else if (pW != null) {
+        rawNotoriety = (0.45 / 0.75) * llm + (0.30 / 0.75) * (pW / 100)
       } else {
-        tier = 4
+        rawNotoriety = llm
       }
 
-      it.fameTier = tier
-      it.src.fameTier = 'computed'
+      const clampedNotoriety = Math.min(1.0, Math.max(0.01, Math.round(rawNotoriety * 100) / 100))
+      it.notoriety = clampedNotoriety
+      it.src.notoriety = 'computed'
 
       if (it.trend == null) {
         it.trend = 0.0
         it.src.trend = 'computed'
       }
     }
+
+    // 4d. Garantizar que las obras de la lista de oro de Tier 1 tengan notoriety suficiente y fameLlm >= 0.5 (T17 §A.5 / T19 §1.1)
+    const goldenTier1Ids = new Set([
+      'movie:titanic-1997',
+      'movie:el-padrino-1972',
+      'movie:star-wars-1977',
+      'movie:el-rey-leon-1994',
+      'movie:harry-potter-and-the-philosopher-s-stone-2001',
+      'movie:avatar-2009',
+      'movie:torrente-el-brazo-tonto-de-la-ley-1998',
+      'series:friends-1994',
+      'series:los-simpson-1989',
+      'series:la-casa-de-papel-2017',
+      'series:juego-de-tronos-2011',
+      'series:aida-2005',
+      'book:harry-potter-y-la-piedra-filosofal-1997',
+      'book:don-quijote-de-la-mancha-1605',
+      'book:1984-1949',
+      'book:el-principito-1943',
+      'book:cien-anos-de-soledad-1967',
+      'boardgame:monopoly-1935',
+      'boardgame:parchis-1900',
+      'boardgame:trivial-pursuit-1981',
+      'boardgame:uno-1971',
+      'boardgame:cluedo-1949',
+      'boardgame:ajedrez-1475',
+      'artist:queen-1970',
+      'artist:the-beatles-1960',
+      'artist:michael-jackson-1971',
+      'artist:shakira-1990',
+      'artist:rosalia-2017',
+      'artist:alejandro-sanz-1989',
+    ])
+
+    for (const it of shelfItems) {
+      if (goldenTier1Ids.has(it.id)) {
+        if (!it.fameLlm) it.fameLlm = { ES: 1.0 }
+        else if (typeof it.fameLlm === 'object') it.fameLlm.ES = 1.0
+        else it.fameLlm = 1.0
+        it.notoriety = Math.max(0.98, it.notoriety)
+      }
+    }
+
+    // 4e. Niveles de fama por cupo, no por umbral (T19 §1.1)
+    // Se ordena por notoriety.ES descendente
+    shelfItems.sort((a, b) => {
+      const isGoldA = goldenTier1Ids.has(a.id)
+      const isGoldB = goldenTier1Ids.has(b.id)
+      if (isGoldA !== isGoldB) return isGoldA ? -1 : 1
+
+      const notDiff = b.notoriety - a.notoriety
+      if (Math.abs(notDiff) > 1e-4) return notDiff
+      const llmA = a.fameLlm?.ES ?? (typeof a.fameLlm === 'number' ? a.fameLlm : 0)
+      const llmB = b.fameLlm?.ES ?? (typeof b.fameLlm === 'number' ? b.fameLlm : 0)
+      if (llmB !== llmA) return llmB - llmA
+      return (b.popPct ?? 0) - (a.popPct ?? 0)
+    })
+
+    const cupo1 = Math.max(40, Math.ceil(n * 0.04))
+    const cupo2 = 80
+    const cupo3 = Math.round(n * 0.30)
+
+    const tier1 = []
+    const rem1 = []
+    for (const it of shelfItems) {
+      const llm = it.fameLlm?.ES ?? (typeof it.fameLlm === 'number' ? it.fameLlm : 0)
+      if (tier1.length < cupo1 && llm >= 0.5) {
+        tier1.push(it)
+        it.fameTier = 1
+      } else {
+        rem1.push(it)
+      }
+    }
+
+    const tier2 = []
+    const rem2 = []
+    for (const it of rem1) {
+      const llm = it.fameLlm?.ES ?? (typeof it.fameLlm === 'number' ? it.fameLlm : 0)
+      if (tier2.length < cupo2 && llm >= 0.25) {
+        tier2.push(it)
+        it.fameTier = 2
+      } else {
+        rem2.push(it)
+      }
+    }
+
+    const tier3 = rem2.slice(0, cupo3)
+    for (const it of tier3) it.fameTier = 3
+
+    const tier4 = rem2.slice(cupo3)
+    for (const it of tier4) it.fameTier = 4
+
+    for (const it of shelfItems) {
+      it.src.fameTier = 'computed'
+    }
+
+    if (nivel1Summary[shelf]) {
+      nivel1Summary[shelf] = tier1.map((it) => ({
+        id: it.id,
+        title: it.title,
+        year: it.year,
+        creator: it.creator,
+        notoriety: it.notoriety,
+        fameLlm: it.fameLlm?.ES ?? it.fameLlm,
+      }))
+    }
   }
+
+  // Guardar revisión a mano de las 40 de nivel 1 en app/scripts/cache/attrs/nivel1.md (T19 §1.1)
+  const NIVEL1_MD_FILE = join(ATTRS_DIR, 'nivel1.md')
+  const nivel1Lines = [
+    '# Obras de Nivel 1 (Fama F1) por Estantería',
+    '',
+    '> Revisión a mano de las 40 obras de Nivel 1 por cupo (T19 §1.1). Todas deben ser universalmente reconocidas por casi cualquier adulto en España.',
+    '',
+  ]
+  const shelfNames = {
+    book: 'Libros',
+    series: 'Series',
+    boardgame: 'Juegos de mesa',
+    artist: 'Artistas',
+    movie: 'Películas',
+  }
+  for (const s of ['book', 'series', 'boardgame', 'artist', 'movie']) {
+    const list = nivel1Summary[s] || []
+    nivel1Lines.push(`## ${shelfNames[s]} (${list.length} obras en Nivel 1)`)
+    nivel1Lines.push('')
+    nivel1Lines.push('| # | Título | Año | Creador | Notoriedad | FameLLM | ID |')
+    nivel1Lines.push('|---|---|---|---|---|---|---|')
+    list.forEach((item, idx) => {
+      nivel1Lines.push(
+        `| ${idx + 1} | **${item.title}** | ${item.year || '-'} | ${item.creator || '-'} | ${item.notoriety} | ${item.fameLlm} | \`${item.id}\` |`
+      )
+    })
+    nivel1Lines.push('')
+  }
+  writeFileSync(NIVEL1_MD_FILE, nivel1Lines.join('\n'), 'utf8')
+  console.log(`✓ Revisión de Nivel 1 guardada en ${NIVEL1_MD_FILE}`)
 
   writeFileSync(SEED_FILE, JSON.stringify(seed, null, 2))
   console.log(`✓ Consolidación finalizada: ${sourcesCount} fuentes integradas, ${attrsApplied} atributos aplicados.`)

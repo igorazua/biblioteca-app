@@ -177,6 +177,38 @@ export function Metrics() {
             <KpiCard label="Duelos por sesión" value={`${kpis.decide.avgDuels}`} sub="Media hasta aceptar" />
             <KpiCard label="Latencia duelo" value={`${kpis.decide.medianDuelMs > 0 ? (kpis.decide.medianDuelMs / 1000).toFixed(1) + 's' : '—'}`} sub="Mediana de decisión" />
             <KpiCard label="InfoGain duelos" value={`${kpis.decide.avgInfoGain}`} sub="Poder discriminatorio" />
+            <KpiCard label="Duelos lentos (> 6 s)" value={`${kpis.decide.slowDuelPct}%`} sub={`F1: ${kpis.decide.slowDuelsByPhase.F1?.pct ?? 0}% (obj < 5%)`} />
+          </div>
+
+          {/* Duelos lentos por fase (T19 §1.3) */}
+          <div className="rounded-2xl bg-surface border border-line p-3 space-y-2">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-semibold uppercase text-mute">Duelos lentos (&gt; 6 s) por fase (T19 §1.3)</span>
+              <span className="text-[10px] text-accent">Obj F1 &lt; 5%</span>
+            </div>
+            <div className="grid grid-cols-3 gap-2 text-center pt-1">
+              <div className="rounded-xl bg-surface2/60 p-2 border border-line/40">
+                <div className="text-[11px] text-mute">F1 · Conocidas</div>
+                <div className="text-lg font-bold font-serif tabular-nums text-white mt-0.5">
+                  {kpis.decide.slowDuelsByPhase.F1?.pct ?? 0}%
+                </div>
+                <div className="text-[9px] text-mute">{kpis.decide.slowDuelsByPhase.F1?.slow ?? 0}/{kpis.decide.slowDuelsByPhase.F1?.total ?? 0} duelos</div>
+              </div>
+              <div className="rounded-xl bg-surface2/60 p-2 border border-line/40">
+                <div className="text-[11px] text-mute">F2 · Afinar</div>
+                <div className="text-lg font-bold font-serif tabular-nums text-white mt-0.5">
+                  {kpis.decide.slowDuelsByPhase.F2?.pct ?? 0}%
+                </div>
+                <div className="text-[9px] text-mute">{kpis.decide.slowDuelsByPhase.F2?.slow ?? 0}/{kpis.decide.slowDuelsByPhase.F2?.total ?? 0} duelos</div>
+              </div>
+              <div className="rounded-xl bg-surface2/60 p-2 border border-line/40">
+                <div className="text-[11px] text-mute">F3 · Parecidas</div>
+                <div className="text-lg font-bold font-serif tabular-nums text-white mt-0.5">
+                  {kpis.decide.slowDuelsByPhase.F3?.pct ?? 0}%
+                </div>
+                <div className="text-[9px] text-mute">{kpis.decide.slowDuelsByPhase.F3?.slow ?? 0}/{kpis.decide.slowDuelsByPhase.F3?.total ?? 0} duelos</div>
+              </div>
+            </div>
           </div>
 
           {/* Métrica estrella: acierto real a 14 días */}

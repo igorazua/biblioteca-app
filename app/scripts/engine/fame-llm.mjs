@@ -187,7 +187,7 @@ const BOARDGAME_POPULAR_MODERN = new Set([
   'catan', 'dixit', 'carcassonne', 'virus!', 'dobble', 'jungle speed', 'bang!',
   'sushi go!', 'fantasma blitz', 'time\'s up!', 'codigo secreto', 'codenames',
   'exploding kittens', 'ciudadelas', 'los hombres lobo de castronegro', 'secret hitler',
-  'pandemic', 'aventureros al tren', 'ticket to ride', 'azul',
+  'pandemic', 'aventureros al tren', 'ticket to ride', 'azul', '7 wonders', 'love letter',
 ])
 
 function inferBoardgameFame(item, pvEs, pvTotal) {
@@ -197,16 +197,23 @@ function inferBoardgameFame(item, pvEs, pvTotal) {
   }
   for (const pop of BOARDGAME_POPULAR_MODERN) {
     if (normTitle.includes(pop)) {
-      if (normTitle.includes('catan')) return 0.75
-      if (['dixit', 'carcassonne', 'virus', 'dobble'].some((k) => normTitle.includes(k))) return 0.5
-      return 0.25
+      if (normTitle.includes('catan')) return 1.0
+      if (['dixit', 'carcassonne', 'virus', 'dobble', 'aventureros al tren', 'ticket to ride'].some((k) => normTitle.includes(k))) return 0.75
+      return 0.5
     }
   }
 
-  // Si tiene visitas astronómicas de Wikipedia en español
+  // Si tiene visitas de Wikipedia o popularidad/votos altos en juegos familiares
   if (pvEs >= 40000 || pvTotal >= 500000) return 0.75
   if (pvEs >= 15000 || pvTotal >= 150000) return 0.5
   if (pvEs >= 4000 || pvTotal >= 30000) return 0.25
+
+  const pop = item.popularity || 0
+  const votes = item.voteCount || 0
+  const weight = item.weight || 2.5
+  if (weight <= 2.2 && (pop >= 80 || votes >= 20000)) return 0.5
+  if (weight <= 2.8 && (pop >= 70 || votes >= 10000)) return 0.25
+
   return 0.0
 }
 
@@ -219,15 +226,30 @@ function inferMediaFame(item, pvEs, pvTotal, isSchoolReading) {
     return 0.75
   }
 
-  // Señales de prestigio / canon / masividad de fondo (mínimo 0.25-0.5 para obras canónicas o de gran impacto)
+  // Señales de prestigio / canon / masividad de fondo
   let base = 0.0
   const isCanon = Boolean(item.isCanon)
   const votes = item.voteCount || item.readers || 0
   const langs = item.wikiLangs || 0
+  const pop = item.popularity || 0
 
-  if (isCanon && (langs >= 30 || votes >= 1000)) base = 0.5
-  else if (langs >= 40 || votes >= 2500) base = 0.5
-  else if (isCanon || langs >= 20 || votes >= 500) base = 0.25
+  if (item.type === 'artist') {
+    if (pop >= 88) base = 0.75
+    else if (pop >= 70) base = 0.5
+    else if (pop >= 50) base = 0.25
+  } else if (item.type === 'series') {
+    if (pop >= 88 || votes >= 15000 || langs >= 80) base = 0.75
+    else if (pop >= 75 || votes >= 5000 || langs >= 40) base = 0.5
+    else if (pop >= 60 || votes >= 1000 || langs >= 20) base = 0.25
+  } else if (item.type === 'book') {
+    if (pop >= 88 || votes >= 15000 || langs >= 50) base = 0.75
+    else if (pop >= 75 || votes >= 3000 || langs >= 25) base = 0.5
+    else if (pop >= 60 || votes >= 500 || langs >= 10 || isCanon) base = 0.25
+  } else {
+    if (isCanon && (langs >= 30 || votes >= 1000)) base = 0.5
+    else if (langs >= 40 || votes >= 2500) base = 0.5
+    else if (isCanon || langs >= 20 || votes >= 500) base = 0.25
+  }
 
   // Obras españolas: el público local las conoce con menos visitas globales
   if (isSpanish) {

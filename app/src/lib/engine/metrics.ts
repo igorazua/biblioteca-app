@@ -33,6 +33,9 @@ export interface DecideMetrics {
   avgDuels: number // media de duelos por sesión aceptada
   avgInfoGain: number // infoGain medio en dec_duel
   medianDuelMs: number // mediana de dec_duel.ms en milisegundos
+  slowDuelPct: number // % de duelos lentos (> 6s) (T19 §1.3)
+  slowDuelsByPhase: Record<string, { total: number; slow: number; pct: number }>
+  slowDuelsByShelf: Record<ShelfType, { total: number; slow: number; pct: number }>
   acceptedItemsCount: number
   realSuccessRate14d: number // % de aceptadas que pasaron a seen en 14 días
   realAvgPercentile: number // percentil medio con el que acaban en ranking
@@ -196,7 +199,22 @@ export function calcDecideMetrics(events: EngineEvent[]): DecideMetrics {
   let totalDuels = 0
   let totalInfoGain = 0
   let duelCount = 0
+  let slowDuelsCount = 0
   const duelMsList: number[] = []
+
+  const slowDuelsByPhase: Record<string, { total: number; slow: number; pct: number }> = {
+    F1: { total: 0, slow: 0, pct: 0 },
+    F2: { total: 0, slow: 0, pct: 0 },
+    F3: { total: 0, slow: 0, pct: 0 },
+  }
+
+  const slowDuelsByShelf: Record<ShelfType, { total: number; slow: number; pct: number }> = {
+    movie: { total: 0, slow: 0, pct: 0 },
+    series: { total: 0, slow: 0, pct: 0 },
+    book: { total: 0, slow: 0, pct: 0 },
+    boardgame: { total: 0, slow: 0, pct: 0 },
+    artist: { total: 0, slow: 0, pct: 0 },
+  }
 
   const acceptedItems = new Map<string, { itemId: string; acceptedAt: number }>()
 
@@ -212,7 +230,24 @@ export function calcDecideMetrics(events: EngineEvent[]): DecideMetrics {
         totalInfoGain += ig
         duelCount++
         const ms = typeof e.data?.ms === 'number' ? e.data.ms : undefined
-        if (ms != null && ms > 0) duelMsList.push(ms)
+        if (ms != null && ms > 0) {
+          duelMsList.push(ms)
+          const isSlow = ms > 6000
+          if (isSlow) slowDuelsCount++
+
+          // Agrupación por fase (T19 §1.3)
+          const rawPhase = (e.data?.phase as string) || 'F1'
+          const ph = rawPhase === 'coarse' ? 'F1' : rawPhase === 'fine' ? 'F2' : rawPhase
+          if (!slowDuelsByPhase[ph]) slowDuelsByPhase[ph] = { total: 0, slow: 0, pct: 0 }
+          slowDuelsByPhase[ph].total++
+          if (isSlow) slowDuelsByPhase[ph].slow++
+
+          // Agrupación por estantería (T19 §1.3)
+          if (e.shelf && slowDuelsByShelf[e.shelf]) {
+            slowDuelsByShelf[e.shelf].total++
+            if (isSlow) slowDuelsByShelf[e.shelf].slow++
+          }
+        }
       } else if (e.type === 'dec_reject') {
         sessionRejects++
       } else if (e.type === 'dec_accept') {
@@ -262,6 +297,14 @@ export function calcDecideMetrics(events: EngineEvent[]): DecideMetrics {
 
   const totalSessions = sessions.size
 
+  for (const ph of Object.values(slowDuelsByPhase)) {
+    ph.pct = ph.total > 0 ? Math.round((ph.slow / ph.total) * 100) : 0
+  }
+  for (const sh of Object.values(slowDuelsByShelf)) {
+    sh.pct = sh.total > 0 ? Math.round((sh.slow / sh.total) * 100) : 0
+  }
+  const slowDuelPct = duelMsList.length > 0 ? Math.round((slowDuelsCount / duelMsList.length) * 100) : 0
+
   return {
     totalSessions,
     acceptedSessions: acceptedCount,
@@ -271,6 +314,9 @@ export function calcDecideMetrics(events: EngineEvent[]): DecideMetrics {
     avgDuels: acceptedCount > 0 ? Math.round((totalDuels / acceptedCount) * 10) / 10 : 0,
     avgInfoGain: duelCount > 0 ? Math.round((totalInfoGain / duelCount) * 100) / 100 : 0,
     medianDuelMs,
+    slowDuelPct,
+    slowDuelsByPhase,
+    slowDuelsByShelf,
     acceptedItemsCount: acceptedItems.size,
     realSuccessRate14d: acceptedItems.size > 0 ? Math.round((convertedToSeen14d / acceptedItems.size) * 100) : 0,
     realAvgPercentile: rankedCount > 0 ? Math.round((totalPctSum / rankedCount) * 100) / 100 : 0,
