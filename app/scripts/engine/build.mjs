@@ -175,7 +175,14 @@ async function main() {
             continue
           }
 
-          target[attrName] = entry.value
+          if (attrName === 'posterUrl') {
+            // misma ruta del bucket con otra imagen dentro: se sube la versión para que el móvil no enseñe la vieja de caché
+            const changed = target.posterUrl !== entry.value || target.imageSrc === 'generated'
+            target.posterUrl = changed ? String(entry.value).replace(/\?v=\d+$/, '') + '?v=3' : entry.value
+            if (entry.imageSrc) target.imageSrc = entry.imageSrc
+          } else {
+            target[attrName] = entry.value
+          }
           target.src[attrName] = newSrc
           if (entry.conf != null) target.conf[attrName] = entry.conf
           attrsApplied++

@@ -19,11 +19,15 @@ export const SOURCE_HIERARCHY = [
   'llm-infer',
   'manual',
   'seed',
+  'generated', // portada generada: la última de todas, cualquier imagen real la sustituye
 ]
 
+// «scrape:covers.openlibrary.org» cuenta como «scrape»
+const baseSrc = (s) => (typeof s === 'string' && s.startsWith('scrape:') ? 'scrape' : s)
+
 export function isMoreAuthoritative(srcA, srcB) {
-  const idxA = SOURCE_HIERARCHY.indexOf(srcA)
-  const idxB = SOURCE_HIERARCHY.indexOf(srcB)
+  const idxA = SOURCE_HIERARCHY.indexOf(baseSrc(srcA))
+  const idxB = SOURCE_HIERARCHY.indexOf(baseSrc(srcB))
   const rankA = idxA === -1 ? 999 : idxA
   const rankB = idxB === -1 ? 999 : idxB
   return rankA < rankB

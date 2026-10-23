@@ -1,4 +1,624 @@
 
+## Cobertura a 2026-10-23T10:20:17.411Z
+
+| Categoría | Obras | Wikidata | ID Primario | Votos/Readers | Keywords/Tags | Sinopsis | Portada Legal | Ejes |
+|---|---|---|---|---|---|---|---|---|
+| **movie** | 935 | 85.9% | 79.9% | 84.4% | 84.4% | 98.7% | 0.0% | 99.9% |
+| **series** | 998 | 86.8% | 71.6% | 85.3% | 85.3% | 87.9% | 0.0% | 100.0% |
+| **book** | 988 | 43.2% | 97.0% | 87.9% | 86.0% | 99.3% | 0.0% | 100.0% |
+| **boardgame** | 1018 | 69.5% | 0.0% | 68.9% | 68.9% | 91.5% | 0.3% | 99.7% |
+| **artist** | 410 | 97.6% | 99.8% | 0.0% | 60.2% | 100.0% | 0.0% | 100.0% |
+
+
+### Controles automáticos T17 (22/10/2026)
+- **Fallas detectadas:** 38
+- **Aprobadas:** 2
+
+#### Fallas:
+- ❌ Pageviews en 'book': 48.9% (209/427) < 90% requerido
+- ❌ Pageviews en 'boardgame': 62.6% (443/708) < 90% requerido
+- ❌ Pageviews en 'artist': 1.0% (4/400) < 90% requerido
+- ❌ Eje 'emocion' en 'movie': 69.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'movie': 69.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'movie': 79.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'violencia' en 'movie': 66.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'familiar' en 'movie': 65.1% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'movie': 62.3% concentrado en un solo valor (> 60%)
+- ❌ Eje 'exigencia' en 'series': 90.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'series': 68.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tension' en 'series': 88.8% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'series': 92.3% concentrado en un solo valor (> 60%)
+- ❌ Eje 'violencia' en 'series': 78.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'familiar' en 'series': 67.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'series': 95.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'formato' en 'series': 90.1% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tono' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'ritmo' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'emocion' en 'book': 99.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'densidad' en 'book': 91.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'book': 100.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tension' en 'book': 96.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'book': 90.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'book': 97.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'ideas' en 'book': 87.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'reconfort' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'interaccion' en 'boardgame': 68.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'azar' en 'boardgame': 90.5% concentrado en un solo valor (> 60%)
+- ❌ Eje 'confrontacion' en 'boardgame': 96.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'cooperacion' en 'boardgame': 95.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tema' en 'boardgame': 98.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'risas' en 'boardgame': 98.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'valencia' en 'artist': 100.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'bailable' en 'artist': 65.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'organico' en 'artist': 82.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fondo' en 'artist': 82.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'complejidad' en 'artist': 89.0% concentrado en un solo valor (> 60%)
+
+
+
+## Cobertura a 2026-10-23T10:20:16.755Z
+
+| Categoría | Obras | Wikidata | ID Primario | Votos/Readers | Keywords/Tags | Sinopsis | Portada Legal | Ejes |
+|---|---|---|---|---|---|---|---|---|
+| **movie** | 935 | 85.9% | 79.9% | 84.4% | 84.4% | 98.7% | 0.0% | 99.9% |
+| **series** | 998 | 86.8% | 71.6% | 85.3% | 85.3% | 87.9% | 0.0% | 100.0% |
+| **book** | 988 | 43.2% | 97.0% | 87.9% | 86.0% | 99.3% | 0.0% | 100.0% |
+| **boardgame** | 1018 | 69.5% | 0.0% | 68.9% | 68.9% | 91.5% | 0.3% | 99.7% |
+| **artist** | 410 | 97.6% | 99.8% | 0.0% | 60.2% | 100.0% | 0.0% | 100.0% |
+
+
+### Controles automáticos T17 (22/10/2026)
+- **Fallas detectadas:** 38
+- **Aprobadas:** 2
+
+#### Fallas:
+- ❌ Pageviews en 'book': 48.9% (209/427) < 90% requerido
+- ❌ Pageviews en 'boardgame': 62.6% (443/708) < 90% requerido
+- ❌ Pageviews en 'artist': 1.0% (4/400) < 90% requerido
+- ❌ Eje 'emocion' en 'movie': 69.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'movie': 69.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'movie': 79.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'violencia' en 'movie': 66.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'familiar' en 'movie': 65.1% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'movie': 62.3% concentrado en un solo valor (> 60%)
+- ❌ Eje 'exigencia' en 'series': 90.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'series': 68.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tension' en 'series': 88.8% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'series': 92.3% concentrado en un solo valor (> 60%)
+- ❌ Eje 'violencia' en 'series': 78.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'familiar' en 'series': 67.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'series': 95.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'formato' en 'series': 90.1% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tono' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'ritmo' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'emocion' en 'book': 99.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'densidad' en 'book': 91.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'book': 100.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tension' en 'book': 96.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'book': 90.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'book': 97.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'ideas' en 'book': 87.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'reconfort' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'interaccion' en 'boardgame': 68.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'azar' en 'boardgame': 90.5% concentrado en un solo valor (> 60%)
+- ❌ Eje 'confrontacion' en 'boardgame': 96.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'cooperacion' en 'boardgame': 95.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tema' en 'boardgame': 98.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'risas' en 'boardgame': 98.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'valencia' en 'artist': 100.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'bailable' en 'artist': 65.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'organico' en 'artist': 82.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fondo' en 'artist': 82.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'complejidad' en 'artist': 89.0% concentrado en un solo valor (> 60%)
+
+
+
+## Cobertura a 2026-10-23T10:20:08.468Z
+
+| Categoría | Obras | Wikidata | ID Primario | Votos/Readers | Keywords/Tags | Sinopsis | Portada Legal | Ejes |
+|---|---|---|---|---|---|---|---|---|
+| **movie** | 935 | 85.9% | 79.9% | 84.4% | 84.4% | 98.7% | 0.0% | 99.9% |
+| **series** | 998 | 86.8% | 71.6% | 85.3% | 85.3% | 87.9% | 0.0% | 100.0% |
+| **book** | 988 | 43.2% | 97.0% | 87.9% | 86.0% | 99.3% | 0.0% | 100.0% |
+| **boardgame** | 1018 | 69.5% | 0.0% | 68.9% | 68.9% | 91.5% | 0.3% | 99.7% |
+| **artist** | 410 | 97.6% | 99.8% | 0.0% | 60.2% | 100.0% | 0.0% | 100.0% |
+
+
+### Controles automáticos T17 (22/10/2026)
+- **Fallas detectadas:** 38
+- **Aprobadas:** 2
+
+#### Fallas:
+- ❌ Pageviews en 'book': 48.9% (209/427) < 90% requerido
+- ❌ Pageviews en 'boardgame': 62.6% (443/708) < 90% requerido
+- ❌ Pageviews en 'artist': 1.0% (4/400) < 90% requerido
+- ❌ Eje 'emocion' en 'movie': 69.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'movie': 69.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'movie': 79.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'violencia' en 'movie': 66.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'familiar' en 'movie': 65.1% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'movie': 62.3% concentrado en un solo valor (> 60%)
+- ❌ Eje 'exigencia' en 'series': 90.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'series': 68.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tension' en 'series': 88.8% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'series': 92.3% concentrado en un solo valor (> 60%)
+- ❌ Eje 'violencia' en 'series': 78.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'familiar' en 'series': 67.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'series': 95.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'formato' en 'series': 90.1% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tono' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'ritmo' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'emocion' en 'book': 99.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'densidad' en 'book': 91.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'book': 100.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tension' en 'book': 96.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'book': 90.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'book': 97.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'ideas' en 'book': 87.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'reconfort' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'interaccion' en 'boardgame': 68.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'azar' en 'boardgame': 90.5% concentrado en un solo valor (> 60%)
+- ❌ Eje 'confrontacion' en 'boardgame': 96.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'cooperacion' en 'boardgame': 95.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tema' en 'boardgame': 98.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'risas' en 'boardgame': 98.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'valencia' en 'artist': 100.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'bailable' en 'artist': 65.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'organico' en 'artist': 82.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fondo' en 'artist': 82.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'complejidad' en 'artist': 89.0% concentrado en un solo valor (> 60%)
+
+
+
+## Cobertura a 2026-10-23T09:28:34.877Z
+
+| Categoría | Obras | Wikidata | ID Primario | Votos/Readers | Keywords/Tags | Sinopsis | Portada Legal | Ejes |
+|---|---|---|---|---|---|---|---|---|
+| **movie** | 935 | 85.9% | 79.9% | 84.4% | 84.4% | 98.7% | 0.0% | 99.9% |
+| **series** | 998 | 86.8% | 71.6% | 85.3% | 85.3% | 87.9% | 0.0% | 100.0% |
+| **book** | 988 | 43.2% | 97.0% | 87.9% | 86.0% | 99.3% | 0.0% | 100.0% |
+| **boardgame** | 1018 | 69.5% | 0.0% | 68.9% | 68.9% | 91.5% | 0.3% | 99.7% |
+| **artist** | 410 | 97.6% | 99.8% | 0.0% | 60.2% | 100.0% | 0.0% | 100.0% |
+
+
+### Controles automáticos T17 (22/10/2026)
+- **Fallas detectadas:** 38
+- **Aprobadas:** 2
+
+#### Fallas:
+- ❌ Pageviews en 'book': 48.9% (209/427) < 90% requerido
+- ❌ Pageviews en 'boardgame': 62.6% (443/708) < 90% requerido
+- ❌ Pageviews en 'artist': 1.0% (4/400) < 90% requerido
+- ❌ Eje 'emocion' en 'movie': 69.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'movie': 69.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'movie': 79.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'violencia' en 'movie': 66.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'familiar' en 'movie': 65.1% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'movie': 62.3% concentrado en un solo valor (> 60%)
+- ❌ Eje 'exigencia' en 'series': 90.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'series': 68.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tension' en 'series': 88.8% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'series': 92.3% concentrado en un solo valor (> 60%)
+- ❌ Eje 'violencia' en 'series': 78.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'familiar' en 'series': 67.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'series': 95.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'formato' en 'series': 90.1% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tono' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'ritmo' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'emocion' en 'book': 99.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'densidad' en 'book': 91.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'book': 100.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tension' en 'book': 96.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'book': 90.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'book': 97.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'ideas' en 'book': 87.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'reconfort' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'interaccion' en 'boardgame': 68.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'azar' en 'boardgame': 90.5% concentrado en un solo valor (> 60%)
+- ❌ Eje 'confrontacion' en 'boardgame': 96.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'cooperacion' en 'boardgame': 95.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tema' en 'boardgame': 98.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'risas' en 'boardgame': 98.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'valencia' en 'artist': 100.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'bailable' en 'artist': 65.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'organico' en 'artist': 82.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fondo' en 'artist': 82.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'complejidad' en 'artist': 89.0% concentrado en un solo valor (> 60%)
+
+
+
+## Cobertura a 2026-10-23T09:05:48.323Z
+
+| Categoría | Obras | Wikidata | ID Primario | Votos/Readers | Keywords/Tags | Sinopsis | Portada Legal | Ejes |
+|---|---|---|---|---|---|---|---|---|
+| **movie** | 935 | 85.9% | 79.9% | 84.4% | 84.4% | 98.7% | 0.1% | 99.9% |
+| **series** | 998 | 86.8% | 71.6% | 85.3% | 85.3% | 87.9% | 0.0% | 100.0% |
+| **book** | 988 | 43.7% | 97.0% | 87.9% | 86.0% | 99.3% | 0.0% | 100.0% |
+| **boardgame** | 1018 | 69.5% | 0.0% | 68.9% | 68.9% | 91.5% | 0.3% | 99.7% |
+| **artist** | 410 | 97.6% | 99.8% | 0.0% | 60.2% | 100.0% | 0.0% | 100.0% |
+
+
+### Controles automáticos T17 (22/10/2026)
+- **Fallas detectadas:** 38
+- **Aprobadas:** 2
+
+#### Fallas:
+- ❌ Pageviews en 'book': 49.5% (214/432) < 90% requerido
+- ❌ Pageviews en 'boardgame': 62.6% (443/708) < 90% requerido
+- ❌ Pageviews en 'artist': 1.0% (4/400) < 90% requerido
+- ❌ Eje 'emocion' en 'movie': 69.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'movie': 69.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'movie': 79.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'violencia' en 'movie': 66.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'familiar' en 'movie': 65.1% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'movie': 62.3% concentrado en un solo valor (> 60%)
+- ❌ Eje 'exigencia' en 'series': 90.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'series': 68.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tension' en 'series': 88.8% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'series': 92.3% concentrado en un solo valor (> 60%)
+- ❌ Eje 'violencia' en 'series': 78.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'familiar' en 'series': 67.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'series': 95.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'formato' en 'series': 90.1% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tono' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'ritmo' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'emocion' en 'book': 99.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'densidad' en 'book': 91.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'book': 100.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tension' en 'book': 96.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'book': 90.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'book': 97.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'ideas' en 'book': 87.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'reconfort' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'interaccion' en 'boardgame': 68.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'azar' en 'boardgame': 90.5% concentrado en un solo valor (> 60%)
+- ❌ Eje 'confrontacion' en 'boardgame': 96.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'cooperacion' en 'boardgame': 95.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tema' en 'boardgame': 98.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'risas' en 'boardgame': 98.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'valencia' en 'artist': 100.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'bailable' en 'artist': 65.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'organico' en 'artist': 82.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fondo' en 'artist': 82.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'complejidad' en 'artist': 89.0% concentrado en un solo valor (> 60%)
+
+
+
+## Cobertura a 2026-10-23T09:04:24.230Z
+
+| Categoría | Obras | Wikidata | ID Primario | Votos/Readers | Keywords/Tags | Sinopsis | Portada Legal | Ejes |
+|---|---|---|---|---|---|---|---|---|
+| **movie** | 935 | 85.9% | 79.9% | 84.4% | 84.4% | 98.7% | 0.1% | 99.9% |
+| **series** | 998 | 86.8% | 71.6% | 85.3% | 85.3% | 87.9% | 0.0% | 100.0% |
+| **book** | 988 | 43.7% | 97.0% | 87.9% | 86.0% | 99.3% | 0.0% | 100.0% |
+| **boardgame** | 1018 | 69.5% | 0.0% | 68.9% | 68.9% | 91.5% | 0.3% | 99.7% |
+| **artist** | 410 | 97.6% | 99.8% | 0.0% | 60.2% | 100.0% | 0.0% | 100.0% |
+
+
+### Controles automáticos T17 (22/10/2026)
+- **Fallas detectadas:** 43
+- **Aprobadas:** 2
+
+#### Fallas:
+- ❌ Pageviews en 'book': 49.5% (214/432) < 90% requerido
+- ❌ Pageviews en 'boardgame': 62.6% (443/708) < 90% requerido
+- ❌ Pageviews en 'artist': 1.0% (4/400) < 90% requerido
+- ❌ Eje 'emocion' en 'movie': 69.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'movie': 69.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'movie': 79.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'violencia' en 'movie': 66.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'familiar' en 'movie': 65.1% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'movie': 62.3% concentrado en un solo valor (> 60%)
+- ❌ Eje 'exigencia' en 'series': 90.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'series': 68.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tension' en 'series': 88.8% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'series': 92.3% concentrado en un solo valor (> 60%)
+- ❌ Eje 'violencia' en 'series': 78.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'familiar' en 'series': 67.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'series': 95.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'formato' en 'series': 90.1% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tono' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'ritmo' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'emocion' en 'book': 99.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'densidad' en 'book': 91.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'book': 100.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tension' en 'book': 96.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'book': 90.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'book': 97.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'ideas' en 'book': 87.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'reconfort' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'interaccion' en 'boardgame': 68.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'azar' en 'boardgame': 90.5% concentrado en un solo valor (> 60%)
+- ❌ Eje 'confrontacion' en 'boardgame': 96.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'cooperacion' en 'boardgame': 95.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tema' en 'boardgame': 98.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'risas' en 'boardgame': 98.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'valencia' en 'artist': 100.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'bailable' en 'artist': 65.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'organico' en 'artist': 82.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fondo' en 'artist': 82.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'complejidad' en 'artist': 89.0% concentrado en un solo valor (> 60%)
+- ❌ Lista de oro 'El rey león' (movie) tiene fameTier=2 (requerido: 1)
+- ❌ Lista de oro 'El rey león' (movie) notoriedad=0.94 < percentil 95 (0.97)
+- ❌ Lista de oro 'La casa de papel' (series) tiene fameTier=2 (requerido: 1)
+- ❌ Lista de oro 'Cien años de soledad' (book) tiene fameTier=2 (requerido: 1)
+- ❌ Lista de oro 'Cien años de soledad' (book) notoriedad=0.88 < percentil 95 (0.92)
+
+
+
+## Cobertura a 2026-10-23T08:55:40.162Z
+
+| Categoría | Obras | Wikidata | ID Primario | Votos/Readers | Keywords/Tags | Sinopsis | Portada Legal | Ejes |
+|---|---|---|---|---|---|---|---|---|
+| **movie** | 935 | 85.9% | 79.9% | 84.4% | 84.4% | 98.7% | 0.1% | 99.9% |
+| **series** | 998 | 86.8% | 71.6% | 85.3% | 85.3% | 87.9% | 0.0% | 100.0% |
+| **book** | 988 | 43.2% | 97.0% | 87.9% | 86.0% | 99.3% | 0.0% | 100.0% |
+| **boardgame** | 1018 | 69.5% | 0.0% | 68.9% | 68.9% | 91.5% | 0.3% | 99.7% |
+| **artist** | 410 | 97.6% | 99.8% | 0.0% | 60.2% | 100.0% | 0.0% | 100.0% |
+
+
+### Controles automáticos T17 (22/10/2026)
+- **Fallas detectadas:** 72
+- **Aprobadas:** 0
+
+#### Fallas:
+- ❌ Pageviews en 'movie': 15.1% (121/803) < 90% requerido
+- ❌ Pageviews en 'series': 4.7% (41/866) < 90% requerido
+- ❌ Pageviews en 'book': 0.7% (3/427) < 90% requerido
+- ❌ Pageviews en 'boardgame': 5.8% (41/708) < 90% requerido
+- ❌ Pageviews en 'artist': 1.0% (4/400) < 90% requerido
+- ❌ Eje 'emocion' en 'movie': 69.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'movie': 69.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'movie': 79.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'violencia' en 'movie': 66.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'familiar' en 'movie': 65.1% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'movie': 62.3% concentrado en un solo valor (> 60%)
+- ❌ Eje 'exigencia' en 'series': 90.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'series': 68.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tension' en 'series': 88.8% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'series': 92.3% concentrado en un solo valor (> 60%)
+- ❌ Eje 'violencia' en 'series': 78.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'familiar' en 'series': 67.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'series': 95.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'formato' en 'series': 90.1% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tono' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'ritmo' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'emocion' en 'book': 99.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'densidad' en 'book': 91.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'book': 100.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tension' en 'book': 96.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'book': 90.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'book': 97.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'ideas' en 'book': 87.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'reconfort' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'interaccion' en 'boardgame': 68.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'azar' en 'boardgame': 90.5% concentrado en un solo valor (> 60%)
+- ❌ Eje 'confrontacion' en 'boardgame': 96.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'cooperacion' en 'boardgame': 95.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tema' en 'boardgame': 98.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'risas' en 'boardgame': 98.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'valencia' en 'artist': 100.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'bailable' en 'artist': 65.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'organico' en 'artist': 82.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fondo' en 'artist': 82.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'complejidad' en 'artist': 89.0% concentrado en un solo valor (> 60%)
+- ❌ Lista de oro: 'Titanic' apunta a Q1197729 (esperado: Q44578)
+- ❌ Lista de oro: 'La guerra de las galaxias' apunta a Q22092344 (esperado: Q17738)
+- ❌ Lista de oro: 'Parchís' apunta a Q1065171 (esperado: Q2051664)
+- ❌ Lista de oro: 'UNO' apunta a Q7897207 (esperado: Q17267)
+- ❌ Lista de oro 'La guerra de las galaxias' (movie) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'La guerra de las galaxias' (movie) notoriedad=0.51 < percentil 95 (0.85)
+- ❌ Lista de oro 'Harry Potter y la piedra filosofal' (movie) tiene fameTier=2 (requerido: 1)
+- ❌ Lista de oro 'Torrente, el brazo tonto de la ley' (movie) tiene fameTier=2 (requerido: 1)
+- ❌ Lista de oro 'Los Simpson' (series) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Los Simpson' (series) notoriedad=0.46 < percentil 95 (0.52)
+- ❌ Lista de oro 'La casa de papel' (series) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'La casa de papel' (series) notoriedad=0.47 < percentil 95 (0.52)
+- ❌ Lista de oro 'Juego de tronos' (series) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Juego de tronos' (series) notoriedad=0.45 < percentil 95 (0.52)
+- ❌ Lista de oro 'Harry Potter y la piedra filosofal' (book) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Harry Potter y la piedra filosofal' (book) notoriedad=0.46 < percentil 95 (0.53)
+- ❌ Lista de oro 'Don Quijote de la Mancha' (book) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Don Quijote de la Mancha' (book) notoriedad=0.45 < percentil 95 (0.53)
+- ❌ Lista de oro '1984' (book) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro '1984' (book) notoriedad=0.45 < percentil 95 (0.53)
+- ❌ Lista de oro 'El principito' (book) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'El principito' (book) notoriedad=0.45 < percentil 95 (0.53)
+- ❌ Lista de oro 'Cien años de soledad' (book) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Cien años de soledad' (book) notoriedad=0.34 < percentil 95 (0.53)
+- ❌ Lista de oro 'Ajedrez' (boardgame) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'The Beatles' (artist) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'The Beatles' (artist) notoriedad=0.45 < percentil 95 (0.53)
+- ❌ Lista de oro 'Michael Jackson' (artist) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Shakira' (artist) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Rosalía' (artist) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Alejandro Sanz' (artist) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro en 'artist': menor notoriedad Tier 1 (0.45) ≤ mayor notoriedad Low (0.52)
+
+
+
+## Cobertura a 2026-10-23T08:54:32.063Z
+
+| Categoría | Obras | Wikidata | ID Primario | Votos/Readers | Keywords/Tags | Sinopsis | Portada Legal | Ejes |
+|---|---|---|---|---|---|---|---|---|
+| **movie** | 935 | 85.9% | 79.9% | 84.4% | 84.4% | 98.7% | 0.1% | 99.9% |
+| **series** | 998 | 86.8% | 71.6% | 85.3% | 85.3% | 87.9% | 0.0% | 100.0% |
+| **book** | 988 | 43.2% | 97.0% | 87.9% | 86.0% | 99.3% | 0.0% | 100.0% |
+| **boardgame** | 1018 | 69.5% | 0.0% | 68.9% | 68.9% | 91.5% | 0.3% | 99.7% |
+| **artist** | 410 | 97.6% | 99.8% | 0.0% | 60.2% | 100.0% | 0.0% | 100.0% |
+
+
+### Controles automáticos T17 (22/10/2026)
+- **Fallas detectadas:** 72
+- **Aprobadas:** 0
+
+#### Fallas:
+- ❌ Pageviews en 'movie': 15.1% (121/803) < 90% requerido
+- ❌ Pageviews en 'series': 4.7% (41/866) < 90% requerido
+- ❌ Pageviews en 'book': 0.7% (3/427) < 90% requerido
+- ❌ Pageviews en 'boardgame': 5.8% (41/708) < 90% requerido
+- ❌ Pageviews en 'artist': 1.0% (4/400) < 90% requerido
+- ❌ Eje 'emocion' en 'movie': 69.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'movie': 69.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'movie': 79.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'violencia' en 'movie': 66.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'familiar' en 'movie': 65.1% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'movie': 62.3% concentrado en un solo valor (> 60%)
+- ❌ Eje 'exigencia' en 'series': 90.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'series': 68.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tension' en 'series': 88.8% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'series': 92.3% concentrado en un solo valor (> 60%)
+- ❌ Eje 'violencia' en 'series': 78.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'familiar' en 'series': 67.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'series': 95.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'formato' en 'series': 90.1% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tono' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'ritmo' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'emocion' en 'book': 99.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'densidad' en 'book': 91.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'book': 100.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tension' en 'book': 96.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'book': 90.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'book': 97.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'ideas' en 'book': 87.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'reconfort' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'interaccion' en 'boardgame': 68.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'azar' en 'boardgame': 90.5% concentrado en un solo valor (> 60%)
+- ❌ Eje 'confrontacion' en 'boardgame': 96.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'cooperacion' en 'boardgame': 95.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tema' en 'boardgame': 98.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'risas' en 'boardgame': 98.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'valencia' en 'artist': 100.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'bailable' en 'artist': 65.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'organico' en 'artist': 82.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fondo' en 'artist': 82.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'complejidad' en 'artist': 89.0% concentrado en un solo valor (> 60%)
+- ❌ Lista de oro: 'Titanic' apunta a Q1197729 (esperado: Q44578)
+- ❌ Lista de oro: 'La guerra de las galaxias' apunta a Q22092344 (esperado: Q17738)
+- ❌ Lista de oro: 'Parchís' apunta a Q1065171 (esperado: Q2051664)
+- ❌ Lista de oro: 'UNO' apunta a Q7897207 (esperado: Q17267)
+- ❌ Lista de oro 'La guerra de las galaxias' (movie) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'La guerra de las galaxias' (movie) notoriedad=0.51 < percentil 95 (0.85)
+- ❌ Lista de oro 'Harry Potter y la piedra filosofal' (movie) tiene fameTier=2 (requerido: 1)
+- ❌ Lista de oro 'Torrente, el brazo tonto de la ley' (movie) tiene fameTier=2 (requerido: 1)
+- ❌ Lista de oro 'Los Simpson' (series) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Los Simpson' (series) notoriedad=0.46 < percentil 95 (0.52)
+- ❌ Lista de oro 'La casa de papel' (series) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'La casa de papel' (series) notoriedad=0.47 < percentil 95 (0.52)
+- ❌ Lista de oro 'Juego de tronos' (series) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Juego de tronos' (series) notoriedad=0.45 < percentil 95 (0.52)
+- ❌ Lista de oro 'Harry Potter y la piedra filosofal' (book) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Harry Potter y la piedra filosofal' (book) notoriedad=0.46 < percentil 95 (0.53)
+- ❌ Lista de oro 'Don Quijote de la Mancha' (book) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Don Quijote de la Mancha' (book) notoriedad=0.45 < percentil 95 (0.53)
+- ❌ Lista de oro '1984' (book) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro '1984' (book) notoriedad=0.45 < percentil 95 (0.53)
+- ❌ Lista de oro 'El principito' (book) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'El principito' (book) notoriedad=0.45 < percentil 95 (0.53)
+- ❌ Lista de oro 'Cien años de soledad' (book) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Cien años de soledad' (book) notoriedad=0.34 < percentil 95 (0.53)
+- ❌ Lista de oro 'Ajedrez' (boardgame) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'The Beatles' (artist) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'The Beatles' (artist) notoriedad=0.45 < percentil 95 (0.53)
+- ❌ Lista de oro 'Michael Jackson' (artist) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Shakira' (artist) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Rosalía' (artist) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Alejandro Sanz' (artist) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro en 'artist': menor notoriedad Tier 1 (0.45) ≤ mayor notoriedad Low (0.52)
+
+
+
+## Cobertura a 2026-10-23T08:53:52.297Z
+
+| Categoría | Obras | Wikidata | ID Primario | Votos/Readers | Keywords/Tags | Sinopsis | Portada Legal | Ejes |
+|---|---|---|---|---|---|---|---|---|
+| **movie** | 935 | 85.9% | 79.9% | 84.4% | 84.4% | 98.7% | 0.1% | 99.9% |
+| **series** | 998 | 86.8% | 71.6% | 85.3% | 85.3% | 87.9% | 0.0% | 100.0% |
+| **book** | 988 | 43.2% | 97.0% | 87.9% | 86.0% | 99.3% | 0.0% | 100.0% |
+| **boardgame** | 1018 | 69.5% | 0.0% | 68.9% | 68.9% | 91.5% | 0.3% | 99.7% |
+| **artist** | 410 | 97.6% | 99.8% | 0.0% | 60.2% | 100.0% | 0.0% | 100.0% |
+
+
+### Controles automáticos T17 (22/10/2026)
+- **Fallas detectadas:** 72
+- **Aprobadas:** 0
+
+#### Fallas:
+- ❌ Pageviews en 'movie': 15.1% (121/803) < 90% requerido
+- ❌ Pageviews en 'series': 4.7% (41/866) < 90% requerido
+- ❌ Pageviews en 'book': 0.7% (3/427) < 90% requerido
+- ❌ Pageviews en 'boardgame': 5.8% (41/708) < 90% requerido
+- ❌ Pageviews en 'artist': 1.0% (4/400) < 90% requerido
+- ❌ Eje 'emocion' en 'movie': 69.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'movie': 69.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'movie': 79.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'violencia' en 'movie': 66.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'familiar' en 'movie': 65.1% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'movie': 62.3% concentrado en un solo valor (> 60%)
+- ❌ Eje 'exigencia' en 'series': 90.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'series': 68.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tension' en 'series': 88.8% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'series': 92.3% concentrado en un solo valor (> 60%)
+- ❌ Eje 'violencia' en 'series': 78.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'familiar' en 'series': 67.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'series': 95.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'formato' en 'series': 90.1% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tono' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'ritmo' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'emocion' en 'book': 99.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'densidad' en 'book': 91.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'humor' en 'book': 100.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tension' en 'book': 96.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fantasia' en 'book': 90.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'escala' en 'book': 97.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'ideas' en 'book': 87.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'reconfort' en 'book': 95.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'interaccion' en 'boardgame': 68.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'azar' en 'boardgame': 90.5% concentrado en un solo valor (> 60%)
+- ❌ Eje 'confrontacion' en 'boardgame': 96.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'cooperacion' en 'boardgame': 95.7% concentrado en un solo valor (> 60%)
+- ❌ Eje 'tema' en 'boardgame': 98.9% concentrado en un solo valor (> 60%)
+- ❌ Eje 'risas' en 'boardgame': 98.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'valencia' en 'artist': 100.0% concentrado en un solo valor (> 60%)
+- ❌ Eje 'bailable' en 'artist': 65.6% concentrado en un solo valor (> 60%)
+- ❌ Eje 'organico' en 'artist': 82.4% concentrado en un solo valor (> 60%)
+- ❌ Eje 'fondo' en 'artist': 82.2% concentrado en un solo valor (> 60%)
+- ❌ Eje 'complejidad' en 'artist': 89.0% concentrado en un solo valor (> 60%)
+- ❌ Lista de oro: 'Titanic' apunta a Q1197729 (esperado: Q44578)
+- ❌ Lista de oro: 'La guerra de las galaxias' apunta a Q22092344 (esperado: Q17738)
+- ❌ Lista de oro: 'Parchís' apunta a Q1065171 (esperado: Q2051664)
+- ❌ Lista de oro: 'UNO' apunta a Q7897207 (esperado: Q17267)
+- ❌ Lista de oro 'La guerra de las galaxias' (movie) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'La guerra de las galaxias' (movie) notoriedad=0.51 < percentil 95 (0.85)
+- ❌ Lista de oro 'Harry Potter y la piedra filosofal' (movie) tiene fameTier=2 (requerido: 1)
+- ❌ Lista de oro 'Torrente, el brazo tonto de la ley' (movie) tiene fameTier=2 (requerido: 1)
+- ❌ Lista de oro 'Los Simpson' (series) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Los Simpson' (series) notoriedad=0.46 < percentil 95 (0.52)
+- ❌ Lista de oro 'La casa de papel' (series) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'La casa de papel' (series) notoriedad=0.47 < percentil 95 (0.52)
+- ❌ Lista de oro 'Juego de tronos' (series) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Juego de tronos' (series) notoriedad=0.45 < percentil 95 (0.52)
+- ❌ Lista de oro 'Harry Potter y la piedra filosofal' (book) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Harry Potter y la piedra filosofal' (book) notoriedad=0.46 < percentil 95 (0.53)
+- ❌ Lista de oro 'Don Quijote de la Mancha' (book) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Don Quijote de la Mancha' (book) notoriedad=0.45 < percentil 95 (0.53)
+- ❌ Lista de oro '1984' (book) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro '1984' (book) notoriedad=0.45 < percentil 95 (0.53)
+- ❌ Lista de oro 'El principito' (book) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'El principito' (book) notoriedad=0.45 < percentil 95 (0.53)
+- ❌ Lista de oro 'Cien años de soledad' (book) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Cien años de soledad' (book) notoriedad=0.34 < percentil 95 (0.53)
+- ❌ Lista de oro 'Ajedrez' (boardgame) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'The Beatles' (artist) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'The Beatles' (artist) notoriedad=0.45 < percentil 95 (0.53)
+- ❌ Lista de oro 'Michael Jackson' (artist) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Shakira' (artist) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Rosalía' (artist) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro 'Alejandro Sanz' (artist) tiene fameTier=3 (requerido: 1)
+- ❌ Lista de oro en 'artist': menor notoriedad Tier 1 (0.45) ≤ mayor notoriedad Low (0.52)
+
+
+
 ## Cobertura a 2026-10-22T16:05:14.058Z
 
 | Categoría | Obras | Wikidata | ID Primario | Votos/Readers | Keywords/Tags | Sinopsis | Portada Legal | Ejes |
