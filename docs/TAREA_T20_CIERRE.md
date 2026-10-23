@@ -127,7 +127,7 @@ Aplica esta guía a **todas** las pantallas. Haz una lista de cada texto cambiad
   | cada peli, serie, libro, juego o artista | **obra** (o el nombre concreto: «peli», «libro») | ítem, elemento, título, contenido |
   | cada categoría | **estantería** | categoría, sección |
   | los tres gestos | **«La vi»** (o «La leí» / «Lo jugué» / «Lo escuché» según la estantería), **«Pendiente»**, **«No me interesa»** | visto, guardado, descartar |
-  | ordenar por parejas | **comparar** / «¿Cuál te gustó más?» | duelo, A/B, versus |
+  | ordenar por parejas | **¡Duelos!** / «¿Cuál te gustó más?» (Igor, 23/10: sustituye a «comparar») | A/B, versus |
   | tu lista ordenada | **tu ranking** o **tu top** | lista, orden |
   | lo que te propone Decidir | **«Te proponemos…»** | recomendación del algoritmo |
 
