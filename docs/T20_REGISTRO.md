@@ -78,3 +78,35 @@ Resultado: **0 libros mal enlazados**.
 - `npx tsc -p app/tsconfig.json --noEmit`: 0 errores
 - `npx vitest run`: 143 passed (21 test files)
 
+---
+
+## T20.3 — Visitas de Wikipedia (≥ 90 % de las obras con id, en todas las estanterías)
+
+### Causa investigada: por qué los artistas tenían 4 de 400
+1. **Sitelinks en caché:** Los sitelinks de Wikipedia en `sitelinks-cache.json` sí existían para 396/400 artistas (descargados correctamente por su QID de Wikidata).
+2. **Causa raíz:** En ejecuciones previas de `enrich-pageviews.mjs`, se utilizaba concurrencia elevada (8 trabajadores concurrentes solicitando 6 idiomas cada uno simultáneamente). Esto generaba ráfagas de más de 45 peticiones instantáneas a la API REST de Wikimedia (`wikimedia.org/api/rest_v1/metrics/pageviews/per-article/`), provocando respuestas masivas `HTTP 429 Too Many Requests`.
+3. **Manejo de error defectuoso previo:** El script capturaba el error 429 retornando `0` para cada idioma y guardaba `{ es: 0, en: 0, fr: 0, de: 0, it: 0, pt: 0 }` en `pageviews.jsonl`.
+4. **Impacto en métricas:** En `coverage.mjs`, `hasPageviews` requería una suma de visitas estrictamente mayor que 0 (`reduce((a, b) => a + b, 0) > 0`). Por ello, las 396 obras de artistas cuyos valores se guardaron en 0 por el rate-limit figuraban como "sin visitas".
+5. **Solución aplicada en `enrich-pageviews.mjs`:**
+   - Procesamiento secuencial sin ráfagas con ritmo controlado (pausa de 35ms por llamada de idioma).
+   - Detección y reintento con backoff exponencial progresivo (3s, 6s, 9s) ante cualquier `HTTP 429`.
+   - Consulta incremental de sitelinks faltantes para los nuevos QIDs de libros asignados en T20.2.
+   - Guardado inmediato y persistente en `pageviews.jsonl` (incluyendo `{}` para obras sin artículo en ninguno de los 6 idiomas para no reencolarlas).
+   - Descarga completada: 1000 obras procesadas (953 con visitas > 0).
+
+### Comprobación: `node app/scripts/engine/coverage.mjs`
+```
+1. Cobertura de pageviews (≥ 90 % de las obras con wikidataId):
+   ✓ Pageviews en 'movie': 100.0% (≥ 90%)
+   ✓ Pageviews en 'series': 100.0% (≥ 90%)
+   ✓ Pageviews en 'book': 100.0% (≥ 90%)
+   ✓ Pageviews en 'boardgame': 100.0% (≥ 90%)
+   ✓ Pageviews en 'artist': 100.0% (≥ 90%)
+```
+Resultado: **✓ en las 5 estanterías (todas al 100.0%)**.
+
+### Comprobación de compilación y tests:
+- `npx tsc -p app/tsconfig.json --noEmit`: 0 errores
+- `npx vitest run`: 143 passed (21 test files)
+
+

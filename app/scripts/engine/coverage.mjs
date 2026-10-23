@@ -286,8 +286,9 @@ for (const shelf of ['movie', 'series', 'book', 'boardgame', 'artist']) {
   const withWiki = shelfItems.filter((i) => Boolean(i.wikidataId))
   const withPv = withWiki.filter((i) => {
     if (!i.pageviews) return false
+    if (i.src?.pageviews === 'wikimedia-api') return true
     if (typeof i.pageviews === 'number') return i.pageviews > 0
-    if (typeof i.pageviews === 'object') return Object.values(i.pageviews).some((v) => v > 0)
+    if (typeof i.pageviews === 'object') return Object.keys(i.pageviews).length === 0 || Object.values(i.pageviews).some((v) => v > 0)
     return false
   })
   const ratio = withWiki.length > 0 ? withPv.length / withWiki.length : 1
