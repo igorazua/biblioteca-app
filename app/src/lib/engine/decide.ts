@@ -50,9 +50,10 @@ export interface DecideState {
   duels: {
     a: string
     b: string
-    winner: string
+    winner: string | null
     phase: 'F1' | 'F2' | 'F3' | 'coarse' | 'fine'
     dimension?: string
+    unknown?: boolean
     infoGain?: number
     ms?: number
     rA?: number
@@ -757,18 +758,9 @@ export function applyDuelChoice(
   const currentPhase = state.phase || 'F1'
   const newShown = Array.from(new Set([...state.shown, winner.id, loser.id]))
 
-  // Red de seguridad sin botón (T19 §1.3):
-  // Si un duelo tarda más de 6 segundos, las dos obras quedan dudosas (R × 0.5 durante 90 días)
-  // y el siguiente duelo sale solo de obras propias o de las 20 más famosas de nivel 1.
-  let preferFameOrOwn = false
-  const updatedDoubtful = { ...(state.doubtfulItems || {}) }
-  if (ms != null && ms > 6000) {
-    const now = Date.now()
-    updatedDoubtful[winner.id] = now
-    updatedDoubtful[loser.id] = now
-    saveDoubtfulItems(updatedDoubtful)
-    preferFameOrOwn = true
-  }
+  // Red de seguridad: reseteada en duelos normales (solo se activa con «No conozco ninguna»)
+  const preferFameOrOwn = false
+  const updatedDoubtful = state.doubtfulItems || {}
 
   // Actualizar preferencias explícitas de dimensión (T17 §C.4)
   const nextPrefs = { ...state.prefs }
@@ -927,6 +919,64 @@ export function applyDuelChoice(
 }
 
 /**
+ * Registra que el usuario no conoce ninguna de las dos obras («No conozco ninguna»).
+ * Ambas obras se marcan como dudosas para este usuario (R × 0.5 durante 90 días)
+ * y el siguiente duelo sale de sus obras propias o de las 20 más famosas de nivel 1.
+ */
+export function skipDuelUnknown(
+  state: DecideState,
+  itemA: Item,
+  itemB: Item,
+  ms?: number,
+  dimensionId?: string
+): DecideState {
+  const currentPhase = state.phase || 'F1'
+  const newShown = Array.from(new Set([...state.shown, itemA.id, itemB.id]))
+
+  // Ambas obras quedan marcadas como dudosas (R × 0.5 durante 90 días)
+  const now = Date.now()
+  const updatedDoubtful = { ...(state.doubtfulItems || {}) }
+  updatedDoubtful[itemA.id] = now
+  updatedDoubtful[itemB.id] = now
+  saveDoubtfulItems(updatedDoubtful)
+
+  const nextDuelsInF1 = currentPhase === 'F1' ? state.duelsInF1 + 1 : state.duelsInF1
+
+  // Transición de fase (T19 §1.2)
+  let nextPhase = currentPhase
+  if (nextPhase === 'F1' && nextDuelsInF1 >= 5 && state.closedDims.length >= 2) {
+    nextPhase = 'F2'
+  }
+  if (nextPhase === 'F2' && state.rejected.length > 0) {
+    nextPhase = 'F3'
+  }
+
+  const newDuels = [
+    ...state.duels,
+    {
+      a: itemA.id,
+      b: itemB.id,
+      winner: null,
+      phase: currentPhase,
+      dimension: dimensionId,
+      unknown: true,
+      ...(ms != null ? { ms } : {}),
+    },
+  ]
+
+  return {
+    ...state,
+    duels: newDuels,
+    shown: newShown,
+    duelsInRound: state.duelsInRound + 1,
+    duelsInF1: nextDuelsInF1,
+    phase: nextPhase,
+    preferFameOrOwn: true,
+    doubtfulItems: updatedDoubtful,
+  }
+}
+
+/**
  * Determina si ya es momento de presentar la propuesta (§8.7, T19 §1.2)
  */
 export function shouldPropose(state: DecideState): boolean {
@@ -1076,7 +1126,7 @@ export function formatReasons(
 
   // 2. Duelos ganados si faltan motivos
   if (reasons.length < 2) {
-    const winners = state.duels.map((d) => itemsById.get(d.winner)).filter(Boolean) as Item[]
+    const winners = state.duels.map((d) => (d.winner ? itemsById.get(d.winner) : undefined)).filter(Boolean) as Item[]
     if (winners.length > 0) {
       const sortedBySim = [...winners].sort(
         (a, b) => calcSimilarity(proposal, b) - calcSimilarity(proposal, a)

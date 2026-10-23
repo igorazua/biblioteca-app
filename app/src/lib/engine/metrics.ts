@@ -232,7 +232,7 @@ export function calcDecideMetrics(events: EngineEvent[]): DecideMetrics {
         const ms = typeof e.data?.ms === 'number' ? e.data.ms : undefined
         if (ms != null && ms > 0) {
           duelMsList.push(ms)
-          const isSlow = ms > 6000
+          const isSlow = Boolean(e.data?.unknown)
           if (isSlow) slowDuelsCount++
 
           // Agrupación por fase (T19 §1.3)

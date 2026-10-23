@@ -8,6 +8,7 @@ import {
   initDecideSession,
   nextDuel,
   applyDuelChoice,
+  skipDuelUnknown,
   shouldPropose,
   getProposal,
   rejectAndContinue,
@@ -95,6 +96,30 @@ export function WhatToWatch() {
   const duelStepRef = useRef(0)
   const duelStartTimeRef = useRef<number>(performance.now())
   const currentDuelPairRef = useRef<DuelPair | null>(null)
+  const [showUnknownBtn, setShowUnknownBtn] = useState(false)
+  const unknownTimerRef = useRef<number | null>(null)
+
+  // Botón «No conozco ninguna» tras 2,5 segundos sin elegir (T19 §1.3)
+  useEffect(() => {
+    setShowUnknownBtn(false)
+    if (unknownTimerRef.current) {
+      window.clearTimeout(unknownTimerRef.current)
+      unknownTimerRef.current = null
+    }
+
+    if (phase === 'shape' && pair) {
+      unknownTimerRef.current = window.setTimeout(() => {
+        setShowUnknownBtn(true)
+      }, 2500)
+    }
+
+    return () => {
+      if (unknownTimerRef.current) {
+        window.clearTimeout(unknownTimerRef.current)
+        unknownTimerRef.current = null
+      }
+    }
+  }, [phase, pair])
 
   const getFriendPct = useCallback((friend: Friend, itemId: string) => {
     return friendRanks(friend, getItem)[itemId]?.pct ?? null
@@ -186,6 +211,12 @@ export function WhatToWatch() {
     const winner = w === 'a' ? a : b
     const loser = w === 'a' ? b : a
 
+    setShowUnknownBtn(false)
+    if (unknownTimerRef.current) {
+      window.clearTimeout(unknownTimerRef.current)
+      unknownTimerRef.current = null
+    }
+
     const elapsedMs = Math.round(performance.now() - duelStartTimeRef.current)
     const currentDuel = currentDuelPairRef.current
 
@@ -257,6 +288,95 @@ export function WhatToWatch() {
         useStore.getState().recordOrienters(shelf, updatedState.shown)
         setProposal(prop)
         setCurrent(prop.item.id)
+        setPair(null)
+        setPhase('propose')
+      } else {
+        setPhase('none')
+      }
+    }
+  }
+
+  const onShaperUnknown = () => {
+    if (!pair || !shelf || !decideState) return
+    const [a, b] = pair
+
+    setShowUnknownBtn(false)
+    if (unknownTimerRef.current) {
+      window.clearTimeout(unknownTimerRef.current)
+      unknownTimerRef.current = null
+    }
+
+    const elapsedMs = Math.round(performance.now() - duelStartTimeRef.current)
+    const currentDuel = currentDuelPairRef.current
+
+    const updatedState = skipDuelUnknown(
+      decideState,
+      a,
+      b,
+      elapsedMs,
+      currentDuel?.dimension
+    )
+    setDecideState(updatedState)
+    duelStepRef.current++
+
+    track('dec_duel', {
+      shelf,
+      sid: sessionSid.current,
+      data: {
+        a: a.id,
+        b: b.id,
+        winner: null,
+        unknown: true,
+        step: duelStepRef.current,
+        phase: currentDuel?.phase || duelPhase,
+        dimension: currentDuel?.dimension,
+        rA: currentDuel?.rA,
+        rB: currentDuel?.rB,
+        tierA: currentDuel?.tierA,
+        tierB: currentDuel?.tierB,
+        isOwnA: currentDuel?.isOwnA,
+        isOwnB: currentDuel?.isOwnB,
+        ms: elapsedMs,
+        infoGain: 0,
+      },
+    })
+
+    if (shouldPropose(updatedState)) {
+      const prop = getProposal(updatedState, itemsById, activeFriends, profile)
+      if (prop) {
+        useStore.getState().recordOrienters(shelf, updatedState.shown)
+        setProposal(prop)
+        setCurrent(prop.item.id)
+        setPair(null)
+        setPhase('propose')
+        track('dec_propose', {
+          shelf,
+          itemId: prop.item.id,
+          sid: sessionSid.current,
+          data: {
+            round: roundRef.current,
+            score: prop.finalScore,
+            candidates: updatedState.pool.length,
+          },
+        })
+        return
+      }
+    }
+
+    const next = nextDuel(updatedState, items, new Set(updatedState.shown))
+    if (next) {
+      currentDuelPairRef.current = next
+      duelStartTimeRef.current = performance.now()
+      setPair([next.a, next.b])
+      setDuelPhase(next.phase as any)
+      setDuel((d) => ({ ...d, n: d.n + 1 }))
+    } else {
+      const prop = getProposal(updatedState, itemsById, activeFriends, profile)
+      if (prop) {
+        useStore.getState().recordOrienters(shelf, updatedState.shown)
+        setProposal(prop)
+        setCurrent(prop.item.id)
+        setPair(null)
         setPhase('propose')
       } else {
         setPhase('none')
@@ -468,6 +588,25 @@ export function WhatToWatch() {
     body = (
       <div className="flex-1 min-h-0 flex flex-col px-5 pb-6">
         <SwipePair left={shaperSide(pair[0])} right={shaperSide(pair[1])} onChoose={onShaperChoose} kind="decide" />
+        <div className="h-11 flex items-center justify-center shrink-0">
+          <AnimatePresence>
+            {showUnknownBtn && (
+              <motion.button
+                key="unknown-btn"
+                type="button"
+                initial={{ opacity: 0, y: 8, scale: 0.96 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 4, scale: 0.96 }}
+                transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+                onClick={onShaperUnknown}
+                className="min-h-[40px] px-5 py-2 rounded-full bg-surface2/90 hover:bg-surface2 border border-line text-meta text-mute hover:text-ink active:scale-95 transition-all flex items-center gap-2 cursor-pointer shadow-sm hover:border-line/80 font-medium select-none"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-mute/60" />
+                <span>No conozco ninguna</span>
+              </motion.button>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
     )
   } else if (phase === 'propose' && currentItem) {

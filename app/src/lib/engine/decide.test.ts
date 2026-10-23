@@ -4,6 +4,7 @@ import {
   initDecideSession,
   nextDuel,
   applyDuelChoice,
+  skipDuelUnknown,
   shouldPropose,
   getProposal,
   rejectAndContinue,
@@ -520,7 +521,7 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
       }
     })
 
-    it('Un duelo lento (>6s): las dos obras quedan marcadas como dudosas y el siguiente duelo sale de las 20 más famosas', async () => {
+    it('Al pulsar «No conozco ninguna»: las dos obras quedan marcadas como dudosas y el siguiente duelo sale de las 20 más famosas', async () => {
       const seed = (await import('../../data/seed.json')).default as { items: Item[] }
       const input: DecideInput = {
         shelf: 'book',
@@ -544,18 +545,24 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
       shown.add(firstDuel.a.id)
       shown.add(firstDuel.b.id)
 
-      // Duelo que tarda más de 6 segundos (6500 ms)
-      const slowState = applyDuelChoice(state, firstDuel.a, firstDuel.b, itemsMap, 6500, firstDuel.dimension)
-      expect(slowState.doubtfulItems?.[firstDuel.a.id]).toBeDefined()
-      expect(slowState.doubtfulItems?.[firstDuel.b.id]).toBeDefined()
-      expect(slowState.preferFameOrOwn).toBe(true)
+      // Comprobar que elegir una opción de forma normal incluso tras 6s NO marca como dudosas (se eliminó el umbral de 6000ms)
+      const normalChoiceState = applyDuelChoice(state, firstDuel.a, firstDuel.b, itemsMap, 7000, firstDuel.dimension)
+      expect(normalChoiceState.preferFameOrOwn).toBe(false)
+      expect(normalChoiceState.doubtfulItems?.[firstDuel.a.id]).toBeUndefined()
+
+      // En cambio, pulsar «No conozco ninguna» sí marca ambas obras como dudosas y activa la red de seguridad
+      const unknownState = skipDuelUnknown(state, firstDuel.a, firstDuel.b, 2700, firstDuel.dimension)
+      expect(unknownState.doubtfulItems?.[firstDuel.a.id]).toBeDefined()
+      expect(unknownState.doubtfulItems?.[firstDuel.b.id]).toBeDefined()
+      expect(unknownState.preferFameOrOwn).toBe(true)
+      expect(unknownState.duels[unknownState.duels.length - 1].unknown).toBe(true)
 
       // Verificar que recog aplica R * 0.5 para obras dudosas
       const { recog } = await import('./recog')
       const recogCtx = {
         user: { country: 'ES', lang: 'es' },
         entries: {},
-        doubtfulItems: slowState.doubtfulItems,
+        doubtfulItems: unknownState.doubtfulItems,
       }
       const normalR = recog(firstDuel.a, { user: { country: 'ES', lang: 'es' } })
       const doubtfulR = recog(firstDuel.a, recogCtx)
@@ -571,7 +578,7 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
           .map((it) => it.id)
       )
 
-      const nextD = nextDuel(slowState, seed.items, shown)
+      const nextD = nextDuel(unknownState, seed.items, shown)
       expect(nextD).not.toBeNull()
       if (!nextD) return
 
