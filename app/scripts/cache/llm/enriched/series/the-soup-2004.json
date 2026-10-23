@@ -1,0 +1,43 @@
+{
+  "id": "series:the-soup-2004",
+  "experience": {
+    "plot": "The Soup fue un programa del canal de televisión por cable E! conducido por Joel McHale. Era una nueva versión de Talk Soup, de la misma cadena. A diferencia de su predecesor, The Soup se dedicaba a mostrar y comentar sarcásticamente videos, no sólo de program",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de E!, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2004, una referencia indispensable obra de E! dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 5,
+    "enganche": 5,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "The Soup: destacada series (2004) obra de E!.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

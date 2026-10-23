@@ -1,0 +1,43 @@
+{
+  "id": "movie:sing-street-2016",
+  "experience": {
+    "plot": "Sing Street es una película musical-dramática irlandesa británica de 2016, escrita, producida y dirigida por John Carney. La película está protagonizada por Lucy Boynton, Maria Doyle Kennedy, Jack Reynor, Kelly Thornton y Ferdia Walsh-Peelo. Gira en torno a un",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de John Carney, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2016, una obra destacada de John Carney en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "musica",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Sing Street: Comedia y Drama con dirección de John Carney.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "series:survivor-2000",
+  "experience": {
+    "plot": "Survivor, formerly known as Survivor 10, is an Israeli reality competition game show based on the popular international Survivor television franchise. The series began in December 2007 and aired on Israeli's Channel 10 for 6 seasons. After legal issues between",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de CBS, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2000, una referencia indispensable obra de CBS dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "abogados_y_juicios",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Survivor: destacada series (2000) obra de CBS.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

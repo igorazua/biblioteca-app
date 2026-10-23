@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:sagrada-2017",
+  "experience": {
+    "plot": "Draft dice and use the tools-of-the-trade in Sagrada to carefully construct your stained glass window masterpiece. In more detail, each player builds a stained glass window by building up a grid of dice on their player board. Each board has some restrictions o",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Adrian Adamescu, Daryl Andrews, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Estrategia abstracta / Dados.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Adrian Adamescu, Daryl Andrews dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "draft_de_cartas",
+    "dados_y_push_your_luck",
+    "puzzles_y_losetas"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Sagrada: destacada boardgame (2017) obra de Adrian Adamescu, Daryl Andrews.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:ticket-to-ride-2004",
+  "experience": {
+    "plot": "Ticket to ride es un juego de mesa de temática ferroviaria diseñado por Alan R. Moon y publicado en 2004 por Days of Wonder. El juego es también conocido como Zug um Zug (alemán), Les Aventuriers du Rail (francés), Wsiąść do pociągu (polaco), y Menolippu (finé",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Alan R. Moon, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Trains.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2004, una referencia indispensable obra de Alan R. Moon dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Ticket to Ride: destacada boardgame (2004) obra de Alan R. Moon.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

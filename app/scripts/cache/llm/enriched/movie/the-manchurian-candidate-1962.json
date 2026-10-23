@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-manchurian-candidate-1962",
+  "experience": {
+    "plot": "The Manchurian Candidate es una película estadounidense de suspenso psicológico y político de 1962, dirigida y producida por John Frankenheimer. El guion es de George Axelrod, basado en la novela de Richard Condon de 1959 The Manchurian Candidate. Los actores ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de John Frankenheimer, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1962, una obra destacada de John Frankenheimer en el panorama de Drama y Thriller."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 1,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "crimen",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "El mensajero del miedo: Drama y Thriller con dirección de John Frankenheimer.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

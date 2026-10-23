@@ -15,16 +15,16 @@
     "context": "La cumbre de la comedia fantástica de los 80 producida por Amblin y dirigida por Robert Zemeckis."
   },
   "axes": {
-    "tono": 1,
-    "ritmo": 5,
-    "emocion": 3,
-    "exigencia": 1,
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 4,
     "humor": 5,
-    "tension": 3,
+    "tension": 2,
     "fantasia": 4,
     "violencia": 1,
-    "familiar": 5,
-    "escala": 2,
+    "familiar": 4,
+    "escala": 4,
     "reconfort": 5
   },
   "themes": [

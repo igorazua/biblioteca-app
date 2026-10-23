@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:imperial-2030-2009",
+  "experience": {
+    "plot": "Imperial 2030 is a game on its own, based on the rules of Imperial. The six powers (USA, Europe, Russia, China, India, and Brazil) develop their industrial basis and build up armies and fleets. They fight over control of neutral land and sea areas in order to ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Mac Gerdts, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Nautical.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de Mac Gerdts dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 2,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Imperial 2030: destacada boardgame (2009) obra de Mac Gerdts.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

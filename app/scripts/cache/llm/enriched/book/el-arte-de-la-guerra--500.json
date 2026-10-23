@@ -1,0 +1,40 @@
+{
+  "id": "book:el-arte-de-la-guerra--500",
+  "experience": {
+    "plot": "El arte de la guerra es un libro sobre tácticas y estrategias militares, escrito por Sun Tzu, un famoso estratega militar chino. Se trata de un antiguo tratado militar chino que data del final del periodo de las Primaveras y Otoños. La obra consta de trece cap",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Sun Tzu, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ensayo / Clásico.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en -500, una referencia indispensable obra de Sun Tzu dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 2,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "escala": 2,
+    "ideas": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "identidad",
+    "guerra",
+    "filosofia"
+  ],
+  "moments": [
+    "concentracion",
+    "para_subrayar"
+  ],
+  "oneLiner": "El arte de la guerra: destacada book (-500) obra de Sun Tzu.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

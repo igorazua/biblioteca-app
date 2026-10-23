@@ -1,0 +1,42 @@
+{
+  "id": "movie:la-plan-te-sauvage-1973",
+  "experience": {
+    "plot": "On a faraway planet where blue giants rule, oppressed humanoids rebel against their machine-like leaders.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Ren\u001a Laloux, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "Parque Jurásico",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 1973, una obra destacada de Ren\u001a Laloux en el panorama de Animación y Ciencia ficción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 5,
+    "reconfort": 5
+  },
+  "themes": [
+    "espacio",
+    "ia_y_robots",
+    "espionaje"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "La plan\u001ate sauvage: Animación y Ciencia ficción con dirección de Ren\u001a Laloux.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

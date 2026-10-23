@@ -1,0 +1,41 @@
+{
+  "id": "movie:star-wars-episode-vi-return-of-the-jedi-1983",
+  "experience": {
+    "plot": "Star Wars: Episode VI - Return of the Jedi es una película de space opera estadounidense de 1983 escrita por George Lucas y Lawrence Kasdan, basada en una historia de Lucas y dirigida por Richard Marquand. Secuela de Una nueva esperanza y El Imperio contraatac",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Richard Marquand, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1983, una obra destacada de Richard Marquand en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "El retorno del Jedi: Acción y Aventura con dirección de Richard Marquand.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

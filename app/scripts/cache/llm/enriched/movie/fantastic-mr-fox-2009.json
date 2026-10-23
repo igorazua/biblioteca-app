@@ -1,0 +1,42 @@
+{
+  "id": "movie:fantastic-mr-fox-2009",
+  "experience": {
+    "plot": "Un zorro padre de familia no puede resistirse a su antigua vida de ladrón y asalta las granjas vecinas.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Wes Anderson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El rey león",
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek"
+    ],
+    "context": "Estrenada en 2009, una obra destacada de Wes Anderson en el panorama de Animación y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Fantastic Mr. Fox: Animación y Comedia con dirección de Wes Anderson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

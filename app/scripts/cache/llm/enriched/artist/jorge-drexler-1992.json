@@ -1,0 +1,36 @@
+{
+  "id": "artist:jorge-drexler-1992",
+  "experience": {
+    "plot": "Jorge Drexler (Montevideo, Uruguay), icono de Canción de autor, Pop alternativo desde 1992.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Montevideo, Uruguay, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Canción de autor / Pop alternativo.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1992, una referencia indispensable obra de Montevideo, Uruguay dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 2,
+    "valencia": 5,
+    "bailable": 4,
+    "organico": 5,
+    "intensidad": 1,
+    "fondo": 4,
+    "complejidad": 2
+  },
+  "themes": [
+    "pop",
+    "musica_latina",
+    "rock_clasico"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Jorge Drexler: destacada artist (1992) obra de Montevideo, Uruguay.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

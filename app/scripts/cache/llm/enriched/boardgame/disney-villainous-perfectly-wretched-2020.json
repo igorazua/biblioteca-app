@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:disney-villainous-perfectly-wretched-2020",
+  "experience": {
+    "plot": "In Disney Villainous: Perfectly Wretched, each player takes control of one of three Disney characters, each one a villain in a different Disney movie, specifically Cruella de Vil from 101 Dalmatians, Mother Gothel from Tangled, and Pete from Steamboat Willie. ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Brian Kirk, Peter Lee, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Brian Kirk, Peter Lee dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "draft_de_cartas",
+    "gestion_de_recursos",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Disney Villainous: Perfectly Wretched (2020): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

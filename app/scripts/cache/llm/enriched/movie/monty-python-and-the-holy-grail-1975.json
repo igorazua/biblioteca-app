@@ -1,0 +1,42 @@
+{
+  "id": "movie:monty-python-and-the-holy-grail-1975",
+  "experience": {
+    "plot": "Monty Python and the Holy Grail es una película de cine británica dirigida por Terry Gilliam y Terry Jones, estrenada en 1975.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Terry Gilliam, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 1975, una obra destacada de Terry Gilliam en el panorama de Aventura y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 5,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "amigos"
+  ],
+  "oneLiner": "Los caballeros de la mesa cuadrada y sus locos seguidores (1975): memorable obra de Avent",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

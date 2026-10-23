@@ -1,0 +1,42 @@
+{
+  "id": "movie:con-faldas-y-a-lo-loco-1959",
+  "experience": {
+    "plot": "Some Like It Hot es una película de comedia estadounidense de 1959, dirigida y producida por Billy Wilder y protagonizada por Marilyn Monroe, Tony Curtis y Jack Lemmon. Ambientado en 1929, el argumento gira en torno a dos músicos que se disfrazan de mujer con ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Billy Wilder, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek",
+      "Amélie"
+    ],
+    "context": "Estrenada en 1959, una obra destacada de Billy Wilder en el panorama de Comedia."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "crimen",
+    "mafia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "Con faldas y a lo loco: Comedia con dirección de Billy Wilder.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

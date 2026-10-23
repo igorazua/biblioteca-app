@@ -1,0 +1,42 @@
+{
+  "id": "movie:green-book-2018",
+  "experience": {
+    "plot": "Green Book es una película estadounidense de comedia dramática de 2018 acerca del viaje real al Viejo Sur estadounidense que realizó en la década de 1960 el pianista afroestadounidense de jazz y música clásica Don Shirley junto a Tony Vallelonga, conocido como",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Peter Farrelly, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2018, una obra destacada de Peter Farrelly en el panorama de Biografía y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Green Book: Biografía y Comedia con dirección de Peter Farrelly.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

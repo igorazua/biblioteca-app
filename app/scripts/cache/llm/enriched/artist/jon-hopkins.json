@@ -1,0 +1,36 @@
+{
+  "id": "artist:jon-hopkins",
+  "experience": {
+    "plot": "Jonathan Julian \"Jon\" Hopkins es un productor y músico inglés especializado en composiciones de música electrónica, y caracterizado por su capacidad para crear melodías ambientales mediante sintetizadores y acordes de piano. Su carrera comenzó como tecladista ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2001, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 2,
+    "valencia": 3,
+    "bailable": 2,
+    "organico": 3,
+    "intensidad": 2,
+    "fondo": 4,
+    "complejidad": 3
+  },
+  "themes": [
+    "electronica",
+    "pop",
+    "rock_clasico"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Jon Hopkins: destacada artist (2001) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

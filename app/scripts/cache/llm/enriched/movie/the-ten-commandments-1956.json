@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-ten-commandments-1956",
+  "experience": {
+    "plot": "Los diez mandamientos es una película estadounidense épica de 1956, dirigida y producida por Cecil B. DeMille, filmada en VistaVision y distribuida por Paramount Pictures. Dramatiza la historia narrada en el libro del Éxodo de la Biblia, cuya autoría tradicion",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Cecil B. DeMille, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 1956, una obra destacada de Cecil B. DeMille en el panorama de Aventura y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Los diez mandamientos: Aventura y Drama con dirección de Cecil B. DeMille.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

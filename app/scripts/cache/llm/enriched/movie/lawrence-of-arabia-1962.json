@@ -1,0 +1,42 @@
+{
+  "id": "movie:lawrence-of-arabia-1962",
+  "experience": {
+    "plot": "Lawrence de Arabia es una película británica de 1962 del género épico-histórico, dirigida por David Lean y basada en la vida de Thomas Edward Lawrence. La cinta está interpretada por Peter O'Toole, Omar Sharif, Anthony Quinn, Alec Guinness, Jack Hawkins, Antho",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de David Lean, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 1962, una obra destacada de David Lean en el panorama de Aventura y Biografía."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Lawrence de Arabia: Aventura y Biografía con dirección de David Lean.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

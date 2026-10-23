@@ -1,0 +1,42 @@
+{
+  "id": "series:ramsay-s-costa-del-nightmares-2014",
+  "experience": {
+    "plot": "Gordon Ramsay visits some of Europe's holiday hotspots, meeting Brits abroad struggling with restaurants in crisis.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Channel 4, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Food.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Channel 4 dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 3,
+    "enganche": 3,
+    "formato": 2
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Ramsay's Costa Del Nightmares: destacada series (2014) obra de Channel 4.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

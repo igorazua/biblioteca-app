@@ -1,0 +1,43 @@
+{
+  "id": "movie:rang-de-basanti-2006",
+  "experience": {
+    "plot": "Rang De Basanti, es una película de Bollywood, dirigida por Rakeysh Omprakash Mehra en 2006.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Rakeysh Omprakash Mehra, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2006, una obra destacada de Rakeysh Omprakash Mehra en el panorama de Comedia y Crimen."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Rang De Basanti: Comedia y Crimen con dirección de Rakeysh Omprakash Mehra.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

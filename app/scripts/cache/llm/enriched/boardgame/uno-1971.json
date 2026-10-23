@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:uno-1971",
+  "experience": {
+    "plot": "Uno es un juego de cartas estadounidense desarrollado en 1971 por Merle Robbins en San Genaro. El juego es un producto de Mattel desde 1992.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Merle Robbins, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Children's Game.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1971, una referencia indispensable obra de Merle Robbins dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "UNO: destacada boardgame (1971) obra de Merle Robbins.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

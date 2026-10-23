@@ -1,0 +1,42 @@
+{
+  "id": "movie:bronenosets-potemkin-1925",
+  "experience": {
+    "plot": "El acorazado Potemkin es una película muda dramática e histórica de 1925 producida por Mosfilm y dirigida por el cineasta soviético Serguéi Eisenstein. La película reproduce el motín ocurrido en el acorazado Potemkin en 1905, cuando la tripulación se rebeló co",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Sergei M. Eisenstein, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1925, una obra destacada de Sergei M. Eisenstein en el panorama de Drama y Historia."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "crimen"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Bronenosets Potemkin: Drama y Historia con dirección de Sergei M. Eisenstein.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

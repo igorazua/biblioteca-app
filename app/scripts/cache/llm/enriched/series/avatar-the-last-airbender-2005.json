@@ -1,0 +1,42 @@
+{
+  "id": "series:avatar-the-last-airbender-2005",
+  "experience": {
+    "plot": "Avatar: la leyenda de Aang o Avatar: el último maestro del aire es una serie de televisión animada estadounidense de acción, aventuras, fantasía, fantasía épica y artes marciales, creada por Michael Dante DiMartino y Bryan Konietzko para Nickelodeon. Fue produ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Nickelodeon, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de Nickelodeon dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 3,
+    "formato": 3
+  },
+  "themes": [
+    "animacion",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Avatar: la leyenda de Aang: destacada series (2005) obra de Nickelodeon.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

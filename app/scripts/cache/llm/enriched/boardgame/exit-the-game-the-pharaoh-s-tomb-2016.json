@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:exit-the-game-the-pharaoh-s-tomb-2016",
+  "experience": {
+    "plot": "On an Egyptian holiday, players are visiting the highlight of the entire journey: the stone pyramids! But after rising through the narrow, labyrinthine corridors, they discover that they've lost the rest of the group. After wandering for hours, they end up in ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Inka Brand, Markus Brand, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad / Deducción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra de Inka Brand, Markus Brand dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 2,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 1,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "roles_ocultos",
+    "puzzles_y_losetas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "EXIT: The Game – The Pharaoh's Tomb (2016): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

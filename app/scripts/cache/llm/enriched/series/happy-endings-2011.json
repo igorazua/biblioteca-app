@@ -1,0 +1,43 @@
+{
+  "id": "series:happy-endings-2011",
+  "experience": {
+    "plot": "Happy endings es una comedia de situación estadounidense, creada por David Caspe y emitida originalmente por la ABC. Protagonizada por Eliza Coupe, Elisha Cuthbert, Zachary Knighton, Adam Pally, Damon Wayans, Jr. y Casey Wilson, la serie se estrenó el 13 de ab",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de ABC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de ABC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Happy Endings: destacada series (2011) obra de ABC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:h-stsonaten-1978",
+  "experience": {
+    "plot": "A married daughter who longs for her mother's love is visited by the latter, a successful concert pianist.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Ingmar Bergman, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1978, una obra destacada de Ingmar Bergman en el panorama de Drama y Música."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "H\u001astsonaten: Drama y Música con dirección de Ingmar Bergman.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

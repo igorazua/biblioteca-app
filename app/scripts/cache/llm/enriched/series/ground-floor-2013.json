@@ -1,0 +1,43 @@
+{
+  "id": "series:ground-floor-2013",
+  "experience": {
+    "plot": "Ground Floor fue una comedia de situación estadounidense transmitida por TBS, creada por Bill Lawrence y Greg Malins. Se estrenó el 14 de noviembre de 2013 en los Estados Unidos.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de TBS, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de TBS dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 5,
+    "enganche": 2,
+    "formato": 2
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Ground Floor: destacada series (2013) obra de TBS.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

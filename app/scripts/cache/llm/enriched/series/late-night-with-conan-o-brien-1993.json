@@ -1,0 +1,43 @@
+{
+  "id": "series:late-night-with-conan-o-brien-1993",
+  "experience": {
+    "plot": "Late Night with Conan O'Brien es un programa de conversación nocturno del tipo late night talk show, conducido por Conan O'Brien, transmitido por la NBC entre 1993 y 2009. Durante los dieciséis años de emisión han transmitido 2725 programas. El show contenía v",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de NBC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1993, una referencia indispensable obra de NBC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 5,
+    "enganche": 5,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Late Night with Conan O'Brien: destacada series (1993) obra de NBC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

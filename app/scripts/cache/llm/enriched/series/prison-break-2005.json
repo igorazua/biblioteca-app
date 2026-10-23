@@ -1,0 +1,43 @@
+{
+  "id": "series:prison-break-2005",
+  "experience": {
+    "plot": "Prison Break es una serie de televisión dramática estadounidense creada por Paul Scheuring y estrenada el 29 de agosto de 2005.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de FOX, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Crimen.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de FOX dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "investigacion_policial",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Prison Break: destacada series (2005) obra de FOX.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

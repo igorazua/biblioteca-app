@@ -1,0 +1,39 @@
+{
+  "id": "book:think-and-grow-rich-1937",
+  "experience": {
+    "plot": "Piense y hágase rico es un libro del escritor estadounidense Napoleón Hill. Se conoce como el método más famoso y efectivo para hacer dinero ya que con más de diez millones de copias vendidas, ha tenido más éxito que cualquier otra obra de su género.[cita requ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Napoleon Hill, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1937, una referencia indispensable obra de Napoleon Hill dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "filosofia",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Think and Grow Rich: destacada book (1937) obra de Napoleon Hill.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

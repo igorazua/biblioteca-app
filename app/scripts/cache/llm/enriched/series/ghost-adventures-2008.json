@@ -1,0 +1,42 @@
+{
+  "id": "series:ghost-adventures-2008",
+  "experience": {
+    "plot": "Buscadores de fantasmas es un docurreality estadounidense emitido por primera vez el 17 de octubre de 2008 a través de Travel Channel. El programa está producido por MY Tupelo Entertainment, y sigue al investigador paranormal Zak Bagans junto a Aaron Goodwin, ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Discovery, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Terror / Misterio.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de Discovery dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 2,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 5,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 1,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "monstruos_y_terror",
+    "amistad"
+  ],
+  "moments": [
+    "pasar_miedo"
+  ],
+  "oneLiner": "Ghost Adventures: destacada series (2008) obra de Discovery.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

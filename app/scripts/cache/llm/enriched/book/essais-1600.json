@@ -1,0 +1,39 @@
+{
+  "id": "book:essais-1600",
+  "experience": {
+    "plot": "Obra clásica de ensayo escrita por Montaigne, Michel de.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Montaigne, Michel de, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ensayo / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1600, una referencia indispensable obra de Montaigne, Michel de dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 2,
+    "densidad": 5,
+    "humor": 1,
+    "tension": 1,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "identidad",
+    "sociedad",
+    "historia"
+  ],
+  "moments": [
+    "concentracion"
+  ],
+  "oneLiner": "Essais: destacada book (1600) obra de Montaigne, Michel de.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

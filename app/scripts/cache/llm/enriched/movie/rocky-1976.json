@@ -1,0 +1,43 @@
+{
+  "id": "movie:rocky-1976",
+  "experience": {
+    "plot": "Rocky es una película estadounidense de 1976 escrita y protagonizada por Sylvester Stallone y dirigida por John G. Avildsen. La historia narra la búsqueda del sueño americano por parte de Rocky Balboa, un italoestadounidense de clase baja que se dedica a cobra",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de John G. Avildsen, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1976, una obra destacada de John G. Avildsen en el panorama de Drama y Deporte."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "amistad",
+    "ia_y_robots",
+    "deporte",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Rocky: Drama y Deporte con dirección de John G. Avildsen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

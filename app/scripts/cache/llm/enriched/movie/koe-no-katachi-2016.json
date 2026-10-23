@@ -1,0 +1,42 @@
+{
+  "id": "movie:koe-no-katachi-2016",
+  "experience": {
+    "plot": "Koe no Katachi , conocida como A Silent Voice en España y Una voz silenciosa en Latinoamérica, es una película de animación japonesa de drama escolar producida por Kyoto Animation, dirigida por Naoko Yamada y escrita por Reiko Yoshida, con diseño de personajes",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Naoko Yamada, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2016, una obra destacada de Naoko Yamada en el panorama de Animación y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Koe no katachi: Animación y Drama con dirección de Naoko Yamada.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

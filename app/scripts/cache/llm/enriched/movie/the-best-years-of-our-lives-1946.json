@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-best-years-of-our-lives-1946",
+  "experience": {
+    "plot": "Los mejores años de nuestra vida es una película estadounidense de 1946 dirigida por William Wyler y con Fredric March, Myrna Loy, Teresa Wright, Virginia Mayo y Dana Andrews en los papeles principales. Está basada en la novela de 1945 Glory for Me, de MacKinl",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de William Wyler, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1946, una obra destacada de William Wyler en el panorama de Drama y Romance."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Los mejores años de nuestra vida: Drama y Romance con dirección de William Wyler.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

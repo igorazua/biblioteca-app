@@ -1,0 +1,42 @@
+{
+  "id": "movie:repulsion-1965",
+  "experience": {
+    "plot": "Repulsión es una película de terror psicológico británica de 1965 dirigida por Roman Polanski, y con la actuación de Catherine Deneuve, Ian Hendry, John Fraser, Yvonne Furneaux y Patrick Wymark. Filmada en Gran Bretaña, fue el segundo largometraje de Polanski,",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Roman Polanski, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1965, una obra destacada de Roman Polanski en el panorama de Drama y Terror."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "crimen",
+    "sobrenatural"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Repulsión: Drama y Terror con dirección de Roman Polanski.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-artist-2011",
+  "experience": {
+    "plot": "The Artist —conocida como El artista en Hispanoamérica— es una película francesa de drama y comedia romántica en el estilo de una película muda en blanco y negro. Escrita y dirigida por Michel Hazanavicius, está protagonizada por Jean Dujardin y Bérénice Bejo.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Michel Hazanavicius, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2011, una obra destacada de Michel Hazanavicius en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 5,
+    "tension": 1,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "The Artist: Comedia y Drama con dirección de Michel Hazanavicius.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

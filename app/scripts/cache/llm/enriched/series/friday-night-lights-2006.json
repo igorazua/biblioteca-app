@@ -1,0 +1,43 @@
+{
+  "id": "series:friday-night-lights-2006",
+  "experience": {
+    "plot": "Friday Night Lights es una serie de televisión estadounidense ganadora de numerosos premios, adaptada por Peter Berg, Brian Grazer y David Nevins a partir del libro Friday Night Lights: A Town, a Team and a Dream, escrito por H. G. Bissinger, y la película hom",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de NBC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Sports.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de NBC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Friday Night Lights: destacada series (2006) obra de NBC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:endeavor-age-of-sail-2018",
+  "experience": {
+    "plot": "In Endeavor: Age of Sail, players strive to earn glory for their empires. Sailing out from Europe and the Mediterranean, players will establish shipping routes and occupy cities the world over. As they do so, players will leverage their growing industry, cultu",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Carl de Visser, Jarratt Gray, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Exploración / Nautical.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Carl de Visser, Jarratt Gray dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Endeavor: Age of Sail: destacada boardgame (2018) obra de Carl de Visser, Jarratt Gray.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -16,14 +16,14 @@
   "axes": {
     "tono": 2,
     "ritmo": 2,
-    "emocion": 2,
-    "densidad": 4,
-    "humor": 1,
-    "tension": 1,
+    "emocion": 3,
+    "densidad": 5,
+    "humor": 2,
+    "tension": 2,
     "fantasia": 1,
-    "escala": 5,
-    "ideas": 2,
-    "reconfort": 5
+    "escala": 4,
+    "ideas": 4,
+    "reconfort": 4
   },
   "themes": [
     "familia",

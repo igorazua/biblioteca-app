@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:rococo-2013",
+  "experience": {
+    "plot": "Rococo es una reconocida boardgame que explora temáticas de Age of Reason, Económico. Destaca por su personalidad propia y su conexión directa con el público.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Louis Malz, Matthias Cramer, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Age of Reason / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de Louis Malz, Matthias Cramer dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Rococo: destacada boardgame (2013) obra de Louis Malz, Matthias Cramer.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "series:true-blood-2008",
+  "experience": {
+    "plot": "True Blood is a horror/drama based on a series of novels called The Southern American Vampires Mysteries. It focuses on Sookie Stackhouse and her various encounters with vampires and other supernatural beings. The show is centred in the small town of Bon Temps",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de HBO, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Romance.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de HBO dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "True Blood: destacada series (2008) obra de HBO.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:haider-2014",
+  "experience": {
+    "plot": "Haider es una película hindú de 2014 escrita, producida y dirigida por Vishal Bhardwaj, coproducida por Siddharth Roy Kapur, y coescrita por Basharat Peer. Está protagonizada por Shahid Kapoor y Tabu en los papeles principales, con Kay Kay Menon, Shraddha Kapo",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Vishal Bhardwaj, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2014, una obra destacada de Vishal Bhardwaj en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Haider: Acción y Crimen con dirección de Vishal Bhardwaj.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

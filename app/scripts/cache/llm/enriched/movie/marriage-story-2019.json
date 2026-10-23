@@ -1,0 +1,43 @@
+{
+  "id": "movie:marriage-story-2019",
+  "experience": {
+    "plot": "Historia de un matrimonio es una película dramática estadounidense de 2019 escrita y dirigida por Noah Baumbach. La cinta está protagonizada por Scarlett Johansson y Adam Driver, acompañados por un elenco integrado por Laura Dern, Ray Liotta y Alan Alda.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Noah Baumbach, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2019, una obra destacada de Noah Baumbach en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Historia de un matrimonio: Comedia y Drama con dirección de Noah Baumbach.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:agricola-2007",
+  "experience": {
+    "plot": "Agrícola es un juego de mesa creado por Uwe Rosenberg en 2007 y editado en España por Homolúdicus. El juego está ambientado en una zona agrícola donde cada jugador será una familia, desarrollará una granja, criará ganado e intentará obtener el alimento necesar",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Uwe Rosenberg, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de Uwe Rosenberg dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Agricola: destacada boardgame (2007) obra de Uwe Rosenberg.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

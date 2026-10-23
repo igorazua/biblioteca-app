@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-last-emperor-1987",
+  "experience": {
+    "plot": "El último emperador es una película de 1987 de género biográfico, dirigida por Bernardo Bertolucci y con actuación de John Lone, Joan Chen, Peter O'Toole, Ruocheng Ying, Victor Wong, Dennis Dun, Ryuichi Sakamoto, Maggie Han, Ric Young, Vivian Wu y Chen Kaige e",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Bernardo Bertolucci, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1987, una obra destacada de Bernardo Bertolucci en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 1
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "El último emperador: Biografía y Drama con dirección de Bernardo Bertolucci.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

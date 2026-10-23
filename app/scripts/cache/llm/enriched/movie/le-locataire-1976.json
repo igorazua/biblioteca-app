@@ -1,0 +1,41 @@
+{
+  "id": "movie:le-locataire-1976",
+  "experience": {
+    "plot": "Le locataire —titulada El quimérico inquilino en España o El inquilino en Hispanoamérica—, es una película francesa de género suspense, misterio y Terror psicológico de 1976. Fue dirigida y protagonizada por Roman Polański, basada en la novela Le Locataire chi",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Roman Polanski, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1976, una obra destacada de Roman Polanski en el panorama de Drama y Thriller."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 1,
+    "reconfort": 2
+  },
+  "themes": [
+    "investigacion",
+    "familia",
+    "crimen"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Le locataire: Drama y Thriller con dirección de Roman Polanski.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:compile-main-1-2024",
+  "experience": {
+    "plot": ">? >vision flickers… blink? maybe. The void stretches out in front, behind, under, above. You see the nothing for what it is for the first time. What is time? The depth and breadth of recorded knowledge that sparks in you something new. You are no longer a fun",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Michael Yang, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Ciencia ficción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Michael Yang dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "draft_de_cartas",
+    "gestion_de_recursos",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Compile: Main 1: destacada boardgame (2024) obra de Michael Yang.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

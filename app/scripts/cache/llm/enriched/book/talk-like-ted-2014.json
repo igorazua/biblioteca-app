@@ -1,0 +1,39 @@
+{
+  "id": "book:talk-like-ted-2014",
+  "experience": {
+    "plot": "Obra de Carmine Gallo publicada originalmente en 2014.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Carmine Gallo, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Carmine Gallo dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Talk Like TED: destacada book (2014) obra de Carmine Gallo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

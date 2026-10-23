@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-boy-in-the-striped-pyjamas-2008",
+  "experience": {
+    "plot": "El niño con el pijama de rayas es una película dramática de 2008 dirigida por Mark Herman basada en la novela homónima de John Boyne.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Mark Herman, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2008, una obra destacada de Mark Herman en el panorama de Drama y Historia."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 1
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "The Boy in the Striped Pyjamas: Drama y Historia con dirección de Mark Herman.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

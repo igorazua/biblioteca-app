@@ -1,0 +1,36 @@
+{
+  "id": "artist:peret",
+  "experience": {
+    "plot": "Pedro Pubill Calaf, conocido artísticamente como Peret, fue un cantante, guitarrista y compositor español de etnia gitana, que popularizó la rumba catalana.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1960, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 2,
+    "valencia": 5,
+    "bailable": 5,
+    "organico": 3,
+    "intensidad": 2,
+    "fondo": 3,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Peret: destacada artist (1960) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

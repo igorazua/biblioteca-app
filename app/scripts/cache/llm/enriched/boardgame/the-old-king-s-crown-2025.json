@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:the-old-king-s-crown-2025",
+  "experience": {
+    "plot": "The Old King’s Crown is a game of card-driven conquest, where you play as heirs to a vacant throne, vying for control of an ancient, overgrown kingdom. Wield unique abilities and leverage your followers’ traits to best outwit your opponents across a map that s",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Pablo Clark, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2025, una referencia indispensable obra de Pablo Clark dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "The Old King's Crown: destacada boardgame (2025) obra de Pablo Clark.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

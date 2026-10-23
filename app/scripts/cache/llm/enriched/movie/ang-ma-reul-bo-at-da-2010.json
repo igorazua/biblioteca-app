@@ -1,0 +1,42 @@
+{
+  "id": "movie:ang-ma-reul-bo-at-da-2010",
+  "experience": {
+    "plot": "A secret agent exacts revenge on a serial killer through a series of captures and releases.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Jee-woon Kim, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2010, una obra destacada de Jee-woon Kim en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Ang-ma-reul bo-at-da: Acción y Crimen con dirección de Jee-woon Kim.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

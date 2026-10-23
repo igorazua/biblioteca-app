@@ -1,0 +1,42 @@
+{
+  "id": "movie:incendies-2010",
+  "experience": {
+    "plot": "Twins journey to the Middle East to discover their family history and fulfill their mother's last wishes.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Denis Villeneuve, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2010, una obra destacada de Denis Villeneuve en el panorama de Drama y Misterio."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "investigacion",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Incendies: Drama y Misterio con dirección de Denis Villeneuve.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

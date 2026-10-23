@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:sid-meier-s-civilization-the-board-game-2010",
+  "experience": {
+    "plot": "Please note: this entry covers the 2010 release of Sid Meier’s Civilization: The Board Game from FFG. This game is unrelated to the similarly named 2002 Eagle Games Sid Meier's Civilization: The Boardgame. From Press Release: Before you lies a vast bounty of l",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Kevin Wilson, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Construcción de ciudades / Civilización.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra de Kevin Wilson dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "imperios_y_civilizaciones",
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Sid Meier's Civilization: The Board Game: destacada boardgame (2010) obra de Kevin Wilson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "artist:los-enanitos-verdes-1979",
+  "experience": {
+    "plot": "Los Enanitos Verdes (Mendoza, Argentina), icono de Rock en español, Pop rock desde 1979.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Mendoza, Argentina, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Rock en español / Pop rock.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1979, una referencia indispensable obra de Mendoza, Argentina dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 5,
+    "bailable": 4,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 4,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "musica_latina"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Los Enanitos Verdes: destacada artist (1979) obra de Mendoza, Argentina.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

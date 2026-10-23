@@ -1,0 +1,44 @@
+{
+  "id": "series:murdoch-mysteries-2008",
+  "experience": {
+    "plot": "Los misterios de Murdoch es una serie canadiense de drama ciencia ficción y misterio, que se estrenó en Citytv el 20 de enero de 2008. Actualmente se emite en CBC, Paramount Network y otras cadenas de televisión. La serie está basada en los personajes de las n",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de CBC Gem, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Crimen.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de CBC Gem dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "investigacion_policial",
+    "epoca_historica",
+    "amistad"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "pasar_miedo"
+  ],
+  "oneLiner": "Murdoch Mysteries: destacada series (2008) obra de CBC Gem.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

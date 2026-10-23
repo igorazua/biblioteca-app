@@ -1,0 +1,42 @@
+{
+  "id": "movie:it-s-a-wonderful-life-1946",
+  "experience": {
+    "plot": "Qué bello es vivir es una película estadounidense de 1946 dirigida y producida por Frank Capra, basada en el cuento de The Greatest Gift, escrito por Philip Van Doren Stern en 1939 y publicado de forma privada en 1943 y que, a su vez, se basa libremente en la ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Frank Capra, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1946, una obra destacada de Frank Capra en el panorama de Drama y Familiar."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 5,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "familia"
+  ],
+  "oneLiner": "¡Qué bello es vivir!: Drama y Familiar con dirección de Frank Capra.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

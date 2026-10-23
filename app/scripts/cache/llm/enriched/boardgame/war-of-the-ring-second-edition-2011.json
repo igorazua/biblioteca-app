@@ -14,14 +14,14 @@
     "context": "Creada en 2011, una referencia indispensable obra de Francesco Nepitello, Marco Maggi dentro de su disciplina."
   },
   "axes": {
-    "peso": 5,
-    "interaccion": 2,
-    "azar": 1,
-    "confrontacion": 1,
+    "peso": 4,
+    "interaccion": 5,
+    "azar": 2,
+    "confrontacion": 4,
     "cooperacion": 1,
-    "tema": 2,
-    "risas": 1,
-    "familiar": 1
+    "tema": 4,
+    "risas": 2,
+    "familiar": 2
   },
   "themes": [
     "gestion_de_recursos",

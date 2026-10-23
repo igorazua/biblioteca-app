@@ -1,0 +1,43 @@
+{
+  "id": "movie:fantasia-1940",
+  "experience": {
+    "plot": "Fantasía es una película de antología musical animada estadounidense de 1940 producida y estrenada por Walt Disney Animation Studios, con la dirección de la historia a cargo de Joe Grant y Dick Huemer y la supervisión de producción de Walt Disney y Ben Sharpst",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de James Algar, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Toy Story",
+      "Shrek"
+    ],
+    "context": "Estrenada en 1940, una obra destacada de James Algar en el panorama de Animación y Familiar."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 5,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "realismo_magico",
+    "musica"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Fantasía: Animación y Familiar con dirección de James Algar.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

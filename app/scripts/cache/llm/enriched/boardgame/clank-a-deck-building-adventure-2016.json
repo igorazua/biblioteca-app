@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:clank-a-deck-building-adventure-2016",
+  "experience": {
+    "plot": "Burgle your way to adventure in the deck-building board game Clank! Sneak into an angry dragon's mountain lair to steal precious artifacts. Delve deeper to find more valuable loot. Acquire cards for your deck and watch your thievish abilities grow. Be quick an",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Paul Dennen, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra de Paul Dennen dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Clank!: A Deck-Building Adventure: destacada boardgame (2016) obra de Paul Dennen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

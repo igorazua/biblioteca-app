@@ -1,0 +1,45 @@
+{
+  "id": "movie:bride-of-frankenstein-1935",
+  "experience": {
+    "plot": "La novia de Frankenstein es una película de terror y ciencia ficción dirigida por James Whale y estrenada en 1935. Es la secuela de Frankenstein (1931). En ambas, los actores Boris Karloff y Colin Clive interpretaron los papeles principales. La cinta cuenta ta",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de James Whale, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 1935, una obra destacada de James Whale en el panorama de Drama y Terror."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "monstruos",
+    "familia",
+    "espacio",
+    "sobrenatural"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "La novia de Frankenstein: Drama y Terror con dirección de James Whale.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

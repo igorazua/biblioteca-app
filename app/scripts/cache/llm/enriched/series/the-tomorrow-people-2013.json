@@ -1,0 +1,42 @@
+{
+  "id": "series:the-tomorrow-people-2013",
+  "experience": {
+    "plot": "The Tomorrow People es una serie de televisión estadounidense de ciencia ficción creada por Phil Klemmer, Greg Berlanti y Julie Plec para la cadena The CW. Basada en la serie de televisión británica original del mismo nombre que fue emitida entre 1973 y 1979, ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de The CW, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Science-Fiction.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de The CW dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 2,
+    "formato": 3
+  },
+  "themes": [
+    "politica_y_poder",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "The Tomorrow People: destacada series (2013) obra de The CW.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

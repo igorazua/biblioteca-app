@@ -1,0 +1,38 @@
+{
+  "id": "artist:amy-winehouse-2003",
+  "experience": {
+    "plot": "Amy Winehouse (Londres, Reino Unido), icono de Soul, R&B, Jazz desde 2003.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Londres, Reino Unido, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Soul / R&B.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2003, una referencia indispensable obra de Londres, Reino Unido dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 2,
+    "valencia": 3,
+    "bailable": 4,
+    "organico": 5,
+    "intensidad": 2,
+    "fondo": 2,
+    "complejidad": 5
+  },
+  "themes": [
+    "pop",
+    "electronica",
+    "jazz",
+    "blues",
+    "soul"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Amy Winehouse: destacada artist (2003) obra de Londres, Reino Unido.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

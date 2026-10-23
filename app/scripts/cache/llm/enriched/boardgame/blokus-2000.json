@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:blokus-2000",
+  "experience": {
+    "plot": "Blokus es un juego de mesa de estrategia abstracto, para dos o hasta cuatro jugadores, inventado por Bernard Tavitian, y publicado por primera vez en el 2002 por Sekkoïa, una compañía francesa.[cita requerida] Ha recibido numerosos premios alrededor del mundo.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bernard Tavitian, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Estrategia abstracta / Territory Building.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2000, una referencia indispensable obra de Bernard Tavitian dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 2,
+    "azar": 1,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Blokus: destacada boardgame (2000) obra de Bernard Tavitian.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

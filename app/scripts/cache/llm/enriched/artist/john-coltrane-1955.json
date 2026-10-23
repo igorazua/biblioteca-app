@@ -1,0 +1,36 @@
+{
+  "id": "artist:john-coltrane-1955",
+  "experience": {
+    "plot": "John Coltrane (Carolina del Norte, EE. UU.), icono de Modal jazz, Free jazz, Hard bop desde 1955.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Carolina del Norte, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Modal jazz / Free jazz.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1955, una referencia indispensable obra de Carolina del Norte, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 2,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 2,
+    "fondo": 3,
+    "complejidad": 4
+  },
+  "themes": [
+    "jazz",
+    "blues",
+    "pop"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "John Coltrane: destacada artist (1955) obra de Carolina del Norte, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

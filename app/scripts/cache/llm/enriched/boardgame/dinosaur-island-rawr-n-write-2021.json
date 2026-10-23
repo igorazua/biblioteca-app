@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:dinosaur-island-rawr-n-write-2021",
+  "experience": {
+    "plot": "Dinosaur Island: Rawr 'n Write is a roll-and-write version of the critically-acclaimed game Dinosaur Island. Dinosaur Island: Rawr ‘n Write is a unique game in which players draft dice and then use those drafted dice as workers in a worker placement phase. The",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Brian Lewis, David McGregor, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Dados.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Brian Lewis, David McGregor dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "dados_y_push_your_luck"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Dinosaur Island: Rawr 'n Write (2021): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:hiroshima-mon-amour-1959",
+  "experience": {
+    "plot": "Hiroshima, mon amour es una película franco-japonesa de 1959, debut del realizador Alain Resnais. La cinta está protagonizada por Emmanuelle Riva, Eiji Okada y Bernard Fresson. Se trata de un drama romántico que aborda una intensa conversación personal sobre l",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Alain Resnais, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1959, una obra destacada de Alain Resnais en el panorama de Drama y Romance."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Hiroshima mon amour: Drama y Romance con dirección de Alain Resnais.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

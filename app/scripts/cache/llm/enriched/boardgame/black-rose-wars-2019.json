@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:black-rose-wars-2019",
+  "experience": {
+    "plot": "Black Rose Wars is a competitive fantasy game of deck-building, strategy, and combat set in the hectic universe of Nova Aetas in Italy. Each player is one of powerful mages of the Black Rose Order who aspires to become the new Supreme Magister in order to acqu",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Marco Montanaro, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Faroleo / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Marco Montanaro dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "faroleo_y_enganos",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Black Rose Wars: destacada boardgame (2019) obra de Marco Montanaro.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

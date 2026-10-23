@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:brazil-imperial-2021",
+  "experience": {
+    "plot": "Take on the role of one of the great monarchs of the past, and show your valor! You will arrive in a vast and rich territory, but the road to the prosperity is filled with challenges. In Brazil: Imperial, you need to construct buildings, manage resources, expl",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Zé Mendes, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Construcción de ciudades / Civilización.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Zé Mendes dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "imperios_y_civilizaciones",
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Brazil: Imperial: destacada boardgame (2021) obra de Zé Mendes.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

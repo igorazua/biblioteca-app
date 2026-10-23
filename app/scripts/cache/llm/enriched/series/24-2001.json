@@ -1,0 +1,43 @@
+{
+  "id": "series:24-2001",
+  "experience": {
+    "plot": "24 es una serie de televisión estadounidense del género de acción/drama, protagonizada por Kiefer Sutherland en el papel del agente Jack Bauer de la Unidad Contra Terrorista, emitida por la cadena Fox y producida por Imagine Televisión. Fue creada por Robert C",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de FOX, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Acción.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2001, una referencia indispensable obra de FOX dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "monstruos_y_terror",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "24: destacada series (2001) obra de FOX.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

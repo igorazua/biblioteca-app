@@ -1,0 +1,41 @@
+{
+  "id": "movie:kis-uykusu-2014",
+  "experience": {
+    "plot": "película de 2014 dirigida por Nuri Bilge Ceylan",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Nuri Bilge Ceylan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2014, una obra destacada de Nuri Bilge Ceylan en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Kis Uykusu: Drama con dirección de Nuri Bilge Ceylan.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

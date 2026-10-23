@@ -1,0 +1,41 @@
+{
+  "id": "movie:butch-cassidy-and-the-sundance-kid-1969",
+  "experience": {
+    "plot": "Butch Cassidy and the Sundance Kid es un western crepuscular estadounidense de 1969, dirigido por George Roy Hill y protagonizado por Paul Newman, Robert Redford y Katharine Ross en los papeles principales. Es conocido en Hispanoamérica como Butch Cassidy. Fue",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de George Roy Hill, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1969, una obra destacada de George Roy Hill en el panorama de Biografía y Crimen."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Dos hombres y un destino: Biografía y Crimen con dirección de George Roy Hill.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

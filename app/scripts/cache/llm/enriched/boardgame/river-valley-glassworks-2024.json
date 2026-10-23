@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:river-valley-glassworks-2024",
+  "experience": {
+    "plot": "Welcome to River Valley! The beautiful pieces of glass that can be found along the river here have attracted the most entrepreneurial of woodland creatures to set up shop. In River Valley Glassworks, you play as one of these pioneers, drafting glass from the m",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Adam Hill, Ben Pinchback, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Industry / Manufacturing.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Adam Hill, Ben Pinchback dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "River Valley Glassworks: destacada boardgame (2024) obra de Adam Hill, Ben Pinchback.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

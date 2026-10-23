@@ -1,0 +1,44 @@
+{
+  "id": "movie:batman-begins-2005",
+  "experience": {
+    "plot": "Batman Begins es una película de superhéroes británica-estadounidense de 2005 basada en el personaje Batman de DC Comics, dirigida por el cineasta inglés Christopher Nolan, escrita por Nolan y David S. Goyer y protagonizada por Christian Bale, Michael Caine, L",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Christopher Nolan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2005, una obra destacada de Christopher Nolan en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "superheroes",
+    "duelo",
+    "espionaje",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Batman Begins: Acción y Aventura con dirección de Christopher Nolan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

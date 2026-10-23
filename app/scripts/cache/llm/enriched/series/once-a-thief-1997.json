@@ -1,0 +1,43 @@
+{
+  "id": "series:once-a-thief-1997",
+  "experience": {
+    "plot": "Once a Thief is a Canadian action comedy television series, which originally aired on CTV for one season between September 15, 1997 and May 2, 1998. Based on the 1991 Hong Kong film by John Woo, the series is a continuation from the 1996 television film. It st",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de CTV, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Acción.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1997, una referencia indispensable obra de CTV dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 2
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Once a Thief: destacada series (1997) obra de CTV.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "series:top-chef-2006",
+  "experience": {
+    "plot": "Top Chef es un programa de telerrealidad estadounidense emitido por la cadena Bravo TV desde el 8 de marzo de 2006, aunque también se emite en otras cadenas del mundo. En el show, chefs profesionales compiten entre sí en una serie de desafíos culinarios, siend",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bravo, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Food.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de Bravo dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 1
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Top Chef: destacada series (2006) obra de Bravo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

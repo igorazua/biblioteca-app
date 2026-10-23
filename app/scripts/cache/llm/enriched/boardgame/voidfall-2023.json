@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:voidfall-2023",
+  "experience": {
+    "plot": "For centuries, the Novarchs, descendants of the royal House of Novarchon, have ruled with an iron fist over the feudalistic galactic empire of humankind, the Domineum. During this time, they brought stunning technological innovation and scientific advancements",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Dávid Turczi, Nigel Buckle, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Civilización / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Dávid Turczi, Nigel Buckle dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Voidfall: destacada boardgame (2023) obra de Dávid Turczi, Nigel Buckle.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "series:home-improvement-1991",
+  "experience": {
+    "plot": "Home Improvement es una serie de televisión estadounidense, emitida por la cadena ABC desde 1991 hasta 1999. Durante esa década fue una de las comedias más vistas y ganadora de varios premios, además de ser la encargada de catapultar la carrera de Tim Allen co",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de ABC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Familiar.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1991, una referencia indispensable obra de ABC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 2,
+    "reconfort": 4,
+    "enganche": 3,
+    "formato": 3
+  },
+  "themes": [
+    "familia",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Un chapuzas en casa: destacada series (1991) obra de ABC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

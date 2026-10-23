@@ -1,0 +1,42 @@
+{
+  "id": "movie:october-sky-1999",
+  "experience": {
+    "plot": "The true story of Homer Hickam, a coal miner's son who was inspired by the first Sputnik launch to take up rocketry against his father's wishes.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Joe Johnston, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1999, una obra destacada de Joe Johnston en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "familia"
+  ],
+  "oneLiner": "October Sky: Biografía y Drama con dirección de Joe Johnston.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

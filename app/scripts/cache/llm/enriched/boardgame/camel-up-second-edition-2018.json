@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:camel-up-second-edition-2018",
+  "experience": {
+    "plot": "In Camel Up, up to eight players bet on five racing camels, trying to suss out which ones will place first and second in a quick race around a pyramid. The earlier you place your bet, the more you can win — should you guess correctly, of course. Camels don't r",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Steffen Bogen, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Arabian.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Steffen Bogen dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "dados_y_push_your_luck",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Camel Up (Second Edition): destacada boardgame (2018) obra de Steffen Bogen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

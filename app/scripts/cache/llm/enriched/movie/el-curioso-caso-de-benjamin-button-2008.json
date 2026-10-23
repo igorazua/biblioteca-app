@@ -1,0 +1,43 @@
+{
+  "id": "movie:el-curioso-caso-de-benjamin-button-2008",
+  "experience": {
+    "plot": "El curioso caso de Benjamin Button—título original; The Curious Case of Benjamin Button— es una película estadounidense del 2008 dirigida por David Fincher, con guion de Eric Roth y protagonizada por Brad Pitt y Cate Blanchett.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de David Fincher, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2008, una obra destacada de David Fincher en el panorama de Drama y Romance."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 1,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "amor",
+    "duelo",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "El curioso caso de Benjamin Button: Drama y Romance con dirección de David Fincher.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:keep-the-heroes-out-2022",
+  "experience": {
+    "plot": "An asymmetric, cooperative dungeon defense game where you play as the monsters protecting their hard earned treasures against invading hordes of looters (so-called heroes) trying to steal it. In their turn players draw 5 cards and play, these cards allow them ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Luís Brueh, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Fighting.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Luís Brueh dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 5,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "cooperativo_pandemia",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "Keep the Heroes Out!: destacada boardgame (2022) obra de Luís Brueh.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:the-great-zimbabwe-2012",
+  "experience": {
+    "plot": "The Great Zimbabwe is a game about building a trade based civilization in ancient Africa. It has been inspired by the old kingdoms surrounding the Great Zimbabwe, a world heritage site in southern Africa. Far into the previous century, colonial governments den",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jeroen Doumen, Joris Wiersinga, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Civilización / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Jeroen Doumen, Joris Wiersinga dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "The Great Zimbabwe: destacada boardgame (2012) obra de Jeroen Doumen, Joris Wiersinga.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

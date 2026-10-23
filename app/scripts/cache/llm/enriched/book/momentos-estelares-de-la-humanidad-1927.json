@@ -1,0 +1,39 @@
+{
+  "id": "book:momentos-estelares-de-la-humanidad-1927",
+  "experience": {
+    "plot": "Catorce miniaturas históricas que relatan instantes decisivos que cambiaron el rumbo del mundo.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Stefan Zweig, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Historia / Biografía.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1927, una referencia indispensable obra de Stefan Zweig dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 2,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "historia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Momentos estelares de la humanidad: destacada book (1927) obra de Stefan Zweig.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

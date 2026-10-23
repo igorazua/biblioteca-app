@@ -1,0 +1,39 @@
+{
+  "id": "book:cronicas-marcianas-1950",
+  "experience": {
+    "plot": "Relatos líricos sobre la colonización humana de Marte y el desencuentro entre civilizaciones.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ray Bradbury, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Cuentos.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1950, una referencia indispensable obra de Ray Bradbury dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 4,
+    "escala": 4,
+    "ideas": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Crónicas marcianas: destacada book (1950) obra de Ray Bradbury.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

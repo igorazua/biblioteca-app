@@ -1,0 +1,36 @@
+{
+  "id": "artist:siniestro-total",
+  "experience": {
+    "plot": "Siniestro Total es un grupo español de música punk-rock formado en Vigo (Pontevedra) en 1981 por Miguel Costas, Julián Hernández, Alberto Torrado y Germán Coppini aunque, tras pasar por diversas formaciones, en el momento de su último concierto en 2022 estaba ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1981, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "punk",
+    "pop"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Siniestro Total: destacada artist (1981) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

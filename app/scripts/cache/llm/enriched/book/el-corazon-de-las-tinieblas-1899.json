@@ -1,0 +1,39 @@
+{
+  "id": "book:el-corazon-de-las-tinieblas-1899",
+  "experience": {
+    "plot": "Marlow remonta el río Congo en busca del enigmático señor Kurtz adentrándose en la brutalidad humana.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Joseph Conrad, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Aventura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1899, una referencia indispensable obra de Joseph Conrad dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "densidad": 1,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "escala": 2,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "aventura",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "El corazón de las tinieblas: destacada book (1899) obra de Joseph Conrad.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

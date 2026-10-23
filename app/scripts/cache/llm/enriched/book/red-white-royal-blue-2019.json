@@ -1,0 +1,39 @@
+{
+  "id": "book:red-white-royal-blue-2019",
+  "experience": {
+    "plot": "Red, White & Royal Blue es una novela romántica LGBT de 2019 escrita por Casey McQuiston. La novela se centra en el personaje de Alex Claremont-Diaz, hijo latino de la presidenta de los Estados Unidos, y su relación romántica con Henry, un príncipe inglés.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Casey McQuiston, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Casey McQuiston dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "amor",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Red, White & Royal Blue: destacada book (2019) obra de Casey McQuiston.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

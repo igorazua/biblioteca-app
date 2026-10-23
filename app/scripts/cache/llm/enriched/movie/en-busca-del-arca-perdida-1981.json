@@ -1,0 +1,41 @@
+{
+  "id": "movie:en-busca-del-arca-perdida-1981",
+  "experience": {
+    "plot": "Raiders of the Lost Ark es una película dirigida por Steven Spielberg y producida por George Lucas, y estrenada en 1981. Se trata de la primera película estrenada de la serie Indiana Jones, aunque es la segunda en la cronología del personaje. La trama describe",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Steven Spielberg, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1981, una obra destacada de Steven Spielberg en el panorama de Aventura y Acción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 5
+  },
+  "themes": [
+    "duelo",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "En busca del arca perdida: Aventura y Acción con dirección de Steven Spielberg.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

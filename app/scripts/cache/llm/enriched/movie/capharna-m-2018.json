@@ -1,0 +1,41 @@
+{
+  "id": "movie:capharna-m-2018",
+  "experience": {
+    "plot": "While serving a five-year sentence for a violent crime, a 12-year-old boy sues his parents for neglect.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Nadine Labaki, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2018, una obra destacada de Nadine Labaki en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Capharna\u001am: Drama con dirección de Nadine Labaki.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

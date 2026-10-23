@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:the-lord-of-the-rings-fate-of-the-fellowship-2025",
+  "experience": {
+    "plot": "As members of The Fellowship and the allies who rise to aid them, you must embark on a journey that may either save or doom Middle-earth. Navigate a world beset by shadow, where every choice forges a new path. The threads of destiny weave together, and the fat",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Matt Leacock, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Novel-based.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2025, una referencia indispensable obra de Matt Leacock dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "The Lord of the Rings: Fate of the Fellowship (2025): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

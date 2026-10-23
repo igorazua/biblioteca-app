@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:russian-railroads-2013",
+  "experience": {
+    "plot": "In Russian Railroads, players compete in an exciting race to build the largest and most advanced railway network. In order to do so, the players appoint their workers to various important tasks. The development of simple tracks will quickly bring the players t",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Helmut Ohley, Leonhard \"Lonny\" Orgler, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Industry / Manufacturing / Trains.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de Helmut Ohley, Leonhard \"Lonny\" Orgler dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Russian Railroads (2013): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:champions-of-midgard-2015",
+  "experience": {
+    "plot": "Champions of Midgard is a middleweight, Viking-themed, worker placement game with dice rolling in which players are leaders of Viking clans who have traveled to an embattled Viking harbor town to help defend it against the threat of trolls, draugr, and other m",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ole Steiness, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Dados.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Ole Steiness dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 5,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "dados_y_push_your_luck",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Champions of Midgard: destacada boardgame (2015) obra de Ole Steiness.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

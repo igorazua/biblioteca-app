@@ -1,0 +1,41 @@
+{
+  "id": "movie:one-flew-over-the-cuckoo-s-nest-1975",
+  "experience": {
+    "plot": "One Flew Over the Cuckoo's Nest es una película estadounidense de 1975 dirigida por Miloš Forman y basada en la novela homónima de Ken Kesey. Es protagonizada por Jack Nicholson, Louise Fletcher, Danny DeVito, Christopher Lloyd, Sydney Lassick, William Redfiel",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Milos Forman, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1975, una obra destacada de Milos Forman en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Alguien voló sobre el nido del cuco: Drama con dirección de Milos Forman.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

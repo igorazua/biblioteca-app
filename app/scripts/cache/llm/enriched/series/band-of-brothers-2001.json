@@ -1,0 +1,43 @@
+{
+  "id": "series:band-of-brothers-2001",
+  "experience": {
+    "plot": "Band of Brothers —conocida en español con los títulos de Banda de hermanos, Hermanos de sangre y Hermandad en la trinchera— es una miniserie de televisión estadounidense de HBO de 10 capítulos, ambientada en la Segunda Guerra Mundial y basada en el libro homón",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de HBO, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Acción.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2001, una referencia indispensable obra de HBO dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2,
+    "enganche": 3,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Hermanos de sangre: destacada series (2001) obra de HBO.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

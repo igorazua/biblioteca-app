@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:roborally-1994",
+  "experience": {
+    "plot": "The robots of the RoboRally automobile factory spend their weekdays toiling at the assembly line. They put in hard hours building high-speed supercars they never get to see in action. But on Saturday nights, the factory becomes a world of mad machines and dang",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Paul Sottosanti, Richard Garfield, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Maze / Miniaturas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1994, una referencia indispensable obra de Paul Sottosanti, Richard Garfield dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "RoboRally: destacada boardgame (1994) obra de Paul Sottosanti, Richard Garfield.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "series:almost-human-2013",
+  "experience": {
+    "plot": "Almost Human es una serie de televisión estadounidense de ciencia ficción. Se estrenó el 17 de noviembre de 2013 en el canal de televisión Fox. La serie ha sido creada por J.H. Wyman para Bad Robot Productions y Warner Bros. Television. El 29 de abril de 2014 ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de FOX, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Crimen.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de FOX dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "investigacion_policial",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Almost Human: destacada series (2013) obra de FOX.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

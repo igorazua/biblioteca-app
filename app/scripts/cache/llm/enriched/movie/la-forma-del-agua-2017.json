@@ -1,0 +1,41 @@
+{
+  "id": "movie:la-forma-del-agua-2017",
+  "experience": {
+    "plot": "La forma del agua es una película de fantasía romántica estadounidense del 2017, dirigida por Guillermo del Toro y escrita por el propio Del Toro y por Vanessa Taylor, protagonizada por Sally Hawkins, Michael Shannon, Richard Jenkins, Doug Jones, Michael Stuhl",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Guillermo del Toro, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Forrest Gump",
+      "El señor de los anillos: La comunidad del anillo",
+      "Titanic",
+      "Amélie"
+    ],
+    "context": "Estrenada en 2017, una obra destacada de Guillermo del Toro en el panorama de Fantasía y Romance."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "espionaje",
+    "monstruos"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "La forma del agua: Fantasía y Romance con dirección de Guillermo del Toro.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

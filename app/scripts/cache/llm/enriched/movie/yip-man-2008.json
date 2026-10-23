@@ -1,0 +1,42 @@
+{
+  "id": "movie:yip-man-2008",
+  "experience": {
+    "plot": "Relato cinematográfico centrado en el viaje emocional y las vivencias de sus protagonistas en un contexto de Acción y Biografía. Enfrentan dilemas que pondrán a prueba sus convicciones más íntimas.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Wilson Yip, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 2008, una obra destacada de Wilson Yip en el panorama de Acción y Biografía."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Yip Man: Acción y Biografía con dirección de Wilson Yip.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

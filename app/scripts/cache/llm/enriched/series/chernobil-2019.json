@@ -14,19 +14,19 @@
     "context": "Creada en 2019, una referencia indispensable obra de Craig Mazin dentro de su disciplina."
   },
   "axes": {
-    "tono": 4,
+    "tono": 3,
     "ritmo": 2,
-    "emocion": 5,
-    "exigencia": 1,
-    "humor": 1,
-    "tension": 1,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
     "fantasia": 1,
-    "violencia": 1,
-    "familiar": 1,
-    "escala": 2,
-    "reconfort": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 5,
+    "reconfort": 3,
     "enganche": 4,
-    "formato": 2
+    "formato": 4
   },
   "themes": [
     "fantasia_epica",

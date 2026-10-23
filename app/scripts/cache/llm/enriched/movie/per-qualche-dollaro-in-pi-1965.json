@@ -1,0 +1,40 @@
+{
+  "id": "movie:per-qualche-dollaro-in-pi-1965",
+  "experience": {
+    "plot": "Two bounty hunters with the same intentions team up to track down a Western outlaw.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Sergio Leone, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Django desencadenado",
+      "El bueno, el feo y el malo",
+      "Sin perdón",
+      "Hasta que llegó su hora"
+    ],
+    "context": "Estrenada en 1965, una obra destacada de Sergio Leone en el panorama de Western."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "amistad",
+    "identidad",
+    "redencion"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "Per qualche dollaro in pi\u001a: Western con dirección de Sergio Leone.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:y-jinb-1961",
+  "experience": {
+    "plot": "A crafty ronin comes to a town divided by two criminal gangs and decides to play them against each other to free the town.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Akira Kurosawa, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1961, una obra destacada de Akira Kurosawa en el panorama de Acción y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Y\u001ajinb\u001a: Acción y Drama con dirección de Akira Kurosawa.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

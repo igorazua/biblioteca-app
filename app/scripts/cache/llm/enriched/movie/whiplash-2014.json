@@ -1,0 +1,41 @@
+{
+  "id": "movie:whiplash-2014",
+  "experience": {
+    "plot": "Whiplash es una película dramático musical estadounidense de 2014 escrita y dirigida por Damien Chazelle; protagonizada por Miles Teller como el joven baterista de jazz Andrew Neiman que asiste a una de las mejores escuelas de música del país en Nueva York, ba",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Damien Chazelle, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2014, una obra destacada de Damien Chazelle en el panorama de Drama y Musical."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "musica",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Whiplash: Drama y Musical con dirección de Damien Chazelle.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

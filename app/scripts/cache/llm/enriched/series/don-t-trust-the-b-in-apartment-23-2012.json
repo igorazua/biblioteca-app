@@ -1,0 +1,43 @@
+{
+  "id": "series:don-t-trust-the-b-in-apartment-23-2012",
+  "experience": {
+    "plot": "After a naive Midwestern girl's big city dreams are dashed during her first week in New York, she finds herself living with her worst nightmare, in a hilarious, contemporary comedy about a female odd couple who are surrounded by an outrageous cast of character",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de ABC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de ABC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 4,
+    "enganche": 3,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Don't Trust the B---- in Apartment 23: destacada series (2012) obra de ABC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

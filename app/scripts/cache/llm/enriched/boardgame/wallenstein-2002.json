@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:wallenstein-2002",
+  "experience": {
+    "plot": "Wallenstein is a medium-weight German-style board game designed by Dirk Henn and published by Queen Games in 2002. Though set during the Thirty Years' War, Wallenstein should not be confused with a complex wargame. Rather, it has the feel of a light strategy g",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Dirk Henn, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Pike and Shot.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2002, una referencia indispensable obra de Dirk Henn dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 1
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "familia",
+    "jugones"
+  ],
+  "oneLiner": "Wallenstein: destacada boardgame (2002) obra de Dirk Henn.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

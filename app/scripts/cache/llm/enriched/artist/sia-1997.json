@@ -1,0 +1,38 @@
+{
+  "id": "artist:sia-1997",
+  "experience": {
+    "plot": "Sia (Adelaida, Australia), icono de Pop, Electropop desde 1997.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Adelaida, Australia, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Pop / Electropop.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1997, una referencia indispensable obra de Adelaida, Australia dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 4,
+    "bailable": 3,
+    "organico": 3,
+    "intensidad": 4,
+    "fondo": 4,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "indie_rock",
+    "electronica",
+    "jazz"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Sia: destacada artist (1997) obra de Adelaida, Australia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

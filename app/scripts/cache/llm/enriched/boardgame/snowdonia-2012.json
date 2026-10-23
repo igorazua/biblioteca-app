@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:snowdonia-2012",
+  "experience": {
+    "plot": "The peaks of Snowdonia rise before you, encased in mist, their summits barely visible. The highest is Snowdon (Wyddfa) herself at 1,085 metres. The year is 1894, and the Snowdon Mountain Tramroad and Hotels Company Limited has been formed to build a branch lin",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Tony Boydell, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Trains.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Tony Boydell dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Snowdonia: destacada boardgame (2012) obra de Tony Boydell.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

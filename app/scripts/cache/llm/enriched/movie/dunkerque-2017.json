@@ -1,0 +1,41 @@
+{
+  "id": "movie:dunkerque-2017",
+  "experience": {
+    "plot": "película de 1958 dirigida por Leslie Norman",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Christopher Nolan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2017, una obra destacada de Christopher Nolan en el panorama de Bélica y Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Dunkerque: Bélica y Drama con dirección de Christopher Nolan.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

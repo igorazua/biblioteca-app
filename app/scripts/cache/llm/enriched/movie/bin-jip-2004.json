@@ -1,0 +1,44 @@
+{
+  "id": "movie:bin-jip-2004",
+  "experience": {
+    "plot": "Hierro 3 es una película surcoreana de 2004 dirigida por Kim Ki-duk. Publicitada en algunos sitios se publicitó con el título \"El espíritu de la pasión\" es una película de género dramático y romántica. Considerada una de las cintas más destacables de la trayec",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Ki-duk Kim, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Ki-duk Kim en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 1
+  },
+  "themes": [
+    "crimen",
+    "amor",
+    "ia_y_robots",
+    "viaje_en_el_tiempo",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Bin-jip: Crimen y Drama con dirección de Ki-duk Kim.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

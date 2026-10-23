@@ -1,0 +1,44 @@
+{
+  "id": "movie:road-to-perdition-2002",
+  "experience": {
+    "plot": "Camino a la perdición es una película de drama criminal estadounidense de 2002 dirigida por Sam Mendes y escrita por David Self, basada en el primer volumen de la serie de novelas gráficas Road to Perdition de DC Comics, creada por Max Allan Collins y Richard ",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Sam Mendes, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2002, una obra destacada de Sam Mendes en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "mafia",
+    "venganza",
+    "familia",
+    "ia_y_robots",
+    "superheroes"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Camino a la perdición: Crimen y Drama con dirección de Sam Mendes.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

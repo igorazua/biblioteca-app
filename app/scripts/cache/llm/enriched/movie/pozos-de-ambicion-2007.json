@@ -1,0 +1,41 @@
+{
+  "id": "movie:pozos-de-ambicion-2007",
+  "experience": {
+    "plot": "There Will Be Blood es una película estadounidense de 2007, dirigida por Paul Thomas Anderson, sobre un guion propio basado en la novela ¡Petróleo!, publicada en 1927 por Upton Sinclair. Se ambienta en los Estados Unidos de la primera mitad del siglo XX, cuand",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Paul Thomas Anderson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2007, una obra destacada de Paul Thomas Anderson en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 1
+  },
+  "themes": [
+    "ia_y_robots",
+    "ambicion",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Pozos de ambición: Drama con dirección de Paul Thomas Anderson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:unlock-heroic-adventures-2018",
+  "experience": {
+    "plot": "Unlock! Heroic Adventures features three \"escape room\" scenarios that you can play on your tabletop. Unlock! is a cooperative card game inspired by escape rooms that uses a simple system which allows you to search scenes, combine objects, and solve riddles. Pl",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Cyril Demaegd, Dave Neale, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Cyril Demaegd, Dave Neale dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 1,
+    "cooperacion": 4,
+    "tema": 5,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "Unlock!: Heroic Adventures: destacada boardgame (2018) obra de Cyril Demaegd, Dave Neale.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

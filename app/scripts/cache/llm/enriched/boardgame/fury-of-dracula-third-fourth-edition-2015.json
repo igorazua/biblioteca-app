@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:fury-of-dracula-third-fourth-edition-2015",
+  "experience": {
+    "plot": "The third edition of Fury of Dracula features all-new art and graphic design crafted to complement the game's intuitive, thematic mechanisms. Rounds are now broken into day and night, with hunters taking actions during both, while Dracula can act only at night",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Frank Brooks, Kevin Wilson, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Deducción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Frank Brooks, Kevin Wilson dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Fury of Dracula (Third/Fourth Edition) (2015): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "movie:cast-away-2000",
+  "experience": {
+    "plot": "Náufrago es una película dramática dirigida por el cineasta estadounidense Robert Zemeckis, protagonizada por Tom Hanks y estrenada en 2000. Su trama describe la supervivencia de Chuck Noland, un empleado de FedEx, en una isla desierta del océano Pacífico dura",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Robert Zemeckis, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2000, una obra destacada de Robert Zemeckis en el panorama de Aventura y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 1
+  },
+  "themes": [
+    "supervivencia",
+    "amor",
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Náufrago: Aventura y Drama con dirección de Robert Zemeckis.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

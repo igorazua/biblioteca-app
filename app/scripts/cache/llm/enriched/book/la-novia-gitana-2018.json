@@ -1,0 +1,39 @@
+{
+  "id": "book:la-novia-gitana-2018",
+  "experience": {
+    "plot": "La novia gitana es una novela escrita por Carmen Mola y publicada el 17 de mayo de 2018. Es el primer libro de la serie de la Inspectora Elena Blanco, al que siguieron La Red Púrpura (2019), La Nena (2020) ,Las Madres (2022) y El Clan (2024).",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Carmen Mola, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Narrativa.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Carmen Mola dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "identidad",
+    "misterio",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "La novia gitana: destacada book (2018) obra de Carmen Mola.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

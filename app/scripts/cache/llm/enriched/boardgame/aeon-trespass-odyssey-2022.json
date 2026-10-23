@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:aeon-trespass-odyssey-2022",
+  "experience": {
+    "plot": "Aeon Trespass: Odyssey is a 1-4 player campaign game about adventures, exploration and fierce battles with giant monsters. It’s a co-operative, choice-driven boardgame experience played over multiple sessions. Set in an alternate Antiquity, where a reality-sha",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Marcin Wełnicki, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Antigüedad.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Marcin Wełnicki dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 2,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 1,
+    "familiar": 3
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "exploracion_y_mapas",
+    "naturaleza_y_animales"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Aeon Trespass: Odyssey: destacada boardgame (2022) obra de Marcin Wełnicki.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

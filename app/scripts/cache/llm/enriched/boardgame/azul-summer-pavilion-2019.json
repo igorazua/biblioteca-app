@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:azul-summer-pavilion-2019",
+  "experience": {
+    "plot": "At the turn of the 16th Century, King Manuel I commissioned Portugal's greatest artisans to construct grandiose buildings. After completing the Palaces of Evora and Sintra, the king sought to build a summer pavilion to honor the most famous members of the roya",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Michael Kiesling, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Estrategia abstracta / Puzzle.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Michael Kiesling dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 1,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "puzzles_y_losetas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Azul: Summer Pavilion: destacada boardgame (2019) obra de Michael Kiesling.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

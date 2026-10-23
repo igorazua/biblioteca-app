@@ -1,0 +1,42 @@
+{
+  "id": "movie:bom-yeoareum-gaeul-gyeoul-geurigo-bom-2003",
+  "experience": {
+    "plot": "A boy is raised by a Buddhist monk in an isolated floating temple where the years pass like the seasons.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Ki-duk Kim, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2003, una obra destacada de Ki-duk Kim en el panorama de Drama y Romance."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Bom Yeoareum Gaeul Gyeoul Geurigo Bom: Drama y Romance con dirección de Ki-duk Kim.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

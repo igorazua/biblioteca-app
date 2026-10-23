@@ -1,0 +1,41 @@
+{
+  "id": "movie:office-space-1999",
+  "experience": {
+    "plot": "Office Space es una película cómica estadounidense escrita y dirigida por Mike Judge y estrenada en 1999. Es una sátira sobre el trabajo rutinario en una compañía de software a finales de los años 1990, enfocándose en un puñado de individuos que están hartos d",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Mike Judge, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek",
+      "Amélie"
+    ],
+    "context": "Estrenada en 1999, una obra destacada de Mike Judge en el panorama de Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "Trabajo basura: Comedia con dirección de Mike Judge.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

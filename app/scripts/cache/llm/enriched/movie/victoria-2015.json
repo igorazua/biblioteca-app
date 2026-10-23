@@ -1,0 +1,43 @@
+{
+  "id": "movie:victoria-2015",
+  "experience": {
+    "plot": "Victoria es una película alemana de 2015 dirigida por Sebastian Schipper. Fue galardonada con 6 premios Lola, incluida su protagonista Laia Costa, que se convirtió en la primera actriz no alemana en ganar el premio a la mejor interpretación femenina protagonis",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Sebastian Schipper, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2015, una obra destacada de Sebastian Schipper en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "amor",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Victoria: Crimen y Drama con dirección de Sebastian Schipper.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "series:the-it-crowd-los-informaticos-2006",
+  "experience": {
+    "plot": "Dos genios informáticos inadaptados y su jefa, que no sabe nada de ordenadores, sobreviven en el sótano de una empresa.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Graham Linehan, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de Graham Linehan dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "The IT Crowd (Los informáticos): destacada series (2006) obra de Graham Linehan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

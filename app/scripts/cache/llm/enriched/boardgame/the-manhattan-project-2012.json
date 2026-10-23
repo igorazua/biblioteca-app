@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:the-manhattan-project-2012",
+  "experience": {
+    "plot": "Teenage Mutant Ninja Turtles III: The Manhattan Project es la tercera iteración en videojuego de la franquicia de Teenage Mutant Ninja Turtles para la Nintendo Entertainment System. Fue lanzado en Japón el 13 de diciembre de 1991, y en América del Norte en feb",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Brandon Tibbetts, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aviation / Flight / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Brandon Tibbetts dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 4,
+    "azar": 1,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "The Manhattan Project: destacada boardgame (2012) obra de Brandon Tibbetts.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

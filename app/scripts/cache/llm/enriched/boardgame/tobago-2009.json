@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:tobago-2009",
+  "experience": {
+    "plot": "Tobago is an adventure game in which the players use representations of treasure maps to locate unknown treasures. During the game, more and more information about the location of a treasure is revealed and its possible locations are gradually narrowed down. W",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bruce Allen, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Deducción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de Bruce Allen dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Tobago: destacada boardgame (2009) obra de Bruce Allen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

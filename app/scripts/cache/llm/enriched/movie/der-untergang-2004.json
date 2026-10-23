@@ -1,0 +1,41 @@
+{
+  "id": "movie:der-untergang-2004",
+  "experience": {
+    "plot": "Der Untergang es una película alemana de drama bélico estrenada en 2004, dirigida por Oliver Hirschbiegel y escrita por Bernd Eichinger. Está basada en el ensayo El hundimiento: Hitler y el final del Tercer Reich, del historiador Joachim Fest, y en Hasta el úl",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Oliver Hirschbiegel, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Oliver Hirschbiegel en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Der Untergang: Biografía y Drama con dirección de Oliver Hirschbiegel.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

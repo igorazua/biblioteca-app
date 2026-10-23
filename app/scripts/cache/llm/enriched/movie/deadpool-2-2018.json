@@ -1,0 +1,42 @@
+{
+  "id": "movie:deadpool-2-2018",
+  "experience": {
+    "plot": "Foul-mouthed mutant mercenary Wade Wilson (a.k.a. Deadpool), brings together a team of fellow mutant rogues to protect a young boy with supernatural abilities from the brutal, time-traveling cyborg Cable.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de David Leitch, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2018, una obra destacada de David Leitch en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "amigos"
+  ],
+  "oneLiner": "Deadpool 2: Acción y Aventura con dirección de David Leitch.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

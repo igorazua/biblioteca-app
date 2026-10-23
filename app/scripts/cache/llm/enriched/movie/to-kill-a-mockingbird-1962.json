@@ -1,0 +1,41 @@
+{
+  "id": "movie:to-kill-a-mockingbird-1962",
+  "experience": {
+    "plot": "To Kill a Mockingbird es una película dramática estadounidense de 1962, dirigida por Robert Mulligan, sobre un guion de Horton Foote, basado en la novela homónima de 1960, de la escritora Harper Lee, galardonada con el Premio Pulitzer.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Robert Mulligan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1962, una obra destacada de Robert Mulligan en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 1
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Matar a un ruiseñor: Crimen y Drama con dirección de Robert Mulligan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "movie:man-on-fire-2004",
+  "experience": {
+    "plot": "Man on Fire es una película mexicana-estadounidense de acción y drama del año 2004, basada en la novela homónima de A. J. Quinnell, que ya había sido llevada al cine en 1987. \nEsta versión, dirigida por Tony Scott, fue estrenada el 23 de abril de 2004.\nLa acci",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Tony Scott, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Tony Scott en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "venganza",
+    "amor",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "El fuego de la venganza: Acción y Crimen con dirección de Tony Scott.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

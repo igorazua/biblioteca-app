@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:not-alone-2016",
+  "experience": {
+    "plot": "Not Alone es una reconocida boardgame que explora temáticas de Faroleo, Cartas, Deducción. Destaca por su personalidad propia y su conexión directa con el público.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ghislain Masson, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Faroleo / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra de Ghislain Masson dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 5,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 4,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "faroleo_y_enganos",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Not Alone: destacada boardgame (2016) obra de Ghislain Masson.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

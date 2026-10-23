@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-blues-brothers-1980",
+  "experience": {
+    "plot": "The Blues Brothers es una película cómica y musical estadounidense de 1980 dirigida por John Landis y con John Belushi y Dan Aykroyd como Jake Blues y Elwood Blues, personajes desarrollados a partir de un sketch musical del programa de televisión Saturday Nigh",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de John Landis, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1980, una obra destacada de John Landis en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "musica",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "amigos"
+  ],
+  "oneLiner": "Granujas a todo ritmo: Acción y Aventura con dirección de John Landis.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

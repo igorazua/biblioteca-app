@@ -1,0 +1,38 @@
+{
+  "id": "artist:guitarricadelafuente",
+  "experience": {
+    "plot": "Guitarricadelafuente, nombre artístico de Álvaro Lafuente Calvo, es un cantautor, guitarrista y actor español afincado en Barcelona. Comenzó a compartir versiones de canciones en redes sociales como Instagram en 2017. Su estilo combina elementos de indie folk,",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 1,
+    "valencia": 5,
+    "bailable": 4,
+    "organico": 4,
+    "intensidad": 2,
+    "fondo": 3,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "indie_rock",
+    "folk",
+    "musica_latina",
+    "cantautor"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Guitarricadelafuente: destacada artist (2019) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

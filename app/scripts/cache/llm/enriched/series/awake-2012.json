@@ -1,0 +1,43 @@
+{
+  "id": "series:awake-2012",
+  "experience": {
+    "plot": "Awake es una serie de televisión de fantasía y drama que emite la cadena NBC. Está protagonizada por Jason Isaacs. El 16 de mayo de 2011, NBC anunció que serviría como reemplazo en la mitad de la temporada 2011-12. La serie se estrenó el 1 de marzo de 2012 y s",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de NBC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Fantasía.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de NBC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Awake: destacada series (2012) obra de NBC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

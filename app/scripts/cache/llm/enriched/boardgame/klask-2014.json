@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:klask-2014",
+  "experience": {
+    "plot": "The KLASK game board is shaped like a ball field with two deep holes functioning as goals in each end of the field. In the middle of the field, three white magnetic pieces serve as \"obstacles\" – do NOT attract them to your own gaming piece! Your gaming piece i",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Mikkel Bertelsen, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Action / Dexterity / Real-time.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Mikkel Bertelsen dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "KLASK: destacada boardgame (2014) obra de Mikkel Bertelsen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "artist:mitski",
+  "experience": {
+    "plot": "Mitsuki Laycock Miyawaki , conocida artísticamente como Mitski, es una cantante y compositora japonesa-estadounidense.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 4,
+    "bailable": 2,
+    "organico": 3,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 2
+  },
+  "themes": [
+    "pop",
+    "rock_clasico",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Mitski: destacada artist (2012) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

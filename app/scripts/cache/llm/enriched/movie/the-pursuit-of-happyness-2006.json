@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-pursuit-of-happyness-2006",
+  "experience": {
+    "plot": "En busca de la felicidad es una película estadounidense dirigida por Gabriele Muccino, la primera protagonizada por Will Smith junto a su hijo Jaden Smith. Se estrenó en 2006 y está basada en la historia real de Chris Gardner.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Gabriele Muccino, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2006, una obra destacada de Gabriele Muccino en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "En busca de la felicidad: Biografía y Drama con dirección de Gabriele Muccino.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

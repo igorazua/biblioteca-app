@@ -1,0 +1,42 @@
+{
+  "id": "series:wolverine-and-the-x-men-2008",
+  "experience": {
+    "plot": "Wolverine and the X-Men es una serie animada de televisión. Es la cuarta adaptación animada de los personajes de la exitosa franquicia X-Men, los otros tres son X-Men: Pryde of the X-Men, X-Men y X-Men: Evolution.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Nicktoons, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de Nicktoons dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 3,
+    "formato": 3
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Lobezno y los X-Men: destacada series (2008) obra de Nicktoons.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-notebook-2004",
+  "experience": {
+    "plot": "The Notebook es una película estadounidense de drama romántico de 2004 dirigida por Nick Cassavetes, a partir de un guion de Jeremy Leven y Jan Sardi, y basada en la novela homónima de Nicholas Sparks. La película está protagonizada por Ryan Gosling y Rachel M",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Nick Cassavetes, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Nick Cassavetes en el panorama de Drama y Romance."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "El diario de Noa: Drama y Romance con dirección de Nick Cassavetes.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

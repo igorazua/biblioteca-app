@@ -1,0 +1,40 @@
+{
+  "id": "movie:torrente-el-brazo-tonto-de-la-ley-1998",
+  "experience": {
+    "plot": "Torrente, el brazo tonto de la ley es una película española de acción y comedia de 1998, escrita, dirigida y protagonizada por Santiago Segura en su primer largometraje como director. El título es una parodia de Cobra, el brazo fuerte de la ley, nombre con el ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Santiago Segura, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El día de la bestia",
+      "El verdugo",
+      "Los santos inocentes",
+      "[REC]"
+    ],
+    "context": "Estrenada en 1998, una obra destacada de Santiago Segura en el panorama de Cine español."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "satira_social",
+    "amistad"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "Torrente, el brazo tonto de la ley: Cine español con dirección de Santiago Segura.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

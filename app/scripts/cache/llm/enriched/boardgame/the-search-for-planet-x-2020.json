@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:the-search-for-planet-x-2020",
+  "experience": {
+    "plot": "At the edge of our solar system, a dark planet may lurk. In 2015, astronomers estimated a large distant planet could explain the unique orbits of dwarf planets and other objects. Since then, astronomers have been scanning the sky, hoping to find this planet.\n\n",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ben Rosset, Matthew O'Malley, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Deducción / Puzzle.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Ben Rosset, Matthew O'Malley dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 2,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "puzzles_y_losetas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "The Search for Planet X: destacada boardgame (2020) obra de Ben Rosset, Matthew O'Malley.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

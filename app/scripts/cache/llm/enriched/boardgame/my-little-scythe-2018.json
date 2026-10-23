@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:my-little-scythe-2018",
+  "experience": {
+    "plot": "My Little Scythe is a competitive, family-friendly game in which each player controls 2 animal miniatures embarking upon an adventure in the Kingdom of Pomme. In an effort to be the first to earn 4 trophies from 8 possible categories, players take turns choosi",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Hoby Chou, Vienna Chou, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Children's Game / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Hoby Chou, Vienna Chou dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "My Little Scythe: destacada boardgame (2018) obra de Hoby Chou, Vienna Chou.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

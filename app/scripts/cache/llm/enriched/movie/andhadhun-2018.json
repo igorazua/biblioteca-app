@@ -1,0 +1,41 @@
+{
+  "id": "movie:andhadhun-2018",
+  "experience": {
+    "plot": "Relato cinematográfico centrado en el viaje emocional y las vivencias de sus protagonistas en un contexto de Crimen y Drama. Enfrentan dilemas que pondrán a prueba sus convicciones más íntimas.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Sriram Raghavan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2018, una obra destacada de Sriram Raghavan en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Andhadhun: Crimen y Drama con dirección de Sriram Raghavan.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

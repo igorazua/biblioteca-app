@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:parchis-1900",
+  "experience": {
+    "plot": "Clásico juego de mesa tradicional derivado del Pachisi indio, con carreras de fichas para 4 jugadores.",
+    "feeling": "Piques divertidos, competitividad familiar directa y suspense en cada tirada de dados.",
+    "hook": "Comerte la ficha de un rival cuando está a punto de llegar a meta.",
+    "notFor": "Jugadores que rechacen completamente el azar de los dados o busquen profundidad eurogame.",
+    "similar": [
+      "La Oca",
+      "Ludo",
+      "Monopoly"
+    ],
+    "context": "Juego tradicional universal arraigado en los hogares españoles durante generaciones."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 2,
+    "azar": 5,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 1,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "carreras",
+    "dados_y_push_your_luck"
+  ],
+  "moments": [
+    "familia",
+    "sobremesa",
+    "pique_sano"
+  ],
+  "oneLiner": "Parchís: el clásico juego de mesa de carreras, dados y piques familiares.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

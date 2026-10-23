@@ -1,0 +1,43 @@
+{
+  "id": "series:saving-hope-2012",
+  "experience": {
+    "plot": "Saving Hope es una serie de televisión canadiense que se estrenó en CTV en 7 de junio de 2012. También se emite en los Estados Unidos en la cadena NBC.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de CTV, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Fantasía.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de CTV dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "medicina_y_hospitales",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Saving Hope: destacada series (2012) obra de CTV.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

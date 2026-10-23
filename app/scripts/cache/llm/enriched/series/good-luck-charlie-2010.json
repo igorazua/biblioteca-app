@@ -1,0 +1,43 @@
+{
+  "id": "series:good-luck-charlie-2010",
+  "experience": {
+    "plot": "¡Buena suerte, Charlie! es una serie de televisión estadounidense de comedia familiar y adolescente, que se emitió desde el 4 de abril de 2010 hasta el 16 de febrero de 2014 en Disney Channel. La serie fue creada por Phil Baker y Drew Vaupen, quienes querían c",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Disney Channel, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Familiar.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra de Disney Channel dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "familia",
+    "sitcom_cotidiana",
+    "adolescencia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Good Luck Charlie: destacada series (2010) obra de Disney Channel.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:wir-sind-das-volk-2014",
+  "experience": {
+    "plot": "1949: Germany, still in ruins from WWII, is split in two, as the Iron Curtain of the Cold War descends. East Germany and West Germany become bitter rivals, each wanting to show its system is superior. Which will reconstruct quicker? Which will make its people ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Peer Sylvester, Richard Sivél, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Political.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Peer Sylvester, Richard Sivél dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Wir sind das Volk!: destacada boardgame (2014) obra de Peer Sylvester, Richard Sivél.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:million-dollar-baby-2004",
+  "experience": {
+    "plot": "Million Dollar Baby es una película dramática estadounidense de 2004 dirigida por Clint Eastwood, quien también participó en la producción, compuso la banda sonora e interpretó uno de los papeles principales. Además de Eastwood, protagonizan la película Hilary",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Clint Eastwood, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Clint Eastwood en el panorama de Drama y Deporte."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "musica",
+    "deporte",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Million Dollar Baby: Drama y Deporte con dirección de Clint Eastwood.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

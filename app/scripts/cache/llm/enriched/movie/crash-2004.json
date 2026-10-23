@@ -1,0 +1,41 @@
+{
+  "id": "movie:crash-2004",
+  "experience": {
+    "plot": "Crash es una película estadounidense de drama, dirigida por Paul Haggis y estrenada en Estados Unidos el 6 de mayo de 2005 y en España el 13 de enero de 2006. La cinta está protagonizada por un reparto coral en el que destacan nombres como Don Cheadle, Terrenc",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Paul Haggis, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Paul Haggis en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Crash: Crimen y Drama con dirección de Paul Haggis.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

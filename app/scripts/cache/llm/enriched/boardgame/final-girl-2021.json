@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:final-girl-2021",
+  "experience": {
+    "plot": "Playing on a famous horror movie trope, Final Girl is a solitaire-only game that puts the player in the shoes of a female protagonist who must kill the slasher if she wants to survive. The Core Box, when combined with one of our Feature Film Boxes, has everyth",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de A. J. Porfirio, Evan Derrick, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de A. J. Porfirio, Evan Derrick dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "terror_lovecraft",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Final Girl: destacada boardgame (2021) obra de A. J. Porfirio, Evan Derrick.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

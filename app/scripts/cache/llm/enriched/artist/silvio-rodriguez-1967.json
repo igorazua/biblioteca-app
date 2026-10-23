@@ -1,0 +1,36 @@
+{
+  "id": "artist:silvio-rodriguez-1967",
+  "experience": {
+    "plot": "Silvio Rodríguez (San Antonio de los Baños, Cuba), icono de Nueva Trova, Canción de autor desde 1967.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de San Antonio de los Baños, Cuba, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Nueva Trova / Canción de autor.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1967, una referencia indispensable obra de San Antonio de los Baños, Cuba dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 2,
+    "valencia": 2,
+    "bailable": 3,
+    "organico": 5,
+    "intensidad": 2,
+    "fondo": 3,
+    "complejidad": 3
+  },
+  "themes": [
+    "pop",
+    "rock_clasico",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Silvio Rodríguez: destacada artist (1967) obra de San Antonio de los Baños, Cuba.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

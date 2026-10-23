@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:star-wars-outer-rim-2019",
+  "experience": {
+    "plot": "Take to the stars and become a living legend in Star Wars: Outer Rim, a game of bounty hunters, mercenaries, and smugglers for 1-4 players! In Outer Rim, you take on the role of an underworld denizen, setting out to make your mark on the galaxy. You'll travel ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Corey Konieczka, Tony Fanchi, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Corey Konieczka, Tony Fanchi dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 1
+  },
+  "themes": [
+    "ciencia_ficcion_espacial",
+    "exploracion_y_mapas",
+    "naturaleza_y_animales"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Star Wars: Outer Rim: destacada boardgame (2019) obra de Corey Konieczka, Tony Fanchi.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "series:sex-and-the-city-1998",
+  "experience": {
+    "plot": "Sex and the City es una serie de televisión estadounidense de comedia dramática y romántica creada por Darren Star para HBO. Es una adaptación del libro del mismo nombre escrito por Candace Bushnell. La serie se estrenó en los Estados Unidos el 6 de junio de 1",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de HBO, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1998, una referencia indispensable obra de HBO dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 1,
+    "reconfort": 4,
+    "enganche": 3,
+    "formato": 2
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "maraton"
+  ],
+  "oneLiner": "Sexo en Nueva York: destacada series (1998) obra de HBO.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

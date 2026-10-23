@@ -1,0 +1,42 @@
+{
+  "id": "movie:my-fair-lady-1964",
+  "experience": {
+    "plot": "My Fair Lady es una película de 1964 dirigida por George Cukor e interpretada por Rex Harrison y Audrey Hepburn. Es una adaptación del musical homónimo de Alan Jay Lerner y Frederick Loewe que, a su vez, se había basado en la obra de teatro Pigmalión, de Georg",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de George Cukor, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1964, una obra destacada de George Cukor en el panorama de Drama y Familiar."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "musica"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "familia"
+  ],
+  "oneLiner": "My Fair Lady: Drama y Familiar con dirección de George Cukor.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

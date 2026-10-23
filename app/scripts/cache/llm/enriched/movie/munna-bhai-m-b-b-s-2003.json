@@ -1,0 +1,43 @@
+{
+  "id": "movie:munna-bhai-m-b-b-s-2003",
+  "experience": {
+    "plot": "película de 2003 dirigida por Rajkumar Hirani",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Rajkumar Hirani, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2003, una obra destacada de Rajkumar Hirani en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 1,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "musica",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Munna Bhai M.B.B.S.: Comedia y Drama con dirección de Rajkumar Hirani.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

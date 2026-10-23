@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:burgle-bros-2015",
+  "experience": {
+    "plot": "Burgle Bros. is a cooperative game. Players are unique members of a crew trying to pull off a robbery of a highly secure building — without getting caught. The building has three floors (4x4 tiles), each with its own safe to crack. Players start on the first f",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Tim Fowers, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Exploración / Maze.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Tim Fowers dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 4,
+    "tema": 2,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "cooperativo_pandemia"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "Burgle Bros.: destacada boardgame (2015) obra de Tim Fowers.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

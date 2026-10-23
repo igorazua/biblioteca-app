@@ -1,0 +1,42 @@
+{
+  "id": "series:gravity-falls-2012",
+  "experience": {
+    "plot": "Twin brother and sister Dipper and Mabel Pines are in for an unexpected adventure when they spend the summer with their great Uncle in the mysterious town of Gravity Falls, Oregon.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Disney XD, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Misterio.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Disney XD dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "pasar_miedo"
+  ],
+  "oneLiner": "Gravity Falls: destacada series (2012) obra de Disney XD.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

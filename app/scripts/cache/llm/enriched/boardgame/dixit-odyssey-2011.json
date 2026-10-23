@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:dixit-odyssey-2011",
+  "experience": {
+    "plot": "Dixit Odyssey is both a standalone game and an expansion (Dixit: Odyssey (expansion)) for Jean-Louis Roubira's Dixit, which won Germany's Spiel des Jahres award in 2010. Game play in Dixit Odyssey matches that of Dixit: Each turn one player is the storyteller.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jean-Louis Roubira, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Humor.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de Jean-Louis Roubira dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 4,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "roles_ocultos",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Dixit: Odyssey: destacada boardgame (2011) obra de Jean-Louis Roubira.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

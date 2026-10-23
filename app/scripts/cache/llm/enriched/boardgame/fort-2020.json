@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:fort-2020",
+  "experience": {
+    "plot": "Can you solve the riddles and stop the kidnapping before it’s too late?\n\nCriminal activity is rampant in the frontier town of Fortune City, and now the sheriff has disappeared without a trace. With precious little time to find him, players need to work togethe",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Grant Rodiek, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Grant Rodiek dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Fort: destacada boardgame (2020) obra de Grant Rodiek.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

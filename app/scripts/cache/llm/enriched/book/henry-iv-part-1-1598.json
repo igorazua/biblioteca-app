@@ -1,0 +1,39 @@
+{
+  "id": "book:henry-iv-part-1-1598",
+  "experience": {
+    "plot": "Obra clásica de historia escrita por William Shakespeare.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de William Shakespeare, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Historia / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1598, una referencia indispensable obra de William Shakespeare dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 2,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "historia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Henry IV, Part 1: destacada book (1598) obra de William Shakespeare.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

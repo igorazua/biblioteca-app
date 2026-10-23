@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:marrakesh-2022",
+  "experience": {
+    "plot": "Compete with other influential families in the city to achieve the most honorable titles through the skillful use of assistants and resources at your disposal. The player who succeeds in doing this best becomes the new \"Obermufti\" of Marrakesh. Marrakesh is pl",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Stefan Feld, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Construcción de ciudades.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Stefan Feld dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Marrakesh: destacada boardgame (2022) obra de Stefan Feld.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

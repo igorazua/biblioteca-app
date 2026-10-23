@@ -1,0 +1,42 @@
+{
+  "id": "series:doctor-who-2005",
+  "experience": {
+    "plot": "Doctor Who es una serie de televisión británica de ciencia ficción producida por la BBC. Está dividida en dos etapas: la denominada serie clásica, emitida entre 1963 y 1989, y la serie moderna, iniciada en 2005 y que continúa emitiéndose en la actualidad. Form",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Russell T Davies, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de Russell T Davies dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 3,
+    "enganche": 5,
+    "formato": 4
+  },
+  "themes": [
+    "medicina_y_hospitales",
+    "fantasia_epica",
+    "amistad"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Doctor Who: destacada series (2005) obra de Russell T Davies.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

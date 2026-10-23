@@ -1,0 +1,42 @@
+{
+  "id": "movie:roman-holiday-1953",
+  "experience": {
+    "plot": "A bored and sheltered princess escapes her guardians and falls in love with an American newsman in Rome.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de William Wyler, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Forrest Gump",
+      "Titanic",
+      "Regreso al futuro",
+      "Toy Story"
+    ],
+    "context": "Estrenada en 1953, una obra destacada de William Wyler en el panorama de Comedia y Romance."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 1,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pareja"
+  ],
+  "oneLiner": "Roman Holiday: Comedia y Romance con dirección de William Wyler.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

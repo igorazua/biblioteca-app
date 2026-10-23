@@ -1,0 +1,39 @@
+{
+  "id": "book:el-guardian-invisible-2013",
+  "experience": {
+    "plot": "La inspectora Amaia Salazar regresa a Elizondo para cazar a un asesino en serie que deja pistas mitológicas.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Dolores Redondo, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Thriller / Misterio.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de Dolores Redondo dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 2,
+    "densidad": 2,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "escala": 4,
+    "ideas": 3,
+    "reconfort": 1
+  },
+  "themes": [
+    "misterio",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "El guardián invisible: destacada book (2013) obra de Dolores Redondo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

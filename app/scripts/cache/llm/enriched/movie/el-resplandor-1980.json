@@ -1,0 +1,42 @@
+{
+  "id": "movie:el-resplandor-1980",
+  "experience": {
+    "plot": "El resplandor es una película británico-estadounidense de 1980 del subgénero de terror psicológico, producida y dirigida por Stanley Kubrick y protagonizada por Jack Nicholson, Shelley Duvall, Danny Lloyd y Scatman Crothers. Está basada en la novela homónima d",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Stanley Kubrick, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Pulp Fiction",
+      "El club de la lucha",
+      "El silencio de los corderos",
+      "Seven"
+    ],
+    "context": "Estrenada en 1980, una obra destacada de Stanley Kubrick en el panorama de Terror y Thriller."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "espacio",
+    "ia_y_robots",
+    "crimen",
+    "sobrenatural"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde"
+  ],
+  "oneLiner": "El resplandor: Terror y Thriller con dirección de Stanley Kubrick.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

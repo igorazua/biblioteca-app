@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:disney-villainous-wicked-to-the-core-2019",
+  "experience": {
+    "plot": "In Villainous: Wicked to the Core, each player takes control of one of three Disney characters, each one a villain in a different Disney movie, specifically the Evil Queen from Snow White, Hades from Hercules, and Dr. Facilier from The Princess and the Frog. E",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Aaron Donogh, Brian Kirk, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Aaron Donogh, Brian Kirk dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "draft_de_cartas",
+    "gestion_de_recursos",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Disney Villainous: Wicked to the Core (2019): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

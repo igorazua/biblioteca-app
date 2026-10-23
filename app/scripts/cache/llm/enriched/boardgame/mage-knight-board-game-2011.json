@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:mage-knight-board-game-2011",
+  "experience": {
+    "plot": "In Mage Knight Board Game you become one of four powerful Mage Knights who explore and subdue an important peninsula of the Atlantean Empire. Learn skills, gather an army, pack your deck with powerful spells and abilities as you conquer castles, battle dragons",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Vlaada Chvátil, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de Vlaada Chvátil dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "ciencia_ficcion_espacial",
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Mage Knight Board Game: destacada boardgame (2011) obra de Vlaada Chvátil.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

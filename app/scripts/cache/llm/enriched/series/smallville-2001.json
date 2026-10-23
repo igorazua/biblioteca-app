@@ -1,0 +1,43 @@
+{
+  "id": "series:smallville-2001",
+  "experience": {
+    "plot": "Smallville es una serie de televisión estadounidense desarrollada originalmente por los escritores y productores Alfred Gough y Miles Millar, que se estrenó el 16 de octubre de 2001 y terminó el 13 de mayo de 2011. Inicialmente fue emitida por The WB. Durante ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de The CW, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2001, una referencia indispensable obra de The CW dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Smallville: destacada series (2001) obra de The CW.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

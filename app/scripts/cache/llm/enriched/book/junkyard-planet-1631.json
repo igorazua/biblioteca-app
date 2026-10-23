@@ -1,0 +1,39 @@
+{
+  "id": "book:junkyard-planet-1631",
+  "experience": {
+    "plot": "Obra clásica de ciencia ficción escrita por H. Beam Piper.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de H. Beam Piper, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1631, una referencia indispensable obra de H. Beam Piper dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 5,
+    "escala": 4,
+    "ideas": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Junkyard Planet: destacada book (1631) obra de H. Beam Piper.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

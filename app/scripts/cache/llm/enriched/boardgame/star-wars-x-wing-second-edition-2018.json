@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:star-wars-x-wing-second-edition-2018",
+  "experience": {
+    "plot": "X-Wing Second Edition puts you in command of your own squadron of advanced starfighters locked in thrilling, tactical space combat. Following in the footsteps of the first edition, the second edition refines the intuitive and exciting core formula of maneuveri",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Frank Brooks, Jay Little, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aviation / Flight / Faroleo.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Frank Brooks, Jay Little dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "faroleo_y_enganos",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Star Wars: X-Wing (Second Edition) (2018): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

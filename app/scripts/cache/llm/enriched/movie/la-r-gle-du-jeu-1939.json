@@ -1,0 +1,42 @@
+{
+  "id": "movie:la-r-gle-du-jeu-1939",
+  "experience": {
+    "plot": "A bourgeois life in France at the onset of World War II, as the rich and their poor servants meet up at a French chateau.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Jean Renoir, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1939, una obra destacada de Jean Renoir en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "La r\u001agle du jeu: Comedia y Drama con dirección de Jean Renoir.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "book:moby-dick-1851",
+  "experience": {
+    "plot": "Moby Dick es una novela del escritor Herman Melville publicada por primera vez el 14 de noviembre de 1851. Narra la travesía del barco ballenero Pequod, comandado por el capitán Ahab, junto a Ismael y el arponero Queequeg en la obsesiva y autodestructiva perse",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Herman Melville, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1851, una referencia indispensable obra de Herman Melville dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Moby Dick: destacada book (1851) obra de Herman Melville.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

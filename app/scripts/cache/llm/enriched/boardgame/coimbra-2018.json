@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:coimbra-2018",
+  "experience": {
+    "plot": "In the 15th and 16th century, Portugal is thriving under its leading role during the Age of Discovery. Nestled in the heart of Portugal, the city of Coimbra serves as a cultural center of the country. As the head of one of Coimbra's oldest houses, you seek to ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Flaminia Brasini, Virginio Gigli, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Dados / Renaissance.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Flaminia Brasini, Virginio Gigli dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "dados_y_push_your_luck",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Coimbra: destacada boardgame (2018) obra de Flaminia Brasini, Virginio Gigli.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

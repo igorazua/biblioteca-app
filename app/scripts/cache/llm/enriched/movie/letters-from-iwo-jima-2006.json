@@ -1,0 +1,43 @@
+{
+  "id": "movie:letters-from-iwo-jima-2006",
+  "experience": {
+    "plot": "Cartas desde Iwo Jima es una película estadounidense de 2006, producida y dirigida por Clint Eastwood, que junto a Banderas de nuestros padres, completa el díptico de este director sobre la Batalla de Iwo Jima, librada en el océano Pacífico durante la Segunda ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Clint Eastwood, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2006, una obra destacada de Clint Eastwood en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "familia",
+    "infancia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Cartas desde Iwo Jima: Acción y Aventura con dirección de Clint Eastwood.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "book:de-rerum-natura-1486",
+  "experience": {
+    "plot": "Obra clásica de historia escrita por Titus Lucretius Carus.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Titus Lucretius Carus, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Historia / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1486, una referencia indispensable obra de Titus Lucretius Carus dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "historia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "De rerum natura: destacada book (1486) obra de Titus Lucretius Carus.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

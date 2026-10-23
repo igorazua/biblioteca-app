@@ -1,0 +1,39 @@
+{
+  "id": "book:emile-or-education-1762",
+  "experience": {
+    "plot": "Obra clásica de ensayo escrita por Jean-Jacques Rousseau.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jean-Jacques Rousseau, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ensayo / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1762, una referencia indispensable obra de Jean-Jacques Rousseau dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 2,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "identidad",
+    "sociedad",
+    "historia"
+  ],
+  "moments": [
+    "concentracion"
+  ],
+  "oneLiner": "Emile or Education: destacada book (1762) obra de Jean-Jacques Rousseau.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

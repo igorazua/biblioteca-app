@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:cthulhu-wars-2015",
+  "experience": {
+    "plot": "Cthulhu Wars is a strategy boardgame in which the players take the part of alien races and gods taken from the Cthulhu mythos created by H. P. Lovecraft. The game is physically large, and includes sixty-four figurines of the cultists, monsters, aliens, and Gre",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Lincoln Petersen, Sandy Petersen, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Fighting.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Lincoln Petersen, Sandy Petersen dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 5,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "terror_lovecraft",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Cthulhu Wars: destacada boardgame (2015) obra de Lincoln Petersen, Sandy Petersen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

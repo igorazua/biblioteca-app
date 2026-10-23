@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:pirates-of-maracaibo-2023",
+  "experience": {
+    "plot": "Set sail for an adventurous raid...for perhaps it will be your last! Face danger and adventure once more while you search high and low for the most valuable treasures the Caribbean has to offer, then quickly find a safe harbor to stash priceless gold, rare eme",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Alexander Pfister, Ralph Bienert, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Alexander Pfister, Ralph Bienert dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Pirates of Maracaibo: destacada boardgame (2023) obra de Alexander Pfister, Ralph Bienert.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

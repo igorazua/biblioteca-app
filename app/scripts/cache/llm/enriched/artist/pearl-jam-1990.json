@@ -1,0 +1,37 @@
+{
+  "id": "artist:pearl-jam-1990",
+  "experience": {
+    "plot": "Pearl Jam (Seattle, EE. UU.), icono de Grunge, Hard rock desde 1990.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Seattle, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Grunge / Hard rock.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1990, una referencia indispensable obra de Seattle, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 2,
+    "bailable": 2,
+    "organico": 3,
+    "intensidad": 5,
+    "fondo": 2,
+    "complejidad": 3
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "indie_rock",
+    "soul"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Pearl Jam: destacada artist (1990) obra de Seattle, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:celda-211-2009",
+  "experience": {
+    "plot": "Celda 211 es una película hispano-francesa de acción y thriller de 2009, dirigida por Daniel Monzón, quien la coescribió con Jorge Guerricaechevarría, basada en la novela homónima del periodista Francisco Pérez Gandul. Está protagonizada por Alberto Ammann, Lu",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Daniel Monzón, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2009, una obra destacada de Daniel Monzón en el panorama de Thriller y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "familia",
+    "crimen"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Celda 211: Thriller y Drama con dirección de Daniel Monzón.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

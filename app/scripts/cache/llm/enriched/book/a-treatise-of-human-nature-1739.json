@@ -1,0 +1,39 @@
+{
+  "id": "book:a-treatise-of-human-nature-1739",
+  "experience": {
+    "plot": "Disertación sobre la naturaleza humana: Una aproximación experimental a la filosofía moral. (1738–40) es un libro del filósofo escocés David Hume, considerado por muchos como la obra más importante de Hume y una de las obras más influyentes en la historia de l",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de David Hume, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ensayo / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1739, una referencia indispensable obra de David Hume dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 2,
+    "densidad": 5,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "identidad",
+    "historia",
+    "filosofia"
+  ],
+  "moments": [
+    "concentracion"
+  ],
+  "oneLiner": "A treatise of human nature: destacada book (1739) obra de David Hume.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

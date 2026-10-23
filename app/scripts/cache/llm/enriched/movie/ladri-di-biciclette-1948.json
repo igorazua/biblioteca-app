@@ -1,0 +1,41 @@
+{
+  "id": "movie:ladri-di-biciclette-1948",
+  "experience": {
+    "plot": "Ladri di biciclette es una película italiana dramática de 1948 dirigida por Vittorio de Sica. Se considera como una de las películas emblemáticas del neorrealismo italiano. En 1954, la revista Sight and Sound publicó su primera lista de las \"diez mejores pelíc",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Vittorio De Sica, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1948, una obra destacada de Vittorio De Sica en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Ladri di biciclette: Drama con dirección de Vittorio De Sica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

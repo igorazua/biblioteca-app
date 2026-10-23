@@ -1,0 +1,41 @@
+{
+  "id": "movie:changeling-2008",
+  "experience": {
+    "plot": "Changeling es una película dirigida por Clint Eastwood y protagonizada por Angelina Jolie y John Malkovich estrenada en 2008.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Clint Eastwood, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2008, una obra destacada de Clint Eastwood en el panorama de Biografía y Crimen."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 1
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "El intercambio: Biografía y Crimen con dirección de Clint Eastwood.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

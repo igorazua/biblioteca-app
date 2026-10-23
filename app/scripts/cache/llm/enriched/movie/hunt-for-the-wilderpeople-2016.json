@@ -1,0 +1,43 @@
+{
+  "id": "movie:hunt-for-the-wilderpeople-2016",
+  "experience": {
+    "plot": "película de 2016 dirigida por Taika Waititi",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Taika Waititi, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2016, una obra destacada de Taika Waititi en el panorama de Aventura y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Hunt for the Wilderpeople: Aventura y Comedia con dirección de Taika Waititi.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:cluedo-1949",
+  "experience": {
+    "plot": "Juego de deducción e investigación donde los jugadores descubren quién cometió el asesinato, con qué arma y en qué habitación.",
+    "feeling": "Intriga detectivesca, cálculo deductivo y tensión en la libreta de notas secreta.",
+    "hook": "Lanzar la acusación definitiva antes de que otro jugador ate cabos.",
+    "notFor": "Quienes prefieran juegos cooperativos o partidas puramente cooperativas sin faroleo.",
+    "similar": [
+      "Mysterium",
+      "Cartas Sherlock",
+      "MicroMacro"
+    ],
+    "context": "Creado por Anthony Pratt en 1949, es el arquetipo clásico de misterio detectivesco."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "misterio_y_deduccion",
+    "roles_ocultos"
+  ],
+  "moments": [
+    "familia",
+    "amigos",
+    "sobremesa"
+  ],
+  "oneLiner": "Cluedo: el juego de misterio y deducción más famoso de la historia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

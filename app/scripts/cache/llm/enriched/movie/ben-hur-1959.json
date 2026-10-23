@@ -1,0 +1,43 @@
+{
+  "id": "movie:ben-hur-1959",
+  "experience": {
+    "plot": "Ben-Hur es una película estadounidense de 1959 de los géneros épico y dramático ambientada mayormente en la provincia romana de Judea en tiempos del emperador Tiberio. Fue dirigida por William Wyler y producida por Sam Zimbalist para la Metro-Goldwyn-Mayer. Su",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de William Wyler, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 1959, una obra destacada de William Wyler en el panorama de Aventura y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Ben-Hur: Aventura y Drama con dirección de William Wyler.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

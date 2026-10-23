@@ -1,0 +1,45 @@
+{
+  "id": "movie:tropa-de-elite-2007",
+  "experience": {
+    "plot": "Tropa de élite es una película brasileña de acción y drama del año 2007. La película es una historia de ficción del BOPE el Batallón de Operaciones Especiales de la Policía Militar de Río de Janeiro. Es la segunda película del director José Padilha, que anteri",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Jos\u001a Padilha, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2007, una obra destacada de Jos\u001a Padilha en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "guerra",
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Tropa de Elite: Acción y Crimen con dirección de Jos\u001a Padilha.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

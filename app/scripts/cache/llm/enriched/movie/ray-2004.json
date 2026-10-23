@@ -1,0 +1,41 @@
+{
+  "id": "movie:ray-2004",
+  "experience": {
+    "plot": "Ray es una película biográfica de 2004 que cuenta la biografía de Ray Charles, músico ciego interpretado por Jamie Foxx. La película está dirigida por Taylor Hackford y consiguió el Óscar al mejor actor principal y al mejor sonido.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Taylor Hackford, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Taylor Hackford en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 1,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Ray: Biografía y Drama con dirección de Taylor Hackford.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:codex-naturalis-2021",
+  "experience": {
+    "plot": "In Codex Naturalis, you must continue the work of the illuminating monk Tybor Kwelein, assembling the pages of a manuscript that lists the living species in primary forests. Can you put the pages together in the best order possible? And are you prepared to sac",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Thomas Dupont, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Medio ambiente.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Thomas Dupont dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 2,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "draft_de_cartas",
+    "gestion_de_recursos",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Codex Naturalis: destacada boardgame (2021) obra de Thomas Dupont.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

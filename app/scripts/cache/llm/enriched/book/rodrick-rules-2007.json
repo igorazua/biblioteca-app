@@ -1,0 +1,39 @@
+{
+  "id": "book:rodrick-rules-2007",
+  "experience": {
+    "plot": "Diary of a Wimpy Kid: Rodrick Rules es una novela de comedia de la colección de Diario de Greg. El libro fue lanzado el viernes, 1 de febrero de 2008 en Estados Unidos y más tarde en el resto del mundo. El libro habla sobre las travesuras que hace Rodrick Heff",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jeff Kinney, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de Jeff Kinney dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Rodrick Rules: destacada book (2007) obra de Jeff Kinney.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

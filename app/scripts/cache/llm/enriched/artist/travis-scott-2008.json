@@ -1,0 +1,36 @@
+{
+  "id": "artist:travis-scott-2008",
+  "experience": {
+    "plot": "Travis Scott (Houston, EE. UU.), icono de Trap, Psychedelic rap desde 2008.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Houston, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Trap / Psychedelic rap.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de Houston, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 4,
+    "bailable": 4,
+    "organico": 2,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 3
+  },
+  "themes": [
+    "pop",
+    "hip_hop",
+    "trap"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Travis Scott: destacada artist (2008) obra de Houston, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

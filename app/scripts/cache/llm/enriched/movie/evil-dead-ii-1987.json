@@ -1,0 +1,42 @@
+{
+  "id": "movie:evil-dead-ii-1987",
+  "experience": {
+    "plot": "The lone survivor of an onslaught of flesh-possessing spirits holes up in a cabin with a group of strangers while the demons continue their attack.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Sam Raimi, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 1987, una obra destacada de Sam Raimi en el panorama de Acción y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "amigos"
+  ],
+  "oneLiner": "Evil Dead II: Acción y Comedia con dirección de Sam Raimi.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

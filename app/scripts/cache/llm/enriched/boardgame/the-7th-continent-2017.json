@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:the-7th-continent-2017",
+  "experience": {
+    "plot": "It's the early 20th century. You have decided to sail back to the newly discovered seventh continent to attempt to lift the terrible curse that has struck you since your return from the previous expedition. In The 7th Continent, a solo or cooperative \"choose-y",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bruno Sautter, Ludovic Roudy, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Bruno Sautter, Ludovic Roudy dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 4,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "The 7th Continent: destacada boardgame (2017) obra de Bruno Sautter, Ludovic Roudy.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

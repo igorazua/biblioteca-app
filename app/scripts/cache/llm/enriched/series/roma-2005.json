@@ -1,0 +1,43 @@
+{
+  "id": "series:roma-2005",
+  "experience": {
+    "plot": "Roma es una ciudad, capital de la región del Lacio y de Italia. Con una población de 2 857 321 habitantes, es el municipio más poblado de Italia y la tercera ciudad más poblada de la Unión Europea. Por antonomasia, se la conoce desde la Antigüedad como la Urbe",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bruno Heller, John Milius y William J. MacDonald, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Histórica / Drama.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de Bruno Heller, John Milius y William J. MacDonald dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 3,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Roma: destacada series (2005) obra de Bruno Heller, John Milius y William J. MacDonald.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:7-wonders-architects-2021",
+  "experience": {
+    "plot": "In 7 Wonders: Architects, 2-7 players race to become a leader of the ancient world by completing an architectural wonder that will last through the ages. Players receive an unconstructed wonder at the beginning of the game and must collect resources to build t",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Antoine Bauza, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Antoine Bauza dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 2,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "7 Wonders: Architects: destacada boardgame (2021) obra de Antoine Bauza.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

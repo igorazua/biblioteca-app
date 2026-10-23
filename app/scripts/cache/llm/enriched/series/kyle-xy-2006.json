@@ -1,0 +1,44 @@
+{
+  "id": "series:kyle-xy-2006",
+  "experience": {
+    "plot": "Kyle XY es una reconocida series que explora temáticas de Drama, Science-Fiction, Misterio. Destaca por su personalidad propia y su conexión directa con el público.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Freeform, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Science-Fiction.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de Freeform dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2,
+    "enganche": 5,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "pasar_miedo"
+  ],
+  "oneLiner": "Kyle XY: destacada series (2006) obra de Freeform.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

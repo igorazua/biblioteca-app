@@ -1,0 +1,39 @@
+{
+  "id": "book:diez-negritos-y-no-quedo-ninguno-1939",
+  "experience": {
+    "plot": "Diez personas sin relación aparente son invitadas a una mansión en una isla y asesinadas una a una según una canción infantil.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Agatha Christie, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Misterio / Thriller.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1939, una referencia indispensable obra de Agatha Christie dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 2,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "duelo",
+    "misterio",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Diez negritos (Y no quedó ninguno): destacada book (1939) obra de Agatha Christie.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

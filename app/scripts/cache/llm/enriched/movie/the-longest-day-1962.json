@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-longest-day-1962",
+  "experience": {
+    "plot": "El día más largo es una película estadounidense de 1962 dirigida por Ken Annakin, Andrew Marton y Bernhard Wicki. Está basada en la novela homónima escrita por Cornelius Ryan, que trata sobre el desembarco de Normandía.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Ken Annakin, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 1962, una obra destacada de Ken Annakin en el panorama de Acción y Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "El día más largo: Acción y Drama con dirección de Ken Annakin.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

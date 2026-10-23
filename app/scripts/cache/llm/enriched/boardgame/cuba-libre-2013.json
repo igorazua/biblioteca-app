@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:cuba-libre-2013",
+  "experience": {
+    "plot": "Cuba Libre es una reconocida boardgame que explora temáticas de Económico, Modern Warfare, Political. Destaca por su personalidad propia y su conexión directa con el público.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jeff Grossman, Volko Ruhnke, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Modern Warfare.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de Jeff Grossman, Volko Ruhnke dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 1,
+    "familiar": 1
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Cuba Libre: destacada boardgame (2013) obra de Jeff Grossman, Volko Ruhnke.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

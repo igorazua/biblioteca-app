@@ -1,0 +1,41 @@
+{
+  "id": "movie:jungfruk-llan-1960",
+  "experience": {
+    "plot": "An innocent yet pampered young virgin and her family's pregnant and jealous servant set out to deliver candles to church, but only one returns from events that transpire in the woods along the way.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Ingmar Bergman, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1960, una obra destacada de Ingmar Bergman en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Jungfruk\u001allan: Drama con dirección de Ingmar Bergman.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

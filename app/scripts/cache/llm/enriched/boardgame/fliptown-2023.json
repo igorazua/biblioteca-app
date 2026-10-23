@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:fliptown-2023",
+  "experience": {
+    "plot": "Fliptown is a flip-and-write game in which you are trying to earn stars by exploring a wild west town. The game uses a standard poker deck to drive an open world-style of game play, along with dry erase boards that serve as each player's map. Each turn, flip o",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Steven Aramini, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de American West / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Steven Aramini dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "draft_de_cartas",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Fliptown: destacada boardgame (2023) obra de Steven Aramini.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

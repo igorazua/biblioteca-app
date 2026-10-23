@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:fantasy-realms-2017",
+  "experience": {
+    "plot": "As ruler, it's up to you to build the mightiest realm in the world! Will you choose to follow military tactics and sweep away all in your path with a massive army? Will you turn towards sorcery and control an inaccessible island surrounded by impenetrable flam",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bruce Glassco, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Bruce Glassco dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Fantasy Realms: destacada boardgame (2017) obra de Bruce Glassco.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

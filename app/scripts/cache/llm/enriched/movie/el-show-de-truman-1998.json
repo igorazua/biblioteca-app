@@ -1,0 +1,43 @@
+{
+  "id": "movie:el-show-de-truman-1998",
+  "experience": {
+    "plot": "The Truman Show (en España: El show de Truman (una vida en directo) y en Hispanoamérica: The Truman Show: Historia de una vida) es una película estadounidense de 1998 de comedia dramática y ciencia ficción dirigida por Peter Weir, escrita por Andrew Niccol y p",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Peter Weir, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 1998, una obra destacada de Peter Weir en el panorama de Drama y Ciencia ficción."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "duelo",
+    "espionaje",
+    "familia",
+    "espacio"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "El show de Truman: Drama y Ciencia ficción con dirección de Peter Weir.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

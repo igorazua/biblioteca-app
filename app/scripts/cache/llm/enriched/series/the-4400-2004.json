@@ -1,0 +1,44 @@
+{
+  "id": "series:the-4400-2004",
+  "experience": {
+    "plot": "The 4400 es una reconocida series que explora temáticas de Drama, Science-Fiction, Misterio. Destaca por su personalidad propia y su conexión directa con el público.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de USA Network, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Science-Fiction.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2004, una referencia indispensable obra de USA Network dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "pasar_miedo"
+  ],
+  "oneLiner": "The 4400: destacada series (2004) obra de USA Network.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:saboteur-2004",
+  "experience": {
+    "plot": "Players take on the role of dwarves. As miners, they are in a mine, hunting for gold. Suddenly, a pick axe swings down and shatters the mine lamp. The saboteur has struck. But which of the players are saboteurs? Will you find the gold, or will the fiendish act",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Fréderic Moyersoen, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Faroleo / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2004, una referencia indispensable obra de Fréderic Moyersoen dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 5,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 4,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "faroleo_y_enganos",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Saboteur: destacada boardgame (2004) obra de Fréderic Moyersoen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

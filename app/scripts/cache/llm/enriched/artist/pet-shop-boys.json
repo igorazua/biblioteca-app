@@ -1,0 +1,36 @@
+{
+  "id": "artist:pet-shop-boys",
+  "experience": {
+    "plot": "Pet Shop Boys es un dúo de synthpop británico, conformado por el cantante y compositor Neil Tennant y el tecladista y compositor Chris Lowe, formado en Londres, en 1981. Tuvo su máximo esplendor desde mediados de los años 80 hasta finales de los 90. Hasta la f",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1981, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 5,
+    "bailable": 5,
+    "organico": 1,
+    "intensidad": 3,
+    "fondo": 3,
+    "complejidad": 1
+  },
+  "themes": [
+    "pop",
+    "rock_clasico",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Pet Shop Boys: destacada artist (1981) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

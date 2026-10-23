@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:shakespeare-2015",
+  "experience": {
+    "plot": "The theaters of London are abuzz. In one week, her majesty the Queen will attend their new shows and will grant her support to one of the troupes. It's the chance of a lifetime for the young authors who are inflaming the populace with ever more audacious and m",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Hervé Rigal, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Renaissance.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Hervé Rigal dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Shakespeare: destacada boardgame (2015) obra de Hervé Rigal.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

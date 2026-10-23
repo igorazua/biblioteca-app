@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:arcs-2024",
+  "experience": {
+    "plot": "Arcs: Conflict & Collapse in the Reach is a space opera board game designed by Cole Wehrle, illustrated by Kyle Ferrin, and published by Leder Games in 2024. In Arcs, players compete to gain the most points by fulfilling variable objectives, taking actions thr",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Cole Wehrle, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Space Exploration.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Cole Wehrle dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Arcs: destacada boardgame (2024) obra de Cole Wehrle.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

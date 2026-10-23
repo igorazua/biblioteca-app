@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:castles-of-mad-king-ludwig-2014",
+  "experience": {
+    "plot": "In the tile-laying game Castles of Mad King Ludwig, players are tasked with building an amazing, extravagant castle for King Ludwig II of Bavaria...one room at a time. You see, the King loves castles, having built Neuschwanstein (the castle that inspired the D",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ted Alspach, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Post-Napoleonic / Puzzle.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Ted Alspach dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "puzzles_y_losetas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Castles of Mad King Ludwig: destacada boardgame (2014) obra de Ted Alspach.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

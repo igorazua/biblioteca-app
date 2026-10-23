@@ -1,0 +1,39 @@
+{
+  "id": "book:twelve-years-a-slave-1853",
+  "experience": {
+    "plot": "12 años de esclavitud es un libro de memorias de 1853 y una narrativa esclavista del estadounidense Solomon Northup, contada y editada por David Wilson. Northup, un hombre negro que nació libre en el estado de Nueva York, detalla su engaño para ir a Washington",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Solomon Northup, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Historia / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1853, una referencia indispensable obra de Solomon Northup dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "memoria",
+    "familia",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Twelve years a slave: destacada book (1853) obra de Solomon Northup.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

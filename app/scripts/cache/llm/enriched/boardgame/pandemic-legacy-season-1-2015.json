@@ -14,13 +14,13 @@
     "context": "Creada en 2015, una referencia indispensable obra de Matt Leacock, Rob Daviau dentro de su disciplina."
   },
   "axes": {
-    "peso": 3,
-    "interaccion": 2,
-    "azar": 1,
-    "confrontacion": 1,
-    "cooperacion": 1,
-    "tema": 2,
-    "risas": 1,
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 4,
+    "tema": 3,
+    "risas": 2,
     "familiar": 3
   },
   "themes": [

@@ -1,0 +1,44 @@
+{
+  "id": "movie:a-clockwork-orange-1971",
+  "experience": {
+    "plot": "A Clockwork Orange es una película británica de ciencia ficción de 1971, producida y dirigida por Stanley Kubrick. Es una adaptación de la novela homónima de 1962 escrita por Anthony Burgess. La película, filmada en el Reino Unido, relata las desventuras de Al",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Stanley Kubrick, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1971, una obra destacada de Stanley Kubrick en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "espacio",
+    "ia_y_robots",
+    "romance_adolescente",
+    "traicion",
+    "espionaje"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "La naranja mecánica: Crimen y Drama con dirección de Stanley Kubrick.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

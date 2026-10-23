@@ -1,0 +1,43 @@
+{
+  "id": "movie:tengoku-to-jigoku-1963",
+  "experience": {
+    "plot": "Tengoku to Jigoku , conocida como El infierno del odio (España), es una película japonesa policial y dramática de 1963 dirigida por Akira Kurosawa. Protagonizada por Toshirô Mifune, Tatsuya Nakadai, Kyôko Kagawa, Isao Kimura, Tatsuya Mihashi y Tsutomu Yamazaki",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Akira Kurosawa, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1963, una obra destacada de Akira Kurosawa en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Tengoku to jigoku: Crimen y Drama con dirección de Akira Kurosawa.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

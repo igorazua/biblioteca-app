@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:unmatched-houdini-vs-the-genie-2022",
+  "experience": {
+    "plot": "Unmatched is a highly asymmetrical miniature fighting game for two or four players. Each hero is represented by a unique deck designed to evoke their style and legend. Tactical movement and no-luck combat resolution create a unique play experience that rewards",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Adil M. Geresu, Brian Neff, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Adil M. Geresu, Brian Neff dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 2,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "draft_de_cartas",
+    "gestion_de_recursos",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Unmatched: Houdini vs. The Genie (2022): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

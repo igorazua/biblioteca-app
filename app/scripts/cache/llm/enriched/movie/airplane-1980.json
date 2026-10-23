@@ -1,0 +1,41 @@
+{
+  "id": "movie:airplane-1980",
+  "experience": {
+    "plot": "Airplane! es una película estadounidense de 1980, del género de comedia, producida y dirigida por Jim Abrahams, David Zucker y Jerry Zucker. Protagonizada por Robert Hays, Julie Hagerty, Leslie Nielsen, Robert Stack, Lloyd Bridges, Peter Graves, Kareem Abdul-J",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Jim Abrahams, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek",
+      "Amélie"
+    ],
+    "context": "Estrenada en 1980, una obra destacada de Jim Abrahams en el panorama de Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "Aterriza como puedas: Comedia con dirección de Jim Abrahams.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:canvas-2021",
+  "experience": {
+    "plot": "In Canvas, you play as a painter competing in an art competition. Players will collect art cards, layering 3 of them together to create their own unique Painting. Each card contains a piece of artwork as well as a set of icons used during scoring. Icons will b",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Andrew Nerger, Jeff Chin, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Puzzle.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Andrew Nerger, Jeff Chin dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "puzzles_y_losetas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Canvas: destacada boardgame (2021) obra de Andrew Nerger, Jeff Chin.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

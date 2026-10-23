@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:the-taverns-of-tiefenthal-2019",
+  "experience": {
+    "plot": "In the village of Tiefenthal lies \"The Tavern of the Deep Valley\". There, all citizens from the area gather, but it's important to attract new, wealthy guests for only then is there enough money to expand the tavern, which will then lure nobles into the tavern",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Wolfgang Warsch, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Dados.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Wolfgang Warsch dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 5,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 2,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "dados_y_push_your_luck"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "The Taverns of Tiefenthal: destacada boardgame (2019) obra de Wolfgang Warsch.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

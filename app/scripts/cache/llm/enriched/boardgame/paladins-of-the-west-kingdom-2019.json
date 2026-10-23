@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:paladins-of-the-west-kingdom-2019",
+  "experience": {
+    "plot": "Paladins of the West Kingdom is set at a turbulent time of West Francia's story, circa 900 AD. Despite recent efforts to develop the city, outlying townships are still under threat from outsiders. Saracens scout the borders, while Vikings plunder wealth and li",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de S J Macdonald, Shem Phillips, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Medieval.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de S J Macdonald, Shem Phillips dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 2,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Paladins of the West Kingdom (2019): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

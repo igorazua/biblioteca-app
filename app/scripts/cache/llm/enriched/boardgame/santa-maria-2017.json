@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:santa-maria-2017",
+  "experience": {
+    "plot": "Santa Maria is a streamlined, medium complexity Eurogame in which each player establishes and develops a colony. The game features elements of dice drafting and strategic engine building. The game is low on luck and has no direct destructive player conflict; a",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Eilif Svensson, Kristian Amundsen Østby, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Civilización / Farming.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Eilif Svensson, Kristian Amundsen Østby dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "dados_y_push_your_luck",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Santa Maria: destacada boardgame (2017) obra de Eilif Svensson, Kristian Amundsen Østby.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

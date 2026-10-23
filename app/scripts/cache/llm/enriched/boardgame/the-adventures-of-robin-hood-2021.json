@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:the-adventures-of-robin-hood-2021",
+  "experience": {
+    "plot": "The Adventures of Robin Hood es una reconocida boardgame que explora temáticas de Medieval. Destaca por su personalidad propia y su conexión directa con el público.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Michael Menzel, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Medieval.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Michael Menzel dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "The Adventures of Robin Hood: destacada boardgame (2021) obra de Michael Menzel.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

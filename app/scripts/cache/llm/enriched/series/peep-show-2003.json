@@ -1,0 +1,43 @@
+{
+  "id": "series:peep-show-2003",
+  "experience": {
+    "plot": "Peep Show es una comedia británica en la que actúan David Mitchell y Robert Webb. El guion lo escriben Jesse Armstrong y Sam Bain, con material adicional de Mitchell y Webb, entre otros. Se emitió en Channel 4 desde 2003, y su última emisión fue el 16 de dicie",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Channel 4, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2003, una referencia indispensable obra de Channel 4 dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Peep Show: destacada series (2003) obra de Channel 4.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "series:the-finder-2012",
+  "experience": {
+    "plot": "The Finder es una serie de televisión \"procedimental\" y comedia-dramática, creada por Hart Hanson inspirándose libremente en la serie de dos libros The Locator, escritos por Richard Greener. Emitida por Fox entre el 12 de enero de 2012 y el 11 de mayo de 2012.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de FOX, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de FOX dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 2
+  },
+  "themes": [
+    "investigacion_policial",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "maraton"
+  ],
+  "oneLiner": "The Finder: destacada series (2012) obra de FOX.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

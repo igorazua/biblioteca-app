@@ -1,0 +1,42 @@
+{
+  "id": "movie:gegen-die-wand-2004",
+  "experience": {
+    "plot": "Contra la pared es una película alemana del año 2004 del director turcoalemán Fatih Akın. Recibió varios premios como mejor film en el Festival Internacional de Cine de Berlín en el año 2004, así como el premio de mejor película en la 17 edición de los Premios",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Fatih Akin, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Fatih Akin en el panorama de Drama y Romance."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Gegen die Wand: Drama y Romance con dirección de Fatih Akin.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:heat-1995",
+  "experience": {
+    "plot": "Heat es una película policíaca estadounidense de 1995, escrita, producida y dirigida por Michael Mann y protagonizada por Al Pacino, Robert De Niro y Val Kilmer. El exconvicto Neil McCauley es un astuto criminal que dirige una banda profesional de ladrones y a",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Michael Mann, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1995, una obra destacada de Michael Mann en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "atraco",
+    "musica",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Heat: Crimen y Drama con dirección de Michael Mann.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:kill-bill-vol-2-2004",
+  "experience": {
+    "plot": "Kill Bill: volumen 2 es una película de acción y suspense estadounidense escrita y dirigida por Quentin Tarantino. Es la segunda de las dos películas que fueron lanzadas en cines aparte varios meses, la primera titulada Kill Bill: volumen 1. La película fue or",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Quentin Tarantino, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Matrix",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Quentin Tarantino en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Kill Bill: Vol. 2: Acción y Crimen con dirección de Quentin Tarantino.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

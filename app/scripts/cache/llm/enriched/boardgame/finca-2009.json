@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:finca-2009",
+  "experience": {
+    "plot": "Finca is a board game published by Hans im Glück. Players collect fruit by stepping around a windmill and then selling the fruit in specific combinations to the various towns on the game board.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ralf zur Linde, Wolfgang Sentker, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Farming.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de Ralf zur Linde, Wolfgang Sentker dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Finca: destacada boardgame (2009) obra de Ralf zur Linde, Wolfgang Sentker.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

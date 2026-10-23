@@ -1,0 +1,40 @@
+{
+  "id": "book:harry-potter-and-the-deathly-hallows-2007",
+  "experience": {
+    "plot": "Harry Potter y las reliquias de la Muerte, es el séptimo libro de la serie literaria Harry Potter, escrita por la autora británica J. K. Rowling. El libro se publicó el 21 de julio de 2007, cerrando la serie que empezó diez años antes con la publicación de Har",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de J. K. Rowling, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de J. K. Rowling dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "duelo",
+    "filosofia",
+    "misterio",
+    "fantasia_epica"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Harry Potter and the Deathly Hallows: destacada book (2007) obra de J. K. Rowling.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

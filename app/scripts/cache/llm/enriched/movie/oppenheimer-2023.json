@@ -1,0 +1,41 @@
+{
+  "id": "movie:oppenheimer-2023",
+  "experience": {
+    "plot": "Oppenheimer es una película biográfica épica de suspenso y drama de 2023, ganadora del Óscar a Mejor Película. Escrita y dirigida por Christopher Nolan, fue producida por Nolan junto a Charles Roven y Emma Thomas. Basada en American Prometheus, una biografía d",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Christopher Nolan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2023, una obra destacada de Christopher Nolan en el panorama de Drama y Histórica."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "guerra",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Oppenheimer: Drama y Histórica con dirección de Christopher Nolan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

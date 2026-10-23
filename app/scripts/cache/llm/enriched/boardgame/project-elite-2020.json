@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:project-elite-2020",
+  "experience": {
+    "plot": "In Project: ELITE, players are members of the ELITE squad on a mission to stop the invading forces of an alien empire. Stopping the invasion requires players to speedily roll dice as they take part in real-time, two-minute combat rounds against waves of terrif",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Konstantinos Kokkinis, Marco Portugal, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fighting / Miniaturas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Konstantinos Kokkinis, Marco Portugal dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Project: ELITE: destacada boardgame (2020) obra de Konstantinos Kokkinis, Marco Portugal.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

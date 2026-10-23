@@ -1,0 +1,42 @@
+{
+  "id": "series:patria-2020",
+  "experience": {
+    "plot": "Patria es una serie de televisión española de drama histórico producida por Alea Media para HBO España. La serie está basada en el libro Patria de Fernando Aramburu, que cuenta la historia de dos familias que pasan duros momentos durante los asesinatos y atent",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Aitor Gabilondo, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Serie española.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Aitor Gabilondo dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 4,
+    "enganche": 3,
+    "formato": 4
+  },
+  "themes": [
+    "familia",
+    "monstruos_y_terror",
+    "amistad"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Patria: destacada series (2020) obra de Aitor Gabilondo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

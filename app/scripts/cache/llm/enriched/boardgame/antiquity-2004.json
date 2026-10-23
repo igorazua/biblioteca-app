@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:antiquity-2004",
+  "experience": {
+    "plot": "From the Manufacturer:\n\n\"These fields no longer yield grain the way they used to,\" complains the farmer. \"We should settle new lands before our food runs out. Why don't we start farming olives, like our neighbors?\"\n\nThe cart-driver nods: \"Ever since them city ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jeroen Doumen, Joris Wiersinga, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Construcción de ciudades / Civilización.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2004, una referencia indispensable obra de Jeroen Doumen, Joris Wiersinga dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 3,
+    "azar": 1,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "imperios_y_civilizaciones",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Antiquity: destacada boardgame (2004) obra de Jeroen Doumen, Joris Wiersinga.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

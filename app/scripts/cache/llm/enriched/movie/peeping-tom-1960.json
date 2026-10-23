@@ -1,0 +1,42 @@
+{
+  "id": "movie:peeping-tom-1960",
+  "experience": {
+    "plot": "Peeping Tom es una película británica de 1960 de los géneros de drama, suspense y terror dirigida por Michael Powell y con Karlheinz Böhm, Moira Shearer y Anna Massey en los papeles principales.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Michael Powell, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1960, una obra destacada de Michael Powell en el panorama de Drama y Terror."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "crimen",
+    "sobrenatural"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "El fotógrafo del pánico: Drama y Terror con dirección de Michael Powell.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

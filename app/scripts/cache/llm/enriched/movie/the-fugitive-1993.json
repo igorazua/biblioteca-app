@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-fugitive-1993",
+  "experience": {
+    "plot": "El fugitivo es una película estadounidense dirigida por Andrew Davis y protagonizada por Harrison Ford y Tommy Lee Jones. Estrenada en 1993 y producida por Warner Bros., la película está basada en la serie homónima de la década de los sesenta.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Andrew Davis, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1993, una obra destacada de Andrew Davis en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "El fugitivo: Acción y Crimen con dirección de Andrew Davis.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:descent-legends-of-the-dark-2021",
+  "experience": {
+    "plot": "Descent: Legends of the Dark es una reconocida boardgame que explora temáticas de Aventura, Fantasía, Fighting. Destaca por su personalidad propia y su conexión directa con el público.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Kara Centell-Dunk, Nathan I. Hajek, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Kara Centell-Dunk, Nathan I. Hajek dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 5,
+    "azar": 4,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 1,
+    "familiar": 1
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Descent: Legends of the Dark (2021): notable e inspiradora creación.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

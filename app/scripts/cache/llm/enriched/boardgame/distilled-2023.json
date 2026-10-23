@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:distilled-2023",
+  "experience": {
+    "plot": "Distilled is a highly thematic strategy card game about crafting spirits in a distillery, with resource management and push-your-luck elements. In the game, you have inherited a distillery and are hoping to someday achieve the title of master distiller through",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Dave Beck, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Dave Beck dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Distilled: destacada boardgame (2023) obra de Dave Beck.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

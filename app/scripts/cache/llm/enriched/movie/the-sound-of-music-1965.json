@@ -1,0 +1,44 @@
+{
+  "id": "movie:the-sound-of-music-1965",
+  "experience": {
+    "plot": "The Sound of Music es una película de drama musical estadounidense de 1965 producida y dirigida por Robert Wise y protagonizada por Julie Andrews y Christopher Plummer, con Richard Haydn, Peggy Wood, Charmian Carr y Eleanor Parker. La película es una adaptació",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Robert Wise, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1965, una obra destacada de Robert Wise en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "ia_y_robots",
+    "espionaje",
+    "musica"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "familia"
+  ],
+  "oneLiner": "Sonrisas y lágrimas: Biografía y Drama con dirección de Robert Wise.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

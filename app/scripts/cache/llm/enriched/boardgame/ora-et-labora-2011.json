@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:ora-et-labora-2011",
+  "experience": {
+    "plot": "In Ora et Labora (Latin for 'Pray and work'), each player is head of a monastery in the Medieval era who acquires land and constructs buildings – little enterprises that will gain resources and profit. The goal is to build a working infrastructure and manufact",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Uwe Rosenberg, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Construcción de ciudades / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de Uwe Rosenberg dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Ora et Labora: destacada boardgame (2011) obra de Uwe Rosenberg.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

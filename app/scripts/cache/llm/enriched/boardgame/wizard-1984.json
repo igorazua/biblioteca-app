@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:wizard-1984",
+  "experience": {
+    "plot": "Wizard es una reconocida boardgame que explora temáticas de Cartas, Fantasía. Destaca por su personalidad propia y su conexión directa con el público.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ken Fisher, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1984, una referencia indispensable obra de Ken Fisher dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Wizard: destacada boardgame (1984) obra de Ken Fisher.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

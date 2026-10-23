@@ -1,0 +1,43 @@
+{
+  "id": "movie:mou-gaan-dou-2002",
+  "experience": {
+    "plot": "Infernal Affairs es un thriller policiaco hongkonés de 2002 codirigido por Andrew Lau y Alan Mak.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Andrew Lau, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2002, una obra destacada de Andrew Lau en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "espionaje",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Mou gaan dou: Acción y Crimen con dirección de Andrew Lau.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

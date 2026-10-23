@@ -1,0 +1,43 @@
+{
+  "id": "series:malcolm-in-the-middle-2000",
+  "experience": {
+    "plot": "Malcolm in the Middle es una serie de televisión cómica creada por Linwood Boomer para la cadena FOX. La serie comenzó a transmitirse el 9 de enero de 2000 y finalizó el 14 de mayo de 2006, luego de siete temporadas y 151 episodios. La serie recibió elogios de",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de FOX, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2000, una referencia indispensable obra de FOX dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 5,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Malcolm in the Middle: destacada series (2000) obra de FOX.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

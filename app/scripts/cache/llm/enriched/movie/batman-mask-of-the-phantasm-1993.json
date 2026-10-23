@@ -1,0 +1,43 @@
+{
+  "id": "movie:batman-mask-of-the-phantasm-1993",
+  "experience": {
+    "plot": "Batman: La máscara del fantasma es una película de animación estadounidense de 1993 protagonizada por Batman; superhéroe de la editorial DC Comics, inspirada en la serie de televisión Batman: la serie animada. Al igual que en la serie, la cinta es protagonizad",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Kevin Altieri, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "El rey león",
+      "Matrix"
+    ],
+    "context": "Estrenada en 1993, una obra destacada de Kevin Altieri en el panorama de Animación y Acción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 5,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "crimen",
+    "superheroes",
+    "sobrenatural",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Batman: La máscara del fantasma: Animación y Acción con dirección de Kevin Altieri.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

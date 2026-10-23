@@ -1,0 +1,39 @@
+{
+  "id": "book:foundation-and-empire-1945",
+  "experience": {
+    "plot": "Fundación e Imperio es una novela de ciencia ficción escrita por Isaac Asimov, publicada en 1952 por la editorial Gnome Press. Es el segundo libro de la llamada \"Trilogía de la Fundación\". La novela se confeccionó como un fix-up de dos novelas cortas publicada",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Isaac Asimov, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1945, una referencia indispensable obra de Isaac Asimov dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 4,
+    "escala": 4,
+    "ideas": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "identidad",
+    "fantasia_epica",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Foundation and Empire: destacada book (1945) obra de Isaac Asimov.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

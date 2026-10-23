@@ -1,0 +1,40 @@
+{
+  "id": "movie:la-isla-minima-2014",
+  "experience": {
+    "plot": "La isla mínima es una película española de thriller de 2014, dirigida por Alberto Rodríguez, quien coescribió el guion con Rafael Cobos. Está protagonizada por Raúl Arévalo, Javier Gutiérrez y Antonio de la Torre. Obtuvo 10 Premios Goya de 17 nominaciones en 2",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Alberto Rodríguez, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "El club de la lucha",
+      "El silencio de los corderos"
+    ],
+    "context": "Estrenada en 2014, una obra destacada de Alberto Rodríguez en el panorama de Thriller y Crimen."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "La isla mínima: Thriller y Crimen con dirección de Alberto Rodríguez.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

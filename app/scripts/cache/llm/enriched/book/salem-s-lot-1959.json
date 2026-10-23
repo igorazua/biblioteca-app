@@ -1,0 +1,39 @@
+{
+  "id": "book:salem-s-lot-1959",
+  "experience": {
+    "plot": "Obra de Stephen King publicada originalmente en 1959.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Stephen King, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1959, una referencia indispensable obra de Stephen King dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "'Salem’s Lot: destacada book (1959) obra de Stephen King.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

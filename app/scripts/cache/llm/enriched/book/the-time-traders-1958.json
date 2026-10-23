@@ -1,0 +1,39 @@
+{
+  "id": "book:the-time-traders-1958",
+  "experience": {
+    "plot": "Obra clásica de ciencia ficción escrita por Andre Norton.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Andre Norton, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1958, una referencia indispensable obra de Andre Norton dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "escala": 4,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "The Time Traders: destacada book (1958) obra de Andre Norton.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

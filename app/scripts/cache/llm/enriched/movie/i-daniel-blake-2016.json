@@ -1,0 +1,41 @@
+{
+  "id": "movie:i-daniel-blake-2016",
+  "experience": {
+    "plot": "Yo, Daniel Blake es una película dirigida por Ken Loach en 2016. Protagonizada por Dave Johns y Hayley Squires, el guion es obra de Paul Laverty, colaborador frecuente de Loach. Empezó a rodarse en octubre de 2015 en Newcastle upon Tyne y alrededores, y la pro",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Ken Loach, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2016, una obra destacada de Ken Loach en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Yo, Daniel Blake: Drama con dirección de Ken Loach.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

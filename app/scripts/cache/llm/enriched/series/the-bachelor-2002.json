@@ -1,0 +1,42 @@
+{
+  "id": "series:the-bachelor-2002",
+  "experience": {
+    "plot": "The Bachelor es una serie de telerrealidad estadounidense sobre citas y relaciones amorosas, que debutó el 25 de marzo de 2002 por la cadena ABC. Dicho programa fue renovado para la primavera del 2007. La temporada del 2006 se llama \"The Bachelor Roma\". Durant",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de ABC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Romance.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2002, una referencia indispensable obra de ABC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "The Bachelor: destacada series (2002) obra de ABC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

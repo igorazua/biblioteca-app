@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:hot-streak-2025",
+  "experience": {
+    "plot": "Hot Streak is a game for hard luck gamblers who love to bet on and scream at the racers, who in this case happen to be mascots who may (or may not) keep running in the right direction. At the start of the game, set up the racing deck with one card for each mas",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jon Perry, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Humor / Party Game.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2025, una referencia indispensable obra de Jon Perry dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 5,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 4,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Hot Streak: destacada boardgame (2025) obra de Jon Perry.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

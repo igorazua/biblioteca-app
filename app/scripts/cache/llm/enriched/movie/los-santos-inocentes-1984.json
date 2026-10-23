@@ -1,0 +1,40 @@
+{
+  "id": "movie:los-santos-inocentes-1984",
+  "experience": {
+    "plot": "Los santos inocentes es una película de drama española de 1984 dirigida por Mario Camus y protagonizada por Alfredo Landa, Terele Pávez, Juan Diego y Paco Rabal, basada en la novela homónima de Miguel Delibes y ambientada en los terrenos de un cortijo en \"La R",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Mario Camus, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El día de la bestia",
+      "El verdugo",
+      "[REC]",
+      "Torrente, el brazo tonto de la ley"
+    ],
+    "context": "Estrenada en 1984, una obra destacada de Mario Camus en el panorama de Cine español."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "espionaje",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "Los santos inocentes: Cine español con dirección de Mario Camus.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

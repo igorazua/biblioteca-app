@@ -1,0 +1,41 @@
+{
+  "id": "movie:memento-2000",
+  "experience": {
+    "plot": "Memento es una película estadounidense de suspense del año 2000, dirigida por Christopher Nolan y protagonizada por Guy Pearce, Carrie-Anne Moss y Joe Pantoliano. La película fue nominada al Globo de Oro al Mejor guion y a dos Óscar.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Christopher Nolan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Pulp Fiction",
+      "El club de la lucha",
+      "El silencio de los corderos",
+      "Seven"
+    ],
+    "context": "Estrenada en 2000, una obra destacada de Christopher Nolan en el panorama de Thriller y Misterio."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "investigacion",
+    "crimen",
+    "amistad"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde"
+  ],
+  "oneLiner": "Memento: Thriller y Misterio con dirección de Christopher Nolan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

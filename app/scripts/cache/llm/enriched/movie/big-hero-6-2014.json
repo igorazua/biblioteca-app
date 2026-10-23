@@ -1,0 +1,43 @@
+{
+  "id": "movie:big-hero-6-2014",
+  "experience": {
+    "plot": "Big Hero 6 es una película animada de superhéroes y ciencia ficción producida por Walt Disney Animation Studios basada en el cómic Big Hero 6 de Marvel Comics. La película está dirigida por Don Hall y Chris Williams, producida por Roy Conli y cuenta con las vo",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Don Hall, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2014, una obra destacada de Don Hall en el panorama de Animación y Acción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 5,
+    "escala": 5,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "superheroes",
+    "espionaje",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Big Hero 6: Animación y Acción con dirección de Don Hall.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

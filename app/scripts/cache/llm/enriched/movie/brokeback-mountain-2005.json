@@ -1,0 +1,42 @@
+{
+  "id": "movie:brokeback-mountain-2005",
+  "experience": {
+    "plot": "Brokeback Mountain es una película estadounidense dirigida por Ang Lee, basada en el cuento «Brokeback Mountain» de Annie Proulx, sobre dos vaqueros que son contratados para cuidar de un rebaño de ovejas en Brokeback que acaban enamorándose. Se estrenó el 2 de",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Ang Lee, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2005, una obra destacada de Ang Lee en el panorama de Drama y Romance."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Brokeback Mountain: Drama y Romance con dirección de Ang Lee.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

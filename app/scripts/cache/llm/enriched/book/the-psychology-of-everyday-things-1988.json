@@ -1,0 +1,39 @@
+{
+  "id": "book:the-psychology-of-everyday-things-1988",
+  "experience": {
+    "plot": "The Design of Everyday Things is a best-selling book by cognitive scientist and usability engineer Donald Norman. Originally published in 1988 with the title The Psychology of Everyday Things, it is often referred to by the initialisms POET and DOET. A new pre",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Donald A. Norman, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1988, una referencia indispensable obra de Donald A. Norman dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 2,
+    "ideas": 3,
+    "reconfort": 1
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "The Psychology of Everyday Things: destacada book (1988) obra de Donald A. Norman.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

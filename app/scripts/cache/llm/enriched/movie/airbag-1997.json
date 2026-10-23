@@ -1,0 +1,40 @@
+{
+  "id": "movie:airbag-1997",
+  "experience": {
+    "plot": "Airbag es una película española de 1997 dirigida por Juanma Bajo Ulloa y protagonizada por Karra Elejalde, Fernando Guillén Cuervo y Alberto San Juan.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Juanma Bajo Ulloa, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El día de la bestia",
+      "El verdugo",
+      "Los santos inocentes",
+      "[REC]"
+    ],
+    "context": "Estrenada en 1997, una obra destacada de Juanma Bajo Ulloa en el panorama de Cine español."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "amistad",
+    "identidad",
+    "redencion"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "Airbag: Cine español con dirección de Juanma Bajo Ulloa.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

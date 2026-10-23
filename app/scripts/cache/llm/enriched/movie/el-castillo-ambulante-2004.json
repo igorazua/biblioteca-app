@@ -1,0 +1,42 @@
+{
+  "id": "movie:el-castillo-ambulante-2004",
+  "experience": {
+    "plot": "película de 2004 dirigida por Hayao Miyazaki",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Hayao Miyazaki, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Toy Story",
+      "Shrek"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Hayao Miyazaki en el panorama de Animación y Fantasía."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "amistad",
+    "identidad",
+    "redencion"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "El castillo ambulante: Animación y Fantasía con dirección de Hayao Miyazaki.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "book:mas-alla-del-bien-y-del-mal-1886",
+  "experience": {
+    "plot": "Una crítica demoledora a la moral tradicional, la religión y los prejuicios de los filósofos dogmáticos.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Friedrich Nietzsche, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ensayo / Filosofía.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1886, una referencia indispensable obra de Friedrich Nietzsche dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 2,
+    "densidad": 5,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "identidad",
+    "filosofia",
+    "sociedad"
+  ],
+  "moments": [
+    "concentracion"
+  ],
+  "oneLiner": "Más allá del bien y del mal: destacada book (1886) obra de Friedrich Nietzsche.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

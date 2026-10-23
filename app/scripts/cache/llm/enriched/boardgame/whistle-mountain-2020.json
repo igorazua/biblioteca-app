@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:whistle-mountain-2020",
+  "experience": {
+    "plot": "Whistle Stop designer Scott Caputo has teamed up with Luke Laurie (Manhattan Project: Energy Empire) to create a new worker-placement strategy title. Whistle Mountain gives a nod to Whistle Stop, but in this standalone game, you leave the train tracks behind a",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Luke Laurie, Scott Caputo, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Industry / Manufacturing.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Luke Laurie, Scott Caputo dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Whistle Mountain: destacada boardgame (2020) obra de Luke Laurie, Scott Caputo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

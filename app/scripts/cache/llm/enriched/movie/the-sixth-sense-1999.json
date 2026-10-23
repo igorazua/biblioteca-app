@@ -1,0 +1,44 @@
+{
+  "id": "movie:the-sixth-sense-1999",
+  "experience": {
+    "plot": "The Sixth Sense es una película estadounidense del género de suspense psicológico sobrenatural de 1999 escrita y dirigida por el realizador indio M. Night Shyamalan, sobre un guion original propio. Está protagonizada por Bruce Willis como un psicólogo infantil",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de M. Night Shyamalan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1999, una obra destacada de M. Night Shyamalan en el panorama de Drama y Misterio."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 3,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 1
+  },
+  "themes": [
+    "investigacion",
+    "sobrenatural",
+    "ambicion",
+    "familia",
+    "crimen"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "El sexto sentido: Drama y Misterio con dirección de M. Night Shyamalan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

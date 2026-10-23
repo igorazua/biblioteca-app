@@ -1,0 +1,39 @@
+{
+  "id": "artist:nina-simone-1954",
+  "experience": {
+    "plot": "Nina Simone (Carolina del Norte, EE. UU.), icono de Jazz, Soul, Civil rights songs desde 1954.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Carolina del Norte, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Jazz / Soul.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1954, una referencia indispensable obra de Carolina del Norte, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 2,
+    "valencia": 2,
+    "bailable": 3,
+    "organico": 5,
+    "intensidad": 2,
+    "fondo": 3,
+    "complejidad": 5
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "folk",
+    "jazz",
+    "blues",
+    "soul"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Nina Simone: destacada artist (1954) obra de Carolina del Norte, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

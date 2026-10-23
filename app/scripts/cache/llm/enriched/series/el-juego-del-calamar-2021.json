@@ -1,0 +1,43 @@
+{
+  "id": "series:el-juego-del-calamar-2021",
+  "experience": {
+    "plot": "serie de televisión surcoreana de 2021",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Hwang Dong-hyuk, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Thriller / Drama.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Hwang Dong-hyuk dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "El juego del calamar: destacada series (2021) obra de Hwang Dong-hyuk.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

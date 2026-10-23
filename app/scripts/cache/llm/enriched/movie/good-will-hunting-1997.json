@@ -1,0 +1,42 @@
+{
+  "id": "movie:good-will-hunting-1997",
+  "experience": {
+    "plot": "Good Will Hunting es una película de 1997 dirigida por Gus Van Sant. La película obtuvo nueve nominaciones a los Óscar, ganando dos de ellos: uno al mejor guion original, para Matt Damon y Ben Affleck, y el otro al mejor actor de reparto para Robin Williams.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Gus Van Sant, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1997, una obra destacada de Gus Van Sant en el panorama de Drama y Romance."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "El indomable Will Hunting: Drama y Romance con dirección de Gus Van Sant.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "book:el-juego-del-angel-2008",
+  "experience": {
+    "plot": "El juego del ángel es una novela de Carlos Ruiz Zafón publicada en 2008. Es el segundo libro de la saga del Cementerio de los libros olvidados. La tirada inicial prevista batió todos los récords editoriales del país, con un millón de ejemplares.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Carlos Ruiz Zafón, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Narrativa.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de Carlos Ruiz Zafón dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "escala": 4,
+    "ideas": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "El juego del ángel: destacada book (2008) obra de Carlos Ruiz Zafón.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "book:cinq-semaines-en-ballon-1867",
+  "experience": {
+    "plot": "Obra clásica de ciencia ficción escrita por Jules Verne.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jules Verne, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1867, una referencia indispensable obra de Jules Verne dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 2,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 5,
+    "escala": 4,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "aventura",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "viaje"
+  ],
+  "oneLiner": "Cinq semaines en ballon: destacada book (1867) obra de Jules Verne.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

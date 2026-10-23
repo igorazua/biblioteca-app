@@ -1,0 +1,39 @@
+{
+  "id": "book:un-mundo-sin-fin-2007",
+  "experience": {
+    "plot": "Un mundo sin fin es el título de una novela de ficción histórica escrita por Ken Follett y publicada el 9 de octubre de 2007. Se trata de la segunda parte de la conocida obra Los pilares de la Tierra. Tiene lugar en la misma ciudad ficticia, Kingsbridge, pero ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ken Follett, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Narrativa.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de Ken Follett dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Un mundo sin fin: destacada book (2007) obra de Ken Follett.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

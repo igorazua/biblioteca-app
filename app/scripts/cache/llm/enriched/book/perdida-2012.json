@@ -1,0 +1,39 @@
+{
+  "id": "book:perdida-2012",
+  "experience": {
+    "plot": "En su quinto aniversario de boda, Amy desaparece y las sospechas apuntan cada vez más a su marido Nick.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Gillian Flynn, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Thriller / Misterio.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Gillian Flynn dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 1,
+    "escala": 4,
+    "ideas": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "misterio",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Perdida: destacada book (2012) obra de Gillian Flynn.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

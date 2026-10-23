@@ -1,0 +1,43 @@
+{
+  "id": "movie:deadpool-2016",
+  "experience": {
+    "plot": "Deadpool es una película de superhéroes estadounidense de 2016, basada en el personaje de Marvel Comics del mismo nombre y dirigida por Tim Miller. Distribuida por 20th Century Fox, la película es un spin-off derivado y la octava película de la saga de películ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Tim Miller, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2016, una obra destacada de Tim Miller en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 5,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "superheroes",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "amigos"
+  ],
+  "oneLiner": "Deadpool: Acción y Aventura con dirección de Tim Miller.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

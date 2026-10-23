@@ -1,0 +1,40 @@
+{
+  "id": "movie:rec-2007",
+  "experience": {
+    "plot": "REC es una película española de terror, metraje encontrado y zombis de 2007, dirigida por Jaume Balagueró y Paco Plaza, quienes escribieron el guion junto a Luiso Berdejo. Protagonizada por Manuela Velasco y Pablo Rosso, la película se filmó en Barcelona y se ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Jaume Balagueró y Paco Plaza, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El día de la bestia",
+      "El verdugo",
+      "Los santos inocentes",
+      "Torrente, el brazo tonto de la ley"
+    ],
+    "context": "Estrenada en 2007, una obra destacada de Jaume Balagueró y Paco Plaza en el panorama de Cine español."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "amistad",
+    "identidad",
+    "redencion"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "[REC]: Cine español con dirección de Jaume Balagueró y Paco Plaza.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

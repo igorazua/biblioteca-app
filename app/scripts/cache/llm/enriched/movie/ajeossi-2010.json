@@ -1,0 +1,42 @@
+{
+  "id": "movie:ajeossi-2010",
+  "experience": {
+    "plot": "Relato cinematográfico centrado en el viaje emocional y las vivencias de sus protagonistas en un contexto de Acción y Crimen. Enfrentan dilemas que pondrán a prueba sus convicciones más íntimas.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Jeong-beom Lee, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2010, una obra destacada de Jeong-beom Lee en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Ajeossi: Acción y Crimen con dirección de Jeong-beom Lee.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

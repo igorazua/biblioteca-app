@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:imperial-2006",
+  "experience": {
+    "plot": "Imperial Glory es un videojuego de estrategia en tiempo real desarrollado por Pyro Studios y distribuido por Eidos Interactive en mayo de 2005.\nEl juego está situado entre 1789 y 1830. El jugador puede seleccionar entre los grandes imperios de la época: Gran B",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Mac Gerdts, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Nautical.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de Mac Gerdts dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 1,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 1,
+    "familiar": 1
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Imperial: destacada boardgame (2006) obra de Mac Gerdts.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

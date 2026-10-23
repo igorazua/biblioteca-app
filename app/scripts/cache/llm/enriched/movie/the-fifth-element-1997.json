@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-fifth-element-1997",
+  "experience": {
+    "plot": "El quinto elemento es una película francesa de ciencia ficción y acción de 1997 dirigida por Luc Besson, con Bruce Willis, Milla Jovovich y Gary Oldman en los papeles principales.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Luc Besson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1997, una obra destacada de Luc Besson en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 5,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "espacio",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "El quinto elemento: Acción y Aventura con dirección de Luc Besson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

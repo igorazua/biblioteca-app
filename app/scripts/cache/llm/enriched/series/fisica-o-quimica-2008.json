@@ -1,0 +1,42 @@
+{
+  "id": "series:fisica-o-quimica-2008",
+  "experience": {
+    "plot": "Física o química es una serie juvenil española producida por Ida y Vuelta emitida por Antena 3 que se estrenó el 4 de febrero de 2008 y finalizó el 13 de junio de 2011 con un total de siete temporadas y setenta y siete episodios emitidos.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Carlos Montero, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Serie española.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de Carlos Montero dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Física o Química: destacada series (2008) obra de Carlos Montero.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

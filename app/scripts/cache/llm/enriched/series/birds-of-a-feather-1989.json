@@ -1,0 +1,44 @@
+{
+  "id": "series:birds-of-a-feather-1989",
+  "experience": {
+    "plot": "Birds of a Feather is an English sitcom originally broadcast on BBC One from 16 October 1989 to 24 December 1998, then revived on ITV from 2 January 2014 to 24 December 2020. The series stars Pauline Quirke and Linda Robson, with Lesley Joseph. It was created ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de ITV1, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1989, una referencia indispensable obra de ITV1 dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 5,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "confort"
+  ],
+  "oneLiner": "Birds of a Feather: destacada series (1989) obra de ITV1.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

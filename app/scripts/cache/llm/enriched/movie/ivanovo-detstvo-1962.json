@@ -1,0 +1,42 @@
+{
+  "id": "movie:ivanovo-detstvo-1962",
+  "experience": {
+    "plot": "La infancia de Iván, es una película soviética de 1962 dirigida por Andréi Tarkovski. Está basada en el relato Iván (Иван), publicado en 1957 por Vladímir Bogomólov. La adaptación del guion es obra de Mijaíl Papava y del propio Tarkovski, que no aparece acredi",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Andrei Tarkovsky, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1962, una obra destacada de Andrei Tarkovsky en el panorama de Drama y Bélica."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "infancia",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Ivanovo detstvo: Drama y Bélica con dirección de Andrei Tarkovsky.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

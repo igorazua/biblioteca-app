@@ -1,0 +1,41 @@
+{
+  "id": "movie:gran-torino-2008",
+  "experience": {
+    "plot": "Gran Torino es una película estadounidense de género dramático del año 2008, dirigida, producida y protagonizada por Clint Eastwood. La película marcó el regreso de Eastwood a un papel estelar después de cuatro años; su último papel estelar había sido en la pe",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Clint Eastwood, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2008, una obra destacada de Clint Eastwood en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 1,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "musica",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Gran Torino: Drama con dirección de Clint Eastwood.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

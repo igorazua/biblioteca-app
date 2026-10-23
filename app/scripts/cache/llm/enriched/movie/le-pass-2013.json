@@ -1,0 +1,42 @@
+{
+  "id": "movie:le-pass-2013",
+  "experience": {
+    "plot": "An Iranian man deserts his French wife and her two children to return to his homeland. Meanwhile, his wife starts up a new relationship, a reality her husband confronts upon his wife's request for a divorce.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Asghar Farhadi, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2013, una obra destacada de Asghar Farhadi en el panorama de Drama y Misterio."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "investigacion",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Le pass\u001a: Drama y Misterio con dirección de Asghar Farhadi.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

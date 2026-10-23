@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:oh-my-goods-2015",
+  "experience": {
+    "plot": "In Oh My Goods!, first released as Royal Goods, players are European artisans during the Middle Ages who produce tools, barrels, glass windows, and many other goods. Only if you make clever use of your production chains will you have the most victory points at",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Alexander Pfister, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Alexander Pfister dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 4
+  },
+  "themes": [
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Oh My Goods!: destacada boardgame (2015) obra de Alexander Pfister.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:the-bloody-inn-2015",
+  "experience": {
+    "plot": "France 1831: In a remote corner of Ardèche, the little village of Peyrebeille sees numerous travelers pass through. A family of greedy rural farmers is determined to make its fortune and has devised a diabolical stratagem to achieve this goal: Invest in an inn",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Nicolas Robert, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Nicolas Robert dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "terror_lovecraft",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "The Bloody Inn: destacada boardgame (2015) obra de Nicolas Robert.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

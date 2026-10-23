@@ -1,0 +1,43 @@
+{
+  "id": "series:cristela-2014",
+  "experience": {
+    "plot": "Cristela's dream of becoming a lawyer is something her traditional Mexican-American family doesn't quite understand. She's entering her sixth year of law school after juggling home obligations and working multiple jobs to pay her way.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de ABC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Legal.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de ABC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 4,
+    "enganche": 3,
+    "formato": 3
+  },
+  "themes": [
+    "abogados_y_juicios",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Cristela: destacada series (2014) obra de ABC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "book:roma-soy-yo-2022",
+  "experience": {
+    "plot": "Roma soy yo es una novela del escritor español Santiago Posteguillo dedicada a la figura de Julio César, emperador romano y uno de los hombres más influyentes de su época. El libro retrata sus años de juventud antes de su ascenso político y militar, incluyendo",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Santiago Posteguillo, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Narrativa.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Santiago Posteguillo dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 2,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "identidad",
+    "sociedad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Roma soy yo: destacada book (2022) obra de Santiago Posteguillo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

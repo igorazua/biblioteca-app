@@ -1,0 +1,40 @@
+{
+  "id": "book:al-faro-1927",
+  "experience": {
+    "plot": "Las complejas relaciones de la familia Ramsay en una isla escocesa a través del flujo de conciencia y el paso del tiempo.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Virginia Woolf, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Clásico.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1927, una referencia indispensable obra de Virginia Woolf dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente",
+    "para_subrayar"
+  ],
+  "oneLiner": "Al faro: destacada book (1927) obra de Virginia Woolf.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

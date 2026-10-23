@@ -1,0 +1,44 @@
+{
+  "id": "movie:ghostbusters-1984",
+  "experience": {
+    "plot": "Cazafantasmas es una película estadounidense de comedia y ciencia ficción de 2016 dirigida por Paul Feig, con guion de Kate Dippold y protagonizada por Melissa McCarthy, Kristen Wiig, Kate McKinnon, Leslie Jones, Neil Casey, Andy García, Cecily Strong y Chris ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Ivan Reitman, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 1984, una obra destacada de Ivan Reitman en el panorama de Acción y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "sobrenatural",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "amigos"
+  ],
+  "oneLiner": "Cazafantasmas: Acción y Comedia con dirección de Ivan Reitman.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

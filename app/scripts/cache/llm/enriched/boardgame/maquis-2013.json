@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:maquis-2013",
+  "experience": {
+    "plot": "Engage the Nazi occupation of France in la petite guerre to throw off the yoke of the oppressors and free your homeland!\n\nMaquis is a solitaire worker-placement game with variable goals and a play time of approximately twenty minutes. The player places his res",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jake Staines, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Print & Play / Spies/Secret Agents.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de Jake Staines dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "roles_ocultos",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Maquis: destacada boardgame (2013) obra de Jake Staines.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "book:picasso-1926",
+  "experience": {
+    "plot": "Obra clásica de ensayo escrita por Pablo Picasso.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Pablo Picasso, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ensayo / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1926, una referencia indispensable obra de Pablo Picasso dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 2,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 1,
+    "fantasia": 2,
+    "escala": 2,
+    "ideas": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "identidad",
+    "sociedad",
+    "historia"
+  ],
+  "moments": [
+    "concentracion"
+  ],
+  "oneLiner": "Picasso: destacada book (1926) obra de Pablo Picasso.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

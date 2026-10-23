@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-fighter-2010",
+  "experience": {
+    "plot": "The Fighter es una película dramática sobre el deporte del boxeo estrenada el 10 de diciembre de 2010 en Estados Unidos y el 4 de febrero, 11 de febrero y 17 de febrero en España, México y Argentina, respectivamente. Protagonizada por Mark Wahlberg, Christian ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de David O. Russell, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2010, una obra destacada de David O. Russell en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 1
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "deporte"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "The Fighter: Biografía y Drama con dirección de David O. Russell.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

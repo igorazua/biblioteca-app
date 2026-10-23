@@ -1,0 +1,44 @@
+{
+  "id": "series:wwe-friday-night-smackdown-1999",
+  "experience": {
+    "plot": "Featuring a star-studded cast of WWE Superstars, SmackDown Live delivers a shot of adrenaline to viewers and bring fans over-the-top action, feats of athleticism beyond the reach of mortal men, and WWE's special brand of drama.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de USA Network, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1999, una referencia indispensable obra de USA Network dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 5,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "maraton"
+  ],
+  "oneLiner": "WWE Friday Night SmackDown: destacada series (1999) obra de USA Network.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

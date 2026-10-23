@@ -1,0 +1,42 @@
+{
+  "id": "movie:room-2015",
+  "experience": {
+    "plot": "Room es una película británica-estadounidense-canadiense-irlandesa estrenada en 2015, dirigida por Lenny Abrahamson y escrita por Emma Donoghue, basada en la novela homónima de Donoghue, que a su vez está basada en la famosa historia real de Elisabeth Fritzl, ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Lenny Abrahamson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2015, una obra destacada de Lenny Abrahamson en el panorama de Drama y Thriller."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "monstruos",
+    "crimen"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "La habitación: Drama y Thriller con dirección de Lenny Abrahamson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

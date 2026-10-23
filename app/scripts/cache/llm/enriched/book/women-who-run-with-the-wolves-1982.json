@@ -1,0 +1,39 @@
+{
+  "id": "book:women-who-run-with-the-wolves-1982",
+  "experience": {
+    "plot": "Mujeres que corren con los lobos: mitos e historias del arquetipo de la mujer salvaje es una obra de 1992 escrita por la doctora en psicología clínica, analista junguiana, escritora y poeta estadounidense Clarissa Pinkola Estés. Llegó a estar presente durante ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Clarissa Pinkola Estés, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1982, una referencia indispensable obra de Clarissa Pinkola Estés dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "historia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Women Who Run with the Wolves: destacada book (1982) obra de Clarissa Pinkola Estés.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

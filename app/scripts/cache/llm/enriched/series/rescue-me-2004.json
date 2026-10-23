@@ -1,0 +1,44 @@
+{
+  "id": "series:rescue-me-2004",
+  "experience": {
+    "plot": "Rescue Me es una serie de televisión estadounidense que se estrenó en la cadena FX el 21 de julio de 2004.\nLa serie se centra en las vidas profesionales y personales de un grupo de\nbomberos de Nueva York, Escalera 62/Máquina 99. La trama sigue principalmente b",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de FX, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2004, una referencia indispensable obra de FX dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 4,
+    "enganche": 5,
+    "formato": 2
+  },
+  "themes": [
+    "familia",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "maraton"
+  ],
+  "oneLiner": "Rescue Me: destacada series (2004) obra de FX.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

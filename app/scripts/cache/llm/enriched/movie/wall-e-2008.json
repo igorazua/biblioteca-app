@@ -1,0 +1,45 @@
+{
+  "id": "movie:wall-e-2008",
+  "experience": {
+    "plot": "WALL•E o WALL-E es una película de animación realizada casi íntegramente por ordenador, perteneciente a los géneros de ciencia ficción y comedia, estrenada en 2008, dirigida por Andrew Stanton, y producida por Walt Disney Pictures y Pixar Animation Studios. La",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Andrew Stanton, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "Parque Jurásico",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 2008, una obra destacada de Andrew Stanton en el panorama de Animación y Ciencia ficción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 5,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 5,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "investigacion",
+    "amor",
+    "espacio",
+    "ia_y_robots",
+    "atraco",
+    "espionaje"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "WALL·E: Animación y Ciencia ficción con dirección de Andrew Stanton.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

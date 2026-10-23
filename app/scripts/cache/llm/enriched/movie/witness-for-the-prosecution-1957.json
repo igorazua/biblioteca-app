@@ -1,0 +1,43 @@
+{
+  "id": "movie:witness-for-the-prosecution-1957",
+  "experience": {
+    "plot": "Testigo de cargo es una película de melodrama judicial estadounidense dirigida por Billy Wilder en 1957. Está basada en la obra teatral del mismo título escrita por Agatha Christie y llevada a la pantalla por primera vez como una producción televisiva de 75 mi",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Billy Wilder, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1957, una obra destacada de Billy Wilder en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 1,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Testigo de cargo: Crimen y Drama con dirección de Billy Wilder.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

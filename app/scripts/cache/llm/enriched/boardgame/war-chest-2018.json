@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:war-chest-2018",
+  "experience": {
+    "plot": "War Chest is an abstract strategy board game designed by Trevor Benjamin and David Thompson and published by Alderac Entertainment Group in 2018. It combines tactical movement and control of locations on a hexagonal board with a bag-building mechanism in which",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de David Thompson (I), Trevor Benjamin, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Estrategia abstracta / Medieval.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de David Thompson (I), Trevor Benjamin dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 1,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "War Chest: destacada boardgame (2018) obra de David Thompson (I), Trevor Benjamin.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

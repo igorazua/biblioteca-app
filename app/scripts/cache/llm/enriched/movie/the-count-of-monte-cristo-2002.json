@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-count-of-monte-cristo-2002",
+  "experience": {
+    "plot": "The Count of Monte Cristo (2002), es una película estadounidense dirigida por Kevin Reynolds y protagonizada por Jim Caviezel, Richard Harris, Henry Cavill, Dagmara Domińczyk, Luis Guzmán, Guy Pearce y James Frain.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Kevin Reynolds, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2002, una obra destacada de Kevin Reynolds en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "venganza",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "La venganza del conde de Montecristo: Acción y Aventura con dirección de Kevin Reynolds.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

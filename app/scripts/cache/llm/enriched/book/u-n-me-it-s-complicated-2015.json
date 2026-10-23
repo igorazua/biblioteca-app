@@ -1,0 +1,39 @@
+{
+  "id": "book:u-n-me-it-s-complicated-2015",
+  "experience": {
+    "plot": "Obra de Aditya Nighhot publicada originalmente en 2015.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Aditya Nighhot, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Aditya Nighhot dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "U n Me ... It's Complicated: destacada book (2015) obra de Aditya Nighhot.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

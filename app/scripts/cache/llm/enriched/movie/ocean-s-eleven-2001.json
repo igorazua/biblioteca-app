@@ -1,0 +1,40 @@
+{
+  "id": "movie:ocean-s-eleven-2001",
+  "experience": {
+    "plot": "Ocean's Eleven es una película estadounidense de acción y comedia estrenada en 2001, dirigida por Steven Soderbergh y protagonizada por George Clooney, Brad Pitt, Matt Damon, Andy García y Julia Roberts. Es una remake de la película homónima de 1960 dirigida p",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Steven Soderbergh, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "El club de la lucha",
+      "El silencio de los corderos"
+    ],
+    "context": "Estrenada en 2001, una obra destacada de Steven Soderbergh en el panorama de Crimen y Thriller."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "Ocean's Eleven: Hagan juego: Crimen y Thriller con dirección de Steven Soderbergh.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

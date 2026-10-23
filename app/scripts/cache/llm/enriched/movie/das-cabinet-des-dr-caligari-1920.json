@@ -1,0 +1,43 @@
+{
+  "id": "movie:das-cabinet-des-dr-caligari-1920",
+  "experience": {
+    "plot": "El gabinete del doctor Caligari es una película muda alemana de terror gótico estrenada en 1920, dirigida por Robert Wiene y escrita por Hans Janowitz y Carl Mayer. Considerada la obra por excelencia del cine expresionista alemán, cuenta la historia de un loco",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Robert Wiene, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El señor de los anillos: La comunidad del anillo",
+      "Sospechosos habituales",
+      "Alien, el octavo pasajero",
+      "Memento"
+    ],
+    "context": "Estrenada en 1920, una obra destacada de Robert Wiene en el panorama de Fantasía y Terror."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 1
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "ia_y_robots",
+    "espionaje",
+    "sobrenatural"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde"
+  ],
+  "oneLiner": "Das Cabinet des Dr. Caligari: Fantasía y Terror con dirección de Robert Wiene.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

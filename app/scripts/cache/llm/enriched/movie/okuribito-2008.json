@@ -1,0 +1,41 @@
+{
+  "id": "movie:okuribito-2008",
+  "experience": {
+    "plot": "Okuribito es una película dramática dirigida por el cineasta japonés Yōjirō Takita, protagonizada por Masahiro Motoki, Ryōko Hirosue y Tsutomu Yamazaki y estrenada en 2008. Su trama describe la historia de un joven llamado Daigo y su trabajo como preparador de",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Y\u001ajir\u001a Takita, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2008, una obra destacada de Y\u001ajir\u001a Takita en el panorama de Drama y Música."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Okuribito: Drama y Música con dirección de Y\u001ajir\u001a Takita.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

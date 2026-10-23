@@ -1,0 +1,41 @@
+{
+  "id": "movie:nosferatu-1922",
+  "experience": {
+    "plot": "Nosferatu, eine Symphonie des Grauens es una película muda alemana de 1922 de terror gótico, dirigida por Friedrich Wilhelm Murnau. Una adaptación «no autorizada y no oficial»de la novela de Bram Stoker, Drácula (1897). Convertida en película de culto, al prin",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de F.W. Murnau, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El señor de los anillos: La comunidad del anillo",
+      "Alien, el octavo pasajero",
+      "Barbie",
+      "El viaje de Chihiro"
+    ],
+    "context": "Estrenada en 1922, una obra destacada de F.W. Murnau en el panorama de Fantasía y Terror."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "sobrenatural"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde"
+  ],
+  "oneLiner": "Nosferatu: Fantasía y Terror con dirección de F.W. Murnau.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

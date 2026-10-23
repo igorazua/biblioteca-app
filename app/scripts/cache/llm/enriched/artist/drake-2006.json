@@ -1,0 +1,38 @@
+{
+  "id": "artist:drake-2006",
+  "experience": {
+    "plot": "Drake (Toronto, Canadá), icono de Hip hop, R&B, Pop rap desde 2006.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Toronto, Canadá, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Hip hop / R&B.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de Toronto, Canadá dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 5,
+    "bailable": 4,
+    "organico": 3,
+    "intensidad": 3,
+    "fondo": 3,
+    "complejidad": 1
+  },
+  "themes": [
+    "pop",
+    "hip_hop",
+    "trap",
+    "soul",
+    "musica_latina"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Drake: destacada artist (2006) obra de Toronto, Canadá.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

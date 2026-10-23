@@ -1,0 +1,43 @@
+{
+  "id": "series:gambito-de-dama-2020",
+  "experience": {
+    "plot": "Gambito de dama es una miniserie de televisión dramática estadounidense basada en la novela del mismo nombre de 1983 de Walter Tevis.La serie fue escrita y dirigida por Scott Frank, quien creó la miniserie con Allan Scott, propietario de los derechos del libro",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Scott Frank y Allan Scott, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Scott Frank y Allan Scott dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 3,
+    "enganche": 3,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Gambito de dama: destacada series (2020) obra de Scott Frank y Allan Scott.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

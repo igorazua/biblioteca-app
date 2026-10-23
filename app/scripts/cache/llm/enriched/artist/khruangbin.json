@@ -1,0 +1,36 @@
+{
+  "id": "artist:khruangbin",
+  "experience": {
+    "plot": "Khruangbin es un trío musical estadounidense de Houston, Texas, con Laura Lee en el bajo, Mark Speer en la guitarra y Donald Ray \"DJ\" Johnson Jr. en la batería. La banda es conocida por combinar influencias musicales globales, soul clásico, dub y psicodelia.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 2,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 3,
+    "intensidad": 2,
+    "fondo": 3,
+    "complejidad": 4
+  },
+  "themes": [
+    "rock_clasico",
+    "soul",
+    "pop"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Khruangbin: destacada artist (2010) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

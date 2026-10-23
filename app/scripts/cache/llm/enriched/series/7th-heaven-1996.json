@@ -1,0 +1,43 @@
+{
+  "id": "series:7th-heaven-1996",
+  "experience": {
+    "plot": "7th Heaven fue una serie de televisión estadounidense, creada y producida por Brenda Hampton. Fue estrenada el 26 de agosto de 1996, en el canal WB Television Network, y transmitida originalmente desde el 26 de agosto de 1996 hasta 13 de mayo de 2007. En prime",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de The CW, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Familiar.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1996, una referencia indispensable obra de The CW dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 2,
+    "reconfort": 5,
+    "enganche": 3,
+    "formato": 5
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "El séptimo cielo: destacada series (1996) obra de The CW.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

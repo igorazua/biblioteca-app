@@ -1,0 +1,39 @@
+{
+  "id": "book:the-power-of-habit-2012",
+  "experience": {
+    "plot": "El poder de los hábitos: Por qué hacemos lo que hacemos en la vida y los negocios es un libro de Charles Duhigg, reportero del New York Times, publicado en febrero de 2012 por Random House. Explora la ciencia detrás de la creación y cambio de los hábitos. El l",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Charles Duhigg, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Charles Duhigg dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "The Power of Habit: destacada book (2012) obra de Charles Duhigg.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

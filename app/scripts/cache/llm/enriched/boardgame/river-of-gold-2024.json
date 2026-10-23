@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:river-of-gold-2024",
+  "experience": {
+    "plot": "From the Spine of the World Mountains to the bustling fishing villages of Earthquake Fish Bay flows a river where fortunes can be made and lowly traders can brush shoulders with Rokugan's elite. Will your clan become the dominant force along this River of Gold",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Keith Piggott, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Keith Piggott dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 1,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "River of Gold: destacada boardgame (2024) obra de Keith Piggott.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

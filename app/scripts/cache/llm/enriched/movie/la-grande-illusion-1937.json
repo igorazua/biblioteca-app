@@ -1,0 +1,41 @@
+{
+  "id": "movie:la-grande-illusion-1937",
+  "experience": {
+    "plot": "La gran ilusión es una película francesa de 1937 dirigida por Jean Renoir. Es considerada la primera de sus obras maestras. Se rodó entre febrero y mayo de 1937. Estuvo censurada en Italia antes de la guerra; en Bélgica ni siquiera se llegó a estrenar y fue no",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Jean Renoir, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1937, una obra destacada de Jean Renoir en el panorama de Drama y Bélica."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "La gran ilusión: Drama y Bélica con dirección de Jean Renoir.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:reservoir-dogs-1992",
+  "experience": {
+    "plot": "Reservoir Dogs es una película estadounidense del año 1992 dirigida y escrita por Quentin Tarantino, siendo este su primer largometraje como director. Está protagonizada por Harvey Keitel, Tim Roth, Chris Penn, Steve Buscemi, Lawrence Tierney y Michael Madsen.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Quentin Tarantino, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1992, una obra destacada de Quentin Tarantino en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Reservoir Dogs: Crimen y Drama con dirección de Quentin Tarantino.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

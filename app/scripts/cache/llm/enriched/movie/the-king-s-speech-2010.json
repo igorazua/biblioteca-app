@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-king-s-speech-2010",
+  "experience": {
+    "plot": "El discurso del rey —título original: The King's Speech— es una película británica de 2010 dirigida por Tom Hooper a partir del guion escrito por David Seidler. Pertenece a los géneros dramático e histórico. La trama gira en torno al duque Jorge de York quien,",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Tom Hooper, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2010, una obra destacada de Tom Hooper en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "amistad",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "El discurso del rey: Biografía y Drama con dirección de Tom Hooper.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

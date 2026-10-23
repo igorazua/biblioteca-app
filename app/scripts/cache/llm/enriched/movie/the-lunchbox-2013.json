@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-lunchbox-2013",
+  "experience": {
+    "plot": "The Lunchbox es una película dramática en hindi de 2013 escrita y dirigida por Ritesh Batra. Producida por Guneet Monga, Anurag Kashyap y Arun Rangachari, es una coproducción internacional de estudios de India, Estados Unidos, Alemania y Francia. Está protagon",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Ritesh Batra, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2013, una obra destacada de Ritesh Batra en el panorama de Drama y Romance."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "The Lunchbox: Drama y Romance con dirección de Ritesh Batra.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

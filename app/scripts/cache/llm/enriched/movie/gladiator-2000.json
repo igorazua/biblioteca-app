@@ -17,15 +17,15 @@
   "axes": {
     "tono": 4,
     "ritmo": 4,
-    "emocion": 5,
-    "exigencia": 2,
-    "humor": 1,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
     "tension": 4,
     "fantasia": 1,
-    "violencia": 5,
-    "familiar": 2,
-    "escala": 5,
-    "reconfort": 3
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 1
   },
   "themes": [
     "venganza",

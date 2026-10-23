@@ -1,0 +1,43 @@
+{
+  "id": "series:brickleberry-2012",
+  "experience": {
+    "plot": "Brickleberry es una serie animada estadounidense dirigida al público adulto transmitida por Comedy Central en EE. UU. estrenada originalmente el 25 de septiembre de 2012. La historia trata de un grupo de 4 guardabosques que cuidan la zona de camping, Bricklebe",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Comedy Central, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Comedy Central dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 5,
+    "enganche": 3,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Brickleberry: destacada series (2012) obra de Comedy Central.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

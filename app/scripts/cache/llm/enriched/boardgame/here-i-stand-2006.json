@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:here-i-stand-2006",
+  "experience": {
+    "plot": "Here I Stand: Wars of the Reformation 1517-1555 is the first game in over 25 years to cover the political and religious conflicts of early 16th Century Europe. Few realize that the greatest feats of Martin Luther, John Calvin, Ignatius of Loyola, Henry VIII, C",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ed Beach, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Negotiation / Pike and Shot.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de Ed Beach dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Here I Stand: destacada boardgame (2006) obra de Ed Beach.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

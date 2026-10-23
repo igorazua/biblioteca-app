@@ -1,0 +1,36 @@
+{
+  "id": "artist:wolfgang-amadeus-mozart-1761",
+  "experience": {
+    "plot": "Wolfgang Amadeus Mozart (Salzburgo, Austria), icono de Clasicismo, Ópera, Música de cámara desde 1761.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Salzburgo, Austria, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Clasicismo / Ópera.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1761, una referencia indispensable obra de Salzburgo, Austria dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 3,
+    "bailable": 2,
+    "organico": 3,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 3
+  },
+  "themes": [
+    "pop",
+    "rock_clasico",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Wolfgang Amadeus Mozart: destacada artist (1761) obra de Salzburgo, Austria.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

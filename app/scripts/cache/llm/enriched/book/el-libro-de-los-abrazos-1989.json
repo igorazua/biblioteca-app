@@ -1,0 +1,39 @@
+{
+  "id": "book:el-libro-de-los-abrazos-1989",
+  "experience": {
+    "plot": "Relatos breves sobre la memoria colectiva, el arte, la política y la calidez del encuentro entre personas.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Eduardo Galeano, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cuentos / Poesía.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1989, una referencia indispensable obra de Eduardo Galeano dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 2,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "memoria",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "para_subrayar"
+  ],
+  "oneLiner": "El libro de los abrazos: destacada book (1989) obra de Eduardo Galeano.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

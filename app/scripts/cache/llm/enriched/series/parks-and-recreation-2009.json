@@ -1,0 +1,43 @@
+{
+  "id": "series:parks-and-recreation-2009",
+  "experience": {
+    "plot": "Parks and Recreation es una serie de televisión de comedia de sátira política estadounidense creada por Greg Daniels y Michael Schur. Transmitida por NBC entre el 9 de abril de 2009 y el 24 de febrero de 2015, durante un espacio de 125 episodios en siete tempo",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Greg Daniels y Michael Schur, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de Greg Daniels y Michael Schur dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "espacio",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Parks and Recreation: destacada series (2009) obra de Greg Daniels y Michael Schur.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

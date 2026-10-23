@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:the-crew-mission-deep-sea-2021",
+  "experience": {
+    "plot": "The Crew: Mission Deep Sea es una reconocida boardgame que explora temáticas de Aventura, Cartas, Mythology. Destaca por su personalidad propia y su conexión directa con el público.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Thomas Sing, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Thomas Sing dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "The Crew: Mission Deep Sea: destacada boardgame (2021) obra de Thomas Sing.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

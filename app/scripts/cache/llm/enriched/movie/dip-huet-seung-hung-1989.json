@@ -1,0 +1,42 @@
+{
+  "id": "movie:dip-huet-seung-hung-1989",
+  "experience": {
+    "plot": "A disillusioned assassin accepts one last hit in hopes of using his earnings to restore vision to a singer he accidentally blinded.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de John Woo, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1989, una obra destacada de John Woo en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Dip huet seung hung: Acción y Crimen con dirección de John Woo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

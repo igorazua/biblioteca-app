@@ -1,0 +1,39 @@
+{
+  "id": "book:plague-ship-1956",
+  "experience": {
+    "plot": "Obra clásica de ciencia ficción escrita por Andre Norton.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Andre Norton, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1956, una referencia indispensable obra de Andre Norton dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "escala": 4,
+    "ideas": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "fantasia_epica",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Plague Ship: destacada book (1956) obra de Andre Norton.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

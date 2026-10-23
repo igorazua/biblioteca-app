@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-nightmare-before-christmas-1993",
+  "experience": {
+    "plot": "The Nightmare Before Christmas es una película de fantasía musical animada en stop-motion, dirigida por Henry Selick y con guion de Caroline Thompson. Cuenta la historia de Jack Skellington, rey de Ciudad Halloween, quien descubre por casualidad Ciudad Navidad",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Henry Selick, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Toy Story",
+      "Shrek"
+    ],
+    "context": "Estrenada en 1993, una obra destacada de Henry Selick en el panorama de Animación y Familiar."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 3,
+    "tension": 1,
+    "fantasia": 5,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "musica"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Pesadilla antes de Navidad: Animación y Familiar con dirección de Henry Selick.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "book:tao-te-ching-1842",
+  "experience": {
+    "plot": "El Dàodé jīng, también llamado Laozi (老子), es un texto clásico chino atribuido al sabio Lao-Tse del siglo VI a. C., aunque su fecha y autoría están abiertas al debate.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de 老子, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1842, una referencia indispensable obra de 老子 dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 2,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Tao te Ching: destacada book (1842) obra de 老子.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

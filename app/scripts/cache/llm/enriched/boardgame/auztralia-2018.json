@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:auztralia-2018",
+  "experience": {
+    "plot": "AuZtralia is an adventure/exploration game for 1-4 players set in an alternate reality 1930s. The theme is inspired by Martin Wallace's A Study in Emerald. Following the Restorationist war, the northern hemisphere lands lay poisoned and starvation was the norm",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Martin Wallace, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Martin Wallace dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "AuZtralia: destacada boardgame (2018) obra de Martin Wallace.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

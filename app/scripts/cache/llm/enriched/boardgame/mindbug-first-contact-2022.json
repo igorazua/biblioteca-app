@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:mindbug-first-contact-2022",
+  "experience": {
+    "plot": "In Mindbug, you summon hybrid creatures and send them to battle against your opponent — but when you summon a creature, the opponent may use one of their Mindbugs to take control of it. Outwit your opponent in a fascinating tactical duel in which having the be",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Christian Kudahl, Marvin Hegen, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Christian Kudahl, Marvin Hegen dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 4,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Mindbug: First Contact: destacada boardgame (2022) obra de Christian Kudahl, Marvin Hegen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

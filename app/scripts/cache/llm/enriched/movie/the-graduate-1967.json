@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-graduate-1967",
+  "experience": {
+    "plot": "El graduado es una película independiente estadounidense de comedia romántica, estrenada en 1967, dirigida por Mike Nichols y escrita por Calder Willingham y Buck Henry, basada en la novela corta de Charles Webb, quien la escribió en 1963 tras graduarse del Wi",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Mike Nichols, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1967, una obra destacada de Mike Nichols en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "El graduado: Comedia y Drama con dirección de Mike Nichols.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

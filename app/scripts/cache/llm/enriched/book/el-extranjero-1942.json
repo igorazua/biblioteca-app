@@ -1,0 +1,40 @@
+{
+  "id": "book:el-extranjero-1942",
+  "experience": {
+    "plot": "Un hombre indiferente comete un crimen en Argel y se enfrenta al juicio de una sociedad que no lo entiende.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Albert Camus, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Clásico.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1942, una referencia indispensable obra de Albert Camus dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "sociedad",
+    "misterio",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente",
+    "para_subrayar"
+  ],
+  "oneLiner": "El extranjero: destacada book (1942) obra de Albert Camus.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

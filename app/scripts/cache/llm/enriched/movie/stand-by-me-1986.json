@@ -1,0 +1,42 @@
+{
+  "id": "movie:stand-by-me-1986",
+  "experience": {
+    "plot": "Cuenta conmigo es una película dramática estadounidense de 1986 sobre el paso a la vida adulta dirigida por Rob Reiner. Basada en la novela corta de Stephen King de 1982, The Body, cuyo título deriva de la canción del mismo nombre de Ben E. King, la película e",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Rob Reiner, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 1986, una obra destacada de Rob Reiner en el panorama de Aventura y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Cuenta conmigo: Aventura y Drama con dirección de Rob Reiner.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

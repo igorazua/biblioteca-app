@@ -1,0 +1,36 @@
+{
+  "id": "artist:chambao",
+  "experience": {
+    "plot": "Chambao es un proyecto musical originario de Málaga (España), activo entre 2002 y 2018 y posteriormente a partir de 2023. Iniciado por la cantante La Mari y los instrumentistas Daniel y Eduardo Casañ, de 2005 en adelante se convirtió en un proyecto en solitari",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2001, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 3,
+    "bailable": 2,
+    "organico": 4,
+    "intensidad": 2,
+    "fondo": 4,
+    "complejidad": 3
+  },
+  "themes": [
+    "electronica",
+    "musica_latina",
+    "pop"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Chambao: destacada artist (2001) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

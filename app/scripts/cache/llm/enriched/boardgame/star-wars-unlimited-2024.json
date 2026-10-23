@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:star-wars-unlimited-2024",
+  "experience": {
+    "plot": "GAME SYSTEM This entry is to allow for discussion/rating of the game system as a whole. It is not for a specific product or release. Versions will appear on the individual item pages. Star Wars: Unlimited is a fast-paced, dynamic game that is both easy to lear",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Daniel Schaefer, Jeremy Zwirn, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Collectible Components.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Daniel Schaefer, Jeremy Zwirn dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Star Wars: Unlimited: destacada boardgame (2024) obra de Daniel Schaefer, Jeremy Zwirn.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

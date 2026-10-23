@@ -1,0 +1,42 @@
+{
+  "id": "movie:once-2007",
+  "experience": {
+    "plot": "Once es una película musical irlandesa escrita y dirigida por John Carney. Rodada en Dublín y protagonizada por Glen Hansard y Markéta Irglová como músicos aficionados. La película obtuvo un premio Óscar a la mejor canción original.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de John Carney, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2007, una obra destacada de John Carney en el panorama de Drama y Música."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "musica",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Once: Drama y Música con dirección de John Carney.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

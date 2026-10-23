@@ -1,0 +1,37 @@
+{
+  "id": "artist:miles-davis-1944",
+  "experience": {
+    "plot": "Miles Davis (Illinois, EE. UU.), icono de Jazz, Cool jazz, Jazz fusion desde 1944.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Illinois, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Jazz / Cool jazz.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1944, una referencia indispensable obra de Illinois, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 2,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 5,
+    "intensidad": 2,
+    "fondo": 3,
+    "complejidad": 5
+  },
+  "themes": [
+    "rock_clasico",
+    "jazz",
+    "blues",
+    "soul"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Miles Davis: destacada artist (1944) obra de Illinois, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

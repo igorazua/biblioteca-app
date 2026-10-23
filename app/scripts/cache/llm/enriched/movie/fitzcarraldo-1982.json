@@ -1,0 +1,42 @@
+{
+  "id": "movie:fitzcarraldo-1982",
+  "experience": {
+    "plot": "Fitzcarraldo es una película alemana de drama y aventura de 1982 dirigida y escrita por Werner Herzog, con Klaus Kinski, Claudia Cardinale, José Lewgoy, Miguel Ángel Fuentes, Paul Hittscher, Huerequeque Enrique Bohorquez, Grande Otelo y Milton Nascimento como ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Werner Herzog, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 1982, una obra destacada de Werner Herzog en el panorama de Aventura y Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Fitzcarraldo: Aventura y Drama con dirección de Werner Herzog.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

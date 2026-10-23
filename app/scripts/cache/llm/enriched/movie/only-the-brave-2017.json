@@ -1,0 +1,42 @@
+{
+  "id": "movie:only-the-brave-2017",
+  "experience": {
+    "plot": "Only the Brave es una película estadounidense de drama biográfico dirigida por Joseph Kosinski y escrita por Ken Nolan y Eric Warren Singer, basada en el artículo de GQ \"No Exit\" de Sean Flynn. La película cuenta la historia de los Granite Mountain Hotshots, u",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Joseph Kosinski, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 2017, una obra destacada de Joseph Kosinski en el panorama de Acción y Biografía."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Héroes en el infierno: Acción y Biografía con dirección de Joseph Kosinski.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

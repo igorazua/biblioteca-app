@@ -1,0 +1,44 @@
+{
+  "id": "series:the-league-2009",
+  "experience": {
+    "plot": "The League es una serie de televisión estadounidense creada por Jeff Schaffer y Jackie Marcus Schaffer y transmitida por FX que se enmarca en la categoría de sitcom semi-improvisada. Su primera temporada fue estrenada el 29 de octubre de 2009. A partir de la q",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de FXX, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Sports.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de FXX dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 5,
+    "enganche": 5,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "confort"
+  ],
+  "oneLiner": "The League: destacada series (2009) obra de FXX.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

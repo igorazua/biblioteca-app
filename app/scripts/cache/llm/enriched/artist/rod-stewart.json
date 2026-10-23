@@ -1,0 +1,36 @@
+{
+  "id": "artist:rod-stewart",
+  "experience": {
+    "plot": "Roderick David Stewart, conocido como Rod Stewart, es un músico, compositor y productor británico de rock, conocido mundialmente por haber sido vocalista en las bandas The Jeff Beck Group y Faces, como también por su exitosa y extensa carrera como solista. Con",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1969, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 2,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 4
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Rod Stewart: destacada artist (1969) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

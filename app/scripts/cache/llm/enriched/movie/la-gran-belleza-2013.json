@@ -1,0 +1,41 @@
+{
+  "id": "movie:la-gran-belleza-2013",
+  "experience": {
+    "plot": "La gran belleza es una película italiana de 2013 coescrita y dirigida por Paolo Sorrentino. Recibió grandes elogios de la crítica y ganó diversos galardones como el premio Oscar a la mejor película extranjera.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Paolo Sorrentino, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2013, una obra destacada de Paolo Sorrentino en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "La gran belleza: Drama con dirección de Paolo Sorrentino.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

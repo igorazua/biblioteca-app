@@ -1,0 +1,43 @@
+{
+  "id": "series:red-dwarf-1988",
+  "experience": {
+    "plot": "Enano Rojo, o Red Dwarf en la versión original, es una serie de televisión británica de ciencia ficción\ny comedia que incluye 12 temporadas —incluyendo una miniserie llamada Back to Earth— que comenzó su transmisión de 1988 a 1993, y luego continuó entre 1997 ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de U&Dave, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Science-Fiction.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1988, una referencia indispensable obra de U&Dave dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 2
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Red Dwarf: destacada series (1988) obra de U&Dave.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:cabaret-1972",
+  "experience": {
+    "plot": "Cabaret es una película estadounidense de 1972 del género musical, dirigida por Bob Fosse, con Liza Minnelli, Michael York y Joel Grey. Es una adaptación libre del musical homónimo de 1966, de los compositores John Kander y Fred Ebb, quienes a su vez se habían",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Bob Fosse, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1972, una obra destacada de Bob Fosse en el panorama de Drama y Música."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "musica",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Cabaret: Drama y Música con dirección de Bob Fosse.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

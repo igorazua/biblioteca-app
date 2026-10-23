@@ -1,0 +1,44 @@
+{
+  "id": "series:ringer-2011",
+  "experience": {
+    "plot": "Ringer fue una serie estadounidense que fue emitida por primera vez el 13 de septiembre de 2011 en la cadena The CW. Está protagonizada por Sarah Michelle Gellar, Kristoffer Polaha, Nestor Carbonell, Mike Colter y Ioan Gruffudd. En Latinoamérica, la serie fue ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de The CW, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Crimen.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de The CW dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "pasar_miedo"
+  ],
+  "oneLiner": "Ringer: destacada series (2011) obra de The CW.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

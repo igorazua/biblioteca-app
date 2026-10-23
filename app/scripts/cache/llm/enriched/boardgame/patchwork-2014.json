@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:patchwork-2014",
+  "experience": {
+    "plot": "In Patchwork, two players compete to build the most aesthetic (and high-scoring) patchwork quilt on a personal 9x9 game board. To start play, lay out all of the patches at random in a circle and place a marker directly clockwise of the 2-1 patch. Each player t",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Uwe Rosenberg, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Estrategia abstracta / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Uwe Rosenberg dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 1,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 1,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "puzzles_y_losetas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "pareja",
+    "jugones"
+  ],
+  "oneLiner": "Patchwork: destacada boardgame (2014) obra de Uwe Rosenberg.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

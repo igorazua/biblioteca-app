@@ -1,0 +1,43 @@
+{
+  "id": "movie:hotaru-no-haka-1988",
+  "experience": {
+    "plot": "La tumba de las luciérnagas , publicada oficialmente en Japón el año 1988. Es una película de animación japonesa producida por Studio Ghibli y dirigida por Isao Takahata. Fue la primera película dirigida por Takahata con Studio Ghibli y el tercer largometraje ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Isao Takahata, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 1988, una obra destacada de Isao Takahata en el panorama de Animación y Drama."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 1,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 3,
+    "violencia": 5,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 4
+  },
+  "themes": [
+    "guerra",
+    "familia",
+    "ia_y_robots",
+    "espionaje"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Hotaru no haka: Animación y Drama con dirección de Isao Takahata.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-machinist-2004",
+  "experience": {
+    "plot": "El maquinista es una película española de habla inglesa de thriller psicológico de 2004, dirigida por Brad Anderson y escrita por Scott Kosar. Está protagonizada por Christian Bale, Jennifer Jason Leigh, John Sharian, Aitana Sánchez-Gijón y Michael Ironside.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Brad Anderson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Brad Anderson en el panorama de Drama y Thriller."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "crimen",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "El maquinista: Drama y Thriller con dirección de Brad Anderson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

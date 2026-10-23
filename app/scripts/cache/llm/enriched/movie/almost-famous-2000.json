@@ -1,0 +1,45 @@
+{
+  "id": "movie:almost-famous-2000",
+  "experience": {
+    "plot": "Casi famosos es una película de comedia dramática estadounidense del año 2000 escrita y dirigida por Cameron Crowe. Muestra la historia ficticia de William Miller, un reportero adolescente que se empeña en escribir sobre el mundo de la música desde dentro. Gra",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Cameron Crowe, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2000, una obra destacada de Cameron Crowe en el panorama de Aventura y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "romance_adolescente",
+    "espionaje",
+    "musica",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Casi famosos: Aventura y Comedia con dirección de Cameron Crowe.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

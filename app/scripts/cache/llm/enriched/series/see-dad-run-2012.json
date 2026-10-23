@@ -1,0 +1,44 @@
+{
+  "id": "series:see-dad-run-2012",
+  "experience": {
+    "plot": "See Dad Run fue una serie de televisión de Estados Unidos, una serie de formato sitcom producida por Nickelodeon y estrenado en Nick at Nite el 6 de octubre de 2012, después del especial de una hora de iCarly, \"iShock America\". El protagonista de la serie tamb",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de nick@nite, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de nick@nite dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "confort"
+  ],
+  "oneLiner": "See Dad Run: destacada series (2012) obra de nick@nite.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

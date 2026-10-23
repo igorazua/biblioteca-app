@@ -1,0 +1,43 @@
+{
+  "id": "series:duck-dynasty-2012",
+  "experience": {
+    "plot": "Duck Dynasty es una serie de telerrealidad estadounidense de A&E, que retrata la vida de la familia Robertson, quienes se convirtieron en un éxito por su negocio familiar, Duck Commander. El negocio de West Monroe, Louisiana, hace productos para cazadores de p",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de A&E, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de A&E dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 2
+  },
+  "themes": [
+    "familia",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Duck Dynasty: destacada series (2012) obra de A&E.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

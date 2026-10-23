@@ -1,0 +1,43 @@
+{
+  "id": "movie:empire-of-the-sun-1987",
+  "experience": {
+    "plot": "El imperio del sol es una película bélica estadounidense de 1987 producida y dirigida por Steven Spielberg y basada en la novela autobiográfica homónima de J. G. Ballard, de 1984. Está protagonizada por Christian Bale, John Malkovich, Miranda Richardson y Nige",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Steven Spielberg, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 1987, una obra destacada de Steven Spielberg en el panorama de Acción y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "familia",
+    "ia_y_robots",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "El imperio del sol: Acción y Drama con dirección de Steven Spielberg.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

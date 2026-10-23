@@ -1,0 +1,42 @@
+{
+  "id": "movie:diarios-de-motocicleta-2004",
+  "experience": {
+    "plot": "Diarios de motocicleta es una película biográfica basada en los diarios de viaje del Che Guevara y Alberto Granado, dirigida por Walter Salles y protagonizada por Gael García Bernal y Rodrigo de la Serna. Fue ganadora del Oscar a la Mejor Canción Original en 2",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Walter Salles, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Walter Salles en el panorama de Aventura y Biografía."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Diarios de motocicleta: Aventura y Biografía con dirección de Walter Salles.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

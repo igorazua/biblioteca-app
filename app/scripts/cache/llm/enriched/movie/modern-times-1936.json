@@ -1,0 +1,43 @@
+{
+  "id": "movie:modern-times-1936",
+  "experience": {
+    "plot": "Tiempos modernos es un largometraje de 1936 escrito y dirigido por Charles Chaplin, que fue también el actor principal. Esta película es un reflejo de las condiciones desesperadas de las cuales era víctima un empleado de la clase obrera en la época de la Gran ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Charles Chaplin, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1936, una obra destacada de Charles Chaplin en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "espionaje",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Tiempos modernos: Comedia y Drama con dirección de Charles Chaplin.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

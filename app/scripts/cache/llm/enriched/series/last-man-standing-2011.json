@@ -1,0 +1,43 @@
+{
+  "id": "series:last-man-standing-2011",
+  "experience": {
+    "plot": "Last Man Standing es una serie de televisión de comedia de situación estadounidense protagonizada por Tim Allen y Nancy Travis que actualmente se emite en la cadena estadounidense ABC y en España en la cadena Fox. La serie se estrenó el 11 de octubre de 2011.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de FOX, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Familiar.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de FOX dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "familia",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Last Man Standing: destacada series (2011) obra de FOX.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

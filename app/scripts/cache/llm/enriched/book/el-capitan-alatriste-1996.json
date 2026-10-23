@@ -1,0 +1,39 @@
+{
+  "id": "book:el-capitan-alatriste-1996",
+  "experience": {
+    "plot": "El capitán Alatriste es el título del primer libro de la colección Las aventuras del capitán Alatriste, escrito por el novelista español Arturo Pérez-Reverte en conjunción con su hija Carlota. La novela es una historia verosímil, en la que muchos de los aconte",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Arturo Pérez-Reverte, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Narrativa.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1996, una referencia indispensable obra de Arturo Pérez-Reverte dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 2,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "escala": 2,
+    "ideas": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "historia",
+    "aventura",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "El capitán Alatriste: destacada book (1996) obra de Arturo Pérez-Reverte.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

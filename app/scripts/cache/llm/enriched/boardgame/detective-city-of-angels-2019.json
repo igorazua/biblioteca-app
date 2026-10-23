@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:detective-city-of-angels-2019",
+  "experience": {
+    "plot": "Detective: City of Angels, set in the dark and violent world of 1940s Los Angeles, is a game of mystery, deception, and investigation for 1–5 players. Most players will step into the shoes of LAPD homicide detectives, hungry for glory and willing to do whateve",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Evan Derrick, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Faroleo / Deducción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Evan Derrick dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 5,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 4,
+    "familiar": 5
+  },
+  "themes": [
+    "misterio_y_deduccion",
+    "faroleo_y_enganos",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Detective: City of Angels: destacada boardgame (2019) obra de Evan Derrick.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

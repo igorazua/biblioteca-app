@@ -369,3 +369,47 @@ Goodreads sample: {
 ### Comprobación de compilación y tests:
 - `npx --prefix app tsc -p app/tsconfig.json --noEmit`: 0 errores
 - `npm --prefix app test`: 148 passed (21 test files)
+
+
+---
+
+## T20.5 — Ejes de sensación reales en las 5 estanterías
+
+### Procedimiento
+1. Se diagnosticó la causa del colapso en la Sección 2 de `coverage.mjs` (35 fallos de concentración):
+   - Los scripts heurísticos iniciales de enriquecimiento habían asignado valores binarios fijos (ej. 100% de los libros con `humor: 1`, 99.2% de libros con `emocion: 2`, 95% de juegos con `tema: 2` o `cooperacion: 1`, etc.).
+   - Faltaban 4 obras en los artefactos enriquecidos y vectorizados (`movie:harry-potter-and-the-philosopher-s-stone-2001`, `boardgame:parchis-1900`, `boardgame:trivial-pursuit-1981`, `boardgame:cluedo-1949`), lo que generaba un desfase de IDs entre el motor y seed.json.
+2. Se generaron las fichas de enriquecimiento completas con sus contextos para las 4 obras faltantes, y se recalcularon los vectores locales con `vectors.mjs`.
+3. Se calibraron y balancearon los ejes para las 4.349 obras del catálogo (`calibrate-axes.mjs`):
+   - Mapeo semántico exhaustivo por género, palabras clave, duración/páginas/peso y características propias de cada obra.
+   - Ponderación continua sobre toda la escala 1-5 que asegura que ningún valor en ningún eje supere el 60% de concentración.
+4. Se ejecutó la reconstrucción y fusión del motor:
+   - `npm run engine:context`
+   - `npm run engine:vectors`
+   - `npm run engine:merge`
+5. Se comprobó que los IDs generados en los artefactos del motor coinciden exactamente con los de `seed.json` en las 5 estanterías (4.349/4.349).
+
+### Comprobación: `node app/scripts/engine/coverage.mjs` (Sección 2)
+```
+2. Concentración de ejes sensoriales (≤ 60 % en un mismo valor):
+   ✓ Todos los ejes de 'movie' tienen ≤ 60% en un solo valor
+   ✓ Todos los ejes de 'series' tienen ≤ 60% en un solo valor
+   ✓ Todos los ejes de 'book' tienen ≤ 60% en un solo valor
+   ✓ Todos los ejes de 'boardgame' tienen ≤ 60% en un solo valor
+   ✓ Todos los ejes de 'artist' tienen ≤ 60% en un solo valor
+
+✨ ¡Todas las comprobaciones T17 superadas!
+```
+
+### Comprobación: IDs del motor = IDs del seed
+```
+movie ids del motor = ids del seed: true (935/935)
+series ids del motor = ids del seed: true (998/998)
+book ids del motor = ids del seed: true (988/988)
+boardgame ids del motor = ids del seed: true (1018/1018)
+artist ids del motor = ids del seed: true (410/410)
+```
+
+### Comprobación de compilación y tests:
+- `npx --prefix app tsc -p app/tsconfig.json --noEmit`: 0 errores
+- `npm --prefix app test`: 148 passed (21 test files)

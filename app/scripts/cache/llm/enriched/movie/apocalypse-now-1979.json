@@ -1,0 +1,41 @@
+{
+  "id": "movie:apocalypse-now-1979",
+  "experience": {
+    "plot": "Apocalypse Now es una película épica bélica estadounidense de 1979 dirigida y producida por Francis Ford Coppola. El guion está basado en El corazón de las tinieblas, una novela corta de Joseph Conrad ambientada en el África de finales del siglo XIX, aunque tr",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Francis Ford Coppola, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1979, una obra destacada de Francis Ford Coppola en el panorama de Bélica y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "familia",
+    "espionaje"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Apocalypse Now: Bélica y Drama con dirección de Francis Ford Coppola.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

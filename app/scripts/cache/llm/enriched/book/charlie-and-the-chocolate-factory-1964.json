@@ -1,0 +1,39 @@
+{
+  "id": "book:charlie-and-the-chocolate-factory-1964",
+  "experience": {
+    "plot": "Charlie y la fábrica de chocolate es una novela infantil escrita por el autor inglés Roald Dahl y publicada en 1964. Narra la historia de Charlie Bucket, un niño rodeado de pobreza extrema, cuyo destino cambia al conocer al excéntrico Willy Wonka, dueño de la ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Roald Dahl, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1964, una referencia indispensable obra de Roald Dahl dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "identidad",
+    "historia",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Charlie and the Chocolate Factory: destacada book (1964) obra de Roald Dahl.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

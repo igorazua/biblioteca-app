@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:colosseum-2007",
+  "experience": {
+    "plot": "Colosseum is a board game by Markus Lübke and Wolfgang Kramer, published in 2007 by Days of Wonder and illustrated by Julien Delval and Cyrille Daujean. In the game, players attempt to attract the most spectators to the events in their arena.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Markus Lübke, Wolfgang Kramer, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad / Negotiation.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de Markus Lübke, Wolfgang Kramer dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Colosseum: destacada boardgame (2007) obra de Markus Lübke, Wolfgang Kramer.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

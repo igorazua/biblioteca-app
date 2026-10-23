@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:massive-darkness-2-hellscape-2022",
+  "experience": {
+    "plot": "Ten years have passed since the Lightbringers drove back the hordes of the Darkness and sealed the Portal from whence they came. The heroes thought their job done, but the newfound peace was never meant to last. Dangerous new Portals have suddenly opened up al",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Alex Olteanu, Marco Portugal, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Alex Olteanu, Marco Portugal dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Massive Darkness 2: Hellscape (2022): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

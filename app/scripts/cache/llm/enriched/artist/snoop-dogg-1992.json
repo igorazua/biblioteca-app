@@ -1,0 +1,38 @@
+{
+  "id": "artist:snoop-dogg-1992",
+  "experience": {
+    "plot": "Snoop Dogg (Long Beach, California, EE. UU.), icono de West coast hip hop, G-funk desde 1992.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Long Beach, California, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de West coast hip hop / G-funk.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1992, una referencia indispensable obra de Long Beach, California, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 4,
+    "organico": 3,
+    "intensidad": 5,
+    "fondo": 2,
+    "complejidad": 3
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "hip_hop",
+    "electronica",
+    "soul"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Snoop Dogg: destacada artist (1992) obra de Long Beach, California, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

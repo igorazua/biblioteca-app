@@ -1,0 +1,42 @@
+{
+  "id": "movie:toy-story-4-2019",
+  "experience": {
+    "plot": "Toy Story 4 es una película de comedia dramática y suspenso animada por computadora estadounidense de 2019, es la cuarta entrega de la saga de animación Toy Story y la secuela de Toy Story 3 (2010), con la trama transcurriendo después de los acontecimientos de",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Josh Cooley, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 2019, una obra destacada de Josh Cooley en el panorama de Animación y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 5,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Toy Story 4: Animación y Aventura con dirección de Josh Cooley.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -14,13 +14,13 @@
     "context": "Creada en 1977, una referencia indispensable obra de Londres, Reino Unido dentro de su disciplina."
   },
   "axes": {
-    "energia": 4,
-    "valencia": 4,
-    "bailable": 5,
-    "organico": 5,
-    "intensidad": 4,
-    "fondo": 1,
-    "complejidad": 2
+    "energia": 3,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 3,
+    "fondo": 4,
+    "complejidad": 3
   },
   "themes": [
     "rock_clasico",

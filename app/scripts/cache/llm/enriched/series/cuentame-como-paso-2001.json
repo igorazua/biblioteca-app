@@ -1,0 +1,43 @@
+{
+  "id": "series:cuentame-como-paso-2001",
+  "experience": {
+    "plot": "La familia Alcántara vive la transición y la España de las últimas décadas a través de los ojos de Carlos.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Miguel Ángel Bernardeau, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Histórica.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2001, una referencia indispensable obra de Miguel Ángel Bernardeau dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 5,
+    "reconfort": 2,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Cuéntame cómo pasó: destacada series (2001) obra de Miguel Ángel Bernardeau.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

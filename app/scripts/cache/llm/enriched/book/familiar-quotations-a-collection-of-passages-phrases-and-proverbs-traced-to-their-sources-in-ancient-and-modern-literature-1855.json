@@ -1,0 +1,39 @@
+{
+  "id": "book:familiar-quotations-a-collection-of-passages-phrases-and-proverbs-traced-to-their-sources-in-ancient-and-modern-literature-1855",
+  "experience": {
+    "plot": "Obra clásica de ensayo escrita por John Bartlett.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de John Bartlett, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ensayo / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1855, una referencia indispensable obra de John Bartlett dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 2,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "identidad",
+    "familia",
+    "sociedad"
+  ],
+  "moments": [
+    "concentracion"
+  ],
+  "oneLiner": "Familiar quotations; a collection of passages, phrases, and proverbs traced to their sour",
+  "confidence": "media",
+  "src": "llm-agent"
+}

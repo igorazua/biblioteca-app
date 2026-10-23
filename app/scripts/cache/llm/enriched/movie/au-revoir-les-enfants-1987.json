@@ -1,0 +1,44 @@
+{
+  "id": "movie:au-revoir-les-enfants-1987",
+  "experience": {
+    "plot": "Au Revoir, Les Enfants es una película autobiografíca teuto-italo-francesa de 1987 escrita, producida y dirigida por Louis Malle. Basada en las experiencias de vida del cineasta, que fue alumno de un internado católico situado en las cercanías de Fontainebleau",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Louis Malle, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1987, una obra destacada de Louis Malle en el panorama de Drama y Bélica."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "amistad",
+    "ia_y_robots",
+    "romance_adolescente",
+    "traicion",
+    "espionaje"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Adiós, muchachos: Drama y Bélica con dirección de Louis Malle.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

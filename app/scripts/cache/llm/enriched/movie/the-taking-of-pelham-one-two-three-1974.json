@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-taking-of-pelham-one-two-three-1974",
+  "experience": {
+    "plot": "The Taking of Pelham One Two Three es una película estadounidense de acción y suspense de 1974 dirigida por Joseph Sargent, producida por Edgar J. Scherick y escrita por Peter Stone. La película está basada en la novela homónima de Morton Freedgood, firmada co",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Joseph Sargent, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Matrix",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1974, una obra destacada de Joseph Sargent en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Pelham 1, 2, 3: Acción y Crimen con dirección de Joseph Sargent.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

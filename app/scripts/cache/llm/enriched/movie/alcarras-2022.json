@@ -1,0 +1,40 @@
+{
+  "id": "movie:alcarras-2022",
+  "experience": {
+    "plot": "Alcarràs es una película dramática española de 2022 dirigida por Carla Simón. Rodada en catalán, ganó el Oso de Oro en la septuagésima segunda edición de la Berlinale y se convirtió en la primera película en catalán en recibir este galardón.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Carla Simón, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El día de la bestia",
+      "El verdugo",
+      "Los santos inocentes",
+      "[REC]"
+    ],
+    "context": "Estrenada en 2022, una obra destacada de Carla Simón en el panorama de Cine español."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 1
+  },
+  "themes": [
+    "amistad",
+    "identidad",
+    "redencion"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "Alcarràs: Cine español con dirección de Carla Simón.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

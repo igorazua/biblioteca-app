@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:tales-of-the-arabian-nights-2009",
+  "experience": {
+    "plot": "In Tales of the Arabian Nights, you are the hero or heroine in a story of adventure and wonder just like those told by Scheherazade to her spellbound sultan! You will travel the land seeking your own destiny and fortune. You will learn stories and gain wisdom ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Anthony J. Gallela, Eric Goldberg, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Arabian.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de Anthony J. Gallela, Eric Goldberg dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 1
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Tales of the Arabian Nights (2009): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

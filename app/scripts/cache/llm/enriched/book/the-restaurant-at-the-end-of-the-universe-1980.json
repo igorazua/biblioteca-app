@@ -1,0 +1,39 @@
+{
+  "id": "book:the-restaurant-at-the-end-of-the-universe-1980",
+  "experience": {
+    "plot": "El restaurante del fin del mundo o El restaurante del fin del universo es una comedia de ciencia ficción escrita por Douglas Adams en 1980. Es la segunda entrega de la saga de la Guía del Autoestopista Galáctico, y este libro, al igual que el primero, está bas",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Douglas Adams, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1980, una referencia indispensable obra de Douglas Adams dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 5,
+    "tension": 4,
+    "fantasia": 4,
+    "escala": 4,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "The Restaurant at the End of the Universe: destacada book (1980) obra de Douglas Adams.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

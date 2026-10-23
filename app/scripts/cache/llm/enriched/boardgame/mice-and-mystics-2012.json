@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:mice-and-mystics-2012",
+  "experience": {
+    "plot": "In Mice and Mystics, players take on the roles of those still loyal to the king – but to escape the clutches of Vanestra, they have been turned into mice! Play as cunning field mice who must race through a castle now twenty times larger than before. The castle",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jerry Hawthorne, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Animales.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Jerry Hawthorne dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Mice and Mystics: destacada boardgame (2012) obra de Jerry Hawthorne.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

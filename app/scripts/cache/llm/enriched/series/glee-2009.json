@@ -1,0 +1,43 @@
+{
+  "id": "series:glee-2009",
+  "experience": {
+    "plot": "Glee es una serie de televisión estadounidense de comedia musical juvenil que se convirtió en un éxito, la cual se emitió por FOX desde el 19 de mayo de 2009 al 20 de marzo de 2015. Transcurre en la secundaria William McKinley High School en la ciudad de Lima,",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de FOX, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Música.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de FOX dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Glee: destacada series (2009) obra de FOX.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

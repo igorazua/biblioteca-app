@@ -1,0 +1,42 @@
+{
+  "id": "movie:star-trek-into-darkness-2013",
+  "experience": {
+    "plot": "After the crew of the Enterprise find an unstoppable force of terror from within their own organization, Captain Kirk leads a manhunt to a war-zone world to capture a one-man weapon of mass destruction.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de J.J. Abrams, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2013, una obra destacada de J.J. Abrams en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "espacio",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Star Trek Into Darkness: Acción y Aventura con dirección de J.J. Abrams.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

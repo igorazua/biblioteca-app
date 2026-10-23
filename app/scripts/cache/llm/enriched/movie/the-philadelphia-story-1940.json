@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-philadelphia-story-1940",
+  "experience": {
+    "plot": "The Philadelphia Story es una película de género comedia romántica basada en la obra teatral del mismo título escrita por Philip Barry y publicada en 1939, dirigida por George Cukor y protagonizada por protagonizado Cary Grant, Katharine Hepburn, James Stewart",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de George Cukor, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Forrest Gump",
+      "Titanic",
+      "Regreso al futuro",
+      "Toy Story"
+    ],
+    "context": "Estrenada en 1940, una obra destacada de George Cukor en el panorama de Comedia y Romance."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 1,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "espionaje",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pareja"
+  ],
+  "oneLiner": "Historias de Filadelfia: Comedia y Romance con dirección de George Cukor.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:duck-soup-1933",
+  "experience": {
+    "plot": "Duck Soup es una película estadounidense cómica de 1933 dirigida por Leo McCarey, protagonizada por los Hermanos Marx, producida por Paramount Pictures, y escrita por Bert Kalmar y Harry Ruby. Es uno de los largometrajes más conocidos de los Hermanos Marx, jun",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Leo McCarey, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Regreso al futuro",
+      "Salvar al soldado Ryan",
+      "Braveheart",
+      "Toy Story"
+    ],
+    "context": "Estrenada en 1933, una obra destacada de Leo McCarey en el panorama de Comedia y Musical."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 2,
+    "emocion": 2,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "musica",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "Sopa de ganso: Comedia y Musical con dirección de Leo McCarey.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

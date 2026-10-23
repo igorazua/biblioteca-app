@@ -1,0 +1,44 @@
+{
+  "id": "movie:avatar-2009",
+  "experience": {
+    "plot": "Avatar es una película épica de ciencia ficción militar y animación estadounidense de 2009,\nescrita, producida y dirigida por James Cameron y protagonizada por Sam Worthington, Zoe Saldaña, Sigourney Weaver, Stephen Lang y Michelle Rodriguez.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de James Cameron, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico"
+    ],
+    "context": "Estrenada en 2009, una obra destacada de James Cameron en el panorama de Ciencia ficción y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "justicia",
+    "guerra",
+    "ia_y_robots",
+    "espionaje",
+    "espacio",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Avatar: Ciencia ficción y Aventura con dirección de James Cameron.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

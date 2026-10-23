@@ -1,0 +1,41 @@
+{
+  "id": "movie:airlift-2016",
+  "experience": {
+    "plot": "Airlift es una película india del género bélico y suspense dirigida por Raja Krishna Menon, y protagonizada por Akshay Kumar y Nimrat Kaur. El script fue escrito por Raja Krishna Menon, quien había desarrollado la idea después de estudiar todo el incidente de ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Raja Menon, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2016, una obra destacada de Raja Menon en el panorama de Drama y Historia."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "guerra",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Airlift: Drama y Historia con dirección de Raja Menon.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

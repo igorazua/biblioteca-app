@@ -1,0 +1,44 @@
+{
+  "id": "series:looking-2014",
+  "experience": {
+    "plot": "Looking es una serie de televisión estadounidense de temática LGBT que narra las vivencias de un grupo de amigos gay que residen en San Francisco.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de HBO, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de HBO dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "amistad",
+    "sitcom_cotidiana",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "maraton"
+  ],
+  "oneLiner": "Looking: destacada series (2014) obra de HBO.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

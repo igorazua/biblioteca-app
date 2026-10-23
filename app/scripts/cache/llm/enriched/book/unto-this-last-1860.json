@@ -1,0 +1,39 @@
+{
+  "id": "book:unto-this-last-1860",
+  "experience": {
+    "plot": "Unto This Last is an essay critical of economics by John Ruskin, who published the first chapter between August and December 1860 in the monthly journal Cornhill Magazine in four articles. Its stated aim is to define wealth and show that the acquisition of wea",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de John Ruskin, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ensayo / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1860, una referencia indispensable obra de John Ruskin dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 2,
+    "densidad": 5,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "identidad",
+    "sociedad",
+    "historia"
+  ],
+  "moments": [
+    "concentracion"
+  ],
+  "oneLiner": "Unto This Last: destacada book (1860) obra de John Ruskin.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

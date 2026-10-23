@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:wits-wagers-2005",
+  "experience": {
+    "plot": "Not a trivia buff? It doesn't matter! In Wits & Wagers, each player writes a guess to a question such as “In what year did the bikini swimsuit makes its first appearance?” or “How many feet wide is an NFL football field?” and places it face-up on the betting m",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Dominic Crapuchettes, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Faroleo / Party Game.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de Dominic Crapuchettes dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 4,
+    "azar": 5,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 4,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "faroleo_y_enganos",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Wits & Wagers: destacada boardgame (2005) obra de Dominic Crapuchettes.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

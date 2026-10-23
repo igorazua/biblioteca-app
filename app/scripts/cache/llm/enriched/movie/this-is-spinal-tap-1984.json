@@ -1,0 +1,42 @@
+{
+  "id": "movie:this-is-spinal-tap-1984",
+  "experience": {
+    "plot": "This is Spinal Tap es una película estadounidense de 1984, de Rob Reiner. Está rodada como un falso documental, acerca de una banda de heavy metal creada por él mismo y los actores del reparto. Ocupa el puesto 48 de las 500 mejores películas de todos los tiemp",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Rob Reiner, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek",
+      "Amélie"
+    ],
+    "context": "Estrenada en 1984, una obra destacada de Rob Reiner en el panorama de Comedia y Música."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 1,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "musica",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "This Is Spinal Tap: Comedia y Música con dirección de Rob Reiner.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

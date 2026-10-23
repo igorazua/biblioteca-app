@@ -1,0 +1,43 @@
+{
+  "id": "movie:iron-man-2008",
+  "experience": {
+    "plot": "Iron Man es una película de superhéroes estadounidense de 2008. Es la primera entrega del Universo cinematográfico de Marvel. La cinta fue dirigida por Jon Favreau, con un guion de Mark Fergus, Hawk Ostby, Art Marcum y Matt Holloway. Es protagonizada por Rober",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Jon Favreau, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Matrix",
+      "Gladiator",
+      "Parque Jurásico",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 2008, una obra destacada de Jon Favreau en el panorama de Acción y Ciencia ficción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 5,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "superheroes",
+    "espionaje",
+    "espacio",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Iron Man: Acción y Ciencia ficción con dirección de Jon Favreau.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

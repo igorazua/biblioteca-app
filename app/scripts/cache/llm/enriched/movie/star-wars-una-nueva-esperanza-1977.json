@@ -1,0 +1,44 @@
+{
+  "id": "movie:star-wars-una-nueva-esperanza-1977",
+  "experience": {
+    "plot": "Un joven granjero se une a un contrabandista y a una princesa para derrotar al Imperio y su Estrella de la Muerte.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de George Lucas, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico"
+    ],
+    "context": "Estrenada en 1977, una obra destacada de George Lucas en el panorama de Ciencia ficción y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "guerra",
+    "espacio",
+    "ia_y_robots",
+    "duelo",
+    "espionaje",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Star Wars: Una nueva esperanza: Ciencia ficción y Aventura con dirección de George Lucas.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

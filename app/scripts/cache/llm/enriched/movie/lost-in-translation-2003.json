@@ -1,0 +1,43 @@
+{
+  "id": "movie:lost-in-translation-2003",
+  "experience": {
+    "plot": "Lost in Translation es la segunda película escrita y dirigida por Sofia Coppola. Es una coproducción de Japón y Estados Unidos, ambientada en Tokio y estrenada en el 2003. La cinta fue nominada a cuatro premios Óscar, la directora ganó el premio al mejor guion",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Sofia Coppola, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2003, una obra destacada de Sofia Coppola en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Lost in Translation: Comedia y Drama con dirección de Sofia Coppola.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

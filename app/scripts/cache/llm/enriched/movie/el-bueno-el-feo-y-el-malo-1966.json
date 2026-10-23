@@ -1,0 +1,40 @@
+{
+  "id": "movie:el-bueno-el-feo-y-el-malo-1966",
+  "experience": {
+    "plot": "Il buono, il brutto, il cattivo es una película del subgénero de spaghetti western estrenada en 1966 y coproducida entre Italia, España y Alemania. Fue dirigida por Sergio Leone y contó con las actuaciones de Clint Eastwood, Lee Van Cleef y Eli Wallach. El gui",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Sergio Leone, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Django desencadenado",
+      "Sin perdón",
+      "Hasta que llegó su hora",
+      "Per qualche dollaro in pi\u001a"
+    ],
+    "context": "Estrenada en 1966, una obra destacada de Sergio Leone en el panorama de Western."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "infancia",
+    "espionaje"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "El bueno, el feo y el malo: Western con dirección de Sergio Leone.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

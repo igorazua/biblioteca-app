@@ -1,0 +1,41 @@
+{
+  "id": "movie:dark-waters-2019",
+  "experience": {
+    "plot": "Dark Waters es una película de suspense legal estadounidense de 2019 dirigida por Todd Haynes y escrita por Mario Correa y Matthew Michael Carnahan. La historia dramatiza el caso de Robert Bilott contra la corporación de fabricación de productos químicos DuPon",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Todd Haynes, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2019, una obra destacada de Todd Haynes en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Aguas oscuras: Biografía y Drama con dirección de Todd Haynes.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

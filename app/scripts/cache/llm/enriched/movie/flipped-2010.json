@@ -1,0 +1,44 @@
+{
+  "id": "movie:flipped-2010",
+  "experience": {
+    "plot": "Flipped es una película estadounidense de 2010 dirigida por Rob Reiner y adaptada de la novela homónima de la escritora estadounidense Wendelin Van Draanen. La película tuvo un lanzamiento limitado en Estados Unidos el 6 de agosto de 2010 y finalmente el estre",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Rob Reiner, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2010, una obra destacada de Rob Reiner en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 5,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Flipped: Comedia y Drama con dirección de Rob Reiner.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "series:whitney-2011",
+  "experience": {
+    "plot": "Whitney fue una serie estadounidense que se estrenó en la NBC el 22 de septiembre de 2011. El programa fue protagonizado por la actriz Whitney Cummings. El 25 de septiembre de 2011, el piloto de Whitney fue estrenado en varias redes de Universal, incluyendo Ox",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de NBC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Romance.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de NBC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 1,
+    "reconfort": 5,
+    "enganche": 2,
+    "formato": 2
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Whitney: destacada series (2011) obra de NBC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

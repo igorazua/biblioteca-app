@@ -1,0 +1,36 @@
+{
+  "id": "artist:saiko-2019",
+  "experience": {
+    "plot": "Saiko (Armilla, Granada, España), icono de Urbano, Trap, Reggaeton desde 2019.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Armilla, Granada, España, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Urbano / Trap.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Armilla, Granada, España dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 5,
+    "organico": 2,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 2
+  },
+  "themes": [
+    "hip_hop",
+    "trap",
+    "pop"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Saiko: destacada artist (2019) obra de Armilla, Granada, España.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

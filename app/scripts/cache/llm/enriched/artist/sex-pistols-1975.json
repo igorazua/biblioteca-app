@@ -1,0 +1,36 @@
+{
+  "id": "artist:sex-pistols-1975",
+  "experience": {
+    "plot": "Sex Pistols (Londres, Reino Unido), icono de Punk rock desde 1975.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Londres, Reino Unido, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Punk rock.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1975, una referencia indispensable obra de Londres, Reino Unido dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 3,
+    "intensidad": 5,
+    "fondo": 1,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "punk"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Sex Pistols: destacada artist (1975) obra de Londres, Reino Unido.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

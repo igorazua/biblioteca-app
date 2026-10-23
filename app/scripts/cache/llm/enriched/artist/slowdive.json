@@ -1,0 +1,36 @@
+{
+  "id": "artist:slowdive",
+  "experience": {
+    "plot": "Slowdive es una banda de rock alternativo británica formada en 1989. El origen del nombre proviene de un sueño del bajista Nick Chaplin y de una conversación con Rachel Goswell que sugirió a «Slowdive», el nombre de un sencillo de uno de sus grupos preferidos,",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de rock / post-rock.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1991, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 4,
+    "bailable": 4,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 3,
+    "complejidad": 4
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Slowdive: destacada artist (1991) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

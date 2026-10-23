@@ -1,0 +1,39 @@
+{
+  "id": "book:the-chessmen-of-mars-1922",
+  "experience": {
+    "plot": "Obra clásica de ciencia ficción escrita por Edgar Rice Burroughs.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Edgar Rice Burroughs, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1922, una referencia indispensable obra de Edgar Rice Burroughs dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 5,
+    "escala": 4,
+    "ideas": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "historia",
+    "fantasia_epica",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "The Chessmen of Mars: destacada book (1922) obra de Edgar Rice Burroughs.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

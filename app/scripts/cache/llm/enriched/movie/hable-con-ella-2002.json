@@ -1,0 +1,43 @@
+{
+  "id": "movie:hable-con-ella-2002",
+  "experience": {
+    "plot": "Hable con ella es una película española de melodrama psicológico de 2002, escrito y dirigido por Pedro Almodóvar. Está protagonizada por Javier Cámara, Leonor Watling, Darío Grandinetti, Rosario Flores y Geraldine Chaplin. La película trata sobre dos hombres q",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Pedro Almod\u001avar, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2002, una obra destacada de Pedro Almod\u001avar en el panorama de Drama y Misterio."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "investigacion",
+    "amor",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Hable con ella: Drama y Misterio con dirección de Pedro Almod\u001avar.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

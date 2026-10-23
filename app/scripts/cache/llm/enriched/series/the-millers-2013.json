@@ -1,0 +1,43 @@
+{
+  "id": "series:the-millers-2013",
+  "experience": {
+    "plot": "The Millers es una comedia de situación estadounidense, creada por Greg Garcia. La serie se estrenó en CBS el jueves 3 de octubre de 2013, The Millers se emitía los jueves a las 8:30 PM, seguido de The Big Bang Theory. En la segunda temporada cambió su día a l",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de CBS, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de CBS dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 4,
+    "enganche": 3,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "The Millers: destacada series (2013) obra de CBS.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:dvonn-2001",
+  "experience": {
+    "plot": "DVONN es un juego de mesa de estrategia para dos jugadores en el que el objetivo es acumular piezas en pilas. Fue lanzado en 2001 por Kris Burm como el cuarto juego del Proyecto GIPF. DVONN ganó en 2002 el premio Mensa Select y el International Gamers Award, y",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Kris Burm, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Estrategia abstracta.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2001, una referencia indispensable obra de Kris Burm dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 1,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "pareja",
+    "jugones"
+  ],
+  "oneLiner": "DVONN: destacada boardgame (2001) obra de Kris Burm.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

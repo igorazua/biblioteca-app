@@ -1,0 +1,42 @@
+{
+  "id": "series:penny-dreadful-2014",
+  "experience": {
+    "plot": "Iconos de la literatura gótica como Frankenstein, Dorian Gray y Drácula conviven en el Londres victoriano.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de John Logan, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Terror / Fantasía.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de John Logan dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 2,
+    "formato": 4
+  },
+  "themes": [
+    "monstruos_y_terror",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo"
+  ],
+  "oneLiner": "Penny Dreadful: destacada series (2014) obra de John Logan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

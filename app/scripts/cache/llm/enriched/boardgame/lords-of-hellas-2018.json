@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:lords-of-hellas-2018",
+  "experience": {
+    "plot": "Enter the Dark Ages of Greece, ruled by mighty Gods wielding advanced technology. Control asymmetric heroes and choose your path to victory, either by strategic control or adventure style monster hunting and quests. Build majestic multi-part monuments of Gods ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Adam Kwapiński, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad / Mythology.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Adam Kwapiński dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Lords of Hellas: destacada boardgame (2018) obra de Adam Kwapiński.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

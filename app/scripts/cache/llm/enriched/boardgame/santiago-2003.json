@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:santiago-2003",
+  "experience": {
+    "plot": "Santiago is about cultivating and watering fields. To accomplish this, a number of tiles denoting various plantation types come into the game each round. The tiles are auctioned off such that each player gets one, and the tiles are then placed onto the game bo",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Claudia Hely, Roman Pelek, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Farming / Negotiation.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2003, una referencia indispensable obra de Claudia Hely, Roman Pelek dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Santiago: destacada boardgame (2003) obra de Claudia Hely, Roman Pelek.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -14,19 +14,19 @@
     "context": "Creada en 2018, una referencia indispensable obra de Jesse Armstrong dentro de su disciplina."
   },
   "axes": {
-    "tono": 1,
+    "tono": 2,
     "ritmo": 4,
-    "emocion": 5,
-    "exigencia": 1,
-    "humor": 5,
-    "tension": 1,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 2,
     "fantasia": 1,
-    "violencia": 1,
+    "violencia": 2,
     "familiar": 4,
-    "escala": 2,
-    "reconfort": 5,
-    "enganche": 4,
-    "formato": 4
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 5,
+    "formato": 3
   },
   "themes": [
     "familia",

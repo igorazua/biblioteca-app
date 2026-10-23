@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:luna-2010",
+  "experience": {
+    "plot": "\"The end of her regency is nigh. It's time to clear the way for a new bearer of the burden. She will keep a wary eye on the novices representing their Orders and trying to win her favor. Eventually, she will have to come to a decision. Which Order will prove i",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Stefan Feld, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra de Stefan Feld dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Luna: destacada boardgame (2010) obra de Stefan Feld.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

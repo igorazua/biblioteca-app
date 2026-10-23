@@ -1,0 +1,42 @@
+{
+  "id": "series:stargate-universe-2009",
+  "experience": {
+    "plot": "Stargate Universe follows a band of soldiers, scientists and civilians, who must fend for themselves as they are forced through a Stargate when their hidden base comes under attack. The desperate survivors emerge aboard an ancient ship, which is locked on an u",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Syfy, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de Syfy dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 3,
+    "formato": 3
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Stargate Universe: destacada series (2009) obra de Syfy.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

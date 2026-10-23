@@ -1,0 +1,43 @@
+{
+  "id": "series:married-with-children-1987",
+  "experience": {
+    "plot": "Married... with Children es una comedia de situaciones que se emitió por primera vez en los Estados Unidos en 1987, por Fox, y adaptada en varias partes del mundo gracias a su éxito. Actualmente la serie está disponible en Pluto TV.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de FOX, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Familiar.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1987, una referencia indispensable obra de FOX dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "familia",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Married... with Children: destacada series (1987) obra de FOX.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

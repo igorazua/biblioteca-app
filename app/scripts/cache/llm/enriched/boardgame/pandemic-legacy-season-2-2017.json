@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:pandemic-legacy-season-2-2017",
+  "experience": {
+    "plot": "Description from the publisher: The world almost ended 71 years ago... The plague came out of nowhere and ravaged the world. Most died within a week. Nothing could stop it. The world did its best. It wasn't good enough. For three generations, we, the last frag",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Matt Leacock, Rob Daviau, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Medio ambiente / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Matt Leacock, Rob Daviau dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 1,
+    "cooperacion": 4,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Pandemic Legacy: Season 2: destacada boardgame (2017) obra de Matt Leacock, Rob Daviau.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

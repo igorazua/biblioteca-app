@@ -1,0 +1,39 @@
+{
+  "id": "book:philosophical-essays-concerning-human-understanding-1900",
+  "experience": {
+    "plot": "Obra clásica de ensayo escrita por David Hume.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de David Hume, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ensayo / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1900, una referencia indispensable obra de David Hume dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 2,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "identidad",
+    "filosofia",
+    "sociedad"
+  ],
+  "moments": [
+    "concentracion"
+  ],
+  "oneLiner": "Philosophical essays concerning human understanding (1900): notable e inspiradora creació",
+  "confidence": "media",
+  "src": "llm-agent"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:roads-boats-1999",
+  "experience": {
+    "plot": "In Roads & Boats, players start with a modest collection of donkeys, geese, boards, and stone. With these few materials, players work to develop their civilization. The emphasis in the game is logistical transport as you bring goods to producers to make new go",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jeroen Doumen, Joris Wiersinga, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Construcción de ciudades / Civilización.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1999, una referencia indispensable obra de Jeroen Doumen, Joris Wiersinga dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 1
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "imperios_y_civilizaciones",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Roads & Boats: destacada boardgame (1999) obra de Jeroen Doumen, Joris Wiersinga.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

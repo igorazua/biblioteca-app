@@ -1,0 +1,43 @@
+{
+  "id": "series:beverly-hills-90210-1990",
+  "experience": {
+    "plot": "Beverly Hills, 90210 es una serie con formato de telenovela juvenil emitida desde el 4 de octubre de 1990 al 17 de mayo de 2000 en el horario de mayor audiencia de la cadena FOX de los Estados Unidos y posteriormente en varias cadenas alrededor del mundo. La s",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de FOX, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Romance.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1990, una referencia indispensable obra de FOX dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Sensación de vivir: destacada series (1990) obra de FOX.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

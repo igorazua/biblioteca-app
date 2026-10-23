@@ -1,0 +1,39 @@
+{
+  "id": "book:firestarter-1980",
+  "experience": {
+    "plot": "Ojos de fuego es una novela de Stephen King originalmente publicada en 1980. Fue serializada en la revista Omni antes de ser publicada. Estuvo nominada para un Premio British Fantasy en 1981.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Stephen King, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1980, una referencia indispensable obra de Stephen King dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 5,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Firestarter: destacada book (1980) obra de Stephen King.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

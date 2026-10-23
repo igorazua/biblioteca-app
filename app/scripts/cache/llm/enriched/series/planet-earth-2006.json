@@ -1,0 +1,42 @@
+{
+  "id": "series:planet-earth-2006",
+  "experience": {
+    "plot": "Planeta Tierra es una serie de la BBC sobre la Naturaleza galardonada con 4 Emmy, narrada por David Attenborough y producida por Alastair Fothergill. Fue emitida por primera vez en el Reino Unido el 5 de marzo de 2006. La versión estadounidense es narrada por ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de BBC One, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Nature.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de BBC One dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "fantasia_epica",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Planet Earth: destacada series (2006) obra de BBC One.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "artist:ella-fitzgerald-1934",
+  "experience": {
+    "plot": "Ella Fitzgerald (Virginia, EE. UU.), icono de Vocal jazz, Bebop, Swing desde 1934.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Virginia, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Vocal jazz / Bebop.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1934, una referencia indispensable obra de Virginia, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 1,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 2,
+    "fondo": 4,
+    "complejidad": 4
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "jazz",
+    "blues"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Ella Fitzgerald: destacada artist (1934) obra de Virginia, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

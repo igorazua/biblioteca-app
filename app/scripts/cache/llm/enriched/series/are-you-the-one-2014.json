@@ -1,0 +1,42 @@
+{
+  "id": "series:are-you-the-one-2014",
+  "experience": {
+    "plot": "Are You the One?, abreviado como AYTO?, es un reality show de MTV, en el que los solteros tratan de encontrar el amor. Antes de que comience el programa, los participantes se someten a varias pruebas psicológicas y los productores del programa los colocan en u",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Paramount+, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Romance.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Paramount+ dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "investigacion_policial",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Are You the One?: destacada series (2014) obra de Paramount+.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

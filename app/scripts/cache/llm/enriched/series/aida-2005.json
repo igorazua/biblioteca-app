@@ -1,0 +1,42 @@
+{
+  "id": "series:aida-2005",
+  "experience": {
+    "plot": "Aída es una serie de televisión de comedia de situación española creada por Nacho G. Velillay producida por Globomedia para la cadena Telecinco, que se emitió del 16 de enero de 2005 al 8 de junio de 2014, convirtiéndose en la serie española más larga de Españ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Nacho G. Velilla, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Serie española.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de Nacho G. Velilla dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Aída: destacada series (2005) obra de Nacho G. Velilla.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

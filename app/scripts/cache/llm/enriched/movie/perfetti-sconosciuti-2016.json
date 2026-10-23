@@ -1,0 +1,42 @@
+{
+  "id": "movie:perfetti-sconosciuti-2016",
+  "experience": {
+    "plot": "Perfectos desconocidos es una película italiana de comedia dramática de 2016, dirigida por Paolo Genovese y protagonizada por Giuseppe Battiston, Anna Foglietta, Marco Giallini, Edoardo Leo, Valerio Mastandrea, Alba Rohrwacher y Kasia Smutniak. La película gan",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Paolo Genovese, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2016, una obra destacada de Paolo Genovese en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Perfetti sconosciuti: Comedia y Drama con dirección de Paolo Genovese.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

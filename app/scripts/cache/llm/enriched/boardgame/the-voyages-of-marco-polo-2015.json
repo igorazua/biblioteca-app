@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:the-voyages-of-marco-polo-2015",
+  "experience": {
+    "plot": "In 1271, 17-year-old Marco Polo started on a journey to China with his father and older brother. After a long and grueling journey that led through Jerusalem and Mesopotamia and over the \"Silk Road\", they reached the court of Kublai Khan in 1275. In The Voyage",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Daniele Tascini, Simone Luciani, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Dados / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Daniele Tascini, Simone Luciani dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "dados_y_push_your_luck",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "The Voyages of Marco Polo (2015): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

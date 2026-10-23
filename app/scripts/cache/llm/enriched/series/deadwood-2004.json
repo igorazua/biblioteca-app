@@ -1,0 +1,43 @@
+{
+  "id": "series:deadwood-2004",
+  "experience": {
+    "plot": "Deadwood es una serie de televisión dramática Western estadounidense creada, producida y casi enteramente escrita por David Milch. La serie se emitió por primera vez en la cadena por cable HBO el 21 de marzo de 2004 y por última vez el 27 de agosto de 2006, ab",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de David Milch, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Western / Drama.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2004, una referencia indispensable obra de David Milch dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2,
+    "enganche": 3,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Deadwood: destacada series (2004) obra de David Milch.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

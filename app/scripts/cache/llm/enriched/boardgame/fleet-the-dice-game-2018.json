@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:fleet-the-dice-game-2018",
+  "experience": {
+    "plot": "Fleet: The Dice Game is an exciting strategic roll and write dice game from the creators of Fleet! Fleet: The Dice Game is heavier than many roll and write games and captures the tense, meaningful decisions of Fleet. Fleet: The Dice Game is for 1-4 players. In",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ben Pinchback, Matt Riddle, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Dados / Nautical.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Ben Pinchback, Matt Riddle dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 5,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "dados_y_push_your_luck",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Fleet: The Dice Game: destacada boardgame (2018) obra de Ben Pinchback, Matt Riddle.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

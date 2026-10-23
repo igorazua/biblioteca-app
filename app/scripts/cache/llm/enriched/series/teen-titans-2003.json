@@ -1,0 +1,42 @@
+{
+  "id": "series:teen-titans-2003",
+  "experience": {
+    "plot": "Teen Titans es una serie de dibujos animados basada en las historietas de superhéroes Jóvenes Titanes, de DC Comics. La serie fue emitida por Cartoon Network y Kids' WB. Esta serie fue una de las más exitosas del canal. La serie gira en torno a un grupo de sup",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Cartoon Network, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2003, una referencia indispensable obra de Cartoon Network dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 3,
+    "formato": 3
+  },
+  "themes": [
+    "adolescencia",
+    "animacion",
+    "amistad"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Los Jóvenes Titanes: destacada series (2003) obra de Cartoon Network.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

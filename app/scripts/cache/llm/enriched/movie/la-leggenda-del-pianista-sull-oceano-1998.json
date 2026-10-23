@@ -1,0 +1,42 @@
+{
+  "id": "movie:la-leggenda-del-pianista-sull-oceano-1998",
+  "experience": {
+    "plot": "La leyenda del pianista en el océano o La leyenda de 1900 es una película italiana-estadounidense dramática de 1998 escrita y dirigida por Giuseppe Tornatore y protagonizada por Tim Roth y Pruitt Taylor Vince. Está basada en el monólogo de teatro Novecento, de",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Giuseppe Tornatore, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1998, una obra destacada de Giuseppe Tornatore en el panorama de Drama y Música."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "La leggenda del pianista sull'oceano: Drama y Música con dirección de Giuseppe Tornatore.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

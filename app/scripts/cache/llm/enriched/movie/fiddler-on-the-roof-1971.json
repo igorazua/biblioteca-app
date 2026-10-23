@@ -1,0 +1,43 @@
+{
+  "id": "movie:fiddler-on-the-roof-1971",
+  "experience": {
+    "plot": "El violinista en el tejado es una película musical estadounidense de 1971 producida y dirigida por Norman Jewison. Es una adaptación del musical de Broadway del mismo nombre de 1964, con música compuesta por Jerry Bock, letra de Sheldon Harnick y guion de Jose",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Norman Jewison, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1971, una obra destacada de Norman Jewison en el panorama de Drama y Familiar."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "espionaje",
+    "musica"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "familia"
+  ],
+  "oneLiner": "El violinista en el tejado: Drama y Familiar con dirección de Norman Jewison.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

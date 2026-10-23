@@ -1,0 +1,44 @@
+{
+  "id": "movie:a-wednesday-2008",
+  "experience": {
+    "plot": "El miércoles es una película de suspense hindú. Está dirigida y escrita por Neeraj Pandey e interpretada en sus papeles principales por Naseeruddin Shah y Anupam Kher. Cuenta la historia del comisario general de policía de Mumbai y su esfuerzo secreto por evit",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Neeraj Pandey, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2008, una obra destacada de Neeraj Pandey en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "A Wednesday: Acción y Crimen con dirección de Neeraj Pandey.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

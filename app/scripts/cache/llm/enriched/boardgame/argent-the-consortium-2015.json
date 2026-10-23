@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:argent-the-consortium-2015",
+  "experience": {
+    "plot": "The time has come for the selection of a new Chancellor at Argent University of Magic, and you are among the likely candidates for the job. Gather your apprentices, ready your spellbook, and build your influence, while secretly discovering and competing over t",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Trey Chambers, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Political.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Trey Chambers dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "roles_ocultos",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Argent: The Consortium: destacada boardgame (2015) obra de Trey Chambers.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

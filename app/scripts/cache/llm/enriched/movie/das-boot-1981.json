@@ -1,0 +1,42 @@
+{
+  "id": "movie:das-boot-1981",
+  "experience": {
+    "plot": "Das Boot es un largometraje alemán de cine bélico y dramático de 1981, dirigido por Wolfgang Petersen y basado en la novela homónima de Lothar-Günther Buchheim. La película fue protagonizada por Jürgen Prochnow, Herbert Grönemeyer y Klaus Wennemann en los pape",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Wolfgang Petersen, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1981, una obra destacada de Wolfgang Petersen en el panorama de Aventura y Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "crimen",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "El submarino: Aventura y Drama con dirección de Wolfgang Petersen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

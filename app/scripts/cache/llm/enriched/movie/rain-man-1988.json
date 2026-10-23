@@ -1,0 +1,41 @@
+{
+  "id": "movie:rain-man-1988",
+  "experience": {
+    "plot": "Rain Man es una película dramática estadounidense del género road movie de 1988, dirigida por Barry Levinson y protagonizada por Dustin Hoffman y Tom Cruise en los papeles principales, siendo producida por MGM. Fue estrenada ese año en el Festival Internaciona",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Barry Levinson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1988, una obra destacada de Barry Levinson en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Rain Man: Drama con dirección de Barry Levinson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

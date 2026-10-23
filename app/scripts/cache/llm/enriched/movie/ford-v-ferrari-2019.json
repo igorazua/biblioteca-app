@@ -1,0 +1,42 @@
+{
+  "id": "movie:ford-v-ferrari-2019",
+  "experience": {
+    "plot": "Ford v Ferrari o Go Like Hell es una película dramática deportiva estadounidense de 2019 dirigida por James Mangold y escrita por Jez Butterworth, John-Henry Butterworth y Jason Keller. La película está protagonizada por Matt Damon y Christian Bale, con Jon Be",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de James Mangold, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 2019, una obra destacada de James Mangold en el panorama de Acción y Biografía."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "deporte",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Le Mans '66: Acción y Biografía con dirección de James Mangold.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

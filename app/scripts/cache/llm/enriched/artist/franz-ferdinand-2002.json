@@ -1,0 +1,37 @@
+{
+  "id": "artist:franz-ferdinand-2002",
+  "experience": {
+    "plot": "Franz Ferdinand (Glasgow, Escocia), icono de Post-punk revival, Indie rock desde 2002.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Glasgow, Escocia, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Post-punk revival / Indie rock.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2002, una referencia indispensable obra de Glasgow, Escocia dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 2,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 1,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "indie_rock",
+    "punk"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Franz Ferdinand: destacada artist (2002) obra de Glasgow, Escocia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

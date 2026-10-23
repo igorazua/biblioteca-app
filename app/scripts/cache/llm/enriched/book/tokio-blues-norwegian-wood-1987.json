@@ -1,0 +1,39 @@
+{
+  "id": "book:tokio-blues-norwegian-wood-1987",
+  "experience": {
+    "plot": "Un hombre recuerda sus años universitarios en Tokio y la relación con dos mujeres de personalidades opuestas.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Haruki Murakami, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Romance / Novela.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1987, una referencia indispensable obra de Haruki Murakami dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "memoria",
+    "amor",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Tokio blues (Norwegian Wood): destacada book (1987) obra de Haruki Murakami.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

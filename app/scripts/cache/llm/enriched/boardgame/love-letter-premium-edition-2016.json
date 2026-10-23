@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:love-letter-premium-edition-2016",
+  "experience": {
+    "plot": "Love Letter Premium takes the familiar Love Letter game and enhances it in two different ways. First, the cards are supersized and much thicker than normal, the hearts that players claim are large and wooden, and the hard-sided box has a magnetic closure. Seco",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de John Zinser, Seiji Kanai, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Deducción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra de John Zinser, Seiji Kanai dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 2,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "misterio_y_deduccion",
+    "draft_de_cartas",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "familia"
+  ],
+  "oneLiner": "Love Letter: Premium Edition: destacada boardgame (2016) obra de John Zinser, Seiji Kanai.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

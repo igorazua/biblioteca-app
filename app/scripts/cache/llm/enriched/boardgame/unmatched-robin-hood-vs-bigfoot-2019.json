@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:unmatched-robin-hood-vs-bigfoot-2019",
+  "experience": {
+    "plot": "In battle, there are no equals. Unmatched is a highly asymmetrical miniature fighting game for two or four players. (Note that this set is solely for two players, but it can be combined with other sets, which all serve up to four players.) Each hero is represe",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Justin D. Jacobson, Rob Daviau, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Justin D. Jacobson, Rob Daviau dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 5,
+    "azar": 4,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "draft_de_cartas",
+    "gestion_de_recursos",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Unmatched: Robin Hood vs. Bigfoot (2019): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

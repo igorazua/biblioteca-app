@@ -1,0 +1,43 @@
+{
+  "id": "series:edge-of-alaska-2014",
+  "experience": {
+    "plot": "Edge of Alaska es una reconocida series que explora temáticas de Drama. Destaca por su personalidad propia y su conexión directa con el público.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Discovery, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Discovery dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Edge of Alaska: destacada series (2014) obra de Discovery.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

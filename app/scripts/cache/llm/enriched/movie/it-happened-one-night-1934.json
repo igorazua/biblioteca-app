@@ -1,0 +1,44 @@
+{
+  "id": "movie:it-happened-one-night-1934",
+  "experience": {
+    "plot": "It Happened One Night es una película estadounidense de comedia «screwball» de 1934 dirigida y producida por Frank Capra, en colaboración con Harry Cohn, y protagonizada por Claudette Colbert y Clark Gable. Basada en Night Bus, una historia escrita por Samuel ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Frank Capra, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Forrest Gump",
+      "Titanic",
+      "Regreso al futuro",
+      "Toy Story"
+    ],
+    "context": "Estrenada en 1934, una obra destacada de Frank Capra en el panorama de Comedia y Romance."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 1,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "ia_y_robots",
+    "espionaje",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pareja"
+  ],
+  "oneLiner": "Sucedió una noche: Comedia y Romance con dirección de Frank Capra.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

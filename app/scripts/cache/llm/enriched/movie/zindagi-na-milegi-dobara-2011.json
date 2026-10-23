@@ -1,0 +1,43 @@
+{
+  "id": "movie:zindagi-na-milegi-dobara-2011",
+  "experience": {
+    "plot": "Zindagi Na Milegi Dobara, conocida en español como Solo se vive una vez o Vida solo hay una, es una película india del año 2011, dirigida por Zoya Akhtar y producida por Farhan Akhtar y Ritesh Sidhwani de Excel Entertainment. La película relata las aventuras d",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Zoya Akhtar, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2011, una obra destacada de Zoya Akhtar en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "amistad",
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Zindagi Na Milegi Dobara: Comedia y Drama con dirección de Zoya Akhtar.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

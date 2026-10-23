@@ -1,0 +1,44 @@
+{
+  "id": "series:dig-2015",
+  "experience": {
+    "plot": "Dig is an American mystery/action-thriller television miniseries that premiered on USA Network on March 5, 2015, and ran until May 7. Created by Gideon Raff and Tim Kring, it stars Jason Isaacs as FBI Agent Peter Connelly and Anne Heche as Lynn Monahan, Peter'",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de USA Network, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Thriller.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de USA Network dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 2,
+    "enganche": 5,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "pasar_miedo"
+  ],
+  "oneLiner": "Dig: destacada series (2015) obra de USA Network.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

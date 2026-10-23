@@ -1,0 +1,43 @@
+{
+  "id": "series:chasing-life-2014",
+  "experience": {
+    "plot": "Chasing Life es una serie de televisión dramática estadounidense que se emitió en ABC Family desde el 10 de junio de 2014 al 28 de septiembre de 2015. La serie es una adaptación de la serie de televisión mexicana Terminales de Televisa. El 6 de noviembre de 20",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Freeform, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Romance.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Freeform dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "medicina_y_hospitales",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Chasing Life: destacada series (2014) obra de Freeform.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

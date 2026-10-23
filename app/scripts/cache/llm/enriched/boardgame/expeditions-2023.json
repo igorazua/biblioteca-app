@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:expeditions-2023",
+  "experience": {
+    "plot": "Expeditions: A MudRunner Game is a vehicle simulation game developed by Saber Interactive and published by Focus Entertainment. A spin-off game in the MudRunner series, it was released for Microsoft Windows, Nintendo Switch, PlayStation 4, PlayStation 5, Xbox ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jamey Stegmaier, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Exploración / Ciencia ficción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Jamey Stegmaier dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 2,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Expeditions: destacada boardgame (2023) obra de Jamey Stegmaier.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

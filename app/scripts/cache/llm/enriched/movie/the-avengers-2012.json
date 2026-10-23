@@ -1,0 +1,44 @@
+{
+  "id": "movie:the-avengers-2012",
+  "experience": {
+    "plot": "Marvel's The Avengers, conocida como Marvel Avengers Assemble en el Reino Unido e Irlanda, o simplemente The Avengers; es una película de superhéroes estadounidense de 2012 basada en el equipo de superhéroes homónimo de Marvel Comics, producida por Marvel Stud",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Joss Whedon, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2012, una obra destacada de Joss Whedon en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "familia",
+    "espacio",
+    "ia_y_robots",
+    "superheroes",
+    "espionaje"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Los Vengadores: Acción y Aventura con dirección de Joss Whedon.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

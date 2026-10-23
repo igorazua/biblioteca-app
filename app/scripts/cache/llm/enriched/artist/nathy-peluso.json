@@ -1,0 +1,36 @@
+{
+  "id": "artist:nathy-peluso",
+  "experience": {
+    "plot": "Natalia Peluso, conocida artísticamente como Nathy Peluso, es una cantante, compositora y bailarina. Nacida en Argentina y criada en España, se interesó por las artes escénicas a una edad temprana, interpretando versiones de canciones en bares musicales en su ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 2,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 2
+  },
+  "themes": [
+    "pop",
+    "rock_clasico",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Nathy Peluso: destacada artist (2017) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:blade-runner-1982",
+  "experience": {
+    "plot": "Blade Runner es una película estadounidense neo-noir y de ciencia ficción dirigida por Ridley Scott, estrenada en 1982. Fue escrita por Hampton Fancher y David Webb Peoples, y el reparto lo componen Harrison Ford, Rutger Hauer, Sean Young, Edward James Olmos, ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Ridley Scott, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Pulp Fiction",
+      "Matrix",
+      "El club de la lucha",
+      "Parque Jurásico"
+    ],
+    "context": "Estrenada en 1982, una obra destacada de Ridley Scott en el panorama de Ciencia ficción y Thriller."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "mafia",
+    "ia_y_robots",
+    "espionaje",
+    "espacio"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "Blade Runner: Ciencia ficción y Thriller con dirección de Ridley Scott.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

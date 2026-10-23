@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:mosaic-a-story-of-civilization-2022",
+  "experience": {
+    "plot": "Mosaic: A Story of Civilization is a Civilization-Building game from Glenn Drover, designer of, among others, Age of Empires III: The Age of Discovery, Railways of the World, Sid Meier's Civilization: The Boardgame, and Raccoon Tycoon. Mosaic is an action sele",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Glenn Drover, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad / Civilización.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Glenn Drover dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 2,
+    "azar": 1,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Mosaic: A Story of Civilization: destacada boardgame (2022) obra de Glenn Drover.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

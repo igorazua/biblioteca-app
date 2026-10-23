@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:star-realms-colony-wars-2015",
+  "experience": {
+    "plot": "Colony Wars is a deckbuilding game in the Star Realms series which is both a standalone box set for two players (featuring an 80-card trade deck, as in the original) and an expansion for the base Star Realms set that allows it to be played as a four-player gam",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Darwin Kastle, Robert Dougherty, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fighting.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Darwin Kastle, Robert Dougherty dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 5,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "draft_de_cartas",
+    "gestion_de_recursos",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Star Realms: Colony Wars (2015): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

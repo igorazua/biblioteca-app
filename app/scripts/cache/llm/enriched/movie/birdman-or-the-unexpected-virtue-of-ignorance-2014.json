@@ -1,0 +1,43 @@
+{
+  "id": "movie:birdman-or-the-unexpected-virtue-of-ignorance-2014",
+  "experience": {
+    "plot": "Birdman o (la inesperada virtud de la ignorancia) (conocida en inglés como Birdman or (The Unexpected Virtue of Ignorance)), también conocida simplemente como Birdman, es una película estadounidense de humor negro de 2014, dirigida por Alejandro González Iñárr",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Alejandro G. I\u001a\u001arritu, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2014, una obra destacada de Alejandro G. I\u001a\u001arritu en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Birdman or (The Unexpected Virtue of Ignorance) (2014): memorable obra de Comedia y Drama",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:the-lord-of-the-rings-the-card-game-2011",
+  "experience": {
+    "plot": "The Lord of the Rings: The Card Game is a cooperative adventure game in which the players attempt to complete a scenario, each with up to three heroes of their choice and a deck of allies, events and attachments to support them. Each round, players send their ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Nate French, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de Nate French dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 1,
+    "cooperacion": 4,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "The Lord of the Rings: The Card Game: destacada boardgame (2011) obra de Nate French.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

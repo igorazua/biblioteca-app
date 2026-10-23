@@ -1,0 +1,43 @@
+{
+  "id": "series:an-idiot-abroad-2010",
+  "experience": {
+    "plot": "Ricky Gervais and Stephen Merchant's partner in crime, Karl Pilkington, isn't much of a traveller, but now he is set to experience a variety of people and cultures as he explores the Seven Wonders of the World in this unmissable series.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Sky Showcase, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra de Sky Showcase dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 4,
+    "enganche": 3,
+    "formato": 2
+  },
+  "themes": [
+    "investigacion_policial",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "An Idiot Abroad: destacada series (2010) obra de Sky Showcase.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

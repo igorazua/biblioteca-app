@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:dune-war-for-arrakis-2024",
+  "experience": {
+    "plot": "Arrakis is a desert world seemingly dead and barren, yet here lies the most important resource in the galaxy: Spice. Without Spice, space travel is impossible, and humans become little clusters on isolated planets. The noble House that controls Arrakis and the",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Francesco Nepitello, Marco Maggi, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Dados / Movies / TV / Radio theme.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Francesco Nepitello, Marco Maggi dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "ciencia_ficcion_espacial",
+    "naturaleza_y_animales",
+    "dados_y_push_your_luck"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Dune: War for Arrakis (2024): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:merchants-marauders-2010",
+  "experience": {
+    "plot": "Merchants & Marauders lets you live the life of an influential merchant or a dreaded pirate in the Caribbean during the Golden Age of Piracy. Seek your fortune through trade, rumor hunting, missions, and of course, plundering. Modify your ship, buy impressive ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Christian Marcussen, Kasper Aagaard, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Fighting.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra de Christian Marcussen, Kasper Aagaard dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 5,
+    "azar": 4,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Merchants & Marauders (2010): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

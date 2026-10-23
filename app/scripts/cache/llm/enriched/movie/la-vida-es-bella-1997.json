@@ -1,0 +1,42 @@
+{
+  "id": "movie:la-vida-es-bella-1997",
+  "experience": {
+    "plot": "La vida es bella es una película italiana dramática de 1997, escrita, dirigida y protagonizada por Roberto Benigni. Los actores Nicoletta Braschi, Giorgio Cantarini y Giustino Durano completaron el elenco principal.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Roberto Benigni, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1997, una obra destacada de Roberto Benigni en el panorama de Drama y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "La vida es bella: Drama y Comedia con dirección de Roberto Benigni.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

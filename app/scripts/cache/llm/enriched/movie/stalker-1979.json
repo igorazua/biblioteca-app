@@ -1,0 +1,43 @@
+{
+  "id": "movie:stalker-1979",
+  "experience": {
+    "plot": "Stalker es una película soviética de ciencia ficción de 1979 dirigida por Andréi Tarkovski. Está basada –en términos generales– en el libro Picnic extraterrestre de los hermanos Arkadi y Borís Strugatski.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Andrei Tarkovsky, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 1979, una obra destacada de Andrei Tarkovsky en el panorama de Drama y Ciencia ficción."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 5,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "espionaje",
+    "monstruos",
+    "espacio"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Stalker: Drama y Ciencia ficción con dirección de Andrei Tarkovsky.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

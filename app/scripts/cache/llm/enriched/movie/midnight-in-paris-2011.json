@@ -1,0 +1,43 @@
+{
+  "id": "movie:midnight-in-paris-2011",
+  "experience": {
+    "plot": "película de 2011 dirigida por Woody Allen",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Woody Allen, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Forrest Gump",
+      "El señor de los anillos: La comunidad del anillo",
+      "Titanic",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 2011, una obra destacada de Woody Allen en el panorama de Comedia y Fantasía."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pareja"
+  ],
+  "oneLiner": "Midnight in Paris: Comedia y Fantasía con dirección de Woody Allen.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

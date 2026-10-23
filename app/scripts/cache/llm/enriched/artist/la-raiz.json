@@ -1,0 +1,36 @@
+{
+  "id": "artist:la-raiz",
+  "experience": {
+    "plot": "La Raíz es un grupo de música de Gandía (España), que mezcla el rock con el reggae, el jazz y el hip hop. Esta banda está conformada por once músicos de varias procedencias nacionales y musicales, repartidos en el escenario con una presencia fuerte y mucho con",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 4,
+    "organico": 5,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 4
+  },
+  "themes": [
+    "rock_clasico",
+    "hip_hop",
+    "jazz"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "La Raíz: destacada artist (2006) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

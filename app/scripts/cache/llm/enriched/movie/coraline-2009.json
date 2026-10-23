@@ -1,0 +1,42 @@
+{
+  "id": "movie:coraline-2009",
+  "experience": {
+    "plot": "Coraline es una película de fantasía oscura, horror y animación stop motion con control de marionetas digitales estadounidense, escrita y dirigida por Henry Selick, basada en la novela homónima de Neil Gaiman y estrenada por primera vez en salas de cine el 6 d",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Henry Selick, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2009, una obra destacada de Henry Selick en el panorama de Animación y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Los mundos de Coraline: Animación y Drama con dirección de Henry Selick.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

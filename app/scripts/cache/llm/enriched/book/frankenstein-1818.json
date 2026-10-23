@@ -1,0 +1,39 @@
+{
+  "id": "book:frankenstein-1818",
+  "experience": {
+    "plot": "Frankenstein o El moderno Prometeo, o simplemente Frankenstein, es una obra literaria de la escritora inglesa Mary Shelley. Publicado el 1 de enero de 1818 y enmarcado en la tradición de la novela gótica, el texto habla de temas tales como la moral científica,",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Mary Shelley, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Terror / Clásico.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1818, una referencia indispensable obra de Mary Shelley dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 2,
+    "escala": 5,
+    "ideas": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "historia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "para_subrayar"
+  ],
+  "oneLiner": "Frankenstein: destacada book (1818) obra de Mary Shelley.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "series:grey-s-anatomy-2005",
+  "experience": {
+    "plot": "Grey's Anatomy es una serie de televisión de drama médico estadounidense creada por Shonda Rhimes, producida por ABC Signature, Shondaland y Entertainment One Television para la American Broadcasting Company, la cual se estrenó el 27 de marzo de 2005 como reem",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de ABC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Romance.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de ABC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "medicina_y_hospitales",
+    "abogados_y_juicios",
+    "amistad"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Anatomía de Grey: destacada series (2005) obra de ABC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

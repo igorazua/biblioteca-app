@@ -1,0 +1,43 @@
+{
+  "id": "movie:yeopgijeogin-geunyeo-2001",
+  "experience": {
+    "plot": "Mi chica descarada es una película de 2001 dirigida por Kwak Jae-yong. Protagonizada por Jun Ji Hyun y Cha Tae-hyun.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Jae-young Kwak, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2001, una obra destacada de Jae-young Kwak en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 1,
+    "reconfort": 5
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Yeopgijeogin geunyeo: Comedia y Drama con dirección de Jae-young Kwak.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "series:devious-maids-2013",
+  "experience": {
+    "plot": "Devious Maids es una serie de comedia-drama de la televisión estadounidense creada en 2013 por Marc Cherry, producida por ABC Studios y por Cherry, Sabrina Wind, Eva Longoria, Paul McGuigan, Larry Shuman, David Lonner, John Mass, Paul Presburger y Michael Garc",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Lifetime, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Crimen.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de Lifetime dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "investigacion_policial",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "pasar_miedo"
+  ],
+  "oneLiner": "Devious Maids: destacada series (2013) obra de Lifetime.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

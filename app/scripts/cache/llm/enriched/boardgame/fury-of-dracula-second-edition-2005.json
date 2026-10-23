@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:fury-of-dracula-second-edition-2005",
+  "experience": {
+    "plot": "In Fury of Dracula, a game of Gothic adventure, one player takes the role of Dracula while up to four others attempt to stop him by controlling Vampire hunters from the famous Bram Stoker novel. Dracula has returned, and is determined to control all of Europe ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Kevin Wilson, Stephen Hand, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Deducción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de Kevin Wilson, Stephen Hand dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Fury of Dracula (Second Edition) (2005): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

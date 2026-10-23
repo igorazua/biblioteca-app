@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:the-loop-2020",
+  "experience": {
+    "plot": "The LOOP is a quirky, cooperative, time-traveling strategy game where 1 to 4 players become temporal agents working together to thwart the evil Dr. Faux, a mad scientist creating chaos across the space-time continuum. Using quirky yet powerful Artifact cards, ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Maxime Rambourg, Théo Rivière, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Ciencia ficción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Maxime Rambourg, Théo Rivière dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "The LOOP: destacada boardgame (2020) obra de Maxime Rambourg, Théo Rivière.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

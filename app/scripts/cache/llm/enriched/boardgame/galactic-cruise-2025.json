@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:galactic-cruise-2025",
+  "experience": {
+    "plot": "Hello, and welcome to Galactic Cruise. Here, we offer our guests something special: the comfort of a luxury cruise with the innovation of space travel. As the first company to offer extended-stay space vacations, we are excited to have you working for us! As a",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Dennis Northcott, Koltin Thompson, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aviation / Flight / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2025, una referencia indispensable obra de Dennis Northcott, Koltin Thompson dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Galactic Cruise: destacada boardgame (2025) obra de Dennis Northcott, Koltin Thompson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

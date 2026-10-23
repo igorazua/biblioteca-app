@@ -1,0 +1,44 @@
+{
+  "id": "series:la-maldicion-de-hill-house-2018",
+  "experience": {
+    "plot": "La maldición de Hill House es una reconocida series que explora temáticas de Terror, Drama. Destaca por su personalidad propia y su conexión directa con el público.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Mike Flanagan, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Terror / Drama.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Mike Flanagan dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 2
+  },
+  "themes": [
+    "monstruos_y_terror",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "pasar_miedo"
+  ],
+  "oneLiner": "La maldición de Hill House: destacada series (2018) obra de Mike Flanagan.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

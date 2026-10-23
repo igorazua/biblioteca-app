@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:letters-from-whitechapel-2011",
+  "experience": {
+    "plot": "Get ready to enter the poor and dreary Whitechapel district in London 1888 – the scene of the mysterious Jack the Ripper murders – with its crowded and smelly alleys, hawkers, shouting merchants, dirty children covered in rags who run through the crowd and beg",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Gabriele Mari, Gianluca Santopietro, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Faroleo / Deducción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de Gabriele Mari, Gianluca Santopietro dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 4,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "faroleo_y_enganos",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Letters from Whitechapel (2011): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

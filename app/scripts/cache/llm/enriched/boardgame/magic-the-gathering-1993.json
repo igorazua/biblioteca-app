@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:magic-the-gathering-1993",
+  "experience": {
+    "plot": "Magic: The Gathering, frecuentemente abreviado como Magic, MTG y Cartas Magic, es un juego de cartas coleccionables diseñado en 1993 por Richard Garfield, profesor de matemáticas, y comercializado por la empresa Wizards of the Coast. Magic es el primer ejemplo",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Richard Garfield, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Collectible Components.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1993, una referencia indispensable obra de Richard Garfield dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "comercio_y_rutas",
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Magic: The Gathering: destacada boardgame (1993) obra de Richard Garfield.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

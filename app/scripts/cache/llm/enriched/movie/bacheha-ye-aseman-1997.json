@@ -1,0 +1,43 @@
+{
+  "id": "movie:bacheha-ye-aseman-1997",
+  "experience": {
+    "plot": "Bacheha-ye aseman es una película iraní de Majid Majidi estrenada en 1997 y filmada en lengua persa. Es el tercer largometraje de su director. Trata sobre las aventuras de un hermano y una hermana que pertenecen a una familia pobre y que han perdido un par de ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Majid Majidi, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1997, una obra destacada de Majid Majidi en el panorama de Drama y Familiar."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "espionaje",
+    "deporte"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "familia"
+  ],
+  "oneLiner": "Bacheha-Ye aseman: Drama y Familiar con dirección de Majid Majidi.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

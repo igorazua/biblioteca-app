@@ -18,14 +18,14 @@
     "tono": 4,
     "ritmo": 4,
     "emocion": 3,
-    "exigencia": 4,
+    "exigencia": 5,
     "humor": 1,
     "tension": 4,
     "fantasia": 4,
-    "violencia": 4,
-    "familiar": 2,
+    "violencia": 3,
+    "familiar": 1,
     "escala": 4,
-    "reconfort": 3
+    "reconfort": 2
   },
   "themes": [
     "ia_y_robots",

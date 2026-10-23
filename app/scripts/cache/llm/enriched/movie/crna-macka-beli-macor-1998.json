@@ -1,0 +1,44 @@
+{
+  "id": "movie:crna-macka-beli-macor-1998",
+  "experience": {
+    "plot": "Gato negro, gato blanco es una comedia romántica serbia dirigida por Emir Kusturica en 1998. Ganó el León de Plata a la mejor dirección en la Mostra de Venecia.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Emir Kusturica, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Titanic"
+    ],
+    "context": "Estrenada en 1998, una obra destacada de Emir Kusturica en el panorama de Comedia y Crimen."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 2,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 5,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "crimen",
+    "amor",
+    "ia_y_robots",
+    "espionaje",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pareja"
+  ],
+  "oneLiner": "Crna macka, beli macor: Comedia y Crimen con dirección de Emir Kusturica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

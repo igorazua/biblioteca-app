@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:broom-service-2015",
+  "experience": {
+    "plot": "Score the most victory points by delivering potions via Broom Service throughout the magical realm. Broom Service is a card-based game that combines luck and skill and balances timely bluffing with clever hand management. Remake of award-winning Witch's Brew: ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Alexander Pfister, Andreas Pelikan, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Alexander Pfister, Andreas Pelikan dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "faroleo_y_enganos",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Broom Service: destacada boardgame (2015) obra de Alexander Pfister, Andreas Pelikan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

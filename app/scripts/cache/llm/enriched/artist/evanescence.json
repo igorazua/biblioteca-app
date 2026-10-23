@@ -1,0 +1,36 @@
+{
+  "id": "artist:evanescence",
+  "experience": {
+    "plot": "Evanescence es una banda estadounidense de goth metal y rock alternativo fundada en Little Rock, Arkansas, en 1994 por la cantante, pianista y compositora Amy Lee y el guitarrista Ben Moody. Después de grabar dos EPs independientes, Evanescence EP y Sound Asle",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2003, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 5,
+    "bailable": 4,
+    "organico": 3,
+    "intensidad": 5,
+    "fondo": 2,
+    "complejidad": 1
+  },
+  "themes": [
+    "rock_clasico",
+    "metal",
+    "pop"
+  ],
+  "moments": [
+    "trabajar_estudiar"
+  ],
+  "oneLiner": "Evanescence: destacada artist (2003) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

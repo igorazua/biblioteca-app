@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:pagan-fate-of-roanoke-2022",
+  "experience": {
+    "plot": "Pagan: Fate of Roanoke is an expandable deduction card game set in the colonial America of 1587. The essence of this asymmetrical game is a witch's struggle against a witch hunter. As the witch strives to complete a ritual of renaturation, the hunter tries to ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Kasper Kjær Christiansen, Kåre Storgaard, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Faroleo.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Kasper Kjær Christiansen, Kåre Storgaard dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "faroleo_y_enganos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Pagan: Fate of Roanoke (2022): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:laura-1944",
+  "experience": {
+    "plot": "Laura es una película estadounidense de 1944 dirigida por Otto Preminger basada en la novela homónima de la escritora Vera Caspary. La película cuenta con la actuación de Gene Tierney, Dana Andrews y Clifton Webb junto con Vincent Price y Judith Anderson.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Otto Preminger, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1944, una obra destacada de Otto Preminger en el panorama de Drama y Cine negro."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Laura: Drama y Cine negro con dirección de Otto Preminger.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:lilja-4-ever-2002",
+  "experience": {
+    "plot": "Lilja 4-ever (2002) es una película sueca de género dramático. Es el tercer largometraje del director Lukas Moodysson y marca un cambio respecto de sus dos películas anteriores: Fucking Åmål y Juntos. Lilja 4-ever relata la una historia de Lilja, interpretada ",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Lukas Moodysson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2002, una obra destacada de Lukas Moodysson en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 1
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "ia_y_robots",
+    "espionaje"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Lilja 4-ever: Crimen y Drama con dirección de Lukas Moodysson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

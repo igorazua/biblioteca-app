@@ -1,0 +1,42 @@
+{
+  "id": "movie:shin-seiki-evangelion-gekij-ban-air-magokoro-wo-kimi-ni-1997",
+  "experience": {
+    "plot": "Concurrent theatrical ending of the TV series Shin seiki evangerion (1995).",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Hideaki Anno, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 1997, una obra destacada de Hideaki Anno en el panorama de Animación y Acción."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 3,
+    "violencia": 3,
+    "familiar": 5,
+    "escala": 1,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Shin seiki Evangelion Gekij\u001a-ban: Air/Magokoro wo, kimi ni (1997): memorable obra de Anim",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:j-b-ninp-ch-1993",
+  "experience": {
+    "plot": "A vagabond swordsman is aided by a beautiful ninja girl and a crafty spy in confronting a demonic clan of killers - with a ghost from his past as their leader - who are bent on overthrowing the Tokugawa Shogunate.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Yoshiaki Kawajiri, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1993, una obra destacada de Yoshiaki Kawajiri en el panorama de Animación y Acción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 3,
+    "violencia": 4,
+    "familiar": 5,
+    "escala": 5,
+    "reconfort": 4
+  },
+  "themes": [
+    "supervivencia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "J\u001ab\u001a ninp\u001ach\u001a: Animación y Acción con dirección de Yoshiaki Kawajiri.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

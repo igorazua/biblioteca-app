@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:undaunted-stalingrad-2022",
+  "experience": {
+    "plot": "Stalingrad, 1942. Before you awaits a grueling conflict in this cornerstone battleground. As the bullets and bombs tear the city asunder, only through wits and valor can you seize the cornerstone of the entire Eastern Front and change the course of history. A ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de David Thompson (I), Trevor Benjamin, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Juego de guerra / World War II.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de David Thompson (I), Trevor Benjamin dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "guerra_historica",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Undaunted: Stalingrad (2022): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

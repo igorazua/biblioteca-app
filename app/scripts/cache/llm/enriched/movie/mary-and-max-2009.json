@@ -1,0 +1,43 @@
+{
+  "id": "movie:mary-and-max-2009",
+  "experience": {
+    "plot": "Mary and Max es una película australiana de animación, stop motion y humor negro del 2009, escrita y dirigida por Adam Elliot. Aunque al inicio de la película se dice que está basada en hechos reales, la verdadera inspiración es la relación por carta que el di",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Adam Elliot, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2009, una obra destacada de Adam Elliot en el panorama de Animación y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "amistad",
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Mary and Max: Animación y Comedia con dirección de Adam Elliot.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

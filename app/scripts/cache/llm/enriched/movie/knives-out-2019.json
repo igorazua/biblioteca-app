@@ -1,0 +1,45 @@
+{
+  "id": "movie:knives-out-2019",
+  "experience": {
+    "plot": "Knives Out es una película estadounidense de suspenso detectivesco, estrenada en 2019; fue escrita y dirigida por Rian Johnson, y producida por el mismo Johnson y Ram Bergman. Siguiendo el estilo del género whodunit, la película sigue las investigaciones del d",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Rian Johnson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2019, una obra destacada de Rian Johnson en el panorama de Comedia y Crimen."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "familia",
+    "ia_y_robots",
+    "duelo",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Puñales por la espalda: Comedia y Crimen con dirección de Rian Johnson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

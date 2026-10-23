@@ -1,0 +1,42 @@
+{
+  "id": "movie:la-dolce-vita-1960",
+  "experience": {
+    "plot": "La dolce vita es una película italiana de 1960, escrita y dirigida por Federico Fellini, con la actuación de Marcello Mastroianni, Anita Ekberg y Anouk Aimée.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Federico Fellini, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1960, una obra destacada de Federico Fellini en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 1,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "La dolce vita: Comedia y Drama con dirección de Federico Fellini.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "series:jag-1995",
+  "experience": {
+    "plot": "JAG, acrónimo de Judge Advocate General, es una serie de televisión estadounidense de aventura y drama, producida por Donald P. Bellisario, en asociación con la Paramount. JAG se estrenó en la NBC en 1995, pero fue cancelada en 1996 tras acabar en la posición ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de CBS, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Crimen.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1995, una referencia indispensable obra de CBS dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "investigacion_policial",
+    "abogados_y_juicios",
+    "amistad"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "JAG: Alerta roja: destacada series (1995) obra de CBS.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

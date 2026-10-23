@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:pandemic-the-cure-2014",
+  "experience": {
+    "plot": "Pandemic: The Cure, a dice-based version of the popular Pandemic board game, sets up in less than a minute and plays in 30 minutes. As in the board game, four diseases threaten the world and it's up to your team to save humanity. You and your team must keep th",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Matt Leacock, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Dados / Medio ambiente.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Matt Leacock dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 4,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "dados_y_push_your_luck",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Pandemic: The Cure: destacada boardgame (2014) obra de Matt Leacock.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

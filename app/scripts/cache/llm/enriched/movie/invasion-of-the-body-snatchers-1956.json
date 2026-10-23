@@ -1,0 +1,45 @@
+{
+  "id": "movie:invasion-of-the-body-snatchers-1956",
+  "experience": {
+    "plot": "Invasion of the Body Snatchers es una película estadounidense de 1956 de los géneros de terror y ciencia ficción dirigida por Don Siegel y con Kevin McCarthy, Dana Wynter, King Donovan, Carolyn Jones y Jean Willes como actores principales. Está basada en la no",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Don Siegel, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 1956, una obra destacada de Don Siegel en el panorama de Drama y Terror."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "espacio",
+    "sobrenatural"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "La invasión de los ladrones de cuerpos: Drama y Terror con dirección de Don Siegel.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

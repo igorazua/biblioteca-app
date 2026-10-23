@@ -1,0 +1,44 @@
+{
+  "id": "movie:after-hours-1985",
+  "experience": {
+    "plot": "After Hours es una película estadounidense del género comedia negra, dirigida por Martin Scorsese a partir de un guion de Joseph Minion. se estrenó en 1985 y protagonizada por Griffin Dunne, Rosanna Arquette, Tommy Chong y John Heard. Relata la historia de un ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Martin Scorsese, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1985, una obra destacada de Martin Scorsese en el panorama de Comedia y Crimen."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Jo, ¡qué noche!: Comedia y Crimen con dirección de Martin Scorsese.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

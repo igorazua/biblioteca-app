@@ -14,14 +14,14 @@
     "context": "Creada en 2024, una referencia indispensable obra de Antoine Bauza, Bruno Cathala dentro de su disciplina."
   },
   "axes": {
-    "peso": 2,
+    "peso": 1,
     "interaccion": 3,
-    "azar": 1,
-    "confrontacion": 1,
+    "azar": 4,
+    "confrontacion": 2,
     "cooperacion": 1,
-    "tema": 2,
-    "risas": 1,
-    "familiar": 5
+    "tema": 4,
+    "risas": 2,
+    "familiar": 4
   },
   "themes": [
     "draft_de_cartas",

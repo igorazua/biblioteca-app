@@ -1,0 +1,39 @@
+{
+  "id": "book:el-hombre-en-el-castillo-1962",
+  "experience": {
+    "plot": "Una ucronía donde las potencias del Eje ganaron la Segunda Guerra Mundial y dividieron Estados Unidos.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Philip K. Dick, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Histórica.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1962, una referencia indispensable obra de Philip K. Dick dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 2,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 5,
+    "escala": 4,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "El hombre en el castillo: destacada book (1962) obra de Philip K. Dick.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

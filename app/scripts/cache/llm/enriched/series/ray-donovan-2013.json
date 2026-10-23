@@ -1,0 +1,43 @@
+{
+  "id": "series:ray-donovan-2013",
+  "experience": {
+    "plot": "Ray Donovan es una serie de televisión de drama criminal estadounidense creada por Ann Biderman para Showtime que se estrenó el 30 de junio de 2013, protagonizada por Liev Schreiber, Paula Malcomson, Eddie Marsan, Dash Mihok y Jon Voight, entre otros. La serie",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Paramount+ with Showtime, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Acción.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de Paramount+ with Showtime dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 1,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Ray Donovan: destacada series (2013) obra de Paramount+ with Showtime.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

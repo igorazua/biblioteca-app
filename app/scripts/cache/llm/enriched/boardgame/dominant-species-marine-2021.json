@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:dominant-species-marine-2021",
+  "experience": {
+    "plot": "Sixty-Something Millions of Years Ago — A great ice age has ended. With massive warming altering the globe, another titanic struggle for supremacy has unwittingly commenced between the varying animal species. Dominant Species: Marine is a game that abstractly ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Chad Jensen, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Medio ambiente.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Chad Jensen dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Dominant Species: Marine: destacada boardgame (2021) obra de Chad Jensen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

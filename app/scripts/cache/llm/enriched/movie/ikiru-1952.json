@@ -1,0 +1,42 @@
+{
+  "id": "movie:ikiru-1952",
+  "experience": {
+    "plot": "Vivir es una película dramática japonesa de 1952 y dirigida por Akira Kurosawa y protagonizada por Takashi Shimura. La trama se centra en el cambio de actitud de un veterano y aburrido funcionario cuando se da cuenta de que ha estado desperdiciando el tiempo a",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Akira Kurosawa, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1952, una obra destacada de Akira Kurosawa en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "duelo",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Vivir: Drama con dirección de Akira Kurosawa.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

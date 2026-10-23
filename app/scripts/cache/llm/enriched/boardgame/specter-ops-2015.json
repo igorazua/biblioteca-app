@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:specter-ops-2015",
+  "experience": {
+    "plot": "A secret agent of A.R.K. has infiltrated a top secret Raxxon facility, attempting to complete three mission objectives before they escape — but they are hunted by genetically modified Raxxon Hunters. Players can choose which side they wish to join. Specter Ops",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Emerson Matsuuchi, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Deducción / Fighting.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Emerson Matsuuchi dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "misterio_y_deduccion",
+    "roles_ocultos",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Specter Ops: destacada boardgame (2015) obra de Emerson Matsuuchi.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

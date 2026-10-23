@@ -14,13 +14,13 @@
     "context": "Creada en 1962, una referencia indispensable obra de Londres, Reino Unido dentro de su disciplina."
   },
   "axes": {
-    "energia": 5,
-    "valencia": 4,
-    "bailable": 5,
+    "energia": 4,
+    "valencia": 2,
+    "bailable": 2,
     "organico": 5,
-    "intensidad": 5,
-    "fondo": 1,
-    "complejidad": 2
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 4
   },
   "themes": [
     "rock_clasico",

@@ -1,0 +1,39 @@
+{
+  "id": "book:alice-s-adventures-in-wonderland-1865",
+  "experience": {
+    "plot": "Las aventuras de Alicia en el país de las maravillas, comúnmente abreviado como Alicia en el país de las maravillas, es una novela de fantasía escrita por el matemático, lógico, fotógrafo y escritor británico Charles Lutwidge Dodgson, bajo el seudónimo de Lewi",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Lewis Carroll, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1865, una referencia indispensable obra de Lewis Carroll dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "escala": 2,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "historia",
+    "aventura",
+    "fantasia_epica"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Alice's Adventures in Wonderland: destacada book (1865) obra de Lewis Carroll.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:blood-rage-2015",
+  "experience": {
+    "plot": "\"Life is Battle; Battle is Glory; Glory is ALL\" In Blood Rage, players control the warriors, leader, and ship of their own Viking clan. Ragnarök has come and it’s the end of the world! It’s the Vikings’ last chance to go down in a blaze of glory and secure the",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Eric M. Lang, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Fighting.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Eric M. Lang dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Blood Rage: destacada boardgame (2015) obra de Eric M. Lang.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

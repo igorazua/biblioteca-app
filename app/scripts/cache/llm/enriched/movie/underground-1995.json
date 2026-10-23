@@ -1,0 +1,44 @@
+{
+  "id": "movie:underground-1995",
+  "experience": {
+    "plot": "Underground, conocida también con el título Érase una vez un país, es una película cómica-dramática de 1995 dirigida por Emir Kusturica y escrita por Dušan Kovačević. A través de la historia de dos amigos, interpretados por Miki Manojlović y Lazar Ristovski, r",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Emir Kusturica, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1995, una obra destacada de Emir Kusturica en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "guerra",
+    "amistad",
+    "ia_y_robots",
+    "satira_social",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Underground: Comedia y Drama con dirección de Emir Kusturica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

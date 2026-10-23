@@ -14,19 +14,19 @@
     "context": "Creada en 1994, una referencia indispensable obra de David Crane y Marta Kauffman dentro de su disciplina."
   },
   "axes": {
-    "tono": 1,
-    "ritmo": 4,
-    "emocion": 2,
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 3,
     "exigencia": 1,
-    "humor": 5,
-    "tension": 1,
-    "fantasia": 1,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
     "violencia": 1,
-    "familiar": 4,
-    "escala": 2,
-    "reconfort": 5,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 4,
     "enganche": 4,
-    "formato": 4
+    "formato": 2
   },
   "themes": [
     "amistad",

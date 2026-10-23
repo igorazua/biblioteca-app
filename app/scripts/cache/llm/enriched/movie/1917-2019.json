@@ -1,0 +1,41 @@
+{
+  "id": "movie:1917-2019",
+  "experience": {
+    "plot": "1917 es una película de guerra británica de 2019 dirigida y producida por Sam Mendes, y escrita por Mendes y Krysty Wilson-Cairns. Está protagonizada por George MacKay y Dean-Charles Chapman, con Mark Strong, Andrew Scott, Richard Madden, Claire Duburcq, Colin",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Sam Mendes, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2019, una obra destacada de Sam Mendes en el panorama de Drama y Thriller."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "familia",
+    "crimen"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "1917: Drama y Thriller con dirección de Sam Mendes.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

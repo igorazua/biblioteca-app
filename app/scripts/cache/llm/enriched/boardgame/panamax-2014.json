@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:panamax-2014",
+  "experience": {
+    "plot": "After one hundred years in service, the Panama Canal still is one of the most important and impressive engineering achievements in modern times.\n\nBuilt in 1914, it held a prominent role in the deployment of military vessels during WWI and in the conflicts that",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Gil d'Orey, Nuno Bizarro Sentieiro, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Nautical.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Gil d'Orey, Nuno Bizarro Sentieiro dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Panamax: destacada boardgame (2014) obra de Gil d'Orey, Nuno Bizarro Sentieiro.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "book:a-midsummer-night-s-dream-1600",
+  "experience": {
+    "plot": "El sueño de una noche de verano es una comedia de William Shakespeare, escrita alrededor de 1595. Narra los hechos que suceden durante el casamiento de Teseo, duque de Atenas, con Hipólita, reina de las amazonas. Incluye las aventuras de cuatro amantes atenien",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de William Shakespeare, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1600, una referencia indispensable obra de William Shakespeare dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "densidad": 3,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "aventura",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "A Midsummer Night's Dream: destacada book (1600) obra de William Shakespeare.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

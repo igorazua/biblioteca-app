@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:ticket-to-ride-legacy-legends-of-the-west-2023",
+  "experience": {
+    "plot": "In Ticket to Ride Legacy: Legends of the West, players embark on twelve journeys across North America as 19th century pioneers. The campaign begins on the East Coast, with players working their way to the West from one adventure to the next, meeting challenges",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Alan R. Moon, Matt Leacock, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de American West / Trains.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Alan R. Moon, Matt Leacock dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Ticket to Ride Legacy: Legends of the West (2023): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

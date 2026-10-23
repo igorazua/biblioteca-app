@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:chess-1475",
+  "experience": {
+    "plot": "El ajedrez es un juego de tablero entre dos contrincantes en el que cada uno dispone al comienzo de dieciséis piezas móviles, desiguales en importancia y valor, que se desplazan sobre un tablero capturando piezas del jugador contrario, según ciertas reglas. En",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de (Uncredited), la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Estrategia abstracta.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1475, una referencia indispensable obra de (Uncredited) dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "pareja",
+    "jugones"
+  ],
+  "oneLiner": "Chess: destacada boardgame (1475) obra de (Uncredited).",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

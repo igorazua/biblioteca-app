@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:alien-frontiers-2010",
+  "experience": {
+    "plot": "Do you have what it takes to be a deep space colonist? An alien frontier awaits the brave and daring! This new planet will be harsh, but if you have the skills to manage your resources, build a fleet, research alien life, and settle colonies, the world can be ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Tory Niemann, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Dados / Ciencia ficción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra de Tory Niemann dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 1,
+    "familiar": 3
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "dados_y_push_your_luck",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Alien Frontiers: destacada boardgame (2010) obra de Tory Niemann.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

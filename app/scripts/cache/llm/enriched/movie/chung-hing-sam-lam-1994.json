@@ -1,0 +1,43 @@
+{
+  "id": "movie:chung-hing-sam-lam-1994",
+  "experience": {
+    "plot": "Chungking Express es una película hongkonesa de 1994 de los géneros de comedia dramática, romántica policíaco artística dirigida y escrita por Wong Kar-Wai. Fue la cuarta película del director hongkonés y, tras su estreno mundial en el Festival Internacional d",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Kar-Wai Wong, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1994, una obra destacada de Kar-Wai Wong en el panorama de Comedia y Crimen."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Chung Hing sam lam: Comedia y Crimen con dirección de Kar-Wai Wong.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

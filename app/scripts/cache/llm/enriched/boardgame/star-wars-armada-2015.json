@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:star-wars-armada-2015",
+  "experience": {
+    "plot": "Massive Star Destroyers fly to battle against Rebel corvettes and frigates. Banks of turbolasers unleash torrential volleys of fire against squadrons of X-wing and TIEs. Engineering teams race to route additional power to failing shields. Laser blasts and expl",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Christian T. Petersen, James Kniffen, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Collectible Components / Miniaturas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Christian T. Petersen, James Kniffen dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 4,
+    "azar": 1,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "pareja",
+    "jugones"
+  ],
+  "oneLiner": "Star Wars: Armada (2015): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

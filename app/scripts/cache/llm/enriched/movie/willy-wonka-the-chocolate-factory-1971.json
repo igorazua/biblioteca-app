@@ -1,0 +1,41 @@
+{
+  "id": "movie:willy-wonka-the-chocolate-factory-1971",
+  "experience": {
+    "plot": "Willy Wonka & the Chocolate Factory es una película estadounidense de 1971 basada en el libro de Roald Dahl: Charlie y la fábrica de chocolate, dirigida por Mel Stuart y protagonizada por Gene Wilder en el papel principal de Willy Wonka.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Mel Stuart, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El señor de los anillos: La comunidad del anillo",
+      "La La Land",
+      "Whiplash",
+      "Barbie"
+    ],
+    "context": "Estrenada en 1971, una obra destacada de Mel Stuart en el panorama de Familiar y Fantasía."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 5,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "musica",
+    "amistad"
+  ],
+  "moments": [
+    "familia",
+    "domingo_tarde"
+  ],
+  "oneLiner": "Un mundo de fantasía: Familiar y Fantasía con dirección de Mel Stuart.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

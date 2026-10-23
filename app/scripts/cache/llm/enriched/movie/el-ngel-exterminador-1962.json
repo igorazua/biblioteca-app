@@ -1,0 +1,41 @@
+{
+  "id": "movie:el-ngel-exterminador-1962",
+  "experience": {
+    "plot": "The guests at an upper-class dinner party find themselves unable to leave.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Luis Bu\u001auel, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1962, una obra destacada de Luis Bu\u001auel en el panorama de Drama y Fantasía."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 5,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 1
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "El \u001angel exterminador: Drama y Fantasía con dirección de Luis Bu\u001auel.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

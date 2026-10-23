@@ -1,0 +1,41 @@
+{
+  "id": "movie:wo-hu-cang-long-2000",
+  "experience": {
+    "plot": "El tigre y el dragón o Tigre y dragón es una película wuxia dirigida por Ang Lee en 2000. Es una coproducción de China, Hong Kong, Taiwán y Estados Unidos, protagonizada por Chow Yun-Fat, Michelle Yeoh, Zhang Ziyi y Chang Chen.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Ang Lee, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2000, una obra destacada de Ang Lee en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Wo hu cang long: Acción y Aventura con dirección de Ang Lee.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

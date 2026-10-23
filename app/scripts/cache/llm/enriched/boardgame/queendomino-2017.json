@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:queendomino-2017",
+  "experience": {
+    "plot": "Description from the publisher: Build up the most prestigious kingdom by claiming wheat fields, forests, lakes, grazing grounds, marshes, and mountains. Your knights will bring you riches in the form of coins — and if you make sure to expand the towns on your ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bruno Cathala, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Medieval.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Bruno Cathala dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "puzzles_y_losetas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Queendomino: destacada boardgame (2017) obra de Bruno Cathala.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "movie:dancer-in-the-dark-2000",
+  "experience": {
+    "plot": "Dancer in the Dark es una película de drama musical escrita y dirigida por Lars von Trier, producida por Vibeke Windeløv en Dinamarca, Francia y Suecia. Fue filmada con cámara de mano, inspirada por la corriente Dogma 95.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Lars von Trier, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2000, una obra destacada de Lars von Trier en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 1,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "espionaje",
+    "musica",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Bailar en la oscuridad: Crimen y Drama con dirección de Lars von Trier.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

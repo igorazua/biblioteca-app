@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:nexus-ops-2005",
+  "experience": {
+    "plot": "Nexus Ops is a light-medium science fiction war game. The game boasts a hexagonal board that is set up differently every time, as well as (in the Avalon Hill edition) cool \"glow\" miniatures and lots of combat. Players control competing futuristic corporations ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Charlie Catino, Steven Kimball, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Juego de guerra.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de Charlie Catino, Steven Kimball dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Nexus Ops: destacada boardgame (2005) obra de Charlie Catino, Steven Kimball.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

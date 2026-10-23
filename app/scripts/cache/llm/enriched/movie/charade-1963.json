@@ -1,0 +1,43 @@
+{
+  "id": "movie:charade-1963",
+  "experience": {
+    "plot": "Charada es una película estadounidense de los géneros de suspense y comedia romántica estrenada en diciembre de 1963, dirigida por Stanley Donen con guion de Peter Stone escrito a partir de otro guion suyo y de Marc Behm llamado The Unsuspecting Wife y de su t",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Stanley Donen, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Forrest Gump",
+      "Titanic",
+      "Regreso al futuro",
+      "Sospechosos habituales"
+    ],
+    "context": "Estrenada en 1963, una obra destacada de Stanley Donen en el panorama de Comedia y Misterio."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 5,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "investigacion",
+    "amor",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pasar_miedo"
+  ],
+  "oneLiner": "Charada: Comedia y Misterio con dirección de Stanley Donen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

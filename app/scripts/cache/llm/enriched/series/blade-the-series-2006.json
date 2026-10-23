@@ -1,0 +1,42 @@
+{
+  "id": "series:blade-the-series-2006",
+  "experience": {
+    "plot": "Blade: la serie es un programa de televisión estadounidense basado en los cómics de Marvel y la popular trilogía cinematográfica. Se estrenó en la televisión estadounidense el 28 de junio de 2006. Kirk «Sticky Fingaz» Jones actor principal en el papel de Blade",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Paramount Network, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Supernatural.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de Paramount Network dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 4,
+    "enganche": 2,
+    "formato": 3
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Blade: The Series: destacada series (2006) obra de Paramount Network.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

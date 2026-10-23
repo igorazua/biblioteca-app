@@ -1,0 +1,43 @@
+{
+  "id": "movie:harry-potter-and-the-philosopher-s-stone-2001",
+  "experience": {
+    "plot": "Harry Potter y la piedra filosofal es una película británica-estadounidense de fantasía y aventuras dirigida por Chris Columbus.",
+    "feeling": "Mágica, nostálgica y emocionante introducción al universo de Hogwarts.",
+    "hook": "El descubrimiento del mundo mágico y la amistad entre Harry, Ron y Hermione.",
+    "notFor": "Quienes busquen cine hiperrealista o no disfruten con relatos iniciáticos fantásticos.",
+    "similar": [
+      "El señor de los anillos",
+      "Las crónicas de Narnia",
+      "Percy Jackson"
+    ],
+    "context": "Estrenada en 2001, dio inicio a una de las sagas cinematográficas más influyentes."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 1,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "magia",
+    "amistad",
+    "infancia",
+    "destino",
+    "colegio_magico"
+  ],
+  "moments": [
+    "familia",
+    "maraton",
+    "domingo_tarde"
+  ],
+  "oneLiner": "Harry Potter y la piedra filosofal (2001): el mágico comienzo de una saga generacional.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

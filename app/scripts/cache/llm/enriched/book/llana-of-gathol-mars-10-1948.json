@@ -1,0 +1,39 @@
+{
+  "id": "book:llana-of-gathol-mars-10-1948",
+  "experience": {
+    "plot": "Obra clásica de ciencia ficción escrita por Edgar Rice Burroughs.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Edgar Rice Burroughs, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1948, una referencia indispensable obra de Edgar Rice Burroughs dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 2,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 5,
+    "escala": 3,
+    "ideas": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "fantasia_epica",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Llana of Gathol (Mars #10): destacada book (1948) obra de Edgar Rice Burroughs.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

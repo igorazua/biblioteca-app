@@ -1,0 +1,44 @@
+{
+  "id": "movie:the-lives-of-others-2006",
+  "experience": {
+    "plot": "La vida de los otros es una película alemana del año 2006 que supuso el debut de Florian Henckel von Donnersmarck como guionista y director. La película transcurre en el Berlín Este durante los últimos años de existencia de la República Democrática Alemana, y ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Florian Henckel von Donnersmarck, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2006, una obra destacada de Florian Henckel von Donnersmarck en el panorama de Drama y Misterio."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "La vida de los otros: Drama y Misterio con dirección de Florian Henckel von Donnersmarck.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

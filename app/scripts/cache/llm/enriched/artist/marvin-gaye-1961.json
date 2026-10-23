@@ -1,0 +1,36 @@
+{
+  "id": "artist:marvin-gaye-1961",
+  "experience": {
+    "plot": "Marvin Gaye (Washington D.C., EE. UU.), icono de Soul, R&B, Motown desde 1961.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Washington D.C., EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Soul / R&B.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1961, una referencia indispensable obra de Washington D.C., EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 2,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 2,
+    "fondo": 3,
+    "complejidad": 2
+  },
+  "themes": [
+    "pop",
+    "blues",
+    "soul"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Marvin Gaye: destacada artist (1961) obra de Washington D.C., EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

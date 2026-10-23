@@ -1,0 +1,41 @@
+{
+  "id": "movie:shine-1996",
+  "experience": {
+    "plot": "Shine es una película australiana de 1996, dirigida por Scott Hicks, acerca de la historia del pianista David Helfgott, también australiano, quien sufrió una crisis emocional a causa de los maltratos que le infligió su padre.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Scott Hicks, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1996, una obra destacada de Scott Hicks en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Shine: Biografía y Drama con dirección de Scott Hicks.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:trois-couleurs-rouge-1994",
+  "experience": {
+    "plot": "Trois Couleurs: Rouge es una película de misterio romántico dramático psicológico artística helvética-polaca-francesa coescrita, producida y dirigida por el director polaco Krzysztof Kieślowski. Es la culminación, estrenada en 1994, de la trilogía basada en la",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Krzysztof Kieslowski, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1994, una obra destacada de Krzysztof Kieslowski en el panorama de Drama y Misterio."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "investigacion",
+    "amor",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Trois couleurs: Rouge: Drama y Misterio con dirección de Krzysztof Kieslowski.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

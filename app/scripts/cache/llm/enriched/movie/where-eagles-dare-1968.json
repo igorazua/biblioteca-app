@@ -1,0 +1,41 @@
+{
+  "id": "movie:where-eagles-dare-1968",
+  "experience": {
+    "plot": "Where Eagles Dare es una película de guerra anglo-estadounidense del año 1968, dirigida por Brian G. Hutton. Protagonizada por Richard Burton y Clint Eastwood, está basada en la novela de Alistair MacLean, siendo un clásico del cine bélico.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Brian G. Hutton, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1968, una obra destacada de Brian G. Hutton en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 2,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 1
+  },
+  "themes": [
+    "guerra",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "El desafío de las águilas: Acción y Aventura con dirección de Brian G. Hutton.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:kanagawa-2016",
+  "experience": {
+    "plot": "1840: In Kanagawa, the great bay of Tokyo, the Master Hokusai decided to open a painting school to share his art with his disciples. You are one of these disciples, and more than anything, you want to prove yourself worthy of the “crazy, old artist”. Follow hi",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bruno Cathala, Charles Chevallier, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra de Bruno Cathala, Charles Chevallier dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Kanagawa: destacada boardgame (2016) obra de Bruno Cathala, Charles Chevallier.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

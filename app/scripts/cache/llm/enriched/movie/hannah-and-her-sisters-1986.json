@@ -1,0 +1,42 @@
+{
+  "id": "movie:hannah-and-her-sisters-1986",
+  "experience": {
+    "plot": "Hannah y sus hermanas es una película estadounidense de 1986 escrita y dirigida por Woody Allen, y con él mismo, Mia Farrow, Michael Caine, Barbara Hershey y Dianne Wiest como actores principales, acompañados de un reparto estelar.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Woody Allen, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1986, una obra destacada de Woody Allen en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Hannah y sus hermanas: Comedia y Drama con dirección de Woody Allen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

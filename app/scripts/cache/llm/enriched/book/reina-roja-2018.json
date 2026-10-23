@@ -1,0 +1,39 @@
+{
+  "id": "book:reina-roja-2018",
+  "experience": {
+    "plot": "Antonia Scott, la mujer más inteligente del mundo, sale de su encierro para resolver un secuestro de alto nivel.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Juan Gómez-Jurado, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Thriller / Crimen.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Juan Gómez-Jurado dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 5,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "escala": 4,
+    "ideas": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "misterio",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Reina roja: destacada book (2018) obra de Juan Gómez-Jurado.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

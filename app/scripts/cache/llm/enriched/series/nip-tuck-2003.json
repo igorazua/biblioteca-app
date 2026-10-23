@@ -1,0 +1,44 @@
+{
+  "id": "series:nip-tuck-2003",
+  "experience": {
+    "plot": "Nip/Tuck, también conocida como A Golpe de Bisturí en España, es una serie de televisión estadounidense ganadora de un premio Emmy y un Globo de Oro creada por Ryan Murphy y estrenada el 22 de julio de 2003. Relata la vida laboral de dos amigos y exitosos ciru",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de FX, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Medical.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2003, una referencia indispensable obra de FX dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "familia",
+    "amistad",
+    "medicina_y_hospitales"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Nip/Tuck: destacada series (2003) obra de FX.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

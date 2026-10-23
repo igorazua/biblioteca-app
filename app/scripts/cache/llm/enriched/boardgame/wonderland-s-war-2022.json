@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:wonderland-s-war-2022",
+  "experience": {
+    "plot": "The Looking Glass has shattered, madness is being drained from the inhabitants, and war has come to Wonderland. Alice, Mad Hatter, Red Queen, Jabberwock, and Cheshire Cat must gather all that they can while playing nice at the Hatter's Tea Party before going t",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ben Eisner, Ian Moss, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Novel-based.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Ben Eisner, Ian Moss dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Wonderland's War: destacada boardgame (2022) obra de Ben Eisner, Ian Moss.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

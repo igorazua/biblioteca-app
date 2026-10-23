@@ -1,0 +1,41 @@
+{
+  "id": "movie:walk-the-line-2005",
+  "experience": {
+    "plot": "Walk the line es una película estadounidense de 2005 dirigida por James Mangold y protagonizada por Joaquín Phoenix y Reese Witherspoon. La película está basada en la vida del cantante Johnny Cash.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de James Mangold, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2005, una obra destacada de James Mangold en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "musica",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "En la cuerda floja: Biografía y Drama con dirección de James Mangold.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

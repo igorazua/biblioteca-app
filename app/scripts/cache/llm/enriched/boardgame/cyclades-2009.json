@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:cyclades-2009",
+  "experience": {
+    "plot": "In this latest collaboration between Bruno Cathala and Ludovic Maublanc, players must buy the favor of the gods in their race to be the first player to build two cities in the Ancient Greek island group known as the Cyclades. Victory requires respect for all t",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bruno Cathala, Ludovic Maublanc, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad / Construcción de ciudades.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de Bruno Cathala, Ludovic Maublanc dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "imperios_y_civilizaciones",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Cyclades: destacada boardgame (2009) obra de Bruno Cathala, Ludovic Maublanc.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

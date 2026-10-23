@@ -1,0 +1,43 @@
+{
+  "id": "movie:gattaca-1997",
+  "experience": {
+    "plot": "A genetically inferior man assumes the identity of a superior one in order to pursue his lifelong dream of space travel.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Andrew Niccol, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1997, una obra destacada de Andrew Niccol en el panorama de Drama y Ciencia ficción."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 5,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "crimen",
+    "espacio"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Gattaca: Drama y Ciencia ficción con dirección de Andrew Niccol.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

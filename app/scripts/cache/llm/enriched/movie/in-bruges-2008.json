@@ -1,0 +1,43 @@
+{
+  "id": "movie:in-bruges-2008",
+  "experience": {
+    "plot": "In Bruges es una película británica de 2008 dirigida y escrita por Martin McDonagh. Fue protagonizada por Colin Farrell, Brendan Gleeson y Ralph Fiennes. La historia tiene lugar en la ciudad belga de Brujas. In Bruges fue la película de la noche inaugural en e",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Martin McDonagh, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2008, una obra destacada de Martin McDonagh en el panorama de Comedia y Crimen."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 1,
+    "reconfort": 5
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Escondidos en Brujas: Comedia y Crimen con dirección de Martin McDonagh.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

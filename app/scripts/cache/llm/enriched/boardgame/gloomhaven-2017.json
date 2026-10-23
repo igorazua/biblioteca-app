@@ -14,14 +14,14 @@
     "context": "Creada en 2017, una referencia indispensable obra de Isaac Childres dentro de su disciplina."
   },
   "axes": {
-    "peso": 3,
+    "peso": 4,
     "interaccion": 3,
-    "azar": 1,
-    "confrontacion": 1,
+    "azar": 4,
+    "confrontacion": 2,
     "cooperacion": 5,
-    "tema": 2,
-    "risas": 1,
-    "familiar": 3
+    "tema": 4,
+    "risas": 2,
+    "familiar": 2
   },
   "themes": [
     "fantasia_medieval",

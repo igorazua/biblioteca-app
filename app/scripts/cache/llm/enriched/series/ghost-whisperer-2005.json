@@ -1,0 +1,43 @@
+{
+  "id": "series:ghost-whisperer-2005",
+  "experience": {
+    "plot": "Entre fantasmas es una reconocida series que explora temáticas de Drama, Fantasía, Supernatural. Destaca por su personalidad propia y su conexión directa con el público.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de CBS, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Fantasía.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de CBS dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Entre fantasmas: destacada series (2005) obra de CBS.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

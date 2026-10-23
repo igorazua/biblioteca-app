@@ -1,0 +1,41 @@
+{
+  "id": "movie:to-be-or-not-to-be-1942",
+  "experience": {
+    "plot": "Ser o no ser es una película cómica estadounidense de Ernst Lubitsch estrenada en 1942. El guion, escrito por Lubitsch y Edwin Justus Mayer, adapta un relato de Menyhért Lengyel. En la película actuaron Carole Lombard, Jack Benny, Robert Stack, Felix Bressart,",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Ernst Lubitsch, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Regreso al futuro",
+      "Salvar al soldado Ryan",
+      "Braveheart",
+      "Toy Story"
+    ],
+    "context": "Estrenada en 1942, una obra destacada de Ernst Lubitsch en el panorama de Comedia y Bélica."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 2,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "Ser o no ser: Comedia y Bélica con dirección de Ernst Lubitsch.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

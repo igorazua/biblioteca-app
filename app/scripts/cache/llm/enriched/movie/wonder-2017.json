@@ -1,0 +1,42 @@
+{
+  "id": "movie:wonder-2017",
+  "experience": {
+    "plot": "Wonder es una película estadounidense de 2017 perteneciente a los géneros de drama y comedia. Está dirigida por Stephen Chbosky y basada en el libro homónimo de 2012 de Raquel Palacio. El elenco principal incluye a Julia Roberts, Owen Wilson y Jacob Tremblay.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Stephen Chbosky, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2017, una obra destacada de Stephen Chbosky en el panorama de Drama y Familiar."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "familia"
+  ],
+  "oneLiner": "Wonder: Drama y Familiar con dirección de Stephen Chbosky.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

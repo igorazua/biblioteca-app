@@ -1,0 +1,39 @@
+{
+  "id": "book:the-prisoner-of-zenda-1800",
+  "experience": {
+    "plot": "Obra clásica de clásico escrita por Anthony Hope.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Anthony Hope, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Clásico / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1800, una referencia indispensable obra de Anthony Hope dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 1
+  },
+  "themes": [
+    "fantasia_epica",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "para_subrayar"
+  ],
+  "oneLiner": "The Prisoner of Zenda: destacada book (1800) obra de Anthony Hope.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

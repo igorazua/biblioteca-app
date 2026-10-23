@@ -1,0 +1,42 @@
+{
+  "id": "movie:what-ever-happened-to-baby-jane-1962",
+  "experience": {
+    "plot": "What Ever Happened to Baby Jane? es una película de suspense y suspenso psicológico estadounidense del año 1962 basada en la novela homónima de 1960, escrita por Henry Farrell.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Robert Aldrich, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1962, una obra destacada de Robert Aldrich en el panorama de Drama y Terror."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "crimen",
+    "sobrenatural"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "¿Qué fue de Baby Jane?: Drama y Terror con dirección de Robert Aldrich.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "book:a-room-with-a-view-1905",
+  "experience": {
+    "plot": "Obra clásica de clásico escrita por E. M. Forster.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de E. M. Forster, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Clásico / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1905, una referencia indispensable obra de E. M. Forster dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "historia",
+    "sociedad"
+  ],
+  "moments": [
+    "para_subrayar"
+  ],
+  "oneLiner": "A Room with a View: destacada book (1905) obra de E. M. Forster.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

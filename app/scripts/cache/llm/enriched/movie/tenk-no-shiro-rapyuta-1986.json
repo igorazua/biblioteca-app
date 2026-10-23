@@ -1,0 +1,42 @@
+{
+  "id": "movie:tenk-no-shiro-rapyuta-1986",
+  "experience": {
+    "plot": "A young boy and a girl with a magic crystal must race against pirates and foreign agents in a search for a legendary floating castle.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Hayao Miyazaki, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 1986, una obra destacada de Hayao Miyazaki en el panorama de Animación y Aventura."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 3,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "realismo_magico",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Tenk\u001a no shiro Rapyuta: Animación y Aventura con dirección de Hayao Miyazaki.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

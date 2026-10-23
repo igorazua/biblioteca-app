@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:star-wars-x-wing-miniatures-game-2012",
+  "experience": {
+    "plot": "Star Wars: X-Wing Miniatures Game is a tactical ship-to-ship combat game in which players take control of powerful Rebel X-wings and nimble Imperial TIE fighters, facing them against each other in fast-paced space combat. Featuring stunningly detailed and pain",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jay Little, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aviation / Flight / Faroleo.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Jay Little dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 2,
+    "tema": 2,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "naturaleza_y_animales",
+    "faroleo_y_enganos",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Star Wars: X-Wing Miniatures Game: destacada boardgame (2012) obra de Jay Little.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:stardew-valley-the-board-game-2021",
+  "experience": {
+    "plot": "A cooperative board game of farming and friendship based on the Stardew Valley video game by Eric Barone. Work together with your fellow farmers to save the Valley from the nefarious JojaMart Corporation! To do this, you'll need to farm, fish, friend and find ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Cole Medeiros, Eric Barone, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Farming.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Cole Medeiros, Eric Barone dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 4,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "Stardew Valley: The Board Game (2021): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

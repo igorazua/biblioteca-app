@@ -1,0 +1,39 @@
+{
+  "id": "book:guerra-y-paz-1869",
+  "experience": {
+    "plot": "Cinco familias aristocráticas rusas viven el esplendor social y el horror de las guerras napoleónicas.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de León Tolstói, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Histórica / Clásico.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1869, una referencia indispensable obra de León Tolstói dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 2,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 4,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "guerra",
+    "sociedad"
+  ],
+  "moments": [
+    "para_subrayar"
+  ],
+  "oneLiner": "Guerra y paz: destacada book (1869) obra de León Tolstói.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

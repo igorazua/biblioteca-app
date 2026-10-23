@@ -1,0 +1,45 @@
+{
+  "id": "movie:barry-lyndon-1975",
+  "experience": {
+    "plot": "Barry Lyndon es una película angloamericana dramática-histórica de 1975 escrita y dirigida por Stanley Kubrick; y protagonizada por Ryan O'Neal, Marisa Berenson, Patrick Magee y Hardy Krüger. Está basada en la novela La suerte de Barry Lyndon de William Makepe",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Stanley Kubrick, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 1975, una obra destacada de Stanley Kubrick en el panorama de Aventura y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "espacio",
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Barry Lyndon: Aventura y Drama con dirección de Stanley Kubrick.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

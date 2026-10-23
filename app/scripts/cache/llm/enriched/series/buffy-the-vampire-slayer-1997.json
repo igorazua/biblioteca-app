@@ -1,0 +1,43 @@
+{
+  "id": "series:buffy-the-vampire-slayer-1997",
+  "experience": {
+    "plot": "Buffy the Vampire Slayer es una serie de televisión estadounidense creada por Joss Whedon. Se estrenó el 10 de marzo de 1997 en The WB y concluyó el 20 de mayo de 2003 en UPN. La narrativa de la serie sigue a Buffy Summers, la última en una línea de mujeres jó",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de UPN, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Acción.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1997, una referencia indispensable obra de UPN dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 1,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "adolescencia",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Buffy, cazavampiros: destacada series (1997) obra de UPN.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

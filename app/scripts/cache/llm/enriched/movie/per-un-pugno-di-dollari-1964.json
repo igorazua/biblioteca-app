@@ -1,0 +1,42 @@
+{
+  "id": "movie:per-un-pugno-di-dollari-1964",
+  "experience": {
+    "plot": "Por un puñado de dólares es una película de coproducción italo-hispano-germana de 1964 dirigida por Sergio Leone, con Clint Eastwood y Gian Maria Volonté en los papeles principales.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Sergio Leone, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 1964, una obra destacada de Sergio Leone en el panorama de Acción y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 1,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Per un pugno di dollari: Acción y Drama con dirección de Sergio Leone.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

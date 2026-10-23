@@ -1,0 +1,40 @@
+{
+  "id": "movie:2001-una-odisea-del-espacio-1968",
+  "experience": {
+    "plot": "2001: A Space Odyssey es una película de culto británico-estadounidense del género ciencia ficción y épica dirigida por Stanley Kubrick y estrenada el 3 de abril de 1968. Marcó un hito por su estilo de comunicación visual, sus revolucionarios efectos especiale",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Stanley Kubrick, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Matrix",
+      "Parque Jurásico",
+      "Regreso al futuro",
+      "Origen"
+    ],
+    "context": "Estrenada en 1968, una obra destacada de Stanley Kubrick en el panorama de Ciencia ficción."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 5,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 1
+  },
+  "themes": [
+    "espacio",
+    "ia_y_robots",
+    "espionaje"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "2001: Una odisea del espacio: Ciencia ficción con dirección de Stanley Kubrick.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

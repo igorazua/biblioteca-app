@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:tiletum-2022",
+  "experience": {
+    "plot": "In Tiletum, you and fellow players take on the roles of rich merchants traveling throughout Europe, from Flanders to Venice, during the Golden Age of the Renaissance. You will travel to various cities to acquire trade contracts for wool and iron, as well as a ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Daniele Tascini, Simone Luciani, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Renaissance.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Daniele Tascini, Simone Luciani dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Tiletum: destacada boardgame (2022) obra de Daniele Tascini, Simone Luciani.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

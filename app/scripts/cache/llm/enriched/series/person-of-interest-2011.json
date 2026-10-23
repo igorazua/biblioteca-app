@@ -1,0 +1,43 @@
+{
+  "id": "series:person-of-interest-2011",
+  "experience": {
+    "plot": "Person of Interest es una serie de televisión estadounidense de CBS. Está basada en un guion de J. J. Abrams y Jonathan Nolan, y protagonizada por Jim Caviezel y Michael Emerson. La serie fue adquirida oficialmente por CBS el 13 de mayo de 2011, debutó el 22 d",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jonathan Nolan, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Crimen.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de Jonathan Nolan dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 1,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Vigilados: Person of Interest: destacada series (2011) obra de Jonathan Nolan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "movie:dog-day-afternoon-1975",
+  "experience": {
+    "plot": "Tarde de perros, cuyo título original en inglés es Dog Day Afternoon, es una película de drama criminal biográfica estadounidense de 1975 dirigida por Sidney Lumet y producida por Martin Bregman y Martin Elfand. La película está protagonizada por Al Pacino, Jo",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Sidney Lumet, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1975, una obra destacada de Sidney Lumet en el panorama de Biografía y Crimen."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 1
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "atraco",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Tarde de perros: Biografía y Crimen con dirección de Sidney Lumet.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

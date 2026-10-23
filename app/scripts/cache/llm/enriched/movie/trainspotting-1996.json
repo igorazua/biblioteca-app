@@ -1,0 +1,42 @@
+{
+  "id": "movie:trainspotting-1996",
+  "experience": {
+    "plot": "Trainspotting es una película británica de comedia negra y drama de 1996 dirigida por Danny Boyle y basada en la novela homónima escrita por Irvine Welsh. Narra la cruda y punzante historia de un grupo de jóvenes heroinómanos de los suburbios de Edimburgo, cuy",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Danny Boyle, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1996, una obra destacada de Danny Boyle en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "ambicion",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Trainspotting: Drama con dirección de Danny Boyle.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

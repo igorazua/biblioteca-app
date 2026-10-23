@@ -1,0 +1,36 @@
+{
+  "id": "artist:carino",
+  "experience": {
+    "plot": "Cariño es una banda musical española de pop, indie pop, tontipop y punk pop. La banda está compuesta por Paola Rivero y Alicia Ros. María Talaverano, la fundadora del proyecto, abandonó el grupo en mayo de 2025.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 4,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 4,
+    "complejidad": 2
+  },
+  "themes": [
+    "pop",
+    "indie_rock",
+    "punk"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Cariño: destacada artist (2018) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

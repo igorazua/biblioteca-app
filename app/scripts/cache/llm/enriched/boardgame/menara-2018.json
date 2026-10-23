@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:menara-2018",
+  "experience": {
+    "plot": "As a tight-knit team in Menara, players use pillars and wondrously-shaped temple floors to build a spectacularly soaring structure full of nooks and crannies. Cooperation and static skills are in demand since for each mistake in construction, you have to add a",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Oliver Richtberg, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Action / Dexterity / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Oliver Richtberg dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "Menara: destacada boardgame (2018) obra de Oliver Richtberg.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

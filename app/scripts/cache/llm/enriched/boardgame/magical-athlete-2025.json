@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:magical-athlete-2025",
+  "experience": {
+    "plot": "Magical Athlete is a racing game of pure chaos! Roll a die and move your racer that many spaces — but all the racers have wacky, game-breaking abilities. Race four times, then whoever has the most points wins! Before the racing begins, players will draft the f",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Richard Garfield, Takashi Ishida, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Dados.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2025, una referencia indispensable obra de Richard Garfield, Takashi Ishida dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 4,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "dados_y_push_your_luck",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Magical Athlete: destacada boardgame (2025) obra de Richard Garfield, Takashi Ishida.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

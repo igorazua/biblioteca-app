@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:shackleton-base-a-journey-to-the-moon-2024",
+  "experience": {
+    "plot": "A permanent base is being built in the Shackleton crater at the Moon's South Pole. You're leading one of the space agencies that are working together to expand their presence on the base, while at the same time the three major corporations sponsoring the missi",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Fabio Lopiano, Nestore Mangone, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Space Exploration.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Fabio Lopiano, Nestore Mangone dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 2
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Shackleton Base: A Journey to the Moon (2024): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

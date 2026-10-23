@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:century-eastern-wonders-2018",
+  "experience": {
+    "plot": "Centuries ago, the lucrative spice trade compelled the prosperous nations of the world to explore alternate routes to the sources of these precious goods. These nations took to the seas to seek out exotic lands. This led to the discovery of the famed Spice Isl",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Emerson Matsuuchi, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Nautical.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Emerson Matsuuchi dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Century: Eastern Wonders: destacada boardgame (2018) obra de Emerson Matsuuchi.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

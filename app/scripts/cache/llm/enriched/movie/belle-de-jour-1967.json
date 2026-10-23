@@ -1,0 +1,42 @@
+{
+  "id": "movie:belle-de-jour-1967",
+  "experience": {
+    "plot": "Belle de jour es una película francesa de 1967 dirigida por el español Luis Buñuel, basada en la novela homónima del argentino-francés Joseph Kessel. «Belle de nuit» en francés es una expresión eufemística para referirse a una prostituta en un lenguaje polític",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Luis Bu\u001auel, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1967, una obra destacada de Luis Bu\u001auel en el panorama de Drama y Romance."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Belle de jour: Drama y Romance con dirección de Luis Bu\u001auel.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

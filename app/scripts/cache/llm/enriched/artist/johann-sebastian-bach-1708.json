@@ -1,0 +1,36 @@
+{
+  "id": "artist:johann-sebastian-bach-1708",
+  "experience": {
+    "plot": "Johann Sebastian Bach (Eisenach, Alemania), icono de Barroco, Música sacra desde 1708.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Eisenach, Alemania, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Barroco / Música sacra.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1708, una referencia indispensable obra de Eisenach, Alemania dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 2,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 2
+  },
+  "themes": [
+    "musica_latina",
+    "pop",
+    "rock_clasico"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Johann Sebastian Bach: destacada artist (1708) obra de Eisenach, Alemania.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

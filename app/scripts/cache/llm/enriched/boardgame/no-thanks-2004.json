@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:no-thanks-2004",
+  "experience": {
+    "plot": "No Thanks! is a card game designed to be as simple as it is engaging. The rules are simple. Each turn, players have two options: play one of their chips to avoid picking up the current face-up card pick up the face-up card (along with any chips that have alrea",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Thorsten Gimmler, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2004, una referencia indispensable obra de Thorsten Gimmler dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "No Thanks!: destacada boardgame (2004) obra de Thorsten Gimmler.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

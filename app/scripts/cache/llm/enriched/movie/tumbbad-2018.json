@@ -1,0 +1,42 @@
+{
+  "id": "movie:tumbbad-2018",
+  "experience": {
+    "plot": "Relato cinematográfico centrado en el viaje emocional y las vivencias de sus protagonistas en un contexto de Drama y Fantasía. Enfrentan dilemas que pondrán a prueba sus convicciones más íntimas.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Rahi Anil Barve, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2018, una obra destacada de Rahi Anil Barve en el panorama de Drama y Fantasía."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 5,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "sobrenatural"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Tumbbad: Drama y Fantasía con dirección de Rahi Anil Barve.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

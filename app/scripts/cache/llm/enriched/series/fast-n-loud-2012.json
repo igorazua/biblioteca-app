@@ -1,0 +1,43 @@
+{
+  "id": "series:fast-n-loud-2012",
+  "experience": {
+    "plot": "Fast N' Loud es un programa de televisión transmitido por Discovery Channel o Discovery Max. Los personajes principales del programa son Richard Rawlings, dueño del taller, y su mecánico Aaron Kauffman Tiene su taller, llamado Gas Monkey Garage, en Dallas, Tex",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Discovery, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Discovery dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Fast N' Loud: destacada series (2012) obra de Discovery.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

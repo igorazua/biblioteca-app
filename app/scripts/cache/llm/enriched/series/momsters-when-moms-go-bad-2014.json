@@ -1,0 +1,43 @@
+{
+  "id": "series:momsters-when-moms-go-bad-2014",
+  "experience": {
+    "plot": "With the help of TV's beloved loud-mouth mom and infamous comedienne, Roseanne Barr, Momsters: When Moms Go Bad uncovers a bizarre world where mothers will do anything for their children's happiness. From the little league mama who stalks and threatens her son",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Investigation Discovery, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Investigation Discovery dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Momsters: When Moms Go Bad: destacada series (2014) obra de Investigation Discovery.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

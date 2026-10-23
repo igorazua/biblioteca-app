@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:carson-city-2009",
+  "experience": {
+    "plot": "Carson City is a strategic game played in four rounds, and in each one of them, the players choose a character from the seven available that gives certain advantages. After selecting characters, your cowboys are placed on action track locations that allow you ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Xavier Georges, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de American West / Construcción de ciudades.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de Xavier Georges dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Carson City: destacada boardgame (2009) obra de Xavier Georges.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

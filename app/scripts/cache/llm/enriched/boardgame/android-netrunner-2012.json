@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:android-netrunner-2012",
+  "experience": {
+    "plot": "Welcome to New Angeles, home of the Beanstalk. From our branch offices in this monument of human achievement, NBN proudly broadcasts all your favorite media programming. We offer fully comprehensive streaming in music and threedee, news and sitcoms, classic mo",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Lukas Litzsinger, Richard Garfield, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Faroleo / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Lukas Litzsinger, Richard Garfield dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 5,
+    "azar": 4,
+    "confrontacion": 4,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 4,
+    "familiar": 3
+  },
+  "themes": [
+    "faroleo_y_enganos",
+    "draft_de_cartas",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Android: Netrunner: destacada boardgame (2012) obra de Lukas Litzsinger, Richard Garfield.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

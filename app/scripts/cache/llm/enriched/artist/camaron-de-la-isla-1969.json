@@ -1,0 +1,36 @@
+{
+  "id": "artist:camaron-de-la-isla-1969",
+  "experience": {
+    "plot": "Camarón de la Isla (San Fernando, España), icono de Flamenco, Nuevo flamenco desde 1969.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de San Fernando, España, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Flamenco / Nuevo flamenco.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1969, una referencia indispensable obra de San Fernando, España dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 4,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 3,
+    "fondo": 3,
+    "complejidad": 3
+  },
+  "themes": [
+    "musica_latina",
+    "pop",
+    "rock_clasico"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Camarón de la Isla: destacada artist (1969) obra de San Fernando, España.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

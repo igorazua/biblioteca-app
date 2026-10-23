@@ -1,0 +1,41 @@
+{
+  "id": "movie:festen-1998",
+  "experience": {
+    "plot": "Celebración o La celebración es una película de comedia negra danesa de 1998 escrita y dirigida por Thomas Vinterberg. La película gira en torno a una reunión familiar para celebrar el 60 cumpleaños de su padre. Vinterberg se inspiró para escribirlo con Mogens",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Thomas Vinterberg, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1998, una obra destacada de Thomas Vinterberg en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Festen: Drama con dirección de Thomas Vinterberg.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

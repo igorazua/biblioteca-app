@@ -14,16 +14,16 @@
     "context": "Creada en 1965, una referencia indispensable obra de Frank Herbert dentro de su disciplina."
   },
   "axes": {
-    "tono": 2,
-    "ritmo": 2,
-    "emocion": 2,
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 3,
     "densidad": 4,
     "humor": 1,
-    "tension": 1,
+    "tension": 4,
     "fantasia": 5,
-    "escala": 5,
-    "ideas": 2,
-    "reconfort": 5
+    "escala": 4,
+    "ideas": 4,
+    "reconfort": 2
   },
   "themes": [
     "aventura",

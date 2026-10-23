@@ -1,0 +1,45 @@
+{
+  "id": "movie:logan-2017",
+  "experience": {
+    "plot": "Logan es una película estadounidense de 2017, la última de la trilogía de Wolverine, basada en el personaje de Wolverine, de Marvel Comics, y producida por Marvel Entertainment, TSG Entertainment y The Donner's Company y distribuida por 20th Century Fox. Es la",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de James Mangold, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 2017, una obra destacada de James Mangold en el panorama de Acción y Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "superheroes",
+    "espionaje",
+    "familia",
+    "espacio",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Logan: Acción y Drama con dirección de James Mangold.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

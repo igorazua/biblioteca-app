@@ -1,0 +1,45 @@
+{
+  "id": "movie:dawn-of-the-dead-1978",
+  "experience": {
+    "plot": "Dawn of the Dead es una película de terror de 1978 dirigida por George A. Romero. Es la continuación de la historia narrada en La noche de los muertos vivientes aunque no se emplea ningún personaje o trama que aparezca en la primera película. Su elenco princip",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de George A. Romero, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1978, una obra destacada de George A. Romero en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "supervivencia",
+    "apocalipsis",
+    "ia_y_robots",
+    "duelo",
+    "espionaje",
+    "sobrenatural"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "amigos"
+  ],
+  "oneLiner": "Zombi: Acción y Aventura con dirección de George A. Romero.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:mare-nostrum-empires-2016",
+  "experience": {
+    "plot": "The ancient Romans called the Mediterranean Sea \"mare nostrum\", which is Latin for \"our sea\". Mare Nostrum is an empire-building game in which 3-5 players [or 2-6 with the 'Atlas' expansion] lead their individual ancient empires to dominion of Mare Nostrum. Yo",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Serge Laget, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad / Civilización.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra de Serge Laget dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "naturaleza_y_animales",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Mare Nostrum: Empires: destacada boardgame (2016) obra de Serge Laget.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

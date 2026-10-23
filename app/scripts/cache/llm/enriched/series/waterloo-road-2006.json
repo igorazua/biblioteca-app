@@ -1,0 +1,43 @@
+{
+  "id": "series:waterloo-road-2006",
+  "experience": {
+    "plot": "Waterloo Road es una serie dramática británica, que se transmite desde el 9 de marzo de 2006 por la cadena BBC One.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de BBC iPlayer, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de BBC iPlayer dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 5,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Waterloo Road: destacada series (2006) obra de BBC iPlayer.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

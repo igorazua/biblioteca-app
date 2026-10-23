@@ -1,0 +1,40 @@
+{
+  "id": "movie:zodiac-2007",
+  "experience": {
+    "plot": "Zodiac es una película de thriller estadounidense de 2007 dirigida por David Fincher. El guion de James Vanderbilt está basado en los hechos reales relatados en los libros de Robert Graysmith, libro del mismo nombre y Zodiac Unmasked, que se publicaron en 1986",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de David Fincher, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "El club de la lucha",
+      "El silencio de los corderos"
+    ],
+    "context": "Estrenada en 2007, una obra destacada de David Fincher en el panorama de Thriller y Crimen."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "Zodiac: Thriller y Crimen con dirección de David Fincher.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

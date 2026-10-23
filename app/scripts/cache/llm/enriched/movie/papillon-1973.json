@@ -1,0 +1,41 @@
+{
+  "id": "movie:papillon-1973",
+  "experience": {
+    "plot": "Papillon es una película estadounidense de 1973 dirigida por Franklin J. Schaffner, protagonizada por Steve McQueen y Dustin Hoffman y con guion de Dalton Trumbo. Está basada en la novela homónima y autobiográfica del escritor y expresidiario francés Henri Cha",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Franklin J. Schaffner, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1973, una obra destacada de Franklin J. Schaffner en el panorama de Biografía y Crimen."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "espacio",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Papillon: Biografía y Crimen con dirección de Franklin J. Schaffner.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "artist:paco-de-lucia-1958",
+  "experience": {
+    "plot": "Paco de Lucía (Algeciras, España), icono de Guitarra flamenca, Flamenco jazz desde 1958.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Algeciras, España, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Guitarra flamenca / Flamenco jazz.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1958, una referencia indispensable obra de Algeciras, España dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 1,
+    "valencia": 4,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 2,
+    "fondo": 3,
+    "complejidad": 5
+  },
+  "themes": [
+    "rock_clasico",
+    "jazz",
+    "musica_latina"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Paco de Lucía: destacada artist (1958) obra de Algeciras, España.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

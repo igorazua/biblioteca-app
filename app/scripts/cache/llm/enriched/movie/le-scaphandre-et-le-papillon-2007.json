@@ -1,0 +1,41 @@
+{
+  "id": "movie:le-scaphandre-et-le-papillon-2007",
+  "experience": {
+    "plot": "Le Scaphandre et le Papillon es una película dramática de 2007 dirigida por el artista plástico y cineasta estadounidense Julian Schnabel, a partir de un guion de Ronald Harwood. Se trata de una coproducción francesa y norteamericana de 119 minutos de duración",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Julian Schnabel, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2007, una obra destacada de Julian Schnabel en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Le scaphandre et le papillon: Biografía y Drama con dirección de Julian Schnabel.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

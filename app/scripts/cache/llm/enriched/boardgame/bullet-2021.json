@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:bullet-2021",
+  "experience": {
+    "plot": "In Bullet♥︎, players take on the role of heroines in a far-flung future Earth and use their incredible powers to defend the Earth from evil — as well as from one another! Each heroine's powers manifest in a different form, with players controlling sound, paper",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Joshua Van Laningham, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fighting / Puzzle.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Joshua Van Laningham dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "puzzles_y_losetas",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Bullet♥︎: destacada boardgame (2021) obra de Joshua Van Laningham.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

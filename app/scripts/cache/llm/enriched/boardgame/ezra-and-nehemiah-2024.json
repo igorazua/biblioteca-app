@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:ezra-and-nehemiah-2024",
+  "experience": {
+    "plot": "In his first year as king of Persia, Cyrus the Great issued a decree in writing to the Israelite exiles living under his rule:\n\nThe God of heaven has given me all the kingdoms of the earth and has appointed me to build a temple for Him in Jerusalem. Any of his",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de S J Macdonald, Shem Phillips, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad / Construcción de ciudades.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de S J Macdonald, Shem Phillips dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Ezra and Nehemiah: destacada boardgame (2024) obra de S J Macdonald, Shem Phillips.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

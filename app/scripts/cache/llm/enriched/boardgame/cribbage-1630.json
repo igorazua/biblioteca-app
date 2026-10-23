@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:cribbage-1630",
+  "experience": {
+    "plot": "El cribbage o crib es un juego de cartas en el que tradicionalmente participan dos jugadores, y a veces tres, cuatro o más personas. Consiste en descartar y agrupar las cartas en combinaciones que otorgan puntos. Posee varias características distintivas: el ta",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Sir John Suckling, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Number.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1630, una referencia indispensable obra de Sir John Suckling dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Cribbage: destacada boardgame (1630) obra de Sir John Suckling.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

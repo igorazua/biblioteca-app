@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:small-world-underground-2011",
+  "experience": {
+    "plot": "\"This world's not big enough for all of us, so it's time you step aside to make room for me.\" That's the spirit of Philippe Keyaerts' award-winning Small World, and the 2011 release Small World Underground is a standalone game that keeps that spirit intact, wh",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Philippe Keyaerts, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Fighting.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de Philippe Keyaerts dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Small World Underground: destacada boardgame (2011) obra de Philippe Keyaerts.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:full-metal-jacket-1987",
+  "experience": {
+    "plot": "Full Metal Jacket es una película bélica anglo-estadounidense dirigida por Stanley Kubrick, distribuida por Warner Bros. y estrenada en 1987. Basada en la novela \nThe Short-Timers, del escritor Gustav Hasford, quien estuvo como periodista de guerra en el confl",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Stanley Kubrick, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1987, una obra destacada de Stanley Kubrick en el panorama de Drama y Bélica."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "espacio",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "La chaqueta metálica: Drama y Bélica con dirección de Stanley Kubrick.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

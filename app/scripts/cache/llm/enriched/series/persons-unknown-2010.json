@@ -1,0 +1,44 @@
+{
+  "id": "series:persons-unknown-2010",
+  "experience": {
+    "plot": "Persons Unknown es una serie de televisión estadounidense producida por Fox Television Studios y creada por Christopher McQuarrie para NBC.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de NBC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Thriller.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra de NBC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 5,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 3,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "pasar_miedo"
+  ],
+  "oneLiner": "Persons Unknown: destacada series (2010) obra de NBC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "series:american-chopper-2002",
+  "experience": {
+    "plot": "American Chopper es una serie de televisión emitida por Discovery Channel, del tipo reality show y en parte documental. Se transmite en España y Uruguay a través del canal Discovery en Español y Discovery MAX, y en Latinoamérica a través del canal Discovery Tu",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Discovery, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2002, una referencia indispensable obra de Discovery dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "American Chopper: destacada series (2002) obra de Discovery.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

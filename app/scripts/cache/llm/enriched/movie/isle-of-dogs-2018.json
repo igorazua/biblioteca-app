@@ -1,0 +1,43 @@
+{
+  "id": "movie:isle-of-dogs-2018",
+  "experience": {
+    "plot": "Isla de perros —título original en inglés: Isle of Dogs— es una película estadounidense de animación y comedia de 2018, dirigida por Wes Anderson y realizada mediante la técnica de stop motion. La cinta cuenta con las voces de Bryan Cranston, Koyu Rankin, Edwa",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Wes Anderson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 2018, una obra destacada de Wes Anderson en el panorama de Animación y Aventura."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 5,
+    "emocion": 1,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 3,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "musica",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Isla de perros: Animación y Aventura con dirección de Wes Anderson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:dirty-harry-1971",
+  "experience": {
+    "plot": "Harry el sucio es una película estadounidense de 1971 dirigida por Don Siegel e interpretada por Clint Eastwood. Con Andrew Robinson, Reni Santoni, John Vernon y Harry Guardino en los papeles principales.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Don Siegel, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Matrix",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1971, una obra destacada de Don Siegel en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Harry el sucio: Acción y Crimen con dirección de Don Siegel.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

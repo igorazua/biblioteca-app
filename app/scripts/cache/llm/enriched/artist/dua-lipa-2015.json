@@ -1,0 +1,37 @@
+{
+  "id": "artist:dua-lipa-2015",
+  "experience": {
+    "plot": "Dua Lipa (Londres, Reino Unido), icono de Pop, Nu-disco, Dance-pop desde 2015.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Londres, Reino Unido, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Pop / Nu-disco.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Londres, Reino Unido dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 5,
+    "bailable": 5,
+    "organico": 3,
+    "intensidad": 4,
+    "fondo": 3,
+    "complejidad": 2
+  },
+  "themes": [
+    "pop",
+    "indie_rock",
+    "electronica",
+    "soul"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Dua Lipa: destacada artist (2015) obra de Londres, Reino Unido.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

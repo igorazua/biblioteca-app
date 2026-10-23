@@ -1,0 +1,36 @@
+{
+  "id": "artist:kings-of-leon-1999",
+  "experience": {
+    "plot": "Kings of Leon (Nashville, EE. UU.), icono de Southern rock, Indie rock desde 1999.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Nashville, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Southern rock / Indie rock.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1999, una referencia indispensable obra de Nashville, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 3,
+    "intensidad": 5,
+    "fondo": 1,
+    "complejidad": 3
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Kings of Leon: destacada artist (1999) obra de Nashville, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

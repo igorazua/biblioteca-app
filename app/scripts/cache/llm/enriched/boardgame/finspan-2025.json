@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:finspan-2025",
+  "experience": {
+    "plot": "You are a marine researcher seeking to find and observe an array of aquatic life in the colorful Sunlight Zone, ghostly Twilight Zone, and pitch-black Midnight Zone of the world's seas and oceans. In Finspan, the fish you discover over four weeks will generate",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de David Gordon (I), Michael O'Connell (II), la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2025, una referencia indispensable obra de David Gordon (I), Michael O'Connell (II) dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Finspan: destacada boardgame (2025) obra de David Gordon (I), Michael O'Connell (II).",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

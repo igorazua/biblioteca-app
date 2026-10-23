@@ -1,0 +1,42 @@
+{
+  "id": "movie:paths-of-glory-1957",
+  "experience": {
+    "plot": "Paths of Glory es una película estadounidense de 1957, cuya acción se desarrolla durante la Primera Guerra Mundial. Dirigida por Stanley Kubrick y protagonizada por Kirk Douglas, está basada en la novela homónima de Humphrey Cobb, publicada en 1935.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Stanley Kubrick, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1957, una obra destacada de Stanley Kubrick en el panorama de Drama y Bélica."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "espacio",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Senderos de gloria: Drama y Bélica con dirección de Stanley Kubrick.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:dallas-buyers-club-2013",
+  "experience": {
+    "plot": "Dallas Buyers Club es una película biográfica estadounidense de 2013 dirigida por Jean-Marc Vallée y protagonizada por Matthew McConaughey, Jared Leto, Jennifer Garner y Steve Zahn. La cinta está basada en la vida de Ron Woodroof, quien en 1992 fue objeto de u",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Jean-Marc Vall\u001ae, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2013, una obra destacada de Jean-Marc Vall\u001ae en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Dallas Buyers Club: Biografía y Drama con dirección de Jean-Marc Vall\u001ae.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

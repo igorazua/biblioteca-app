@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:commands-colors-napoleonics-2010",
+  "experience": {
+    "plot": "Commands & Colors: Napoleonics allows you to re-fight epic battles of the Napoleonic era. In this core volume, the focus is on the French and the British, two bitter rivals in the struggle for European preeminence during the time of Napoleon. As with other gam",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Richard Borg, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Napoleonic / Juego de guerra.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra de Richard Borg dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Commands & Colors: Napoleonics: destacada boardgame (2010) obra de Richard Borg.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

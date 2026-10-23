@@ -1,0 +1,42 @@
+{
+  "id": "series:dancing-with-the-stars-2005",
+  "experience": {
+    "plot": "Bailando con las estrellas es el nombre dado a una serie de programas de televisión internacionales basados en el formato del programa de televisión inglés Strictly Come Dancing.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de ABC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Familiar.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de ABC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Dancing with the Stars: destacada series (2005) obra de ABC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

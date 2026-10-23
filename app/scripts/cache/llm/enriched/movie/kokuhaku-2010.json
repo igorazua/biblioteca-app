@@ -1,0 +1,41 @@
+{
+  "id": "movie:kokuhaku-2010",
+  "experience": {
+    "plot": "Tora-san Confesses  is a 1991 Japanese comedy film directed by Yoji Yamada. It stars Kiyoshi Atsumi as Torajirō Kuruma (Tora-san), and Hideko Yoshida as his love interest or \"Madonna\". Tora-san Confesses is the forty-fourth entry in the popular, long-running O",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Tetsuya Nakashima, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2010, una obra destacada de Tetsuya Nakashima en el panorama de Drama y Thriller."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "crimen",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Kokuhaku: Drama y Thriller con dirección de Tetsuya Nakashima.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

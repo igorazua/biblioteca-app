@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:time-s-up-title-recall-2008",
+  "experience": {
+    "plot": "Based on the popular game Time's Up!, Time's Up: Title Recall challenges players to guess the titles of books, films, songs, and more. Players try to get their teammates to guess the same set of titles over three rounds. In each round, one member of a team tri",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Michael Adams, Peter Sarrett, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Humor / Movies / TV / Radio theme.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de Michael Adams, Peter Sarrett dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 5,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Time's Up! Title Recall!: destacada boardgame (2008) obra de Michael Adams, Peter Sarrett.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

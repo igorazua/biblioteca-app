@@ -1,0 +1,43 @@
+{
+  "id": "movie:la-migliore-offerta-2013",
+  "experience": {
+    "plot": "La mejor oferta es una película italo-estadounidense dirigida por Giuseppe Tornatore y estrenada en el 2013. Incluye música de Ennio Morricone, y los principales actores son Geoffrey Rush, Jim Sturgess, Sylvia Hoeks y Donald Sutherland.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Giuseppe Tornatore, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2013, una obra destacada de Giuseppe Tornatore en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 1
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "La migliore offerta: Crimen y Drama con dirección de Giuseppe Tornatore.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

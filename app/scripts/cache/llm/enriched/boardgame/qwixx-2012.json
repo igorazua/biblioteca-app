@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:qwixx-2012",
+  "experience": {
+    "plot": "Qwixx is a quick-playing dice game in which everyone participates, no matter whose turn it is. Each player has a scoresheet with the numbers 2-12 in rows of red and yellow and the numbers 12-2 in rows of green and blue. To score points you want to mark off as ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Steffen Benndorf, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Dados / Math.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Steffen Benndorf dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "dados_y_push_your_luck",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Qwixx: destacada boardgame (2012) obra de Steffen Benndorf.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

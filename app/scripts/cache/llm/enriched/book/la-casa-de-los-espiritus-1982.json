@@ -1,0 +1,39 @@
+{
+  "id": "book:la-casa-de-los-espiritus-1982",
+  "experience": {
+    "plot": "La saga de la familia Trueba en un país latinoamericano, con clarividencia y política.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Isabel Allende, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Realismo mágico.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1982, una referencia indispensable obra de Isabel Allende dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 5,
+    "escala": 4,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "fantasia_epica",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "La casa de los espíritus: destacada book (1982) obra de Isabel Allende.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

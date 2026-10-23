@@ -1,0 +1,43 @@
+{
+  "id": "series:jericho-2006",
+  "experience": {
+    "plot": "Jericho es una serie de televisión emitida por la cadena estadounidense CBS que narra la vida del ficticio pueblo de Jericho, Kansas, tras ataques nucleares lanzados contra 23 ciudades estadounidenses. A raíz del avistamiento de un hongo nuclear en el horizont",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de CBS, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Acción.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de CBS dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 5,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "monstruos_y_terror",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Jericho: destacada series (2006) obra de CBS.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

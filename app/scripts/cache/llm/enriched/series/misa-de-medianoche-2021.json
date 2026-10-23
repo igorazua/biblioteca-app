@@ -1,0 +1,44 @@
+{
+  "id": "series:misa-de-medianoche-2021",
+  "experience": {
+    "plot": "La llegada de un carismático y joven sacerdote a una aislada comunidad isleña desata milagros y presagios aterradores.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Mike Flanagan, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Terror / Drama.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Mike Flanagan dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2,
+    "enganche": 3,
+    "formato": 4
+  },
+  "themes": [
+    "adolescencia",
+    "monstruos_y_terror",
+    "amistad"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "pasar_miedo"
+  ],
+  "oneLiner": "Misa de medianoche: destacada series (2021) obra de Mike Flanagan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:the-lord-of-the-rings-the-fellowship-of-the-ring-trick-taking-game-2025",
+  "experience": {
+    "plot": "The Fellowship of the Ring: Trick-Taking Game is a co-operative card game that plays out over eighteen chapters that lead players through the events of the novel The Fellowship of the Ring. The chapters can be played in any order, but ideally you play them in ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bryan Bornmueller, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2025, una referencia indispensable obra de Bryan Bornmueller dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "The Lord of the Rings: The Fellowship of the Ring – Trick-Taking Game (2025): notable e i",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

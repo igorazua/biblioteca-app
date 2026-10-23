@@ -1,0 +1,42 @@
+{
+  "id": "series:marvel-s-agent-carter-2015",
+  "experience": {
+    "plot": "Marvel's Agent Carter, o simplemente Agent Carter, es una serie de televisión estadounidense creada por Christopher Markus & Stephen McFeely para ABC, basada en el personaje de Marvel Comics, Peggy Carter después de sus papeles en la película de 2011, Captain ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de ABC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de ABC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 1,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Marvel's Agent Carter: destacada series (2015) obra de ABC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

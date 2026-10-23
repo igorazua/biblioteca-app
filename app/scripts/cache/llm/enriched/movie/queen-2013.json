@@ -1,0 +1,43 @@
+{
+  "id": "movie:queen-2013",
+  "experience": {
+    "plot": "Relato cinematográfico centrado en el viaje emocional y las vivencias de sus protagonistas en un contexto de Aventura y Comedia. Enfrentan dilemas que pondrán a prueba sus convicciones más íntimas.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Vikas Bahl, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2013, una obra destacada de Vikas Bahl en el panorama de Aventura y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Queen: Aventura y Comedia con dirección de Vikas Bahl.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

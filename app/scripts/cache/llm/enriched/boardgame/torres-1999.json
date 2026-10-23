@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:torres-1999",
+  "experience": {
+    "plot": "Torres es un juego de mesa para entre dos y cuatro jugadores creado por los diseñadores de juegos Wolfgang Kramer y Michael Kiesling a partir del juego Burgenland del propio Wolfgang Kramer. Lo publicó en 1999 F.X. Schimd, filial de Ravensburger.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Michael Kiesling, Wolfgang Kramer, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Estrategia abstracta / Medieval.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1999, una referencia indispensable obra de Michael Kiesling, Wolfgang Kramer dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 1,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Torres: destacada boardgame (1999) obra de Michael Kiesling, Wolfgang Kramer.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

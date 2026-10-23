@@ -16,15 +16,15 @@
   },
   "axes": {
     "tono": 4,
-    "ritmo": 4,
-    "emocion": 5,
+    "ritmo": 3,
+    "emocion": 4,
     "exigencia": 3,
-    "humor": 1,
-    "tension": 5,
-    "fantasia": 1,
-    "violencia": 5,
-    "familiar": 1,
-    "escala": 5,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
     "reconfort": 2
   },
   "themes": [

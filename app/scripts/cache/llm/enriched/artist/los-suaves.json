@@ -1,0 +1,37 @@
+{
+  "id": "artist:los-suaves",
+  "experience": {
+    "plot": "Los Suaves es una banda española de hard rock formada en Orense (Galicia) por los hermanos Yosi, Charly y Javier Domínguez a finales de los años setenta. Su estilo inicial era una propuesta musical cercana al punk rock con fuertes influencias de bandas de hard",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1980, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 5,
+    "bailable": 4,
+    "organico": 4,
+    "intensidad": 5,
+    "fondo": 2,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "metal",
+    "punk",
+    "musica_latina"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Los Suaves: destacada artist (1980) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

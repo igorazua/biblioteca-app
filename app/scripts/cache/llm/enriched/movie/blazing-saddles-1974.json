@@ -1,0 +1,41 @@
+{
+  "id": "movie:blazing-saddles-1974",
+  "experience": {
+    "plot": "película de 1974 dirigida por Mel Brooks",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Mel Brooks, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek",
+      "Amélie"
+    ],
+    "context": "Estrenada en 1974, una obra destacada de Mel Brooks en el panorama de Comedia y Western."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "Sillas de montar calientes: Comedia y Western con dirección de Mel Brooks.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

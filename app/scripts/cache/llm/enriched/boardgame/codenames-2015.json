@@ -1,0 +1,40 @@
+{
+  "id": "boardgame:codenames-2015",
+  "experience": {
+    "plot": "Código secreto es un juego de mesa para entre dos y ocho jugadores creado por el diseñador de juegos Vlaada Chvátil y publicado en 2015 por Czech Games Edition, existiendo edición en español a cargo de la editorial Devir.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Vlaada Chvátil, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Deducción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Vlaada Chvátil dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 5,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 5,
+    "familiar": 5
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "ciencia_ficcion_espacial",
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "roles_ocultos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Codenames: destacada boardgame (2015) obra de Vlaada Chvátil.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

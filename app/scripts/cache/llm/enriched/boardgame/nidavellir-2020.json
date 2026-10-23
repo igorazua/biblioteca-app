@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:nidavellir-2020",
+  "experience": {
+    "plot": "Nidavellir, the Dwarf Kingdom, is threatened by the dragon Fafnir. As a venerable Elvaland, you have been appointed by the King. Search through every tavern in the kingdom, hire the most skillful dwarves, recruit the most prestigious heroes, and build the best",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Serge Laget, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Serge Laget dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Nidavellir: destacada boardgame (2020) obra de Serge Laget.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

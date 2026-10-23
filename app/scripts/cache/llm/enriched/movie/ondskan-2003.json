@@ -1,0 +1,41 @@
+{
+  "id": "movie:ondskan-2003",
+  "experience": {
+    "plot": "Solo contra sí mismo, en España \"El Mal\", en Latinoamérica \"Infierno\", es una película sueca del 2003 dirigida por Mikael Håfström. Es basada en la novela de 1981 Ondskan de Jan Guillou.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Mikael H\u001afstr\u001am, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2003, una obra destacada de Mikael H\u001afstr\u001am en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Ondskan: Drama con dirección de Mikael H\u001afstr\u001am.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

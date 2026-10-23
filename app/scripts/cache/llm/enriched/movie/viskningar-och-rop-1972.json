@@ -1,0 +1,41 @@
+{
+  "id": "movie:viskningar-och-rop-1972",
+  "experience": {
+    "plot": "Gritos y susurros es una película sueca de 1972 de género dramático con guion y dirección de Ingmar Bergman, y con Harriet Andersson, Kari Sylwan, Ingrid Thulin y Liv Ullmann en los papeles principales. El largometraje, ambientado en una mansión de finales del",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Ingmar Bergman, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1972, una obra destacada de Ingmar Bergman en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "espionaje"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Viskningar och rop: Drama con dirección de Ingmar Bergman.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

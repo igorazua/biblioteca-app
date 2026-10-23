@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:black-rose-wars-rebirth-2023",
+  "experience": {
+    "plot": "Black Rose Wars: Rebirth is a highly competitive fantasy game of combat, strategy, and deck-building set in ancient Italy. Black Rose Wars: Rebirth is the second chapter in the Black Rose Wars series. Even though 25 years have passed after the Lodge was destro",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Andrea Colletti, Diego Fonseca, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Andrea Colletti, Diego Fonseca dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Black Rose Wars: Rebirth (2023): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

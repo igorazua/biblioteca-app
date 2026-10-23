@@ -1,0 +1,44 @@
+{
+  "id": "series:family-ties-1982",
+  "experience": {
+    "plot": "Family Ties fue una comedia estadounidense. Se emitió en la NBC durante 7 temporadas, de 1982 a 1989. La comedia refleja la evolución en Estados Unidos desde el liberalismo cultural de los años sesenta y setenta hacia el conservadurismo de la década de los och",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de NBC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1982, una referencia indispensable obra de NBC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 5,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 2,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "familia",
+    "sitcom_cotidiana",
+    "adolescencia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "maraton"
+  ],
+  "oneLiner": "Enredos de familia: destacada series (1982) obra de NBC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

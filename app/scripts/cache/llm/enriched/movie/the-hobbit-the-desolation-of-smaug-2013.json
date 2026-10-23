@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-hobbit-the-desolation-of-smaug-2013",
+  "experience": {
+    "plot": "The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins is in possession of a mysterious and magical ring.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Peter Jackson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico",
+      "Avatar"
+    ],
+    "context": "Estrenada en 2013, una obra destacada de Peter Jackson en el panorama de Aventura y Fantasía."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 5,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "realismo_magico",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "The Hobbit: The Desolation of Smaug: Aventura y Fantasía con dirección de Peter Jackson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

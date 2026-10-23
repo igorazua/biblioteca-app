@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:go--2200",
+  "experience": {
+    "plot": "El go es un juego de tablero de estrategia para dos personas, que se originó en China hace más de 2500 años. Fue considerado una de las cuatro artes esenciales de la antigüedad china. Los textos más antiguos que hacen referencia al go son las analectas de Conf",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de (Uncredited), la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Estrategia abstracta.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en -2200, una referencia indispensable obra de (Uncredited) dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "pareja",
+    "jugones"
+  ],
+  "oneLiner": "Go: destacada boardgame (-2200) obra de (Uncredited).",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

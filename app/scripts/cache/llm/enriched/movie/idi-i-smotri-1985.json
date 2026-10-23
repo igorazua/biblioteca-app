@@ -1,0 +1,41 @@
+{
+  "id": "movie:idi-i-smotri-1985",
+  "experience": {
+    "plot": "Idí i Smotrí es una película soviética dramática-bélica de 1985, dirigida por Elem Klímov y protagonizada por Alekséi Krávchenko y Olga Mirónova.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Elem Klimov, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1985, una obra destacada de Elem Klimov en el panorama de Drama y Thriller."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "crimen",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Idi i smotri: Drama y Thriller con dirección de Elem Klimov.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

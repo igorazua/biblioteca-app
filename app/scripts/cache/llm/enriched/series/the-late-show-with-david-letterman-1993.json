@@ -1,0 +1,43 @@
+{
+  "id": "series:the-late-show-with-david-letterman-1993",
+  "experience": {
+    "plot": "The Late Show with David Letterman fue un talk show nocturno estadounidense, creado y presentado por David Letterman y emitido por la cadena CBS. El programa se emitió durante 22 años desde el 30 de agosto de 1993 hasta el 20 de mayo de 2015. El programa fue p",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de CBS, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1993, una referencia indispensable obra de CBS dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 2
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "The Late Show with David Letterman: destacada series (1993) obra de CBS.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

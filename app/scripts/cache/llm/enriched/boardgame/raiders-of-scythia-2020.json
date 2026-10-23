@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:raiders-of-scythia-2020",
+  "experience": {
+    "plot": "Many centuries ago, the Greek, Persian and Assyrian empires controlled vast amounts of land and riches. Yet, despite their fortifications and imposing armies, rumours began spreading of a formidable foe in the lands above the Black Sea. They came on horseback.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Shem Phillips, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Shem Phillips dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Raiders of Scythia: destacada boardgame (2020) obra de Shem Phillips.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

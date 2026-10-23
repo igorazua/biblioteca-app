@@ -1,0 +1,40 @@
+{
+  "id": "movie:once-upon-a-time-in-the-west-1968",
+  "experience": {
+    "plot": "C'era una volta il West es una película épica italiana del género spaghetti western de 1968, dirigida por Sergio Leone, quien la escribió junto a Sergio Donati con base en una historia de Dario Argento, Bernardo Bertolucci y el propio Leone. Está protagonizada",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Sergio Leone, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Django desencadenado",
+      "El bueno, el feo y el malo",
+      "Sin perdón",
+      "Per qualche dollaro in pi\u001a"
+    ],
+    "context": "Estrenada en 1968, una obra destacada de Sergio Leone en el panorama de Western."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "infancia",
+    "musica"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "Hasta que llegó su hora: Western con dirección de Sergio Leone.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

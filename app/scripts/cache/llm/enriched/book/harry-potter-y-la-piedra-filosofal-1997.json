@@ -16,14 +16,14 @@
   "axes": {
     "tono": 2,
     "ritmo": 4,
-    "emocion": 2,
-    "densidad": 2,
+    "emocion": 4,
+    "densidad": 3,
     "humor": 1,
-    "tension": 1,
-    "fantasia": 5,
-    "escala": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "escala": 4,
     "ideas": 2,
-    "reconfort": 5
+    "reconfort": 2
   },
   "themes": [
     "filosofia",

@@ -1,0 +1,39 @@
+{
+  "id": "book:the-complete-life-and-adventures-of-santa-claus-1902",
+  "experience": {
+    "plot": "Obra clásica de clásico escrita por L. Frank Baum.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de L. Frank Baum, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Clásico / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1902, una referencia indispensable obra de L. Frank Baum dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "para_subrayar"
+  ],
+  "oneLiner": "The Complete Life and Adventures of Santa Claus (1902): notable e inspiradora creación.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

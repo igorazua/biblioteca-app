@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:cozy-stickerville-2026",
+  "experience": {
+    "plot": "Explore the land, uncover mysteries, and follow your residents’ personal stories. Build your Village with over 800 stickers featuring houses, farms, shops, animals, and so much more! As your village grows, so do your options: go fishing, explore the mine, find",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Corey Konieczka, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Construcción de ciudades.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2026, una referencia indispensable obra de Corey Konieczka dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Cozy Stickerville: destacada boardgame (2026) obra de Corey Konieczka.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

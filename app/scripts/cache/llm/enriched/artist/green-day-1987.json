@@ -1,0 +1,36 @@
+{
+  "id": "artist:green-day-1987",
+  "experience": {
+    "plot": "Green Day (Rodeo, California, EE. UU.), icono de Punk rock, Pop punk, Alt-rock desde 1987.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Rodeo, California, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Punk rock / Pop punk.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1987, una referencia indispensable obra de Rodeo, California, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 5,
+    "bailable": 4,
+    "organico": 4,
+    "intensidad": 5,
+    "fondo": 3,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "punk"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Green Day: destacada artist (1987) obra de Rodeo, California, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

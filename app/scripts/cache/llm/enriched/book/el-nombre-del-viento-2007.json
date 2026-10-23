@@ -1,0 +1,39 @@
+{
+  "id": "book:el-nombre-del-viento-2007",
+  "experience": {
+    "plot": "Kvothe, músico legendario y mago, relata la verdad sobre su vida desde una posada solitaria.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Patrick Rothfuss, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Aventura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de Patrick Rothfuss dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 5,
+    "escala": 5,
+    "ideas": 2,
+    "reconfort": 1
+  },
+  "themes": [
+    "aventura",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "El nombre del viento: destacada book (2007) obra de Patrick Rothfuss.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

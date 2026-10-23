@@ -1,0 +1,41 @@
+{
+  "id": "movie:el-pianista-2002",
+  "experience": {
+    "plot": "El pianista es una película del año 2002 dirigida por Roman Polanski y con Adrien Brody como actor principal. La película es una adaptación de las memorias del músico polaco de origen judío Władysław Szpilman. Narrando como este sobrevivió al holocausto y la o",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Roman Polanski, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2002, una obra destacada de Roman Polanski en el panorama de Drama y Bélica."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "El pianista: Drama y Bélica con dirección de Roman Polanski.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

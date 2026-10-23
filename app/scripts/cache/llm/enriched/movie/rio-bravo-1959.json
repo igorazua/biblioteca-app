@@ -1,0 +1,44 @@
+{
+  "id": "movie:rio-bravo-1959",
+  "experience": {
+    "plot": "Río Bravo es una película wéstern estadounidense de 1959 producida y dirigida por Howard Hawks, y protagonizada por John Wayne, Dean Martin, Walter Brennan, Claude Akins, Angie Dickinson y Ricky Nelson en los papeles principales. El guion escrito por Leigh Bra",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Howard Hawks, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 1959, una obra destacada de Howard Hawks en el panorama de Acción y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "ia_y_robots",
+    "espionaje",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Río Bravo: Acción y Drama con dirección de Howard Hawks.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

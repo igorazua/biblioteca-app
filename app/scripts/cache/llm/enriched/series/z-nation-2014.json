@@ -1,0 +1,42 @@
+{
+  "id": "series:z-nation-2014",
+  "experience": {
+    "plot": "Z Nation es una serie de televisión zombi de terror, acción y comedia estadounidense creada por Karl Schaefer y Craig Engler, emitida en la cadena de televisión estadounidense SyFy. La primera temporada, que consta de 13 episodios, comenzó a emitirse el 12 de ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Syfy, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Terror.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Syfy dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "monstruos_y_terror",
+    "amistad"
+  ],
+  "moments": [
+    "pasar_miedo"
+  ],
+  "oneLiner": "Z Nation: destacada series (2014) obra de Syfy.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

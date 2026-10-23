@@ -1,0 +1,41 @@
+{
+  "id": "movie:m-eine-stadt-sucht-einen-m-rder-1931",
+  "experience": {
+    "plot": "When the police in a German city are unable to catch a child-murderer, other criminals join in the manhunt.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Fritz Lang, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "El club de la lucha",
+      "El silencio de los corderos"
+    ],
+    "context": "Estrenada en 1931, una obra destacada de Fritz Lang en el panorama de Crimen y Misterio."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 5,
+    "emocion": 2,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 1
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "amistad"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde"
+  ],
+  "oneLiner": "M - Eine Stadt sucht einen M\u001arder: Crimen y Misterio con dirección de Fritz Lang.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

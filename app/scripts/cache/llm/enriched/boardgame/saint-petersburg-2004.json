@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:saint-petersburg-2004",
+  "experience": {
+    "plot": "Saint Petersburg is a card-driven Eurogame, with the design of the game credited to Michael Tummelhofer, a pseudonym for Michael Bruinsma, Jay Tummelson and Bernd Brunnhofer. Most of the design work was done by Brunnhofer. The game was published in 2004 by Han",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bernd Brunnhofer, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Age of Reason / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2004, una referencia indispensable obra de Bernd Brunnhofer dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Saint Petersburg: destacada boardgame (2004) obra de Bernd Brunnhofer.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

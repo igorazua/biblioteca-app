@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:878-vikings-invasions-of-england-2017",
+  "experience": {
+    "plot": "The year is 865. For the past 72 years, Viking raiding parties from Norway and Denmark have been terrorizing the coasts of England with ‘hit and run’ attacks. The treasures and stories gained from these attacks have allowed the Norsemen to raise huge hosts of ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Beau Beckett, Dave Kimmel, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Educational / Medieval.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Beau Beckett, Dave Kimmel dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "terror_lovecraft",
+    "guerra_historica"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "878 Vikings: Invasions of England (2017): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "series:the-mysteries-of-laura-2014",
+  "experience": {
+    "plot": "The Mysteries of Laura es una serie de televisión estadounidense de género policiaco-procesal drama-comedia, que fue adaptada en Estados Unidos, por la compra de sus derechos. El creador de esta versión es Jeff Rake junto con Carlos Vila y Javier Holgado, crea",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de NBC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Crimen.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de NBC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 5,
+    "humor": 5,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "investigacion_policial",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "maraton"
+  ],
+  "oneLiner": "The Mysteries of Laura: destacada series (2014) obra de NBC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

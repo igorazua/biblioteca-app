@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:planet-unknown-2022",
+  "experience": {
+    "plot": "Our planet has run out of resources, and we are forced to move. We have discovered a series of planets and sent our rovers to test their environment with the hope of colonization. Our rovers have confirmed 1-6 viable colonization options. Planet Unknown is a c",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Adam Rehberg, Ryan Lambert, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Construcción de ciudades / Industry / Manufacturing.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Adam Rehberg, Ryan Lambert dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 2,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "puzzles_y_losetas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Planet Unknown: destacada boardgame (2022) obra de Adam Rehberg, Ryan Lambert.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

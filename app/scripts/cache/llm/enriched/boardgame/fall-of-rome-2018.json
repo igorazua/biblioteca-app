@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:fall-of-rome-2018",
+  "experience": {
+    "plot": "At the height of its power, the Roman Empire held more than two million square miles of territory containing over a hundred million people. Throughout the centuries of its existence, the Empire brought major advancements in engineering, architecture, science, ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Matt Leacock, Paolo Mori, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Matt Leacock, Paolo Mori dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Fall of Rome: destacada boardgame (2018) obra de Matt Leacock, Paolo Mori.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

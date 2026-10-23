@@ -1,0 +1,43 @@
+{
+  "id": "movie:as-good-as-it-gets-1997",
+  "experience": {
+    "plot": "Mejor... imposible es una película estadounidense de comedia romántica de 1997, dirigida por James L. Brooks, escrita por Mark Andrus y Brooks, y producida por Laura Ziskin. Es protagonizada por Jack Nicholson, Helen Hunt y Greg Kinnear.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de James L. Brooks, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1997, una obra destacada de James L. Brooks en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Mejor... imposible: Comedia y Drama con dirección de James L. Brooks.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

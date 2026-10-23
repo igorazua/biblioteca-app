@@ -1,0 +1,39 @@
+{
+  "id": "book:new-moon-2006",
+  "experience": {
+    "plot": "Luna nueva es una novela de fantasía y romance para jóvenes creada por Stephenie Meyer y publicada en 2006; es la segunda parte de una serie de cinco libros, de la que, además, están publicados Crepúsculo, Eclipse, Amanecer y La segunda vida de Bree Tanner.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Stephenie Meyer, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de Stephenie Meyer dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "amor",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "New Moon: destacada book (2006) obra de Stephenie Meyer.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

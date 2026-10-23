@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-right-stuff-1983",
+  "experience": {
+    "plot": "The Right Stuff es una película estadounidense de 1983, dirigida por Philip Kaufman. El título, The Right Stuff, es una expresión de la lengua inglesa que suele traducirse como 'lo que hay que tener', en referencia al coraje necesario a la hora de enfrentarse ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Philip Kaufman, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 1983, una obra destacada de Philip Kaufman en el panorama de Aventura y Biografía."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Elegidos para la gloria: Aventura y Biografía con dirección de Philip Kaufman.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

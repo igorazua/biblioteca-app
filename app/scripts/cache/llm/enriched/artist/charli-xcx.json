@@ -1,0 +1,36 @@
+{
+  "id": "artist:charli-xcx",
+  "experience": {
+    "plot": "Charlotte Emma Aitchison, conocida por su nombre artístico Charli XCX, es una cantante y compositora británica.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 3,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 4
+  },
+  "themes": [
+    "pop",
+    "rock_clasico",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Charli XCX: destacada artist (2013) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

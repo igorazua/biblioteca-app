@@ -1,0 +1,41 @@
+{
+  "id": "movie:zelig-1983",
+  "experience": {
+    "plot": "Zelig (1983) es una comedia de Woody Allen, en la que se entremezclan el humor característico del director, su pasión por el jazz y sus obsesiones. Tratada como un falso documental, la película ha sido reconocida por la crítica por sus innovaciones técnicas e ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Woody Allen, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek",
+      "Amélie"
+    ],
+    "context": "Estrenada en 1983, una obra destacada de Woody Allen en el panorama de Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "Zelig: Comedia con dirección de Woody Allen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

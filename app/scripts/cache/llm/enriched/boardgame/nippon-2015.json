@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:nippon-2015",
+  "experience": {
+    "plot": "La Liga Japonesa de Béisbol Profesional es la máxima categoría del béisbol profesional en Japón. Fue fundada en 1950 y actualmente está compuesta por doce equipos divididos en dos ligas: la Liga Central y la Liga del Pacífico.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Nuno Bizarro Sentieiro, Paulo Soledade, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Industry / Manufacturing.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Nuno Bizarro Sentieiro, Paulo Soledade dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Nippon: destacada boardgame (2015) obra de Nuno Bizarro Sentieiro, Paulo Soledade.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

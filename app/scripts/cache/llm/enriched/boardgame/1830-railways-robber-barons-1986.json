@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:1830-railways-robber-barons-1986",
+  "experience": {
+    "plot": "1830 is one of the most famous 18xx games. One of the things some gamers like about this game is that the game has no 'chance' element. That is to say, if players wished to play two games with the same moves, the outcome would be the same also. This game takes",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bruce Shelley, Francis Tresham, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Trains.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1986, una referencia indispensable obra de Bruce Shelley, Francis Tresham dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "1830: Railways & Robber Barons (1986): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

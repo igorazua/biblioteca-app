@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:clank-in-space-a-deck-building-adventure-2017",
+  "experience": {
+    "plot": "The evil Lord Eradikus has all but conquered the galaxy and is now on a victory lap across the sector in his flagship, Eradikus Prime. He may rule with an iron grip, but his most prized artifacts are about to slip through his cyborg claws. You and your fellow ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Andy Clautice, Darrell Hardy, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Andy Clautice, Darrell Hardy dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "ciencia_ficcion_espacial",
+    "naturaleza_y_animales",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Clank! In! Space!: A Deck-Building Adventure (2017): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

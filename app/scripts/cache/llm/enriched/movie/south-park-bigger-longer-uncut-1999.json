@@ -1,0 +1,43 @@
+{
+  "id": "movie:south-park-bigger-longer-uncut-1999",
+  "experience": {
+    "plot": "South Park: Bigger, Longer & Uncut es una película de animación satírica, bélica y musical de 1999 basada en la serie de televisión animada South Park, creada por Matt Stone y Trey Parker. La película fue dirigida por Trey Parker y parodia a las películas de a",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Trey Parker, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Regreso al futuro",
+      "Toy Story"
+    ],
+    "context": "Estrenada en 1999, una obra destacada de Trey Parker en el panorama de Animación y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "satira_social",
+    "musica",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "South Park: más grande, más largo y sin cortes (1999): memorable obra de Animación y Come",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

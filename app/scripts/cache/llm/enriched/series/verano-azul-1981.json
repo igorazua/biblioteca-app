@@ -1,0 +1,44 @@
+{
+  "id": "series:verano-azul-1981",
+  "experience": {
+    "plot": "Verano azul fue una serie de Televisión Española producida en 1981 y dirigida por Antonio Mercero con música de Carmelo Bernaola. Fue rodada durante 16 meses, entre finales de agosto de 1979 y diciembre de 1980, en las localidades malagueñas de Nerja y Vélez-M",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Antonio Mercero, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1981, una referencia indispensable obra de Antonio Mercero dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4,
+    "enganche": 3,
+    "formato": 2
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "maraton"
+  ],
+  "oneLiner": "Verano azul: destacada series (1981) obra de Antonio Mercero.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

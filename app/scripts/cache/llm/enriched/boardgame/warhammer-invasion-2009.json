@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:warhammer-invasion-2009",
+  "experience": {
+    "plot": "Warhammer: Invasion The Card Game is a two-player card game of intense warfare, clever kingdom management, and epic questing. Players must carefully allocate their resources as they seek to build their kingdom, complete quests, and attack the enemy’s capital. ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Eric M. Lang, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Collectible Components.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de Eric M. Lang dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Warhammer: Invasion: destacada boardgame (2009) obra de Eric M. Lang.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

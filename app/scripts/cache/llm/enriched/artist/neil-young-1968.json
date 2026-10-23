@@ -1,0 +1,37 @@
+{
+  "id": "artist:neil-young-1968",
+  "experience": {
+    "plot": "Neil Young (Toronto, Canadá), icono de Folk rock, Country rock, Grunge desde 1968.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Toronto, Canadá, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Folk rock / Country rock.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1968, una referencia indispensable obra de Toronto, Canadá dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 2,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 3,
+    "fondo": 4,
+    "complejidad": 3
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "folk",
+    "blues"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Neil Young: destacada artist (1968) obra de Toronto, Canadá.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "movie:past-lives-vidas-pasadas-2023",
+  "experience": {
+    "plot": "Dos amigos de la infancia en Seúl se reencuentran en Nueva York dos décadas después para confrontar su destino.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Celine Song, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2023, una obra destacada de Celine Song en el panorama de Romance y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "amistad",
+    "ia_y_robots",
+    "infancia",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Past Lives (Vidas pasadas): Romance y Drama con dirección de Celine Song.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

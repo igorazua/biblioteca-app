@@ -1,0 +1,41 @@
+{
+  "id": "movie:la-doncella-2016",
+  "experience": {
+    "plot": "La doncella es un thriller psicológico erótico dirigido por el director surcoreano Park Chan-wook y protagonizado por Kim Min-hee, Kim Tae-ri, Ha Jung-woo y Cho Jin-woong en 2016. Está inspirada en la novela Falsa identidad de la escritora galesa Sarah Waters,",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Park Chan-wook, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2016, una obra destacada de Park Chan-wook en el panorama de Thriller y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "crimen",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "La doncella: Thriller y Drama con dirección de Park Chan-wook.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

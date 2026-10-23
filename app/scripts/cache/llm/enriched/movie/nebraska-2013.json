@@ -1,0 +1,43 @@
+{
+  "id": "movie:nebraska-2013",
+  "experience": {
+    "plot": "Nebraska es una película de 2013 de comedia dramática estadounidense protagonizada por Bruce Dern y Will Forte. Está dirigida por Alexander Payne. Fue lanzada el 15 de noviembre de 2013. Fue nominada a la Palma de Oro en el Festival de Cine de Cannes de 2013, ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Alexander Payne, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2013, una obra destacada de Alexander Payne en el panorama de Aventura y Comedia."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Nebraska: Aventura y Comedia con dirección de Alexander Payne.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:pax-porfiriana-2012",
+  "experience": {
+    "plot": "Pax Porfiriana – Latin for \"The Porfirian Peace\" – refers to the 33-year reign of dictator Porfirio Díaz, who ruled Mexico with an iron hand until toppled by the 1910 Revolution. As a rich businessman (Hacendado) in the turbulent pre-revolutionary borderlands ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jim Gutt, Matt Eklund, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Civil War.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Jim Gutt, Matt Eklund dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 1
+  },
+  "themes": [
+    "draft_de_cartas",
+    "dados_y_push_your_luck",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Pax Porfiriana: destacada boardgame (2012) obra de Jim Gutt, Matt Eklund.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

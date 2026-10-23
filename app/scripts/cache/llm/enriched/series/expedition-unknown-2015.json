@@ -1,0 +1,42 @@
+{
+  "id": "series:expedition-unknown-2015",
+  "experience": {
+    "plot": "Expedition Unknown es una reconocida series que explora temáticas de Aventura, Misterio, Historia. Destaca por su personalidad propia y su conexión directa con el público.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Discovery, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Misterio.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Discovery dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 1,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "pasar_miedo"
+  ],
+  "oneLiner": "Expedition Unknown: destacada series (2015) obra de Discovery.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

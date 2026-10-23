@@ -1,0 +1,39 @@
+{
+  "id": "book:cosmos-1980",
+  "experience": {
+    "plot": "Cosmos es un libro escrito por Carl Sagan en 1980, basado en la serie de documentales Cosmos: un viaje personal que él mismo produjo junto a su última esposa Ann Druyan.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Carl Sagan, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Divulgación / Ciencia.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1980, una referencia indispensable obra de Carl Sagan dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 2,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 4,
+    "ideas": 5,
+    "reconfort": 4
+  },
+  "themes": [
+    "aventura",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "viaje"
+  ],
+  "oneLiner": "Cosmos: destacada book (1980) obra de Carl Sagan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

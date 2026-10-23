@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:unconscious-mind-2024",
+  "experience": {
+    "plot": "In the early 1900s, the Austrian neurologist Sigmund Freud established a revolutionary theory called psychoanalysis, related to the study of the unconscious mind. As his work took hold, supporters met at Freud's apartment every Wednesday to discuss psychology ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Antonio Zax, Jonny Pac, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Medical / Post-Napoleonic.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Antonio Zax, Jonny Pac dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 2,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Unconscious Mind: destacada boardgame (2024) obra de Antonio Zax, Jonny Pac.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

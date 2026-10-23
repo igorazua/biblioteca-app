@@ -1,0 +1,37 @@
+{
+  "id": "artist:sonic-youth-1981",
+  "experience": {
+    "plot": "Sonic Youth (Nueva York, EE. UU.), icono de Noise rock, Alt-rock desde 1981.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Nueva York, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Noise rock / Alt-rock.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1981, una referencia indispensable obra de Nueva York, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 4,
+    "bailable": 3,
+    "organico": 3,
+    "intensidad": 3,
+    "fondo": 3,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "indie_rock",
+    "punk"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Sonic Youth: destacada artist (1981) obra de Nueva York, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -15,13 +15,13 @@
   },
   "axes": {
     "peso": 4,
-    "interaccion": 2,
-    "azar": 1,
-    "confrontacion": 1,
-    "cooperacion": 1,
-    "tema": 2,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
     "risas": 1,
-    "familiar": 1
+    "familiar": 3
   },
   "themes": [
     "exploracion_y_mapas",

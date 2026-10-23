@@ -1,0 +1,41 @@
+{
+  "id": "movie:el-hoyo-2019",
+  "experience": {
+    "plot": "El hoyo es una película española de ciencia ficción y suspense del año 2019 dirigida por Galder Gaztelu-Urrutia y protagonizada por Iván Massagué, Antonia San Juan, Zorion Eguileor, Emilio Buale y Alexandra Masangkay.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Galder Gaztelu-Urrutia, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Pulp Fiction",
+      "Matrix",
+      "El club de la lucha",
+      "Parque Jurásico"
+    ],
+    "context": "Estrenada en 2019, una obra destacada de Galder Gaztelu-Urrutia en el panorama de Ciencia ficción y Thriller."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 5,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "crimen",
+    "espacio"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "El hoyo: Ciencia ficción y Thriller con dirección de Galder Gaztelu-Urrutia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

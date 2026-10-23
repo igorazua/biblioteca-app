@@ -1,0 +1,43 @@
+{
+  "id": "series:bad-teacher-2014",
+  "experience": {
+    "plot": "Bad Teacher es una serie de televisión estadounidense de comedia creada por Hilary Winston, libremente basada en la película de 2011 del mismo nombre. La serie se estrenó en CBS el 24 de abril hasta el 26 de julio de 2014, como parte de la temporada televisiva",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de CBS, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de CBS dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 3,
+    "enganche": 3,
+    "formato": 2
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Bad Teacher: destacada series (2014) obra de CBS.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

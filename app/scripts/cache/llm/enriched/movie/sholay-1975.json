@@ -1,0 +1,42 @@
+{
+  "id": "movie:sholay-1975",
+  "experience": {
+    "plot": "Sholay es una película de la India dirigida por Ramesh Sippy, escrita por Javed Akhtar y Salim Khan y protagonizada por Dharmendra, Amitabh Bachchan, Sanjeev Kumar, Hema Malini, Jaya Bhaduri y Amjad Khan.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Ramesh Sippy, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1975, una obra destacada de Ramesh Sippy en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 1,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "amigos"
+  ],
+  "oneLiner": "Sholay: Acción y Aventura con dirección de Ramesh Sippy.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:the-great-wall-2021",
+  "experience": {
+    "plot": "The Great Wall is a new asymmetric worker/soldier placement game with engine building themes and a twist in form of a constantly attacking AI (Mongolian Horde) that requires players to sometimes cooperate in order to defeat it. This is a new major board game f",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Kamil 'Sanex' Cieśla, Robert Plesowicz, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Kamil 'Sanex' Cieśla, Robert Plesowicz dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 3,
+    "azar": 1,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "trenes_y_ferrocarril",
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "cooperativo",
+    "jugones"
+  ],
+  "oneLiner": "The Great Wall: destacada boardgame (2021) obra de Kamil 'Sanex' Cieśla, Robert Plesowicz.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

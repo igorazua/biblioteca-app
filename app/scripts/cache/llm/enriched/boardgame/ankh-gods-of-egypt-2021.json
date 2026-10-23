@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:ankh-gods-of-egypt-2021",
+  "experience": {
+    "plot": "Play as a god of ancient Egypt, competing to survive as society begins to forget the old ways, so that only you and your followers remain. Build caravans, summon monsters, and convert followers in your quest to reign supreme in Ankh: Gods of Egypt. Deities, mo",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Eric M. Lang, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Eric M. Lang dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 5,
+    "azar": 3,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Ankh: Gods of Egypt: destacada boardgame (2021) obra de Eric M. Lang.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

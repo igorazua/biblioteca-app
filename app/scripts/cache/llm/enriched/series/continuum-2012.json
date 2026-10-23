@@ -1,0 +1,43 @@
+{
+  "id": "series:continuum-2012",
+  "experience": {
+    "plot": "Continuum es una serie de televisión canadiense de ciencia ficción distópica; producida por Reunion Pictures, Thunderbird Reunion Pictures, Boy Meets Girl Film Company, Shaw Media y GK-tv para Showcase en Canadá, relata la historia de una agente de policía en ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Showcase, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Crimen.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Showcase dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "monstruos_y_terror",
+    "amistad"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Continuum: destacada series (2012) obra de Showcase.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

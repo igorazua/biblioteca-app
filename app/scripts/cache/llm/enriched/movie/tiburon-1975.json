@@ -1,0 +1,44 @@
+{
+  "id": "movie:tiburon-1975",
+  "experience": {
+    "plot": "Tiburón es una película estadounidense de terror, suspense y aventuras de 1975, dirigida por Steven Spielberg y basada en la novela homónima de Peter Benchley. En la historia, un enorme tiburón blanco devorador de hombres ataca a los bañistas en las playas de ",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Steven Spielberg, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico",
+      "Avatar"
+    ],
+    "context": "Estrenada en 1975, una obra destacada de Steven Spielberg en el panorama de Terror y Aventura."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "espionaje",
+    "sobrenatural",
+    "supervivencia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "amigos"
+  ],
+  "oneLiner": "Tiburón: Terror y Aventura con dirección de Steven Spielberg.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

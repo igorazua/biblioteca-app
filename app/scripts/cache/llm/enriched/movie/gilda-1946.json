@@ -1,0 +1,42 @@
+{
+  "id": "movie:gilda-1946",
+  "experience": {
+    "plot": "Gilda es una película estadounidense de 1946 dirigida por Charles Vidor que contó con Rita Hayworth y Glenn Ford como actores principales. El guion se atribuye a Ben Hecht, que como en tantas otras de sus películas no figura en los créditos.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Charles Vidor, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1946, una obra destacada de Charles Vidor en el panorama de Drama y Cine negro."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 1
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Gilda: Drama y Cine negro con dirección de Charles Vidor.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

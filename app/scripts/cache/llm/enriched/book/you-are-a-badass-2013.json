@@ -1,0 +1,39 @@
+{
+  "id": "book:you-are-a-badass-2013",
+  "experience": {
+    "plot": "Obra de Jen Sincero publicada originalmente en 2013.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jen Sincero, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de Jen Sincero dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "You Are a Badass: destacada book (2013) obra de Jen Sincero.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

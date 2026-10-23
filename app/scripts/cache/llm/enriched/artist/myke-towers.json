@@ -1,0 +1,38 @@
+{
+  "id": "artist:myke-towers",
+  "experience": {
+    "plot": "Michael Anthony Torres Monge, conocido artísticamente como Myke Towers, es un cantante y compositor puertorriqueño, considerado uno de los mayores referentes de la generación de música urbana latina consolidada a finales de la década de 2010. Su repertorio aba",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 5,
+    "bailable": 4,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 3,
+    "complejidad": 2
+  },
+  "themes": [
+    "pop",
+    "hip_hop",
+    "trap",
+    "blues",
+    "musica_latina"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Myke Towers: destacada artist (2016) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

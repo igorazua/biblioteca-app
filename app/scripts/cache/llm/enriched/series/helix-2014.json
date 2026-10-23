@@ -1,0 +1,42 @@
+{
+  "id": "series:helix-2014",
+  "experience": {
+    "plot": "Helix es una serie de televisión estadounidense transmitida por Syfy. Se estrenó el 10 de enero de 2014 en Syfy en los Estados Unidos.\nLa primera temporada consistió en 13 episodios. El 28 de marzo de 2014 se anunció que el programa se había renovado para una ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Syfy, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Terror / Science-Fiction.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Syfy dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "monstruos_y_terror",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo"
+  ],
+  "oneLiner": "Helix: destacada series (2014) obra de Syfy.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

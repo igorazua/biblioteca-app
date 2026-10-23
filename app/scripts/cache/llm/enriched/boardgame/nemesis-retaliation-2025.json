@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:nemesis-retaliation-2025",
+  "experience": {
+    "plot": "Nemesis: Retaliation is the third installment of the Nemesis horror board game series. Like the first two, it is designed as a standalone game. This time, players take on the roles of highly trained marines, entering the alien nest with strict orders and the m",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Adam Kwapiński, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Exploración / Fighting.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2025, una referencia indispensable obra de Adam Kwapiński dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 5,
+    "tema": 5,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "terror_lovecraft",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Nemesis: Retaliation: destacada boardgame (2025) obra de Adam Kwapiński.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

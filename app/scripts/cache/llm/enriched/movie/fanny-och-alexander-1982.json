@@ -1,0 +1,41 @@
+{
+  "id": "movie:fanny-och-alexander-1982",
+  "experience": {
+    "plot": "Fanny y Alexander es una película con coproducción sueco-franco-alemana de 1982, de género melodramático, escrita y dirigida por Ingmar Bergman. Tras un rodaje de siete meses, se trata de la última cinta realizada para cine por Bergman.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Ingmar Bergman, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1982, una obra destacada de Ingmar Bergman en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Fanny och Alexander: Drama con dirección de Ingmar Bergman.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

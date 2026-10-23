@@ -1,0 +1,43 @@
+{
+  "id": "movie:el-caballero-oscuro-2008",
+  "experience": {
+    "plot": "The Dark Knight es una película de superhéroes británico-estadounidense de 2008 dirigida por Christopher Nolan a partir de un guion coescrito con su hermano Jonathan. Basada en el superhéroe Batman de DC Comics, es la secuela de Batman Begins (2005) y la segun",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Christopher Nolan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Matrix",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2008, una obra destacada de Christopher Nolan en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "justicia",
+    "familia",
+    "superheroes",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "El caballero oscuro: Acción y Crimen con dirección de Christopher Nolan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

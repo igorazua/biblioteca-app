@@ -1,0 +1,39 @@
+{
+  "id": "book:a-knight-of-the-seven-kingdoms-2013",
+  "experience": {
+    "plot": "Los Cuentos de Dunk y Egg es una serie de noveletas de fantasía escritas por George R. R. Martin ambientadas en el mundo de sus novelas de la Canción de hielo y fuego. Siguen las aventuras de «Dunk» y «Egg», unos 90 años antes de los acontecimientos de las nov",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de George R. R. Martin, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de George R. R. Martin dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "aventura",
+    "fantasia_epica",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "A Knight of the Seven Kingdoms: destacada book (2013) obra de George R. R. Martin.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

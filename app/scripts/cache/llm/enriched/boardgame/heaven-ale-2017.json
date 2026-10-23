@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:heaven-ale-2017",
+  "experience": {
+    "plot": "You have been assigned to lead an ancient monastery and its brewery. Now it's your time to brew the best beer under God's blue sky! The fine art of brewing beer demands your best timing. In order to get the best results of your production, you have to provide ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Andreas Schmidt, Michael Kiesling, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Farming.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Andreas Schmidt, Michael Kiesling dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Heaven & Ale: destacada boardgame (2017) obra de Andreas Schmidt, Michael Kiesling.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

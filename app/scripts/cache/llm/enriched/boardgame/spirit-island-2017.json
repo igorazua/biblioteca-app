@@ -14,14 +14,14 @@
     "context": "Creada en 2017, una referencia indispensable obra de R. Eric Reuss dentro de su disciplina."
   },
   "axes": {
-    "peso": 4,
-    "interaccion": 2,
-    "azar": 1,
-    "confrontacion": 1,
-    "cooperacion": 1,
-    "tema": 2,
-    "risas": 1,
-    "familiar": 1
+    "peso": 5,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 5,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 2
   },
   "themes": [
     "naturaleza_y_animales",

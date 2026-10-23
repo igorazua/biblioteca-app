@@ -1,0 +1,43 @@
+{
+  "id": "movie:knockin-on-heaven-s-door-1997",
+  "experience": {
+    "plot": "Knockin' on Heaven's Door is a 1997 German crime tragicomedy film by Thomas Jahn, starring Til Schweiger, Moritz Bleibtreu, Jan Josef Liefers and Rutger Hauer. Its name derives from the Bob Dylan song which is also on the film's soundtrack. It was entered into",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Thomas Jahn, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Matrix",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1997, una obra destacada de Thomas Jahn en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "amigos"
+  ],
+  "oneLiner": "Knockin' on Heaven's Door: Acción y Crimen con dirección de Thomas Jahn.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

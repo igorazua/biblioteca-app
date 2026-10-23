@@ -1,0 +1,42 @@
+{
+  "id": "series:power-rangers-1993",
+  "experience": {
+    "plot": "Mighty Morphin Power Rangers es el título de la primera entrega de la franquicia Power Rangers, producida por Saban Entertainment, en colaboración con Toei Company, y emitida en Fox Kids del 28 de agosto de 1993 al 27 de noviembre de 1995, constando de 145 epi",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Netflix, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Children.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1993, una referencia indispensable obra de Netflix dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 1,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Power Rangers: destacada series (1993) obra de Netflix.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

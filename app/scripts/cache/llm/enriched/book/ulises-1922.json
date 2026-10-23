@@ -1,0 +1,40 @@
+{
+  "id": "book:ulises-1922",
+  "experience": {
+    "plot": "Un día entero en la vida de Leopold Bloom recorriendo Dublín en un despliegue lingüístico monumental.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de James Joyce, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Clásico.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1922, una referencia indispensable obra de James Joyce dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 3,
+    "densidad": 5,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 5,
+    "ideas": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente",
+    "para_subrayar"
+  ],
+  "oneLiner": "Ulises: destacada book (1922) obra de James Joyce.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

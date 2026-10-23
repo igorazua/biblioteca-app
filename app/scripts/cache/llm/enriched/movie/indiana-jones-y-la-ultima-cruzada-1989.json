@@ -1,0 +1,43 @@
+{
+  "id": "movie:indiana-jones-y-la-ultima-cruzada-1989",
+  "experience": {
+    "plot": "Indiana Jones y la última cruzada es una película estadounidense de aventuras dirigida por Steven Spielberg, estrenada en 1989 y producida por Robert Watts, George Lucas y Frank Marshall. Es el tercer filme estrenado de la serie cinematográfica de Indiana Jone",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Steven Spielberg, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1989, una obra destacada de Steven Spielberg en el panorama de Aventura y Acción."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 1
+  },
+  "themes": [
+    "ia_y_robots",
+    "duelo",
+    "espionaje",
+    "musica",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Indiana Jones y la última cruzada: Aventura y Acción con dirección de Steven Spielberg.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

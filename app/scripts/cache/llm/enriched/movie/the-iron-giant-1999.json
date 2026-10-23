@@ -1,0 +1,45 @@
+{
+  "id": "movie:the-iron-giant-1999",
+  "experience": {
+    "plot": "El gigante de hierro es una película de animación de ciencia ficción, dirigida por Brad Bird para la división de animación de Warner Bros. Se basa en la novela El hombre de hierro del escritor británico Ted Hughes y su guion fue redactado por Tim McCanlies a p",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Brad Bird, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1999, una obra destacada de Brad Bird en el panorama de Animación y Acción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "amistad",
+    "espacio",
+    "ia_y_robots",
+    "atraco",
+    "espionaje"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "El gigante de hierro: Animación y Acción con dirección de Brad Bird.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

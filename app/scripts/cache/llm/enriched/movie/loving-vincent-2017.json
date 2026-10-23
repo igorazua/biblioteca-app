@@ -1,0 +1,42 @@
+{
+  "id": "movie:loving-vincent-2017",
+  "experience": {
+    "plot": "In a story depicted in oil painted animation, a young man comes to the last hometown of painter Vincent van Gogh (Robert Gulaczyk) to deliver the troubled artist's final letter and ends up investigating his final days there.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Dorota Kobiela, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "El rey león",
+      "El silencio de los corderos"
+    ],
+    "context": "Estrenada en 2017, una obra destacada de Dorota Kobiela en el panorama de Animación y Biografía."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 3,
+    "violencia": 4,
+    "familiar": 5,
+    "escala": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Loving Vincent: Animación y Biografía con dirección de Dorota Kobiela.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

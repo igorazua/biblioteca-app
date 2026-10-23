@@ -1,0 +1,43 @@
+{
+  "id": "movie:joker-2019",
+  "experience": {
+    "plot": "Joker es una película de suspense psicológico estadounidense de 2019 dirigida y producida por Todd Phillips, quien coescribió el guion con Scott Silver. La película, basada en personajes de DC Comics, está protagonizada por Joaquin Phoenix como El Joker y prop",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Todd Phillips, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2019, una obra destacada de Todd Phillips en el panorama de Drama y Thriller."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "superheroes",
+    "espionaje",
+    "familia",
+    "crimen"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Joker: Drama y Thriller con dirección de Todd Phillips.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

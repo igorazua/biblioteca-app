@@ -1,0 +1,42 @@
+{
+  "id": "movie:cowboy-bebop-tengoku-no-tobira-2001",
+  "experience": {
+    "plot": "Cowboy Bebop: Knockin' on Heaven's Door , es una película de anime japonesa de 2001 dirigida por Shinichirō Watanabe, es un side story basado en la serie de televisión Cowboy Bebop; fue animada por el estudio BONES, producida por Sunrise y Bandai Visual.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Shin'ichir\u001a Watanabe, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "El rey león",
+      "Matrix"
+    ],
+    "context": "Estrenada en 2001, una obra destacada de Shin'ichir\u001a Watanabe en el panorama de Animación y Acción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 3,
+    "violencia": 5,
+    "familiar": 5,
+    "escala": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "crimen",
+    "musica",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Cowboy Bebop: Tengoku no tobira: Animación y Acción con dirección de Shin'ichir\u001a Watanabe.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

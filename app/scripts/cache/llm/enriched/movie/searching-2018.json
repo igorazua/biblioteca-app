@@ -1,0 +1,43 @@
+{
+  "id": "movie:searching-2018",
+  "experience": {
+    "plot": "Searching es una película estadounidense de suspenso psicológico de 2018, dirigida por Aneesh Chaganty y protagonizada por John Cho y Debra Messing. La película está filmada desde el punto de vista de pantallas de celulares y computadoras, y sigue la historia ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Aneesh Chaganty, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2018, una obra destacada de Aneesh Chaganty en el panorama de Drama y Misterio."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 1
+  },
+  "themes": [
+    "investigacion",
+    "familia",
+    "ia_y_robots",
+    "crimen"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Searching: Drama y Misterio con dirección de Aneesh Chaganty.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

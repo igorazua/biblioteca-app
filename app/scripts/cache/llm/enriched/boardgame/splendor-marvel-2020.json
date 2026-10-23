@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:splendor-marvel-2020",
+  "experience": {
+    "plot": "Bring together a team of super heroes and prevent Thanos from ending the world! The Infinity Stones are scattered throughout the Multiverse. Use their essence to recruit heroes and villains and gain Infinity Points. Assemble the Avengers, acquire locations and",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Marc André, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Comic Book / Strip.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Marc André dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Splendor: Marvel: destacada boardgame (2020) obra de Marc André.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

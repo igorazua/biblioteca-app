@@ -1,0 +1,43 @@
+{
+  "id": "series:top-gear-2010",
+  "experience": {
+    "plot": "Top Gear es un programa de la televisión británica sobre vehículos de motor, principalmente autos, y es el programa de autos más visto del mundo. Comenzó en 1977 como un programa de autos convencional. Con el tiempo, y sobre todo desde un relanzamiento en 2002",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de History, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra de History dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Top Gear: destacada series (2010) obra de History.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

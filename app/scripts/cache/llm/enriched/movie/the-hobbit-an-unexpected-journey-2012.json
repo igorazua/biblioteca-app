@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-hobbit-an-unexpected-journey-2012",
+  "experience": {
+    "plot": "El hobbit: un viaje inesperado es la primera de las tres partes en las que se ha dividido la novela El hobbit, del escritor británico J. R. R. Tolkien, para su adaptación al cine. La idea de realizar la adaptación para la pantalla grande viene desde 1995, cuan",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Peter Jackson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico",
+      "Avatar"
+    ],
+    "context": "Estrenada en 2012, una obra destacada de Peter Jackson en el panorama de Aventura y Fantasía."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 5,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "supervivencia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "El hobbit: Un viaje inesperado: Aventura y Fantasía con dirección de Peter Jackson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

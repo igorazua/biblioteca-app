@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:mystic-vale-2016",
+  "experience": {
+    "plot": "A curse has been placed on the Valley of Life. Hearing the spirits of nature cry out for aid, clans of druids have arrived, determined to use their blessings to heal the land and rescue the spirits. It will require courage and also caution, as the curse can ov",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de John D. Clair, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra de John D. Clair dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Mystic Vale: destacada boardgame (2016) obra de John D. Clair.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

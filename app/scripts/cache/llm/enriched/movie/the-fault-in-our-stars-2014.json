@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-fault-in-our-stars-2014",
+  "experience": {
+    "plot": "The Fault in Our Stars es una película estadounidense de drama adolescente basada en la novela homónima escrita por John Green, dirigida por Josh Boone, con guion de Scott Neustadter y Michael H. Weber y protagonizada por Shailene Woodley y Ansel Elgort, traba",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Josh Boone, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2014, una obra destacada de Josh Boone en el panorama de Drama y Romance."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "amor",
+    "romance_adolescente",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Bajo la misma estrella: Drama y Romance con dirección de Josh Boone.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

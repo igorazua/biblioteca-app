@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:struggle-of-empires-2004",
+  "experience": {
+    "plot": "Struggle of Empires recreates the various wars fought between the European powers as they attempted to become the dominant force in Europe and the rest of the world during the eighteenth century. Build armies and fleets, make alliances, establish colonies, imp",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Martin Wallace, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Age of Reason / Civilización.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2004, una referencia indispensable obra de Martin Wallace dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 1,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Struggle of Empires: destacada boardgame (2004) obra de Martin Wallace.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

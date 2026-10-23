@@ -1,0 +1,39 @@
+{
+  "id": "book:the-body-keeps-the-score-2014",
+  "experience": {
+    "plot": "The Body Keeps the Score: Brain, Mind, and Body in the Healing of Trauma is a 2014 book by Bessel van der Kolk about the purported effects of psychological trauma. The book describes van der Kolk's research and experiences on how people are affected by traumat",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bessel van der Kolk, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Bessel van der Kolk dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "The Body Keeps the Score: destacada book (2014) obra de Bessel van der Kolk.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

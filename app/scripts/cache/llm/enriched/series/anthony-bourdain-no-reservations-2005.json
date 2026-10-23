@@ -1,0 +1,42 @@
+{
+  "id": "series:anthony-bourdain-no-reservations-2005",
+  "experience": {
+    "plot": "Anthony Bourdain: No Reservations es un programa de televisión estadounidense sobre viajes y comida del Travel Channel; también emitido por el canal Discovery Travel & Living alrededor del mundo. El presentador Anthony Bourdain visita diversos países y ciudade",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Travel Channel, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Food / Travel.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de Travel Channel dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 5,
+    "formato": 2
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Anthony Bourdain: No Reservations: destacada series (2005) obra de Travel Channel.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

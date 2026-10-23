@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-gold-rush-1925",
+  "experience": {
+    "plot": "La quimera del oro es una película de comedia muda estadounidense de 1925 escrita, dirigida, producida y protagonizada por Charles Chaplin. Es considerada como una de sus obras más célebres, y él mismo declaró varias veces que era la película por la que más qu",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Charles Chaplin, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 1925, una obra destacada de Charles Chaplin en el panorama de Aventura y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "La quimera del oro: Aventura y Comedia con dirección de Charles Chaplin.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "artist:rihanna-2005",
+  "experience": {
+    "plot": "Rihanna (Saint Michael, Barbados), icono de Pop, R&B, Dancehall desde 2005.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Saint Michael, Barbados, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Pop / R&B.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de Saint Michael, Barbados dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 4,
+    "bailable": 4,
+    "organico": 3,
+    "intensidad": 5,
+    "fondo": 4,
+    "complejidad": 2
+  },
+  "themes": [
+    "pop",
+    "soul",
+    "rock_clasico"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Rihanna: destacada artist (2005) obra de Saint Michael, Barbados.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

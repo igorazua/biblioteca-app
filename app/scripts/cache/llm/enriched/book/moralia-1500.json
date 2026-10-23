@@ -1,0 +1,39 @@
+{
+  "id": "book:moralia-1500",
+  "experience": {
+    "plot": "Moralia son los restos supervivientes de la obra de la época madura de Plutarco recopilados bajo dicho título latino.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Plutarch, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ensayo / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1500, una referencia indispensable obra de Plutarch dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 2,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "escala": 2,
+    "ideas": 5,
+    "reconfort": 1
+  },
+  "themes": [
+    "identidad",
+    "sociedad",
+    "historia"
+  ],
+  "moments": [
+    "concentracion"
+  ],
+  "oneLiner": "Moralia: destacada book (1500) obra de Plutarch.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

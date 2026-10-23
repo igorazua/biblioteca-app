@@ -1,0 +1,39 @@
+{
+  "id": "book:a-short-history-of-nearly-everything-2003",
+  "experience": {
+    "plot": "A short History of Nearly Everything es un libro de divulgación científica de Bill Bryson escrito en 2003, en el que se aborda la historia de la ciencia desde la perspectiva de cómo fue evolucionando el saber y entrega aspectos curiosos de la vida de sus prota",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bill Bryson, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2003, una referencia indispensable obra de Bill Bryson dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "historia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "A short history of nearly everything: destacada book (2003) obra de Bill Bryson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

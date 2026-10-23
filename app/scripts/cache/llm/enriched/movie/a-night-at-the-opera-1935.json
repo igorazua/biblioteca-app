@@ -1,0 +1,43 @@
+{
+  "id": "movie:a-night-at-the-opera-1935",
+  "experience": {
+    "plot": "Una noche en la ópera es la sexta película de los hermanos Marx y la primera que rodaron para MGM, después de su ruptura con Paramount. Es uno de los largometrajes más conocidos de los Hermanos Marx, junto a Duck Soup (1933).",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Sam Wood, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek",
+      "Amélie"
+    ],
+    "context": "Estrenada en 1935, una obra destacada de Sam Wood en el panorama de Comedia y Música."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "desamor",
+    "familia",
+    "ia_y_robots",
+    "musica",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "Una noche en la ópera: Comedia y Música con dirección de Sam Wood.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

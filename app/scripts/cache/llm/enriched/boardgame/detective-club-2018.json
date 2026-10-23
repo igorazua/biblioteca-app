@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:detective-club-2018",
+  "experience": {
+    "plot": "Detective Club is a board game for players who enjoy party games, with simple rules that take just a minute to explain. Intrigue, sudden revelations, limitless creativity, and tons of fun await you in this game! Lead the investigation as a detective, or cover ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Oleksandr Nevskiy, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Faroleo / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Oleksandr Nevskiy dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 4,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "faroleo_y_enganos",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Detective Club: destacada boardgame (2018) obra de Oleksandr Nevskiy.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

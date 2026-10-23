@@ -1,0 +1,42 @@
+{
+  "id": "movie:edge-of-tomorrow-2014",
+  "experience": {
+    "plot": "Al filo del mañana es una película de ciencia ficción dirigida por Doug Liman, estrenada el 30 de mayo de 2014 en 3D e IMAX y protagonizada por Tom Cruise y Emily Blunt.\nEstá inspirada en la novela ligera All You Need Is Kill de Hiroshi Sakurazaka.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Doug Liman, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2014, una obra destacada de Doug Liman en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "espacio",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Al filo del mañana: Acción y Aventura con dirección de Doug Liman.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

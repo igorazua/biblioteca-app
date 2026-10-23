@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:air-land-sea-2019",
+  "experience": {
+    "plot": "As Supreme Commander of your country's military forces in Air, Land, & Sea, you must carefully deploy your forces across three theaters of war: air, land, and sea. At the start of each battle, you're dealt a hand of six cards. Players take turns playing cards ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jon Perry, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Jon Perry dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Air, Land, & Sea: destacada boardgame (2019) obra de Jon Perry.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

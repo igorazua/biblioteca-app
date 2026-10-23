@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:twilight-imperium-third-edition-2005",
+  "experience": {
+    "plot": "Twilight Imperium Third Edition is an epic empire-building game of interstellar conflict, trade, and struggle for power. Players take the roles of ancient galactic civilizations, each seeking to seize the imperial throne via warfare, diplomacy, and technologic",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Christian T. Petersen, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Civilización / Negotiation.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de Christian T. Petersen dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 1
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Twilight Imperium: Third Edition (2005): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

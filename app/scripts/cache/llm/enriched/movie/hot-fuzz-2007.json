@@ -1,0 +1,43 @@
+{
+  "id": "movie:hot-fuzz-2007",
+  "experience": {
+    "plot": "Hot Fuzz es una comedia cinematográfica de 2007 dirigida por Edgar Wright y protagonizada por Simon Pegg y Nick Frost. Los tres habían trabajado juntos con anterioridad en la película de 2004 Shaun of the Dead y la serie de televisión Spaced. Fue escrita por E",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Edgar Wright, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Matrix",
+      "Gladiator",
+      "Regreso al futuro",
+      "Sospechosos habituales"
+    ],
+    "context": "Estrenada en 2007, una obra destacada de Edgar Wright en el panorama de Acción y Comedia."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "investigacion",
+    "ia_y_robots",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pasar_miedo"
+  ],
+  "oneLiner": "Arma fatal: Acción y Comedia con dirección de Edgar Wright.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

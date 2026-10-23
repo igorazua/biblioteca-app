@@ -1,0 +1,45 @@
+{
+  "id": "movie:blood-diamond-2006",
+  "experience": {
+    "plot": "Diamante de sangre es una película estadounidense de 2006, dirigida y producida por Edward Zwick. Los protagonistas son Leonardo DiCaprio, Jennifer Connelly y Djimon Hounsou. El título hace referencia a los diamantes de guerra, piedras preciosas que se encuent",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Edward Zwick, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2006, una obra destacada de Edward Zwick en el panorama de Aventura y Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 1
+  },
+  "themes": [
+    "guerra",
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "crimen",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Diamante de sangre: Aventura y Drama con dirección de Edward Zwick.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

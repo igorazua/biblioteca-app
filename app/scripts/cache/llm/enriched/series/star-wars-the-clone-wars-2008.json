@@ -1,0 +1,42 @@
+{
+  "id": "series:star-wars-the-clone-wars-2008",
+  "experience": {
+    "plot": "Star Wars: The Clone Wars es una serie de televisión de animación por computadora, creada por George Lucas, producida por Lucasfilm y Lucasfilm Animation. La serie se estrenó en Estados Unidos, en Cartoon Network, el 3 de octubre de 2008. Es parte de la franqu",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Disney+, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de Disney+ dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 2,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "animacion",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Star Wars: The Clone Wars: destacada series (2008) obra de Disney+.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:a-little-princess-1995",
+  "experience": {
+    "plot": "A young girl is relegated to servitude at a boarding school when her father goes missing and is presumed dead.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Alfonso Cuar\u001an, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1995, una obra destacada de Alfonso Cuar\u001an en el panorama de Drama y Familiar."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 5,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "familia"
+  ],
+  "oneLiner": "A Little Princess: Drama y Familiar con dirección de Alfonso Cuar\u001an.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

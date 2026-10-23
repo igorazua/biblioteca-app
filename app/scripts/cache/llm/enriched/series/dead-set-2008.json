@@ -1,0 +1,44 @@
+{
+  "id": "series:dead-set-2008",
+  "experience": {
+    "plot": "Dead Set, en España titulada Dead Set: Muerte En Directo, es una serie de televisión inglesa de terror creada por el escritor inglés Charlie Brooker y nominada a los premios BAFTA. La serie, ambientada en la casa del Gran Hermano británico, fue estrenada en el",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de E4, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Fantasía.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de E4 dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 3,
+    "formato": 2
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "monstruos_y_terror",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "pasar_miedo"
+  ],
+  "oneLiner": "Dead Set: destacada series (2008) obra de E4.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

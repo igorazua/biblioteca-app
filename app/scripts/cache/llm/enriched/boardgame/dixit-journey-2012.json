@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:dixit-journey-2012",
+  "experience": {
+    "plot": "Dixit: Journey features the same basic game play as Dixit: Each round one player takes on the role of Storyteller, choosing one card from their hand, then telling a story, singing a ditty or otherwise doing something that in their opinion is associated with th",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jean-Louis Roubira, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Humor.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Jean-Louis Roubira dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 4,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Dixit: Journey: destacada boardgame (2012) obra de Jean-Louis Roubira.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

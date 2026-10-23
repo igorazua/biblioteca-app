@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:carcassonne-the-castle-2003",
+  "experience": {
+    "plot": "Carcassonne: the Castle takes place in the city of Carcassone itself. The theme is development of the city within the \"castle walls\", which might be more appropriately called the city walls, but Carcassonne: The City was apparently already in development. It i",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Klaus-Jürgen Wrede, Reiner Knizia, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Construcción de ciudades / Medieval.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2003, una referencia indispensable obra de Klaus-Jürgen Wrede, Reiner Knizia dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Carcassonne: The Castle (2003): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

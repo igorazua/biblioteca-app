@@ -15,12 +15,12 @@
   },
   "axes": {
     "energia": 5,
-    "valencia": 4,
-    "bailable": 5,
-    "organico": 5,
-    "intensidad": 5,
-    "fondo": 1,
-    "complejidad": 2
+    "valencia": 3,
+    "bailable": 1,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 3
   },
   "themes": [
     "rock_clasico",

@@ -1,0 +1,41 @@
+{
+  "id": "movie:black-2005",
+  "experience": {
+    "plot": "Black es una película dramática del cine de la India, escrita, producida y dirigida por Sanjay Leela Bhansali y protagonizada por Amitabh Bachchan y Rani Mukerji. Basada en la autobiografía de Helen Keller La historia de mi vida, Black narra la historia de una",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Sanjay Leela Bhansali, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2005, una obra destacada de Sanjay Leela Bhansali en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 1,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Black: Drama con dirección de Sanjay Leela Bhansali.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

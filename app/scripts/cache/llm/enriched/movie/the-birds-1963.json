@@ -1,0 +1,44 @@
+{
+  "id": "movie:the-birds-1963",
+  "experience": {
+    "plot": "Los pájaros es una película estadounidense de 1963 de suspenso y terror dirigida por Alfred Hitchcock. Se basa en una novela corta homónima de 1952 escrita por Daphne du Maurier. La película contó con la actuación de Tippi Hedren, Rod Taylor, Jessica Tandy, Su",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Alfred Hitchcock, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1963, una obra destacada de Alfred Hitchcock en el panorama de Drama y Terror."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "duelo",
+    "familia",
+    "sobrenatural"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Los pájaros: Drama y Terror con dirección de Alfred Hitchcock.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

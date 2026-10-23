@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:caylus-2005",
+  "experience": {
+    "plot": "Once upon a time ... 1289. To strengthen the borders of the Kingdom of France, King Philip the Fair decided to have a new castle built. For the time being, Caylus is but a humble village, but soon, workers and craftsmen will be flocking by the cartload, attrac",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de William Attia, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Construcción de ciudades / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de William Attia dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "fantasia_medieval",
+    "trenes_y_ferrocarril",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Caylus: destacada boardgame (2005) obra de William Attia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "artist:ludovico-einaudi-1980",
+  "experience": {
+    "plot": "Ludovico Einaudi (Turín, Italia), icono de Neoclásica, Minimalismo, Piano desde 1980.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Turín, Italia, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Neoclásica / Minimalismo.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1980, una referencia indispensable obra de Turín, Italia dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 2,
+    "organico": 3,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 5
+  },
+  "themes": [
+    "pop",
+    "rock_clasico",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Ludovico Einaudi: destacada artist (1980) obra de Turín, Italia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

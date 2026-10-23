@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:arydia-the-paths-we-dare-tread-2025",
+  "experience": {
+    "plot": "Arydia: The Paths We Dare Tread is an open world, campaign-based, co-operative, fantasy-based, \"green legacy\" role-playing board game. The game of Arydia is built on four design pillars: Exploration, Progression, Combat, and Role-playing. Exploration — Make yo",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Cody Miller, Ira Fay, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2025, una referencia indispensable obra de Cody Miller, Ira Fay dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Arydia: The Paths We Dare Tread: destacada boardgame (2025) obra de Cody Miller, Ira Fay.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

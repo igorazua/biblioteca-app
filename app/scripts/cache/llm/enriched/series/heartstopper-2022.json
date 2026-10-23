@@ -1,0 +1,43 @@
+{
+  "id": "series:heartstopper-2022",
+  "experience": {
+    "plot": "Heartstopper es una serie de televisión por streaming británica de drama y romance adolescente, basada en el webcómic y novela gráfica del mismo nombre creado por Alice Oseman y fue escrita por la propia Oseman. La serie se centra en la historia de Charlie Spr",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Alice Oseman, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Romance / Drama.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Alice Oseman dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 3,
+    "enganche": 3,
+    "formato": 4
+  },
+  "themes": [
+    "adolescencia",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Heartstopper: destacada series (2022) obra de Alice Oseman.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

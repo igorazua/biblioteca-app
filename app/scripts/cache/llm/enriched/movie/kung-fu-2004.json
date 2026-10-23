@@ -1,0 +1,42 @@
+{
+  "id": "movie:kung-fu-2004",
+  "experience": {
+    "plot": "Kung Fu Hustle, también llamada Kung Fu Sion o Kung-Fusión, es una comedia de acción de Hong Kong del año 2004, dirigida, producida y protagonizada por Stephen Chow. Otros productores fueron Po Chu Chui y Jeffrey Lau, mientras que el guion fue escrito por Xin ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Stephen Chow, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Stephen Chow en el panorama de Acción y Comedia."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "amigos"
+  ],
+  "oneLiner": "Kung Fu Sion: Acción y Comedia con dirección de Stephen Chow.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

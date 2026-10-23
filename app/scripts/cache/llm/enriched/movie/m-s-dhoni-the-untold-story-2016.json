@@ -1,0 +1,41 @@
+{
+  "id": "movie:m-s-dhoni-the-untold-story-2016",
+  "experience": {
+    "plot": "M.S. Dhoni: The Untold Story es una largometraje de Bollywood. Es una película biográfica dirigida por Neeraj Pandey, basada en la vida de un jugador de cricket indio y el actual capitán del equipo de criquet nacional indio, Mahendra Singh Dhoni. Fox Star Stud",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Neeraj Pandey, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2016, una obra destacada de Neeraj Pandey en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "espionaje",
+    "deporte",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "M.S. Dhoni: The Untold Story: Biografía y Drama con dirección de Neeraj Pandey.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

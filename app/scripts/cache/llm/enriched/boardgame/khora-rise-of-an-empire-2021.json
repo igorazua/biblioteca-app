@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:khora-rise-of-an-empire-2021",
+  "experience": {
+    "plot": "In Khôra: Rise of an Empire, each player is the head of a blossoming city-state in Ancient Greece. On your turn, you must take 2 of the following 7 Actions: Philosophy, Legislation, Culture, Trade, Military, Politics, or Development. Choose Actions that align ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Head Quarter Simulation Game Club, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad / Construcción de ciudades.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Head Quarter Simulation Game Club dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Khôra: Rise of an Empire (2021): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

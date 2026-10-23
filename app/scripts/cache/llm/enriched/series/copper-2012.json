@@ -1,0 +1,43 @@
+{
+  "id": "series:copper-2012",
+  "experience": {
+    "plot": "Copper is an American saga set in 1865 New York City, picks-up on the brink of Lincoln's assassination - with shifts in politics and society altering the landscape for Irish immigrants and African-Americans. At the center, Detective Kevin Corcoran struggles to",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de BBC America, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Crimen.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de BBC America dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "politica_y_poder",
+    "amistad"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Copper: destacada series (2012) obra de BBC America.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

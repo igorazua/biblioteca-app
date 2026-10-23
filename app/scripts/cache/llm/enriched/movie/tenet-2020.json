@@ -1,0 +1,44 @@
+{
+  "id": "movie:tenet-2020",
+  "experience": {
+    "plot": "Tenet es una película británica-estadounidense de thriller, espías y viajes en el tiempo escrita, dirigida y producida por Christopher Nolan. Está protagonizada por John David Washington, Robert Pattinson, Elizabeth Debicki, Dimple Kapadia, Michael Caine y Ken",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Christopher Nolan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Matrix",
+      "Gladiator",
+      "Parque Jurásico",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 2020, una obra destacada de Christopher Nolan en el panorama de Ciencia ficción y Acción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 5,
+    "reconfort": 3
+  },
+  "themes": [
+    "guerra",
+    "ia_y_robots",
+    "viaje_en_el_tiempo",
+    "espionaje",
+    "espacio",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Tenet: Ciencia ficción y Acción con dirección de Christopher Nolan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

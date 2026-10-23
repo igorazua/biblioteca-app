@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:tzaar-2007",
+  "experience": {
+    "plot": "TZAAR es un juego abstracto, el séptimo juego del Proyecto GIPF del belga Kris Burm. Fue declarado el Juego del año 2009 de la revista Games. Es el reemplazo anunciado de TAMSK, el segundo juego de mesa del Proyecto GIPF. El juego fue lanzado oficialmente en 2",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Kris Burm, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Estrategia abstracta.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de Kris Burm dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 1,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "pareja",
+    "jugones"
+  ],
+  "oneLiner": "TZAAR: destacada boardgame (2007) obra de Kris Burm.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

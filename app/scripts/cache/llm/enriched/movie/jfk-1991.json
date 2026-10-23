@@ -1,0 +1,44 @@
+{
+  "id": "movie:jfk-1991",
+  "experience": {
+    "plot": "JFK es una película dramática estadounidense de 1991 dirigida por Oliver Stone. En ella se examinan los eventos que llevaron al asesinato del presidente John F. Kennedy y el subsecuente encubrimiento del hecho a través de los ojos del ex-fiscal de distrito de ",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Oliver Stone, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1991, una obra destacada de Oliver Stone en el panorama de Drama y Historia."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "ia_y_robots",
+    "espionaje",
+    "ambicion",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "JFK: caso abierto: Drama y Historia con dirección de Oliver Stone.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

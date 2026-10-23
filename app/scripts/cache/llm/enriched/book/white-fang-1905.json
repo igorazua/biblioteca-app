@@ -1,0 +1,39 @@
+{
+  "id": "book:white-fang-1905",
+  "experience": {
+    "plot": "Colmillo Blanco es una novela del escritor estadounidense Jack London (1876-1916). Inicialmente aparecida por entregas en la revista Outing, fue publicada en 1906. La historia transcurre en el Territorio del Yukón, Canadá, durante la Fiebre del oro de Klondike",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jack London, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Thriller / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1905, una referencia indispensable obra de Jack London dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "historia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "White Fang: destacada book (1905) obra de Jack London.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

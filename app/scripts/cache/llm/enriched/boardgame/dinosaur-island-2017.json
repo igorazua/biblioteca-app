@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:dinosaur-island-2017",
+  "experience": {
+    "plot": "In Dinosaur Island, players will have to collect DNA, research the DNA sequences of extinct dinosaur species, and then combine the ancient DNA in the correct sequence to bring these prehistoric creatures back to life. Dino cooking! All players will compete to ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Brian Lewis, Jonathan Gilmour-Long, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Brian Lewis, Jonathan Gilmour-Long dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Dinosaur Island: destacada boardgame (2017) obra de Brian Lewis, Jonathan Gilmour-Long.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:love-letter-batman-2015",
+  "experience": {
+    "plot": "Love Letter: Batman is a game of risk, deduction, and luck for 2–4 players based on the original Love Letter game by Seiji Kanai. The deck consists mostly of criminals, with Joker being the most valuable card at #8, Harley Quinn at #7, and so on, with Robin sh",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Seiji Kanai, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Comic Book / Strip.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Seiji Kanai dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "misterio_y_deduccion",
+    "terror_lovecraft",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Love Letter: Batman: destacada boardgame (2015) obra de Seiji Kanai.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

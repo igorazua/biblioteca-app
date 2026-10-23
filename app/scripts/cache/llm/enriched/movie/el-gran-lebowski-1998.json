@@ -1,0 +1,42 @@
+{
+  "id": "movie:el-gran-lebowski-1998",
+  "experience": {
+    "plot": "El gran Lebowski es una película cómica estadounidense de 1998 escrita, producida y dirigida por los hermanos Coen. Está protagonizada por Jeff Bridges, quien interpreta a Jeffrey Lebowski, un jugador de bolos desempleado de Los Ángeles, quien se hace llamar «",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Joel y Ethan Coen, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Regreso al futuro",
+      "El silencio de los corderos"
+    ],
+    "context": "Estrenada en 1998, una obra destacada de Joel y Ethan Coen en el panorama de Comedia y Crimen."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "amistad",
+    "ia_y_robots"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "El gran Lebowski: Comedia y Crimen con dirección de Joel y Ethan Coen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

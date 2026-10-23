@@ -1,0 +1,37 @@
+{
+  "id": "artist:the-offspring-1984",
+  "experience": {
+    "plot": "The Offspring (Garden Grove, EE. UU.), icono de Punk rock, Skate punk desde 1984.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Garden Grove, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Punk rock / Skate punk.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1984, una referencia indispensable obra de Garden Grove, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 4,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "indie_rock",
+    "punk"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "The Offspring: destacada artist (1984) obra de Garden Grove, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

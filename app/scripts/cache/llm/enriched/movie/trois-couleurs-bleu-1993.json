@@ -1,0 +1,42 @@
+{
+  "id": "movie:trois-couleurs-bleu-1993",
+  "experience": {
+    "plot": "Trois couleurs: Bleu es una película de drama romántico psicológico artística helvética-polaca-francesa escrita, producida y dirigida por el director polaco Krzysztof Kieślowski. Es la primera película de la trilogía Tres colores, centrada en los ideales revol",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Krzysztof Kieslowski, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1993, una obra destacada de Krzysztof Kieslowski en el panorama de Drama y Música."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "investigacion",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Trois couleurs: Bleu: Drama y Música con dirección de Krzysztof Kieslowski.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

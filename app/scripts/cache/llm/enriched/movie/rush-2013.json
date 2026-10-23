@@ -1,0 +1,42 @@
+{
+  "id": "movie:rush-2013",
+  "experience": {
+    "plot": "Rush es una película de acción británica de 2013, dirigida por Ron Howard, escrita por Peter Morgan y protagonizada por los actores Chris Hemsworth y Daniel Brühl, quienes interpretan a los pilotos de Fórmula 1 James Hunt y Niki Lauda respectivamente.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Ron Howard, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 2013, una obra destacada de Ron Howard en el panorama de Acción y Biografía."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Rush: Acción y Biografía con dirección de Ron Howard.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

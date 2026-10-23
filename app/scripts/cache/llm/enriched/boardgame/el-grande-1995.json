@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:el-grande-1995",
+  "experience": {
+    "plot": "El Grande es un juego de mesa de estilo alemán para 2-5 jugadores, diseñado por Wolfgang Kramer y Richard Ulrich y publicado en 1995 por Hans im Glück. El tablero representa la España renacentista, donde la nobleza lucha por el control de las nueve regiones qu",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Richard Ulrich, Wolfgang Kramer, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Medieval.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1995, una referencia indispensable obra de Richard Ulrich, Wolfgang Kramer dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "El Grande: destacada boardgame (1995) obra de Richard Ulrich, Wolfgang Kramer.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

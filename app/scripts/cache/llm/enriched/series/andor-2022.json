@@ -1,0 +1,42 @@
+{
+  "id": "series:andor-2022",
+  "experience": {
+    "plot": "Andor, también conocida como Star Wars: Andor y Andor: A Star Wars Story en su segunda temporada, es una serie de televisión estadounidense creada por Tony Gilroy para el servicio OTT de streaming Disney+. Forma parte de la franquicia Star Wars y es una precue",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Tony Gilroy, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Thriller.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Tony Gilroy dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 1,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Andor: destacada series (2022) obra de Tony Gilroy.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

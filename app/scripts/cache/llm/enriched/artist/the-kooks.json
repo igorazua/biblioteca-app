@@ -1,0 +1,36 @@
+{
+  "id": "artist:the-kooks",
+  "experience": {
+    "plot": "The Kooks es una banda de indie rock británica formada en Brighton, East Sussex, Inglaterra en 2004. La banda está formada por Luke Pritchard (voz/guitarra), Hugh Harris (guitarra/teclados/bajo/coros) Alexis Nuñez (batería/percusiones) y Jonathan Harvey. La al",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 3
+  },
+  "themes": [
+    "rock_clasico",
+    "indie_rock",
+    "pop"
+  ],
+  "moments": [
+    "trabajar_estudiar"
+  ],
+  "oneLiner": "The Kooks: destacada artist (2006) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

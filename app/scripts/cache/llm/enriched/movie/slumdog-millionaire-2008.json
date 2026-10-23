@@ -1,0 +1,42 @@
+{
+  "id": "movie:slumdog-millionaire-2008",
+  "experience": {
+    "plot": "Slumdog Millionaire es una película indo-británica del 2008, dirigida por Danny Boyle y escrita por Simon Beaufoy, ganadora de 8 Premios Óscar. La película está basada en la novela ¿Quiere ser millonario?, del escritor y diplomático indio Vikas Swarup.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Danny Boyle, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2008, una obra destacada de Danny Boyle en el panorama de Drama y Romance."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Slumdog Millionaire: Drama y Romance con dirección de Danny Boyle.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

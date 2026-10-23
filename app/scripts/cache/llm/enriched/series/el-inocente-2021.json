@@ -1,0 +1,42 @@
+{
+  "id": "series:el-inocente-2021",
+  "experience": {
+    "plot": "El inocente es una serie española de televisión original de Netflix, estrenada el 30 de abril de 2021 en 190 países del mundo. La serie narra la vida de un exencarcelado que trata de rehacer su vida, no confía en casi nadie y trata de descubrir la verdad que l",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Oriol Paulo, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Thriller / Misterio.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Oriol Paulo dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 3,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "pasar_miedo"
+  ],
+  "oneLiner": "El inocente: destacada series (2021) obra de Oriol Paulo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

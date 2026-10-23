@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:shogun-2006",
+  "experience": {
+    "plot": "Shogun is a strategy board game designed by Dirk Henn and published by Queen Games in 2006. It is based on his earlier game Wallenstein, but it is set in the Sengoku period, which ends with the inception of the Tokugawa Shogunate.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Dirk Henn, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Medieval.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de Dirk Henn dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Shogun: destacada boardgame (2006) obra de Dirk Henn.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

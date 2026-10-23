@@ -1,0 +1,42 @@
+{
+  "id": "movie:how-to-train-your-dragon-2010",
+  "experience": {
+    "plot": "Cómo entrenar a tu dragón es una película de animación 3D estadounidense de 2010, basada libremente en la serie de libros homónimos de la autora británica Cressida Cowell. El filme cuenta con las voces de Jay Baruchel, Gerard Butler, America Ferrera, Christoph",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Dean DeBlois, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2010, una obra destacada de Dean DeBlois en el panorama de Animación y Acción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 5,
+    "escala": 5,
+    "reconfort": 4
+  },
+  "themes": [
+    "realismo_magico",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Cómo entrenar a tu dragón: Animación y Acción con dirección de Dean DeBlois.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

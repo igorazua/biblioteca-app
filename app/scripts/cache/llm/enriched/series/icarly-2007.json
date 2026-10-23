@@ -1,0 +1,43 @@
+{
+  "id": "series:icarly-2007",
+  "experience": {
+    "plot": "iCarly es una serie de televisión web estadounidense de comedia, que sirve como el regreso de la serie original homónima de 2007 de Nickelodeon. Está protagonizada por Miranda Cosgrove, Jerry Trainor y Nathan Kress, quienes retoman sus papeles de la serie orig",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Nickelodeon, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Children.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de Nickelodeon dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 2
+  },
+  "themes": [
+    "familia",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "iCarly: destacada series (2007) obra de Nickelodeon.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

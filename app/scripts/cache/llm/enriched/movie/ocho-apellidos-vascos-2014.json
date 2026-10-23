@@ -1,0 +1,42 @@
+{
+  "id": "movie:ocho-apellidos-vascos-2014",
+  "experience": {
+    "plot": "Ocho apellidos vascos es una película española de comedia de 2014, dirigida por Emilio Martínez-Lázaro y escrita por Borja Cobeaga y Diego San José. Está protagonizada por Clara Lago, Dani Rovira, Carmen Machi y Karra Elejalde. Se estrenó en cines de España el",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Emilio Martínez-Lázaro, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Forrest Gump",
+      "Titanic",
+      "Regreso al futuro",
+      "Toy Story"
+    ],
+    "context": "Estrenada en 2014, una obra destacada de Emilio Martínez-Lázaro en el panorama de Comedia y Romance."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pareja"
+  ],
+  "oneLiner": "Ocho apellidos vascos: Comedia y Romance con dirección de Emilio Martínez-Lázaro.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

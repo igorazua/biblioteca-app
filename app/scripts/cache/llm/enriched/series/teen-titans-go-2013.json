@@ -1,0 +1,43 @@
+{
+  "id": "series:teen-titans-go-2013",
+  "experience": {
+    "plot": "Teen Titans Go! es una serie animada estadounidense basada en el equipo de superhéroes de DC Comics, Jóvenes Titanes. La serie fue anunciada después de la popularidad del cortometraje de DC Nation, Los Nuevos Jóvenes Titanes, los cuales se basan en la serie de",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Cartoon Network, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Acción.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de Cartoon Network dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 5,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 4,
+    "enganche": 5,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Teen Titans Go!: destacada series (2013) obra de Cartoon Network.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:one-night-ultimate-werewolf-2014",
+  "experience": {
+    "plot": "No moderator, no elimination, ten-minute games. One Night Ultimate Werewolf is a fast game for 3-10 players in which everyone gets a role: One of the dastardly Werewolves, the tricky Troublemaker, the helpful Seer, or one of a dozen different characters, each ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Akihisa Okui, Ted Alspach, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Faroleo / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Akihisa Okui, Ted Alspach dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 4,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "misterio_y_deduccion",
+    "faroleo_y_enganos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "One Night Ultimate Werewolf: destacada boardgame (2014) obra de Akihisa Okui, Ted Alspach.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

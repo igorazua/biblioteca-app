@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:life-of-the-amazonia-2023",
+  "experience": {
+    "plot": "Build your very own thriving jungle by discovering various wild animals, insects, and plants in this beautiful board game. Life of the Amazonia is a strategic meeple placing game that combines bag building and pattern building. Players will restore land, place",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jamie Bloom, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Puzzle.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Jamie Bloom dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 1,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "puzzles_y_losetas",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Life of the Amazonia: destacada boardgame (2023) obra de Jamie Bloom.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

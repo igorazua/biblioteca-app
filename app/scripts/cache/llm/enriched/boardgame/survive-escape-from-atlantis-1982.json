@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:survive-escape-from-atlantis-1982",
+  "experience": {
+    "plot": "Survive is a cutthroat game where players seek to evacuate their pieces from an island that is breaking up, while remembering where their highest-valued pieces are located to maximize their score. An island made up of 40 hex-tiles is slowly sinking into the oc",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Julian Courtland-Smith, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Animales.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1982, una referencia indispensable obra de Julian Courtland-Smith dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "faroleo_y_enganos",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Survive: Escape from Atlantis!: destacada boardgame (1982) obra de Julian Courtland-Smith.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

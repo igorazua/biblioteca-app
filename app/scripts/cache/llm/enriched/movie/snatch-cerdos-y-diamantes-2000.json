@@ -1,0 +1,42 @@
+{
+  "id": "movie:snatch-cerdos-y-diamantes-2000",
+  "experience": {
+    "plot": "Snatch es una película británica del director y guionista Guy Ritchie.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Guy Ritchie, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Regreso al futuro",
+      "El silencio de los corderos"
+    ],
+    "context": "Estrenada en 2000, una obra destacada de Guy Ritchie en el panorama de Comedia y Crimen."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "crimen",
+    "mafia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "Snatch: Cerdos y diamantes: Comedia y Crimen con dirección de Guy Ritchie.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

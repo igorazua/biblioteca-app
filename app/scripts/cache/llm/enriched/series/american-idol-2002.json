@@ -1,0 +1,42 @@
+{
+  "id": "series:american-idol-2002",
+  "experience": {
+    "plot": "American Idol es un programa de telerrealidad estadounidense de concurso de canto creada por Simon Fuller, producida por Fremantle North America y 19 Entertainment, y distribuida por Fremantle North America. Se emitió en Fox del 11 de junio de 2002 al 7 de abr",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de ABC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2002, una referencia indispensable obra de ABC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "American Idol: destacada series (2002) obra de ABC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

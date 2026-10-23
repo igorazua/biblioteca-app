@@ -1,0 +1,43 @@
+{
+  "id": "movie:sherlock-jr-1924",
+  "experience": {
+    "plot": "El moderno Sherlock Holmes es una película de comedia muda estadounidense de 1924, dirigida y protagonizada por Buster Keaton. El guion fue escrito por Clyde Bruckman, Jean Havez y Joseph A. Mitchell. El elenco cuenta con Kathryn McGuire, Joe Keaton y Ward Cra",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Buster Keaton, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Forrest Gump",
+      "Matrix",
+      "Gladiator",
+      "Titanic"
+    ],
+    "context": "Estrenada en 1924, una obra destacada de Buster Keaton en el panorama de Acción y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pareja"
+  ],
+  "oneLiner": "El moderno Sherlock Holmes: Acción y Comedia con dirección de Buster Keaton.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

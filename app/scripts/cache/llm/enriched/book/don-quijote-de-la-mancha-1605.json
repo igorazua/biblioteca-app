@@ -14,16 +14,16 @@
     "context": "Creada en 1605, una referencia indispensable obra de Miguel de Cervantes dentro de su disciplina."
   },
   "axes": {
-    "tono": 2,
+    "tono": 3,
     "ritmo": 2,
-    "emocion": 2,
+    "emocion": 4,
     "densidad": 4,
-    "humor": 1,
-    "tension": 1,
-    "fantasia": 1,
-    "escala": 5,
-    "ideas": 2,
-    "reconfort": 5
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 4,
+    "ideas": 4,
+    "reconfort": 4
   },
   "themes": [
     "sociedad",

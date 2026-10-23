@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:pandemic-2008",
+  "experience": {
+    "plot": "Pandemic, también conocido como Pandemia es un juego de mesa cooperativo diseñado por Matt Leacock y publicado por Z-Man Games en 2007. Pandemic se basa en la premisa de la existencia de cuatro enfermedades que se están expandiendo por el mundo, cada una de la",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Matt Leacock, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Medical / Travel.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de Matt Leacock dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 1,
+    "cooperacion": 4,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "Pandemic: destacada boardgame (2008) obra de Matt Leacock.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

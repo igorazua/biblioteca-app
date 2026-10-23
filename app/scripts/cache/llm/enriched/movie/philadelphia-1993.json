@@ -1,0 +1,41 @@
+{
+  "id": "movie:philadelphia-1993",
+  "experience": {
+    "plot": "Philadelphia, es una película de drama judicial estadounidense de 1993, escrita por Ron Nyswaner, dirigida por Jonathan Demme y protagonizada por Tom Hanks y Denzel Washington. Los actores Jason Robards, Joanne Woodward y Antonio Banderas forman parte del elen",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Jonathan Demme, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1993, una obra destacada de Jonathan Demme en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Philadelphia: Drama con dirección de Jonathan Demme.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

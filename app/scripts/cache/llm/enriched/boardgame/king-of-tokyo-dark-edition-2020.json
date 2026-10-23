@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:king-of-tokyo-dark-edition-2020",
+  "experience": {
+    "plot": "King of Tokyo: Dark Edition is a collector's edition [limited edition: 100 000 copies in 12 languages] of King of Tokyo, with the fight taking place in an alternative and darker world in which the struggle for control of Tokyo has never been so fierce...and wi",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Richard Garfield, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Dados / Fighting.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Richard Garfield dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 4,
+    "azar": 5,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "dados_y_push_your_luck",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "King of Tokyo: Dark Edition: destacada boardgame (2020) obra de Richard Garfield.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

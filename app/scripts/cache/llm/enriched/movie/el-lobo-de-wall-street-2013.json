@@ -1,0 +1,42 @@
+{
+  "id": "movie:el-lobo-de-wall-street-2013",
+  "experience": {
+    "plot": "El lobo de Wall Street —cuyo título original en inglés es The Wolf of Wall Street— es una película estadounidense de comedia negra criminal biográfica de 2013 dirigida por Martin Scorsese y escrita por Terence Winter, basada en las memorias de Jordan Belfort d",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Martin Scorsese, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek",
+      "Amélie"
+    ],
+    "context": "Estrenada en 2013, una obra destacada de Martin Scorsese en el panorama de Comedia y Biografía."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 2,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "crimen",
+    "amistad",
+    "ia_y_robots",
+    "deporte"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "El lobo de Wall Street: Comedia y Biografía con dirección de Martin Scorsese.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

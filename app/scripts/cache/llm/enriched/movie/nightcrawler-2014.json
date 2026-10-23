@@ -1,0 +1,40 @@
+{
+  "id": "movie:nightcrawler-2014",
+  "experience": {
+    "plot": "Nightcrawler es una película estadounidense de 2014 del género crimen-thriller (noir) escrita y dirigida por Dan Gilroy. La película está protagonizada por Jake Gyllenhaal, Rene Russo, Riz Ahmed y Bill Paxton. Marcando el debut como director de Gilroy, cuenta ",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Dan Gilroy, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "El club de la lucha",
+      "El silencio de los corderos"
+    ],
+    "context": "Estrenada en 2014, una obra destacada de Dan Gilroy en el panorama de Thriller y Crimen."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "Nightcrawler: Thriller y Crimen con dirección de Dan Gilroy.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

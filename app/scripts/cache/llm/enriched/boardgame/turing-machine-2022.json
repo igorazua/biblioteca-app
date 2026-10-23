@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:turing-machine-2022",
+  "experience": {
+    "plot": "\"Codes are a puzzle. A game, just like any other game.\" - Alan Turing in The Imitation Game. Turing Machine is a fascinating and competitive deduction game. It offers a unique experience of questioning a proto-computer that works without electricity or any sor",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Fabien Gridel, Yoann Levet, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Deducción / Math.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Fabien Gridel, Yoann Levet dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 2,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "roles_ocultos",
+    "puzzles_y_losetas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Turing Machine: destacada boardgame (2022) obra de Fabien Gridel, Yoann Levet.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

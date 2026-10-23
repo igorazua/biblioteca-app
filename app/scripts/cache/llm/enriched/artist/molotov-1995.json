@@ -1,0 +1,37 @@
+{
+  "id": "artist:molotov-1995",
+  "experience": {
+    "plot": "Molotov (Ciudad de México, México), icono de Rap rock, Rock en español desde 1995.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ciudad de México, México, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Rap rock / Rock en español.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1995, una referencia indispensable obra de Ciudad de México, México dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "hip_hop",
+    "soul",
+    "metal"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Molotov: destacada artist (1995) obra de Ciudad de México, México.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

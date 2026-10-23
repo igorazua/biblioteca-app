@@ -1,0 +1,42 @@
+{
+  "id": "movie:argo-2012",
+  "experience": {
+    "plot": "Argo es una película de 2012 de suspenso del drama histórico estadounidense dirigida por Ben Affleck. El guionista Chris Terrio adaptó el guion del libro de 1999 del operativo Tony Mendez de la Agencia Central de Inteligencia de EE. UU., El maestro de disfrace",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Ben Affleck, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2012, una obra destacada de Ben Affleck en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "crimen"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Argo: Biografía y Drama con dirección de Ben Affleck.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

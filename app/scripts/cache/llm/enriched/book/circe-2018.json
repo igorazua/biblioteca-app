@@ -1,0 +1,39 @@
+{
+  "id": "book:circe-2018",
+  "experience": {
+    "plot": "Circe es una novela del año 2018 de la escritora estadounidense Madeline Miller. Se desarrolla durante la Edad Heroica griega y es una adaptación de varios mitos griegos, entre los que destaca la Odisea. Esta narrada desde la perspectiva de la bruja Circe, pro",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Madeline Miller, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Madeline Miller dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "historia",
+    "fantasia_epica"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Circe: destacada book (2018) obra de Madeline Miller.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

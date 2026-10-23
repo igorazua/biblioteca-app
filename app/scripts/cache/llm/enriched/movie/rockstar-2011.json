@@ -1,0 +1,41 @@
+{
+  "id": "movie:rockstar-2011",
+  "experience": {
+    "plot": "película de 2011 dirigida por Imtiaz Ali",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Imtiaz Ali, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2011, una obra destacada de Imtiaz Ali en el panorama de Drama y Música."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 1
+  },
+  "themes": [
+    "musica",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Rockstar: Drama y Música con dirección de Imtiaz Ali.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

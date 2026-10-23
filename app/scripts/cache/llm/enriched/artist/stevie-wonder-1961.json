@@ -1,0 +1,38 @@
+{
+  "id": "artist:stevie-wonder-1961",
+  "experience": {
+    "plot": "Stevie Wonder (Michigan, EE. UU.), icono de Soul, Funk, R&B desde 1961.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Michigan, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Soul / Funk.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1961, una referencia indispensable obra de Michigan, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 2,
+    "valencia": 3,
+    "bailable": 5,
+    "organico": 3,
+    "intensidad": 2,
+    "fondo": 3,
+    "complejidad": 4
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "indie_rock",
+    "blues",
+    "soul"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Stevie Wonder: destacada artist (1961) obra de Michigan, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

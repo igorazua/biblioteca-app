@@ -1,0 +1,42 @@
+{
+  "id": "movie:as-bestas-2022",
+  "experience": {
+    "plot": "As bestas es una película de thriller rural hispanofrancesa de 2022 dirigida por Rodrigo Sorogoyen y protagonizada por Denis Ménochet, Marina Foïs, Luis Zahera y Diego Anido. Está ambientada en Galicia y rodada en francés, español y gallego.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Rodrigo Sorogoyen, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2022, una obra destacada de Rodrigo Sorogoyen en el panorama de Thriller y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "crimen"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "As bestas: Thriller y Drama con dirección de Rodrigo Sorogoyen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

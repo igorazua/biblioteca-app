@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:yamatai-2017",
+  "experience": {
+    "plot": "In Yamatai, 2-4 players compete to build palaces, torii, and their own buildings in the land of Yamatai. The game includes ten numbered action tiles, each showing one or more colored ships and with most showing a special action. You shuffle these tiles, place ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bruno Cathala, Marc Paquien, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Mythology.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Bruno Cathala, Marc Paquien dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Yamataï: destacada boardgame (2017) obra de Bruno Cathala, Marc Paquien.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

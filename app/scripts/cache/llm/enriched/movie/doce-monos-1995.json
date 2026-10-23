@@ -1,0 +1,41 @@
+{
+  "id": "movie:doce-monos-1995",
+  "experience": {
+    "plot": "Doce monos es una película estadounidense de ciencia ficción de 1995. Está protagonizada por Bruce Willis, Madeleine Stowe y Brad Pitt.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Terry Gilliam, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Pulp Fiction",
+      "Matrix",
+      "El club de la lucha",
+      "Parque Jurásico"
+    ],
+    "context": "Estrenada en 1995, una obra destacada de Terry Gilliam en el panorama de Ciencia ficción y Thriller."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "crimen",
+    "espacio"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "Doce monos: Ciencia ficción y Thriller con dirección de Terry Gilliam.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

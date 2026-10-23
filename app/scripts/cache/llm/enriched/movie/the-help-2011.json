@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-help-2011",
+  "experience": {
+    "plot": "The Help es una película dramática estadounidense estrenada el 10 de agosto del 2011. Dirigida por Tate Taylor y protagonizada por Emma Stone, Viola Davis, Octavia Spencer y Bryce Dallas Howard, está basada en la novela Criadas y señoras, de Kathryn Stockett.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Tate Taylor, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2011, una obra destacada de Tate Taylor en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Criadas y señoras: Drama con dirección de Tate Taylor.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

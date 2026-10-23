@@ -1,0 +1,39 @@
+{
+  "id": "book:the-art-of-seduction-2001",
+  "experience": {
+    "plot": "El Arte de la Seducción es el segundo libro del autor estadounidense Robert Greene. Esta obra analiza el poder social a través de la perspectiva de la seducción, y se convirtió en un éxito de ventas a nivel internacional tras su lanzamiento en 2001.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Robert Greene, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2001, una referencia indispensable obra de Robert Greene dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 2,
+    "ideas": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "The Art of Seduction: destacada book (2001) obra de Robert Greene.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

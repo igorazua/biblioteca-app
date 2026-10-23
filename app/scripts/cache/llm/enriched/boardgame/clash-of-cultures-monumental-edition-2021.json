@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:clash-of-cultures-monumental-edition-2021",
+  "experience": {
+    "plot": "Clash of Cultures: Monumental Edition brings back the classic game of exploration, expansion, and development with the Clash of Cultures base game and the Civilizations and Aztecs expansions in one box! Grow your civilization, advance your culture and tech, an",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Christian Marcussen, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad / Construcción de ciudades.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Christian Marcussen dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "imperios_y_civilizaciones",
+    "exploracion_y_mapas",
+    "naturaleza_y_animales"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Clash of Cultures: Monumental Edition (2021): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

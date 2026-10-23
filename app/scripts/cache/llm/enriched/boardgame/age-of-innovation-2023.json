@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:age-of-innovation-2023",
+  "experience": {
+    "plot": "Age of Innovation is a standalone game set in the world of Terra Mystica. Twelve factions, each with unique characteristics, populate this world of varying terrains. Here you will compete to erect buildings and merge them into cities. Each game allows you to c",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Helge Ostertag, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Civilización / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Helge Ostertag dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Age of Innovation: destacada boardgame (2023) obra de Helge Ostertag.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

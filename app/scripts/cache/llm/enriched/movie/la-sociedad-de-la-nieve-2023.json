@@ -1,0 +1,42 @@
+{
+  "id": "movie:la-sociedad-de-la-nieve-2023",
+  "experience": {
+    "plot": "La sociedad de la nieve es una película dramática española de 2023, dirigida y escrita por J. A. Bayona, basada en el libro homónimo de Pablo Vierci, que a su vez se basa en el documental homónimo de Gonzalo Arijón que relata el accidente del vuelo 571 de la F",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Juan Antonio Bayona, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2023, una obra destacada de Juan Antonio Bayona en el panorama de Drama y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 5,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "La sociedad de la nieve: Drama y Aventura con dirección de Juan Antonio Bayona.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

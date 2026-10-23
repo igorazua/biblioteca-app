@@ -1,0 +1,36 @@
+{
+  "id": "artist:sfdk-1993",
+  "experience": {
+    "plot": "SFDK (Sevilla, España), icono de Rap, Hip hop en español desde 1993.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Sevilla, España, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Rap / Hip hop en español.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1993, una referencia indispensable obra de Sevilla, España dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 4,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 3
+  },
+  "themes": [
+    "hip_hop",
+    "pop",
+    "rock_clasico"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "SFDK: destacada artist (1993) obra de Sevilla, España.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

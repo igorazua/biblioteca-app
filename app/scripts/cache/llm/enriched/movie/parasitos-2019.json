@@ -1,0 +1,41 @@
+{
+  "id": "movie:parasitos-2019",
+  "experience": {
+    "plot": "Parásitos es una película surcoreana de drama, suspenso y humor negro del año 2019, dirigida por Bong Joon-ho y protagonizada por Song Kang-ho, Lee Sun-kyun, Cho Yeo-jeong, Choi Woo-shik y Park So-dam.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Bong Joon-ho, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Pulp Fiction",
+      "El club de la lucha",
+      "Regreso al futuro",
+      "El silencio de los corderos"
+    ],
+    "context": "Estrenada en 2019, una obra destacada de Bong Joon-ho en el panorama de Thriller y Comedia."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 1,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "amistad",
+    "crimen"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "Parásitos: Thriller y Comedia con dirección de Bong Joon-ho.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

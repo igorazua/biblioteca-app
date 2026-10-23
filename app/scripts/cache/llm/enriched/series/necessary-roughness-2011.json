@@ -1,0 +1,44 @@
+{
+  "id": "series:necessary-roughness-2011",
+  "experience": {
+    "plot": "Terapia de choque es una serie de televisión creada por Elizabeth Kruger y Craig Shapiro y estrenada en Estados Unidos el 29 de junio de 2011 en la cadena USA Network. En España se estrenó el 27 de septiembre de 2011 con el título Terapia de choque en el canal",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de USA Network, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de USA Network dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4,
+    "enganche": 3,
+    "formato": 2
+  },
+  "themes": [
+    "politica_y_poder",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "maraton"
+  ],
+  "oneLiner": "Necessary Roughness: destacada series (2011) obra de USA Network.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

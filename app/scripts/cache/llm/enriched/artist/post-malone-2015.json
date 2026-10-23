@@ -1,0 +1,37 @@
+{
+  "id": "artist:post-malone-2015",
+  "experience": {
+    "plot": "Post Malone (Syracuse, Nueva York, EE. UU.), icono de Pop rap, Hip hop, Country desde 2015.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Syracuse, Nueva York, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Pop rap / Hip hop.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Syracuse, Nueva York, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 5,
+    "bailable": 3,
+    "organico": 3,
+    "intensidad": 4,
+    "fondo": 4,
+    "complejidad": 2
+  },
+  "themes": [
+    "pop",
+    "hip_hop",
+    "trap",
+    "soul"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Post Malone: destacada artist (2015) obra de Syracuse, Nueva York, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

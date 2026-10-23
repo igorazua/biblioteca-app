@@ -1,0 +1,40 @@
+{
+  "id": "movie:infiltrados-2006",
+  "experience": {
+    "plot": "The Departed es una película estadounidense de suspenso y crimen de 2006 dirigida por Martin Scorsese, escrita por William Monahan y protagonizada por Leonardo DiCaprio, Matt Damon, Jack Nicholson y Mark Wahlberg, con Martin Sheen, Ray Winstone, Vera Farmiga y",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Martin Scorsese, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "El club de la lucha",
+      "El silencio de los corderos"
+    ],
+    "context": "Estrenada en 2006, una obra destacada de Martin Scorsese en el panorama de Crimen y Thriller."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "Infiltrados: Crimen y Thriller con dirección de Martin Scorsese.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

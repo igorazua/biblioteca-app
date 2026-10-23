@@ -1,0 +1,39 @@
+{
+  "id": "book:kim-1901",
+  "experience": {
+    "plot": "Obra clásica de clásico escrita por Rudyard Kipling.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Rudyard Kipling, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Clásico / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1901, una referencia indispensable obra de Rudyard Kipling dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 2,
+    "ideas": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "para_subrayar"
+  ],
+  "oneLiner": "Kim: destacada book (1901) obra de Rudyard Kipling.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

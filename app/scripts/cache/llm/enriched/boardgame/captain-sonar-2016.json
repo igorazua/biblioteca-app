@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:captain-sonar-2016",
+  "experience": {
+    "plot": "At the bottom of the ocean, no one will hear you scream! In Captain Sonar, you and your teammates control a state-of-the-art submarine and are trying to locate an enemy submarine in order to blow it out of the water before they can do the same to you. Every ro",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Roberto Fraga, Yohan Lemonnier, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Deducción / Fighting.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra de Roberto Fraga, Yohan Lemonnier dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 5,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Captain Sonar: destacada boardgame (2016) obra de Roberto Fraga, Yohan Lemonnier.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

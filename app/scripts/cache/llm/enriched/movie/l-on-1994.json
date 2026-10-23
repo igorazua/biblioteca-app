@@ -1,0 +1,42 @@
+{
+  "id": "movie:l-on-1994",
+  "experience": {
+    "plot": "Mathilda, a 12-year-old girl, is reluctantly taken in by L\u001aon, a professional assassin, after her family is murdered. An unusual relationship forms as she becomes his prot\u001ag\u001ae and learns the assassin's trade.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Luc Besson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1994, una obra destacada de Luc Besson en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "L\u001aon: Acción y Crimen con dirección de Luc Besson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

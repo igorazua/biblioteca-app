@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:a-gentle-rain-2021",
+  "experience": {
+    "plot": "TAKE A DEEP BREATH, AND RELAX... You have come to the lake hoping to see a rare and beautiful sight. The lilies of the lake only open their blossoms in the rain, and only rarely do all eight kinds of lily bloom at once. The goal of A Gentle Rain is to place th",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Kevin Wilson, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Puzzle.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Kevin Wilson dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 2,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 1,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "naturaleza_y_animales",
+    "puzzles_y_losetas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "A Gentle Rain: destacada boardgame (2021) obra de Kevin Wilson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

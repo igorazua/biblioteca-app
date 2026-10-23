@@ -1,0 +1,38 @@
+{
+  "id": "artist:fleetwood-mac-1967",
+  "experience": {
+    "plot": "Fleetwood Mac (Londres, Reino Unido), icono de Pop rock, Soft rock desde 1967.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Londres, Reino Unido, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Pop rock / Soft rock.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1967, una referencia indispensable obra de Londres, Reino Unido dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 4,
+    "bailable": 4,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 4,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "folk",
+    "electronica",
+    "blues"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Fleetwood Mac: destacada artist (1967) obra de Londres, Reino Unido.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

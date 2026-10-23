@@ -1,0 +1,39 @@
+{
+  "id": "book:the-art-of-being-alone-2023",
+  "experience": {
+    "plot": "The Lonely City: Adventures in the Art of Being Alone is a non-fiction book written by British writer Olivia Laing. It was first published in 2016 by Canongate in the UK and Picador in the US. Like Laing's previous works, The Lonely City blends research, biogr",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Renuka Gavrani, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Renuka Gavrani dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "The Art of Being Alone: destacada book (2023) obra de Renuka Gavrani.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

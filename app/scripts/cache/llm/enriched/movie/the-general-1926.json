@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-general-1926",
+  "experience": {
+    "plot": "The General es una película basada en la vida y hechos de Martin Cahill, delincuente irlandés que desafío a la policía y al IRA en los años 80. Fue dirigida por John Boorman en 1997 y estrenada en 1998. Brendan Gleeson interpretó a Cahill, Adrian Dunbar a su a",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Clyde Bruckman, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1926, una obra destacada de Clyde Bruckman en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 3,
+    "humor": 5,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "crimen",
+    "amistad",
+    "ia_y_robots",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "amigos"
+  ],
+  "oneLiner": "El maquinista de La General: Acción y Aventura con dirección de Clyde Bruckman.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

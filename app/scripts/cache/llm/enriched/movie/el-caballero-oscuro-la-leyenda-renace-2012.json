@@ -1,0 +1,41 @@
+{
+  "id": "movie:el-caballero-oscuro-la-leyenda-renace-2012",
+  "experience": {
+    "plot": "The Dark Knight Rises es una película de superhéroes británico-estadounidense de 2012 dirigida, producida y coescrita por Christopher Nolan. Basada en el personaje Batman de DC Comics, la cinta es la tercera y última entrega de la serie fílmica Batman de Nolan",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Christopher Nolan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Matrix",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2012, una obra destacada de Christopher Nolan en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "superheroes",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "El caballero oscuro: La leyenda renace: notable propuesta de Acción y Crimen (2012).",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

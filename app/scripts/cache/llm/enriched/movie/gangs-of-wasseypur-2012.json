@@ -1,0 +1,43 @@
+{
+  "id": "movie:gangs-of-wasseypur-2012",
+  "experience": {
+    "plot": "Relato cinematográfico centrado en el viaje emocional y las vivencias de sus protagonistas en un contexto de Acción y Comedia. Enfrentan dilemas que pondrán a prueba sus convicciones más íntimas.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Anurag Kashyap, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Matrix",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2012, una obra destacada de Anurag Kashyap en el panorama de Acción y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "amigos"
+  ],
+  "oneLiner": "Gangs of Wasseypur: Acción y Comedia con dirección de Anurag Kashyap.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

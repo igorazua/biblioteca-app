@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:in-the-year-of-the-dragon-2007",
+  "experience": {
+    "plot": "Stefan Feld's 3rd game by Alea is In the Year of the Dragon. Players take on the role of Chinese rulers around the year 1000. The game plays out in twelve rounds, with each round representing one month in a year that seems to go from bad to worse. Disease, dro",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Stefan Feld, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Medieval.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de Stefan Feld dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 2,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "In the Year of the Dragon: destacada boardgame (2007) obra de Stefan Feld.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

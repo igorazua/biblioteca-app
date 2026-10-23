@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:puerto-rico-2002",
+  "experience": {
+    "plot": "Puerto Rico es un juego de mesa de estilo alemán lanzado en el año 2002 por Andreas Seyfarth. Los jugadores asumen el control de una colonia de la isla de Puerto Rico en el año 1493. El objetivo de juego es conseguir la máxima cantidad de puntos de victoria an",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Andreas Seyfarth, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Construcción de ciudades / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2002, una referencia indispensable obra de Andreas Seyfarth dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Puerto Rico: destacada boardgame (2002) obra de Andreas Seyfarth.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "series:bates-motel-2013",
+  "experience": {
+    "plot": "Bates Motel es una serie de televisión de terror psicológico dramático estadounidense, transmitida desde el 18 de marzo de 2013 al 24 de abril de 2017. Fue desarrollado por Carlton Cuse, Kerry Ehrin, y Anthony Cipriano, y es producido por Universal Television ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Carlton Cuse, Kerry Ehrin y Anthony Cipriano, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Terror / Misterio.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de Carlton Cuse, Kerry Ehrin y Anthony Cipriano dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "monstruos_y_terror",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo"
+  ],
+  "oneLiner": "Bates Motel: destacada series (2013) obra de Carlton Cuse, Kerry Ehrin y Anthony Cipriano.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

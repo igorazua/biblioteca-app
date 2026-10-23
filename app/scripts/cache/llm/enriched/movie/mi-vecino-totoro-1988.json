@@ -1,0 +1,43 @@
+{
+  "id": "movie:mi-vecino-totoro-1988",
+  "experience": {
+    "plot": "Mi vecino Totoro  es una película de animación japonesa de 1988 escrita y dirigida por Hayao Miyazaki y producida por Studio Ghibli. El filme —protagonizado por los actores Noriko Hidaka, Chika Sakamoto y Hitoshi Takagi— cuenta la historia de una familia y sus",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Hayao Miyazaki, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Toy Story",
+      "Shrek"
+    ],
+    "context": "Estrenada en 1988, una obra destacada de Hayao Miyazaki en el panorama de Animación y Fantasía."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "guerra",
+    "familia",
+    "ia_y_robots",
+    "espionaje"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Mi vecino Totoro: Animación y Fantasía con dirección de Hayao Miyazaki.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

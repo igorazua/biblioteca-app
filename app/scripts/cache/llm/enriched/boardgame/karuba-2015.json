@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:karuba-2015",
+  "experience": {
+    "plot": "This is a tile-laying race game with players starting with boards that are identical, and one player drawing tiles that they all will use. They race to get their explorers to temples first and earn points. Along the way they can collect additional points by co",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Rüdiger Dorn, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Exploración / Puzzle.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Rüdiger Dorn dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 2,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 1,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "puzzles_y_losetas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Karuba: destacada boardgame (2015) obra de Rüdiger Dorn.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

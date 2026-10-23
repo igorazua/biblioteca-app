@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:quacks-2018",
+  "experience": {
+    "plot": "QuackShot Starring Donald Duck, conocido en Japón como I Love Donald Duck: The Treasure of King Garuzia, es un videojuego de plataformas desarrollado y publicado por Sega para la consola Mega Drive. Salió a la venta en Europa en 1991, en Norteamérica el 19 de ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Wolfgang Warsch, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Medieval.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Wolfgang Warsch dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Quacks: destacada boardgame (2018) obra de Wolfgang Warsch.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

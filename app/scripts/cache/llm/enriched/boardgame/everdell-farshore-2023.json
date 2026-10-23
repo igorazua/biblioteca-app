@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:everdell-farshore-2023",
+  "experience": {
+    "plot": "The Forever Sea is calling... The rugged coast north of Everdell Valley is a land brimming with adventure and mystery. Stalwart sailors search for bountiful islands and valuable treasures. Dutiful monks inhabit abbeys and scriptoriums, meticulously translating",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Clarissa A. Wilson, James A. Wilson, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Clarissa A. Wilson, James A. Wilson dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Everdell Farshore: destacada boardgame (2023) obra de Clarissa A. Wilson, James A. Wilson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

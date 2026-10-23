@@ -1,0 +1,44 @@
+{
+  "id": "series:scrubs-2001",
+  "experience": {
+    "plot": "Scrubs es una serie de televisión estadounidense creada por Bill Lawrence. La serie toma su nombre de la indumentaria del personal sanitario de un hospital y enfoca en las vidas personales y profesionales de los empleados del hospital docente Sacred Heart.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bill Lawrence, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Drama.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2001, una referencia indispensable obra de Bill Lawrence dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 5,
+    "formato": 3
+  },
+  "themes": [
+    "medicina_y_hospitales",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "maraton"
+  ],
+  "oneLiner": "Scrubs: destacada series (2001) obra de Bill Lawrence.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

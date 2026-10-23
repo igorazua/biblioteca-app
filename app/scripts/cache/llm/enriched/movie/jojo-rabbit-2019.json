@@ -1,0 +1,42 @@
+{
+  "id": "movie:jojo-rabbit-2019",
+  "experience": {
+    "plot": "Jojo Rabbit es una película estadounidense de comedia negra y comedia dramática de 2019, escrita y dirigida por Taika Waititi y basada en el libro Caging Skies, de Christine Leunens.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Taika Waititi, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2019, una obra destacada de Taika Waititi en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Jojo Rabbit: Comedia y Drama con dirección de Taika Waititi.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

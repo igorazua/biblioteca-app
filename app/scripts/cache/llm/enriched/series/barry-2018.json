@@ -1,0 +1,44 @@
+{
+  "id": "series:barry-2018",
+  "experience": {
+    "plot": "Barry es una serie de televisión estadounidense de comedia creada por Alec Berg y Bill Hader para HBO, estrenada el 25 de marzo de 2018 y finalizada el 28 de mayo de 2023 con 4 temporadas y 32 episodios. Es protagonizada por Hader, quien encarna a Barry Berkma",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bill Hader y Alec Berg, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Crimen.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Bill Hader y Alec Berg dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "investigacion_policial",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "maraton"
+  ],
+  "oneLiner": "Barry: destacada series (2018) obra de Bill Hader y Alec Berg.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

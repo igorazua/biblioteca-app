@@ -1,0 +1,43 @@
+{
+  "id": "series:blue-mountain-state-2010",
+  "experience": {
+    "plot": "Blue Mountain State (BMS) es una serie de comedia estadounidense que se estrenó en Spike TV el 11 de enero de 2010. Los productores de la serie son: Chris Romansky y Eric Falconer de Colgados en Filadelfia, Canal 101, y The Sarah Silverman Program. Está produc",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Paramount Network, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Sports.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra de Paramount Network dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 5,
+    "enganche": 3,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Blue Mountain State: destacada series (2010) obra de Paramount Network.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

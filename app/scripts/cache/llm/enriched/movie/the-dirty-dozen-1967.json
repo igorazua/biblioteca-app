@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-dirty-dozen-1967",
+  "experience": {
+    "plot": "Doce del patíbulo es una película bélica británico-estadounidense de 1967 de la MGM, dirigida por Robert Aldrich y basada en la novela del escritor Erwin Nathanson Filthy Thirteen.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Robert Aldrich, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1967, una obra destacada de Robert Aldrich en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 3
+  },
+  "themes": [
+    "supervivencia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Doce del patíbulo: Acción y Aventura con dirección de Robert Aldrich.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

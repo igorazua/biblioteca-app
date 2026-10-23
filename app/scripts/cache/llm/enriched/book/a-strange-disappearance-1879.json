@@ -1,0 +1,39 @@
+{
+  "id": "book:a-strange-disappearance-1879",
+  "experience": {
+    "plot": "Obra clásica de thriller escrita por Anna Katharine Green.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Anna Katharine Green, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Thriller / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1879, una referencia indispensable obra de Anna Katharine Green dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "A strange disappearance: destacada book (1879) obra de Anna Katharine Green.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

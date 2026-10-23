@@ -1,0 +1,39 @@
+{
+  "id": "book:the-silmarillion-1977",
+  "experience": {
+    "plot": "El Silmarillion es una recopilación de obras de J. R. R. Tolkien, editada y publicada póstumamente por su hijo Christopher Tolkien, en 1977. En ella se narra, entre otras cosas, la creación de Eä y el nacimiento de las razas más importantes de Arda.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de J.R.R. Tolkien, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1977, una referencia indispensable obra de J.R.R. Tolkien dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 2,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "fantasia_epica",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "The Silmarillion: destacada book (1977) obra de J.R.R. Tolkien.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "book:la-divina-comedia-1320",
+  "experience": {
+    "plot": "Dante desciende a los círculos del Infierno, cruza el Purgatorio y asciende al Paraíso guiado por Virgilio.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Dante Alighieri, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Poesía / Clásico.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1320, una referencia indispensable obra de Dante Alighieri dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 4,
+    "ideas": 5,
+    "reconfort": 3
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "para_subrayar"
+  ],
+  "oneLiner": "La divina comedia: destacada book (1320) obra de Dante Alighieri.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

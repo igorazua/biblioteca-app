@@ -1,0 +1,42 @@
+{
+  "id": "movie:3-10-to-yuma-2007",
+  "experience": {
+    "plot": "El tren de las 3:10 es una película estadounidense de wéstern de 2007, un remake de la cinta del año 1957 con el mismo título, dirigida por James Mangold y protagonizada por Christian Bale y Russell Crowe. La película fue filmada en Nuevo México y en España. S",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de James Mangold, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2007, una obra destacada de James Mangold en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "El tren de las 3:10: Acción y Crimen con dirección de James Mangold.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

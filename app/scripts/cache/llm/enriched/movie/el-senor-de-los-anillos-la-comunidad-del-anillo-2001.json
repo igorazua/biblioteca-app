@@ -16,16 +16,16 @@
   },
   "axes": {
     "tono": 3,
-    "ritmo": 3,
-    "emocion": 5,
+    "ritmo": 4,
+    "emocion": 4,
     "exigencia": 3,
-    "humor": 2,
-    "tension": 4,
-    "fantasia": 5,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 4,
     "violencia": 3,
     "familiar": 4,
     "escala": 5,
-    "reconfort": 4
+    "reconfort": 3
   },
   "themes": [
     "mitologia",

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:unmatched-cobble-fog-2020",
+  "experience": {
+    "plot": "In battle, there are no equals. Unmatched: Cobble & Fog features four new heroes for the Unmatched system. Invisible Man uses fog to dart around the board and strike without warning. Sherlock, with the trusty Watson by his side, schemes and calculates to ensur",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Chris Leder, Justin D. Jacobson, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Chris Leder, Justin D. Jacobson dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "draft_de_cartas",
+    "gestion_de_recursos",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Unmatched: Cobble & Fog (2020): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

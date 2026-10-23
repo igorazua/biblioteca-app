@@ -14,14 +14,14 @@
     "context": "Creada en 2024, una referencia indispensable obra de Tomáš Holek dentro de su disciplina."
   },
   "axes": {
-    "peso": 2,
+    "peso": 3,
     "interaccion": 2,
-    "azar": 1,
-    "confrontacion": 1,
-    "cooperacion": 1,
-    "tema": 2,
-    "risas": 1,
-    "familiar": 5
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 5,
+    "risas": 3,
+    "familiar": 2
   },
   "themes": [
     "exploracion_y_mapas",

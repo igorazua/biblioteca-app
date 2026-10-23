@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:sleeping-gods-2021",
+  "experience": {
+    "plot": "\"Are the stars unfamiliar here?\" she asked, and the sky grew suddenly dark, the star's patterns alien and exotic. \"This is the Wandering Sea. The gods have brought you here, and you must wake them if you wish to return home.\" In Sleeping Gods, you and up to 3 ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ryan Laukat, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Ryan Laukat dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "familia"
+  ],
+  "oneLiner": "Sleeping Gods: destacada boardgame (2021) obra de Ryan Laukat.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:star-wars-x-wing-miniatures-game-the-force-awakens-core-set-2015",
+  "experience": {
+    "plot": "From the publisher: Featuring beautifully detailed painted miniatures, X-Wing is a two-player game of dramatic starfighter battles set in the Star Wars universe. You and your opponent take command of Resistance X-wings and First Order TIE fighters, then battle",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Adam Sadler, Alex Davy, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aviation / Flight / Collectible Components.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Adam Sadler, Alex Davy dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Star Wars: X-Wing Miniatures Game – The Force Awakens Core Set (2015): notable e inspirad",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

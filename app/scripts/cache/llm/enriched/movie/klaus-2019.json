@@ -1,0 +1,44 @@
+{
+  "id": "movie:klaus-2019",
+  "experience": {
+    "plot": "Klaus es una película española de animación, escrita y dirigida por Sergio Pablos en su debut como director. El argumento está centrado en una visión alternativa de la leyenda de Papá Noel a través de las experiencias de Jesper, un cartero destinado en contra ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Sergio Pablos, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 2019, una obra destacada de Sergio Pablos en el panorama de Animación y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 5,
+    "reconfort": 4
+  },
+  "themes": [
+    "investigacion",
+    "amistad",
+    "ia_y_robots",
+    "espionaje",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Klaus: Animación y Aventura con dirección de Sergio Pablos.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

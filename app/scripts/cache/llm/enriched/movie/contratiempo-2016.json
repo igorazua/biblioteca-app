@@ -1,0 +1,44 @@
+{
+  "id": "movie:contratiempo-2016",
+  "experience": {
+    "plot": "Contratiempo es una película española de suspenso y misterio escrita y dirigida por Oriol Paulo. Se estrenó el 6 de enero de 2017. La película se abrió con una tibia respuesta de la crítica, pero fue un éxito comercial, recaudando 30,5 millones de dólares cont",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Oriol Paulo, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2016, una obra destacada de Oriol Paulo en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Contratiempo: Crimen y Drama con dirección de Oriol Paulo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

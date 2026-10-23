@@ -1,0 +1,42 @@
+{
+  "id": "series:silo-2023",
+  "experience": {
+    "plot": "Silo es una serie de televisión estadounidense de ciencia ficción y distópica de 2023 creada por Graham Yost. Está basada en la serie de novelas Crónicas de Silo del autor norteamericano Hugh Howey. La historia está ambientada en un futuro distópico en el cual",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Graham Yost, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Misterio.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Graham Yost dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "pasar_miedo"
+  ],
+  "oneLiner": "Silo: destacada series (2023) obra de Graham Yost.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

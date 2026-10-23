@@ -1,0 +1,43 @@
+{
+  "id": "movie:down-by-law-1986",
+  "experience": {
+    "plot": "Down by Law es una película independiente en blanco y negro del año 1986 escrita y dirigida por Jim Jarmusch. Fue protagonizada por Tom Waits, John Lurie y Roberto Benigni.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Jim Jarmusch, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1986, una obra destacada de Jim Jarmusch en el panorama de Comedia y Crimen."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Bajo el peso de la ley: Comedia y Crimen con dirección de Jim Jarmusch.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

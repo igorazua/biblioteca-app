@@ -1,0 +1,42 @@
+{
+  "id": "series:30-monedas-2020",
+  "experience": {
+    "plot": "30 monedas es una serie de televisión por internet española de terror, misterio y fantasía oscura dirigida por Álex de la Iglesia, quien la coescribió junto con Jorge Guerricaechevarría, para HBO España. Está producida por Pokeepsie Films y protagonizada por E",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Álex de la Iglesia, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Serie española.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Álex de la Iglesia dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2,
+    "enganche": 3,
+    "formato": 3
+  },
+  "themes": [
+    "monstruos_y_terror",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "30 monedas: destacada series (2020) obra de Álex de la Iglesia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

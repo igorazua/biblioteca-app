@@ -1,0 +1,39 @@
+{
+  "id": "book:stranger-in-a-strange-land-1961",
+  "experience": {
+    "plot": "Forastero en tierra extraña es una novela de Robert A. Heinlein escrita en 1961. En su publicación fue un escándalo por la forma de concebir las relaciones sexuales que se desprendían de la novela. Más tarde se convirtió en un enorme éxito y referente de la co",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Robert A. Heinlein, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1961, una referencia indispensable obra de Robert A. Heinlein dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 4,
+    "escala": 4,
+    "ideas": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "guerra",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Stranger in a Strange Land: destacada book (1961) obra de Robert A. Heinlein.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

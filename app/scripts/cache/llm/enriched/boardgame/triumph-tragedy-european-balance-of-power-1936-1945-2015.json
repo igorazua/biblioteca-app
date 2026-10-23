@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:triumph-tragedy-european-balance-of-power-1936-1945-2015",
+  "experience": {
+    "plot": "Triumph & Tragedy is a geopolitical strategy game for 3 players (also playable by 2) covering the competition for European supremacy during the period 1936-45 between Capitalism (the West), Communism (the Soviet Union) and Fascism (the Axis). It has diplomatic",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Craig Besinque, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Negotiation.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Craig Besinque dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Triumph & Tragedy: European Balance of Power 1936-1945 (2015): notable e inspiradora crea",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

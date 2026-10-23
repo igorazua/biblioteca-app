@@ -1,0 +1,43 @@
+{
+  "id": "series:sons-of-liberty-2015",
+  "experience": {
+    "plot": "Sons of Liberty is an American television History Channel miniseries dramatizing the early American Revolution events in Boston, Massachusetts, the start of the Revolutionary War, and the negotiations of the Second Continental Congress which resulted in drafti",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de History, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Acción.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de History dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Sons of Liberty: destacada series (2015) obra de History.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

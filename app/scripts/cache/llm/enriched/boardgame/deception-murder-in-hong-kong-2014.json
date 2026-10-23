@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:deception-murder-in-hong-kong-2014",
+  "experience": {
+    "plot": "Deception: Murder in Hong Kong is a game of deduction and deception for 4-12 players that plays in about 20 minutes. In the game, players take on the roles of investigators attempting to solve a murder case – but there's a twist. The killer is one of the inves",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Tobey Ho, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Faroleo / Deducción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Tobey Ho dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 5,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 4,
+    "familiar": 5
+  },
+  "themes": [
+    "misterio_y_deduccion",
+    "faroleo_y_enganos",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Deception: Murder in Hong Kong: destacada boardgame (2014) obra de Tobey Ho.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:feed-the-kraken-2022",
+  "experience": {
+    "plot": "Feed the Kraken is a hidden role deduction game, with three asymmetric factions. All players may be sitting in the same boat, but they want to navigate in different directions! The loyal sailors must bring the ship safely to mainland, whereas the pirates crave",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Dr. Hans Joachim Höh, Maikel Cheney, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Faroleo / Deducción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Dr. Hans Joachim Höh, Maikel Cheney dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 5,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 4,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "roles_ocultos",
+    "faroleo_y_enganos",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Feed the Kraken: destacada boardgame (2022) obra de Dr. Hans Joachim Höh, Maikel Cheney.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

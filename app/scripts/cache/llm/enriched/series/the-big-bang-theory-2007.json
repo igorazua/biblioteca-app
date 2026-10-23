@@ -14,19 +14,19 @@
     "context": "Creada en 2007, una referencia indispensable obra de Chuck Lorre y Bill Prady dentro de su disciplina."
   },
   "axes": {
-    "tono": 1,
+    "tono": 2,
     "ritmo": 4,
-    "emocion": 2,
-    "exigencia": 1,
-    "humor": 5,
-    "tension": 1,
-    "fantasia": 1,
-    "violencia": 1,
-    "familiar": 4,
-    "escala": 2,
-    "reconfort": 5,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 4,
     "enganche": 4,
-    "formato": 4
+    "formato": 2
   },
   "themes": [
     "sitcom_cotidiana",

@@ -1,0 +1,36 @@
+{
+  "id": "artist:phoenix",
+  "experience": {
+    "plot": "Phoenix es un grupo de indie rock francés formada en Versalles, Francia a finales de la década de los 90. La agrupación conformada por Thomas Mars (voz), Deck d'Arcy, y los hermanos Laurent Brancowitz y Christian Mazzalai son considerados, junto con Daft Punk,",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1999, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "indie_rock",
+    "punk"
+  ],
+  "moments": [
+    "trabajar_estudiar"
+  ],
+  "oneLiner": "Phoenix: destacada artist (1999) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

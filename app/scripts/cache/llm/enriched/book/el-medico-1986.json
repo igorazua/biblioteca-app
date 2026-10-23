@@ -1,0 +1,39 @@
+{
+  "id": "book:el-medico-1986",
+  "experience": {
+    "plot": "Un joven inglés huérfano viaja a Persia haciéndose pasar por judío para aprender medicina con Avicena.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Noah Gordon, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Histórica / Aventura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1986, una referencia indispensable obra de Noah Gordon dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 5,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "escala": 4,
+    "ideas": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "aventura",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "El médico: destacada book (1986) obra de Noah Gordon.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

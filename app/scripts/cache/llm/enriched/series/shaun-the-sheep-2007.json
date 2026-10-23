@@ -1,0 +1,43 @@
+{
+  "id": "series:shaun-the-sheep-2007",
+  "experience": {
+    "plot": "Shaun the Sheep es una serie de televisión animada mediante la técnica de stop motion, de origen británico y producida por Aardman Animations y HIT Entertainment. Fue transmitida por primera vez en CBBC el 5 de marzo de 2007.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de BBC iPlayer, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Children.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de BBC iPlayer dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 3,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 2
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "La oveja Shaun: destacada series (2007) obra de BBC iPlayer.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

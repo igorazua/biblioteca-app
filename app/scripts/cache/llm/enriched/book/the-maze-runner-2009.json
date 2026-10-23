@@ -1,0 +1,39 @@
+{
+  "id": "book:the-maze-runner-2009",
+  "experience": {
+    "plot": "Obra de James Dashner publicada originalmente en 2009.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de James Dashner, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de James Dashner dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "The Maze Runner: destacada book (2009) obra de James Dashner.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

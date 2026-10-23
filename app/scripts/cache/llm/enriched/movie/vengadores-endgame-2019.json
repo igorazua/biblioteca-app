@@ -1,0 +1,44 @@
+{
+  "id": "movie:vengadores-endgame-2019",
+  "experience": {
+    "plot": "Avengers: Endgame es una película estadounidense de superhéroes de 2019 basada en el equipo de superhéroes de Marvel Comics, los Vengadores. Producida por Marvel Studios y distribuida por Walt Disney Studios Motion Pictures, es la secuela de Avengers: Infinity",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Anthony y Joe Russo, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Matrix",
+      "Gladiator",
+      "Parque Jurásico",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 2019, una obra destacada de Anthony y Joe Russo en el panorama de Acción y Ciencia ficción."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "supervivencia",
+    "espacio",
+    "ia_y_robots",
+    "superheroes",
+    "espionaje"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Vengadores: Endgame: Acción y Ciencia ficción con dirección de Anthony y Joe Russo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

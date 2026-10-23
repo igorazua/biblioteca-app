@@ -1,0 +1,43 @@
+{
+  "id": "movie:togo-2019",
+  "experience": {
+    "plot": "Togo es una película dramática estadounidense de 2019 estrenada en Disney+. La cinta se centra en dos figuras clave en la carrera del suero a Nome de 1925, también conocida como \"Gran carrera de la misericordia\", en la que equipos de trineos tirados por perros",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Ericson Core, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2019, una obra destacada de Ericson Core en el panorama de Aventura y Biografía."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "deporte",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Togo: Aventura y Biografía con dirección de Ericson Core.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

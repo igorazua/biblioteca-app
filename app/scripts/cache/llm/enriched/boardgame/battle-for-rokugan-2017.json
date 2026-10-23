@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:battle-for-rokugan-2017",
+  "experience": {
+    "plot": "Conquer the realm and bring honor to your clan in Battle for Rokugan! This turn-based strategy game of conquest and mayhem puts players in the role of Rokugan daimyō struggling for control over the rich land of the Emerald Empire. Leaders must balance their re",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Molly Glover, Tom Jolly, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Medieval.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Molly Glover, Tom Jolly dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 1,
+    "familiar": 3
+  },
+  "themes": [
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Battle for Rokugan: destacada boardgame (2017) obra de Molly Glover, Tom Jolly.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

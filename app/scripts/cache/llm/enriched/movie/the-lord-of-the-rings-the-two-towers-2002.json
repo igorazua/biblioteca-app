@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-lord-of-the-rings-the-two-towers-2002",
+  "experience": {
+    "plot": "El Señor de los Anillos: las dos torres —cuyo título original en inglés es The Lord of the Rings: The Two Towers—, conocida también de forma abreviada como Las dos torres, es una película basada en el segundo tomo de la novela El Señor de los Anillos, del escr",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Peter Jackson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2002, una obra destacada de Peter Jackson en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "El señor de los anillos: Las dos torres: Acción y Aventura con dirección de Peter Jackson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb-1964",
+  "experience": {
+    "plot": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb es una película angloamericana de 1964 del género de comedia de humor negro, producida y dirigida por Stanley Kubrick.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Stanley Kubrick, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek",
+      "Amélie"
+    ],
+    "context": "Estrenada en 1964, una obra destacada de Stanley Kubrick en el panorama de Comedia."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "espacio",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1964): memorable ob",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

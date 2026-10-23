@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:star-wars-destiny-2016",
+  "experience": {
+    "plot": "Star Wars: Destiny fue un juego de cartas coleccionables de Fantasy Flight Games. Fue publicado por primera vez en noviembre de 2016. Ha sido comparado con Magic: The Gathering, a pesar de que también incorporó el uso de dados. También marcó el regreso de Fant",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Corey Konieczka, Lukas Litzsinger, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Collectible Components.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra de Corey Konieczka, Lukas Litzsinger dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "dados_y_push_your_luck",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Star Wars: Destiny: destacada boardgame (2016) obra de Corey Konieczka, Lukas Litzsinger.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

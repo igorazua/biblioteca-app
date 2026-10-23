@@ -1,0 +1,42 @@
+{
+  "id": "movie:ba-wang-bie-ji-1993",
+  "experience": {
+    "plot": "Adiós a mi concubina es una película china de 1993 dirigida por Chen Kaige. Narra la historia política y cultural de China durante la segunda mitad del siglo XX, desde antes de que se formara la República Popular China hasta los años 70, a través de las vidas ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Kaige Chen, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1993, una obra destacada de Kaige Chen en el panorama de Drama y Música."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Ba wang bie ji: Drama y Música con dirección de Kaige Chen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

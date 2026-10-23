@@ -1,0 +1,41 @@
+{
+  "id": "movie:du-rififi-chez-les-hommes-1955",
+  "experience": {
+    "plot": "Rififí es una película francesa de 1955 dirigida por Jules Dassin, protagonizada por Jean Servais, Carl Möhner, Robert Manuel, Jules Dassin, Magali Noël, Pierre Grasset, Robert Hossein, Janine Darcey, Marie Sabouret y Claude Sylvain en los papeles principales.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Jules Dassin, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1955, una obra destacada de Jules Dassin en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Du rififi chez les hommes: Crimen y Drama con dirección de Jules Dassin.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

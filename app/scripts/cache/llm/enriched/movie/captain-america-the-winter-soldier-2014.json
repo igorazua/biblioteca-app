@@ -1,0 +1,44 @@
+{
+  "id": "movie:captain-america-the-winter-soldier-2014",
+  "experience": {
+    "plot": "Captain America: The Winter Soldier es una película de superhéroes estadounidense de 2014 basada en el personaje de Marvel Comics, Capitán América, producida por Marvel Studios y distribuida por Walt Disney Studios Motion Pictures. Es la secuela de Capitán Amé",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Anthony Russo, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2014, una obra destacada de Anthony Russo en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 5
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "guerra",
+    "espacio",
+    "ia_y_robots",
+    "superheroes"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Capitán América: El soldado de invierno: Acción y Aventura con dirección de Anthony Russo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

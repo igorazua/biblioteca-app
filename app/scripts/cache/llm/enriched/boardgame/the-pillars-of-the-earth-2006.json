@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:the-pillars-of-the-earth-2006",
+  "experience": {
+    "plot": "Die Säulen der Erde / The Pillars of the Earth is based on the bestselling novel by Ken Follett and the 2006 game in the Kosmos line of literature-based games. At the beginning of the 13th century, construction of the greatest and most beautiful cathedral in E",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Michael Rieneck, Stefan Stadler, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Medieval.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de Michael Rieneck, Stefan Stadler dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "The Pillars of the Earth (2006): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

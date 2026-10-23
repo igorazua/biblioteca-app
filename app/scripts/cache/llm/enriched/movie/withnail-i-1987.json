@@ -1,0 +1,43 @@
+{
+  "id": "movie:withnail-i-1987",
+  "experience": {
+    "plot": "Withnail and I es una película británica de comedia negra filmada en 1987 y escrita y dirigida por Bruce Robinson. Basada en la vida de Robinson en Londres durante los últimos años 60, la trama sigue a dos actores jóvenes sin empleo, Withnail y \"Yo\", que viven",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Bruce Robinson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1987, una obra destacada de Bruce Robinson en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Withnail & I: Comedia y Drama con dirección de Bruce Robinson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

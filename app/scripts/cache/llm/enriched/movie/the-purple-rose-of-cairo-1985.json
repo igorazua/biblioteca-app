@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-purple-rose-of-cairo-1985",
+  "experience": {
+    "plot": "The Purple Rose of Cairo es una película de comedia de fantasía romántica estadounidense de 1985 escrita y dirigida por Woody Allen. Inspirada en El moderno Sherlock Holmes, dirigida por Buster Keaton; en Hellzapoppin (1941), dirigida por Henry Codman Potter I",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Woody Allen, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Forrest Gump",
+      "El señor de los anillos: La comunidad del anillo",
+      "Titanic",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 1985, una obra destacada de Woody Allen en el panorama de Comedia y Fantasía."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 5,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pareja"
+  ],
+  "oneLiner": "La rosa púrpura de El Cairo: Comedia y Fantasía con dirección de Woody Allen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

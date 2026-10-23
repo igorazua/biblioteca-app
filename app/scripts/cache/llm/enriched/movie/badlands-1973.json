@@ -1,0 +1,42 @@
+{
+  "id": "movie:badlands-1973",
+  "experience": {
+    "plot": "Badlands —conocida en español con los títulos de Malas tierras, Mala tierra y Mundos bajos— es una película de 1973 escrita y dirigida por Terrence Malick, protagonizada por Martin Sheen y Sissy Spacek, junto con Warren Oates y Ramón Bieri.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Terrence Malick, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1973, una obra destacada de Terrence Malick en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Malas tierras: Acción y Crimen con dirección de Terrence Malick.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

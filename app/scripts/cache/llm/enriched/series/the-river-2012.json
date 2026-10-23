@@ -1,0 +1,44 @@
+{
+  "id": "series:the-river-2012",
+  "experience": {
+    "plot": "The River es una serie estadounidense centrada en lo paranormal que se estrenó el 7 de febrero de 2012 en Estados Unidos, mientras que en España se estrenó el día 13. La serie se emitió en el canal estadounidense ABC, en Latinoamérica en el canal AXN y en Espa",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de ABC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Terror.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de ABC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 2,
+    "enganche": 3,
+    "formato": 4
+  },
+  "themes": [
+    "monstruos_y_terror",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "pasar_miedo"
+  ],
+  "oneLiner": "The River: destacada series (2012) obra de ABC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

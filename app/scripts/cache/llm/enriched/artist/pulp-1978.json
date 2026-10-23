@@ -1,0 +1,37 @@
+{
+  "id": "artist:pulp-1978",
+  "experience": {
+    "plot": "Pulp (Sheffield, Reino Unido), icono de Britpop, Glam rock desde 1978.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Sheffield, Reino Unido, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Britpop / Glam rock.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1978, una referencia indispensable obra de Sheffield, Reino Unido dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 5,
+    "bailable": 3,
+    "organico": 3,
+    "intensidad": 4,
+    "fondo": 3,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "indie_rock",
+    "punk"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Pulp: destacada artist (1978) obra de Sheffield, Reino Unido.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

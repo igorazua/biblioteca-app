@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:horizons-of-spirit-island-2022",
+  "experience": {
+    "plot": "Horizons of Spirit Island features the core mechanisms of Spirit Island, but features a new double-sided game board with a streamlined set-up, punchboard components, and five new Spirits designed to be ideal for those playing a Spirit Island game for the first",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de R. Eric Reuss, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Medio ambiente / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de R. Eric Reuss dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 5,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 4,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Horizons of Spirit Island: destacada boardgame (2022) obra de R. Eric Reuss.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

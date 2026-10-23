@@ -1,0 +1,43 @@
+{
+  "id": "movie:casablanca-1942",
+  "experience": {
+    "plot": "Casablanca es una película estadounidense de drama y romance de 1942 dirigida por Michael Curtiz. Narra un drama romántico en la ciudad marroquí de Casablanca bajo el control del gobierno de Vichy. La película, basada en la obra teatral Everybody Comes to Rick",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Michael Curtiz, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1942, una obra destacada de Michael Curtiz en el panorama de Romance y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Casablanca: Romance y Drama con dirección de Michael Curtiz.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

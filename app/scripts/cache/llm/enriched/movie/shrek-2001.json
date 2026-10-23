@@ -17,15 +17,15 @@
   "axes": {
     "tono": 1,
     "ritmo": 4,
-    "emocion": 3,
-    "exigencia": 1,
-    "humor": 5,
-    "tension": 2,
-    "fantasia": 5,
-    "violencia": 1,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 3,
+    "violencia": 2,
     "familiar": 5,
     "escala": 3,
-    "reconfort": 5
+    "reconfort": 4
   },
   "themes": [
     "parodia",

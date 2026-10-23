@@ -1,0 +1,36 @@
+{
+  "id": "artist:kate-bush",
+  "experience": {
+    "plot": "Catherine Bush, conocida como Kate Bush, es una cantautora, artista, productora y actriz británica. Considerada una de las máximas referentes en las décadas de los años 1970, 1980 y 1990; del art pop y del nuevo pop progresivo; es conocida por sus letras no co",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1978, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 5,
+    "bailable": 3,
+    "organico": 3,
+    "intensidad": 3,
+    "fondo": 3,
+    "complejidad": 5
+  },
+  "themes": [
+    "pop",
+    "cantautor",
+    "rock_clasico"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Kate Bush: destacada artist (1978) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

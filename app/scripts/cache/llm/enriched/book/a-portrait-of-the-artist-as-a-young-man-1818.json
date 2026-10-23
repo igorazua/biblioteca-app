@@ -1,0 +1,39 @@
+{
+  "id": "book:a-portrait-of-the-artist-as-a-young-man-1818",
+  "experience": {
+    "plot": "Retrato del artista adolescente es una novela semiautobiográfica escrita por el escritor irlandés James Joyce, publicada en formato de serial en la revista The Egoist, entre 1914 y 1915, y como libro en el año 1916. Novela de aprendizaje, o Bildungsroman, es l",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de James Joyce, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Clásico / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1818, una referencia indispensable obra de James Joyce dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "historia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "para_subrayar"
+  ],
+  "oneLiner": "A Portrait of the Artist as a Young Man: destacada book (1818) obra de James Joyce.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

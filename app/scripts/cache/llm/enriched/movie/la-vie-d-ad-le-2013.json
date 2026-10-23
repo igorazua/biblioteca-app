@@ -1,0 +1,42 @@
+{
+  "id": "movie:la-vie-d-ad-le-2013",
+  "experience": {
+    "plot": "Ad\u001ale's life is changed when she meets Emma, a young woman with blue hair, who will allow her to discover desire and to assert herself as a woman and as an adult. In front of others, Ad\u001ale grows, seeks herself, loses herself, and ultimately finds herself throu",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Abdellatif Kechiche, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2013, una obra destacada de Abdellatif Kechiche en el panorama de Drama y Romance."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 1,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "La vie d'Ad\u001ale: Drama y Romance con dirección de Abdellatif Kechiche.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

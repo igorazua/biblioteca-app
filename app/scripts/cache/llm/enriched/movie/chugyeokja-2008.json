@@ -1,0 +1,41 @@
+{
+  "id": "movie:chugyeokja-2008",
+  "experience": {
+    "plot": "A disgraced ex-policeman who runs a small ring of prostitutes finds himself in a race against time when one of his women goes missing.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Hong-jin Na, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Matrix",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2008, una obra destacada de Hong-jin Na en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Chugyeokja: Acción y Crimen con dirección de Hong-jin Na.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

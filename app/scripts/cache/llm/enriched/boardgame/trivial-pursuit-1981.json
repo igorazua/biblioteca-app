@@ -1,0 +1,36 @@
+{
+  "id": "boardgame:trivial-pursuit-1981",
+  "experience": {
+    "plot": "Juego de preguntas y respuestas culturales distribuidas en seis categorías emblemáticas de quesitos.",
+    "feeling": "Reto intelectual, satisfacción al acertar preguntas difíciles y rivalidad amistosa.",
+    "hook": "Conseguir el último quesito en una categoría que no dominas.",
+    "notFor": "Personas que se frustren con datos de cultura general o busquen mecánicas tácticas complejas.",
+    "similar": [
+      "Party & Co",
+      "Time's Up",
+      "Scattergories"
+    ],
+    "context": "Diseñado en 1981, se convirtió en el juego de trivia más vendido del mundo."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa",
+    "amigos",
+    "fiesta"
+  ],
+  "oneLiner": "Trivial Pursuit: el rey indiscutible de las preguntas de cultura general.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

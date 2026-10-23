@@ -1,0 +1,41 @@
+{
+  "id": "movie:uno-de-los-nuestros-1990",
+  "experience": {
+    "plot": "Goodfellas es una película dramática criminal estadounidense de 1990 dirigida por Martin Scorsese. Está basada en el libro sobre hechos reales Wiseguy de Nicholas Pileggi, quien también coescribió el guion para la película con Scorsese. La película sigue el as",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Martin Scorsese, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1990, una obra destacada de Martin Scorsese en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Uno de los nuestros: Crimen y Drama con dirección de Martin Scorsese.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

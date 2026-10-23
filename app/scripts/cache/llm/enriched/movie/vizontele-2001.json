@@ -1,0 +1,44 @@
+{
+  "id": "movie:vizontele-2001",
+  "experience": {
+    "plot": "Vizontele es una película turca escrita y dirigida por Yılmaz Erdoğan en el 2001. Está basada en las memorias de infancia del director, cuando llegó la primera televisión a su localidad en la década de 1970. La película ganó el reconocimiento como una de las p",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Yilmaz Erdogan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2001, una obra destacada de Yilmaz Erdogan en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 1,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "infancia",
+    "espionaje",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Vizontele: Comedia y Drama con dirección de Yilmaz Erdogan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

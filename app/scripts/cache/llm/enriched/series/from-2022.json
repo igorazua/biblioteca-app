@@ -1,0 +1,42 @@
+{
+  "id": "series:from-2022",
+  "experience": {
+    "plot": "From es una serie de televisión estadounidense de ciencia ficción y terror creada por John Griffin. La primera temporada se estrenó el 20 de febrero de 2022 en Epix. La serie está protagonizada por Harold Perrineau, Catalina Sandino Moreno, Eion Bailey, David ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de John Griffin, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Terror / Misterio.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de John Griffin dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "monstruos_y_terror",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo"
+  ],
+  "oneLiner": "From: destacada series (2022) obra de John Griffin.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

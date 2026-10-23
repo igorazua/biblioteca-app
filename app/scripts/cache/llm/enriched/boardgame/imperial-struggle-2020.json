@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:imperial-struggle-2020",
+  "experience": {
+    "plot": "In 1697 the Sun King, Louis XIV, emerged from a decade of war with his Continental ambitions still unsatisfied. Meanwhile, King William III of England sat easier on his new throne than he ever had before. With the Spanish succession crisis unresolved and loomi",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ananda Gupta, Jason Matthews, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Age of Reason / American Revolutionary War.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Ananda Gupta, Jason Matthews dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 1
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "guerra_historica",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "pareja",
+    "jugones"
+  ],
+  "oneLiner": "Imperial Struggle: destacada boardgame (2020) obra de Ananda Gupta, Jason Matthews.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:4-luni-3-saptam-ni-si-2-zile-2007",
+  "experience": {
+    "plot": "A woman assists her friend in arranging an illegal abortion in 1980s Romania.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Cristian Mungiu, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2007, una obra destacada de Cristian Mungiu en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "4 luni, 3 saptam\u001ani si 2 zile: Drama con dirección de Cristian Mungiu.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

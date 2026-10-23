@@ -1,0 +1,41 @@
+{
+  "id": "movie:el-gran-dictador-1940",
+  "experience": {
+    "plot": "El gran dictador es una película estadounidense de comedia dramática, estrenada en 1940, con guion, dirección y actuación de Charles Chaplin. Chaplin era el único cineasta en Hollywood que seguía realizando películas mudas cuando el sonido ya estaba plenamente",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Charles Chaplin, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Regreso al futuro",
+      "Salvar al soldado Ryan",
+      "Braveheart",
+      "Toy Story"
+    ],
+    "context": "Estrenada en 1940, una obra destacada de Charles Chaplin en el panorama de Comedia y Bélica."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "El gran dictador: Comedia y Bélica con dirección de Charles Chaplin.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

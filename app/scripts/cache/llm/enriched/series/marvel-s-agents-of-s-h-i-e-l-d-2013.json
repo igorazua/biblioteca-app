@@ -1,0 +1,42 @@
+{
+  "id": "series:marvel-s-agents-of-s-h-i-e-l-d-2013",
+  "experience": {
+    "plot": "Marvel's Agents of S.H.I.E.L.D., o simplemente Agents of S.H.I.E.L.D., es una serie de televisión estadounidense creada por Joss Whedon, Jed Whedon y Maurissa Tancharoen para ABC basada en la organización de Marvel Comics, S.H.I.E.L.D., una agencia de mantenim",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de ABC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de ABC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Marvel's Agents of S.H.I.E.L.D.: destacada series (2013) obra de ABC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

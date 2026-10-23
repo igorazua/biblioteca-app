@@ -1,0 +1,43 @@
+{
+  "id": "series:one-tree-hill-2003",
+  "experience": {
+    "plot": "One Tree Hill es una serie de televisión estadounidense. La serie narra la historia de un grupo de jóvenes y sus familias en un pequeño pueblo llamado Tree Hill a través del paso de estos por la escuela secundaria y después de la universidad. Con una trama sim",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de The CW, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Familiar.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2003, una referencia indispensable obra de The CW dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "familia",
+    "adolescencia",
+    "amistad"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "One Tree Hill: destacada series (2003) obra de The CW.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "book:el-mundo-de-ayer-1942",
+  "experience": {
+    "plot": "Memorias de un europeo que vio desmoronarse la edad de oro de Viena y de Europa ante los totalitarismos.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Stefan Zweig, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Biografía / Historia.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1942, una referencia indispensable obra de Stefan Zweig dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 2,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "memoria",
+    "historia",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "El mundo de ayer: destacada book (1942) obra de Stefan Zweig.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

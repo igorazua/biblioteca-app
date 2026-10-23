@@ -1,0 +1,42 @@
+{
+  "id": "movie:naked-1993",
+  "experience": {
+    "plot": "Naked es una película de tragicomedia oscura británica de 1993 dirigida por Mike Leigh. Sus protagonistas son David Thewlis, Lesley Sharp y Katrin Cartlidge.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Mike Leigh, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1993, una obra destacada de Mike Leigh en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 1,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Indefenso: Comedia y Drama con dirección de Mike Leigh.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

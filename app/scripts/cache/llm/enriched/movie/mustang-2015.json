@@ -1,0 +1,41 @@
+{
+  "id": "movie:mustang-2015",
+  "experience": {
+    "plot": "Mustang es una película dramática de coproducción internacional, dirigida por la directora de cine de origen turco y nacionalizada francesa Deniz Gamze Ergüven. La película está ambientada en un pueblo turco y muestra la vida de cinco jóvenes hermanas huérfana",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Deniz Gamze Erg\u001aven, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2015, una obra destacada de Deniz Gamze Erg\u001aven en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "romance_adolescente"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Mustang: Drama con dirección de Deniz Gamze Erg\u001aven.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

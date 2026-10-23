@@ -1,0 +1,40 @@
+{
+  "id": "book:cronica-de-una-muerte-anunciada-1981",
+  "experience": {
+    "plot": "Crónica de una muerte anunciada es una novela del escritor colombiano \nGabriel García Márquez, publicada en 1981. Fue incluida entre las 100 mejores en español del siglo XX del periódico español El Mundo.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Gabriel García Márquez, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Misterio.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1981, una referencia indispensable obra de Gabriel García Márquez dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "densidad": 2,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "escala": 2,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "duelo",
+    "amor",
+    "soledad",
+    "misterio"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Crónica de una muerte anunciada: destacada book (1981) obra de Gabriel García Márquez.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

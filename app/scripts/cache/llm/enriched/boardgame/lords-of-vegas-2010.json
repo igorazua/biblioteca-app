@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:lords-of-vegas-2010",
+  "experience": {
+    "plot": "You and your opponents represent powerful developers in a burgeoning Nevada city. You will earn money and prestige by building the biggest and most profitable casinos on \"The Strip,\" the town's backbone of dust and sin. You start with nothing but parking lots ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de James Ernest, Mike Selinker, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Construcción de ciudades / Dados.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra de James Ernest, Mike Selinker dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 3
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "dados_y_push_your_luck",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Lords of Vegas: destacada boardgame (2010) obra de James Ernest, Mike Selinker.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

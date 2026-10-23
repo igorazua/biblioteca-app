@@ -1,0 +1,41 @@
+{
+  "id": "movie:hidden-figures-2016",
+  "experience": {
+    "plot": "Hidden Figures es una película biográfica estadounidense de 2016 dirigida por Theodore Melfi y escrita por Melfi y Allison Schroeder. El título juega con el doble significado de figure/cifra y figure/silueta. La película, basada en el libro de no ficción del m",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Theodore Melfi, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2016, una obra destacada de Theodore Melfi en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Figuras ocultas: Biografía y Drama con dirección de Theodore Melfi.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

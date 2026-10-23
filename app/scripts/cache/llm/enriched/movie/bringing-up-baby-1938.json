@@ -1,0 +1,43 @@
+{
+  "id": "movie:bringing-up-baby-1938",
+  "experience": {
+    "plot": "Bringing Up Baby es una película estadounidense del género de comedia, de 1938, dirigida por Howard Hawks con la participación estelar de Katharine Hepburn y Cary Grant. El guion fue adaptado por Dudley Nichols y Hagar Wilde a partir de una historia de Hagar W",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Howard Hawks, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Forrest Gump",
+      "Titanic",
+      "Regreso al futuro",
+      "Toy Story"
+    ],
+    "context": "Estrenada en 1938, una obra destacada de Howard Hawks en el panorama de Comedia y Familiar."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "La fiera de mi niña: Comedia y Familiar con dirección de Howard Hawks.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

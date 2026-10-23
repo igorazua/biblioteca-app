@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:kingsburg-2007",
+  "experience": {
+    "plot": "In Kingsburg, players are Lords sent from the King to administer frontier territories. The game takes place over five years, a total of 20 turns. In every year, there are 3 production seasons for collecting resources, building structures, and training troops. ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Andrea Chiarvesio, Luca Iennaco, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Construcción de ciudades / Dados.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de Andrea Chiarvesio, Luca Iennaco dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 2,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 1,
+    "familiar": 4
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "dados_y_push_your_luck",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Kingsburg: destacada boardgame (2007) obra de Andrea Chiarvesio, Luca Iennaco.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

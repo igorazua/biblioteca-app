@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:yinsh-2003",
+  "experience": {
+    "plot": "YINSH es un juego abstracto del diseñador de juegos Kris Burm. Es el quinto juego que se lanza en el Proyecto GIPF. En el momento de su lanzamiento en 2003, Burm declaró que tenía la intención de que fuera considerado como el sexto y último juego del proyecto,",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Kris Burm, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Estrategia abstracta.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2003, una referencia indispensable obra de Kris Burm dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 1,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "pareja",
+    "jugones"
+  ],
+  "oneLiner": "YINSH: destacada boardgame (2003) obra de Kris Burm.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

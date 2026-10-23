@@ -1,0 +1,39 @@
+{
+  "id": "book:king-of-greed-2023",
+  "experience": {
+    "plot": "Obra de Ana Huang publicada originalmente en 2023.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ana Huang, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Ana Huang dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "King of Greed: destacada book (2023) obra de Ana Huang.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

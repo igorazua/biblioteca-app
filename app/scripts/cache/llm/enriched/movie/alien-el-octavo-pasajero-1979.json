@@ -1,0 +1,44 @@
+{
+  "id": "movie:alien-el-octavo-pasajero-1979",
+  "experience": {
+    "plot": "Alien: el octavo pasajero, o simplemente Alien en su idioma original, es una película de ciencia ficción y terror dirigida por el cineasta británico Ridley Scott y estrenada en 1979. El reparto estuvo integrado por Sigourney Weaver, Tom Skerritt, Veronica Cart",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Ridley Scott, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Matrix",
+      "Parque Jurásico",
+      "Regreso al futuro",
+      "Origen"
+    ],
+    "context": "Estrenada en 1979, una obra destacada de Ridley Scott en el panorama de Terror y Ciencia ficción."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 5,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "mafia",
+    "espacio",
+    "ia_y_robots",
+    "espionaje",
+    "monstruos"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde"
+  ],
+  "oneLiner": "Alien, el octavo pasajero: Terror y Ciencia ficción con dirección de Ridley Scott.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

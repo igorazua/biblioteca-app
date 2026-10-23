@@ -1,0 +1,39 @@
+{
+  "id": "book:los-tres-mosqueteros-1844",
+  "experience": {
+    "plot": "El joven d'Artagnan se une a Athos, Porthos y Aramis bajo el lema de todos para uno y uno para todos.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Alexandre Dumas, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Clásico.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1844, una referencia indispensable obra de Alexandre Dumas dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 1,
+    "escala": 5,
+    "ideas": 5,
+    "reconfort": 3
+  },
+  "themes": [
+    "aventura",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "para_subrayar"
+  ],
+  "oneLiner": "Los tres mosqueteros: destacada book (1844) obra de Alexandre Dumas.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

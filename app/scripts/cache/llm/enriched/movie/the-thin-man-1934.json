@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-thin-man-1934",
+  "experience": {
+    "plot": "La cena de los acusados fue una comedia cinematográfica de 1934 dirigida por W. S. Van Dyke y protagonizada por William Powell, Myrna Loy y Maureen O'Sullivan basándose en el guion de Albert Hackett y Frances Goodrich.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de W.S. Van Dyke, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Regreso al futuro",
+      "El silencio de los corderos"
+    ],
+    "context": "Estrenada en 1934, una obra destacada de W.S. Van Dyke en el panorama de Comedia y Crimen."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 5,
+    "humor": 5,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pasar_miedo"
+  ],
+  "oneLiner": "La cena de los acusados: Comedia y Crimen con dirección de W.S. Van Dyke.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:beer-bread-2022",
+  "experience": {
+    "plot": "Beer & Bread is a multi-use card game for two players. Its clever structure of alternating rounds puts a fascinating twist on player interaction, card drafting, and resource management. Founded on the fruitful lands of an erstwhile monastery, two villages have",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Scott Almes, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Farming.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Scott Almes dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "fantasia_medieval",
+    "ciencia_ficcion_espacial",
+    "naturaleza_y_animales",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Beer & Bread: destacada boardgame (2022) obra de Scott Almes.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

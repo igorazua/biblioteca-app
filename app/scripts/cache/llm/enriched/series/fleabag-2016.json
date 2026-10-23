@@ -1,0 +1,44 @@
+{
+  "id": "series:fleabag-2016",
+  "experience": {
+    "plot": "Fleabag es una comedia dramática británica para televisión creada y escrita por Phoebe Waller-Bridge, basado en su monólogo individual presentado por primera vez en 2013. Originalmente producida por Two Brothers Pictures para el canal digital BBC Three en un a",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Phoebe Waller-Bridge, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Drama.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra de Phoebe Waller-Bridge dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 1,
+    "reconfort": 4,
+    "enganche": 3,
+    "formato": 2
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "adolescencia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "maraton"
+  ],
+  "oneLiner": "Fleabag: destacada series (2016) obra de Phoebe Waller-Bridge.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

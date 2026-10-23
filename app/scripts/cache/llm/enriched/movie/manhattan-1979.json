@@ -1,0 +1,43 @@
+{
+  "id": "movie:manhattan-1979",
+  "experience": {
+    "plot": "Manhattan es una película estadounidense dirigida y protagonizada por Woody Allen, estrenada en 1979. Obtuvo dos nominaciones a los Óscar.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Woody Allen, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1979, una obra destacada de Woody Allen en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Manhattan: Comedia y Drama con dirección de Woody Allen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

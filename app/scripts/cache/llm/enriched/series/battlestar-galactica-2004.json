@@ -1,0 +1,43 @@
+{
+  "id": "series:battlestar-galactica-2004",
+  "experience": {
+    "plot": "Battlestar Galactica es una serie de televisión de ciencia ficción militar estadounidense y parte de la franquicia Battlestar Galactica. El programa fue desarrollado por Ronald D. Moore y producido por Moore y David Eick como una reinvención de la serie de tel",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ronald D. Moore, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Drama.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2004, una referencia indispensable obra de Ronald D. Moore dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 5,
+    "reconfort": 4,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Battlestar Galactica: destacada series (2004) obra de Ronald D. Moore.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

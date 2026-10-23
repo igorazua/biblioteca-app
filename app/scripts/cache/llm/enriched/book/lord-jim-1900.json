@@ -1,0 +1,39 @@
+{
+  "id": "book:lord-jim-1900",
+  "experience": {
+    "plot": "Un joven marino comete un acto de cobardía al abandonar un barco en peligro y busca redimirse en Oriente.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Joseph Conrad, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Aventura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1900, una referencia indispensable obra de Joseph Conrad dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "escala": 4,
+    "ideas": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "aventura",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Lord Jim: destacada book (1900) obra de Joseph Conrad.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:cape-fear-1962",
+  "experience": {
+    "plot": "Cape Fear es una película estadounidense de 1962 del género de suspense, con guion de James R. Webb basado en la novela de 1957 The Executioners, escrita por John D. MacDonald.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de J. Lee Thompson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1962, una obra destacada de J. Lee Thompson en el panorama de Drama y Thriller."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 1
+  },
+  "themes": [
+    "familia",
+    "crimen",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "El cabo del terror: Drama y Thriller con dirección de J. Lee Thompson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

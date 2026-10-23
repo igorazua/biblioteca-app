@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:aquatica-2019",
+  "experience": {
+    "plot": "Aquatica is a deep, but easy to learn family engine builder about underwater kingdoms.\n\nIn the game you will become one of the mighty ocean kings, struggling to bring glory to his realm. To win the game, you need to capture and buy locations, recruit new chara",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ivan Tuzovsky, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Ivan Tuzovsky dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Aquatica: destacada boardgame (2019) obra de Ivan Tuzovsky.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

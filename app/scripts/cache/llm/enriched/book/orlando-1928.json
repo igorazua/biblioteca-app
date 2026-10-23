@@ -1,0 +1,39 @@
+{
+  "id": "book:orlando-1928",
+  "experience": {
+    "plot": "Un joven noble inglés viaja a lo largo de más de tres siglos cambiando de época y transformándose de hombre a mujer.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Virginia Woolf, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Fantasía.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1928, una referencia indispensable obra de Virginia Woolf dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 4,
+    "escala": 5,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "historia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Orlando: destacada book (1928) obra de Virginia Woolf.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

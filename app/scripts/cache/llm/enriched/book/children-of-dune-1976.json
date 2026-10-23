@@ -1,0 +1,39 @@
+{
+  "id": "book:children-of-dune-1976",
+  "experience": {
+    "plot": "Hijos de Dune es el tercer libro en la saga de Dune escrita por Frank Herbert en 1976. El libro que le precede en la saga es El Mesías de Dune, y el que le sigue es Dios Emperador de Dune.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Frank Herbert, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1976, una referencia indispensable obra de Frank Herbert dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "escala": 5,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "fantasia_epica",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Children of Dune: destacada book (1976) obra de Frank Herbert.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

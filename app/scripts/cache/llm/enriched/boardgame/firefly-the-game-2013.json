@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:firefly-the-game-2013",
+  "experience": {
+    "plot": "Players begin with a ship, and travel from planet to planet, hiring crew, purchasing ship upgrades, and picking up cargo to deliver (jobs) all in the form of cards. Some crew and cargo are illegal, and can be confiscated if your ship is boarded by an alliance ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Aaron Dill, John Kovaleski, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de Aaron Dill, John Kovaleski dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 1
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Firefly: The Game: destacada boardgame (2013) obra de Aaron Dill, John Kovaleski.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

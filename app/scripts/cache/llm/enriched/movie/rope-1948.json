@@ -1,0 +1,44 @@
+{
+  "id": "movie:rope-1948",
+  "experience": {
+    "plot": "Rope es una película estadounidense de thriller psicológico y crimen de 1948 dirigida por Alfred Hitchcock y basada en la obra teatral homónima de 1929 de Patrick Hamilton. Protagonizada por James Stewart, John Dall, Farley Granger y Joan Chandler, la historia",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Alfred Hitchcock, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1948, una obra destacada de Alfred Hitchcock en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "ia_y_robots",
+    "duelo",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "La soga: Crimen y Drama con dirección de Alfred Hitchcock.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

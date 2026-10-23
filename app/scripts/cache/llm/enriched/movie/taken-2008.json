@@ -1,0 +1,41 @@
+{
+  "id": "movie:taken-2008",
+  "experience": {
+    "plot": "Taken es una película de acción francesa de 2008, protagonizada por Liam Neeson, Famke Janssen y Maggie Grace. Está dirigida por Pierre Morel y fue escrita y coproducida por Luc Besson. Es el top 85 de las 100 mejores películas de acción de todos los tiempos p",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Pierre Morel, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Pulp Fiction",
+      "Matrix",
+      "El club de la lucha",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2008, una obra destacada de Pierre Morel en el panorama de Acción y Thriller."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "venganza",
+    "crimen",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Venganza: Acción y Thriller con dirección de Pierre Morel.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

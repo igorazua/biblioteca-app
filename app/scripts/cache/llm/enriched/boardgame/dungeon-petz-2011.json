@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:dungeon-petz-2011",
+  "experience": {
+    "plot": "Become the leader of an imp family that has just started a new business – breeding and selling petz. Sound simple and safe? Well, we forgot to mention that those petz are for Dungeon Lords. This means magical, playful, sometimes angry monsters that constantly ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Vlaada Chvátil, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de Vlaada Chvátil dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 2,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 4,
+    "familiar": 3
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "ciencia_ficcion_espacial",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Dungeon Petz: destacada boardgame (2011) obra de Vlaada Chvátil.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

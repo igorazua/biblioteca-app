@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:stella-dixit-universe-2021",
+  "experience": {
+    "plot": "Starseekers! Explore the sky and bring some light back to your world. Stella is a competitive game in the Dixit universe. In each round, players interpret Dixit cards on a board after receiving a common clue word. Each player observes the Dixit cards and secre",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Gérald Cattiaux, Jean-Louis Roubira, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Party Game.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Gérald Cattiaux, Jean-Louis Roubira dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 4,
+    "familiar": 4
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "roles_ocultos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Stella: Dixit Universe (2021): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

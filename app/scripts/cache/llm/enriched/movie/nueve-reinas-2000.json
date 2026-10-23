@@ -1,0 +1,42 @@
+{
+  "id": "movie:nueve-reinas-2000",
+  "experience": {
+    "plot": "Nueve reinas es una película argentina policial y de suspenso, del año 2000, escrita y dirigida por Fabián Bielinsky. Está protagonizada por Ricardo Darín y Gastón Pauls y coprotagonizada por José Ignacio Abadal, Tomás Fonzi, Graciela Tenenbaum, Oscar Núñez, A",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Fabi\u001an Bielinsky, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2000, una obra destacada de Fabi\u001an Bielinsky en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Nueve reinas: Crimen y Drama con dirección de Fabi\u001an Bielinsky.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "movie:red-river-1948",
+  "experience": {
+    "plot": "Río Rojo es una película estadounidense del género western de 1948 dirigida por Howard Hawks y protagonizada por John Wayne y Montgomery Clift. La cinta narra una versión ficticia del primer traslado de ganado vacuno de Texas a Kansas a lo largo del sendero Ch",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Howard Hawks, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 1948, una obra destacada de Howard Hawks en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Río Rojo: Acción y Aventura con dirección de Howard Hawks.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

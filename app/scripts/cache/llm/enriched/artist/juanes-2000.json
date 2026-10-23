@@ -1,0 +1,36 @@
+{
+  "id": "artist:juanes-2000",
+  "experience": {
+    "plot": "Juanes (Medellín, Colombia), icono de Pop rock latino, Cumbia desde 2000.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Medellín, Colombia, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Pop rock latino / Cumbia.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2000, una referencia indispensable obra de Medellín, Colombia dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 4,
+    "bailable": 4,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 4,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "musica_latina"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Juanes: destacada artist (2000) obra de Medellín, Colombia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

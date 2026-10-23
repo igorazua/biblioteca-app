@@ -1,0 +1,41 @@
+{
+  "id": "movie:goldfinger-1964",
+  "experience": {
+    "plot": "Goldfinger, es una película británica de espionaje de 1964. Es la tercera película de James Bond, producida por Eon Productions, y también la tercera de Sean Connery como el agente ficticio del MI6 James Bond. Está basada en la novela homónima de Ian Fleming. ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Guy Hamilton, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Pulp Fiction",
+      "El rey león",
+      "Matrix",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1964, una obra destacada de Guy Hamilton en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 1
+  },
+  "themes": [
+    "espionaje",
+    "crimen",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Goldfinger: Acción y Aventura con dirección de Guy Hamilton.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

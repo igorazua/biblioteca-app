@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:oathsworn-into-the-deepwood-2022",
+  "experience": {
+    "plot": "Oathsworn is a Twisting Tales Game for 1-4 players where play is focused on narrative choices and rich miniature combat encounters. The game is set in the Deepwood where a Free company (the Oathsworn) fights for humanity's survival against unnatural horrors an",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jamie Jolly, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Jamie Jolly dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 5,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "dados_y_push_your_luck",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Oathsworn: Into the Deepwood: destacada boardgame (2022) obra de Jamie Jolly.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

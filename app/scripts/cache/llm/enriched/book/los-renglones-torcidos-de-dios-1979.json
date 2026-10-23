@@ -1,0 +1,39 @@
+{
+  "id": "book:los-renglones-torcidos-de-dios-1979",
+  "experience": {
+    "plot": "Los renglones torcidos de Dios es una novela publicada en 1979 por Torcuato Luca de Tena (1923-1999). En ella se relata la historia de Alice Gould, una mujer que es internada en un hospital psiquiátrico siguiendo las pistas referentes a un caso de homicidio. S",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Torcuato Luca de Tena, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Misterio / Novela.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1979, una referencia indispensable obra de Torcuato Luca de Tena dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "escala": 4,
+    "ideas": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "historia",
+    "misterio",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Los renglones torcidos de Dios: destacada book (1979) obra de Torcuato Luca de Tena.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

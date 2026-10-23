@@ -1,0 +1,45 @@
+{
+  "id": "movie:ran-1985",
+  "experience": {
+    "plot": "Ran es una película japonesa de 1985 escrita y dirigida por Akira Kurosawa. Considerada una de las obras clave del cineasta la trama está basada, además de las leyendas del daimio Mori Motonari, en la tragedia El rey Lear de William Shakespeare. Se trata de un",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Akira Kurosawa, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 1985, una obra destacada de Akira Kurosawa en el panorama de Acción y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "guerra",
+    "familia",
+    "ia_y_robots",
+    "ambicion",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Ran: Acción y Drama con dirección de Akira Kurosawa.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

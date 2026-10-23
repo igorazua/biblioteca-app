@@ -1,0 +1,40 @@
+{
+  "id": "book:la-familia-de-pascual-duarte-1942",
+  "experience": {
+    "plot": "Las memorias carcelarias de un campesino extremeño empujado a una violencia brutal y despiadada.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Camilo José Cela, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Clásico.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1942, una referencia indispensable obra de Camilo José Cela dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 3,
+    "densidad": 5,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "memoria",
+    "familia",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente",
+    "para_subrayar"
+  ],
+  "oneLiner": "La familia de Pascual Duarte: destacada book (1942) obra de Camilo José Cela.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

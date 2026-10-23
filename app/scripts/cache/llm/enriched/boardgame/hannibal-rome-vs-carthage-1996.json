@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:hannibal-rome-vs-carthage-1996",
+  "experience": {
+    "plot": "This game uses the very popular card system which first appeared in Avalon Hill's We the People game to detail the struggle between Carthage's Hannibal and the Roman Republic in approximately 200 BC. Hannibal: Rome vs. Carthage is an asymmetrical card driven g",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Mark Simonitch, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad / Political.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1996, una referencia indispensable obra de Mark Simonitch dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 1,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "pareja",
+    "jugones"
+  ],
+  "oneLiner": "Hannibal: Rome vs. Carthage: destacada boardgame (1996) obra de Mark Simonitch.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

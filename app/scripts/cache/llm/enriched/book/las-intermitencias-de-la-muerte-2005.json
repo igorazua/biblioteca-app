@@ -1,0 +1,39 @@
+{
+  "id": "book:las-intermitencias-de-la-muerte-2005",
+  "experience": {
+    "plot": "La muerte decide hacer huelga y deja de matar, provocando una crisis sin precedentes en la sociedad.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de José Saramago, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Fantasía.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de José Saramago dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 5,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 4,
+    "escala": 4,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "identidad",
+    "duelo",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Las intermitencias de la muerte: destacada book (2005) obra de José Saramago.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

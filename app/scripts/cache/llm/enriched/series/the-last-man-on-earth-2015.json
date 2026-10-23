@@ -1,0 +1,43 @@
+{
+  "id": "series:the-last-man-on-earth-2015",
+  "experience": {
+    "plot": "The Last Man on Earth is a single-camera comedy chronicles the life and adventures of an average guy - and humanity's last hope - who discovers what life is like when no one is telling you what you can and cannot do.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de FOX, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Science-Fiction.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de FOX dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "The Last Man on Earth: destacada series (2015) obra de FOX.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

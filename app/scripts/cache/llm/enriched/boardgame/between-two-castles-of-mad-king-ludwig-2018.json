@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:between-two-castles-of-mad-king-ludwig-2018",
+  "experience": {
+    "plot": "Between Two Castles of Mad King Ludwig is published by Stonemaier Games as part of a collaboration with Bezier Games. The king demands a castle! You are a world-renowned master builder who has been asked by the Mad King Ludwig to help design his castles. Proje",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ben Rosset, Matthew O'Malley, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Negotiation / Post-Napoleonic.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Ben Rosset, Matthew O'Malley dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 2,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Between Two Castles of Mad King Ludwig (2018): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

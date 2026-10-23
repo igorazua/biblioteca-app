@@ -1,0 +1,36 @@
+{
+  "id": "artist:mac-miller-2007",
+  "experience": {
+    "plot": "Mac Miller (Pittsburgh, EE. UU.), icono de Hip hop, Jazz rap desde 2007.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Pittsburgh, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Hip hop / Jazz rap.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de Pittsburgh, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 4,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 5
+  },
+  "themes": [
+    "hip_hop",
+    "jazz",
+    "pop"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Mac Miller: destacada artist (2007) obra de Pittsburgh, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

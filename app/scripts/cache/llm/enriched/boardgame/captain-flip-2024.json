@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:captain-flip-2024",
+  "experience": {
+    "plot": "Ahoy, Captain! Hoist your flag, recruit a crew, and fill your coffers with shiny, gold coins. Captain Flip is a game of obvious simplicity explained in less time than a cannonball shot. On your turn, draw a tile from the bag. You like it? Keep it! You don't li",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Paolo Mori, Remo Conzadori, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Nautical / Pirates.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Paolo Mori, Remo Conzadori dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Captain Flip: destacada boardgame (2024) obra de Paolo Mori, Remo Conzadori.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:faraway-2023",
+  "experience": {
+    "plot": "Welcome to Alula, a mysterious continent with ever-changing geography, shaped after the rhythm of the seasons. Beyond the Sea of Mists lies the mysterious continent of Alula. Roam across the land in search of its secrets, meet its inhabitants, and list its won",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Corentin Lebrat, Johannes Goupy, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Corentin Lebrat, Johannes Goupy dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "roles_ocultos",
+    "draft_de_cartas",
+    "puzzles_y_losetas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Faraway: destacada boardgame (2023) obra de Corentin Lebrat, Johannes Goupy.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "series:pokemon-1997",
+  "experience": {
+    "plot": "Pokémon , abreviando su nombre original Pocket Monsters , es un anime metaserial creado por Satoshi Tajiri, Junichi Masuda y Ken Sugimori que narra la historia de Ash Ketchum, un joven Entrenador Pokémon originario de Pueblo Paleta en la región Kanto que comie",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de TV Tokyo, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Anime.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1997, una referencia indispensable obra de TV Tokyo dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 5,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "adolescencia",
+    "animacion",
+    "amistad"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Pokémon: destacada series (1997) obra de TV Tokyo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

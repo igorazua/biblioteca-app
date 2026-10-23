@@ -1,0 +1,42 @@
+{
+  "id": "movie:patton-1970",
+  "experience": {
+    "plot": "Patton es una película estadounidense de 1970 que relata las hazañas militares del general George Patton, desde la derrota estadounidense en el paso de Kasserine hasta la entrega de una parte de Alemania a los rusos al terminar la Segunda Guerra Mundial, aunqu",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Franklin J. Schaffner, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1970, una obra destacada de Franklin J. Schaffner en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "espacio",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Patton: Biografía y Drama con dirección de Franklin J. Schaffner.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

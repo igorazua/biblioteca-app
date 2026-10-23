@@ -1,0 +1,41 @@
+{
+  "id": "movie:malditos-bastardos-2009",
+  "experience": {
+    "plot": "Inglourious Basterds es una película de 2009 escrita y dirigida por Quentin Tarantino, protagonizada por Brad Pitt, Christoph Waltz y Mélanie Laurent, y lanzada por The Weinstein Company en Estados Unidos y por Universal Pictures en el resto del mundo.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Quentin Tarantino, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Matrix",
+      "Gladiator",
+      "Salvar al soldado Ryan",
+      "Braveheart"
+    ],
+    "context": "Estrenada en 2009, una obra destacada de Quentin Tarantino en el panorama de Bélica y Acción."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "supervivencia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Malditos bastardos: Bélica y Acción con dirección de Quentin Tarantino.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

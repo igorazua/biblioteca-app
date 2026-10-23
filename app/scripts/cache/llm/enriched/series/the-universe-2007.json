@@ -1,0 +1,42 @@
+{
+  "id": "series:the-universe-2007",
+  "experience": {
+    "plot": "From the planets to the stars and out to the edge of the unknown, history and science collide in this epic exploration of the Universe and its mysteries. It's a very old universe. Yet just 50 years since man first ventured into outer space, the heavens are yie",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Vice TV, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Familiar.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de Vice TV dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "The Universe: destacada series (2007) obra de Vice TV.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

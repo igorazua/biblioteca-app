@@ -1,0 +1,41 @@
+{
+  "id": "movie:magnolia-1999",
+  "experience": {
+    "plot": "Magnolia es una película estadounidense de 1999 escrita y dirigida por Paul Thomas Anderson que cuenta la historia, aparentemente inconexa, de varios personajes a lo largo de un día normal en el Valle de San Fernando, California. La película está protagonizada",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Paul Thomas Anderson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1999, una obra destacada de Paul Thomas Anderson en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "ambicion"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Magnolia: Drama con dirección de Paul Thomas Anderson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

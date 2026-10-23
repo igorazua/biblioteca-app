@@ -1,0 +1,39 @@
+{
+  "id": "book:el-elogio-de-la-locura-1511",
+  "experience": {
+    "plot": "Una sátira humanista e irónica contra las costumbres corruptas y la hipocresía de su época.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Erasmo de Róterdam, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ensayo / Filosofía.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1511, una referencia indispensable obra de Erasmo de Róterdam dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 2,
+    "densidad": 5,
+    "humor": 2,
+    "tension": 1,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 5,
+    "reconfort": 3
+  },
+  "themes": [
+    "identidad",
+    "filosofia",
+    "sociedad"
+  ],
+  "moments": [
+    "concentracion"
+  ],
+  "oneLiner": "El elogio de la locura: destacada book (1511) obra de Erasmo de Róterdam.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

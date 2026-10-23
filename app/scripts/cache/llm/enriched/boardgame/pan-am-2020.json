@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:pan-am-2020",
+  "experience": {
+    "plot": "In Pan Am, players compete with Pan American Airways and others to build an air-travel empire. Outbid rivals for lucrative landing rights, buy planes with longer range to reach the far corners of the world, and use insider connections to advance your interests",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Peter Lee, Prospero Hall, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aviation / Flight / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Peter Lee, Prospero Hall dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "comercio_y_rutas",
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Pan Am: destacada boardgame (2020) obra de Peter Lee, Prospero Hall.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

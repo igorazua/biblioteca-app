@@ -1,0 +1,43 @@
+{
+  "id": "movie:barton-fink-1991",
+  "experience": {
+    "plot": "A renowned New York playwright is enticed to California to write for the movies and discovers the hellish truth of Hollywood.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Joel Coen, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1991, una obra destacada de Joel Coen en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad",
+    "crimen"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Barton Fink: Comedia y Drama con dirección de Joel Coen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "book:el-tiempo-entre-costuras-2009",
+  "experience": {
+    "plot": "Una modista madrileña se traslada a Tetuán y se ve envuelta en una red de espionaje en plena guerra.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de María Dueñas, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Histórica / Novela.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de María Dueñas dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 2,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 4,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "guerra",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "El tiempo entre costuras: destacada book (2009) obra de María Dueñas.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

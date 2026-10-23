@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:bang-2002",
+  "experience": {
+    "plot": "Bang! es un popular juego de cartas creado por Da Vinci Games, escrito por Emiliano Sciarra, es un juego de disparos, al estilo Wild West, entre un grupo de Forajidos (Outlaws) y el Sheriff, su objetivo. Están los Alguaciles (Deputies) del Sheriff, pero tambié",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Emiliano Sciarra, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de American West / Faroleo.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2002, una referencia indispensable obra de Emiliano Sciarra dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "faroleo_y_enganos",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "BANG!: destacada boardgame (2002) obra de Emiliano Sciarra.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

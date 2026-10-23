@@ -1,0 +1,41 @@
+{
+  "id": "movie:origen-2010",
+  "experience": {
+    "plot": "Inception es una película británica-estadounidense-canadiense-japonesa de ciencia ficción escrita, producida y dirigida por Christopher Nolan y protagonizada por Leonardo DiCaprio, Elliot Page, Joseph Gordon-Levitt, Ken Watanabe, Tom Hardy, Marion Cotillard, C",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Christopher Nolan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Pulp Fiction",
+      "Matrix",
+      "El club de la lucha",
+      "Parque Jurásico"
+    ],
+    "context": "Estrenada en 2010, una obra destacada de Christopher Nolan en el panorama de Ciencia ficción y Thriller."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 5,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "crimen",
+    "espacio"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "Origen: Ciencia ficción y Thriller con dirección de Christopher Nolan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

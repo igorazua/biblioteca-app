@@ -1,0 +1,42 @@
+{
+  "id": "series:signed-sealed-delivered-2013",
+  "experience": {
+    "plot": "Signed, Sealed, Delivered is a wonderful combination of romance, comedy and drama that follows the lives of four postal detectives who transform themselves into a team of detectives to track down intended recipients of undeliverable mail. Their missions take t",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Hallmark Mystery, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Romance / Misterio.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de Hallmark Mystery dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 5,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo"
+  ],
+  "oneLiner": "Signed, Sealed, Delivered: destacada series (2013) obra de Hallmark Mystery.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "movie:the-prestige-2006",
+  "experience": {
+    "plot": "The Prestige –titulada El truco final  en España y El gran truco en Hispanoamérica– es una película de 2006 dirigida por Christopher Nolan y protagonizada por Christian Bale y Hugh Jackman, basada en el libro homónimo de Christopher Priest. Producida por la Wa",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Christopher Nolan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 2006, una obra destacada de Christopher Nolan en el panorama de Drama y Misterio."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "investigacion",
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "espacio"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "El truco final: Drama y Misterio con dirección de Christopher Nolan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

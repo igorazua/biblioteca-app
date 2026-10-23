@@ -1,0 +1,40 @@
+{
+  "id": "movie:la-la-land-2016",
+  "experience": {
+    "plot": "La La Land es una película dramática y musical estadounidense de 2016, escrita y dirigida por Damien Chazelle, y protagonizada por Emma Stone y Ryan Gosling, una aspirante a actriz y un pianista de jazz que se conocen y enamoran en Los Ángeles, California. Se ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Damien Chazelle, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Forrest Gump",
+      "Titanic",
+      "Amélie",
+      "Cinema Paradiso"
+    ],
+    "context": "Estrenada en 2016, una obra destacada de Damien Chazelle en el panorama de Musical y Romance."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "musica"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "La La Land: Musical y Romance con dirección de Damien Chazelle.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:spartacus-a-game-of-blood-and-treachery-2012",
+  "experience": {
+    "plot": "In Spartacus: A Game of Blood & Treachery, an exciting game of twisted schemes and bloody combats inspired by the hit STARZ Original series, each player takes on the role of Dominus, head of a rising house in the ancient Roman city of Capua. Each house is comp",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Aaron Dill, John Kovaleski, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad / Dados.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Aaron Dill, John Kovaleski dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 1
+  },
+  "themes": [
+    "dados_y_push_your_luck",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Spartacus: A Game of Blood and Treachery (2012): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

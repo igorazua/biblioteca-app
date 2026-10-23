@@ -1,0 +1,39 @@
+{
+  "id": "book:la-tabla-de-flandes-1990",
+  "experience": {
+    "plot": "La tabla de Flandes es una novela del escritor y periodista español Arturo Pérez-Reverte, cuya primera edición fue publicada en 1990. El libro se fundamenta en una trama que mezcla novela histórica y policíaca, con el arte y el ajedrez como grandes temas. Es e",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Arturo Pérez-Reverte, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Narrativa.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1990, una referencia indispensable obra de Arturo Pérez-Reverte dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 2,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "historia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "La tabla de Flandes: destacada book (1990) obra de Arturo Pérez-Reverte.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

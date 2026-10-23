@@ -1,0 +1,41 @@
+{
+  "id": "movie:toro-salvaje-1980",
+  "experience": {
+    "plot": "Raging Bull es una película estadounidense de 1980 dirigida por Martin Scorsese, basada en el libro Raging Bull: My Story del boxeador Jake LaMotta. Tiene a Robert De Niro como Jake LaMotta, un boxeador de peso mediano cuya rabia sadomasoquista, celos sexuales",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Martin Scorsese, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1980, una obra destacada de Martin Scorsese en el panorama de Drama y Biografía."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 1,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Toro salvaje: Drama y Biografía con dirección de Martin Scorsese.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

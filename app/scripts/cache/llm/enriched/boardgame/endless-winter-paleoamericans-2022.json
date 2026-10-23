@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:endless-winter-paleoamericans-2022",
+  "experience": {
+    "plot": "Designed by Stan Kordonskiy (Dice Hospital, Rurik, Lock Up), developed by Jonny Pac (Coloma, Sierra West, Lions of Lydia), solo mode by Drake Villareal (Solani, Spook Manor), and illustrated by The Mico (Raiders of the North Sea, Paladins of the West Kingdom, ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Stan Kordonskiy, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Prehistoric.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Stan Kordonskiy dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 5,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Endless Winter: Paleoamericans: destacada boardgame (2022) obra de Stan Kordonskiy.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

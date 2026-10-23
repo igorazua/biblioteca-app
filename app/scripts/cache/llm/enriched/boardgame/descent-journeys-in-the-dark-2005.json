@@ -1,0 +1,40 @@
+{
+  "id": "boardgame:descent-journeys-in-the-dark-2005",
+  "experience": {
+    "plot": "Descent: Viaje a las tinieblas es un juego de tablero de fantasía de exploración de mazmorras publicado en 2005 por Fantasy Flight Games en inglés y por Edge Entertainment en español. Descent fue diseñado y producido por Kevin Wilson. El juego no está relacion",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Kevin Wilson, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de Kevin Wilson dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 1
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "gestion_de_recursos",
+    "fantasia_medieval",
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Descent: Journeys in the Dark: destacada boardgame (2005) obra de Kevin Wilson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

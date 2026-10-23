@@ -1,0 +1,42 @@
+{
+  "id": "series:the-x-factor-2004",
+  "experience": {
+    "plot": "The X Factor es un reality musical de la televisión australiana, basado en la versión original británica de la serie, que se encarga de encontrar nuevos talentos. La primera temporada del show fue emitida de febrero a mayo, y la segunda temporada comenzó a ser",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de ITV1, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2004, una referencia indispensable obra de ITV1 dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "The X Factor: destacada series (2004) obra de ITV1.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

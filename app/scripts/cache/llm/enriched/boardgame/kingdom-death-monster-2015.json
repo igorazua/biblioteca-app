@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:kingdom-death-monster-2015",
+  "experience": {
+    "plot": "Kingdom Death: Monster is a fully cooperative tabletop hobby game experience. Set in a unique nightmarish world devoid of most natural resources, you control a settlement at the dawn of its existence. Fight monsters, craft weapons and gear, and develop your se",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Adam Poots, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Adam Poots dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 4,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "Kingdom Death: Monster: destacada boardgame (2015) obra de Adam Poots.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

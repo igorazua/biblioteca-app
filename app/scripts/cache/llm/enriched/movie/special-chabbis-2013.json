@@ -1,0 +1,42 @@
+{
+  "id": "movie:special-chabbis-2013",
+  "experience": {
+    "plot": "Special 26 es una película de suspenso y robos de época en hindi de 2013 escrita y dirigida por Neeraj Pandey. Basada en el atraco a la Ópera de 1987, la trama sigue a un equipo de criminales, que se hacen pasar por agentes del CBI y realizan redadas, robando ",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Neeraj Pandey, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2013, una obra destacada de Neeraj Pandey en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "atraco",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Special Chabbis: Crimen y Drama con dirección de Neeraj Pandey.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

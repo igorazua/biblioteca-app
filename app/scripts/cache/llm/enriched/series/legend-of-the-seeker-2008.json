@@ -1,0 +1,42 @@
+{
+  "id": "series:legend-of-the-seeker-2008",
+  "experience": {
+    "plot": "Legend of the Seeker o en español: La Leyenda del Buscador es una serie de televisión estadounidense basada en los dos primeros libros de la saga La espada de la verdad escrita por Terry Goodkind: Debt of Bones & Wizard's First Rule. La serie está producida po",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Syndication, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de Syndication dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "La leyenda del buscador: destacada series (2008) obra de Syndication.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

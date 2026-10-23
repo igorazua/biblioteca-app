@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:la-granja-deluxe-master-set-2023",
+  "experience": {
+    "plot": "La Granja: Deluxe Master Set is an upgraded and expanded version of the 2014 game La Granja in which 1–4 players manage small farms by the Alpich pond near the village of Esporles on Majorca. The players must carefully consider the decisions of which dice to d",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Adam Kwapiński, Andreas Odendahl, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Dados / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Adam Kwapiński, Andreas Odendahl dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "draft_de_cartas",
+    "dados_y_push_your_luck",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "La Granja: Deluxe Master Set (2023): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

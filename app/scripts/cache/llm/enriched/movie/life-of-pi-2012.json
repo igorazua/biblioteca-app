@@ -1,0 +1,42 @@
+{
+  "id": "movie:life-of-pi-2012",
+  "experience": {
+    "plot": "Life of Pi es una película estadounidense de drama y aventura estrenada en noviembre de 2012. Basada en la novela homónima de Yann Martel, a su vez basada en el libro Max e os felinos, del escritor brasileño Moacyr Scliar, fue dirigida por Ang Lee y protagoniz",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Ang Lee, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2012, una obra destacada de Ang Lee en el panorama de Aventura y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 5,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "La vida de Pi: Aventura y Drama con dirección de Ang Lee.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "series:batman-the-brave-and-the-bold-2008",
+  "experience": {
+    "plot": "Batman: The Brave and the Bold es una serie de televisión animada estadounidense, basada en parte en las series \"team-up\" de DC Comics, The Brave and the Bold. Al igual que la serie original del cómic, cuenta con dos o más superhéroes que se unen para resolver",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Cartoon Network, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Crimen.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de Cartoon Network dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Batman: The Brave and the Bold: destacada series (2008) obra de Cartoon Network.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

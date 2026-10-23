@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:bohnanza-1997",
+  "experience": {
+    "plot": "Bohnanza es un juego de cartas de origen y estilo alemán, diseñado por Uwe Rosenberg. Fue lanzado en 1997 por la editorial Amigo Spiele en su idioma de origen, y por Rio Grande Games en inglés. En su versión estándar alemana, el juego consta de un mazo de 110 ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Uwe Rosenberg, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Farming.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1997, una referencia indispensable obra de Uwe Rosenberg dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "ciencia_ficcion_espacial",
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Bohnanza: destacada boardgame (1997) obra de Uwe Rosenberg.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

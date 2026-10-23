@@ -1,0 +1,42 @@
+{
+  "id": "series:demon-slayer-kimetsu-no-yaiba-2019",
+  "experience": {
+    "plot": "Demon Slayer: Kimetsu no Yaiba , en España Guardianes de la Noche: Kimetsu no Yaiba, es una serie de anime japonesa producida por Ufotable, basada en el manga homónimo de Koyoharu Gotouge. La historia sigue a Tanjirō Kamado, un adolescente que decide convertir",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Haruo Sotozaki, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animación / Acción.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Haruo Sotozaki dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 3,
+    "violencia": 3,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "familia",
+    "adolescencia",
+    "animacion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Demon Slayer: Kimetsu no Yaiba: destacada series (2019) obra de Haruo Sotozaki.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

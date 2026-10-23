@@ -1,0 +1,43 @@
+{
+  "id": "series:veneno-2020",
+  "experience": {
+    "plot": "Veneno es una serie española creada por Javier Calvo y Javier Ambrossi y que narra la vida de Cristina Ortiz \"La Veneno\" en una única temporada de ocho capítulos. Se trata de un biopic basado en la obra ¡Digo! Ni puta, ni santa. Las memorias de La Veneno (2016",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Javier Calvo y Javier Ambrossi, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Biografía.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Javier Calvo y Javier Ambrossi dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 1,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Veneno: destacada series (2020) obra de Javier Calvo y Javier Ambrossi.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

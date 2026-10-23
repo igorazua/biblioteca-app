@@ -1,0 +1,44 @@
+{
+  "id": "series:carnivale-2003",
+  "experience": {
+    "plot": "Carnivàle es una serie de televisión que se estrenó en HBO y estuvo ambientada durante la gran depresión de 1929 en Estados Unidos. Describe la vida de dos grupos de personas, mientras en el fondo trata la eterna batalla entre el bien y el mal, la pelea entre ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de HBO, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Fantasía.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2003, una referencia indispensable obra de HBO dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 5,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 1,
+    "enganche": 3,
+    "formato": 4
+  },
+  "themes": [
+    "monstruos_y_terror",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "pasar_miedo"
+  ],
+  "oneLiner": "Carnivàle: destacada series (2003) obra de HBO.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

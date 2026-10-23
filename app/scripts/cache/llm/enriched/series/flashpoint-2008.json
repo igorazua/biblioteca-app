@@ -1,0 +1,43 @@
+{
+  "id": "series:flashpoint-2008",
+  "experience": {
+    "plot": "Flashpoint es una serie de televisión canadiense de drama policial que debutó el 11 de julio de 2008 en la cadena canadiense CTV Television Network. En los Estados Unidos la serie se transmite en ION Television, y desde el 9 de marzo de 2009, la serie se emite",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de CTV, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de CTV dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 5,
+    "emocion": 2,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 1,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Flashpoint: destacada series (2008) obra de CTV.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

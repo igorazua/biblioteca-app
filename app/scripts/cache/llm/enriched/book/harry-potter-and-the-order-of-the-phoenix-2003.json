@@ -1,0 +1,39 @@
+{
+  "id": "book:harry-potter-and-the-order-of-the-phoenix-2003",
+  "experience": {
+    "plot": "Harry Potter y la Orden del Fénix, es el quinto libro de la serie Harry Potter, escrita por la autora británica J. K. Rowling en el 2003.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de J. K. Rowling, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2003, una referencia indispensable obra de J. K. Rowling dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "filosofia",
+    "fantasia_epica",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Harry Potter y la Orden del Fénix: destacada book (2003) obra de J. K. Rowling.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-goonies-1985",
+  "experience": {
+    "plot": "Los Goonies es una película estadounidense de aventuras de 1985 dirigida por Richard Donner y escrita por Chris Columbus, basada en una historia de Steven Spielberg. Fue producida por Steven Spielberg junto con Donner, Harvey Bernhard, Kathleen Kennedy y Frank",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Richard Donner, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 1985, una obra destacada de Richard Donner en el panorama de Aventura y Comedia."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Los Goonies: Aventura y Comedia con dirección de Richard Donner.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:chaos-in-the-old-world-2009",
+  "experience": {
+    "plot": "Chaos in the Old World makes you a god. Each god’s distinctive powers and legion of followers grant you unique strengths and diabolical abilities with which to corrupt and enslave the Old World. Khorne, the Blood God, the Skulltaker, lusts for death and battle",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Eric M. Lang, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Fighting.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de Eric M. Lang dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "trenes_y_ferrocarril",
+    "naturaleza_y_animales",
+    "terror_lovecraft",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Chaos in the Old World: destacada boardgame (2009) obra de Eric M. Lang.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

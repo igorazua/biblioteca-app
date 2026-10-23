@@ -1,0 +1,42 @@
+{
+  "id": "movie:moonrise-kingdom-2012",
+  "experience": {
+    "plot": "película de 2012 dirigida por Wes Anderson",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Wes Anderson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Forrest Gump",
+      "Titanic",
+      "Regreso al futuro",
+      "Toy Story"
+    ],
+    "context": "Estrenada en 2012, una obra destacada de Wes Anderson en el panorama de Comedia y Romance."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pareja"
+  ],
+  "oneLiner": "Moonrise Kingdom: Comedia y Romance con dirección de Wes Anderson.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

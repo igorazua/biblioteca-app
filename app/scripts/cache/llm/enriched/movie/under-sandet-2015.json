@@ -1,0 +1,41 @@
+{
+  "id": "movie:under-sandet-2015",
+  "experience": {
+    "plot": "película de 2015 dirigida por Martin Zandvliet",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Martin Zandvliet, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2015, una obra destacada de Martin Zandvliet en el panorama de Drama y Historia."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Under sandet: Drama y Historia con dirección de Martin Zandvliet.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

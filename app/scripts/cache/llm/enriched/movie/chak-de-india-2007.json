@@ -1,0 +1,45 @@
+{
+  "id": "movie:chak-de-india-2007",
+  "experience": {
+    "plot": "Chak De! India es una película de deporte en hindi de 2007 dirigida por Shimit Amin y producida por Aditya Chopra, con un guion escrito por Jaideep Sahni, con escenas deportivas coreografiadas por Rob Miller y música de Salim–Sulaiman. Cuenta una historia fict",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Shimit Amin, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2007, una obra destacada de Shimit Amin en el panorama de Drama y Familiar."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 3,
+    "tension": 1,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "justicia",
+    "familia",
+    "ia_y_robots",
+    "infancia",
+    "espionaje",
+    "deporte"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "familia"
+  ],
+  "oneLiner": "Chak De! India: Drama y Familiar con dirección de Shimit Amin.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

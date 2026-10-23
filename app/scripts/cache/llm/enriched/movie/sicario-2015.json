@@ -1,0 +1,43 @@
+{
+  "id": "movie:sicario-2015",
+  "experience": {
+    "plot": "Sicario es una película estadounidense de crimen y suspense de 2015, dirigida por Denis Villeneuve y escrita por Taylor Sheridan. La cinta está protagonizada por Emily Blunt, Benicio del Toro y Josh Brolin y compitió en la sección oficial del Festival de Cine ",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Denis Villeneuve, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2015, una obra destacada de Denis Villeneuve en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "espionaje",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Sicario: Acción y Crimen con dirección de Denis Villeneuve.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

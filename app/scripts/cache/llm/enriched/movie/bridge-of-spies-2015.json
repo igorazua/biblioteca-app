@@ -1,0 +1,42 @@
+{
+  "id": "movie:bridge-of-spies-2015",
+  "experience": {
+    "plot": "Bridge of Spies es una película dramática de 2015, dirigida por Steven Spielberg, escrita por Matt Charman y los hermanos Coen y protagonizada por Tom Hanks, Mark Rylance, Amy Ryan y Alan Alda. La película está basada en la detención del espía ruso Rudolf Abel",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Steven Spielberg, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2015, una obra destacada de Steven Spielberg en el panorama de Drama y Historia."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "familia",
+    "ia_y_robots",
+    "crimen"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "El puente de los espías: Drama y Historia con dirección de Steven Spielberg.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

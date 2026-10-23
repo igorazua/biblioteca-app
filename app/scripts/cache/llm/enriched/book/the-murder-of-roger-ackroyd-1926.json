@@ -1,0 +1,39 @@
+{
+  "id": "book:the-murder-of-roger-ackroyd-1926",
+  "experience": {
+    "plot": "Obra de Agatha Christie publicada originalmente en 1926.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Agatha Christie, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1926, una referencia indispensable obra de Agatha Christie dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "duelo",
+    "historia",
+    "misterio"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "The Murder of Roger Ackroyd: destacada book (1926) obra de Agatha Christie.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

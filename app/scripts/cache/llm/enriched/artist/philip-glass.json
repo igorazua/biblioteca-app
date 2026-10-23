@@ -1,0 +1,36 @@
+{
+  "id": "artist:philip-glass",
+  "experience": {
+    "plot": "Philip Glass es un compositor de música clásica minimalista estadounidense de origen judío. Estudió en la Juilliard School de Nueva York. Su reconocimiento internacional aumentó desde la aparición de su ópera Einstein on the Beach (1975).",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1970, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 3,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 4
+  },
+  "themes": [
+    "pop",
+    "rock_clasico",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Philip Glass: destacada artist (1970) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

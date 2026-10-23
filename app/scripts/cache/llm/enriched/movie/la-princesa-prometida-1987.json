@@ -1,0 +1,41 @@
+{
+  "id": "movie:la-princesa-prometida-1987",
+  "experience": {
+    "plot": "The Princess Bride es una película estadounidense de 1987, dirigida por Rob Reiner y protagonizada por Cary Elwes, Robin Wright, Chris Sarandon, Mandy Patinkin, Wallace Shawn, Christopher Guest y André el Gigante. Está basada en el libro homónimo de 1973, escr",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Rob Reiner, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico",
+      "Avatar"
+    ],
+    "context": "Estrenada en 1987, una obra destacada de Rob Reiner en el panorama de Fantasía y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "supervivencia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "La princesa prometida: Fantasía y Aventura con dirección de Rob Reiner.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

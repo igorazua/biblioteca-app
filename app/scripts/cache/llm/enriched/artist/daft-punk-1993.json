@@ -1,0 +1,38 @@
+{
+  "id": "artist:daft-punk-1993",
+  "experience": {
+    "plot": "Daft Punk (París, Francia), icono de Electrónica, French house, Disco desde 1993.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de París, Francia, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Electrónica / French house.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1993, una referencia indispensable obra de París, Francia dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 5,
+    "bailable": 5,
+    "organico": 3,
+    "intensidad": 4,
+    "fondo": 1,
+    "complejidad": 2
+  },
+  "themes": [
+    "pop",
+    "indie_rock",
+    "electronica",
+    "soul",
+    "punk"
+  ],
+  "moments": [
+    "fiesta"
+  ],
+  "oneLiner": "Daft Punk: destacada artist (1993) obra de París, Francia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

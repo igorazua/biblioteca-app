@@ -1,0 +1,39 @@
+{
+  "id": "book:the-curious-incident-of-the-dog-in-the-night-time-2002",
+  "experience": {
+    "plot": "El curioso incidente del perro a medianoche es una novela del escritor Mark Haddon. La novela ganó en 2003 el premio Libro del Año Whitbread, en 2005 el premio al Mejor primer libro para jóvenes lectores y en 2004 el Premio para Escritores de la Commonwealth c",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Mark Haddon, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2002, una referencia indispensable obra de Mark Haddon dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "historia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "The Curious Incident of the Dog in the Night-Time (2002): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

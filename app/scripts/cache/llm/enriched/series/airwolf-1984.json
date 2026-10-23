@@ -1,0 +1,42 @@
+{
+  "id": "series:airwolf-1984",
+  "experience": {
+    "plot": "AirWolf es una serie televisiva estadounidense de los años 1980, emitida originalmente en Estados Unidos a lo largo de cuatro temporadas, sumando entre las cuatro un total de 79 episodios. Las tres primeras temporadas fueron emitidas por primera vez de 1984 a ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de USA Network, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1984, una referencia indispensable obra de USA Network dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 3,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "El lobo del aire: destacada series (1984) obra de USA Network.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

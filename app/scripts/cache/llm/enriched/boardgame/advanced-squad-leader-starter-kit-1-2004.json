@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:advanced-squad-leader-starter-kit-1-2004",
+  "experience": {
+    "plot": "(from MMP website and user's description:) Advanced Squad Leader (ASL) Starter Kit #1 teaches new players the basic concepts of the major Infantry and Terrain rules from Advanced Squad Leader by using an abbreviated and illustrated rulebook. The ASL Starter Ki",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ken Dunn, Pete Shelling, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Juego de guerra / World War II.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2004, una referencia indispensable obra de Ken Dunn, Pete Shelling dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "guerra_historica",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "pareja",
+    "jugones"
+  ],
+  "oneLiner": "Advanced Squad Leader: Starter Kit #1 (2004): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

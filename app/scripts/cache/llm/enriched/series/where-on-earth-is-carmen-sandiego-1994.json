@@ -1,0 +1,42 @@
+{
+  "id": "series:where-on-earth-is-carmen-sandiego-1994",
+  "experience": {
+    "plot": "Where on Earth Is Carmen Sandiego? y ¿Dónde en el mundo está Carmen Sandiego? en Hispanoamérica) es una serie de animación estadounidense emitido entre 1994 a 1999 basado en los videojuegos de Carmen Sandiego de los años 1980 y 1990.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de FOX, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1994, una referencia indispensable obra de FOX dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "animacion",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Where on Earth is Carmen Sandiego?: destacada series (1994) obra de FOX.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

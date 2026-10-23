@@ -1,0 +1,41 @@
+{
+  "id": "movie:rebel-without-a-cause-1955",
+  "experience": {
+    "plot": "Rebelde sin causa es una película dramática estadounidense de 1955 dirigida por Nicholas Ray y protagonizada por James Dean, Natalie Wood, Sal Mineo, Jim Backus, Ann Doran y Corey Allen.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Nicholas Ray, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1955, una obra destacada de Nicholas Ray en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Rebelde sin causa: Drama con dirección de Nicholas Ray.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

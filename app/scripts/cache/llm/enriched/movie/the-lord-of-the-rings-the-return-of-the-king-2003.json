@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-lord-of-the-rings-the-return-of-the-king-2003",
+  "experience": {
+    "plot": "El Señor de los Anillos: el retorno del Rey es la tercera película de la trilogía cinematográfica de El Señor de los Anillos, dirigida por Peter Jackson y basada en la tercera parte de la obra de J. R. R. Tolkien El Señor de los Anillos. Tuvo un presupuesto de",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Peter Jackson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2003, una obra destacada de Peter Jackson en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "El señor de los anillos: El retorno del rey (2003): memorable obra de Acción y Aventura.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

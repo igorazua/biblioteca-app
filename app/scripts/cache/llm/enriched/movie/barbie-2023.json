@@ -1,0 +1,41 @@
+{
+  "id": "movie:barbie-2023",
+  "experience": {
+    "plot": "Barbie es una película de comedia fantástica satírica de 2023, dirigida por Greta Gerwig a partir de un guion escrito junto con su esposo, Noah Baumbach. Basada en las muñecas de Mattel, es la primera película de imagen real de Barbie tras numerosas produccion",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Greta Gerwig, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El señor de los anillos: La comunidad del anillo",
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek"
+    ],
+    "context": "Estrenada en 2023, una obra destacada de Greta Gerwig en el panorama de Comedia y Fantasía."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 5,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "Barbie: Comedia y Fantasía con dirección de Greta Gerwig.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

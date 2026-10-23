@@ -1,0 +1,42 @@
+{
+  "id": "series:star-trek-the-next-generation-1987",
+  "experience": {
+    "plot": "Star Trek: The Next Generation (Star Trek: La nueva generación en España o Viaje a las estrellas: La nueva generación en Hispanoamérica), algunas veces abreviada ST:TNG o TNG, es una serie de ciencia ficción estadounidense creada por Gene Roddenberry. Se emiti",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Syndication, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1987, una referencia indispensable obra de Syndication dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 3,
+    "formato": 4
+  },
+  "themes": [
+    "epoca_historica",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Star Trek: La nueva generación: destacada series (1987) obra de Syndication.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

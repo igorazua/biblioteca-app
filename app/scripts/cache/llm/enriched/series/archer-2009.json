@@ -1,0 +1,43 @@
+{
+  "id": "series:archer-2009",
+  "experience": {
+    "plot": "Archer es una serie de televisión animada estadounidense para adultos creada por Adam Reed para la red básica de cable FX. Sigue las hazañas del personaje principal, un agente secreto irreverente y disfuncional y siete de sus colegas: la jefa dominante/madre M",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de FXX, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Acción.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de FXX dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 2
+  },
+  "themes": [
+    "familia",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Archer: destacada series (2009) obra de FXX.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

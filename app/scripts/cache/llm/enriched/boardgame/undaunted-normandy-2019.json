@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:undaunted-normandy-2019",
+  "experience": {
+    "plot": "June, 1944: Through the D-Day landings, the Allies have seized a foothold on the beaches of Normandy. Now you must lead your troops forward as you push deeper into France and drive the German forces back. You will face intense resistance, machine gun fire, and",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de David Thompson (I), Trevor Benjamin, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Juego de guerra / World War II.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de David Thompson (I), Trevor Benjamin dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Undaunted: Normandy (2019): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

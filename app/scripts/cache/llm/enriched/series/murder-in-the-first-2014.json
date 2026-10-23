@@ -1,0 +1,44 @@
+{
+  "id": "series:murder-in-the-first-2014",
+  "experience": {
+    "plot": "Murder in the First es una serie de televisión estadounidense que se transmite por TNT. La serie fue creada por Steven Bochco y Eric Lodal, y es protagonizada por Taye Diggs y Kathleen Robertson. Establecida en San Francisco, la serie sigue un caso de homicidi",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de TNT, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Crimen.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de TNT dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 5,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "pasar_miedo"
+  ],
+  "oneLiner": "Murder in the First: destacada series (2014) obra de TNT.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

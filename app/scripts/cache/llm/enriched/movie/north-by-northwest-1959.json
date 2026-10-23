@@ -1,0 +1,43 @@
+{
+  "id": "movie:north-by-northwest-1959",
+  "experience": {
+    "plot": "North by Northwest es una película de suspense estadounidense de 1959 dirigida por Alfred Hitchcock y considerada generalmente como una de sus mejores películas. Está protagonizada por Cary Grant, Eva Marie Saint y James Mason. El estreno mundial tuvo lugar du",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Alfred Hitchcock, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Pulp Fiction",
+      "El rey león",
+      "El club de la lucha",
+      "El señor de los anillos: La comunidad del anillo"
+    ],
+    "context": "Estrenada en 1959, una obra destacada de Alfred Hitchcock en el panorama de Aventura y Misterio."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 3,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "duelo",
+    "supervivencia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "amigos"
+  ],
+  "oneLiner": "Con la muerte en los talones: Aventura y Misterio con dirección de Alfred Hitchcock.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

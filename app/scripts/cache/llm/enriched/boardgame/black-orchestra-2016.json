@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:black-orchestra-2016",
+  "experience": {
+    "plot": "As Hitler's grasp on Germany tightens and his maniacal fervor is unmasked, men from the highest levels of the Reich begin to plot his assassination. As the clock ticks and Hitler's ambitions grow, these daring few must build their strength and prepare for the ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Philip duBarry, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Spies/Secret Agents / World War II.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra de Philip duBarry dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "trenes_y_ferrocarril",
+    "roles_ocultos",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Black Orchestra: destacada boardgame (2016) obra de Philip duBarry.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

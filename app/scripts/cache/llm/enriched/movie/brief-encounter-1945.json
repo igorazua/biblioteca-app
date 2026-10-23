@@ -1,0 +1,42 @@
+{
+  "id": "movie:brief-encounter-1945",
+  "experience": {
+    "plot": "Breve encuentro es una película británica de 1945, dirigida por David Lean, protagonizada por Celia Johnson, Trevor Howard, Stanley Holloway, Joyce Carey, Cyril Raymond, Everley Gregg y Valentine Dyall. Tuvo tres candidaturas al Óscar.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de David Lean, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1945, una obra destacada de David Lean en el panorama de Drama y Romance."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Breve encuentro: Drama y Romance con dirección de David Lean.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "book:mr-standfast-1918",
+  "experience": {
+    "plot": "Obra clásica de thriller escrita por John Buchan.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de John Buchan, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Thriller / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1918, una referencia indispensable obra de John Buchan dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "densidad": 2,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "escala": 2,
+    "ideas": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "historia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Mr. Standfast: destacada book (1918) obra de John Buchan.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

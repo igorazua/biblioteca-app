@@ -15,17 +15,17 @@
     "context": "Ganadora de 5 premios Óscar incluyendo mejor película y director para Mel Gibson en 1995."
   },
   "axes": {
-    "tono": 3,
-    "ritmo": 4,
-    "emocion": 5,
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 2,
     "exigencia": 2,
-    "humor": 2,
-    "tension": 4,
-    "fantasia": 1,
-    "violencia": 5,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 4,
     "familiar": 2,
-    "escala": 5,
-    "reconfort": 3
+    "escala": 4,
+    "reconfort": 2
   },
   "themes": [
     "libertad",

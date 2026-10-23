@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:through-the-ages-a-story-of-civilization-2006",
+  "experience": {
+    "plot": "Through the Ages is a civilization building game. Each player attempts to build the best civilization through careful resource management, discovering new technologies, electing the right leaders, building wonders and maintaining a strong military. Weakness in",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Vlaada Chvátil, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Civilización / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de Vlaada Chvátil dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 1
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "ciencia_ficcion_espacial",
+    "guerra_historica"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Through the Ages: A Story of Civilization (2006): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

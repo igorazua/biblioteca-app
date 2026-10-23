@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:lisboa-2017",
+  "experience": {
+    "plot": "Lisboa is a game about the reconstruction of Lisboa after the great earthquake of 1755.\n\nOn November 1, 1755, Lisbon suffered an earthquake of an estimated magnitude of 8.5–9.0, followed by a tsunami and three days of fires. The city was almost totally destroy",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Vital Lacerda, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Age of Reason / Construcción de ciudades.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Vital Lacerda dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 4
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Lisboa: destacada boardgame (2017) obra de Vital Lacerda.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

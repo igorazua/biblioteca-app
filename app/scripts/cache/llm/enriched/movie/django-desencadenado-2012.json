@@ -1,0 +1,41 @@
+{
+  "id": "movie:django-desencadenado-2012",
+  "experience": {
+    "plot": "Django Unchained es una película estadounidense del género western escrita y dirigida por Quentin Tarantino, interpretada por un amplio reparto liderado por Jamie Foxx, Christoph Waltz, Leonardo DiCaprio y Samuel L. Jackson. Se estrenó en los cines de Estados ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Quentin Tarantino, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Matrix",
+      "Gladiator",
+      "El caballero oscuro",
+      "Vengadores: Endgame"
+    ],
+    "context": "Estrenada en 2012, una obra destacada de Quentin Tarantino en el panorama de Western y Acción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "supervivencia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Django desencadenado: Western y Acción con dirección de Quentin Tarantino.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

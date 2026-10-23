@@ -1,0 +1,42 @@
+{
+  "id": "movie:dances-with-wolves-1990",
+  "experience": {
+    "plot": "Dances with Wolves es una película estadounidense dirigida y protagonizada por Kevin Costner. Estrenada en 1990, la película está basada en la novela homónima de Michael Blake y recibió siete premios Óscar.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Kevin Costner, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 1990, una obra destacada de Kevin Costner en el panorama de Aventura y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Bailando con lobos: Aventura y Drama con dirección de Kevin Costner.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

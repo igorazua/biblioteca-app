@@ -1,0 +1,41 @@
+{
+  "id": "movie:sling-blade-1996",
+  "experience": {
+    "plot": "Sling Blade es una película estadounidense de 1996 dirigida y escrita por Billy Bob Thornton. Ambientado en la zona rural de Arkansas, el filme narra la historia de Karl Childers quien es liberado después de pasar 25 años en un hospital psiquiátrico por haber ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Billy Bob Thornton, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1996, una obra destacada de Billy Bob Thornton en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "El otro lado de la vida: Drama con dirección de Billy Bob Thornton.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

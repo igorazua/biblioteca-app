@@ -1,0 +1,42 @@
+{
+  "id": "series:blood-ties-2007",
+  "experience": {
+    "plot": "Blood Ties es una serie de televisión canadiense basada en los libros de Tanya Huff; el show fue creado por Peter Mohan. Empezó en los Estados Unidos el 11 de marzo de 2007, en Lifetime, y duró hasta otoño del 2007 en Citytv y Space en Canadá. Fue comprado por",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Lifetime, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Terror.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de Lifetime dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 5,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "monstruos_y_terror",
+    "fantasia_epica",
+    "amistad"
+  ],
+  "moments": [
+    "pasar_miedo"
+  ],
+  "oneLiner": "Blood Ties: destacada series (2007) obra de Lifetime.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

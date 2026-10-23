@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:terrorscape-2023",
+  "experience": {
+    "plot": "Some nights, the shadows are alive… and they’re hunting you. On a stormy night, a mansion offers shelter but becomes a trap. Terrorscape is a 2 to 4 player asymmetric horror game where one player is the Killer and the others are Survivors trying to escape. Sur",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jeffrey CCH, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Terror / Movies / TV / Radio theme.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Jeffrey CCH dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 2,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "terror_lovecraft",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Terrorscape: destacada boardgame (2023) obra de Jeffrey CCH.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:kaze-no-tani-no-naushika-1984",
+  "experience": {
+    "plot": "Nausicaä del Valle del Viento  es una película de animación japonesa creada por Hayao Miyazaki en 1984, e inspirada en la novela gráfica homónima del propio Miyazaki publicada en el año 1982. Fue realizada un año antes de la fundación de Studio Ghibli y estuvo",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Hayao Miyazaki, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico",
+      "Toy Story"
+    ],
+    "context": "Estrenada en 1984, una obra destacada de Hayao Miyazaki en el panorama de Animación y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "supervivencia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Kaze no tani no Naushika: Animación y Aventura con dirección de Hayao Miyazaki.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-bourne-ultimatum-2007",
+  "experience": {
+    "plot": "The Bourne Ultimatum es una película de espías estadounidense del año 2007 dirigida por Paul Greengrass y protagonizada por Matt Damon, Julia Stiles, David Strathairn y Joan Allen. La película ganó tres premios Oscar en el 2007: mejor montaje, mejor sonido, y ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Paul Greengrass, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Pulp Fiction",
+      "Matrix",
+      "El club de la lucha",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2007, una obra destacada de Paul Greengrass en el panorama de Acción y Misterio."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "investigacion",
+    "ia_y_robots",
+    "crimen",
+    "supervivencia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "amigos"
+  ],
+  "oneLiner": "El ultimátum de Bourne: Acción y Misterio con dirección de Paul Greengrass.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

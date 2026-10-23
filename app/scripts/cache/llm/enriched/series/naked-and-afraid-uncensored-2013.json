@@ -1,0 +1,42 @@
+{
+  "id": "series:naked-and-afraid-uncensored-2013",
+  "experience": {
+    "plot": "Each week on Naked and Afraid: Uncensored, a new pair of total strangers are faced with the ultimate survival challenge: survive for 21 days together with no clothes or supplies in some of the most dangerous environments in the world. In addition to the landsc",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Discovery, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Nature.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de Discovery dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Naked and Afraid: Uncensored: destacada series (2013) obra de Discovery.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

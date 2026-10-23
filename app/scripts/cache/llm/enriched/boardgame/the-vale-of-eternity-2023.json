@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:the-vale-of-eternity-2023",
+  "experience": {
+    "plot": "In The Vale of Eternity, players are tamers who hunt various monsters and spirits to tame them as minions. In this fantasy world, numerous creatures are living in harmony. Among them, dragons are the most valuable and noble ones, and all tamers dream of taming",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Eric Hong, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Eric Hong dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "The Vale of Eternity: destacada boardgame (2023) obra de Eric Hong.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:east-of-eden-1955",
+  "experience": {
+    "plot": "East of Eden es una película dramática estadounidense de 1955 dirigida por Elia Kazan, basada en la segunda mitad de la novela homónima de John Steinbeck. La película trata de un joven díscolo que, mientras busca su propia identidad, compite por el afecto de s",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Elia Kazan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1955, una obra destacada de Elia Kazan en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Al este del Edén: Drama con dirección de Elia Kazan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

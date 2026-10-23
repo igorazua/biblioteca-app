@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:friday-2011",
+  "experience": {
+    "plot": "Friday, the second game in the Friedemann Friese Series: Freitag-Project (Friedemann Friese), is based on the story of Robinson Crusoe and his loyal partner Friday (Freitag). You play as Friday, and when Robinson Crusoe crashes his ship on your island, your pe",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Friedemann Friese, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de Friedemann Friese dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 5,
+    "azar": 3,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Friday: destacada boardgame (2011) obra de Friedemann Friese.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

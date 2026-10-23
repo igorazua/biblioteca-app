@@ -1,0 +1,42 @@
+{
+  "id": "movie:a-christmas-story-1983",
+  "experience": {
+    "plot": "A Christmas Story es una película estadounidense de 1983 dirigida por Bob Clark y distribuida por Metro-Goldwyn Mayer. Está protagonizada por Peter Billingsley, Jean Shepherd, Melinda Dillon, Darren McGavin, Ian Petrella, Tedde Moore, Yano Anaya, Zack Ward, Sc",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Bob Clark, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek",
+      "Amélie"
+    ],
+    "context": "Estrenada en 1983, una obra destacada de Bob Clark en el panorama de Comedia y Familiar."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Historias de Navidad: Comedia y Familiar con dirección de Bob Clark.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

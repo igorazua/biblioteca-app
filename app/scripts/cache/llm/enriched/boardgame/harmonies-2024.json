@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:harmonies-2024",
+  "experience": {
+    "plot": "Harmonies es un juego de mesa de colocación de fichas para entre uno y cuatro jugadores, en el que los jugadores construyen paisajes y crean hábitats colocando fichas de colores y puntuando por el logro de patrones. Fue diseñado en 2024 por Johan Benvenuto, co",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Johan Benvenuto, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Medio ambiente.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Johan Benvenuto dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "puzzles_y_losetas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Harmonies: destacada boardgame (2024) obra de Johan Benvenuto.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

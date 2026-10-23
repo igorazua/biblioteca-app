@@ -1,0 +1,36 @@
+{
+  "id": "artist:los-planetas-1992",
+  "experience": {
+    "plot": "Los Planetas (Granada, España), icono de Indie rock, Noise pop, Psicodelia desde 1992.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Granada, España, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Indie rock / Noise pop.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1992, una referencia indispensable obra de Granada, España dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 5,
+    "bailable": 4,
+    "organico": 3,
+    "intensidad": 3,
+    "fondo": 3,
+    "complejidad": 1
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Los Planetas: destacada artist (1992) obra de Granada, España.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

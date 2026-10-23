@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-exorcist-1973",
+  "experience": {
+    "plot": "El exorcista es una película de terror sobrenatural estadounidense de 1973, dirigida por William Friedkin, con un guion escrito por William Peter Blatty basado en su propia novela homónima, publicada en 1971. Está protagonizada por Ellen Burstyn, Max von Sydow",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de William Friedkin, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Alien, el octavo pasajero",
+      "El resplandor",
+      "Psicosis",
+      "Los otros"
+    ],
+    "context": "Estrenada en 1973, una obra destacada de William Friedkin en el panorama de Terror."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 3,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "sobrenatural"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde"
+  ],
+  "oneLiner": "El exorcista: Terror con dirección de William Friedkin.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

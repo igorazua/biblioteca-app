@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:the-manhattan-project-energy-empire-2016",
+  "experience": {
+    "plot": "From the ashes of war, nations rise to power in the atomic age. Each player takes control of a nation struggling for power in the latter part of the 20th century. They build up their nation’s industry, commerce, and government by acquiring resources, building ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Luke Laurie, Tom Jolly, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Dados / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra de Luke Laurie, Tom Jolly dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "dados_y_push_your_luck",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "The Manhattan Project: Energy Empire (2016): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:runebound-third-edition-2015",
+  "experience": {
+    "plot": "Description from the publisher: Welcome to Terrinoth, adventurer! Runebound is a fantasy adventure board game for two to four players, inviting you to play as one of six heroes wandering the realm and taking whatever quests you may encounter. But all is not we",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Lukas Litzsinger, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Lukas Litzsinger dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Runebound (Third Edition): destacada boardgame (2015) obra de Lukas Litzsinger.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

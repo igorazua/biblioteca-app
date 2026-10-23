@@ -1,0 +1,42 @@
+{
+  "id": "movie:scarface-1983",
+  "experience": {
+    "plot": "Scarface es una película estadounidense de drama criminal de 1983 dirigida por Brian De Palma y escrita por Oliver Stone. Se trata de una nueva versión de la película del mismo nombre de 1932 y cuenta la historia del refugiado cubano Tony Montana, que llega si",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Brian De Palma, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1983, una obra destacada de Brian De Palma en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "ambicion",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Scarface, el precio del poder: Crimen y Drama con dirección de Brian De Palma.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

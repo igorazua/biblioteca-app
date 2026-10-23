@@ -1,0 +1,43 @@
+{
+  "id": "series:real-time-with-bill-maher-2003",
+  "experience": {
+    "plot": "Real Time with Bill Maher es un talk show que se emite semanalmente en la cadena HBO, presentado por el humorista Bill Maher. Como en su anterior programa, Politically Incorrect en ABC, Real Time tiene una sesión en la que un panel de invitados discute acontec",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de HBO, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2003, una referencia indispensable obra de HBO dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "politica_y_poder",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Real Time with Bill Maher: destacada series (2003) obra de HBO.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

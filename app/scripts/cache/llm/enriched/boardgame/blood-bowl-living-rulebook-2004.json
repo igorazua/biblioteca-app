@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:blood-bowl-living-rulebook-2004",
+  "experience": {
+    "plot": "Blood Bowl is the game of Rugby slash Football as imagined in a fantasy world of orcs, elves, beastmen and many other fantasy creatures. The game truly shines in a League format, where players gain experience and learn new skills as they play. The latest rules",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jervis Johnson, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Collectible Components / Expansion for Base-game.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2004, una referencia indispensable obra de Jervis Johnson dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "pareja",
+    "jugones"
+  ],
+  "oneLiner": "Blood Bowl: Living Rulebook: destacada boardgame (2004) obra de Jervis Johnson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

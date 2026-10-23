@@ -15,12 +15,12 @@
   },
   "axes": {
     "peso": 3,
-    "interaccion": 2,
-    "azar": 1,
-    "confrontacion": 1,
-    "cooperacion": 1,
-    "tema": 2,
-    "risas": 1,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 5,
+    "risas": 2,
     "familiar": 3
   },
   "themes": [

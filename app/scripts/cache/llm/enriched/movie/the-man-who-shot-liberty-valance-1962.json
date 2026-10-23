@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-man-who-shot-liberty-valance-1962",
+  "experience": {
+    "plot": "The Man Who Shot Liberty Valance es una película wéstern estadounidense de 1962 dirigida por John Ford y protagonizada por John Wayne y James Stewart. El guion de James Warner Bellah y Willis Goldbeck fue adaptado a partir de un relato corto de 1953 escrito po",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de John Ford, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1962, una obra destacada de John Ford en el panorama de Drama y Western."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "justicia",
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "El hombre que mató a Liberty Valance: Drama y Western con dirección de John Ford.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

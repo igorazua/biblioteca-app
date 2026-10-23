@@ -1,0 +1,41 @@
+{
+  "id": "movie:lat-sau-san-taam-1992",
+  "experience": {
+    "plot": "A tough-as-nails cop teams up with an undercover agent to shut down a sinister mobster and his crew.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de John Woo, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Matrix",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1992, una obra destacada de John Woo en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Lat sau san taam: Acción y Crimen con dirección de John Woo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

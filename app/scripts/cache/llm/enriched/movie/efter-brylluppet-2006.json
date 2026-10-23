@@ -1,0 +1,41 @@
+{
+  "id": "movie:efter-brylluppet-2006",
+  "experience": {
+    "plot": "Después de la boda (2006) es una película danesa, dirigida por Susanne Bier y protagonizada por Mads Mikkelsen y Sidse Babett Knudsen. Con una estética cercana a la de Dogma 95, pero sin seguir al pie de la letra todas las reglas del movimiento.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Susanne Bier, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2006, una obra destacada de Susanne Bier en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Efter brylluppet: Drama con dirección de Susanne Bier.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

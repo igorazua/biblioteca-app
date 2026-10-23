@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-last-king-of-scotland-2006",
+  "experience": {
+    "plot": "El último rey de Escocia es una película dramática británica de 2006, dirigida por Kevin Macdonald y basada en la novela homónima de Giles Foden, adaptada por Peter Morgan y Jeremy Brock. La cinta está protagonizada por Forest Whitaker y James McAvoy en los pa",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Kevin Macdonald, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2006, una obra destacada de Kevin Macdonald en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 1
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "El último rey de Escocia: Biografía y Drama con dirección de Kevin Macdonald.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:le-petit-prince-2015",
+  "experience": {
+    "plot": "El principito es un filme francés de animación por computadora y animación en volumen, dirigido por Mark Osborne. Irena Brignull escribió el guion basado en la novela de 1943 del mismo nombre, escrita por Antoine de Saint-Exupéry. Es la primera versión animada",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Mark Osborne, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2015, una obra destacada de Mark Osborne en el panorama de Animación y Aventura."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 3,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Le Petit Prince: Animación y Aventura con dirección de Mark Osborne.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

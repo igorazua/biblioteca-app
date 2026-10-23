@@ -14,14 +14,14 @@
     "context": "Creada en 2011, una referencia indispensable obra de Stefan Feld dentro de su disciplina."
   },
   "axes": {
-    "peso": 2,
-    "interaccion": 2,
-    "azar": 1,
-    "confrontacion": 1,
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
     "cooperacion": 1,
     "tema": 2,
-    "risas": 1,
-    "familiar": 5
+    "risas": 2,
+    "familiar": 4
   },
   "themes": [
     "fantasia_medieval",

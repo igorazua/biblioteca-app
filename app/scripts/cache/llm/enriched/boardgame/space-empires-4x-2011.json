@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:space-empires-4x-2011",
+  "experience": {
+    "plot": "Space Empires 4X is a Science-Fiction Strategic level board-wargame in the finest tradition of 4X space games - eXplore, eXpand, eXploit, and eXterminate. Each player builds up a space empire and uses it to conquer the other players. Exploration on the mounted",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jim Krohn, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Faroleo / Civilización.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de Jim Krohn dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "faroleo_y_enganos",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Space Empires 4X: destacada boardgame (2011) obra de Jim Krohn.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

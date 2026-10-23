@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:robinson-crusoe-adventures-on-the-cursed-island-2012",
+  "experience": {
+    "plot": "Robinson Crusoe: Adventures on the Cursed Island es una reconocida boardgame que explora temáticas de Aventura, Exploración, Fighting. Destaca por su personalidad propia y su conexión directa con el público.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ignacy Trzewiczek, Joanna Kijanka, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Ignacy Trzewiczek, Joanna Kijanka dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 4,
+    "cooperacion": 4,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Robinson Crusoe: Adventures on the Cursed Island (2012): notable e inspiradora creación.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

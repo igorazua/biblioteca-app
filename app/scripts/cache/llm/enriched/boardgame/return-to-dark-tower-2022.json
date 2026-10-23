@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:return-to-dark-tower-2022",
+  "experience": {
+    "plot": "For an age, the tower lay in ruins. Unbeknownst to the people of the realm, a great evil stirred in its bowels. It started with strange sightings: a flock of crows flying in circles until they dropped from the sky, the lake frozen solid in the height of summer",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Brian Neff, Isaac Childres, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Electronic.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Brian Neff, Isaac Childres dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Return to Dark Tower: destacada boardgame (2022) obra de Brian Neff, Isaac Childres.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

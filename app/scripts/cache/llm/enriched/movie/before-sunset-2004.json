@@ -1,0 +1,42 @@
+{
+  "id": "movie:before-sunset-2004",
+  "experience": {
+    "plot": "Antes del atardecer es una película de 2004 dirigida por Richard Linklater. Es la secuela de Antes del amanecer del mismo director. Entre una película y otra pasaron 9 años, los mismos que transcurren en la narración. No sólo atrae el romanticismo de la histor",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Richard Linklater, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Richard Linklater en el panorama de Drama y Romance."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 1
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Antes del atardecer: Drama y Romance con dirección de Richard Linklater.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

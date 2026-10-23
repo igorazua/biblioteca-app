@@ -15,17 +15,17 @@
     "context": "Top 1 histórico de IMDb desde hace décadas, venerada mundialmente como el gran clásico de la esperanza carcelaria."
   },
   "axes": {
-    "tono": 2,
-    "ritmo": 2,
-    "emocion": 5,
-    "exigencia": 2,
-    "humor": 2,
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
     "tension": 3,
-    "fantasia": 1,
+    "fantasia": 2,
     "violencia": 3,
-    "familiar": 3,
-    "escala": 2,
-    "reconfort": 5
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
   },
   "themes": [
     "amistad",

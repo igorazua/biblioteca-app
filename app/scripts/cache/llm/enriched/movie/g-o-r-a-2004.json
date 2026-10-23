@@ -1,0 +1,44 @@
+{
+  "id": "movie:g-o-r-a-2004",
+  "experience": {
+    "plot": "película de 2004 dirigida por Ömer Faruk Sorak",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de \u001amer Faruk Sorak, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de \u001amer Faruk Sorak en el panorama de Aventura y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "amistad",
+    "espacio",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "amigos"
+  ],
+  "oneLiner": "G.O.R.A.: Aventura y Comedia con dirección de \u001amer Faruk Sorak.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

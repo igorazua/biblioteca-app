@@ -1,0 +1,39 @@
+{
+  "id": "book:cat-s-cradle-1963",
+  "experience": {
+    "plot": "Cat's Cradle is a satirical postmodern novel, with science fiction elements, by American writer Kurt Vonnegut. Vonnegut's fourth novel, it was first published on March 18, 1963, exploring and satirizing issues of science, technology, the purpose of religion, a",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Kurt Vonnegut, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1963, una referencia indispensable obra de Kurt Vonnegut dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 5,
+    "escala": 4,
+    "ideas": 3,
+    "reconfort": 1
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Cat's Cradle: destacada book (1963) obra de Kurt Vonnegut.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:el-orfanato-2007",
+  "experience": {
+    "plot": "El orfanato es una película coproducción española-mexicana de terror gótico y drama de 2007, dirigida por J.A. Bayona en su primer largometraje y escrita por Sergio G. Sánchez. Está protagonizada por Belén Rueda y producida por Rodar y Rodar y Telecinco Cinema",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Juan Antonio Bayona, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Sospechosos habituales",
+      "Alien, el octavo pasajero",
+      "Memento",
+      "El resplandor"
+    ],
+    "context": "Estrenada en 2007, una obra destacada de Juan Antonio Bayona en el panorama de Terror y Misterio."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 1
+  },
+  "themes": [
+    "investigacion",
+    "sobrenatural",
+    "amistad"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde"
+  ],
+  "oneLiner": "El orfanato: Terror y Misterio con dirección de Juan Antonio Bayona.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

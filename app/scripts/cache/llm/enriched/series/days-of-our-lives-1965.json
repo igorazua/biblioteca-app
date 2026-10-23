@@ -1,0 +1,43 @@
+{
+  "id": "series:days-of-our-lives-1965",
+  "experience": {
+    "plot": "Days of our Lives is set in the fictitious Midwestern town of Salem. The core families are the Bradys, the Hortons and the DiMeras, and the multi-layered storylines involve elements of romance, adventure, mystery, comedy and drama.Beginning on September 12, 20",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Peacock, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Familiar.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1965, una referencia indispensable obra de Peacock dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 5,
+    "formato": 4
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Days of Our Lives: destacada series (1965) obra de Peacock.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

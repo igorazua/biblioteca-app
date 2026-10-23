@@ -1,0 +1,43 @@
+{
+  "id": "movie:psicosis-1960",
+  "experience": {
+    "plot": "Psicosis es una película estadounidense de suspenso y terror de 1960, producida y dirigida por Alfred Hitchcock. El guion, escrito por Joseph Stefano, se basa en la novela homónima de Robert Bloch publicada en 1959. La película está protagonizada por Anthony P",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Alfred Hitchcock, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Pulp Fiction",
+      "El club de la lucha",
+      "El silencio de los corderos",
+      "Seven"
+    ],
+    "context": "Estrenada en 1960, una obra destacada de Alfred Hitchcock en el panorama de Terror y Thriller."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "familia",
+    "duelo",
+    "sobrenatural"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde"
+  ],
+  "oneLiner": "Psicosis: Terror y Thriller con dirección de Alfred Hitchcock.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

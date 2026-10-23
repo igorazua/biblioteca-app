@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:architects-of-the-west-kingdom-2018",
+  "experience": {
+    "plot": "Architects of the West Kingdom is set at the end of the Carolingian Empire, circa 850 AD. As royal architects, players compete to impress their King and maintain their noble status by constructing various landmarks throughout his newly appointed domain. Player",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de S J Macdonald, Shem Phillips, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Construcción de ciudades / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de S J Macdonald, Shem Phillips dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 2,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Architects of the West Kingdom (2018): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

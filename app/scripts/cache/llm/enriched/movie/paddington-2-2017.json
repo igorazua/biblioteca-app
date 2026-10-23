@@ -1,0 +1,43 @@
+{
+  "id": "movie:paddington-2-2017",
+  "experience": {
+    "plot": "Paddington 2 es una película británico-francesa de comedia familiar dirigida por Paul King, coescrita por King y Simon Farnaby, y producida por David Heyman. Es la secuela de la cinta del 2014 Paddington., protagonizada por Hugh Grant, Brendan Gleeson, Hugh Bo",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Paul King, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 2017, una obra destacada de Paul King en el panorama de Aventura y Comedia."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Paddington 2: Aventura y Comedia con dirección de Paul King.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

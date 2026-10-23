@@ -1,0 +1,43 @@
+{
+  "id": "movie:his-girl-friday-1940",
+  "experience": {
+    "plot": "His Girl Friday es una película de comedia screwball estadounidense de 1940, dirigida por Howard Hawks, con actuación de Rosalind Russell y Cary Grant y estrenada por Columbia Pictures.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Howard Hawks, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1940, una obra destacada de Howard Hawks en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Luna nueva: Comedia y Drama con dirección de Howard Hawks.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

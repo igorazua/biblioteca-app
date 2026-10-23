@@ -1,0 +1,41 @@
+{
+  "id": "movie:just-mercy-2019",
+  "experience": {
+    "plot": "World-renowned civil rights defense attorney Bryan Stevenson works to free a wrongly condemned death row prisoner.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Destin Daniel Cretton, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2019, una obra destacada de Destin Daniel Cretton en el panorama de Biografía y Crimen."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 1
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Just Mercy: Biografía y Crimen con dirección de Destin Daniel Cretton.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

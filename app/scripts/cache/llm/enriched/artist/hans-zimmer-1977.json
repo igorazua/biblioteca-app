@@ -1,0 +1,36 @@
+{
+  "id": "artist:hans-zimmer-1977",
+  "experience": {
+    "plot": "Hans Zimmer (Frankfurt, Alemania), icono de Banda sonora, Clásica cinematográfica desde 1977.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Frankfurt, Alemania, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Banda sonora / Clásica cinematográfica.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1977, una referencia indispensable obra de Frankfurt, Alemania dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 3,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 4
+  },
+  "themes": [
+    "pop",
+    "rock_clasico",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Hans Zimmer: destacada artist (1977) obra de Frankfurt, Alemania.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

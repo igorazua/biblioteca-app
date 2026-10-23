@@ -1,0 +1,43 @@
+{
+  "id": "series:it-s-always-sunny-in-philadelphia-2005",
+  "experience": {
+    "plot": "It's Always Sunny in Philadelphia es una comedia de situación estadounidense creada por Rob McElhenney y realizada por Glenn Howerton, Charlie Day y el mismo McElhenney. Fue estrenada en FX el 4 de agosto de 2005. El programa sigue los acontecimientos de un gr",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Rob McElhenney, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de Rob McElhenney dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 2
+  },
+  "themes": [
+    "amistad",
+    "sitcom_cotidiana",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Colgados en Filadelfia: destacada series (2005) obra de Rob McElhenney.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

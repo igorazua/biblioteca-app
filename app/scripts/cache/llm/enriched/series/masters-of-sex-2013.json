@@ -1,0 +1,43 @@
+{
+  "id": "series:masters-of-sex-2013",
+  "experience": {
+    "plot": "Masters of Sex es una serie de televisión estadounidense creada por Michelle Ashford, basada en la biografía de los investigadores en ginecología y sexología \"Masters y Johnson\": William Masters y Virginia Johnson, interpretados por Michael Sheen y Lizzy Capla",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Paramount+ with Showtime, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Romance.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de Paramount+ with Showtime dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "investigacion_policial",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Masters of Sex: destacada series (2013) obra de Paramount+ with Showtime.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

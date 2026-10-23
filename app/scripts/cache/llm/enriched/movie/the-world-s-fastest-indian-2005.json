@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-world-s-fastest-indian-2005",
+  "experience": {
+    "plot": "The World's Fastest Indian es una película estrenada en 2005 basada en la historia real de Burt Munro (1899-1978), motociclista neozelandés protagonizada por Anthony Hopkins.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Roger Donaldson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2005, una obra destacada de Roger Donaldson en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "deporte",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Burt Munro: Un sueño, una leyenda: Biografía y Drama con dirección de Roger Donaldson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

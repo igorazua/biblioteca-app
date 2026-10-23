@@ -1,0 +1,41 @@
+{
+  "id": "movie:carlito-s-way-1993",
+  "experience": {
+    "plot": "Carlito's Way es una película de crimen estadounidense de 1993 dirigida por Brian De Palma. El guion fue escrito por David Koepp, basado en las novelas del juez y escritor Edwin Torres, Carlito's Way (1975) y After Hours (1979). El filme está protagonizado por",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Brian De Palma, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1993, una obra destacada de Brian De Palma en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "ambicion",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Atrapado por su pasado: Crimen y Drama con dirección de Brian De Palma.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

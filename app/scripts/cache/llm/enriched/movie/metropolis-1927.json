@@ -1,0 +1,42 @@
+{
+  "id": "movie:metropolis-1927",
+  "experience": {
+    "plot": "Metrópolis es una película muda alemana de 1927 del género de ciencia ficción dirigida por Fritz Lang y realizada por la productora UFA. El guion fue escrito por Thea von Harbou y Fritz Lang, inspirándose en una novela de 1926 de la misma Von Harbou. Fue prota",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Fritz Lang, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 1927, una obra destacada de Fritz Lang en el panorama de Drama y Ciencia ficción."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "espacio"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Metropolis: Drama y Ciencia ficción con dirección de Fritz Lang.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

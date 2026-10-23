@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:pret-a-porter-2010",
+  "experience": {
+    "plot": "Prêt-à-Porter is an economic strategy game set in a world of fashion. Players run clothes companies and fight for dominance during fashion shows. It is – perhaps – one of the most cruel and ruthless of all our games. Money can be a dangerous weapon.\n\nDuring th",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ignacy Trzewiczek, Piotr Haraszczak, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Industry / Manufacturing.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra de Ignacy Trzewiczek, Piotr Haraszczak dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 1,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Prêt-à-Porter: destacada boardgame (2010) obra de Ignacy Trzewiczek, Piotr Haraszczak.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

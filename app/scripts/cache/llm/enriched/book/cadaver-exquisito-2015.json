@@ -1,0 +1,39 @@
+{
+  "id": "book:cadaver-exquisito-2015",
+  "experience": {
+    "plot": "Obra de Agustina Bazterrica publicada originalmente en 2015.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Agustina Bazterrica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Agustina Bazterrica dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "amor",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Cadáver exquisito: destacada book (2015) obra de Agustina Bazterrica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

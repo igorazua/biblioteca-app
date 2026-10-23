@@ -1,0 +1,41 @@
+{
+  "id": "movie:remember-the-titans-2000",
+  "experience": {
+    "plot": "Remember the Titans es una película estadounidense de fútbol americano y drama estrenada en el año 2000, basada en una historia real, dirigida por Boaz Yakin, producida por Jerry Bruckheimer para Walt Disney Pictures y protagonizada por Denzel Washington.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Boaz Yakin, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2000, una obra destacada de Boaz Yakin en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "deporte",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Titanes, hicieron historia: Biografía y Drama con dirección de Boaz Yakin.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

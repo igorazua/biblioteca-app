@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:the-magnificent-2019",
+  "experience": {
+    "plot": "The Magnificent is a tightly designed Eurogame from the creators of Santa Maria set in a mystical world beautifully illustrated by French artist Martin Mottet.\n\nIn the game, players are competing to attract the largest audiences to their shows, featuring magni",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Eilif Svensson, Kristian Amundsen Østby, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Dados / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Eilif Svensson, Kristian Amundsen Østby dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 1,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "dados_y_push_your_luck",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "The Magnificent (2019): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

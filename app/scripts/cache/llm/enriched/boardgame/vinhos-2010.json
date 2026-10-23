@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:vinhos-2010",
+  "experience": {
+    "plot": "Vinhos (Portuguese word for \"wines\") is a trading and economic game about wine making.\n\nDespite its small size, Portugal is one of the world’s leading wine producers. Why not get to know the country around a table? Over six years of harvests, cultivate your vi",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Vital Lacerda, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Farming.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra de Vital Lacerda dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Vinhos: destacada boardgame (2010) obra de Vital Lacerda.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

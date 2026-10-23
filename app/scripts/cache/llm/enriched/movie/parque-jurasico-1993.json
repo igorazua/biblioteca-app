@@ -15,17 +15,17 @@
     "context": "Obra maestra del cine de entretenimiento de Steven Spielberg de 1993 que revolucionó los efectos digitales en Hollywood."
   },
   "axes": {
-    "tono": 2,
+    "tono": 3,
     "ritmo": 4,
-    "emocion": 4,
-    "exigencia": 2,
-    "humor": 3,
-    "tension": 5,
-    "fantasia": 4,
-    "violencia": 3,
-    "familiar": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 5,
+    "violencia": 2,
+    "familiar": 3,
     "escala": 4,
-    "reconfort": 4
+    "reconfort": 3
   },
   "themes": [
     "ia_y_robots",

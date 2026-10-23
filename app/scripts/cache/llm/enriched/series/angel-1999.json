@@ -1,0 +1,43 @@
+{
+  "id": "series:angel-1999",
+  "experience": {
+    "plot": "Ángel es una serie de televisión estadounidense, es un spin-off de la serie de televisión Buffy the Vampire Slayer. La serie fue hecha por el creador de Buffy, Joss Whedon, en colaboración con David Greenwalt. Emitida en The WB desde el 5 de octubre de 1999 ha",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de The WB, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Acción.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1999, una referencia indispensable obra de The WB dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 1,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Angel: destacada series (1999) obra de The WB.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

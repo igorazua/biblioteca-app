@@ -1,0 +1,42 @@
+{
+  "id": "movie:k-kaku-kid-tai-1995",
+  "experience": {
+    "plot": "A cyborg policewoman and her partner hunt a mysterious and powerful hacker called the Puppet Master.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Mamoru Oshii, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "El rey león",
+      "Matrix"
+    ],
+    "context": "Estrenada en 1995, una obra destacada de Mamoru Oshii en el panorama de Animación y Acción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 5,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "crimen",
+    "amor",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "K\u001akaku Kid\u001atai: Animación y Acción con dirección de Mamoru Oshii.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "book:the-artist-s-way-1992",
+  "experience": {
+    "plot": "The Artist's Way: A Spiritual Path to Higher Creativity is a 1992 self-help book by American author Julia Cameron. The book was written to help people with creative recovery, which teaches techniques and exercises to assist people in gaining self-confidence in",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Julia Cameron, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1992, una referencia indispensable obra de Julia Cameron dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 2,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "sociedad",
+    "identidad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "The Artist's Way: destacada book (1992) obra de Julia Cameron.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

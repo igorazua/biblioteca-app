@@ -15,18 +15,18 @@
   },
   "axes": {
     "tono": 4,
-    "ritmo": 2,
+    "ritmo": 3,
     "emocion": 5,
-    "exigencia": 1,
-    "humor": 1,
-    "tension": 1,
-    "fantasia": 5,
-    "violencia": 1,
-    "familiar": 1,
-    "escala": 5,
-    "reconfort": 1,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 3,
     "enganche": 4,
-    "formato": 4
+    "formato": 5
   },
   "themes": [
     "fantasia_epica",

@@ -1,0 +1,36 @@
+{
+  "id": "artist:alaska-y-dinarama",
+  "experience": {
+    "plot": "Alaska y Dinarama, también conocido como Dinarama + Alaska, Alaska + Dinarama o simplemente Dinarama, fue un grupo español de pop originario de Madrid. Fue formado a finales de 1982 por Carlos Berlanga y Nacho Canut, y posteriormente se uniría Alaska como voca",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1982, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 2,
+    "valencia": 4,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 2,
+    "fondo": 4,
+    "complejidad": 1
+  },
+  "themes": [
+    "pop",
+    "rock_clasico",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Alaska y Dinarama: destacada artist (1982) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

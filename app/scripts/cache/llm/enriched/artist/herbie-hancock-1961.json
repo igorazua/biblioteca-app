@@ -1,0 +1,37 @@
+{
+  "id": "artist:herbie-hancock-1961",
+  "experience": {
+    "plot": "Herbie Hancock (Chicago, EE. UU.), icono de Post-bop, Jazz-funk, Jazz fusion desde 1961.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Chicago, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Post-bop / Jazz-funk.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1961, una referencia indispensable obra de Chicago, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 2,
+    "valencia": 3,
+    "bailable": 5,
+    "organico": 5,
+    "intensidad": 2,
+    "fondo": 3,
+    "complejidad": 5
+  },
+  "themes": [
+    "electronica",
+    "jazz",
+    "blues",
+    "soul"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Herbie Hancock: destacada artist (1961) obra de Chicago, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

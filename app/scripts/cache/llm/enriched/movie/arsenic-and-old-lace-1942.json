@@ -1,0 +1,41 @@
+{
+  "id": "movie:arsenic-and-old-lace-1942",
+  "experience": {
+    "plot": "Arsenic and Old Lace es una película de comedia estadounidense de 1944 dirigida por Frank Capra. Está basada en la pieza de teatro homónima.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Frank Capra, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "El club de la lucha",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 1942, una obra destacada de Frank Capra en el panorama de Comedia y Crimen."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "Arsénico por compasión: Comedia y Crimen con dirección de Frank Capra.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

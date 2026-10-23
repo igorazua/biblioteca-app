@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:railways-of-the-world-2005",
+  "experience": {
+    "plot": "Railways of the World (2009) is the new edition of the base game for Eagle Games' popular Railways of the World series, first published as Railroad Tycoon in 2005. It reimplements the original game with several improvements. Revisit the early days of the Age o",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Glenn Drover, Martin Wallace, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Trains / Transportation.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de Glenn Drover, Martin Wallace dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 1,
+    "familiar": 1
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Railways of the World: destacada boardgame (2005) obra de Glenn Drover, Martin Wallace.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-untouchables-1987",
+  "experience": {
+    "plot": "The Untouchables es una película estadounidense de 1987 dirigida por Brian De Palma y protagonizada por Kevin Costner. Está inspirada en la autobiografía The Untouchables (1957), escrita por Eliot Ness y Oscar Fraley.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Brian De Palma, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1987, una obra destacada de Brian De Palma en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "ambicion",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Los intocables de Eliot Ness: Crimen y Drama con dirección de Brian De Palma.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

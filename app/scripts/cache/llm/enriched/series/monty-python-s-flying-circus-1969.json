@@ -1,0 +1,43 @@
+{
+  "id": "series:monty-python-s-flying-circus-1969",
+  "experience": {
+    "plot": "Monty Python's Flying Circus es una serie de televisión británica creada y protagonizada por el grupo de humoristas Monty Python y consta de 4 temporadas, con un total de 45 capítulos. Esta se basaba en sketches breves que en muchas ocasiones incluían una impo",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de BBC One, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1969, una referencia indispensable obra de BBC One dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Monty Python's Flying Circus: destacada series (1969) obra de BBC One.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

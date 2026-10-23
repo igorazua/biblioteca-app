@@ -1,0 +1,40 @@
+{
+  "id": "boardgame:love-letter-2019",
+  "experience": {
+    "plot": "Love Letter es un juego de mesa de cartas de roles ocultos de ambientación medieval. Fue creado en 2012 por Seiji Kanai. El juego transcurre en el imaginario reino de Tempest. La reina ha sido apresada y se encuentra encarcelada acusada de alta traición. Su hi",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Alexandar Ortloff-Tang, Justin Kemppainen, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Deducción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Alexandar Ortloff-Tang, Justin Kemppainen dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "fantasia_medieval",
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "roles_ocultos",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Love Letter: destacada boardgame (2019) obra de Alexandar Ortloff-Tang, Justin Kemppainen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

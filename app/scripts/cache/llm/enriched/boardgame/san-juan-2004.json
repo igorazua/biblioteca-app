@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:san-juan-2004",
+  "experience": {
+    "plot": "San Juan is a card game designed by Andreas Seyfarth and published in 2004 by Alea in German and by Rio Grande Games in English. The game is derived from the board game Puerto Rico, and takes its name from San Juan, the capital city of Puerto Rico.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Andreas Seyfarth, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Construcción de ciudades.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2004, una referencia indispensable obra de Andreas Seyfarth dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "comercio_y_rutas",
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "San Juan: destacada boardgame (2004) obra de Andreas Seyfarth.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

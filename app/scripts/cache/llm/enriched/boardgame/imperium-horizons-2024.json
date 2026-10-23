@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:imperium-horizons-2024",
+  "experience": {
+    "plot": "In your hands lies the destiny of one of the most storied peoples of history. Under constant threat of attack, you must conquer new lands, oversee dramatic scientific and cultural advances, and lead your people into the era of empire. Expand too rapidly and un",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Dávid Turczi, Nigel Buckle, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Civilización.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Dávid Turczi, Nigel Buckle dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "draft_de_cartas",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Imperium: Horizons: destacada boardgame (2024) obra de Dávid Turczi, Nigel Buckle.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

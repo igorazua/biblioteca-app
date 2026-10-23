@@ -1,0 +1,42 @@
+{
+  "id": "series:severance-2022",
+  "experience": {
+    "plot": "Severance es una serie de televisión estadounidense de ciencia ficción y suspenso psicológico creada por Dan Erickson. Ben Stiller asumió la producción ejecutiva y gran parte de la dirección. El elenco cuenta con Adam Scott, Zach Cherry, Britt Lower, Tramell T",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Dan Erickson, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Thriller.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Dan Erickson dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 3,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Severance: destacada series (2022) obra de Dan Erickson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

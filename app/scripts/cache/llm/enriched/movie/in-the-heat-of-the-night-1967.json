@@ -1,0 +1,42 @@
+{
+  "id": "movie:in-the-heat-of-the-night-1967",
+  "experience": {
+    "plot": "In the Heat of the Night es una película policíaca estadounidense de 1967, dirigida por Norman Jewison y protagonizada por Sidney Poitier, Rod Steiger, Warren Oates y Larry Gates. Con guion de Stirling Silliphant, está basada en la novela homónima de John Ball",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Norman Jewison, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1967, una obra destacada de Norman Jewison en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 1,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "En el calor de la noche: Crimen y Drama con dirección de Norman Jewison.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "series:royal-pains-2009",
+  "experience": {
+    "plot": "Royal Pains es una serie que se estrenó el 4 de junio de 2009, protagonizada por Mark Feuerstein como médico de urgencias quien, después de haber sido injustamente culpado por la muerte de un paciente importante, se muda a Los Hamptons y se convierte en un rea",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de USA Network, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de USA Network dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 2
+  },
+  "themes": [
+    "familia",
+    "medicina_y_hospitales",
+    "sitcom_cotidiana"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "maraton"
+  ],
+  "oneLiner": "Royal Pains: destacada series (2009) obra de USA Network.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

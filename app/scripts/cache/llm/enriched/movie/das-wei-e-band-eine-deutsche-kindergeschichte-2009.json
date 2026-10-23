@@ -1,0 +1,42 @@
+{
+  "id": "movie:das-wei-e-band-eine-deutsche-kindergeschichte-2009",
+  "experience": {
+    "plot": "Strange events happen in a small village in the north of Germany during the years before World War I, which seem to be ritual punishment. Who is responsible?",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Michael Haneke, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2009, una obra destacada de Michael Haneke en el panorama de Drama y Historia."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "investigacion",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Das wei\u001ae Band - Eine deutsche Kindergeschichte (2009): memorable obra de Drama y Histori",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

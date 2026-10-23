@@ -1,0 +1,44 @@
+{
+  "id": "series:jane-by-design-2012",
+  "experience": {
+    "plot": "Jane by Design es una serie de televisión de comedia-drama de ABC Family. La serie sigue la vida de Jane Quimby, una adolescente que es confundida con una adulta en una entrevista para conseguir su trabajo de ensueño en el mundo de la moda con una diseñadora d",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Freeform, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Freeform dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "adolescencia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "maraton"
+  ],
+  "oneLiner": "Jane by Design: destacada series (2012) obra de Freeform.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

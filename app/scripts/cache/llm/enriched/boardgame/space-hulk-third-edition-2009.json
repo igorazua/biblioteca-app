@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:space-hulk-third-edition-2009",
+  "experience": {
+    "plot": "From the depths of space an ancient vessel drifts slowly towards the Imperium of Mankind - a space hulk. Within its confines, untold thousands of Genestealers slowly emerge from hibernation. The Space Marines must enter the cramped corridors and tomb-like cham",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Richard Halliwell, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fighting / Miniaturas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de Richard Halliwell dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Space Hulk (Third Edition): destacada boardgame (2009) obra de Richard Halliwell.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

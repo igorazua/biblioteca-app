@@ -1,0 +1,42 @@
+{
+  "id": "movie:star-trek-ii-the-wrath-of-khan-1982",
+  "experience": {
+    "plot": "Star Trek II: la ira de Khan es una película de ciencia ficción estadounidense ubicada dentro del universo ficticio de Star Trek creado por Gene Roddenberry. Es la segunda película de la franquicia, y fue producida por Paramount Pictures.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Nicholas Meyer, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1982, una obra destacada de Nicholas Meyer en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "espacio",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Star Trek II: La ira de Khan: Acción y Aventura con dirección de Nicholas Meyer.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

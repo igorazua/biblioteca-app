@@ -1,0 +1,44 @@
+{
+  "id": "series:the-inbetweeners-2008",
+  "experience": {
+    "plot": "The Inbetweeners es una serie de televisión británica, acerca de un grupo de amigos adolescentes y sus vivencias en la adolescencia. Escrita por Damon Beesley e Iain Morris, la serie fue producida originalmente para el canal de televisión E4, transmitiendo la ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de E4, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de E4 dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 5,
+    "formato": 3
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "sitcom_cotidiana",
+    "adolescencia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "The Inbetweeners: destacada series (2008) obra de E4.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

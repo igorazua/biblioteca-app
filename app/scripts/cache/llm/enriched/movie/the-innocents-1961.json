@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-innocents-1961",
+  "experience": {
+    "plot": "The Innocents es una película producida y dirigida por Jack Clayton en 1961. Se trata de la más celebrada adaptación al cine de la novela de Henry James The Turn of the Screw.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Jack Clayton, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Alien, el octavo pasajero",
+      "El resplandor",
+      "Psicosis",
+      "Los otros"
+    ],
+    "context": "Estrenada en 1961, una obra destacada de Jack Clayton en el panorama de Terror."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "sobrenatural",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde"
+  ],
+  "oneLiner": "Suspense: Terror con dirección de Jack Clayton.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

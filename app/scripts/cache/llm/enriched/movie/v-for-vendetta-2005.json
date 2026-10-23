@@ -1,0 +1,45 @@
+{
+  "id": "movie:v-for-vendetta-2005",
+  "experience": {
+    "plot": "V for Vendetta es una película de 2005, adaptación al cine de la novela gráfica V for Vendetta perteneciente al subsello de DC Comics, Vertigo Comics, escrita por Alan Moore e ilustrada por David Lloyd. La película fue dirigida por el australiano James McTeigu",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de James McTeigue, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 2005, una obra destacada de James McTeigue en el panorama de Acción y Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "venganza",
+    "familia",
+    "ia_y_robots",
+    "superheroes",
+    "espionaje",
+    "espacio"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "V de Vendetta: Acción y Drama con dirección de James McTeigue.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

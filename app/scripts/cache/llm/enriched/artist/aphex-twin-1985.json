@@ -1,0 +1,36 @@
+{
+  "id": "artist:aphex-twin-1985",
+  "experience": {
+    "plot": "Aphex Twin (Cornualles, Reino Unido), icono de IDM, Ambient techno, Drill and bass desde 1985.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Cornualles, Reino Unido, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de IDM / Ambient techno.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1985, una referencia indispensable obra de Cornualles, Reino Unido dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 3,
+    "bailable": 4,
+    "organico": 2,
+    "intensidad": 4,
+    "fondo": 5,
+    "complejidad": 3
+  },
+  "themes": [
+    "pop",
+    "electronica",
+    "rock_clasico"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Aphex Twin: destacada artist (1985) obra de Cornualles, Reino Unido.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

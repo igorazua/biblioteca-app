@@ -1,0 +1,36 @@
+{
+  "id": "artist:quevedo-2020",
+  "experience": {
+    "plot": "Quevedo (Las Palmas de Gran Canaria, España), icono de Urbano, Reggaeton, Trap desde 2020.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Las Palmas de Gran Canaria, España, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Urbano / Reggaeton.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Las Palmas de Gran Canaria, España dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 4,
+    "organico": 2,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 2
+  },
+  "themes": [
+    "hip_hop",
+    "trap",
+    "musica_latina"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Quevedo: destacada artist (2020) obra de Las Palmas de Gran Canaria, España.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

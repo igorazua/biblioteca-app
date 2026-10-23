@@ -1,0 +1,43 @@
+{
+  "id": "movie:amores-perros-2000",
+  "experience": {
+    "plot": "Amores perros es una película coral mexicana del año 2000, dirigida por Alejandro González Iñárritu en su debut como director, y escrita junto a Guillermo Arriaga. Junto a 21 gramos y Babel forma la \"Trilogía de la muerte\" y catapultó internacionalmente la car",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Alejandro González Iñárritu, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2000, una obra destacada de Alejandro González Iñárritu en el panorama de Drama y Thriller."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "amor",
+    "duelo",
+    "deporte",
+    "familia",
+    "crimen"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Amores perros: Drama y Thriller con dirección de Alejandro González Iñárritu.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

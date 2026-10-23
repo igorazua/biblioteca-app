@@ -1,0 +1,37 @@
+{
+  "id": "artist:the-clash-1976",
+  "experience": {
+    "plot": "The Clash (Londres, Reino Unido), icono de Punk rock, Post-punk, Reggae rock desde 1976.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Londres, Reino Unido, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Punk rock / Post-punk.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1976, una referencia indispensable obra de Londres, Reino Unido dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 2,
+    "bailable": 3,
+    "organico": 3,
+    "intensidad": 4,
+    "fondo": 1,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "soul",
+    "punk"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "The Clash: destacada artist (1976) obra de Londres, Reino Unido.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

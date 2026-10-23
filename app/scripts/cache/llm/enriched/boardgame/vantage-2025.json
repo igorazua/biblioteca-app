@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:vantage-2025",
+  "experience": {
+    "plot": "Vantage Master is a 1997 tactical role-playing game by Nihon Falcom. The game was never released outside of Asia. A sequel, Vantage Master V2, was released in 1998, featuring new maps and adjusted character balance but an unchanged overall game design. The Eng",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jamey Stegmaier, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2025, una referencia indispensable obra de Jamey Stegmaier dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "dados_y_push_your_luck",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Vantage: destacada boardgame (2025) obra de Jamey Stegmaier.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-bourne-identity-2002",
+  "experience": {
+    "plot": "The Bourne Identity es un film de acción estadounidense del año 2002, dirigido por Doug Liman y protagonizado por Matt Damon y Franka Potente. Es la primera entrega de una saga de películas basadas en las novelas del escritor Robert Ludlum.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Doug Liman, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Pulp Fiction",
+      "Matrix",
+      "El club de la lucha",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2002, una obra destacada de Doug Liman en el panorama de Acción y Misterio."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "investigacion",
+    "crimen",
+    "supervivencia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "amigos"
+  ],
+  "oneLiner": "El caso Bourne: Acción y Misterio con dirección de Doug Liman.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

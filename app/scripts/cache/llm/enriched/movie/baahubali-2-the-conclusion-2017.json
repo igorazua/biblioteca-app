@@ -1,0 +1,42 @@
+{
+  "id": "movie:baahubali-2-the-conclusion-2017",
+  "experience": {
+    "plot": "Baahubali 2: The Conclusion es una película india de aventuras de 2017 dirigida por S.S. Rajamouli y protagonizada por Tamannah Bhatia, Anushka Shetty, Rana Daggubati y Prabhas Raju.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de S.S. Rajamouli, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 2017, una obra destacada de S.S. Rajamouli en el panorama de Acción y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Baahubali 2: The Conclusion: Acción y Drama con dirección de S.S. Rajamouli.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-adventures-of-robin-hood-1938",
+  "experience": {
+    "plot": "The Adventures of Robin Hood es una película de aventuras estadounidense de 1938 dirigida por Michael Curtiz y William Keighley y escrita por Norman Reilly Raine y Seton I. Miller, basada en la leyenda de Robin Hood. Protagonizada por Errol Flynn en el papel p",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Michael Curtiz, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Forrest Gump",
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo"
+    ],
+    "context": "Estrenada en 1938, una obra destacada de Michael Curtiz en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "supervivencia"
+  ],
+  "moments": [
+    "pareja",
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Robin de los bosques: Acción y Aventura con dirección de Michael Curtiz.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -14,16 +14,16 @@
     "context": "Creada en 1813, una referencia indispensable obra de Jane Austen dentro de su disciplina."
   },
   "axes": {
-    "tono": 2,
-    "ritmo": 4,
-    "emocion": 2,
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 4,
     "densidad": 4,
-    "humor": 1,
-    "tension": 1,
-    "fantasia": 1,
-    "escala": 2,
-    "ideas": 2,
-    "reconfort": 5
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 4
   },
   "themes": [
     "amor",

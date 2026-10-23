@@ -1,0 +1,36 @@
+{
+  "id": "artist:fleet-foxes",
+  "experience": {
+    "plot": "Fleet Foxes es una banda estadounidense de indie folk formada en 2006 en Seattle, Washington. Han firmado con los sellos discográficos Sub Pop y Bella Union. Saltaron a la fama en 2008 tras el lanzamiento del EP Sun Giant y el álbum Fleet Foxes. Ambos recibier",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 1,
+    "valencia": 5,
+    "bailable": 5,
+    "organico": 4,
+    "intensidad": 2,
+    "fondo": 3,
+    "complejidad": 1
+  },
+  "themes": [
+    "pop",
+    "indie_rock",
+    "folk"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Fleet Foxes: destacada artist (2006) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

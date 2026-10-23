@@ -14,15 +14,15 @@
     "context": "Creada en 1949, una referencia indispensable obra de George Orwell dentro de su disciplina."
   },
   "axes": {
-    "tono": 4,
-    "ritmo": 4,
-    "emocion": 2,
-    "densidad": 2,
+    "tono": 5,
+    "ritmo": 2,
+    "emocion": 4,
+    "densidad": 4,
     "humor": 1,
-    "tension": 1,
-    "fantasia": 1,
-    "escala": 2,
-    "ideas": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "escala": 3,
+    "ideas": 4,
     "reconfort": 2
   },
   "themes": [

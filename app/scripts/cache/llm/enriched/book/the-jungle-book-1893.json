@@ -1,0 +1,39 @@
+{
+  "id": "book:the-jungle-book-1893",
+  "experience": {
+    "plot": "El libro de la selva, también conocido en español como El libro de las tierras vírgenes y El libro de la jungla, publicado en 1894, es una colección de historias escritas por el inglés nacido en la India Rudyard Kipling, el primer escritor británico en ser gal",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Rudyard Kipling, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Clásico / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1893, una referencia indispensable obra de Rudyard Kipling dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "historia",
+    "sociedad"
+  ],
+  "moments": [
+    "para_subrayar"
+  ],
+  "oneLiner": "The Jungle Book: destacada book (1893) obra de Rudyard Kipling.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

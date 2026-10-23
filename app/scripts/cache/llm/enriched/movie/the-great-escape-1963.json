@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-great-escape-1963",
+  "experience": {
+    "plot": "The Great Escape es una película bélica estadounidense de 1963 producida y dirigida por John Sturges, y protagonizada por Steve McQueen, James Garner, Charles Bronson, Richard Attenborough y otros grandes actores. Basada en los hechos sucedidos en el campo de ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de John Sturges, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 1963, una obra destacada de John Sturges en el panorama de Aventura y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "ia_y_robots",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "La gran evasión: Aventura y Drama con dirección de John Sturges.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:three-sisters-2022",
+  "experience": {
+    "plot": "Three Sisters is a strategic roll-and-write game about backyard farming. Three Sisters is named after an indigenous agricultural technique still widely used today in which three different crops — pumpkins, corn, and beans — are planted close together. Corn pro",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ben Pinchback, Matt Riddle, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Dados / Farming.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Ben Pinchback, Matt Riddle dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "trenes_y_ferrocarril",
+    "naturaleza_y_animales",
+    "dados_y_push_your_luck",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Three Sisters: destacada boardgame (2022) obra de Ben Pinchback, Matt Riddle.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

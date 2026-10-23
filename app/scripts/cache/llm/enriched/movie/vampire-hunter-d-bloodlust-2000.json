@@ -1,0 +1,42 @@
+{
+  "id": "movie:vampire-hunter-d-bloodlust-2000",
+  "experience": {
+    "plot": "Vampire Hunter D: Bloodlust , es una película animada japonesa estrenada en el 2000, de ciencia ficción y acción; escrita y dirigida por Yoshiaki Kawajiri producida por Madhouse y distribuida por Urban Vision Entertainment. Esta cinta basa su guion en Demon De",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Yoshiaki Kawajiri, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2000, una obra destacada de Yoshiaki Kawajiri en el panorama de Animación y Acción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Vampire Hunter D: Bloodlust: Animación y Acción con dirección de Yoshiaki Kawajiri.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

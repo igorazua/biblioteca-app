@@ -1,0 +1,41 @@
+{
+  "id": "movie:all-about-eve-1950",
+  "experience": {
+    "plot": "All About Eve es una película estadounidense de 1950 dirigida por Joseph L. Mankiewicz y con Bette Davis y Anne Baxter en los papeles principales. El guion está basado en el cuento The Wisdom of Eve, de Mary Orr. El cuento, de nueve páginas, se había publicado",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Joseph L. Mankiewicz, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1950, una obra destacada de Joseph L. Mankiewicz en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 1,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Eva al desnudo: Drama con dirección de Joseph L. Mankiewicz.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

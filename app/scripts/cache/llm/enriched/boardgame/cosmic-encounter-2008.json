@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:cosmic-encounter-2008",
+  "experience": {
+    "plot": "Cosmic Encounter es un juego de mesa de estrategia de ciencia ficción diseñado por «Future Pastimes» y publicado originalmente por Eon Games en 1977. En él, cada jugador asume el papel de una especie alienígena, cada una con un poder único para alterar una de ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bill Eberle, Bill Norton, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Faroleo / Negotiation.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de Bill Eberle, Bill Norton dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 5,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "faroleo_y_enganos",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Cosmic Encounter: destacada boardgame (2008) obra de Bill Eberle, Bill Norton.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

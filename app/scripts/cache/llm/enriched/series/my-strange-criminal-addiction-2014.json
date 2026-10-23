@@ -1,0 +1,43 @@
+{
+  "id": "series:my-strange-criminal-addiction-2014",
+  "experience": {
+    "plot": "My Strange Criminal Addiction reveals what happens when bizarre compulsions spin out of control and push people into a life of crime. From a lewd subway commuter to a diaper-wearing man, or a urine drinker to a toe sucker, first-hand accounts of these true cri",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Investigation Discovery, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Crimen.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Investigation Discovery dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "abogados_y_juicios",
+    "amistad"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "My Strange Criminal Addiction: destacada series (2014) obra de Investigation Discovery.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

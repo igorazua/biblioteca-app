@@ -1,0 +1,42 @@
+{
+  "id": "series:outlander-2014",
+  "experience": {
+    "plot": "Outlander es una serie de televisión británica-estadounidense de drama histórico basada en la saga de novelas homónima de Diana Gabaldon. Desarrollada por Ronald D. Moore y producida por Sony Pictures Television y Left Bank Pictures para Starz, se estrenó en a",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de STARZ, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Romance.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de STARZ dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Outlander: destacada series (2014) obra de STARZ.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:etherfields-2020",
+  "experience": {
+    "plot": "Etherfields is a narrative, cooperative game for 1 - 4 (5 with the 5th player expansion). A series of unique Dreams await to be discovered through tense exploration and tactical encounters. Learn about the Dreamers, their forgotten past, and their desperate mi",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Michał Oracz, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Michał Oracz dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 1,
+    "cooperacion": 4,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "cooperativo_pandemia"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "Etherfields: destacada boardgame (2020) obra de Michał Oracz.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

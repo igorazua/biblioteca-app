@@ -1,0 +1,43 @@
+{
+  "id": "series:the-critic-1994",
+  "experience": {
+    "plot": "El Crítico es una serie animada creada por Al Jean y Mike Reiss, productores y guionistas en Los Simpson. El show fue producido por Gracie Films en asociación con Columbia Pictures Television, y fue animada por Film Roman. Fue transmitida por la ABC en 1994 y ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Atom.com, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1994, una referencia indispensable obra de Atom.com dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 1,
+    "reconfort": 5,
+    "enganche": 2,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "The Critic: destacada series (1994) obra de Atom.com.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

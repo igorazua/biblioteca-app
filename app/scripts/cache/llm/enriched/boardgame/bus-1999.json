@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:bus-1999",
+  "experience": {
+    "plot": "Bus es una reconocida boardgame que explora temáticas de Transportation. Destaca por su personalidad propia y su conexión directa con el público.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jeroen Doumen, Joris Wiersinga, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Transportation.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1999, una referencia indispensable obra de Jeroen Doumen, Joris Wiersinga dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Bus: destacada boardgame (1999) obra de Jeroen Doumen, Joris Wiersinga.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

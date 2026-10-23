@@ -1,0 +1,43 @@
+{
+  "id": "movie:captain-america-civil-war-2016",
+  "experience": {
+    "plot": "Political involvement in the Avengers' affairs causes a rift between Captain America and Iron Man.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Anthony Russo, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2016, una obra destacada de Anthony Russo en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "guerra",
+    "ia_y_robots",
+    "espionaje",
+    "espacio",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Captain America: Civil War: Acción y Aventura con dirección de Anthony Russo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

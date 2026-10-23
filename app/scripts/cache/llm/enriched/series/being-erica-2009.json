@@ -1,0 +1,44 @@
+{
+  "id": "series:being-erica-2009",
+  "experience": {
+    "plot": "Being Erica fue una serie de televisión canadiense creada por Jana Sinyor y emitida por la cadena CBC desde el 5 de enero de 2009. Duró cuatro temporadas, de trece episodios la primera temporada, doce la segunda, trece la tercera y once la cuarta. La temporada",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de CBC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de CBC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "maraton"
+  ],
+  "oneLiner": "Being Erica: destacada series (2009) obra de CBC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

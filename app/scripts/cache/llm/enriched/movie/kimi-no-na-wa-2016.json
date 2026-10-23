@@ -1,0 +1,42 @@
+{
+  "id": "movie:kimi-no-na-wa-2016",
+  "experience": {
+    "plot": "Kimi no Na wa.  es una película de animación japonesa estrenada en 2016, escrita y dirigida por Makoto Shinkai, animada por CoMix Wave Films y distribuida por Tōhō. La película está inspirada en la novela del mismo título escrita por Shinkai que fue publicada ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Makoto Shinkai, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2016, una obra destacada de Makoto Shinkai en el panorama de Animación y Drama."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 5,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Kimi no na wa.: Animación y Drama con dirección de Makoto Shinkai.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:through-the-desert-1998",
+  "experience": {
+    "plot": "Each player attempts to score the most points by snaking caravan routes through the desert, trying to reach oases and blocking off sections of the desert. Many people feel that it is reminiscent of Go. Publisher's Description From the award-winning game design",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Reiner Knizia, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Estrategia abstracta / Animales.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1998, una referencia indispensable obra de Reiner Knizia dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Through the Desert: destacada boardgame (1998) obra de Reiner Knizia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

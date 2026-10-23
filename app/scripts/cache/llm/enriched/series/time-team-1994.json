@@ -1,0 +1,42 @@
+{
+  "id": "series:time-team-1994",
+  "experience": {
+    "plot": "Time Team es un programa de televisión británico que se emitió originalmente por Channel 4 del 16 de enero de 1994 al 7 de septiembre de 2014. En el 2022, regresó en las plataformas en línea YouTube y Patreon. El programa fue creado por el productor de televis",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Channel 4, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Historia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1994, una referencia indispensable obra de Channel 4 dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 5,
+    "formato": 4
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Time Team: destacada series (1994) obra de Channel 4.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

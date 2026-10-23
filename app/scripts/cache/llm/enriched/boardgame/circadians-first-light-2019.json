@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:circadians-first-light-2019",
+  "experience": {
+    "plot": "We were light years from our home, galaxies away, when we first discovered this ancient celestial body — a planet filled with intriguing, intelligent lifeforms, not too unlike our own. Some built kingdoms below the surface of the green seas, while others contr",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de S J Macdonald, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Dados / Ciencia ficción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de S J Macdonald dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 2,
+    "azar": 5,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "ciencia_ficcion_espacial",
+    "exploracion_y_mapas",
+    "dados_y_push_your_luck"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Circadians: First Light: destacada boardgame (2019) obra de S J Macdonald.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

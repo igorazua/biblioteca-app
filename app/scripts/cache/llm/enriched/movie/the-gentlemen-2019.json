@@ -1,0 +1,44 @@
+{
+  "id": "movie:the-gentlemen-2019",
+  "experience": {
+    "plot": "The Gentlemen es una película de crimen y acción británico-estadounidense de 2019 dirigida, escrita y producida por Guy Ritchie, y coescrita junto a Ivan Atkinson y Marn Davies. Está protagonizada por Charlie Hunnam, Henry Golding, Michelle Dockery, Colin Farr",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Guy Ritchie, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Matrix",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2019, una obra destacada de Guy Ritchie en el panorama de Acción y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "crimen",
+    "mafia",
+    "ia_y_robots",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "amigos"
+  ],
+  "oneLiner": "The Gentlemen: Los señores de la mafia: Acción y Comedia con dirección de Guy Ritchie.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

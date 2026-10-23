@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:rats-of-wistar-2023",
+  "experience": {
+    "plot": "In Rats of Wistar, you play the role of one of the four rats who organized the escape from a lab. As such, you will have to lead your family to prove that you are the most deserving of leading the entire colony. Thanks to your extraordinary skills, you will be",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Danilo Sabia, Simone Luciani, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Danilo Sabia, Simone Luciani dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 2,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Rats of Wistar: destacada boardgame (2023) obra de Danilo Sabia, Simone Luciani.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

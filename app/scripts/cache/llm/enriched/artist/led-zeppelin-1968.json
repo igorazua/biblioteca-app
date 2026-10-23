@@ -16,11 +16,11 @@
   "axes": {
     "energia": 5,
     "valencia": 4,
-    "bailable": 5,
+    "bailable": 3,
     "organico": 5,
-    "intensidad": 5,
-    "fondo": 1,
-    "complejidad": 2
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 3
   },
   "themes": [
     "rock_clasico",

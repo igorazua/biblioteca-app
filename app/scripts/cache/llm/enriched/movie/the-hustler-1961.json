@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-hustler-1961",
+  "experience": {
+    "plot": "The Hustler es una película dramática y de deportes estadounidense de 1961 producida, coescrita y dirigida por Robert Rossen. Es una adaptación de El buscavidas de Walter Tevis, publicada en 1959. Contó con los actores Paul Newman como Eddie Felson y Jackie Gl",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Robert Rossen, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1961, una obra destacada de Robert Rossen en el panorama de Drama y Deporte."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "deporte",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "El buscavidas: Drama y Deporte con dirección de Robert Rossen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

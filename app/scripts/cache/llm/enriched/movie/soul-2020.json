@@ -1,0 +1,44 @@
+{
+  "id": "movie:soul-2020",
+  "experience": {
+    "plot": "Soul es una película animada estadounidense de aventura, drama y comedia dirigida por Pete Docter y producida por Pixar Animation Studios. Narra la historia de un profesor de música que sufre un accidente antes de poder cumplir su sueño de convertirse en un re",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Pete Docter y Kemp Powers, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El rey león",
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek"
+    ],
+    "context": "Estrenada en 2020, una obra destacada de Pete Docter y Kemp Powers en el panorama de Animación y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "monstruos",
+    "ambicion",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Soul: Animación y Comedia con dirección de Pete Docter y Kemp Powers.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

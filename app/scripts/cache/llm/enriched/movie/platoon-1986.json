@@ -1,0 +1,41 @@
+{
+  "id": "movie:platoon-1986",
+  "experience": {
+    "plot": "Platoon es una película bélica estadounidense de 1986 dirigida por Oliver Stone y protagonizada por Willem Dafoe, Charlie Sheen y Tom Berenger. Es la primera de la trilogía de películas que Oliver Stone dirigió sobre la guerra de Vietnam, siendo las otras dos ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Oliver Stone, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1986, una obra destacada de Oliver Stone en el panorama de Drama y Bélica."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Platoon: Drama y Bélica con dirección de Oliver Stone.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

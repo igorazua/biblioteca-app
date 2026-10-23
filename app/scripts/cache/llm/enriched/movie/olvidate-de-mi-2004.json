@@ -1,0 +1,41 @@
+{
+  "id": "movie:olvidate-de-mi-2004",
+  "experience": {
+    "plot": "Eternal Sunshine of the Spotless Mind es una película estadounidense del año 2004, de los géneros de drama, romance y ciencia ficción. Está dirigida por Michel Gondry y escrita por Charlie Kaufman. La historia, creada por Pierre Bismuth, Kaufman y Gondry, trat",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Michel Gondry, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Forrest Gump",
+      "Matrix",
+      "Titanic",
+      "Parque Jurásico"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Michel Gondry en el panorama de Romance y Ciencia ficción."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 5,
+    "violencia": 1,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "espionaje",
+    "espacio"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "¡Olvídate de mí!: Romance y Ciencia ficción con dirección de Michel Gondry.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

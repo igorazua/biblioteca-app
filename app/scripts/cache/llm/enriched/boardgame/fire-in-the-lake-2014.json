@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:fire-in-the-lake-2014",
+  "experience": {
+    "plot": "Volume IV in the Series: COIN (GMT) dives headlong into the momentous and complex battle for South Vietnam. A unique multi-faction treatment of the Vietnam War, Fire in the Lake will take players on US heliborne sweeps of the jungle and Communist infiltration ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Mark Herman, Volko Ruhnke, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Civil War / Modern Warfare.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Mark Herman, Volko Ruhnke dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 3,
+    "azar": 1,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Fire in the Lake: destacada boardgame (2014) obra de Mark Herman, Volko Ruhnke.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

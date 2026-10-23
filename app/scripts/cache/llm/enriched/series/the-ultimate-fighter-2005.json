@@ -1,0 +1,42 @@
+{
+  "id": "series:the-ultimate-fighter-2005",
+  "experience": {
+    "plot": "The Ultimate Fighter es un reality de televisión estadounidense basado en una competición de artes marciales mixtas (MMA) de la empresa Ultimate Fighting Championship (UFC). Se emitió en Spike TV (2005-2011), FX (2012-2013) y Fox Sports 1 (2013-2018), y actual",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Paramount+, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Sports.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de Paramount+ dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "The Ultimate Fighter: destacada series (2005) obra de Paramount+.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

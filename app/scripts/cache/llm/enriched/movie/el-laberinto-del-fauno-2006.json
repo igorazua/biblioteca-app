@@ -1,0 +1,41 @@
+{
+  "id": "movie:el-laberinto-del-fauno-2006",
+  "experience": {
+    "plot": "El laberinto del fauno es una película hispano-mexicana de drama y fantasía oscura de 2006, escrita, coproducida y dirigida por Guillermo del Toro. Está protagonizada por Ivana Baquero, Sergi López, Maribel Verdú y Doug Jones. Fue distribuida por Warner Bros P",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Guillermo del Toro, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2006, una obra destacada de Guillermo del Toro en el panorama de Fantasía y Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "El laberinto del fauno: Fantasía y Drama con dirección de Guillermo del Toro.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

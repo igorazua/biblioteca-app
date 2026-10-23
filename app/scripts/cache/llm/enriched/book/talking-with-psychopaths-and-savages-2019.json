@@ -1,0 +1,39 @@
+{
+  "id": "book:talking-with-psychopaths-and-savages-2019",
+  "experience": {
+    "plot": "Obra de Christopher Berry-Dee publicada originalmente en 2019.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Christopher Berry-Dee, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Christopher Berry-Dee dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 2,
+    "ideas": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "misterio",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Talking With Psychopaths and Savages: destacada book (2019) obra de Christopher Berry-Dee.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

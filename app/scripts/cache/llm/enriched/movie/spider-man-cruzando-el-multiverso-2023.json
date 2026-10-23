@@ -1,0 +1,42 @@
+{
+  "id": "movie:spider-man-cruzando-el-multiverso-2023",
+  "experience": {
+    "plot": "Miles Morales se catapulta a través del multiverso y se enfrenta a un equipo de Spider-Heroes encargados de proteger su existencia.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Joaquim Dos Santos, Kemp Powers y Justin K. Thompson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "Gladiator",
+      "Toy Story"
+    ],
+    "context": "Estrenada en 2023, una obra destacada de Joaquim Dos Santos, Kemp Powers y Justin K. Thompson en el panorama de Animación y Acción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 5,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Spider-Man: Cruzando el Multiverso: notable propuesta de Animación y Acción (2023).",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

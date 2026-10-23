@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:mr-jack-2006",
+  "experience": {
+    "plot": "In Mr. Jack, one of the two players represents Jack the Ripper, who will be one of the eight characters on the board. This player knows which character is Mr. Jack, and his goal is to flee from the district as soon as possible (or avoid being accused for eight",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bruno Cathala, Ludovic Maublanc, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Deducción / Murder / Mystery.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de Bruno Cathala, Ludovic Maublanc dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 2,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Mr. Jack: destacada boardgame (2006) obra de Bruno Cathala, Ludovic Maublanc.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

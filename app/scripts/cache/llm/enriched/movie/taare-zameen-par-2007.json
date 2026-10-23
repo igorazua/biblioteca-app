@@ -1,0 +1,42 @@
+{
+  "id": "movie:taare-zameen-par-2007",
+  "experience": {
+    "plot": "Taare Zameen Par es una película india del año 2007 dirigida y producida por Aamir Khan y protagonizada por Darsheel Safary y Aamir Khan. El largometraje fue la selección oficial de la India para los Premios Óscar de 2007.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Aamir Khan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2007, una obra destacada de Aamir Khan en el panorama de Drama y Familiar."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "espionaje"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "familia"
+  ],
+  "oneLiner": "Taare Zameen Par: Drama y Familiar con dirección de Aamir Khan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

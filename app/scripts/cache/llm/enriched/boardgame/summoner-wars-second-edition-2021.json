@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:summoner-wars-second-edition-2021",
+  "experience": {
+    "plot": "Summoner Wars puts you in the role of a powerful summoner in control of a unique army, dedicated to taking control of the war-torn planet of Itharia. Display your tactical prowess by summoning units to your gates, outmaneuvering your opponent, and cutting down",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Colby Dauch, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Colby Dauch dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 5,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Summoner Wars (Second Edition): destacada boardgame (2021) obra de Colby Dauch.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

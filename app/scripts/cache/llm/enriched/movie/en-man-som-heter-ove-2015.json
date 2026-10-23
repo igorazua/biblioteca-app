@@ -1,0 +1,43 @@
+{
+  "id": "movie:en-man-som-heter-ove-2015",
+  "experience": {
+    "plot": "Un hombre llamado Ove es una película sueca de drama y comedia dirigida por Hannes Holm y estrenada el 25 de diciembre de 2015. Está basada en la novela homónima escrita por Fredrik Backman. La cinta fue galardonada como mejor comedia europea en los Premios de",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Hannes Holm, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2015, una obra destacada de Hannes Holm en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "En man som heter Ove: Comedia y Drama con dirección de Hannes Holm.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:cidade-de-deus-2002",
+  "experience": {
+    "plot": "Cidade de Deus es una película brasileña, basada en una historia real escrita por Paulo Lins, de acción y drama dirigida por Fernando Meirelles y Kátia Lund y estrenada en 2002. La película se centra en la guerra entre Zé Pequeño y Mané Galinha, desarrollada e",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Fernando Meirelles, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2002, una obra destacada de Fernando Meirelles en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "guerra",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Cidade de Deus: Crimen y Drama con dirección de Fernando Meirelles.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

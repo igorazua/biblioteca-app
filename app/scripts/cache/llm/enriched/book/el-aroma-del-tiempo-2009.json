@@ -1,0 +1,39 @@
+{
+  "id": "book:el-aroma-del-tiempo-2009",
+  "experience": {
+    "plot": "Un alegato poético y filosófico sobre la aceleración contemporánea y la necesidad de recuperar la pausa contemplativa.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Byung-Chul Han, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ensayo / Filosofía.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de Byung-Chul Han dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 2,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "escala": 2,
+    "ideas": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "identidad",
+    "filosofia",
+    "sociedad"
+  ],
+  "moments": [
+    "concentracion"
+  ],
+  "oneLiner": "El aroma del tiempo: destacada book (2009) obra de Byung-Chul Han.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

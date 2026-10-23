@@ -17,12 +17,12 @@
     "tono": 4,
     "ritmo": 4,
     "emocion": 2,
-    "densidad": 2,
+    "densidad": 3,
     "humor": 1,
-    "tension": 1,
-    "fantasia": 5,
-    "escala": 2,
-    "ideas": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "escala": 4,
+    "ideas": 4,
     "reconfort": 2
   },
   "themes": [

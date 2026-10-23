@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:atlantis-rising-second-edition-2019",
+  "experience": {
+    "plot": "The isle of Atlantis, your home, is sinking. Will you be able to save your people in time? Atlantis Rising is a co-operative worker placement game in which you must work together with up to six other players to deploy citizens across your homeland, gathering r",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Brent Dickman, Galen Ciscell, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad / Civilización.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Brent Dickman, Galen Ciscell dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "naturaleza_y_animales",
+    "dados_y_push_your_luck"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Atlantis Rising (Second Edition) (2019): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

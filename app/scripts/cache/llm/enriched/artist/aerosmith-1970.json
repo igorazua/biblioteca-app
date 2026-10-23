@@ -14,13 +14,13 @@
     "context": "Creada en 1970, una referencia indispensable obra de Boston, EE. UU. dentro de su disciplina."
   },
   "axes": {
-    "energia": 5,
-    "valencia": 4,
-    "bailable": 5,
-    "organico": 5,
-    "intensidad": 5,
-    "fondo": 1,
-    "complejidad": 2
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 2,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 4
   },
   "themes": [
     "rock_clasico",

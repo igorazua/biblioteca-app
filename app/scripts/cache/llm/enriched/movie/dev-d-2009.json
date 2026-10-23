@@ -1,0 +1,42 @@
+{
+  "id": "movie:dev-d-2009",
+  "experience": {
+    "plot": "Dev.D es una película de 2009 estrenada el 6 de febrero de 2009. Escrita y dirigida por Anurag Kashyap, la película saca su trama de la novela Devdas.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Anurag Kashyap, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2009, una obra destacada de Anurag Kashyap en el panorama de Drama y Romance."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 1
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Dev.D: Drama y Romance con dirección de Anurag Kashyap.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-ladykillers-1955",
+  "experience": {
+    "plot": "comedia británica de humor negro de 1955 dirigida por Alexander Mackendrick",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Alexander Mackendrick, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Regreso al futuro",
+      "El silencio de los corderos"
+    ],
+    "context": "Estrenada en 1955, una obra destacada de Alexander Mackendrick en el panorama de Comedia y Crimen."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "duelo",
+    "espionaje",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "El quinteto de la muerte: Comedia y Crimen con dirección de Alexander Mackendrick.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

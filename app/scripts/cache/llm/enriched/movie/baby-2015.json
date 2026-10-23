@@ -1,0 +1,41 @@
+{
+  "id": "movie:baby-2015",
+  "experience": {
+    "plot": "Baby is a 2015 Indian Hindi-language spy action thriller film written and directed by Neeraj Pandey. It is the first installment of Baby franchise. It stars Akshay Kumar, Anupam Kher, Rana Daggubati, Danny Denzongpa, Taapsee Pannu, Kay Kay Menon, Mikaal Zulfiq",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Neeraj Pandey, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Matrix",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2015, una obra destacada de Neeraj Pandey en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "espionaje",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Baby: Acción y Crimen con dirección de Neeraj Pandey.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:just-one-2018",
+  "experience": {
+    "plot": "Just One es un juego de mesa cooperativo para entre tres y siete jugadores creado por los diseñadores de juegos Ludovic Roudy y Bruno Sautter y publicado en 2018 por Repos Production. Existe una edición en español publicada por la editorial Asmodee.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bruno Sautter, Ludovic Roudy, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Deducción / Party Game.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Bruno Sautter, Ludovic Roudy dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 2,
+    "azar": 4,
+    "confrontacion": 1,
+    "cooperacion": 4,
+    "tema": 3,
+    "risas": 5,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "cooperativo_pandemia",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "Just One: destacada boardgame (2018) obra de Bruno Sautter, Ludovic Roudy.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

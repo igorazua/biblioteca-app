@@ -1,0 +1,42 @@
+{
+  "id": "movie:gone-with-the-wind-1939",
+  "experience": {
+    "plot": "Lo que el viento se llevó es una película estadounidense de los géneros épico, histórico y romántico de 1939, adaptación de la novela homónima de 1936 de Margaret Mitchell, producida por David O. Selznick y dirigida por Victor Fleming.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Victor Fleming, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1939, una obra destacada de Victor Fleming en el panorama de Drama y Historia."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Lo que el viento se llevó: Drama y Historia con dirección de Victor Fleming.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

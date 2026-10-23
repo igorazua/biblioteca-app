@@ -1,0 +1,44 @@
+{
+  "id": "movie:zwartboek-2006",
+  "experience": {
+    "plot": "Zwartboek es una película de 2006 dirigida por Paul Verhoeven y protagonizada por Carice van Houten, Sebastian Koch y Thom Hoffman. El largometraje, un drama bélico de intriga, cuenta cómo una joven cantante judía se une a la resistencia holandesa durante la S",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Paul Verhoeven, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2006, una obra destacada de Paul Verhoeven en el panorama de Drama y Thriller."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "ia_y_robots",
+    "espionaje",
+    "musica",
+    "familia",
+    "crimen"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Zwartboek: Drama y Thriller con dirección de Paul Verhoeven.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

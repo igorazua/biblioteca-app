@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:crown-of-emara-2018",
+  "experience": {
+    "plot": "Good times in the tiny kingdom of Emara: During the reign of King Thedorius the Wise, wars, uprisings, and other inconveniences became a thing of the past. Thedorius always cared more for the well-being of his subjects than for power or riches. Therefore, only",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Benjamin Schwer, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Medieval.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Benjamin Schwer dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "fantasia_medieval",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Crown of Emara: destacada boardgame (2018) obra de Benjamin Schwer.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -14,14 +14,14 @@
     "context": "Creada en 2018, una referencia indispensable obra de Gavan Brown, Martin Wallace dentro de su disciplina."
   },
   "axes": {
-    "peso": 3,
-    "interaccion": 2,
+    "peso": 4,
+    "interaccion": 3,
     "azar": 1,
     "confrontacion": 1,
     "cooperacion": 1,
-    "tema": 2,
-    "risas": 1,
-    "familiar": 3
+    "tema": 3,
+    "risas": 2,
+    "familiar": 2
   },
   "themes": [
     "gestion_de_recursos",

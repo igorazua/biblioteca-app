@@ -1,0 +1,43 @@
+{
+  "id": "movie:terminator-2-el-juicio-final-1991",
+  "experience": {
+    "plot": "Terminator 2: el juicio final es una película estadounidense de acción y ciencia ficción dirigida y producida por James Cameron, quien coescribió el guion junto con William Wisher Jr. Protagonizada por Arnold Schwarzenegger, Linda Hamilton, Robert Patrick y Ed",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de James Cameron, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Matrix",
+      "Gladiator",
+      "Parque Jurásico",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 1991, una obra destacada de James Cameron en el panorama de Acción y Ciencia ficción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "justicia",
+    "ia_y_robots",
+    "espionaje",
+    "espacio",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Terminator 2: El juicio final: Acción y Ciencia ficción con dirección de James Cameron.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

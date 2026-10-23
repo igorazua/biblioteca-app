@@ -1,0 +1,41 @@
+{
+  "id": "movie:bohemian-rhapsody-2018",
+  "experience": {
+    "plot": "Bohemian Rhapsody es una película biográfica británica-estadounidense de 2018 sobre el cantante británico Freddie Mercury y el grupo de rock Queen. Fue dirigida por Bryan Singer, aunque Dexter Fletcher asumió el cargo de director las últimas semanas de rodaje ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Bryan Singer, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2018, una obra destacada de Bryan Singer en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 1,
+    "reconfort": 3
+  },
+  "themes": [
+    "musica",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Bohemian Rhapsody: Biografía y Drama con dirección de Bryan Singer.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

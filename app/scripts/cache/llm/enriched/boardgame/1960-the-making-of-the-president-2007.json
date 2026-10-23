@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:1960-the-making-of-the-president-2007",
+  "experience": {
+    "plot": "From the author: \"Sometimes the history of a nation can be defined by the relationship between two individuals. The Election of 1960 is the story of two men, John F. Kennedy and Richard M. Nixon. One is the scion of a wealthy, politically powerful family from ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Christian Leonhard, Jason Matthews, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Political / Juego de guerra.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de Christian Leonhard, Jason Matthews dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "1960: The Making of the President (2007): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

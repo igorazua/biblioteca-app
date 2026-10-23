@@ -1,0 +1,42 @@
+{
+  "id": "movie:persona-1966",
+  "experience": {
+    "plot": "Persona es una película sueca de 1966 escrita, dirigida y producida por Ingmar Bergman, y con actuación principal de Bibi Andersson y Liv Ullmann. La historia gira en torno a una joven enfermera llamada Alma (Andersson) y su paciente, la conocida actriz de tea",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Ingmar Bergman, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1966, una obra destacada de Ingmar Bergman en el panorama de Drama y Thriller."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "viaje_en_el_tiempo",
+    "familia",
+    "crimen"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Persona: Drama y Thriller con dirección de Ingmar Bergman.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

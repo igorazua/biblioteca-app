@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:power-grid-2004",
+  "experience": {
+    "plot": "Power Grid es un juego de mesa de estilo alemán para entre dos y seis jugadores publicado en 2004 por el diseñador de juegos Friedemann Friese como reimplementación de su propio juego de 2001 Funkenschlag. El juego fue editado por Rio Grande Games.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Friedemann Friese, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Industry / Manufacturing.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2004, una referencia indispensable obra de Friedemann Friese dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Power Grid: destacada boardgame (2004) obra de Friedemann Friese.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

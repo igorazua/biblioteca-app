@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:mistborn-the-deckbuilding-game-2024",
+  "experience": {
+    "plot": "Based on the hit Mistborn novel series by Brandon Sanderson, Mistborn: The Deckbuilding Game takes players into the world of Scadrial! From designer John D Clair, players get to control iconic characters from the series and \"burn\" metals to unlock Allomantic p",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de John D. Clair, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de John D. Clair dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Mistborn: The Deckbuilding Game: destacada boardgame (2024) obra de John D. Clair.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

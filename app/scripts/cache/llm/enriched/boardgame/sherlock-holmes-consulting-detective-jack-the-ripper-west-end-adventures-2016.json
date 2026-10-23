@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:sherlock-holmes-consulting-detective-jack-the-ripper-west-end-adventures-2016",
+  "experience": {
+    "plot": "Sherlock Holmes Consulting Detective: Jack the Ripper & West End Adventures is a standalone expansion to Sherlock Holmes Consulting Detective with updated graphics that features ten more cases to be solved in Sherlock Holmes' Victorian-era London, England. A \"",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Gary Grady, Jérôme Ropert, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Deducción / Murder / Mystery.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra de Gary Grady, Jérôme Ropert dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "misterio_y_deduccion",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Sherlock Holmes Consulting Detective: Jack the Ripper & West End Adventures (2016): notab",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

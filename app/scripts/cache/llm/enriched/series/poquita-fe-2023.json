@@ -1,0 +1,43 @@
+{
+  "id": "series:poquita-fe-2023",
+  "experience": {
+    "plot": "Poquita fe es una serie de televisión por internet española de comedia creada y escrita por Pepón Montero y Juan Maidagán para Movistar Plus+. Está producida por Buendía Estudios y protagonizada por Raúl Cimas y Esperanza Pedreño. Ganó el Premio Ondas mejor se",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Pepón Montero y Juan Maidagán, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Pepón Montero y Juan Maidagán dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4,
+    "enganche": 2,
+    "formato": 2
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Poquita fe: destacada series (2023) obra de Pepón Montero y Juan Maidagán.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

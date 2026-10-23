@@ -1,0 +1,41 @@
+{
+  "id": "movie:doce-hombres-sin-piedad-1957",
+  "experience": {
+    "plot": "12 Angry Men es una película dramática estadounidense de 1957 dirigida por Sidney Lumet y basada en el guion para TV de título similar escrito por Reginald Rose.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Sidney Lumet, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1957, una obra destacada de Sidney Lumet en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Doce hombres sin piedad: Drama con dirección de Sidney Lumet.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

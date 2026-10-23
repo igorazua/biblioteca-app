@@ -1,0 +1,42 @@
+{
+  "id": "series:fallout-2024",
+  "experience": {
+    "plot": "Fallout es una serie de televisión estadounidense postapocalíptica de drama, suspenso y ciencia ficción creada por Graham Wagner y Geneva Robertson-Dworet para Amazon Prime Video. Basada en la franquicia de videojuegos de rol creada por Tim Cain y Leonard Boya",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Graham Wagner y Geneva Robertson-Dworet, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Acción.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Graham Wagner y Geneva Robertson-Dworet dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 3,
+    "formato": 4
+  },
+  "themes": [
+    "epoca_historica",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Fallout: destacada series (2024) obra de Graham Wagner y Geneva Robertson-Dworet.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

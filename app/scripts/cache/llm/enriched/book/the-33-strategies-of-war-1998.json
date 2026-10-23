@@ -1,0 +1,39 @@
+{
+  "id": "book:the-33-strategies-of-war-1998",
+  "experience": {
+    "plot": "Las 33 estrategias de guerra es un libro de autoayuda escrito por el autor estadounidense Robert Greene en 2006. Se compone de discusiones y ejemplos de estrategias ofensivas y defensivas de una amplia variedad de personas y condiciones, aplicándolas a conflic",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Robert Greene, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1998, una referencia indispensable obra de Robert Greene dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "guerra",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "The 33 Strategies of War: destacada book (1998) obra de Robert Greene.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

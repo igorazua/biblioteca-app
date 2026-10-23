@@ -1,0 +1,44 @@
+{
+  "id": "movie:harry-potter-and-the-deathly-hallows-part-2-2011",
+  "experience": {
+    "plot": "Harry Potter y las reliquias de la muerte: parte 2 es una película de acción y fantasía dirigida por David Yates. Es la octava y última película de la saga, y la segunda de dos partes cinematográficas basada en la novela homónima de J. K. Rowling, la octava pe",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de David Yates, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2011, una obra destacada de David Yates en el panorama de Aventura y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 5,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 1
+  },
+  "themes": [
+    "ia_y_robots",
+    "duelo",
+    "espionaje",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Harry Potter y las Reliquias de la Muerte: parte 2 (2011): memorable obra de Aventura y D",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

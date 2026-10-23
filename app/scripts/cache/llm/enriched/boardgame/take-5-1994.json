@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:take-5-1994",
+  "experience": {
+    "plot": "6 nimmt! / ¡Toma 6! es un juego de cartas para 2–10 jugadores diseñado por Wolfgang Kramer en 1994 y publicado por Amigo Spiele. La versión francesa es distribuida por Gigamic. Este juego recibió el premio Deutscher Spiele Preis en 1994.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Wolfgang Kramer, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Number.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1994, una referencia indispensable obra de Wolfgang Kramer dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 5,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Take 5: destacada boardgame (1994) obra de Wolfgang Kramer.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

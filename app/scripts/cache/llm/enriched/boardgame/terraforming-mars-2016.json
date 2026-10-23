@@ -14,14 +14,14 @@
     "context": "Creada en 2016, una referencia indispensable obra de Jacob Fryxelius dentro de su disciplina."
   },
   "axes": {
-    "peso": 4,
+    "peso": 3,
     "interaccion": 2,
-    "azar": 1,
-    "confrontacion": 1,
-    "cooperacion": 1,
-    "tema": 2,
-    "risas": 1,
-    "familiar": 1
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
   },
   "themes": [
     "imperios_y_civilizaciones",

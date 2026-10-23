@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:sword-sorcery-immortal-souls-2017",
+  "experience": {
+    "plot": "The legend begins! Play heroes of epic stature against the forces of evil. Five heroes awoke from the dead and were made immortal to save the kingdom from the rise of darkness. In Sword & Sorcery: Immortal Souls, up to five players control one or more of these",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Nunzio Surace, Simone Romano, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Nunzio Surace, Simone Romano dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Sword & Sorcery: Immortal Souls (2017): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

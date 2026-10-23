@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:zhanguo-2014",
+  "experience": {
+    "plot": "Between 230 and 221 B.C., the ambitious and extremely young king of Qin, Ying Zheng, unified China, adding all the other so-called Warring States (ZhanGuo) to his empire. Through this, Ying Zheng became the first emperor in Chinese history, taking the title of",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Marco Canetta, Stefania Niccolini, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2014, una referencia indispensable obra de Marco Canetta, Stefania Niccolini dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "ZhanGuo: destacada boardgame (2014) obra de Marco Canetta, Stefania Niccolini.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

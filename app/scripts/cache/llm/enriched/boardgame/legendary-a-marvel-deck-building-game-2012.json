@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:legendary-a-marvel-deck-building-game-2012",
+  "experience": {
+    "plot": "Legendary: A Marvel Deck Building Game is set in the Marvel Comics universe. To set up the game, players choose a mastermind villain (Magneto, Loki, Dr. Doom, Red Skull in the base game), stack that particular villain's attack cards underneath it, then modify ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Devin Low, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Comic Book / Strip.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Devin Low dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Legendary: A Marvel Deck Building Game: destacada boardgame (2012) obra de Devin Low.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "series:star-trek-voyager-1995",
+  "experience": {
+    "plot": "Star Trek: Voyager es una serie de televisión de ciencia ficción estadounidense, creada por Rick Berman, Michael Piller y Jeri Taylor. Se emitió originalmente del 16 de enero de 1995 al 23 de mayo de 2001 por UPN, con 172 episodios repartidos en siete temporad",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de UPN, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1995, una referencia indispensable obra de UPN dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "epoca_historica",
+    "espacio",
+    "amistad"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Star Trek: Voyager: destacada series (1995) obra de UPN.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

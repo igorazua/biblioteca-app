@@ -1,0 +1,44 @@
+{
+  "id": "series:reba-2001",
+  "experience": {
+    "plot": "Reba es una serie de televisión de comedia estadounidense creada por Chuck Lorre y protagonizada por Reba McEntire, y que se emitió del 5 de octubre de 2001 al 18 de febrero de 2007. La serie se estrenó en The WB, donde se emitió durante 5 temporadas, y la sex",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de The CW, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2001, una referencia indispensable obra de The CW dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 5,
+    "enganche": 5,
+    "formato": 3
+  },
+  "themes": [
+    "familia",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "maraton"
+  ],
+  "oneLiner": "Reba: destacada series (2001) obra de The CW.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

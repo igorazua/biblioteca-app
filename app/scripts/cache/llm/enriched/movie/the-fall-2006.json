@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-fall-2006",
+  "experience": {
+    "plot": "The Fall. El sueño de Alexandria es una película de 2006 dirigida por Tarsem Singh y protagonizada por Lee Pace, Catinca Untaru y Justine Waddell. El guion fue escrito por Dan Gilroy, Nico Soultanakis y Tarsem Singh, y está basado en la idea central de la pelí",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Tarsem Singh, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2006, una obra destacada de Tarsem Singh en el panorama de Aventura y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 1
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "The Fall: El sueño de Alexandria: Aventura y Drama con dirección de Tarsem Singh.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

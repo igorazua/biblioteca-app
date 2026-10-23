@@ -1,0 +1,42 @@
+{
+  "id": "movie:la-princesa-mononoke-1997",
+  "experience": {
+    "plot": "La princesa Mononoke  es una película de animación japonesa escrita y dirigida por Hayao Miyazaki, estrenada en 1997. Fue producida por Studio Ghibli y distribuida por Tōhō. La princesa Mononoke fue el undécimo largometraje de Studio Ghibli y el sexto dirigido",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Hayao Miyazaki, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Toy Story",
+      "Shrek"
+    ],
+    "context": "Estrenada en 1997, una obra destacada de Hayao Miyazaki en el panorama de Animación y Fantasía."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 5,
+    "reconfort": 5
+  },
+  "themes": [
+    "amistad",
+    "identidad",
+    "redencion"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "La princesa Mononoke: Animación y Fantasía con dirección de Hayao Miyazaki.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

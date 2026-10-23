@@ -1,0 +1,42 @@
+{
+  "id": "series:dark-2017",
+  "experience": {
+    "plot": "Dark es una serie de televisión web alemana de suspenso y ciencia ficción creada por Baran bo Odar y Jantje Friese. Ambientada en la ficticia ciudad de Winden (Alemania), la serie sigue las secuelas de la desaparición de un niño, lo que expone los secretos y l",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Baran bo Odar y Jantje Friese, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Misterio.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Baran bo Odar y Jantje Friese dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 5,
+    "reconfort": 3,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "ambicion"
+  ],
+  "moments": [
+    "pasar_miedo"
+  ],
+  "oneLiner": "Dark: destacada series (2017) obra de Baran bo Odar y Jantje Friese.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -14,13 +14,13 @@
     "context": "Creada en 1965, una referencia indispensable obra de Los Ángeles, EE. UU. dentro de su disciplina."
   },
   "axes": {
-    "energia": 5,
-    "valencia": 4,
-    "bailable": 5,
-    "organico": 5,
-    "intensidad": 5,
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 4,
     "fondo": 1,
-    "complejidad": 2
+    "complejidad": 4
   },
   "themes": [
     "rock_clasico",

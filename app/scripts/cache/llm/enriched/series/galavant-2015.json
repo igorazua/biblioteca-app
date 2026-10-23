@@ -1,0 +1,43 @@
+{
+  "id": "series:galavant-2015",
+  "experience": {
+    "plot": "Galavant es una serie de televisión estadounidense transmitida por ABC desde el 4 de enero de 2015 hasta el 31 de enero de 2016. La serie fue creada, escrita y producida por Dan Fogelman, junto con Alan Menken, Glenn Slater, Chris Koch, Kat Likkel y John Hober",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de ABC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Fantasía.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de ABC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 2,
+    "formato": 2
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Galavant: destacada series (2015) obra de ABC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

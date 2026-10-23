@@ -1,0 +1,44 @@
+{
+  "id": "movie:coco-2017",
+  "experience": {
+    "plot": "Coco es una película de animación por ordenador producida por Pixar Animation Studios y distribuida por Walt Disney Studios Motion Pictures. Su argumento está basado en una idea de Lee Unkrich, quien también ejerció como director del proyecto, a la par que Adr",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Lee Unkrich, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "Toy Story",
+      "Shrek",
+      "La La Land"
+    ],
+    "context": "Estrenada en 2017, una obra destacada de Lee Unkrich en el panorama de Animación y Musical."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "duelo",
+    "ambicion",
+    "musica"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Coco: Animación y Musical con dirección de Lee Unkrich.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

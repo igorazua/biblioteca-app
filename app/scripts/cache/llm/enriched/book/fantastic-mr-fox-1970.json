@@ -1,0 +1,39 @@
+{
+  "id": "book:fantastic-mr-fox-1970",
+  "experience": {
+    "plot": "Fantastic Mr Fox es una novela infantil escrita por Roald Dahl. Fue publicada en 1970 por la editorial George Allen & Unwin en el Reino Unido y por Alfred A. Knopf en los Estados Unidos, con ilustraciones de Donald Chaffin. Posteriormente, el libro fue publica",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Roald Dahl, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1970, una referencia indispensable obra de Roald Dahl dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "escala": 2,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "historia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Fantastic Mr Fox: destacada book (1970) obra de Roald Dahl.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:a-game-of-thrones-the-card-game-second-edition-2015",
+  "experience": {
+    "plot": "In A Game of Thrones: The Card Game, the warring factions of Westeros await your command, inviting you to engage in a life-or-death struggle. In every game, you select devious plots and challenge your opponents on the field of battle, through back alley intrig",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Eric M. Lang, Nate French, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Faroleo / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Eric M. Lang, Nate French dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 4,
+    "familiar": 3
+  },
+  "themes": [
+    "faroleo_y_enganos",
+    "draft_de_cartas",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "A Game of Thrones: The Card Game (Second Edition) (2015): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

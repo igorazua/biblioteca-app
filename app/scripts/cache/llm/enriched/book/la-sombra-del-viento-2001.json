@@ -15,15 +15,15 @@
   },
   "axes": {
     "tono": 2,
-    "ritmo": 2,
-    "emocion": 2,
-    "densidad": 4,
-    "humor": 1,
-    "tension": 5,
-    "fantasia": 1,
-    "escala": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "densidad": 5,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 3,
+    "escala": 5,
     "ideas": 2,
-    "reconfort": 5
+    "reconfort": 2
   },
   "themes": [
     "misterio",

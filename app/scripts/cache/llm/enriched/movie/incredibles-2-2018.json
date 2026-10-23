@@ -1,0 +1,43 @@
+{
+  "id": "movie:incredibles-2-2018",
+  "experience": {
+    "plot": "Los Increíbles 2 es una película animada de superhéroes estadounidense de 2018 producida por Pixar y distribuida por Walt Disney Pictures. Es la secuela de Los Increíbles. Fue estrenada el 15 de junio de 2018 en Estados Unidos. La película fue escrita y dirigi",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Brad Bird, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2018, una obra destacada de Brad Bird en el panorama de Animación y Acción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "ambicion",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Los increíbles 2: Animación y Acción con dirección de Brad Bird.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

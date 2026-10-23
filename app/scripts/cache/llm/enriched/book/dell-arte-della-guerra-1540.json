@@ -1,0 +1,39 @@
+{
+  "id": "book:dell-arte-della-guerra-1540",
+  "experience": {
+    "plot": "Obra de Niccolò Machiavelli publicada originalmente en 1540.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Niccolò Machiavelli, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1540, una referencia indispensable obra de Niccolò Machiavelli dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 4,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Dell'Arte della Guerra: destacada book (1540) obra de Niccolò Machiavelli.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

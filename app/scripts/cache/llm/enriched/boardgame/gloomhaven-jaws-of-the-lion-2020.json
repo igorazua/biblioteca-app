@@ -16,12 +16,12 @@
   "axes": {
     "peso": 2,
     "interaccion": 2,
-    "azar": 1,
+    "azar": 3,
     "confrontacion": 1,
-    "cooperacion": 1,
-    "tema": 2,
-    "risas": 1,
-    "familiar": 5
+    "cooperacion": 4,
+    "tema": 5,
+    "risas": 3,
+    "familiar": 4
   },
   "themes": [
     "exploracion_y_mapas",

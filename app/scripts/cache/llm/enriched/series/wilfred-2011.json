@@ -1,0 +1,44 @@
+{
+  "id": "series:wilfred-2011",
+  "experience": {
+    "plot": "Wilfred, es una comedia de televisión estadounidense que se estrenó el 23 de junio de 2011. Es la adaptación de la serie de televisión australiana del mismo nombre, emitida por SBS. Está protagonizada por Elijah Wood, junto al coautor y productor de la serie J",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de FXX, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de FXX dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 5,
+    "humor": 4,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 2
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "maraton"
+  ],
+  "oneLiner": "Wilfred: destacada series (2011) obra de FXX.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

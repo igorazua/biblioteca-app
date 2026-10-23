@@ -1,0 +1,42 @@
+{
+  "id": "series:knight-rider-2008",
+  "experience": {
+    "plot": "Knight Rider fue una serie de televisión continuación de la serie de 1982 y que tuvo como episodio piloto una película con el mismo nombre en 2008. Los protagonistas son Justin Bruening, como Michael Knight, y Deanna Russo como Sarah Graiman, antigua novia de ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de NBC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de NBC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 1,
+    "enganche": 3,
+    "formato": 3
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "El coche fantástico: destacada series (2008) obra de NBC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

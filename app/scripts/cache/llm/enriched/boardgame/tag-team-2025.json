@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:tag-team-2025",
+  "experience": {
+    "plot": "SNK Heroines: Tag Team Frenzy es un videojuego de lucha 2.5D desarrollado por SNK para PlayStation 4, y por Abstraction Games para Nintendo Switch. Fue distribuido por Nippon Ichi Software en Norteamérica y Europa, SNK en Japón, y SEGA en el resto de Asia. Su ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Corentin Lebrat, Gricha German, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2025, una referencia indispensable obra de Corentin Lebrat, Gricha German dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 3,
+    "tema": 5,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Tag Team: destacada boardgame (2025) obra de Corentin Lebrat, Gricha German.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

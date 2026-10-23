@@ -14,16 +14,16 @@
     "context": "Creada en 2003, una referencia indispensable obra de Dan Brown dentro de su disciplina."
   },
   "axes": {
-    "tono": 2,
-    "ritmo": 2,
+    "tono": 3,
+    "ritmo": 5,
     "emocion": 2,
-    "densidad": 4,
+    "densidad": 5,
     "humor": 1,
-    "tension": 5,
+    "tension": 4,
     "fantasia": 1,
-    "escala": 2,
+    "escala": 4,
     "ideas": 2,
-    "reconfort": 5
+    "reconfort": 2
   },
   "themes": [
     "misterio",

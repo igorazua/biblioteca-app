@@ -1,0 +1,42 @@
+{
+  "id": "movie:what-we-do-in-the-shadows-2014",
+  "experience": {
+    "plot": "What We Do in the Shadows es una comedia de terror mockumentary neozelandés-estadounidense de 2014 escrita, dirigida y protagonizada por Jemaine Clement y Taika Waititi. La historia sigue a un grupo de vampiros que viven juntos en Wellington. La cinta se estre",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Jemaine Clement, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek",
+      "Alien, el octavo pasajero"
+    ],
+    "context": "Estrenada en 2014, una obra destacada de Jemaine Clement en el panorama de Comedia y Terror."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 5,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "amistad",
+    "sobrenatural"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pasar_miedo"
+  ],
+  "oneLiner": "Lo que hacemos en las sombras: Comedia y Terror con dirección de Jemaine Clement.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:in-the-hall-of-the-mountain-king-2019",
+  "experience": {
+    "plot": "Play as trolls rebuilding your abandoned kingdom under the mountain in In the Hall of the Mountain King. With muscle and magic, you'll unearth riches, dig out collapsed tunnels, and carve out great halls as you raise the toppled statues of your ancestors to th",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Graeme Jahns, Jay Cormier, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Territory Building.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Graeme Jahns, Jay Cormier dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 1,
+    "familiar": 4
+  },
+  "themes": [
+    "trenes_y_ferrocarril",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "In the Hall of the Mountain King (2019): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

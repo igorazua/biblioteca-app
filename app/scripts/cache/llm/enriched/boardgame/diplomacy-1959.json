@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:diplomacy-1959",
+  "experience": {
+    "plot": "Diplomacy es uno de los juegos de mesa de estrategia militar más representativos. Fue diseñado por Allan B. Calhamer y publicado originalmente en 1959. Entre sus carecterísticas distintivas puede señalarse el hecho de que se juega por turnos, la acción es simu",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Allan B. Calhamer, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Faroleo / Negotiation.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1959, una referencia indispensable obra de Allan B. Calhamer dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 2
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "faroleo_y_enganos",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Diplomacy: destacada boardgame (1959) obra de Allan B. Calhamer.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "series:dirty-sexy-money-2007",
+  "experience": {
+    "plot": "Dirty Sexy Money es una serie de televisión estadounidense sobre Nick George, interpretado por Peter Krause. Toda la vida George ha estado a la sombra de la familia Darling, pero como adulto está llevando la vida perfecta como un abogado idealista, hasta la so",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de ABC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de ABC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "familia",
+    "abogados_y_juicios",
+    "amistad"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Dirty Sexy Money: destacada series (2007) obra de ABC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

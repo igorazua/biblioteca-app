@@ -1,0 +1,43 @@
+{
+  "id": "series:robot-chicken-2005",
+  "experience": {
+    "plot": "Robot Chicken es una serie animada estadounidense que usa la técnica de animación por stop motion. Fue creada por Seth Green y Matthew Senreich en 2005 y es emitida por el bloque Adult Swim en Cartoon Network. La serie parodia un sinnúmero de situaciones en la",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Adult Swim, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Science-Fiction.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de Adult Swim dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 5,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 2
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "animacion",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Robot Chicken: destacada series (2005) obra de Adult Swim.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

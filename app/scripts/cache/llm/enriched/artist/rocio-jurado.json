@@ -1,0 +1,36 @@
+{
+  "id": "artist:rocio-jurado",
+  "experience": {
+    "plot": "María del Rocío Trinidad Mohedano Jurado, conocida como Rocío Jurado, fue una cantante y actriz española de fama internacional, que se especializó en géneros musicales como la copla andaluza y el flamenco, así como en la balada romántica y la canción melódica,",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1968, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 5,
+    "intensidad": 4,
+    "fondo": 1,
+    "complejidad": 3
+  },
+  "themes": [
+    "musica_latina",
+    "pop",
+    "rock_clasico"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Rocío Jurado: destacada artist (1968) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

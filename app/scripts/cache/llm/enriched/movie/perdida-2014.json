@@ -1,0 +1,43 @@
+{
+  "id": "movie:perdida-2014",
+  "experience": {
+    "plot": "Perdida es una película criminal de suspenso dramático coproducido internacionalmente de 2018 basada en la novela escrita por Florencia Etcheves titulada Cornelia. El film fue coescrito y dirigido por Alejandro Montiel y protagonizado por Luisana Lopilato y Am",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de David Fincher, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Pulp Fiction",
+      "El club de la lucha",
+      "El silencio de los corderos",
+      "Seven"
+    ],
+    "context": "Estrenada en 2014, una obra destacada de David Fincher en el panorama de Misterio y Thriller."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "ia_y_robots",
+    "duelo",
+    "espionaje"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde"
+  ],
+  "oneLiner": "Perdida: Misterio y Thriller con dirección de David Fincher.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

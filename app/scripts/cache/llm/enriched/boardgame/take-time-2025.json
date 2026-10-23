@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:take-time-2025",
+  "experience": {
+    "plot": "Take Time is a cooperative game where players either win or lose together. To succeed, you must strategically play 12 cards facedown around a Clock, following specific rules for each Test. You can work together through a series of games to pass all 40 Tests av",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Alexi Piovesan, Julien Prothière, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Puzzle.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2025, una referencia indispensable obra de Alexi Piovesan, Julien Prothière dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 5,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "draft_de_cartas",
+    "puzzles_y_losetas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "Take Time: destacada boardgame (2025) obra de Alexi Piovesan, Julien Prothière.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

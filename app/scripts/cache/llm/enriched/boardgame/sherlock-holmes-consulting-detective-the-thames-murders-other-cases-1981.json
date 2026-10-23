@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:sherlock-holmes-consulting-detective-the-thames-murders-other-cases-1981",
+  "experience": {
+    "plot": "Have you ever had the desire to walk the streets of Victorian London with Sherlock Holmes in search of Professor Moriarty? To search the docks for the giant rat of Sumatra? To walk up Baker Street as the fog is rolling in and hear Holmes cry out, \"Come, Watson",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Gary Grady, Raymond Edwards, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Deducción / Murder / Mystery.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1981, una referencia indispensable obra de Gary Grady, Raymond Edwards dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Sherlock Holmes Consulting Detective: The Thames Murders & Other Cases (1981): notable e ",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

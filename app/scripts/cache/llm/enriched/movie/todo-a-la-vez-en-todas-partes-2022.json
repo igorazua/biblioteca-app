@@ -1,0 +1,42 @@
+{
+  "id": "movie:todo-a-la-vez-en-todas-partes-2022",
+  "experience": {
+    "plot": "Everything Everywhere All at Once es una película estadounidense de comedia dramática absurda, acción y ciencia ficción de 2022 escrita y dirigida por Daniel Kwan y Daniel Scheinert. Está protagonizada por Michelle Yeoh, Ke Huy Quan, Stephanie Hsu, Jenny Slate",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Daniel Kwan y Daniel Scheinert, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Matrix",
+      "Parque Jurásico",
+      "Regreso al futuro",
+      "Toy Story"
+    ],
+    "context": "Estrenada en 2022, una obra destacada de Daniel Kwan y Daniel Scheinert en el panorama de Ciencia ficción y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "amistad",
+    "espacio"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "Todo a la vez en todas partes: notable propuesta de Ciencia ficción y Comedia (2022).",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

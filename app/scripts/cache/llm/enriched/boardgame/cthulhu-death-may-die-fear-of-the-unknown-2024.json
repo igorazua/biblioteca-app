@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:cthulhu-death-may-die-fear-of-the-unknown-2024",
+  "experience": {
+    "plot": "Cthulhu: Death May Die is back with a new standalone box and upgraded rules! Designed by Rob Daviau and Marco Portugal, Fear of the Unknown marks a new Season of the hit board game that brought a new twist to the mythos universe created by H.P. Lovecraft. Face",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Eric M. Lang, Marco Portugal, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Fighting.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Eric M. Lang, Marco Portugal dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "terror_lovecraft",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Cthulhu: Death May Die – Fear of the Unknown (2024): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

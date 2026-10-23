@@ -1,0 +1,42 @@
+{
+  "id": "movie:bir-zamanlar-anadolu-da-2011",
+  "experience": {
+    "plot": "Érase una vez en Anatolia (2011) —en turco: «Bir zamanlar Anadolu'da»— es una película dramática turca, coescrita y dirigida por Nuri Bilge Ceylan basada en la experiencia real de uno de los escritores de la película, que narra la historia de un grupo de hombr",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Nuri Bilge Ceylan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2011, una obra destacada de Nuri Bilge Ceylan en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Bir Zamanlar Anadolu'da: Crimen y Drama con dirección de Nuri Bilge Ceylan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

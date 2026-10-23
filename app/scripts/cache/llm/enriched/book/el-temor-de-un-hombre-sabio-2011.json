@@ -1,0 +1,39 @@
+{
+  "id": "book:el-temor-de-un-hombre-sabio-2011",
+  "experience": {
+    "plot": "Kvothe continúa su relato adentrándose en intrigas cortesanas, tierras salvajes y el reino feérico.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Patrick Rothfuss, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Aventura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de Patrick Rothfuss dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 5,
+    "escala": 4,
+    "ideas": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "aventura",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "El temor de un hombre sabio: destacada book (2011) obra de Patrick Rothfuss.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

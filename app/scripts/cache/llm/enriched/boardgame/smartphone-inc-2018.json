@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:smartphone-inc-2018",
+  "experience": {
+    "plot": "In Smartphone Inc., you become a CEO of one of the largest smartphone-producing companies in the time when smartphones were only beginning to conquer the world. Research technologies, develop your factory, build your worldwide office network, and outprice your",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ivan Lashin, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Industry / Manufacturing.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Ivan Lashin dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Smartphone Inc.: destacada boardgame (2018) obra de Ivan Lashin.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:gongdong-gyeongbi-guyeok-jsa-2000",
+  "experience": {
+    "plot": "Área común de seguridad es una película surcoreana del año 2000, conocida también como Área de seguridad compartida o JSA: Zona de riesgo. El film fue dirigido por Chan-wook Park y protagonizado por Lee Young-ae, Byung-hun Lee, Song Kang-ho, Kim Tae-woo y Shin",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Chan-wook Park, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2000, una obra destacada de Chan-wook Park en el panorama de Acción y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "crimen",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Gongdong gyeongbi guyeok JSA: Acción y Drama con dirección de Chan-wook Park.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

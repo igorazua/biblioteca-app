@@ -1,0 +1,36 @@
+{
+  "id": "artist:soundgarden-1984",
+  "experience": {
+    "plot": "Soundgarden (Seattle, EE. UU.), icono de Grunge, Heavy metal desde 1984.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Seattle, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Grunge / Heavy metal.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1984, una referencia indispensable obra de Seattle, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 2,
+    "bailable": 2,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 3
+  },
+  "themes": [
+    "rock_clasico",
+    "metal",
+    "punk"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Soundgarden: destacada artist (1984) obra de Seattle, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

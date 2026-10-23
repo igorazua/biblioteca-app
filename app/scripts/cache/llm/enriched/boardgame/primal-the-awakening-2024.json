@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:primal-the-awakening-2024",
+  "experience": {
+    "plot": "Primal: the Awakening is a fully cooperative monster hunting miniature boardgame for 1-4 players set in a fantasy world where humans struggle to survive an untamed wilderness. The game is played in a series of multiple sessions throughout an epic campaign wher",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Alberto Parisi, Tommaso Mondadori, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Fighting.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Alberto Parisi, Tommaso Mondadori dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 5,
+    "azar": 2,
+    "confrontacion": 5,
+    "cooperacion": 5,
+    "tema": 5,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "dados_y_push_your_luck",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "Primal: The Awakening (2024): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

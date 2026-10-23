@@ -1,0 +1,43 @@
+{
+  "id": "movie:singin-in-the-rain-1952",
+  "experience": {
+    "plot": "Cantando bajo la lluvia es una película musical de 1952 dirigida por Gene Kelly y Stanley Donen. Está protagonizada por Gene Kelly, Donald O'Connor y Debbie Reynolds. Hecha siguiendo los esquemas clásicos de la MGM, tiene su inspiración en todas las melodías d",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Stanley Donen, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Forrest Gump",
+      "Titanic",
+      "Regreso al futuro",
+      "Toy Story"
+    ],
+    "context": "Estrenada en 1952, una obra destacada de Stanley Donen en el panorama de Comedia y Musical."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "musica",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pareja"
+  ],
+  "oneLiner": "Cantando bajo la lluvia: Comedia y Musical con dirección de Stanley Donen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

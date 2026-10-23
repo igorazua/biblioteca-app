@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:moonrakers-2020",
+  "experience": {
+    "plot": "Moonrakers is a game of shipbuilding, temporary alliances, and shrewd negotiation set in a space-faring future. The players form a loose band of mercenaries, but while they are united in name, actual alliances are shaky as players are pitted against each other",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Austin Harrison, Max Anderson, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Ciencia ficción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Austin Harrison, Max Anderson dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Moonrakers: destacada boardgame (2020) obra de Austin Harrison, Max Anderson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

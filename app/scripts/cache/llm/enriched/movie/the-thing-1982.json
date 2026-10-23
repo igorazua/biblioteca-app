@@ -1,0 +1,44 @@
+{
+  "id": "movie:the-thing-1982",
+  "experience": {
+    "plot": "The Thing es una película de terror y ciencia ficción estadounidense de 1982 dirigida por John Carpenter y escrita por Bill Lancaster. Basado en la novela de 1938 de John W. Campbell Jr. Who Goes There?, cuenta la historia de un grupo de investigadores estadou",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de John Carpenter, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Matrix",
+      "Parque Jurásico",
+      "Regreso al futuro",
+      "Sospechosos habituales"
+    ],
+    "context": "Estrenada en 1982, una obra destacada de John Carpenter en el panorama de Terror y Misterio."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "investigacion",
+    "ia_y_robots",
+    "espionaje",
+    "monstruos",
+    "espacio",
+    "sobrenatural"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde"
+  ],
+  "oneLiner": "La cosa: Terror y Misterio con dirección de John Carpenter.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

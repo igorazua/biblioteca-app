@@ -1,0 +1,42 @@
+{
+  "id": "movie:waking-life-2001",
+  "experience": {
+    "plot": "Despertando a la vida es una película estadounidense de animación de 2001 dirigida por Richard Linklater. Fue filmada mediante la técnica de rotoscopia y completamente en vídeo digital, para luego ser editada por un grupo de artistas mediante el uso de ordenad",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Richard Linklater, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2001, una obra destacada de Richard Linklater en el panorama de Animación y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 5,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Waking Life: Animación y Drama con dirección de Richard Linklater.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

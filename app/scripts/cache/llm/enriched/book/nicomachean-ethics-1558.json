@@ -1,0 +1,39 @@
+{
+  "id": "book:nicomachean-ethics-1558",
+  "experience": {
+    "plot": "Ética nicomáquea o Ética a Nicómaco es el nombre dado a la obra más conocida de Aristóteles sobre ética, escrita en el siglo IV a. C. Se trata de uno de los primeros tratados conservados sobre ética y moral de la filosofía occidental. Este escrito juega un rol",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Aristotle, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ensayo / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1558, una referencia indispensable obra de Aristotle dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 2,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "identidad",
+    "filosofia",
+    "sociedad"
+  ],
+  "moments": [
+    "concentracion"
+  ],
+  "oneLiner": "Nicomachean Ethics: destacada book (1558) obra de Aristotle.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

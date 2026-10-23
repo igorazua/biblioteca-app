@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:forbidden-stars-2015",
+  "experience": {
+    "plot": "The shifting Warp Storms that surround the long lost Herakon Cluster have finally abated, leaving the ancient treasures and planets within this sector open to the rest of the galaxy. Now, the great factions of the galaxy mobilize their fleets and race to estab",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Corey Konieczka, James Kniffen, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Faroleo / Fighting.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Corey Konieczka, James Kniffen dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 4,
+    "azar": 1,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 4,
+    "familiar": 2
+  },
+  "themes": [
+    "ciencia_ficcion_espacial",
+    "naturaleza_y_animales",
+    "faroleo_y_enganos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Forbidden Stars: destacada boardgame (2015) obra de Corey Konieczka, James Kniffen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

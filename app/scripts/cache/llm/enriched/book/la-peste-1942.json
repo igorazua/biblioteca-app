@@ -1,0 +1,39 @@
+{
+  "id": "book:la-peste-1942",
+  "experience": {
+    "plot": "La peste es una novela del escritor argelino-francés Albert Camus (1913-1960). Publicada en el 10 de junio de 1947, cuenta la historia de unos doctores que descubren el sentido de la solidaridad en su labor humanitaria en la ciudad argelina de Orán, mientras e",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Albert Camus, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1942, una referencia indispensable obra de Albert Camus dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "historia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "La Peste: destacada book (1942) obra de Albert Camus.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

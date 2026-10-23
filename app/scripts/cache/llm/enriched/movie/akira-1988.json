@@ -1,0 +1,42 @@
+{
+  "id": "movie:akira-1988",
+  "experience": {
+    "plot": "Akira  es un largometraje de anime ciberpunk posapocalíptico dirigido por Katsuhiro Ōtomo estrenado el 16 de julio de 1988 en Japón. Es una adaptación a la gran pantalla del manga homónimo creado por el mismo Otomo y coescrita con ayuda de Izo Hashimoto. El di",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Katsuhiro Otomo, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "Parque Jurásico",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 1988, una obra destacada de Katsuhiro Otomo en el panorama de Animación y Ciencia ficción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 5,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "espacio"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Akira: Animación y Ciencia ficción con dirección de Katsuhiro Otomo.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

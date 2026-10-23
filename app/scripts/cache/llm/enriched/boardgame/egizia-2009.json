@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:egizia-2009",
+  "experience": {
+    "plot": "The players are builders in Ancient Egypt, competing to get the most fame building different monuments requested by the Pharaoh (the Sphinx, the Obelisk, the Temple, and the Pyramid). The game lasts 5 turns. In each turn, the players place their pawns on the b",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Acchittocca, Antonio Tinto, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad / Farming.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de Acchittocca, Antonio Tinto dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Egizia: destacada boardgame (2009) obra de Acchittocca, Antonio Tinto.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

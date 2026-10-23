@@ -1,0 +1,41 @@
+{
+  "id": "movie:no-es-pais-para-viejos-2007",
+  "experience": {
+    "plot": "No Country for Old Men es una película estadounidense del año 2007, escrita, dirigida, producida y montada por los hermanos Coen, basada en la novela No es país para viejos de Cormac McCarthy. La película es protagonizada por Tommy Lee Jones, Javier Bardem y J",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Joel y Ethan Coen, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "El club de la lucha",
+      "El silencio de los corderos"
+    ],
+    "context": "Estrenada en 2007, una obra destacada de Joel y Ethan Coen en el panorama de Thriller y Crimen."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 1
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "ia_y_robots",
+    "espionaje"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "No es país para viejos: Thriller y Crimen con dirección de Joel y Ethan Coen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

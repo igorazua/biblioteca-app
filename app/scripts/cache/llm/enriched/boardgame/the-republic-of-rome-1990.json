@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:the-republic-of-rome-1990",
+  "experience": {
+    "plot": "The Republic of Rome is an abstraction of over 250 years of history. It simulates the politics of the Roman Senate during the republic. The players take the part of various factions vying for the control of the senate. They control the various powerful familie",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Don Greenwood, Richard Berthold, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad / Negotiation.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1990, una referencia indispensable obra de Don Greenwood, Richard Berthold dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 2,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "The Republic of Rome: destacada boardgame (1990) obra de Don Greenwood, Richard Berthold.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

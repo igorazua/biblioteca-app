@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:the-witcher-old-world-2023",
+  "experience": {
+    "plot": "In The Witcher: Old World, you become a witcher — a professional monster slayer — and immerse yourself in the legendary universe of The Witcher franchise. Set years before the saga of Geralt of Rivia, The Witcher: Old World explores a time when monsters roamed",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Łukasz Woźniak, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Łukasz Woźniak dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 5,
+    "azar": 3,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "The Witcher: Old World: destacada boardgame (2023) obra de Łukasz Woźniak.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

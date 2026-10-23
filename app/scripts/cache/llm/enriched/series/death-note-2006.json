@@ -1,0 +1,42 @@
+{
+  "id": "series:death-note-2006",
+  "experience": {
+    "plot": "Death Note  is a Japanese television drama series based on the manga series of the same name by Tsugumi Ohba and Takeshi Obata. The show stars Masataka Kubota as Light Yagami, Kento Yamazaki as L, and Mio Yūki as Near / Mello and focuses on the story of an int",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Tetsuro Araki, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animación / Misterio.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de Tetsuro Araki dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 3,
+    "violencia": 5,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "animacion",
+    "amistad"
+  ],
+  "moments": [
+    "pasar_miedo"
+  ],
+  "oneLiner": "Death Note: destacada series (2006) obra de Tetsuro Araki.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

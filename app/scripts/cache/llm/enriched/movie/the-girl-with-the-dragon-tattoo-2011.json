@@ -1,0 +1,45 @@
+{
+  "id": "movie:the-girl-with-the-dragon-tattoo-2011",
+  "experience": {
+    "plot": "The Girl with the Dragon Tattoo es una película de 2011 basada en la novela sueca Los hombres que no amaban a las mujeres, la primera de la saga Millennium. Está dirigida por David Fincher y protagonizada por Daniel Craig y Rooney Mara. Ganadora de un Oscar a ",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de David Fincher, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2011, una obra destacada de David Fincher en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "realismo_magico",
+    "duelo",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Millennium: Los hombres que no amaban a las mujeres (2011): memorable obra de Crimen y Dr",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

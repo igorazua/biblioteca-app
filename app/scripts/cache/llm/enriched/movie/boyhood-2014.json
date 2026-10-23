@@ -1,0 +1,41 @@
+{
+  "id": "movie:boyhood-2014",
+  "experience": {
+    "plot": "Boyhood (titulada Boyhood (Momentos de una vida) en España y Boyhood: momentos de una vida en Hispanoamérica) es una película estadounidense dirigida por Richard Linklater y protagonizada por Patricia Arquette, Ellar Coltrane, Lorelei Linklater y Ethan Hawke. ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Richard Linklater, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2014, una obra destacada de Richard Linklater en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Boyhood: Drama con dirección de Richard Linklater.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

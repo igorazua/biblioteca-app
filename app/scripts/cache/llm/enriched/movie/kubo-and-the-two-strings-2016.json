@@ -1,0 +1,42 @@
+{
+  "id": "movie:kubo-and-the-two-strings-2016",
+  "experience": {
+    "plot": "Kubo and the Two Strings es una película estadounidense de animación en stop motion en 3D de 2016, producida por Laika y distribuida por Focus Features en Estados Unidos y por Universal Pictures en el resto del mundo. Fue dirigida por Travis Knight, y escrita ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Travis Knight, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2016, una obra destacada de Travis Knight en el panorama de Animación y Acción."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 3,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "supervivencia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Kubo y las dos cuerdas mágicas: Animación y Acción con dirección de Travis Knight.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

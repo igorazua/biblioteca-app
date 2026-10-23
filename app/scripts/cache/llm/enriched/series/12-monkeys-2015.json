@@ -1,0 +1,43 @@
+{
+  "id": "series:12-monkeys-2015",
+  "experience": {
+    "plot": "12 Monos es una serie de televisión estadounidense de Syfy, de ciencia ficción y drama, creada por Terry Matalas y Travis Fickett y basada en la película de 1995 del mismo título Doce monos, dirigido por Terry Gilliam, quien se basó en el cortometraje de 1962 ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Syfy, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Syfy dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 5,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 3,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "12 Monkeys: destacada series (2015) obra de Syfy.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

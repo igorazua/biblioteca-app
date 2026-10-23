@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:honey-buzz-2020",
+  "experience": {
+    "plot": "The bees have discovered economics. The queens believe that if they sell honey to the bears, badgers, and woodland creatures, they will find peace and prosperity. Spring has arrived and it's time to build the hive, find nectar, make honey, and, for the first t",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Paul Salomon, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de Paul Salomon dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Honey Buzz: destacada boardgame (2020) obra de Paul Salomon.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

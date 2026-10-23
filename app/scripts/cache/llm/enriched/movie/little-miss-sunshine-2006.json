@@ -1,0 +1,43 @@
+{
+  "id": "movie:little-miss-sunshine-2006",
+  "experience": {
+    "plot": "Pequeña Miss Sunshine es una comedia dramática estadounidense de 2006 con formato de road movie que se sitúa alrededor de un viaje a bordo de un Volkswagen Combi para asistir a un concurso de belleza de niñas, con el fin de mostrar los problemas de convivencia",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Jonathan Dayton, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2006, una obra destacada de Jonathan Dayton en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "espionaje",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Little Miss Sunshine: Comedia y Drama con dirección de Jonathan Dayton.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

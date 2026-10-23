@@ -1,0 +1,41 @@
+{
+  "id": "movie:die-hard-1988",
+  "experience": {
+    "plot": "Die Hard es una película de acción estadounidense de 1988 dirigida por John McTiernan y escrita por Steve de Souza y Jeb Stuart. Está basada en la novela Nothing Lasts Forever (1979) de Roderick Thorp.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de John McTiernan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Pulp Fiction",
+      "Matrix",
+      "El club de la lucha",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1988, una obra destacada de John McTiernan en el panorama de Acción y Thriller."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "La jungla de cristal: Acción y Thriller con dirección de John McTiernan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

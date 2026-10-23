@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:smart10-2017",
+  "experience": {
+    "plot": "Smart10 is a quiz game where a player doesn't need to wait for one's turn for long. There are ten possible answers to each question, and every player gets to answer every question. If the answer is correct, the player gets an answer marker. But should you answ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Arno Steinwender, Christoph Reiser, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Party Game / Trivia.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Arno Steinwender, Christoph Reiser dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 5,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 5,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Smart10: destacada boardgame (2017) obra de Arno Steinwender, Christoph Reiser.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

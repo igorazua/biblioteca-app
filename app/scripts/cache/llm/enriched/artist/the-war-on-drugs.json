@@ -1,0 +1,36 @@
+{
+  "id": "artist:the-war-on-drugs",
+  "experience": {
+    "plot": "The War on Drugs es una banda estadounidense de indie rock de la ciudad de Filadelfia, Pensilvania, fundada en 2005. La banda está formada por Adam Granduciel, David Hartley (bajo), Robbie Bennett (teclados), Charlie Hall (batería), Jon Natchez y Anthony LaMar",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 3,
+    "fondo": 3,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "indie_rock",
+    "pop"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "The War on Drugs: destacada artist (2005) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

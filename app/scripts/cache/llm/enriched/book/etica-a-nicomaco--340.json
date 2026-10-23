@@ -1,0 +1,40 @@
+{
+  "id": "book:etica-a-nicomaco--340",
+  "experience": {
+    "plot": "Tratado moral sobre la felicidad (eudaimonía), la virtud y la búsqueda del justo medio entre extremos.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Aristóteles, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Filosofía / Clásico.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en -340, una referencia indispensable obra de Aristóteles dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 2,
+    "ideas": 5,
+    "reconfort": 3
+  },
+  "themes": [
+    "filosofia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "concentracion",
+    "para_subrayar"
+  ],
+  "oneLiner": "Ética a Nicómaco: destacada book (-340) obra de Aristóteles.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

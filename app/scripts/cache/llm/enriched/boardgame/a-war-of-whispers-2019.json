@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:a-war-of-whispers-2019",
+  "experience": {
+    "plot": "A War of Whispers is a competitive board game for 2 to 4 players. Five mighty empires are at war for the world, but you are no mighty ruler. Instead, you play a secret society that is betting on the results of this war while pulling strings to rig the results ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jeremy Stoltzfus, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Political.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Jeremy Stoltzfus dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "roles_ocultos",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "A War of Whispers: destacada boardgame (2019) obra de Jeremy Stoltzfus.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

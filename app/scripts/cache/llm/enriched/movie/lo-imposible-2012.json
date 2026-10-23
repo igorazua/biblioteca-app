@@ -1,0 +1,41 @@
+{
+  "id": "movie:lo-imposible-2012",
+  "experience": {
+    "plot": "Lo imposible es una película española de habla inglesa de catástrofes y drama de 2012, dirigida por J.A. Bayona y escrita por Sergio G. Sánchez, basada en la historia real de la trágica experiencia de la doctora española María Belón y su familia en el tsunami ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Juan Antonio Bayona, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2012, una obra destacada de Juan Antonio Bayona en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "espionaje"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Lo imposible: Drama con dirección de Juan Antonio Bayona.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

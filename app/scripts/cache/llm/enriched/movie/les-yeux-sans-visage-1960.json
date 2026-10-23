@@ -1,0 +1,42 @@
+{
+  "id": "movie:les-yeux-sans-visage-1960",
+  "experience": {
+    "plot": "Les yeux sans visage es una película de terror francesa de 1960 dirigida por Georges Franju, adaptación de la novela homónima de Jean Redon y protagonizada por Pierre Brasseur y Alida Valli. La trama gira en torno a un cirujano plástico que está decidido a rea",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Georges Franju, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1960, una obra destacada de Georges Franju en el panorama de Drama y Terror."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 1
+  },
+  "themes": [
+    "familia",
+    "sobrenatural",
+    "amistad"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Les yeux sans visage: Drama y Terror con dirección de Georges Franju.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

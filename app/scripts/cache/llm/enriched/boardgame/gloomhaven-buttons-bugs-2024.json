@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:gloomhaven-buttons-bugs-2024",
+  "experience": {
+    "plot": "Gloomhaven: Buttons & Bugs is a solo play game, with an original campaign story written by Isaac Childres, that features a playstyle similar to Gloomhaven in a fraction of the size. Gloomhaven: Buttons & Bugs is set after the events of Gloomhaven and Forgotten",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Joe Klipfel, Nikki Valens, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Joe Klipfel, Nikki Valens dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 5,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Gloomhaven: Buttons & Bugs: destacada boardgame (2024) obra de Joe Klipfel, Nikki Valens.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

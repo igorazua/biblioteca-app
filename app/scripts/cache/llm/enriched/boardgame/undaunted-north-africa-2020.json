@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:undaunted-north-africa-2020",
+  "experience": {
+    "plot": "The Undaunted series continues with this two-player deck-building game of tactical combat, pitting the raiders of Britain's Long Range Desert Group against Italian forces in the North African Theater of World War II. The North African campaign has begun. Take ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de David Thompson (I), Trevor Benjamin, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Juego de guerra / World War II.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2020, una referencia indispensable obra de David Thompson (I), Trevor Benjamin dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 4
+  },
+  "themes": [
+    "guerra_historica",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Undaunted: North Africa (2020): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

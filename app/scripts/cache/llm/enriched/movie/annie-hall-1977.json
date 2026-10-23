@@ -1,0 +1,43 @@
+{
+  "id": "movie:annie-hall-1977",
+  "experience": {
+    "plot": "Annie Hall es una película estadounidense de 1977 dirigida por Woody Allen, siendo una de sus películas más célebres. Se hizo acreedora al Óscar a la mejor película, al mejor director, al mejor guion original y a la mejor actriz principal, en 1978. Forma parte",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Woody Allen, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Forrest Gump",
+      "Titanic",
+      "Regreso al futuro",
+      "Toy Story"
+    ],
+    "context": "Estrenada en 1977, una obra destacada de Woody Allen en el panorama de Comedia y Romance."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pareja"
+  ],
+  "oneLiner": "Annie Hall: Comedia y Romance con dirección de Woody Allen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

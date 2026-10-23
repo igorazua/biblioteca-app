@@ -1,0 +1,41 @@
+{
+  "id": "movie:her-2013",
+  "experience": {
+    "plot": "Her es una película dramática romántica estadounidense de ciencia ficción de 2013 escrita, dirigida y producida por Spike Jonze. Marcó el debut de guionista en solitario de Jonze. La película sigue a Theodore Twombly, un hombre que desarrolla una relación con ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Spike Jonze, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Forrest Gump",
+      "Matrix",
+      "Titanic",
+      "Parque Jurásico"
+    ],
+    "context": "Estrenada en 2013, una obra destacada de Spike Jonze en el panorama de Romance y Ciencia ficción."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "espionaje",
+    "espacio"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Her: Romance y Ciencia ficción con dirección de Spike Jonze.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

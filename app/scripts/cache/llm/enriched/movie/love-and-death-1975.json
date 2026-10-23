@@ -1,0 +1,41 @@
+{
+  "id": "movie:love-and-death-1975",
+  "experience": {
+    "plot": "Love and Death es una película estadounidense de 1975 dirigida por Woody Allen.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Woody Allen, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Regreso al futuro",
+      "Salvar al soldado Ryan",
+      "Braveheart",
+      "Toy Story"
+    ],
+    "context": "Estrenada en 1975, una obra destacada de Woody Allen en el panorama de Comedia y Bélica."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "La última noche de Boris Grushenko: Comedia y Bélica con dirección de Woody Allen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

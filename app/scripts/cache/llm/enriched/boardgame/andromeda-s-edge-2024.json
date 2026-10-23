@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:andromeda-s-edge-2024",
+  "experience": {
+    "plot": "Behold Andromeda’s Edge: A dazzling, uncharted region of space on the edge of the Andromeda Galaxy. Littered with the modular debris of the precursor civilization, patrolled by malicious extragalactic raiders, and bordered by dense nebulae, The Edge is a last ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Luke Laurie, Maximus Laurie, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fighting / Ciencia ficción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Luke Laurie, Maximus Laurie dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "gestion_de_recursos",
+    "ciencia_ficcion_espacial",
+    "exploracion_y_mapas",
+    "naturaleza_y_animales"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Andromeda's Edge: destacada boardgame (2024) obra de Luke Laurie, Maximus Laurie.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

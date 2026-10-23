@@ -1,0 +1,41 @@
+{
+  "id": "movie:sound-of-metal-2019",
+  "experience": {
+    "plot": "Sound of Metal es una película estadounidense dramática de 2019 dirigida y coescrita por Darius Marder y protagonizada por Riz Ahmed, Olivia Cooke, Paul Raci, Lauren Ridloff y Mathieu Amalric. Relata la historia de un baterista de metal que empieza a perder su",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Darius Marder, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2019, una obra destacada de Darius Marder en el panorama de Drama y Música."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Sound of Metal: Drama y Música con dirección de Darius Marder.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

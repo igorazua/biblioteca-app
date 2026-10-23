@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:blackout-hong-kong-2018",
+  "experience": {
+    "plot": "Hong Kong has been struck by a large scale unexpected blackout. As the government struggles to maintain control, you decide to take matters into your own hands and try to bring back some kind of societal order! Daily life as you were used to has quickly dissol",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Alexander Pfister, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Alexander Pfister dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Blackout: Hong Kong: destacada boardgame (2018) obra de Alexander Pfister.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

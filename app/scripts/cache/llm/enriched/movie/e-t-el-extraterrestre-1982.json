@@ -1,0 +1,44 @@
+{
+  "id": "movie:e-t-el-extraterrestre-1982",
+  "experience": {
+    "plot": "E. T., el extraterrestre es una película estadounidense de ciencia ficción de 1982 dirigida por Steven Spielberg, escrita por Melissa Mathison, protagonizada por Henry Thomas y distribuida por Universal Pictures. La cinta está basada en un amigo imaginario del",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Steven Spielberg, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico"
+    ],
+    "context": "Estrenada en 1982, una obra destacada de Steven Spielberg en el panorama de Ciencia ficción y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 5
+  },
+  "themes": [
+    "desamor",
+    "familia",
+    "amistad",
+    "ia_y_robots",
+    "realismo_magico",
+    "espionaje"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "E.T., el extraterrestre: Ciencia ficción y Aventura con dirección de Steven Spielberg.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

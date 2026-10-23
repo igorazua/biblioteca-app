@@ -1,0 +1,44 @@
+{
+  "id": "movie:lock-stock-and-two-smoking-barrels-1998",
+  "experience": {
+    "plot": "Lock, Stock and Two Smoking Barrels ; es una película de thriller, o también catalogada como comedia negra, británica, del año 1998. Está escrita y dirigida por Guy Ritchie.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Guy Ritchie, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Matrix",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1998, una obra destacada de Guy Ritchie en el panorama de Acción y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "crimen",
+    "mafia",
+    "ia_y_robots",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "amigos"
+  ],
+  "oneLiner": "Lock & Stock: Acción y Comedia con dirección de Guy Ritchie.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

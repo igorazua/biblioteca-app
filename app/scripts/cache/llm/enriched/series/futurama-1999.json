@@ -1,0 +1,43 @@
+{
+  "id": "series:futurama-1999",
+  "experience": {
+    "plot": "Futurama es una serie de televisión estadounidense de animación para adultos creada por Matt Groening, creador de la popular serie humorística Los Simpson. Ha sido producida por Matt Groening y David X. Cohen para la cadena Fox, Comedy Central y Hulu. La serie",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Hulu, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1999, una referencia indispensable obra de Hulu dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 5,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 5,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "animacion",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Futurama: destacada series (1999) obra de Hulu.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

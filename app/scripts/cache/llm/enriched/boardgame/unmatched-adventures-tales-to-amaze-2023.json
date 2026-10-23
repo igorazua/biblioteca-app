@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:unmatched-adventures-tales-to-amaze-2023",
+  "experience": {
+    "plot": "Unmatched Adventures: Tales to Amaze, which is themed around the pulp adventures, tall tales, and local legends of the mid-20th century, gives you a whole new way to play Unmatched. In the game, players work together to defeat one of two villains: Mothman or t",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Darren Reckner, Jason Hager, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Darren Reckner, Jason Hager dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 5,
+    "azar": 4,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "draft_de_cartas",
+    "gestion_de_recursos",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Unmatched Adventures: Tales to Amaze (2023): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

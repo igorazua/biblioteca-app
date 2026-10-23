@@ -1,0 +1,44 @@
+{
+  "id": "movie:veer-zaara-2004",
+  "experience": {
+    "plot": "Veer-Zaara es una película india, dirigida por Yash Chopra, protagonizada por Shahrukh Khan, Preity Zinta, y Rani Mukerji; la historia es sobre Veer, un piloto de la aviación india, quien conoce a Zaara, una joven pakistaní que viaja hacia un pequeño pueblo pa",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Yash Chopra, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Yash Chopra en el panorama de Drama y Familiar."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "ia_y_robots",
+    "espionaje",
+    "musica"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "familia"
+  ],
+  "oneLiner": "Veer-Zaara: Drama y Familiar con dirección de Yash Chopra.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

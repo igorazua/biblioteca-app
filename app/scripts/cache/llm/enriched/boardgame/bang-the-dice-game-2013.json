@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:bang-the-dice-game-2013",
+  "experience": {
+    "plot": "In the U.S. wild west, the eternal battle between the law and the outlaws keeps heating up. Suddenly, a rain of arrows darken the sky: It's an Indian attack! Are you bold enough to keep up with the Indians? Do you have the courage to challenge your fate? Can y",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Lukas Zach, Michael Palm, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de American West / Faroleo.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de Lukas Zach, Michael Palm dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "faroleo_y_enganos",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "BANG! The Dice Game: destacada boardgame (2013) obra de Lukas Zach, Michael Palm.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

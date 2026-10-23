@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:raccoon-tycoon-2018",
+  "experience": {
+    "plot": "Astoria is a land bustling with productivity and growth! New towns, factories, and railroads are springing up across the land. A few savvy business tycoons (you and your opponents) are determined to make your fortunes on the crest of this wave. These tycoons s",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Glenn Drover, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Glenn Drover dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "naturaleza_y_animales",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Raccoon Tycoon: destacada boardgame (2018) obra de Glenn Drover.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "movie:district-9-2009",
+  "experience": {
+    "plot": "District 9 es una película sudafricana de ciencia ficción dirigida por Neill Blomkamp, escrita por Blomkamp y Terri Tatchell, y producida por Peter Jackson.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Neill Blomkamp, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Pulp Fiction",
+      "Matrix",
+      "El club de la lucha",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2009, una obra destacada de Neill Blomkamp en el panorama de Acción y Ciencia ficción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "crimen",
+    "espacio",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "District 9: Acción y Ciencia ficción con dirección de Neill Blomkamp.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

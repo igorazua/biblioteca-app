@@ -1,0 +1,41 @@
+{
+  "id": "movie:captain-phillips-2013",
+  "experience": {
+    "plot": "Captain Phillips es una película biográfica dirigida por Paul Greengrass y protagonizada por Tom Hanks. Está basada en el secuestro del Mærsk Alabama y en el libro A Captain's Duty, escrito por Stephan Talty y por el capitán Richard Phillips, quien en 2009 fue",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Paul Greengrass, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo"
+    ],
+    "context": "Estrenada en 2013, una obra destacada de Paul Greengrass en el panorama de Aventura y Biografía."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Capitán Phillips: Aventura y Biografía con dirección de Paul Greengrass.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

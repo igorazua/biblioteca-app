@@ -1,0 +1,43 @@
+{
+  "id": "series:invincible-2021",
+  "experience": {
+    "plot": "Invencible es una serie de televisión estadounidense de animación para adultos creada por Robert Kirkman para Amazon Prime Video, basada en la serie de cómics de Image Comics, del mismo nombre, que cocreó con Cory Walker y Ryan Ottley. Es producida por Skyboun",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Robert Kirkman, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animación / Acción.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Robert Kirkman dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "familia",
+    "politica_y_poder",
+    "adolescencia",
+    "animacion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Invencible: destacada series (2021) obra de Robert Kirkman.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

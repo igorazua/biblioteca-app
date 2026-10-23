@@ -1,0 +1,42 @@
+{
+  "id": "series:kill-la-kill-2013",
+  "experience": {
+    "plot": "After 6 years since their collaboration on the ground breaking anime series, ‘Tengen Toppa Gurren Lagann,' Hiroyuki Imaishi and Kazuki Nakashima are back to shock the world! Ryuko Matoi is a vagrant school girl traveling from place to place searching for clues",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de MBS, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de MBS dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 2,
+    "formato": 3
+  },
+  "themes": [
+    "animacion",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Kill la Kill: destacada series (2013) obra de MBS.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "series:terminator-the-sarah-connor-chronicles-2008",
+  "experience": {
+    "plot": "Terminator: The Sarah Connor Chronicles es una serie de televisión estadounidense de ciencia ficción de la cadena Fox, estrenada en 2008. La serie fue producida por Warner Bros. Television y C2 Pictures. Es una serie derivada de la franquicia Terminator. Gira ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de FOX, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Acción.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de FOX dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "abogados_y_juicios",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Terminator: Las crónicas de Sarah Connor: destacada series (2008) obra de FOX.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

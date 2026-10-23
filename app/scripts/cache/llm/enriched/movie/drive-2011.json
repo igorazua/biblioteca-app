@@ -1,0 +1,43 @@
+{
+  "id": "movie:drive-2011",
+  "experience": {
+    "plot": "Drive es una película dramática y de suspense neo-noir estrenada el 16 de septiembre de 2011 en Estados Unidos, protagonizada por Ryan Gosling y Carey Mulligan, dirigida por Nicolas Winding Refn y basada en el libro de título homónimo escrito por James Sallis ",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Nicolas Winding Refn, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Matrix",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2011, una obra destacada de Nicolas Winding Refn en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "amistad",
+    "ia_y_robots",
+    "espionaje",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Drive: Acción y Crimen con dirección de Nicolas Winding Refn.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

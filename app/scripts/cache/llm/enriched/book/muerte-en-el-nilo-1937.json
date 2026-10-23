@@ -1,0 +1,39 @@
+{
+  "id": "book:muerte-en-el-nilo-1937",
+  "experience": {
+    "plot": "Un idílico crucero por el río Nilo se convierte en escenario de celos y crimen para una rica heredera.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Agatha Christie, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Misterio / Clásico.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1937, una referencia indispensable obra de Agatha Christie dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 4,
+    "densidad": 5,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "duelo",
+    "misterio",
+    "sociedad"
+  ],
+  "moments": [
+    "para_subrayar"
+  ],
+  "oneLiner": "Muerte en el Nilo: destacada book (1937) obra de Agatha Christie.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "artist:james-brown-1956",
+  "experience": {
+    "plot": "James Brown (Carolina del Sur, EE. UU.), icono de Funk, Soul, R&B desde 1956.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Carolina del Sur, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Funk / Soul.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1956, una referencia indispensable obra de Carolina del Sur, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 3,
+    "bailable": 5,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 3
+  },
+  "themes": [
+    "rock_clasico",
+    "indie_rock",
+    "blues",
+    "soul"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "James Brown: destacada artist (1956) obra de Carolina del Sur, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

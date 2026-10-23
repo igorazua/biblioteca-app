@@ -1,0 +1,44 @@
+{
+  "id": "movie:spider-man-un-nuevo-universo-2018",
+  "experience": {
+    "plot": "Spider-Man: Un nuevo universo es una película estadounidense de superhéroes animada por computadora de 2018, dirigida por Bob Persichetti, Peter Ramsey y Rodney Rothman y escrita por Phil Lord y Rothman. Siendo la primera película animada de Spider-Man, la cin",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Bob Persichetti, Peter Ramsey y Rodney Rothman, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "Gladiator",
+      "Toy Story"
+    ],
+    "context": "Estrenada en 2018, una obra destacada de Bob Persichetti, Peter Ramsey y Rodney Rothman en el panorama de Animación y Acción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "superheroes",
+    "espionaje",
+    "musica",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Spider-Man: Un nuevo universo: notable propuesta de Animación y Acción (2018).",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

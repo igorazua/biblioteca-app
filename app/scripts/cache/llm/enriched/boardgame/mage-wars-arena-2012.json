@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:mage-wars-arena-2012",
+  "experience": {
+    "plot": "What would it be like for Mages of vastly different schools and philosophies of magic to come together in an arena and fight to the death? How would an Illusionist battle a Druid? Or a Warlock fight a Beastmaster? Or a Priestess fare against a Wizard? Mage War",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Benjamin Pope, Bryan Pope, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Benjamin Pope, Bryan Pope dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Mage Wars Arena: destacada boardgame (2012) obra de Benjamin Pope, Bryan Pope.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "book:the-amber-spyglass-1999",
+  "experience": {
+    "plot": "El catalejo lacado es la última novela de la trilogía de Philip Pullman La materia oscura, fue publicada en el año 2000.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Philip Pullman, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Ciencia ficción / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1999, una referencia indispensable obra de Philip Pullman dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 2,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 5,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "fantasia_epica",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "The Amber Spyglass: destacada book (1999) obra de Philip Pullman.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

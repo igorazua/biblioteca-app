@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:knarr-2023",
+  "experience": {
+    "plot": "In Knarr, you are the leader of a band of Vikings that you send to new destinations. Manage the recruitment of your crew, and choose the best territories to explore. Depending on the destinations reached (for trading or influence) and the Vikings who accompany",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Thomas Dupont, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Thomas Dupont dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Knarr: destacada boardgame (2023) obra de Thomas Dupont.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

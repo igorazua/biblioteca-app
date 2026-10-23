@@ -1,0 +1,42 @@
+{
+  "id": "movie:song-of-the-sea-2014",
+  "experience": {
+    "plot": "La canción del mar es una película animada irlandesa de fantasía estrenada en 2014, producida por Cartoon Saloon y dirigida por Tomm Moore. La película, hecha con el sistema tradicional de animación, empezó su producción antes del lanzamiento de El secreto del",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Tomm Moore, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2014, una obra destacada de Tomm Moore en el panorama de Animación y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 3,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "La canción del mar: Animación y Aventura con dirección de Tomm Moore.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

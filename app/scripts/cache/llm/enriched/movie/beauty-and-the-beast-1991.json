@@ -1,0 +1,42 @@
+{
+  "id": "movie:beauty-and-the-beast-1991",
+  "experience": {
+    "plot": "La bella y la bestia es una película de animación estadounidense. Se trata de la trigésima película en el canon de Walt Disney Animation. El estreno fue en El Capitán Theatre el 13 de noviembre de 1991, producida por Walt Disney Feature Animation y dirigida po",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Gary Trousdale, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Toy Story",
+      "Shrek"
+    ],
+    "context": "Estrenada en 1991, una obra destacada de Gary Trousdale en el panorama de Animación y Familiar."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "La bella y la bestia: Animación y Familiar con dirección de Gary Trousdale.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

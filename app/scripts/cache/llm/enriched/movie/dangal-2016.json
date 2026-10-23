@@ -1,0 +1,44 @@
+{
+  "id": "movie:dangal-2016",
+  "experience": {
+    "plot": "Dangal: El Honor es una película biográfica deportiva dramática dirigida por Nitesh Tiwari. Es protagonizada por Aamir Khan como Mahavir Singh Phogat, quien enseñó lucha libre a sus hijas Geeta Phogat y Babita Kumari. La primera es la primera luchadora femenin",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Nitesh Tiwari, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 2016, una obra destacada de Nitesh Tiwari en el panorama de Acción y Biografía."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "espionaje",
+    "deporte",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Dangal: Acción y Biografía con dirección de Nitesh Tiwari.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

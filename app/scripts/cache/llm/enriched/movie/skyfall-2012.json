@@ -1,0 +1,41 @@
+{
+  "id": "movie:skyfall-2012",
+  "experience": {
+    "plot": "Skyfall es la vigesimotercera película de James Bond producida por Eon Productions. Cuenta con Daniel Craig en su tercera actuación como James Bond y Javier Bardem como Raoul Silva, el villano de la película. Fue dirigida por Sam Mendes y escrita por Neal Purv",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Sam Mendes, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Pulp Fiction",
+      "El rey león",
+      "Matrix",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2012, una obra destacada de Sam Mendes en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 5,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "crimen",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Skyfall: Acción y Aventura con dirección de Sam Mendes.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:hamilton-2020",
+  "experience": {
+    "plot": "Hamilton es una película musical estadounidense de 2020, que consiste en una grabación en vivo del musical de Broadway del 2015, inspirado en la biografía de 2004, Alexander Hamilton, de Ron Chernow. Fue dirigida y producida por Thomas Kail y producida, escrit",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Thomas Kail, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2020, una obra destacada de Thomas Kail en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 1,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "musica"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Hamilton: Biografía y Drama con dirección de Thomas Kail.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

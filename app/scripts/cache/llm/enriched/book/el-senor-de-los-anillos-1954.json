@@ -14,16 +14,16 @@
     "context": "Creada en 1954, una referencia indispensable obra de J. R. R. Tolkien dentro de su disciplina."
   },
   "axes": {
-    "tono": 2,
-    "ritmo": 2,
-    "emocion": 2,
-    "densidad": 4,
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 5,
     "humor": 1,
-    "tension": 1,
-    "fantasia": 5,
-    "escala": 5,
+    "tension": 3,
+    "fantasia": 4,
+    "escala": 4,
     "ideas": 2,
-    "reconfort": 5
+    "reconfort": 4
   },
   "themes": [
     "aventura",

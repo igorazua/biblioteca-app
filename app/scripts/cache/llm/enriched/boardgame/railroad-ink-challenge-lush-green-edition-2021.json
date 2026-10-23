@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:railroad-ink-challenge-lush-green-edition-2021",
+  "experience": {
+    "plot": "Railroad Ink Challenge is a quick-playing roll-and-write game for 1 to 4 players. Grab a board and a dry-erase marker, and get ready to reach networking nirvana! Roll the dice and draw the routes to connect the exits around your board. Expand your network with",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Hjalmar Hach, Lorenzo Silva, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Dados / Trains.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Hjalmar Hach, Lorenzo Silva dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "dados_y_push_your_luck",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Railroad Ink Challenge: Lush Green Edition (2021): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

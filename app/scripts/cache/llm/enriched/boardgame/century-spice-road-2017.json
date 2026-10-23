@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:century-spice-road-2017",
+  "experience": {
+    "plot": "Century: Spice Road is the first in a series of games that explores the history of each century with spice-trading as the theme for the first installment. In Century: Spice Road, players are caravan leaders who travel the famed silk road to deliver spices to t",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Emerson Matsuuchi, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Emerson Matsuuchi dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 4
+  },
+  "themes": [
+    "fantasia_medieval",
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Century: Spice Road: destacada boardgame (2017) obra de Emerson Matsuuchi.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

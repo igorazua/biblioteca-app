@@ -1,0 +1,44 @@
+{
+  "id": "movie:harold-and-maude-1971",
+  "experience": {
+    "plot": "Harold and Maude es una película estadounidense de 1971 dirigida por Hal Ashby y protagonizada por Ruth Gordon y Bud Cort. Es una historia de amor que incorpora elementos de humor negro y drama existencial.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Hal Ashby, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1971, una obra destacada de Hal Ashby en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Harold y Maude: Comedia y Drama con dirección de Hal Ashby.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

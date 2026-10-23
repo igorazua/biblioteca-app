@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:tumblin-dice-2004",
+  "experience": {
+    "plot": "Tumblin' Dice is a dexterity dice game in which players take turns sliding, rolling, or flicking one of their dice down stepped surface. After all players have launched their four dice, they score points, multiplying the value of the die roll by 1×, 2×, 3×, or",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Carey Grayson, Randy Nash, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Action / Dexterity / Dados.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2004, una referencia indispensable obra de Carey Grayson, Randy Nash dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 5,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "dados_y_push_your_luck",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Tumblin' Dice: destacada boardgame (2004) obra de Carey Grayson, Randy Nash.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:taegukgi-hwinalrimyeo-2004",
+  "experience": {
+    "plot": "Taegukgi Hwinallimyeo ; titulada «La Hermandad de la guerra» -en América- y «Lazos de guerra» -en España-, es una película surcoreana, realizada en el año 2005 y dirigida por Kang Je-gyu, protagonizada por Jang Dong-gun y Won Bin.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Je-kyu Kang, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Je-kyu Kang en el panorama de Acción y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Taegukgi hwinalrimyeo: Acción y Drama con dirección de Je-kyu Kang.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

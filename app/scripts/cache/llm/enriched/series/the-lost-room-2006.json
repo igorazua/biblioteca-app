@@ -1,0 +1,43 @@
+{
+  "id": "series:the-lost-room-2006",
+  "experience": {
+    "plot": "Habitación perdida —título original The Lost Room— es una miniserie de televisión estadounidense producida en 2006 que consta de 6 episodios. Protagonizada por Elle Fanning, Peter Krause y Julianna Margulies, mezcla efectos especiales y drama con un argumento ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Syfy, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Science-Fiction.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de Syfy dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "politica_y_poder",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "The Lost Room: destacada series (2006) obra de Syfy.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

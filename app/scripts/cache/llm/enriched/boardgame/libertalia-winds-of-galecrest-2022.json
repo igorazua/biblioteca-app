@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:libertalia-winds-of-galecrest-2022",
+  "experience": {
+    "plot": "In the world of Galecrest, sky pirates set sail on the winds in search of adventure, treasure, and glory. As an admiral, you command a vast and varied crew...but so do your rivals sailing other ships in the pirate fleet. Each day the fleet lands on a different",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Paolo Mori, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Pirates.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Paolo Mori dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Libertalia: Winds of Galecrest: destacada boardgame (2022) obra de Paolo Mori.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

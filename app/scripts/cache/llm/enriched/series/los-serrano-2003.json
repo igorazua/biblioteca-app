@@ -1,0 +1,42 @@
+{
+  "id": "series:los-serrano-2003",
+  "experience": {
+    "plot": "Los Serrano es una serie de televisión de comedia dramática producida por Globomedia emitida originalmente en la cadena española Telecinco con 8 temporadas y un total de 147 episodios. La serie transcurre en el ficticio barrio de Santa Justa localizado en la R",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Daniel Écija, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Serie española.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2003, una referencia indispensable obra de Daniel Écija dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "familia",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Los Serrano: destacada series (2003) obra de Daniel Écija.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

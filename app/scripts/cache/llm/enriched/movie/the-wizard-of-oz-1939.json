@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-wizard-of-oz-1939",
+  "experience": {
+    "plot": "El mago de Oz es una película musical, fantástica estadounidense, de 1939, producida por Metro-Goldwyn-Mayer, y protagonizada por Judy Garland, Frank Morgan, Ray Bolger, Jack Haley, Bert Lahr, Billie Burke y Margaret Hamilton. En la actualidad, es considerada ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Victor Fleming, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico",
+      "Avatar"
+    ],
+    "context": "Estrenada en 1939, una obra destacada de Victor Fleming en el panorama de Aventura y Familiar."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "espionaje",
+    "musica",
+    "supervivencia"
+  ],
+  "moments": [
+    "familia",
+    "domingo_tarde",
+    "amigos"
+  ],
+  "oneLiner": "El mago de Oz: Aventura y Familiar con dirección de Victor Fleming.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

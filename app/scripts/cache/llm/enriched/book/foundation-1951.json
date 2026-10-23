@@ -1,0 +1,39 @@
+{
+  "id": "book:foundation-1951",
+  "experience": {
+    "plot": "La Fundación es una novela de ciencia ficción escrita por Isaac Asimov, publicada en 1951 por la editorial Gnome Press. Es el primer libro de la llamada \"Trilogía de la Fundación\". La novela se confeccionó como una composición de cinco relatos, cuatro de ellos",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Isaac Asimov, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1951, una referencia indispensable obra de Isaac Asimov dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 3,
+    "densidad": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "identidad",
+    "historia",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Foundation: destacada book (1951) obra de Isaac Asimov.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

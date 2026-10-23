@@ -15,13 +15,13 @@
   },
   "axes": {
     "peso": 4,
-    "interaccion": 3,
-    "azar": 1,
-    "confrontacion": 1,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 2,
     "cooperacion": 1,
-    "tema": 2,
-    "risas": 1,
-    "familiar": 1
+    "tema": 4,
+    "risas": 2,
+    "familiar": 2
   },
   "themes": [
     "naturaleza_y_animales",

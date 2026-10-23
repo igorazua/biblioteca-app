@@ -1,0 +1,41 @@
+{
+  "id": "movie:short-term-12-2013",
+  "experience": {
+    "plot": "Short Term 12 es una película de drama estadounidense del 2013 escrita y dirigida por Destin Daniel Cretton. La película está basada en el cortometraje homónimo de Cretton, producido en 2009. Está protagonizada por Brie Larson como Grace, la supervisora de una",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Destin Daniel Cretton, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2013, una obra destacada de Destin Daniel Cretton en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 1
+  },
+  "themes": [
+    "romance_adolescente",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Las vidas de Grace: Drama con dirección de Destin Daniel Cretton.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

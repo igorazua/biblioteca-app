@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-godfather-part-ii-1974",
+  "experience": {
+    "plot": "The Godfather Part II es una película estadounidense de drama criminal y gánsteres de 1974, producida y dirigida por Francis Ford Coppola a partir del guion coescrito con Mario Puzo, protagonizada por Al Pacino, Robert Duvall, Diane Keaton, Robert De Niro, Tal",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Francis Ford Coppola, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1974, una obra destacada de Francis Ford Coppola en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "ia_y_robots",
+    "infancia",
+    "espionaje"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "El padrino. Parte II: Crimen y Drama con dirección de Francis Ford Coppola.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

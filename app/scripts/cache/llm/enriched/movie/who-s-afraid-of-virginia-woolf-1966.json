@@ -1,0 +1,41 @@
+{
+  "id": "movie:who-s-afraid-of-virginia-woolf-1966",
+  "experience": {
+    "plot": "Who's Afraid of Virginia Woolf? es una película estadounidense de 1966 de comedia negra y drama dirigida por Mike Nichols. El guion de Ernest Lehman es una adaptación de la obra de teatro homónima de Edward Albee. Tuvo como protagonistas a Elizabeth Taylor com",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Mike Nichols, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1966, una obra destacada de Mike Nichols en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "¿Quién teme a Virginia Woolf?: Drama con dirección de Mike Nichols.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

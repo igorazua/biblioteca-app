@@ -1,0 +1,43 @@
+{
+  "id": "movie:city-lights-1931",
+  "experience": {
+    "plot": "Luces de la ciudad es una película estadounidense de 1931 escrita, dirigida e interpretada por Charlie Chaplin. Ocupa el puesto número once en la lista de las cien mejores películas elaborada por el American Film Institute en el año 2007. Forma parte además de",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Charles Chaplin, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1931, una obra destacada de Charles Chaplin en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Luces de la ciudad: Comedia y Drama con dirección de Charles Chaplin.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

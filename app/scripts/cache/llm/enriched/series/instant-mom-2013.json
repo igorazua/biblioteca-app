@@ -1,0 +1,44 @@
+{
+  "id": "series:instant-mom-2013",
+  "experience": {
+    "plot": "Instant Mom es una serie de televisión en formato sitcom para Nick@Nite, producida por Howard Michael Gould y protagonizada por Tia Mowry-Hardrict como la madrastra de los tres hijos de su esposo. Se estrenó el 29 de septiembre de 2013. La serie produjo mejore",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de TV Land, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Familiar.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de TV Land dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 3,
+    "enganche": 3,
+    "formato": 2
+  },
+  "themes": [
+    "familia",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "confort"
+  ],
+  "oneLiner": "Instant Mom: destacada series (2013) obra de TV Land.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

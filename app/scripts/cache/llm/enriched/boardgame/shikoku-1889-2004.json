@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:shikoku-1889-2004",
+  "experience": {
+    "plot": "1889, an 18xx game in the series originated by Francis Tresham's 1829, is set in Shikoku Japan. The rules are similar to 1830: Railways & Robber Barons on a smaller and terrain-heavy map. In 1889, 2-6 players will use money to purchase shares in railroad compa",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Yasutaka Ikeda, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Trains.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2004, una referencia indispensable obra de Yasutaka Ikeda dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Shikoku 1889: destacada boardgame (2004) obra de Yasutaka Ikeda.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-lion-in-winter-1968",
+  "experience": {
+    "plot": "El león en invierno (The Lion in Winter) es una película británica histórica de 1968 dirigida por Anthony Harvey. Escrita por James Goldman ; producida por Joseph E. Levine, Jane C. Nusbaum y Martin Poll ; y protagonizada por Peter O'Toole, Katharine Hepburn, ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Anthony Harvey, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1968, una obra destacada de Anthony Harvey en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "El león en invierno: Biografía y Drama con dirección de Anthony Harvey.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

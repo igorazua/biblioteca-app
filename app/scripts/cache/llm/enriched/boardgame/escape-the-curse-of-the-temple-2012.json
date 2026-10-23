@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:escape-the-curse-of-the-temple-2012",
+  "experience": {
+    "plot": "Escape: The Curse of the Temple is a cooperative game in which players must escape (yes...) from a temple (yes...) which is cursed (yes...) before the temple collapses and kills one or more explorers, thereby causing everyone to lose. The initial game board co",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Kristian Amundsen Østby, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Action / Dexterity / Aventura.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Kristian Amundsen Østby dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 2,
+    "azar": 5,
+    "confrontacion": 2,
+    "cooperacion": 5,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "dados_y_push_your_luck"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "Escape: The Curse of the Temple (2012): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

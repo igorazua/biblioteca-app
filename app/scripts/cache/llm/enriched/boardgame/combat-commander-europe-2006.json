@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:combat-commander-europe-2006",
+  "experience": {
+    "plot": "Combat Commander: Europe is a card-driven board game covering tactical infantry combat in the European Theater of World War II. One player takes the role of the Axis (Germany) while another player commands the Allies (America or Russia). These two players will",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Chad Jensen, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Juego de guerra / World War II.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de Chad Jensen dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "pareja"
+  ],
+  "oneLiner": "Combat Commander: Europe: destacada boardgame (2006) obra de Chad Jensen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

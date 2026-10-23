@@ -1,0 +1,37 @@
+{
+  "id": "artist:bad-bunny-2016",
+  "experience": {
+    "plot": "Bad Bunny (Vega Baja, Puerto Rico), icono de Reggaeton, Trap latino, Pop desde 2016.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Vega Baja, Puerto Rico, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Reggaeton / Trap latino.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra de Vega Baja, Puerto Rico dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 4,
+    "bailable": 5,
+    "organico": 2,
+    "intensidad": 3,
+    "fondo": 4,
+    "complejidad": 1
+  },
+  "themes": [
+    "pop",
+    "hip_hop",
+    "trap",
+    "musica_latina"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Bad Bunny: destacada artist (2016) obra de Vega Baja, Puerto Rico.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

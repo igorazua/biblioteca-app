@@ -1,0 +1,43 @@
+{
+  "id": "series:teenage-mutant-ninja-turtles-2012",
+  "experience": {
+    "plot": "Leo, Donnie, Raph and Mikey are mutant turtles who have been trained in the art of ninjutsu by their rat sensei, Master Splinter. Emerging from their sewer lair, the reptile brothers confront the wondrous world of New York City, facing villains more dangerous ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Nicktoons, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Acción.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Nicktoons dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 4,
+    "humor": 5,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 5,
+    "enganche": 5,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Teenage Mutant Ninja Turtles: destacada series (2012) obra de Nicktoons.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -15,16 +15,16 @@
     "context": "El primer largometraje animado totalmente por ordenador de Pixar en 1995, que cambió el cine para siempre."
   },
   "axes": {
-    "tono": 1,
-    "ritmo": 4,
-    "emocion": 3,
-    "exigencia": 1,
-    "humor": 5,
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
     "tension": 2,
     "fantasia": 4,
-    "violencia": 1,
+    "violencia": 2,
     "familiar": 5,
-    "escala": 2,
+    "escala": 3,
     "reconfort": 5
   },
   "themes": [

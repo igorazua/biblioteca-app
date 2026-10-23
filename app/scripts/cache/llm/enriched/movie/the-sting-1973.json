@@ -1,0 +1,44 @@
+{
+  "id": "movie:the-sting-1973",
+  "experience": {
+    "plot": "El golpe es una película de robos y comedia estadounidense de 1973 dirigida por George Roy Hill. La película reunió de nuevo a Paul Newman y Robert Redford después de su trabajo conjunto en Butch Cassidy and the Sundance Kid, también actuaron Robert Shaw, Eile",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de George Roy Hill, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1973, una obra destacada de George Roy Hill en el panorama de Comedia y Crimen."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "ia_y_robots",
+    "atraco",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "El golpe: Comedia y Crimen con dirección de George Roy Hill.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

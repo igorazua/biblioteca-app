@@ -1,0 +1,44 @@
+{
+  "id": "movie:der-name-der-rose-1986",
+  "experience": {
+    "plot": "El nombre de la rosa es una película de suspenso y drama de 1986, coproducida entre Italia, Francia y Alemania, dirigida por Jean-Jacques Annaud y basada en la novela homónima, escrita por el italiano Umberto Eco y publicada con enorme éxito en 1980.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Jean-Jacques Annaud, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1986, una obra destacada de Jean-Jacques Annaud en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 1
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Der Name der Rose: Crimen y Drama con dirección de Jean-Jacques Annaud.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-last-of-the-mohicans-1992",
+  "experience": {
+    "plot": "The Last of the Mohicans es una película épica estadounidense de 1992, del género aventuras, basada en la novela homónima del escritor estadounidense James Fenimore Cooper. Dirigida por Michael Mann, está protagonizada por Daniel Day-Lewis, Madeleine Stowe, Jo",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Michael Mann, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 1992, una obra destacada de Michael Mann en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "El último mohicano: Acción y Aventura con dirección de Michael Mann.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

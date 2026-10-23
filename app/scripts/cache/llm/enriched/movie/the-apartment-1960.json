@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-apartment-1960",
+  "experience": {
+    "plot": "The Apartment es una película de comedia dramático-romántica estadounidense de 1960 producida y dirigida por Billy Wilder, y con actuación de Jack Lemmon, Shirley MacLaine y Fred MacMurray. La historia que se cuenta se inspiró en parte en el guion que había es",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Billy Wilder, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1960, una obra destacada de Billy Wilder en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "El apartamento: Comedia y Drama con dirección de Billy Wilder.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:big-fish-2003",
+  "experience": {
+    "plot": "Big Fish es una película de 2003 dirigida por Tim Burton y escrita por John August. Está basada en la novela Big Fish: A Novel of Mythic Proportions de Daniel Wallace y protagonizada por Ewan McGregor, Albert Finney, Billy Crudup, Jessica Lange, Marion Cotilla",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Tim Burton, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2003, una obra destacada de Tim Burton en el panorama de Aventura y Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Big Fish: Aventura y Drama con dirección de Tim Burton.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "movie:kind-hearts-and-coronets-1949",
+  "experience": {
+    "plot": "Ocho sentencias de muerte es una película británica, en clave de comedia, de 1949, dirigida por Robert Hamer. Los actores principales son: Dennis Price, Joan Greenwood, Valerie Hobson y Alec Guinness; Guinness representa ocho papeles distintos. La trama es una",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Robert Hamer, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Regreso al futuro",
+      "El silencio de los corderos"
+    ],
+    "context": "Estrenada en 1949, una obra destacada de Robert Hamer en el panorama de Comedia y Crimen."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 1,
+    "humor": 5,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "duelo",
+    "espionaje",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "Ocho sentencias de muerte: Comedia y Crimen con dirección de Robert Hamer.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

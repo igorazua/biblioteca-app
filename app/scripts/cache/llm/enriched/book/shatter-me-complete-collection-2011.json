@@ -1,0 +1,39 @@
+{
+  "id": "book:shatter-me-complete-collection-2011",
+  "experience": {
+    "plot": "Obra de Tahereh Mafi publicada originalmente en 2011.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Tahereh Mafi, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de Tahereh Mafi dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 2,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Shatter Me Complete Collection: destacada book (2011) obra de Tahereh Mafi.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

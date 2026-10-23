@@ -1,0 +1,43 @@
+{
+  "id": "movie:mulholland-dr-2001",
+  "experience": {
+    "plot": "Mulholland Drive es una película estadounidense de culto de 2001, perteneciente a los géneros misterio, surrealismo y neo-noir. Fue escrita y dirigida por David Lynch y protagonizada por Naomi Watts, Laura Harring y Justin Theroux. La historia combina varias t",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de David Lynch, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2001, una obra destacada de David Lynch en el panorama de Drama y Misterio."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "investigacion",
+    "ia_y_robots",
+    "familia",
+    "crimen"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Mulholland Dr.: Drama y Misterio con dirección de David Lynch.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

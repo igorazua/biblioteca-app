@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:zombicide-2nd-edition-2021",
+  "experience": {
+    "plot": "Zombicide, the board game, has taken the world by storm with over two million copies sold since its release in 2012 and spawning a cult franchise of cooperative zombie slaying all over the world. In Zombicide, zombies are controlled by the game, while players ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jean-Baptiste Lullien, Nicolas Raoult, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fighting / Terror.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Jean-Baptiste Lullien, Nicolas Raoult dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 4,
+    "tema": 5,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "terror_lovecraft",
+    "cooperativo_pandemia",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "Zombicide: 2nd Edition (2021): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

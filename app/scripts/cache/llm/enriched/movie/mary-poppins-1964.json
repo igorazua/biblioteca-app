@@ -1,0 +1,43 @@
+{
+  "id": "movie:mary-poppins-1964",
+  "experience": {
+    "plot": "Mary Poppins es una película musical de fantasía estadounidense, dirigida por Robert Stevenson, producida por Walt Disney y con canciones escritas por los hermanos Sherman, estrenada en 1964. El guion, escrito por Bill Walsh y Don DaGradi, está basado en la se",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Robert Stevenson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El señor de los anillos: La comunidad del anillo",
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek"
+    ],
+    "context": "Estrenada en 1964, una obra destacada de Robert Stevenson en el panorama de Comedia y Familiar."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "musica",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Mary Poppins: Comedia y Familiar con dirección de Robert Stevenson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

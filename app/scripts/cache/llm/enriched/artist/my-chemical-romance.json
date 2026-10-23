@@ -1,0 +1,36 @@
+{
+  "id": "artist:my-chemical-romance",
+  "experience": {
+    "plot": "My Chemical Romance, también conocido oficialmente por sus siglas como MCR, es un cuarteto estadounidense de pop punk y post-hardcore, formado en 2001 en el estado de Nueva Jersey, e integrado en la mayor parte de su historia por el vocalista Gerard Way, el ba",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2001, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 4,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 3,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "punk"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "My Chemical Romance: destacada artist (2001) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

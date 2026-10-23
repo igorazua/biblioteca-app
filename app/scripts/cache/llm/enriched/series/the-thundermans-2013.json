@@ -1,0 +1,44 @@
+{
+  "id": "series:the-thundermans-2013",
+  "experience": {
+    "plot": "The Thundermans es una serie de televisión de superhéroes en formato sitcom transmitida por Nickelodeon que salió al aire el 14 de octubre de 2013 como un previsto y oficialmente fue estrenada el 2 de noviembre de 2013. La serie fue creada por Jed Spingarn. Ni",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Nickelodeon, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Familiar.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de Nickelodeon dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 5,
+    "reconfort": 4,
+    "enganche": 5,
+    "formato": 3
+  },
+  "themes": [
+    "familia",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "confort"
+  ],
+  "oneLiner": "The Thundermans: destacada series (2013) obra de Nickelodeon.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

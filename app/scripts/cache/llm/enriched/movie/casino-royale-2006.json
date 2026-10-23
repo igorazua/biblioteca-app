@@ -1,0 +1,43 @@
+{
+  "id": "movie:casino-royale-2006",
+  "experience": {
+    "plot": "Casino Royale es la vigésima primera película de la serie cinematográfica de James Bond, basada en la novela homónima de Ian Fleming, dirigida por el neozelandés Martin Campbell y estrenada en 2006. Es la primera cinta de la franquicia que cuenta con Daniel Cr",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Martin Campbell, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Pulp Fiction",
+      "El rey león",
+      "Matrix",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2006, una obra destacada de Martin Campbell en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 5,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "espionaje",
+    "crimen",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Casino Royale: Acción y Aventura con dirección de Martin Campbell.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

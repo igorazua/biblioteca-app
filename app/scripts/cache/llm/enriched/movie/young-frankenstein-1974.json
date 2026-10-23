@@ -1,0 +1,41 @@
+{
+  "id": "movie:young-frankenstein-1974",
+  "experience": {
+    "plot": "Young Frankenstein es una película cómica estadounidense de 1974 dirigida por Mel Brooks y con Gene Wilder, Teri Garr, Cloris Leachman, Marty Feldman, Peter Boyle, Madeline Kahn, Kenneth Mars y Gene Hackman como actores principales. El guion fue escrito por Br",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Mel Brooks, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek",
+      "Amélie"
+    ],
+    "context": "Estrenada en 1974, una obra destacada de Mel Brooks en el panorama de Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "El jovencito Frankenstein: Comedia con dirección de Mel Brooks.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

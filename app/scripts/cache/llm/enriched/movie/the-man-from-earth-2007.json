@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-man-from-earth-2007",
+  "experience": {
+    "plot": "The Man from Earth es una película independiente escrita por Jerome Bixby (1923-1998) y dirigida por Richard Schenkman (1958-) estrenada el 13 de noviembre de 2007. Jerome Bixby concibió el guion de esta película en los años sesenta y lo terminó en su lecho de",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Richard Schenkman, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2007, una obra destacada de Richard Schenkman en el panorama de Drama y Fantasía."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "investigacion",
+    "duelo",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "The Man from Earth: Drama y Fantasía con dirección de Richard Schenkman.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

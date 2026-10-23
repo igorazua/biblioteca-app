@@ -1,0 +1,44 @@
+{
+  "id": "movie:american-beauty-1999",
+  "experience": {
+    "plot": "American Beauty es una película dramática estadounidense de 1999 dirigida por Sam Mendes y escrita por Alan Ball. Está protagonizada por Kevin Spacey, Annette Bening, Thora Birch, Wes Bentley, Mena Suvari y Chris Cooper. La trama relata la vida de los Burnham,",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Sam Mendes, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1999, una obra destacada de Sam Mendes en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "ia_y_robots",
+    "romance_adolescente",
+    "redencion",
+    "espionaje"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "American Beauty: Drama con dirección de Sam Mendes.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

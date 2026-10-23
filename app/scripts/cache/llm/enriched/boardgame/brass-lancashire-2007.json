@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:brass-lancashire-2007",
+  "experience": {
+    "plot": "Brass es un juego de mesa ambientado en Lancashire, Inglaterra, durante la Revolución Industrial. Fue desarrollado por el diseñador de juegos británico Martin Wallace.El nombre proviene de una expresión típica de Lancashire: «where there’s muck there’s brass»,",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Martin Wallace, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Age of Reason / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de Martin Wallace dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 3
+  },
+  "themes": [
+    "comercio_y_rutas",
+    "trenes_y_ferrocarril",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Brass: Lancashire: destacada boardgame (2007) obra de Martin Wallace.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

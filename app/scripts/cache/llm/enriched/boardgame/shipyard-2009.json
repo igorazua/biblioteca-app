@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:shipyard-2009",
+  "experience": {
+    "plot": "We’re in 19th century, sea transport is more and more important. Both corporations and naval forces require newer and newer ships. Try to put yourself in the role of their manufacturers. Hire employees, buy accessories, get favour of evaluating committees. Don",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Vladimír Suchý, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Industry / Manufacturing.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de Vladimír Suchý dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "comercio_y_rutas",
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Shipyard: destacada boardgame (2009) obra de Vladimír Suchý.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

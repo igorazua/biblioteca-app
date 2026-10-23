@@ -1,0 +1,42 @@
+{
+  "id": "movie:amelie-2001",
+  "experience": {
+    "plot": "Amélie es una comedia romántica francesa de 2001 dirigida por Jean-Pierre Jeunet. El guion fue escrito por Jeunet con la colaboración del novelista Guillaume Laurant en los diálogos, fue protagonizada por Audrey Tautou como Amélie. Bajo el lema Elle va changer",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Jean-Pierre Jeunet, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Forrest Gump",
+      "Titanic",
+      "Regreso al futuro",
+      "Toy Story"
+    ],
+    "context": "Estrenada en 2001, una obra destacada de Jean-Pierre Jeunet en el panorama de Comedia y Romance."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 3,
+    "humor": 5,
+    "tension": 1,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pareja"
+  ],
+  "oneLiner": "Amélie: Comedia y Romance con dirección de Jean-Pierre Jeunet.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

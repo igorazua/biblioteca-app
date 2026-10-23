@@ -1,0 +1,43 @@
+{
+  "id": "movie:spider-man-2-2004",
+  "experience": {
+    "plot": "Spider-Man 2 es una película de superhéroes estadounidense de 2004 basada en el personaje de Marvel Comics Spider-Man. Dirigida por Sam Raimi y escrita por Alvin Sargent a partir de una historia concebida por Michael Chabon y el equipo de guionistas formado po",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Sam Raimi, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Matrix",
+      "Gladiator",
+      "Parque Jurásico",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Sam Raimi en el panorama de Acción y Ciencia ficción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 1
+  },
+  "themes": [
+    "ia_y_robots",
+    "superheroes",
+    "espionaje",
+    "espacio",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Spider-Man 2: Acción y Ciencia ficción con dirección de Sam Raimi.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

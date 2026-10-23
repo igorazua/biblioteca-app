@@ -16,10 +16,10 @@
   "axes": {
     "peso": 4,
     "interaccion": 3,
-    "azar": 1,
-    "confrontacion": 1,
+    "azar": 3,
+    "confrontacion": 2,
     "cooperacion": 1,
-    "tema": 2,
+    "tema": 4,
     "risas": 1,
     "familiar": 1
   },

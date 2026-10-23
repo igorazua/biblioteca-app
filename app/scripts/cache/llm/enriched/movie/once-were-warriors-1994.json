@@ -1,0 +1,42 @@
+{
+  "id": "movie:once-were-warriors-1994",
+  "experience": {
+    "plot": "Once Were Warriors es una película dramática dirigida por Lee Tamahori, protagonizada por Rena Owen y Temuera Morrison y basada en la novela homónima de Alan Duff. Su temática incluye como principal elemento la violencia contra las mujeres y la violencia intra",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Lee Tamahori, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1994, una obra destacada de Lee Tamahori en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 1
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "ia_y_robots",
+    "espionaje"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Once Were Warriors: Crimen y Drama con dirección de Lee Tamahori.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

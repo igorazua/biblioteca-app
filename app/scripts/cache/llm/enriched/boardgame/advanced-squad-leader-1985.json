@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:advanced-squad-leader-1985",
+  "experience": {
+    "plot": "Advanced Squad Leader is the completely reorganized and re-designed version of the original Squad Leader system. This three-ring binder is the basic rules for the entire system and provides the ultimate combination of playability and detail. Full-color charts ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Don Greenwood, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Juego de guerra / World War II.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 1985, una referencia indispensable obra de Don Greenwood dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 1,
+    "familiar": 2
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "guerra_historica",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "pareja",
+    "jugones"
+  ],
+  "oneLiner": "Advanced Squad Leader: destacada boardgame (1985) obra de Don Greenwood.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

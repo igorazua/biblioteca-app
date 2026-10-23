@@ -1,0 +1,41 @@
+{
+  "id": "movie:misery-1990",
+  "experience": {
+    "plot": "Misery es una película de suspenso psicológicodirigida por Rob Reiner, basada en la novela homónima de 1987 escrita por Stephen King, protagonizada por James Caan, Kathy Bates, Lauren Bacall, Richard Farnsworth y Frances Sternhagen. La trama se centra en un au",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Rob Reiner, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1990, una obra destacada de Rob Reiner en el panorama de Drama y Thriller."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 1
+  },
+  "themes": [
+    "familia",
+    "crimen",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Misery: Drama y Thriller con dirección de Rob Reiner.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

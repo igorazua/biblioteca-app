@@ -1,0 +1,43 @@
+{
+  "id": "series:padre-de-familia-1999",
+  "experience": {
+    "plot": "Family Guy es una serie de televisión animada estadounidense de animación para adultos, creada por el director, guionista y cantante Seth MacFarlane el 31 de enero de 1999. La serie se centra en los Griffin, una familia disfuncional cuyos componentes son: los ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Seth MacFarlane, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animación / Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1999, una referencia indispensable obra de Seth MacFarlane dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 3,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 2
+  },
+  "themes": [
+    "familia",
+    "sitcom_cotidiana",
+    "animacion"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Padre de familia: destacada series (1999) obra de Seth MacFarlane.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

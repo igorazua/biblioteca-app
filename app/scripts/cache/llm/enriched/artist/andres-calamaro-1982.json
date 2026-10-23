@@ -1,0 +1,36 @@
+{
+  "id": "artist:andres-calamaro-1982",
+  "experience": {
+    "plot": "Andrés Calamaro (Buenos Aires, Argentina), icono de Rock en español, Canción de autor desde 1982.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Buenos Aires, Argentina, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Rock en español / Canción de autor.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1982, una referencia indispensable obra de Buenos Aires, Argentina dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 4,
+    "bailable": 2,
+    "organico": 4,
+    "intensidad": 5,
+    "fondo": 2,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Andrés Calamaro: destacada artist (1982) obra de Buenos Aires, Argentina.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

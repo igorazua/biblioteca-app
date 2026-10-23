@@ -1,0 +1,42 @@
+{
+  "id": "movie:x-men-days-of-future-past-2014",
+  "experience": {
+    "plot": "X-Men: días del futuro pasado es una película de la saga X-Men dirigida por Bryan Singer que supone ser el nexo entre las entregas originales y la película X-Men: primera generación, convirtiéndose en la secuela de X-Men: The Last Stand, X-Men: primera generac",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Bryan Singer, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2014, una obra destacada de Bryan Singer en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 5,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "espacio",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "X-Men: Días del futuro pasado: Acción y Aventura con dirección de Bryan Singer.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

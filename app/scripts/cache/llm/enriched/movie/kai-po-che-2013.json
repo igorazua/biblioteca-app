@@ -1,0 +1,41 @@
+{
+  "id": "movie:kai-po-che-2013",
+  "experience": {
+    "plot": "Kai Po Che! es una película india estrenada en 2013 basada en la novela The 3 Mistakes of My Life de Chetan Bhagat. Fue dirigida por Abhishek Kapoor y protagonizada por Rajkummar Rao, Sushant Singh Rajput y Amit Sadh.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Abhishek Kapoor, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2013, una obra destacada de Abhishek Kapoor en el panorama de Drama y Deporte."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 1,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "deporte",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Kai po che!: Drama y Deporte con dirección de Abhishek Kapoor.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

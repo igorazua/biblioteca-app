@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:exploding-kittens-2015",
+  "experience": {
+    "plot": "Exploding Kittens es un juego de cartas casual de baraja específica diseñado por Matthew Inman, del webcómic The Oatmeal, Elan Lee y Shane Small, y publicado por primera vez en 2015. Comenzó como un proyecto de Kickstarter que buscaba recaudar 10 000 dólares e",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Elan Lee, Matthew Inman, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Elan Lee, Matthew Inman dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Exploding Kittens: destacada boardgame (2015) obra de Elan Lee, Matthew Inman.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

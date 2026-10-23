@@ -1,0 +1,41 @@
+{
+  "id": "movie:kill-bill-volumen-1-2003",
+  "experience": {
+    "plot": "Kill Bill: Volumen 1 es una película de acción y suspense estadounidense escrita y dirigida por Quentin Tarantino. Es la primera de las dos películas que fueron lanzadas en cines aparte varios meses, la segunda titulada Kill Bill: Volumen 2. La película fue or",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Quentin Tarantino, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Matrix",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2003, una obra destacada de Quentin Tarantino en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Kill Bill: Volumen 1: Acción y Crimen con dirección de Quentin Tarantino.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-hangover-2009",
+  "experience": {
+    "plot": "The Hangover es una película dirigida por Todd Phillips y protagonizada por Bradley Cooper, Ed Helms, Zach Galifianakis y Justin Bartha. Se estrenó el 5 de junio de 2009 en Estados Unidos y sus secuelas son The Hangover Part II (2011) y The Hangover Part III (",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Todd Phillips, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek",
+      "Amélie"
+    ],
+    "context": "Estrenada en 2009, una obra destacada de Todd Phillips en el panorama de Comedia."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "musica",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "Resacón en Las Vegas: Comedia con dirección de Todd Phillips.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

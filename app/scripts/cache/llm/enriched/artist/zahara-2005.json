@@ -1,0 +1,36 @@
+{
+  "id": "artist:zahara-2005",
+  "experience": {
+    "plot": "Zahara (Úbeda, España), icono de Indie pop, Electrónica desde 2005.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Úbeda, España, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Indie pop / Electrónica.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de Úbeda, España dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 5,
+    "bailable": 4,
+    "organico": 3,
+    "intensidad": 3,
+    "fondo": 4,
+    "complejidad": 2
+  },
+  "themes": [
+    "pop",
+    "indie_rock",
+    "electronica"
+  ],
+  "moments": [
+    "fiesta"
+  ],
+  "oneLiner": "Zahara: destacada artist (2005) obra de Úbeda, España.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

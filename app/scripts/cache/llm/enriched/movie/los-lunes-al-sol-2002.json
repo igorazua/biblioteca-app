@@ -1,0 +1,42 @@
+{
+  "id": "movie:los-lunes-al-sol-2002",
+  "experience": {
+    "plot": "Los lunes al sol es una película de drama de 2002, dirigida por Fernando León de Aranoa, quien coescribió el guion con Ignacio del Moral. Está protagonizada por Luis Tosar, Javier Bardem, José Ángel Egido, Joaquín Climent y Nieve de Medina.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Fernando León de Aranoa, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2002, una obra destacada de Fernando León de Aranoa en el panorama de Drama y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Los lunes al sol: Drama y Comedia con dirección de Fernando León de Aranoa.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

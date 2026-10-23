@@ -1,0 +1,43 @@
+{
+  "id": "movie:volver-2006",
+  "experience": {
+    "plot": "Volver es una película española de melodrama y comedia dramática de 2006, escrita y dirigida por Pedro Almodóvar. Está protagonizada por Penélope Cruz, Carmen Maura, Lola Dueñas, Blanca Portillo, Yohana Cobo y Chus Lampreave. La trama gira en torno a una excén",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Pedro Almodóvar, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2006, una obra destacada de Pedro Almodóvar en el panorama de Drama y Comedia."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "duelo",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Volver: Drama y Comedia con dirección de Pedro Almodóvar.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

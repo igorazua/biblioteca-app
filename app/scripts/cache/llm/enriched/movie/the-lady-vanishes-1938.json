@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-lady-vanishes-1938",
+  "experience": {
+    "plot": "The Lady Vanishes es una película británica de 1938 basada en la novela del mismo año The Wheel Spins, de Ethel Lina White, adaptada por Sidney Gilliat y Frank Launder, dirigida por Alfred Hitchcock y con actuación de Margaret Lockwood, Michael Redgrave, Basil",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Alfred Hitchcock, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Pulp Fiction",
+      "El club de la lucha",
+      "El silencio de los corderos",
+      "Seven"
+    ],
+    "context": "Estrenada en 1938, una obra destacada de Alfred Hitchcock en el panorama de Misterio y Thriller."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "duelo"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde"
+  ],
+  "oneLiner": "Alarma en el expreso: Misterio y Thriller con dirección de Alfred Hitchcock.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

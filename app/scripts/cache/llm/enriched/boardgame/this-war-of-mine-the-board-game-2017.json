@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:this-war-of-mine-the-board-game-2017",
+  "experience": {
+    "plot": "This War Of Mine: The Board Game is the tabletop adaptation of the award-winning video game that pictures the drama of civilians trapped in a war-torn city. You will enter this experience as a group of civilians trapped in a besieged and conflict-ridden city, ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jakub Wiśniewski, Michał Oracz, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Jakub Wiśniewski, Michał Oracz dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "This War of Mine: The Board Game (2017): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

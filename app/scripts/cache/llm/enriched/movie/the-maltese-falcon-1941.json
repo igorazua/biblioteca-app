@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-maltese-falcon-1941",
+  "experience": {
+    "plot": "El halcón maltés es una película estadounidense de cine negro estrenada en 1941 dirigida por John Huston, quien también escribió el guion basado en la novela homónima de Dashiell Hammett. Está protagonizada por Humphrey Bogart, Mary Astor, Peter Lorre y Gladys",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de John Huston, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Sospechosos habituales",
+      "Memento",
+      "Ciudadano Kane",
+      "Vértigo"
+    ],
+    "context": "Estrenada en 1941, una obra destacada de John Huston en el panorama de Cine negro y Misterio."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "investigacion",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde"
+  ],
+  "oneLiner": "El halcón maltés: Cine negro y Misterio con dirección de John Huston.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

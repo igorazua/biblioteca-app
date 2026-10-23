@@ -1,0 +1,43 @@
+{
+  "id": "series:the-tonight-show-with-jay-leno-1992",
+  "experience": {
+    "plot": "The Tonight Show with Jay Leno is an American television talk show broadcast by NBC. The show is the fourth and sixth installment of The Tonight Show. Hosted by Jay Leno, it aired from May 25, 1992, to May 29, 2009, replacing The Tonight Show Starring Johnny C",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de NBC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1992, una referencia indispensable obra de NBC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "The Tonight Show with Jay Leno: destacada series (1992) obra de NBC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

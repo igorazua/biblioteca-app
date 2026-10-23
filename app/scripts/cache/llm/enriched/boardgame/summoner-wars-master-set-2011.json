@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:summoner-wars-master-set-2011",
+  "experience": {
+    "plot": "Summoner Wars is a fast-playing, action-packed card game for 2-4 players in which they take on the role of Summoners: powerful beings who harness the power of mysterious Summoning Stones to lead their race to conquest on the war-torn planet of Itharia. These S",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Colby Dauch, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2011, una referencia indispensable obra de Colby Dauch dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Summoner Wars: Master Set: destacada boardgame (2011) obra de Colby Dauch.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

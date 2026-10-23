@@ -1,0 +1,42 @@
+{
+  "id": "movie:dune-2021",
+  "experience": {
+    "plot": "Dune es una película épica de ciencia ficción de 2021 dirigida por Denis Villeneuve y escrita por Eric Roth, Jon Spaihts y el propio director. Es una coproducción internacional de Estados Unidos, Reino Unido, Canadá y Hungría y constituye la primera entrega de",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Denis Villeneuve, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico"
+    ],
+    "context": "Estrenada en 2021, una obra destacada de Denis Villeneuve en el panorama de Ciencia ficción y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "espacio",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Dune: Ciencia ficción y Aventura con dirección de Denis Villeneuve.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

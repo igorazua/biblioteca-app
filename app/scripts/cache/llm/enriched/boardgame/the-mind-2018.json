@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:the-mind-2018",
+  "experience": {
+    "plot": "The Mind es un juego de cartas cooperativo presentado en caja pequeña y creado por el diseñador de juegos austríaco Wolfgang Warsch. Lo publicó en 2018 Nürnberger-Spielkarten-Verlag y fue nominado al premio Spiel des Jahres en Alemania en 2018 y ganó el As d’O",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Wolfgang Warsch, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Number.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Wolfgang Warsch dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 4,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "The Mind: destacada boardgame (2018) obra de Wolfgang Warsch.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

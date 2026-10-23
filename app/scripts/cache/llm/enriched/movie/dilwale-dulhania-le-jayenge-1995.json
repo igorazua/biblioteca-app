@@ -1,0 +1,43 @@
+{
+  "id": "movie:dilwale-dulhania-le-jayenge-1995",
+  "experience": {
+    "plot": "Amor contra viento y marea, también conocida por las siglas DDLJ, es una película romántica india escrita y dirigida por Aditya Chopra y producida por Yash Chopra, que se estrenó el 19 de octubre de 1995. La cinta está protagonizada por Shahrukh Khan y Kajol, ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Aditya Chopra, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1995, una obra destacada de Aditya Chopra en el panorama de Drama y Romance."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "amistad",
+    "ia_y_robots"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Dilwale Dulhania Le Jayenge: Drama y Romance con dirección de Aditya Chopra.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

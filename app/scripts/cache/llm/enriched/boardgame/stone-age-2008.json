@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:stone-age-2008",
+  "experience": {
+    "plot": "Stone Age es un juego de mesa de estilo alemán, diseñado por Bernd Brunnhofer, \ny publicado en 2008 por Hans im Glück en alemán y Rio Grande Games en inglés. En 2008 fue propuesto para el premio Spiel des Jahres, y obtuvo el segundo lugar en \nel premio Deutsch",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bernd Brunnhofer, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Dados / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2008, una referencia indispensable obra de Bernd Brunnhofer dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "dados_y_push_your_luck",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Stone Age: destacada boardgame (2008) obra de Bernd Brunnhofer.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

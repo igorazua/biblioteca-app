@@ -1,0 +1,45 @@
+{
+  "id": "movie:dom-za-vesanje-1988",
+  "experience": {
+    "plot": "Dom za vešanje es una película yugoslava dirigida por Emir Kusturica, por la cual recibió el premio a Mejor director en el Festival de Cannes, Francia. La película se centra en la vida de Perhan, interpretado por Davor Dujmović, un gitano adolescente con poder",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Emir Kusturica, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1988, una obra destacada de Emir Kusturica en el panorama de Comedia y Crimen."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "crimen",
+    "ia_y_robots",
+    "romance_adolescente",
+    "espionaje",
+    "ambicion",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Dom za vesanje: Comedia y Crimen con dirección de Emir Kusturica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

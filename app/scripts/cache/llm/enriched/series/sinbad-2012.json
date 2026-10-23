@@ -1,0 +1,42 @@
+{
+  "id": "series:sinbad-2012",
+  "experience": {
+    "plot": "Sinbad is a British action-adventure fantasy family saga television series that aired on Sky1 from 8 July to 23 September 2012. It was produced by Impossible Pictures, who previously made Walking with Dinosaurs and Primeval. The series stars Elliot Knight as t",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Sky Showcase, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Acción / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2012, una referencia indispensable obra de Sky Showcase dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 1,
+    "enganche": 3,
+    "formato": 3
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Sinbad: destacada series (2012) obra de Sky Showcase.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

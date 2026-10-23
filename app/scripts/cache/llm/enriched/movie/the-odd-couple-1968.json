@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-odd-couple-1968",
+  "experience": {
+    "plot": "La extraña pareja es una película estadounidense de 1968 dirigida por Gene Saks y protagonizada por Jack Lemmon y Walter Matthau. Basada en una obra de teatro de Neil Simon, el guion está basado en la experiencia de ver cómo Mel Brooks convivió con un amigo tr",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Gene Saks, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek",
+      "Amélie"
+    ],
+    "context": "Estrenada en 1968, una obra destacada de Gene Saks en el panorama de Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "desamor",
+    "amistad",
+    "ia_y_robots",
+    "espionaje"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "La extraña pareja: Comedia con dirección de Gene Saks.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

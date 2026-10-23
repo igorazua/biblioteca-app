@@ -1,0 +1,44 @@
+{
+  "id": "series:la-mesias-2023",
+  "experience": {
+    "plot": "La mesías es una serie española de televisión de pago de thriller y drama creada, escrita y dirigida por Javier Ambrossi y Javier Calvo para Movistar Plus+. Está protagonizada por un amplio reparto coral liderado por Macarena García, Roger Casamajor, Lola Dueñ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Javier Calvo y Javier Ambrossi, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Misterio.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de Javier Calvo y Javier Ambrossi dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 1,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "pasar_miedo"
+  ],
+  "oneLiner": "La Mesías: destacada series (2023) obra de Javier Calvo y Javier Ambrossi.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

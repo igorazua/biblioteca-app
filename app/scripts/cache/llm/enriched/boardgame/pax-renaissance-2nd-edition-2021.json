@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:pax-renaissance-2nd-edition-2021",
+  "experience": {
+    "plot": "Pax Renaissance 2nd Edition is a game for 1 to 4 players where you play as a banker in Europe at the height of the Renaissance during the late 15th and early 16th-century. A time when European nobility and warlords declined and the arts and technology advanced",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Matt Eklund, Phil Eklund, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Pike and Shot / Religious.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Matt Eklund, Phil Eklund dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Pax Renaissance: 2nd Edition: destacada boardgame (2021) obra de Matt Eklund, Phil Eklund.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

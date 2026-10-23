@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-day-the-earth-stood-still-1951",
+  "experience": {
+    "plot": "An alien lands and tells the people of Earth that they must live peacefully or be destroyed as a danger to other planets.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Robert Wise, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 1951, una obra destacada de Robert Wise en el panorama de Drama y Ciencia ficción."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "espacio",
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Ultimátum a la Tierra: Drama y Ciencia ficción con dirección de Robert Wise.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

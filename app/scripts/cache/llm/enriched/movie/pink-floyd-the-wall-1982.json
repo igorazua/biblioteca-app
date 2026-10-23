@@ -1,0 +1,41 @@
+{
+  "id": "movie:pink-floyd-the-wall-1982",
+  "experience": {
+    "plot": "Pink Floyd – The Wall es una película británica de 1982 dirigida por el director británico Alan Parker y basada en el álbum de Pink Floyd The Wall (1979). El guion fue escrito por el vocalista y bajista de Pink Floyd, Roger Waters. Altamente metafórica y rica ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Alan Parker, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1982, una obra destacada de Alan Parker en el panorama de Drama y Fantasía."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Pink Floyd: El muro: Drama y Fantasía con dirección de Alan Parker.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

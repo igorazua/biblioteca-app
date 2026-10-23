@@ -1,0 +1,44 @@
+{
+  "id": "movie:aliens-1986",
+  "experience": {
+    "plot": "Aliens es una película de acción y ciencia ficción militar estadounidense de 1986, dirigida por James Cameron, producida por Gale Anne Hurd y protagonizada por Sigourney Weaver, Carrie Henn, Michael Biehn, Paul Reiser, Jenette Goldstein, Lance Henriksen, Al Ma",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de James Cameron, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1986, una obra destacada de James Cameron en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 5,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "justicia",
+    "guerra",
+    "espacio",
+    "ia_y_robots",
+    "espionaje",
+    "monstruos"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Aliens: El regreso: Acción y Aventura con dirección de James Cameron.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

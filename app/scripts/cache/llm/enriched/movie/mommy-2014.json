@@ -1,0 +1,41 @@
+{
+  "id": "movie:mommy-2014",
+  "experience": {
+    "plot": "Mommy es una película dramática canadiense del 2014, dirigida, escrita, producida y editada por Xavier Dolan. Estuvo protagonizada por Anne Dorval, Antoine Olivier Pilon y Suzanne Clément. La historia trata de una madre con un hijo adolescente a veces violento",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Xavier Dolan, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2014, una obra destacada de Xavier Dolan en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "romance_adolescente"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Mommy: Drama con dirección de Xavier Dolan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

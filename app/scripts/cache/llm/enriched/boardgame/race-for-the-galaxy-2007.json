@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:race-for-the-galaxy-2007",
+  "experience": {
+    "plot": "Race for the Galaxy es un juego de cartas no coleccionables para entre dos y cuatro jugadores creado por Thomas Lehmann y publicado en 2007 por Rio Grande Games. En 2012 se editó la versión en español con el nombre Galaxia: La Conquista de la mano de la empres",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Thomas Lehmann, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Civilización.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de Thomas Lehmann dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 1,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 1,
+    "familiar": 4
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "ciencia_ficcion_espacial",
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Race for the Galaxy: destacada boardgame (2007) obra de Thomas Lehmann.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

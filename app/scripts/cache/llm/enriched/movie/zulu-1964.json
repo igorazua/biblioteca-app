@@ -1,0 +1,41 @@
+{
+  "id": "movie:zulu-1964",
+  "experience": {
+    "plot": "Zulú es una película británica de 1964, dirigida por Cy Endfield y protagonizada por Stanley Baker, Michael Caine, Jack Hawkins, Ulla Jacobsson, James Booth y Nigel Green en los papeles principales.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Cy Endfield, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1964, una obra destacada de Cy Endfield en el panorama de Drama y Historia."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Zulu: Drama y Historia con dirección de Cy Endfield.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

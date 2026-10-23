@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:starcraft-the-board-game-2007",
+  "experience": {
+    "plot": "Publisher blurb Including a total of 180 plastic figures and dozens of unit types, Starcraft: The Board Game features an innovative modular board of varying sizes, which guarantees a new experience each and every game. An exciting card driven combat system all",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Christian T. Petersen, Corey Konieczka, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Civilización / Fighting.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2007, una referencia indispensable obra de Christian T. Petersen, Corey Konieczka dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 5,
+    "azar": 2,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "StarCraft: The Board Game (2007): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

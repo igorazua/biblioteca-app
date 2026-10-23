@@ -1,0 +1,36 @@
+{
+  "id": "artist:the-beach-boys-1961",
+  "experience": {
+    "plot": "The Beach Boys (California, EE. UU.), icono de Surf rock, Pop psicodélico desde 1961.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de California, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Surf rock / Pop psicodélico.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1961, una referencia indispensable obra de California, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 5,
+    "bailable": 4,
+    "organico": 4,
+    "intensidad": 5,
+    "fondo": 4,
+    "complejidad": 1
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "The Beach Boys: destacada artist (1961) obra de California, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

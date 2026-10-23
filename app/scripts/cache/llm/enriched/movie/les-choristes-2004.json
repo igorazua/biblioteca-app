@@ -1,0 +1,41 @@
+{
+  "id": "movie:les-choristes-2004",
+  "experience": {
+    "plot": "Les Choristes es una película francesa producida en el 2004 de los géneros drama y musica dirigida por Christophe Barratier. Con guion de Barratier y Philippe Lopes-Curval, que está basado en otra película, de 1945: La jaula de los ruiseñores, con guion adapta",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Christophe Barratier, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Christophe Barratier en el panorama de Drama y Música."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 1,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "musica",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Les choristes: Drama y Música con dirección de Christophe Barratier.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

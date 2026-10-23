@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:evolution-climate-2016",
+  "experience": {
+    "plot": "Evolution: Climate is a standalone game that introduces climate into the Evolution game system. In Evolution: Climate, players adapt their species in a dynamic ecosystem where food is scarce, predators lurk, and the climate can swing between scorching hot and ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Dmitry Knorre, Dominic Crapuchettes, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra de Dmitry Knorre, Dominic Crapuchettes dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Evolution: Climate (2016): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "movie:harry-potter-and-the-deathly-hallows-part-1-2010",
+  "experience": {
+    "plot": "película de 2010 dirigida por David Yates",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de David Yates, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico",
+      "Avatar"
+    ],
+    "context": "Estrenada en 2010, una obra destacada de David Yates en el panorama de Aventura y Familiar."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "duelo",
+    "supervivencia"
+  ],
+  "moments": [
+    "familia",
+    "domingo_tarde",
+    "amigos"
+  ],
+  "oneLiner": "Harry Potter y las Reliquias de la Muerte: parte 1 (2010): memorable obra de Aventura y F",
+  "confidence": "media",
+  "src": "llm-agent"
+}

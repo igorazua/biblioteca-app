@@ -1,0 +1,43 @@
+{
+  "id": "movie:star-wars-1977",
+  "experience": {
+    "plot": "La guerra de las galaxias —después renombrada como Star Wars: Episodio IV - Una nueva esperanza o La guerra de las galaxias: Episodio IV - Una nueva esperanza o, de forma abreviada y dentro del contexto de la serie, simplemente como Una nueva esperanza— es una",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de George Lucas, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1977, una obra destacada de George Lucas en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 5,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 2
+  },
+  "themes": [
+    "guerra",
+    "espacio",
+    "ia_y_robots",
+    "espionaje",
+    "supervivencia"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "La guerra de las galaxias: Acción y Aventura con dirección de George Lucas.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

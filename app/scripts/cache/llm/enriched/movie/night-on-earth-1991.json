@@ -1,0 +1,44 @@
+{
+  "id": "movie:night-on-earth-1991",
+  "experience": {
+    "plot": "Night on Earth —conocida como Noche en la Tierra en España y Una noche en la Tierra en Hispanoamérica— es una película de Jim Jarmusch del año 1991 en la que presenta una secuencia de cinco historias desarrolladas simultáneamente durante una noche en diferente",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Jim Jarmusch, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1991, una obra destacada de Jim Jarmusch en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "musica",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Noche en la Tierra: Comedia y Drama con dirección de Jim Jarmusch.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

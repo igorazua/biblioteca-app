@@ -1,0 +1,41 @@
+{
+  "id": "book:el-amor-en-los-tiempos-del-colera-1985",
+  "experience": {
+    "plot": "Florentino Ariza espera durante cincuenta y un años, nueve meses y cuatro días para reiterar su amor a Fermina Daza.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Gabriel García Márquez, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Romance / Realismo mágico.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1985, una referencia indispensable obra de Gabriel García Márquez dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 5,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "duelo",
+    "amor",
+    "soledad",
+    "familia",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "El amor en los tiempos del cólera: destacada book (1985) obra de Gabriel García Márquez.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

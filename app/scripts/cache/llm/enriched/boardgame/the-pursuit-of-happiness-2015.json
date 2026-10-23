@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:the-pursuit-of-happiness-2015",
+  "experience": {
+    "plot": "We all have one common desire: the desire for happiness. As we build our life, taking steps towards the pursuit of happiness, we come closer to the realization that happiness lies in the pursuit.\n\nThe Pursuit of Happiness is a game in which you take a characte",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Adrian Abela, David Chircop, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Adrian Abela, David Chircop dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 1,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "The Pursuit of Happiness: destacada boardgame (2015) obra de Adrian Abela, David Chircop.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

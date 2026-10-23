@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:agent-avenue-2024",
+  "experience": {
+    "plot": "Agent Avenue is a competitive card game that combines bluffing, strategic set collection, and a race to uncover your opponent's identity. Set in a colorful anthropomorphic world, players assume the roles of retired spies in a suburban neighborhood, outsmarting",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Christian Kudahl, Laura Kudahl, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Faroleo.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Christian Kudahl, Laura Kudahl dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 4,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "faroleo_y_enganos",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Agent Avenue: destacada boardgame (2024) obra de Christian Kudahl, Laura Kudahl.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

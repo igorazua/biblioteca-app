@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:millennium-blades-2016",
+  "experience": {
+    "plot": "Millennium Blades is a CCG-Simulator -- A game in which you play as a group of friends who play the fictional CCG \"Millennium Blades\". The game draws heavily on Manga/Anime inspiration for its art, and parodies Magic: the Gathering, Yugioh, and many other coll",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de D. Brad Talton, Jr., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Real-time.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra de D. Brad Talton, Jr. dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "draft_de_cartas",
+    "gestion_de_recursos",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Millennium Blades: destacada boardgame (2016) obra de D. Brad Talton, Jr..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

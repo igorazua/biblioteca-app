@@ -1,0 +1,43 @@
+{
+  "id": "movie:andaz-apna-apna-1994",
+  "experience": {
+    "plot": "película de 1994 dirigida por Rajkumar Santoshi",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Rajkumar Santoshi, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Forrest Gump",
+      "Matrix",
+      "Gladiator",
+      "Titanic"
+    ],
+    "context": "Estrenada en 1994, una obra destacada de Rajkumar Santoshi en el panorama de Acción y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pareja"
+  ],
+  "oneLiner": "Andaz Apna Apna: Acción y Comedia con dirección de Rajkumar Santoshi.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:cool-hand-luke-1967",
+  "experience": {
+    "plot": "La leyenda del indomable es una película dramática estadounidense de 1967 dirigida por Stuart Rosenberg, con Paul Newman, George Kennedy y Strother Martin como actores principales. Está basada en la novela homónima de 1965 escrita por Donn Pearce.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Stuart Rosenberg, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1967, una obra destacada de Stuart Rosenberg en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 1,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "La leyenda del indomable: Crimen y Drama con dirección de Stuart Rosenberg.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

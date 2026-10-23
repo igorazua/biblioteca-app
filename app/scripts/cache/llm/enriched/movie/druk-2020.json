@@ -1,0 +1,42 @@
+{
+  "id": "movie:druk-2020",
+  "experience": {
+    "plot": "Druk es una película dramática danesa de 2020, dirigida por Thomas Vinterberg, a partir de un guion de Vinterberg y Tobias Lindholm. Está protagonizada por Mads Mikkelsen, Thomas Bo Larsen, Magnus Millang y Lars Ranthe. El tema principal de la película es \"Wha",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Thomas Vinterberg, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2020, una obra destacada de Thomas Vinterberg en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Druk: Comedia y Drama con dirección de Thomas Vinterberg.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

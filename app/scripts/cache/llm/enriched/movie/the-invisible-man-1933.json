@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-invisible-man-1933",
+  "experience": {
+    "plot": "El hombre invisible es una película estadounidense de suspenso, terror y ciencia ficción de 2020 escrita y dirigida por Leigh Whannell. La cinta está protagonizada por Elisabeth Moss y Oliver Jackson-Cohen, y se basa libremente en la novela homónima de H. G. W",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de James Whale, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Matrix",
+      "Parque Jurásico",
+      "Regreso al futuro",
+      "Origen"
+    ],
+    "context": "Estrenada en 1933, una obra destacada de James Whale en el panorama de Terror y Ciencia ficción."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 2,
+    "emocion": 3,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "espacio",
+    "sobrenatural"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde"
+  ],
+  "oneLiner": "El hombre invisible: Terror y Ciencia ficción con dirección de James Whale.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

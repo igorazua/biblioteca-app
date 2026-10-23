@@ -1,0 +1,44 @@
+{
+  "id": "movie:harry-potter-and-the-prisoner-of-azkaban-2004",
+  "experience": {
+    "plot": "Harry Potter y el prisionero de Azkaban es la tercera película de la serie de películas de Harry Potter y de la franquicia Mundo Mágico. Fue dirigida por el director mexicano Alfonso Cuarón. La película se basó en la novela homónima de la escritora J. K. Rowli",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Alfonso Cuar\u001an, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico",
+      "Avatar"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Alfonso Cuar\u001an en el panorama de Aventura y Familiar."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 5,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "duelo",
+    "espionaje",
+    "supervivencia"
+  ],
+  "moments": [
+    "familia",
+    "domingo_tarde",
+    "amigos"
+  ],
+  "oneLiner": "Harry Potter y el prisionero de Azkaban: notable propuesta de Aventura y Familiar (2004).",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

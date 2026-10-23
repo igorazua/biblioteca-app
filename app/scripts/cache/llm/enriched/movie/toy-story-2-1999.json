@@ -1,0 +1,43 @@
+{
+  "id": "movie:toy-story-2-1999",
+  "experience": {
+    "plot": "Toy Story 2 es una película de animación por ordenador de 1999 dirigida por John Lasseter, Ash Brannon y Lee Unkrich y producida por Pixar Animation Studios para Walt Disney Pictures. La película fue estrenada en Estados Unidos el 24 de noviembre de 1999. Es l",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de John Lasseter, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 1999, una obra destacada de John Lasseter en el panorama de Animación y Aventura."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 5,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 1,
+    "fantasia": 3,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "amistad",
+    "ia_y_robots",
+    "espionaje",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Toy Story 2: Animación y Aventura con dirección de John Lasseter.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

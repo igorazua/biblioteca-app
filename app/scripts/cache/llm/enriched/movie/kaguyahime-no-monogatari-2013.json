@@ -1,0 +1,42 @@
+{
+  "id": "movie:kaguyahime-no-monogatari-2013",
+  "experience": {
+    "plot": "El cuento de la princesa Kaguya , también conocida como La leyenda de la princesa Kaguya en algunos países de Hispanoamérica, es una película de animación japonesa producida por Studio Ghibli y estrenada en Japón a finales de 2013. Se basa en el cuento popular",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Isao Takahata, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2013, una obra destacada de Isao Takahata en el panorama de Animación y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 1,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 5,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Kaguyahime no monogatari: Animación y Aventura con dirección de Isao Takahata.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

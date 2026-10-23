@@ -1,0 +1,41 @@
+{
+  "id": "movie:cisne-negro-2010",
+  "experience": {
+    "plot": "Black Swan es una película estadounidense de terror psicológico psicológico dirigida en 2010 por Darren Aronofsky. Está protagonizada por Natalie Portman, Vincent Cassel, Mila Kunis, Barbara Hershey y Winona Ryder. Portman ganó el Óscar, el Globo de Oro y el P",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Darren Aronofsky, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2010, una obra destacada de Darren Aronofsky en el panorama de Thriller y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "espionaje",
+    "familia",
+    "crimen"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Cisne negro: Thriller y Drama con dirección de Darren Aronofsky.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

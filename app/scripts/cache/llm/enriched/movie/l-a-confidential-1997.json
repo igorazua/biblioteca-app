@@ -1,0 +1,42 @@
+{
+  "id": "movie:l-a-confidential-1997",
+  "experience": {
+    "plot": "L.A. Confidential es una película estadounidense de suspense neo-noir de 1997, dirigida por Curtis Hanson, y escrita por Hanson y Brian Helgeland, basándose en la novela homónima de James Ellroy. La cinta fue protagonizada por Guy Pearce, Kevin Spacey y Russel",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Curtis Hanson, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1997, una obra destacada de Curtis Hanson en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "L.A. Confidential: Crimen y Drama con dirección de Curtis Hanson.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

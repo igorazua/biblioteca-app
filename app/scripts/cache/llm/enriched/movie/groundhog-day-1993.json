@@ -1,0 +1,43 @@
+{
+  "id": "movie:groundhog-day-1993",
+  "experience": {
+    "plot": "Groundhog Day es una película estadounidense de comedia fantástica de 1993 dirigida por Harold Ramis a partir de un guion de él y Danny Rubin. Protagonizada por Bill Murray y Andie MacDowell, cuenta la historia de Phil Connors (Murray), un arrogante meteorólog",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Harold Ramis, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Forrest Gump",
+      "El señor de los anillos: La comunidad del anillo",
+      "Titanic",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 1993, una obra destacada de Harold Ramis en el panorama de Comedia y Fantasía."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 3,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 5,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "viaje_en_el_tiempo",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pareja"
+  ],
+  "oneLiner": "Atrapado en el tiempo: Comedia y Fantasía con dirección de Harold Ramis.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

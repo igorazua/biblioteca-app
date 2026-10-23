@@ -1,0 +1,44 @@
+{
+  "id": "series:young-dracula-2006",
+  "experience": {
+    "plot": "Young Drácula es una serie de televisión británica, dirigida por Joss Agnew, la primera temporada se emitió en 2006, y la segunda temporada, comenzó a finales del 2007, concluyó a principios de 2008. Una tercera temporada fue encargada tres años más tarde y co",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de CBBC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Children.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2006, una referencia indispensable obra de CBBC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "monstruos_y_terror",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "pasar_miedo"
+  ],
+  "oneLiner": "Young Dracula: destacada series (2006) obra de CBBC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

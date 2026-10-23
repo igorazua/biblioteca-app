@@ -1,0 +1,36 @@
+{
+  "id": "artist:pantera-1981",
+  "experience": {
+    "plot": "Pantera (Arlington, EE. UU.), icono de Groove metal, Thrash metal desde 1981.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Arlington, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Groove metal / Thrash metal.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1981, una referencia indispensable obra de Arlington, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 5,
+    "valencia": 3,
+    "bailable": 1,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 3
+  },
+  "themes": [
+    "electronica",
+    "metal",
+    "punk"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Pantera: destacada artist (1981) obra de Arlington, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "movie:sin-city-2005",
+  "experience": {
+    "plot": "Sin City —también conocida como Frank Miller's Sin City, y en español como La ciudad del pecado— es una película de 2005, adaptación de las historietas de Sin City: El duro adiós, La gran masacre, Ese bastardo amarillo y El cliente siempre tiene la razón. Aunq",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Frank Miller, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "El club de la lucha",
+      "El silencio de los corderos"
+    ],
+    "context": "Estrenada en 2005, una obra destacada de Frank Miller en el panorama de Crimen y Thriller."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "Sin City: Crimen y Thriller con dirección de Frank Miller.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

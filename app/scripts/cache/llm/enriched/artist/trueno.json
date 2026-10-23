@@ -1,0 +1,36 @@
+{
+  "id": "artist:trueno",
+  "experience": {
+    "plot": "Mateo Palacios Corazzina, conocido artísticamente como Trueno, es un rapero y compositor argentino. Consolidado como una de las figuras más prominentes de la música urbana de Argentina, se distingue por una evolución que comenzó en la cultura hip hop y el free",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 4,
+    "bailable": 4,
+    "organico": 1,
+    "intensidad": 3,
+    "fondo": 4,
+    "complejidad": 1
+  },
+  "themes": [
+    "hip_hop",
+    "trap",
+    "soul"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Trueno: destacada artist (2019) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

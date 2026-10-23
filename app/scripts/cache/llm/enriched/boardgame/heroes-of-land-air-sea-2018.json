@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:heroes-of-land-air-sea-2018",
+  "experience": {
+    "plot": "Heroes of Land, Air & Sea is an immersive and strategic 4X-style board game that transports players into a world of epic battles between orcs and humans, dwarves and elves, and warring kingdoms. With beautifully crafted miniatures, this game brings to life the",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Scott Almes, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Exploración / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Scott Almes dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 5,
+    "azar": 2,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 1
+  },
+  "themes": [
+    "ciencia_ficcion_espacial",
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Heroes of Land, Air & Sea: destacada boardgame (2018) obra de Scott Almes.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

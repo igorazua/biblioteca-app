@@ -1,0 +1,44 @@
+{
+  "id": "series:sherlock-2010",
+  "experience": {
+    "plot": "Sherlock es una serie de televisión británica que comenzó en 2010, realizada por la BBC y protagonizada por Benedict Cumberbatch y Martin Freeman. Coproducida por Hartswood Films y WGBH, la serie fue creada por Steven Moffat y Mark Gatiss. El cineasta Paul McG",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Steven Moffat y Mark Gatiss, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Misterio / Crimen.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra de Steven Moffat y Mark Gatiss dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 1,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 2,
+    "enganche": 4,
+    "formato": 4
+  },
+  "themes": [
+    "investigacion_policial",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton",
+    "enganche",
+    "pasar_miedo"
+  ],
+  "oneLiner": "Sherlock: destacada series (2010) obra de Steven Moffat y Mark Gatiss.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

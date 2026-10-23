@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:lacrimosa-2022",
+  "experience": {
+    "plot": "Wolfgang Amadeus Mozart is dead. His last conscious action on his deathbed was composing the Lacrimosa movement of his Opus Requiem. You, as one of his sponsors, will meet with the widow in order to participate one last time in the funding of the works of the ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Ferran Renalias, Gerard Ascensi, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Ferran Renalias, Gerard Ascensi dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 2,
+    "risas": 1,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Lacrimosa: destacada boardgame (2022) obra de Ferran Renalias, Gerard Ascensi.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

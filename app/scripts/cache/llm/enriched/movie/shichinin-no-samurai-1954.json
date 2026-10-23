@@ -1,0 +1,43 @@
+{
+  "id": "movie:shichinin-no-samurai-1954",
+  "experience": {
+    "plot": "Los siete samuráis es una película japonesa de 1954 dirigida por Akira Kurosawa. Obtuvo el León de Plata en la Mostra de Venecia y dos candidaturas al Óscar.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Akira Kurosawa, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 1954, una obra destacada de Akira Kurosawa en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 4,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Shichinin no samurai: Acción y Aventura con dirección de Akira Kurosawa.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

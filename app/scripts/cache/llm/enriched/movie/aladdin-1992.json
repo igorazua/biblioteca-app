@@ -1,0 +1,44 @@
+{
+  "id": "movie:aladdin-1992",
+  "experience": {
+    "plot": "Aladdín es una película animada producida por Walt Disney Feature Animation y distribuida por Walt Disney Pictures. Es la trigésima primera película en el canon de Walt Disney Animation y se realizó en un período conocido como el Renacimiento de Disney. La pel",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Ron Clements, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Parque Jurásico",
+      "Regreso al futuro"
+    ],
+    "context": "Estrenada en 1992, una obra destacada de Ron Clements en el panorama de Animación y Aventura."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 5,
+    "reconfort": 5
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "musica",
+    "amistad",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Aladdín: Animación y Aventura con dirección de Ron Clements.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

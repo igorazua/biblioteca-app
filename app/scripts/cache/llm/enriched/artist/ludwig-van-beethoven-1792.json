@@ -1,0 +1,36 @@
+{
+  "id": "artist:ludwig-van-beethoven-1792",
+  "experience": {
+    "plot": "Ludwig van Beethoven (Bonn, Alemania), icono de Clasicismo, Romanticismo, Sinfónico desde 1792.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Bonn, Alemania, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Clasicismo / Romanticismo.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1792, una referencia indispensable obra de Bonn, Alemania dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 3,
+    "intensidad": 4,
+    "fondo": 1,
+    "complejidad": 3
+  },
+  "themes": [
+    "pop",
+    "rock_clasico",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Ludwig van Beethoven: destacada artist (1792) obra de Bonn, Alemania.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

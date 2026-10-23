@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:lorenzo-il-magnifico-2016",
+  "experience": {
+    "plot": "Lorenzo de' Medici, also known as \"Lorenzo il Magnifico\" (Lorenzo the Magnificent), was one of the most powerful and enthusiastic patrons of the Italian Renaissance. In Lorenzo il Magnifico, each player takes the role of the head of a noble family in a city du",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Flaminia Brasini, Simone Luciani, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Renaissance.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra de Flaminia Brasini, Simone Luciani dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Lorenzo il Magnifico: destacada boardgame (2016) obra de Flaminia Brasini, Simone Luciani.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "movie:the-searchers-1956",
+  "experience": {
+    "plot": "The Searchers es una película estadounidense de 1956 basada en la novela homónima de Alan Le May, dirigida por John Ford y con John Wayne, Jeffrey Hunter, Vera Miles, Natalie Wood y Ward Bond como actores principales.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de John Ford, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 1956, una obra destacada de John Ford en el panorama de Aventura y Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Centauros del desierto: Aventura y Drama con dirección de John Ford.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

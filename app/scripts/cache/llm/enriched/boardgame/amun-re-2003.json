@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:amun-re-2003",
+  "experience": {
+    "plot": "Everyone knows of the pyramids on the Nile — eternal monuments of a powerful and beautiful culture that can still take our breath away. The players (leaders of a royal Egyptian family) choose their sites, build their pyramids, and thank Amun-Re and the other g",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Reiner Knizia, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Antigüedad / Económico.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2003, una referencia indispensable obra de Reiner Knizia dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 1,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Amun-Re: destacada boardgame (2003) obra de Reiner Knizia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

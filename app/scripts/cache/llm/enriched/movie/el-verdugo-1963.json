@@ -1,0 +1,40 @@
+{
+  "id": "movie:el-verdugo-1963",
+  "experience": {
+    "plot": "El Verdugo es una película italo-española de comedia oscura satírica de la nueva ola española de 1963 dirigida por Luis García Berlanga. Fue rodada en blanco y negro, y actualmente es considerada un clásico y uno de los mejores films del cine español. Obtuvo d",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Luis García Berlanga, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El día de la bestia",
+      "Los santos inocentes",
+      "[REC]",
+      "Torrente, el brazo tonto de la ley"
+    ],
+    "context": "Estrenada en 1963, una obra destacada de Luis García Berlanga en el panorama de Cine español."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "ia_y_robots",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "El verdugo: Cine español con dirección de Luis García Berlanga.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

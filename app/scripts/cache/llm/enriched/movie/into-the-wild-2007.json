@@ -1,0 +1,43 @@
+{
+  "id": "movie:into-the-wild-2007",
+  "experience": {
+    "plot": "Into the Wild —conocida en español como Hacia rutas salvajes o Camino salvaje— es una película dramática de aventura biográfica estadounidense de 2007, escrita, coproducida y dirigida por Sean Penn. Es una adaptación del libro de no ficción de 1996 Hacia rutas",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Sean Penn, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 2007, una obra destacada de Sean Penn en el panorama de Aventura y Biografía."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "espionaje",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Hacia rutas salvajes: Aventura y Biografía con dirección de Sean Penn.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

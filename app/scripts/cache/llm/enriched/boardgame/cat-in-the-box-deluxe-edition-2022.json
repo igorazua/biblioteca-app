@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:cat-in-the-box-deluxe-edition-2022",
+  "experience": {
+    "plot": "Cat in the Box: Deluxe Edition is the quintessential quantum trick-taking card game for 2 - 5 cool cats, where your card’s color isn’t defined until you play it! Hypothesize how many tricks you will win, and record your bid. Place tokens on the community resea",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Muneyuki Yokouchi (横内宗幸), la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Muneyuki Yokouchi (横内宗幸) dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 4,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "draft_de_cartas",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Cat in the Box: Deluxe Edition (2022): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

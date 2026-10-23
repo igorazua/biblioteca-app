@@ -1,0 +1,43 @@
+{
+  "id": "series:spongebob-squarepants-1999",
+  "experience": {
+    "plot": "Bob Esponja es una serie de televisión de dibujos animados estadounidense bidimensional creada por el educador y animador de ciencias marinas Stephen Hillenburg que se estrenó en Nickelodeon como un adelanto después de los Kids Choice Awards 1999 el 1 de mayo ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Nickelodeon, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 1999, una referencia indispensable obra de Nickelodeon dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 5,
+    "enganche": 2,
+    "formato": 2
+  },
+  "themes": [
+    "amistad",
+    "sitcom_cotidiana",
+    "animacion"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Bob Esponja: destacada series (1999) obra de Nickelodeon.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

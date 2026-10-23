@@ -1,0 +1,43 @@
+{
+  "id": "series:kroll-show-2013",
+  "experience": {
+    "plot": "With unforgettable recurring characters like Bobby Bottleservice, the PubLIZity Girls, Ref Jeff, C-Czar and more, Kroll Show skewers our television-obsessed culture and the rabid fan base it breeds. More than just a collection of sketches, it's Nick Kroll's on",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Comedy Central, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de Comedy Central dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 1,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 2,
+    "reconfort": 5,
+    "enganche": 3,
+    "formato": 3
+  },
+  "themes": [
+    "sitcom_cotidiana",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Kroll Show: destacada series (2013) obra de Comedy Central.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

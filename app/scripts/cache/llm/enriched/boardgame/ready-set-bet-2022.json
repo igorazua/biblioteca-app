@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:ready-set-bet-2022",
+  "experience": {
+    "plot": "In Ready Set Bet, you and your friends head to the races for a day of cheering, jeering, and betting on your favorite horses, whose fates hang on every roll of the dice. Ready Set Bet is played over four rounds. Each round consists of a race followed by bet re",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de John D. Clair, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Party Game.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de John D. Clair dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 4,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Ready Set Bet: destacada boardgame (2022) obra de John D. Clair.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

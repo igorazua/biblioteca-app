@@ -1,0 +1,43 @@
+{
+  "id": "movie:lage-raho-munna-bhai-2006",
+  "experience": {
+    "plot": "película de 2006 dirigida por Rajkumar Hirani",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Rajkumar Hirani, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2006, una obra destacada de Rajkumar Hirani en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 1,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 1,
+    "humor": 5,
+    "tension": 1,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Lage Raho Munna Bhai: Comedia y Drama con dirección de Rajkumar Hirani.",
+  "confidence": "media",
+  "src": "llm-agent"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "series:regular-show-2010",
+  "experience": {
+    "plot": "Regular Show es una serie animada de televisión estadounidense de comedia, creada por J. G. Quintel para Cartoon Network. Está protagonizada por dos amigos, Mordecai —un arrendajo azul— y Rigby —un mapache—, encargados del mantenimiento en un parque, que busca",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Cartoon Network, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Aventura.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra de Cartoon Network dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 5,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 3,
+    "escala": 1,
+    "reconfort": 5,
+    "enganche": 2,
+    "formato": 2
+  },
+  "themes": [
+    "amistad",
+    "sitcom_cotidiana",
+    "familia"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "Historias corrientes: destacada series (2010) obra de Cartoon Network.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

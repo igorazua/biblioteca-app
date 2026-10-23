@@ -1,0 +1,42 @@
+{
+  "id": "movie:black-hawk-down-2001",
+  "experience": {
+    "plot": "Black Hawk Down es una película bélica estadounidense de 2001 dirigida por Ridley Scott y escrita por Ken Nolan. El argumento está basado en el libro homónimo de no ficción escrito por el periodista Mark Bowden, que narra el hecho real acontecido durante una m",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Ridley Scott, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2001, una obra destacada de Ridley Scott en el panorama de Drama y Historia."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "mafia",
+    "ia_y_robots",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Black Hawk derribado: Drama y Historia con dirección de Ridley Scott.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

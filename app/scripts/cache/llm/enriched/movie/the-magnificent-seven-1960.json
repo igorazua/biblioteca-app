@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-magnificent-seven-1960",
+  "experience": {
+    "plot": "Los siete magníficos —cuyo título original es The Magnificent Seven— es una película estadounidense estrenada el 23 de octubre de 1960, dirigida por John Sturges, con Yul Brynner, Steve McQueen, Charles Bronson, James Coburn, Horst Buchholz, Robert Vaughn, Eli",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de John Sturges, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1960, una obra destacada de John Sturges en el panorama de Acción y Aventura."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "supervivencia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Los siete magníficos: Acción y Aventura con dirección de John Sturges.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

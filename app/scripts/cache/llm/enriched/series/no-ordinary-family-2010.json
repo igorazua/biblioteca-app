@@ -1,0 +1,43 @@
+{
+  "id": "series:no-ordinary-family-2010",
+  "experience": {
+    "plot": "No Ordinary Family es una serie de televisión estadounidense de ABC. Es de una hora de duración, y es de tipo ciencia ficción, comedia, drama. Producida por ABC Studios desde 2010-11. El estreno de la serie en Estados Unidos fue el 28 de septiembre de 2010.\nEl",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de ABC, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Acción.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra de ABC dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2,
+    "enganche": 3,
+    "formato": 4
+  },
+  "themes": [
+    "familia",
+    "politica_y_poder",
+    "sitcom_cotidiana"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Una familia con superpoderes: destacada series (2010) obra de ABC.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

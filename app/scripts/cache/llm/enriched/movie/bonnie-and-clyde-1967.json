@@ -1,0 +1,41 @@
+{
+  "id": "movie:bonnie-and-clyde-1967",
+  "experience": {
+    "plot": "Bonnie y Clyde es una película de gánsteres estadounidense de 1967 dirigida por Arthur Penn, con Warren Beatty y Faye Dunaway en los papeles principales.",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Arthur Penn, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Matrix",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 1967, una obra destacada de Arthur Penn en el panorama de Acción y Biografía."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 1
+  },
+  "themes": [
+    "crimen",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Bonnie y Clyde: Acción y Biografía con dirección de Arthur Penn.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:clerks-1994",
+  "experience": {
+    "plot": "Clerks es una comedia estadounidense de 1994 y ópera prima de Kevin Smith, quien ejerció como guionista, director y actor secundario como Bob el silencioso. Tras su buena acogida en el festival de Sundance, esta película ha sido considerada una joya del cine i",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Kevin Smith, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek",
+      "Amélie"
+    ],
+    "context": "Estrenada en 1994, una obra destacada de Kevin Smith en el panorama de Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 2,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 1,
+    "reconfort": 5
+  },
+  "themes": [
+    "ia_y_robots",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar"
+  ],
+  "oneLiner": "Clerks: Comedia con dirección de Kevin Smith.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

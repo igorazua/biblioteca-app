@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:blitzkrieg-world-war-two-in-20-minutes-2019",
+  "experience": {
+    "plot": "Recreate World War Two in 20 minutes! The perfect wargame for non-wargamers, Blitzkrieg! allows two players to battle across the War’s most iconic theatres, winning key campaigns and building military might. Players draw army tokens from a bag to determine the",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Paolo Mori, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Juego de guerra / World War II.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2019, una referencia indispensable obra de Paolo Mori dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "guerra_historica",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Blitzkrieg!: World War Two in 20 Minutes: destacada boardgame (2019) obra de Paolo Mori.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

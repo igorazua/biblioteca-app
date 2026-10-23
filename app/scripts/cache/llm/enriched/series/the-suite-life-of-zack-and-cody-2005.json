@@ -1,0 +1,43 @@
+{
+  "id": "series:the-suite-life-of-zack-and-cody-2005",
+  "experience": {
+    "plot": "The Suite Life of Zack & Cody es una serie de televisión creada por Danny Kallis y Jim Geoghan. La serie se estrenó por primera vez en Disney Channel el 18 de marzo de 2005, con 4 millones de espectadores, convirtiéndose en el estreno más exitoso para Disney C",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Disney Channel, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia / Children.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2005, una referencia indispensable obra de Disney Channel dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "familia",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena"
+  ],
+  "oneLiner": "The Suite Life of Zack and Cody: destacada series (2005) obra de Disney Channel.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

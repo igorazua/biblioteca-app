@@ -1,0 +1,36 @@
+{
+  "id": "artist:john-williams-1958",
+  "experience": {
+    "plot": "John Williams (Nueva York, EE. UU.), icono de Banda sonora, Música orquestal desde 1958.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Nueva York, EE. UU., la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Banda sonora / Música orquestal.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1958, una referencia indispensable obra de Nueva York, EE. UU. dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 3,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
+    "complejidad": 3
+  },
+  "themes": [
+    "jazz",
+    "pop",
+    "rock_clasico"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "John Williams: destacada artist (1958) obra de Nueva York, EE. UU..",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

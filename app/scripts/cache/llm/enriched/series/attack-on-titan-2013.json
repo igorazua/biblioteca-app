@@ -1,0 +1,42 @@
+{
+  "id": "series:attack-on-titan-2013",
+  "experience": {
+    "plot": "Attack on Titan  es un anime japonés de fantasía oscura, adaptado del manga homónimo de Hajime Isayama, que se estrenó el 7 de abril de 2013. Originalmente, en Japón, la primera y segunda temporada se emitieron en MBS TV, mientras que la tercera y cuarta en NH",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Hajime Isayama, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animación / Acción.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2013, una referencia indispensable obra de Hajime Isayama dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 3,
+    "humor": 4,
+    "tension": 3,
+    "fantasia": 3,
+    "violencia": 4,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 5,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "animacion",
+    "amistad",
+    "familia"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Ataque a los titanes: destacada series (2013) obra de Hajime Isayama.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

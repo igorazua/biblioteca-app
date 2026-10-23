@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:scholars-of-the-south-tigris-2023",
+  "experience": {
+    "plot": "Scholars of the South Tigris is set during the height of the Abbasid Caliphate, circa 830 AD. The Caliph has called upon the keenest minds to acquire scientific manuscripts from all over the known world. Players will need to increase their influence in the Hou",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de S J Macdonald, Shem Phillips, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Arabian / Medieval.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2023, una referencia indispensable obra de S J Macdonald, Shem Phillips dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 2,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 3
+  },
+  "themes": [
+    "fantasia_medieval",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Scholars of the South Tigris (2023): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

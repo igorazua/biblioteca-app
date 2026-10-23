@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:space-hulk-death-angel-the-card-game-2010",
+  "experience": {
+    "plot": "A cooperative game where the players attempt to clean out an infestation of hostile aliens from a derelict spaceship. Set in the Warhammer 40,000 universe, players take on the roles of Space Marines pitted against hordes of Genestealers. Players choose from si",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Corey Konieczka, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cartas / Fighting.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra de Corey Konieczka dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 4,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "draft_de_cartas",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "Space Hulk: Death Angel – The Card Game (2010): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

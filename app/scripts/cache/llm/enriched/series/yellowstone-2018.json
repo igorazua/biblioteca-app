@@ -1,0 +1,43 @@
+{
+  "id": "series:yellowstone-2018",
+  "experience": {
+    "plot": "Yellowstone es una serie de televisión dramática neo-western estadounidense creada por Taylor Sheridan y John Linson que se emitió en Paramount Network del 20 de junio de 2018 al 15 de diciembre de 2024. La serie está protagonizada por Kevin Costner, Wes Bentl",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Taylor Sheridan, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Western.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Taylor Sheridan dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 1,
+    "enganche": 5,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Yellowstone: destacada series (2018) obra de Taylor Sheridan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "artist:sade",
+  "experience": {
+    "plot": "Helen Folasade Adu es una cantante y compositora británica de origen nigeriano, vocalista principal de su banda Sade.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de downtempo / pop.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1984, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 2,
+    "valencia": 4,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 3,
+    "fondo": 5,
+    "complejidad": 4
+  },
+  "themes": [
+    "pop",
+    "jazz",
+    "rock_clasico"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Sade: destacada artist (1984) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "artist:eladio-carrion",
+  "experience": {
+    "plot": "Eladio Carrión es un cantante y compositor estadounidense de música urbana latina. Criado en Puerto Rico, su carrera comenzó como creador de contenido junto al productor Dbeats, parodiando voces de artistas de la escena urbana local, para después desempeñarse ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 4,
+    "bailable": 3,
+    "organico": 3,
+    "intensidad": 3,
+    "fondo": 3,
+    "complejidad": 3
+  },
+  "themes": [
+    "musica_latina",
+    "pop",
+    "rock_clasico"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Eladio Carrión: destacada artist (2017) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

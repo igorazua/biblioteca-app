@@ -1,0 +1,42 @@
+{
+  "id": "series:cake-boss-2009",
+  "experience": {
+    "plot": "Cake boss, es un programa de televisión estadounidense transmitido por TLC desde 2009 hasta la actualidad. El programa sigue el funcionamiento de Carlo's Bake Shop, una pastelería familiar ubicada en Hoboken, Nueva Jersey que es propiedad de los hermanos Buddy",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Discovery Family, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Food / Familiar.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2009, una referencia indispensable obra de Discovery Family dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 2
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton"
+  ],
+  "oneLiner": "Cake Boss: destacada series (2009) obra de Discovery Family.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

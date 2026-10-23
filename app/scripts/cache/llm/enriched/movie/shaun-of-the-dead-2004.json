@@ -1,0 +1,43 @@
+{
+  "id": "movie:shaun-of-the-dead-2004",
+  "experience": {
+    "plot": "Shaun of the Dead es una película de comedia británica-francesa estrenada en 2004. Fue dirigida por Edgar Wright y protagonizada por Simon Pegg y Nick Frost. La película mezcla los géneros de comedia y cine de terror, basándose en cintas sobre muertos viviente",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Edgar Wright, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "Regreso al futuro",
+      "Toy Story",
+      "Shrek",
+      "Alien, el octavo pasajero"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Edgar Wright en el panorama de Comedia y Terror."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "duelo",
+    "amistad",
+    "sobrenatural"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pasar_miedo"
+  ],
+  "oneLiner": "Zombies party: Comedia y Terror con dirección de Edgar Wright.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

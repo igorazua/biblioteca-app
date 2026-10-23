@@ -1,0 +1,38 @@
+{
+  "id": "boardgame:warhammer-quest-the-adventure-card-game-2015",
+  "experience": {
+    "plot": "Join forces with legendary heroes to brave the many dangers of a cavernous dungeon. Wield potent weapons and magic. Conquer hordes of vile monsters. Discover fabulous treasures. Warhammer Quest: The Adventure Card Game is a cooperative game of heroic dungeon a",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Adam Sadler, Brady Sadler, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Cartas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Adam Sadler, Brady Sadler dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 1,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 4,
+    "tema": 3,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "cooperativo"
+  ],
+  "oneLiner": "Warhammer Quest: The Adventure Card Game (2015): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

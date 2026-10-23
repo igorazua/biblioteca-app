@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-broken-circle-breakdown-2012",
+  "experience": {
+    "plot": "Alabama Monroe es una película dramática belga de 2012 dirigida por Felix van Groeningen con un guion de Carl Joos y del mismo Van Groeningen. Se basa en la obra de teatro homónima de Johan Heldenbergh y Mieke Dobbels. La cinta fue seleccionada para competir e",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Felix van Groeningen, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2012, una obra destacada de Felix van Groeningen en el panorama de Drama y Música."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "pareja"
+  ],
+  "oneLiner": "Alabama Monroe: Drama y Música con dirección de Felix van Groeningen.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

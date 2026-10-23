@@ -1,0 +1,43 @@
+{
+  "id": "movie:el-viaje-de-chihiro-2001",
+  "experience": {
+    "plot": "El viaje de Chihiro  es una película de animación japonesa estrenada el 20 de julio de 2001. Fue dirigida por Hayao Miyazaki y producida en el Studio Ghibli, por Tokuma Shoten, Nippon Television Network, Dentsu, Buena Vista Home Entertainment, Tohokushinsha Fi",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Hayao Miyazaki, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "El señor de los anillos: La comunidad del anillo",
+      "Toy Story",
+      "Shrek"
+    ],
+    "context": "Estrenada en 2001, una obra destacada de Hayao Miyazaki en el panorama de Animación y Fantasía."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 3,
+    "fantasia": 4,
+    "violencia": 2,
+    "familiar": 5,
+    "escala": 4,
+    "reconfort": 5
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "sobrenatural",
+    "ambicion"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "El viaje de Chihiro: Animación y Fantasía con dirección de Hayao Miyazaki.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

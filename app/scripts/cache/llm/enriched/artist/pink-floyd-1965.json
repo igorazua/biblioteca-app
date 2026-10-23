@@ -14,12 +14,12 @@
     "context": "Creada en 1965, una referencia indispensable obra de Londres, Reino Unido dentro de su disciplina."
   },
   "axes": {
-    "energia": 5,
+    "energia": 4,
     "valencia": 4,
-    "bailable": 5,
-    "organico": 5,
-    "intensidad": 5,
-    "fondo": 1,
+    "bailable": 2,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 2,
     "complejidad": 5
   },
   "themes": [

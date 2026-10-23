@@ -16,14 +16,14 @@
   "axes": {
     "tono": 2,
     "ritmo": 4,
-    "emocion": 2,
+    "emocion": 3,
     "densidad": 4,
     "humor": 1,
-    "tension": 1,
-    "fantasia": 1,
-    "escala": 2,
-    "ideas": 2,
-    "reconfort": 5
+    "tension": 2,
+    "fantasia": 4,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 4
   },
   "themes": [
     "duelo",

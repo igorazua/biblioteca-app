@@ -1,0 +1,41 @@
+{
+  "id": "movie:the-straight-story-1999",
+  "experience": {
+    "plot": "The Straight Story es una película de carretera estadounidense de 1999 dirigida por David Lynch. La película fue editada y producida por Mary Sweeney, socia y colaboradora de Lynch en muchos de sus proyectos, que coescribió el guion con John E. Roach. La pelíc",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de David Lynch, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1999, una obra destacada de David Lynch en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "familia"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Una historia verdadera: Biografía y Drama con dirección de David Lynch.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

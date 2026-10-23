@@ -1,0 +1,41 @@
+{
+  "id": "movie:oldboy-2003",
+  "experience": {
+    "plot": "Oldboy es una película de thriller, drama y neo noir surcoreana dirigida por Park Chan-wook. Inspirada en el manga homónimo, guion de Garon Tsuchiya y dibujo de Nobuaki Minegishi, se presentó en 2003 como la segunda entrega de la denominada «Trilogía de la ven",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Park Chan-wook, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Pulp Fiction",
+      "El club de la lucha",
+      "El silencio de los corderos",
+      "Seven"
+    ],
+    "context": "Estrenada en 2003, una obra destacada de Park Chan-wook en el panorama de Thriller y Misterio."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 2,
+    "exigencia": 5,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "investigacion",
+    "venganza",
+    "crimen"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde"
+  ],
+  "oneLiner": "Oldboy: Thriller y Misterio con dirección de Park Chan-wook.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

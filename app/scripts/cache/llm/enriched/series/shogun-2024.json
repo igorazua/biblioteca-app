@@ -1,0 +1,43 @@
+{
+  "id": "series:shogun-2024",
+  "experience": {
+    "plot": "Shōgun es una serie de televisión de drama histórico estadounidense creada por Rachel Kondo y Justin Marks. Está basada en la novela del mismo nombre de James Clavell, que fue previamente adaptada a una miniserie del mismo nombre. Su elenco incluye a Hiroyuki ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Rachel Kondo y Justin Marks, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Drama / Histórica.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Rachel Kondo y Justin Marks dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 5
+  },
+  "themes": [
+    "amistad",
+    "familia",
+    "ambicion"
+  ],
+  "moments": [
+    "maraton",
+    "enganche"
+  ],
+  "oneLiner": "Shōgun: destacada series (2024) obra de Rachel Kondo y Justin Marks.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

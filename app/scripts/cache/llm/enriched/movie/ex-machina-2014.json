@@ -1,0 +1,41 @@
+{
+  "id": "movie:ex-machina-2014",
+  "experience": {
+    "plot": "Ex Machina es una película de ciencia ficción británica de 2014, escrita y dirigida por Alex Garland, quien ejerció por primera vez como director. La protagonizaron Domhnall Gleeson, Alicia Vikander, Oscar Isaac y Sonoya Mizuno, y cuenta la historia de Caleb, ",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Alex Garland, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Pulp Fiction",
+      "Matrix",
+      "El club de la lucha",
+      "Parque Jurásico"
+    ],
+    "context": "Estrenada en 2014, una obra destacada de Alex Garland en el panorama de Ciencia ficción y Thriller."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 5,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "ia_y_robots",
+    "espionaje",
+    "crimen",
+    "espacio"
+  ],
+  "moments": [
+    "solo"
+  ],
+  "oneLiner": "Ex Machina: Ciencia ficción y Thriller con dirección de Alex Garland.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

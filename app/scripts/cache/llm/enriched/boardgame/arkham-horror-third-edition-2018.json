@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:arkham-horror-third-edition-2018",
+  "experience": {
+    "plot": "The year is 1926, and it is the height of the Roaring Twenties. Flappers dance till dawn in smoke-filled speakeasies, drinking alcohol supplied by rum runners and the mob. It’s a celebration to end all celebrations in the aftermath of the War to End All Wars. ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Kevin Wilson, Nikki Valens, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Fighting.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Kevin Wilson, Nikki Valens dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 5,
+    "azar": 3,
+    "confrontacion": 4,
+    "cooperacion": 4,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 1
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "terror_lovecraft",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Arkham Horror (Third Edition) (2018): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

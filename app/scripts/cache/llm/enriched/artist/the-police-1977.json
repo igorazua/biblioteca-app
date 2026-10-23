@@ -14,12 +14,12 @@
     "context": "Creada en 1977, una referencia indispensable obra de Londres, Reino Unido dentro de su disciplina."
   },
   "axes": {
-    "energia": 5,
-    "valencia": 4,
-    "bailable": 5,
-    "organico": 5,
+    "energia": 4,
+    "valencia": 1,
+    "bailable": 3,
+    "organico": 4,
     "intensidad": 5,
-    "fondo": 1,
+    "fondo": 2,
     "complejidad": 2
   },
   "themes": [

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:zombie-kidz-evolution-2018",
+  "experience": {
+    "plot": "Zombie Kidz Evolution is the first \"legacy\"-style game for kids, with basic gameplay similar to the 2013 title Zombie Kidz — but things will quickly evolve! In the game, the young players are at school when zombies start to attack, infiltrating the entryways, ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Annick Lobet, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Children's Game / Fighting.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Annick Lobet dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 5,
+    "azar": 2,
+    "confrontacion": 4,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "terror_lovecraft",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Zombie Kidz Evolution: destacada boardgame (2018) obra de Annick Lobet.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:root-2018",
+  "experience": {
+    "plot": "Root: A Game of Woodland Might and Right is a 2018 asymmetric strategy wargame board game designed by Cole Wehrle, illustrated by Kyle Ferrin, and published by Leder Games. Players compete for the most victory points through moving and battling using various f",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Cole Wehrle, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Animales / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2018, una referencia indispensable obra de Cole Wehrle dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 2,
+    "azar": 1,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Root: destacada boardgame (2018) obra de Cole Wehrle.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

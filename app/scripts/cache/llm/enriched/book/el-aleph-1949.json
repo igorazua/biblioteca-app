@@ -1,0 +1,39 @@
+{
+  "id": "book:el-aleph-1949",
+  "experience": {
+    "plot": "El Aleph es uno de los libros de cuentos más representativos del escritor argentino Jorge Luis Borges. Publicado en 1949 con 14 cuentos, fue reeditado por el autor en 1974 donde agrego 3 más. Sus 17 textos remiten a una infinidad de fuentes y bibliografías en ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Jorge Luis Borges, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Cuentos / Realismo mágico.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1949, una referencia indispensable obra de Jorge Luis Borges dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 3,
+    "fantasia": 4,
+    "escala": 3,
+    "ideas": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "duelo",
+    "amor",
+    "sociedad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "El Aleph: destacada book (1949) obra de Jorge Luis Borges.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

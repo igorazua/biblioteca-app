@@ -1,0 +1,39 @@
+{
+  "id": "book:the-strange-case-of-dr-jekyll-and-mr-hyde-1875",
+  "experience": {
+    "plot": "El extraño caso del doctor Jekyll y el señor Hyde, a veces titulado simplemente El doctor Jekyll y el señor Hyde, es una novela corta de horror gótico escrita por Robert Louis Stevenson y publicada por primera vez en inglés en 1886, que trata acerca de un abog",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Robert Louis Stevenson, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1875, una referencia indispensable obra de Robert Louis Stevenson dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 3,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "identidad",
+    "sociedad",
+    "historia"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "The Strange Case of Dr. Jekyll and Mr. Hyde (1875): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

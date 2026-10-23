@@ -1,0 +1,36 @@
+{
+  "id": "artist:mon-laferte-2003",
+  "experience": {
+    "plot": "Mon Laferte (Viña del Mar, Chile), icono de Bolero, Rock alternativo, Pop desde 2003.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Viña del Mar, Chile, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Bolero / Rock alternativo.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 2003, una referencia indispensable obra de Viña del Mar, Chile dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 4,
+    "bailable": 3,
+    "organico": 4,
+    "intensidad": 4,
+    "fondo": 4,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "musica_latina"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Mon Laferte: destacada artist (2003) obra de Viña del Mar, Chile.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

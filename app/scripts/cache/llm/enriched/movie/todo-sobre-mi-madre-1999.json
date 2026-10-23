@@ -1,0 +1,41 @@
+{
+  "id": "movie:todo-sobre-mi-madre-1999",
+  "experience": {
+    "plot": "Todo sobre mi madre es una película hispano-francesa de comedia dramática de 1999, escrita y dirigida por Pedro Almodóvar. Está protagonizada por Cecilia Roth, Marisa Paredes, Candela Peña, Antonia San Juan, Penélope Cruz y Rosa María Sardà.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Pedro Almodóvar, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1999, una obra destacada de Pedro Almodóvar en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Todo sobre mi madre: Drama con dirección de Pedro Almodóvar.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

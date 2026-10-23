@@ -1,0 +1,44 @@
+{
+  "id": "series:arrested-development-2003",
+  "experience": {
+    "plot": "Arrested Development fue una serie de televisión galardonada con varios premios Emmy como comedia televisiva, que se emitió en televisión originalmente en Estados Unidos entre noviembre de 2003 y febrero de 2006. Esta sitcom está centrada en los personajes de ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Mitchell Hurwitz, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Comedia.",
+    "similar": [
+      "Breaking Bad",
+      "Better Call Saul",
+      "Juego de tronos",
+      "Los Soprano"
+    ],
+    "context": "Creada en 2003, una referencia indispensable obra de Mitchell Hurwitz dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 1,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4,
+    "enganche": 4,
+    "formato": 3
+  },
+  "themes": [
+    "familia",
+    "sitcom_cotidiana",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "capitulo_cena",
+    "confort"
+  ],
+  "oneLiner": "Arrested Development: destacada series (2003) obra de Mitchell Hurwitz.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

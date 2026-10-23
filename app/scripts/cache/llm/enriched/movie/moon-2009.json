@@ -1,0 +1,45 @@
+{
+  "id": "movie:moon-2009",
+  "experience": {
+    "plot": "Moon es una película británica de ciencia ficción. Se estrenó en 2009 y es la ópera prima del director Duncan Jones. Su protagonista es Sam Rockwell, quien interpreta a Sam Bell, mientras que Kevin Spacey brinda su voz al robot GERTY. La banda sonora fue compu",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Duncan Jones, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 2009, una obra destacada de Duncan Jones en el panorama de Drama y Misterio."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 5,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 5,
+    "reconfort": 1
+  },
+  "themes": [
+    "investigacion",
+    "ia_y_robots",
+    "atraco",
+    "espionaje",
+    "musica",
+    "familia"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde",
+    "pensar"
+  ],
+  "oneLiner": "Moon: Drama y Misterio con dirección de Duncan Jones.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

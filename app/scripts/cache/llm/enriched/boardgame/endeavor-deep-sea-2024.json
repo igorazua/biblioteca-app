@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:endeavor-deep-sea-2024",
+  "experience": {
+    "plot": "Plunge into the modern era, where our planet's vast interconnected ocean scape is one of the last frontiers to discover and explore. Experience a deep new ever-changing adventure in this followup to the smash hit Endeavor: Age of Sail! In Endeavor: Deep Sea, y",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Carl de Visser, Jarratt Gray, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Medio ambiente / Exploración.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2024, una referencia indispensable obra de Carl de Visser, Jarratt Gray dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Endeavor: Deep Sea: destacada boardgame (2024) obra de Carl de Visser, Jarratt Gray.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

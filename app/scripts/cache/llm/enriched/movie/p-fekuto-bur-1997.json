@@ -1,0 +1,42 @@
+{
+  "id": "movie:p-fekuto-bur-1997",
+  "experience": {
+    "plot": "A pop singer gives up her career to become an actress, but she slowly goes insane when she starts being stalked by an obsessed fan and what seems to be a ghost of her past.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Satoshi Kon, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "El rey león",
+      "El silencio de los corderos"
+    ],
+    "context": "Estrenada en 1997, una obra destacada de Satoshi Kon en el panorama de Animación y Crimen."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 2,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 3,
+    "violencia": 4,
+    "familiar": 5,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "investigacion",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pasar_miedo"
+  ],
+  "oneLiner": "P\u001afekuto bur\u001a: Animación y Crimen con dirección de Satoshi Kon.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "movie:pink-2016",
+  "experience": {
+    "plot": "Pink is a 2016 Indian Hindi-language legal thriller film directed by Aniruddha Roy Chowdhury and written by Shoojit Sircar, Ritesh Shah and Aniruddha Roy Chowdhury. The film is produced by Rising Sun Films on a total budget of ₹30 crore, with screenplay by Sha",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Aniruddha Roy Chowdhury, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2016, una obra destacada de Aniruddha Roy Chowdhury en el panorama de Drama y Thriller."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "crimen",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Pink: Drama y Thriller con dirección de Aniruddha Roy Chowdhury.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

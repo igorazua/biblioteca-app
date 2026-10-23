@@ -1,0 +1,41 @@
+{
+  "id": "movie:breaking-the-waves-1996",
+  "experience": {
+    "plot": "Breaking the Waves es una película de drama psicológico romántico de 1996 con la que se consagró el director y guionista Lars von Trier. Es la primera de la trilogía Corazón Dorado, de la que forman parte Idioterne y Dancer in the Dark.",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Lars von Trier, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1996, una obra destacada de Lars von Trier en el panorama de Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 5,
+    "humor": 2,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 3,
+    "familiar": 3,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "amistad",
+    "identidad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Rompiendo las olas: Drama con dirección de Lars von Trier.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

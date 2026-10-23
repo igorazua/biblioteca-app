@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:the-elder-scrolls-betrayal-of-the-second-era-2025",
+  "experience": {
+    "plot": "The Elder Scrolls: Betrayal of the Second Era is a cooperative tabletop adventure set during Tamriel's Second Era – specifically during the events of the Planemeld, as the Order of the Black Worm plots to secure the Amulet of Kings. As the dark cult schemes, h",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Josh J. Carlson, Josh Wielgus, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Dados.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2025, una referencia indispensable obra de Josh J. Carlson, Josh Wielgus dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 3,
+    "azar": 4,
+    "confrontacion": 2,
+    "cooperacion": 4,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 2
+  },
+  "themes": [
+    "exploracion_y_mapas",
+    "naturaleza_y_animales",
+    "cooperativo_pandemia",
+    "dados_y_push_your_luck"
+  ],
+  "moments": [
+    "cooperativo",
+    "jugones"
+  ],
+  "oneLiner": "The Elder Scrolls: Betrayal of the Second Era (2025): notable e inspiradora creación.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

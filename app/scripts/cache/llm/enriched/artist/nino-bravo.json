@@ -1,0 +1,36 @@
+{
+  "id": "artist:nino-bravo",
+  "experience": {
+    "plot": "Luis Manuel Ferri Llopis ,conocido por su nombre artístico Nino Bravo, fue un cantante español considerado uno de los grandes exponentes de la música pop española, en particular durante las décadas de 1960 y 1970. A pesar de su breve carrera, ha dejado una pot",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra canónica, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Música.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1969, una referencia indispensable obra canónica dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 3,
+    "valencia": 4,
+    "bailable": 4,
+    "organico": 3,
+    "intensidad": 2,
+    "fondo": 4,
+    "complejidad": 2
+  },
+  "themes": [
+    "pop",
+    "rock_clasico",
+    "indie_rock"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Nino Bravo: destacada artist (1969) obra canónica.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

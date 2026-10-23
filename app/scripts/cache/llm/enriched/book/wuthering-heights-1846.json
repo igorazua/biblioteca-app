@@ -1,0 +1,39 @@
+{
+  "id": "book:wuthering-heights-1846",
+  "experience": {
+    "plot": "Cumbres Borrascosas es una novela de la escritora inglesa Emily Brontë. Fue publicada por primera vez en 1847 bajo el seudónimo de Ellis Bell. Su hermana Charlotte editó una segunda edición póstuma. Trata sobre dos familias de la nobleza terrateniente que vive",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Emily Brontë, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Novela / Literatura.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 1846, una referencia indispensable obra de Emily Brontë dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 4,
+    "densidad": 4,
+    "humor": 1,
+    "tension": 2,
+    "fantasia": 1,
+    "escala": 3,
+    "ideas": 3,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "sociedad",
+    "identidad"
+  ],
+  "moments": [
+    "absorbente"
+  ],
+  "oneLiner": "Wuthering Heights: destacada book (1846) obra de Emily Brontë.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

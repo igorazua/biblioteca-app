@@ -1,0 +1,41 @@
+{
+  "id": "movie:boyz-n-the-hood-1991",
+  "experience": {
+    "plot": "Boyz n the Hood es una película estadounidense de 1991 dirigida por John Singleton y protagonizada por Cuba Gooding Jr., Ice Cube, Morris Chestnut, Laurence Fishburne, Nia Long, Regina King y Angela Bassett. La trama sigue a Tre Styles, quien es enviado a vivi",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de John Singleton, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 1991, una obra destacada de John Singleton en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 1,
+    "violencia": 5,
+    "familiar": 1,
+    "escala": 1,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "ia_y_robots"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Los chicos del barrio: Crimen y Drama con dirección de John Singleton.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

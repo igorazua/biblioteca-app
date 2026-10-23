@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-treasure-of-the-sierra-madre-1948",
+  "experience": {
+    "plot": "El tesoro de Sierra Madre es una película estadounidense de 1948 escrita y dirigida por John Huston basada en la novela de 1927 The Treasure of the Sierra Madre, escrita por B. Traven. Contó con las actuaciones de Humphrey Bogart, Walter Huston, Tim Holt, Bruc",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de John Huston, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El rey león"
+    ],
+    "context": "Estrenada en 1948, una obra destacada de John Huston en el panorama de Aventura y Drama."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 5,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 3,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 4,
+    "reconfort": 3
+  },
+  "themes": [
+    "familia",
+    "supervivencia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "El tesoro de Sierra Madre: Aventura y Drama con dirección de John Huston.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

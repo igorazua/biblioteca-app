@@ -1,0 +1,39 @@
+{
+  "id": "boardgame:whitehall-mystery-2017",
+  "experience": {
+    "plot": "October 1888: During the construction of the Metropolitan Police headquarters near Whitehall, which would later be known as Scotland Yard, the remains of a body were found. In September, a severed arm had already been discovered in the muddy shore of the River",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Gabriele Mari, Gianluca Santopietro, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Faroleo / Deducción.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2017, una referencia indispensable obra de Gabriele Mari, Gianluca Santopietro dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 3,
+    "cooperacion": 1,
+    "tema": 4,
+    "risas": 4,
+    "familiar": 4
+  },
+  "themes": [
+    "construccion_de_ciudades",
+    "naturaleza_y_animales",
+    "misterio_y_deduccion",
+    "faroleo_y_enganos",
+    "palabras_y_asociacion"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Whitehall Mystery: destacada boardgame (2017) obra de Gabriele Mari, Gianluca Santopietro.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

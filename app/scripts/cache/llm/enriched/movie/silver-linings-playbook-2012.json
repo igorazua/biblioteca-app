@@ -1,0 +1,43 @@
+{
+  "id": "movie:silver-linings-playbook-2012",
+  "experience": {
+    "plot": "Silver Linings Playbook es una película dramática y de comedia romántica estadounidense de 2012 dirigida por David O. Russell, con guion de Russell, adaptado de la novela The Silver Linings Playbook, escrita por Matthew Quick. Está protagonizada por Bradley Co",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de David O. Russell, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2012, una obra destacada de David O. Russell en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 3,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 2,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 4,
+    "escala": 3,
+    "reconfort": 4
+  },
+  "themes": [
+    "amor",
+    "familia",
+    "ia_y_robots",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "El lado bueno de las cosas: Comedia y Drama con dirección de David O. Russell.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

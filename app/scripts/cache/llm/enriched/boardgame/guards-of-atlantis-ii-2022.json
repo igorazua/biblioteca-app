@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:guards-of-atlantis-ii-2022",
+  "experience": {
+    "plot": "Guards of Atlantis: Tabletop MOBA is a competitive \"zero-luck\" team-based board game inspired by computer games of the MOBA genre. In the game, each player controls a single hero and uses a hand of cards to move that hero around the game board, employ special ",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Artyom Nichipurov, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Miniaturas.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2022, una referencia indispensable obra de Artyom Nichipurov dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 3,
+    "interaccion": 3,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 2,
+    "familiar": 4
+  },
+  "themes": [
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Guards of Atlantis II: destacada boardgame (2022) obra de Artyom Nichipurov.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

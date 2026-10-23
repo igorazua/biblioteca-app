@@ -1,0 +1,42 @@
+{
+  "id": "movie:abre-los-ojos-1997",
+  "experience": {
+    "plot": "Abre los ojos es una película de thriller psicológico y ciencia ficción de 1997, dirigida por Alejandro Amenábar, quien coescribió el guion con Mateo Gil. Está protagonizada por Eduardo Noriega, Penélope Cruz, Chete Lera, Fele Martínez y Najwa Nimri. Los plano",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Alejandro Amenábar, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "Matrix",
+      "Parque Jurásico",
+      "Regreso al futuro",
+      "Sospechosos habituales"
+    ],
+    "context": "Estrenada en 1997, una obra destacada de Alejandro Amenábar en el panorama de Ciencia ficción y Misterio."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 5,
+    "violencia": 2,
+    "familiar": 2,
+    "escala": 4,
+    "reconfort": 2
+  },
+  "themes": [
+    "investigacion",
+    "ia_y_robots",
+    "espionaje",
+    "espacio"
+  ],
+  "moments": [
+    "pasar_miedo",
+    "noche_tarde"
+  ],
+  "oneLiner": "Abre los ojos: Ciencia ficción y Misterio con dirección de Alejandro Amenábar.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:cartographers-heroes-2021",
+  "experience": {
+    "plot": "The expedition to the Western Lands is the kind of honor that comes once in a lifetime for a royal cartographer. But these are dangerous times. War ravages the land, and you are sure to encounter Dragul forces determined to thwart Queen Gimnax’s plans for west",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de John Brieger, Jordy Adan, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Fantasía / Territory Building.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de John Brieger, Jordy Adan dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 2,
+    "azar": 3,
+    "confrontacion": 3,
+    "cooperacion": 2,
+    "tema": 4,
+    "risas": 3,
+    "familiar": 5
+  },
+  "themes": [
+    "gestion_de_recursos",
+    "draft_de_cartas",
+    "comercio_y_rutas"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Cartographers Heroes: destacada boardgame (2021) obra de John Brieger, Jordy Adan.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

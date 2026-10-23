@@ -1,0 +1,43 @@
+{
+  "id": "movie:no-man-s-land-2001",
+  "experience": {
+    "plot": "En tierra de nadie es una película bélica de 2001 ambientada en la Guerra de Bosnia. La película es una parábola y marca el debut del escritor y director bosnio Danis Tanović. La película muestra, desde un punto de vista tragicómico, el duro y espinoso conflic",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Danis Tanovic, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2001, una obra destacada de Danis Tanovic en el panorama de Comedia y Drama."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 5,
+    "exigencia": 2,
+    "humor": 5,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 4,
+    "escala": 5,
+    "reconfort": 5
+  },
+  "themes": [
+    "guerra",
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "En tierra de nadie: Comedia y Drama con dirección de Danis Tanovic.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

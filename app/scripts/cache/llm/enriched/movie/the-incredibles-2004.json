@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-incredibles-2004",
+  "experience": {
+    "plot": "Los Increíbles —título original en inglés: The Incredibles— es una película de animación, aventuras y superhéroes dirigida por el estadounidense Brad Bird y producida conjuntamente por los estudios Walt Disney Pictures y Pixar Animation Studios, cuyo estreno t",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Brad Bird, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El rey león",
+      "Matrix",
+      "El señor de los anillos: La comunidad del anillo",
+      "Gladiator"
+    ],
+    "context": "Estrenada en 2004, una obra destacada de Brad Bird en el panorama de Animación y Acción."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 4,
+    "emocion": 3,
+    "exigencia": 2,
+    "humor": 3,
+    "tension": 4,
+    "fantasia": 4,
+    "violencia": 4,
+    "familiar": 4,
+    "escala": 4,
+    "reconfort": 4
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "supervivencia"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "familia"
+  ],
+  "oneLiner": "Los increíbles: Animación y Acción con dirección de Brad Bird.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

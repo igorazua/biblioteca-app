@@ -1,0 +1,41 @@
+{
+  "id": "movie:andrei-rublev-1966",
+  "experience": {
+    "plot": "Andréi Rubliov es una película soviética histórica biográfica de 1966 dirigida por Andréi Tarkovski y coescrita con Andréi Konchalovski. La película está basada libremente en la vida de Andréi Rubliov, pintor de iconos ruso del siglo XV. La película está inter",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Andrei Tarkovsky, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque acción constante o tramas complacientes sin profundidad narrativa.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1966, una obra destacada de Andrei Tarkovsky en el panorama de Biografía y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 1,
+    "emocion": 5,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 3,
+    "fantasia": 2,
+    "violencia": 2,
+    "familiar": 1,
+    "escala": 3,
+    "reconfort": 1
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Andrei Rublev: Biografía y Drama con dirección de Andrei Tarkovsky.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

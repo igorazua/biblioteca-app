@@ -14,13 +14,13 @@
     "context": "Creada en 1973, una referencia indispensable obra de Sídney, Australia dentro de su disciplina."
   },
   "axes": {
-    "energia": 5,
-    "valencia": 4,
-    "bailable": 5,
-    "organico": 5,
+    "energia": 4,
+    "valencia": 3,
+    "bailable": 1,
+    "organico": 4,
     "intensidad": 5,
-    "fondo": 1,
-    "complejidad": 2
+    "fondo": 2,
+    "complejidad": 3
   },
   "themes": [
     "rock_clasico",

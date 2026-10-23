@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:defenders-of-the-realm-2010",
+  "experience": {
+    "plot": "“Our Liege is in desperate hour! From what grievous cause have these accursed races arisen? Orcs, Dragons, Demons and the Dead make haste towards Monarch City. The King and Countryside of Monarch City is in need of valiant Heroes!” Will you answer the King's c",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Richard Launius, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Aventura / Fantasía.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2010, una referencia indispensable obra de Richard Launius dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 4,
+    "interaccion": 4,
+    "azar": 3,
+    "confrontacion": 5,
+    "cooperacion": 2,
+    "tema": 5,
+    "risas": 2,
+    "familiar": 3
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Defenders of the Realm: destacada boardgame (2010) obra de Richard Launius.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

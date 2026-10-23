@@ -1,0 +1,36 @@
+{
+  "id": "artist:carlos-vives-1986",
+  "experience": {
+    "plot": "Carlos Vives (Santa Marta, Colombia), icono de Vallenato pop, Cumbia desde 1986.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Santa Marta, Colombia, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Vallenato pop / Cumbia.",
+    "similar": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "Led Zeppelin"
+    ],
+    "context": "Creada en 1986, una referencia indispensable obra de Santa Marta, Colombia dentro de su disciplina."
+  },
+  "axes": {
+    "energia": 4,
+    "valencia": 5,
+    "bailable": 4,
+    "organico": 2,
+    "intensidad": 4,
+    "fondo": 3,
+    "complejidad": 2
+  },
+  "themes": [
+    "rock_clasico",
+    "pop",
+    "musica_latina"
+  ],
+  "moments": [
+    "de_fondo"
+  ],
+  "oneLiner": "Carlos Vives: destacada artist (1986) obra de Santa Marta, Colombia.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

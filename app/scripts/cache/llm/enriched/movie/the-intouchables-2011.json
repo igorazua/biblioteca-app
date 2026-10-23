@@ -1,0 +1,42 @@
+{
+  "id": "movie:the-intouchables-2011",
+  "experience": {
+    "plot": "Intouchables es una película francesa de 2011, dirigida por Olivier Nakache y Éric Toledano. Está protagonizada por François Cluzet y Omar Sy. La trama de la película está inspirada en la historia real de Philippe Pozzo di Borgo y su cuidador franco-argelino A",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Olivier Nakache, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Quien busque un drama trascendental o no conecte con el tono ligero y desenfadado.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 2011, una obra destacada de Olivier Nakache en el panorama de Biografía y Comedia."
+  },
+  "axes": {
+    "tono": 2,
+    "ritmo": 2,
+    "emocion": 4,
+    "exigencia": 2,
+    "humor": 4,
+    "tension": 2,
+    "fantasia": 1,
+    "violencia": 2,
+    "familiar": 3,
+    "escala": 1,
+    "reconfort": 4
+  },
+  "themes": [
+    "ia_y_robots",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "reir",
+    "desconectar",
+    "pensar"
+  ],
+  "oneLiner": "Intocable: Biografía y Comedia con dirección de Olivier Nakache.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

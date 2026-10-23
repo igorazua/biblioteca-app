@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:imperial-steam-2021",
+  "experience": {
+    "plot": "The Industrial Age is starting to boom. You are in need of more workers for your factories, and you also need more workers to build railroad tracks to expand your railway network. This, in turn, will enable you to deliver the goods from your factories to citie",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Alexander Huemer, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Económico / Industry / Manufacturing.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2021, una referencia indispensable obra de Alexander Huemer dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 5,
+    "interaccion": 4,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 2,
+    "tema": 2,
+    "risas": 2,
+    "familiar": 1
+  },
+  "themes": [
+    "imperios_y_civilizaciones",
+    "gestion_de_recursos",
+    "draft_de_cartas"
+  ],
+  "moments": [
+    "jugones"
+  ],
+  "oneLiner": "Imperial Steam: destacada boardgame (2021) obra de Alexander Huemer.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

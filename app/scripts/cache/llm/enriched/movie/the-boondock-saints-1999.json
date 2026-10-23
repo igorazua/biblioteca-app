@@ -1,0 +1,44 @@
+{
+  "id": "movie:the-boondock-saints-1999",
+  "experience": {
+    "plot": "The Boondock Saints es una película estadounidense de 1999 dirigida y escrita por Troy Duffy. El filme fue protagonizado por Sean Patrick Flanery y Norman Reedus como dos hermanos irlandeses católicos que se convierten en justicieros después de asesinar a dos ",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una sensación gratificante de entretenimiento.",
+    "hook": "Engancha por la dirección de Troy Duffy, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Matrix",
+      "El club de la lucha"
+    ],
+    "context": "Estrenada en 1999, una obra destacada de Troy Duffy en el panorama de Acción y Crimen."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 2,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 1,
+    "escala": 2,
+    "reconfort": 3
+  },
+  "themes": [
+    "crimen",
+    "mafia",
+    "justicia",
+    "familia",
+    "amistad",
+    "ia_y_robots"
+  ],
+  "moments": [
+    "amigos",
+    "para_repetir"
+  ],
+  "oneLiner": "Los elegidos: Acción y Crimen con dirección de Troy Duffy.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

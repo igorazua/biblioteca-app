@@ -1,0 +1,44 @@
+{
+  "id": "movie:warrior-2011",
+  "experience": {
+    "plot": "Warrior, titulada La última pelea en México, es una película estadounidense de 2011 dirigida por Gavin O'Connor y protagonizada por Tom Hardy, Joel Edgerton, y Nick Nolte. La película narra la historia de dos hermanos distanciados que entran a un torneo de art",
+    "feeling": "Una experiencia cinematográfica cálida y cercana, marcada por un ritmo medido y envolvente. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Gavin O'Connor, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Forrest Gump",
+      "Cadena perpetua",
+      "Matrix"
+    ],
+    "context": "Estrenada en 2011, una obra destacada de Gavin O'Connor en el panorama de Acción y Drama."
+  },
+  "axes": {
+    "tono": 4,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 4,
+    "humor": 2,
+    "tension": 4,
+    "fantasia": 2,
+    "violencia": 3,
+    "familiar": 2,
+    "escala": 2,
+    "reconfort": 2
+  },
+  "themes": [
+    "familia",
+    "ia_y_robots",
+    "espionaje",
+    "deporte",
+    "supervivencia"
+  ],
+  "moments": [
+    "pensar",
+    "solo",
+    "amigos"
+  ],
+  "oneLiner": "Warrior: Acción y Drama con dirección de Gavin O'Connor.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

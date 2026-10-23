@@ -1,0 +1,39 @@
+{
+  "id": "book:la-chica-del-tren-2015",
+  "experience": {
+    "plot": "Una mujer que viaja en tren todos los días observa a una pareja idílica hasta que presencia una desaparición.",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Paula Hawkins, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Thriller / Misterio.",
+    "similar": [
+      "Cien años de soledad",
+      "Don Quijote de la Mancha",
+      "La sombra del viento",
+      "El principito"
+    ],
+    "context": "Creada en 2015, una referencia indispensable obra de Paula Hawkins dentro de su disciplina."
+  },
+  "axes": {
+    "tono": 3,
+    "ritmo": 4,
+    "emocion": 3,
+    "densidad": 2,
+    "humor": 1,
+    "tension": 4,
+    "fantasia": 1,
+    "escala": 4,
+    "ideas": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "aventura",
+    "misterio",
+    "sociedad"
+  ],
+  "moments": [
+    "viaje"
+  ],
+  "oneLiner": "La chica del tren: destacada book (2015) obra de Paula Hawkins.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

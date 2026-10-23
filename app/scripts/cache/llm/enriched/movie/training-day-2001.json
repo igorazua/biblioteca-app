@@ -1,0 +1,41 @@
+{
+  "id": "movie:training-day-2001",
+  "experience": {
+    "plot": "Día de entrenamiento es una película estadounidense de 2001 dirigida por Antoine Fuqua y escrita por David Ayer. Está protagonizada por Denzel Washington en el papel de Alonzo Harris, un policía de LAPD muy condecorado pero corrupto, y Ethan Hawke como Jake Ho",
+    "feeling": "Una experiencia cinematográfica tensa y absorbente, marcada por un ritmo ágil y dinámico. Te deja una profunda huella emocional.",
+    "hook": "Engancha por la dirección de Antoine Fuqua, el carisma de sus personajes y su capacidad para sumergirte en su universo visual.",
+    "notFor": "Espectadores que busquen evasión ligera, cine amable o sean sensibles a conflictos de alta intensidad.",
+    "similar": [
+      "El padrino",
+      "Pulp Fiction",
+      "Forrest Gump",
+      "Cadena perpetua"
+    ],
+    "context": "Estrenada en 2001, una obra destacada de Antoine Fuqua en el panorama de Crimen y Drama."
+  },
+  "axes": {
+    "tono": 5,
+    "ritmo": 4,
+    "emocion": 4,
+    "exigencia": 3,
+    "humor": 1,
+    "tension": 5,
+    "fantasia": 2,
+    "violencia": 4,
+    "familiar": 2,
+    "escala": 3,
+    "reconfort": 2
+  },
+  "themes": [
+    "crimen",
+    "familia",
+    "amistad"
+  ],
+  "moments": [
+    "pensar",
+    "solo"
+  ],
+  "oneLiner": "Training Day: Crimen y Drama con dirección de Antoine Fuqua.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "boardgame:flamme-rouge-2016",
+  "experience": {
+    "plot": "The excitement in the air is electric as the leaders round the last corner and head for the finish line. Each team has used cunning and skill to position their sprinter for this moment, but only one has done enough to pull off the win! Will your team lead from",
+    "feeling": "Transmite una sensación cautivadora y envolvente, con una cadencia equilibrada y momentos memorables. Deja un poso perdurable que invita a revisitar la obra.",
+    "hook": "Engancha por su lograda atmósfera obra de Asger Aleksandrov Granerud, la autenticidad de su propuesta y su capacidad para conectar de inmediato.",
+    "notFor": "Quienes busquen una propuesta complaciente sin matices, o no sintonicen con el universo de Racing / Sports.",
+    "similar": [
+      "Brass: Birmingham",
+      "Ark Nova",
+      "Pandemic Legacy: Season 1",
+      "Gloomhaven"
+    ],
+    "context": "Creada en 2016, una referencia indispensable obra de Asger Aleksandrov Granerud dentro de su disciplina."
+  },
+  "axes": {
+    "peso": 2,
+    "interaccion": 2,
+    "azar": 2,
+    "confrontacion": 2,
+    "cooperacion": 1,
+    "tema": 3,
+    "risas": 2,
+    "familiar": 5
+  },
+  "themes": [
+    "naturaleza_y_animales",
+    "palabras_y_asociacion",
+    "gestion_de_recursos"
+  ],
+  "moments": [
+    "sobremesa"
+  ],
+  "oneLiner": "Flamme Rouge: destacada boardgame (2016) obra de Asger Aleksandrov Granerud.",
+  "confidence": "alta",
+  "src": "llm-agent"
+}
