@@ -462,3 +462,9 @@ Encargo completo en **`docs/TAREA_T18_CONECTAR.md`** (23/10/2026). Va después d
 # T19 — Duelos solo con obras conocidas, portadas, «ranking completo» y portada final de Comparar
 
 Encargo completo en **`docs/TAREA_T19_AJUSTES.md`** (23/10/2026). **Va antes que las partes B y C de T17** y las corrige.
+
+---
+
+# T20 — Cerrar todo lo pendiente, sin atajos
+
+Encargo completo en **`docs/TAREA_T20_CIERRE.md`** (23/10/2026). **Es lo siguiente que toca.** Sustituye a lo que quedaba abierto de T17, T18 y T19.
