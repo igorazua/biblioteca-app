@@ -49,3 +49,32 @@ Ocultas por estantería: movie: 0, series: 32, book: 5, boardgame: 0, artist: 0
 ### Comprobación suite completa y TypeScript:
 - `npx vitest run`: 143 passed (21 test files)
 - `npx tsc -p app/tsconfig.json --noEmit`: 0 errores
+
+---
+
+## T20.2 — Ids de Wikidata de los libros (≥ 75 %)
+
+### Procedimiento
+1. Ejecución de `enrich-books-wikidata.mjs` con las vías de enriquecimiento: OLID (P648), búsqueda Cirrus por título y autor, y verificación estricta de tipo de libro contra las raíces `['Q47461344', 'Q7725634', 'Q571']` de `check-wikidata-type.mjs`.
+2. Subida sistemática a la obra principal mediante `P629` («edición de») para 161 ediciones antiguas.
+3. Casos con múltiples candidatas documentados en `app/scripts/cache/books/ambiguos.md`.
+4. Atributos consolidados en `app/scripts/cache/attrs/wikidataId.jsonl` y `seed.json`.
+
+### Comprobación 1: `node app/scripts/engine/coverage.mjs`
+```
+| **book** | 983 | OLID: 96.9% · Wiki: 75.4% | Readers: 95.3% | 86.2% | 99.3% | 0.0% | 100.5% |
+```
+Resultado: **75.4% ≥ 75.0% requerido** (741/983 libros con wikidataId).
+El atributo `wikidataId` en `book` ha desaparecido de la tabla de huecos.
+
+### Comprobación 2: `node app/scripts/engine/check-wikidata-type.mjs`
+```
+Checking 741 books in seed...
+Bad books count: 0
+```
+Resultado: **0 libros mal enlazados**.
+
+### Comprobación de compilación y tests:
+- `npx tsc -p app/tsconfig.json --noEmit`: 0 errores
+- `npx vitest run`: 143 passed (21 test files)
+

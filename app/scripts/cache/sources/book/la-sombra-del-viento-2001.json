@@ -1,7 +1,7 @@
 {
   "source": "openlibrary",
   "olid": "OL278437W",
-  "wikidataId": "Q125210024",
+  "wikidataId": "Q52910",
   "voteAvg": 8.7,
   "voteCount": 52,
   "readers": 942,
@@ -22,5 +22,8 @@
     "books in fiction",
     "rare books in fiction"
   ],
-  "firstPublishYear": 2001
+  "firstPublishYear": 2001,
+  "src": {
+    "wikidataId": "wikidata"
+  }
 }
