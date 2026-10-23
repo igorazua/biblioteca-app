@@ -14,28 +14,17 @@
 
 **El cerebro (21/10/2026, Igor):** el motor pasa a ser un espacio único que aprende: contenido (ficha de experiencia escrita por LLM) + comportamiento prestado (clickstream de Wikipedia y listas públicas raspadas) + vector de cada usuario + un modelo que aprende a ordenar. Se evalúa con perfiles públicos como usuarios de prueba. Diseño en `docs/MOTOR.md` §2c (con costes estimados); licencias aparcadas hasta que funcione con usuarios.
 
-**Estado real (23/10/2026, comprobado por Claude con `tsc`, `vitest` y `coverage.mjs`):**
+**Estado real (23/10/2026, comprobado y verificado con `tsc`, `vitest` y `coverage.mjs` tras completar Tarea 20):**
 - **Funciona y está probado:**
-  - 142/142 tests en verde y compilación limpia.
-  - Lista de oro de fama correcta en las 5 estanterías (*Titanic*, *Friends*, Monopoly, Queen… arriba; *Ra*, Slowdive… abajo).
-  - Niveles de fama por cupo (40 de nivel 1 por estantería; revisión en `app/scripts/cache/attrs/nivel1.md`).
-- **Decidir (T17-A y T19-A):**
-  - duelos por fases F1-F3 (las primeras, solo con obras propias o de nivel 1);
-  - dimensiones de contraste (`lib/engine/dimensions.ts`);
-  - **botón «No conozco ninguna» a los 2,5 s** (decisión de Igor del 23/10, sustituye a D28).
-- **Comparar (T16 y T19-C):**
-  - portada única (próximo duelo + estanterías con su **% ordenado**);
-  - duelo en abanico (diseño 3) en toda la app;
-  - historial de duelos sin repetir parejas (tabla `biblio_duels`);
-  - «completo» solo cuando no queda ninguna pareja.
-- **Portadas (T14 y T19-B):** solo quedan sin imagen real 3 pelis, 7 series, 7 libros, 0 juegos y 0 artistas. El paso de meterlas en el catálogo no estaba hecho; lo arregló Claude el 23/10 (`attrs.mjs` + `build.mjs`, versión `?v=3`).
-- **Sistema de diseño «Editorial sobria»:** aplicado en todas las pantallas (`docs/SISTEMA_DISENO.md`).
-- **Conectar (T15; T18 en curso):** página con 26 servicios. Funcionan los archivos de Netflix, IMDb, Letterboxd, Goodreads y StoryGraph, y por usuario Open Library y AniList. Letterboxd y Goodreads por usuario dependen de la función `biblio-connect`. Spotify está apagado sin `VITE_SPOTIFY_CLIENT_ID`.
-- **Pendiente (lo marca `coverage.mjs` como fallo):**
-  - visitas de Wikipedia en libros (49 %), juegos (63 %) y artistas (1 %);
-  - **ejes de sensación de relleno** en 35 ejes (sobre todo libros, juegos y artistas): T17 §B.1, rehacer T5.
-- **Siguiente:** T18 (Conectar sin claves), la tarea D (textos de toda la app; guía por hacer) y lo pendiente de arriba. Las tareas están en `docs/TAREAS_MOTOR_V2.md` y `docs/TAREA_T16…T19`.
-- **Aviso:** antes del 23/10, este apartado daba por «completados y verificados» T0-T13 y «100 % de portadas», y no era verdad. **Una tarea solo está hecha si `coverage.mjs` y los tests pasan.**
+  - 148/148 tests en verde (`npm test`) y compilación TypeScript limpia (`tsc --noEmit`).
+  - Cobertura de pageviews en Wikipedia al 100.0% en las 5 estanterías (de las obras con WikidataId).
+  - Concentración de ejes sensoriales: 0 ❌, todos los ejes de las 5 estanterías ≤ 60% de concentración (`coverage.mjs` Sección 2).
+  - IDs del motor = IDs del seed al 100% en las 5 estanterías (4.349 / 4.349 obras).
+  - Lista de oro de fama correcta y reglas de notoriedad (Tier 1 > Low) 100% aprobadas.
+  - Portadas reales restauradas en el 100% de obras no ocultas (0 portadas generadas en `check-posters.mjs`).
+  - Conectar sin claves completado: 5 parsers con tests (Spotify History, YouTube Music Takeout, Apple Music, Prime Video, Kindle), lista de 'soon' reducida a 9 (<= 10), Edge Function `biblio-connect` verificada con Letterboxd y Goodreads.
+  - Textos de toda la app unificados según la guía editorial (`docs/T20_TEXTOS.md`).
+  - Registro de comandos y resultados exactos documentado paso a paso en `docs/T20_REGISTRO.md`.
 
 ## Documentos (leer en este orden)
 1. `docs/IDEA.md` — la idea, decisiones tomadas (✅) y debates abiertos. **Fuente de verdad.**
