@@ -740,7 +740,7 @@
       "fameLlm": {
         "ES": 1
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "movie:gladiator-2000",
@@ -5783,7 +5783,7 @@
         "it": 179789,
         "pt": 24485
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "movie:2001-una-odisea-del-espacio-1968",
@@ -6362,7 +6362,7 @@
         "it": 107676,
         "pt": 20222
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "movie:vertigo-1958",
@@ -21579,18 +21579,18 @@
         "synopsis": "wikidata",
         "posterUrl": "scrape:m.media-amazon.com",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
       "conf": {
         "originalLanguage": 0.95,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 99,
-      "notoriety": 0.99,
+      "notoriety": 0.54,
       "trend": 0,
       "originalLanguage": "en",
       "isCanon": true,
@@ -21602,7 +21602,7 @@
       "imdbId": "tt3117746",
       "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/movie/queen-2013.webp?v=2",
       "fameLlm": {
-        "ES": 1
+        "ES": 0
       },
       "pageviews": {
         "es": 237720,
@@ -21612,7 +21612,7 @@
         "it": 186211,
         "pt": 72779
       },
-      "fameTier": 1
+      "fameTier": 4
     },
     {
       "id": "movie:mandariinid-2013",
@@ -25748,7 +25748,7 @@
         "posterUrl": "scrape:m.media-amazon.com",
         "cast": "wikidata",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -25756,11 +25756,11 @@
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 98.6,
-      "notoriety": 0.98,
+      "notoriety": 0.53,
       "trend": 0,
       "originCountry": [
         "US"
@@ -25783,7 +25783,7 @@
         "Taapsee Pannu"
       ],
       "fameLlm": {
-        "ES": 1
+        "ES": 0
       },
       "pageviews": {
         "es": 118066,
@@ -25793,7 +25793,7 @@
         "it": 64768,
         "pt": 44776
       },
-      "fameTier": 1
+      "fameTier": 4
     },
     {
       "id": "movie:koe-no-katachi-2016",
@@ -59193,7 +59193,7 @@
         "it": 121238,
         "pt": 14286
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "movie:kokuhaku-2010",
@@ -63850,7 +63850,7 @@
         "it": 60818,
         "pt": 2606
       },
-      "fameTier": 4
+      "fameTier": 3
     },
     {
       "id": "movie:naked-1993",
@@ -64860,7 +64860,7 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 4
+      "fameTier": 3
     },
     {
       "id": "movie:dip-huet-seung-hung-1989",
@@ -127204,7 +127204,7 @@
         "it": 68967,
         "pt": 6081
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "series:the-adventures-of-sinbad-1996",
@@ -145207,7 +145207,7 @@
         "it": 6239,
         "pt": 3326
       },
-      "fameTier": 4
+      "fameTier": 3
     },
     {
       "id": "series:sex-and-the-city-1998",
@@ -148204,7 +148204,7 @@
         "it": 0,
         "pt": 42452
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "series:star-trek-enterprise-2001",
@@ -156253,7 +156253,7 @@
         "network": "tvmaze",
         "ongoing": "tvmaze",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -156261,11 +156261,11 @@
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 99.9,
-      "notoriety": 0.99,
+      "notoriety": 0.59,
       "trend": 0,
       "originCountry": [
         "US"
@@ -156283,7 +156283,7 @@
       "network": "HBO",
       "ongoing": false,
       "fameLlm": {
-        "ES": 1
+        "ES": 0.1
       },
       "pageviews": {
         "es": 311180,
@@ -156293,7 +156293,7 @@
         "it": 208942,
         "pt": 132436
       },
-      "fameTier": 1
+      "fameTier": 4
     },
     {
       "id": "series:macgyver-1985",
@@ -174566,7 +174566,7 @@
         "it": 10443,
         "pt": 4609
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "book:platero-y-yo-1914",
@@ -189614,7 +189614,7 @@
         "isCanon": "computed",
         "titles": "localized",
         "schoolReading": "scrape:listas-lectura-eso-bachillerato",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -189622,12 +189622,12 @@
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1,
         "schoolReading": 0.95
       },
       "popPct": 84.6,
-      "notoriety": 0.99,
+      "notoriety": 0.58,
       "trend": 0,
       "wikidataId": "Q2307397",
       "originCountry": [
@@ -189642,7 +189642,7 @@
         "ES": false
       },
       "fameLlm": {
-        "ES": 1
+        "ES": 0.1
       },
       "pageviews": {
         "es": 130800,
@@ -189652,7 +189652,7 @@
         "it": 47314,
         "pt": 39745
       },
-      "fameTier": 1
+      "fameTier": 4
     },
     {
       "id": "book:the-secret-garden-1911",
@@ -238748,7 +238748,7 @@
       "fameLlm": {
         "ES": 0.75
       },
-      "fameTier": 4,
+      "fameTier": 3,
       "wikidataId": "Q1265755",
       "pageviews": {
         "es": 5125,
@@ -244396,7 +244396,7 @@
       "fameLlm": {
         "ES": 0.75
       },
-      "fameTier": 3,
+      "fameTier": 2,
       "wikidataId": "Q373536",
       "pageviews": {
         "es": 42814,
@@ -252201,7 +252201,7 @@
         "it": 2104,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:dune-imperium-uprising-2023",
@@ -253014,7 +253014,7 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:slay-the-spire-the-board-game-2024",
@@ -253610,7 +253610,7 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:eclipse-second-dawn-for-the-galaxy-2020",
@@ -255101,7 +255101,7 @@
         "it": 16361,
         "pt": 9727
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "boardgame:hegemony-lead-your-class-to-victory-2023",
@@ -256380,7 +256380,7 @@
         "cooperative": "curated",
         "mechanics": "computed",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -256388,11 +256388,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 99.1,
-      "notoriety": 0.89,
+      "notoriety": 0.59,
       "trend": 0,
       "originCountry": [
         "US"
@@ -256421,7 +256421,7 @@
         "Control de área"
       ],
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 698628,
@@ -256431,7 +256431,7 @@
         "it": 229492,
         "pt": 161871
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:the-lord-of-the-rings-fate-of-the-fellowship-2025",
@@ -257165,7 +257165,7 @@
         "it": 2327,
         "pt": 180
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:blood-rage-2015",
@@ -257467,7 +257467,7 @@
         "wikidataId": "wikidata",
         "wikiLangs": "wikidata",
         "synopsis": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "fameTier": "computed",
         "pageviews": "wikimedia-api"
       },
@@ -257475,11 +257475,11 @@
         "originCountry": 0.99,
         "originalLanguage": 0.99,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 98.6,
-      "notoriety": 0.88,
+      "notoriety": 0.58,
       "trend": 0,
       "originCountry": [
         "PT"
@@ -257501,9 +257501,9 @@
       ],
       "wikidataId": "Q597",
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
-      "fameTier": 1,
+      "fameTier": 3,
       "pageviews": {
         "es": 116393,
         "en": 739657,
@@ -258014,7 +258014,7 @@
         "it": 1915,
         "pt": 405
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:tzolk-in-the-mayan-calendar-2012",
@@ -258447,7 +258447,7 @@
         "it": 677,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:paladins-of-the-west-kingdom-2019",
@@ -259174,7 +259174,7 @@
       "fameLlm": {
         "ES": 0.75
       },
-      "fameTier": 2,
+      "fameTier": 1,
       "pageviews": {
         "es": 78306,
         "en": 95507,
@@ -264667,7 +264667,7 @@
         "it": 0,
         "pt": 15476
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "boardgame:just-one-2018",
@@ -264757,7 +264757,7 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:civolution-2024",
@@ -264952,7 +264952,7 @@
         "mechanics": "computed",
         "posterUrl": "scrape:cf.geekdo-images.com",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -264960,11 +264960,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 97.5,
-      "notoriety": 0.87,
+      "notoriety": 0.58,
       "trend": 0,
       "originCountry": [
         "US"
@@ -264986,7 +264986,7 @@
       ],
       "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/iberia-2016.webp?v=2",
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 123794,
@@ -264996,7 +264996,7 @@
         "it": 0,
         "pt": 50697
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:codenames-2015",
@@ -265505,7 +265505,7 @@
         "it": 29453,
         "pt": 12080
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "boardgame:rajas-of-the-ganges-2017",
@@ -266100,7 +266100,7 @@
         "it": 4628,
         "pt": 822
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:star-realms-2014",
@@ -267169,7 +267169,7 @@
         "cooperative": "curated",
         "mechanics": "computed",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -267177,11 +267177,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 96.9,
-      "notoriety": 0.88,
+      "notoriety": 0.59,
       "trend": 0,
       "originCountry": [
         "US"
@@ -267203,7 +267203,7 @@
         "Deducción"
       ],
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 170490,
@@ -267213,7 +267213,7 @@
         "it": 157442,
         "pt": 45034
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:star-wars-outer-rim-2019",
@@ -267440,7 +267440,7 @@
         "cooperative": "curated",
         "mechanics": "computed",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -267448,11 +267448,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 99.3,
-      "notoriety": 0.88,
+      "notoriety": 0.59,
       "trend": 0,
       "originCountry": [
         "US"
@@ -267477,7 +267477,7 @@
         "Gestión económica"
       ],
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 217293,
@@ -267487,7 +267487,7 @@
         "it": 180334,
         "pt": 80652
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:terraforming-mars-ares-expedition-2021",
@@ -267621,7 +267621,7 @@
         "wikidataId": "wikidata",
         "wikiLangs": "wikidata",
         "synopsis": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "fameTier": "computed",
         "pageviews": "wikimedia-api"
       },
@@ -267629,11 +267629,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 98.9,
-      "notoriety": 0.88,
+      "notoriety": 0.59,
       "trend": 0,
       "originCountry": [
         "US"
@@ -267654,9 +267654,9 @@
       ],
       "wikidataId": "Q1085",
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
-      "fameTier": 1,
+      "fameTier": 3,
       "pageviews": {
         "es": 151520,
         "en": 1222956,
@@ -268055,7 +268055,7 @@
         "it": 666,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:that-s-pretty-clever-2018",
@@ -268360,7 +268360,7 @@
         "mechanics": "computed",
         "posterUrl": "scrape:boardgamegeek",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -268368,11 +268368,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 98.2,
-      "notoriety": 0.88,
+      "notoriety": 0.59,
       "trend": 0,
       "originCountry": [
         "US"
@@ -268393,7 +268393,7 @@
       ],
       "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/kemet-2012.webp?v=2",
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 223368,
@@ -268403,7 +268403,7 @@
         "it": 86057,
         "pt": 72157
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:glen-more-ii-chronicles-2019",
@@ -268805,7 +268805,7 @@
         "posterUrl": "scrape:cf.geekdo-images.com",
         "wikidataId": "wikidata",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "fameTier": "computed",
         "pageviews": "wikimedia-api"
       },
@@ -268813,11 +268813,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 99.8,
-      "notoriety": 0.88,
+      "notoriety": 0.59,
       "trend": 0,
       "originCountry": [
         "US"
@@ -268838,9 +268838,9 @@
       ],
       "wikidataId": "Q2",
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
-      "fameTier": 1,
+      "fameTier": 3,
       "pageviews": {
         "es": 330847,
         "en": 3520946,
@@ -270553,7 +270553,7 @@
         "it": 524,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:dune-war-for-arrakis-2024",
@@ -271292,7 +271292,7 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "boardgame:splendor-2014",
@@ -271966,7 +271966,7 @@
         "it": 5515,
         "pt": 5759
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "boardgame:the-taverns-of-tiefenthal-2019",
@@ -272973,7 +272973,7 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "boardgame:so-clover-2021",
@@ -273196,7 +273196,7 @@
       "fameLlm": {
         "ES": 0.5
       },
-      "fameTier": 2,
+      "fameTier": 1,
       "pageviews": {
         "es": 39861,
         "en": 132866,
@@ -274675,7 +274675,7 @@
         "mechanics": "computed",
         "posterUrl": "scrape:cf.geekdo-images.com",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -274683,11 +274683,11 @@
         "originCountry": 0.99,
         "originalLanguage": 0.99,
         "isCanon": 0.95,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 96.8,
-      "notoriety": 0.87,
+      "notoriety": 0.58,
       "trend": 0,
       "originCountry": [
         "DE"
@@ -274707,7 +274707,7 @@
       ],
       "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/samurai-1998.webp?v=2",
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 82165,
@@ -274717,7 +274717,7 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:legendary-a-marvel-deck-building-game-2012",
@@ -276109,7 +276109,7 @@
         "mechanics": "computed",
         "posterUrl": "scrape:cf.geekdo-images.com",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -276117,11 +276117,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 99.6,
-      "notoriety": 0.88,
+      "notoriety": 0.59,
       "trend": 0,
       "originCountry": [
         "US"
@@ -276142,7 +276142,7 @@
       ],
       "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/indonesia-2005.webp?v=2",
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 312045,
@@ -276152,7 +276152,7 @@
         "it": 178246,
         "pt": 106480
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:monikers-2015",
@@ -277300,7 +277300,7 @@
         "it": 47890,
         "pt": 15679
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "boardgame:pulsar-2849-2017",
@@ -277853,7 +277853,7 @@
         "cooperative": "curated",
         "mechanics": "computed",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -277861,11 +277861,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 95.6,
-      "notoriety": 0.87,
+      "notoriety": 0.57,
       "trend": 0,
       "originCountry": [
         "US"
@@ -277890,7 +277890,7 @@
         "Gestión económica"
       ],
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 40877,
@@ -277900,7 +277900,7 @@
         "it": 41045,
         "pt": 14481
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:mind-mgmt-the-psychic-espionage-game-2021",
@@ -278136,7 +278136,7 @@
         "it": 807,
         "pt": 715
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:viticulture-2013",
@@ -278374,7 +278374,7 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:the-witcher-old-world-2023",
@@ -278987,7 +278987,7 @@
         "it": 1000,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:bora-bora-2013",
@@ -279062,7 +279062,7 @@
       "fameLlm": {
         "ES": 0.75
       },
-      "fameTier": 2,
+      "fameTier": 1,
       "pageviews": {
         "es": 34428,
         "en": 391072,
@@ -279643,7 +279643,7 @@
         "it": 33379,
         "pt": 19149
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "boardgame:wayfarers-of-the-south-tigris-2022",
@@ -279896,7 +279896,7 @@
         "mechanics": "computed",
         "posterUrl": "scrape:cf.geekdo-images.com",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -279904,11 +279904,11 @@
         "originCountry": 0.99,
         "originalLanguage": 0.99,
         "isCanon": 0.95,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 96.3,
-      "notoriety": 0.87,
+      "notoriety": 0.58,
       "trend": 0,
       "originCountry": [
         "GB"
@@ -279929,7 +279929,7 @@
       ],
       "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/steam-2009.webp?v=2",
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 99385,
@@ -279939,7 +279939,7 @@
         "it": 30104,
         "pt": 39365
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:detective-a-modern-crime-board-game-2018",
@@ -281900,7 +281900,7 @@
         "mechanics": "computed",
         "posterUrl": "scrape:cf.geekdo-images.com",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -281908,11 +281908,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 97.7,
-      "notoriety": 0.87,
+      "notoriety": 0.58,
       "trend": 0,
       "originCountry": [
         "US"
@@ -281933,7 +281933,7 @@
       ],
       "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/navegador-2010.webp?v=2",
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 108886,
@@ -281943,7 +281943,7 @@
         "it": 28841,
         "pt": 15287
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:frostpunk-the-board-game-2022",
@@ -282501,7 +282501,7 @@
         "it": 4119,
         "pt": 2016
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "boardgame:dungeon-petz-2011",
@@ -282761,7 +282761,7 @@
       "fameLlm": {
         "ES": 0.75
       },
-      "fameTier": 2,
+      "fameTier": 1,
       "pageviews": {
         "es": 30004,
         "en": 697875,
@@ -283658,7 +283658,7 @@
         "it": 1413,
         "pt": 254
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:arydia-the-paths-we-dare-tread-2025",
@@ -287553,7 +287553,7 @@
         "it": 17154,
         "pt": 0
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "boardgame:akropolis-2022",
@@ -288330,7 +288330,7 @@
       "fameLlm": {
         "ES": 0.75
       },
-      "fameTier": 2,
+      "fameTier": 1,
       "pageviews": {
         "es": 96421,
         "en": 860139,
@@ -290207,7 +290207,7 @@
         "it": 523,
         "pt": 50
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:scholars-of-the-south-tigris-2023",
@@ -290777,7 +290777,7 @@
         "it": 1348,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:men-nefer-2024",
@@ -291311,7 +291311,7 @@
         "cooperative": "curated",
         "mechanics": "computed",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -291319,11 +291319,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 98.8,
-      "notoriety": 0.88,
+      "notoriety": 0.58,
       "trend": 0,
       "originCountry": [
         "US"
@@ -291348,7 +291348,7 @@
         "Colocación de losetas"
       ],
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 140880,
@@ -291358,7 +291358,7 @@
         "it": 122786,
         "pt": 43583
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:luthier-2025",
@@ -292167,7 +292167,7 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:dice-forge-2017",
@@ -292513,7 +292513,7 @@
       "fameLlm": {
         "ES": 0.25
       },
-      "fameTier": 3,
+      "fameTier": 2,
       "pageviews": {
         "es": 928,
         "en": 63445,
@@ -293342,7 +293342,7 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "boardgame:caper-europe-2022",
@@ -293829,7 +293829,7 @@
       "fameLlm": {
         "ES": 0.5
       },
-      "fameTier": 2,
+      "fameTier": 1,
       "pageviews": {
         "es": 23054,
         "en": 237605,
@@ -294779,7 +294779,7 @@
         "it": 297,
         "pt": 36
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:micromacro-crime-city-full-house-2021",
@@ -295338,7 +295338,7 @@
         "it": 1077,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:santa-maria-2017",
@@ -295380,7 +295380,7 @@
         "posterUrl": "scrape:cf.geekdo-images.com",
         "wikidataId": "wikidata",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "fameTier": "computed",
         "pageviews": "wikimedia-api"
       },
@@ -295388,11 +295388,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 97.6,
-      "notoriety": 0.87,
+      "notoriety": 0.58,
       "trend": 0,
       "originCountry": [
         "US"
@@ -295413,9 +295413,9 @@
       ],
       "wikidataId": "Q345",
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
-      "fameTier": 1,
+      "fameTier": 3,
       "pageviews": {
         "es": 217082,
         "en": 0,
@@ -296620,7 +296620,7 @@
         "cooperative": "curated",
         "mechanics": "computed",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -296628,11 +296628,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 98.7,
-      "notoriety": 0.88,
+      "notoriety": 0.59,
       "trend": 0,
       "originCountry": [
         "US"
@@ -296652,7 +296652,7 @@
         "Colocación de losetas"
       ],
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 429936,
@@ -296662,7 +296662,7 @@
         "it": 146242,
         "pt": 65900
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:colt-express-2014",
@@ -296751,7 +296751,7 @@
         "it": 668,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:nippon-2015",
@@ -296794,7 +296794,7 @@
         "cooperative": "curated",
         "mechanics": "computed",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -296802,11 +296802,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 100,
-      "notoriety": 0.89,
+      "notoriety": 0.59,
       "trend": 0,
       "originCountry": [
         "US"
@@ -296826,7 +296826,7 @@
         "Gestión económica"
       ],
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 596057,
@@ -296836,7 +296836,7 @@
         "it": 340872,
         "pt": 236667
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:macao-2009",
@@ -299377,7 +299377,7 @@
       "fameLlm": {
         "ES": 0.5
       },
-      "fameTier": 2,
+      "fameTier": 1,
       "pageviews": {
         "es": 16447,
         "en": 101370,
@@ -300059,7 +300059,7 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:lords-of-vegas-2010",
@@ -300662,7 +300662,7 @@
         "cooperative": "curated",
         "mechanics": "computed",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -300670,11 +300670,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 95.8,
-      "notoriety": 0.87,
+      "notoriety": 0.58,
       "trend": 0,
       "originCountry": [
         "US"
@@ -300699,7 +300699,7 @@
         "Colocación de losetas"
       ],
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 195201,
@@ -300709,7 +300709,7 @@
         "it": 68029,
         "pt": 21958
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:exit-the-game-dead-man-on-the-orient-express-2017",
@@ -301806,7 +301806,7 @@
       "fameLlm": {
         "ES": 0.5
       },
-      "fameTier": 2,
+      "fameTier": 1,
       "pageviews": {
         "es": 6433,
         "en": 166087,
@@ -302031,7 +302031,7 @@
         "cooperative": "curated",
         "mechanics": "computed",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -302039,11 +302039,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 98.1,
-      "notoriety": 0.87,
+      "notoriety": 0.58,
       "trend": 0,
       "originCountry": [
         "US"
@@ -302064,7 +302064,7 @@
         "Estrategia"
       ],
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 97901,
@@ -302074,7 +302074,7 @@
         "it": 63777,
         "pt": 33749
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:star-wars-unlimited-2024",
@@ -303019,7 +303019,7 @@
         "it": 0,
         "pt": 857
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:ingenious-2004",
@@ -303623,7 +303623,7 @@
         "mechanics": "computed",
         "posterUrl": "scrape:cf.geekdo-images.com",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -303631,11 +303631,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 99.2,
-      "notoriety": 0.88,
+      "notoriety": 0.59,
       "trend": 0,
       "originCountry": [
         "US"
@@ -303659,7 +303659,7 @@
       ],
       "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/jamaica-2007.webp?v=2",
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 231145,
@@ -303669,7 +303669,7 @@
         "it": 92313,
         "pt": 108587
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:bullet-2021",
@@ -305286,7 +305286,7 @@
         "it": 2757,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:karuba-2015",
@@ -307855,7 +307855,7 @@
         "it": 1081,
         "pt": 204
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:taj-mahal-2000",
@@ -307987,7 +307987,7 @@
         "mechanics": "computed",
         "posterUrl": "scrape:cf.geekdo-images.com",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -307995,11 +307995,11 @@
         "originCountry": 0.99,
         "originalLanguage": 0.99,
         "isCanon": 0.95,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 99.7,
-      "notoriety": 0.88,
+      "notoriety": 0.59,
       "trend": 0,
       "originCountry": [
         "GB"
@@ -308022,7 +308022,7 @@
       ],
       "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/london-2010.webp?v=2",
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 281453,
@@ -308032,7 +308032,7 @@
         "it": 222011,
         "pt": 94107
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:in-the-hall-of-the-mountain-king-2019",
@@ -308160,7 +308160,7 @@
         "mechanics": "computed",
         "posterUrl": "scrape:cf.geekdo-images.com",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -308168,11 +308168,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 98.5,
-      "notoriety": 0.89,
+      "notoriety": 0.59,
       "trend": 0,
       "originCountry": [
         "US"
@@ -308193,7 +308193,7 @@
       ],
       "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/federation-2022.webp?v=2",
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 465448,
@@ -308203,7 +308203,7 @@
         "it": 116681,
         "pt": 149809
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:heroquest-1989",
@@ -308656,7 +308656,7 @@
         "posterUrl": "scrape:cf.geekdo-images.com",
         "wikidataId": "wikidata",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "fameTier": "computed",
         "pageviews": "wikimedia-api"
       },
@@ -308664,11 +308664,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 97.8,
-      "notoriety": 0.88,
+      "notoriety": 0.59,
       "trend": 0,
       "originCountry": [
         "US"
@@ -308689,9 +308689,9 @@
       ],
       "wikidataId": "Q26253",
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
-      "fameTier": 1,
+      "fameTier": 3,
       "pageviews": {
         "es": 121681,
         "en": 2493368,
@@ -309229,7 +309229,7 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "boardgame:weather-machine-2022",
@@ -312205,7 +312205,7 @@
         "it": 20648,
         "pt": 29545
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "boardgame:telestrations-12-player-party-pack-2011",
@@ -315042,7 +315042,7 @@
         "it": 0,
         "pt": 1449
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "boardgame:evolution-2014",
@@ -316561,7 +316561,7 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:disney-villainous-wicked-to-the-core-2019",
@@ -317095,7 +317095,7 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "boardgame:one-night-ultimate-werewolf-daybreak-2015",
@@ -318101,7 +318101,7 @@
         "cooperative": "curated",
         "mechanics": "computed",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -318109,11 +318109,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 99.9,
-      "notoriety": 0.89,
+      "notoriety": 0.59,
       "trend": 0,
       "originCountry": [
         "US"
@@ -318134,7 +318134,7 @@
         "Colocación de losetas"
       ],
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 1439067,
@@ -318144,7 +318144,7 @@
         "it": 195115,
         "pt": 216304
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:creature-caravan-2024",
@@ -318668,7 +318668,7 @@
         "mechanics": "computed",
         "posterUrl": "scrape:cf.geekdo-images.com",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -318676,11 +318676,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 96.1,
-      "notoriety": 0.87,
+      "notoriety": 0.58,
       "trend": 0,
       "originCountry": [
         "US"
@@ -318701,7 +318701,7 @@
       ],
       "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/treasure-island-2018.webp?v=2",
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 57442,
@@ -318711,7 +318711,7 @@
         "it": 53631,
         "pt": 10867
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:the-magnificent-2019",
@@ -319207,7 +319207,7 @@
       "fameLlm": {
         "ES": 0.5
       },
-      "fameTier": 2,
+      "fameTier": 1,
       "pageviews": {
         "es": 8561,
         "en": 92698,
@@ -320492,7 +320492,7 @@
         "mechanics": "computed",
         "posterUrl": "scrape:cf.geekdo-images.com",
         "wikiLangs": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
       },
@@ -320500,11 +320500,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 99.4,
-      "notoriety": 0.88,
+      "notoriety": 0.59,
       "trend": 0,
       "originCountry": [
         "US"
@@ -320528,7 +320528,7 @@
       ],
       "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/cuba-2007.webp?v=2",
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
       "pageviews": {
         "es": 568741,
@@ -320538,7 +320538,7 @@
         "it": 201804,
         "pt": 154104
       },
-      "fameTier": 1
+      "fameTier": 3
     },
     {
       "id": "boardgame:marvel-zombies-a-zombicide-game-2023",
@@ -321422,7 +321422,7 @@
         "it": 11090,
         "pt": 4671
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "boardgame:galileo-galilei-2024",
@@ -321463,7 +321463,7 @@
         "wikidataId": "wikidata",
         "wikiLangs": "wikidata",
         "synopsis": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "fameTier": "computed",
         "pageviews": "wikimedia-api"
       },
@@ -321471,11 +321471,11 @@
         "originCountry": 0.8,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 99,
-      "notoriety": 0.88,
+      "notoriety": 0.59,
       "trend": 0,
       "originCountry": [
         "US"
@@ -321496,9 +321496,9 @@
       ],
       "wikidataId": "Q307",
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
-      "fameTier": 1,
+      "fameTier": 3,
       "pageviews": {
         "es": 336210,
         "en": 1052768,
@@ -321956,7 +321956,7 @@
         "wikidataId": "wikidata",
         "wikiLangs": "wikidata",
         "synopsis": "wikidata",
-        "fameLlm": "llm-infer",
+        "fameLlm": "manual",
         "fameTier": "computed",
         "pageviews": "wikimedia-api"
       },
@@ -321964,11 +321964,11 @@
         "originCountry": 0.99,
         "originalLanguage": 0.99,
         "isCanon": 0.9,
-        "fameLlm": 0.9,
+        "fameLlm": 1,
         "pageviews": 1
       },
       "popPct": 99.5,
-      "notoriety": 0.88,
+      "notoriety": 0.59,
       "trend": 0,
       "originCountry": [
         "DE"
@@ -321989,9 +321989,9 @@
       ],
       "wikidataId": "Q405",
       "fameLlm": {
-        "ES": 0.75
+        "ES": 0.1
       },
-      "fameTier": 1,
+      "fameTier": 3,
       "pageviews": {
         "es": 332726,
         "en": 2141900,
@@ -323180,7 +323180,7 @@
         "it": 1357,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:khora-rise-of-an-empire-2021",
@@ -323593,7 +323593,7 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "boardgame:codex-naturalis-2021",
@@ -324055,7 +324055,7 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 2
     },
     {
       "id": "boardgame:k2-2010",
@@ -329702,7 +329702,7 @@
       "fameLlm": {
         "ES": 0.75
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "boardgame:merchants-cove-2021",
@@ -332241,7 +332241,7 @@
       "fameLlm": {
         "ES": 0.75
       },
-      "fameTier": 2
+      "fameTier": 1
     },
     {
       "id": "artist:the-beatles-1960",

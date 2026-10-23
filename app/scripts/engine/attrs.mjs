@@ -6,6 +6,7 @@
  */
 
 export const SOURCE_HIERARCHY = [
+  'manual', // Revisión humana explícita: máxima autoridad para corregir errores
   'wikidata',
   'openlibrary',
   'musicbrainz',
@@ -17,7 +18,6 @@ export const SOURCE_HIERARCHY = [
   'scrape',
   'llm-search',
   'llm-infer',
-  'manual',
   'seed',
   'generated', // portada generada: la última de todas, cualquier imagen real la sustituye
 ]
