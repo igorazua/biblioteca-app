@@ -23,7 +23,17 @@ export const METHOD_LABEL: Record<ConnectMethod, string> = {
 }
 
 /** Cómo se lee un archivo de este servicio (ver Connect.tsx / lib/import). */
-export type FileKind = 'letterboxd' | 'imdb' | 'goodreads' | 'storygraph' | 'netflix'
+export type FileKind =
+  | 'letterboxd'
+  | 'imdb'
+  | 'goodreads'
+  | 'storygraph'
+  | 'netflix'
+  | 'spotify'
+  | 'ytmusic'
+  | 'applemusic'
+  | 'prime'
+  | 'kindle'
 
 export interface FileHelp {
   kind: FileKind
@@ -66,8 +76,69 @@ const NETFLIX_FILE: FileHelp = {
   ],
 }
 
+const PRIME_FILE: FileHelp = {
+  kind: 'prime',
+  extensions: '.csv',
+  url: 'https://www.amazon.es/gp/privacycentral/dsar/preview.html',
+  urlLabel: 'Solicitar datos a Amazon',
+  steps: [
+    'Entra en Amazon → «Privacidad de los datos» → «Solicitar tus datos».',
+    'Selecciona «Prime Video» y confirma la solicitud.',
+    'Cuando recibas el correo con el ZIP, descomprímelo y sube el archivo de historial de reproducción (CSV).',
+  ],
+}
+
+const KINDLE_FILE: FileHelp = {
+  kind: 'kindle',
+  extensions: '.csv',
+  url: 'https://www.amazon.es/gp/privacycentral/dsar/preview.html',
+  urlLabel: 'Solicitar datos a Amazon',
+  steps: [
+    'Entra en Amazon → «Privacidad de los datos» → «Solicitar tus datos».',
+    'Selecciona «Kindle» y confirma la solicitud.',
+    'Cuando recibas el correo con el archivo, sube aquí tu lista o historial de libros Kindle (CSV).',
+  ],
+}
+
+const SPOTIFY_FILE: FileHelp = {
+  kind: 'spotify',
+  extensions: '.json',
+  url: 'https://www.spotify.com/account/privacy/',
+  urlLabel: 'Descargar datos de Spotify',
+  steps: [
+    'Entra en tu cuenta de Spotify → Privacidad de la cuenta.',
+    'En «Descarga tus datos», solicita tu historial de reproducción.',
+    'Cuando recibas el ZIP por correo, sube el archivo Streaming_History_Audio_*.json.',
+  ],
+}
+
+const YTMUSIC_FILE: FileHelp = {
+  kind: 'ytmusic',
+  extensions: '.json',
+  url: 'https://takeout.google.com/',
+  urlLabel: 'Google Takeout',
+  steps: [
+    'Entra en takeout.google.com e inicia sesión con tu cuenta de Google.',
+    'Desmarca todo y selecciona solo «YouTube y YouTube Music» (historial).',
+    'Descarga el ZIP, descomprímelo y sube el archivo watch-history.json.',
+  ],
+}
+
+const APPLEMUSIC_FILE: FileHelp = {
+  kind: 'applemusic',
+  extensions: '.csv',
+  url: 'https://privacy.apple.com/',
+  urlLabel: 'Privacidad de Apple',
+  steps: [
+    'Entra en privacy.apple.com con tu Apple ID.',
+    'Solicita una copia de tus datos marcando «Información sobre los servicios de Apple Media».',
+    'Descarga el archivo resultante y sube Apple Music Play History.csv.',
+  ],
+}
+
 export const SERVICES: Service[] = [
   // Pelis y series
+  { id: 'netflix', name: 'Netflix', subtitle: 'Historial completo de visionado', color: '#B3202A', group: 'screen', brings: ['PELIS', 'SERIES'], method: 'file', blurb: 'Traemos tu historial completo de visionado.', file: NETFLIX_FILE },
   {
     id: 'letterboxd', name: 'Letterboxd', subtitle: 'Diario, películas vistas y notas', color: '#00A878', group: 'screen', brings: ['PELIS'], method: 'username',
     blurb: 'Traemos tu diario reciente con notas y fechas. Para todo el histórico, sube el archivo de exportación.',
@@ -94,14 +165,14 @@ export const SERVICES: Service[] = [
       ],
     },
   },
-  { id: 'netflix', name: 'Netflix', subtitle: 'Historial completo de visionado', color: '#B3202A', group: 'screen', brings: ['PELIS', 'SERIES'], method: 'file', blurb: 'Traemos tu historial completo de visionado.', file: NETFLIX_FILE },
+  { id: 'prime', name: 'Prime Video', subtitle: 'Historial de visionado en Prime', color: '#1F6FB2', group: 'screen', brings: ['PELIS', 'SERIES'], method: 'file', blurb: 'Traemos tu historial de reproducción desde la exportación de Amazon.', file: PRIME_FILE },
   { id: 'trakt', name: 'Trakt', subtitle: 'Historial y seguimiento de series y cine', color: '#C0392B', group: 'screen', brings: ['PELIS', 'SERIES'], method: 'soon', blurb: 'Vistas con fecha, valoraciones y pendientes.' },
-  { id: 'prime', name: 'Prime Video', subtitle: 'Historial de visionado en Prime', color: '#1F6FB2', group: 'screen', brings: ['PELIS', 'SERIES'], method: 'soon', blurb: 'Solo con la solicitud de datos de Amazon.' },
   { id: 'disney', name: 'Disney+', subtitle: 'Historial de visionado en Disney', color: '#1F3D7A', group: 'screen', brings: ['PELIS', 'SERIES'], method: 'soon', blurb: 'No ofrece forma de sacar el historial.' },
   { id: 'max', name: 'Max', subtitle: 'Historial de series y cine en Max', color: '#5B3FD1', group: 'screen', brings: ['PELIS', 'SERIES'], method: 'soon', blurb: 'No ofrece forma de sacar el historial.' },
   { id: 'movistar', name: 'Movistar Plus+', subtitle: 'Historial de visionado en Movistar', color: '#1E88B8', group: 'screen', brings: ['PELIS', 'SERIES'], method: 'soon', blurb: 'No ofrece forma de sacar el historial.' },
   { id: 'filmin', name: 'Filmin', subtitle: 'Cine y series vistas en Filmin', color: '#D64545', group: 'screen', brings: ['PELIS', 'SERIES'], method: 'soon', blurb: 'No ofrece forma de sacar el historial.' },
   { id: 'skyshowtime', name: 'SkyShowtime', subtitle: 'Historial de visionado en SkyShowtime', color: '#4A5568', group: 'screen', brings: ['PELIS', 'SERIES'], method: 'soon', blurb: 'No ofrece forma de sacar el historial.' },
+
   // Libros
   {
     id: 'goodreads', name: 'Goodreads', subtitle: 'Libros leídos, notas y por leer', color: '#8A6A3B', group: 'books', brings: ['LIBROS'], method: 'username',
@@ -129,22 +200,27 @@ export const SERVICES: Service[] = [
       ],
     },
   },
+  { id: 'kindle', name: 'Kindle', subtitle: 'Historial de libros leídos en Amazon Kindle', color: '#2D3748', group: 'books', brings: ['LIBROS'], method: 'file', blurb: 'Traemos tus libros leídos desde la exportación de Amazon Kindle.', file: KINDLE_FILE },
   {
     id: 'openlibrary', name: 'Open Library', subtitle: 'Registro público de lecturas', color: '#B5651D', group: 'books', brings: ['LIBROS'], method: 'username',
     blurb: 'Traemos tu registro de lectura público: leídos y quiero leer.', connector: openLibrary,
     username: { label: 'Tu usuario de Open Library', placeholder: 'usuario', hint: 'Lo ves en la dirección de tu perfil: openlibrary.org/people/usuario' },
   },
-  { id: 'kindle', name: 'Kindle', subtitle: 'Historial de libros leídos en Amazon Kindle', color: '#2D3748', group: 'books', brings: ['LIBROS'], method: 'soon', blurb: 'Solo con la solicitud de datos de Amazon.' },
+
   // Música
   {
     id: 'spotify', name: 'Spotify', subtitle: 'Tus artistas más escuchados y biblioteca', color: '#1DB954', group: 'music', brings: ['ARTISTAS'], method: 'oauth',
-    blurb: 'Traemos tus artistas más escuchados, los que sigues y los de tus álbumes guardados.', connector: spotify,
+    blurb: 'Traemos tus artistas más escuchados, los que sigues y los de tus álbumes guardados. También puedes subir tu historial descargado.',
+    connector: spotify,
+    file: SPOTIFY_FILE,
   },
+  { id: 'ytmusic', name: 'YouTube Music', subtitle: 'Artistas escuchados en tu cuenta de Google', color: '#D43D3D', group: 'music', brings: ['ARTISTAS'], method: 'file', blurb: 'Traemos tus artistas reproducidos desde Google Takeout.', file: YTMUSIC_FILE },
+  { id: 'applemusic', name: 'Apple Music', subtitle: 'Artistas guardados en tu biblioteca de Apple', color: '#E0475B', group: 'music', brings: ['ARTISTAS'], method: 'file', blurb: 'Traemos tu historial de reproducción desde la exportación de Apple.', file: APPLEMUSIC_FILE },
   { id: 'lastfm', name: 'Last.fm', subtitle: 'Scrobbles y artistas más reproducidos', color: '#C3262E', group: 'music', brings: ['ARTISTAS'], method: 'soon', blurb: 'Tus artistas más escuchados por periodos.' },
-  { id: 'ytmusic', name: 'YouTube Music', subtitle: 'Artistas escuchados en tu cuenta de Google', color: '#D43D3D', group: 'music', brings: ['ARTISTAS'], method: 'soon', blurb: 'Solo con Google Takeout.' },
-  { id: 'applemusic', name: 'Apple Music', subtitle: 'Artistas guardados en tu biblioteca de Apple', color: '#E0475B', group: 'music', brings: ['ARTISTAS'], method: 'soon', blurb: 'Pide una cuenta de desarrollador de pago.' },
+
   // Juegos
   { id: 'bgg', name: 'BoardGameGeek', subtitle: 'Colección de juegos de mesa y partidas', color: '#7B4B94', group: 'games', brings: ['JUEGOS'], method: 'soon', blurb: 'Tu colección: lo tienes, lo jugaste, lo quieres.' },
+
   // Anime
   {
     id: 'anilist', name: 'AniList', subtitle: 'Tu lista de anime visto y pendiente', color: '#3B82C4', group: 'anime', brings: ['SERIES'], method: 'username',

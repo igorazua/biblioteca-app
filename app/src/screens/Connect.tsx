@@ -14,6 +14,11 @@ import { parseImdb } from '../lib/import/imdb'
 import { parseGoodreads } from '../lib/import/goodreads'
 import { parseNetflix } from '../lib/import/netflix'
 import { parseStoryGraph } from '../lib/import/storygraph'
+import { parseSpotifyHistory } from '../lib/import/spotify-history'
+import { parseYouTubeMusic } from '../lib/import/youtube-music'
+import { parseAppleMusic } from '../lib/import/apple-music'
+import { parsePrimeVideo } from '../lib/import/prime-video'
+import { parseKindle } from '../lib/import/kindle'
 import { GROUPS, SERVICES, type Service } from '../lib/connect/services'
 import { ConnectorUnavailable, ConnectorUserError } from '../lib/connect/types'
 import { disconnectSpotify, loadSpotifyTokens, spotifyEnabled, startSpotifyAuth } from '../lib/connect/spotify'
@@ -29,6 +34,11 @@ async function rowsFromFile(service: Service, file: File): Promise<ImportRow[]> 
     case 'goodreads': return parseGoodreads(text)
     case 'storygraph': return parseStoryGraph(text)
     case 'netflix': return parseNetflix(text)
+    case 'spotify': return parseSpotifyHistory(text)
+    case 'ytmusic': return parseYouTubeMusic(text)
+    case 'applemusic': return parseAppleMusic(text)
+    case 'prime': return parsePrimeVideo(text)
+    case 'kindle': return parseKindle(text)
   }
 }
 

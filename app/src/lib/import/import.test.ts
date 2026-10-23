@@ -3,6 +3,11 @@ import { parseLetterboxd } from './letterboxd'
 import { parseImdb } from './imdb'
 import { parseGoodreads } from './goodreads'
 import { parseNetflix } from './netflix'
+import { parseSpotifyHistory } from './spotify-history'
+import { parseYouTubeMusic } from './youtube-music'
+import { parseAppleMusic } from './apple-music'
+import { parsePrimeVideo } from './prime-video'
+import { parseKindle } from './kindle'
 import { applyImportRows } from './apply'
 import { buildLocalIndex, matchLocal } from './match'
 import { items as seedItems } from '../../data/catalog'
@@ -15,6 +20,11 @@ import letterboxdWatchlistCsv from './__fixtures__/letterboxd_watchlist.csv?raw'
 import imdbRatingsCsv from './__fixtures__/imdb_ratings.csv?raw'
 import goodreadsCsv from './__fixtures__/goodreads.csv?raw'
 import netflixCsv from './__fixtures__/netflix.csv?raw'
+import spotifyJson from './__fixtures__/spotify_history.json?raw'
+import ytMusicJson from './__fixtures__/youtube_music.json?raw'
+import appleMusicCsv from './__fixtures__/apple_music.csv?raw'
+import primeVideoCsv from './__fixtures__/prime_video.csv?raw'
+import kindleCsv from './__fixtures__/kindle.csv?raw'
 
 describe('Analizador Letterboxd', () => {
   it('procesa ratings, watched y watchlist correctamente', () => {
@@ -311,5 +321,79 @@ describe('Casado local con el catálogo real', () => {
     const hit = matchLocal({ type: 'movie', title: 'Back to the Future', year: 1985, status: 'seen' }, index)
     expect(hit?.title).toBe('Regreso al futuro')
     expect(hit?.originalTitle).toBe('Back to the Future')
+  })
+})
+
+describe('Analizadores sin claves (T20.7)', () => {
+  it('Spotify History procesa escuchas agrupadas por artista ponderando estrellas por minutos', () => {
+    const rows = parseSpotifyHistory(spotifyJson)
+    expect(rows.length).toBe(3)
+    const rosalia = rows.find((r) => r.title === 'Rosalía')
+    expect(rosalia).toBeDefined()
+    expect(rosalia?.type).toBe('artist')
+    expect(rosalia?.status).toBe('seen')
+    expect(rosalia?.stars).toBe(5)
+
+    const badBunny = rows.find((r) => r.title === 'Bad Bunny')
+    expect(badBunny).toBeDefined()
+    expect(badBunny?.type).toBe('artist')
+
+    const ctangana = rows.find((r) => r.title === 'C. Tangana')
+    expect(ctangana).toBeDefined()
+  })
+
+  it('YouTube Music Takeout extrae canales de artistas', () => {
+    const rows = parseYouTubeMusic(ytMusicJson)
+    expect(rows.length).toBe(2)
+    const rosalia = rows.find((r) => r.title === 'Rosalía')
+    expect(rosalia).toBeDefined()
+    expect(rosalia?.type).toBe('artist')
+    expect(rosalia?.status).toBe('seen')
+
+    const queen = rows.find((r) => r.title === 'Queen')
+    expect(queen).toBeDefined()
+    expect(queen?.type).toBe('artist')
+    expect(queen?.status).toBe('seen')
+  })
+
+  it('Apple Music CSV extrae artistas únicos con estado visto', () => {
+    const rows = parseAppleMusic(appleMusicCsv)
+    expect(rows.length).toBe(2)
+    const beatles = rows.find((r) => r.title === 'The Beatles')
+    expect(beatles).toBeDefined()
+    expect(beatles?.type).toBe('artist')
+    expect(beatles?.status).toBe('seen')
+  })
+
+  it('Prime Video CSV detecta series y películas', () => {
+    const rows = parsePrimeVideo(primeVideoCsv)
+    expect(rows.length).toBe(4)
+    const theBoys = rows.find((r) => r.title === 'The Boys')
+    expect(theBoys).toBeDefined()
+    expect(theBoys?.type).toBe('series')
+    expect(theBoys?.status).toBe('seen')
+
+    const fallout = rows.find((r) => r.title === 'Fallout')
+    expect(fallout).toBeDefined()
+    expect(fallout?.type).toBe('series')
+
+    const interstellar = rows.find((r) => r.title === 'Interstellar')
+    expect(interstellar).toBeDefined()
+    expect(interstellar?.type).toBe('movie')
+    expect(interstellar?.status).toBe('seen')
+  })
+
+  it('Kindle CSV extrae libros leídos y autores', () => {
+    const rows = parseKindle(kindleCsv)
+    expect(rows.length).toBe(3)
+    const cienAnos = rows.find((r) => r.title === 'Cien años de soledad')
+    expect(cienAnos).toBeDefined()
+    expect(cienAnos?.type).toBe('book')
+    expect(cienAnos?.creator).toBe('Gabriel García Márquez')
+    expect(cienAnos?.status).toBe('seen')
+
+    const milNovecientos = rows.find((r) => r.title === '1984')
+    expect(milNovecientos).toBeDefined()
+    expect(milNovecientos?.creator).toBe('George Orwell')
   })
 })

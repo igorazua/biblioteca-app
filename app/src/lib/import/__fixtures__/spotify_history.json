@@ -1,0 +1,32 @@
+[
+  {
+    "endTime": "2024-01-15 14:22",
+    "artistName": "Rosalía",
+    "trackName": "DESPECHÁ",
+    "msPlayed": 157000
+  },
+  {
+    "endTime": "2024-01-15 14:25",
+    "artistName": "Rosalía",
+    "trackName": "BIZCOCHITO",
+    "msPlayed": 139000
+  },
+  {
+    "endTime": "2024-01-16 10:11",
+    "artistName": "C. Tangana",
+    "trackName": "Tú Me Dejaste De Querer",
+    "msPlayed": 197000
+  },
+  {
+    "endTime": "2024-01-16 10:12",
+    "artistName": "C. Tangana",
+    "trackName": "Demasiadas Mujeres",
+    "msPlayed": 5000
+  },
+  {
+    "ts": "2024-02-01T18:00:00Z",
+    "master_metadata_album_artist_name": "Bad Bunny",
+    "master_metadata_track_name": "Monaco",
+    "ms_played": 267000
+  }
+]

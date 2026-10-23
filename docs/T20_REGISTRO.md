@@ -300,3 +300,72 @@ Resultado: **0 sin portada real entre las no ocultas** (0 portadas generadas en 
 ### Comprobación de compilación y tests:
 - `npx tsc -p app/tsconfig.json --noEmit`: 0 errores
 - `npx vitest run`: 143 passed (21 test files)
+
+
+---
+
+## T20.7 — Conectar sin claves (archivos y servicios)
+
+### Procedimiento
+1. Se añadieron los analizadores de importación basados en archivo en `app/src/lib/import/`:
+   - `spotify-history.ts`: Procesa `StreamingHistory*.json` o `Streaming_History_Audio_*.json` de Spotify descargado vía Solicitud de datos. Agrupa escuchas por artista, calcula minutos acumulados y asigna ponderación de estrellas (5 estrellas si ≥ 120 min, 4 si ≥ 45 min, 3 si ≥ 15 min, etc.).
+   - `youtube-music.ts`: Procesa `watch-history.json` de Google Takeout filtrando entradas de «YouTube Music» y extrayendo artistas desde subtítulos o canales temáticos.
+   - `apple-music.ts`: Procesa `Apple Music Play History.csv` de la exportación de privacidad de Apple, agrupando por artista y deduplicando.
+   - `prime-video.ts`: Procesa el CSV de visionado de Amazon Prime Video (`Playback History`), detectando patrones de temporadas/episodios para clasificar como serie o película.
+   - `kindle.ts`: Procesa la lista de pedidos/lecturas de Amazon Kindle (`Kindle.Devices.csv` / pedidos), limpiando sufijos comerciales y extrayendo autor y fecha.
+2. Se crearon datos de prueba (fixtures) completos en `app/src/lib/import/__fixtures__/`:
+   - `spotify_history.json`
+   - `youtube_music.json`
+   - `apple_music.csv`
+   - `prime_video.csv`
+   - `kindle.csv`
+3. Se actualizó `app/src/lib/connect/services.ts`:
+   - Se extendió `FileKind` con `'spotify' | 'ytmusic' | 'applemusic' | 'prime' | 'kindle'`.
+   - Se movieron los 5 servicios a `method: 'file'` (o `oauth` con opción `file` como Spotify) con instrucciones detalladas, URL y pasos.
+   - Se verificó que los servicios en estado `method: 'soon'` se reduzcan a solo 9 (cumpliendo `<= 10`).
+4. Se conectaron los nuevos analizadores en `app/src/screens/Connect.tsx` dentro de `rowsFromFile`.
+5. Se redactaron las suites de tests unitarios correspondientes en `app/src/lib/import/import.test.ts`.
+6. Se verificó el funcionamiento de la Edge Function `biblio-connect` desplegada en Supabase para Letterboxd y Goodreads mediante peticiones reales con credenciales del entorno.
+
+### Comprobación: servicios 'soon' (`<= 10`)
+```
+$ git grep "method: 'soon'" app/src/lib/connect/services.ts
+app/src/lib/connect/services.ts:  { id: 'trakt', name: 'Trakt', ... method: 'soon' }
+app/src/lib/connect/services.ts:  { id: 'disney', name: 'Disney+', ... method: 'soon' }
+app/src/lib/connect/services.ts:  { id: 'max', name: 'Max', ... method: 'soon' }
+app/src/lib/connect/services.ts:  { id: 'movistar', name: 'Movistar Plus+', ... method: 'soon' }
+app/src/lib/connect/services.ts:  { id: 'filmin', name: 'Filmin', ... method: 'soon' }
+app/src/lib/connect/services.ts:  { id: 'skyshowtime', name: 'SkyShowtime', ... method: 'soon' }
+app/src/lib/connect/services.ts:  { id: 'lastfm', name: 'Last.fm', ... method: 'soon' }
+app/src/lib/connect/services.ts:  { id: 'bgg', name: 'BoardGameGeek', ... method: 'soon' }
+app/src/lib/connect/services.ts:  { id: 'mal', name: 'MyAnimeList', ... method: 'soon' }
+Total: 9 servicios 'soon' (cumple el límite <= 10).
+```
+
+### Comprobación: Edge Function `biblio-connect` (Letterboxd & Goodreads)
+```
+Testing: https://pvewnpemlwmvaduzhjso.supabase.co/functions/v1/biblio-connect
+Letterboxd status: 200 Rows count: 50
+Letterboxd sample: {
+  type: 'movie',
+  title: 'Captain America: Brave New World',
+  year: 2025,
+  status: 'seen',
+  stars: 2,
+  at: 1792454400000
+}
+Goodreads status: 200 Rows count: 71
+Goodreads sample: {
+  type: 'book',
+  title: 'Harry Potter and the Half-Blood Prince (Harry Potter, #6)',
+  creator: 'J.K. Rowling',
+  year: 2005,
+  status: 'seen',
+  stars: 5,
+  at: 1398844795000
+}
+```
+
+### Comprobación de compilación y tests:
+- `npx --prefix app tsc -p app/tsconfig.json --noEmit`: 0 errores
+- `npm --prefix app test`: 148 passed (21 test files)

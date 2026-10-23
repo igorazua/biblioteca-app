@@ -1,0 +1,43 @@
+[
+  {
+    "header": "YouTube Music",
+    "title": "Watched Saoko",
+    "titleUrl": "https://www.youtube.com/watch?v=123",
+    "subtitles": [
+      {
+        "name": "Rosalía - Topic",
+        "url": "https://www.youtube.com/channel/456"
+      }
+    ],
+    "time": "2024-03-10T12:00:00.000Z"
+  },
+  {
+    "header": "YouTube Music",
+    "title": "Watched Hentai",
+    "titleUrl": "https://www.youtube.com/watch?v=124",
+    "subtitles": [
+      {
+        "name": "Rosalía - Topic",
+        "url": "https://www.youtube.com/channel/456"
+      }
+    ],
+    "time": "2024-03-10T12:04:00.000Z"
+  },
+  {
+    "header": "YouTube Music",
+    "title": "Watched Bohemian Rhapsody",
+    "titleUrl": "https://www.youtube.com/watch?v=789",
+    "subtitles": [
+      {
+        "name": "Queen",
+        "url": "https://www.youtube.com/channel/999"
+      }
+    ],
+    "time": "2024-03-11T15:30:00.000Z"
+  },
+  {
+    "header": "YouTube",
+    "title": "Watched Random Video",
+    "time": "2024-03-11T16:00:00.000Z"
+  }
+]
