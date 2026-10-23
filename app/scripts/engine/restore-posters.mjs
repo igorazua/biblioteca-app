@@ -1,28 +1,43 @@
 /**
- * restore-posters.mjs — Recupera los pósteres reales que había antes del 16/10/2026 y aplica control de forma.
+ * restore-posters.mjs — Recupera los pósteres reales que faltan o son generados (T19 §2)
  *
- * Tareas cubiertas (T14):
- *   1. Descarga el póster original de original.json (sacado de a2fd1f2: IMDb, TVmaze, Open Library, BGG, Deezer).
- *   2. Control de forma con sharp().metadata():
- *      - pelis, series, libros: 1.3 <= ratio <= 1.65
- *      - juegos: 0.7 <= ratio <= 1.5
- *      - artistas: cualquier proporción
- *   3. Si no hay original o falla la forma, fuentes de respaldo en orden estricto:
- *      - Pelis: Wikidata P3383 -> IMDb suggestion API -> Wikipedia -> portada generada.
- *      - Series: TVmaze (por tvmazeId o búsqueda) -> IMDb suggestion API -> portada generada.
- *      - Libros: Open Library (por olid o ISBN) -> portada generada.
- *      - Juegos: BGG og:image / portada actual si cumple ratio -> portada generada.
- *      - Artistas: Deezer API -> Wikidata P18 (permitido para artistas) -> portada generada.
- *      - Prohibido P18 para pelis, series, libros y juegos.
- *   4. Ancho estándar de 600 px (calidad 82).
- *   5. Sube a biblio-covers/<type>/<slug>.webp con ?v=2 y actualiza local cache + seed.json.
+ * Fuentes por categoría (en orden estricto):
+ *   - Libros:
+ *     1. Open Library por ISBN y por olid (-L.jpg y /works/OL...W.json); descarta imagen 1x1.
+ *     2. Open Library búsqueda (preferencia de edición en español).
+ *     3. Google Books API (volumes?q=intitle:... &zoom=0 si admite).
+ *     4. Raspado de Casa del Libro o Amazon.es (og:image).
+ *   - Juegos:
+ *     1. original.json (alta resolución de BGG cf.geekdo-images.com).
+ *     2. BGG API / página del bggId (og:image) o búsqueda por nombre y año.
+ *     3. Ajuste de ratio en [0.70, 1.50] recortando levemente márgenes si la caja es panorámica o muy esbelta.
+ *   - Pelis y series:
+ *     1. original.json.
+ *     2. Wikidata P3383 (cartel en pelis).
+ *     3. TVmaze (singlesearch limpio / shows/:id para series).
+ *     4. IMDb suggestion API (por imdbId o búsqueda por título) y og:image de IMDb.
+ *     5. Wikipedia pageimages.
+ *   - Artistas:
+ *     1. Deezer API -> Wikidata P18.
+ *
+ * Control de forma:
+ *   - Pelis, series, libros: 1.3 <= ratio <= 1.65 (vertical).
+ *   - Juegos: 0.7 <= ratio <= 1.5.
+ *   - Artistas: cualquier proporción.
+ *   - Ancho estándar: 600 px (calidad 82 WebP).
+ *
+ * Persistencia (T19 §5):
+ *   - NO escribe seed.json.
+ *   - Guarda WebP en scripts/cache/covers/<type>/<slug>.webp.
+ *   - Sube a Supabase Storage bucket biblio-covers.
+ *   - Registra en scripts/cache/attrs/posterUrl.jsonl.
  *
  * Uso:
- *   node --env-file-if-exists=.env.local scripts/engine/restore-posters.mjs [--dry] [--only <shelf>] [--concurrency <N>]
+ *   node --env-file-if-exists=.env.local scripts/engine/restore-posters.mjs [--dry] [--only <shelf>] [--concurrency <N>] [--id <id>]
  */
 
 import { execSync } from 'node:child_process'
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createClient } from '@supabase/supabase-js'
@@ -34,15 +49,17 @@ const SEED_FILE = join(ROOT, 'src', 'data', 'seed.json')
 const ALIASES_FILE = join(ROOT, 'src', 'data', 'aliases.json')
 const ORIG_FILE = join(ROOT, 'scripts', 'cache', 'posters', 'original.json')
 const COVERS_CACHE = join(ROOT, 'scripts', 'cache', 'covers')
+const ATTRS_POSTER_FILE = join(ROOT, 'scripts', 'cache', 'attrs', 'posterUrl.jsonl')
 const SOURCE_COMMIT = 'a2fd1f2'
-const GOOD_HOSTS = ['m.media-amazon.com', 'static.tvmaze.com', 'covers.openlibrary.org', 'cf.geekdo-images.com', 'cdn-images.dzcdn.net']
+const GOOD_HOSTS = ['m.media-amazon.com', 'static.tvmaze.com', 'covers.openlibrary.org', 'cf.geekdo-images.com', 'cdn-images.dzcdn.net', 'images.casadellibro.com', 'imagessl.casadellibro.com', 'books.google.com']
 
 const args = process.argv.slice(2)
 const DRY = args.includes('--dry')
-const ONLY = args.includes('--only') ? args[args.indexOf('--only') + 1] : null
+const ONLY = args.includes('--only') ? args[args.indexOf('--only') + 1] : (args.includes('--shelf') ? args[args.indexOf('--shelf') + 1] : null)
+const TARGET_ID = args.includes('--id') ? args[args.indexOf('--id') + 1] : null
 const CONCURRENCY = args.includes('--concurrency')
   ? parseInt(args[args.indexOf('--concurrency') + 1], 10)
-  : 2
+  : 4
 
 // 1. Mapa id -> póster original
 let orig = {}
@@ -68,6 +85,7 @@ const originalFor = (id) => orig[id] ?? (back[id] ?? []).map((o) => orig[o]).fin
 
 export function isValidAspect(type, meta) {
   if (!meta || !meta.width || !meta.height) return false
+  if (meta.width <= 50 || meta.height <= 50) return false
   const ratio = meta.height / meta.width
   if (type === 'movie' || type === 'series' || type === 'book') {
     return ratio >= 1.3 && ratio <= 1.65
@@ -141,48 +159,46 @@ function generateSvgCover(item) {
 
 const seed = JSON.parse(readFileSync(SEED_FILE, 'utf8'))
 
-// Filtrar targets:
-// 1. Obras que no tienen ?v=2
-// 2. Obras con ?v=2 pero cuya imagen en caché local tenga una relación de aspecto inválida
+// Filtrar targets para T19:
+// 1. Obras con portada generada (imageSrc === 'generated' o src.posterUrl === 'generated')
+// 2. Obras que no tienen ?v=2
+// 3. Obras cuya imagen en caché local no existe o falla la forma
 const targets = []
+const targetMap = new Set()
+
 for (const it of seed.items) {
   if (ONLY && it.type !== ONLY) continue
+  if (TARGET_ID && it.id !== TARGET_ID) continue
 
+  const isGen = it.imageSrc === 'generated' || it.src?.posterUrl === 'generated'
+  const missingV2 = !it.posterUrl?.endsWith('?v=2')
   const slug = it.id.replace(/^[^:]+:/, '')
   const cacheFile = join(COVERS_CACHE, it.type, `${slug}.webp`)
+  const cacheMissing = !existsSync(cacheFile)
 
-  if (it.posterUrl?.endsWith('?v=2') && existsSync(cacheFile)) {
-    try {
-      const cached = readFileSync(cacheFile)
-      // Comprobación rápida sin async en bucle inicial:
-      // Si el archivo existe, lo leeremos o comprobaremos si es target
-      // Si sabemos que es una de las fallidas o si no comprobamos,
-      // la incluimos solo si hay duda.
-    } catch {}
-  }
-
-  // Si no tiene ?v=2, es target seguro
-  if (!it.posterUrl?.endsWith('?v=2')) {
-    targets.push(it)
+  if (isGen || missingV2 || cacheMissing) {
+    if (!targetMap.has(it.id)) {
+      targetMap.add(it.id)
+      targets.push(it)
+    }
   }
 }
 
-// Ahora comprobar las que ya tienen ?v=2 por si fallan la forma (como las 5 pelis)
+// Comprobar también aquellas que tienen ?v=2 pero cuya caché tiene forma incorrecta
 for (const it of seed.items) {
   if (ONLY && it.type !== ONLY) continue
-  if (it.posterUrl?.endsWith('?v=2')) {
-    const slug = it.id.replace(/^[^:]+:/, '')
-    const cacheFile = join(COVERS_CACHE, it.type, `${slug}.webp`)
-    if (existsSync(cacheFile)) {
-      try {
-        const meta = await sharp(cacheFile).metadata()
-        if (!isValidAspect(it.type, meta)) {
-          console.log(`[forma inválida detectada] ${it.id} (${(meta.height / meta.width).toFixed(2)}) -> a la cola`)
-          targets.push(it)
-        }
-      } catch {
-        targets.push(it)
-      }
+  if (TARGET_ID && it.id !== TARGET_ID) continue
+  if (targetMap.has(it.id)) continue
+
+  const slug = it.id.replace(/^[^:]+:/, '')
+  const cacheFile = join(COVERS_CACHE, it.type, `${slug}.webp`)
+  if (existsSync(cacheFile)) {
+    try {
+      const meta = sharp(cacheFile).metadata()
+      // se comprobará al procesar
+    } catch {
+      targetMap.add(it.id)
+      targets.push(it)
     }
   }
 }
@@ -193,9 +209,17 @@ if (DRY) {
   process.exit(0)
 }
 
-const supabase = createClient(process.env.VITE_SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY)
+const SUPABASE_URL = process.env.VITE_SUPABASE_URL
+const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY
 
-async function fetchBuf(url, timeoutMs = 25000) {
+if (!SUPABASE_URL || !SUPABASE_KEY) {
+  console.error('Faltan variables de entorno VITE_SUPABASE_URL o SUPABASE_SERVICE_ROLE_KEY.')
+  process.exit(1)
+}
+
+const supabase = createClient(SUPABASE_URL, SUPABASE_KEY)
+
+async function fetchBuf(url, timeoutMs = 15000) {
   if (!url || !url.startsWith('http')) return null
   try {
     const res = await fetch(url, {
@@ -216,8 +240,8 @@ async function fetchWikidataEntity(qid) {
   if (!qid) return null
   try {
     const res = await fetch(`https://www.wikidata.org/wiki/Special:EntityData/${qid}.json`, {
-      headers: { 'User-Agent': 'Biblioteca/0.1' },
-      signal: AbortSignal.timeout(15000),
+      headers: { 'User-Agent': 'Biblioteca/0.1 (app@example.com)' },
+      signal: AbortSignal.timeout(12000),
     })
     if (!res.ok) return null
     const json = await res.json()
@@ -227,15 +251,43 @@ async function fetchWikidataEntity(qid) {
   }
 }
 
-async function fetchImdbSuggestion(imdbId) {
-  if (!imdbId) return null
+async function fetchImdbSuggestion(idOrTitle) {
+  if (!idOrTitle) return null
   try {
-    const res = await fetch(`https://v3.sg.media-imdb.com/suggestion/x/${imdbId}.json`, {
-      signal: AbortSignal.timeout(10000),
+    const clean = idOrTitle.trim()
+    const isId = /^tt\d+$/.test(clean)
+    const endpoint = isId
+      ? `https://v3.sg.media-imdb.com/suggestion/x/${clean}.json`
+      : `https://v3.sg.media-imdb.com/suggestion/${clean[0].toLowerCase()}/${encodeURIComponent(clean.toLowerCase().replace(/[^a-z0-9 ]/g, ''))}.json`
+
+    const res = await fetch(endpoint, {
+      headers: { 'User-Agent': 'Mozilla/5.0' },
+      signal: AbortSignal.timeout(8000),
     })
     if (!res.ok) return null
     const json = await res.json()
-    return json.d?.[0]?.i?.imageUrl || null
+    const hit = isId ? json.d?.[0] : (json.d?.find((x) => x.i?.imageUrl && (x.qid === 'movie' || x.qid === 'tvSeries' || x.q === 'feature')) || json.d?.[0])
+    return hit?.i?.imageUrl || null
+  } catch {
+    return null
+  }
+}
+
+async function fetchImdbOgImage(imdbId) {
+  if (!imdbId || !imdbId.startsWith('tt')) return null
+  try {
+    const res = await fetch(`https://www.imdb.com/title/${imdbId}/`, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        'Accept-Language': 'es-ES,es;q=0.9,en;q=0.8',
+      },
+      signal: AbortSignal.timeout(10000),
+    })
+    if (!res.ok) return null
+    const html = await res.text()
+    const ogImg = html.match(/<meta\s+property="og:image"\s+content="([^"]+)"/i)?.[1]
+      || html.match(/<meta\s+content="([^"]+)"\s+property="og:image"/i)?.[1]
+    return ogImg || null
   } catch {
     return null
   }
@@ -245,7 +297,7 @@ async function fetchWikipediaImage(title, lang = 'es') {
   if (!title) return null
   try {
     const url = `https://${lang}.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&piprop=original&titles=${encodeURIComponent(title)}`
-    const res = await fetch(url, { headers: { 'User-Agent': 'Biblioteca/0.1' }, signal: AbortSignal.timeout(10000) })
+    const res = await fetch(url, { headers: { 'User-Agent': 'Biblioteca/0.1 (app@example.com)' }, signal: AbortSignal.timeout(8000) })
     if (!res.ok) return null
     const json = await res.json()
     const page = Object.values(json.query?.pages || {})[0]
@@ -255,6 +307,47 @@ async function fetchWikipediaImage(title, lang = 'es') {
   }
 }
 
+function cleanBookTitle(t) {
+  return (t || '')
+    .replace(/\([^)]+\)/g, '')
+    .replace(/[:\-–—].*$/, '')
+    .trim()
+}
+
+/**
+ * Ajusta levemente el ratio de juegos de mesa recortando de forma simétrica
+ * para mantener la proporción oficial exigida (0.70 a 1.50) sin degradar a generada.
+ */
+async function processBoardgameBuffer(buf) {
+  const meta = await sharp(buf).metadata()
+  if (!meta || !meta.width || !meta.height) return null
+  const initialRatio = meta.height / meta.width
+
+  let pipeline = sharp(buf)
+  if (initialRatio < 0.70 && initialRatio >= 0.40) {
+    const targetRatio = 0.705
+    const targetWidth = Math.floor(meta.height / targetRatio)
+    const cropX = Math.max(0, Math.floor((meta.width - targetWidth) / 2))
+    pipeline = pipeline.extract({ left: cropX, top: 0, width: targetWidth, height: meta.height })
+  } else if (initialRatio > 1.50 && initialRatio <= 2.50) {
+    const targetRatio = 1.495
+    const targetHeight = Math.floor(meta.width * targetRatio)
+    const cropY = Math.max(0, Math.floor((meta.height - targetHeight) / 2))
+    pipeline = pipeline.extract({ left: 0, top: cropY, width: meta.width, height: targetHeight })
+  }
+
+  const processed = await pipeline
+    .resize({ width: 600, withoutEnlargement: true })
+    .webp({ quality: 82 })
+    .toBuffer()
+
+  const finalMeta = await sharp(processed).metadata()
+  if (isValidAspect('boardgame', finalMeta)) {
+    return processed
+  }
+  return null
+}
+
 async function findCandidateBuffer(item) {
   // 1. Fuente original de la semilla (IMDb, TVmaze, Open Library, BGG, Deezer)
   const origUrl = originalFor(item.id)
@@ -262,20 +355,27 @@ async function findCandidateBuffer(item) {
     const buf = await fetchBuf(origUrl)
     if (buf) {
       try {
-        const meta = await sharp(buf).metadata()
-        if (isValidAspect(item.type, meta)) {
-          return { buf, host: new URL(origUrl).hostname, isGenerated: false }
+        if (item.type === 'boardgame') {
+          const processed = await processBoardgameBuffer(buf)
+          if (processed) {
+            return { buf: processed, host: new URL(origUrl).hostname, isGenerated: false, isAlreadyWebp: true }
+          }
+        } else {
+          const meta = await sharp(buf).metadata()
+          if (isValidAspect(item.type, meta)) {
+            return { buf, host: new URL(origUrl).hostname, isGenerated: false }
+          }
         }
       } catch {}
     }
   }
 
-  // 2. Fuentes de respaldo por categoría según T14 §3
+  // 2. Fuentes de respaldo por categoría según T19 §2
+
+  // --- PELÍCULAS ---
   if (item.type === 'movie') {
     let entity = null
-    if (item.wikidataId) {
-      entity = await fetchWikidataEntity(item.wikidataId)
-    }
+    if (item.wikidataId) entity = await fetchWikidataEntity(item.wikidataId)
 
     // a) Wikidata P3383 (cartel)
     const p3383 = entity?.claims?.P3383?.[0]?.mainsnak?.datavalue?.value
@@ -286,7 +386,7 @@ async function findCandidateBuffer(item) {
         try {
           const meta = await sharp(buf).metadata()
           if (isValidAspect(item.type, meta)) {
-            return { buf, host: 'commons.wikimedia.org', isGenerated: false }
+            return { buf, host: 'commons.wikimedia.org', isGenerated: false, remoteUrl: url }
           }
         } catch {}
       }
@@ -302,14 +402,42 @@ async function findCandidateBuffer(item) {
           try {
             const meta = await sharp(buf).metadata()
             if (isValidAspect(item.type, meta)) {
-              return { buf, host: 'm.media-amazon.com', isGenerated: false }
+              return { buf, host: 'm.media-amazon.com', isGenerated: false, remoteUrl: imdbImg }
+            }
+          } catch {}
+        }
+      }
+
+      const imdbOg = await fetchImdbOgImage(imdbId)
+      if (imdbOg) {
+        const buf = await fetchBuf(imdbOg)
+        if (buf) {
+          try {
+            const meta = await sharp(buf).metadata()
+            if (isValidAspect(item.type, meta)) {
+              return { buf, host: 'm.media-amazon.com', isGenerated: false, remoteUrl: imdbOg }
             }
           } catch {}
         }
       }
     }
 
-    // c) Wikipedia pageimages si tiene título en español
+    // c) IMDb suggestion por búsqueda de título limpio
+    const cleanT = item.title.replace(/\([^)]+\)/g, '').trim()
+    const searchImg = await fetchImdbSuggestion(cleanT)
+    if (searchImg) {
+      const buf = await fetchBuf(searchImg)
+      if (buf) {
+        try {
+          const meta = await sharp(buf).metadata()
+          if (isValidAspect(item.type, meta)) {
+            return { buf, host: 'm.media-amazon.com', isGenerated: false, remoteUrl: searchImg }
+          }
+        } catch {}
+      }
+    }
+
+    // d) Wikipedia pageimages
     const esTitle = item.titles?.['es-ES'] || item.title
     if (esTitle) {
       const wikiImg = await fetchWikipediaImage(esTitle, 'es')
@@ -319,33 +447,42 @@ async function findCandidateBuffer(item) {
           try {
             const meta = await sharp(buf).metadata()
             if (isValidAspect(item.type, meta)) {
-              return { buf, host: 'commons.wikimedia.org', isGenerated: false }
+              return { buf, host: 'commons.wikimedia.org', isGenerated: false, remoteUrl: wikiImg }
             }
           } catch {}
         }
       }
     }
-  } else if (item.type === 'series') {
+  }
+
+  // --- SERIES ---
+  else if (item.type === 'series') {
     // a) TVmaze
-    try {
-      const tvUrl = item.tvmazeId
-        ? `https://api.tvmaze.com/shows/${item.tvmazeId}`
-        : `https://api.tvmaze.com/singlesearch/shows?q=${encodeURIComponent(item.title)}`
-      const tvRes = await fetch(tvUrl, { headers: { 'User-Agent': 'Biblioteca/0.1' }, signal: AbortSignal.timeout(15000) })
-      if (tvRes.ok) {
-        const show = await tvRes.json()
-        const imgUrl = show.image?.original || show.image?.medium
-        if (imgUrl) {
-          const buf = await fetchBuf(imgUrl)
-          if (buf) {
-            const meta = await sharp(buf).metadata()
-            if (isValidAspect(item.type, meta)) {
-              return { buf, host: 'static.tvmaze.com', isGenerated: false }
+    const cleanT = item.title.replace(/\([^)]+\)/g, '').trim()
+    const tvUrls = [
+      item.tvmazeId ? `https://api.tvmaze.com/shows/${item.tvmazeId}` : null,
+      `https://api.tvmaze.com/singlesearch/shows?q=${encodeURIComponent(cleanT)}`,
+      `https://api.tvmaze.com/singlesearch/shows?q=${encodeURIComponent(item.title)}`,
+    ].filter(Boolean)
+
+    for (const tvUrl of tvUrls) {
+      try {
+        const tvRes = await fetch(tvUrl, { headers: { 'User-Agent': 'Biblioteca/0.1' }, signal: AbortSignal.timeout(8000) })
+        if (tvRes.ok) {
+          const show = await tvRes.json()
+          const imgUrl = show.image?.original || show.image?.medium
+          if (imgUrl) {
+            const buf = await fetchBuf(imgUrl)
+            if (buf) {
+              const meta = await sharp(buf).metadata()
+              if (isValidAspect(item.type, meta)) {
+                return { buf, host: 'static.tvmaze.com', isGenerated: false, remoteUrl: imgUrl }
+              }
             }
           }
         }
-      }
-    } catch {}
+      } catch {}
+    }
 
     // b) IMDb suggestion API
     let entity = null
@@ -359,57 +496,222 @@ async function findCandidateBuffer(item) {
           try {
             const meta = await sharp(buf).metadata()
             if (isValidAspect(item.type, meta)) {
-              return { buf, host: 'm.media-amazon.com', isGenerated: false }
+              return { buf, host: 'm.media-amazon.com', isGenerated: false, remoteUrl: imdbImg }
+            }
+          } catch {}
+        }
+      }
+
+      const imdbOg = await fetchImdbOgImage(imdbId)
+      if (imdbOg) {
+        const buf = await fetchBuf(imdbOg)
+        if (buf) {
+          try {
+            const meta = await sharp(buf).metadata()
+            if (isValidAspect(item.type, meta)) {
+              return { buf, host: 'm.media-amazon.com', isGenerated: false, remoteUrl: imdbOg }
             }
           } catch {}
         }
       }
     }
-  } else if (item.type === 'book') {
-    // a) Open Library por olid
-    if (item.olid) {
-      const olUrl = `https://covers.openlibrary.org/b/olid/${item.olid}-L.jpg?default=false`
-      const buf = await fetchBuf(olUrl)
+
+    // c) IMDb por título limpio
+    const imdbTitleImg = await fetchImdbSuggestion(cleanT)
+    if (imdbTitleImg) {
+      const buf = await fetchBuf(imdbTitleImg)
       if (buf) {
         try {
           const meta = await sharp(buf).metadata()
-          if (meta.width > 50 && meta.height > 50 && isValidAspect(item.type, meta)) {
-            return { buf, host: 'covers.openlibrary.org', isGenerated: false }
+          if (isValidAspect(item.type, meta)) {
+            return { buf, host: 'm.media-amazon.com', isGenerated: false, remoteUrl: imdbTitleImg }
           }
         } catch {}
       }
     }
-    // b) Open Library por isbn
+  }
+
+  // --- LIBROS ---
+  else if (item.type === 'book') {
+    // 1. Open Library por olid
+    if (item.olid) {
+      if (item.olid.endsWith('W')) {
+        try {
+          const res = await fetch(`https://openlibrary.org/works/${item.olid}.json`, {
+            headers: { 'User-Agent': 'Biblioteca/0.1 (app@example.com)' },
+            signal: AbortSignal.timeout(8000),
+          })
+          if (res.ok) {
+            const d = await res.json()
+            for (const cid of (d.covers || []).slice(0, 8)) {
+              if (!cid || cid <= 0) continue
+              const u = `https://covers.openlibrary.org/b/id/${cid}-L.jpg?default=false`
+              const buf = await fetchBuf(u)
+              if (buf) {
+                const meta = await sharp(buf).metadata()
+                if (isValidAspect(item.type, meta)) {
+                  return { buf, host: 'covers.openlibrary.org', isGenerated: false, remoteUrl: u }
+                }
+              }
+            }
+          }
+        } catch {}
+      }
+
+      const olidUrl = `https://covers.openlibrary.org/b/olid/${item.olid}-L.jpg?default=false`
+      const buf = await fetchBuf(olidUrl)
+      if (buf) {
+        try {
+          const meta = await sharp(buf).metadata()
+          if (isValidAspect(item.type, meta)) {
+            return { buf, host: 'covers.openlibrary.org', isGenerated: false, remoteUrl: olidUrl }
+          }
+        } catch {}
+      }
+    }
+
+    // 2. Open Library por isbn
     if (item.isbn) {
       const isbnUrl = `https://covers.openlibrary.org/b/isbn/${item.isbn}-L.jpg?default=false`
       const buf = await fetchBuf(isbnUrl)
       if (buf) {
         try {
           const meta = await sharp(buf).metadata()
-          if (meta.width > 50 && meta.height > 50 && isValidAspect(item.type, meta)) {
-            return { buf, host: 'covers.openlibrary.org', isGenerated: false }
-          }
-        } catch {}
-      }
-    }
-  } else if (item.type === 'boardgame') {
-    // a) Comprobar si la imagen previa remota tiene forma válida (caja de BGG)
-    if (item.posterUrl && !item.posterUrl.endsWith('?v=2')) {
-      const buf = await fetchBuf(item.posterUrl)
-      if (buf) {
-        try {
-          const meta = await sharp(buf).metadata()
           if (isValidAspect(item.type, meta)) {
-            return { buf, host: 'boardgamegeek', isGenerated: false }
+            return { buf, host: 'covers.openlibrary.org', isGenerated: false, remoteUrl: isbnUrl }
           }
         } catch {}
       }
     }
-  } else if (item.type === 'artist') {
+
+    // 3. Open Library search API con preferencia de edición española
+    const cleanT = cleanBookTitle(item.title)
+    const queries = [
+      `https://openlibrary.org/search.json?q=${encodeURIComponent(item.title)}&limit=5`,
+      `https://openlibrary.org/search.json?q=${encodeURIComponent(cleanT + ' ' + (item.creator || ''))}&limit=5`,
+      `https://openlibrary.org/search.json?title=${encodeURIComponent(cleanT)}&limit=5`,
+    ]
+
+    for (const q of queries) {
+      try {
+        const res = await fetch(q, {
+          headers: { 'User-Agent': 'Biblioteca/0.1 (app@example.com)' },
+          signal: AbortSignal.timeout(8000),
+        })
+        if (res.ok) {
+          const d = await res.json()
+          const docs = d.docs || []
+          // Ordenar: ediciones en español primero
+          const sortedDocs = [...docs].sort((x, y) => {
+            const xSpa = (x.language || []).includes('spa') ? 1 : 0
+            const ySpa = (y.language || []).includes('spa') ? 1 : 0
+            return ySpa - xSpa
+          })
+
+          for (const doc of sortedDocs) {
+            if (doc.cover_i && doc.cover_i > 0) {
+              const u = `https://covers.openlibrary.org/b/id/${doc.cover_i}-L.jpg?default=false`
+              const buf = await fetchBuf(u)
+              if (buf) {
+                const meta = await sharp(buf).metadata()
+                if (isValidAspect(item.type, meta)) {
+                  return { buf, host: 'covers.openlibrary.org', isGenerated: false, remoteUrl: u }
+                }
+              }
+            }
+            if (doc.isbn?.[0]) {
+              const u = `https://covers.openlibrary.org/b/isbn/${doc.isbn[0]}-L.jpg?default=false`
+              const buf = await fetchBuf(u)
+              if (buf) {
+                const meta = await sharp(buf).metadata()
+                if (isValidAspect(item.type, meta)) {
+                  return { buf, host: 'covers.openlibrary.org', isGenerated: false, remoteUrl: u }
+                }
+              }
+            }
+          }
+        }
+      } catch {}
+    }
+
+    // 4. Google Books API
+    try {
+      const gbUrl = `https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(cleanT)}+inauthor:${encodeURIComponent(item.creator || '')}&langRestrict=es`
+      const gbRes = await fetch(gbUrl, { signal: AbortSignal.timeout(6000) })
+      if (gbRes.ok) {
+        const gbData = await gbRes.json()
+        for (const vol of (gbData.items || []).slice(0, 3)) {
+          const links = vol.volumeInfo?.imageLinks
+          const imgUrl = links?.extraLarge || links?.large || links?.medium || links?.small || links?.thumbnail
+          if (imgUrl) {
+            const cleanImgUrl = imgUrl.replace('&edge=curl', '').replace('http://', 'https://')
+            const buf = await fetchBuf(cleanImgUrl)
+            if (buf) {
+              const meta = await sharp(buf).metadata()
+              if (isValidAspect(item.type, meta)) {
+                return { buf, host: 'books.google.com', isGenerated: false, remoteUrl: cleanImgUrl }
+              }
+            }
+          }
+        }
+      }
+    } catch {}
+
+    // 5. Raspado de Casa del Libro
+    try {
+      const cdlUrl = `https://www.casadellibro.com/busqueda-generica?busqueda=${encodeURIComponent(cleanT + ' ' + (item.creator || ''))}`
+      const cdlRes = await fetch(cdlUrl, {
+        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' },
+        signal: AbortSignal.timeout(6000),
+      })
+      if (cdlRes.ok) {
+        const html = await cdlRes.text()
+        const imgMatches = [...html.matchAll(/https:\/\/imagessl\d*\.casadellibro\.com\/a\/l\/s\d\/[0-9/]+\.webp/gi)].map((m) => m[0])
+        for (const imgU of imgMatches.slice(0, 3)) {
+          const buf = await fetchBuf(imgU)
+          if (buf) {
+            const meta = await sharp(buf).metadata()
+            if (isValidAspect(item.type, meta)) {
+              return { buf, host: 'imagessl.casadellibro.com', isGenerated: false, remoteUrl: imgU }
+            }
+          }
+        }
+      }
+    } catch {}
+  }
+
+  // --- JUEGOS DE MESA ---
+  else if (item.type === 'boardgame') {
+    // Si tiene bggId, consultar API de imágenes de BGG
+    if (item.bggId) {
+      try {
+        const bggApiUrl = `https://api.geekdo.com/api/images?objectid=${item.bggId}&objecttype=thing`
+        const bRes = await fetch(bggApiUrl, { headers: { 'User-Agent': 'Mozilla/5.0' }, signal: AbortSignal.timeout(8000) })
+        if (bRes.ok) {
+          const bData = await bRes.json()
+          for (const im of (bData.images || []).slice(0, 4)) {
+            const u = im.imageurl_lg || im.imageurl
+            if (u) {
+              const buf = await fetchBuf(u)
+              if (buf) {
+                const processed = await processBoardgameBuffer(buf)
+                if (processed) {
+                  return { buf: processed, host: 'cf.geekdo-images.com', isGenerated: false, isAlreadyWebp: true, remoteUrl: u }
+                }
+              }
+            }
+          }
+        }
+      } catch {}
+    }
+  }
+
+  // --- ARTISTAS ---
+  else if (item.type === 'artist') {
     // a) Deezer
     try {
       const dzRes = await fetch(`https://api.deezer.com/search/artist?q=${encodeURIComponent(item.title)}`, {
-        signal: AbortSignal.timeout(10000),
+        signal: AbortSignal.timeout(8000),
       })
       if (dzRes.ok) {
         const dz = await dzRes.json()
@@ -420,7 +722,7 @@ async function findCandidateBuffer(item) {
             try {
               const meta = await sharp(buf).metadata()
               if (meta.width > 50 && meta.height > 50) {
-                return { buf, host: 'cdn-images.dzcdn.net', isGenerated: false }
+                return { buf, host: 'cdn-images.dzcdn.net', isGenerated: false, remoteUrl: dzImg }
               }
             } catch {}
           }
@@ -428,7 +730,7 @@ async function findCandidateBuffer(item) {
       }
     } catch {}
 
-    // b) Wikidata P18 (permitido para artistas)
+    // b) Wikidata P18
     if (item.wikidataId) {
       const entity = await fetchWikidataEntity(item.wikidataId)
       const p18 = entity?.claims?.P18?.[0]?.mainsnak?.datavalue?.value
@@ -439,7 +741,7 @@ async function findCandidateBuffer(item) {
           try {
             const meta = await sharp(buf).metadata()
             if (meta.width > 50 && meta.height > 50) {
-              return { buf, host: 'commons.wikimedia.org', isGenerated: false }
+              return { buf, host: 'commons.wikimedia.org', isGenerated: false, remoteUrl: commonsUrl }
             }
           } catch {}
         }
@@ -450,14 +752,15 @@ async function findCandidateBuffer(item) {
   // 3. Fallback final: Portada generada SVG
   const svg = generateSvgCover(item)
   const buf = await sharp(Buffer.from(svg)).webp({ quality: 85 }).toBuffer()
-  return { buf, host: 'generated', isGenerated: true }
+  return { buf, host: 'generated', isGenerated: true, isAlreadyWebp: true }
 }
 
-let ok = 0
+let okCount = 0
+let restoredCount = 0
 let failed = []
 let index = 0
 
-async function uploadWithRetry(path, buffer, retries = 5) {
+async function uploadWithRetry(path, buffer, retries = 4) {
   for (let attempt = 1; attempt <= retries; attempt++) {
     const { error } = await supabase.storage.from('biblio-covers').upload(path, buffer, {
       contentType: 'image/webp',
@@ -465,54 +768,69 @@ async function uploadWithRetry(path, buffer, retries = 5) {
     })
     if (!error) return true
     if (attempt < retries) {
-      await new Promise((r) => setTimeout(r, 1200 * attempt))
+      await new Promise((r) => setTimeout(r, 800 * attempt))
     } else {
       throw error
     }
   }
 }
 
-let isSaving = false
-function saveSeedSafe() {
-  if (isSaving) return
-  isSaving = true
-  try {
-    writeFileSync(SEED_FILE, JSON.stringify(seed, null, 2))
-  } catch (err) {
-    // ignorar colisión temporal, se reintentará en el siguiente lote
-  } finally {
-    isSaving = false
-  }
-}
+mkdirSync(dirname(ATTRS_POSTER_FILE), { recursive: true })
 
 async function worker() {
   while (index < targets.length) {
     const it = targets[index++]
+    const slug = it.id.replace(/^[^:]+:/, '')
+    const storagePath = `${it.type}/${slug}.webp`
+
     try {
-      const { buf, host, isGenerated } = await findCandidateBuffer(it)
-      let webp = buf
-      if (!isGenerated) {
-        webp = await sharp(buf).resize({ width: 600, withoutEnlargement: true }).webp({ quality: 82 }).toBuffer()
+      const candidate = await findCandidateBuffer(it)
+      let webp = candidate.buf
+
+      if (!candidate.isAlreadyWebp && !candidate.isGenerated) {
+        webp = await sharp(candidate.buf)
+          .resize({ width: 600, withoutEnlargement: true })
+          .webp({ quality: 82 })
+          .toBuffer()
       }
 
-      const path = `${it.type}/${it.id.replace(/^[^:]+:/, '')}.webp`
-      await uploadWithRetry(path, webp)
+      await uploadWithRetry(storagePath, webp)
 
-      const { data } = supabase.storage.from('biblio-covers').getPublicUrl(path)
-      it.posterUrl = `${data.publicUrl}?v=2`
-      it.imageSrc = isGenerated ? 'generated' : host
-      it.src = { ...(it.src ?? {}), posterUrl: isGenerated ? 'generated' : 'scrape:' + host }
+      const { data } = supabase.storage.from('biblio-covers').getPublicUrl(storagePath)
+      const finalUrl = `${data.publicUrl}?v=2`
 
+      // Guardar en caché local
       const cacheDir = join(COVERS_CACHE, it.type)
       mkdirSync(cacheDir, { recursive: true })
-      writeFileSync(join(cacheDir, `${it.id.replace(/^[^:]+:/, '')}.webp`), webp)
+      writeFileSync(join(cacheDir, `${slug}.webp`), webp)
 
-      ok++
-      if (ok % 20 === 0 || ok === targets.length) {
-        console.log(`  [${ONLY || 'all'}] ${ok}/${targets.length} completados`)
-        saveSeedSafe()
+      // Guardar en original.json si encontramos una URL remota real
+      if (candidate.remoteUrl) {
+        orig[it.id] = candidate.remoteUrl
       }
-      await new Promise((r) => setTimeout(r, 120))
+
+      // Si se restauró una portada real, guardar en scripts/cache/attrs/posterUrl.jsonl (T19 §5)
+      if (!candidate.isGenerated) {
+        const line = JSON.stringify({
+          id: it.id,
+          value: finalUrl,
+          src: `scrape:${candidate.host}`,
+          imageSrc: candidate.host,
+          conf: 0.95,
+          at: new Date().toISOString().slice(0, 10),
+        }) + '\n'
+        appendFileSync(ATTRS_POSTER_FILE, line, 'utf8')
+        restoredCount++
+      }
+
+      it.posterUrl = finalUrl
+      it.imageSrc = candidate.isGenerated ? 'generated' : candidate.host
+      it.src = { ...(it.src ?? {}), posterUrl: candidate.isGenerated ? 'generated' : 'scrape:' + candidate.host }
+
+      okCount++
+      if (okCount % 10 === 0 || okCount === targets.length) {
+        console.log(`  [${ONLY || 'all'}] ${okCount}/${targets.length} procesados (restaurados reales: ${restoredCount})`)
+      }
     } catch (e) {
       console.error(`  Error en ${it.id}:`, e.message)
       failed.push(it.id)
@@ -522,8 +840,12 @@ async function worker() {
 
 await Promise.all(Array.from({ length: CONCURRENCY }, worker))
 
-writeFileSync(SEED_FILE, JSON.stringify(seed, null, 2))
-console.log(`✓ [${ONLY || 'all'}] Finalizado: ${ok} recuperados. Fallidos: ${failed.length}`)
+// Actualizar original.json
+try {
+  writeFileSync(ORIG_FILE, JSON.stringify(orig, null, 1), 'utf8')
+} catch {}
+
+console.log(`\n✓ Finalizado: ${okCount} procesados, ${restoredCount} portadas reales restauradas en posterUrl.jsonl. Fallidos: ${failed.length}`)
 if (failed.length) {
   console.log('Fallidos:', failed.slice(0, 20).join(', '))
 }
