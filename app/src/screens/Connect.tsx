@@ -1,11 +1,12 @@
 // Conectar: traer tu historial desde otras plataformas (docs/CONECTAR.md).
 // Cada servicio acaba devolviendo ImportRow[]; el emparejado, la revisión y la aplicación son los de lib/import.
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Sheet, Tag, Toast } from '../components/ui'
+import { Sheet, Toast } from '../components/ui'
 import { Group } from '../components/Group'
 import { ImportFlowView } from '../components/ImportFlowView'
 import { ScreenTitle } from '../components/ScreenTitle'
+import { BrandLogo } from '../components/BrandLogo'
 import { track } from '../store/useEvents'
 import { useImportFlow } from '../lib/import/useImportFlow'
 import { parseLetterboxd } from '../lib/import/letterboxd'
@@ -13,12 +14,10 @@ import { parseImdb } from '../lib/import/imdb'
 import { parseGoodreads } from '../lib/import/goodreads'
 import { parseNetflix } from '../lib/import/netflix'
 import { parseStoryGraph } from '../lib/import/storygraph'
-import { GROUPS, METHOD_LABEL, SERVICES, type Service } from '../lib/connect/services'
+import { GROUPS, SERVICES, type Service } from '../lib/connect/services'
 import { ConnectorUnavailable, ConnectorUserError } from '../lib/connect/types'
-import { loadSpotifyTokens, spotifyEnabled, startSpotifyAuth } from '../lib/connect/spotify'
+import { disconnectSpotify, loadSpotifyTokens, spotifyEnabled, startSpotifyAuth } from '../lib/connect/spotify'
 import type { ImportRow } from '../lib/import/types'
-
-const TRUST = 'Solo leemos lo que nos dejes. Puedes desconectarlo cuando quieras.'
 
 async function rowsFromFile(service: Service, file: File): Promise<ImportRow[]> {
   const kind = service.file!.kind
@@ -33,32 +32,6 @@ async function rowsFromFile(service: Service, file: File): Promise<ImportRow[]> 
   }
 }
 
-function ServiceIcon({ s }: { s: Service }) {
-  return (
-    <span
-      className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 text-white font-semibold text-lg serif"
-      style={{ background: s.color }}
-      aria-hidden
-    >
-      {s.name[0]}
-    </span>
-  )
-}
-
-function ActionButton({ children, onClick, quiet, disabled }: { children: string; onClick?: () => void; quiet?: boolean; disabled?: boolean }) {
-  return (
-    <button
-      onClick={onClick}
-      disabled={disabled}
-      className={`min-h-[40px] px-4 rounded-full text-sm font-semibold shrink-0 border transition-colors ${
-        quiet ? 'bg-transparent border-line text-mute active:bg-surface2' : 'bg-surface2 border-line text-ink active:bg-line'
-      } ${disabled ? 'opacity-60' : ''}`}
-    >
-      {children}
-    </button>
-  )
-}
-
 type SheetState = { kind: 'username' | 'file' | 'oauth'; service: Service } | null
 
 export function Connect() {
@@ -67,7 +40,7 @@ export function Connect() {
   const [sheet, setSheet] = useState<SheetState>(null)
   const [toast, setToast] = useState<string | null>(null)
   const [asked, setAsked] = useState<Set<string>>(new Set())
-  const spotifyConnected = Boolean(loadSpotifyTokens()) && spotifyEnabled
+  const [spotifyConnected, setSpotifyConnected] = useState<boolean>(() => Boolean(loadSpotifyTokens()) && spotifyEnabled)
 
   const startRows = async (rows: ImportRow[], serviceId: string) => {
     setSheet(null)
@@ -89,6 +62,12 @@ export function Connect() {
     else if (spotifyEnabled) setSheet({ kind: 'oauth', service: s })
   }
 
+  const handleDisconnectSpotify = () => {
+    disconnectSpotify()
+    setSpotifyConnected(false)
+    setToast('Desconectado de Spotify.')
+  }
+
   const inFlow = flow.step !== 'idle'
 
   return (
@@ -102,56 +81,95 @@ export function Connect() {
       {inFlow ? (
         <ImportFlowView flow={flow} />
       ) : (
-        <div className="px-5 pb-12 pt-2 w-full max-w-md mx-auto space-y-8">
+        <div className="px-5 pb-16 pt-2 w-full max-w-md mx-auto space-y-7">
           <p className="text-sm text-mute leading-relaxed">
-            Trae lo que ya has visto, leído o escuchado desde otras plataformas. Nunca te pedimos tu contraseña.
+            Trae lo que ya has visto, leído o escuchado desde tus plataformas de siempre. Sin notas numéricas vacías y sin pedirte nunca tu contraseña.
           </p>
 
           <Group title="Tus conexiones">
             {spotifyConnected ? (
-              <div className="min-h-[64px] px-4 py-3 flex items-center gap-3">
-                <ServiceIcon s={SERVICES.find((s) => s.id === 'spotify')!} />
-                <div className="flex-1 min-w-0">
-                  <div className="text-sm font-semibold">Spotify</div>
-                  <div className="text-xs text-mute">Conectada con tu cuenta</div>
+              <div className="min-h-[64px] px-4 py-3 flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3 min-w-0">
+                  <BrandLogo id="spotify" size={40} />
+                  <div className="min-w-0">
+                    <div className="text-[15px] font-semibold text-ink leading-tight">Spotify</div>
+                    <div className="flex items-center gap-1.5 mt-0.5 text-xs text-mute">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
+                      <span>Conectada con tu cuenta</span>
+                    </div>
+                  </div>
                 </div>
+                <button
+                  type="button"
+                  onClick={handleDisconnectSpotify}
+                  className="px-3 py-1.5 rounded-full text-xs font-medium text-mute hover:text-ink transition-colors active:scale-95"
+                >
+                  Desconectar
+                </button>
               </div>
             ) : (
-              <div className="px-4 py-5 text-sm text-mute leading-relaxed">
-                Aún no has conectado nada. Elige una plataforma de abajo y empieza por la que más uses.
+              <div className="px-4 py-4 text-xs text-mute leading-relaxed">
+                Aún no has conectado ninguna cuenta. Elige tu plataforma habitual para empezar.
               </div>
             )}
           </Group>
 
-          {GROUPS.map((g) => (
-            <Group key={g.id} title={g.title}>
-              {SERVICES.filter((s) => s.group === g.id).map((s) => {
-                const soon = s.method === 'soon'
-                const offSpotify = s.method === 'oauth' && !spotifyEnabled
-                return (
-                  <div key={s.id} className="min-h-[72px] px-4 py-3 flex items-center gap-3">
-                    <ServiceIcon s={s} />
-                    <div className="flex-1 min-w-0">
-                      <div className="text-sm font-semibold">{s.name}</div>
-                      <div className="flex flex-wrap gap-1 mt-1">
-                        {s.brings.map((b) => <Tag key={b} variant="subtle">{b}</Tag>)}
-                        <Tag variant={soon || offSpotify ? 'subtle' : 'accent'}>{METHOD_LABEL[s.method]}</Tag>
+          {GROUPS.map((g) => {
+            const list = SERVICES.filter((s) => s.group === g.id)
+            if (list.length === 0) return null
+            return (
+              <Group key={g.id} title={g.title}>
+                {list.map((s) => {
+                  const soon = s.method === 'soon'
+                  const offSpotify = s.method === 'oauth' && !spotifyEnabled
+                  const isAsked = asked.has(s.id)
+                  const actionLabel =
+                    offSpotify ? 'Pronto'
+                    : soon ? (isAsked ? 'Anotado' : 'Avísame')
+                    : s.method === 'file' ? 'Importar'
+                    : 'Conectar'
+
+                  return (
+                    <div
+                      key={s.id}
+                      className="min-h-[68px] px-4 py-3 flex items-center justify-between gap-3 transition-colors"
+                    >
+                      <div className="flex items-center gap-3.5 min-w-0 flex-1">
+                        <BrandLogo id={s.id} size={40} />
+                        <div className="min-w-0 flex-1">
+                          <div className="text-[15px] font-semibold text-ink leading-tight truncate">
+                            {s.name}
+                          </div>
+                          <div className="text-xs text-mute mt-0.5 leading-snug truncate">
+                            {s.subtitle || s.blurb}
+                          </div>
+                        </div>
                       </div>
+
+                      <button
+                        type="button"
+                        onClick={
+                          offSpotify || (soon && isAsked)
+                            ? undefined
+                            : () => tapService(s)
+                        }
+                        disabled={offSpotify || (soon && isAsked)}
+                        className={`min-h-[34px] px-3.5 rounded-full text-xs font-semibold shrink-0 transition-all active:scale-95 ${
+                          soon || offSpotify
+                            ? isAsked
+                              ? 'bg-transparent text-accent font-medium border border-accent/40'
+                              : 'bg-transparent text-mute hover:text-ink border border-line/60'
+                            : 'bg-surface2 border border-line text-ink hover:border-accent shadow-sm'
+                        }`}
+                      >
+                        {actionLabel}
+                      </button>
                     </div>
-                    {offSpotify ? (
-                      <ActionButton quiet disabled>Muy pronto</ActionButton>
-                    ) : soon ? (
-                      <ActionButton quiet onClick={asked.has(s.id) ? undefined : () => tapService(s)}>
-                        {asked.has(s.id) ? 'Anotado' : 'Avísame'}
-                      </ActionButton>
-                    ) : (
-                      <ActionButton onClick={() => tapService(s)}>{s.method === 'file' ? 'Subir' : 'Conectar'}</ActionButton>
-                    )}
-                  </div>
-                )
-              })}
-            </Group>
-          ))}
+                  )
+                })}
+              </Group>
+            )
+          })}
         </div>
       )}
 
@@ -164,9 +182,15 @@ export function Connect() {
         />
       )}
       {sheet?.kind === 'file' && (
-        <FileSheet service={sheet.service} onClose={() => setSheet(null)} onRows={(rows) => startRows(rows, sheet.service.id)} />
+        <FileSheet
+          service={sheet.service}
+          onClose={() => setSheet(null)}
+          onRows={(rows) => startRows(rows, sheet.service.id)}
+        />
       )}
-      {sheet?.kind === 'oauth' && <OAuthSheet service={sheet.service} onClose={() => setSheet(null)} />}
+      {sheet?.kind === 'oauth' && (
+        <OAuthSheet service={sheet.service} onClose={() => setSheet(null)} />
+      )}
 
       {toast && <Toast message={toast} onDone={() => setToast(null)} ms={2600} />}
     </div>
@@ -175,17 +199,27 @@ export function Connect() {
 
 function SheetHead({ service, children }: { service: Service; children: string }) {
   return (
-    <div className="flex items-center gap-3 mb-3">
-      <ServiceIcon s={service} />
+    <div className="flex items-center gap-3.5 mb-4">
+      <BrandLogo id={service.id} size={44} />
       <div className="min-w-0">
-        <h2 className="serif text-xl font-semibold leading-tight">{service.name}</h2>
-        <p className="text-xs text-mute">{children}</p>
+        <h2 className="serif text-xl font-semibold leading-tight text-ink">{service.name}</h2>
+        <p className="text-xs text-mute mt-0.5">{children}</p>
       </div>
     </div>
   )
 }
 
-function UsernameSheet({ service, onClose, onRows, onFile }: { service: Service; onClose: () => void; onRows: (r: ImportRow[]) => void; onFile: () => void }) {
+function UsernameSheet({
+  service,
+  onClose,
+  onRows,
+  onFile,
+}: {
+  service: Service
+  onClose: () => void
+  onRows: (r: ImportRow[]) => void
+  onFile: () => void
+}) {
   const [handle, setHandle] = useState('')
   const [busy, setBusy] = useState(false)
   const [msg, setMsg] = useState<{ text: string; soon?: boolean } | null>(null)
@@ -197,23 +231,23 @@ function UsernameSheet({ service, onClose, onRows, onFile }: { service: Service;
     setMsg(null)
     try {
       const rows = await service.connector!.fetchRows({ service: service.id, handle })
-      if (rows.length === 0) setMsg({ text: 'No hemos encontrado nada en esa cuenta. Comprueba que el perfil es público.' })
+      if (rows.length === 0) setMsg({ text: 'No hemos encontrado obras en esa cuenta. Comprueba que el perfil sea público.' })
       else onRows(rows)
     } catch (e) {
       if (e instanceof ConnectorUnavailable) setMsg({ text: 'Disponible muy pronto', soon: true })
       else if (e instanceof ConnectorUserError) setMsg({ text: e.message })
-      else setMsg({ text: 'No hemos podido conectar ahora mismo. Inténtalo en un rato.' })
+      else setMsg({ text: 'No hemos podido conectar ahora mismo. Inténtalo de nuevo en unos minutos.' })
     } finally {
       setBusy(false)
     }
   }
 
   return (
-    <Sheet onClose={onClose} label={`Conectar ${service.name}`} height="62%">
+    <Sheet onClose={onClose} label={`Conectar ${service.name}`} height="65%">
       <SheetHead service={service}>Con tu usuario</SheetHead>
       <p className="text-sm text-ink/80 leading-relaxed">{service.blurb}</p>
       <label className="block mt-5">
-        <span className="label-caps text-mute">{u.label}</span>
+        <span className="text-[11px] font-semibold uppercase tracking-wider text-mute">{u.label}</span>
         <input
           value={handle}
           onChange={(e) => setHandle(e.target.value)}
@@ -235,81 +269,131 @@ function UsernameSheet({ service, onClose, onRows, onFile }: { service: Service;
       <button
         onClick={submit}
         disabled={busy || !handle.trim()}
-        className="mt-5 w-full min-h-[52px] rounded-2xl bg-accent text-accent-ink font-semibold disabled:opacity-50 active:scale-[0.98] transition-transform"
+        className="mt-5 w-full min-h-[52px] rounded-2xl bg-accent text-accent-ink font-semibold disabled:opacity-50 active:scale-[0.98] transition-transform shadow-md"
       >
         {busy ? 'Buscando…' : 'Conectar'}
       </button>
+
       {service.file && (
-        <button onClick={onFile} className="mt-2 w-full min-h-[44px] text-sm text-mute underline underline-offset-4">
-          Prefiero subir un archivo
+        <button
+          onClick={onFile}
+          className="mt-3 w-full py-2 text-xs font-medium text-mute hover:text-ink text-center transition-colors"
+        >
+          ¿Prefieres subir el archivo completo? Toca aquí
         </button>
       )}
-      <p className="text-[11px] text-mute text-center mt-3">{TRUST}</p>
     </Sheet>
   )
 }
 
-function FileSheet({ service, onClose, onRows }: { service: Service; onClose: () => void; onRows: (r: ImportRow[]) => void }) {
-  const input = useRef<HTMLInputElement>(null)
-  const [error, setError] = useState<string | null>(null)
+function FileSheet({
+  service,
+  onClose,
+  onRows,
+}: {
+  service: Service
+  onClose: () => void
+  onRows: (r: ImportRow[]) => void
+}) {
   const f = service.file!
+  const [reading, setReading] = useState(false)
+  const [err, setErr] = useState<string | null>(null)
 
-  const onFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onFilePicked = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
-    e.target.value = ''
     if (!file) return
-    setError(null)
+    setReading(true)
+    setErr(null)
     try {
       const rows = await rowsFromFile(service, file)
-      if (rows.length === 0) setError('No hemos encontrado registros válidos en ese archivo.')
+      if (rows.length === 0) setErr('No hemos encontrado ninguna obra en ese archivo.')
       else onRows(rows)
     } catch {
-      setError('No hemos podido leer el archivo. Comprueba que es el correcto.')
+      setErr('No hemos podido leer ese archivo. Comprueba que sea la exportación correcta.')
+    } finally {
+      setReading(false)
     }
   }
 
   return (
-    <Sheet onClose={onClose} label={`Subir archivo de ${service.name}`} height="62%">
-      <SheetHead service={service}>Con un archivo</SheetHead>
+    <Sheet onClose={onClose} label={`Subir archivo de ${service.name}`} height="70%">
+      <SheetHead service={service}>Con tu archivo de exportación</SheetHead>
       <p className="text-sm text-ink/80 leading-relaxed">{service.blurb}</p>
-      <ol className="mt-4 space-y-3">
-        {f.steps.map((st, i) => (
-          <li key={i} className="flex items-start gap-3 text-sm">
-            <span className="w-6 h-6 rounded-full bg-surface2 border border-line text-xs font-semibold text-mute flex items-center justify-center shrink-0 mt-0.5">{i + 1}</span>
-            <span className="flex-1 leading-snug text-ink/90">{st}</span>
-          </li>
-        ))}
-      </ol>
-      {f.url && (
-        <a href={f.url} target="_blank" rel="noopener noreferrer" className="mt-3 text-sm text-accent underline underline-offset-4 self-start">
-          {f.urlLabel} ↗
-        </a>
-      )}
-      {error && <p className="text-sm mt-3 text-stamp-red" role="status">{error}</p>}
-      <input ref={input} type="file" accept={f.extensions} onChange={onFile} className="hidden" />
-      <button
-        onClick={() => input.current?.click()}
-        className="mt-5 w-full min-h-[52px] rounded-2xl bg-accent text-accent-ink font-semibold active:scale-[0.98] transition-transform"
-      >
-        Subir archivo
-      </button>
-      <p className="text-[11px] text-mute text-center mt-3">El archivo se lee solo en tu móvil. {TRUST}</p>
+
+      <div className="mt-4 rounded-2xl bg-surface2 border border-line p-4 space-y-2.5">
+        <div className="text-[11px] font-semibold uppercase tracking-wider text-mute">Cómo descargarlo</div>
+        <ol className="list-decimal list-inside text-xs text-ink/80 space-y-1.5 leading-relaxed">
+          {f.steps.map((st, i) => (
+            <li key={i}>{st}</li>
+          ))}
+        </ol>
+        {f.url && (
+          <a
+            href={f.url}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block mt-1 text-xs font-semibold text-accent underline underline-offset-2"
+          >
+            {f.urlLabel || 'Abrir la página de exportación'} ↗
+          </a>
+        )}
+      </div>
+
+      <label className="mt-5 block">
+        <input
+          type="file"
+          accept={f.extensions}
+          onChange={onFilePicked}
+          disabled={reading}
+          className="hidden"
+          id="connect-file-input"
+        />
+        <span
+          className={`w-full min-h-[52px] rounded-2xl bg-accent text-accent-ink font-semibold flex items-center justify-center cursor-pointer active:scale-[0.98] transition-transform shadow-md ${
+            reading ? 'opacity-50 pointer-events-none' : ''
+          }`}
+        >
+          {reading ? 'Leyendo archivo…' : 'Elegir archivo descargado'}
+        </span>
+      </label>
+
+      {err && <p className="text-xs text-stamp-red mt-3 text-center">{err}</p>}
     </Sheet>
   )
 }
 
 function OAuthSheet({ service, onClose }: { service: Service; onClose: () => void }) {
+  const [starting, setStarting] = useState(false)
+  const nav = useNavigate()
+
+  const launch = async () => {
+    setStarting(true)
+    try {
+      if (service.id === 'spotify') {
+        await startSpotifyAuth()
+      }
+    } catch {
+      setStarting(false)
+      nav('/conectar/spotify?error=start_failed')
+    }
+  }
+
   return (
-    <Sheet onClose={onClose} label={`Conectar ${service.name}`} height="44%">
-      <SheetHead service={service}>Con tu cuenta</SheetHead>
+    <Sheet onClose={onClose} label={`Conectar ${service.name}`} height="55%">
+      <SheetHead service={service}>Conexión directa</SheetHead>
       <p className="text-sm text-ink/80 leading-relaxed">{service.blurb}</p>
+      <div className="mt-4 p-4 rounded-2xl bg-surface2 border border-line text-xs text-mute space-y-1">
+        <p>Solo leemos lo que nos autorices: tus artistas y música guardada.</p>
+        <p>Puedes revocar el acceso en cualquier momento desde tu cuenta o desde aquí.</p>
+      </div>
       <button
-        onClick={() => startSpotifyAuth()}
-        className="mt-6 w-full min-h-[52px] rounded-2xl bg-accent text-accent-ink font-semibold active:scale-[0.98] transition-transform"
+        type="button"
+        onClick={launch}
+        disabled={starting}
+        className="mt-6 w-full min-h-[52px] rounded-2xl bg-accent text-accent-ink font-semibold active:scale-[0.98] transition-transform shadow-md disabled:opacity-50"
       >
-        Conectar con {service.name}
+        {starting ? 'Abriendo…' : `Continuar a ${service.name}`}
       </button>
-      <p className="text-[11px] text-mute text-center mt-3">{TRUST}</p>
     </Sheet>
   )
 }

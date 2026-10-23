@@ -10,6 +10,8 @@ import { Poster } from '../components/Poster'
 import { Icon, type IconName } from '../components/Icon'
 import { Avatar } from '../components/ui'
 import { Button } from '../components/Button'
+import { DuelFan } from '../components/DuelVariants'
+import type { Side } from '../components/SwipePair'
 import { haptic } from '../lib/haptics'
 
 const SHELF_ICONS: Record<ShelfType, IconName> = {
@@ -402,97 +404,78 @@ export function Onboarding() {
             )}
 
             {/* ============================================================== */}
-            {/* PASO 2: TU RANKING SIN NOTAS VACÍAS (DUELO REAL A/B)           */}
+            {/* PASO 2: TU RANKING SIN NOTAS VACÍAS (DUELO REAL A/B VER. 3)    */}
             {/* ============================================================== */}
-            {step === 2 && (
-              <div className="w-full space-y-6 text-center">
-                <div className="space-y-1">
-                  <h2 className="serif text-[28px] leading-tight font-bold text-ink">
-                    Tu ranking sin poner notas
-                  </h2>
-                  <p className="text-mute text-xs leading-relaxed max-w-xs mx-auto">
-                    Poner un 7 o un 8 no define tu gusto. En Biblioteca eliges entre dos y el motor ordena tu lista de forma natural.
+            {step === 2 && (() => {
+              const itemA = TUTORIAL_ITEMS[0]
+              const itemB = TUTORIAL_ITEMS[1]
+              const sideA: Side = {
+                key: itemA.id,
+                title: itemA.title,
+                subtitle: `${itemA.year} · ${itemA.creator}`,
+                bg: <Poster item={itemA} showTitle={false} className="w-full h-full object-cover" />,
+              }
+              const sideB: Side = {
+                key: itemB.id,
+                title: itemB.title,
+                subtitle: `${itemB.year} · ${itemB.creator}`,
+                bg: <Poster item={itemB} showTitle={false} className="w-full h-full object-cover" />,
+              }
+              const texts = {
+                question: '¿Cuál te gustó más?',
+                hint: ['← esta', 'esta →'] as [string, string],
+                prefix: 'Gana ',
+                pill: '¡Genial!',
+              }
+
+              return (
+                <div className="w-full flex flex-col text-center">
+                  <div className="space-y-1 mb-2">
+                    <h2 className="serif text-[28px] leading-tight font-bold text-ink">
+                      Tu ranking sin poner notas
+                    </h2>
+                    <p className="text-mute text-xs leading-relaxed max-w-xs mx-auto">
+                      Poner un 7 o un 8 no define tu gusto. En los duelos eliges entre dos y tu ranking se ordena solo.
+                    </p>
+                  </div>
+
+                  {/* Duelo versión 3: Cartas en abanico auténticas */}
+                  <div className="relative h-[320px] w-full overflow-hidden my-1">
+                    <DuelFan
+                      left={sideA}
+                      right={sideB}
+                      onChoose={(w) => {
+                        setWinner(w)
+                        haptic('success')
+                      }}
+                      texts={texts}
+                    />
+                  </div>
+
+                  <p className="text-xs text-mute font-medium py-1">
+                    {winner
+                      ? `¡Elegida! Has votado por ${winner === 'a' ? itemA.title : itemB.title}.`
+                      : 'Desliza hacia la que prefieras o toca una carta'}
                   </p>
+
+                  <div className="pt-2">
+                    <button
+                      onClick={() => {
+                        haptic('tap')
+                        setStep(3)
+                      }}
+                      className={`w-full min-h-[50px] rounded-2xl font-bold text-sm transition-all shadow-md ${
+                        winner
+                          ? 'bg-accent text-accent-ink active:scale-[0.98]'
+                          : 'bg-surface2 text-mute border border-line'
+                      }`}
+                    >
+                      {winner ? 'Siguiente' : 'Elige una para continuar'}
+                    </button>
+                  </div>
                 </div>
-
-                {/* Comparación visual viva entre dos obras reales */}
-                <div className="py-2 flex items-center justify-center gap-3 w-full">
-                  {/* Tarjeta A */}
-                  <motion.div
-                    whileTap={{ scale: 0.96 }}
-                    onClick={() => {
-                      haptic('tick')
-                      setWinner('a')
-                    }}
-                    className={`relative w-36 h-52 rounded-2xl overflow-hidden border cursor-pointer transition-all duration-300 shadow-xl ${
-                      winner === 'a'
-                        ? 'border-accent scale-105 z-20'
-                        : winner === 'b'
-                        ? 'opacity-40 scale-95 border-line'
-                        : 'border-line rotate-[-4deg]'
-                    }`}
-                  >
-                    <Poster item={TUTORIAL_ITEMS[0]} showTitle={false} className="w-full h-full object-cover" />
-                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/60 to-transparent p-3 flex flex-col justify-end text-left text-white">
-                      <div className="text-[10px] font-bold text-accent">#1</div>
-                      <div className="text-xs font-bold truncate leading-tight">{TUTORIAL_ITEMS[0].title}</div>
-                      <div className="text-[10px] text-white/70">{TUTORIAL_ITEMS[0].year}</div>
-                    </div>
-                    {winner === 'a' && (
-                      <div className="absolute top-2 right-2 bg-accent text-accent-ink p-1 rounded-full shadow">
-                        <Icon name="check" size={14} strokeWidth={3} />
-                      </div>
-                    )}
-                  </motion.div>
-
-                  <div className="text-xs font-black text-mute px-1">VS</div>
-
-                  {/* Tarjeta B */}
-                  <motion.div
-                    whileTap={{ scale: 0.96 }}
-                    onClick={() => {
-                      haptic('tick')
-                      setWinner('b')
-                    }}
-                    className={`relative w-36 h-52 rounded-2xl overflow-hidden border cursor-pointer transition-all duration-300 shadow-xl ${
-                      winner === 'b'
-                        ? 'border-accent scale-105 z-20'
-                        : winner === 'a'
-                        ? 'opacity-40 scale-95 border-line'
-                        : 'border-line rotate-[4deg]'
-                    }`}
-                  >
-                    <Poster item={TUTORIAL_ITEMS[1]} showTitle={false} className="w-full h-full object-cover" />
-                    <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/60 to-transparent p-3 flex flex-col justify-end text-left text-white">
-                      <div className="text-[10px] font-bold text-accent">#2</div>
-                      <div className="text-xs font-bold truncate leading-tight">{TUTORIAL_ITEMS[1].title}</div>
-                      <div className="text-[10px] text-white/70">{TUTORIAL_ITEMS[1].year}</div>
-                    </div>
-                    {winner === 'b' && (
-                      <div className="absolute top-2 right-2 bg-accent text-accent-ink p-1 rounded-full shadow">
-                        <Icon name="check" size={14} strokeWidth={3} />
-                      </div>
-                    )}
-                  </motion.div>
-                </div>
-
-                <div className="text-xs text-mute font-medium">
-                  {winner ? '¡Elegida! Con pocos duelos tu lista queda perfectamente ordenada.' : 'Toca la que más te guste para probar'}
-                </div>
-
-                <div className="pt-2">
-                  <button
-                    onClick={() => {
-                      haptic('tap')
-                      setStep(3)
-                    }}
-                    className="w-full min-h-[48px] rounded-2xl bg-accent text-accent-ink font-semibold text-sm active:scale-[0.98] transition-transform"
-                  >
-                    Siguiente
-                  </button>
-                </div>
-              </div>
-            )}
+              )
+            })()}
 
             {/* ============================================================== */}
             {/* PASO 3: AMIGOS Y CRÍTICA HONESTA                               */}
