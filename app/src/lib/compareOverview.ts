@@ -2,13 +2,14 @@ import { useMemo } from 'react'
 import { getItem } from '../data/catalog'
 import { useStore } from '../store/useStore'
 import { SHELVES, type ShelfType, type UserEntry, type DuelRecord } from '../types'
-import { pairKey, planNextDuel } from './ranking'
+import { pairKey, planNextDuel, RANK_DUELS_FOR_DONE } from './ranking'
 
 export interface ShelfOverview {
   shelf: ShelfType
   sinOrdenar: number
   enRanking: number
   pulido: number
+  ordenado: number
   ultima: number
   disponible: boolean
   completo: boolean
@@ -21,7 +22,7 @@ export interface CompareOverviewData {
 
 /**
  * Función pura que calcula los datos de la pantalla inicial de Comparar.
- * docs/TAREA_T16_COMPARAR.md §1.4
+ * docs/TAREA_T16_COMPARAR.md §1.4 y docs/TAREA_T19_AJUSTES.md §3 y §4.2.1
  */
 export function computeCompareOverview(
   entries: Record<string, UserEntry>,
@@ -31,8 +32,8 @@ export function computeCompareOverview(
 ): CompareOverviewData {
   const shelfOverviewMap = {} as Record<ShelfType, ShelfOverview>
 
-  let weightedPulidoSum = 0
-  let totalWeight = 0
+  let totalBienAll = 0
+  let totalSeenAll = 0
 
   for (const s of SHELVES) {
     const ranking = rankings[s] ?? []
@@ -43,13 +44,39 @@ export function computeCompareOverview(
     )
     const totalSeen = seenEntries.length
 
-    const unrankedEntries = seenEntries.filter((e) => !e.ranked || e.provisional)
+    // Fuente de verdad del orden: el array de ranking
+    const unrankedEntries = seenEntries.filter(
+      (e) => !ranking.includes(e.itemId) || Boolean(e.provisional),
+    )
     const sinOrdenar = unrankedEntries.length
 
     const shelfDuels = duels[s] ?? {}
     const ultima = lastCompared[s] ?? 0
 
-    // pulido (0-100) = % parejas vecinas (i, i+1) en ranking que se han enfrentado directamente
+    // Conteo de duelos de ranking jugados por obra (historial de T16)
+    const duelCounts: Record<string, number> = {}
+    for (const key of Object.keys(shelfDuels)) {
+      const sep = key.indexOf('|')
+      if (sep > 0) {
+        const a = key.slice(0, sep)
+        const b = key.slice(sep + 1)
+        duelCounts[a] = (duelCounts[a] || 0) + 1
+        duelCounts[b] = (duelCounts[b] || 0) + 1
+      }
+    }
+
+    // % ordenado (§4.2.1):
+    // bien_ordenada(obra) = está en rankings[shelf] Y ha jugado ≥ 3 duelos de ranking
+    // ordenado(shelf)     = round(100 · nº de vistas bien ordenadas / nº de vistas)
+    let bienOrdenadas = 0
+    for (const e of seenEntries) {
+      if (ranking.includes(e.itemId) && !e.provisional && (duelCounts[e.itemId] ?? 0) >= RANK_DUELS_FOR_DONE) {
+        bienOrdenadas++
+      }
+    }
+    const ordenado = totalSeen > 0 ? Math.round((100 * bienOrdenadas) / totalSeen) : 0
+
+    // pulido (0-100) = % parejas vecinas (i, i+1) en ranking que se han enfrentado directamente (dato interno)
     let pulido = 0
     if (enRanking >= 2) {
       let faced = 0
@@ -65,14 +92,13 @@ export function computeCompareOverview(
     // disponible: hay al menos 2 vistas, o 1 sin ordenar y un ranking de al menos 1
     const disponible = totalSeen >= 2 || (sinOrdenar >= 1 && enRanking >= 1)
 
-    // completo: sin nada sin ordenar y sin parejas por pulir
+    // completo (§3): solo cuando no queda nada sin ordenar Y planNextDuel devuelve null
     let completo = false
     if (sinOrdenar === 0) {
       if (enRanking < 2) {
         completo = totalSeen < 2
       } else {
         completo =
-          pulido === 100 ||
           planNextDuel({
             shelf: s,
             ranking,
@@ -88,22 +114,17 @@ export function computeCompareOverview(
       sinOrdenar,
       enRanking,
       pulido,
+      ordenado,
       ultima,
       disponible,
       completo,
     }
 
-    // total (diseño 4): media de pulido de todas las estanterías con ranking, ponderada por enRanking.
-    // Las obras sin ordenar cuentan como 0 % pulido.
-    if (enRanking > 0) {
-      const shelfWeight = enRanking + sinOrdenar
-      const shelfScore = (pulido * enRanking) / shelfWeight
-      weightedPulidoSum += shelfScore * shelfWeight
-      totalWeight += shelfWeight
-    }
+    totalBienAll += bienOrdenadas
+    totalSeenAll += totalSeen
   }
 
-  const total = totalWeight > 0 ? Math.round(weightedPulidoSum / totalWeight) : 0
+  const total = totalSeenAll > 0 ? Math.round((100 * totalBienAll) / totalSeenAll) : 0
 
   return {
     shelves: shelfOverviewMap,

@@ -1,9 +1,11 @@
 import { useMemo, useState } from 'react'
-import { Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom'
+import { Link, Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { getItem } from '../data/catalog'
 import { useStore } from '../store/useStore'
 import { SHELVES, SHELF_LABEL, type ShelfType } from '../types'
+import { useCompareOverview } from '../lib/compareOverview'
 import { ItemRow } from '../components/ItemRow'
+import { Poster } from '../components/Poster'
 import { Chip, Toast } from '../components/ui'
 import { AddFlow } from '../components/AddFlow'
 import { CleanupFlow } from '../components/CleanupFlow'
@@ -18,6 +20,7 @@ type Seg = 'ord' | 'pend'
 export function Shelf() {
   const { type } = useParams()
   const nav = useNavigate()
+  const overview = useCompareOverview()
   const entries = useStore((s) => s.entries)
   const ranking = useStore((s) => (type && (SHELVES as readonly string[]).includes(type) ? (s.rankings[type as ShelfType] ?? []) : []))
   const [params] = useSearchParams()
@@ -32,11 +35,18 @@ export function Shelf() {
   const all = useMemo(() => Object.values(entries).filter((e) => getItem(e.itemId)?.type === t), [entries, t])
   if (!type || !(SHELVES as readonly string[]).includes(t)) return <Navigate to="/" replace />
   const label = SHELF_LABEL[t]
-  // lo aún no comparado va al final del ranking, sin etiqueta (§14.4)
-  const unranked = all.filter((e) => e.status === 'seen' && !e.ranked).map((e) => e.itemId)
-  const mine = [...ranking, ...unranked]
+
+  // Fuente de verdad: el array de ranking (T19 §3)
+  const seenEntries = all.filter((e) => e.status === 'seen')
+  const unrankedIds = seenEntries
+    .filter((e) => !ranking.includes(e.itemId) || Boolean(e.provisional))
+    .map((e) => e.itemId)
+  const totalSeen = seenEntries.length
+  const shelfOverview = overview.shelves[t]
+  const ordenadoPct = shelfOverview?.ordenado ?? 0
+
   const pend = all.filter((e) => e.status === 'pending')
-  const visibleIds = seg === 'ord' ? mine : pend.map((e) => e.itemId)
+  const visibleIds = seg === 'ord' ? [...ranking, ...unrankedIds] : pend.map((e) => e.itemId)
   const toggle = (id: string) => setSel((c) => (c.includes(id) ? c.filter((x) => x !== id) : [...c, id]))
   const createList = () => nav(`/lista/nueva?title=${encodeURIComponent(`Mis ${label.plural.toLowerCase()} favoritas de ${profileName}`)}&ids=${sel.join(',')}`)
 
@@ -45,7 +55,7 @@ export function Shelf() {
       <ScreenTitle
         label={`ESTANTERÍA · ${label.plural.toUpperCase()}`}
         title={label.plural}
-        subtitle={`${visibleIds.length} obras`}
+        subtitle={seg === 'ord' ? `${totalSeen} obras · ${ordenadoPct} % ordenado` : `${pend.length} obras`}
         onBack={() => (selecting ? setSelecting(false) : nav('/'))}
         action={
           selecting ? null : (
@@ -69,7 +79,7 @@ export function Shelf() {
         }
       />
       <div className="px-5 pb-3 flex gap-2 overflow-x-auto no-scrollbar shrink-0">
-        <Chip active={seg === 'ord'} onClick={() => setSeg('ord')}>Mis {label.plural.toLowerCase()} · {mine.length}</Chip>
+        <Chip active={seg === 'ord'} onClick={() => setSeg('ord')}>Mis {label.plural.toLowerCase()} · {totalSeen}</Chip>
         <Chip active={seg === 'pend'} onClick={() => setSeg('pend')}>Pendientes · {pend.length}</Chip>
       </div>
       {selecting && (
@@ -80,16 +90,79 @@ export function Shelf() {
       )}
       <div className="flex-1 min-h-0 scroll-y px-5 pb-6">
         {seg === 'ord' && (
-          mine.length ? (
-            <div className="rounded-2xl bg-surface border border-line divide-y divide-line overflow-hidden">
-              {ranking.map((id, i) => {
-                const it = getItem(id)
-                return it ? <ItemRow key={id} item={it} rank={i + 1} highlight={i === 0 && !selecting} selecting={selecting} selected={sel.includes(id)} onToggle={() => toggle(id)} /> : null
-              })}
-              {unranked.map((id) => {
-                const it = getItem(id)
-                return it ? <ItemRow key={id} item={it} selecting={selecting} selected={sel.includes(id)} onToggle={() => toggle(id)} /> : null
-              })}
+          totalSeen ? (
+            <div className="space-y-6">
+              {/* Obras numeradas en el ranking */}
+              {ranking.length > 0 && (
+                <div className="rounded-2xl bg-surface border border-line divide-y divide-line overflow-hidden">
+                  {ranking.map((id, i) => {
+                    const it = getItem(id)
+                    return it ? <ItemRow key={id} item={it} rank={i + 1} highlight={i === 0 && !selecting} selecting={selecting} selected={sel.includes(id)} onToggle={() => toggle(id)} /> : null
+                  })}
+                </div>
+              )}
+
+              {/* Obras sin ordenar (T19 §4.3) */}
+              {unrankedIds.length > 0 && (
+                <div>
+                  <div className="flex items-center justify-between mb-2.5">
+                    <span className="text-label text-mute">SIN ORDENAR · {unrankedIds.length}</span>
+                    <Link to={`/comparar/${t}`} className="text-label text-accent font-semibold hover:underline">
+                      Ordenar
+                    </Link>
+                  </div>
+                  <div className="rounded-2xl bg-surface border border-line divide-y divide-line overflow-hidden">
+                    {unrankedIds.map((id) => {
+                      const it = getItem(id)
+                      if (!it) return null
+                      const isSel = sel.includes(id)
+                      const cls = `flex items-center gap-3 px-4 py-2.5 min-h-[56px] w-full text-left transition-colors ${
+                        isSel ? 'bg-accent/15' : 'hover:bg-surface2/60 active:bg-surface2'
+                      }`
+                      const rowBody = (
+                        <>
+                          {selecting ? (
+                            <span
+                              className={`w-5 h-5 rounded-md border shrink-0 flex items-center justify-center transition-colors ${
+                                isSel ? 'bg-accent border-accent text-accent-ink' : 'border-line bg-surface'
+                              }`}
+                            >
+                              {isSel && <Icon name="check" size={13} strokeWidth={3} />}
+                            </span>
+                          ) : (
+                            <span className="w-6 shrink-0" aria-hidden />
+                          )}
+                          <Poster item={it} className="w-9 aspect-[2/3] rounded-[6px] shrink-0 object-cover" />
+                          <div className="flex-1 min-w-0">
+                            <div className="serif text-item text-ink leading-tight line-clamp-1">{it.title}</div>
+                            <div className="text-meta text-mute mt-0.5 truncate">{it.year} · {it.creator}</div>
+                            <div className="text-meta text-mute mt-0.5 truncate">sin ordenar</div>
+                          </div>
+                        </>
+                      )
+                      if (selecting) {
+                        return (
+                          <button
+                            key={id}
+                            type="button"
+                            role="checkbox"
+                            aria-checked={isSel}
+                            onClick={() => toggle(id)}
+                            className={cls}
+                          >
+                            {rowBody}
+                          </button>
+                        )
+                      }
+                      return (
+                        <Link key={id} to={`/i/${encodeURIComponent(id)}`} className={cls}>
+                          {rowBody}
+                        </Link>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
             </div>
           ) : (
             <Empty

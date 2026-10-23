@@ -1,49 +1,9 @@
 // app/src/components/DuelVariants.tsx
-// Diseños del duelo A/B para probarlos en el móvil (REFERENCIAS_UI, 21/10/2026). Igor quiere que todos respondan
-// al gesto (se ve qué estás votando mientras arrastras) y que el póster se vea entero, nunca recortado.
+// Diseño 3 (abanico) del duelo A/B: cartas que responden al gesto y póster entero (T19 §4.1).
 import { useEffect, useLayoutEffect, useRef, useState, type RefObject } from 'react'
 import { animate, motion, useMotionValue, useReducedMotion, useTransform, type MotionValue } from 'framer-motion'
 import { haptic } from '../lib/haptics'
 import type { Side } from './SwipePair'
-
-export type DuelStyle = 'diagonal' | 'entero' | 'abanico'
-export const DUEL_STYLES: { id: DuelStyle; name: string }[] = [
-  { id: 'diagonal', name: '1 · Diagonal (actual)' },
-  { id: 'entero', name: '2 · Diagonal con póster entero' },
-  { id: 'abanico', name: '3 · Cartas en abanico' },
-]
-
-const KEY = 'biblioteca-duel-style'
-const EVT = 'duel-style-change'
-
-/** Estilo elegido, guardado en este móvil (es solo para pruebas; no va al store ni a la nube). */
-export function useDuelStyle(): [DuelStyle, (s: DuelStyle) => void] {
-  const [style, setStyle] = useState<DuelStyle>(readStyle)
-  useEffect(() => {
-    const on = () => setStyle(readStyle())
-    window.addEventListener(EVT, on)
-    return () => window.removeEventListener(EVT, on)
-  }, [])
-  const set = (n: DuelStyle) => {
-    try {
-      localStorage.setItem(KEY, n)
-    } catch {
-      /* sin almacenamiento: solo cambia en esta sesión */
-    }
-    setStyle(n)
-    window.dispatchEvent(new Event(EVT))
-  }
-  return [style, set]
-}
-
-function readStyle(): DuelStyle {
-  try {
-    const v = localStorage.getItem(KEY) as DuelStyle | null
-    return DUEL_STYLES.some((s) => s.id === v) ? (v as DuelStyle) : 'diagonal'
-  } catch {
-    return 'diagonal'
-  }
-}
 
 // ── Textos del duelo ────────────────────────────────────────────────────────────────────────────
 export type DuelKind = 'rank' | 'decide'
@@ -147,49 +107,12 @@ function PickBadge({ color, texts, title, reduce }: { color: string; texts: Duel
   )
 }
 
-/** Diseño 1: solo la confirmación común. */
-export function PickCheck(props: { color: string; texts: DuelTexts; title: string; reduce: boolean | null }) {
-  return <PickBadge {...props} />
-}
-
-/** Diseño 2: borde en el póster elegido, más la confirmación común. */
-export function PickRing({ color, box, texts, title, reduce }: { color: string; box: { left: number; top: number; w: number; h: number }; areaH?: number; texts: DuelTexts; title: string; reduce: boolean | null }) {
-  return (
-    <>
-      <div className="absolute inset-0 z-30 pointer-events-none">
-        <motion.div
-          className="absolute"
-          style={{ left: box.left, top: box.top, width: box.w, height: box.h, borderRadius: 20, border: `2.5px solid ${color}` }}
-          initial={reduce ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.2 }}
-        />
-      </div>
-      <PickBadge color={color} texts={texts} title={title} reduce={reduce} />
-    </>
-  )
-}
-
-/** Diseño 3: borde en la carta elegida, más la confirmación común. */
+/** Borde en la carta elegida, más la confirmación común. */
 export function PickStrip({ color, card, texts, title, reduce }: { color: string; card: { left: number; top: number; w: number; h: number; r: number }; texts: DuelTexts; title: string; reduce: boolean | null }) {
   return (
     <>
       <PickBadge color={color} texts={texts} title={title} reduce={reduce} />
     </>
-  )
-}
-
-/**
- * Póster entero dentro de cualquier caja: la imagen se ve completa (sin recortar logos ni fotos apaisadas)
- * y el hueco sobrante lo rellena la misma imagen, difuminada.
- */
-export function FullPoster({ side, className = '' }: { side: Side; className?: string }) {
-  return (
-    <div className={`absolute inset-0 overflow-hidden ${className}`}>
-      <div className="absolute -inset-6 blur-2xl opacity-70 scale-110">{side.bg}</div>
-      <div className="absolute inset-0 bg-black/25" />
-      <div className="absolute inset-0 [&_img]:object-contain">{side.bg}</div>
-    </div>
   )
 }
 

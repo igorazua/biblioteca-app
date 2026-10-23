@@ -119,4 +119,20 @@ describe('mergeCloudAndLocal', () => {
     expect(result.entries['series:local-only']).toBeDefined()
     expect(result.entries['series:local-only'].itemId).toBe('series:local-only')
   })
+
+  it('repara inconsistencias entre ranked y ranking tras fusionar con la nube (T19 §3)', () => {
+    // Fila en la nube marcada como ranked sin estar en el array local ni de nube
+    const localEntries: Record<string, UserEntry> = {
+      'movie:ghost': {
+        itemId: 'movie:ghost',
+        shelf: 'movie',
+        status: 'seen',
+        ranked: true,
+        updatedAt: 1000,
+      },
+    }
+    const result = mergeCloudAndLocal(localEntries, emptyRankings, [])
+    // Debe haber pasado a ranked: false porque no está en rankings.movie
+    expect(result.entries['movie:ghost'].ranked).toBe(false)
+  })
 })

@@ -2,7 +2,7 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { items, getItem } from '../data/catalog'
 import { canonicalId, canonicalizeUserData } from '../data/aliases'
-import { clampStars, insertAt, starBand, pairKey } from '../lib/ranking'
+import { clampStars, insertAt, starBand, pairKey, repairRankingsAndEntries } from '../lib/ranking'
 import { SHELVES, type List, type Profile, type Settings, type ShelfType, type Stars, type Status, type UserEntry, type DeckLearn, type DeckLearnShelf, type DuelRecord } from '../types'
 import { computeUserVector } from '../lib/engine/userVec'
 import { track } from './useEvents'
@@ -149,6 +149,16 @@ export function migrateStore(persistedState: unknown, version: number) {
     if (!state.lastCompared) {
       state.lastCompared = { movie: 0, series: 0, book: 0, artist: 0, boardgame: 0 }
     }
+  }
+  // v5: reparación de consistencia entre entries.ranked y rankings (§3)
+  if (version < 5 && state) {
+    const defaultRks = { movie: [], series: [], book: [], artist: [], boardgame: [] }
+    const repaired = repairRankingsAndEntries(
+      (state.entries as Record<string, UserEntry>) || {},
+      (state.rankings as Record<ShelfType, string[]>) || defaultRks,
+    )
+    state.entries = repaired.entries
+    state.rankings = repaired.rankings
   }
   return state
 }
@@ -527,7 +537,7 @@ export const useStore = create<State>()(
     }),
     {
       name: 'biblioteca-v1',
-      version: 4,
+      version: 5,
       migrate: migrateStore,
       merge: (persistedState: unknown, currentState: State) => {
         const p = (persistedState as Partial<State>) ?? {}
@@ -537,11 +547,16 @@ export const useStore = create<State>()(
             mergedRankings[shelf] = []
           }
         }
-        const mergedEntries = (p.entries as Record<string, UserEntry>) || currentState.entries || {}
+        const rawEntries = (p.entries as Record<string, UserEntry>) || currentState.entries || {}
+        // Reparación de consistencia al cargar (§3)
+        const repaired = repairRankingsAndEntries(rawEntries, mergedRankings)
+        const mergedEntries = repaired.entries
+        const finalRankings = repaired.rankings
+
         const mergedVectors = { ...currentState.userVectors, ...(p.userVectors || {}) }
         for (const shelf of SHELVES) {
           if (!mergedVectors[shelf] && Object.values(mergedEntries).some((e) => e.shelf === shelf)) {
-            mergedVectors[shelf] = recomputeVectorForShelf(mergedEntries, mergedRankings, shelf)
+            mergedVectors[shelf] = recomputeVectorForShelf(mergedEntries, finalRankings, shelf)
           }
         }
         const mergedDuels = { ...currentState.duels, ...(p.duels || {}) }
@@ -555,7 +570,8 @@ export const useStore = create<State>()(
         return {
           ...currentState,
           ...p,
-          rankings: mergedRankings,
+          entries: mergedEntries,
+          rankings: finalRankings,
           userVectors: mergedVectors,
           duels: mergedDuels,
           lastCompared: mergedLastCompared,

@@ -1,11 +1,59 @@
 // Motor de valoración a pares. Funciones PURAS: la UI conduce las máquinas de estados.
 // Convenciones: `ranking` es una lista de itemIds, mejor primero. `starsOf` da las estrellas de un item.
-import type { Stars, DuelRecord, ShelfType } from '../types'
+import { getItem } from '../data/catalog'
+import { SHELVES, type Stars, type DuelRecord, type ShelfType, type UserEntry } from '../types'
 
 export type StarsOf = (id: string) => number | undefined
 export type Rng = () => number
 
 export const PLACEMENT_MAX_COMPARISONS = 4
+export const RANK_DUELS_FOR_DONE = 3
+
+/**
+ * Repara consistencia entre entries y rankings:
+ * 1. Las IDs de un ranking que no son una vista ('seen') se quitan.
+ * 2. Las entradas 'ranked: true' que no están en el array de ranking pasan a 'ranked: false'.
+ * 3. Las entradas 'seen' en el ranking y no provisionales tienen 'ranked: true'.
+ */
+export function repairRankingsAndEntries(
+  entries: Record<string, UserEntry>,
+  rankings: Record<ShelfType, string[]>,
+): { entries: Record<string, UserEntry>; rankings: Record<ShelfType, string[]>; changed: boolean } {
+  let changed = false
+  const nextRankings: Record<ShelfType, string[]> = {
+    movie: [...(rankings.movie ?? [])],
+    series: [...(rankings.series ?? [])],
+    book: [...(rankings.book ?? [])],
+    artist: [...(rankings.artist ?? [])],
+    boardgame: [...(rankings.boardgame ?? [])],
+  }
+
+  // 1. Quitar de rankings las IDs que no sean status === 'seen'
+  for (const s of SHELVES) {
+    const orig = nextRankings[s] ?? []
+    const filtered = orig.filter((id) => entries[id]?.status === 'seen')
+    if (filtered.length !== orig.length) {
+      nextRankings[s] = filtered
+      changed = true
+    }
+  }
+
+  // 2. Corregir flag ranked en entries
+  const nextEntries: Record<string, UserEntry> = { ...entries }
+  for (const [id, e] of Object.entries(entries)) {
+    const shelf = (e.shelf ?? getItem(id)?.type) as ShelfType
+    const inRanking = (nextRankings[shelf] ?? []).includes(id)
+    if (e.ranked && !inRanking) {
+      nextEntries[id] = { ...e, ranked: false }
+      changed = true
+    } else if (!e.ranked && inRanking && e.status === 'seen' && !e.provisional) {
+      nextEntries[id] = { ...e, ranked: true }
+      changed = true
+    }
+  }
+
+  return { entries: nextEntries, rankings: nextRankings, changed }
+}
 
 /* ============================ Colocación (búsqueda binaria) ============================ */
 

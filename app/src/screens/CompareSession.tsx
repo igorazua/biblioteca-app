@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { getItem } from '../data/catalog'
 import { useStore, starsOfEntries } from '../store/useStore'
-import { SHELVES, SHELF_LABEL, type Item, type ShelfType, type UserEntry } from '../types'
+import { SHELVES, SHELF_LABEL, type Item, type ShelfType, type UserEntry, type DuelRecord } from '../types'
 import {
   advancePlacementWithDuels, answerPlacement, answerRefine, finishPlacement,
-  newRefineState, pairKey, planNextDuel,
+  newRefineState, planNextDuel, RANK_DUELS_FOR_DONE,
   type Placement, type PlannedDuel, type RefineState,
 } from '../lib/ranking'
 import { SwipePair, type Side } from '../components/SwipePair'
@@ -37,8 +37,42 @@ const sideOf = (it: Item): Side => ({
   bg: <Poster item={it} showTitle={false} className="absolute inset-0 w-full h-full" />,
 })
 
+function calcShelfOrdenado(
+  entries: Record<string, UserEntry>,
+  rankings: Record<ShelfType, string[]>,
+  shDuels: Record<string, DuelRecord>,
+  shelf: ShelfType,
+): number {
+  const rk = rankings[shelf] ?? []
+  const seen = Object.values(entries).filter(
+    (e) => e.status === 'seen' && (e.shelf ?? getItem(e.itemId)?.type) === shelf,
+  )
+  if (seen.length === 0) return 0
+  const duelCounts: Record<string, number> = {}
+  for (const k of Object.keys(shDuels)) {
+    const sep = k.indexOf('|')
+    if (sep > 0) {
+      const a = k.slice(0, sep)
+      const b = k.slice(sep + 1)
+      duelCounts[a] = (duelCounts[a] || 0) + 1
+      duelCounts[b] = (duelCounts[b] || 0) + 1
+    }
+  }
+  let bien = 0
+  for (const e of seen) {
+    if (rk.includes(e.itemId) && !e.provisional && (duelCounts[e.itemId] ?? 0) >= RANK_DUELS_FOR_DONE) {
+      bien++
+    }
+  }
+  return Math.round((100 * bien) / seen.length)
+}
+
 export function CompareSession() {
   const nav = useNavigate()
+  const location = useLocation()
+  const initialDuel = location.state?.duel as PlannedDuel | undefined
+  const initialDuelConsumed = useRef(false)
+
   const { shelf: rawShelf } = useParams<{ shelf: string }>()
   const shelf = (SHELVES.includes(rawShelf as any) ? rawShelf : 'movie') as ShelfType
 
@@ -56,6 +90,7 @@ export function CompareSession() {
 
   const refineRef = useRef<RefineState>(newRefineState())
   const startRank = useRef<string[]>(ranking ?? [])
+  const startOrdenado = useRef<number>(0)
   const [commentFor, setCommentFor] = useState<string | null>(null)
   const [undo, setUndo] = useState<Snapshot | null>(null)
   const [toast, setToast] = useState<string | null>(null)
@@ -80,7 +115,14 @@ export function CompareSession() {
     setActivePlacement(null)
     setCurrentDuel(null)
     setEmptyState('none')
+    initialDuelConsumed.current = false
     startRank.current = useStore.getState().rankings[shelf] ?? []
+    startOrdenado.current = calcShelfOrdenado(
+      useStore.getState().entries,
+      useStore.getState().rankings,
+      useStore.getState().duels[shelf] ?? {},
+      shelf,
+    )
     useStore.getState().touchLastCompared(shelf)
   }
 
@@ -94,11 +136,20 @@ export function CompareSession() {
   useEffect(() => {
     if (summary) return
 
+    // Si viene con un duelo inicial de la portada y estamos en el primer paso (T19 §4.2.2)
+    if (count === 0 && !initialDuelConsumed.current && initialDuel && !activePlacement) {
+      initialDuelConsumed.current = true
+      setCurrentDuel(initialDuel)
+      setEmptyState('none')
+      return
+    }
+
     const st = useStore.getState()
     const rk = st.rankings[shelf] ?? []
     const shDuels = st.duels[shelf] ?? {}
+    // Fuente de verdad: el array de ranking (T19 §3)
     const unranked = Object.values(st.entries)
-      .filter((e) => e.status === 'seen' && (!e.ranked || e.provisional) && (e.shelf ?? getItem(e.itemId)?.type) === shelf)
+      .filter((e) => e.status === 'seen' && (!rk.includes(e.itemId) || Boolean(e.provisional)) && (e.shelf ?? getItem(e.itemId)?.type) === shelf)
       .sort((a, b) => a.updatedAt - b.updatedAt)
       .map((e) => ({ itemId: e.itemId, stars: e.stars }))
 
@@ -228,6 +279,11 @@ export function CompareSession() {
   }
 
   // Resumen al terminar los 7 duelos
+  const nowOrdenado = useMemo(() => {
+    if (!summary) return 0
+    return calcShelfOrdenado(entries, useStore.getState().rankings, duels, shelf)
+  }, [summary, entries, duels, shelf])
+
   const moves = useMemo(() => {
     if (!summary) return null
     const now = useStore.getState().rankings[shelf] ?? []
@@ -259,7 +315,9 @@ export function CompareSession() {
         }
         subtitle={
           summary
-            ? `${PAIRS_PER_SESSION} comparaciones en ${SHELF_LABEL[shelf].plural.toLowerCase()}`
+            ? (startOrdenado.current !== nowOrdenado
+                ? `${SHELF_LABEL[shelf].plural}: del ${startOrdenado.current} % al ${nowOrdenado} %`
+                : `${SHELF_LABEL[shelf].plural}: ${nowOrdenado} % ordenado`)
             : currentDuel
             ? undefined
             : undefined
@@ -302,11 +360,16 @@ export function CompareSession() {
           <SwipePair left={sideOf(pair.left)} right={sideOf(pair.right)} onChoose={onChoose} kind="rank" />
         ) : emptyState === 'complete' ? (
           <div className="flex-1 flex flex-col items-center justify-center text-center gap-3 px-5">
-            <h2 className="text-title text-ink">Tu ranking de {SHELF_LABEL[shelf].plural} está completo</h2>
+            <h2 className="text-title text-ink">
+              Has comparado todas tus {SHELF_LABEL[shelf].plural.toLowerCase()} entre sí
+            </h2>
             <p className="text-mute text-body max-w-sm">
-              Has comparado todas las parejas de esta estantería. Añade nuevas obras o elige otra categoría para ordenar.
+              Cuando marques más, seguimos ordenando.
             </p>
-            <div className="mt-3">
+            <div className="mt-4 flex flex-col gap-2.5 w-full max-w-xs">
+              <Button variant="primary" onClick={() => nav('/descubrir')}>
+                Ir a Descubrir
+              </Button>
               <Button variant="text" onClick={() => nav('/comparar')}>
                 Elegir otra estantería
               </Button>

@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import {
   answerPlacement, answerRefine, clampStars, finishPlacement, formatScore, insertAt, newRefineState,
   nextRefinePair, placementOpponent, scoresForShelf, startPlacement, starBand,
-  pairKey, planNextDuel, advancePlacementWithDuels,
+  pairKey, planNextDuel, advancePlacementWithDuels, repairRankingsAndEntries, RANK_DUELS_FOR_DONE,
   type Placement, type RefineState, type StarsOf,
 } from './ranking'
 import { useStore, migrateStore } from '../store/useStore'
@@ -349,5 +349,54 @@ describe('T16 — Lógica de duelos y planNextDuel', () => {
       artist: 0,
       boardgame: 0,
     })
+  })
+
+  it('repairRankingsAndEntries repara ranked inconsistente y quita no vistas del array (T19 §3)', () => {
+    const entries: Record<string, any> = {
+      'book:1': { itemId: 'book:1', shelf: 'book', status: 'seen', ranked: true },
+      'book:2': { itemId: 'book:2', shelf: 'book', status: 'seen', ranked: true },
+      'book:3': { itemId: 'book:3', shelf: 'book', status: 'seen', ranked: true }, // está en array
+      'book:4': { itemId: 'book:4', shelf: 'book', status: 'seen', ranked: true }, // NO está en array -> pasa a ranked: false
+      'book:5': { itemId: 'book:5', shelf: 'book', status: 'pending', ranked: true }, // pending en array -> se quita del array
+    }
+    const rankings: Record<any, string[]> = {
+      movie: [],
+      series: [],
+      book: ['book:1', 'book:2', 'book:3', 'book:5'],
+      artist: [],
+      boardgame: [],
+    }
+
+    const res = repairRankingsAndEntries(entries, rankings)
+
+    // book:5 era pending -> se quita del array
+    expect(res.rankings.book).toEqual(['book:1', 'book:2', 'book:3'])
+    // book:4 tenía ranked: true pero no está en array -> pasa a ranked: false
+    expect(res.entries['book:4'].ranked).toBe(false)
+    // book:1, 2, 3 siguen con ranked: true
+    expect(res.entries['book:1'].ranked).toBe(true)
+    expect(res.entries['book:2'].ranked).toBe(true)
+    expect(res.entries['book:3'].ranked).toBe(true)
+  })
+
+  it('migrateStore v5 repara inconsistencias entre ranked y array del ranking', () => {
+    const v4State = {
+      entries: {
+        'book:ghost': { itemId: 'book:ghost', shelf: 'book', status: 'seen', ranked: true },
+      },
+      rankings: {
+        movie: [],
+        series: [],
+        book: [],
+        artist: [],
+        boardgame: [],
+      },
+    }
+    const migrated = migrateStore(v4State, 4)
+    expect(migrated?.entries?.['book:ghost']?.ranked).toBe(false)
+  })
+
+  it('RANK_DUELS_FOR_DONE es 3', () => {
+    expect(RANK_DUELS_FOR_DONE).toBe(3)
   })
 })

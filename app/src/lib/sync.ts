@@ -5,7 +5,7 @@ import { useStore } from '../store/useStore'
 import { useAuth } from '../store/useAuth'
 import { useCatalog } from '../store/useCatalog'
 import { SHELVES, type ShelfType, type UserEntry, type DuelRecord } from '../types'
-import { pairKey } from './ranking'
+import { pairKey, repairRankingsAndEntries } from './ranking'
 
 const resolveShelf = (itemId: string, shelfFromEntry?: string): ShelfType | undefined => {
   if (shelfFromEntry && shelfFromEntry in { movie: 1, series: 1, book: 1, artist: 1, boardgame: 1 }) {
@@ -112,7 +112,9 @@ export function mergeCloudAndLocal(
     }
   }
 
-  return { entries: newEntries, rankings: newRankings }
+  // Reparación de consistencia tras sincronizar (§3)
+  const repaired = repairRankingsAndEntries(newEntries, newRankings)
+  return { entries: repaired.entries, rankings: repaired.rankings }
 }
 
 /** Descarga las entradas de Supabase y las fusiona con el store local */
