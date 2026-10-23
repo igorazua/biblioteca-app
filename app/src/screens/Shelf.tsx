@@ -57,13 +57,13 @@ export function Shelf() {
         title={label.plural}
         subtitle={seg === 'ord' ? `${totalSeen} obras · ${ordenadoPct} % ordenado` : `${pend.length} obras`}
         onBack={() => (selecting ? setSelecting(false) : nav('/'))}
-        action={
+        titleAction={
           selecting ? null : (
-            <div className="flex items-center gap-1.5">
+            <>
               <button
                 onClick={() => { setSelecting(true); setSel([]) }}
                 aria-label="Compartir"
-                className="w-9 h-9 rounded-full flex items-center justify-center text-mute hover:text-ink active:scale-95 transition-transform"
+                className="w-9 h-9 rounded-full bg-surface border border-line flex items-center justify-center text-ink active:scale-95 transition-transform"
               >
                 <Icon name="share" size={18} />
               </button>
@@ -74,7 +74,7 @@ export function Shelf() {
               >
                 <Icon name="plus" size={18} strokeWidth={2.5} />
               </button>
-            </div>
+            </>
           )
         }
       />

@@ -7,6 +7,8 @@ export interface ScreenTitleProps {
   title?: string
   subtitle?: string
   action?: ReactNode
+  /** botones alineados con el título grande, a su derecha (no con la flecha de volver) */
+  titleAction?: ReactNode
   onBack?: () => void
   className?: string
 }
@@ -17,6 +19,7 @@ export function ScreenTitle({
   title,
   subtitle,
   action,
+  titleAction,
   onBack,
   className = '',
 }: ScreenTitleProps) {
@@ -57,7 +60,14 @@ export function ScreenTitle({
       )}
 
       {/* Título display principal (máx 2 líneas, alineado a la izquierda) */}
-      {title && <h1 className="text-display text-ink text-balance">{title}</h1>}
+      {title && (titleAction ? (
+        <div className="flex items-center justify-between gap-3">
+          <h1 className="text-display text-ink text-balance min-w-0">{title}</h1>
+          <div className="shrink-0 flex items-center gap-2">{titleAction}</div>
+        </div>
+      ) : (
+        <h1 className="text-display text-ink text-balance">{title}</h1>
+      ))}
 
       {/* Subtítulo opcional */}
       {subtitle && <p className="text-meta mt-1.5 text-balance">{subtitle}</p>}

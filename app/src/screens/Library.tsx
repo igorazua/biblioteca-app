@@ -124,28 +124,27 @@ export function Library() {
         )}
       </AnimatePresence>
 
-      <div className="space-y-8">
+      <div className="space-y-4">
         {SHELVES.map((t) => {
           const rk = rankings[t] ?? []
           const unranked = all.filter((e) => e.status === 'seen' && !e.ranked && getItem(e.itemId)?.type === t)
           const unrankedCount = unranked.length
           const pendingCount = all.filter((e) => e.status === 'pending' && getItem(e.itemId)?.type === t).length
           return (
-            <section key={t} aria-label={SHELF_LABEL[t].plural}>
-              <div className="flex items-center justify-between px-5 mb-2.5 min-h-[44px] gap-2">
-                <Link to={`/estanteria/${t}`} className="flex-1 flex items-center justify-between min-h-[44px]">
-                  <h2 className="text-title font-medium text-ink">{SHELF_LABEL[t].plural}</h2>
-                  <span className="text-meta text-mute flex items-center gap-1">{rk.length + unrankedCount} <Icon name="chevron" size={14} /></span>
-                </Link>
-                {pendingCount > 0 && (
-                  <Link to={`/estanteria/${t}?seg=pend`} className="shrink-0 min-h-[36px] px-3 rounded-full bg-surface text-[13px] text-ink/85 flex items-center gap-1.5" aria-label={`${pendingCount} pendientes en ${SHELF_LABEL[t].plural}`}>
-                    <Icon name="bookmark" size={14} className="text-stamp-blue" /> {pendingCount}
-                  </Link>
-                )}
-                <button onClick={() => setAdd({ shelf: t })} aria-label={`Añadir a ${SHELF_LABEL[t].plural}`} className="w-10 h-10 rounded-full bg-surface border border-line flex items-center justify-center text-accent shrink-0"><Icon name="plus" size={19} /></button>
-              </div>
+            <section key={t} aria-label={SHELF_LABEL[t].plural} className="mx-4 rounded-3xl bg-surface border border-line pt-1 pb-4">
+              {/* toda la cabecera abre la estantería */}
+              <Link to={`/estanteria/${t}`} className="flex items-center gap-2 px-4 min-h-[52px] active:opacity-70 transition-opacity">
+                <h2 className="text-title font-medium text-ink">{SHELF_LABEL[t].plural}</h2>
+                <span className="text-meta text-mute tabular-nums">
+                  {rk.length + unrankedCount}
+                  {pendingCount > 0 && ` · ${pendingCount} pendientes`}
+                </span>
+                <span className="ml-auto text-meta text-accent font-medium flex items-center gap-0.5 shrink-0">
+                  Ver todo <Icon name="chevron" size={14} />
+                </span>
+              </Link>
               {rk.length || unranked.length ? (
-                <div className="flex gap-3 overflow-x-auto no-scrollbar px-5 pb-2 items-end">
+                <div className="flex gap-3 overflow-x-auto no-scrollbar px-4 items-end">
                   {rk.map((id, i) => {
                     const it = getItem(id)
                     return it ? <PosterTile key={id} item={it} rank={i + 1} /> : null
@@ -156,8 +155,8 @@ export function Library() {
                   })}
                 </div>
               ) : (
-                <div className="mx-5 space-y-2">
-                  <Link to={`/descubrir`} className="rounded-3xl bg-surface p-4 flex items-center gap-4 active:scale-[0.99] transition-transform">
+                <div className="mx-4 space-y-2">
+                  <Link to={`/descubrir`} className="rounded-2xl bg-surface2 p-4 flex items-center gap-4 active:scale-[0.99] transition-transform">
                     <span className="flex -space-x-5 shrink-0" aria-hidden>
                       {items.filter((it) => it.type === t).slice(0, 3).map((it, i) => (
                         <Poster key={it.id} item={it} showTitle={false} className="w-11 aspect-[2/3] rounded-[8px] border border-line" style={{ transform: `rotate(${(i - 1) * 7}deg)` }} />
@@ -167,7 +166,7 @@ export function Library() {
                     <Icon name="chevron" size={18} className="text-mute shrink-0" />
                   </Link>
                   {(t === 'movie' || t === 'series' || t === 'book') && (
-                    <Link to="/importar" className="px-4 py-2.5 rounded-2xl bg-surface border border-line flex items-center justify-between text-xs text-mute hover:text-ink active:scale-[0.99] transition-transform">
+                    <Link to="/importar" className="px-4 py-2.5 rounded-2xl bg-surface2 border border-line flex items-center justify-between text-xs text-mute hover:text-ink active:scale-[0.99] transition-transform">
                       <span>Trae tus {SHELF_LABEL[t].plural.toLowerCase()} de Letterboxd o IMDb</span>
                       <span className="text-accent font-semibold flex items-center gap-1">Importar <Icon name="chevron" size={13} /></span>
                     </Link>
@@ -178,7 +177,7 @@ export function Library() {
           )
         })}
 
-        <section aria-label="Mis listas">
+        <section aria-label="Mis listas" className="pt-4">
           <div className="flex items-center justify-between px-5 mb-2.5 min-h-[44px]">
             <h2 className="serif text-[22px] font-semibold">Mis listas</h2>
             <button onClick={() => nav('/lista/nueva')} className="min-h-[40px] px-3 rounded-full bg-surface border border-line text-sm flex items-center gap-1"><Icon name="plus" size={16} /> Nueva lista</button>

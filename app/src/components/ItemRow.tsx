@@ -4,13 +4,19 @@ import { Poster, posterLayoutId } from './Poster'
 import { Icon } from './Icon'
 
 /**
- * Portada con su puesto (filas horizontales de la biblioteca, D25). Con `rank`, un círculo naranja con el número en la
- * esquina superior izquierda (el orden es lo que dice qué te marcó más). `faded` = aún sin ordenar.
+ * Portada con su puesto (filas horizontales de la biblioteca, D25). Con `rank`, un número grande y hueco asoma por detrás
+ * a la izquierda (el orden es lo que dice qué te marcó más). `faded` = aún sin ordenar.
  */
 export function PosterTile({ item, size = 104, rank, faded }: { item?: Item | null; size?: number; rank?: number; faded?: boolean }) {
+  const numW = rank === undefined ? 0 : rank >= 10 ? 58 : 34
   if (!item) {
     return (
-      <div className="relative shrink-0 block" style={{ width: size }} aria-hidden="true">
+      <div
+        className="relative shrink-0 block"
+        style={{ width: size + numW, paddingLeft: numW }}
+        aria-hidden="true"
+      >
+        {rank !== undefined && <span className="rank-num absolute left-0 bottom-0 text-[86px] select-none text-mute/30" aria-hidden>{rank}</span>}
         <div className="skeleton w-full aspect-[2/3] rounded-[10px] border border-line" />
       </div>
     )
@@ -19,20 +25,13 @@ export function PosterTile({ item, size = 104, rank, faded }: { item?: Item | nu
     <Link
       to={`/i/${encodeURIComponent(item.id)}`}
       className="relative shrink-0 block active:scale-[0.97] transition-transform duration-200"
-      style={{ width: size }}
+      style={{ width: size + numW, paddingLeft: numW }}
       aria-label={`${rank ? `Nº ${rank}: ` : ''}${item.title}`}
     >
+      {rank !== undefined && <span className="rank-num absolute left-0 bottom-0 text-[86px] select-none" aria-hidden>{rank}</span>}
       <div className={`relative ${faded ? 'opacity-55 saturate-50' : ''}`}>
         <Poster item={item} layoutId={posterLayoutId(item.id)} style={{ borderRadius: 10 }} className="w-full aspect-[2/3] rounded-[10px]" />
       </div>
-      {rank !== undefined && (
-        <span
-          className="absolute top-1.5 left-1.5 min-w-[22px] h-[22px] px-1 rounded-full bg-accent text-accent-ink text-[12px] font-bold tabular-nums flex items-center justify-center shadow-[0_2px_6px_rgb(0_0_0/0.45)]"
-          aria-hidden
-        >
-          {rank}
-        </span>
-      )}
     </Link>
   )
 }

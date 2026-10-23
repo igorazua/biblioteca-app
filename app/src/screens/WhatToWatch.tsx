@@ -51,7 +51,9 @@ const loadSnap = (): Snap | null => {
     const x = r ? (JSON.parse(r) as Snap) : null
     if (!x || !x.shelf) return null
     if (x.pair && !(getItem(x.pair[0]) && getItem(x.pair[1]))) return null
-    if (x.phase === 'shape' && !x.pair) return null
+    // Solo se recuerda la propuesta ya hecha: el estado del motor de los duelos no se guarda, así que un duelo o una
+    // pregunta a medias no se puede retomar (se quedaba atascado al pulsar). Se vuelve a empezar.
+    if (x.phase !== 'propose' && x.phase !== 'done') return null
     return x
   } catch { return null }
 }
@@ -134,7 +136,10 @@ export function WhatToWatch() {
   }, [activeFriends, ranks])
 
   useEffect(() => {
-    if (!shelf || phase === 'shelf') return
+    if (!shelf || (phase !== 'propose' && phase !== 'done')) {
+      if (phase === 'shelf' || phase === 'ask' || phase === 'shape') clearSnap()
+      return
+    }
     const data: Snap = { shelf, phase, qi, answers, pair: pair && pair[0] && pair[1] ? [pair[0].id, pair[1].id] : null, duel, current, rejected }
     try { localStorage.setItem(SNAP_KEY, JSON.stringify(data)) } catch { /* ok */ }
   }, [shelf, phase, qi, answers, pair, duel, current, rejected])
@@ -398,7 +403,12 @@ export function WhatToWatch() {
   }
 
   const seguir = () => {
-    if (!current || !shelf || !decideState) return
+    if (!current || !shelf) return
+    if (!decideState) {
+      setRejected([...rejected, current])
+      startShaping(answers, 3)
+      return
+    }
     track('dec_reject', {
       shelf,
       itemId: current,
@@ -449,6 +459,7 @@ export function WhatToWatch() {
     setDecideState(null)
     setProposal(null)
     setPair(null)
+    setAnswers({ platforms: profile.platforms })
   }
 
   const shelfTerms = shelf ? SHELF_LABEL[shelf] : SHELF_LABEL.movie
@@ -482,7 +493,7 @@ export function WhatToWatch() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05, duration: 0.2 }}
-              onClick={() => { setShelf(s); setPhase('ask'); setQi(0) }}
+              onClick={() => { setShelf(s); setAnswers({ platforms: profile.platforms }); setPhase('ask'); setQi(0) }}
               className="relative flex-1 min-h-[110px] rounded-2xl overflow-hidden border border-line text-left active:scale-[0.985] transition-transform bg-surface"
             >
               <div className="absolute inset-0 grid grid-cols-3 gap-px opacity-30">
@@ -566,7 +577,12 @@ export function WhatToWatch() {
           )}
         </AnimatePresence>
         <div className="mt-4 flex">
-          <Button variant="secondary" onClick={() => (qi > 0 ? setQi(qi - 1) : reset())}>
+          <Button variant="secondary" onClick={() => {
+              if (qi === 0) return reset()
+              const prev = questions[qi - 1]
+              if (prev && !prev.multi) setAnswers(({ [prev.id]: _drop, ...rest }) => rest)
+              setQi(qi - 1)
+            }}>
             {qi > 0 ? 'Atrás' : 'Cambiar categoría'}
           </Button>
         </div>

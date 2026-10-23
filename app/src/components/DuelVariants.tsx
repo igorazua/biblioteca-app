@@ -62,6 +62,8 @@ export function useDuelCopy(): [DuelCopy, (c: DuelCopy) => void] {
 export const pickDelay = (reduce: boolean | null) => (reduce ? 600 : 1050)
 /** En Comparar se encadenan duelos a toda velocidad: solo lo justo para ver la carta elegida moverse. */
 const FAST_DELAY = 170
+/** En Decidir, sin texto de confirmación: el borde iluminado basta (Igor, 23/10). */
+const DECIDE_DELAY = 380
 
 /** «Gana *título*» con el título en cursiva serif. */
 export function Chosen({ texts, title }: { texts: DuelTexts; title: string }) {
@@ -202,7 +204,7 @@ export function DuelFan({ left, right, onChoose, texts, fast = false }: { left: 
     haptic('success')
     const to = w === 'a' ? W() * FAN_COMMIT : -W() * FAN_COMMIT
     animate(x, to, reduce ? { duration: 0 } : fast ? { duration: 0.16, ease: 'easeOut' } : { type: 'spring', stiffness: 300, damping: 30 })
-    setTimeout(() => onChoose(w), fast ? FAST_DELAY : pickDelay(reduce))
+    setTimeout(() => onChoose(w), fast ? FAST_DELAY : reduce ? pickDelay(reduce) : DECIDE_DELAY)
   }
 
   return (
@@ -233,8 +235,8 @@ export function DuelFan({ left, right, onChoose, texts, fast = false }: { left: 
       <FanBackdrop side={left} g={gA} />
       <FanBackdrop side={right} g={gB} />
 
-      <FanCard side={left} which="a" g={gA} og={gB} lay={lay} picked={picked} onTap={() => { if (!dragged.current) choose('a') }} />
-      <FanCard side={right} which="b" g={gB} og={gA} lay={lay} picked={picked} onTap={() => { if (!dragged.current) choose('b') }} />
+      <FanCard side={left} which="a" color="#F5B544" g={gA} og={gB} lay={lay} picked={picked} onTap={() => { if (!dragged.current) choose('a') }} />
+      <FanCard side={right} which="b" color="#9A86FF" g={gB} og={gA} lay={lay} picked={picked} onTap={() => { if (!dragged.current) choose('b') }} />
 
       {/* Títulos: texto liso bajo cada carta, que se desvanece al crecer la elegida */}
       {(['a', 'b'] as const).map((k) => {
@@ -254,15 +256,6 @@ export function DuelFan({ left, right, onChoose, texts, fast = false }: { left: 
         )
       })}
 
-      {picked && !fast && (
-        <PickStrip
-          color={picked === 'a' ? '#F5B544' : '#9A86FF'} // DUEL_LEFT / DUEL_RIGHT (SwipePair.tsx)
-          card={{ left: (L.w - L.fitW) / 2, top: (L.h - L.fitW * 1.5) / 2, w: L.fitW, h: L.fitW * 1.5, r: 18 * (L.fitW / L.cardW) }}
-          texts={texts}
-          title={(picked === 'a' ? left : right).title}
-          reduce={reduce}
-        />
-      )}
     </motion.div>
   )
 }
@@ -280,6 +273,7 @@ function FanBackdrop({ side, g }: { side: Side; g: MotionValue<number> }) {
 function FanCard({
   side,
   which,
+  color,
   g,
   og,
   lay,
@@ -288,6 +282,8 @@ function FanCard({
 }: {
   side: Side
   which: 'a' | 'b'
+  /** color del borde que se ilumina al elegirla (DUEL_LEFT / DUEL_RIGHT de SwipePair.tsx) */
+  color: string
   g: MotionValue<number>
   og: MotionValue<number>
   lay: RefObject<FanLayout>
@@ -338,6 +334,15 @@ function FanCard({
       <div className="absolute inset-0 overflow-hidden" style={{ borderRadius: 'inherit' }}>
         {side.bg}
       </div>
+      {/* borde iluminado de la elegida: la confirmación del duelo */}
+      <motion.div
+        aria-hidden
+        className="absolute inset-0 pointer-events-none"
+        style={{ borderRadius: 'inherit', boxShadow: `0 0 0 3px ${color}, 0 0 26px 4px ${color}aa` }}
+        initial={false}
+        animate={{ opacity: picked === which ? 1 : 0 }}
+        transition={{ duration: 0.12 }}
+      />
     </motion.button>
   )
 }

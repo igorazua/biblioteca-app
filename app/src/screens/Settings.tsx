@@ -6,7 +6,7 @@ import { APP_NAME } from '../config'
 import { ENGINE_VERSION } from '../lib/engine/params'
 import { useStore } from '../store/useStore'
 import { useAuth } from '../store/useAuth'
-import { Confirm, Sheet, Toast } from '../components/ui'
+import { Avatar, Confirm, Sheet, Toast } from '../components/ui'
 import { Group, Row, Toggle } from '../components/Group'
 import { Icon } from '../components/Icon'
 import { ScreenTitle } from '../components/ScreenTitle'
@@ -103,30 +103,26 @@ export function Settings() {
       />
 
       <div className="px-5 space-y-7">
-        {/* Cuenta */}
-        <Group
-          title="Cuenta"
-          footer={user ? undefined : 'Sin cuenta, tus datos están solo en este móvil. Entra para guardarlos en la nube, usarlos en otro dispositivo y conectar con amigos.'}
-        >
-          {user ? (
-            <>
-              <Row
-                icon="user"
-                title={authProfile?.displayName || user.email}
-                sub={`${authProfile?.handle ? `@${authProfile.handle} · ` : ''}${user.email ?? ''}`}
-                right={<span className="text-[11px] bg-stamp-green/20 text-stamp-green font-semibold px-2.5 py-1 rounded-full shrink-0">Conectado</span>}
-              />
-              <Row icon="edit" title="Tus datos" sub="Foto, nombre, @usuario, país, año y plataformas" to="/perfil/editar" />
-              <Row
-                icon="undo"
-                title={syncing ? 'Sincronizando…' : 'Sincronizar ahora'}
-                sub="Sube lo de este móvil y baja lo de la nube"
-                onClick={syncing ? undefined : handleSyncNow}
-              />
-              <Row icon="back" title="Cerrar sesión" onClick={() => signOut()} />
-            </>
-          ) : (
+        {/* Quién eres: tarjeta propia arriba, separada de los ajustes (Igor, 23/10) */}
+        {user ? (
+          <button
+            onClick={() => nav('/perfil/editar')}
+            className="w-full rounded-3xl bg-surface border border-line p-4 flex items-center gap-3.5 text-left active:bg-surface2 transition-colors"
+          >
+            <Avatar name={profile.name} color={profile.avatarColor} url={profile.avatarUrl} size={52} />
+            <span className="flex-1 min-w-0">
+              <span className="block text-body font-semibold truncate">{authProfile?.displayName || profile.name}</span>
+              <span className="block text-meta truncate">{authProfile?.handle ? `@${authProfile.handle} · ` : ''}{user.email ?? ''}</span>
+              <span className="inline-flex items-center gap-1.5 mt-1 text-[11px] text-stamp-green font-semibold">
+                <span className="w-1.5 h-1.5 rounded-full bg-stamp-green" /> Cuenta conectada
+              </span>
+            </span>
+            <Icon name="chevron" size={16} className="text-mute shrink-0" />
+          </button>
+        ) : (
+          <Group footer="Sin cuenta, tus datos están solo en este móvil. Entra para guardarlos en la nube, usarlos en otro dispositivo y conectar con amigos.">
             <div className="p-4 space-y-3">
+              <p className="text-body font-semibold">Guarda tu biblioteca en la nube</p>
               <button
                 onClick={() => signInWithGoogle()}
                 className="w-full min-h-[46px] rounded-2xl bg-white text-black text-sm font-semibold flex items-center justify-center gap-2 active:scale-95 transition-transform shadow"
@@ -161,14 +157,12 @@ export function Settings() {
                 </button>
               </div>
             </div>
-          )}
-        </Group>
-
-        {!user && (
-          <Group title="Tu perfil">
-            <Row icon="edit" title="Tus datos" sub="Foto, nombre, país, año y plataformas" to="/perfil/editar" />
           </Group>
         )}
+
+        <Group title="Tu perfil">
+          <Row icon="edit" title="Tus datos" sub={`Foto, nombre, ${user ? '@usuario, ' : ''}país, año y plataformas`} to="/perfil/editar" />
+        </Group>
 
         {/* Privacidad (solo con cuenta) */}
         {user && (
@@ -229,9 +223,16 @@ export function Settings() {
           </div>
         </Group>
 
-        {/* Cuenta: borrar (abajo del todo, como en cualquier app) */}
+        {/* Sesión: sincronizar, salir y borrar (abajo del todo, como en cualquier app) */}
         {user && (
-          <Group>
+          <Group title="Sesión">
+            <Row
+              icon="rotateCcw"
+              title={syncing ? 'Sincronizando…' : 'Sincronizar ahora'}
+              sub="Sube lo de este móvil y baja lo de la nube"
+              onClick={syncing ? undefined : handleSyncNow}
+            />
+            <Row icon="back" title="Cerrar sesión" onClick={() => signOut()} />
             <Row icon="trash" title="Borrar mi cuenta" sub="Elimina tu perfil y todo lo guardado en la nube" onClick={() => setConfirmDelete(true)} danger />
           </Group>
         )}

@@ -123,8 +123,8 @@ export function Profile() {
         title={unnamed ? 'Tu perfil' : profile.name}
         subtitle={[authProfile?.handle ? `@${authProfile.handle}` : null, place ?? null].filter(Boolean).join(' · ')}
         action={
-          <Link to="/ajustes" aria-label="Ajustes" className="w-9 h-9 rounded-full flex items-center justify-center text-mute hover:text-ink active:scale-95 transition-transform">
-            <Icon name="gear" size={20} />
+          <Link to="/ajustes" className="min-h-[36px] pl-2.5 pr-3.5 rounded-full bg-surface border border-line text-ink text-[13px] font-medium flex items-center gap-1.5 active:scale-95 transition-transform">
+            <Icon name="gear" size={17} /> Ajustes
           </Link>
         }
       />

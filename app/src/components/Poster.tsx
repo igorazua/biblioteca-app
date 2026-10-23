@@ -55,6 +55,25 @@ export function Poster({ item, className = '', style, alt, showTitle = true, lay
       />
     )
   }
+  // Juegos de mesa: las cajas casi nunca son verticales. Se ve la caja entera y el aire de arriba y abajo se rellena
+  // con la propia caja ampliada y difuminada, para que tome su color (Igor, 23/10; excepción a SISTEMA_DISENO §1.3).
+  if (src && !imgError && item.type === 'boardgame') {
+    const done = loaded?.src === src
+    return (
+      <motion.div {...flight} className={`relative overflow-hidden bg-surface2 ${done ? '' : 'skeleton'} ${className}`} style={style}>
+        <img src={src} alt="" aria-hidden draggable={false} className="absolute inset-0 w-full h-full object-cover scale-125 blur-xl opacity-70" />
+        <img
+          ref={imgRef}
+          src={src}
+          alt={alt ?? `Portada de ${item.title}`}
+          onLoad={() => setLoaded((l) => (l?.src === src ? l : { src, fade: true }))}
+          onError={() => setImgError(true)}
+          draggable={false}
+          className={`absolute inset-0 w-full h-full object-contain ${done && loaded.fade ? 'img-in' : ''}`}
+        />
+      </motion.div>
+    )
+  }
   if (src && !imgError) {
     const done = loaded?.src === src
     return (

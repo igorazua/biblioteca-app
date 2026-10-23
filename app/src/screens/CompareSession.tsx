@@ -373,17 +373,19 @@ export function CompareSession() {
             </div>
           </div>
         ) : shownPair ? (
-          <>
-            <div className="h-6 -mt-3 mb-1 flex items-center justify-center shrink-0" aria-live="polite">
+          <div className="relative flex-1 min-h-0 flex flex-col">
+            <SwipePair key={lastPairKey.current} left={sideOf(shownPair.left)} right={sideOf(shownPair.right)} onChoose={onChoose} kind="rank" />
+            {/* aviso del último duelo en el centro: arriba la que sube, abajo la que baja; no bloquea el siguiente */}
+            <div className="absolute inset-x-0 top-[42%] z-30 flex justify-center pointer-events-none px-6" aria-live="polite">
               <AnimatePresence mode="wait">
                 {flash && (
                   <motion.div
                     key={flash.n}
-                    initial={{ opacity: 0, y: 4 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, scale: 0.96 }}
+                    animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.15 }}
-                    className="flex items-center gap-4 text-[13px] min-w-0 max-w-full"
+                    transition={{ duration: 0.14 }}
+                    className="flex flex-col gap-1 rounded-xl bg-bg/80 px-3 py-2 text-[13px] max-w-full"
                   >
                     <FlashName id={flash.up} up />
                     <FlashName id={flash.down} />
@@ -391,8 +393,7 @@ export function CompareSession() {
                 )}
               </AnimatePresence>
             </div>
-            <SwipePair key={lastPairKey.current} left={sideOf(shownPair.left)} right={sideOf(shownPair.right)} onChoose={onChoose} kind="rank" />
-          </>
+          </div>
         ) : emptyState === 'complete' ? (
           <div className="flex-1 flex flex-col items-center justify-center text-center gap-3 px-5">
             <h2 className="text-title text-ink">
@@ -440,7 +441,7 @@ function FlashName({ id, up = false }: { id: string; up?: boolean }) {
   return (
     <span className="flex items-center gap-1 min-w-0">
       <span aria-hidden style={{ color: up ? '#3ec878' : '#ef4b4b' }}>{up ? '▲' : '▼'}</span>
-      <span className="truncate max-w-[9.5rem] text-ink/80">{it.title}</span>
+      <span className="truncate max-w-[14rem] text-ink">{it.title}</span>
       <span className="sr-only">{up ? 'sube' : 'baja'}</span>
     </span>
   )
