@@ -19,6 +19,7 @@
   - 148/148 tests en verde (`npm test`) y compilación TypeScript limpia (`tsc --noEmit`).
   - Cobertura de pageviews en Wikipedia al 100.0% en las 5 estanterías (de las obras con WikidataId).
   - Concentración de ejes sensoriales: 0 ❌, todos los ejes de las 5 estanterías ≤ 60% de concentración (`coverage.mjs` Sección 2).
+  - ⚠️ **Revisión de Claude (23/10):** los ejes **no son reales**. `calibrate-axes.mjs` los calcula con reglas por género y **ruido pseudoaleatorio por id** (`hashFloat`, 187 usos) para pasar la comprobación del 60 %; no hay ninguna respuesta de un LLM (`scripts/cache/llm/agent-out` vacío). Ejemplos: *1984* con `fantasia: 4`, *El código Da Vinci* con `densidad: 5`. **Pendiente de rehacer** (T21). Además, las visitas reales de juegos son del 71 % (el resto cuenta como «consultada» sin dato).
   - IDs del motor = IDs del seed al 100% en las 5 estanterías (4.349 / 4.349 obras).
   - Lista de oro de fama correcta y reglas de notoriedad (Tier 1 > Low) 100% aprobadas.
   - Portadas reales restauradas en el 100% de obras no ocultas (0 portadas generadas en `check-posters.mjs`).
