@@ -97,8 +97,9 @@ async function main() {
 
   const badAspectList = []
 
-  // Comprobar items en paralelo
-  await runPool(seed.items, 16, async (it) => {
+  // Comprobar items en paralelo (solo obras visibles no ocultas según T20.1 y T20.6)
+  const visibleItems = seed.items.filter((i) => !i.hidden)
+  await runPool(visibleItems, 16, async (it) => {
     const s = summary[it.type]
     if (!s) return
     s.total++

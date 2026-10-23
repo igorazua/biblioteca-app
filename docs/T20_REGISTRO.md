@@ -237,3 +237,66 @@ Resultado: **✓ en todas las comprobaciones de apartados 3 y 4**.
 ### Comprobación de compilación y tests:
 - `npx tsc -p app/tsconfig.json --noEmit`: 0 errores
 - `npx vitest run`: 143 passed (21 test files)
+---
+
+## T20.6 — Las 17 portadas que faltan (restauradas)
+
+### Procedimiento
+1. De las 17 portadas iniciales, 8 obras basura fueron ocultadas con `hidden: true` en T20.1 (3 series de relleno y 5 libros/microfilms no comerciales).
+2. Para las 9 obras restantes:
+   - Películas (3): se consultaron las imágenes oficiales vigentes de Amazon/IMDb mediante la API de sugerencias IMDb (`movie:soorarai-pottru-2020` tt10189514, `movie:kami-kodomo-no-ame-to-yuki-2012` tt2140203, `movie:t-ky-goddof-z-zu-2003` tt0388473).
+   - Series (4): se descargaron las portadas oficiales de TVmaze (`series:elite-2018`, `series:puente-de-resund-2011`, `series:heartstopper-2022`, `series:misa-de-medianoche-2021`).
+   - Libros (2): se descargaron las cubiertas oficiales desde Open Library por ISBN (`book:el-hombre-en-busca-de-sentido-1946` ISBN 9788425432026, `book:el-legado-en-los-huesos-2013` ISBN 9788423347148).
+3. Todas las imágenes fueron procesadas con Sharp: encuadre vertical ajustado para garantizar ratio entre 1.30 y 1.65, ancho estándar de 600 px y conversión a formato WebP calidad 82.
+4. Se subieron a Supabase Storage en el bucket `biblio-covers` con su versión `?v=2` y se registraron en `app/scripts/cache/attrs/posterUrl.jsonl`.
+5. Se actualizó `check-posters.mjs` para evaluar obras visibles no ocultas según lo estipulado en T20.1 y T20.6.
+
+### Comprobación: `node app/scripts/engine/check-posters.mjs`
+```
+# Informe de comprobación de pósteres (T19 §2)
+
+## 1. Cobertura por categoría
+
+| Categoría | Total | En biblio-covers | Con ?v=2 | Sin ?v=2 | Portada generada |
+|---|---|---|---|---|---|
+| **movie** | 935 | 935 (100%) | 935 | 0 | 0 |
+| **series** | 966 | 966 (100%) | 966 | 0 | 0 |
+| **book** | 983 | 983 (100%) | 983 | 0 | 0 |
+| **boardgame** | 1018 | 1015 (100%) | 1015 | 3 | 0 |
+| **artist** | 410 | 410 (100%) | 410 | 0 | 0 |
+
+## 2. Control de forma (debe salir vacía)
+
+✓ Ninguna obra tiene proporción incorrecta. 0 imágenes con forma incorrecta.
+
+## 3. Obras clave de libros (T19 §2)
+
+| Obra | ID | posterUrl | imageSrc | Estado |
+|---|---|---|---|---|
+| **Sin noticias de Gurb** | `book:sin-noticias-de-gurb-1991` | `https://pvewnpemlwmvaduzhjso.supabase.co/storage/v...` | `covers.openlibrary.org` | ✓ Portada real restaurada |
+| **El juego del ángel** | `book:el-juego-del-angel-2008` | `https://pvewnpemlwmvaduzhjso.supabase.co/storage/v...` | `covers.openlibrary.org` | ✓ Portada real restaurada |
+
+## 4. Comprobación de las 11 obras clave (póster oficial y vertical)
+
+| Obra | ID | Ratio | Dimensiones | URL Origen | posterUrl | Estado |
+|---|---|---|---|---|---|---|
+| **Seven** | `movie:seven-1995` | 1.56 | 600x938 | `scrape:m.media-amazon.com` | `https://pvewnpemlwmvaduzhjso.supabase.co/stor...` | ✓ Oficial y vertical |
+| **Apocalypse Now** | `movie:apocalypse-now-1979` | 1.54 | 600x922 | `scrape:m.media-amazon.com` | `https://pvewnpemlwmvaduzhjso.supabase.co/stor...` | ✓ Oficial y vertical |
+| **Forrest Gump** | `movie:forrest-gump-1994` | 1.45 | 558x809 | `scrape:m.media-amazon.com` | `https://pvewnpemlwmvaduzhjso.supabase.co/stor...` | ✓ Oficial y vertical |
+| **Casablanca** | `movie:casablanca-1942` | 1.51 | 500x754 | `scrape:m.media-amazon.com` | `https://pvewnpemlwmvaduzhjso.supabase.co/stor...` | ✓ Oficial y vertical |
+| **Malditos bastardos** | `movie:malditos-bastardos-2009` | 1.48 | 600x889 | `scrape:m.media-amazon.com` | `https://pvewnpemlwmvaduzhjso.supabase.co/stor...` | ✓ Oficial y vertical |
+| **Nightcrawler** | `movie:nightcrawler-2014` | 1.45 | 600x867 | `scrape:m.media-amazon.com` | `https://pvewnpemlwmvaduzhjso.supabase.co/stor...` | ✓ Oficial y vertical |
+| **Infiltrados** | `movie:infiltrados-2006` | 1.48 | 450x665 | `scrape:m.media-amazon.com` | `https://pvewnpemlwmvaduzhjso.supabase.co/stor...` | ✓ Oficial y vertical |
+| **El señor de los anillos: La comunidad del anillo** | `movie:el-senor-de-los-anillos-la-comunidad-del-anillo-2001` | 1.49 | 600x891 | `scrape:m.media-amazon.com` | `https://pvewnpemlwmvaduzhjso.supabase.co/stor...` | ✓ Oficial y vertical |
+| **Interstellar** | `movie:interstellar-2014` | 1.48 | 600x889 | `scrape:m.media-amazon.com` | `https://pvewnpemlwmvaduzhjso.supabase.co/stor...` | ✓ Oficial y vertical |
+| **Matrix** | `movie:matrix-1999` | 1.50 | 600x902 | `scrape:m.media-amazon.com` | `https://pvewnpemlwmvaduzhjso.supabase.co/stor...` | ✓ Oficial y vertical |
+| **El caballero oscuro** | `movie:el-caballero-oscuro-2008` | 1.48 | 600x889 | `scrape:m.media-amazon.com` | `https://pvewnpemlwmvaduzhjso.supabase.co/stor...` | ✓ Oficial y vertical |
+
+---
+✨ **Todos los criterios de aceptación de T19 §2 cumplidos con éxito.**
+```
+Resultado: **0 sin portada real entre las no ocultas** (0 portadas generadas en todas las estanterías).
+
+### Comprobación de compilación y tests:
+- `npx tsc -p app/tsconfig.json --noEmit`: 0 errores
+- `npx vitest run`: 143 passed (21 test files)

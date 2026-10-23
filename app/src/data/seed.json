@@ -14653,7 +14653,7 @@
         "Drama"
       ],
       "synopsis": "Nedumaaran Rajangam \"Maara\" sets out to make the common man fly and in the process takes on the world's most capital intensive industry and several enemies who stand in his way.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/movie/soorarai-pottru-2020.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/movie/soorarai-pottru-2020.webp?v=3",
       "platforms": [
         "Netflix",
         "Prime Video"
@@ -14670,7 +14670,7 @@
       "keywords": [
         "drama"
       ],
-      "imageSrc": "generated",
+      "imageSrc": "m.media-amazon.com",
       "imageCredit": "Wikipedia / Wikimedia Commons",
       "src": {
         "wikidataId": "wikidata",
@@ -14680,7 +14680,7 @@
         "voteCount": "wikidata",
         "keywords": "wikidata",
         "synopsis": "wikidata",
-        "posterUrl": "generated",
+        "posterUrl": "scrape:m.media-amazon.com",
         "wikiLangs": "wikidata",
         "originCountry": "wikidata",
         "popPct": "computed",
@@ -14698,7 +14698,8 @@
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "posterUrl": 0.95
       },
       "popPct": 72.4,
       "notoriety": 0.48,
@@ -26739,7 +26740,7 @@
         "Fantasía"
       ],
       "synopsis": "After her werewolf lover unexpectedly dies in an accident while hunting for food for their children, a young woman must find ways to raise the werewolf son and daughter that she had with him while keeping their trait hidden from society.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/movie/kami-kodomo-no-ame-to-yuki-2012.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/movie/kami-kodomo-no-ame-to-yuki-2012.webp?v=3",
       "platforms": [
         "Netflix",
         "Prime Video"
@@ -26753,7 +26754,7 @@
         "originalLanguage": "llm-infer",
         "isCanon": "computed",
         "titles": "localized",
-        "posterUrl": "generated",
+        "posterUrl": "scrape:m.media-amazon.com",
         "fameLlm": "llm-infer",
         "fameTier": "computed"
       },
@@ -26761,7 +26762,8 @@
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "posterUrl": 0.95
       },
       "popPct": 2.5,
       "notoriety": 0.01,
@@ -26774,7 +26776,7 @@
       "titles": {
         "es-ES": "\u001akami kodomo no Ame to Yuki"
       },
-      "imageSrc": "generated",
+      "imageSrc": "m.media-amazon.com",
       "fameLlm": {
         "ES": 0
       },
@@ -61585,7 +61587,7 @@
         "Comedia"
       ],
       "synopsis": "On Christmas Eve, three homeless people living on the streets of Tokyo discover a newborn baby among the trash and set out to find its parents.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/movie/t-ky-goddof-z-zu-2003.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/movie/t-ky-goddof-z-zu-2003.webp?v=3",
       "platforms": [
         "Netflix",
         "Prime Video"
@@ -61599,7 +61601,7 @@
         "originalLanguage": "llm-infer",
         "isCanon": "computed",
         "titles": "localized",
-        "posterUrl": "generated",
+        "posterUrl": "scrape:m.media-amazon.com",
         "fameLlm": "llm-infer",
         "fameTier": "computed"
       },
@@ -61607,7 +61609,8 @@
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "posterUrl": 0.95
       },
       "popPct": 8,
       "notoriety": 0.01,
@@ -61620,7 +61623,7 @@
       "titles": {
         "es-ES": "T\u001aky\u001a goddof\u001az\u001azu"
       },
-      "imageSrc": "generated",
+      "imageSrc": "m.media-amazon.com",
       "fameLlm": {
         "ES": 0
       },
@@ -86553,7 +86556,7 @@
         "Thriller"
       ],
       "synopsis": "Tres jóvenes becados entran en un colegio de élite y un asesinato lo cambia todo.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/series/elite-2018.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/series/elite-2018.webp?v=3",
       "platforms": [
         "Netflix"
       ],
@@ -86571,7 +86574,7 @@
         "episodes": "tvmaze",
         "network": "tvmaze",
         "ongoing": "tvmaze",
-        "posterUrl": "generated",
+        "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
         "fameTier": "computed"
       },
@@ -86579,7 +86582,8 @@
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "posterUrl": 0.95
       },
       "popPct": 0.4,
       "notoriety": 0.5,
@@ -86595,7 +86599,7 @@
       "episodes": 64,
       "network": "Netflix",
       "ongoing": false,
-      "imageSrc": "generated",
+      "imageSrc": "static.tvmaze.com",
       "fameLlm": {
         "ES": 0.5
       },
@@ -87331,7 +87335,7 @@
         "crimen",
         "thriller"
       ],
-      "imageSrc": "generated",
+      "imageSrc": "static.tvmaze.com",
       "imageCredit": "Archivo",
       "src": {
         "voteAvg": "wikidata",
@@ -87344,7 +87348,7 @@
         "originalLanguage": "llm-infer",
         "isCanon": "computed",
         "titles": "localized",
-        "posterUrl": "generated",
+        "posterUrl": "scrape:static.tvmaze.com",
         "wikidataId": "wikidata",
         "wikiLangs": "wikidata",
         "synopsis": "wikidata",
@@ -87357,7 +87361,8 @@
         "originalLanguage": 0.85,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "posterUrl": 0.95
       },
       "popPct": 92.6,
       "notoriety": 0.66,
@@ -87370,7 +87375,7 @@
       "titles": {
         "es-ES": "Puente de Øresund"
       },
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/series/puente-de-resund-2011.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/series/puente-de-resund-2011.webp?v=3",
       "wikidataId": "Q297871",
       "synopsis": "El puente-túnel de Øresund o de Öresund es un puente-túnel que conecta las dos áreas metropolitanas de la región de Øresund: la capital danesa, Copenhague, y la ciudad sueca de Malmö. Cuenta con dos vías de ferrocarril y cuatro carriles de carretera, siendo el puente combinado tren-carretera más largo de Europa. La ruta internacional europea E20 pasa por este puente. El transporte ferroviario es operado conjuntamente por la empresa sueca Statens Järnvägar (SJ) y la danesa Danske Statsbaner (DSB).",
       "fameLlm": {
@@ -94118,7 +94123,7 @@
         "Drama"
       ],
       "synopsis": "Heartstopper es una serie de televisión por streaming británica de drama y romance adolescente, basada en el webcómic y novela gráfica del mismo nombre creado por Alice Oseman y fue escrita por la propia Oseman. La serie se centra en la historia de Charlie Spring, un alumno gay que se enamora de su compañero de clase Nick Nelson, de quien se sienta al lado en su nuevo grupo. También explora la vida de Tao, Elle, Tara y Darcy.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/series/heartstopper-2022.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/series/heartstopper-2022.webp?v=3",
       "platforms": [
         "Netflix"
       ],
@@ -94148,7 +94153,7 @@
         "voteCount": "wikidata",
         "keywords": "wikidata",
         "synopsis": "wikipedia",
-        "posterUrl": "generated",
+        "posterUrl": "scrape:static.tvmaze.com",
         "wikiLangs": "wikidata",
         "originCountry": "wikidata",
         "popPct": "computed",
@@ -94169,7 +94174,8 @@
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "posterUrl": 0.95
       },
       "popPct": 85,
       "notoriety": 0.81,
@@ -94182,7 +94188,7 @@
       "episodes": 24,
       "network": "Netflix",
       "ongoing": false,
-      "imageSrc": "generated",
+      "imageSrc": "static.tvmaze.com",
       "fameLlm": {
         "ES": 0.75
       },
@@ -95514,7 +95520,7 @@
         "Drama"
       ],
       "synopsis": "La llegada de un carismático y joven sacerdote a una aislada comunidad isleña desata milagros y presagios aterradores.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/series/misa-de-medianoche-2021.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/series/misa-de-medianoche-2021.webp?v=3",
       "platforms": [
         "Netflix"
       ],
@@ -95527,7 +95533,7 @@
         "originalLanguage": "llm-infer",
         "isCanon": "computed",
         "titles": "localized",
-        "posterUrl": "generated",
+        "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
         "fameTier": "computed"
       },
@@ -95535,7 +95541,8 @@
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "posterUrl": 0.95
       },
       "popPct": 2,
       "notoriety": 0.5,
@@ -95548,7 +95555,7 @@
       "titles": {
         "es-ES": "Misa de medianoche"
       },
-      "imageSrc": "generated",
+      "imageSrc": "static.tvmaze.com",
       "fameLlm": {
         "ES": 0.5
       },
@@ -169941,7 +169948,7 @@
         "Biografía"
       ],
       "synopsis": "Un psiquiatra austriaco relata su experiencia en los campos de concentración y expone la logoterapia.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/book/el-hombre-en-busca-de-sentido-1946.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/book/el-hombre-en-busca-de-sentido-1946.webp?v=3",
       "popularity": 91,
       "src": {
         "popPct": "computed",
@@ -169953,7 +169960,7 @@
         "isCanon": "computed",
         "titles": "localized",
         "schoolReading": "scrape:listas-lectura-eso-bachillerato",
-        "posterUrl": "generated",
+        "posterUrl": "scrape:covers.openlibrary.org",
         "fameLlm": "llm-infer",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
@@ -169964,7 +169971,8 @@
         "isCanon": 0.9,
         "fameLlm": 0.9,
         "pageviews": 1,
-        "schoolReading": 0.95
+        "schoolReading": 0.95,
+        "posterUrl": 0.95
       },
       "popPct": 45.8,
       "notoriety": 0.97,
@@ -169981,7 +169989,7 @@
       "schoolReading": {
         "ES": false
       },
-      "imageSrc": "generated",
+      "imageSrc": "covers.openlibrary.org",
       "fameLlm": {
         "ES": 1
       },
@@ -365894,7 +365902,7 @@
         "Narrativa"
       ],
       "synopsis": "Carlos Eugenio Lavín García-Huidobro es un ingeniero comercial y empresario chileno. En 2018 fue condenado por corrupción junto a su socio Carlos Alberto Délano por el Caso Penta, a cuatro años de presidio con beneficio de libertad vigilada, por delitos tributarios consumados y reiterados.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/book/el-legado-en-los-huesos-2013.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/book/el-legado-en-los-huesos-2013.webp?v=3",
       "originCountry": [
         "ES"
       ],
@@ -365908,7 +365916,7 @@
         "isCanon": "computed",
         "titles": "localized",
         "schoolReading": "scrape:listas-lectura-eso-bachillerato",
-        "posterUrl": "generated",
+        "posterUrl": "scrape:covers.openlibrary.org",
         "fameLlm": "llm-infer",
         "fameTier": "computed",
         "wikidataId": "wikidata",
@@ -365919,7 +365927,8 @@
         "fameLlm": 0.9,
         "schoolReading": 0.95,
         "wikidataId": 0.98,
-        "pageviews": 1
+        "pageviews": 1,
+        "posterUrl": 0.95
       },
       "popPct": 27.3,
       "notoriety": 0.22,
@@ -365931,7 +365940,7 @@
       "schoolReading": {
         "ES": false
       },
-      "imageSrc": "generated",
+      "imageSrc": "covers.openlibrary.org",
       "fameLlm": {
         "ES": 0
       },
