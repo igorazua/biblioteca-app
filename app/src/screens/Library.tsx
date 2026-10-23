@@ -144,7 +144,7 @@ export function Library() {
                 </span>
               </Link>
               {rk.length || unranked.length ? (
-                <div className="flex gap-3 overflow-x-auto no-scrollbar px-4 items-end">
+                <div className="flex gap-3 overflow-x-auto overflow-y-hidden overscroll-x-contain no-scrollbar px-4 pt-1 items-end">
                   {rk.map((id, i) => {
                     const it = getItem(id)
                     return it ? <PosterTile key={id} item={it} rank={i + 1} /> : null

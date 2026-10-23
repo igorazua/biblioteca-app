@@ -199,7 +199,7 @@ export function Profile() {
             </div>
           ) : (
             <Link to="/comparar" className="block text-body text-mute rounded-2xl border border-dashed border-line p-4">
-              Cuando ordenes tus obras en <span className="text-accent font-medium">Comparar</span>, aquí saldrá tu top 3 de cada estantería.
+              Cuando ordenes tus obras en <span className="text-accent font-medium">¡Duelos!</span>, aquí saldrá tu top 3 de cada estantería.
             </Link>
           )}
         </section>

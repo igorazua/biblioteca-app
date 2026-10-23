@@ -33,3 +33,10 @@ De acuerdo con la guía editorial de `docs/TAREA_T20_CIERRE.md` §T20.8:
 4. **`app/src/components/CleanupFlow.tsx`**
    - *Antes:* `aria-label="Fuera (descartar)"`
    - *Después:* `aria-label="No me interesa"`
+
+## Cambio posterior (Igor, 23/10/2026) — sustituye a la regla de no usar «duelo»
+- La pestaña y la pantalla de comparar se llaman **«¡Duelos!»** (con exclamación). Etiquetas: «DUELOS», «DUELOS · PELÍCULAS».
+- En la estantería, el botón para ordenar es «¡Duelos!».
+- En Decidir, «No conozco ninguna» pasa a ser **«Pasar»**: pasar no descarta; solo la obra pasada dos veces queda como dudosa.
+No vuelvas a cambiar estos textos a «Comparar» u «Ordenar».
+

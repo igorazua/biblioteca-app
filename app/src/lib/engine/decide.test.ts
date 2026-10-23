@@ -5,6 +5,7 @@ import {
   nextDuel,
   applyDuelChoice,
   skipDuelUnknown,
+  sameFamily,
   shouldPropose,
   getProposal,
   rejectAndContinue,
@@ -550,7 +551,10 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
       expect(normalChoiceState.preferFameOrOwn).toBe(false)
       expect(normalChoiceState.doubtfulItems?.[firstDuel.a.id]).toBeUndefined()
 
-      // En cambio, pulsar «No conozco ninguna» sí marca ambas obras como dudosas y activa la red de seguridad
+      // «Pasar» una vez no descarta nada; la segunda vez que se pasan, las obras quedan dudosas y se activa la red de seguridad
+      const onceState = skipDuelUnknown(state, firstDuel.a, firstDuel.b, 2700, firstDuel.dimension)
+      expect(onceState.doubtfulItems?.[firstDuel.a.id]).toBeUndefined()
+      expect(onceState.preferFameOrOwn).toBe(false)
       const unknownState = skipDuelUnknown(state, firstDuel.a, firstDuel.b, 2700, firstDuel.dimension)
       expect(unknownState.doubtfulItems?.[firstDuel.a.id]).toBeDefined()
       expect(unknownState.doubtfulItems?.[firstDuel.b.id]).toBeDefined()
@@ -585,5 +589,15 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
       expect(top20FamousIds.has(nextD.a.id)).toBe(true)
       expect(top20FamousIds.has(nextD.b.id)).toBe(true)
     })
+  })
+})
+
+describe('sameFamily (Decidir no enfrenta obras de la misma familia)', () => {
+  const mk = (title: string, creator: string) => ({ id: title, title, creator, type: 'boardgame', genres: [] }) as unknown as Item
+  it('detecta expansiones, sagas y mismo autor', () => {
+    expect(sameFamily(mk('Carcassonne', 'Klaus-Jürgen Wrede'), mk('Carcassonne: The Castle', 'Reiner Knizia'))).toBe(true)
+    expect(sameFamily(mk('Catan', 'Klaus Teuber'), mk('Catan: Seafarers', 'Otro'))).toBe(true)
+    expect(sameFamily(mk('Azul', 'Michael Kiesling'), mk('Wingspan', 'Elizabeth Hargrave, Michael Kiesling'))).toBe(true)
+    expect(sameFamily(mk('Azul', 'Michael Kiesling'), mk('Wingspan', 'Elizabeth Hargrave'))).toBe(false)
   })
 })

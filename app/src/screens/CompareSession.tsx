@@ -314,7 +314,7 @@ export function CompareSession() {
   return (
     <div className="h-full flex flex-col relative bg-bg select-none">
       <ScreenTitle
-        label={`COMPARAR · ${SHELF_LABEL[shelf].plural.toUpperCase()}`}
+        label={`DUELOS · ${SHELF_LABEL[shelf].plural.toUpperCase()}`}
         step={
           !summary && currentDuel
             ? { current: Math.min(count + 1, PAIRS_PER_SESSION), total: PAIRS_PER_SESSION }

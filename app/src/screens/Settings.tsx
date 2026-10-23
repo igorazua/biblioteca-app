@@ -102,30 +102,31 @@ export function Settings() {
         onBack={() => nav(-1)}
       />
 
-      <div className="px-5 space-y-7">
-        {/* Quién eres: tarjeta propia arriba, separada de los ajustes (Igor, 23/10) */}
-        {user ? (
-          <button
-            onClick={() => nav('/perfil/editar')}
-            className="w-full rounded-3xl bg-surface border border-line p-4 flex items-center gap-3.5 text-left active:bg-surface2 transition-colors"
-          >
-            <Avatar name={profile.name} color={profile.avatarColor} url={profile.avatarUrl} size={52} />
+      <div className="px-5 space-y-6">
+        {/* Tú: tarjeta de cabecera con tu foto; tocarla abre tus datos. Sin cuenta, el acceso va en la misma tarjeta. */}
+        <section className="rounded-3xl bg-surface border border-line overflow-hidden">
+          <button onClick={() => nav('/perfil/editar')} className="w-full p-4 flex items-center gap-3.5 text-left active:bg-surface2 transition-colors">
+            <Avatar name={profile.name} color={profile.avatarColor} url={profile.avatarUrl} size={56} />
             <span className="flex-1 min-w-0">
-              <span className="block text-body font-semibold truncate">{authProfile?.displayName || profile.name}</span>
-              <span className="block text-meta truncate">{authProfile?.handle ? `@${authProfile.handle} · ` : ''}{user.email ?? ''}</span>
-              <span className="inline-flex items-center gap-1.5 mt-1 text-[11px] text-stamp-green font-semibold">
-                <span className="w-1.5 h-1.5 rounded-full bg-stamp-green" /> Cuenta conectada
-              </span>
+              <span className="block text-title text-ink truncate">{authProfile?.displayName || (profile.name === 'Tú' ? 'Tu perfil' : profile.name)}</span>
+              {user ? (
+                <span className="flex items-center gap-1.5 text-meta truncate mt-0.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-stamp-green shrink-0" />
+                  {authProfile?.handle ? `@${authProfile.handle}` : user.email}
+                </span>
+              ) : (
+                <span className="block text-meta mt-0.5">Sin cuenta · todo está solo en este móvil</span>
+              )}
+              <span className="block text-[12px] text-accent font-medium mt-1">Editar foto, nombre y plataformas</span>
             </span>
             <Icon name="chevron" size={16} className="text-mute shrink-0" />
           </button>
-        ) : (
-          <Group footer="Sin cuenta, tus datos están solo en este móvil. Entra para guardarlos en la nube, usarlos en otro dispositivo y conectar con amigos.">
-            <div className="p-4 space-y-3">
-              <p className="text-body font-semibold">Guarda tu biblioteca en la nube</p>
+          {!user && (
+            <div className="px-4 pb-4 pt-3 space-y-2.5 border-t border-line">
+              <p className="text-meta">Entra para guardarla en la nube, usarla en otro móvil y ver a tus amigos.</p>
               <button
                 onClick={() => signInWithGoogle()}
-                className="w-full min-h-[46px] rounded-2xl bg-white text-black text-sm font-semibold flex items-center justify-center gap-2 active:scale-95 transition-transform shadow"
+                className="w-full min-h-[46px] rounded-2xl bg-white text-black text-sm font-semibold flex items-center justify-center gap-2 active:scale-95 transition-transform"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24">
                   <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
@@ -140,7 +141,7 @@ export function Settings() {
                   type="email"
                   value={emailInput}
                   onChange={(e) => setEmailInput(e.target.value)}
-                  placeholder="o tu email para un enlace de acceso"
+                  placeholder="o tu email para un enlace"
                   className="flex-1 min-w-0 bg-surface2 border border-line rounded-2xl px-3.5 text-xs focus:outline-none focus:border-accent"
                 />
                 <button
@@ -157,14 +158,35 @@ export function Settings() {
                 </button>
               </div>
             </div>
-          </Group>
-        )}
+          )}
+        </section>
 
-        <Group title="Tu perfil">
-          <Row icon="edit" title="Tus datos" sub={`Foto, nombre, ${user ? '@usuario, ' : ''}país, año y plataformas`} to="/perfil/editar" />
+        <Group title="Tus listas">
+          <Row icon="link" tint="#2f9e6e" title="Conectar otras apps" sub="Letterboxd, Goodreads, Netflix…" to="/conectar" />
         </Group>
 
-        {/* Privacidad (solo con cuenta) */}
+        <Group title="Preferencias">
+          <Row
+            icon="star"
+            tint="#d9932b"
+            title="Valorar al marcar como vista"
+            right={<Toggle on={settings.rateOnSwipe ?? true} onChange={(rateOnSwipe) => setSettings({ rateOnSwipe })} label="Valorar al marcar como vista" />}
+          />
+          <Row
+            icon="message"
+            tint="#7a64e0"
+            title="Nota tras cada duelo"
+            right={<Toggle on={settings.commentBoxInPairs} onChange={(commentBoxInPairs) => setSettings({ commentBoxInPairs })} label="Nota tras cada duelo" />}
+          />
+          <Row
+            icon="bell"
+            tint="#e0584b"
+            title="Notificaciones"
+            sub="Amigos y recordatorios"
+            right={<Toggle on={pushEnabled} onChange={handleTogglePush} label="Notificaciones" />}
+          />
+        </Group>
+
         {user && (
           <Group title="Privacidad">
             <div className="p-4">
@@ -173,69 +195,26 @@ export function Settings() {
           </Group>
         )}
 
-        {/* Tus listas */}
-        <Group title="Tus listas">
-          <Row icon="sparkle" title="Conectar" sub="Letterboxd, Goodreads, Spotify, Netflix y más" to="/conectar" />
-        </Group>
-
-        {/* Uso de la app */}
-        <Group title="Uso de la app">
-          <Row
-            icon="star"
-            title="Valorar al marcar como vista"
-            sub="Abre las estrellas al deslizar a la derecha en Descubrir"
-            right={<Toggle on={settings.rateOnSwipe ?? true} onChange={(rateOnSwipe) => setSettings({ rateOnSwipe })} label="Valorar al marcar como vista" />}
-          />
-          <Row
-            icon="message"
-            title="Comentario al comparar"
-            sub="Ofrece escribir una nota breve tras comparar dos obras"
-            right={<Toggle on={settings.commentBoxInPairs} onChange={(commentBoxInPairs) => setSettings({ commentBoxInPairs })} label="Comentario al comparar" />}
-          />
-        </Group>
-
-        {/* Avisos */}
-        <Group title="Avisos">
-          <Row
-            icon="clock"
-            title="Notificaciones"
-            sub="Cuando un amigo valora algo que tienes pendiente, y recordatorios"
-            right={<Toggle on={pushEnabled} onChange={handleTogglePush} label="Notificaciones" />}
-          />
-        </Group>
-
-        {/* Ayuda */}
         <Group title="Ayuda">
-          <Row icon="cards" title="Ver el tutorial otra vez" sub="Los 3 gestos y cómo funciona el ranking" onClick={() => nav('/onboarding')} />
-          <Row icon="mail" title="Enviar una sugerencia o un error" onClick={() => setFeedbackOpen(true)} />
+          <Row icon="cards" tint="#3d7fd9" title="Ver el tutorial otra vez" onClick={() => nav('/onboarding')} />
+          <Row icon="mail" tint="#3d7fd9" title="Enviar una sugerencia o un error" onClick={() => setFeedbackOpen(true)} />
         </Group>
 
-        {/* Acerca de */}
-        <Group title="Acerca de" footer={`${APP_NAME} · Motor ${ENGINE_VERSION}`}>
-          <div className="p-4 text-xs text-mute leading-relaxed space-y-1.5">
-            <p>Los datos del catálogo salen de fuentes públicas, entre otras:</p>
-            <ul className="list-disc pl-4 space-y-1">
-              <li><b className="text-ink">Wikidata</b> (CC0) y <b className="text-ink">Wikipedia</b>.</li>
-              <li><b className="text-ink">TVmaze</b>: series (CC BY-SA).</li>
-              <li><b className="text-ink">Open Library</b>: libros y portadas.</li>
-              <li><b className="text-ink">MusicBrainz</b>: artistas.</li>
-            </ul>
-          </div>
-        </Group>
-
-        {/* Sesión: sincronizar, salir y borrar (abajo del todo, como en cualquier app) */}
         {user && (
           <Group title="Sesión">
             <Row
               icon="rotateCcw"
               title={syncing ? 'Sincronizando…' : 'Sincronizar ahora'}
-              sub="Sube lo de este móvil y baja lo de la nube"
               onClick={syncing ? undefined : handleSyncNow}
             />
             <Row icon="back" title="Cerrar sesión" onClick={() => signOut()} />
-            <Row icon="trash" title="Borrar mi cuenta" sub="Elimina tu perfil y todo lo guardado en la nube" onClick={() => setConfirmDelete(true)} danger />
+            <Row icon="trash" title="Borrar mi cuenta" onClick={() => setConfirmDelete(true)} danger />
           </Group>
         )}
+
+        <p className="text-[11px] text-mute leading-relaxed px-1">
+          {APP_NAME} · Motor {ENGINE_VERSION}. Catálogo de fuentes públicas: Wikidata (CC0), Wikipedia, TVmaze (CC BY-SA), Open Library y MusicBrainz.
+        </p>
 
         {/* Zona de pruebas (plegada) */}
         <section aria-label="Zona de pruebas">

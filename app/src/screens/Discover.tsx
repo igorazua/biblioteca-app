@@ -17,7 +17,6 @@ import { RatingFlow } from '../components/RatingFlow'
 import { NudgeCard } from '../components/NudgeCard'
 import { Chip, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
-import { ScreenTitle } from '../components/ScreenTitle'
 import { Button } from '../components/Button'
 
 const readShelf = (): ShelfType => {
@@ -208,13 +207,8 @@ export function Discover() {
 
   return (
     <div className="h-full flex flex-col relative bg-bg">
-      <ScreenTitle
-        label={`DESCUBRIR · ${label.plural.toUpperCase()}`}
-        title="Descubre y guarda"
-        subtitle={remainingCount > 0 ? `${remainingCount} obras por explorar` : undefined}
-      />
-
-      <div className="px-5 pb-3 shrink-0">
+      {/* Cabecera mínima: las estanterías arriba del todo y el contador; todo el alto, para la tarjeta */}
+      <div className="safe-top px-5 pb-2 shrink-0">
         <div className="flex gap-2 overflow-x-auto no-scrollbar" role="tablist" aria-label="Estantería">
           {SHELVES.map((s) => (
             <Chip key={s} active={s === shelf} onClick={() => setShelf(s)}>
@@ -222,6 +216,7 @@ export function Discover() {
             </Chip>
           ))}
         </div>
+        <div className="text-meta text-center mt-2 tabular-nums">{remainingCount > 0 ? `${remainingCount} ${label.plural.toLowerCase()} por descubrir` : ' '}</div>
       </div>
 
       <div className="flex-1 min-h-0 px-5 relative">
@@ -261,7 +256,7 @@ export function Discover() {
             <p className="text-mute text-body">Ya no quedan más en esta estantería de la demo.</p>
             <div className="mt-2">
               <Button variant="primary" onClick={() => nav('/comparar')}>
-                Ordenar con Comparar
+                Ordenar con ¡Duelos!
               </Button>
             </div>
             <div className="flex gap-2 mt-3">
@@ -276,44 +271,44 @@ export function Discover() {
       </div>
 
       <div className="shrink-0 px-5 pt-2 pb-4">
-        <div className="flex items-center justify-center gap-5">
+        <div className="flex items-center justify-center gap-4">
           <button
             onClick={undo}
             disabled={!hasHistory || blocked}
             aria-label="Deshacer"
             title="Deshacer"
-            className="w-11 h-11 rounded-full bg-accent text-accent-ink flex items-center justify-center disabled:bg-surface disabled:text-mute disabled:opacity-40 active:scale-90 transition-transform"
+            className="w-12 h-12 rounded-full bg-accent text-accent-ink flex items-center justify-center disabled:bg-surface disabled:text-mute disabled:opacity-40 active:scale-90 transition-transform"
           >
-            <Icon name="rotateCcw" size={19} strokeWidth={2.4} />
+            <Icon name="rotateCcw" size={20} strokeWidth={2.4} />
           </button>
           <ActionBtn
             label="No me interesa"
             color="#ef4b4b"
-            size={56}
+            size={68}
             disabled={!deck.length || blocked}
             onClick={() => deckRef.current?.fling('left')}
           >
-            <Icon name="x" size={24} strokeWidth={2.4} />
+            <Icon name="x" size={30} strokeWidth={2.6} />
           </ActionBtn>
           <ActionBtn
             label={`Pendiente: no ${label.pronoun} he ${label.seenPastPart}, me interesa`}
             color="#5b9cf5"
-            size={48}
+            size={56}
             disabled={!deck.length || blocked}
             onClick={() => deckRef.current?.fling('up')}
           >
-            <Icon name="bookmark" size={20} strokeWidth={2.2} />
+            <Icon name="bookmark" size={24} strokeWidth={2.4} />
           </ActionBtn>
           <ActionBtn
             label={`${label.stamp.replace(/[¡!]/g, '')}: ${label.pronoun} he ${label.seenPastPart}`}
             color="#3ec878"
-            size={56}
+            size={68}
             disabled={!deck.length || blocked}
             onClick={() => deckRef.current?.fling('right')}
           >
-            <Icon name="check" size={24} strokeWidth={2.6} />
+            <Icon name="check" size={32} strokeWidth={2.8} />
           </ActionBtn>
-          <span className="w-11" aria-hidden />
+          <span className="w-12" aria-hidden />
         </div>
       </div>
 

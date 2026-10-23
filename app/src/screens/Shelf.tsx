@@ -14,6 +14,11 @@ import { ScreenTitle } from '../components/ScreenTitle'
 import { Button } from '../components/Button'
 import { AnimatePresence } from 'framer-motion'
 import { WIZARD_PATH } from '../config'
+import { pctColor } from './CompareHome'
+import type { IconName } from '../components/Icon'
+
+const SHELF_COLOR: Record<ShelfType, string> = { movie: '#f2b04a', series: '#ff6b5b', book: '#e37d8c', artist: '#9d8cff', boardgame: '#4fd1a5' }
+const SHELF_ICON: Record<ShelfType, IconName> = { movie: 'film', series: 'tv', book: 'bookOpen', artist: 'music', boardgame: 'dice' }
 
 type Seg = 'ord' | 'pend'
 
@@ -54,30 +59,52 @@ export function Shelf() {
     <div className="h-full flex flex-col bg-bg">
       <ScreenTitle
         label={`ESTANTERÍA · ${label.plural.toUpperCase()}`}
-        title={label.plural}
-        subtitle={seg === 'ord' ? `${totalSeen} obras · ${ordenadoPct} % ordenado` : `${pend.length} obras`}
         onBack={() => (selecting ? setSelecting(false) : nav('/'))}
-        titleAction={
-          selecting ? null : (
-            <>
-              <button
-                onClick={() => { setSelecting(true); setSel([]) }}
-                aria-label="Compartir"
-                className="w-9 h-9 rounded-full bg-surface border border-line flex items-center justify-center text-ink active:scale-95 transition-transform"
-              >
-                <Icon name="share" size={18} />
-              </button>
-              <button
-                onClick={() => setAdding(true)}
-                aria-label={`Añadir a ${label.plural}`}
-                className="w-9 h-9 rounded-full bg-accent text-accent-ink flex items-center justify-center active:scale-95 transition-transform"
-              >
-                <Icon name="plus" size={18} strokeWidth={2.5} />
-              </button>
-            </>
-          )
-        }
+        className="!pb-3"
       />
+      {/* Portada de la estantería: su color, su icono y sus tres primeras obras de fondo */}
+      <div className="mx-5 mb-4 relative rounded-3xl overflow-hidden border border-line shrink-0" style={{ background: `linear-gradient(135deg, ${SHELF_COLOR[t]}55 0%, ${SHELF_COLOR[t]}14 55%, var(--color-surface) 100%)` }}>
+        <div className="absolute inset-y-0 right-0 w-[52%] flex justify-end items-center gap-0 pr-2 opacity-45 pointer-events-none" aria-hidden>
+          {ranking.slice(0, 3).map((id, i) => (
+            <Poster key={id} item={getItem(id)} showTitle={false} className="w-16 aspect-[2/3] rounded-lg border border-black/30 -ml-6 shadow-lg" style={{ transform: `rotate(${(i - 1) * 8}deg) translateY(${i === 1 ? -6 : 4}px)` }} />
+          ))}
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-bg/70 via-bg/30 to-transparent pointer-events-none" aria-hidden />
+        <div className="relative p-4">
+          <div className="flex items-center gap-3">
+            <span className="w-11 h-11 rounded-2xl flex items-center justify-center shrink-0" style={{ background: SHELF_COLOR[t], color: '#14100c' }}>
+              <Icon name={SHELF_ICON[t]} size={22} strokeWidth={2.2} />
+            </span>
+            <h1 className="text-display text-ink flex-1 min-w-0 truncate">{label.plural}</h1>
+            {!selecting && (
+              <div className="flex items-center gap-2 shrink-0">
+                <button
+                  onClick={() => { setSelecting(true); setSel([]) }}
+                  aria-label="Compartir"
+                  className="w-9 h-9 rounded-full bg-bg/60 border border-line flex items-center justify-center text-ink active:scale-95 transition-transform"
+                >
+                  <Icon name="share" size={18} />
+                </button>
+                <button
+                  onClick={() => setAdding(true)}
+                  aria-label={`Añadir a ${label.plural}`}
+                  className="w-9 h-9 rounded-full bg-accent text-accent-ink flex items-center justify-center active:scale-95 transition-transform"
+                >
+                  <Icon name="plus" size={18} strokeWidth={2.5} />
+                </button>
+              </div>
+            )}
+          </div>
+          <p className="text-meta text-ink/75 mt-2">
+            {seg === 'ord' ? <>{totalSeen} obras · <span className="font-semibold" style={{ color: pctColor(ordenadoPct) }}>{ordenadoPct} % ordenado</span></> : `${pend.length} pendientes`}
+          </p>
+          {totalSeen >= 2 && !selecting && (
+            <Link to={`/comparar/${t}`} className="mt-3 inline-flex items-center gap-1.5 min-h-[36px] px-4 rounded-full bg-accent text-accent-ink text-[14px] font-semibold active:scale-95 transition-transform">
+              <Icon name="scale" size={16} strokeWidth={2.2} /> ¡Duelos!
+            </Link>
+          )}
+        </div>
+      </div>
       <div className="px-5 pb-3 flex gap-2 overflow-x-auto no-scrollbar shrink-0">
         <Chip active={seg === 'ord'} onClick={() => setSeg('ord')}>Mis {label.plural.toLowerCase()} · {totalSeen}</Chip>
         <Chip active={seg === 'pend'} onClick={() => setSeg('pend')}>Pendientes · {pend.length}</Chip>
@@ -108,7 +135,7 @@ export function Shelf() {
                   <div className="flex items-center justify-between mb-2.5">
                     <span className="text-label text-mute">SIN ORDENAR · {unrankedIds.length}</span>
                     <Link to={`/comparar/${t}`} className="text-label text-accent font-semibold hover:underline">
-                      Ordenar
+                      ¡Duelos!
                     </Link>
                   </div>
                   <div className="rounded-2xl bg-surface border border-line divide-y divide-line overflow-hidden">

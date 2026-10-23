@@ -135,6 +135,8 @@ export function useBoxSize(ref: RefObject<HTMLElement | null>) {
   return size
 }
 
+const FIT_MARGIN = 26 // px libres alrededor de la carta elegida a tamaño completo
+const IDLE_HINT_MS = 2600 // sin tocar nada, las cartas insinúan el gesto
 const FAN_COMMIT = 0.28 // fracción del ancho para elegir al soltar (igual que el diseño 1)
 const clamp01 = (v: number) => Math.max(0, Math.min(1, v))
 const lerp = (a: number, b: number, k: number) => a + (b - a) * k
@@ -163,7 +165,8 @@ function fanLayout(w: number, h: number) {
     cy: top + cardH / 2,
     titleTop: top + cardH + gap,
     cx: { a: w * 0.3, b: w * 0.7 },
-    fitW: Math.min(w, h / 1.5), // el póster entero, de borde a borde en ancho o en alto
+    // el póster entero, con un margen igual por los cuatro lados para que el borde iluminado no se corte
+    fitW: Math.min(w - 2 * FIT_MARGIN, (h - 2 * FIT_MARGIN) / 1.5),
   }
 }
 type FanLayout = ReturnType<typeof fanLayout>
@@ -190,6 +193,28 @@ export function DuelFan({ left, right, onChoose, texts, fast = false }: { left: 
     x.set(0)
   }, [left.key, right.key, x])
 
+  // Pista si no se hace nada: primero la izquierda inicia el movimiento, luego la derecha, y se repite cada pocos segundos
+  const touched = useRef(false)
+  useEffect(() => {
+    touched.current = false
+    if (reduce) return
+    let stop: (() => void) | null = null
+    const hint = () => {
+      if (touched.current || dragged.current) return
+      const d = W() * FAN_COMMIT * 0.3
+      const ctl = animate(x, [0, d, 0, -d, 0], { duration: 1.5, times: [0, 0.22, 0.48, 0.72, 1], ease: 'easeInOut' })
+      stop = () => ctl.stop()
+    }
+    const first = window.setTimeout(hint, IDLE_HINT_MS)
+    const again = window.setInterval(hint, IDLE_HINT_MS + 3500)
+    return () => {
+      window.clearTimeout(first)
+      window.clearInterval(again)
+      stop?.()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [left.key, right.key, reduce])
+
   // q: -1 (elige la de la derecha) … 1 (elige la de la izquierda)
   const q = useTransform(x, (v) => Math.max(-1, Math.min(1, v / (W() * FAN_COMMIT))))
   const gA = useTransform(q, (v) => Math.max(0, v))
@@ -200,6 +225,7 @@ export function DuelFan({ left, right, onChoose, texts, fast = false }: { left: 
 
   const choose = (w: 'a' | 'b') => {
     if (picked) return
+    touched.current = true
     setPicked(w)
     haptic('success')
     const to = w === 'a' ? W() * FAN_COMMIT : -W() * FAN_COMMIT
@@ -214,6 +240,8 @@ export function DuelFan({ left, right, onChoose, texts, fast = false }: { left: 
       style={{ touchAction: 'pan-y' }}
       onPanStart={() => {
         dragged.current = true
+        touched.current = true
+        x.stop()
       }}
       onPan={(_, info) => {
         if (!picked) x.set(info.offset.x)
@@ -338,7 +366,7 @@ function FanCard({
       <motion.div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
-        style={{ borderRadius: 'inherit', boxShadow: `0 0 0 3px ${color}, 0 0 26px 4px ${color}aa` }}
+        style={{ borderRadius: 'inherit', boxShadow: `0 0 0 2px ${color}, 0 0 10px 1px ${color}aa` }}
         initial={false}
         animate={{ opacity: picked === which ? 1 : 0 }}
         transition={{ duration: 0.12 }}

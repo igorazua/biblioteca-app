@@ -6,7 +6,7 @@ const TABS: { to: string; label: string; icon: IconName; center?: boolean; end?:
   { to: '/', label: 'Biblioteca', icon: 'library', end: true },
   { to: '/descubrir', label: 'Descubrir', icon: 'cards' },
   { to: WIZARD_PATH, label: WIZARD_NAME, icon: 'sparkle' },
-  { to: '/comparar', label: 'Comparar', icon: 'scale' },
+  { to: '/comparar', label: '¡Duelos!', icon: 'scale' },
   { to: '/perfil', label: 'Perfil', icon: 'user' },
 ]
 

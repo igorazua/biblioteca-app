@@ -19,6 +19,14 @@ function formatShelfNames(shelves: ShelfType[]): string {
   return `${names.slice(0, -1).join(', ')} y ${names[names.length - 1]}`
 }
 
+/** Color del % ordenado: verde desde el 80 %, luego amarillo, naranja y rojo. */
+export function pctColor(p: number): string {
+  if (p >= 80) return '#3ec878'
+  if (p >= 55) return '#e8c547'
+  if (p >= 30) return '#f2913a'
+  return '#ef4b4b'
+}
+
 export function CompareHome() {
   const nav = useNavigate()
   const overview = useCompareOverview()
@@ -97,7 +105,7 @@ export function CompareHome() {
   }, [nextDuel])
 
   // Título y subtítulo de la cabecera (T19 §4.2.2)
-  let title = 'Comparar'
+  let title = '¡Duelos!'
   let subtitle: string | undefined = undefined
 
   if (availableShelves.length === 0) {
@@ -129,7 +137,7 @@ export function CompareHome() {
   return (
     <div className="h-full flex flex-col bg-bg">
       <ScreenTitle
-        label="COMPARAR"
+        label="DUELOS"
         title={title}
         subtitle={subtitle}
       />
@@ -235,7 +243,7 @@ export function CompareHome() {
                     <div className="h-6 flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <span className="serif text-[18px] text-ink leading-none">{SHELF_LABEL[s].plural}</span>
-                        <span className={`text-meta ${o.ordenado === 100 ? 'text-ink font-medium' : 'text-mute'}`}>
+                        <span className="text-meta font-semibold tabular-nums" style={{ color: pctColor(o.ordenado) }}>
                           {o.ordenado} %
                         </span>
                       </div>
@@ -247,8 +255,8 @@ export function CompareHome() {
                     {/* Barra fina de 2 px a 8 px, relleno ink o accent si es la que más falta */}
                     <div className="mt-2 h-0.5 w-full bg-surface2 rounded-full overflow-hidden">
                       <div
-                        className={`h-full rounded-full transition-all ${idx === 0 ? 'bg-accent' : 'bg-ink'}`}
-                        style={{ width: `${Math.min(100, Math.max(0, o.ordenado))}%` }}
+                        className="h-full rounded-full transition-all"
+                        style={{ width: `${Math.min(100, Math.max(0, o.ordenado))}%`, background: pctColor(o.ordenado) }}
                       />
                     </div>
 

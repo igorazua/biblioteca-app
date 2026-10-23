@@ -31,6 +31,47 @@ export function saveDoubtfulItems(items: Record<string, number>): void {
   }
 }
 
+// «Pasar» (antes «No conozco ninguna»): pasar no descarta. Una obra solo pasa a dudosa (R × 0,5) cuando se ha pasado
+// PASSES_FOR_DOUBTFUL veces, contando todas las sesiones (Igor, 23/10).
+const PASSES_STORAGE_KEY = 'biblio_passed_items'
+export const PASSES_FOR_DOUBTFUL = 2
+
+let passedMem: Record<string, number> = {} // sin almacenamiento (tests, modo privado)
+
+export function loadPassedItems(): Record<string, number> {
+  try {
+    const raw = typeof localStorage !== 'undefined' ? localStorage.getItem(PASSES_STORAGE_KEY) : null
+    return raw ? JSON.parse(raw) : { ...passedMem }
+  } catch {
+    return { ...passedMem }
+  }
+}
+
+function savePassedItems(items: Record<string, number>): void {
+  passedMem = items
+  try {
+    if (typeof localStorage !== 'undefined') localStorage.setItem(PASSES_STORAGE_KEY, JSON.stringify(items))
+  } catch {
+    // ok
+  }
+}
+
+const normTitle = (t: string) =>
+  t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/^(the|el|la|los|las|le) /, '').trim()
+/** Clave de familia: el título antes de «:», « - » o «(», sin artículo (Carcassonne, Carcassonne: The Castle → «carcassonne»). */
+export function familyKey(it: Item): string {
+  return normTitle(it.title.split(/:| - | – |\(/)[0])
+}
+const creatorsOf = (it: Item) => (it.creator ?? '').split(',').map((c) => c.trim().toLowerCase()).filter(Boolean)
+/** Dos obras de la misma familia (misma saga, expansión o mismo autor) no deciden nada enfrentadas. */
+export function sameFamily(a: Item, b: Item): boolean {
+  const ka = familyKey(a)
+  const kb = familyKey(b)
+  if (ka && kb && (ka === kb || ka.startsWith(kb + ' ') || kb.startsWith(ka + ' '))) return true
+  const cb = new Set(creatorsOf(b))
+  return creatorsOf(a).some((c) => cb.has(c))
+}
+
 export interface DecideState {
   shelf: ShelfType
   answers: Answers
@@ -95,6 +136,8 @@ export interface DecideProposal {
   finalScore: number
   reasons: string[]
   fromFriends: boolean
+  /** las siguientes mejores candidatas, en orden («Ver otras candidatas») */
+  alternatives?: Item[]
 }
 
 export interface DecideInput {
@@ -372,7 +415,10 @@ export function nextDuel(
   }
 
   // Orientadores de la estantería aún no mostrados en la sesión (las obras ocultas no salen en duelos)
-  const orienters = items.filter((it) => it.type === shelf && !it.hidden && !shown.has(it.id))
+  // Las expansiones de un juego del catálogo («Carcassonne: The Castle» si existe «Carcassonne») no orientan: solo si son propias
+  const baseTitles = new Set(items.filter((it) => it.type === shelf && !it.title.includes(':')).map((it) => normTitle(it.title)))
+  const isExpansion = (it: Item) => shelf === 'boardgame' && it.title.includes(':') && baseTitles.has(familyKey(it))
+  const orienters = items.filter((it) => it.type === shelf && !it.hidden && !shown.has(it.id) && (!isExpansion(it) || isOwn(it)))
   if (orienters.length < 2) return null
 
   // Calcular R para cada orientador
@@ -536,7 +582,7 @@ export function nextDuel(
         for (const a of listA) {
           for (const b of listB) {
             if (a.id === b.id) continue
-            if (a.creator && b.creator && a.creator === b.creator) continue
+            if (sameFamily(a, b)) continue
 
             const hasOwn = isOwn(a) || isOwn(b)
             if (reqAtLeastOneOwn && !hasOwn) continue
@@ -605,7 +651,7 @@ export function nextDuel(
   for (let t = 0; t < maxTries; t++) {
     const a = fPool[Math.floor(rng() * fPool.length)]
     const b = fPool[Math.floor(rng() * fPool.length)]
-    if (a.id === b.id) continue
+    if (a.id === b.id || sameFamily(a, b)) continue
 
     if (currentPhase === 'F1' && ownInPool.length > 0) {
       if (wantBothOwn && ownInPool.length >= 2) {
@@ -641,14 +687,14 @@ export function nextDuel(
   if (candidatePairs.length === 0) {
     const sorted = [...fPool].sort((x, y) => (recogMap.get(y.id) ?? 0) - (recogMap.get(x.id) ?? 0))
     let a = sorted[0]
-    let b = sorted[1] ?? sorted[0]
+    let b = sorted.find((x) => x.id !== a.id && !sameFamily(a, x)) ?? sorted[1] ?? sorted[0]
     if (currentPhase === 'F1' && ownInPool.length > 0) {
       if (wantBothOwn && ownInPool.length >= 2) {
         a = ownInPool[0]
         b = ownInPool[1]
       } else {
         a = ownInPool[0]
-        b = sorted.find((x) => x.id !== a.id) ?? sorted[1] ?? a
+        b = sorted.find((x) => x.id !== a.id && !sameFamily(a, x)) ?? sorted.find((x) => x.id !== a.id) ?? sorted[1] ?? a
       }
     }
     return {
@@ -934,12 +980,20 @@ export function skipDuelUnknown(
   const currentPhase = state.phase || 'F1'
   const newShown = Array.from(new Set([...state.shown, itemA.id, itemB.id]))
 
-  // Ambas obras quedan marcadas como dudosas (R × 0.5 durante 90 días)
+  // Pasar no descarta: solo la obra que se ha pasado PASSES_FOR_DOUBTFUL veces queda dudosa (R × 0.5 durante 90 días)
   const now = Date.now()
+  const passed = loadPassedItems()
   const updatedDoubtful = { ...(state.doubtfulItems || {}) }
-  updatedDoubtful[itemA.id] = now
-  updatedDoubtful[itemB.id] = now
-  saveDoubtfulItems(updatedDoubtful)
+  let becameDoubtful = false
+  for (const id of [itemA.id, itemB.id]) {
+    passed[id] = (passed[id] ?? 0) + 1
+    if (passed[id] >= PASSES_FOR_DOUBTFUL) {
+      updatedDoubtful[id] = now
+      becameDoubtful = true
+    }
+  }
+  savePassedItems(passed)
+  if (becameDoubtful) saveDoubtfulItems(updatedDoubtful)
 
   const nextDuelsInF1 = currentPhase === 'F1' ? state.duelsInF1 + 1 : state.duelsInF1
 
@@ -972,7 +1026,8 @@ export function skipDuelUnknown(
     duelsInRound: state.duelsInRound + 1,
     duelsInF1: nextDuelsInF1,
     phase: nextPhase,
-    preferFameOrOwn: true,
+    // la red de seguridad (obras propias o muy famosas) solo si ya hay obras que no conoce
+    preferFameOrOwn: state.preferFameOrOwn || becameDoubtful,
     doubtfulItems: updatedDoubtful,
   }
 }
@@ -1093,6 +1148,7 @@ export function getProposal(
     finalScore: winner.finalScore,
     reasons,
     fromFriends: false,
+    alternatives: candidatesWithScore.slice(1, 11).map((c) => c.item),
   }
 }
 

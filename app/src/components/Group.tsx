@@ -25,8 +25,11 @@ export function Row({
   to,
   onClick,
   danger,
+  tint,
 }: {
   icon?: IconName
+  /** color del cuadradito del icono (Ajustes) */
+  tint?: string
   title: ReactNode
   sub?: ReactNode
   right?: ReactNode
@@ -37,7 +40,10 @@ export function Row({
   const body = (
     <>
       {icon && (
-        <span className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${danger ? 'bg-stamp-red/15 text-stamp-red' : 'bg-surface2 text-ink/80'}`}>
+        <span
+          className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${danger ? 'bg-stamp-red/15 text-stamp-red' : tint ? '' : 'bg-surface2 text-ink/80'}`}
+          style={tint && !danger ? { background: tint, color: '#fff' } : undefined}
+        >
           <Icon name={icon} size={18} />
         </span>
       )}

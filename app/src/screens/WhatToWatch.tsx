@@ -26,7 +26,7 @@ import { SHELVES, SHELF_LABEL, type Friend, type Item, type ShelfType } from '..
 import { Poster, posterLayoutId } from '../components/Poster'
 import { SwipePair, type Side } from '../components/SwipePair'
 import { RatingFlow } from '../components/RatingFlow'
-import { PlatformPicker, Toast } from '../components/ui'
+import { PlatformPicker, Sheet, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { ScreenTitle } from '../components/ScreenTitle'
 import { Button } from '../components/Button'
@@ -87,6 +87,7 @@ export function WhatToWatch() {
   const [rejected, setRejected] = useState<string[]>(snap?.rejected ?? [])
   const [rating, setRating] = useState<string | null>(null)
   const [toast, setToast] = useState<string | null>(null)
+  const [showAlts, setShowAlts] = useState(false)
   const timer = useRef<number | undefined>(undefined)
 
   const [decideState, setDecideState] = useState<DecideState | null>(null)
@@ -101,7 +102,7 @@ export function WhatToWatch() {
   const [showUnknownBtn, setShowUnknownBtn] = useState(false)
   const unknownTimerRef = useRef<number | null>(null)
 
-  // Botón «No conozco ninguna» tras 2,5 segundos sin elegir (T19 §1.3)
+  // Botón «Pasar» tras 2,5 segundos sin elegir (T19 §1.3; antes «No conozco ninguna»)
   useEffect(() => {
     setShowUnknownBtn(false)
     if (unknownTimerRef.current) {
@@ -622,7 +623,7 @@ export function WhatToWatch() {
                     onClick={onShaperUnknown}
                     className="min-h-[42px] px-5 rounded-full bg-[#ffb340] text-[#1a1206] text-[14px] font-semibold active:scale-95 transition-transform select-none shadow-[0_0_0_1px_rgb(255_179_64/0.5),0_0_22px_2px_rgb(255_150_40/0.45)]"
                   >
-                    No conozco ninguna
+                    Pasar
                   </motion.button>
                 )}
               </AnimatePresence>
@@ -662,7 +663,12 @@ export function WhatToWatch() {
             <p className="text-body text-mute mt-1.5 line-clamp-2">{currentItem.synopsis}</p>
           </div>
         </Link>
-        <div className="flex gap-3 mt-4">
+        {!!proposal?.alternatives?.length && (
+          <button onClick={() => setShowAlts(true)} className="self-center mt-3 min-h-[36px] px-3 text-meta text-accent font-medium flex items-center gap-1 active:opacity-70">
+            Ver otras {proposal.alternatives.length} candidatas <Icon name="chevron" size={14} />
+          </button>
+        )}
+        <div className="flex gap-3 mt-2">
           <Button variant="secondary" onClick={seguir} className="flex-1">
             Seguir buscando
           </Button>
@@ -725,6 +731,34 @@ export function WhatToWatch() {
       {body}
       {rating && <RatingFlow key={rating} itemId={rating} withStars onDone={(m) => { setRating(null); if (m) setToast(m); reset() }} />}
       <AnimatePresence>{toast && <Toast key={toast} message={toast} onDone={() => setToast(null)} />}</AnimatePresence>
+      {showAlts && proposal?.alternatives && (
+        <Sheet label="Otras candidatas" onClose={() => setShowAlts(false)} height="70%">
+          <h3 className="text-title text-ink">Otras candidatas</h3>
+          <p className="text-meta mb-3">Por orden, según lo que has elegido. Toca una para que sea la propuesta.</p>
+          <ul className="space-y-1 overflow-y-auto -mx-2" style={{ maxHeight: '56vh' }}>
+            {proposal.alternatives.map((it, i) => (
+              <li key={it.id}>
+                <button
+                  onClick={() => {
+                    const rest = [proposal.item, ...proposal.alternatives!.filter((x) => x.id !== it.id)]
+                    setProposal({ ...proposal, item: it, reasons: ['Elegida de tus otras candidatas'], alternatives: rest })
+                    setCurrent(it.id)
+                    setShowAlts(false)
+                  }}
+                  className="w-full flex items-center gap-3 px-2 py-2 rounded-xl text-left active:bg-surface2"
+                >
+                  <span className="w-5 text-center text-meta tabular-nums">{i + 2}</span>
+                  <Poster item={it} showTitle={false} className="w-10 aspect-[2/3] rounded-md shrink-0" />
+                  <span className="flex-1 min-w-0">
+                    <span className="block serif text-item text-ink truncate">{it.title}</span>
+                    <span className="block text-meta truncate">{it.year} · {it.creator}</span>
+                  </span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </Sheet>
+      )}
     </div>
   )
 }
