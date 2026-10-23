@@ -587,26 +587,32 @@ export function WhatToWatch() {
     )
     body = (
       <div className="flex-1 min-h-0 flex flex-col px-5 pb-6">
-        <SwipePair left={shaperSide(pair[0])} right={shaperSide(pair[1])} onChoose={onShaperChoose} kind="decide" />
-        <div className="h-11 flex items-center justify-center shrink-0">
-          <AnimatePresence>
-            {showUnknownBtn && (
-              <motion.button
-                key="unknown-btn"
-                type="button"
-                initial={{ opacity: 0, y: 8, scale: 0.96 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: 4, scale: 0.96 }}
-                transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-                onClick={onShaperUnknown}
-                className="min-h-[40px] px-5 py-2 rounded-full bg-surface2/90 hover:bg-surface2 border border-line text-meta text-mute hover:text-ink active:scale-95 transition-all flex items-center gap-2 cursor-pointer shadow-sm hover:border-line/80 font-medium select-none"
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-mute/60" />
-                <span>No conozco ninguna</span>
-              </motion.button>
-            )}
-          </AnimatePresence>
-        </div>
+        <SwipePair
+          left={shaperSide(pair[0])}
+          right={shaperSide(pair[1])}
+          onChoose={onShaperChoose}
+          kind="decide"
+          extra={
+            <div className="h-12 flex items-center justify-center shrink-0">
+              <AnimatePresence>
+                {showUnknownBtn && (
+                  <motion.button
+                    key="unknown-btn"
+                    type="button"
+                    initial={{ opacity: 0, y: 8, scale: 0.96 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 4, scale: 0.96 }}
+                    transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+                    onClick={onShaperUnknown}
+                    className="min-h-[42px] px-5 rounded-full bg-[#ffb340] text-[#1a1206] text-[14px] font-semibold active:scale-95 transition-transform select-none shadow-[0_0_0_1px_rgb(255_179_64/0.5),0_0_22px_2px_rgb(255_150_40/0.45)]"
+                  >
+                    No conozco ninguna
+                  </motion.button>
+                )}
+              </AnimatePresence>
+            </div>
+          }
+        />
       </div>
     )
   } else if (phase === 'propose' && currentItem) {

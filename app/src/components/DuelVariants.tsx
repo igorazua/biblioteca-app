@@ -60,6 +60,8 @@ export function useDuelCopy(): [DuelCopy, (c: DuelCopy) => void] {
 
 /** Milisegundos que dura la confirmación antes de pasar al siguiente duelo (el ✓ se dibuja despacio). */
 export const pickDelay = (reduce: boolean | null) => (reduce ? 600 : 1050)
+/** En Comparar se encadenan duelos a toda velocidad: solo lo justo para ver la carta elegida moverse. */
+const FAST_DELAY = 170
 
 /** «Gana *título*» con el título en cursiva serif. */
 export function Chosen({ texts, title }: { texts: DuelTexts; title: string }) {
@@ -169,7 +171,7 @@ type FanLayout = ReturnType<typeof fanLayout>
  * de la izquierda, a la izquierda la de la derecha («empujarla hacia el centro»). La elegida sigue una trayectoria fija
  * hacia el centro, se endereza y crece hasta casi llenar la pantalla; la otra se apaga. Todo va ligado al progreso del gesto.
  */
-export function DuelFan({ left, right, onChoose, texts }: { left: Side; right: Side; onChoose: (w: 'a' | 'b') => void; texts: DuelTexts }) {
+export function DuelFan({ left, right, onChoose, texts, fast = false }: { left: Side; right: Side; onChoose: (w: 'a' | 'b') => void; texts: DuelTexts; /** sin confirmación central y casi sin espera (Comparar) */ fast?: boolean }) {
   const reduce = useReducedMotion()
   const box = useRef<HTMLDivElement>(null)
   const size = useBoxSize(box)
@@ -199,8 +201,8 @@ export function DuelFan({ left, right, onChoose, texts }: { left: Side; right: S
     setPicked(w)
     haptic('success')
     const to = w === 'a' ? W() * FAN_COMMIT : -W() * FAN_COMMIT
-    animate(x, to, reduce ? { duration: 0 } : { type: 'spring', stiffness: 300, damping: 30 })
-    setTimeout(() => onChoose(w), pickDelay(reduce))
+    animate(x, to, reduce ? { duration: 0 } : fast ? { duration: 0.16, ease: 'easeOut' } : { type: 'spring', stiffness: 300, damping: 30 })
+    setTimeout(() => onChoose(w), fast ? FAST_DELAY : pickDelay(reduce))
   }
 
   return (
@@ -252,7 +254,7 @@ export function DuelFan({ left, right, onChoose, texts }: { left: Side; right: S
         )
       })}
 
-      {picked && (
+      {picked && !fast && (
         <PickStrip
           color={picked === 'a' ? '#F5B544' : '#9A86FF'} // DUEL_LEFT / DUEL_RIGHT (SwipePair.tsx)
           card={{ left: (L.w - L.fitW) / 2, top: (L.h - L.fitW * 1.5) / 2, w: L.fitW, h: L.fitW * 1.5, r: 18 * (L.fitW / L.cardW) }}

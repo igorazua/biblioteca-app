@@ -12,36 +12,9 @@ import { COUNTRIES } from '../lib/countries'
 import { Avatar, PlatformPicker, Toast } from '../components/ui'
 import { Group } from '../components/Group'
 import { Icon } from '../components/Icon'
+import { AvatarCropper } from '../components/AvatarCropper'
 import { ScreenTitle } from '../components/ScreenTitle'
 import { Button } from '../components/Button'
-
-async function processAvatarImage(file: File): Promise<Blob> {
-  return new Promise((resolve, reject) => {
-    const img = new Image()
-    const url = URL.createObjectURL(file)
-    img.onload = () => {
-      URL.revokeObjectURL(url)
-      const canvas = document.createElement('canvas')
-      canvas.width = 256
-      canvas.height = 256
-      const ctx = canvas.getContext('2d')
-      if (!ctx) {
-        reject(new Error('Canvas context error'))
-        return
-      }
-      const size = Math.min(img.naturalWidth, img.naturalHeight)
-      const sx = (img.naturalWidth - size) / 2
-      const sy = (img.naturalHeight - size) / 2
-      ctx.drawImage(img, sx, sy, size, size, 0, 0, 256, 256)
-      canvas.toBlob((blob) => (blob ? resolve(blob) : reject(new Error('Failed to create blob'))), 'image/webp', 0.85)
-    }
-    img.onerror = (err) => {
-      URL.revokeObjectURL(url)
-      reject(err)
-    }
-    img.src = url
-  })
-}
 
 const fieldCls =
   'w-full bg-surface2 border border-line rounded-xl px-3.5 min-h-[44px] text-sm focus:outline-none focus:border-accent'
@@ -65,17 +38,23 @@ export function EditProfile() {
 
   const avatarInputRef = useRef<HTMLInputElement>(null)
   const [uploadingAvatar, setUploadingAvatar] = useState(false)
+  const [cropFile, setCropFile] = useState<File | null>(null)
 
   const maxYear = new Date().getFullYear() - 6
   const yearNum = parseInt(birthYear, 10)
   const yearInvalid = birthYear !== '' && !(yearNum >= 1930 && yearNum <= maxYear)
 
-  const handleAvatarFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  // elegir archivo → encuadrar → subir lo que se ve en el círculo
+  const handleAvatarFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
-    if (!file) return
+    if (avatarInputRef.current) avatarInputRef.current.value = ''
+    if (file) setCropFile(file)
+  }
+
+  const uploadAvatar = async (blob: Blob) => {
+    setCropFile(null)
     setUploadingAvatar(true)
     try {
-      const blob = await processAvatarImage(file)
       if (user && supabase) {
         const filePath = `${user.id}/avatar.webp`
         const { error } = await supabase.storage.from('biblio-avatars').upload(filePath, blob, { contentType: 'image/webp', upsert: true })
@@ -95,7 +74,6 @@ export function EditProfile() {
       setToast('No se pudo subir la foto. Reintentar.')
     } finally {
       setUploadingAvatar(false)
-      if (avatarInputRef.current) avatarInputRef.current.value = ''
     }
   }
 
@@ -262,6 +240,7 @@ export function EditProfile() {
         )}
       </div>
 
+      {cropFile && <AvatarCropper file={cropFile} onCancel={() => setCropFile(null)} onDone={uploadAvatar} />}
       <AnimatePresence>{toast && <Toast key={toast} message={toast} onDone={() => setToast(null)} />}</AnimatePresence>
     </div>
   )

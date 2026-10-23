@@ -101,7 +101,8 @@ export const SwipeDeck = forwardRef<DeckHandle, Props>(function SwipeDeck({ deck
 
   if (!top) return null
   return (
-    <div ref={box} className="relative w-full h-full">
+    // la tarjeta nunca más ancha que un póster (2:3 + el hueco de 30 px del montón): si falta alto, se estrecha
+    <div ref={box} className="relative h-full max-w-full mx-auto" style={{ aspectRatio: '2 / 3.15' }}>
       {deck[2] && (
         <motion.div className="absolute inset-x-0 top-0 bottom-[30px]" style={{ scale: s3, y: y3, transformOrigin: '50% 100%' }}>
           <CardFace item={deck[2]} bubbles={false} />

@@ -281,9 +281,10 @@ export function Discover() {
             onClick={undo}
             disabled={!hasHistory || blocked}
             aria-label="Deshacer"
-            className="w-11 h-11 rounded-full bg-surface border border-line flex items-center justify-center text-mute disabled:opacity-25 active:scale-90 transition-transform"
+            title="Deshacer"
+            className="w-11 h-11 rounded-full bg-accent text-accent-ink flex items-center justify-center disabled:bg-surface disabled:text-mute disabled:opacity-40 active:scale-90 transition-transform"
           >
-            <Icon name="undo" size={18} />
+            <Icon name="rotateCcw" size={19} strokeWidth={2.4} />
           </button>
           <ActionBtn
             label="No me interesa"

@@ -9,6 +9,7 @@
 1. **Menos es más.** Cada pantalla tiene **una** cosa principal. Lo secundario es más pequeño, gris y está más lejos.
 2. **El contenido manda.** Los pósteres y los títulos son la decoración; la interfaz se aparta.
 3. **Sin efectos.** Nada de cristales (`backdrop-blur`), brillos, resplandores, degradados decorativos ni bordes iluminados. Solo hay dos excepciones: el oscurecido sobre un póster para que se lea un texto y la sombra de las hojas que flotan.
+   - **En revisión (Igor, 23/10/2026):** a Igor la app le parece plana y «sin efectos»; esta regla se va a replantear con la nueva dirección visual. Mientras tanto hay dos excepciones más: el resplandor ámbar del botón «No conozco ninguna» de Decidir y el círculo naranja con el puesto sobre los pósteres de la biblioteca. No las quites.
 4. **Un único sistema.** Los mismos tamaños, espacios y componentes en todas las pantallas. Nada de valores sueltos (`text-[13.5px]`, `mt-[7px]`).
 5. **Texto nunca encima del póster,** salvo en una franja oscurecida pensada para eso.
 

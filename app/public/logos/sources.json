@@ -1,0 +1,47 @@
+{
+  "prime": {
+    "src": "https://www.google.com/s2/favicons?domain=primevideo.com&sz=256",
+    "domain": "primevideo.com",
+    "fetchedAt": "2026-10-23"
+  },
+  "disney": {
+    "src": "https://www.google.com/s2/favicons?domain=disneyplus.com&sz=256",
+    "domain": "disneyplus.com",
+    "fetchedAt": "2026-10-23"
+  },
+  "max": {
+    "src": "https://www.google.com/s2/favicons?domain=max.com&sz=256",
+    "domain": "max.com",
+    "fetchedAt": "2026-10-23"
+  },
+  "movistar": {
+    "src": "https://www.google.com/s2/favicons?domain=movistarplus.es&sz=256",
+    "domain": "movistarplus.es",
+    "fetchedAt": "2026-10-23"
+  },
+  "filmin": {
+    "src": "https://www.google.com/s2/favicons?domain=filmin.es&sz=256",
+    "domain": "filmin.es",
+    "fetchedAt": "2026-10-23"
+  },
+  "skyshowtime": {
+    "src": "https://www.google.com/s2/favicons?domain=skyshowtime.com&sz=256",
+    "domain": "skyshowtime.com",
+    "fetchedAt": "2026-10-23"
+  },
+  "kindle": {
+    "src": "https://www.google.com/s2/favicons?domain=amazon.com&sz=256",
+    "domain": "amazon.com",
+    "fetchedAt": "2026-10-23"
+  },
+  "ytmusic": {
+    "src": "https://www.google.com/s2/favicons?domain=music.youtube.com&sz=256",
+    "domain": "music.youtube.com",
+    "fetchedAt": "2026-10-23"
+  },
+  "mal": {
+    "src": "https://www.google.com/s2/favicons?domain=myanimelist.net&sz=256",
+    "domain": "myanimelist.net",
+    "fetchedAt": "2026-10-23"
+  }
+}

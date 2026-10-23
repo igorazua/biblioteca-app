@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { getItem } from '../data/catalog'
 import { useStore, starsOfEntries } from '../store/useStore'
 import { SHELVES, SHELF_LABEL, type Item, type ShelfType, type UserEntry, type DuelRecord } from '../types'
@@ -12,7 +12,6 @@ import {
 import { SwipePair, type Side } from '../components/SwipePair'
 import { Poster } from '../components/Poster'
 import { CommentSheet } from '../components/RatingFlow'
-import { Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { ScreenTitle } from '../components/ScreenTitle'
 import { Button } from '../components/Button'
@@ -93,7 +92,11 @@ export function CompareSession() {
   const startOrdenado = useRef<number>(0)
   const [commentFor, setCommentFor] = useState<string | null>(null)
   const [undo, setUndo] = useState<Snapshot | null>(null)
-  const [toast, setToast] = useState<string | null>(null)
+  // Aviso discreto del último duelo: cuál sube y cuál baja (no bloquea el siguiente)
+  const [flash, setFlash] = useState<{ up: string; down: string; n: number } | null>(null)
+  // El último par se queda montado mientras se planifica el siguiente, para que las cartas no parpadeen
+  const lastPair = useRef<{ left: Item; right: Item; leftIsSubject: boolean } | null>(null)
+  const lastPairKey = useRef(0)
 
   // Registrar visita y recencia al abrir la estantería
   useEffect(() => {
@@ -200,6 +203,17 @@ export function CompareSession() {
       ? { left: itB, right: itA, leftIsSubject: false }
       : { left: itA, right: itB, leftIsSubject: true }
   }, [currentDuel, count])
+  if (pair) {
+    lastPair.current = pair
+    lastPairKey.current = count
+  }
+  const shownPair = pair ?? (emptyState === 'none' && !summary ? lastPair.current : null)
+
+  useEffect(() => {
+    if (!flash) return
+    const t = window.setTimeout(() => setFlash(null), 1400)
+    return () => window.clearTimeout(t)
+  }, [flash])
 
   const onChoose = (w: 'a' | 'b') => {
     if (!currentDuel || !pair) return
@@ -218,6 +232,8 @@ export function CompareSession() {
       activePlacement,
       duelKey: { a: pair.left.id, b: pair.right.id },
     })
+
+    setFlash({ up: winnerId, down: loserId, n: count })
 
     // Registrar duelo y uso
     st.recordDuel(shelf, pair.left.id, pair.right.id, winnerId)
@@ -244,9 +260,6 @@ export function CompareSession() {
       const res = answerRefine(st.rankings[shelf] ?? [], refineRef.current, currentDuel.pair, subjectWon)
       refineRef.current = res.state
       st.applyRanking(shelf, res.ranking)
-      if (res.jumped) {
-        setToast(currentDuel.pair.kind === 'jumpUp' ? '¡Sube mucho!' : 'Baja bastante')
-      }
       setCurrentDuel(null)
     }
 
@@ -276,6 +289,7 @@ export function CompareSession() {
     setActivePlacement(undo.activePlacement)
     setSummary(false)
     setUndo(null)
+    setFlash(null)
   }
 
   // Resumen al terminar los 7 duelos
@@ -327,9 +341,11 @@ export function CompareSession() {
           undo && !summary ? (
             <button
               onClick={doUndo}
-              className="text-meta text-mute hover:text-ink hover:underline flex items-center gap-1 active:scale-95"
+              aria-label="Deshacer el último duelo"
+              title="Deshacer"
+              className="w-9 h-9 rounded-full bg-accent text-accent-ink flex items-center justify-center active:scale-90 transition-transform"
             >
-              <Icon name="undo" size={14} /> Deshacer
+              <Icon name="rotateCcw" size={18} strokeWidth={2.4} />
             </button>
           ) : undefined
         }
@@ -356,8 +372,27 @@ export function CompareSession() {
               </Button>
             </div>
           </div>
-        ) : pair ? (
-          <SwipePair left={sideOf(pair.left)} right={sideOf(pair.right)} onChoose={onChoose} kind="rank" />
+        ) : shownPair ? (
+          <>
+            <div className="h-6 -mt-3 mb-1 flex items-center justify-center shrink-0" aria-live="polite">
+              <AnimatePresence mode="wait">
+                {flash && (
+                  <motion.div
+                    key={flash.n}
+                    initial={{ opacity: 0, y: 4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.15 }}
+                    className="flex items-center gap-4 text-[13px] min-w-0 max-w-full"
+                  >
+                    <FlashName id={flash.up} up />
+                    <FlashName id={flash.down} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+            <SwipePair key={lastPairKey.current} left={sideOf(shownPair.left)} right={sideOf(shownPair.right)} onChoose={onChoose} kind="rank" />
+          </>
         ) : emptyState === 'complete' ? (
           <div className="flex-1 flex flex-col items-center justify-center text-center gap-3 px-5">
             <h2 className="text-title text-ink">
@@ -394,8 +429,20 @@ export function CompareSession() {
       </div>
 
       {commentFor && <CommentSheet key={commentFor + count} itemId={commentFor} onClose={() => setCommentFor(null)} />}
-      <AnimatePresence>{toast && <Toast key={toast} message={toast} onDone={() => setToast(null)} />}</AnimatePresence>
     </div>
+  )
+}
+
+/** «▲ Título» en verde o «▼ Título» en rojo: confirma el duelo sin estorbar. */
+function FlashName({ id, up = false }: { id: string; up?: boolean }) {
+  const it = getItem(id)
+  if (!it) return null
+  return (
+    <span className="flex items-center gap-1 min-w-0">
+      <span aria-hidden style={{ color: up ? '#3ec878' : '#ef4b4b' }}>{up ? '▲' : '▼'}</span>
+      <span className="truncate max-w-[9.5rem] text-ink/80">{it.title}</span>
+      <span className="sr-only">{up ? 'sube' : 'baja'}</span>
+    </span>
   )
 }
 

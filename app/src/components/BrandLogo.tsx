@@ -11,6 +11,8 @@ export interface BrandLogoProps {
  * Logos reales vectoriales de las plataformas para Conectar e Importar.
  * Sin iniciales genéricas en cuadrados ni insignias cutres: cada marca con su identidad real.
  */
+const HOSTED_LOGOS = new Set(['prime', 'disney', 'max', 'movistar', 'filmin', 'skyshowtime', 'kindle', 'ytmusic', 'mal'])
+
 export function BrandLogo({ id, size = 32, className = '', style }: BrandLogoProps) {
   switch (id) {
     case 'letterboxd':
@@ -189,6 +191,18 @@ export function BrandLogo({ id, size = 32, className = '', style }: BrandLogoPro
       )
 
     default:
+      // iconos descargados y alojados por nosotros (scripts/fetch-brand-logos.mjs)
+      if (HOSTED_LOGOS.has(id))
+        return (
+          <img
+            src={`/logos/${id}.png`}
+            alt=""
+            aria-hidden
+            draggable={false}
+            className={`shrink-0 rounded-xl object-cover border border-white/10 ${className}`}
+            style={{ width: size, height: size, ...style }}
+          />
+        )
       return (
         <span
           className={`inline-flex items-center justify-center shrink-0 rounded-xl bg-surface2 border border-line text-ink font-semibold text-sm ${className}`}
