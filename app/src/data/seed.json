@@ -112677,13 +112677,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 4.5,
       "notoriety": 0.01,
@@ -112704,7 +112707,9 @@
       "fameLlm": {
         "ES": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:long-shadow-2014",
@@ -125881,13 +125886,16 @@
         "synopsis": "wikidata",
         "fameLlm": "llm-infer",
         "fameTier": "computed",
-        "pageviews": "wikimedia-api"
+        "pageviews": "wikimedia-api",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "isConsumerWork": 0.95
       },
       "popPct": 21.1,
       "notoriety": 0.25,
@@ -125915,7 +125923,9 @@
         "de": 0,
         "it": 0,
         "pt": 0
-      }
+      },
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:rugrats-1991",
@@ -139820,13 +139830,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 7.3,
       "notoriety": 0.01,
@@ -139847,7 +139860,9 @@
       "fameLlm": {
         "ES": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:crowd-control-2014",
@@ -139890,14 +139905,17 @@
         "wikiLangs": "wikidata",
         "fameLlm": "llm-infer",
         "pageviews": "wikimedia-api",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "isConsumerWork": 0.95
       },
       "popPct": 15.9,
       "notoriety": 0.01,
@@ -139929,7 +139947,9 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:fake-off-2014",
@@ -139980,13 +140000,16 @@
         "ongoing": "tvmaze",
         "fameLlm": "llm-infer",
         "pageviews": "wikimedia-api",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "isConsumerWork": 0.95
       },
       "popPct": 19.8,
       "notoriety": 0.23,
@@ -140011,7 +140034,9 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:euros-of-hollywood-2014",
@@ -140065,13 +140090,16 @@
         "ongoing": "tvmaze",
         "fameLlm": "llm-infer",
         "pageviews": "wikimedia-api",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "isConsumerWork": 0.95
       },
       "popPct": 20.1,
       "notoriety": 0.09,
@@ -140096,7 +140124,9 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:godfather-of-pittsburgh-2014",
@@ -140128,13 +140158,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 7.4,
       "notoriety": 0.01,
@@ -140155,7 +140188,9 @@
       "fameLlm": {
         "ES": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:booze-traveler-2014",
@@ -140207,13 +140242,16 @@
         "synopsis": "wikidata",
         "fameLlm": "llm-infer",
         "fameTier": "computed",
-        "pageviews": "wikimedia-api"
+        "pageviews": "wikimedia-api",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "isConsumerWork": 0.95
       },
       "popPct": 23.1,
       "notoriety": 0.09,
@@ -140241,7 +140279,9 @@
         "de": 0,
         "it": 0,
         "pt": 0
-      }
+      },
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:eric-greenspan-is-hungry-2014",
@@ -140274,13 +140314,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "generated",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 7.5,
       "notoriety": 0.01,
@@ -140301,7 +140344,9 @@
       "fameLlm": {
         "ES": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:air-warriors-2014",
@@ -141003,13 +141048,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 7.7,
       "notoriety": 0.01,
@@ -141030,7 +141078,9 @@
       "fameLlm": {
         "ES": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:allegiance-2015",
@@ -141303,13 +141353,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "generated",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 8.2,
       "notoriety": 0.25,
@@ -141330,7 +141383,9 @@
       "fameLlm": {
         "ES": 0.25
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:younger-2015",
@@ -141537,13 +141592,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 8.3,
       "notoriety": 0.01,
@@ -141564,7 +141622,9 @@
       "fameLlm": {
         "ES": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:a-d-the-bible-continues-2015",
@@ -141770,13 +141830,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 8.4,
       "notoriety": 0.01,
@@ -141797,7 +141860,9 @@
       "fameLlm": {
         "ES": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:kitchen-inferno-2014",
@@ -141829,13 +141894,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 8.5,
       "notoriety": 0.25,
@@ -141856,7 +141924,9 @@
       "fameLlm": {
         "ES": 0.25
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:murder-book-2014",
@@ -141972,13 +142042,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 8.6,
       "notoriety": 0.01,
@@ -141999,7 +142072,9 @@
       "fameLlm": {
         "ES": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:momsters-when-moms-go-bad-2014",
@@ -142030,13 +142105,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 8.7,
       "notoriety": 0.01,
@@ -142056,7 +142134,9 @@
       "fameLlm": {
         "ES": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:food-truck-face-off-2014",
@@ -142359,13 +142439,16 @@
         "ongoing": "tvmaze",
         "fameLlm": "llm-infer",
         "pageviews": "wikimedia-api",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "isConsumerWork": 0.95
       },
       "popPct": 14.5,
       "notoriety": 0.01,
@@ -142391,7 +142474,9 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:girlfriends-guide-to-divorce-2014",
@@ -142511,13 +142596,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 8.8,
       "notoriety": 0.01,
@@ -142537,7 +142625,9 @@
       "fameLlm": {
         "ES": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:hitler-the-junkie-2014",
@@ -142641,13 +142731,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 8.9,
       "notoriety": 0.25,
@@ -142668,7 +142761,9 @@
       "fameLlm": {
         "ES": 0.25
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:amish-renogades-2014",
@@ -142701,13 +142796,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 9,
       "notoriety": 0.25,
@@ -142728,7 +142826,9 @@
       "fameLlm": {
         "ES": 0.25
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:the-carbonaro-effect-2014",
@@ -142927,13 +143027,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 9.1,
       "notoriety": 0.01,
@@ -142954,7 +143057,9 @@
       "fameLlm": {
         "ES": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:friends-of-the-people-2014",
@@ -143067,13 +143172,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 9.2,
       "notoriety": 0.25,
@@ -143093,7 +143201,9 @@
       "fameLlm": {
         "ES": 0.25
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:nail-d-it-2014",
@@ -143125,13 +143235,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 9.3,
       "notoriety": 0.01,
@@ -143152,7 +143265,9 @@
       "fameLlm": {
         "ES": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:the-red-tent-2014",
@@ -143359,13 +143474,16 @@
         "ongoing": "tvmaze",
         "fameLlm": "llm-infer",
         "pageviews": "wikimedia-api",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "isConsumerWork": 0.95
       },
       "popPct": 19.4,
       "notoriety": 0.08,
@@ -143390,7 +143508,9 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:lucha-underground-2014",
@@ -143524,13 +143644,16 @@
         "synopsis": "wikidata",
         "fameLlm": "llm-infer",
         "fameTier": "computed",
-        "pageviews": "wikimedia-api"
+        "pageviews": "wikimedia-api",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "isConsumerWork": 0.95
       },
       "popPct": 18.2,
       "notoriety": 0.08,
@@ -143558,7 +143681,9 @@
         "de": 0,
         "it": 0,
         "pt": 0
-      }
+      },
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:ally-mcbeal-1997",
@@ -144153,13 +144278,16 @@
         "ongoing": "tvmaze",
         "fameLlm": "llm-infer",
         "pageviews": "wikimedia-api",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "isConsumerWork": 0.95
       },
       "popPct": 16,
       "notoriety": 0.01,
@@ -144184,7 +144312,9 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:leverage-2008",
@@ -149764,13 +149894,16 @@
         "ongoing": "tvmaze",
         "fameLlm": "llm-infer",
         "pageviews": "wikimedia-api",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "isConsumerWork": 0.95
       },
       "popPct": 19.5,
       "notoriety": 0.08,
@@ -149794,7 +149927,9 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:zoo-2015",
@@ -157416,13 +157551,16 @@
         "ongoing": "tvmaze",
         "fameLlm": "llm-infer",
         "pageviews": "wikimedia-api",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "isConsumerWork": 0.95
       },
       "popPct": 16.4,
       "notoriety": 0.25,
@@ -157447,7 +157585,9 @@
         "it": 0,
         "pt": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:dirty-jobs-2003",
@@ -157948,13 +158088,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 11.4,
       "notoriety": 0.25,
@@ -157975,7 +158118,9 @@
       "fameLlm": {
         "ES": 0.25
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:dawson-s-creek-1998",
@@ -160527,13 +160672,16 @@
         "ongoing": "tvmaze",
         "posterUrl": "scrape:static.tvmaze.com",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
-        "fameLlm": 0.9
+        "fameLlm": 0.9,
+        "isConsumerWork": 0.95
       },
       "popPct": 12,
       "notoriety": 0.01,
@@ -160554,7 +160702,9 @@
       "fameLlm": {
         "ES": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:chips-1977",
@@ -160765,14 +160915,17 @@
         "ongoing": "tvmaze",
         "posterUrl": "scrape:m.media-amazon.com",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "posterUrl": 0.95
+        "posterUrl": 0.95,
+        "isConsumerWork": 0.95
       },
       "popPct": 12.1,
       "notoriety": 0.01,
@@ -160793,7 +160946,9 @@
       "fameLlm": {
         "ES": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:8-out-of-10-cats-does-countdown-2012",
@@ -161068,13 +161223,16 @@
         "synopsis": "wikidata",
         "fameLlm": "llm-infer",
         "fameTier": "computed",
-        "pageviews": "wikimedia-api"
+        "pageviews": "wikimedia-api",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "isConsumerWork": 0.95
       },
       "popPct": 22.4,
       "notoriety": 0.09,
@@ -161101,7 +161259,9 @@
         "de": 0,
         "it": 0,
         "pt": 48
-      }
+      },
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "series:top-chef-duels-2014",
@@ -180748,14 +180908,17 @@
         "titles": "localized",
         "schoolReading": "scrape:listas-lectura-eso-bachillerato",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "schoolReading": 0.95
+        "schoolReading": 0.95,
+        "isConsumerWork": 0.95
       },
       "popPct": 39.2,
       "notoriety": 0.5,
@@ -180774,7 +180937,9 @@
       "fameLlm": {
         "ES": 0.5
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "book:wuthering-heights-1846",
@@ -201921,14 +202086,17 @@
         "titles": "localized",
         "schoolReading": "scrape:listas-lectura-eso-bachillerato",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "schoolReading": 0.95
+        "schoolReading": 0.95,
+        "isConsumerWork": 0.95
       },
       "popPct": 43,
       "notoriety": 0.5,
@@ -201947,7 +202115,9 @@
       "fameLlm": {
         "ES": 0.5
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "book:men-are-from-mars-women-are-from-venus-1992",
@@ -208706,14 +208876,17 @@
         "titles": "localized",
         "schoolReading": "scrape:listas-lectura-eso-bachillerato",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "schoolReading": 0.95
+        "schoolReading": 0.95,
+        "isConsumerWork": 0.95
       },
       "popPct": 24.5,
       "notoriety": 0.5,
@@ -208732,7 +208905,9 @@
       "fameLlm": {
         "ES": 0.5
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "book:eragon-2000",
@@ -216732,14 +216907,17 @@
         "titles": "localized",
         "schoolReading": "scrape:listas-lectura-eso-bachillerato",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "schoolReading": 0.95
+        "schoolReading": 0.95,
+        "isConsumerWork": 0.95
       },
       "popPct": 5.1,
       "notoriety": 0.5,
@@ -216758,7 +216936,9 @@
       "fameLlm": {
         "ES": 0.5
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "book:the-dragonet-prophecy-2012",
@@ -237421,14 +237601,17 @@
         "titles": "localized",
         "schoolReading": "scrape:listas-lectura-eso-bachillerato",
         "fameLlm": "llm-infer",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "hidden": "manual",
+        "isConsumerWork": "llm-infer"
       },
       "conf": {
         "originCountry": 0.85,
         "originalLanguage": 0.85,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "schoolReading": 0.95
+        "schoolReading": 0.95,
+        "isConsumerWork": 0.95
       },
       "popPct": 5.9,
       "notoriety": 0.75,
@@ -237448,7 +237631,9 @@
       "fameLlm": {
         "ES": 0.75
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "hidden": true,
+      "isConsumerWork": false
     },
     {
       "id": "book:kritik-der-reinen-vernunft-1781",

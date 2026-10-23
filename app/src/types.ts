@@ -48,6 +48,8 @@ export interface Item {
   fameTier?: Record<string, 1 | 2 | 3 | 4> | 1 | 2 | 3 | 4 // nivel de fama calibrado (1=superfamosa a 4=nicho)
   trend?: Record<string, number> | number
   isCanon?: boolean
+  isConsumerWork?: boolean
+  hidden?: boolean
   schoolReading?: Record<string, boolean> | boolean
   pageviews?: Record<string, number> | number
   src?: Record<string, string> // procedencia de cada metadato

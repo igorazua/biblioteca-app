@@ -201,8 +201,9 @@ export function initDecideSession(input: DecideInput): DecideState {
   const isRepeat = asStr(answers.seen) === 'vista'
   const source = asStr(answers.source)
 
-  // 1. Filtrar bolsa de candidatas con fallback por niveles (§8.2)
+  // 1. Filtrar bolsa de candidatas con fallback por niveles (§8.2) — obras ocultas nunca entran
   const poolFilter = (it: Item, checkPlats: boolean) => {
+    if (it.hidden) return false
     if (it.type !== shelf) return false
     if (!passesFilters(it, answers, checkPlats ? plats : [])) return false
     const entry = entries[it.id]
@@ -219,7 +220,7 @@ export function initDecideSession(input: DecideInput): DecideState {
     rawCandidates = items.filter((it) => poolFilter(it, false))
   }
   if (rawCandidates.length < 3) {
-    rawCandidates = items.filter((it) => it.type === shelf)
+    rawCandidates = items.filter((it) => it.type === shelf && !it.hidden)
   }
 
   // 2. Vector de preferencia inicial
@@ -370,8 +371,8 @@ export function nextDuel(
     )
   }
 
-  // Orientadores de la estantería aún no mostrados en la sesión
-  const orienters = items.filter((it) => it.type === shelf && !shown.has(it.id))
+  // Orientadores de la estantería aún no mostrados en la sesión (las obras ocultas no salen en duelos)
+  const orienters = items.filter((it) => it.type === shelf && !it.hidden && !shown.has(it.id))
   if (orienters.length < 2) return null
 
   // Calcular R para cada orientador

@@ -39,8 +39,18 @@ function pctVal(num, total) {
   return (num / total) * 100
 }
 
-const byShelf = {}
+const hiddenByShelf = { movie: 0, series: 0, book: 0, boardgame: 0, artist: 0 }
 for (const it of items) {
+  if (it.hidden) {
+    hiddenByShelf[it.type] = (hiddenByShelf[it.type] || 0) + 1
+  }
+}
+
+// Las obras ocultas no cuentan en coverage.mjs (T20.1)
+const visibleItems = items.filter((it) => !it.hidden)
+
+const byShelf = {}
+for (const it of visibleItems) {
   byShelf[it.type] = byShelf[it.type] || []
   byShelf[it.type].push(it)
 }
@@ -107,6 +117,7 @@ for (const [shelf, c] of Object.entries(results)) {
   )
 }
 console.log('')
+console.log(`Ocultas por estantería: ${Object.entries(hiddenByShelf).map(([s, n]) => `${s}: ${n}`).join(', ')}\n`)
 
 // Guardar histórico en coverage.md
 if (!existsSync(CACHE_DIR)) mkdirSync(CACHE_DIR, { recursive: true })
@@ -132,7 +143,8 @@ console.log(`Histórico actualizado en scripts/cache/coverage.md\n`)
 // Tabla de «Huecos» (MOTOR v2 §2b.2 / TAREAS_MOTOR_V2.md T3)
 const gaps = []
 for (const [attrName, def] of Object.entries(ATTRS)) {
-  const minTarget = def.minCoverage || 0.9
+  const minTarget = def.minCoverage !== undefined ? def.minCoverage : 0.9
+  if (minTarget <= 0) continue
   for (const shelf of def.shelves) {
     const shelfItems = byShelf[shelf] || []
     if (!shelfItems.length) continue

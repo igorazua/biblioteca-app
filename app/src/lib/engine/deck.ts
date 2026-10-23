@@ -131,8 +131,9 @@ export function nextCards(input: DeckInput, already: string[] = [], n = 20): Dec
   const country = profile.country || 'ES'
   const lang = profile.lang || 'es'
 
-  // 1. Filtrar elegibles: sin entrada o descartadas que vuelven
+  // 1. Filtrar elegibles: sin entrada o descartadas que vuelven (las obras ocultas nunca salen)
   const eligible = items.filter((it) => {
+    if (it.hidden) return false
     if (alreadySet.has(it.id)) return false
     const entry = entries[it.id]
     if (!entry) return true

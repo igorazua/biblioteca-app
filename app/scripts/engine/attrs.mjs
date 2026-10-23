@@ -92,6 +92,22 @@ export const ATTRS = {
     minCoverage: 1.0,
     refresh: 'never',
   },
+  isConsumerWork: {
+    type: 'bool',
+    shelves: ['movie', 'series', 'book', 'boardgame', 'artist'],
+    consumers: ['catálogo', 'limpieza'],
+    sources: ['llm-infer', 'manual'],
+    minCoverage: 0.0,
+    refresh: 'never',
+  },
+  hidden: {
+    type: 'bool',
+    shelves: ['movie', 'series', 'book', 'boardgame', 'artist'],
+    consumers: ['catálogo', 'limpieza', 'D', 'Decidir'],
+    sources: ['manual', 'computed'],
+    minCoverage: 0.0,
+    refresh: 'never',
+  },
   schoolReading: {
     type: 'map<country,bool>',
     shelves: ['book'],
