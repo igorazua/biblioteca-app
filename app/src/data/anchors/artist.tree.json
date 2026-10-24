@@ -1,0 +1,59 @@
+{
+  "shelf": "artist",
+  "version": 1,
+  "population": "anchors",
+  "root": {
+    "dim": "bailable",
+    "balance": 0.333,
+    "pairs": [
+      {
+        "a": "artist:ac-dc-1973",
+        "b": "artist:rosalia-2017"
+      },
+      {
+        "a": "artist:bruce-springsteen-1972",
+        "b": "artist:george-michael-1982"
+      },
+      {
+        "a": "artist:billie-eilish-2015",
+        "b": "artist:bad-bunny-2016"
+      }
+    ],
+    "A": {
+      "dim": "energia",
+      "balance": 0.143,
+      "pairs": [
+        {
+          "a": "artist:wolfgang-amadeus-mozart-1761",
+          "b": "artist:queen-1970",
+          "relaxed": true
+        },
+        {
+          "a": "artist:bob-dylan-1962",
+          "b": "artist:tupac-shakur-1989",
+          "relaxed": true
+        }
+      ],
+      "A": null,
+      "B": null
+    },
+    "B": {
+      "dim": "sonido",
+      "balance": 0,
+      "pairs": [
+        {
+          "a": "artist:lady-gaga-2008",
+          "b": "artist:queen-1970",
+          "relaxed": true
+        },
+        {
+          "a": "artist:dua-lipa-2015",
+          "b": "artist:the-beatles-1960",
+          "relaxed": true
+        }
+      ],
+      "A": null,
+      "B": null
+    }
+  }
+}

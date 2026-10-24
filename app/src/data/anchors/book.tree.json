@@ -1,0 +1,103 @@
+{
+  "shelf": "book",
+  "version": 1,
+  "population": "anchors",
+  "root": {
+    "dim": "realismo",
+    "balance": 0.345,
+    "pairs": [
+      {
+        "a": "book:harry-potter-y-la-piedra-filosofal-1997",
+        "b": "book:los-tres-mosqueteros-1844"
+      },
+      {
+        "a": "book:dracula-1897",
+        "b": "book:la-casa-de-bernarda-alba-1936"
+      },
+      {
+        "a": "book:el-senor-de-los-anillos-1954",
+        "b": "book:los-miserables-1862"
+      }
+    ],
+    "A": {
+      "dim": "ritmo",
+      "balance": 0.3,
+      "pairs": [
+        {
+          "a": "book:fahrenheit-451-1953",
+          "b": "book:el-principito-1943"
+        },
+        {
+          "a": "book:el-extrano-caso-del-doctor-jekyll-y-el-senor-hyde-1886",
+          "b": "book:dune-1965"
+        }
+      ],
+      "A": {
+        "dim": "densidad",
+        "balance": 0,
+        "pairs": [
+          {
+            "a": "book:la-metamorfosis-1915",
+            "b": "book:macbeth-1508",
+            "relaxed": true
+          }
+        ],
+        "A": null,
+        "B": null
+      },
+      "B": {
+        "dim": "densidad",
+        "balance": 0.333,
+        "pairs": [
+          {
+            "a": "book:la-metamorfosis-1915",
+            "b": "book:macbeth-1508",
+            "relaxed": true
+          }
+        ],
+        "A": null,
+        "B": null
+      }
+    },
+    "B": {
+      "dim": "tono",
+      "balance": 0.231,
+      "pairs": [
+        {
+          "a": "book:orgullo-y-prejuicio-1813",
+          "b": "book:cumbres-borrascosas-1847"
+        },
+        {
+          "a": "book:la-isla-del-tesoro-1883",
+          "b": "book:el-extranjero-1942"
+        }
+      ],
+      "A": {
+        "dim": "densidad",
+        "balance": 0,
+        "pairs": [
+          {
+            "a": "book:el-hombre-en-busca-de-sentido-1946",
+            "b": "book:cien-anos-de-soledad-1967",
+            "relaxed": true
+          }
+        ],
+        "A": null,
+        "B": null
+      },
+      "B": {
+        "dim": "densidad",
+        "balance": 0.2,
+        "pairs": [
+          {
+            "a": "book:el-hombre-en-busca-de-sentido-1946",
+            "b": "book:cien-anos-de-soledad-1967",
+            "relaxed": true
+          }
+        ],
+        "A": null,
+        "B": null
+      }
+    }
+  }
+}

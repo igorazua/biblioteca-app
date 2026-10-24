@@ -1,0 +1,118 @@
+{
+  "shelf": "movie",
+  "version": 1,
+  "population": "anchors",
+  "root": {
+    "dim": "realismo",
+    "balance": 0.394,
+    "pairs": [
+      {
+        "a": "movie:el-rey-leon-1994",
+        "b": "movie:forrest-gump-1994"
+      },
+      {
+        "a": "movie:avatar-2009",
+        "b": "movie:knives-out-2019"
+      },
+      {
+        "a": "movie:vengadores-endgame-2019",
+        "b": "movie:titanic-1997"
+      }
+    ],
+    "A": {
+      "dim": "exigencia",
+      "balance": 0.267,
+      "pairs": [
+        {
+          "a": "movie:parque-jurasico-1993",
+          "b": "movie:interstellar-2014"
+        },
+        {
+          "a": "movie:harry-potter-and-the-philosopher-s-stone-2001",
+          "b": "movie:2001-una-odisea-del-espacio-1968"
+        },
+        {
+          "a": "movie:star-wars-1977",
+          "b": "movie:origen-2010"
+        }
+      ],
+      "A": {
+        "dim": "tono",
+        "balance": 0,
+        "pairs": [
+          {
+            "a": "movie:la-la-land-2016",
+            "b": "movie:the-green-mile-1999",
+            "relaxed": true
+          },
+          {
+            "a": "movie:regreso-al-futuro-1985",
+            "b": "movie:dune-2021",
+            "relaxed": true
+          },
+          {
+            "a": "movie:toy-story-1995",
+            "b": "movie:el-resplandor-1980",
+            "relaxed": true
+          }
+        ],
+        "A": null,
+        "B": null
+      },
+      "B": {
+        "dim": "humor",
+        "balance": 0,
+        "pairs": [
+          {
+            "a": "movie:todo-a-la-vez-en-todas-partes-2022",
+            "b": "movie:the-green-mile-1999",
+            "relaxed": true
+          }
+        ],
+        "A": null,
+        "B": null
+      }
+    },
+    "B": {
+      "dim": "humor",
+      "balance": 0.154,
+      "pairs": [
+        {
+          "a": "movie:el-lobo-de-wall-street-2013",
+          "b": "movie:el-padrino-1972"
+        }
+      ],
+      "A": {
+        "dim": "tono",
+        "balance": 0,
+        "pairs": [
+          {
+            "a": "movie:la-la-land-2016",
+            "b": "movie:pulp-fiction-1994",
+            "relaxed": true
+          }
+        ],
+        "A": null,
+        "B": null
+      },
+      "B": {
+        "dim": "intensidad",
+        "balance": 0,
+        "pairs": [
+          {
+            "a": "movie:once-upon-a-time-in-hollywood-2019",
+            "b": "movie:psicosis-1960",
+            "relaxed": true
+          },
+          {
+            "a": "movie:la-la-land-2016",
+            "b": "movie:el-resplandor-1980",
+            "relaxed": true
+          }
+        ],
+        "A": null,
+        "B": null
+      }
+    }
+  }
+}

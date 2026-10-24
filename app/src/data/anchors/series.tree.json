@@ -1,0 +1,112 @@
+{
+  "shelf": "series",
+  "version": 1,
+  "population": "anchors",
+  "root": {
+    "dim": "realismo",
+    "balance": 0.367,
+    "pairs": [
+      {
+        "a": "series:juego-de-tronos-2011",
+        "b": "series:fargo-2014"
+      },
+      {
+        "a": "series:american-horror-story-2011",
+        "b": "series:dexter-2006"
+      },
+      {
+        "a": "series:attack-on-titan-2013",
+        "b": "series:criminal-minds-2005"
+      }
+    ],
+    "A": {
+      "dim": "humor",
+      "balance": 0.182,
+      "pairs": [
+        {
+          "a": "series:the-boys-2019",
+          "b": "series:the-walking-dead-2010"
+        },
+        {
+          "a": "series:spongebob-squarepants-1999",
+          "b": "series:black-mirror-2011"
+        }
+      ],
+      "A": {
+        "dim": "tono",
+        "balance": 0.5,
+        "pairs": [
+          {
+            "a": "series:los-simpson-1989",
+            "b": "series:supernatural-2005",
+            "relaxed": true
+          }
+        ],
+        "A": null,
+        "B": null
+      },
+      "B": {
+        "dim": "exigencia",
+        "balance": 0,
+        "pairs": [
+          {
+            "a": "series:demon-slayer-kimetsu-no-yaiba-2019",
+            "b": "series:twin-peaks-1990",
+            "relaxed": true
+          }
+        ],
+        "A": null,
+        "B": null
+      }
+    },
+    "B": {
+      "dim": "tono",
+      "balance": 0.278,
+      "pairs": [
+        {
+          "a": "series:sex-and-the-city-1998",
+          "b": "series:euphoria-2019"
+        },
+        {
+          "a": "series:friends-1994",
+          "b": "series:peaky-blinders-2013"
+        },
+        {
+          "a": "series:aida-2005",
+          "b": "series:true-detective-2014"
+        }
+      ],
+      "A": {
+        "dim": "publico",
+        "balance": 0.2,
+        "pairs": [
+          {
+            "a": "series:los-simpson-1989",
+            "b": "series:the-white-lotus-2021",
+            "relaxed": true
+          },
+          {
+            "a": "series:ted-lasso-2020",
+            "b": "series:yellowstone-2018",
+            "relaxed": true
+          }
+        ],
+        "A": null,
+        "B": null
+      },
+      "B": {
+        "dim": "humor",
+        "balance": 0,
+        "pairs": [
+          {
+            "a": "series:the-white-lotus-2021",
+            "b": "series:peaky-blinders-2013",
+            "relaxed": true
+          }
+        ],
+        "A": null,
+        "B": null
+      }
+    }
+  }
+}

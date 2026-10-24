@@ -1,0 +1,56 @@
+{
+  "shelf": "boardgame",
+  "version": 1,
+  "population": "anchors",
+  "root": {
+    "dim": "tematico",
+    "balance": 0.222,
+    "pairs": [
+      {
+        "a": "boardgame:parchis-1900",
+        "b": "boardgame:cluedo-1949"
+      },
+      {
+        "a": "boardgame:uno-1971",
+        "b": "boardgame:risk-1959"
+      }
+    ],
+    "A": {
+      "dim": "peso",
+      "balance": 0.2,
+      "pairs": [
+        {
+          "a": "boardgame:trivial-pursuit-1981",
+          "b": "boardgame:chess-1475"
+        }
+      ],
+      "A": {
+        "dim": "interaccion",
+        "balance": 0,
+        "pairs": [
+          {
+            "a": "boardgame:scrabble-1948",
+            "b": "boardgame:catan-1995",
+            "relaxed": true
+          }
+        ],
+        "A": null,
+        "B": null
+      },
+      "B": {
+        "dim": "interaccion",
+        "balance": 0,
+        "pairs": [
+          {
+            "a": "boardgame:scrabble-1948",
+            "b": "boardgame:catan-1995",
+            "relaxed": true
+          }
+        ],
+        "A": null,
+        "B": null
+      }
+    },
+    "B": null
+  }
+}
