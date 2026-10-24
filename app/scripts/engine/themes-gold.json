@@ -1,0 +1,170 @@
+{
+  "_nota": "Temas de oro de T21 (Claude, 24/10/2026). Cada obra tiene que tener al menos 2 de los temas esperados (o 1 si solo se espera 1). No los cambies para que pase la prueba.",
+  "movie:titanic-1997": [
+    "mar y barcos",
+    "amor",
+    "clases sociales"
+  ],
+  "movie:el-lobo-de-wall-street-2013": [
+    "dinero y riqueza",
+    "drogas",
+    "historia real"
+  ],
+  "movie:finding-nemo-2003": [
+    "mar y barcos",
+    "animales",
+    "familia"
+  ],
+  "movie:harry-potter-and-the-philosopher-s-stone-2001": [
+    "magia",
+    "escuela y universidad",
+    "amistad"
+  ],
+  "movie:la-red-social-2010": [
+    "emprendimiento",
+    "tecnología",
+    "historia real"
+  ],
+  "movie:el-padrino-1972": [
+    "crimen organizado",
+    "familia",
+    "poder"
+  ],
+  "movie:interstellar-2014": [
+    "espacio",
+    "familia",
+    "viaje en el tiempo"
+  ],
+  "movie:el-rey-leon-1994": [
+    "animales",
+    "familia",
+    "poder"
+  ],
+  "movie:coco-2017": [
+    "familia",
+    "música",
+    "muerte y duelo"
+  ],
+  "movie:la-vida-es-bella-1997": [
+    "guerra",
+    "familia"
+  ],
+  "movie:up-2009": [
+    "viajes",
+    "muerte y duelo",
+    "amistad"
+  ],
+  "movie:mad-max-furia-en-la-carretera-2015": [
+    "distopía",
+    "libertad"
+  ],
+  "movie:el-resplandor-1980": [
+    "salud mental",
+    "familia"
+  ],
+  "movie:seven-1995": [
+    "asesinos",
+    "policía"
+  ],
+  "movie:origen-2010": [
+    "atracos",
+    "familia"
+  ],
+  "series:breaking-bad-2008": [
+    "drogas",
+    "crimen organizado",
+    "familia"
+  ],
+  "series:narcos-2015": [
+    "drogas",
+    "crimen organizado",
+    "historia real"
+  ],
+  "series:la-casa-de-papel-2017": [
+    "atracos",
+    "policía"
+  ],
+  "series:juego-de-tronos-2011": [
+    "poder",
+    "guerra",
+    "magia"
+  ],
+  "series:stranger-things-2016": [
+    "monstruos",
+    "amistad",
+    "infancia"
+  ],
+  "series:chernobil-2019": [
+    "historia real",
+    "política"
+  ],
+  "series:friends-1994": [
+    "amistad",
+    "amor",
+    "gran ciudad"
+  ],
+  "series:peaky-blinders-2013": [
+    "crimen organizado",
+    "familia"
+  ],
+  "series:black-mirror-2011": [
+    "tecnología",
+    "distopía"
+  ],
+  "book:moby-dick-1851": [
+    "mar y barcos",
+    "animales",
+    "venganza"
+  ],
+  "book:harry-potter-y-la-piedra-filosofal-1997": [
+    "magia",
+    "escuela y universidad",
+    "amistad"
+  ],
+  "book:1984-1949": [
+    "distopía",
+    "política",
+    "libertad"
+  ],
+  "book:cien-anos-de-soledad-1967": [
+    "familia",
+    "pueblo"
+  ],
+  "book:sapiens-2011": [
+    "historia real"
+  ],
+  "book:la-sombra-del-viento-2001": [
+    "gran ciudad",
+    "amor"
+  ],
+  "book:orgullo-y-prejuicio-1813": [
+    "amor",
+    "clases sociales"
+  ],
+  "book:el-codigo-da-vinci-2003": [
+    "religión",
+    "arte"
+  ],
+  "book:el-principito-1943": [
+    "infancia",
+    "amistad"
+  ],
+  "book:it-1986": [
+    "monstruos",
+    "infancia",
+    "amistad"
+  ],
+  "boardgame:catan-1995": [
+    "dinero y riqueza"
+  ],
+  "boardgame:monopoly-1935": [
+    "dinero y riqueza"
+  ],
+  "boardgame:cluedo-1949": [
+    "asesinos"
+  ],
+  "boardgame:pandemic-2008": [
+    "enfermedades y epidemias",
+    "viajes"
+  ]
+}
