@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
 import { motion, type Transition } from 'framer-motion'
 import type { Item } from '../types'
 import { typeName } from '../data/catalog'
+import { posterShape } from '../lib/posterShape'
 
 function hash(s: string) {
   let h = 2166136261
@@ -55,10 +56,10 @@ export function Poster({ item, className = '', style, alt, showTitle = true, lay
       />
     )
   }
-  // Juegos de mesa y artistas: sus imágenes casi nunca son verticales (cajas, fotos de grupo, portadas cuadradas). Se ve
+  // Juegos de mesa: sus imágenes casi nunca son verticales (cajas). Se ve
   // la imagen entera y el aire se rellena con ella misma ampliada y difuminada, para que tome su color
-  // (Igor, 23/10; excepción a SISTEMA_DISENO §1.3).
-  if (src && !imgError && (item.type === 'boardgame' || item.type === 'artist')) {
+  // (Igor, 23/10; excepción a SISTEMA_DISENO §1.3). Para música se usa object-cover en contenedor cuadrado (T27 §27.3 regla 7).
+  if (src && !imgError && item.type === 'boardgame') {
     const done = loaded?.src === src
     return (
       <motion.div {...flight} className={`relative overflow-hidden bg-surface2 ${done ? '' : 'skeleton'} ${className}`} style={style}>
@@ -98,7 +99,10 @@ export function Poster({ item, className = '', style, alt, showTitle = true, lay
   const cy = 18 + ((h >> 13) % 30)
   const shape = (h >> 17) % 3 // 0 círculo, 1 arco, 2 franja
   const len = item.title.length
-  const size = len > 30 ? '9.5cqw' : len > 18 ? '11.5cqw' : len > 10 ? '13.5cqw' : '16cqw'
+  const isSquare = posterShape(item.type) === 'square'
+  const size = isSquare
+    ? len > 30 ? '8.5cqw' : len > 18 ? '10.5cqw' : len > 10 ? '12.5cqw' : '15cqw'
+    : len > 30 ? '9.5cqw' : len > 18 ? '11.5cqw' : len > 10 ? '13.5cqw' : '16cqw'
   return (
     <motion.div
       {...flight}
@@ -117,13 +121,13 @@ export function Poster({ item, className = '', style, alt, showTitle = true, lay
       <div className="absolute inset-0 opacity-[0.22] mix-blend-overlay" style={{ backgroundImage: GRAIN }} />
 
       {showTitle && (
-        <div className="absolute inset-0 flex flex-col justify-end p-[8cqw]">
-          <div className="uppercase tracking-[0.24em] text-white/60 font-semibold" style={{ fontSize: '4.6cqw' }}>{typeName(item.type)}</div>
+        <div className={`absolute inset-0 flex flex-col justify-end ${isSquare ? 'p-[6.5cqw]' : 'p-[8cqw]'}`}>
+          <div className="uppercase tracking-[0.24em] text-white/60 font-semibold" style={{ fontSize: isSquare ? '4.2cqw' : '4.6cqw' }}>{typeName(item.type)}</div>
           <div className="serif text-white font-semibold leading-[1.02] mt-[2.5cqw] break-words hyphens-auto" lang="es" style={{ fontSize: size, textWrap: 'balance' } as CSSProperties}>
             {item.title}
           </div>
           <div className="mt-[3cqw] h-px w-[18cqw]" style={{ background: light, opacity: 0.8 }} />
-          <div className="text-white/65 mt-[2.5cqw] truncate" style={{ fontSize: '5cqw' }}>{item.year} · {item.creator}</div>
+          <div className="text-white/65 mt-[2.5cqw] truncate" style={{ fontSize: isSquare ? '4.5cqw' : '5cqw' }}>{item.year} · {item.creator}</div>
         </div>
       )}
     </motion.div>
