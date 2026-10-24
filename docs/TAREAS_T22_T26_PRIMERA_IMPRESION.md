@@ -18,13 +18,13 @@
 ### Reparto de archivos y orden
 | Tarea | Quién (propuesta) | Archivos que solo toca ella | Depende de |
 |---|---|---|---|
-| **T22 · Anclas y guion de los 3 primeros duelos** | **Sonnet** (es la más delicada y define la primera impresión) | `app/src/data/anchors/*.json` (nuevo), `app/src/lib/engine/anchors.ts` (nuevo), `app/src/lib/engine/userSeeds.ts` (nuevo, solo el esqueleto), `app/src/lib/engine/decide.ts`, `decide.test.ts`, `anchors.test.ts` | nada |
-| **T23 · Aprendizaje colectivo de «No conozco»** | Gemini | `supabase/migrations/0010_biblio_recog_stats.sql`, `supabase/functions/biblio-recog/` (nueva), `app/src/lib/engine/crowd.ts` (nuevo), `app/src/lib/engine/recog.ts` (+ test), `app/src/screens/WhatToWatch.tsx` | nada |
-| **T24 · Lo que se ve ahora en España** | Gemini | `app/scripts/engine/trending/*.mjs` (nuevos), `app/scripts/cache/trending/`, `app/scripts/cache/attrs/trend.jsonl`, `app/scripts/engine/build.mjs` (solo la fórmula de `trend` y de `notoriety`) | **T21 terminada** (también toca `build.mjs`) |
-| **T25 · Lo que ya trae el usuario** | Gemini | `app/src/lib/engine/userSeeds.ts` (lo implementa), `app/src/screens/Onboarding.tsx`, `app/src/screens/JoinInvite.tsx`, `app/src/store/useFriends.ts` | **T22 terminada** (crea el esqueleto de `userSeeds.ts` y lo enchufa en `decide.ts`) |
+| **T22 · Anclas y guion de los 3 primeros duelos** | **Sonnet** (es la más delicada y define la primera impresión) | `app/src/data/anchors/*.json` (nuevo), `app/src/lib/engine/anchors.ts` (nuevo), `app/src/lib/engine/userSeeds.ts` (nuevo, solo el esqueleto), `app/src/lib/engine/decide.ts`, `decide.test.ts`, `anchors.test.ts` | nada · **en curso (Sonnet)** |
+| **T23 · Aprendizaje colectivo de «No conozco»** | — | — | ⏸ **aplazada** (hacen falta muchos usuarios) |
+| **T24 · Lo que se ve ahora en España, solo para sugerir** | — | — | ⏸ **no se hace ahora** (no toca los duelos) |
+| **T25 · Lo que ya trae el usuario** | Gemini | ver la tabla de archivos en la sección T25 | **A y C ya**; **B espera a T22** |
 | **T26 · Aprender qué parejas funcionan** | Gemini, **más adelante** | `app/scripts/engine/pair-stats.mjs` (nuevo), `app/src/data/engine/pair-stats.json` (nuevo), `app/src/lib/engine/pairStats.ts` (nuevo) | T22 y que haya ≥ 500 sesiones de Decidir reales |
 
-**Se pueden lanzar ya en paralelo: T22, T23 y T21** (la que está en curso). **T24, cuando acabe T21. T25, cuando acabe T22. T26, más adelante.**
+**Ahora: T22 (Sonnet, en curso), T21 (Gemini, en curso) y T25-A + T25-C (Gemini). T25-B cuando Claude dé por buena T22. T23, T24 y T26, más adelante.**
 
 ---
 
@@ -81,85 +81,111 @@ Un árbol de 3 niveles generado por `app/src/lib/engine/anchors.ts` (función pu
 
 ---
 
-## T23 — Aprendizaje colectivo: «No conozco» enseña a todos
-### Por qué
-Si muchos usuarios de España y de una edad parecida pulsan «No conozco ninguna» con una obra, esa obra no debe volver a salir a gente parecida. Con unas decenas de usuarios, la reconocibilidad se corrige sola.
-
-### 23.1 Datos
-- Migración `0010_biblio_recog_stats.sql`:
-  - tabla `biblio_recog_events` (`user_id`, `item_id`, `country`, `age_band`, `kind`: `unknown` | `slow` | `answered`, `at`), con RLS: cada usuario inserta solo lo suyo y nadie lee lo de otros;
-  - vista materializada `biblio_recog_stats` (`item_id`, `country`, `age_band`, `shown`, `unknown`, `slow`) que se refresca cada hora, **agregada**, sin `user_id`, legible por todos.
-  - `age_band` sale de la edad **deducida** (nunca se pregunta): `<25`, `25-34`, `35-44`, `45+` o `?`.
-- **Qué se manda:** cada obra de cada duelo de Decidir que se enseña (`answered`), las dos de un «No conozco ninguna» (`unknown`) y las de un duelo de más de 6 s (`slow`). Desde `WhatToWatch.tsx`, en segundo plano y sin bloquear nada; si no hay cuenta o red, se guarda y se manda luego.
-
-### 23.2 Uso en R (`crowd.ts` + `recog.ts`)
-```
-tasa  = (unknown + 0.5·slow + 1) / (shown + 10)        (suavizada: con pocos datos no mueve casi nada)
-factor = clamp(0.3, 1.0, 1 − 1.5·max(0, tasa − 0.05))   (por debajo del 5 % de «no la conozco», no penaliza)
-R = R_actual · factor
-```
-- Se usa la fila del país y la franja de edad del usuario. Si esa fila tiene `shown < 20`, se usa la del país entero; si tampoco, factor 1.
-- `crowd.ts` descarga `biblio_recog_stats` al abrir Decidir (con caché de 1 hora) y expone `crowdFactor(itemId, country, ageBand)`.
-
-### 23.3 Comprueba
-- `recog.test.ts`:
-  - 50 enseñadas y 25 «no la conozco» → R baja más de un 40 %;
-  - 3 enseñadas y 1 «no la conozco» → R baja menos de un 5 %;
-  - sin datos → igual que antes.
-- Con datos de prueba en una base local o en una rama de Supabase (**no en producción**): inserta eventos y comprueba que la vista agrega y que la RLS impide leer filas ajenas. Pega las consultas y su resultado en el registro.
-- **⛔ Para y pide el OK de Igor** antes de aplicar la migración en producción.
+## T23 — Aprendizaje colectivo de «No conozco» · ⏸ APLAZADA (Igor, 24/10/2026)
+**No se hace ahora.** El botón «No conozco ninguna» ya aprende **para cada usuario** (`skipDuelUnknown` en `decide.ts`): a quien pasa de una obra le sale menos. T23 compartiría ese aprendizaje entre usuarios, pero no se nota hasta que haya **decenas de usuarios por país y edad**, y la primera impresión ya la cubren las anclas de T22.
+**Cuándo retomarla:** con más de 300 usuarios activos en España. El diseño de entonces se queda como referencia:
+- tabla de eventos con RLS y vista agregada sin `user_id`;
+- `tasa = (unknown + 0.5·slow + 1)/(shown + 10)`;
+- `factor = clamp(0.3, 1, 1 − 1.5·max(0, tasa − 0.05))`, aplicado a R.
 
 ---
 
-## T24 — Lo que se está viendo y leyendo ahora en España
-### Por qué
-Un estreno que todo el mundo está viendo tiene pocas visitas en Wikipedia los primeros meses, pero se conoce. Las listas semanales públicas lo detectan.
-
-### 24.1 Fuentes (raspado permitido, con caché, ≤ 1 petición/s, sin iniciar sesión)
-| Estantería | Fuente | Qué se coge |
-|---|---|---|
-| Pelis y series | Top 10 semanal de **Netflix España** (`top10.netflix.com/spain`); FlixPatrol España para **Prime Video, Max y Disney+** | posición y semanas en lista |
-| Libros | Lo más vendido en España: listas semanales de Casa del Libro y de El Corte Inglés | posición y semanas |
-| Artistas | **Spotify Charts España** (top 50 semanal, `charts.spotify.com`; si exige sesión, el top 50 de Kworb) | artistas del top 50 |
-| Juegos | Lo más vendido de juegos de mesa en Amazon.es | posición |
-
-- Guarda cada semana en `app/scripts/cache/trending/<fuente>/<AAAA-semana>.json`, con la URL y la fecha. **Lee las condiciones de cada web** y apunta en el registro si alguna prohíbe el raspado; si es así, no la uses.
-- **Emparejar con el catálogo:** por título en español y original + año, con el emparejador de `lib/import/match`. Lo que no esté en el catálogo va a `trending/fuera-del-catalogo.md` (candidatas a añadir, para Igor).
-
-### 24.2 Cálculo
-```
-trend.ES = max sobre las últimas 12 semanas de  (11 − posición)/10 · 0.85^(semanas desde esa semana)
-notoriety.ES = max(notoriety.ES, 0.6 + 0.35·trend.ES)    solo si la obra es de los últimos 3 años
-```
-Lo que está de moda **sube** la reconocibilidad, nunca la baja. Va en `build.mjs`, en el paso 4.
-
-### 24.3 Comprueba
-- Ejecuta las fuentes una vez y pega en el registro, por fuente, cuántas obras ha encontrado y cuántas han casado con el catálogo.
-- **Prueba de verdad:** las 5 primeras del top 10 de Netflix España de esta semana tienen `notoriety.ES ≥ 0.6` (si están en el catálogo).
-- `coverage.mjs` sigue en verde (lista de oro incluida).
-- Deja preparado el comando `npm run engine:trending` para ejecutarlo cada semana, y explica en `app/README.md` cómo programarlo (por ejemplo, con el Programador de tareas de Windows). **No lo programes tú.**
+## T24 — Lo que se ve ahora en España, **solo para sugerir** · ⏸ NO SE HACE AHORA
+**Cambio de Igor (24/10/2026):** para comparar se quieren **clásicos muy conocidos, no lo que está de moda**. Por eso esta tarea **no toca la reconocibilidad (R), ni `notoriety`, ni los duelos de Decidir o de Comparar**.
+Cuando se haga, sirve solo para sugerir:
+- **Propuesta de Decidir:** un empujón pequeño (como mucho ×1,15 en la puntuación final) a lo que está en el top 10 de España **y** encaja con los gustos que han salido en los duelos. Nunca cambia qué obras salen en los duelos.
+- **Descubrir:** la etiqueta «Lo están viendo en España» en la carta y un hueco pequeño en el mazo (como mucho 1 de cada 10 cartas).
+- **Fuentes** (raspado con caché, ≤ 1 petición/s, sin iniciar sesión y respetando las condiciones de cada web):
+  - el top 10 semanal de Netflix España;
+  - FlixPatrol España para Prime Video, Max y Disney+;
+  - los más vendidos de Casa del Libro y de El Corte Inglés;
+  - Spotify Charts España (o Kworb);
+  - los juegos de mesa más vendidos de Amazon.es.
+- **Dato:** `trend.ES` en `scripts/cache/attrs/trend.jsonl`, calculado como `(11 − posición)/10 · 0.85^semanas`.
 
 ---
 
-## T25 — Aprovechar lo que ya trae el usuario
-### 25.1 Invitado por un amigo
-- Si el usuario entró por `/unete/:code` (`JoinInvite.tsx`), se guarda quién le invitó (`useFriends`).
-- `userSeedAnchors(ctx)` en `userSeeds.ts` devuelve, para la estantería, las obras del **top 30 % del ranking de quien le invitó** que sean de nivel de fama 1 o 2. `decide.ts` (T22) ya las mezcla en el guion.
-- **Límite:** como mucho 1 de cada 2 obras de un duelo sale de aquí, y siempre en un extremo claro de la dimensión del duelo (comprueba sus `sides` con las etiquetas de T21).
+## T25 — Lo que ya trae el usuario · ✅ SE HACE AHORA (Gemini)
+Se divide en tres partes. **Gemini hace ahora T25-A y T25-C. T25-B espera a que Claude dé por buena T22** (toca `decide.ts` y `userSeeds.ts`, que son de T22).
 
-### 25.2 Entre estanterías
-- Si el usuario tiene obras propias en otra estantería, `userSeedAnchors` añade como candidatas las **adaptaciones** de esas obras en esta estantería. Salen de las aristas `adapt` de `cross.json` y de Wikidata P144: si leyó *Harry Potter*, en pelis entra la peli de *Harry Potter*.
-- Solo si la adaptación es de nivel 1 o 2.
+### Archivos de T25-A y T25-C (solo estos)
+| Archivo | Qué cambia |
+|---|---|
+| `app/src/store/useFriends.ts` | `acceptInvite` devuelve también `creatorId` (la RPC `biblio_accept_invite` ya devuelve `creator_id`; en el camino antiguo, `invite.creator_id`) |
+| `app/src/store/useStore.ts` | nuevo campo persistido `invitedBy: { friendId: string; at: number } \| null`, con su acción `setInvitedBy` y su paso en `migrateStore` (sube la versión en 1) |
+| `app/src/screens/JoinInvite.tsx` | al aceptar con éxito: `setInvitedBy({ friendId: res.creatorId, at: Date.now() })` |
+| `app/src/lib/engine/deck.ts` | la regla de A2 |
+| `app/src/lib/engine/deck.test.ts` | los tests de A4 |
+| `app/src/screens/Discover.tsx` | pasa `invitedBy` a `nextCards` (solo ese campo en el `input`) |
+| `app/src/screens/Onboarding.tsx` | el paso de T25-C |
+| `app/scripts/check-t25.mjs` | el script de comprobación |
+| `docs/registro/T25.md` | el registro |
 
-### 25.3 Conectar en la bienvenida
-- En `Onboarding.tsx`, después de los 3 gestos, una pantalla **opcional**: «¿Ya usas alguna de estas?», con los 6 servicios más usados en España de `lib/connect/services.ts` (Netflix, Spotify, Prime Video, Letterboxd, Goodreads, YouTube Music), que llevan a su hoja de Conectar, y un botón de texto «Ahora no». Sin cambiar nada de Conectar.
+**No toques** `decide.ts`, `userSeeds.ts`, `anchors.ts` ni `data/anchors/` (son de T22, que está en curso), ni `SwipeDeck.tsx`, ni el diseño de las cartas.
 
-### 25.4 Comprueba
-- Test de `userSeeds`:
-  - invitado por alguien con *Breaking Bad* arriba → sale entre las candidatas;
-  - con *Harry Potter* (libro) vista → la peli sale en pelis;
-  - una obra de nivel 4 del amigo **no** sale.
-- Test de que la pantalla de Conectar de la bienvenida se puede saltar y no bloquea el resto.
+### T25-A · Descubrir empieza por las obras de quien te invitó
+**Por qué:** en cada carta de Descubrir ya salen las caras de tus amigos con su nota (`getFriendHits`). Si el primer mazo está lleno de obras que tu amigo ha valorado, la app «está viva» desde el primer minuto. Es el gancho social.
+
+**A1 · Quién es «el amigo de referencia»** (en este orden):
+1. `invitedBy.friendId`, si está entre los `friends` reales;
+2. si no, el amigo real con **más obras vistas en esa estantería**, si tiene al menos 5;
+3. si no, ninguno: el mazo funciona como hoy. Los amigos de demostración (`seedFriends` de `data/catalog`) **nunca** cuentan como amigo de referencia. `Discover.tsx` le pasa a `nextCards` si los `friends` son reales (por ejemplo, `friendsAreReal: realFriends.length > 0`).
+
+**A2 · La regla en `nextCards`** (campos nuevos opcionales en `DeckInput`: `invitedBy?: string | null` y `friendsAreReal?: boolean`):
+- **Solo se aplica** si el usuario tiene **menos de 20 obras marcadas** (vistas, pendientes o descartadas) en esa estantería. Pasado eso, el mazo de siempre.
+- **Candidatas:**
+  - obras que el amigo ha marcado como **vistas** en esa estantería;
+  - que el usuario no tiene marcadas y no están ocultas (`hidden`);
+  - de nivel de fama (`fameTier.ES`, o el número si no es un objeto) **1, 2 o 3**: nada de nicho en la primera impresión.
+- **Orden de las candidatas:** por el percentil del amigo (`friendPct`), de mayor a menor. A igualdad, la de mejor nivel de fama.
+- **Mezcla:**
+  - en las **12 primeras cartas** que devuelve `nextCards`, van candidatas del amigo en las posiciones 1, 2, 4, 6, 8 y 10 (contando desde 1), como mucho 6;
+  - el resto, como hoy;
+  - si hay menos de 6 candidatas, se ponen las que haya y los demás huecos se quedan con el mazo normal.
+- **Esas cartas** llevan `bucket: 'social'` y `reason: { friendId }`. Las caras ya salen solas; no cambies el diseño de la carta.
+- **Sin repeticiones:** `already` se respeta, así que una obra ya enseñada no vuelve en el siguiente lote.
+
+**A3 · Lo que no cambia:** las proporciones de cubos de `params.ts`, `calcAdapt` y el resto de `nextCards` para usuarios sin amigo de referencia o con 20 obras o más.
+
+**A4 · Tests en `deck.test.ts`** (todos deben pasar):
+1. Usuario nuevo, invitado por un amigo con 30 pelis vistas de nivel 1 a 3: las cartas 1, 2, 4, 6, 8 y 10 son del amigo, en orden de su percentil.
+2. El mismo usuario con 20 pelis marcadas: el mazo es **idéntico** al de una llamada sin `invitedBy`.
+3. Una obra de nivel 4 que el amigo tiene arriba **no** sale entre esas cartas.
+4. Una obra que el usuario ya tiene marcada **no** sale.
+5. Sin `invitedBy` y sin amigos reales con 5 o más obras (o con `friendsAreReal: false`): el mazo es idéntico al de antes.
+6. Sin `invitedBy`, con un amigo real de 12 obras vistas y otro de 6: el amigo de referencia es el de 12.
+7. `migrateStore`: un estado guardado de la versión anterior carga con `invitedBy: null`.
+
+### T25-C · Conectar en la bienvenida
+- En `Onboarding.tsx`, un paso nuevo **justo después de «Amigos» (paso 3)** y antes de «Registro»: «¿Ya usas alguna de estas?».
+- **Seis servicios,** sacados de `lib/connect/services.ts`, nunca escritos a mano: Netflix, Spotify, Prime Video, Letterboxd, Goodreads y YouTube Music. Si alguno no existe con ese nombre en `services.ts`, usa el más parecido y apúntalo en el registro.
+- **Al tocar un servicio:** se marca (como un chip seleccionado) y se sigue en la bienvenida. **No abre Conectar en mitad de la bienvenida.** Al terminar la bienvenida, si eligió alguno, va a `/conectar` con el primero abierto, si `Connect.tsx` admite abrir uno por la URL o el estado (míralo). Si no lo admite, va a `/conectar` sin más y lo apuntas en el registro.
+- **Botón de texto «Ahora no»,** que salta el paso. El paso **nunca bloquea** la bienvenida.
+- **Ajusta el contador de pasos** («Paso N de 7»), los puntitos de progreso y la flecha de volver.
+- **Sistema de diseño** (`docs/SISTEMA_DISENO.md`):
+  - cabecera §5.1;
+  - filas `Group` y `Row` con el logo de `BrandLogo` si existe;
+  - el único botón ámbar es «Continuar»;
+  - sin emojis ni efectos.
+- **Test** (o comprobación con Testing Library, si ya se usa en el proyecto): se puede llegar al final de la bienvenida pulsando «Ahora no», sin elegir nada. Si en el proyecto no hay tests de pantallas, sácalo a una función pura (el siguiente paso según el paso actual y lo elegido) y pruébala.
+
+### T25-B · Adaptaciones entre estanterías en Decidir · ⏳ ESPERA A T22
+**No la empieces** hasta que Claude confirme que T22 está bien: toca `userSeeds.ts` y `decide.ts`, que ahora son de T22.
+- `userSeedAnchors(ctx)` en `userSeeds.ts` añade como anclas las **adaptaciones** de obras que el usuario tiene vistas en otra estantería:
+  - salen de las aristas `adapt` de `cross.json` (si faltan, de Wikidata P144, guardadas en caché);
+  - por ejemplo, si leyó *Harry Potter*, la peli de *Harry Potter* entra como ancla en pelis;
+  - solo si la adaptación es de nivel 1 o 2 y tiene un extremo claro en la dimensión del duelo.
+- **Límite:** como mucho 1 de las 2 obras de cada duelo sale de aquí.
+- **Tests:**
+  - con el libro de *Harry Potter* visto, la peli sale entre las candidatas de pelis;
+  - con una adaptación de nivel 4, no sale.
+
+### Comprobaciones para dar T25-A y T25-C por hechas (pega la salida real en `docs/registro/T25.md`)
+- `npx tsc -p app/tsconfig.json --noEmit` limpio.
+- `npx vitest run` en verde, incluidos los 7 tests de A4 y el de T25-C.
+- **Prueba de las 12 primeras cartas:** escribe `app/scripts/check-t25.mjs`. Monta un usuario nuevo invitado por uno de los amigos de demostración, tratado como real **solo en el script**, y saca los títulos de esas 12 cartas en pelis y en libros, marcando cuáles son del amigo. Pega esa lista en el registro.
+- Un commit por parte (`T25-A: …` y `T25-C: …`), con `git add` archivo a archivo, nunca `git add -A`. **Sin `git push`.** Sin revisión visual: la hace Igor en el móvil.
+- Si algo del encargo no encaja con el código (un nombre que no existe o un tipo distinto), **para y apúntalo en el registro**. No lo arregles en archivos que no son tuyos.
 
 ---
 
@@ -173,6 +199,5 @@ Lo que está de moda **sube** la reconocibilidad, nunca la baja. Va en `build.mj
 
 ## Lo que tiene que hacer Igor
 - **T22:** revisar `anchors/REVISION.md` (unas 260 obras, de un vistazo).
-- **T23:** el OK para aplicar la migración en producción.
-- **T24:** decidir si quiere programar `npm run engine:trending` cada semana.
-- Lanzar los agentes en este orden: **T22 (Sonnet) y T23 ya; T24 al acabar T21; T25 al acabar T22.**
+- **T25:** lanzar un agente de Gemini con **T25-A y T25-C** (no T25-B).
+- T23, T24 y T26 se retoman más adelante.

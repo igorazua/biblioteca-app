@@ -479,4 +479,4 @@ Encargo completo en **`docs/TAREA_T21_ETIQUETAS_Y_TEMAS.md`** (24/10/2026). **Es
 
 # T22-T26 — Primera impresión de Decidir (anclas, aprendizaje colectivo, actualidad, lo que trae el usuario)
 
-Encargos completos en **`docs/TAREAS_T22_T26_PRIMERA_IMPRESION.md`** (24/10/2026). Cinco tareas para agentes distintos, con archivos repartidos y orden de lanzamiento.
+Encargos completos en **`docs/TAREAS_T22_T26_PRIMERA_IMPRESION.md`** (24/10/2026). Ahora: T22 (Sonnet) y T25-A + T25-C (Gemini); T23, T24 y T26 aplazadas.
