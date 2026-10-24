@@ -304,11 +304,6 @@ export interface PathConstraint {
   side: Side
 }
 
-const notorietyOf = (it?: Item): number => {
-  if (!it) return 0
-  const n = it.notoriety
-  return typeof n === 'number' ? n : (n?.ES ?? 0)
-}
 
 /**
  * Genera el árbol de 3 niveles de una estantería (T22 §22.2). Función pura y determinista.
@@ -375,8 +370,9 @@ export function createTreeBuilder(anchors: Anchor[], labels: CatalogLabels | nul
       if (sa && sb && sa !== sb) confounds++
       else if ((sa && !sb) || (!sa && sb)) oneSided++
     }
-    const fame = notorietyOf(itemsById?.get(a.id)) * notorietyOf(itemsById?.get(b.id))
-    return -(confounds * 1.0 + oneSided * 0.25) + 0.1 * fame
+    // Solo cuenta la neutralidad en las demás dimensiones. No se usa la fama para desempatar: el árbol guardado no debe
+    // cambiar si cambian las notoriedades del catálogo (en ejecución ya se elige por R_a · R_b); los empates se rompen por id.
+    return -(confounds * 1.0 + oneSided * 0.25)
   }
 
   /** parejas válidas para una dimensión y un camino, de mejor a peor; en modo `relaxed` se admiten neutros en el camino */
@@ -607,10 +603,16 @@ export function nextScriptPair(inp: ScriptInput): ScriptSelection | null {
 
   // 1. Reconstruir dónde estamos a partir de los duelos del guion ya jugados
   for (const d of inp.duels) {
-    if (!isAnchorDimId(d.dimension)) continue
+    // Un «Pasar» sin dimensión registrada (p. ej. al restaurar una sesión) cuenta como del guion si sus dos obras
+    // son una de las parejas del hueco actual.
+    const isScriptedPass =
+      !isAnchorDimId(d.dimension) &&
+      (d.unknown || !d.winner) &&
+      Boolean(node?.pairs.some((p) => (p.a === d.a && p.b === d.b) || (p.a === d.b && p.b === d.a)))
+    if (!isAnchorDimId(d.dimension) && !isScriptedPass) continue
     seen.add(d.a)
     seen.add(d.b)
-    const dim = d.dimension.slice(ANCHOR_DIM_PREFIX.length)
+    const dim = isAnchorDimId(d.dimension) ? d.dimension.slice(ANCHOR_DIM_PREFIX.length) : (node?.dim ?? '')
     if (d.unknown || !d.winner) {
       passesAtNode++
       if (node && remaining(node, seen, itemsById).length === 0) advance(null, null)

@@ -15,8 +15,8 @@
         "b": "movie:knives-out-2019"
       },
       {
-        "a": "movie:vengadores-endgame-2019",
-        "b": "movie:titanic-1997"
+        "a": "movie:blade-runner-1982",
+        "b": "movie:pulp-fiction-1994"
       }
     ],
     "A": {
@@ -25,14 +25,14 @@
       "pairs": [
         {
           "a": "movie:parque-jurasico-1993",
+          "b": "movie:2001-una-odisea-del-espacio-1968"
+        },
+        {
+          "a": "movie:vengadores-endgame-2019",
           "b": "movie:interstellar-2014"
         },
         {
           "a": "movie:harry-potter-and-the-philosopher-s-stone-2001",
-          "b": "movie:2001-una-odisea-del-espacio-1968"
-        },
-        {
-          "a": "movie:star-wars-1977",
           "b": "movie:origen-2010"
         }
       ],
@@ -41,17 +41,17 @@
         "balance": 0,
         "pairs": [
           {
+            "a": "movie:star-wars-1977",
+            "b": "movie:dune-2021",
+            "relaxed": true
+          },
+          {
             "a": "movie:la-la-land-2016",
             "b": "movie:the-green-mile-1999",
             "relaxed": true
           },
           {
             "a": "movie:regreso-al-futuro-1985",
-            "b": "movie:dune-2021",
-            "relaxed": true
-          },
-          {
-            "a": "movie:toy-story-1995",
             "b": "movie:el-resplandor-1980",
             "relaxed": true
           }
@@ -79,34 +79,22 @@
       "pairs": [
         {
           "a": "movie:el-lobo-de-wall-street-2013",
-          "b": "movie:el-padrino-1972"
+          "b": "movie:cadena-perpetua-1994"
         }
       ],
-      "A": {
-        "dim": "tono",
-        "balance": 0,
-        "pairs": [
-          {
-            "a": "movie:la-la-land-2016",
-            "b": "movie:pulp-fiction-1994",
-            "relaxed": true
-          }
-        ],
-        "A": null,
-        "B": null
-      },
+      "A": null,
       "B": {
         "dim": "intensidad",
         "balance": 0,
         "pairs": [
           {
             "a": "movie:once-upon-a-time-in-hollywood-2019",
-            "b": "movie:psicosis-1960",
+            "b": "movie:el-resplandor-1980",
             "relaxed": true
           },
           {
             "a": "movie:la-la-land-2016",
-            "b": "movie:el-resplandor-1980",
+            "b": "movie:no-es-pais-para-viejos-2007",
             "relaxed": true
           }
         ],

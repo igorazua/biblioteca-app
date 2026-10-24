@@ -406,6 +406,25 @@ describe('T22 · lados de las anclas y dimensiones del guion', () => {
     expect(next.depth).toBe(1)
   })
 
+  it('nextScriptPair: un «Pasar» sin dimensión registrada cuenta igual si las dos obras son una pareja del hueco', () => {
+    const shelf: ShelfType = 'movie'
+    const tree = getTree(shelf)
+    const root = tree.root!
+    const base = { tree, shelf, itemsById, recogOf: newUserR, isOwn: () => false, ownItems: [] as Item[] }
+    const duels: { a: string; b: string; winner: string | null; dimension?: string; unknown?: boolean }[] = []
+    const shown = new Set<string>()
+    for (let i = 0; i < root.pairs.length; i++) {
+      const pick = nextScriptPair({ ...base, duels, shown })!
+      expect(pick.dim).toBe(root.dim)
+      shown.add(pick.a.id)
+      shown.add(pick.b.id)
+      duels.push({ a: pick.a.id, b: pick.b.id, winner: null, unknown: true }) // sin `dimension`
+    }
+    const next = nextScriptPair({ ...base, duels, shown })!
+    expect(next.dim).not.toBe(root.dim)
+    expect(next.depth).toBe(1)
+  })
+
   it('nextScriptPair termina tras 3 duelos respondidos', () => {
     const shelf: ShelfType = 'book'
     const tree = getTree(shelf)

@@ -7,16 +7,16 @@
     "balance": 0.367,
     "pairs": [
       {
-        "a": "series:juego-de-tronos-2011",
-        "b": "series:fargo-2014"
-      },
-      {
         "a": "series:american-horror-story-2011",
-        "b": "series:dexter-2006"
+        "b": "series:criminal-minds-2005"
       },
       {
         "a": "series:attack-on-titan-2013",
-        "b": "series:criminal-minds-2005"
+        "b": "series:dexter-2006"
+      },
+      {
+        "a": "series:dark-2017",
+        "b": "series:true-detective-2014"
       }
     ],
     "A": {
@@ -25,11 +25,11 @@
       "pairs": [
         {
           "a": "series:the-boys-2019",
-          "b": "series:the-walking-dead-2010"
+          "b": "series:black-mirror-2011"
         },
         {
           "a": "series:spongebob-squarepants-1999",
-          "b": "series:black-mirror-2011"
+          "b": "series:the-walking-dead-2010"
         }
       ],
       "A": {
@@ -65,15 +65,15 @@
       "pairs": [
         {
           "a": "series:sex-and-the-city-1998",
+          "b": "series:fargo-2014"
+        },
+        {
+          "a": "series:aida-2005",
           "b": "series:euphoria-2019"
         },
         {
           "a": "series:friends-1994",
           "b": "series:peaky-blinders-2013"
-        },
-        {
-          "a": "series:aida-2005",
-          "b": "series:true-detective-2014"
         }
       ],
       "A": {
@@ -100,7 +100,7 @@
         "pairs": [
           {
             "a": "series:the-white-lotus-2021",
-            "b": "series:peaky-blinders-2013",
+            "b": "series:euphoria-2019",
             "relaxed": true
           }
         ],

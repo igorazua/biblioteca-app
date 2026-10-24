@@ -2,9 +2,14 @@
 
 Las anclas son las obras que salen en los **3 primeros duelos** de Decidir. Tienen que conocerlas todos en España y separar gustos de verdad. Quita o cambia las que no te convenzan: editas `app/src/data/anchors/<estantería>.json` y se regenera el árbol con
 
+En PowerShell (desde la carpeta `app`):
+
 ```
-REGEN_TREES=1 npx vitest run src/lib/engine/anchors.test.ts
+$env:REGEN_TREES='1'; npx vitest run src/lib/engine/anchors.test.ts; Remove-Item Env:REGEN_TREES
 ```
+
+(Quitar la variable al final es importante: si se queda puesta, cada ejecución de los tests reescribe los árboles.)
+En bash: `REGEN_TREES=1 npx vitest run src/lib/engine/anchors.test.ts`.
 
 > **Aviso importante:** el objetivo era 60 pelis, 60 series, 60 libros, 40 juegos y 40 artistas, pero el catálogo no permite llegar. Cada estantería tiene como mucho ~40 obras de nivel de fama 1 (cupo fijo de `build.mjs` paso 4e) y solo una parte llega a R ≥ 0,85. Detalle y cifras en `docs/registro/T22.md`.
 

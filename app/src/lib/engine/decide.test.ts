@@ -663,7 +663,8 @@ describe('T22 · guion de los 3 primeros duelos', () => {
 
   const pairKey = (d: DuelPair) => [d.a.id, d.b.id].sort().join('|')
 
-  it('22.4 · 1.000 usuarios nuevos: todo anclas, extremos opuestos, sin repetir pareja y con rotación entre sesiones', async () => {
+  // La simulación se ejecuta una sola vez (≈ 100 s) y la leen los tests de abajo
+  const runBigSim = async () => {
     const ctx = await load()
     const N = 1000
     const rng = mulberry32(2210)
@@ -725,19 +726,41 @@ describe('T22 · guion de los 3 primeros duelos', () => {
       const ok = (n: import('./anchors').TreeNode | null, depth: number): boolean => (depth === 3 ? true : !!n && ok(n.A, depth + 1) && ok(n.B, depth + 1))
       return ok(ctx.getTree(shelf).root, 0)
     }
-    for (const shelf of SHELF_LIST) {
-      const x = stats[shelf]
-      expect(x.sessions).toBeGreaterThan(0)
-      // Lo que sale del guion es siempre ancla, de extremos opuestos, y no se repite dentro de la sesión
-      expect(x.anchors, `${shelf}: obras del guion que no son anclas`).toBe(x.viaScript)
-      expect(x.opposite, `${shelf}: duelos del guion sin extremos opuestos`).toBe(x.viaScript)
-      expect(x.repeatedInSession, `${shelf}: parejas u obras repetidas en una sesión`).toBe(0)
-      expect(x.repeated2 / x.pairs2, `${shelf}: parejas repetidas entre sesiones`).toBeLessThan(0.2)
-      // El primer duelo es siempre del guion; los 3 primeros, el 100 % si el árbol llega a 3 niveles en todas las ramas
-      expect(x.first3Scripted).toBeGreaterThanOrEqual(x.sessions * 2)
-      if (complete(shelf)) expect(x.first3Scripted, `${shelf}: no todos los 3 primeros duelos son del guion`).toBe(x.first3)
-    }
-  }, 280000)
+    return { stats, complete }
+  }
+  let bigSim: ReturnType<typeof runBigSim> | null = null
+  const getBigSim = () => (bigSim ??= runBigSim())
+
+  for (const shelf of SHELF_LIST) {
+    describe(`22.4 · 1.000 usuarios nuevos · ${shelf}`, () => {
+      it('lo que sale del guion es siempre ancla, de extremos opuestos y no se repite dentro de la sesión', async () => {
+        const { stats } = await getBigSim()
+        const x = stats[shelf]
+        expect(x.sessions).toBeGreaterThan(0)
+        expect(x.anchors, 'obras del guion que no son anclas').toBe(x.viaScript)
+        expect(x.opposite, 'duelos del guion sin extremos opuestos').toBe(x.viaScript)
+        expect(x.repeatedInSession, 'parejas u obras repetidas en una sesión').toBe(0)
+        expect(x.first3Scripted, 'cada sesión tiene al menos un duelo del guion').toBeGreaterThanOrEqual(x.sessions * 2)
+      }, 280000)
+
+      it('en 2 sesiones seguidas del mismo usuario se repiten menos del 20 % de las parejas', async () => {
+        const { stats } = await getBigSim()
+        const x = stats[shelf]
+        expect(x.repeated2 / x.pairs2).toBeLessThan(0.2)
+      }, 280000)
+
+      // Solo con árbol de 3 niveles en todas las ramas se puede garantizar el 100 % de anclas en los 3 primeros duelos.
+      // Juegos (9 anclas) y artistas (21) no lo tienen: HUECO DE DATOS (ver docs/registro/T22.md). `it.fails` para que el
+      // test se ponga rojo el día que haya anclas suficientes.
+      const all3 = (name: string, fn: () => Promise<void>) => (shelf === 'boardgame' || shelf === 'artist' ? it.fails(`[hueco de datos] ${name}`, fn, 280000) : it(name, fn, 280000))
+      all3('el 100 % de las obras de los 3 primeros duelos son anclas del guion', async () => {
+        const { stats } = await getBigSim()
+        const x = stats[shelf]
+        expect(x.first3Scripted, `${x.first3Scripted}/${x.first3}`).toBe(x.first3)
+      })
+    })
+  }
+
 
   it('aunque el usuario pase mucho (35 % de «Pasar»), lo que sale del guion sigue siendo anclas opuestas y sin repetir', async () => {
     const ctx = await load()

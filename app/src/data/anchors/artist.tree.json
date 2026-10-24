@@ -24,12 +24,12 @@
       "balance": 0.143,
       "pairs": [
         {
-          "a": "artist:wolfgang-amadeus-mozart-1761",
+          "a": "artist:bob-dylan-1962",
           "b": "artist:queen-1970",
           "relaxed": true
         },
         {
-          "a": "artist:bob-dylan-1962",
+          "a": "artist:wolfgang-amadeus-mozart-1761",
           "b": "artist:tupac-shakur-1989",
           "relaxed": true
         }

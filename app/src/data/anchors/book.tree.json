@@ -7,16 +7,16 @@
     "balance": 0.345,
     "pairs": [
       {
-        "a": "book:harry-potter-y-la-piedra-filosofal-1997",
-        "b": "book:los-tres-mosqueteros-1844"
-      },
-      {
         "a": "book:dracula-1897",
         "b": "book:la-casa-de-bernarda-alba-1936"
       },
       {
-        "a": "book:el-senor-de-los-anillos-1954",
-        "b": "book:los-miserables-1862"
+        "a": "book:harry-potter-y-la-piedra-filosofal-1997",
+        "b": "book:la-isla-del-tesoro-1883"
+      },
+      {
+        "a": "book:dune-1965",
+        "b": "book:el-gran-gatsby-1925"
       }
     ],
     "A": {
@@ -29,7 +29,7 @@
         },
         {
           "a": "book:el-extrano-caso-del-doctor-jekyll-y-el-senor-hyde-1886",
-          "b": "book:dune-1965"
+          "b": "book:el-senor-de-los-anillos-1954"
         }
       ],
       "A": {
@@ -68,7 +68,7 @@
           "b": "book:cumbres-borrascosas-1847"
         },
         {
-          "a": "book:la-isla-del-tesoro-1883",
+          "a": "book:los-tres-mosqueteros-1844",
           "b": "book:el-extranjero-1942"
         }
       ],
