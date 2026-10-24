@@ -157,7 +157,7 @@ const clamp01 = (v: number) => Math.max(0, Math.min(1, v))
 const lerp = (a: number, b: number, k: number) => a + (b - a) * k
 
 /** Reparto de la mesa del abanico según el tamaño disponible. */
-function fanLayout(w: number, h: number) {
+function fanLayout(w: number, h: number, square: boolean = false) {
   const padTop = 8
   const qH = 0 // la pregunta va en la cabecera de la pantalla (SISTEMA_DISENO §5.5)
   const qGap = 0
@@ -165,8 +165,9 @@ function fanLayout(w: number, h: number) {
   const titleH = 56
   const gap = 14
   const availH = Math.max(220, h - padTop - hintH)
-  const cardW = Math.min(w * 0.48, (availH - qH - qGap - titleH - gap) / 1.5)
-  const cardH = cardW * 1.5
+  const ratio = square ? 1 : 1.5
+  const cardW = Math.min(w * 0.48, (availH - qH - qGap - titleH - gap) / ratio)
+  const cardH = cardW * ratio
   const blockH = qH + qGap + cardH + gap + titleH
   const qTop = padTop + Math.max(0, (availH - blockH) / 2)
   const top = qTop + qH + qGap
@@ -181,7 +182,7 @@ function fanLayout(w: number, h: number) {
     titleTop: top + cardH + gap,
     cx: { a: w * 0.3, b: w * 0.7 },
     // el póster entero, con un margen igual por los cuatro lados para que el borde iluminado no se corte
-    fitW: Math.min(w - 2 * FIT_MARGIN, (h - 2 * FIT_MARGIN) / 1.5),
+    fitW: Math.min(w - 2 * FIT_MARGIN, (h - 2 * FIT_MARGIN) / ratio),
   }
 }
 type FanLayout = ReturnType<typeof fanLayout>
@@ -191,11 +192,11 @@ type FanLayout = ReturnType<typeof fanLayout>
  * de la izquierda, a la izquierda la de la derecha («empujarla hacia el centro»). La elegida sigue una trayectoria fija
  * hacia el centro, se endereza y crece hasta casi llenar la pantalla; la otra se apaga. Todo va ligado al progreso del gesto.
  */
-export function DuelFan({ left, right, onChoose, texts, fast = false }: { left: Side; right: Side; onChoose: (w: 'a' | 'b') => void; texts: DuelTexts; /** sin confirmación central y casi sin espera (Comparar) */ fast?: boolean }) {
+export function DuelFan({ left, right, onChoose, texts, fast = false, square = false }: { left: Side; right: Side; onChoose: (w: 'a' | 'b') => void; texts: DuelTexts; /** sin confirmación central y casi sin espera (Comparar) */ fast?: boolean; square?: boolean }) {
   const reduce = useReducedMotion()
   const box = useRef<HTMLDivElement>(null)
   const size = useBoxSize(box)
-  const L = fanLayout(size.w, size.h)
+  const L = fanLayout(size.w, size.h, square)
   const lay = useRef(L)
   lay.current = L
   const x = useMotionValue(0)

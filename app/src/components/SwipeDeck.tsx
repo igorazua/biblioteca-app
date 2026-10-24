@@ -6,6 +6,7 @@ import { Poster, posterLayoutId } from './Poster'
 import { FriendBubbles, Tag } from './ui'
 import { itemFacts, typeName } from '../data/catalog'
 import { haptic } from '../lib/haptics'
+import { posterShape } from '../lib/posterShape'
 
 export type SwipeDir = 'left' | 'right' | 'up'
 export interface DeckHandle { fling: (dir: SwipeDir) => void }
@@ -17,6 +18,30 @@ const FLICK = 600
 
 /** `flight`: solo la tarjeta de arriba vuela a la ficha (un único layoutId montado por obra). */
 function CardFace({ item, bubbles = true, flight = false }: { item: Item; bubbles?: boolean; flight?: boolean }) {
+  const isSquare = posterShape(item.type) === 'square'
+  if (isSquare) {
+    return (
+      <div className="absolute inset-0 rounded-[28px] overflow-hidden bg-surface border border-line shadow-2xl shadow-black/60 flex flex-col">
+        <div className="relative w-full aspect-square shrink-0 overflow-hidden bg-surface2">
+          <Poster item={item} showTitle={false} layoutId={flight ? posterLayoutId(item.id) : undefined} className="w-full h-full object-cover" />
+          {bubbles && <div className="absolute top-3 right-3"><FriendBubbles itemId={item.id} shelf={item.type} /></div>}
+        </div>
+        <div className="flex-1 p-5 pb-4 flex flex-col justify-between min-h-0 bg-surface">
+          <div>
+            <div className="text-label text-ink/80">{typeName(item.type)} · {item.year}</div>
+            <h2 className="text-display text-ink mt-1 line-clamp-2" style={{ textWrap: 'balance' } as React.CSSProperties}>{item.title}</h2>
+            <div className="text-meta text-ink/80 mt-1 truncate">{item.creator}</div>
+          </div>
+          <div className="flex flex-wrap items-center gap-1.5 mt-2">
+            {itemFacts(item) && <Tag variant="brand">{itemFacts(item)}</Tag>}
+            {item.genres.slice(0, 2).map((g) => (
+              <Tag key={g} variant="brand">{g}</Tag>
+            ))}
+          </div>
+        </div>
+      </div>
+    )
+  }
   return (
     <div className="absolute inset-0 rounded-[28px] overflow-hidden bg-surface border border-line shadow-2xl shadow-black/60">
       <Poster item={item} showTitle={false} layoutId={flight ? posterLayoutId(item.id) : undefined} className="absolute inset-0 w-full h-full" />
