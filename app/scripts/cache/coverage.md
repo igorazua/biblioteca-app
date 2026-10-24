@@ -1,4 +1,23 @@
 
+## Cobertura a 2026-10-23T12:32:09.591Z
+
+| Categoría | Obras | Wikidata | ID Primario | Votos/Readers | Keywords/Tags | Sinopsis | Portada Legal | Ejes |
+|---|---|---|---|---|---|---|---|---|
+| **movie** | 935 | 85.9% | 79.9% | 84.4% | 84.4% | 98.7% | 0.0% | 100.0% |
+| **series** | 966 | 88.4% | 73.1% | 86.9% | 86.9% | 88.2% | 0.0% | 103.3% |
+| **book** | 983 | 75.4% | 96.9% | 87.8% | 86.2% | 99.3% | 0.0% | 100.5% |
+| **boardgame** | 1018 | 69.5% | 0.0% | 68.9% | 68.9% | 91.5% | 0.3% | 100.0% |
+| **artist** | 410 | 97.6% | 99.8% | 0.0% | 60.2% | 100.0% | 0.0% | 100.0% |
+
+
+### Controles automáticos T17 (22/10/2026)
+- **Fallas detectadas:** 0
+- **Aprobadas:** 10
+
+✨ ¡Todos los controles T17 aprobados!
+
+
+
 ## Cobertura a 2026-10-23T12:29:24.184Z
 
 | Categoría | Obras | Wikidata | ID Primario | Votos/Readers | Keywords/Tags | Sinopsis | Portada Legal | Ejes |

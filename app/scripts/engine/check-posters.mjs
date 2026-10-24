@@ -42,7 +42,9 @@ export function isValidAspect(type, ratio) {
     return ratio >= 1.3 && ratio <= 1.65
   }
   if (type === 'boardgame') {
-    return ratio >= 0.7 && ratio <= 1.5
+    // Las cajas de juegos no se recortan (Igor 23/10, Poster.tsx):
+    // van desde apaisadas panorámicas (Descent 0.50, Risk 0.67) a cuadradas (1.0) y esbeltas de cartas (Scout 1.76, CAH 1.82)
+    return ratio >= 0.45 && ratio <= 2.0
   }
   if (type === 'artist') {
     return true
@@ -105,7 +107,7 @@ async function main() {
     s.total++
 
     const isStorage = it.posterUrl?.includes('biblio-covers')
-    const hasV2 = it.posterUrl?.endsWith('?v=2')
+    const hasV2 = /\?v=\d+/.test(it.posterUrl || '')
     const isGen = it.imageSrc === 'generated' || it.src?.posterUrl === 'generated'
 
     if (isStorage) s.inStorage++

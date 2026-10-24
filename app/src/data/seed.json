@@ -172561,7 +172561,7 @@
         "readers": "openlibrary",
         "voteAvg": "openlibrary",
         "subjects": "openlibrary",
-        "posterUrl": "scrape:covers.openlibrary.org",
+        "posterUrl": "openlibrary",
         "voteCount": "openlibrary",
         "popPct": "computed",
         "notoriety": "computed",
@@ -172574,7 +172574,8 @@
         "schoolReading": "scrape:listas-lectura-eso-bachillerato",
         "fameLlm": "llm-infer",
         "pageviews": "wikimedia-api",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "isbn": "curated"
       },
       "conf": {
         "originCountry": 0.99,
@@ -172611,7 +172612,8 @@
         "it": 105679,
         "pt": 50452
       },
-      "fameTier": 1
+      "fameTier": 1,
+      "isbn": "9788491052401"
     },
     {
       "id": "book:frankenstein-1818",
@@ -173046,7 +173048,7 @@
         "readers": "openlibrary",
         "voteAvg": "openlibrary",
         "subjects": "openlibrary",
-        "posterUrl": "scrape:covers.openlibrary.org",
+        "posterUrl": "openlibrary",
         "voteCount": "openlibrary",
         "popPct": "computed",
         "notoriety": "computed",
@@ -173059,7 +173061,8 @@
         "schoolReading": "scrape:listas-lectura-eso-bachillerato",
         "fameLlm": "llm-infer",
         "pageviews": "wikimedia-api",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "isbn": "curated"
       },
       "conf": {
         "originCountry": 0.99,
@@ -173097,7 +173100,9 @@
         "it": 174163,
         "pt": 77273
       },
-      "fameTier": 2
+      "fameTier": 2,
+      "imageCredit": "Open Library",
+      "isbn": "9788437632186"
     },
     {
       "id": "book:ficciones-1944",
@@ -181277,7 +181282,7 @@
         "Literatura"
       ],
       "synopsis": "Obra de Esquire publicada originalmente en 2016.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/book/esquire-s-the-new-rules-for-men-2016.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/book/esquire-s-the-new-rules-for-men-2016.webp?v=3",
       "popularity": 85,
       "olid": "OL25740044W",
       "readers": 2201,
@@ -181286,14 +181291,14 @@
       "keywords": [
         "etiquette for men"
       ],
-      "imageSrc": "generated",
+      "imageSrc": "covers.openlibrary.org",
       "imageCredit": "Open Library",
       "src": {
         "olid": "openlibrary",
         "readers": "openlibrary",
         "voteAvg": "openlibrary",
         "subjects": "openlibrary",
-        "posterUrl": "generated",
+        "posterUrl": "openlibrary",
         "voteCount": "openlibrary",
         "popPct": "computed",
         "notoriety": "computed",
@@ -181306,7 +181311,8 @@
         "fameLlm": "llm-infer",
         "fameTier": "computed",
         "hidden": "manual",
-        "isConsumerWork": "llm-infer"
+        "isConsumerWork": "llm-infer",
+        "isbn": "curated"
       },
       "conf": {
         "originCountry": 0.85,
@@ -181335,7 +181341,8 @@
       },
       "fameTier": 4,
       "hidden": true,
-      "isConsumerWork": false
+      "isConsumerWork": false,
+      "isbn": "9781618371867"
     },
     {
       "id": "book:wuthering-heights-1846",
@@ -251994,18 +252001,18 @@
         "Medio ambiente"
       ],
       "synopsis": "In Ark Nova, you will plan and design a modern, scientifically managed zoo. With the ultimate goal of owning the most successful zoological establishment, you will build enclosures, accommodate animals, and support conservation projects all over the world. Specialists and unique ...",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/ark-nova-2021.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/ark-nova-2021.webp?v=3",
       "popularity": 84,
       "wikidataId": "Q111493740",
-      "bggId": "342942",
+      "bggId": 342942,
       "wikiLangs": 4,
-      "imageSrc": "boardgamegeek",
-      "imageCredit": "Wikimedia Commons / Wikipedia",
+      "imageSrc": "cf.geekdo-images.com",
+      "imageCredit": "BoardGameGeek",
       "src": {
         "wikidataId": "wikidata",
         "bggId": "bgg",
         "synopsis": "wikidata",
-        "posterUrl": "scrape:boardgamegeek",
+        "posterUrl": "bgg",
         "wikiLangs": "wikidata",
         "popPct": "computed",
         "notoriety": "computed",
@@ -260727,7 +260734,7 @@
       "genres": [
         "Cartas"
       ],
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/scout-2019.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/scout-2019.webp?v=3",
       "popularity": 76,
       "voteAvg": 7.6,
       "voteCount": 100,
@@ -260739,7 +260746,7 @@
         "voteAvg": "wikidata",
         "voteCount": "wikidata",
         "keywords": "wikidata",
-        "posterUrl": "scrape:boardgamegeek",
+        "posterUrl": "bgg",
         "popPct": "computed",
         "notoriety": "computed",
         "trend": "computed",
@@ -260756,7 +260763,8 @@
         "wikiLangs": "wikidata",
         "fameLlm": "llm-infer",
         "pageviews": "wikimedia-api",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "bggId": "bgg"
       },
       "conf": {
         "originCountry": 0.8,
@@ -260778,9 +260786,9 @@
       },
       "wikidataId": "Q56363333",
       "synopsis": "SCOUT is a ladder-climbing game in which cards have two potential values, players may not rearrange their hand of cards, and players may pass their turn to take a card from the current high set of cards into their hand. More specifically, cards are dual-indexed, with different va...",
-      "imageSrc": "boardgamegeek",
-      "imageCredit": "Wikimedia Commons",
-      "bggId": "291453",
+      "imageSrc": "cf.geekdo-images.com",
+      "imageCredit": "BoardGameGeek",
+      "bggId": 291453,
       "weight": 1.1,
       "minAge": 6,
       "cooperative": false,
@@ -261938,8 +261946,8 @@
         "card game",
         "exploration"
       ],
-      "imageSrc": "boardgamegeek",
-      "imageCredit": "Archivo",
+      "imageSrc": "cf.geekdo-images.com",
+      "imageCredit": "BoardGameGeek",
       "src": {
         "voteAvg": "wikidata",
         "voteCount": "wikidata",
@@ -261957,11 +261965,12 @@
         "minAge": "computed",
         "cooperative": "curated",
         "mechanics": "computed",
-        "posterUrl": "scrape:boardgamegeek",
+        "posterUrl": "bgg",
         "wikiLangs": "wikidata",
         "fameLlm": "llm-infer",
         "pageviews": "wikimedia-api",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "bggId": "bgg"
       },
       "conf": {
         "originCountry": 0.8,
@@ -261983,14 +261992,14 @@
       },
       "wikidataId": "Q5972831",
       "synopsis": "iNiS Corporation  es un estudio desarrollador de videojuegos japonés que se especializa en videojuegos de ritmo. Fue cofundado por Keiichi Yano el 3 de febrero de 1997 como iNiS Ltd. El nombre iNiS es un acrónimo y significa infinite Noise of the inner Soul.",
-      "bggId": "155821",
+      "bggId": 155821,
       "weight": 2.5,
       "minAge": 10,
       "cooperative": false,
       "mechanics": [
         "Gestión de mano"
       ],
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/inis-2016.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/inis-2016.webp?v=3",
       "fameLlm": {
         "ES": 0.25
       },
@@ -268347,8 +268356,8 @@
         "fantasy",
         "mythology"
       ],
-      "imageSrc": "boardgamegeek",
-      "imageCredit": "Archivo",
+      "imageSrc": "cf.geekdo-images.com",
+      "imageCredit": "BoardGameGeek",
       "src": {
         "voteAvg": "wikidata",
         "voteCount": "wikidata",
@@ -268366,11 +268375,12 @@
         "minAge": "computed",
         "cooperative": "curated",
         "mechanics": "computed",
-        "posterUrl": "scrape:boardgamegeek",
+        "posterUrl": "bgg",
         "wikiLangs": "wikidata",
         "fameLlm": "manual",
         "pageviews": "wikimedia-api",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "bggId": "bgg"
       },
       "conf": {
         "originCountry": 0.8,
@@ -268392,14 +268402,14 @@
       },
       "wikidataId": "Q11768",
       "synopsis": "El Antiguo Egipto fue una civilización de la Antigüedad que se originó a lo largo del cauce medio y bajo del río Nilo y cuya historia abarca más de 3181 años.",
-      "bggId": "127023",
+      "bggId": 127023,
       "weight": 3.1,
       "minAge": 12,
       "cooperative": false,
       "mechanics": [
         "Estrategia"
       ],
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/kemet-2012.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/kemet-2012.webp?v=3",
       "fameLlm": {
         "ES": 0.1
       },
@@ -273617,10 +273627,10 @@
         "Civilización"
       ],
       "synopsis": "In this latest collaboration between Bruno Cathala and Ludovic Maublanc, players must buy the favor of the gods in their race to be the first player to build two cities in the Ancient Greek island group known as the Cyclades. Victory requires respect for all the gods - players ca...",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/cyclades-2009.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/cyclades-2009.webp?v=3",
       "popularity": 72,
       "wikidataId": "Q66439215",
-      "bggId": "54998",
+      "bggId": 54998,
       "voteAvg": 7.2,
       "voteCount": 100,
       "wikiLangs": 2,
@@ -273629,8 +273639,8 @@
         "city building",
         "civilization"
       ],
-      "imageSrc": "boardgamegeek",
-      "imageCredit": "Wikimedia Commons / Wikipedia",
+      "imageSrc": "cf.geekdo-images.com",
+      "imageCredit": "BoardGameGeek",
       "src": {
         "wikidataId": "wikidata",
         "bggId": "bgg",
@@ -273638,7 +273648,7 @@
         "voteCount": "wikidata",
         "keywords": "wikidata",
         "synopsis": "wikidata",
-        "posterUrl": "scrape:boardgamegeek",
+        "posterUrl": "bgg",
         "wikiLangs": "wikidata",
         "popPct": "computed",
         "notoriety": "computed",
@@ -277085,10 +277095,10 @@
         "Renaissance"
       ],
       "synopsis": "Love Letter es un juego de mesa de cartas de roles ocultos de ambientación medieval. Fue creado en 2012 por Seiji Kanai. El juego transcurre en el imaginario reino de Tempest. La reina ha sido apresada y se encuentra encarcelada acusada de alta traición. Su hija, la princesa Annette, llena de pena se encierra en palacio, negándose a salir. Pretendientes de todo el reino llegan con la intención de cortejarla y devolverle la alegría. Los pretendientes intentan hacer llegar cartas de amor a la princesa a través de personajes de la corte, que actúan de intermediarios.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/love-letter-2019.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/love-letter-2019.webp?v=3",
       "popularity": 72,
       "wikidataId": "Q18456969",
-      "bggId": "129622",
+      "bggId": 277085,
       "voteAvg": 7.2,
       "voteCount": 600,
       "wikiLangs": 12,
@@ -277097,8 +277107,8 @@
         "deduction",
         "renaissance"
       ],
-      "imageSrc": "boardgamegeek",
-      "imageCredit": "Wikimedia Commons / Wikipedia",
+      "imageSrc": "cf.geekdo-images.com",
+      "imageCredit": "BoardGameGeek",
       "src": {
         "wikidataId": "wikidata",
         "bggId": "bgg",
@@ -277106,7 +277116,7 @@
         "voteCount": "wikidata",
         "keywords": "wikidata",
         "synopsis": "wikipedia",
-        "posterUrl": "scrape:boardgamegeek",
+        "posterUrl": "bgg",
         "wikiLangs": "wikidata",
         "popPct": "computed",
         "notoriety": "computed",
@@ -278783,8 +278793,8 @@
         "fantasy",
         "negotiation"
       ],
-      "imageSrc": "boardgamegeek",
-      "imageCredit": "Archivo",
+      "imageSrc": "cf.geekdo-images.com",
+      "imageCredit": "BoardGameGeek",
       "src": {
         "voteAvg": "wikidata",
         "voteCount": "wikidata",
@@ -278802,11 +278812,12 @@
         "minAge": "computed",
         "cooperative": "curated",
         "mechanics": "computed",
-        "posterUrl": "scrape:boardgamegeek",
+        "posterUrl": "bgg",
         "wikiLangs": "wikidata",
         "fameLlm": "llm-infer",
         "pageviews": "wikimedia-api",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "bggId": "bgg"
       },
       "conf": {
         "originCountry": 0.8,
@@ -278834,7 +278845,7 @@
       "mechanics": [
         "Gestión económica"
       ],
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/oath-2021.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/oath-2021.webp?v=3",
       "fameLlm": {
         "ES": 0.25
       },
@@ -278846,7 +278857,8 @@
         "it": 82,
         "pt": 61
       },
-      "fameTier": 3
+      "fameTier": 3,
+      "bggId": 291572
     },
     {
       "id": "boardgame:imperium-classics-2021",
@@ -294073,10 +294085,10 @@
         "Arabian"
       ],
       "synopsis": "Each player attempts to score the most points by snaking caravan routes through the desert, trying to reach oases and blocking off sections of the desert. Many people feel that it is reminiscent of Go. Publisher's Description From the award-winning game designer Reiner Knizia com...",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/through-the-desert-1998.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/through-the-desert-1998.webp?v=3",
       "popularity": 70,
       "wikidataId": "Q1266886",
-      "bggId": "503",
+      "bggId": 503,
       "voteAvg": 7,
       "voteCount": 200,
       "wikiLangs": 4,
@@ -294085,8 +294097,8 @@
         "animals",
         "arabian"
       ],
-      "imageSrc": "boardgamegeek",
-      "imageCredit": "Wikimedia Commons / Wikipedia",
+      "imageSrc": "cf.geekdo-images.com",
+      "imageCredit": "BoardGameGeek",
       "src": {
         "wikidataId": "wikidata",
         "bggId": "bgg",
@@ -294094,7 +294106,7 @@
         "voteCount": "wikidata",
         "keywords": "wikidata",
         "synopsis": "wikidata",
-        "posterUrl": "scrape:boardgamegeek",
+        "posterUrl": "bgg",
         "wikiLangs": "wikidata",
         "popPct": "computed",
         "notoriety": "computed",
@@ -297808,10 +297820,10 @@
         "Trains"
       ],
       "synopsis": "The city of London has commissioned you to redesign its underground network! Optimise connections, serve as many sights as possible and exploit the tunnels that pass under the Thames. Be careful to respect the specifications set by the city. Reveal the next Station card. Draw a n...",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/next-station-london-2022.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/next-station-london-2022.webp?v=3",
       "popularity": 69,
       "wikidataId": "Q118669310",
-      "bggId": "353545",
+      "bggId": 353545,
       "voteAvg": 6.9,
       "voteCount": 100,
       "wikiLangs": 2,
@@ -297819,8 +297831,8 @@
         "city building",
         "trains"
       ],
-      "imageSrc": "boardgamegeek",
-      "imageCredit": "Wikimedia Commons / Wikipedia",
+      "imageSrc": "cf.geekdo-images.com",
+      "imageCredit": "BoardGameGeek",
       "src": {
         "wikidataId": "wikidata",
         "bggId": "bgg",
@@ -297828,7 +297840,7 @@
         "voteCount": "wikidata",
         "keywords": "wikidata",
         "synopsis": "wikidata",
-        "posterUrl": "scrape:boardgamegeek",
+        "posterUrl": "bgg",
         "wikiLangs": "wikidata",
         "popPct": "computed",
         "notoriety": "computed",
@@ -302307,10 +302319,10 @@
         "Fantasía"
       ],
       "synopsis": "Descent: Viaje a las tinieblas es un juego de tablero de fantasía de exploración de mazmorras publicado en 2005 por Fantasy Flight Games en inglés y por Edge Entertainment en español. Descent fue diseñado y producido por Kevin Wilson. El juego no está relacionado con el videojuego Descent, sino basado en una versión mejorada de las mecánicas de Doom: El Juego de Tablero. En Descent, los jugadores toman el control de aventureros que se adentran en complejos subterráneos en busca de tesoros. Un jugador toma el rol de Señor Supremo, que controla a los enemigos y juega cartas para estorbar a los jugadores héroes. Descent difiere de otros juegos en el género en que la meta del jugador Señor Supremo es ganar agotando los puntos de victoria de los otros jugadores, en vez de meramente facilitar el juego. Los recursos del Señor Supremo están limitados por las reglas del juego, lo que requiere que acumule y gaste puntos \"de amenaza\", que son generados en respuesta a las acciones de los personajes héroes, para obstaculizar a los otros jugadores y poner monstruos adicionales para derrotarlos. Este mecanismo es recuerda mucho al de El Señor de los Anillos cuando se juega con la expansión opcional Sauron.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/descent-journeys-in-the-dark-2005.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/descent-journeys-in-the-dark-2005.webp?v=3",
       "popularity": 69,
       "wikidataId": "Q1200534",
-      "bggId": "17226",
+      "bggId": 17226,
       "voteAvg": 6.9,
       "voteCount": 500,
       "wikiLangs": 10,
@@ -302319,8 +302331,8 @@
         "exploration",
         "fantasy"
       ],
-      "imageSrc": "boardgamegeek",
-      "imageCredit": "Wikimedia Commons / Wikipedia",
+      "imageSrc": "cf.geekdo-images.com",
+      "imageCredit": "BoardGameGeek",
       "src": {
         "wikidataId": "wikidata",
         "bggId": "bgg",
@@ -302328,7 +302340,7 @@
         "voteCount": "wikidata",
         "keywords": "wikidata",
         "synopsis": "wikipedia",
-        "posterUrl": "scrape:boardgamegeek",
+        "posterUrl": "bgg",
         "wikiLangs": "wikidata",
         "popPct": "computed",
         "notoriety": "computed",
@@ -325552,8 +325564,8 @@
         "city building",
         "industry / manufacturing"
       ],
-      "imageSrc": "boardgamegeek",
-      "imageCredit": "Archivo",
+      "imageSrc": "cf.geekdo-images.com",
+      "imageCredit": "BoardGameGeek",
       "src": {
         "voteAvg": "wikidata",
         "voteCount": "wikidata",
@@ -325571,11 +325583,12 @@
         "minAge": "computed",
         "cooperative": "curated",
         "mechanics": "computed",
-        "posterUrl": "scrape:boardgamegeek",
+        "posterUrl": "bgg",
         "wikiLangs": "wikidata",
         "fameLlm": "llm-infer",
         "pageviews": "wikimedia-api",
-        "fameTier": "computed"
+        "fameTier": "computed",
+        "bggId": "bgg"
       },
       "conf": {
         "originCountry": 0.8,
@@ -325604,7 +325617,7 @@
         "Gestión de mano",
         "Colocación de losetas"
       ],
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/villagers-2019.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/villagers-2019.webp?v=3",
       "fameLlm": {
         "ES": 0
       },
@@ -325616,7 +325629,8 @@
         "it": 459,
         "pt": 0
       },
-      "fameTier": 3
+      "fameTier": 3,
+      "bggId": 241724
     },
     {
       "id": "boardgame:paris-la-cite-de-la-lumiere-2019",
@@ -331157,10 +331171,10 @@
         "Comic Book / Strip"
       ],
       "synopsis": "Exploding Kittens es un juego de cartas casual de baraja específica diseñado por Matthew Inman, del webcómic The Oatmeal, Elan Lee y Shane Small, y publicado por primera vez en 2015. Comenzó como un proyecto de Kickstarter que buscaba recaudar 10 000 dólares estadounidenses mediante micromecenazgo, pero superó su objetivo en ocho minutos.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/exploding-kittens-2015.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/exploding-kittens-2015.webp?v=3",
       "popularity": 59,
       "wikidataId": "Q18956795",
-      "bggId": "172225",
+      "bggId": 172225,
       "voteAvg": 5.9,
       "voteCount": 850,
       "wikiLangs": 17,
@@ -331169,8 +331183,8 @@
         "card game",
         "comic book / strip"
       ],
-      "imageSrc": "boardgamegeek",
-      "imageCredit": "Wikimedia Commons / Wikipedia",
+      "imageSrc": "cf.geekdo-images.com",
+      "imageCredit": "BoardGameGeek",
       "src": {
         "wikidataId": "wikidata",
         "bggId": "bgg",
@@ -331178,7 +331192,7 @@
         "voteCount": "wikidata",
         "keywords": "wikidata",
         "synopsis": "wikipedia",
-        "posterUrl": "scrape:boardgamegeek",
+        "posterUrl": "bgg",
         "wikiLangs": "wikidata",
         "popPct": "computed",
         "notoriety": "computed",
@@ -331244,18 +331258,18 @@
         "Económico"
       ],
       "synopsis": "Monopoly es un juego de mesa basado en el intercambio y la compraventa de bienes raíces. Hoy es propiedad de la empresa estadounidense Hasbro. Monopoly es uno de los juegos de mesa comerciales más vendidos del mundo.[cita requerida]",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/monopoly-1935.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/monopoly-1935.webp?v=3",
       "popularity": 50,
       "wikidataId": "Q17243",
-      "bggId": "1406",
+      "bggId": 1406,
       "voteAvg": 5,
       "voteCount": 4050,
       "wikiLangs": 81,
       "keywords": [
         "economic"
       ],
-      "imageSrc": "boardgamegeek",
-      "imageCredit": "Wikimedia Commons / Wikipedia",
+      "imageSrc": "cf.geekdo-images.com",
+      "imageCredit": "BoardGameGeek",
       "src": {
         "wikidataId": "wikidata",
         "bggId": "bgg",
@@ -331263,7 +331277,7 @@
         "voteCount": "wikidata",
         "keywords": "wikidata",
         "synopsis": "wikipedia",
-        "posterUrl": "scrape:boardgamegeek",
+        "posterUrl": "bgg",
         "wikiLangs": "wikidata",
         "popPct": "computed",
         "notoriety": "computed",
@@ -331330,10 +331344,10 @@
         "Juego de guerra"
       ],
       "synopsis": "Risk es un juego de mesa de carácter estratégico, creado por Albert Lamorisse en 1950 con el nombre de La Conquête du Monde y comercializado desde 1958 por la empresa Parker Brothers.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/risk-1959.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/risk-1959.webp?v=3",
       "popularity": 55,
       "wikidataId": "Q12541",
-      "bggId": "181",
+      "bggId": 181,
       "voteAvg": 5.5,
       "voteCount": 1900,
       "wikiLangs": 38,
@@ -331341,8 +331355,8 @@
         "territory building",
         "wargame"
       ],
-      "imageSrc": "boardgamegeek",
-      "imageCredit": "Wikimedia Commons / Wikipedia",
+      "imageSrc": "cf.geekdo-images.com",
+      "imageCredit": "BoardGameGeek",
       "src": {
         "wikidataId": "wikidata",
         "bggId": "bgg",
@@ -331350,7 +331364,7 @@
         "voteCount": "wikidata",
         "keywords": "wikidata",
         "synopsis": "wikipedia",
-        "posterUrl": "scrape:boardgamegeek",
+        "posterUrl": "bgg",
         "wikiLangs": "wikidata",
         "popPct": "computed",
         "notoriety": "computed",
@@ -332027,10 +332041,10 @@
         "Mature / Adult"
       ],
       "synopsis": "Cartas contra la humanidad es un juego de socialización actualmente disponible como descarga gratuita o como copia distribuida. El juego está licenciado a través de Creative Commons. Su título es una referencia a la frase crímenes contra la humanidad, en alusión a su contenido políticamente incorrecto.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/cards-against-humanity-2009.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/cards-against-humanity-2009.webp?v=3",
       "popularity": 55,
       "wikidataId": "Q5038791",
-      "bggId": "50381",
+      "bggId": 50381,
       "voteAvg": 5.5,
       "voteCount": 850,
       "wikiLangs": 17,
@@ -332039,8 +332053,8 @@
         "humor",
         "mature / adult"
       ],
-      "imageSrc": "boardgamegeek",
-      "imageCredit": "Wikimedia Commons / Wikipedia",
+      "imageSrc": "cf.geekdo-images.com",
+      "imageCredit": "BoardGameGeek",
       "src": {
         "wikidataId": "wikidata",
         "bggId": "bgg",
@@ -332048,7 +332062,7 @@
         "voteCount": "wikidata",
         "keywords": "wikidata",
         "synopsis": "wikipedia",
-        "posterUrl": "scrape:boardgamegeek",
+        "posterUrl": "bgg",
         "wikiLangs": "wikidata",
         "popPct": "computed",
         "notoriety": "computed",
@@ -332415,7 +332429,7 @@
         "Ópera rock"
       ],
       "synopsis": "Queen (Londres, Reino Unido), icono de Rock, Glam rock, Ópera rock desde 1970.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/queen-1970.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/queen-1970.webp?v=3",
       "popularity": 90,
       "mbid": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
       "keywords": [
@@ -332477,12 +332491,12 @@
       ],
       "wikidataId": "Q15862",
       "imageSrc": "cdn-images.dzcdn.net",
-      "imageCredit": "Wikimedia Commons",
+      "imageCredit": "Deezer",
       "src": {
         "mbid": "musicbrainz",
         "wikidataId": "wikidata",
         "tags": "musicbrainz",
-        "posterUrl": "scrape:cdn-images.dzcdn.net",
+        "posterUrl": "deezer",
         "popPct": "computed",
         "notoriety": "computed",
         "trend": "computed",
@@ -332528,7 +332542,8 @@
         "it": 186211,
         "pt": 72779
       },
-      "fameTier": 1
+      "fameTier": 1,
+      "deezerId": 412
     },
     {
       "id": "artist:pink-floyd-1965",
@@ -333633,7 +333648,7 @@
         "Glam rock"
       ],
       "synopsis": "Kiss (Nueva York, EE. UU.), icono de Hard rock, Glam rock desde 1973.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/kiss-1973.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/kiss-1973.webp?v=3",
       "popularity": 90,
       "wikidataId": "Q124179",
       "mbid": "e1f1e33e-2e4c-4d43-b91b-7064068d3283",
@@ -333662,12 +333677,12 @@
         "vyrzukhisuc-artiest"
       ],
       "imageSrc": "cdn-images.dzcdn.net",
-      "imageCredit": "Wikimedia Commons",
+      "imageCredit": "Deezer",
       "src": {
         "mbid": "musicbrainz",
         "wikidataId": "wikidata",
         "tags": "musicbrainz",
-        "posterUrl": "scrape:cdn-images.dzcdn.net",
+        "posterUrl": "deezer",
         "popPct": "computed",
         "notoriety": "computed",
         "trend": "computed",
@@ -333713,7 +333728,8 @@
         "it": 121804,
         "pt": 86486
       },
-      "fameTier": 1
+      "fameTier": 1,
+      "deezerId": 67
     },
     {
       "id": "artist:van-halen-1972",
@@ -338689,7 +338705,7 @@
         "Space rock"
       ],
       "synopsis": "Muse (Teignmouth, Reino Unido), icono de Rock alternativo, Space rock desde 1994.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/muse-1994.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/muse-1994.webp?v=3",
       "popularity": 90,
       "wikidataId": "Q22151",
       "mbid": "9c9f1380-2516-4fc9-a3e6-f9f61941d090",
@@ -338738,12 +338754,12 @@
         "prog related"
       ],
       "imageSrc": "cdn-images.dzcdn.net",
-      "imageCredit": "Wikimedia Commons",
+      "imageCredit": "Deezer / Muse",
       "src": {
         "mbid": "musicbrainz",
         "wikidataId": "wikidata",
         "tags": "musicbrainz",
-        "posterUrl": "scrape:cdn-images.dzcdn.net",
+        "posterUrl": "deezer",
         "popPct": "computed",
         "notoriety": "computed",
         "trend": "computed",
@@ -338760,7 +338776,8 @@
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "posterUrl": 0.99
       },
       "popPct": 65.3,
       "notoriety": 0.66,
@@ -340531,7 +340548,7 @@
         "Dance-pop"
       ],
       "synopsis": "Madonna (Bay City, Michigan, EE. UU.), icono de Pop, Dance-pop desde 1982.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/madonna-1982.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/madonna-1982.webp?v=3",
       "popularity": 90,
       "wikidataId": "Q1744",
       "mbid": "79239441-bfd5-4981-a70c-55c3f15c1287",
@@ -340576,12 +340593,12 @@
         "nuno"
       ],
       "imageSrc": "cdn-images.dzcdn.net",
-      "imageCredit": "Wikimedia Commons",
+      "imageCredit": "Deezer / Madonna",
       "src": {
         "mbid": "musicbrainz",
         "wikidataId": "wikidata",
         "tags": "musicbrainz",
-        "posterUrl": "scrape:cdn-images.dzcdn.net",
+        "posterUrl": "deezer",
         "popPct": "computed",
         "notoriety": "computed",
         "trend": "computed",
@@ -340598,7 +340615,8 @@
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "posterUrl": 0.99
       },
       "popPct": 98,
       "notoriety": 0.88,
@@ -344034,7 +344052,7 @@
         "Art pop"
       ],
       "synopsis": "Kanye West (Chicago, EE. UU.), icono de Hip hop, Art pop desde 1996.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/kanye-west-1996.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/kanye-west-1996.webp?v=3",
       "popularity": 90,
       "wikidataId": "Q15623597",
       "mbid": "44017d4d-a289-45a2-a9b6-816313a7fa45",
@@ -344046,7 +344064,7 @@
         "mbid": "musicbrainz",
         "wikidataId": "wikidata",
         "tags": "musicbrainz",
-        "posterUrl": "scrape:cdn-images.dzcdn.net",
+        "posterUrl": "wikimedia",
         "popPct": "computed",
         "notoriety": "computed",
         "trend": "computed",
@@ -344063,7 +344081,8 @@
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "posterUrl": 0.99
       },
       "popPct": 4.2,
       "notoriety": 0.47,
@@ -344080,7 +344099,7 @@
         "2000s",
         "2010s"
       ],
-      "imageSrc": "cdn-images.dzcdn.net",
+      "imageSrc": "commons.wikimedia.org",
       "fameLlm": {
         "ES": 0.75
       },
@@ -344092,7 +344111,8 @@
         "it": 104,
         "pt": 0
       },
-      "fameTier": 4
+      "fameTier": 4,
+      "imageCredit": "David Shankbone / Wikimedia Commons"
     },
     {
       "id": "artist:jay-z-1986",
@@ -344193,7 +344213,7 @@
         "East coast hip hop"
       ],
       "synopsis": "Nas (Nueva York, EE. UU.), icono de East coast hip hop desde 1991.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/nas-1991.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/nas-1991.webp?v=3",
       "popularity": 90,
       "wikidataId": "Q194220",
       "mbid": "cfbc0924-0035-4d6c-8197-f024653af823",
@@ -344230,12 +344250,12 @@
         "top 50"
       ],
       "imageSrc": "cdn-images.dzcdn.net",
-      "imageCredit": "Wikimedia Commons",
+      "imageCredit": "Deezer / Nas",
       "src": {
         "mbid": "musicbrainz",
         "wikidataId": "wikidata",
         "tags": "musicbrainz",
-        "posterUrl": "scrape:cdn-images.dzcdn.net",
+        "posterUrl": "deezer",
         "popPct": "computed",
         "notoriety": "computed",
         "trend": "computed",
@@ -344252,7 +344272,8 @@
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "posterUrl": 0.99
       },
       "popPct": 60.9,
       "notoriety": 0.57,
@@ -347266,7 +347287,7 @@
         "Urbano"
       ],
       "synopsis": "Rosalía (Barcelona, España), icono de Nuevo flamenco, Art pop, Urbano desde 2017.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/rosalia-2017.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/rosalia-2017.webp?v=3",
       "popularity": 90,
       "wikidataId": "Q28843759",
       "mbid": "25f3abd9-63b5-471a-bd25-feb9672dfa11",
@@ -347284,12 +347305,12 @@
         "flamenco pop"
       ],
       "imageSrc": "cdn-images.dzcdn.net",
-      "imageCredit": "Wikimedia Commons",
+      "imageCredit": "Deezer",
       "src": {
         "mbid": "musicbrainz",
         "wikidataId": "wikidata",
         "tags": "musicbrainz",
-        "posterUrl": "scrape:cdn-images.dzcdn.net",
+        "posterUrl": "deezer",
         "popPct": "computed",
         "notoriety": "computed",
         "trend": "computed",
@@ -347334,7 +347355,8 @@
         "it": 301773,
         "pt": 191355
       },
-      "fameTier": 1
+      "fameTier": 1,
+      "deezerId": 554792
     },
     {
       "id": "artist:c-tangana-2006",
@@ -350274,7 +350296,7 @@
         "Electrónica"
       ],
       "synopsis": "Zahara (Úbeda, España), icono de Indie pop, Electrónica desde 2005.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/zahara-2005.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/zahara-2005.webp?v=3",
       "popularity": 90,
       "wikidataId": "Q3825360",
       "mbid": "fe4cc36c-cfc5-45d1-90f9-d61ebf40559f",
@@ -350284,12 +350306,12 @@
         "synth-pop"
       ],
       "imageSrc": "cdn-images.dzcdn.net",
-      "imageCredit": "Wikimedia Commons",
+      "imageCredit": "Deezer / Zahara",
       "src": {
         "mbid": "musicbrainz",
         "wikidataId": "wikidata",
         "tags": "musicbrainz",
-        "posterUrl": "scrape:cdn-images.dzcdn.net",
+        "posterUrl": "deezer",
         "popPct": "computed",
         "notoriety": "computed",
         "trend": "computed",
@@ -350306,7 +350328,8 @@
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "posterUrl": 0.99
       },
       "popPct": 7.6,
       "notoriety": 0.4,
@@ -350349,7 +350372,7 @@
         "Pop"
       ],
       "synopsis": "Bad Bunny (Vega Baja, Puerto Rico), icono de Reggaeton, Trap latino, Pop desde 2016.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/bad-bunny-2016.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/bad-bunny-2016.webp?v=3",
       "popularity": 90,
       "wikidataId": "Q44333953",
       "mbid": "89aa5ecb-59ad-46f5-b3eb-2d424e941f19",
@@ -350365,12 +350388,12 @@
         "trap latino"
       ],
       "imageSrc": "cdn-images.dzcdn.net",
-      "imageCredit": "Wikimedia Commons",
+      "imageCredit": "Deezer",
       "src": {
         "mbid": "musicbrainz",
         "wikidataId": "wikidata",
         "tags": "musicbrainz",
-        "posterUrl": "scrape:cdn-images.dzcdn.net",
+        "posterUrl": "deezer",
         "popPct": "computed",
         "notoriety": "computed",
         "trend": "computed",
@@ -350415,7 +350438,8 @@
         "it": 489550,
         "pt": 380564
       },
-      "fameTier": 1
+      "fameTier": 1,
+      "deezerId": 10583405
     },
     {
       "id": "artist:shakira-1990",
@@ -351558,7 +351582,7 @@
         "Hip hop"
       ],
       "synopsis": "Duki (Buenos Aires, Argentina), icono de Trap latino, Hip hop desde 2016.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/duki-2016.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/duki-2016.webp?v=3",
       "popularity": 90,
       "wikidataId": "Q62024032",
       "mbid": "44869536-0262-4f22-9c23-b4821c13cd97",
@@ -351581,7 +351605,7 @@
         "mbid": "musicbrainz",
         "wikidataId": "wikidata",
         "tags": "musicbrainz",
-        "posterUrl": "scrape:cdn-images.dzcdn.net",
+        "posterUrl": "deezer",
         "popPct": "computed",
         "notoriety": "computed",
         "trend": "computed",
@@ -351598,7 +351622,8 @@
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "posterUrl": 0.99
       },
       "popPct": 23.5,
       "notoriety": 0.57,
@@ -351627,7 +351652,8 @@
         "it": 3003,
         "pt": 1078
       },
-      "fameTier": 3
+      "fameTier": 3,
+      "imageCredit": "Deezer / DUKI"
     },
     {
       "id": "artist:rauw-alejandro-2014",
@@ -352358,7 +352384,7 @@
         "Dance-pop"
       ],
       "synopsis": "Ricky Martin (San Juan, Puerto Rico), icono de Pop latino, Dance-pop desde 1984.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/ricky-martin-1984.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/ricky-martin-1984.webp?v=3",
       "popularity": 90,
       "wikidataId": "Q128799",
       "mbid": "70ea63ea-70dc-4b63-951a-2c249d2b3b0a",
@@ -352375,12 +352401,12 @@
         "lgbtqi"
       ],
       "imageSrc": "cdn-images.dzcdn.net",
-      "imageCredit": "Wikimedia Commons",
+      "imageCredit": "Deezer",
       "src": {
         "mbid": "musicbrainz",
         "wikidataId": "wikidata",
         "tags": "musicbrainz",
-        "posterUrl": "scrape:cdn-images.dzcdn.net",
+        "posterUrl": "deezer",
         "popPct": "computed",
         "notoriety": "computed",
         "trend": "computed",
@@ -352426,7 +352452,8 @@
         "it": 98352,
         "pt": 70531
       },
-      "fameTier": 1
+      "fameTier": 1,
+      "deezerId": 2789
     },
     {
       "id": "artist:mon-laferte-2003",
@@ -357270,9 +357297,9 @@
         "Música"
       ],
       "synopsis": "Cupido es un grupo de electropop e indiepop formado en 2018, compuesto por el trapero barcelonés Pimp Flaco (voz) y la banda madrileño-canaria de bedroom pop Solo Astra, integrada por Alejandro \"Al\" García (bajo), \"Toni D\" Díaz, Dani \"Dannel\" Rodríguez (batería) y Luis \"Luichi Boy\" Sansó.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/cupido.webp?v=2",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/cupido.webp?v=3",
       "imageSrc": "cdn-images.dzcdn.net",
-      "imageCredit": "Archivo",
+      "imageCredit": "Deezer / Cupido",
       "mbid": "6bb079e7-a4bc-4d07-9dee-96e1e8989a75",
       "originCountry": [
         "ES"
@@ -357287,9 +357314,9 @@
         "originalLanguage": "llm-infer",
         "isCanon": "computed",
         "titles": "localized",
-        "wikidataId": "wikidata",
+        "wikidataId": "curated",
         "synopsis": "wikipedia",
-        "posterUrl": "scrape:cdn-images.dzcdn.net",
+        "posterUrl": "deezer",
         "peakDecades": "computed",
         "fameLlm": "llm-infer",
         "pageviews": "wikimedia-api",
@@ -357299,7 +357326,9 @@
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "posterUrl": 0.99,
+        "wikidataId": 1
       },
       "popPct": 6.8,
       "notoriety": 0.02,
@@ -357308,7 +357337,7 @@
       "titles": {
         "es-ES": "Cupido"
       },
-      "wikidataId": "Q286700",
+      "wikidataId": "Q109313219",
       "wikiLangs": 3,
       "peakDecades": [
         "2010s",
@@ -364444,9 +364473,9 @@
         "Música"
       ],
       "synopsis": "Burning  es un grupo de rock de Madrid creado en 1974 por José Casas Toledo, Juan Antonio Martín Díaz, Enrique Pérez (bajo) y Ernesto Estepa. Más tarde se uniria Juan Antonio Cifuentes Laso. Los dos últimos dejaron la banda a finales de los 70.",
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/burning.webp?v=2",
-      "imageSrc": "cdn-images.dzcdn.net",
-      "imageCredit": "Wikimedia Commons",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/artist/burning.webp?v=3",
+      "imageSrc": "commons.wikimedia.org",
+      "imageCredit": "Wikimedia Commons / Burning",
       "wikidataId": "Q61747725",
       "mbid": "7015f9da-a820-4787-935e-f2e426e36829",
       "originCountry": [
@@ -364464,7 +364493,7 @@
         "isCanon": "computed",
         "titles": "localized",
         "peakDecades": "computed",
-        "posterUrl": "scrape:cdn-images.dzcdn.net",
+        "posterUrl": "wikimedia",
         "fameLlm": "llm-infer",
         "pageviews": "wikimedia-api",
         "fameTier": "computed"
@@ -364473,7 +364502,8 @@
         "originalLanguage": 0.95,
         "isCanon": 0.9,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "posterUrl": 0.99
       },
       "popPct": 2,
       "notoriety": 0.01,
@@ -367415,9 +367445,9 @@
         "Familiar",
         "Carreras"
       ],
-      "synopsis": "Charles Kingsley Meek, or just C. K. Meek, was a British anthropologist. He wrote about the northern and southern tribes of Nigeria and studied the Jukun people. Meek took photographs during some of his field work.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Charles%20Kingsley%20Meek%20(1a).jpg?width=600",
-      "wikidataId": "Q2051664",
+      "synopsis": "El parchís es un clásico juego de carreras derivado del pachisi. Muy popular en España e Hispanoamérica, se juega con un dado y cuatro fichas por jugador con el objetivo de llevarlas todas a la casilla final.",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/parchis-1900.webp?v=3",
+      "wikidataId": "Q1139414",
       "originCountry": [
         "ES"
       ],
@@ -367439,13 +367469,15 @@
         "originalLanguage": "llm-infer",
         "isCanon": "computed",
         "titles": "localized",
-        "synopsis": "wikipedia",
+        "synopsis": "curated",
         "fameLlm": "llm-infer",
         "pageviews": "wikimedia-api",
         "popPct": "computed",
         "notoriety": "computed",
         "fameTier": "computed",
-        "trend": "computed"
+        "trend": "computed",
+        "posterUrl": "wikimedia",
+        "bggId": "bgg"
       },
       "conf": {
         "originCountry": 0.99,
@@ -367453,9 +367485,10 @@
         "isCanon": 0.95,
         "fameLlm": 0.9,
         "pageviews": 1,
-        "wikidataId": 1
+        "wikidataId": 1,
+        "posterUrl": 0.99
       },
-      "imageSrc": "wikimedia",
+      "imageSrc": "upload.wikimedia.org",
       "imageCredit": "Wikimedia Commons",
       "fameLlm": {
         "ES": 1
@@ -367471,7 +367504,8 @@
       "popPct": 52,
       "notoriety": 0.98,
       "fameTier": 1,
-      "trend": 0
+      "trend": 0,
+      "bggId": 2136
     },
     {
       "id": "boardgame:trivial-pursuit-1981",
@@ -367486,8 +367520,8 @@
         "Familiar",
         "Cultura"
       ],
-      "synopsis": "El Trivial Pursuit es un juego de mesa clásico de preguntas y respuestas sobre cultura general y conocimientos específicos dividido en 6 categorías.",
-      "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Trivial_Pursuit_icon.png",
+      "synopsis": "Trivial Pursuit es el clásico juego de preguntas y respuestas donde los jugadores compiten por rellenar su ficha con los seis quesitos de colores respondiendo preguntas de cultura general.",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/trivial-pursuit-1981.webp?v=3",
       "wikidataId": "Q172440",
       "originCountry": [
         "ES"
@@ -367515,14 +367549,19 @@
         "popPct": "computed",
         "notoriety": "computed",
         "fameTier": "computed",
-        "trend": "computed"
+        "trend": "computed",
+        "posterUrl": "bgg",
+        "synopsis": "curated",
+        "bggId": "bgg"
       },
       "conf": {
         "originCountry": 0.99,
         "originalLanguage": 0.95,
         "isCanon": 0.95,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "posterUrl": 0.99,
+        "wikidataId": 1
       },
       "fameLlm": {
         "ES": 1
@@ -367538,7 +367577,10 @@
       "popPct": 50.5,
       "notoriety": 0.98,
       "fameTier": 1,
-      "trend": 0
+      "trend": 0,
+      "imageSrc": "cf.geekdo-images.com",
+      "imageCredit": "BoardGameGeek",
+      "bggId": 2952
     },
     {
       "id": "boardgame:cluedo-1949",
@@ -367554,7 +367596,7 @@
         "Familiar"
       ],
       "synopsis": "Cluedo es un célebre juego de mesa de misterio y deducción donde los jugadores investigan quién mató al Dr. Black (o Mr. Boddy), en qué habitación y con qué arma.",
-      "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Canzonissima%201972%20-%20Nello%20Pagani.png?width=600",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/cluedo-1949.webp?v=3",
       "wikidataId": "Q172460",
       "originCountry": [
         "ES"
@@ -367582,17 +367624,22 @@
         "popPct": "computed",
         "notoriety": "computed",
         "fameTier": "computed",
-        "trend": "computed"
+        "trend": "computed",
+        "posterUrl": "bgg",
+        "synopsis": "curated",
+        "bggId": "bgg"
       },
       "conf": {
         "originCountry": 0.99,
         "originalLanguage": 0.95,
         "isCanon": 0.95,
         "fameLlm": 0.9,
-        "pageviews": 1
+        "pageviews": 1,
+        "posterUrl": 0.99,
+        "wikidataId": 1
       },
-      "imageSrc": "wikimedia",
-      "imageCredit": "Wikimedia Commons",
+      "imageSrc": "cf.geekdo-images.com",
+      "imageCredit": "BoardGameGeek",
       "fameLlm": {
         "ES": 1
       },
@@ -367607,7 +367654,8 @@
       "popPct": 50.6,
       "notoriety": 0.98,
       "fameTier": 1,
-      "trend": 0
+      "trend": 0,
+      "bggId": 1294
     }
   ],
   "friends": [
