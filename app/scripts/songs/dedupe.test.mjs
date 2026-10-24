@@ -325,4 +325,34 @@ describe('T28 §28.3 · Deduplicación y normalización de canciones', () => {
     const groups = deduplicateRecordings(input)
     expect(groups.length).toBe(2)
   })
+
+  it('16. Limpieza profunda: Full Length Version / Radio Edit no llegan al slug ni al título visible', () => {
+    const input = [
+      {
+        title: 'Common People (Full Length Version)',
+        artist: 'Pulp',
+        artistMbid: 'pulp-mbid',
+        firstReleaseDate: '1995-05-22',
+      },
+    ]
+    const groups = deduplicateRecordings(input)
+    const song = pickCanonicalSong(groups[0])
+    expect(song.title).toBe('Common People')
+    expect(song.id).toBe('song:common-people-pulp-1995')
+  })
+
+  it('17. Limpieza de sufijos: Kids (Radio Edit) produce slug limpio sin coletillas', () => {
+    const input = [
+      {
+        title: 'Kids (Radio Edit)',
+        artist: 'MGMT',
+        artistMbid: 'mgmt-mbid',
+        firstReleaseDate: '2007-10-02',
+      },
+    ]
+    const groups = deduplicateRecordings(input)
+    const song = pickCanonicalSong(groups[0])
+    expect(song.title).toBe('Kids')
+    expect(song.id).toBe('song:kids-mgmt-2007')
+  })
 })

@@ -12,3 +12,4 @@ app/scripts/cache/covers/
 app/scripts/cache/songs/itunes/
 app/scripts/cache/songs/listenbrainz/
 app/scripts/cache/songs/musicbrainz/
+app/scripts/cache/songs/charts/

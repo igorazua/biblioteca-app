@@ -1,9 +1,5040 @@
 [
   {
-    "title": "Mil campanas",
-    "artist": "Olé Olé",
+    "title": "On the floor",
+    "artist": "Jennifer López ft. Pitbull",
+    "year": 2011,
+    "provenance": "promusicae-n1-anual-2011",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "La plena",
+    "artist": "W Sound ft. Beéle & Ovy On the Drums",
+    "year": 2025,
+    "provenance": "promusicae-n1-anual-2025",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2 de enero",
+    "artist": "rowspan=12 style=text-align: center; |Karol G ft. Nicki Minaj",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "9 de enero",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "16 de enero",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "23 de enero",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "30 de enero",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "6 de febrero",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "13 de febrero",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "20 de febrero",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "27 de febrero",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "5 de marzo",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "12 de marzo",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "19 de marzo",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "26 de marzo",
+    "artist": "style=text-align: center; | J Balvin",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2 de abril",
+    "artist": "rowspan=4 style=text-align: center; |Bad Bunny ft. Jowell & Randy y Ñengo Flow",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "9 de abril",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "16 de abril",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "23 de abril",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "30 de abril",
+    "artist": "rowspan=2 style=text-align: center; |C. Tangana",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "7 de mayo",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "14 de mayo",
+    "artist": "rowspan=2style=text-align: center; |Bad Bunny y Don Omar",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "21 de mayo",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "28 de mayo",
+    "artist": "style=text-align: center; | Justin Quiles, Daddy Yankee y El Alfa",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "4 de junio",
+    "artist": "style=text-align: center; | Rosalía y Travis Scott",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "11 de junio",
+    "artist": "style=text-align: center; |Anuel AA y Bad Bunny",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "18 de junio",
+    "artist": "style=text-align: center; |Nio García, Anuel AA, Myke Towers, Juanka y Brray",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "25 de junio",
+    "artist": "style=text-align: center; |Anuel AA",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2 de julio",
+    "artist": "rowspan=4 style=text-align: center; |Ozuna",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "9 de julio",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "16 de julio",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "23 de julio",
+    "artist": "style=text-align: center; |",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "30 de julio",
+    "artist": "style=text-align: center; |J Balvin y Tainy",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "6 de agosto",
+    "artist": "style=text-align: center;rowspan=3 |Trueno, Nicki Nicole, Bizarrap, Taiu y Tatool",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "27 de agosto",
+    "artist": "align=center rowspan=8| Maluma",
+    "year": 2020,
+    "provenance": "promusicae-n1-semanal-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2 de enero",
+    "artist": "align=center rowspan=2| Dakiti",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "9 de enero",
+    "artist": "align=center|",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "16 de enero",
+    "artist": "align=center rowspan=4| Bandido",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "23 de enero",
+    "artist": "align=center|",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "30 de enero",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "6 de febrero",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "13 de febrero",
+    "artist": "rowspan=2 align=center | Ella no es tuya",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "20 de febrero",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "27 de febrero",
+    "artist": "align=center | Ingobernable",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "6 de marzo",
+    "artist": "align=center rowspan=4 |Ella no es tuya",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "13 de marzo",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "27 de marzo",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "3 de abril",
+    "artist": "align=center rowspan=3 |Fiel",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "10 de abril",
+    "artist": "align=center|",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "17 de abril",
+    "artist": "align=center|",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "24 de abril",
+    "artist": "align=center rowspan=4 |Pareja del año",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1 de mayo",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "8 de mayo",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "15 de mayo",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "22 de mayo",
+    "artist": "rowspan=9 align=center |Todo de ti",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "29 de mayo",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "5 de junio",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "12 de junio",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "19 de junio",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "26 de junio",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "3 de julio",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "10 de julio",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "17 de julio",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "24 de julio",
+    "artist": "align=center rowspan=5 | Pepas",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "31 de julio",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "7 de agosto",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "14 de agosto",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "21 de agosto",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "28 de agosto",
+    "artist": "rowspan=6 align=center | Mon amour (Remix)",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "4 de septiembre",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "11 de septiembre",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "18 de septiembre",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "25 de septiembre",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2 de octubre",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "9 de octubre",
+    "artist": "rowspan=5 align=center | Ateo",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "16 de octubre",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "23 de octubre",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "30 de octubre",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "6 de noviembre",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "13 de noviembre",
+    "artist": "rowspan=3 align=center | La fama",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "20 de noviembre",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "27 de noviembre",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "4 de diciembre",
+    "artist": "align=center | Mon amour (Remix)",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "11 de diciembre",
+    "artist": "align=center rowspan=2| Morad: Bzrp Music Sessions, Vol. 47",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "18 de diciembre",
+    "artist": "align=center |",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "25 de diciembre",
+    "artist": "align=center | Mon amour (Remix)",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "}",
+    "artist": "predecesor = 2020",
+    "year": 2021,
+    "provenance": "promusicae-n1-semanal-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1 de enero",
+    "artist": "align=center| Pelele",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "8 de enero",
+    "artist": "align=center rowspan=3| Desesperados",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "15 de enero",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "22 de enero",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "29 de enero",
+    "artist": "align=center| Ay mamá",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "5 de febrero",
+    "artist": "align=center rowspan=2| Cayó la noche (Remix)",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "12 de febrero",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "19 de febrero",
+    "artist": "align=center| Mamiii",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "26 de febrero",
+    "artist": "rowspan=3 align=center| Cayó la noche (Remix)",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "5 de marzo",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "12 de marzo",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "19 de marzo",
+    "artist": "align=center| Candy",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "26 de marzo",
+    "artist": "align=center| Plan A",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2 de abril",
+    "artist": "rowspan=3 align=center| Pantysito",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "9 de abril",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "16 de abril",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "23 de abril",
+    "artist": "rowspan=2 align=center|Paulo Londra: Bzrp Music Sessions, Vol. 23",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "30 de abril",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "7 de mayo",
+    "artist": "align=center| Moscow Mule",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "14 de mayo",
+    "artist": "align=center| SloMo",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "21 de mayo",
+    "artist": "rowspan=7 align=center| Tití me preguntó",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "28 de mayo",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "4 de junio",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "11 de junio",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "18 de junio",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "25 de junio",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2 de julio",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "9 de julio",
+    "artist": "rowspan=3 align=center| Quevedo: Bzrp Music Sessions, Vol. 52",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "16 de julio",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "23 de julio",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "30 de julio",
+    "artist": "align=center| Despechá",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "6 de agosto",
+    "artist": "align=center| Quevedo: Bzrp Music Sessions, Vol. 52",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "13 de agosto",
+    "artist": "align=center| Despechá",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "20 de agosto",
+    "artist": "rowspan=9 align=center| Quevedo: Bzrp Music Sessions, Vol. 52",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "27 de agosto",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "3 de septiembre",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "10 de septiembre",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "17 de septiembre",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "24 de septiembre",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1 de octubre",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "8 de octubre",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "15 de octubre",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "22 de octubre",
+    "artist": "align=center rowspan=2| La bachata",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "29 de octubre",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "5 de noviembre",
+    "artist": "align=center| Apa",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "12 de noviembre",
+    "artist": "align=center| La bachata",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "19 de noviembre",
+    "artist": "align=center| Duki: BZRP Music Sessions, Vol. 50",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "26 de noviembre",
+    "artist": "align=center| La bachata",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "3 de diciembre",
+    "artist": "align=center rowspan=2| La jumpa",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "10 de diciembre",
+    "artist": "align=center|",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "17 de diciembre",
+    "artist": "align=center| Playa del inglés",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "24 de diciembre",
+    "artist": "align=center| La jumpa",
+    "year": 2022,
+    "provenance": "promusicae-n1-semanal-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "posición_tabla = izquierda",
+    "artist": "dirección = horizontal",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "5 de enero",
+    "artist": "align=center| La bachata",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "12 de enero",
+    "artist": "align=center rowspan=7| Shakira: BZRP Music Sessions, Vol. 53",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "19 de enero",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "26 de enero",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2 de febrero",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "9 de febrero",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "16 de febrero",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "23 de febrero",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2 de marzo",
+    "artist": "align=center rowspan=4| TQG",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "9 de marzo",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "16 de marzo",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "23 de marzo",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "30 de marzo",
+    "artist": "rowspan=3 align=center | Beso",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "6 de abril",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "13 de abril",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "20 de abril",
+    "artist": "align=center rowspan=2 |El tonto",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "27 de abril",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "4 de mayo",
+    "artist": "align=center|Supernova",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "11 de mayo",
+    "artist": "rowspan=2 align=center |El tonto",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "18 de mayo",
+    "artist": "align=center |",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "25 de mayo",
+    "artist": "align=center|Acróstico",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1 de junio",
+    "artist": "rowspan=2 align=center |Where She Goes",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "8 de junio",
+    "artist": "align=center |",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "15 de junio",
+    "artist": "rowspan=2 align=center |Polaris (Remix)",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "22 de junio",
+    "artist": "align=center |",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "29 de junio",
+    "artist": "align=center|Rauw Alejandro: BZRP Music Sessions, Vol. 56",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "6 de julio",
+    "artist": "align=center|Lala",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "13 de julio",
+    "artist": "rowspan=8 align=center |Columbia",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "20 de julio",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "27 de julio",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "3 de agosto",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "10 de agosto",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "17 de agosto",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "24 de agosto",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "31 de agosto",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "7 de septiembre",
+    "artist": "rowspan=3 align=center |Reina",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "14 de septiembre",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "21 de septiembre",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "28 de septiembre",
+    "artist": "align=center|Buenas",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "5 de octubre",
+    "artist": "rowspan=2 align=center |Si no estás",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "12 de octubre",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "19 de octubre",
+    "artist": "align=center|Monaco",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "26 de octubre",
+    "artist": "rowspan=6 align=center |Si no estás",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2 de noviembre",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "9 de noviembre",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "16 de noviembre",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "23 de noviembre",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "30 de noviembre",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "7 de diciembre",
+    "artist": "rowspan=4 align=center |Manos rotas",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "14 de diciembre",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "21 de diciembre",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "28 de diciembre",
+    "artist": "align=center|",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "{{Bandera|España}} Quevedo",
+    "artist": "align=center|15",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "{{Bandera|Colombia}} Shakira",
+    "artist": "align=center|12",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "{{Bandera|España}} Íñigo Quintero",
+    "artist": "align=center|8",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "{{Bandera|Argentina}} Bizarrap",
+    "artist": "align=center|8",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "{{Bandera|España}} Saiko",
+    "artist": "align=center|7",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "{{Bandera|Puerto Rico}} Rauw Alejandro",
+    "artist": "align=center|4",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "{{Bandera|España}} Lola Índigo",
+    "artist": "align=center|4",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "{{Bandera|Puerto Rico}} Mora",
+    "artist": "align=center|4",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "{{Bandera|España}} Rosalía",
+    "artist": "align=center|3",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "{{Bandera|Puerto Rico}} Bad Bunny",
+    "artist": "align=center|3",
+    "year": 2023,
+    "provenance": "promusicae-n1-semanal-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "4 de enero",
+    "artist": "rowspan=2 align=center |Manos rotas",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "11 de enero",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "18 de enero",
+    "artist": "rowspan=3 align=center |Young Miko: BZRP Music Sessions, Vol. 58",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "25 de enero",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1 de febrero",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "8 de febrero",
+    "artist": "rowspan=2 align=center |La última",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "15 de febrero",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "22 de febrero",
+    "artist": "align=center |Luna",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "29 de febrero",
+    "artist": "align=center |Fardos",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "7 de marzo",
+    "artist": "rowspan=6 align=center |Xclusivo",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "14 de marzo",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "21 de marzo",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "28 de marzo",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "4 de abril",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "11 de abril",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "18 de abril",
+    "artist": "align=center |El conjuntito",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "25 de abril",
+    "artist": "rowspan=2 align=center |Santa",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2 de mayo",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "9 de mayo",
+    "artist": "rowspan=6 align=center |Badgyal",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "16 de mayo",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "23 de mayo",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "30 de mayo",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "6 de junio",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "13 de junio",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "20 de junio",
+    "artist": "rowspan=2 align=center |Real Gangsta Love",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "27 de junio",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "4 de julio",
+    "artist": "rowspan=2 align=center |Si antes te hubiera conocido",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "11 de julio",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "18 de julio",
+    "artist": "align=center |Potra salvaje",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "25 de julio",
+    "artist": "rowspan=14 align=center |Si antes te hubiera conocido",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1 de agosto",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "8 de agosto",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "15 de agosto",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "22 de agosto",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "29 de agosto",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "5 de septiembre",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "12 de septiembre",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "19 de septiembre",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "26 de septiembre",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "3 de octubre",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "10 de octubre",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "17 de octubre",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "24 de octubre",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "31 de octubre",
+    "artist": "rowspan=2 align=center |Degenere",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "7 de noviembre",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "14 de noviembre",
+    "artist": "align=center |IA",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "21 de noviembre",
+    "artist": "align=center |Qué pasaría...",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "28 de noviembre",
+    "artist": "rowspan=3 align=center |Gran Vía",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "5 de diciembre",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "12 de diciembre",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "19 de diciembre",
+    "artist": "rowspan=2 align=center |Capaz (merengueton)",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "26 de diciembre",
+    "artist": "align=center |",
+    "year": 2024,
+    "provenance": "promusicae-n1-semanal-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "|| || || || ||",
+    "artist": "1966",
+    "year": 2018,
+    "provenance": "los40-historico-2018",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1970",
+    "artist": "1971",
+    "year": 1970,
+    "provenance": "los40-historico-1970",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1980",
+    "artist": "1981",
+    "year": 1980,
+    "provenance": "los40-historico-1980",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1990",
+    "artist": "1991",
     "year": 1990,
-    "src": "los40-historico",
+    "provenance": "los40-historico-1990",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2010",
+    "artist": "2011",
+    "year": 2010,
+    "provenance": "los40-historico-2010",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2020",
+    "artist": "2021",
+    "year": 2020,
+    "provenance": "los40-historico-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "<center>25",
+    "artist": "{{bandera|España}} Alejandro Sanz",
+    "year": 2000,
+    "provenance": "los40-historico-2000",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=1|<center>22",
+    "artist": "{{bandera|Colombia}} Shakira",
+    "year": 2000,
+    "provenance": "los40-historico-2000",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=2 |<center>19",
+    "artist": "{{bandera|España}} Miguel Bosé",
+    "year": 2000,
+    "provenance": "los40-historico-2000",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=2 |<center>18",
+    "artist": "{{bandera|España}} Camilo Sesto",
+    "year": 2000,
+    "provenance": "los40-historico-2000",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "<center>16",
+    "artist": "{{bandera|España}} David Bisbal",
+    "year": 2000,
+    "provenance": "los40-historico-2000",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=4 |<center>15",
+    "artist": "{{bandera|España}} Mecano",
+    "year": 2000,
+    "provenance": "los40-historico-2000",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=2 |<center>14",
+    "artist": "{{bandera|España}} Luz Casal",
+    "year": 2000,
+    "provenance": "los40-historico-2000",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=3 |<center>13",
+    "artist": "{{bandera|Italia}} Eros Ramazzotti",
+    "year": 2000,
+    "provenance": "los40-historico-2000",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=2|<center>12",
+    "artist": "{{bandera|España}} La Unión",
+    "year": 2000,
+    "provenance": "los40-historico-2000",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=4 |<center>11",
+    "artist": "{{bandera|Cuba}} Gloria Estefan",
+    "year": 2000,
+    "provenance": "los40-historico-2000",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=9 |<center>10",
+    "artist": "{{bandera|Reino Unido}} Pet Shop Boys",
+    "year": 2000,
+    "provenance": "los40-historico-2000",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "{{Bandera|España}} Olé Olé",
+    "artist": "}",
+    "year": 1972,
+    "provenance": "los40-historico-1972",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1966",
+    "artist": "Black Is Black",
+    "year": 1966,
+    "provenance": "los40-historico-1966",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1967",
+    "artist": "Marionetas en la cuerda",
+    "year": 1967,
+    "provenance": "los40-historico-1967",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1968",
+    "artist": "Delilah",
+    "year": 1968,
+    "provenance": "los40-historico-1968",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1969",
+    "artist": "María Isabel",
+    "year": 1969,
+    "provenance": "los40-historico-1969",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1970",
+    "artist": "Un rayo de sol",
+    "year": 1970,
+    "provenance": "los40-historico-1970",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1971",
+    "artist": "My Sweet Lord",
+    "year": 1971,
+    "provenance": "los40-historico-1971",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1972",
+    "artist": "Amor, háblame dulcemente",
+    "year": 1972,
+    "provenance": "los40-historico-1972",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1973",
+    "artist": "América, América",
+    "year": 1973,
+    "provenance": "los40-historico-1973",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1974",
+    "artist": "Conversaciones conmigo mismo",
+    "year": 1974,
+    "provenance": "los40-historico-1974",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1975",
+    "artist": "Melina",
+    "year": 1975,
+    "provenance": "los40-historico-1975",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=2|1976",
+    "artist": "Esa eres tú",
+    "year": 1976,
+    "provenance": "los40-historico-1976",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1977",
+    "artist": "Mi buen amor",
+    "year": 1977,
+    "provenance": "los40-historico-1977",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=3|1978",
+    "artist": "Y... no",
+    "year": 1978,
+    "provenance": "los40-historico-1978",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1979",
+    "artist": "Too Much Heaven",
+    "year": 1979,
+    "provenance": "los40-historico-1979",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1980",
+    "artist": "Dime que me quieres",
+    "year": 1980,
+    "provenance": "los40-historico-1980",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1981",
+    "artist": "Johnny and Mary",
+    "year": 1981,
+    "provenance": "los40-historico-1981",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=4|1982",
+    "artist": "Como una ola",
+    "year": 1982,
+    "provenance": "los40-historico-1982",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Dos enamorados",
+    "artist": "Pedro Marín",
+    "year": 1982,
+    "provenance": "los40-historico-1982",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=6|1983",
+    "artist": "Eres tú",
+    "year": 1983,
+    "provenance": "los40-historico-1983",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=3|1984",
+    "artist": "Thriller",
+    "year": 1984,
+    "provenance": "los40-historico-1984",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1985",
+    "artist": "Live is Life",
+    "year": 1985,
+    "provenance": "los40-historico-1985",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=3|1986",
+    "artist": "Janey, Dont You Lose Heart",
+    "year": 1986,
+    "provenance": "los40-historico-1986",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=2|1988",
+    "artist": "Gimme Hope JoAnna",
+    "year": 1988,
+    "provenance": "los40-historico-1988",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=3|1989",
+    "artist": "Like a Prayer",
+    "year": 1989,
+    "provenance": "los40-historico-1989",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1990",
+    "artist": "La abuela",
+    "year": 1990,
+    "provenance": "los40-historico-1990",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1992",
+    "artist": "Otro día más sin verte",
+    "year": 1992,
+    "provenance": "los40-historico-1992",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1993",
+    "artist": "I Will Always Love You",
+    "year": 1993,
+    "provenance": "los40-historico-1993",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1995",
+    "artist": "Entre mis recuerdos",
+    "year": 1995,
+    "provenance": "los40-historico-1995",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1996",
+    "artist": "Fast Love",
+    "year": 1996,
+    "provenance": "los40-historico-1996",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "1998",
+    "artist": "Corazón partío",
+    "year": 1998,
+    "provenance": "los40-historico-1998",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2000",
+    "artist": "Sobreviviré",
+    "year": 2000,
+    "provenance": "los40-historico-2000",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2001",
+    "artist": "La playa",
+    "year": 2001,
+    "provenance": "los40-historico-2001",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2002",
+    "artist": "Mi música es tu voz",
+    "year": 2002,
+    "provenance": "los40-historico-2002",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2003",
+    "artist": "No es lo mismo",
+    "year": 2003,
+    "provenance": "los40-historico-2003",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=2|2004",
+    "artist": "Bulería",
+    "year": 2004,
+    "provenance": "los40-historico-2004",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2005",
+    "artist": "Días de verano",
+    "year": 2005,
+    "provenance": "los40-historico-2005",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2006",
+    "artist": "Hips Dont Lie",
+    "year": 2006,
+    "provenance": "los40-historico-2006",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2007",
+    "artist": "Las de la intuición",
+    "year": 2007,
+    "provenance": "los40-historico-2007",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2008",
+    "artist": "Ella Elle La",
+    "year": 2008,
+    "provenance": "los40-historico-2008",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2009",
+    "artist": "Colgando en tus manos",
+    "year": 2009,
+    "provenance": "los40-historico-2009",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2010",
+    "artist": "Waka Waka (Esto es África)",
+    "year": 2010,
+    "provenance": "los40-historico-2010",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2011",
+    "artist": "Give Me Everything",
+    "year": 2011,
+    "provenance": "los40-historico-2011",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2012",
+    "artist": "Someone like You",
+    "year": 2012,
+    "provenance": "los40-historico-2012",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2013",
+    "artist": "Wrecking Ball",
+    "year": 2013,
+    "provenance": "los40-historico-2013",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=3|2015",
+    "artist": "Uptown Funk",
+    "year": 2015,
+    "provenance": "los40-historico-2015",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=2|2016",
+    "artist": "One Dance",
+    "year": 2016,
+    "provenance": "los40-historico-2016",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Cant Stop the Feeling!",
+    "artist": "Justin Timberlake",
+    "year": 2016,
+    "provenance": "los40-historico-2016",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2017",
+    "artist": "Shape of You",
+    "year": 2017,
+    "provenance": "los40-historico-2017",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=4|2018",
+    "artist": "Lo malo",
+    "year": 2018,
+    "provenance": "los40-historico-2018",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "One Kiss",
+    "artist": "Calvin Harris con Dua Lipa",
+    "year": 2018,
+    "provenance": "los40-historico-2018",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Girls Like You",
+    "artist": "Maroon 5 y Cardi B",
+    "year": 2018,
+    "provenance": "los40-historico-2018",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=4 |2019",
+    "artist": "Sweet but Psycho",
+    "year": 2019,
+    "provenance": "los40-historico-2019",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Say My Name",
+    "artist": "David Guetta con Bebe Rexha y J Balvin",
+    "year": 2000,
+    "provenance": "los40-historico-2000",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "I Dont Care",
+    "artist": "Ed Sheeran y Justin Bieber",
+    "year": 2000,
+    "provenance": "los40-historico-2000",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Señorita",
+    "artist": "Shawn Mendes y Camila Cabello",
+    "year": 2000,
+    "provenance": "los40-historico-2000",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=4 |2020",
+    "artist": "Tabú",
+    "year": 2020,
+    "provenance": "los40-historico-2020",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Tusa",
+    "artist": "Karol G y Nicki Minaj",
+    "year": 2000,
+    "provenance": "los40-historico-2000",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2021",
+    "artist": "Todo de ti",
+    "year": 2021,
+    "provenance": "los40-historico-2021",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "rowspan=7 |2022",
+    "artist": "Tacones rojos",
+    "year": 2022,
+    "provenance": "los40-historico-2022",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Te felicito",
+    "artist": "Shakira y Rauw Alejandro",
+    "year": 2000,
+    "provenance": "los40-historico-2000",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Quevedo: BZRP Music Sessions, Vol. 52",
+    "artist": "Bizarrap y Quevedo",
+    "year": 2000,
+    "provenance": "los40-historico-2000",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2023",
+    "artist": "Flowers",
+    "year": 2023,
+    "provenance": "los40-historico-2023",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2024",
+    "artist": "Si antes te hubiera conocido",
+    "year": 2024,
+    "provenance": "los40-historico-2024",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2025",
+    "artist": "Capaz (merenguetón)",
+    "year": 2025,
+    "provenance": "los40-historico-2025",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "2026",
+    "artist": "La Graciosa",
+    "year": 2026,
+    "provenance": "los40-historico-2026",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Bring Out Your Dead (Live, 1970) [2026 Mix]",
+    "artist": "The Doors",
+    "artistId": "artist:the-doors-1965",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Who Says You Can't Go Home (Duet with Jennifer Nettles)",
+    "artist": "Bon Jovi",
+    "artistId": "artist:bon-jovi-1983",
+    "year": "2005",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Pink Cadillac (Single B-Side - 1984)",
+    "artist": "Bruce Springsteen",
+    "artistId": "artist:bruce-springsteen-1972",
+    "year": "1984",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Have you ever seen the rain (feat. Johnny (Guitar) Williamson)",
+    "artist": "Creedence Clearwater Revival",
+    "artistId": "artist:creedence-clearwater-revival-1967",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Old man down the road (feat. Johnny (Guitar) Williamson)",
+    "artist": "Creedence Clearwater Revival",
+    "artistId": "artist:creedence-clearwater-revival-1967",
+    "year": "2000",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Suzy Q (feat. Johnny (Guitar) Williamson)",
+    "artist": "Creedence Clearwater Revival",
+    "artistId": "artist:creedence-clearwater-revival-1967",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Travelin' band (feat. Johnny (Guitar) Williamson)",
+    "artist": "Creedence Clearwater Revival",
+    "artistId": "artist:creedence-clearwater-revival-1967",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "A Well Respected Man (Kwyet Kinks EP)",
+    "artist": "The Kinks",
+    "artistId": "artist:the-kinks-1963",
+    "year": "1965",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "WWE: Line In the Sand (Evolution)",
+    "artist": "Motorhead",
+    "artistId": "artist:motorhead-1975",
+    "year": "2004",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Line In the Sand (Evolution)",
+    "artist": "Motorhead",
+    "artistId": "artist:motorhead-1975",
+    "year": "2004",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "WWE: King of Kings (Triple H) [feat. Motörhead]",
+    "artist": "Motorhead",
+    "artistId": "artist:motorhead-1975",
+    "year": "2006",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "The Great Beyond (Live at the Black Sessions / 2001)",
+    "artist": "R.E.M.",
+    "artistId": "artist:r-e-m-1980",
+    "reason": "no_verified_release_year_found",
+    "provenance": "itunes-top-artist"
+  },
+  {
+    "title": "Twenty Four Hours (2020 Digital Master)",
+    "artist": "Joy Division",
+    "artistId": "artist:joy-division-1976",
+    "year": "1980",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "What'd I Say, Pts. I & 2",
+    "artist": "Ray Charles",
+    "artistId": "artist:ray-charles-1949",
+    "year": "1959",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "I Knew It, I Knew You (From \"Toy Story 5\")",
+    "artist": "Taylor Swift",
+    "artistId": "artist:taylor-swift-2006",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "30 For 30 (with Kendrick Lamar)",
+    "artist": "SZA",
+    "artistId": "artist:sza-2012",
+    "year": "2025",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Girl, so confusing featuring lorde",
+    "artist": "Lorde",
+    "artistId": "artist:lorde-2013",
+    "year": "2024",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Too Good at Goodbyes",
+    "artist": "Sam Smith",
+    "artistId": "artist:sam-smith-2013",
+    "year": "2017",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Lay Me Down",
+    "artist": "Sam Smith",
+    "artistId": "artist:sam-smith-2013",
+    "year": "2013",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Latch",
+    "artist": "Sam Smith",
+    "artistId": "artist:sam-smith-2013",
+    "year": "2012",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Unholy",
+    "artist": "Sam Smith",
+    "artistId": "artist:sam-smith-2013",
+    "year": "2022",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Dancing With A Stranger",
+    "artist": "Sam Smith",
+    "artistId": "artist:sam-smith-2013",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "How Do You Sleep?",
+    "artist": "Sam Smith",
+    "artistId": "artist:sam-smith-2013",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Fire on Fire",
+    "artist": "Sam Smith",
+    "artistId": "artist:sam-smith-2013",
+    "year": "2018",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Make It to Me",
+    "artist": "Sam Smith",
+    "artistId": "artist:sam-smith-2013",
+    "year": "2014",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "I'm Not The Only One (Live from Apple Music Studios)",
+    "artist": "Sam Smith",
+    "artistId": "artist:sam-smith-2013",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Writing's On the Wall",
+    "artist": "Sam Smith",
+    "artistId": "artist:sam-smith-2013",
+    "year": "2015",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Promises",
+    "artist": "Sam Smith",
+    "artistId": "artist:sam-smith-2013",
+    "year": "2018",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "To Die For (Bonus Track)",
+    "artist": "Sam Smith",
+    "artistId": "artist:sam-smith-2013",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Nothing Left for You",
+    "artist": "Sam Smith",
+    "artistId": "artist:sam-smith-2013",
+    "year": "2017",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "One Last Song",
+    "artist": "Sam Smith",
+    "artistId": "artist:sam-smith-2013",
+    "year": "2017",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "No Peace (feat. Yebba)",
+    "artist": "Sam Smith",
+    "artistId": "artist:sam-smith-2013",
+    "year": "2017",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "CAN'T STOP THE FEELING!",
+    "artist": "Justin Timberlake",
+    "artistId": "artist:justin-timberlake-1995",
+    "year": "2016",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Heartless",
+    "artist": "Kanye West",
+    "artistId": "artist:kanye-west-1996",
+    "year": "2008",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "God Is",
+    "artist": "Kanye West",
+    "artistId": "artist:kanye-west-1996",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Love Lockdown",
+    "artist": "Kanye West",
+    "artistId": "artist:kanye-west-1996",
+    "year": "2008",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "I Wonder",
+    "artist": "Kanye West",
+    "artistId": "artist:kanye-west-1996",
+    "year": "2007",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Amazing (feat. Young Jeezy)",
+    "artist": "Kanye West",
+    "artistId": "artist:kanye-west-1996",
+    "year": "2008",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Stronger",
+    "artist": "Kanye West",
+    "artistId": "artist:kanye-west-1996",
+    "year": "2007",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Homecoming (feat. Chris Martin)",
+    "artist": "Kanye West",
+    "artistId": "artist:kanye-west-1996",
+    "year": "2007",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Hurricane",
+    "artist": "Kanye West",
+    "artistId": "artist:kanye-west-1996",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "FourFiveSeconds",
+    "artist": "Kanye West",
+    "artistId": "artist:kanye-west-1996",
+    "year": "2015",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Follow God",
+    "artist": "Kanye West",
+    "artistId": "artist:kanye-west-1996",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Praise God",
+    "artist": "Kanye West",
+    "artistId": "artist:kanye-west-1996",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Closed on Sunday",
+    "artist": "Kanye West",
+    "artistId": "artist:kanye-west-1996",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Moon",
+    "artist": "Kanye West",
+    "artistId": "artist:kanye-west-1996",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Heartless",
+    "artist": "Kanye West",
+    "artistId": "artist:kanye-west-1996",
+    "year": "2008",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Hurricane",
+    "artist": "Kanye West",
+    "artistId": "artist:kanye-west-1996",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Panini (DaBaby Remix)",
+    "artist": "Nas",
+    "artistId": "artist:nas-1991",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Old Town Road (feat. Billy Ray Cyrus) [Remix]",
+    "artist": "Nas",
+    "artistId": "artist:nas-1991",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Old Town Road (feat. RM of BTS) [Seoul Town Road Remix]",
+    "artist": "Nas",
+    "artistId": "artist:nas-1991",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Old Town Road (feat. Billy Ray Cyrus) [Remix]",
+    "artist": "Nas",
+    "artistId": "artist:nas-1991",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Panini",
+    "artist": "Nas",
+    "artistId": "artist:nas-1991",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Old Town Road",
+    "artist": "Nas",
+    "artistId": "artist:nas-1991",
+    "year": "2018",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "MONTERO (Call Me By Your Name)",
+    "artist": "Nas",
+    "artistId": "artist:nas-1991",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "C7osure (You Like)",
+    "artist": "Nas",
+    "artistId": "artist:nas-1991",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Bad Guys Always Die (From \"Wild Wild West\" Soundtrack)",
+    "artist": "Dr. Dre",
+    "artistId": "artist:dr-dre-1985",
+    "year": "1999",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Same Ol' Thing (From \"Men in Black: The Album\")",
+    "artist": "A Tribe Called Quest",
+    "artistId": "artist:a-tribe-called-quest-1985",
+    "year": "2003",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Work Out",
+    "artist": "J. Cole",
+    "artistId": "artist:j-cole-2007",
+    "year": "2011",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Deja Vu",
+    "artist": "J. Cole",
+    "artistId": "artist:j-cole-2007",
+    "year": "2016",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "KOD",
+    "artist": "J. Cole",
+    "artistId": "artist:j-cole-2007",
+    "year": "2018",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Wet Dreamz",
+    "artist": "J. Cole",
+    "artistId": "artist:j-cole-2007",
+    "year": "2014",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Neighbors",
+    "artist": "J. Cole",
+    "artistId": "artist:j-cole-2007",
+    "year": "2016",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "MIDDLE CHILD",
+    "artist": "J. Cole",
+    "artistId": "artist:j-cole-2007",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Power Trip (feat. Miguel)",
+    "artist": "J. Cole",
+    "artistId": "artist:j-cole-2007",
+    "year": "2013",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "m y . l i f e",
+    "artist": "J. Cole",
+    "artistId": "artist:j-cole-2007",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Kevin's Heart",
+    "artist": "J. Cole",
+    "artistId": "artist:j-cole-2007",
+    "year": "2018",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "No Role Modelz",
+    "artist": "J. Cole",
+    "artistId": "artist:j-cole-2007",
+    "year": "2014",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "G.O.M.D",
+    "artist": "J. Cole",
+    "artistId": "artist:j-cole-2007",
+    "year": "2014",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Crooked Smile (feat. TLC)",
+    "artist": "J. Cole",
+    "artistId": "artist:j-cole-2007",
+    "year": "2013",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Stoned",
+    "artist": "Mac Miller",
+    "artistId": "artist:mac-miller-2007",
+    "year": "2025",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "My Favorite Part (feat. Ariana Grande)",
+    "artist": "Mac Miller",
+    "artistId": "artist:mac-miller-2007",
+    "year": "2016",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Come Back to Earth",
+    "artist": "Mac Miller",
+    "artistId": "artist:mac-miller-2007",
+    "year": "2018",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Soulmate",
+    "artist": "Mac Miller",
+    "artistId": "artist:mac-miller-2007",
+    "year": "2016",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Woods",
+    "artist": "Mac Miller",
+    "artistId": "artist:mac-miller-2007",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Good News",
+    "artist": "Mac Miller",
+    "artistId": "artist:mac-miller-2007",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Good News",
+    "artist": "Mac Miller",
+    "artistId": "artist:mac-miller-2007",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Hand Me Downs",
+    "artist": "Mac Miller",
+    "artistId": "artist:mac-miller-2007",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Circles",
+    "artist": "Mac Miller",
+    "artistId": "artist:mac-miller-2007",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Surf",
+    "artist": "Mac Miller",
+    "artistId": "artist:mac-miller-2007",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Complicated",
+    "artist": "Mac Miller",
+    "artistId": "artist:mac-miller-2007",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "That's on Me",
+    "artist": "Mac Miller",
+    "artistId": "artist:mac-miller-2007",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "I Can See",
+    "artist": "Mac Miller",
+    "artistId": "artist:mac-miller-2007",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Circles",
+    "artist": "Mac Miller",
+    "artistId": "artist:mac-miller-2007",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Lavender Buds",
+    "artist": "MF DOOM",
+    "artistId": "artist:mf-doom-1988",
+    "year": "2003",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "The Chocolate Conquistadors (From Grand Theft Auto Online: The Cayo Perico Heist)",
+    "artist": "MF DOOM",
+    "artistId": "artist:mf-doom-1988",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "A.T.H.F. (Aqua Teen Hunger Force)",
+    "artist": "MF DOOM",
+    "artistId": "artist:mf-doom-1988",
+    "year": "2005",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "El Chupa Nibre",
+    "artist": "MF DOOM",
+    "artistId": "artist:mf-doom-1988",
+    "year": "2005",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Benzi Box (feat. CeeLo Green)",
+    "artist": "MF DOOM",
+    "artistId": "artist:mf-doom-1988",
+    "year": "2005",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Lavender Buds",
+    "artist": "MF DOOM",
+    "artistId": "artist:mf-doom-1988",
+    "year": "2006",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Alberto Balsalm (1994)",
+    "artist": "Aphex Twin",
+    "artistId": "artist:aphex-twin-1985",
+    "year": "1995",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "180Db_ [130]",
+    "artist": "Aphex Twin",
+    "artistId": "artist:aphex-twin-1985",
+    "year": "2014",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Iz - Us",
+    "artist": "Aphex Twin",
+    "artistId": "artist:aphex-twin-1985",
+    "year": "1997",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Tell the truth",
+    "artist": "Justice",
+    "artistId": "artist:justice-2003",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Toys",
+    "artist": "Justice",
+    "artistId": "artist:justice-2003",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "I know you",
+    "artist": "Justice",
+    "artistId": "artist:justice-2003",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Me&U",
+    "artist": "Justice",
+    "artistId": "artist:justice-2003",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Wya",
+    "artist": "Justice",
+    "artistId": "artist:justice-2003",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Do that",
+    "artist": "Justice",
+    "artistId": "artist:justice-2003",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Groove girl",
+    "artist": "Justice",
+    "artistId": "artist:justice-2003",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "So cold",
+    "artist": "Justice",
+    "artistId": "artist:justice-2003",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "In my life",
+    "artist": "Justice",
+    "artistId": "artist:justice-2003",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Back for you",
+    "artist": "Justice",
+    "artistId": "artist:justice-2003",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "I said",
+    "artist": "Justice",
+    "artistId": "artist:justice-2003",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Lock eyes (feat. 2G!)",
+    "artist": "Justice",
+    "artistId": "artist:justice-2003",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Hypnotize (feat. 2G!)",
+    "artist": "Justice",
+    "artistId": "artist:justice-2003",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Love Tonight (David Guetta Remix Edit)",
+    "artist": "David Guetta",
+    "artistId": "artist:david-guetta-1984",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Where Are Ü Now (with Justin Bieber) [feat. Justin Bieber]",
+    "artist": "Skrillex",
+    "artistId": "artist:skrillex-2004",
+    "year": "2015",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Nana Del Caballo Grande (Mezcla 2013)",
+    "artist": "Camarón de la Isla",
+    "artistId": "artist:camaron-de-la-isla-1969",
+    "year": "1979",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "La Leyenda Del Tiempo (Mezcla 2013)",
+    "artist": "Camarón de la Isla",
+    "artistId": "artist:camaron-de-la-isla-1969",
+    "year": "1979",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Homenaje A Federico (Mezcla 2013)",
+    "artist": "Camarón de la Isla",
+    "artistId": "artist:camaron-de-la-isla-1969",
+    "year": "1979",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Volando Voy (Mezcla 2013)",
+    "artist": "Camarón de la Isla",
+    "artistId": "artist:camaron-de-la-isla-1969",
+    "year": "1979",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Viejo Mundo (Bulerias) [Mezcla 2013]",
+    "artist": "Camarón de la Isla",
+    "artistId": "artist:camaron-de-la-isla-1969",
+    "year": "1979",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Romance Del Amargo (Mezcla 2013)",
+    "artist": "Camarón de la Isla",
+    "artistId": "artist:camaron-de-la-isla-1969",
+    "year": "1979",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Como Tengo Voz Sonora",
+    "artist": "Camarón de la Isla",
+    "artistId": "artist:camaron-de-la-isla-1969",
+    "year": "1998",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Bahía De Cádiz (Mezcla 2013)",
+    "artist": "Camarón de la Isla",
+    "artistId": "artist:camaron-de-la-isla-1969",
+    "year": "1979",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Concierto de Aranjuez: II. Adagio",
+    "artist": "Paco de Lucía",
+    "artistId": "artist:paco-de-lucia-1958",
+    "year": "1991",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "La chispa adecuada (feat. León Larregui) [MTV Unplugged] [Live]",
+    "artist": "Bunbury",
+    "artistId": "artist:bunbury-1997",
+    "year": "2015",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Ven y camina conmigo (feat. Pepe Aguilar) [MTV Unplugged] [Live]",
+    "artist": "Bunbury",
+    "artistId": "artist:bunbury-1997",
+    "year": "2015",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Nostalgia",
+    "artist": "Robe",
+    "artistId": "artist:robe-2015",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Bike Ride",
+    "artist": "Robe",
+    "artistId": "artist:robe-2015",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Nunca Debiste Cruzar el Mississippi",
+    "artist": "Leiva",
+    "artistId": "artist:leiva-2012",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "El Listón De Tu Pelo",
+    "artist": "Leiva",
+    "artistId": "artist:leiva-2012",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Ladie Madrid",
+    "artist": "Pereza",
+    "artistId": "artist:pereza-2001",
+    "year": "2001",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "MODA",
+    "artist": "Lori Meyers",
+    "artistId": "artist:lori-meyers-1998",
+    "year": "2024",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Tercer Tipo",
+    "artist": "Lori Meyers",
+    "artistId": "artist:lori-meyers-1998",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Ninguna Chavala Tiene Dueño / Porque Ella Me Lo Dijo",
+    "artist": "Violadores del Verso",
+    "artistId": "artist:violadores-del-verso-1998",
+    "year": "2001",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Esta Canción Va Dedicada… ,con Morodo",
+    "artist": "SFDK",
+    "artistId": "artist:sfdk-1993",
+    "year": "2005",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Insomnio, pesadillas y pastillas",
+    "artist": "Ayax y Prok",
+    "artistId": "artist:ayax-y-prok-2014",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "La Isla del Encanto (feat. FERNANDOCOSTA)",
+    "artist": "Ayax y Prok",
+    "artistId": "artist:ayax-y-prok-2014",
+    "year": "2022",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Cruella",
+    "artist": "Ayax y Prok",
+    "artistId": "artist:ayax-y-prok-2014",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Funeral",
+    "artist": "Ayax y Prok",
+    "artistId": "artist:ayax-y-prok-2014",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Zenit",
+    "artist": "Ayax y Prok",
+    "artistId": "artist:ayax-y-prok-2014",
+    "year": "2022",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Gracias",
+    "artist": "Ayax y Prok",
+    "artistId": "artist:ayax-y-prok-2014",
+    "year": "2022",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Gold Diggers",
+    "artist": "Natos y Waor",
+    "artistId": "artist:natos-y-waor-2010",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Romance (Tema de \"El Cid)\"",
+    "artist": "Natos y Waor",
+    "artistId": "artist:natos-y-waor-2010",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Red Bull Espiral #03",
+    "artist": "Natos y Waor",
+    "artistId": "artist:natos-y-waor-2010",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "CALIENTE (feat. Yoss Bones)",
+    "artist": "Natos y Waor",
+    "artistId": "artist:natos-y-waor-2010",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "COSAS QUE NO TE DIJE",
+    "artist": "Saiko",
+    "artistId": "artist:saiko-2019",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Supernova",
+    "artist": "Saiko",
+    "artistId": "artist:saiko-2019",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "FINALES DE AGOSTO",
+    "artist": "Saiko",
+    "artistId": "artist:saiko-2019",
+    "year": "2024",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Buenas",
+    "artist": "Saiko",
+    "artistId": "artist:saiko-2019",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Bahamas",
+    "artist": "Saiko",
+    "artistId": "artist:saiko-2019",
+    "year": "2024",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Bandidona",
+    "artist": "Saiko",
+    "artistId": "artist:saiko-2019",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Bahamas",
+    "artist": "Saiko",
+    "artistId": "artist:saiko-2019",
+    "year": "2024",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "CORLEONE",
+    "artist": "Saiko",
+    "artistId": "artist:saiko-2019",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Te Mentí",
+    "artist": "Saiko",
+    "artistId": "artist:saiko-2019",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "BB ;(",
+    "artist": "Saiko",
+    "artistId": "artist:saiko-2019",
+    "year": "2022",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Paper Plane",
+    "artist": "Saiko",
+    "artistId": "artist:saiko-2019",
+    "year": "2025",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Ódiame",
+    "artist": "Saiko",
+    "artistId": "artist:saiko-2019",
+    "year": "2022",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Antidepresivos",
+    "artist": "Saiko",
+    "artistId": "artist:saiko-2019",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "COMO SUENAN LAS ESTRELLAS",
+    "artist": "Saiko",
+    "artistId": "artist:saiko-2019",
+    "year": "2024",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "CORLEONE",
+    "artist": "Saiko",
+    "artistId": "artist:saiko-2019",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Shakira: Bzrp Music Sessions, Vol. 53/66",
+    "artist": "Shakira",
+    "artistId": "artist:shakira-1990",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Los Rodriguez",
+    "artist": "Los Rodríguez",
+    "artistId": "artist:los-rodriguez-1990",
+    "year": "1981",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Salud, dinero y amor (Edición aniversario)",
+    "artist": "Los Rodríguez",
+    "artistId": "artist:los-rodriguez-1990",
+    "year": "1993",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "L-Gante: Bzrp Music Sessions, Vol.38/66",
+    "artist": "Bizarrap",
+    "artistId": "artist:bizarrap-2018",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "No Me Conocen (con Duki, Rei & Tiago PZK) [feat. Tiago pzk] [Remix]",
+    "artist": "Duki",
+    "artistId": "artist:duki-2016",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Alley Oop",
+    "artist": "Duki",
+    "artistId": "artist:duki-2016",
+    "year": "2025",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "¿Qué Somos?",
+    "artist": "Rauw Alejandro",
+    "artistId": "artist:rauw-alejandro-2014",
+    "year": "2018",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "MySpace (feat. Wisin & Yandel)",
+    "artist": "Don Omar",
+    "artistId": "artist:don-omar-1999",
+    "year": "2006",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "A Besitos",
+    "artist": "Luis Miguel",
+    "artistId": "artist:luis-miguel-1982",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Niégame Tres Veces",
+    "artist": "Luis Miguel",
+    "artistId": "artist:luis-miguel-1982",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Me Morí 2 Veces",
+    "artist": "Luis Miguel",
+    "artistId": "artist:luis-miguel-1982",
+    "year": "2025",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Vete",
+    "artist": "Luis Miguel",
+    "artistId": "artist:luis-miguel-1982",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "El Único Culpable",
+    "artist": "Luis Miguel",
+    "artistId": "artist:luis-miguel-1982",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "No Sufro Más",
+    "artist": "Luis Miguel",
+    "artistId": "artist:luis-miguel-1982",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Aunque Me Case Con la Muerte",
+    "artist": "Luis Miguel",
+    "artistId": "artist:luis-miguel-1982",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Falsas Mentiras",
+    "artist": "Luis Miguel",
+    "artistId": "artist:luis-miguel-1982",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Antes de Que Te Vayas",
+    "artist": "Luis Miguel",
+    "artistId": "artist:luis-miguel-1982",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Sufre",
+    "artist": "Luis Miguel",
+    "artistId": "artist:luis-miguel-1982",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Cuando Te Acuerdes de Mi",
+    "artist": "Luis Miguel",
+    "artistId": "artist:luis-miguel-1982",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "La Mitad (feat. Jay Sisa)",
+    "artist": "Luis Miguel",
+    "artistId": "artist:luis-miguel-1982",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Aquellas Pequeñas Cosas (with Joan Manuel Serrat)",
+    "artist": "Mercedes Sosa",
+    "artistId": "artist:mercedes-sosa-1959",
+    "year": "2014",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Générique (BOF \"Ascenseur pour l'échafaud\")",
+    "artist": "Miles Davis",
+    "artistId": "artist:miles-davis-1944",
+    "year": "1958",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "A Love Supreme, Pt. 1: Acknowledgement",
+    "artist": "John Coltrane",
+    "artistId": "artist:john-coltrane-1955",
+    "year": "1965",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "I Feel the Way I Feel",
+    "artist": "Muddy Waters",
+    "artistId": "artist:muddy-waters-1941",
+    "year": "1967",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Black Rat",
+    "artist": "Muddy Waters",
+    "artistId": "artist:muddy-waters-1941",
+    "year": "1967",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "I'm Feeling Alright",
+    "artist": "Muddy Waters",
+    "artistId": "artist:muddy-waters-1941",
+    "year": "1967",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Sometimes I Have a Heartache",
+    "artist": "Muddy Waters",
+    "artistId": "artist:muddy-waters-1941",
+    "year": "1967",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Guide Me Home",
+    "artist": "Muddy Waters",
+    "artistId": "artist:muddy-waters-1941",
+    "year": "1967",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Bumble Bee",
+    "artist": "Muddy Waters",
+    "artistId": "artist:muddy-waters-1941",
+    "year": "1967",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Looking the World Over",
+    "artist": "Muddy Waters",
+    "artistId": "artist:muddy-waters-1941",
+    "year": "1967",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Life Goes On",
+    "artist": "Muddy Waters",
+    "artistId": "artist:muddy-waters-1941",
+    "year": "1967",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "El Éxtasis Del Oro - L'estasi Dell'oro",
+    "artist": "Ennio Morricone",
+    "artistId": "artist:ennio-morricone-1946",
+    "year": "1966",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Brian DePalma Suite: Main Theme from Casualities of War",
+    "artist": "Ennio Morricone",
+    "artistId": "artist:ennio-morricone-1946",
+    "year": "2003",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Giuseppe Tornatore Suite: Playing Love from The Legend of 1900",
+    "artist": "Ennio Morricone",
+    "artistId": "artist:ennio-morricone-1946",
+    "year": "2003",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Recomposed By Max Richter: Vivaldi, The Four Seasons: Spring 1 (2012)",
+    "artist": "Max Richter",
+    "artistId": "artist:max-richter-1996",
+    "year": "2012",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "The Council of Elrond (Theme for Aragorn and Arwen) [feat. \"Aniron\"]",
+    "artist": "Howard Shore",
+    "artistId": "artist:howard-shore-1970",
+    "year": "2001",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Carrying Glass",
+    "artist": "Ryuichi Sakamoto",
+    "artistId": "artist:ryuichi-sakamoto-1978",
+    "year": "2015",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Sanctuary – The Master of the Tomb",
+    "artist": "Joe Hisaishi",
+    "artistId": "artist:joe-hisaishi-1981",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Opening Song - Merry-Go-Round of Life",
+    "artist": "Joe Hisaishi",
+    "artistId": "artist:joe-hisaishi-1981",
+    "year": "2004",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "The Flower Garden",
+    "artist": "Joe Hisaishi",
+    "artistId": "artist:joe-hisaishi-1981",
+    "year": "2004",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "The Boundless Skies",
+    "artist": "Joe Hisaishi",
+    "artistId": "artist:joe-hisaishi-1981",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "My Neighbor Totoro – Ending Theme Song",
+    "artist": "Joe Hisaishi",
+    "artistId": "artist:joe-hisaishi-1981",
+    "year": "1988",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "A Walk in the Skies",
+    "artist": "Joe Hisaishi",
+    "artistId": "artist:joe-hisaishi-1981",
+    "year": "2004",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "A Huge Tree in the Tsukamori Forest",
+    "artist": "Joe Hisaishi",
+    "artistId": "artist:joe-hisaishi-1981",
+    "year": "1988",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Summer 78 (2)",
+    "artist": "Yann Tiersen",
+    "artistId": "artist:yann-tiersen-1995",
+    "year": "2003",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "I've Never Been There",
+    "artist": "Yann Tiersen",
+    "artistId": "artist:yann-tiersen-1995",
+    "year": "1996",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Beethoven: Sonata No. 14 \"Moonlight\" in C-Sharp Minor, Op. 27 No 2: I. Adagio sostenuto I",
+    "artist": "Ludwig van Beethoven",
+    "artistId": "artist:ludwig-van-beethoven-1792",
+    "year": "2025",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Claude Debussy - Des pas sur la neige (Prelude)",
+    "artist": "Claude Debussy",
+    "artistId": "artist:claude-debussy-1890",
+    "year": "2012",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Por el Boulevard de los Sueños Rotos",
+    "artist": "Los Secretos",
+    "artistId": "artist:los-secretos",
+    "year": "2003",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "El rey del Glam",
+    "artist": "Alaska y Dinarama",
+    "artistId": "artist:alaska-y-dinarama",
+    "year": "1983",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "El rey del Glam",
+    "artist": "Alaska y Dinarama",
+    "artistId": "artist:alaska-y-dinarama",
+    "year": "1983",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Cadillac Solitario",
+    "artist": "Loquillo",
+    "artistId": "artist:loquillo",
+    "year": "1983",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "La Mataré",
+    "artist": "Loquillo",
+    "artistId": "artist:loquillo",
+    "year": "1987",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "En el final de los días",
+    "artist": "Loquillo",
+    "artistId": "artist:loquillo",
+    "year": "2016",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Cadillac Solitario",
+    "artist": "Loquillo",
+    "artistId": "artist:loquillo",
+    "year": "1983",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Cruzando el Paraíso (dueto Con Johnny Hallyday)",
+    "artist": "Loquillo",
+    "artistId": "artist:loquillo",
+    "year": "2008",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Cruzando el Paraíso",
+    "artist": "Loquillo",
+    "artistId": "artist:loquillo",
+    "year": "2008",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Feo, Fuerte y Formal",
+    "artist": "Loquillo",
+    "artistId": "artist:loquillo",
+    "year": "2001",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "El rompeolas (Directo Granada 2014)",
+    "artist": "Loquillo",
+    "artistId": "artist:loquillo",
+    "year": "2014",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "El hombre de negro (feat. Urrutia, Calamaro y Bunbury)",
+    "artist": "Loquillo",
+    "artistId": "artist:loquillo",
+    "year": "1993",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "El Rompeolas",
+    "artist": "Loquillo",
+    "artistId": "artist:loquillo",
+    "year": "1988",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Somos la furia",
+    "artist": "Loquillo",
+    "artistId": "artist:loquillo",
+    "year": "2022",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "El rompeolas",
+    "artist": "Loquillo",
+    "artistId": "artist:loquillo",
+    "year": "1988",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "El Ritmo del Garaje",
+    "artist": "Loquillo",
+    "artistId": "artist:loquillo",
+    "year": "1983",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Penélope Cruz Volver",
+    "artist": "Enrique Morente",
+    "artistId": "artist:enrique-morente",
+    "year": "2006",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Que Me Van Aniquilando (Tangos)",
+    "artist": "Enrique Morente",
+    "artistId": "artist:enrique-morente",
+    "year": "1977",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "La Gazpacha / La Repompa / La Tía Concha",
+    "artist": "Enrique Morente",
+    "artistId": "artist:enrique-morente",
+    "year": "2006",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Y Será Verdad...",
+    "artist": "Enrique Morente",
+    "artistId": "artist:enrique-morente",
+    "year": "2009",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "La Joya",
+    "artist": "Enrique Morente",
+    "artistId": "artist:enrique-morente",
+    "year": "2006",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Ne me quitte pas",
+    "artist": "Enrique Morente",
+    "artistId": "artist:enrique-morente",
+    "year": "2006",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Chavela la Noche de Mi Amor",
+    "artist": "Enrique Morente",
+    "artistId": "artist:enrique-morente",
+    "year": "2006",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Agustito",
+    "artist": "Ketama",
+    "artistId": "artist:ketama",
+    "year": "1999",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Miénteme",
+    "artist": "Ketama",
+    "artistId": "artist:ketama",
+    "year": "1999",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Agustito (Ketama Goes To Miami  Remix)",
+    "artist": "Ketama",
+    "artistId": "artist:ketama",
+    "year": "2000",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "SUD",
+    "artist": "Ketama",
+    "artistId": "artist:ketama",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Kanela y Menta",
+    "artist": "Ketama",
+    "artistId": "artist:ketama",
+    "year": "1999",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Alba",
+    "artist": "Ketama",
+    "artistId": "artist:ketama",
+    "year": "1993",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "K' Cha Cha",
+    "artist": "Ketama",
+    "artistId": "artist:ketama",
+    "year": "1999",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Asi Me Siento",
+    "artist": "Ketama",
+    "artistId": "artist:ketama",
+    "year": "1999",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Tan Lejos",
+    "artist": "Ketama",
+    "artistId": "artist:ketama",
+    "year": "1999",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Vente pá Madrid (Remastered 2019)",
+    "artist": "Ketama",
+    "artistId": "artist:ketama",
+    "year": "1995",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "No Estamos Lokos (Kalikeño) [Remastered 2019]",
+    "artist": "Ketama",
+    "artistId": "artist:ketama",
+    "year": "1995",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "RAGAZZI FUORI",
+    "artist": "Ketama",
+    "artistId": "artist:ketama",
+    "year": "2022",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Se Dejaba Llevar Por Ti (Remastered 2019)",
+    "artist": "Ketama",
+    "artistId": "artist:ketama",
+    "year": "1995",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Vamos Eileen (Come On Eileen)",
+    "artist": "Celtas Cortos",
+    "artistId": "artist:celtas-cortos",
+    "year": "2010",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "El Marinero Borracho (The Drunken Sailor)",
+    "artist": "Celtas Cortos",
+    "artistId": "artist:celtas-cortos",
+    "year": "2010",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Han Matado al Rock 'n' Roll",
+    "artist": "Los Suaves",
+    "artistId": "artist:los-suaves",
+    "year": "2010",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Giving Up On That",
+    "artist": "Dover",
+    "artistId": "artist:dover",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Baby I Am",
+    "artist": "Dover",
+    "artistId": "artist:dover",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Damn Good Life",
+    "artist": "Dover",
+    "artistId": "artist:dover",
+    "year": "2022",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "You Got a Small Town",
+    "artist": "Dover",
+    "artistId": "artist:dover",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "With All the Memories",
+    "artist": "Dover",
+    "artistId": "artist:dover",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Hear About a Girl",
+    "artist": "Dover",
+    "artistId": "artist:dover",
+    "year": "2022",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Vivir (with Estopa)",
+    "artist": "Rozalén",
+    "artistId": "artist:rozalen",
+    "year": "2017",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Por Ti",
+    "artist": "Sen Senra",
+    "artistId": "artist:sen-senra",
+    "year": "2017",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Espacio Vacío",
+    "artist": "Carolina Durante",
+    "artistId": "artist:carolina-durante",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Bailando mal",
+    "artist": "Ginebras",
+    "artistId": "artist:ginebras",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Ojos Sin Ver",
+    "artist": "Morad",
+    "artistId": "artist:morad",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "A Escondidas",
+    "artist": "Morad",
+    "artistId": "artist:morad",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Oye Bebe",
+    "artist": "Cruz Cafuné",
+    "artistId": "artist:cruz-cafune",
+    "year": "2017",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Veneno (Orquestal)",
+    "artist": "Delaossa",
+    "artistId": "artist:delaossa",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Mal Agüero",
+    "artist": "Delaossa",
+    "artistId": "artist:delaossa",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Si Quiero",
+    "artist": "Yung Beef",
+    "artistId": "artist:yung-beef",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Nike Tiburón",
+    "artist": "Yung Beef",
+    "artistId": "artist:yung-beef",
+    "year": "2024",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Nos Vamos",
+    "artist": "Yung Beef",
+    "artistId": "artist:yung-beef",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Los Reyes Magos",
+    "artist": "Yung Beef",
+    "artistId": "artist:yung-beef",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "ANORMAL (feat. geomafia, Pablo Chill-E & Manny ElDomi)",
+    "artist": "Yung Beef",
+    "artistId": "artist:yung-beef",
+    "year": "2026",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Agnus Dei (Banda Sonora Orginal de la Serie Vis a Vis) [Urban Version]",
+    "artist": "Mala Rodríguez",
+    "artistId": "artist:mala-rodriguez",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "El Tour de Sing Sing",
+    "artist": "Toteking",
+    "artistId": "artist:toteking",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Donde Te Has Metio",
+    "artist": "Toteking",
+    "artistId": "artist:toteking",
+    "year": "2009",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Akatsuki (From \"Naruto Shippuden\")",
+    "artist": "Rayden",
+    "artistId": "artist:rayden",
+    "year": "2017",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "A Beautiful Song (From \"NieR: Automata\")",
+    "artist": "Rayden",
+    "artistId": "artist:rayden",
+    "year": "2017",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Attack on Titan",
+    "artist": "Rayden",
+    "artistId": "artist:rayden",
+    "year": "2017",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Spider-Man Unlimited Theme",
+    "artist": "Rayden",
+    "artistId": "artist:rayden",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Song of the Ancients (From \"NieR: Automata\") [feat. Roux]",
+    "artist": "Rayden",
+    "artistId": "artist:rayden",
+    "year": "2018",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Libera Me From Hell (from \"Gurren Lagann\")",
+    "artist": "Rayden",
+    "artistId": "artist:rayden",
+    "year": "2017",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Soundscape to Ardor (Remix)",
+    "artist": "Rayden",
+    "artistId": "artist:rayden",
+    "year": "2012",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Cosquilleo",
+    "artist": "Rayden",
+    "artistId": "artist:rayden",
+    "year": "2015",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "París",
+    "artist": "Alizzz",
+    "artistId": "artist:alizzz",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Yelo",
+    "artist": "Alizzz",
+    "artistId": "artist:alizzz",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Para Repartir",
+    "artist": "Alizzz",
+    "artistId": "artist:alizzz",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Tu cama (feat. Jesse Baez & Paula Cendejas)",
+    "artist": "Alizzz",
+    "artistId": "artist:alizzz",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "DIEZ MINUTOS (feat. Mario Bautista)",
+    "artist": "Alizzz",
+    "artistId": "artist:alizzz",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Tiki Tiki",
+    "artist": "Lola Índigo",
+    "artistId": "artist:lola-indigo",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Universo Tarifa",
+    "artist": "Vanesa Martín",
+    "artistId": "artist:vanesa-martin",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Luna Llena (English Version)",
+    "artist": "Malú",
+    "artistId": "artist:malu",
+    "year": "2017",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Hasta Luego",
+    "artist": "Malú",
+    "artistId": "artist:malu",
+    "year": "2018",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Llueve Alegría (with Alejandro Sanz)",
+    "artist": "Malú",
+    "artistId": "artist:malu",
+    "year": "2018",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "No Me Llores",
+    "artist": "Manuel Carrasco",
+    "artistId": "artist:manuel-carrasco",
+    "year": "2024",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Con la Misma Piedra (With the Same Stone)",
+    "artist": "Julio Iglesias",
+    "artistId": "artist:julio-iglesias",
+    "year": "1982",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Oh la la amour",
+    "artist": "Julio Iglesias",
+    "artistId": "artist:julio-iglesias",
+    "year": "1982",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Porque Me Habrás Besado",
+    "artist": "Rocío Jurado",
+    "artistId": "artist:rocio-jurado",
+    "year": "2004",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Ay Pena, Penita, Pena (Zambra) [Remastered]",
+    "artist": "Lola Flores",
+    "artistId": "artist:lola-flores",
+    "year": "1953",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Las Cositas del Querer (Pasodoble) [Remastered]",
+    "artist": "Lola Flores",
+    "artistId": "artist:lola-flores",
+    "year": "1986",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "La Ruñidera (Remastered)",
+    "artist": "Lola Flores",
+    "artistId": "artist:lola-flores",
+    "year": "1986",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Burbujas de Amor",
+    "artist": "Juan Luis Guerra",
+    "artistId": "artist:juan-luis-guerra",
+    "year": "1990",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Frío, Frío (feat. Romeo Santos) [Live]",
+    "artist": "Juan Luis Guerra",
+    "artistId": "artist:juan-luis-guerra",
+    "year": "2013",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "La Cosquillita",
+    "artist": "Juan Luis Guerra",
+    "artistId": "artist:juan-luis-guerra",
+    "year": "1995",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "A Pedir Su Mano",
+    "artist": "Juan Luis Guerra",
+    "artistId": "artist:juan-luis-guerra",
+    "year": "1990",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Vale la Pena",
+    "artist": "Juan Luis Guerra",
+    "artistId": "artist:juan-luis-guerra",
+    "year": "1998",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Pambiche de novia",
+    "artist": "Juan Luis Guerra",
+    "artistId": "artist:juan-luis-guerra",
+    "year": "2020",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "DONDE SE APRENDE A QUERER?",
+    "artist": "Mora",
+    "artistId": "artist:mora",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "MEMORIAS",
+    "artist": "Mora",
+    "artistId": "artist:mora",
+    "year": "2022",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "ESCALOFRÍOS",
+    "artist": "Mora",
+    "artistId": "artist:mora",
+    "year": "2022",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "MIL VIDAS",
+    "artist": "Mora",
+    "artistId": "artist:mora",
+    "year": "2025",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "DOMINGO DE BOTE",
+    "artist": "Mora",
+    "artistId": "artist:mora",
+    "year": "2022",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "PASAJERO",
+    "artist": "Mora",
+    "artistId": "artist:mora",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Noche Loca",
+    "artist": "Mora",
+    "artistId": "artist:mora",
+    "year": "2018",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "MEDIA LUNA",
+    "artist": "Mora",
+    "artistId": "artist:mora",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "PLAYA PRIVADA",
+    "artist": "Mora",
+    "artistId": "artist:mora",
+    "year": "2022",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "PECADO",
+    "artist": "Mora",
+    "artistId": "artist:mora",
+    "year": "2022",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "FUMETEO (Remix)",
+    "artist": "Mora",
+    "artistId": "artist:mora",
+    "year": "2021",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Sauceboy (Freestyle)",
+    "artist": "Eladio Carrión",
+    "artistId": "artist:eladio-carrion",
+    "year": "2019",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Little Demon",
+    "artist": "Anuel AA",
+    "artistId": "artist:anuel-aa",
+    "year": "2025",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "POR EL CONTRARIO (with Leonardo Aguilar & Ángela Aguilar)",
+    "artist": "Becky G",
+    "artistId": "artist:becky-g",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Ya acabó (Con Becky G)",
+    "artist": "Becky G",
+    "artistId": "artist:becky-g",
+    "year": "2022",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Skinny Love",
+    "artist": "Bon Iver",
+    "artistId": "artist:bon-iver",
+    "year": "2007",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Rosyln",
+    "artist": "Bon Iver",
+    "artistId": "artist:bon-iver",
+    "year": "2009",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Wash.",
+    "artist": "Bon Iver",
+    "artistId": "artist:bon-iver",
+    "year": "2011",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "S P E Y S I D E",
+    "artist": "Bon Iver",
+    "artistId": "artist:bon-iver",
+    "year": "2024",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Flume",
+    "artist": "Bon Iver",
+    "artistId": "artist:bon-iver",
+    "year": "2007",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Re: Stacks",
+    "artist": "Bon Iver",
+    "artistId": "artist:bon-iver",
+    "year": "2007",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Beach Baby",
+    "artist": "Bon Iver",
+    "artistId": "artist:bon-iver",
+    "year": "2009",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "33 “GOD”",
+    "artist": "Bon Iver",
+    "artistId": "artist:bon-iver",
+    "year": "2016",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Mystery of Love (From “Call Me By Your Name”)",
+    "artist": "Sufjan Stevens",
+    "artistId": "artist:sufjan-stevens",
+    "year": "2004",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Can’t Catch Me Now (from The Hunger Games: The Ballad of Songbirds & Snakes)",
+    "artist": "Olivia Rodrigo",
+    "artistId": "artist:olivia-rodrigo",
+    "year": "2023",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Guess featuring Billie Eilish",
+    "artist": "Charli XCX",
+    "artistId": "artist:charli-xcx",
+    "year": "2024",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Girl, so confusing featuring lorde",
+    "artist": "Charli XCX",
+    "artistId": "artist:charli-xcx",
+    "year": "2024",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Untitled #9 (Smáskífa 1)",
+    "artist": "Sigur Rós",
+    "artistId": "artist:sigur-ros",
+    "year": "2002",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Untitled #4 (Njósnavélin)",
+    "artist": "Sigur Rós",
+    "artistId": "artist:sigur-ros",
+    "year": "2002",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Untitled #3 (Samskeyti)",
+    "artist": "Sigur Rós",
+    "artistId": "artist:sigur-ros",
+    "year": "2002",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "MOON MUSiC",
+    "artist": "Jon Hopkins",
+    "artistId": "artist:jon-hopkins",
+    "year": "2024",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "I might say something stupid featuring the 1975 & jon hopkins",
+    "artist": "Jon Hopkins",
+    "artistId": "artist:jon-hopkins",
+    "year": "2024",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "MOON MUSiC",
+    "artist": "Jon Hopkins",
+    "artistId": "artist:jon-hopkins",
+    "year": "2024",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "I might say something stupid featuring the 1975 & jon hopkins",
+    "artist": "Jon Hopkins",
+    "artistId": "artist:jon-hopkins",
+    "year": "2024",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Miña terra galega (Sweet Home Alabama)",
+    "artist": "Siniestro Total",
+    "artistId": "artist:siniestro-total",
+    "year": "1990",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "O Tren / Mas Vale Ser Punky Que Maricon de Playa / Me Pica un Huevo / Dios Salve al Conselleiro (Live)",
+    "artist": "Siniestro Total",
+    "artistId": "artist:siniestro-total",
+    "year": "1992",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Mi Abuelo Querido",
+    "artist": "Los Ronaldos",
+    "artistId": "artist:los-ronaldos",
+    "year": "2001",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Avion Arriba",
+    "artist": "Los Ronaldos",
+    "artistId": "artist:los-ronaldos",
+    "year": "2018",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Siempre Hacia Delante",
+    "artist": "Obús",
+    "artistId": "artist:obus",
+    "year": "2025",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Querida amiga pena",
+    "artist": "Niña Polaca",
+    "artistId": "artist:nina-polaca",
+    "year": "2024",
+    "provenance": "itunes-top-artist",
+    "reason": "no_recording_found_in_musicbrainz"
+  },
+  {
+    "title": "Meant to Be",
+    "artist": "Bebe",
+    "artistId": "artist:bebe",
+    "year": "2017",
+    "provenance": "itunes-top-artist",
     "reason": "no_recording_found_in_musicbrainz"
   }
 ]

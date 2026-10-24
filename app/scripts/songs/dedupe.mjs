@@ -18,24 +18,26 @@ export function slugify(text) {
     .replace(/^-+|-+$/g, '')
 }
 
+/** Limpia profundamente el título para mostrar en la interfaz y generar el slug canónico */
+export function cleanDisplayTitle(title) {
+  if (!title) return ''
+  let t = title.toString().trim()
+  t = t.replace(/^["'«](.*)["'»]$/, '$1')
+  // Quitar paréntesis y corchetes con información de versión, directo, remaster, feat, edit, etc.
+  const parenPattern = /[\(\[][^()\]]*(?:feat\.|ft\.|remaster|deluxe|anniversary|live|directo|mix|version|edit|mono|stereo|session|demo|take \d|acoustic|ac[uú]stico|original|full length|bonus track|instrumental)[^()\]]*[\)\]]/gi
+  t = t.replace(parenPattern, '')
+  // Quitar coletillas separadas por guión al final: "- Remastered 2011", "- Live", "- Radio Edit", etc.
+  const dashPattern = /\s*[-–—]\s*(?:remaster|remastered|live|en directo|directo|radio edit|single edit|single version|album version|full length|deluxe|version|edit|mono|stereo|anniversary|\d{4} remaster|acoustic|ac[uú]stico|original mix|remix|bonus track).*$/i
+  t = t.replace(dashPattern, '')
+  // Quitar feat. residuales
+  t = t.replace(/\s+(?:feat\.|ft\.|con)\s+.*$/i, '')
+  return t.replace(/\s+/g, ' ').trim()
+}
+
 /** Limpia y normaliza el título de una canción para emparejar variantes */
 export function normalizeTitle(title) {
   if (!title) return ''
-  let t = title.toString().trim()
-
-  // Quitar comillas externas
-  t = t.replace(/^["'«](.*)["'»]$/, '$1')
-
-  // Quitar anotaciones de feat. fuera de paréntesis
-  t = t.replace(/\s+(?:feat\.|ft\.|con)\s+[^(\[-]+/i, '')
-
-  // Quitar paréntesis y corchetes con información de versión, directo, remaster, feat, etc.
-  const parenPattern = /[\(\[][^()\]]*(?:feat\.|ft\.|remaster|deluxe|anniversary|live|directo|mix|version|edit|mono|stereo|session|demo|take \d|acoustic|ac[uú]stico)[^()\]]*[\)\]]/gi
-  t = t.replace(parenPattern, '')
-
-  // Quitar coletillas separadas por guión al final: "- Remastered 2011", "- Live", "- Radio Edit", "- Remix", etc.
-  const dashPattern = /\s*[-–—]\s*(?:remaster|remastered|live|en directo|directo|radio edit|single edit|single version|deluxe|version|edit|mono|stereo|anniversary|\d{4} remaster|acoustic|ac[uú]stico|original mix|remix|bonus track).*$/i
-  t = t.replace(dashPattern, '')
+  let t = cleanDisplayTitle(title)
 
   // Normalizar acentos y pasar a minúsculas
   t = t
@@ -78,11 +80,11 @@ export function isLiveOrAlternate(candidate) {
  * Devuelve un array de grupos: cada grupo es una lista de grabaciones fusionadas.
  */
 export function deduplicateRecordings(recordings) {
-  // Primero agrupamos por artista canónico. Artistas distintos NUNCA se fusionan (ej. Hurt NIN vs Johnny Cash).
+  // Primero agrupamos por artista normalizado. Artistas distintos NUNCA se fusionan (ej. Hurt NIN vs Johnny Cash).
   const byArtist = new Map()
 
   for (const rec of recordings) {
-    const artistKey = rec.artistId || rec.artistMbid || normalizeArtist(rec.artist)
+    const artistKey = normalizeArtist(rec.artist || rec.creator || '')
     if (!byArtist.has(artistKey)) {
       byArtist.set(artistKey, [])
     }
@@ -186,21 +188,17 @@ export function pickCanonicalSong(group) {
     }
   }
   if (earliestYear === 9999) {
-    earliestYear = canonical.year || new Date().getFullYear()
+    earliestYear = canonical.year || null
   }
 
-  // Título limpio para mostrar
-  let displayTitle = canonical.title
-  // Quitar sufijos obvios de remaster si quedaron en el canónico
-  displayTitle = displayTitle
-    .replace(/\s*[-–—]\s*(?:remaster|remastered|\d{4} remaster).*$/i, '')
-    .replace(/\s*\((?:remaster|remastered|\d{4} remaster)\)$/i, '')
-    .trim()
-
+  // Título limpio para mostrar y generar el slug canónico (sin coletillas de remaster, directo, edición, etc.)
+  const displayTitle = cleanDisplayTitle(canonical.title) || canonical.title
   const artistName = canonical.artist || canonical.creator || 'Desconocido'
-  const titleSlug = slugify(displayTitle)
-  const artistSlug = slugify(artistName)
-  const songId = `song:${titleSlug}-${artistSlug}-${earliestYear}`
+  const titleSlug = slugify(displayTitle).slice(0, 60).replace(/-+$/, '')
+  const artistSlug = slugify(artistName).slice(0, 30).replace(/-+$/, '')
+  const songId = earliestYear
+    ? `song:${titleSlug}-${artistSlug}-${earliestYear}`
+    : `song:${titleSlug}-${artistSlug}`
 
   // Carátula si existe en cualquiera del grupo
   const coverCandidate = group.find((g) => g.posterUrl || g.caaReleaseMbid || g.caaId) || canonical
@@ -211,7 +209,7 @@ export function pickCanonicalSong(group) {
     title: displayTitle,
     creator: artistName,
     year: earliestYear,
-    artistId: canonical.artistId || null,
+    artistId: canonical.artistId || group.find((g) => g.artistId)?.artistId || null,
     album: canonical.album || canonical.releaseName || null,
     isrc: canonical.isrc || group.find((g) => g.isrc)?.isrc || null,
     durationSec: canonical.durationSec || (canonical.length ? Math.round(canonical.length / 1000) : null),
@@ -222,9 +220,9 @@ export function pickCanonicalSong(group) {
     caaId: coverCandidate.caaId || null,
     groupSize: group.length,
     src: {
-      recording: canonical.mbid ? 'musicbrainz' : 'listenbrainz',
-      popularity: 'listenbrainz',
-      ...(coverCandidate.posterUrl ? { posterUrl: 'coverartarchive' } : {}),
+      recording: 'musicbrainz',
+      popularity: canonical.srcPopularity || (canonical.provenance === 'listenbrainz' ? 'listenbrainz' : canonical.provenance || 'itunes'),
+      ...(coverCandidate.posterUrl ? { posterUrl: coverCandidate.posterUrl.includes('supabase') ? 'supabase' : coverCandidate.posterUrl.includes('apple') || coverCandidate.posterUrl.includes('mzstatic') ? 'itunes' : 'coverartarchive' } : {}),
     },
   }
 }
