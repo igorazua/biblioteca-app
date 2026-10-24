@@ -1,0 +1,352 @@
+{
+  "shelf": "movie",
+  "country": "ES",
+  "anchors": [
+    {
+      "id": "movie:psicosis-1960",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "intensidad": "tension",
+        "realismo": "realistic",
+        "publico": "adults"
+      },
+      "era": "<1980",
+      "why": "Hitchcock; la ducha la conoce todo el mundo. Clásico oscuro y de tensión pura, sin humor"
+    },
+    {
+      "id": "movie:bonnie-and-clyde-1967",
+      "sides": {
+        "realismo": "realistic",
+        "publico": "adults"
+      },
+      "era": "<1980",
+      "why": "Clásico del cine de atracos, basado en hechos reales y violento para su época"
+    },
+    {
+      "id": "movie:2001-una-odisea-del-espacio-1968",
+      "sides": {
+        "realismo": "fantasy",
+        "exigencia": "demanding"
+      },
+      "era": "<1980",
+      "why": "Kubrick; ciencia ficción lenta y abstracta que se conoce hasta sin haberla visto"
+    },
+    {
+      "id": "movie:el-padrino-1972",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "realismo": "realistic",
+        "publico": "adults"
+      },
+      "era": "<1980",
+      "why": "Mafia seria y realista, para adultos; la conoce todo el mundo"
+    },
+    {
+      "id": "movie:star-wars-1977",
+      "sides": {
+        "tono": "light",
+        "realismo": "fantasy",
+        "exigencia": "light",
+        "publico": "all"
+      },
+      "era": "<1980",
+      "why": "La guerra de las galaxias: aventura de fantasía espacial para toda la familia, fácil de seguir"
+    },
+    {
+      "id": "movie:apocalypse-now-1979",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "intensidad": "tension",
+        "realismo": "realistic",
+        "exigencia": "demanding",
+        "publico": "adults"
+      },
+      "era": "<1980",
+      "why": "Guerra de Vietnam, oscura y exigente; un clásico muy citado"
+    },
+    {
+      "id": "movie:el-resplandor-1980",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "intensidad": "tension",
+        "publico": "adults"
+      },
+      "era": "1980-1994",
+      "why": "Terror psicológico de Kubrick; las gemelas y «Aquí está Johnny» las conoce todo el mundo"
+    },
+    {
+      "id": "movie:blade-runner-1982",
+      "sides": {
+        "tono": "dark",
+        "realismo": "fantasy",
+        "exigencia": "demanding",
+        "publico": "adults"
+      },
+      "era": "1980-1994",
+      "why": "Ciencia ficción oscura y pausada; referente de todo el género"
+    },
+    {
+      "id": "movie:regreso-al-futuro-1985",
+      "sides": {
+        "tono": "light",
+        "humor": "comedy",
+        "realismo": "fantasy",
+        "exigencia": "light",
+        "publico": "all"
+      },
+      "era": "1980-1994",
+      "why": "Aventura y comedia con viajes en el tiempo; luminosa y familiar"
+    },
+    {
+      "id": "movie:parque-jurasico-1993",
+      "sides": {
+        "realismo": "fantasy",
+        "exigencia": "light",
+        "publico": "all"
+      },
+      "era": "1980-1994",
+      "why": "Dinosaurios y aventura de Spielberg; la ve todo el mundo de niño"
+    },
+    {
+      "id": "movie:pulp-fiction-1994",
+      "sides": {
+        "tono": "dark",
+        "realismo": "realistic",
+        "publico": "adults"
+      },
+      "era": "1980-1994",
+      "why": "Tarantino; crimen con violencia para adultos, de las más famosas de los 90"
+    },
+    {
+      "id": "movie:forrest-gump-1994",
+      "sides": {
+        "tono": "light",
+        "intensidad": "calm",
+        "realismo": "realistic",
+        "exigencia": "light",
+        "publico": "all"
+      },
+      "era": "1980-1994",
+      "why": "Drama amable y sentimental, muy fácil de ver; para casi todos los públicos"
+    },
+    {
+      "id": "movie:cadena-perpetua-1994",
+      "sides": {
+        "humor": "none",
+        "realismo": "realistic"
+      },
+      "era": "1980-1994",
+      "why": "Drama carcelario serio y realista; suele estar la primera en los rankings"
+    },
+    {
+      "id": "movie:el-rey-leon-1994",
+      "sides": {
+        "tono": "light",
+        "intensidad": "calm",
+        "realismo": "fantasy",
+        "exigencia": "light",
+        "publico": "all"
+      },
+      "era": "1980-1994",
+      "why": "Disney de animación; lo ha visto toda una generación de niños"
+    },
+    {
+      "id": "movie:toy-story-1995",
+      "sides": {
+        "tono": "light",
+        "humor": "comedy",
+        "intensidad": "calm",
+        "realismo": "fantasy",
+        "exigencia": "light",
+        "publico": "all"
+      },
+      "era": "1995-2004",
+      "why": "Pixar, la conoce todo el mundo; extremo luminoso y familiar"
+    },
+    {
+      "id": "movie:titanic-1997",
+      "sides": {
+        "realismo": "realistic",
+        "exigencia": "light"
+      },
+      "era": "1995-2004",
+      "why": "Romance histórico con naufragio real; de las más vistas de todos los tiempos"
+    },
+    {
+      "id": "movie:torrente-el-brazo-tonto-de-la-ley-1998",
+      "sides": {
+        "humor": "comedy",
+        "exigencia": "light",
+        "publico": "adults"
+      },
+      "era": "1995-2004",
+      "why": "Comedia española grosera para adultos; fenómeno nacional"
+    },
+    {
+      "id": "movie:the-green-mile-1999",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "publico": "adults"
+      },
+      "era": "1995-2004",
+      "why": "Drama carcelario con un toque sobrenatural, duro y emotivo"
+    },
+    {
+      "id": "movie:gladiator-2000",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "realismo": "realistic",
+        "publico": "adults"
+      },
+      "era": "1995-2004",
+      "why": "Péplum épico, violento y serio; Oscar a la mejor película"
+    },
+    {
+      "id": "movie:el-senor-de-los-anillos-la-comunidad-del-anillo-2001",
+      "sides": {
+        "realismo": "fantasy"
+      },
+      "era": "1995-2004",
+      "why": "Fantasía épica de referencia, con mundos y criaturas inventados"
+    },
+    {
+      "id": "movie:harry-potter-and-the-philosopher-s-stone-2001",
+      "sides": {
+        "tono": "light",
+        "realismo": "fantasy",
+        "exigencia": "light",
+        "publico": "all"
+      },
+      "era": "1995-2004",
+      "why": "Magia y colegio; la ha visto toda una generación desde niños"
+    },
+    {
+      "id": "movie:no-es-pais-para-viejos-2007",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "intensidad": "tension",
+        "realismo": "realistic",
+        "publico": "adults"
+      },
+      "era": "2005-2014",
+      "why": "Thriller seco de los Coen con Bardem; Oscar a la mejor película"
+    },
+    {
+      "id": "movie:avatar-2009",
+      "sides": {
+        "realismo": "fantasy",
+        "exigencia": "light"
+      },
+      "era": "2005-2014",
+      "why": "La más taquillera de la historia; mundo de fantasía espacial y argumento sencillo"
+    },
+    {
+      "id": "movie:origen-2010",
+      "sides": {
+        "realismo": "fantasy",
+        "intensidad": "tension",
+        "exigencia": "demanding"
+      },
+      "era": "2005-2014",
+      "why": "Sueños dentro de sueños; ciencia ficción que obliga a pensar"
+    },
+    {
+      "id": "movie:shutter-island-2010",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "intensidad": "tension",
+        "publico": "adults"
+      },
+      "era": "2005-2014",
+      "why": "Thriller psicológico oscuro de Scorsese con giro final famoso"
+    },
+    {
+      "id": "movie:el-lobo-de-wall-street-2013",
+      "sides": {
+        "humor": "comedy",
+        "realismo": "realistic",
+        "exigencia": "light",
+        "publico": "adults"
+      },
+      "era": "2005-2014",
+      "why": "Comedia negra y excesos reales de Wall Street, solo para adultos"
+    },
+    {
+      "id": "movie:interstellar-2014",
+      "sides": {
+        "realismo": "fantasy",
+        "exigencia": "demanding"
+      },
+      "era": "2005-2014",
+      "why": "Ciencia ficción espacial y científica; exigente y muy comentada"
+    },
+    {
+      "id": "movie:la-la-land-2016",
+      "sides": {
+        "tono": "light",
+        "intensidad": "calm",
+        "exigencia": "light"
+      },
+      "era": "2015+",
+      "why": "Musical romántico y luminoso; fácil de ver, sin tensión"
+    },
+    {
+      "id": "movie:vengadores-endgame-2019",
+      "sides": {
+        "realismo": "fantasy",
+        "exigencia": "light",
+        "publico": "all"
+      },
+      "era": "2015+",
+      "why": "Superhéroes de Marvel, el evento de cine más grande reciente; para casi todos"
+    },
+    {
+      "id": "movie:knives-out-2019",
+      "sides": {
+        "humor": "comedy",
+        "realismo": "realistic",
+        "exigencia": "light"
+      },
+      "era": "2015+",
+      "why": "Comedia de misterio con asesino, ligera y de actualidad"
+    },
+    {
+      "id": "movie:once-upon-a-time-in-hollywood-2019",
+      "sides": {
+        "intensidad": "calm",
+        "realismo": "realistic",
+        "publico": "adults"
+      },
+      "era": "2015+",
+      "why": "Tarantino pausado y nostálgico; Hollywood de 1969, para adultos"
+    },
+    {
+      "id": "movie:dune-2021",
+      "sides": {
+        "tono": "dark",
+        "realismo": "fantasy",
+        "intensidad": "tension"
+      },
+      "era": "2015+",
+      "why": "Ciencia ficción épica y sombría; estreno masivo reciente"
+    },
+    {
+      "id": "movie:todo-a-la-vez-en-todas-partes-2022",
+      "sides": {
+        "humor": "comedy",
+        "realismo": "fantasy",
+        "publico": "adults"
+      },
+      "era": "2015+",
+      "why": "Multiverso y comedia absurda; arrasó en los Oscar"
+    }
+  ]
+}

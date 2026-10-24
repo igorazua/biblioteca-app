@@ -1,0 +1,94 @@
+{
+  "shelf": "boardgame",
+  "country": "ES",
+  "anchors": [
+    {
+      "id": "boardgame:chess-1475",
+      "sides": {
+        "peso": "heavy",
+        "ambiente": "serious",
+        "azar": "none",
+        "tematico": "abstract"
+      },
+      "era": "<1980",
+      "why": "Ajedrez; sin azar, abstracto y para pensar"
+    },
+    {
+      "id": "boardgame:parchis-1900",
+      "sides": {
+        "peso": "light",
+        "azar": "lots",
+        "tematico": "abstract"
+      },
+      "era": "<1980",
+      "why": "Parchís; el clásico de las casas españolas, mucho dado y sin tema"
+    },
+    {
+      "id": "boardgame:monopoly-1935",
+      "sides": {
+        "peso": "light",
+        "interaccion": "interactive",
+        "azar": "lots"
+      },
+      "era": "<1980",
+      "why": "Monopoly; negociar y comprar con mucho dado, conocidísimo"
+    },
+    {
+      "id": "boardgame:scrabble-1948",
+      "sides": {
+        "interaccion": "solo",
+        "tematico": "abstract"
+      },
+      "era": "<1980",
+      "why": "Scrabble; juego de palabras abstracto, cada uno con sus fichas"
+    },
+    {
+      "id": "boardgame:cluedo-1949",
+      "sides": {
+        "peso": "light",
+        "tematico": "thematic"
+      },
+      "era": "<1980",
+      "why": "Cluedo; misterio de asesinato con mucho ambiente"
+    },
+    {
+      "id": "boardgame:risk-1959",
+      "sides": {
+        "interaccion": "interactive",
+        "azar": "lots",
+        "tematico": "thematic"
+      },
+      "era": "<1980",
+      "why": "Risk; conquista del mundo con dados y mucho enfrentamiento"
+    },
+    {
+      "id": "boardgame:uno-1971",
+      "sides": {
+        "peso": "light",
+        "ambiente": "laughs",
+        "azar": "lots",
+        "tematico": "abstract"
+      },
+      "era": "<1980",
+      "why": "UNO; cartas de risas y azar, lo conoce todo el mundo"
+    },
+    {
+      "id": "boardgame:trivial-pursuit-1981",
+      "sides": {
+        "peso": "light",
+        "ambiente": "laughs",
+        "tematico": "abstract"
+      },
+      "era": "1980-1994",
+      "why": "Trivial Pursuit; preguntas de cultura general para reunir a la familia"
+    },
+    {
+      "id": "boardgame:catan-1995",
+      "sides": {
+        "interaccion": "interactive"
+      },
+      "era": "1995-2004",
+      "why": "Catan; el juego moderno más famoso, negociación constante"
+    }
+  ]
+}

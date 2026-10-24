@@ -1,0 +1,297 @@
+{
+  "shelf": "book",
+  "country": "ES",
+  "anchors": [
+    {
+      "id": "book:macbeth-1508",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "densidad": "demanding"
+      },
+      "era": "<1980",
+      "why": "Shakespeare; tragedia oscura de ambición y poder"
+    },
+    {
+      "id": "book:don-quijote-de-la-mancha-1605",
+      "sides": {
+        "humor": "comedy",
+        "ritmo": "slow",
+        "densidad": "demanding"
+      },
+      "era": "<1980",
+      "why": "La novela de los españoles; larga, cómica y de lenguaje antiguo"
+    },
+    {
+      "id": "book:orgullo-y-prejuicio-1813",
+      "sides": {
+        "tono": "light",
+        "realismo": "realistic",
+        "ritmo": "slow"
+      },
+      "era": "<1980",
+      "why": "Jane Austen; romance irónico y luminoso del siglo XIX"
+    },
+    {
+      "id": "book:el-conde-de-montecristo-1844",
+      "sides": {
+        "realismo": "realistic"
+      },
+      "era": "<1980",
+      "why": "Aventuras y venganza, un clásico que casi todos conocen"
+    },
+    {
+      "id": "book:los-tres-mosqueteros-1844",
+      "sides": {
+        "tono": "light",
+        "realismo": "realistic",
+        "ritmo": "fast",
+        "densidad": "light"
+      },
+      "era": "<1980",
+      "why": "Aventura de capa y espada, ágil y divertida"
+    },
+    {
+      "id": "book:cumbres-borrascosas-1847",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "realismo": "realistic",
+        "ritmo": "slow"
+      },
+      "era": "<1980",
+      "why": "Pasión y venganza en los páramos; oscura y atormentada"
+    },
+    {
+      "id": "book:madame-bovary-1857",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "realismo": "realistic",
+        "ritmo": "slow"
+      },
+      "era": "<1980",
+      "why": "Novela realista y trágica del siglo XIX"
+    },
+    {
+      "id": "book:los-miserables-1862",
+      "sides": {
+        "tono": "dark",
+        "realismo": "realistic",
+        "ritmo": "slow",
+        "densidad": "demanding"
+      },
+      "era": "<1980",
+      "why": "Victor Hugo; larguísima y dura, con musical y películas muy famosas"
+    },
+    {
+      "id": "book:la-isla-del-tesoro-1883",
+      "sides": {
+        "tono": "light",
+        "realismo": "realistic",
+        "ritmo": "fast",
+        "densidad": "light"
+      },
+      "era": "<1980",
+      "why": "Piratas y aventura juvenil; lectura ágil"
+    },
+    {
+      "id": "book:el-extrano-caso-del-doctor-jekyll-y-el-senor-hyde-1886",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "realismo": "fantasy",
+        "ritmo": "fast",
+        "densidad": "light"
+      },
+      "era": "<1980",
+      "why": "Jekyll y Hyde; terror breve y rápido"
+    },
+    {
+      "id": "book:el-retrato-de-dorian-gray-1890",
+      "sides": {
+        "tono": "dark",
+        "realismo": "fantasy"
+      },
+      "era": "<1980",
+      "why": "Wilde; pacto sobrenatural y decadencia"
+    },
+    {
+      "id": "book:dracula-1897",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "realismo": "fantasy"
+      },
+      "era": "<1980",
+      "why": "El vampiro por excelencia; terror gótico"
+    },
+    {
+      "id": "book:la-metamorfosis-1915",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "realismo": "fantasy",
+        "densidad": "light"
+      },
+      "era": "<1980",
+      "why": "Kafka; un hombre convertido en insecto, breve y angustiosa"
+    },
+    {
+      "id": "book:el-gran-gatsby-1925",
+      "sides": {
+        "realismo": "realistic",
+        "ritmo": "slow"
+      },
+      "era": "<1980",
+      "why": "Fitzgerald; los felices años 20 y un amor imposible"
+    },
+    {
+      "id": "book:un-mundo-feliz-1932",
+      "sides": {
+        "tono": "dark",
+        "realismo": "fantasy"
+      },
+      "era": "<1980",
+      "why": "Huxley; distopía de manual"
+    },
+    {
+      "id": "book:la-casa-de-bernarda-alba-1936",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "realismo": "realistic"
+      },
+      "era": "<1980",
+      "why": "Lorca; lectura escolar en España, drama rural y opresivo"
+    },
+    {
+      "id": "book:el-extranjero-1942",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "realismo": "realistic",
+        "ritmo": "slow",
+        "densidad": "light"
+      },
+      "era": "<1980",
+      "why": "Camus; breve, seca y existencialista"
+    },
+    {
+      "id": "book:el-principito-1943",
+      "sides": {
+        "tono": "light",
+        "realismo": "fantasy",
+        "ritmo": "slow",
+        "densidad": "light"
+      },
+      "era": "<1980",
+      "why": "La fábula más leída; corta y para todas las edades"
+    },
+    {
+      "id": "book:el-hombre-en-busca-de-sentido-1946",
+      "sides": {
+        "realismo": "realistic",
+        "densidad": "light"
+      },
+      "era": "<1980",
+      "why": "Frankl; testimonio real de un campo de concentración, el ensayo más conocido"
+    },
+    {
+      "id": "book:1984-1949",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "ritmo": "slow"
+      },
+      "era": "<1980",
+      "why": "Orwell; la distopía por excelencia, muy citada"
+    },
+    {
+      "id": "book:el-guardian-entre-el-centeno-1951",
+      "sides": {
+        "realismo": "realistic",
+        "ritmo": "slow"
+      },
+      "era": "<1980",
+      "why": "Salinger; adolescente rebelde, lectura clásica de instituto"
+    },
+    {
+      "id": "book:fahrenheit-451-1953",
+      "sides": {
+        "tono": "dark",
+        "realismo": "fantasy",
+        "ritmo": "fast",
+        "densidad": "light"
+      },
+      "era": "<1980",
+      "why": "Bradbury; distopía breve y ágil de libros quemados"
+    },
+    {
+      "id": "book:el-senor-de-los-anillos-1954",
+      "sides": {
+        "realismo": "fantasy",
+        "ritmo": "slow",
+        "densidad": "demanding"
+      },
+      "era": "<1980",
+      "why": "Tolkien; fantasía épica larguísima"
+    },
+    {
+      "id": "book:matar-a-un-ruisenor-1960",
+      "sides": {
+        "realismo": "realistic",
+        "ritmo": "slow"
+      },
+      "era": "<1980",
+      "why": "Harper Lee; drama social del sur de EE. UU., clásico de instituto"
+    },
+    {
+      "id": "book:dune-1965",
+      "sides": {
+        "realismo": "fantasy",
+        "ritmo": "slow",
+        "densidad": "demanding"
+      },
+      "era": "<1980",
+      "why": "Frank Herbert; la gran saga de ciencia ficción, densa"
+    },
+    {
+      "id": "book:cien-anos-de-soledad-1967",
+      "sides": {
+        "densidad": "demanding"
+      },
+      "era": "<1980",
+      "why": "García Márquez; el clásico español-latinoamericano, de lectura exigente"
+    },
+    {
+      "id": "book:el-amor-en-los-tiempos-del-colera-1985",
+      "sides": {
+        "ritmo": "slow"
+      },
+      "era": "1980-1994",
+      "why": "García Márquez; romance de toda una vida, pausado"
+    },
+    {
+      "id": "book:the-handmaid-s-tale-1985",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "ritmo": "slow"
+      },
+      "era": "1980-1994",
+      "why": "Atwood; distopía opresiva que se hizo serie famosa"
+    },
+    {
+      "id": "book:harry-potter-y-la-piedra-filosofal-1997",
+      "sides": {
+        "tono": "light",
+        "realismo": "fantasy",
+        "ritmo": "fast",
+        "densidad": "light"
+      },
+      "era": "1995-2004",
+      "why": "Rowling; el libro que enganchó a toda una generación, fácil de leer"
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "shelf": "artist",
+  "country": "ES",
+  "anchors": [
+    {
+      "id": "artist:wolfgang-amadeus-mozart-1761",
+      "sides": {
+        "energia": "calm",
+        "bailable": "no",
+        "sonido": "acoustic"
+      },
+      "era": "<1980",
+      "why": "Mozart; música clásica, tranquila y acústica; lo conoce todo el mundo"
+    },
+    {
+      "id": "artist:the-beatles-1960",
+      "sides": {
+        "sonido": "acoustic"
+      },
+      "era": "<1980",
+      "why": "The Beatles; la banda más famosa de la historia, sonido de guitarras y voces"
+    },
+    {
+      "id": "artist:bob-dylan-1962",
+      "sides": {
+        "energia": "calm",
+        "bailable": "no",
+        "sonido": "acoustic"
+      },
+      "era": "<1980",
+      "why": "Bob Dylan; folk de guitarra y armónica, Nobel de Literatura"
+    },
+    {
+      "id": "artist:queen-1970",
+      "sides": {
+        "energia": "energetic",
+        "sonido": "acoustic"
+      },
+      "era": "<1980",
+      "why": "Queen; rock de estadio con Freddie Mercury, la conoce todo el mundo"
+    },
+    {
+      "id": "artist:michael-jackson-1971",
+      "sides": {
+        "energia": "energetic",
+        "animo": "cheerful",
+        "bailable": "dance"
+      },
+      "era": "<1980",
+      "why": "Michael Jackson; el rey del pop, para bailar"
+    },
+    {
+      "id": "artist:bruce-springsteen-1972",
+      "sides": {
+        "bailable": "no",
+        "sonido": "acoustic"
+      },
+      "era": "<1980",
+      "why": "Bruce Springsteen; rock de guitarras de estadio"
+    },
+    {
+      "id": "artist:ac-dc-1973",
+      "sides": {
+        "energia": "energetic",
+        "bailable": "no",
+        "sonido": "acoustic"
+      },
+      "era": "<1980",
+      "why": "AC/DC; hard rock a todo volumen, guitarras de verdad"
+    },
+    {
+      "id": "artist:prince-1978",
+      "sides": {
+        "energia": "energetic",
+        "animo": "cheerful",
+        "bailable": "dance"
+      },
+      "era": "<1980",
+      "why": "Prince; funk y pop de pista de baile"
+    },
+    {
+      "id": "artist:madonna-1982",
+      "sides": {
+        "energia": "energetic",
+        "animo": "cheerful",
+        "bailable": "dance",
+        "sonido": "electronic"
+      },
+      "era": "1980-1994",
+      "why": "Madonna; la reina del pop de baile, sonido de sintetizadores"
+    },
+    {
+      "id": "artist:george-michael-1982",
+      "sides": {
+        "bailable": "dance"
+      },
+      "era": "1980-1994",
+      "why": "George Michael; pop de baile de los 80 y baladas"
+    },
+    {
+      "id": "artist:tupac-shakur-1989",
+      "sides": {
+        "energia": "energetic"
+      },
+      "era": "1980-1994",
+      "why": "Tupac; el rap de los 90, intenso y reivindicativo"
+    },
+    {
+      "id": "artist:alejandro-sanz-1989",
+      "sides": {
+        "energia": "calm",
+        "animo": "melancholic",
+        "bailable": "no",
+        "sonido": "acoustic"
+      },
+      "era": "1980-1994",
+      "why": "Alejandro Sanz; baladas en español de guitarra, el artista más reconocido de España"
+    },
+    {
+      "id": "artist:shakira-1990",
+      "sides": {
+        "energia": "energetic",
+        "animo": "cheerful",
+        "bailable": "dance"
+      },
+      "era": "1980-1994",
+      "why": "Shakira; pop latino de baile conocido en todo el mundo"
+    },
+    {
+      "id": "artist:katy-perry-2001",
+      "sides": {
+        "energia": "energetic",
+        "animo": "cheerful",
+        "bailable": "dance",
+        "sonido": "electronic"
+      },
+      "era": "1995-2004",
+      "why": "Katy Perry; pop de colores, alegre y de baile"
+    },
+    {
+      "id": "artist:amy-winehouse-2003",
+      "sides": {
+        "energia": "calm",
+        "animo": "melancholic",
+        "bailable": "no",
+        "sonido": "acoustic"
+      },
+      "era": "1995-2004",
+      "why": "Amy Winehouse; soul triste con banda de verdad"
+    },
+    {
+      "id": "artist:lady-gaga-2008",
+      "sides": {
+        "energia": "energetic",
+        "bailable": "dance",
+        "sonido": "electronic"
+      },
+      "era": "2005-2014",
+      "why": "Lady Gaga; pop electrónico de pista de baile"
+    },
+    {
+      "id": "artist:bruno-mars-2010",
+      "sides": {
+        "energia": "energetic",
+        "animo": "cheerful",
+        "bailable": "dance"
+      },
+      "era": "2005-2014",
+      "why": "Bruno Mars; funk y pop alegre para bailar"
+    },
+    {
+      "id": "artist:dua-lipa-2015",
+      "sides": {
+        "energia": "energetic",
+        "animo": "cheerful",
+        "bailable": "dance",
+        "sonido": "electronic"
+      },
+      "era": "2015+",
+      "why": "Dua Lipa; pop disco de baile"
+    },
+    {
+      "id": "artist:billie-eilish-2015",
+      "sides": {
+        "energia": "calm",
+        "animo": "melancholic",
+        "bailable": "no",
+        "sonido": "electronic"
+      },
+      "era": "2015+",
+      "why": "Billie Eilish; pop susurrado, oscuro y electrónico"
+    },
+    {
+      "id": "artist:bad-bunny-2016",
+      "sides": {
+        "energia": "energetic",
+        "bailable": "dance",
+        "sonido": "electronic"
+      },
+      "era": "2015+",
+      "why": "Bad Bunny; reguetón y trap, el artista más escuchado"
+    },
+    {
+      "id": "artist:rosalia-2017",
+      "sides": {
+        "energia": "energetic",
+        "bailable": "dance"
+      },
+      "era": "2015+",
+      "why": "Rosalía; flamenco y urbano, la artista española más conocida fuera de España"
+    }
+  ]
+}

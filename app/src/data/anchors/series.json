@@ -1,0 +1,337 @@
+{
+  "shelf": "series",
+  "country": "ES",
+  "anchors": [
+    {
+      "id": "series:los-simpson-1989",
+      "sides": {
+        "tono": "light",
+        "humor": "comedy",
+        "exigencia": "light",
+        "publico": "all"
+      },
+      "era": "1980-1994",
+      "why": "La comedia de animación más famosa de la tele; la conoce toda España"
+    },
+    {
+      "id": "series:twin-peaks-1990",
+      "sides": {
+        "tono": "dark",
+        "realismo": "fantasy",
+        "exigencia": "demanding",
+        "publico": "adults"
+      },
+      "era": "1980-1994",
+      "why": "Misterio surrealista de Lynch; serie de culto que casi todos conocen de nombre"
+    },
+    {
+      "id": "series:friends-1994",
+      "sides": {
+        "tono": "light",
+        "humor": "comedy",
+        "intensidad": "calm",
+        "realismo": "realistic",
+        "exigencia": "light"
+      },
+      "era": "1980-1994",
+      "why": "La comedia de situación por excelencia; extremo luminoso y cotidiano"
+    },
+    {
+      "id": "series:er-1994",
+      "sides": {
+        "realismo": "realistic",
+        "intensidad": "tension",
+        "publico": "adults"
+      },
+      "era": "1980-1994",
+      "why": "Urgencias; drama médico realista, un clásico de la tele de los 90"
+    },
+    {
+      "id": "series:sex-and-the-city-1998",
+      "sides": {
+        "tono": "light",
+        "humor": "comedy",
+        "realismo": "realistic",
+        "exigencia": "light",
+        "publico": "adults"
+      },
+      "era": "1995-2004",
+      "why": "Comedia romántica y moda en Nueva York; dirigida a adultos"
+    },
+    {
+      "id": "series:spongebob-squarepants-1999",
+      "sides": {
+        "tono": "light",
+        "humor": "comedy",
+        "intensidad": "calm",
+        "realismo": "fantasy",
+        "exigencia": "light",
+        "publico": "all"
+      },
+      "era": "1995-2004",
+      "why": "Bob Esponja; la conocen niños y adultos, humor absurdo y luminoso"
+    },
+    {
+      "id": "series:gilmore-girls-2000",
+      "sides": {
+        "tono": "light",
+        "humor": "comedy",
+        "intensidad": "calm",
+        "realismo": "realistic",
+        "exigencia": "light"
+      },
+      "era": "1995-2004",
+      "why": "Las chicas Gilmore; comedia dramática cálida y cotidiana"
+    },
+    {
+      "id": "series:supernatural-2005",
+      "sides": {
+        "tono": "dark",
+        "intensidad": "tension",
+        "realismo": "fantasy"
+      },
+      "era": "2005-2014",
+      "why": "Sobrenatural; demonios y cazadores, durante años en la tele en abierto"
+    },
+    {
+      "id": "series:grey-s-anatomy-2005",
+      "sides": {
+        "realismo": "realistic"
+      },
+      "era": "2005-2014",
+      "why": "Anatomía de Grey; drama médico que ha visto medio mundo"
+    },
+    {
+      "id": "series:criminal-minds-2005",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "intensidad": "tension",
+        "realismo": "realistic",
+        "publico": "adults"
+      },
+      "era": "2005-2014",
+      "why": "Mentes criminales; policíaca oscura y de tensión, muy emitida en España"
+    },
+    {
+      "id": "series:aida-2005",
+      "sides": {
+        "tono": "light",
+        "humor": "comedy",
+        "intensidad": "calm",
+        "realismo": "realistic",
+        "exigencia": "light"
+      },
+      "era": "2005-2014",
+      "why": "Aída; comedia española de barrio que vio toda España"
+    },
+    {
+      "id": "series:dexter-2006",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "intensidad": "tension",
+        "realismo": "realistic",
+        "publico": "adults"
+      },
+      "era": "2005-2014",
+      "why": "Dexter; un asesino en serie como protagonista, oscura y para adultos"
+    },
+    {
+      "id": "series:the-mentalist-2008",
+      "sides": {
+        "realismo": "realistic",
+        "exigencia": "light"
+      },
+      "era": "2005-2014",
+      "why": "El mentalista; policíaca ligera y de episodios cerrados"
+    },
+    {
+      "id": "series:the-walking-dead-2010",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "intensidad": "tension",
+        "realismo": "fantasy",
+        "publico": "adults"
+      },
+      "era": "2005-2014",
+      "why": "Zombis y supervivencia; oscura y violenta"
+    },
+    {
+      "id": "series:juego-de-tronos-2011",
+      "sides": {
+        "tono": "dark",
+        "realismo": "fantasy",
+        "publico": "adults"
+      },
+      "era": "2005-2014",
+      "why": "Fantasía épica y cruda; el fenómeno de la década"
+    },
+    {
+      "id": "series:black-mirror-2011",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "realismo": "fantasy",
+        "exigencia": "demanding",
+        "publico": "adults"
+      },
+      "era": "2005-2014",
+      "why": "Tecnología y distopía en episodios sueltos; oscura y para pensar"
+    },
+    {
+      "id": "series:american-horror-story-2011",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "intensidad": "tension",
+        "realismo": "fantasy",
+        "publico": "adults"
+      },
+      "era": "2005-2014",
+      "why": "Terror antológico, para adultos"
+    },
+    {
+      "id": "series:peaky-blinders-2013",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "realismo": "realistic",
+        "publico": "adults"
+      },
+      "era": "2005-2014",
+      "why": "Gánsteres en la Inglaterra de 1919, seria y estilizada"
+    },
+    {
+      "id": "series:attack-on-titan-2013",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "intensidad": "tension",
+        "realismo": "fantasy",
+        "publico": "adults"
+      },
+      "era": "2005-2014",
+      "why": "Ataque a los titanes; el anime más comentado, crudo y de acción"
+    },
+    {
+      "id": "series:fargo-2014",
+      "sides": {
+        "tono": "dark",
+        "realismo": "realistic",
+        "publico": "adults"
+      },
+      "era": "2005-2014",
+      "why": "Fargo; crimen con humor negro y frío, para adultos"
+    },
+    {
+      "id": "series:true-detective-2014",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "intensidad": "tension",
+        "realismo": "realistic",
+        "exigencia": "demanding",
+        "publico": "adults"
+      },
+      "era": "2005-2014",
+      "why": "True Detective; policíaca oscura y densa"
+    },
+    {
+      "id": "series:dark-2017",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "intensidad": "tension",
+        "realismo": "fantasy",
+        "exigencia": "demanding",
+        "publico": "adults"
+      },
+      "era": "2015+",
+      "why": "Dark; viajes en el tiempo, complicada de seguir y muy oscura"
+    },
+    {
+      "id": "series:la-casa-de-papel-2017",
+      "sides": {
+        "intensidad": "tension",
+        "realismo": "realistic"
+      },
+      "era": "2015+",
+      "why": "La casa de papel; atraco español que se hizo famoso en todo el mundo"
+    },
+    {
+      "id": "series:yellowstone-2018",
+      "sides": {
+        "realismo": "realistic",
+        "publico": "adults"
+      },
+      "era": "2015+",
+      "why": "Yellowstone; drama western de rancheros, para adultos"
+    },
+    {
+      "id": "series:demon-slayer-kimetsu-no-yaiba-2019",
+      "sides": {
+        "realismo": "fantasy",
+        "exigencia": "light"
+      },
+      "era": "2015+",
+      "why": "Demon Slayer; anime de fantasía y combates, muy popular entre jóvenes"
+    },
+    {
+      "id": "series:the-boys-2019",
+      "sides": {
+        "tono": "dark",
+        "humor": "comedy",
+        "realismo": "fantasy",
+        "publico": "adults"
+      },
+      "era": "2015+",
+      "why": "Superhéroes gamberros y violentos, humor negro"
+    },
+    {
+      "id": "series:euphoria-2019",
+      "sides": {
+        "tono": "dark",
+        "humor": "none",
+        "realismo": "realistic",
+        "publico": "adults"
+      },
+      "era": "2015+",
+      "why": "Euphoria; drama crudo sobre adolescentes, para adultos"
+    },
+    {
+      "id": "series:ted-lasso-2020",
+      "sides": {
+        "tono": "light",
+        "humor": "comedy",
+        "intensidad": "calm",
+        "realismo": "realistic",
+        "exigencia": "light",
+        "publico": "all"
+      },
+      "era": "2015+",
+      "why": "Ted Lasso; comedia amable y optimista"
+    },
+    {
+      "id": "series:the-white-lotus-2021",
+      "sides": {
+        "humor": "comedy",
+        "realismo": "realistic",
+        "publico": "adults"
+      },
+      "era": "2015+",
+      "why": "The White Lotus; sátira de ricos de vacaciones"
+    },
+    {
+      "id": "series:the-bear-2022",
+      "sides": {
+        "intensidad": "tension",
+        "realismo": "realistic",
+        "publico": "adults"
+      },
+      "era": "2015+",
+      "why": "The Bear; cocina frenética y agobiante, muy comentada"
+    }
+  ]
+}
