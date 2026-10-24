@@ -47,6 +47,13 @@ export function matchLocal(row: ImportRow, index: LocalIndex, qid?: string): Ite
   for (const title of [row.title, row.originalTitle]) {
     if (!title) continue
     for (const it of index.byTitle.get(`${row.type}|${normTitle(title)}`) ?? []) {
+      if (row.type === 'song' && row.creator && it.creator) {
+        const normRowCreator = normTitle(row.creator)
+        const normItCreator = normTitle(it.creator)
+        if (!normItCreator.includes(normRowCreator) && !normRowCreator.includes(normItCreator)) {
+          continue
+        }
+      }
       if (row.year && it.year && Math.abs(it.year - row.year) > tolerance) continue
       const key = it.wikidataId ?? it.id
       if (!found.has(key)) found.set(key, index.byWikidata.get(`${it.type}|${it.wikidataId}`) ?? it)

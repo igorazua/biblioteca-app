@@ -5,6 +5,8 @@ import { TabBar } from './components/TabBar'
 import { Toast } from './components/ui'
 import { UpdatePrompt } from './components/UpdatePrompt'
 import { PushPrompt } from './components/PushPrompt'
+import { loadSongs } from './data/songs'
+import { SHELF_ENABLED } from './config'
 import { useStore } from './store/useStore'
 import { useAuth } from './store/useAuth'
 import { useFriends } from './store/useFriends'
@@ -90,6 +92,12 @@ export function App() {
   const user = useAuth((s) => s.user)
   const hasHydrated = useCatalog((s) => s._hasHydrated)
   const [syncToast, setSyncToast] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (SHELF_ENABLED.song) {
+      loadSongs()
+    }
+  }, [])
 
   useEffect(() => {
     if (!hasHydrated) return

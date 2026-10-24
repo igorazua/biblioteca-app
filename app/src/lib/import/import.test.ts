@@ -324,45 +324,110 @@ describe('Casado local con el catálogo real', () => {
   })
 })
 
-describe('Analizadores sin claves (T20.7)', () => {
-  it('Spotify History procesa escuchas agrupadas por artista ponderando estrellas por minutos', () => {
+describe('Analizadores sin claves (T20.7 / T28.5)', () => {
+  it('Spotify History procesa escuchas agrupadas por artista y canciones ponderando estrellas por minutos', () => {
     const rows = parseSpotifyHistory(spotifyJson)
-    expect(rows.length).toBe(3)
-    const rosalia = rows.find((r) => r.title === 'Rosalía')
+    const artists = rows.filter((r) => r.type === 'artist')
+    const songs = rows.filter((r) => r.type === 'song')
+
+    expect(artists.length).toBe(3)
+    const rosalia = artists.find((r) => r.title === 'Rosalía')
     expect(rosalia).toBeDefined()
-    expect(rosalia?.type).toBe('artist')
     expect(rosalia?.status).toBe('seen')
     expect(rosalia?.stars).toBe(5)
 
-    const badBunny = rows.find((r) => r.title === 'Bad Bunny')
+    const badBunny = artists.find((r) => r.title === 'Bad Bunny')
     expect(badBunny).toBeDefined()
-    expect(badBunny?.type).toBe('artist')
 
-    const ctangana = rows.find((r) => r.title === 'C. Tangana')
+    const ctangana = artists.find((r) => r.title === 'C. Tangana')
     expect(ctangana).toBeDefined()
+
+    // Canciones extraídas
+    expect(songs.length).toBe(4)
+    const despecha = songs.find((r) => r.title === 'DESPECHÁ')
+    expect(despecha).toBeDefined()
+    expect(despecha?.creator).toBe('Rosalía')
+    expect(despecha?.stars).toBe(5)
   })
 
-  it('YouTube Music Takeout extrae canales de artistas', () => {
+  it('T28.5 Test de riesgo: un historial de ejemplo produce canciones esperadas, suma escuchas y fusiona remasters', () => {
+    const historyFixture = JSON.stringify([
+      {
+        endTime: '2024-03-01 12:00',
+        artistName: 'Queen',
+        trackName: 'Bohemian Rhapsody',
+        msPlayed: 354000,
+      },
+      {
+        endTime: '2024-03-02 14:00',
+        artistName: 'Queen',
+        trackName: 'Bohemian Rhapsody - 2011 Remaster',
+        msPlayed: 354000,
+      },
+      {
+        endTime: '2024-03-03 16:00',
+        artistName: 'Queen',
+        trackName: 'Bohemian Rhapsody (Live at Wembley)',
+        msPlayed: 300000,
+      },
+      {
+        endTime: '2024-03-04 18:00',
+        artistName: 'Queen',
+        trackName: 'Radio Ga Ga',
+        msPlayed: 343000,
+      },
+    ])
+
+    const rows = parseSpotifyHistory(historyFixture)
+    const songs = rows.filter((r) => r.type === 'song')
+
+    // Bohemian Rhapsody (original + remaster 2011 + live) deben fusionarse en 1 sola entrada con 3 escuchas
+    const bohemians = songs.filter((s) => s.title === 'Bohemian Rhapsody')
+    expect(bohemians.length).toBe(1)
+    expect(bohemians[0].creator).toBe('Queen')
+    expect(bohemians[0].stars).toBe(5)
+
+    const radioGaGa = songs.find((s) => s.title === 'Radio Ga Ga')
+    expect(radioGaGa).toBeDefined()
+    expect(songs.length).toBe(2)
+  })
+
+  it('YouTube Music Takeout extrae canales de artistas y canciones', () => {
     const rows = parseYouTubeMusic(ytMusicJson)
-    expect(rows.length).toBe(2)
-    const rosalia = rows.find((r) => r.title === 'Rosalía')
+    const artists = rows.filter((r) => r.type === 'artist')
+    const songs = rows.filter((r) => r.type === 'song')
+
+    expect(artists.length).toBe(2)
+    const rosalia = artists.find((r) => r.title === 'Rosalía')
     expect(rosalia).toBeDefined()
-    expect(rosalia?.type).toBe('artist')
     expect(rosalia?.status).toBe('seen')
 
-    const queen = rows.find((r) => r.title === 'Queen')
+    const queen = artists.find((r) => r.title === 'Queen')
     expect(queen).toBeDefined()
-    expect(queen?.type).toBe('artist')
     expect(queen?.status).toBe('seen')
+
+    // Canciones de YouTube Music
+    expect(songs.length).toBe(3)
+    const saoko = songs.find((r) => r.title === 'Saoko')
+    expect(saoko).toBeDefined()
+    expect(saoko?.creator).toBe('Rosalía')
   })
 
-  it('Apple Music CSV extrae artistas únicos con estado visto', () => {
+  it('Apple Music CSV extrae artistas únicos y canciones con estado visto', () => {
     const rows = parseAppleMusic(appleMusicCsv)
-    expect(rows.length).toBe(2)
-    const beatles = rows.find((r) => r.title === 'The Beatles')
+    const artists = rows.filter((r) => r.type === 'artist')
+    const songs = rows.filter((r) => r.type === 'song')
+
+    expect(artists.length).toBe(2)
+    const beatles = artists.find((r) => r.title === 'The Beatles')
     expect(beatles).toBeDefined()
-    expect(beatles?.type).toBe('artist')
     expect(beatles?.status).toBe('seen')
+
+    // Canciones de Apple Music (filtrando saltos < 10s como Hey Jude de 5000ms)
+    expect(songs.length).toBe(3)
+    const hereComes = songs.find((r) => r.title === 'Here Comes The Sun')
+    expect(hereComes).toBeDefined()
+    expect(hereComes?.creator).toBe('The Beatles')
   })
 
   it('Prime Video CSV detecta series y películas', () => {

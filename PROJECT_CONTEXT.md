@@ -41,7 +41,7 @@
 11. `docs/SISTEMA_DISENO.md` — sistema de diseño «Editorial sobria» (obligatorio en toda pantalla).
 12. `docs/CONECTAR.md` — importar desde otras apps y mantenerlo al día.
 13. `docs/REFERENCIAS_UI.md` — patrones de otras apps (Shelf, Popcorn, Achriom) y decisiones de Igor.
-14. `docs/TAREA_T16_COMPARAR.md`, `TAREA_T17_DECIDIR.md`, `TAREA_T18_CONECTAR.md`, `TAREA_T19_AJUSTES.md` — encargos detallados. `docs/TAREAS_T27_T28_MUSICA.md` (24/10, Gemini): tarjetas cuadradas para artistas y canciones, y estantería de Canciones detrás del interruptor `SHELF_ENABLED.song` (activarla o no en el lanzamiento, por decidir).
+14. `docs/TAREA_T16_COMPARAR.md`, `TAREA_T17_DECIDIR.md`, `TAREA_T18_CONECTAR.md`, `TAREA_T19_AJUSTES.md` — encargos detallados. `docs/TAREAS_T27_T28_MUSICA.md` (24/10, Gemini): tarjetas cuadradas para artistas y canciones (T27), y estantería de Canciones (T28) con catálogo dinámico de 4.474 canciones detrás del interruptor `SHELF_ENABLED.song` (pendiente decidir si se activa en el lanzamiento).
 15. `docs/antigravity/` — manifiesto previo hecho con Antigravity (`VISION_Y_FEATURES.md`) y mockup de UI.
 
 ## Estructura

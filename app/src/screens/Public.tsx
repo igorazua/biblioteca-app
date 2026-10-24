@@ -97,7 +97,8 @@ export function PublicList() {
 
       <ul className="mt-6 space-y-3">
         {items.map(([id, note]) => {
-          const it = getItem(id)!
+          const it = getItem(id)
+          if (!it) return null
           const mine = entries[id]
           return (
             <li key={id} className="flex gap-3.5 bg-surface rounded-2xl border border-line p-3.5">
@@ -108,6 +109,17 @@ export function PublicList() {
                 <div className="text-meta text-mute mt-0.5">{it.creator}{itemFacts(it) ? ` · ${itemFacts(it)}` : ''}</div>
                 {note && <p className="serif italic text-body text-accent mt-1.5">«{note}»</p>}
                 <p className="text-meta text-mute mt-1.5 line-clamp-2">{it.synopsis}</p>
+                {it.type === 'song' && (
+                  <a
+                    href={`https://open.spotify.com/search/${encodeURIComponent(`${it.title} ${it.creator}`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 text-meta text-accent hover:underline flex items-center gap-1.5 self-start"
+                  >
+                    <Icon name="disc" size={13} />
+                    Abrir en Spotify
+                  </a>
+                )}
                 <button onClick={() => save([id])} disabled={!!mine && mine.status !== 'dismissed'}
                   className="mt-auto pt-2 self-start min-h-[36px] px-3 rounded-xl bg-surface2 border border-line text-meta font-medium flex items-center gap-1.5 disabled:text-stamp-green">
                   <Icon name={mine && mine.status !== 'dismissed' ? 'check' : 'bookmark'} size={14} />
@@ -161,7 +173,8 @@ export function PublicProfile() {
             <h2 className="text-title font-medium text-ink mb-3">{SHELF_LABEL[t].plural}</h2>
             <ol className="grid grid-cols-3 gap-3">
               {ids.map((id, i) => {
-                const it = getItem(id)!
+                const it = getItem(id)
+                if (!it) return null
                 return (
                   <li key={id}>
                     <div className="relative">

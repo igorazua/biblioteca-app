@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
-import { friends as seedFriends, getItem, items } from '../data/catalog'
+import { friends as seedFriends, getItem, itemsOfType } from '../data/catalog'
+import { useSongsLoaded } from '../data/songs'
 import { nextCards, newDeckSessionState, type DeckCard, type DeckSessionState } from '../lib/engine/deck'
 import { useStore } from '../store/useStore'
 import { useAuth } from '../store/useAuth'
@@ -70,9 +71,10 @@ export function Discover() {
 
   // Cola de tarjetas con batching (§7)
   const [deckCards, setDeckCards] = useState<DeckCard[]>([])
+  const songsLoaded = useSongsLoaded()
 
   const fetchBatch = useCallback((existingIds: Set<string>, count = 20) => {
-    const pool = items.filter((i) => i.type === shelf && !existingIds.has(i.id))
+    const pool = itemsOfType(shelf).filter((i) => !existingIds.has(i.id))
     return nextCards({
       shelf,
       items: pool,
@@ -85,7 +87,7 @@ export function Discover() {
       session: sessionStateRef.current,
       userVec: userVectors?.[shelf],
     }, Array.from(existingIds), count)
-  }, [shelf, entries, rankings, profile, activeFriends, getAffinity, getFriendPct, userVectors])
+  }, [shelf, entries, rankings, profile, activeFriends, getAffinity, getFriendPct, userVectors, songsLoaded])
 
   // Inicializar o recargar mazo al cambiar estantería
   useEffect(() => {
@@ -106,7 +108,7 @@ export function Discover() {
         data: { cards: shownIds.current.size, swipes: swipeCount.current },
       })
     }
-  }, [shelf, fetchBatch, newSession])
+  }, [shelf, fetchBatch, newSession, songsLoaded])
 
   // Reabastecer mazo cuando quedan <= 8 tarjetas (§7)
   useEffect(() => {
@@ -198,8 +200,8 @@ export function Discover() {
 
   // Contador de obras pendientes de descubrir en toda la estantería (§1.5)
   const remainingCount = useMemo(() => {
-    return items.filter((i) => i.type === shelf && !entries[i.id]).length
-  }, [shelf, entries])
+    return itemsOfType(shelf).filter((i) => !entries[i.id]).length
+  }, [shelf, entries, songsLoaded])
 
   const deck = deckCards.map((c) => c.item)
   const label = SHELF_LABEL[shelf]

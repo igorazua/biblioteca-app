@@ -116,7 +116,16 @@ export function ItemDetail() {
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.16 }} className="absolute bottom-0 inset-x-0 px-5">
             <div className="text-label text-ink/80">{typeName(item.type)} · {item.year}</div>
             <h1 className="text-display text-ink mt-1">{item.title}</h1>
-            <div className="text-meta text-ink/80 mt-1">{item.creator}{itemFacts(item) ? ` · ${itemFacts(item)}` : ''}</div>
+            <div className="text-meta text-ink/80 mt-1">
+              {item.artistId ? (
+                <Link to={`/i/${encodeURIComponent(item.artistId)}`} className="underline underline-offset-2">
+                  {item.creator}
+                </Link>
+              ) : (
+                item.creator
+              )}
+              {itemFacts(item) ? ` · ${itemFacts(item)}` : ''}
+            </div>
           </motion.div>
         </div>
 
@@ -124,6 +133,17 @@ export function ItemDetail() {
           <div className="flex flex-wrap gap-1.5">
             {item.genres.map((g) => <Tag key={g}>{g}</Tag>)}
             {item.platforms?.map((p) => <Tag key={p} variant="accent">{p}</Tag>)}
+            {item.type === 'song' && (
+              <a
+                href={`https://open.spotify.com/search/${encodeURIComponent(`${item.title} ${item.creator}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-surface border border-line text-meta text-accent hover:underline font-medium"
+              >
+                <Icon name="disc" size={14} />
+                Spotify
+              </a>
+            )}
           </div>
           <p className="text-body leading-relaxed text-ink/90">{item.synopsis}</p>
 

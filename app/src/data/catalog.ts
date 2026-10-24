@@ -11,6 +11,26 @@ export const friends = seed.friends as Friend[]
 export const itemsById = new Map<string, Item>(items.map((i) => [i.id, i]))
 setSeedChecker((id) => itemsById.has(canonicalId(id)))
 
+let dynamicSongs: Item[] = []
+const songsListeners = new Set<() => void>()
+
+export function registerLoadedSongs(songs: Item[]) {
+  dynamicSongs = songs
+  for (const s of songs) {
+    itemsById.set(s.id, s)
+  }
+  for (const listener of songsListeners) {
+    listener()
+  }
+}
+
+export function subscribeSongs(listener: () => void) {
+  songsListeners.add(listener)
+  return () => {
+    songsListeners.delete(listener)
+  }
+}
+
 /** Los ids de gemelas fusionadas (aliases.json) devuelven la obra que se conservó. */
 export const getItem = (id: string): Item | undefined => {
   const cid = canonicalId(id)
@@ -23,6 +43,13 @@ export const isKnownItem = (id: string): boolean => {
 }
 
 export const itemsOfType = (t: ShelfType): Item[] => {
+  if (t === 'song') {
+    const liveItems = Object.values(useCatalog.getState().items).filter((i) => i.type === 'song')
+    if (liveItems.length === 0) return dynamicSongs
+    const seenIds = new Set(dynamicSongs.map((i) => i.id))
+    const extras = liveItems.filter((i) => !seenIds.has(i.id))
+    return [...dynamicSongs, ...extras]
+  }
   const seedList = items.filter((i) => i.type === t)
   const liveItems = Object.values(useCatalog.getState().items).filter((i) => i.type === t)
   if (liveItems.length === 0) return seedList
@@ -79,6 +106,8 @@ export function itemFacts(it: Item): string {
     return [it.players ? `${it.players} jug.` : '', it.durationMin ? `${it.durationMin} min` : ''].filter(Boolean).join(' · ')
   if (it.type === 'artist')
     return it.genres.slice(0, 2).join(' · ')
+  if (it.type === 'song')
+    return [it.album, it.durationSec ? `${Math.floor(it.durationSec / 60)}:${String(it.durationSec % 60).padStart(2, '0')}` : ''].filter(Boolean).join(' · ')
   return ''
 }
 
@@ -89,6 +118,7 @@ export const typeName = (t: ShelfType) => {
     case 'book': return 'Libro'
     case 'artist': return 'Artista'
     case 'boardgame': return 'Juego de mesa'
+    case 'song': return 'Canción'
   }
 }
 

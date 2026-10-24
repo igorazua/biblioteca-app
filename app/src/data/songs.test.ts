@@ -2,6 +2,8 @@ import { describe, it, expect, beforeEach } from 'vitest'
 import { SHELVES, ACTIVE_SHELVES, type UserEntry } from '../types'
 import { SHELF_ENABLED } from '../config'
 import { useStore } from '../store/useStore'
+import { getItem, itemsOfType } from './catalog'
+import { loadSongs } from './songs'
 
 describe('T28.0 — Interruptor de la estantería de canciones', () => {
   beforeEach(() => {
@@ -52,6 +54,21 @@ describe('T28.0 — Interruptor de la estantería de canciones', () => {
       expect(st.rankings.song).toContain(songId)
     } finally {
       SHELF_ENABLED.song = originalSongEnabled
+    }
+  })
+
+  it('T28.4: carga dinámica de songs.json sólo si el interruptor está encendido y registro en catalog', async () => {
+    const original = SHELF_ENABLED.song
+    try {
+      SHELF_ENABLED.song = true
+      const loaded = await loadSongs()
+      expect(loaded.length).toBeGreaterThan(4000)
+      expect(itemsOfType('song').length).toBeGreaterThan(4000)
+      const sample = loaded[0]
+      expect(getItem(sample.id)).toBeDefined()
+      expect(getItem(sample.id)?.title).toBe(sample.title)
+    } finally {
+      SHELF_ENABLED.song = original
     }
   })
 })

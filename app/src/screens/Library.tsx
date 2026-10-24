@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
-import { getItem, items } from '../data/catalog'
+import { getItem, items, itemsOfType } from '../data/catalog'
 import { useStore } from '../store/useStore'
 import { useAuth } from '../store/useAuth'
 import { useFriends } from '../store/useFriends'
@@ -159,7 +159,7 @@ export function Library() {
                 <div className="mx-4 space-y-2">
                   <Link to={`/descubrir`} className="rounded-2xl bg-surface2 p-4 flex items-center gap-4 active:scale-[0.99] transition-transform">
                     <span className="flex -space-x-5 shrink-0" aria-hidden>
-                      {items.filter((it) => it.type === t).slice(0, 3).map((it, i) => (
+                      {itemsOfType(t).slice(0, 3).map((it, i) => (
                         <Poster key={it.id} item={it} showTitle={false} className={`w-11 ${posterAspectClass(t)} rounded-[8px] border border-line`} style={{ borderRadius: posterRadius(t, 8), transform: `rotate(${(i - 1) * 7}deg)` }} />
                       ))}
                     </span>
