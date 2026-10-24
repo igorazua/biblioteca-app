@@ -1,0 +1,933 @@
+{
+  "totalRecordingsIngested": 5103,
+  "resultingSongsCount": 4719,
+  "songsWithCoverCount": 4709,
+  "pctCover": "99.8",
+  "unresolvedCount": 1,
+  "pctUnresolved": "0.02",
+  "coverBreakdown": {
+    "caaCount": 1534,
+    "itunesCount": 3175,
+    "artistPosterCount": 0,
+    "generatedCount": 10
+  },
+  "sample30MergedGroups": [
+    {
+      "canonical": "Cheap Thrills (Sia, 2015) [song:cheap-thrills-sia-2015]",
+      "variants": [
+        "Cheap Thrills [bcc861c8-986b-4229-9cf5-d8d05e1ab68f] (itunes)",
+        "Cheap Thrills (feat. Sean Paul) [bcc861c8-986b-4229-9cf5-d8d05e1ab68f] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Mía (Belén Aguilera, 2020) [song:mia-belen-aguilera-2020]",
+      "variants": [
+        "Mía [48033b0a-31fc-40b6-81c6-fb737b86495f] (itunes)",
+        "Mía [48033b0a-31fc-40b6-81c6-fb737b86495f] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Escuela de Calor (Radio Futura, 1984) [song:escuela-de-calor-radio-futura-1984]",
+      "variants": [
+        "Escuela de Calor [9821c7cc-6a14-4082-889d-dad818534036] (itunes)",
+        "Escuela de Calor [9821c7cc-6a14-4082-889d-dad818534036] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Southern Man (Neil Young, 1970) [song:southern-man-neil-young-1970]",
+      "variants": [
+        "Southern Man [no-mbid] (itunes)",
+        "Southern Man [no-mbid] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Old Man (Neil Young, 1972) [song:old-man-neil-young-1972]",
+      "variants": [
+        "Old Man [ef226abd-afde-4fbe-88ed-3d1ab53310f6] (itunes)",
+        "Old Man [ef226abd-afde-4fbe-88ed-3d1ab53310f6] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Deutschland (Rammstein, 2019) [song:deutschland-rammstein-2019]",
+      "variants": [
+        "Deutschland (Live in Mexico City) [no-mbid] (itunes)",
+        "Deutschland [no-mbid] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Mariposas (Los Enanitos Verdes, 2006) [song:mariposas-los-enanitos-verdes-2006]",
+      "variants": [
+        "Mariposas [8edf0ecf-1f42-456e-a3af-898128026109] (itunes)",
+        "Mariposas [8edf0ecf-1f42-456e-a3af-898128026109] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Cuando el mar te tenga (El Último de la Fila, 1990) [song:cuando-el-mar-te-tenga-el-ultimo-de-la-fila-1990]",
+      "variants": [
+        "Cuando el mar te tenga [753e3815-1339-44d8-846c-d10b39dcc322] (itunes)",
+        "Cuando el Mar Te Tenga (En Directo) [753e3815-1339-44d8-846c-d10b39dcc322] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Common People (Full Length Version) (Pulp, 1995) [song:common-people-full-length-version-pulp-1995]",
+      "variants": [
+        "Common People (Full Length Version) [d26d31d5-e924-4177-a152-493bb48cb353] (itunes)",
+        "Common People (Full Length Version) [d26d31d5-e924-4177-a152-493bb48cb353] (itunes)",
+        "Common People [d26d31d5-e924-4177-a152-493bb48cb353] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Dream a Little Dream of Me (Louis Armstrong, 1950) [song:dream-a-little-dream-of-me-louis-armstrong-1950]",
+      "variants": [
+        "Dream a Little Dream of Me [67cd8784-53f1-42ec-93e4-e67e6e081c02] (listenbrainz)",
+        "Dream a Little Dream of Me [a0c4a2f8-f8c8-44ec-9bf7-c3e7783d94f0] (listenbrainz)"
+      ]
+    },
+    {
+      "canonical": "Iron Maiden (Iron Maiden, 1980) [song:iron-maiden-iron-maiden-1980]",
+      "variants": [
+        "Iron Maiden (2015 Remaster) [f0f0cf1b-d635-4a92-9f5f-5ec92d1248a4] (itunes)",
+        "Iron Maiden (Live in Mexico City, Palacio de los Deportes, Mexico, September 2019) [f0f0cf1b-d635-4a92-9f5f-5ec92d1248a4] (itunes)",
+        "Iron Maiden (Live in Santiago 09 March 2008) [f0f0cf1b-d635-4a92-9f5f-5ec92d1248a4] (itunes)",
+        "Iron Maiden (Live at Rock in Rio) [2015 Remaster] [f0f0cf1b-d635-4a92-9f5f-5ec92d1248a4] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Disarm (The Smashing Pumpkins, 1993) [song:disarm-the-smashing-pumpkins-1993]",
+      "variants": [
+        "Disarm [99479876-9f93-45b8-8e84-caef39f69d4d] (listenbrainz)",
+        "Disarm [99479876-9f93-45b8-8e84-caef39f69d4d] (listenbrainz)"
+      ]
+    },
+    {
+      "canonical": "My Feelings for You (original mix) (Avicii, 2010) [song:my-feelings-for-you-original-mix-avicii-2010]",
+      "variants": [
+        "My Feelings for You [7eb9fdab-0c56-4bc1-b6ea-902957ece881] (listenbrainz)",
+        "My Feelings for You (original mix) [e0dc4b50-f084-429d-932e-b865867f1741] (listenbrainz)"
+      ]
+    },
+    {
+      "canonical": "Good News (Mac Miller, 2020) [song:good-news-mac-miller-2020]",
+      "variants": [
+        "Good News [no-mbid] (itunes)",
+        "Good News [no-mbid] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Diesel Power (The Prodigy, 1997) [song:diesel-power-the-prodigy-1997]",
+      "variants": [
+        "Diesel Power [ca8e00a4-9ca6-4760-a5f9-7c5d8a0624b3] (itunes)",
+        "Diesel Power [ca8e00a4-9ca6-4760-a5f9-7c5d8a0624b3] (itunes)"
+      ]
+    },
+    {
+      "canonical": "The Greatest (Sia, 2016) [song:the-greatest-sia-2016]",
+      "variants": [
+        "The Greatest [3b912521-b921-49d2-8f93-aec6fbc86181] (itunes)",
+        "The Greatest (feat. Kendrick Lamar) [7e436df3-e950-4bc5-a3a8-62b895a4f116] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Blue Monday (New Order, 1983) [song:blue-monday-new-order-1983]",
+      "variants": [
+        "Blue Monday [ef9832d2-248e-4c7d-8e0b-44e5b858be38] (itunes)",
+        "Blue Monday [ef9832d2-248e-4c7d-8e0b-44e5b858be38] (itunes)",
+        "Blue Monday [ef9832d2-248e-4c7d-8e0b-44e5b858be38] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Big Poppa (The Notorious B.I.G., 1994) [song:big-poppa-the-notorious-b-i-g-1994]",
+      "variants": [
+        "Big Poppa [a45f3df9-2101-4908-924d-94cd9022dd17] (itunes)",
+        "Big Poppa [a45f3df9-2101-4908-924d-94cd9022dd17] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Giant Steps (John Coltrane, 1960) [song:giant-steps-john-coltrane-1960]",
+      "variants": [
+        "Giant Steps (2020 Remaster) [no-mbid] (itunes)",
+        "Giant Steps (2020 Remaster) [no-mbid] (itunes)",
+        "Giant Steps [no-mbid] (itunes)"
+      ]
+    },
+    {
+      "canonical": "100% (Sonic Youth, 1992) [song:100-sonic-youth-1992]",
+      "variants": [
+        "100% [12f37b2b-a2aa-4521-8d34-3b6c4ffedeba] (itunes)",
+        "100% [12f37b2b-a2aa-4521-8d34-3b6c4ffedeba] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Devuélveme a Mi Chica (Hombres G, 1985) [song:devuelveme-a-mi-chica-hombres-g-1985]",
+      "variants": [
+        "Devuélveme a Mi Chica [no-mbid] (itunes)",
+        "Devuélveme a Mi Chica [no-mbid] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Kill EVERYBODY (Skrillex, 2010) [song:kill-everybody-skrillex-2010]",
+      "variants": [
+        "Kill EVERYBODY [5aee5873-5f1a-45f6-9e83-dbad341480b8] (listenbrainz)",
+        "Kill Everybody (Bare Noize remix) [42453870-d3e1-4b70-ab3c-dcf5da598612] (listenbrainz)"
+      ]
+    },
+    {
+      "canonical": "Bloodbuzz Ohio (The National, 2010) [song:bloodbuzz-ohio-the-national-2010]",
+      "variants": [
+        "Bloodbuzz Ohio [b13712ac-3ba1-452d-ae39-1ff42dadb737] (itunes)",
+        "Bloodbuzz Ohio [b13712ac-3ba1-452d-ae39-1ff42dadb737] (itunes)"
+      ]
+    },
+    {
+      "canonical": "20 De Abril (Celtas Cortos, 1989) [song:20-de-abril-celtas-cortos-1989]",
+      "variants": [
+        "20 De Abril [no-mbid] (itunes)",
+        "20 de abril [no-mbid] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Y Nos Dieron las Diez (Joaquín Sabina, 1992) [song:y-nos-dieron-las-diez-joaquin-sabina-1992]",
+      "variants": [
+        "Y Nos Dieron las Diez [c1a0dfa3-a0bd-41e1-b706-c705ac5e746b] (itunes)",
+        "Y Nos Dieron las Diez [c1a0dfa3-a0bd-41e1-b706-c705ac5e746b] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Drop It Like It's Hot (feat. Pharrell Williams) (Snoop Dogg, 2004) [song:drop-it-like-its-hot-feat-pharrell-williams-snoop-dogg-2004]",
+      "variants": [
+        "Drop It Like It's Hot (feat. Pharrell Williams) [no-mbid] (itunes)",
+        "Drop It Like It's Hot (Radio Edit) [no-mbid] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Al Otro Lado del Rio (Jorge Drexler, 2004) [song:al-otro-lado-del-rio-jorge-drexler-2004]",
+      "variants": [
+        "Al Otro Lado del Rio [no-mbid] (itunes)",
+        "Al otro lado del Río [no-mbid] (itunes)"
+      ]
+    },
+    {
+      "canonical": "El rey del Glam (Alaska y Dinarama, 1983) [song:el-rey-del-glam-alaska-y-dinarama-1983]",
+      "variants": [
+        "El rey del Glam [no-mbid] (itunes)",
+        "El rey del Glam [no-mbid] (itunes)"
+      ]
+    },
+    {
+      "canonical": "Alfonsina Y El Mar (Mercedes Sosa, 1982) [song:alfonsina-y-el-mar-mercedes-sosa-1982]",
+      "variants": [
+        "Alfonsina Y El Mar [no-mbid] (itunes)",
+        "Alfonsina y el Mar [no-mbid] (itunes)"
+      ]
+    },
+    {
+      "canonical": "A Quién Le Importa (Alaska y Dinarama, 1986) [song:a-quien-le-importa-alaska-y-dinarama-1986]",
+      "variants": [
+        "A Quién Le Importa [no-mbid] (itunes)",
+        "A Quién Le Importa [no-mbid] (itunes)"
+      ]
+    }
+  ],
+  "sample50Songs": [
+    {
+      "id": "song:aurora-ryuichi-sakamoto-2005",
+      "title": "Aurora",
+      "creator": "Ryuichi Sakamoto",
+      "year": 2005,
+      "album": "Insen",
+      "popularity": 28,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/65/ec/6e/65ec6e82-6430-58bc-3f73-5e838f8cd737/5056163017695_cover.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "listenbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:houses-in-motion-talking-heads-1980",
+      "title": "Houses in Motion",
+      "creator": "Talking Heads",
+      "year": 1980,
+      "album": "Remain in Light",
+      "popularity": 77,
+      "posterUrl": "https://coverartarchive.org/release/b6c6032c-1ed2-4f98-b50d-a2e1d85be723/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:ill-never-love-again-film-version-lady-gaga-2018",
+      "title": "I'll Never Love Again (Film Version)",
+      "creator": "Lady Gaga",
+      "year": 2018,
+      "album": "A Star Is Born Soundtrack",
+      "popularity": 60,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/b1/9f/ef/b19fef51-79de-a940-e8ab-9e4e07b04d96/18UMGIM53752.rgb.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "listenbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:harmony-hall-vampire-weekend-2019",
+      "title": "Harmony Hall",
+      "creator": "Vampire Weekend",
+      "year": 2019,
+      "album": "Father of the Bride",
+      "popularity": 64,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/c4/fa/36/c4fa36f5-eee0-8549-bb95-3c341c82ef40/886447485521.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "listenbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:live-forever-oasis-1994",
+      "title": "Live Forever",
+      "creator": "Oasis",
+      "year": 1994,
+      "album": "Definitely Maybe (Deluxe Edition Remastered)",
+      "popularity": 66,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/00/af/e3/00afe365-35f8-04cb-379a-e12abead71cd/5051961070132.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:liar-sex-pistols-1977",
+      "title": "Liar",
+      "creator": "Sex Pistols",
+      "year": 1977,
+      "album": "Never Mind the Bollocks, Here's the Sex Pistols",
+      "popularity": 68,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music/4c/16/50/mzi.cipyvpqz.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:return-to-air-bonobo-2014",
+      "title": "Return To Air",
+      "creator": "Bonobo",
+      "year": 2014,
+      "album": "Flashlight - Single",
+      "popularity": 51,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/e8/0b/fb/e80bfbdc-2ea8-8b68-3060-f3bb2afecdf2/5054429000566.png/600x600bb.jpg",
+      "src": {
+        "recording": "listenbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:everywhere-fleetwood-mac-1987",
+      "title": "Everywhere",
+      "creator": "Fleetwood Mac",
+      "year": 1987,
+      "album": "Tango in the Night",
+      "popularity": 84,
+      "posterUrl": "https://coverartarchive.org/release/67e84ceb-2c4a-4819-a7aa-04492242e087/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:bull-in-the-heather-sonic-youth-1994",
+      "title": "Bull In the Heather",
+      "creator": "Sonic Youth",
+      "year": 1994,
+      "album": "Experimental Jet Set, Trash and No Star",
+      "popularity": 67,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/61/58/91/615891a1-90f5-8dfa-5d3a-e869e489ca0d/00602557200171.rgb.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "listenbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:want-you-bad-the-offspring-2000",
+      "title": "Want You Bad",
+      "creator": "The Offspring",
+      "year": 2000,
+      "album": "Conspiracy of One",
+      "popularity": 92,
+      "posterUrl": "https://coverartarchive.org/release/05a93768-e317-338a-882e-fbe83790d8cd/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:do-that-justice-2026",
+      "title": "Do that",
+      "creator": "Justice",
+      "year": 2026,
+      "album": "Not Jus For You",
+      "popularity": 52,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/b7/f2/4c/b7f24c12-5c9d-5bb8-2fb7-1a928483db94/1554176.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "listenbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:pennyroyal-tea-nirvana-1993",
+      "title": "Pennyroyal Tea",
+      "creator": "Nirvana",
+      "year": 1993,
+      "album": "In Utero",
+      "popularity": 96,
+      "posterUrl": "https://coverartarchive.org/release/7d13c434-1c49-4d7f-b164-a5247108af01/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:im-good-blue-david-guetta-2022",
+      "title": "I'm Good (Blue)",
+      "creator": "David Guetta",
+      "year": 2022,
+      "album": "I'm Good (Blue) - Single",
+      "popularity": 51,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/32/d2/9c/32d29c8a-e0a2-a629-7889-23c12ead0595/5054197344749.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "listenbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:fake-tales-of-san-francisco-arctic-monkeys-2005",
+      "title": "Fake Tales of San Francisco",
+      "creator": "Arctic Monkeys",
+      "year": 2005,
+      "album": "Whatever People Say I Am, That’s What I’m Not",
+      "popularity": 99,
+      "posterUrl": "https://coverartarchive.org/release/ac78a3f7-252f-332f-8d8f-a1f15564ce0b/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:up-around-the-bend-creedence-clearwater-revival-1970",
+      "title": "Up Around the Bend",
+      "creator": "Creedence Clearwater Revival",
+      "year": 1970,
+      "album": "Cosmo’s Factory",
+      "popularity": 85,
+      "posterUrl": "https://coverartarchive.org/release/57b35ec9-77ed-4f5a-bad4-8f5992932563/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:ameonna-deadmau5-2025",
+      "title": "Ameonna",
+      "creator": "Deadmau5",
+      "year": 2025,
+      "album": "Ameonna - Single",
+      "popularity": 51,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/d0/14/aa/d014aa47-56b9-4958-31ee-b6339f173d41/663918577097.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "listenbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:try-me-james-brown-1959",
+      "title": "Try Me",
+      "creator": "James Brown",
+      "year": 1959,
+      "album": "Try Me!",
+      "popularity": 61,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/84/62/f5/8462f5cd-b1c6-cd90-20aa-7a1f8f91a95f/06UMGIM18900.rgb.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:love-will-tear-us-apart-joy-division-2007",
+      "title": "Love Will Tear Us Apart",
+      "creator": "Joy Division",
+      "year": 2007,
+      "album": "Closer",
+      "popularity": 99,
+      "posterUrl": "https://coverartarchive.org/release/ee50be9b-85c9-3f3c-a851-e198731ae2ff/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:campus-vampire-weekend-2008",
+      "title": "Campus",
+      "creator": "Vampire Weekend",
+      "year": 2008,
+      "album": "Vampire Weekend",
+      "popularity": 64,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/ba/01/17/ba01176d-e46f-aac5-e1be-4256c26c173e/634904831868.png/600x600bb.jpg",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:stand-by-me-florence-the-machine-2016",
+      "title": "Stand By Me",
+      "creator": "Florence + The Machine",
+      "year": 2016,
+      "album": "Songs from Final Fantasy XV - Single",
+      "popularity": 64,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/09/4c/01/094c01c4-832a-10d6-4ad8-dc0a9e02581a/00602557130607.rgb.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "listenbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:never-let-me-go-florence-the-machine-2011",
+      "title": "Never Let Me Go",
+      "creator": "Florence + The Machine",
+      "year": 2011,
+      "album": "Ceremonials",
+      "popularity": 64,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/43/d5/9e/43d59e0c-6a9e-7f1a-e41d-badced2f40b4/11UMGIM28690.rgb.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:pretty-girls-make-graves-the-smiths-1984",
+      "title": "Pretty Girls Make Graves",
+      "creator": "The Smiths",
+      "year": 1984,
+      "album": "The Smiths",
+      "popularity": 66,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/9d/b2/b0/9db2b04c-d7b2-050b-5c9e-4f64c6e03a3a/745099189228.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:stairway-to-heaven-led-zeppelin-1971",
+      "title": "Stairway to Heaven",
+      "creator": "Led Zeppelin",
+      "year": 1971,
+      "album": "[Led Zeppelin IV]",
+      "popularity": 100,
+      "posterUrl": "https://coverartarchive.org/release/959621bf-6536-4f37-a60d-148168d98700/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:sweating-bullets-megadeth-1992",
+      "title": "Sweating Bullets",
+      "creator": "Megadeth",
+      "year": 1992,
+      "album": "Countdown to Extinction",
+      "popularity": 83,
+      "posterUrl": "https://coverartarchive.org/release/7eddabb7-74ad-48da-b78f-ef5fb0b316b0/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:love-lockdown-kanye-west-2008",
+      "title": "Love Lockdown",
+      "creator": "Kanye West",
+      "year": 2008,
+      "album": "808s & Heartbreak",
+      "popularity": 56,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/4d/75/2d/4d752db1-022d-f65d-40a1-a2390f01427a/13UAEIM26465.rgb.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "listenbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:i-bet-you-look-good-on-the-dancefloor-arctic-monkeys-2005",
+      "title": "I Bet You Look Good on the Dancefloor",
+      "creator": "Arctic Monkeys",
+      "year": 2005,
+      "album": "Whatever People Say I Am, That’s What I’m Not",
+      "popularity": 100,
+      "posterUrl": "https://coverartarchive.org/release/ac78a3f7-252f-332f-8d8f-a1f15564ce0b/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:kids-mgmt-2026",
+      "title": "Kids",
+      "creator": "MGMT",
+      "year": 2026,
+      "album": "Oracular Spectacular",
+      "popularity": 100,
+      "posterUrl": "https://coverartarchive.org/release/cd407e30-202e-4a6d-b145-08bd00ab0159/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:in-the-end-linkin-park-2000",
+      "title": "In the End",
+      "creator": "Linkin Park",
+      "year": 2000,
+      "album": "Hybrid Theory",
+      "popularity": 100,
+      "posterUrl": "https://coverartarchive.org/release/69b7b91a-43fc-483f-b8cf-22cdc8f69079/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:woods-mac-miller-2020",
+      "title": "Woods",
+      "creator": "Mac Miller",
+      "year": 2020,
+      "album": "Circles",
+      "popularity": 54,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/23/39/38/23393826-762f-ec76-dc1e-9344f647c958/093624905981.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "listenbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:dive-ed-sheeran-2017",
+      "title": "Dive",
+      "creator": "Ed Sheeran",
+      "year": 2017,
+      "album": "÷ (Deluxe)",
+      "popularity": 58,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/15/e6/e8/15e6e8a4-4190-6a8b-86c3-ab4a51b88288/190295851286.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "listenbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:bed-of-roses-bon-jovi-1992",
+      "title": "Bed of Roses",
+      "creator": "Bon Jovi",
+      "year": 1992,
+      "album": "Keep the Faith",
+      "popularity": 83,
+      "posterUrl": "https://coverartarchive.org/release/17ca74c2-98f0-3096-9be1-fce2228696da/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:to-the-end-blur-1994",
+      "title": "To the End",
+      "creator": "Blur",
+      "year": 1994,
+      "album": "Parklife",
+      "popularity": 83,
+      "posterUrl": "https://coverartarchive.org/release/83dc04ba-bb5a-41f6-8dd9-b06855cf84cd/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:south-of-heaven-slayer-1988",
+      "title": "South of Heaven",
+      "creator": "Slayer",
+      "year": 1988,
+      "album": "South of Heaven",
+      "popularity": 84,
+      "posterUrl": "https://coverartarchive.org/release/c0a03ece-b7de-48b2-9813-f3feb175b8fe/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:judy-is-a-punk-ramones-1976",
+      "title": "Judy Is a Punk",
+      "creator": "Ramones",
+      "year": 1976,
+      "album": "Ramones",
+      "popularity": 86,
+      "posterUrl": "https://coverartarchive.org/release/dbebf0d3-0b65-30a5-a3be-296709c5d3df/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:everlong-foo-fighters-1997",
+      "title": "Everlong",
+      "creator": "Foo Fighters",
+      "year": 1997,
+      "album": "The Colour and the Shape",
+      "popularity": 99,
+      "posterUrl": "https://coverartarchive.org/release/29c813ca-30cb-404e-b33e-87f366f4da84/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:everybody-scream-florence-the-machine-2025",
+      "title": "Everybody Scream",
+      "creator": "Florence + The Machine",
+      "year": 2025,
+      "album": "Everybody Scream",
+      "popularity": 64,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2e/5b/79/2e5b79a5-c166-da6b-3545-abc762f3beb2/25UM1IM19575.rgb.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "listenbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:set-fire-to-the-rain-adele-2011",
+      "title": "Set Fire to the Rain",
+      "creator": "Adele",
+      "year": 2011,
+      "album": "21",
+      "popularity": 99,
+      "posterUrl": "https://coverartarchive.org/release/768bc7f7-6b91-4b57-8a7b-1508636719e6/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:rock-and-roll-all-nite-kiss-1975",
+      "title": "Rock and Roll All Nite",
+      "creator": "Kiss",
+      "year": 1975,
+      "album": "Dressed to Kill",
+      "popularity": 83,
+      "posterUrl": "https://coverartarchive.org/release/a1deafae-4007-4067-9737-1d0027d8543c/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:one-of-these-mornings-moby-2002",
+      "title": "One of These Mornings",
+      "creator": "Moby",
+      "year": 2002,
+      "album": "18 & 18 B-Sides",
+      "popularity": 52,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6a/22/af/6a22af55-6dc2-008f-6929-8b752b661e11/5060236631145_1.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:lithium-nirvana-1991",
+      "title": "Lithium",
+      "creator": "Nirvana",
+      "year": 1991,
+      "album": "Nevermind",
+      "popularity": 99,
+      "posterUrl": "https://coverartarchive.org/release/c771f7fc-9e62-4349-a2e3-ceaf7122bf5b/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:serial-thrilla-the-prodigy-1997",
+      "title": "Serial Thrilla",
+      "creator": "The Prodigy",
+      "year": 1997,
+      "album": "The Fat of the Land",
+      "popularity": 53,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/96/8b/08/968b08e4-cb2b-54c2-32bb-dba77ad1c2ca/634904912161.png/600x600bb.jpg",
+      "src": {
+        "recording": "listenbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:material-girl-madonna-1984",
+      "title": "Material Girl",
+      "creator": "Madonna",
+      "year": 1984,
+      "album": "Like a Virgin",
+      "popularity": 84,
+      "posterUrl": "https://coverartarchive.org/release/05a2fdc7-078f-4e03-ab98-abc4151f7a42/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:bloodbuzz-ohio-the-national-2010",
+      "title": "Bloodbuzz Ohio",
+      "creator": "The National",
+      "year": 2010,
+      "album": "High Violet (Bonus Track Version)",
+      "popularity": 64,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/75/1e/5e/751e5e63-f9f4-de93-b6b0-75578f47aced/652637300369.png/600x600bb.jpg",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:the-message-feat-mary-j-blige-rell-dr-dre-1999",
+      "title": "The Message (feat. Mary J. Blige & Rell)",
+      "creator": "Dr. Dre",
+      "year": 1999,
+      "album": "2001",
+      "popularity": 56,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/fd/63/ed/fd63ed6c-178c-7fa9-4844-29a7326bf655/06UMGIM01277.rgb.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "listenbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:come-to-me-bjork-1993",
+      "title": "Come to Me",
+      "creator": "Björk",
+      "year": 1993,
+      "album": "Debut",
+      "popularity": 63,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/58/30/6e/58306e6c-deba-df87-423b-07c0a5fca918/075596146869.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "listenbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:my-name-is-eminem-1999",
+      "title": "My Name Is",
+      "creator": "Eminem",
+      "year": 1999,
+      "album": "The Slim Shady LP",
+      "popularity": 85,
+      "posterUrl": "https://coverartarchive.org/release/ede60c69-29d1-48dd-a10b-169ae99dee92/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:the-game-triple-h-motorhead-2002",
+      "title": "The Game (Triple H)",
+      "creator": "Motorhead",
+      "year": 2002,
+      "album": "WWE: Raw Greatest Hits - The Music",
+      "popularity": 68,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/94/64/51/94645142-5738-81b1-54b2-415f02e08142/dj.vlamoecx.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "listenbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:modern-love-david-bowie-1983",
+      "title": "Modern Love",
+      "creator": "David Bowie",
+      "year": 1983,
+      "album": "Let’s Dance",
+      "popularity": 86,
+      "posterUrl": "https://coverartarchive.org/release/e87f6077-6085-3fb4-97bb-284ca3de6e51/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:motorhead-motorhead-1977",
+      "title": "Motörhead",
+      "creator": "Motorhead",
+      "year": 1977,
+      "album": "Motörhead",
+      "popularity": 68,
+      "posterUrl": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/01/a4/c4/01a4c44f-9aed-b6c0-9c08-2df4584fc7ae/196626712028.jpg/600x600bb.jpg",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    },
+    {
+      "id": "song:where-is-my-mind-the-pixies-1988",
+      "title": "Where Is My Mind?",
+      "creator": "The Pixies",
+      "year": 1988,
+      "album": "Surfer Rosa",
+      "popularity": 99,
+      "posterUrl": "https://coverartarchive.org/release/e78fc156-e0be-4e1a-a668-9338356dfe29/front-500",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "listenbrainz",
+        "posterUrl": "coverartarchive"
+      }
+    }
+  ]
+}
