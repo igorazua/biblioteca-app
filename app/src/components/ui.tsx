@@ -147,6 +147,9 @@ export function PlatformPicker({
 /** Burbujas de amigos sobre la tarjeta: hasta 4 avatares solapados + «+N», con la nota de cada uno (🔖 si lo tiene pendiente, 💬 si tiene comentario). */
 export function FriendBubbles({ itemId, shelf, max = 4 }: { itemId: string; shelf?: ShelfType; max?: number }) {
   const user = useAuth((s) => s.user)
+  const [activeFriend, setActiveFriend] = useState<FriendHit | null>(null)
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
   const isMock = !user
   const hits = friendHits(itemId)
   if (!hits.length) return null
@@ -171,9 +174,6 @@ export function FriendBubbles({ itemId, shelf, max = 4 }: { itemId: string; shel
   const label = seen.length
     ? `${names[0]}${seen.length > 1 ? ` y ${seen.length - 1} más` : ''} ${seen.length > 1 ? terms.verbPerfPlural : terms.verbPerfSingular}`
     : `${sortedHits[0].friend.name}${sortedHits.length > 1 ? ` y ${sortedHits.length - 1} más` : ''} ${sortedHits.length > 1 ? terms.pendingPlural : terms.pendingSingular}`
-
-  const [activeFriend, setActiveFriend] = useState<FriendHit | null>(null)
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const clearTimer = () => {
     if (timerRef.current) {
@@ -215,15 +215,15 @@ export function FriendBubbles({ itemId, shelf, max = 4 }: { itemId: string; shel
             >
               <Avatar name={h.friend.name} color={h.friend.avatarColor} url={h.friend.avatarUrl} size={34} className="ring-2 ring-black/70" />
               {h.entry.status === 'seen' && rank ? (
-                <RankBadge pos={rank.pos} className="absolute -bottom-2 left-1/2 -translate-x-1/2 ring-1 ring-black/60" />
+                <RankBadge pos={rank.pos} className="absolute -bottom-2 left-1/2 -translate-x-1/2 ring-1 ring-black/60 z-10" />
               ) : (
-                <span className="absolute -bottom-1.5 -right-1 bg-stamp-blue rounded-full p-[3px] ring-1 ring-black/60" title="Lo tiene pendiente">
+                <span className="absolute -bottom-1.5 -right-1 bg-stamp-blue rounded-full p-[3px] ring-1 ring-black/60 z-10" title="Lo tiene pendiente">
                   <Icon name="bookmark" size={9} fill="white" strokeWidth={2.5} />
                 </span>
               )}
               {hasComment && (
                 <span
-                  className="absolute -bottom-1 -right-1 bg-[#161513] rounded-full w-[14px] h-[14px] ring-1 ring-black/70 flex items-center justify-center text-white"
+                  className="absolute -top-1 -right-1 bg-[#161513] rounded-full w-[15px] h-[15px] ring-1 ring-black/70 flex items-center justify-center text-white z-20"
                   title="Tiene comentario"
                 >
                   <Icon name="message" size={8} fill="white" strokeWidth={1} />

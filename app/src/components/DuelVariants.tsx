@@ -136,8 +136,23 @@ export function useBoxSize(ref: RefObject<HTMLElement | null>) {
 }
 
 const FIT_MARGIN = 26 // px libres alrededor de la carta elegida a tamaño completo
-const IDLE_HINT_MS = 2600 // sin tocar nada, las cartas insinúan el gesto
+const IDLE_HINT_FIRST_MS = 4800 // solo para usuarios noveles: espera previa a la primera insinuación
 const FAN_COMMIT = 0.28 // fracción del ancho para elegir al soltar (igual que el diseño 1)
+const LEARNED_KEY = 'biblioteca-duel-learned'
+
+export function isDuelLearned(): boolean {
+  try {
+    return localStorage.getItem(LEARNED_KEY) === 'true'
+  } catch {
+    return false
+  }
+}
+
+export function markDuelLearned() {
+  try {
+    localStorage.setItem(LEARNED_KEY, 'true')
+  } catch {}
+}
 const clamp01 = (v: number) => Math.max(0, Math.min(1, v))
 const lerp = (a: number, b: number, k: number) => a + (b - a) * k
 
@@ -193,23 +208,25 @@ export function DuelFan({ left, right, onChoose, texts, fast = false }: { left: 
     x.set(0)
   }, [left.key, right.key, x])
 
-  // Pista si no se hace nada: primero la izquierda inicia el movimiento, luego la derecha, y se repite cada pocos segundos
+  // Pista solo la primera vez si el usuario es nuevo y tarda en interactuar.
+  // En cuanto interactúa o se insinúa una vez, queda aprendido y nunca más se mueve solo.
   const touched = useRef(false)
   useEffect(() => {
     touched.current = false
-    if (reduce) return
+    if (reduce || isDuelLearned()) return
+
     let stop: (() => void) | null = null
     const hint = () => {
       if (touched.current || dragged.current) return
-      const d = W() * FAN_COMMIT * 0.3
-      const ctl = animate(x, [0, d, 0, -d, 0], { duration: 1.5, times: [0, 0.22, 0.48, 0.72, 1], ease: 'easeInOut' })
+      // Amplitud sutil (~8-11px): un leve vaivén orgánico que insinúa el eje sin distraer
+      const d = Math.min(11, Math.max(7, W() * FAN_COMMIT * 0.11))
+      const ctl = animate(x, [0, d, 0, -d, 0], { duration: 1.6, times: [0, 0.22, 0.48, 0.72, 1], ease: 'easeInOut' })
       stop = () => ctl.stop()
+      markDuelLearned()
     }
-    const first = window.setTimeout(hint, IDLE_HINT_MS)
-    const again = window.setInterval(hint, IDLE_HINT_MS + 3500)
+    const timer = window.setTimeout(hint, IDLE_HINT_FIRST_MS)
     return () => {
-      window.clearTimeout(first)
-      window.clearInterval(again)
+      window.clearTimeout(timer)
       stop?.()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -226,6 +243,7 @@ export function DuelFan({ left, right, onChoose, texts, fast = false }: { left: 
   const choose = (w: 'a' | 'b') => {
     if (picked) return
     touched.current = true
+    markDuelLearned()
     setPicked(w)
     haptic('success')
     const to = w === 'a' ? W() * FAN_COMMIT : -W() * FAN_COMMIT
@@ -241,6 +259,7 @@ export function DuelFan({ left, right, onChoose, texts, fast = false }: { left: 
       onPanStart={() => {
         dragged.current = true
         touched.current = true
+        markDuelLearned()
         x.stop()
       }}
       onPan={(_, info) => {

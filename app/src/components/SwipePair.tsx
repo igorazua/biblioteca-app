@@ -27,7 +27,7 @@ export function SwipePair(props: { left: Side; right: Side; onChoose: Choose; ki
       {extra}
       <p className="text-center text-meta text-mute py-1.5 pointer-events-none select-none shrink-0">
         {/* con ratón no se desliza: se hace clic en la carta */}
-        <span className="[@media(hover:hover)_and_(pointer:fine)]:hidden">Desliza hacia la que prefieras</span>
+        <span className="[@media(hover:hover)_and_(pointer:fine)]:hidden">← Desliza hacia la que prefieras →</span>
         <span className="hidden [@media(hover:hover)_and_(pointer:fine)]:inline">Haz clic en la que prefieras</span>
       </p>
     </div>

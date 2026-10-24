@@ -480,3 +480,9 @@ Encargo completo en **`docs/TAREA_T21_ETIQUETAS_Y_TEMAS.md`** (24/10/2026). **Es
 # T22-T26 — Primera impresión de Decidir (anclas, aprendizaje colectivo, actualidad, lo que trae el usuario)
 
 Encargos completos en **`docs/TAREAS_T22_T26_PRIMERA_IMPRESION.md`** (24/10/2026). Ahora solo T22 (Sonnet); T23-T26 aplazadas.
+
+---
+
+# T27-T28 — Tarjetas cuadradas para la música y estantería de Canciones
+
+Encargos completos en **`docs/TAREAS_T27_T28_MUSICA.md`** (24/10/2026). Los hace **Gemini**, primero T27 y luego T28. Canciones queda detrás del interruptor `SHELF_ENABLED.song` de `config.ts`.
