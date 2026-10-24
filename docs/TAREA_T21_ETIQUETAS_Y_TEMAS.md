@@ -11,6 +11,18 @@
 2. **Prohibido tocar los umbrales** de `coverage.mjs` o de las pruebas de oro para que pasen.
 3. **Prohibido escribir de memoria sin mirar el contexto** de la obra (`scripts/cache/context/<shelf>/<slug>.txt`). Si el contexto no basta, se responde `"?"` y la obra va a la lista de dudosas.
 
+## 0b. Idiomas: claves neutras, textos por idioma (decisión del 24/10)
+Para que abrir otro país no obligue a rehacer nada:
+- **Lo que se guarda en el catálogo es una clave fija, sin idioma** (`snake_case`, en inglés sencillo): temas `sea_ships`, `money_wealth`, `drugs`, `freedom`, `entrepreneurship`…; opciones de etiqueta `light`/`neutral`/`dark`, `comedy`/`some`/`none`…
+- **Lo que ve el usuario sale de un diccionario por idioma** dentro del vocabulario:
+  ```js
+  { id: 'sea_ships', es: 'mar y barcos', en: 'sea and ships' }
+  ```
+  Ahora solo hace falta `es`. Añadir un idioma es añadir una columna, sin tocar ni una obra.
+- **Las etiquetas en bruto de las fuentes** (IMDb, Open Library, BGG, MusicBrainz) se guardan **tal cual vienen**, casi siempre en inglés. La tabla de traducción de B.2 las lleva a las claves, no al español.
+- **Los archivos de oro** (`labels-gold.json`, `themes-gold.json`) están escritos con los **textos en español**. El comprobador los traduce a claves con el diccionario `es`, así que todo texto de oro tiene que existir tal cual en el vocabulario.
+- **Gemini, al etiquetar,** puede responder con los textos en español (le resulta más natural). El import los convierte a claves y rechaza los que no estén en el diccionario.
+
 ---
 
 ## Parte A — Etiquetas de sensación (sustituyen a los ejes 1-5)
