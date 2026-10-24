@@ -8,7 +8,7 @@ describe('mergeCloudAndLocal', () => {
     series: [],
     book: [],
     artist: [],
-    boardgame: [],
+    boardgame: [], song: [],
   }
 
   it('adopta la versión de la nube si es más reciente', () => {

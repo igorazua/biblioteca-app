@@ -6,7 +6,7 @@ import type { ShelfType, UserEntry } from '../types'
 const baseInput = (): NudgeInput => ({
   hasAccount: false,
   entries: {},
-  rankings: { movie: [], series: [], book: [], artist: [], boardgame: [] },
+  rankings: { movie: [], series: [], book: [], artist: [], boardgame: [], song: [] },
   hasImported: true,
   friendsCount: 0,
   hasUsedDecide: false,
@@ -83,7 +83,7 @@ describe('nudges engine', () => {
     const entries = makeEntries(16, 'seen', 'movie')
     for (const k of Object.keys(entries)) entries[k].ranked = true
     // Touch all shelves so explore doesn't preempt
-    for (const s of ['series', 'book', 'artist', 'boardgame'] as const) {
+    for (const s of ['series', 'book', 'artist', 'boardgame', 'song'] as const) {
       entries[`dummy-${s}`] = { itemId: `dummy-${s}`, shelf: s, status: 'seen', ranked: true, updatedAt: 1000 }
     }
     const input = {
@@ -99,7 +99,7 @@ describe('nudges engine', () => {
   it('triggers decide nudge when >= 10 pending and never used decide', () => {
     const entries = makeEntries(11, 'pending', 'movie')
     // Touch all shelves so explore doesn't preempt
-    for (const s of ['series', 'book', 'artist', 'boardgame'] as const) {
+    for (const s of ['series', 'book', 'artist', 'boardgame', 'song'] as const) {
       entries[`dummy-${s}`] = { itemId: `dummy-${s}`, shelf: s, status: 'seen', ranked: true, updatedAt: 1000 }
     }
     const input = {

@@ -17,6 +17,7 @@ describe('compareOverview', () => {
       book: [],
       artist: [],
       boardgame: [],
+      song: [],
     }
     // Ranking has 3 items -> 2 adjacent pairs: (1, 2) and (2, 3)
     // Duelos registrados para que movie:1 tenga 3 duelos:
@@ -30,6 +31,7 @@ describe('compareOverview', () => {
       book: {},
       artist: {},
       boardgame: {},
+      song: {},
     }
     const lastCompared: Record<ShelfType, number> = {
       movie: 123456,
@@ -37,6 +39,7 @@ describe('compareOverview', () => {
       book: 0,
       artist: 0,
       boardgame: 0,
+      song: 0,
     }
 
     const overview = computeCompareOverview(entries, rankings, duels, lastCompared)
@@ -71,13 +74,14 @@ describe('compareOverview', () => {
       book: ['book:1', 'book:2', 'book:3'],
       artist: [],
       boardgame: [],
+      song: [],
     }
 
     const overview = computeCompareOverview(
       entries,
       rankings,
-      { movie: {}, series: {}, book: {}, artist: {}, boardgame: {} },
-      { movie: 0, series: 0, book: 0, artist: 0, boardgame: 0 },
+      { movie: {}, series: {}, book: {}, artist: {}, boardgame: {}, song: {} },
+      { movie: 0, series: 0, book: 0, artist: 0, boardgame: 0, song: 0 },
     )
 
     const book = overview.shelves.book
@@ -102,6 +106,7 @@ describe('compareOverview', () => {
       book: [],
       artist: [],
       boardgame: [],
+      song: [],
     }
     const duels: Record<ShelfType, Record<string, DuelRecord>> = {
       movie: {
@@ -113,13 +118,14 @@ describe('compareOverview', () => {
       book: {},
       artist: {},
       boardgame: {},
+      song: {},
     }
 
     const overview = computeCompareOverview(
       entries,
       rankings,
       duels,
-      { movie: 0, series: 0, book: 0, artist: 0, boardgame: 0 },
+      { movie: 0, series: 0, book: 0, artist: 0, boardgame: 0, song: 0 },
     )
 
     const movie = overview.shelves.movie
@@ -139,12 +145,13 @@ describe('compareOverview', () => {
       book: [],
       artist: [],
       boardgame: [],
+      song: [],
     }
     const overview = computeCompareOverview(
       entries,
       rankings,
-      { movie: {}, series: {}, book: {}, artist: {}, boardgame: {} },
-      { movie: 0, series: 0, book: 0, artist: 0, boardgame: 0 },
+      { movie: {}, series: {}, book: {}, artist: {}, boardgame: {}, song: {} },
+      { movie: 0, series: 0, book: 0, artist: 0, boardgame: 0, song: 0 },
     )
     expect(overview.shelves.book.disponible).toBe(false)
   })

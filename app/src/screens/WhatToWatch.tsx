@@ -22,7 +22,7 @@ import { useRanks } from '../store/useScores'
 import { track, useEvents } from '../store/useEvents'
 import { affinity } from '../lib/affinity'
 import { friendRanks } from '../lib/rank'
-import { SHELVES, SHELF_LABEL, type Friend, type Item, type ShelfType } from '../types'
+import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type Friend, type Item, type ShelfType } from '../types'
 import { Poster, posterLayoutId } from '../components/Poster'
 import { posterAspectClass, posterRadius } from '../lib/posterShape'
 import { SwipePair, type Side } from '../components/SwipePair'
@@ -62,13 +62,15 @@ const clearSnap = () => { try { localStorage.removeItem(SNAP_KEY) } catch { /* o
 
 const titleOf = (s: ShelfType) => (s === 'book' ? '¿Qué leo ahora?' : s === 'boardgame' ? '¿A qué jugamos hoy?' : s === 'artist' ? '¿Qué escucho hoy?' : '¿Qué vemos hoy?')
 
+const DECIDE_SHELVES = ACTIVE_SHELVES.filter((s): s is Exclude<ShelfType, 'song'> => s !== 'song')
+
 export function WhatToWatch() {
   const nav = useNavigate()
   const [params] = useSearchParams()
   const t0 = params.get('t')
-  const urlShelf = t0 && (SHELVES as string[]).includes(t0) ? (t0 as ShelfType) : null
-  const [snap] = useState<Snap | null>(() => { const x = loadSnap(); return x && (!urlShelf || x.shelf === urlShelf) ? x : null })
-  const [shelf, setShelf] = useState<ShelfType | null>(snap?.shelf ?? urlShelf)
+  const urlShelf = t0 && (DECIDE_SHELVES as string[]).includes(t0) ? (t0 as Exclude<ShelfType, 'song'>) : null
+  const [snap] = useState<Snap | null>(() => { const x = loadSnap(); return x && (!urlShelf || x.shelf === urlShelf) && x.shelf !== 'song' ? x : null })
+  const [shelf, setShelf] = useState<Exclude<ShelfType, 'song'> | null>(snap?.shelf as Exclude<ShelfType, 'song'> ?? urlShelf)
   const profile = useStore((s) => s.profile)
   const entries = useStore((s) => s.entries)
   const rankings = useStore((s) => s.rankings)
@@ -488,7 +490,7 @@ export function WhatToWatch() {
     )
     body = (
       <div className="flex-1 min-h-0 flex flex-col px-5 pb-6 gap-3">
-        {SHELVES.map((s, i) => {
+        {DECIDE_SHELVES.map((s, i) => {
           const cover = items.filter((it) => it.type === s).sort((a, b) => b.popularity - a.popularity).slice(0, 3)
           return (
             <motion.button

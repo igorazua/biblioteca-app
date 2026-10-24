@@ -5,7 +5,7 @@ import { nextCards } from '../lib/engine/deck'
 import { useStore } from '../store/useStore'
 import { useCatalog } from '../store/useCatalog'
 import { supabase } from '../lib/supabase'
-import { SHELVES, SHELF_LABEL, type Item, type ShelfType } from '../types'
+import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type Item, type ShelfType } from '../types'
 import { Portal } from './ui'
 import { Poster } from './Poster'
 import { Icon } from './Icon'
@@ -186,7 +186,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
               <Icon name="chevron" size={16} className="text-accent shrink-0" />
             </button>
             <p className="text-mute text-sm pt-1">O añade una a una por estantería:</p>
-            {SHELVES.map((s) => (
+            {ACTIVE_SHELVES.map((s) => (
               <button
                 key={s}
                 onClick={() => setShelf(s)}

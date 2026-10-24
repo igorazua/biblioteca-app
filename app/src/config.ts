@@ -1,5 +1,17 @@
+import type { ShelfType } from './types'
+
 // Nombre provisional del producto (D17): cámbialo solo aquí.
 export const APP_NAME = 'Biblioteca'
+
+/** Estanterías que se ven en la app. Para quitar Canciones, ponla a false: no se carga nada de canciones. */
+export const SHELF_ENABLED: Record<ShelfType, boolean> = {
+  movie: true,
+  series: true,
+  book: true,
+  artist: true,
+  boardgame: true,
+  song: true,
+}
 
 export const PLATFORMS = ['Netflix', 'Prime Video', 'HBO Max', 'Disney+', 'Movistar+', 'Filmin', 'Apple TV+'] as const
 

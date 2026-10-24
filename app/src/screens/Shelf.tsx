@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import { Link, Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { getItem } from '../data/catalog'
 import { useStore } from '../store/useStore'
-import { SHELVES, SHELF_LABEL, type ShelfType } from '../types'
+import { ACTIVE_SHELVES, SHELF_LABEL, type ShelfType } from '../types'
 import { useCompareOverview } from '../lib/compareOverview'
 import { ItemRow } from '../components/ItemRow'
 import { Poster } from '../components/Poster'
@@ -18,8 +18,8 @@ import { WIZARD_PATH } from '../config'
 import { pctColor } from './CompareHome'
 import type { IconName } from '../components/Icon'
 
-const SHELF_COLOR: Record<ShelfType, string> = { movie: '#f2b04a', series: '#ff6b5b', book: '#e37d8c', artist: '#9d8cff', boardgame: '#4fd1a5' }
-const SHELF_ICON: Record<ShelfType, IconName> = { movie: 'film', series: 'tv', book: 'bookOpen', artist: 'music', boardgame: 'dice' }
+const SHELF_COLOR: Record<ShelfType, string> = { movie: '#f2b04a', series: '#ff6b5b', book: '#e37d8c', artist: '#9d8cff', boardgame: '#4fd1a5', song: '#c084fc' }
+const SHELF_ICON: Record<ShelfType, IconName> = { movie: 'film', series: 'tv', book: 'bookOpen', artist: 'music', boardgame: 'dice', song: 'disc' }
 
 type Seg = 'ord' | 'pend'
 
@@ -28,7 +28,7 @@ export function Shelf() {
   const nav = useNavigate()
   const overview = useCompareOverview()
   const entries = useStore((s) => s.entries)
-  const ranking = useStore((s) => (type && (SHELVES as readonly string[]).includes(type) ? (s.rankings[type as ShelfType] ?? []) : []))
+  const ranking = useStore((s) => (type && (ACTIVE_SHELVES as readonly string[]).includes(type) ? (s.rankings[type as ShelfType] ?? []) : []))
   const [params] = useSearchParams()
   const [seg, setSeg] = useState<Seg>(params.get('seg') === 'pend' ? 'pend' : 'ord')
   const [adding, setAdding] = useState(false)
@@ -39,7 +39,7 @@ export function Shelf() {
   const profileName = useStore((s) => s.profile.name)
   const t = type as ShelfType
   const all = useMemo(() => Object.values(entries).filter((e) => getItem(e.itemId)?.type === t), [entries, t])
-  if (!type || !(SHELVES as readonly string[]).includes(t)) return <Navigate to="/" replace />
+  if (!type || !(ACTIVE_SHELVES as readonly string[]).includes(t)) return <Navigate to="/" replace />
   const label = SHELF_LABEL[t]
 
   // Fuente de verdad: el array de ranking (T19 §3)

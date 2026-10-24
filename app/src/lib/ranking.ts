@@ -26,6 +26,7 @@ export function repairRankingsAndEntries(
     book: [...(rankings.book ?? [])],
     artist: [...(rankings.artist ?? [])],
     boardgame: [...(rankings.boardgame ?? [])],
+    song: [...(rankings.song ?? [])],
   }
 
   // 1. Quitar de rankings las IDs que no sean status === 'seen'

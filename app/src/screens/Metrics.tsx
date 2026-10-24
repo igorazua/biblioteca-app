@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useEvents } from '../store/useEvents'
 import { calcAllMetrics } from '../lib/engine/metrics'
 import { ENGINE_VERSION, type Bucket } from '../lib/engine/params'
-import { SHELVES, SHELF_LABEL, type ShelfType } from '../types'
+import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type ShelfType } from '../types'
 import { Icon } from '../components/Icon'
 import { Chip, Confirm, Toast } from '../components/ui'
 
@@ -104,7 +104,7 @@ export function Metrics() {
           <Chip active={selectedShelf === 'all'} onClick={() => setSelectedShelf('all')}>
             Todas
           </Chip>
-          {SHELVES.map((s) => (
+          {ACTIVE_SHELVES.map((s) => (
             <Chip key={s} active={selectedShelf === s} onClick={() => setSelectedShelf(s)}>
               {SHELF_LABEL[s].plural}
             </Chip>

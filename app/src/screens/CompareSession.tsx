@@ -3,7 +3,7 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { getItem } from '../data/catalog'
 import { useStore, starsOfEntries } from '../store/useStore'
-import { SHELVES, SHELF_LABEL, type Item, type ShelfType, type UserEntry, type DuelRecord } from '../types'
+import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type Item, type ShelfType, type UserEntry, type DuelRecord } from '../types'
 import {
   advancePlacementWithDuels, answerPlacement, answerRefine, finishPlacement,
   newRefineState, planNextDuel, RANK_DUELS_FOR_DONE,
@@ -74,7 +74,7 @@ export function CompareSession() {
   const initialDuelConsumed = useRef(false)
 
   const { shelf: rawShelf } = useParams<{ shelf: string }>()
-  const shelf = (SHELVES.includes(rawShelf as any) ? rawShelf : 'movie') as ShelfType
+  const shelf = (ACTIVE_SHELVES.includes(rawShelf as any) ? rawShelf : (ACTIVE_SHELVES[0] ?? 'movie')) as ShelfType
 
   const entries = useStore((s) => s.entries)
   const ranking = useStore((s) => s.rankings[shelf] ?? [])

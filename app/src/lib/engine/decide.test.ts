@@ -150,7 +150,7 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
       shelf: 'movie',
       items: mockItems,
       entries: {},
-      rankings: { movie: [], series: [], book: [], boardgame: [], artist: [] },
+      rankings: { movie: [], series: [], book: [], boardgame: [], artist: [], song: [] },
       profile: mockProfile,
       friends: mockFriends,
       answers: {},
@@ -171,7 +171,7 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
       shelf: 'movie',
       items: mockItems.slice(0, 4), // m1, m2, m3, m4 en pool
       entries: {},
-      rankings: { movie: [], series: [], book: [], boardgame: [], artist: [] },
+      rankings: { movie: [], series: [], book: [], boardgame: [], artist: [], song: [] },
       profile: mockProfile,
       friends: mockFriends,
       answers: {},
@@ -220,7 +220,7 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
       shelf: 'movie',
       items: mockItems,
       entries: {},
-      rankings: { movie: [], series: [], book: [], boardgame: [], artist: [] },
+      rankings: { movie: [], series: [], book: [], boardgame: [], artist: [], song: [] },
       profile: mockProfile,
       friends: mockFriends,
       answers: {},
@@ -256,7 +256,7 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
       shelf: 'movie',
       items: mockItems,
       entries: {},
-      rankings: { movie: [], series: [], book: [], artist: [], boardgame: [] },
+      rankings: { movie: [], series: [], book: [], artist: [], boardgame: [], song: [] },
       profile: mockProfile,
       friends: mockFriends,
       answers: {},
@@ -301,7 +301,7 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
       shelf: 'movie',
       items: [liveItem],
       entries: {},
-      rankings: { movie: [], series: [], book: [], artist: [], boardgame: [] },
+      rankings: { movie: [], series: [], book: [], artist: [], boardgame: [], song: [] },
       profile: mockProfile,
       friends: mockFriends,
       answers: {},
@@ -381,7 +381,7 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
       shelf: 'artist',
       items: mockArtists,
       entries: {},
-      rankings: { movie: [], series: [], book: [], artist: [], boardgame: [] },
+      rankings: { movie: [], series: [], book: [], artist: [], boardgame: [], song: [] },
       profile: mockProfile,
       friends: [],
       answers: {},
@@ -410,7 +410,7 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
         shelf,
         items: seed.items,
         entries: {},
-        rankings: { movie: [], series: [], book: [], artist: [], boardgame: [] },
+        rankings: { movie: [], series: [], book: [], artist: [], boardgame: [], song: [] },
         profile: { ...mockProfile, country: 'ES', lang: 'es' },
         friends: [],
         answers: {},
@@ -456,7 +456,7 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
         shelf: 'book',
         items: seed.items,
         entries: {},
-        rankings: { movie: [], series: [], book: [], artist: [], boardgame: [] },
+        rankings: { movie: [], series: [], book: [], artist: [], boardgame: [], song: [] },
         profile: { ...mockProfile, country: 'ES', lang: 'es' },
         friends: [],
         answers: {},
@@ -497,7 +497,7 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
         shelf: 'book',
         items: seed.items,
         entries,
-        rankings: { movie: [], series: [], book: ownBooks.map((b) => b.id), artist: [], boardgame: [] },
+        rankings: { movie: [], series: [], book: ownBooks.map((b) => b.id), artist: [], boardgame: [], song: [] },
         profile: { ...mockProfile, country: 'ES', lang: 'es' },
         friends: [],
         answers: {},
@@ -529,7 +529,7 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
         shelf: 'book',
         items: seed.items,
         entries: {},
-        rankings: { movie: [], series: [], book: [], artist: [], boardgame: [] },
+        rankings: { movie: [], series: [], book: [], artist: [], boardgame: [], song: [] },
         profile: { ...mockProfile, country: 'ES', lang: 'es' },
         friends: [],
         answers: {},
@@ -595,7 +595,7 @@ describe('Motor de Decidir (F5 - decide.ts)', () => {
 
 describe('T22 · guion de los 3 primeros duelos', () => {
   const SHELF_LIST = ['movie', 'series', 'book', 'boardgame', 'artist'] as const
-  const emptyRankings = { movie: [], series: [], book: [], artist: [], boardgame: [] }
+  const emptyRankings = { movie: [], series: [], book: [], artist: [], boardgame: [], song: [] }
   const mulberry32 = (a: number) => () => {
     a |= 0
     a = (a + 0x6d2b79f5) | 0

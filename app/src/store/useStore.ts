@@ -66,7 +66,7 @@ const defaults = () => ({
   onboarded: false,
   profile: { name: 'Tú', avatarColor: '#F5B544', platforms: [], country: 'ES', lang: 'es' } as Profile,
   entries: {} as Record<string, UserEntry>,
-  rankings: { movie: [], series: [], book: [], artist: [], boardgame: [] } as Record<ShelfType, string[]>,
+  rankings: { movie: [], series: [], book: [], artist: [], boardgame: [], song: [] } as Record<ShelfType, string[]>,
   lists: [] as List[],
   settings: { commentBoxInPairs: true, rateOnSwipe: true } as Settings,
   categoryVotes: {} as Record<string, boolean>,
@@ -79,6 +79,7 @@ const defaults = () => ({
     book: { byMacro: {}, byDecade: {} },
     artist: { byMacro: {}, byDecade: {} },
     boardgame: { byMacro: {}, byDecade: {} },
+    song: { byMacro: {}, byDecade: {} },
   } as DeckLearn,
   recentOrienters: {
     movie: [],
@@ -86,6 +87,7 @@ const defaults = () => ({
     book: [],
     artist: [],
     boardgame: [],
+    song: [],
   } as Record<ShelfType, string[][]>,
   userVectors: {
     movie: null,
@@ -93,6 +95,7 @@ const defaults = () => ({
     book: null,
     artist: null,
     boardgame: null,
+    song: null,
   } as Record<ShelfType, number[] | null>,
   duels: {
     movie: {},
@@ -100,6 +103,7 @@ const defaults = () => ({
     book: {},
     artist: {},
     boardgame: {},
+    song: {},
   } as Record<ShelfType, Record<string, DuelRecord>>,
   lastCompared: {
     movie: 0,
@@ -107,6 +111,7 @@ const defaults = () => ({
     book: 0,
     artist: 0,
     boardgame: 0,
+    song: 0,
   } as Record<ShelfType, number>,
 })
 
@@ -144,15 +149,15 @@ export function migrateStore(persistedState: unknown, version: number) {
   // v4: historial de duelos persistido y última sesión por estantería (T16)
   if (version < 4 && state) {
     if (!state.duels) {
-      state.duels = { movie: {}, series: {}, book: {}, artist: {}, boardgame: {} }
+      state.duels = { movie: {}, series: {}, book: {}, artist: {}, boardgame: {}, song: {} }
     }
     if (!state.lastCompared) {
-      state.lastCompared = { movie: 0, series: 0, book: 0, artist: 0, boardgame: 0 }
+      state.lastCompared = { movie: 0, series: 0, book: 0, artist: 0, boardgame: 0, song: 0 }
     }
   }
   // v5: reparación de consistencia entre entries.ranked y rankings (§3)
   if (version < 5 && state) {
-    const defaultRks = { movie: [], series: [], book: [], artist: [], boardgame: [] }
+    const defaultRks = { movie: [], series: [], book: [], artist: [], boardgame: [], song: [] }
     const repaired = repairRankingsAndEntries(
       (state.entries as Record<string, UserEntry>) || {},
       (state.rankings as Record<ShelfType, string[]>) || defaultRks,
@@ -521,7 +526,7 @@ export const useStore = create<State>()(
       loadSample: () =>
         set((s) => {
           const entries = { ...s.entries }
-          const quota: Record<ShelfType, number> = { movie: 10, series: 6, book: 4, artist: 4, boardgame: 4 }
+          const quota: Record<ShelfType, number> = { movie: 10, series: 6, book: 4, artist: 4, boardgame: 4, song: 0 }
           for (const t of SHELVES) {
             const pool = items.filter((i) => i.type === t && !entries[i.id]).sort((a, b) => b.popularity - a.popularity).slice(0, quota[t])
             for (const it of pool) entries[it.id] = { itemId: it.id, status: 'seen', ranked: false, updatedAt: Date.now() }

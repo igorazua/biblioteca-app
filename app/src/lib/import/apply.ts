@@ -30,6 +30,7 @@ export function applyImportRows(
     book: [...(existingRankings.book ?? [])],
     artist: [...(existingRankings.artist ?? [])],
     boardgame: [...(existingRankings.boardgame ?? [])],
+    song: [...(existingRankings.song ?? [])],
   }
 
   let createdCount = 0

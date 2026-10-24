@@ -5,7 +5,7 @@ import { APP_NAME } from '../config'
 import { useStore } from '../store/useStore'
 import { useAuth } from '../store/useAuth'
 import { getItem } from '../data/catalog'
-import { SHELVES, SHELF_LABEL, type Item, type ShelfType } from '../types'
+import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type Item, type ShelfType } from '../types'
 import { Poster } from '../components/Poster'
 import { Icon, type IconName } from '../components/Icon'
 import { Avatar } from '../components/ui'
@@ -20,6 +20,7 @@ const SHELF_ICONS: Record<ShelfType, IconName> = {
   book: 'bookOpen',
   boardgame: 'cards',
   artist: 'sparkle',
+  song: 'disc',
 }
 
 // Obras emblemáticas reales del catálogo para el tutorial interactivo
@@ -69,7 +70,7 @@ export function Onboarding() {
   })
 
   // Estanterías elegidas en paso 5
-  const [selectedShelves, setSelectedShelves] = useState<ShelfType[]>([...SHELVES])
+  const [selectedShelves, setSelectedShelves] = useState<ShelfType[]>([...ACTIVE_SHELVES])
 
   // Tarjeta actual de práctica en paso 1
   const [itemIndex, setItemIndex] = useState(0)
@@ -216,9 +217,9 @@ export function Onboarding() {
                   </p>
                 </div>
 
-                {/* Resumen de las 5 estanterías con iconos profesionales */}
-                <div className="grid grid-cols-5 gap-2 pt-1 w-full">
-                  {SHELVES.map((s) => (
+                {/* Resumen de las estanterías activas con iconos profesionales */}
+                <div className="grid gap-2 pt-1 w-full" style={{ gridTemplateColumns: `repeat(${ACTIVE_SHELVES.length}, minmax(0, 1fr))` }}>
+                  {ACTIVE_SHELVES.map((s) => (
                     <div
                       key={s}
                       className="flex flex-col items-center gap-1.5 py-2.5 px-1 rounded-2xl bg-surface border border-line"
@@ -623,7 +624,7 @@ export function Onboarding() {
                 </div>
 
                 <div className="space-y-2">
-                  {SHELVES.map((s) => {
+                  {ACTIVE_SHELVES.map((s) => {
                     const active = selectedShelves.includes(s)
                     return (
                       <button

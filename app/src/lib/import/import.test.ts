@@ -149,7 +149,7 @@ describe('Reglas al crear entradas (regla «no pisar»)', () => {
     series: [],
     book: [],
     artist: [],
-    boardgame: [],
+    boardgame: [], song: [],
   }
 
   it('no pisa una entrada que ya tenga estrellas', () => {

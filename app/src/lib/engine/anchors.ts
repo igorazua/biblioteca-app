@@ -113,6 +113,7 @@ export const ANCHOR_EXTREMES: Record<ShelfType, Record<string, readonly [string,
     bailable: ['no', 'dance'],
     sonido: ['electronic', 'acoustic'],
   },
+  song: {},
 }
 
 /** Textos por idioma (solo `es` por ahora): nombre de la dimensión y de cada extremo, y el motivo (T17 §C.5). */
@@ -145,6 +146,7 @@ const FILES: Record<ShelfType, AnchorFile> = {
   book: bookFile as unknown as AnchorFile,
   boardgame: boardgameFile as unknown as AnchorFile,
   artist: artistFile as unknown as AnchorFile,
+  song: { version: 1, shelf: 'song', country: 'ES', anchors: [] } as AnchorFile,
 }
 
 const TREES: Record<ShelfType, AnchorTree> = {
@@ -153,6 +155,7 @@ const TREES: Record<ShelfType, AnchorTree> = {
   book: bookTree as unknown as AnchorTree,
   boardgame: boardgameTree as unknown as AnchorTree,
   artist: artistTree as unknown as AnchorTree,
+  song: { version: 1, shelf: 'song', root: null, pairs: [] } as AnchorTree,
 }
 
 export function getAnchors(shelf: ShelfType): Anchor[] {
@@ -204,6 +207,7 @@ const LEGACY_DIM: Record<ShelfType, Record<string, string>> = {
   book: { realismo: 'realismo_fantasia', ritmo: 'libros_ritmo_trepidante_pausado' },
   boardgame: { peso: 'juegos_peso_reglas', ambiente: 'juegos_ambiente_fiesta_estrategia' },
   artist: { energia: 'artistas_energia', sonido: 'artistas_sonido_acustico_electronico' },
+  song: {},
 }
 
 export const ANCHOR_DIM_PREFIX = 'anc:'

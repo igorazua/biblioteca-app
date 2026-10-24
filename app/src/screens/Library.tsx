@@ -7,7 +7,7 @@ import { useAuth } from '../store/useAuth'
 import { useFriends } from '../store/useFriends'
 import { track } from '../store/useEvents'
 import { evaluateNudges } from '../lib/nudges'
-import { SHELVES, SHELF_LABEL, type ShelfType } from '../types'
+import { ACTIVE_SHELVES, SHELF_LABEL, type ShelfType } from '../types'
 import { PosterTile } from '../components/ItemRow'
 import { Poster } from '../components/Poster'
 import { posterAspectClass, posterRadius } from '../lib/posterShape'
@@ -19,7 +19,7 @@ import { ScreenTitle } from '../components/ScreenTitle'
 
 const FUTURE_SHELVES: [string, number][] = [
   ['Documentales', 214], ['Anime', 187], ['Podcasts', 163], ['Videojuegos', 241],
-  ['Cómics y manga', 152], ['Canciones', 276], ['Canales de YouTube', 121], ['Restaurantes', 233],
+  ['Cómics y manga', 152], ['Canales de YouTube', 121], ['Restaurantes', 233],
 ]
 
 export function Library() {
@@ -126,7 +126,7 @@ export function Library() {
       </AnimatePresence>
 
       <div className="space-y-4">
-        {SHELVES.map((t) => {
+        {ACTIVE_SHELVES.map((t) => {
           const rk = rankings[t] ?? []
           const unranked = all.filter((e) => e.status === 'seen' && !e.ranked && getItem(e.itemId)?.type === t)
           const unrankedCount = unranked.length

@@ -1,6 +1,6 @@
 // app/src/lib/nudges.ts
 // Motor puro de recordatorios (F-NUDGES)
-import { SHELVES, SHELF_LABEL, type ShelfType, type UserEntry } from '../types'
+import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type ShelfType, type UserEntry } from '../types'
 
 export type NudgeId = 'login' | 'import' | 'explore' | 'rank' | 'invite' | 'decide' | 'install'
 
@@ -98,10 +98,11 @@ export function evaluateNudges(input: NudgeInput): Nudge | null {
     book: bookCount,
     artist: allEntries.filter((e) => e.shelf === 'artist').length,
     boardgame: allEntries.filter((e) => e.shelf === 'boardgame').length,
+    song: allEntries.filter((e) => e.shelf === 'song').length,
   }
 
-  const hasBusyShelf = SHELVES.some((s) => shelfCounts[s] >= 10)
-  const emptyShelf = SHELVES.find((s) => shelfCounts[s] === 0)
+  const hasBusyShelf = ACTIVE_SHELVES.some((s) => shelfCounts[s] >= 10)
+  const emptyShelf = ACTIVE_SHELVES.find((s) => shelfCounts[s] === 0)
 
   if (hasBusyShelf && emptyShelf && check('explore')) {
     const label = SHELF_LABEL[emptyShelf].plural

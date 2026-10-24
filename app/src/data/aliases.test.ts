@@ -6,7 +6,7 @@ import type { ShelfType, UserEntry } from '../types'
 
 const ES = 'movie:cadena-perpetua-1994'
 const EN = 'movie:the-shawshank-redemption-1994'
-const empty = (): Record<ShelfType, string[]> => ({ movie: [], series: [], book: [], artist: [], boardgame: [] })
+const empty = (): Record<ShelfType, string[]> => ({ movie: [], series: [], book: [], artist: [], boardgame: [], song: [] })
 const entry = (itemId: string, patch: Partial<UserEntry> = {}): UserEntry => ({ itemId, status: 'seen', ranked: false, updatedAt: 1, ...patch })
 
 describe('Gemelas fusionadas (aliases)', () => {

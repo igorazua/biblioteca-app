@@ -1,5 +1,8 @@
-export type ShelfType = 'movie' | 'series' | 'book' | 'artist' | 'boardgame'
-export const SHELVES: ShelfType[] = ['movie', 'series', 'book', 'artist', 'boardgame']
+import { SHELF_ENABLED } from './config'
+
+export type ShelfType = 'movie' | 'series' | 'book' | 'artist' | 'boardgame' | 'song'
+export const SHELVES: ShelfType[] = ['movie', 'series', 'book', 'artist', 'boardgame', 'song']
+export const ACTIVE_SHELVES: ShelfType[] = SHELVES.filter((s) => SHELF_ENABLED[s])
 
 export interface Item {
   id: string // slug estable: 'movie:el-hoyo-2019'
@@ -22,6 +25,11 @@ export interface Item {
   cast?: string[] // reparto principal
   peakDecades?: string[] // décadas de éxito para artistas
   depth?: Depth // solo libros
+  // solo canciones:
+  artistId?: string // el artist:... del seed si existe
+  album?: string
+  isrc?: string
+  durationSec?: number
   genres: string[]
   synopsis: string
   posterUrl: string | null
@@ -239,6 +247,22 @@ export const SHELF_LABEL: Record<ShelfType, ShelfTerms> = {
     verbPerfPlural: 'lo han jugado',
     pendingSingular: 'lo tiene pendiente',
     pendingPlural: 'lo tienen pendiente',
+  },
+  song: {
+    plural: 'Canciones',
+    singular: 'canción',
+    seen: 'escuchadas',
+    seenFem: 'escuchada',
+    stamp: '¡LA CONOZCO!',
+    actionPast: 'Escuchada',
+    pronoun: 'la',
+    pronounCap: 'La',
+    verbPast: 'escuchó',
+    seenPastPart: 'escuchado',
+    verbPerfSingular: 'la ha escuchado',
+    verbPerfPlural: 'la han escuchado',
+    pendingSingular: 'la tiene pendiente',
+    pendingPlural: 'la tienen pendiente',
   },
 }
 

@@ -4,7 +4,7 @@ import { AnimatePresence } from 'framer-motion'
 import { getItem, isKnownItem, itemFacts, typeName } from '../data/catalog'
 import { useStore } from '../store/useStore'
 import { useCatalog } from '../store/useCatalog'
-import { SHELVES, SHELF_LABEL } from '../types'
+import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL } from '../types'
 import { decodeList, decodeProfile } from '../lib/share'
 import { Poster } from '../components/Poster'
 import { posterAspectClass, posterRadius } from '../lib/posterShape'
@@ -153,7 +153,7 @@ export function PublicProfile() {
           <p className="text-meta text-mute">Lo que más le ha marcado</p>
         </div>
       </div>
-      {SHELVES.map((t) => {
+      {ACTIVE_SHELVES.map((t) => {
         const ids = data.top[t] ?? []
         if (!ids.length) return null
         return (

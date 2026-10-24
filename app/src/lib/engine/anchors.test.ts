@@ -95,7 +95,7 @@ describe('regenerar árboles (solo con REGEN_TREES=1)', () => {
 // ───────────────────────── Reglas de 22.1 ─────────────────────────
 
 /** Objetivo del encargo (T22 §22.1) */
-const TARGET: Record<ShelfType, number> = { movie: 60, series: 60, book: 60, boardgame: 40, artist: 40 }
+const TARGET: Record<ShelfType, number> = { movie: 60, series: 60, book: 60, boardgame: 40, artist: 40, song: 0 }
 
 /**
  * HUECOS CONOCIDOS DE LOS DATOS (no del código). El catálogo no permite cumplir estas reglas con los umbrales del
@@ -123,6 +123,7 @@ const T17_LEVEL1: Record<ShelfType, string[]> = {
   book: ['book:harry-potter-y-la-piedra-filosofal-1997', 'book:don-quijote-de-la-mancha-1605', 'book:1984-1949', 'book:el-principito-1943', 'book:cien-anos-de-soledad-1967'],
   boardgame: ['boardgame:monopoly-1935', 'boardgame:parchis-1900', 'boardgame:trivial-pursuit-1981', 'boardgame:uno-1971', 'boardgame:cluedo-1949', 'boardgame:chess-1475'],
   artist: ['artist:queen-1970', 'artist:the-beatles-1960', 'artist:michael-jackson-1971', 'artist:shakira-1990', 'artist:rosalia-2017', 'artist:alejandro-sanz-1989'],
+  song: [],
 }
 
 const eraOf = (y: number) => (y < 1980 ? '<1980' : y <= 1994 ? '1980-1994' : y <= 2004 ? '1995-2004' : y <= 2014 ? '2005-2014' : '2015+')

@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { getItem } from '../data/catalog'
 import { useStore, starsOfEntries } from '../store/useStore'
-import { SHELVES, SHELF_LABEL, type ShelfType, type Item } from '../types'
+import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type ShelfType, type Item } from '../types'
 import { useCompareOverview, type ShelfOverview } from '../lib/compareOverview'
 import { planNextDuel, type PlannedDuel } from '../lib/ranking'
 import { ScreenTitle } from '../components/ScreenTitle'
@@ -45,7 +45,7 @@ export function CompareHome() {
 
   // Estanterías disponibles ordenadas estrictamente por más sin ordenar y, si empatan, menor % ordenado (T19 §4.2.2)
   const availableShelves = useMemo(() => {
-    return SHELVES.filter((s) => overview.shelves[s]?.disponible).sort((a, b) => {
+    return ACTIVE_SHELVES.filter((s) => overview.shelves[s]?.disponible).sort((a, b) => {
       const oA = overview.shelves[a]
       const oB = overview.shelves[b]
       if (oB.sinOrdenar !== oA.sinOrdenar) return oB.sinOrdenar - oA.sinOrdenar
@@ -56,7 +56,7 @@ export function CompareHome() {
 
   // Estanterías no disponibles (< 2 vistas)
   const unavailableShelves = useMemo(() => {
-    return SHELVES.filter((s) => !overview.shelves[s]?.disponible)
+    return ACTIVE_SHELVES.filter((s) => !overview.shelves[s]?.disponible)
   }, [overview])
 
   // Estantería recomendada (la primera de las disponibles)

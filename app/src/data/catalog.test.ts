@@ -23,7 +23,7 @@ describe('Catálogo vivo y sincronización (F-B1)', () => {
     useCatalog.setState({ items: {}, version: 0, _hasHydrated: true })
     useStore.setState({
       entries: {},
-      rankings: { movie: [], series: [], book: [], artist: [], boardgame: [] },
+      rankings: { movie: [], series: [], book: [], artist: [], boardgame: [], song: [] },
     })
   })
 
@@ -97,6 +97,7 @@ describe('Catálogo vivo y sincronización (F-B1)', () => {
         book: [],
         artist: [],
         boardgame: [],
+        song: [],
       },
     })
 

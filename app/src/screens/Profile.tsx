@@ -8,7 +8,7 @@ import { APP_NAME } from '../config'
 import { useStore } from '../store/useStore'
 import { useRanks } from '../store/useScores'
 import { friendRanks } from '../lib/rank'
-import { SHELVES, SHELF_LABEL } from '../types'
+import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL } from '../types'
 import { affinity } from '../lib/affinity'
 import { profileUrl, type SharedProfile } from '../lib/share'
 import { shareOrCopy } from '../lib/shareUi'
@@ -43,7 +43,7 @@ export function Profile() {
   const stats = useMemo(() => {
     const list = Object.values(entries)
     const perShelf: Record<string, number> = {}
-    for (const t of SHELVES) {
+    for (const t of ACTIVE_SHELVES) {
       perShelf[t] = list.filter((e) => e.status === 'seen' && (e.shelf ?? getItem(e.itemId)?.type) === t).length
     }
     const seen = list.filter((e) => e.status === 'seen').length
@@ -72,7 +72,7 @@ export function Profile() {
 
   const sharedProfile = (): SharedProfile => {
     const top: SharedProfile['top'] = {}
-    for (const t of SHELVES) {
+    for (const t of ACTIVE_SHELVES) {
       const top3 = (rankings[t] ?? []).slice(0, 3)
       if (top3.length) top[t] = top3
     }
@@ -90,7 +90,7 @@ export function Profile() {
     setGeneratingCard(true)
     try {
       const topIds: string[] = []
-      for (const t of SHELVES) {
+      for (const t of ACTIVE_SHELVES) {
         for (const id of rankings[t] ?? []) {
           if (!topIds.includes(id)) topIds.push(id)
           if (topIds.length >= 5) break
@@ -113,7 +113,7 @@ export function Profile() {
     }
   }
 
-  const hasTop = SHELVES.some((t) => (rankings[t] ?? []).length > 0)
+  const hasTop = ACTIVE_SHELVES.some((t) => (rankings[t] ?? []).length > 0)
   const place = countryName(profile.country)
   const unnamed = !profile.name || profile.name === 'Tú'
 
@@ -172,7 +172,7 @@ export function Profile() {
           <h2 className="text-title font-medium text-ink mb-3">Lo que más me marcó</h2>
           {hasTop ? (
             <div className="space-y-4">
-              {SHELVES.filter((t) => (rankings[t] ?? []).length > 0).map((t) => (
+              {ACTIVE_SHELVES.filter((t) => (rankings[t] ?? []).length > 0).map((t) => (
                 <div key={t}>
                   <div className="flex items-center justify-between mb-2">
                     <span className="label-caps text-mute">{SHELF_LABEL[t].plural}</span>
@@ -209,7 +209,7 @@ export function Profile() {
         <section aria-label="Estadísticas">
           <h2 className="text-title font-medium text-ink mb-3">Mis números</h2>
           <div className="grid grid-cols-2 gap-2.5">
-            {SHELVES.map((t) => (
+            {ACTIVE_SHELVES.map((t) => (
               <Link key={t} to={`/estanteria/${t}`} className="bg-surface rounded-2xl border border-line p-3 active:bg-surface2">
                 <div className="text-2xl font-semibold tabular-nums leading-none text-ink">{stats.perShelf[t] ?? 0}</div>
                 <div className="text-meta text-mute mt-1.5 truncate">{`${SHELF_LABEL[t].plural} ${SHELF_LABEL[t].seen}`}</div>

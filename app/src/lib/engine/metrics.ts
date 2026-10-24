@@ -214,6 +214,7 @@ export function calcDecideMetrics(events: EngineEvent[]): DecideMetrics {
     book: { total: 0, slow: 0, pct: 0 },
     boardgame: { total: 0, slow: 0, pct: 0 },
     artist: { total: 0, slow: 0, pct: 0 },
+    song: { total: 0, slow: 0, pct: 0 },
   }
 
   const acceptedItems = new Map<string, { itemId: string; acceptedAt: number }>()

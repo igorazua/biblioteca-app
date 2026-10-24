@@ -328,6 +328,7 @@ describe('T16 — Lógica de duelos y planNextDuel', () => {
         book: [],
         artist: [],
         boardgame: [],
+        song: [],
       },
     }
 
@@ -341,6 +342,7 @@ describe('T16 — Lógica de duelos y planNextDuel', () => {
       book: {},
       artist: {},
       boardgame: {},
+      song: {},
     })
     expect(migrated?.lastCompared).toEqual({
       movie: 0,
@@ -348,6 +350,7 @@ describe('T16 — Lógica de duelos y planNextDuel', () => {
       book: 0,
       artist: 0,
       boardgame: 0,
+      song: 0,
     })
   })
 

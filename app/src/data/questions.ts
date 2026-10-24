@@ -41,7 +41,7 @@ const SEEN_OR_NEW: Question = {
   ],
 }
 
-export const QUESTIONS_BY_SHELF: Record<Exclude<ShelfType, 'book'>, Question[]> = {
+export const QUESTIONS_BY_SHELF: Record<Exclude<ShelfType, 'book' | 'song'>, Question[]> = {
   // Pelis: vista o nueva → de guardados / todas / da igual → plataformas
   movie: [SEEN_OR_NEW, SOURCE, PLATFORMS],
   // Series: miniserie o larga → terminada o en emisión → guardados / nuevas / da igual
@@ -93,6 +93,12 @@ export const MOOD_GENRES: Record<ShelfType, Record<string, string[]>> = {
     estrategia: ['Eurogame', 'Estrategia', 'Gestión', 'Económico'],
     coop: ['Cooperativo', 'Aventura', 'Narrativo'],
     cartas: ['Cartas', 'Deckbuilding', 'Draft'],
+  },
+  song: {
+    foco: ['Ambient', 'Clásica', 'Indie', 'Jazz', 'Instrumental', 'Post-rock'],
+    energia: ['Rock', 'Hip hop', 'Metal', 'Electrónica', 'Punk'],
+    chill: ['Soul', 'Folk', 'Acústico', 'R&B', 'Blues'],
+    fiesta: ['Pop', 'Funk', 'Disco', 'Reggaeton', 'Dance'],
   },
 }
 

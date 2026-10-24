@@ -85,6 +85,7 @@ export function mergeCloudAndLocal(
     book: [...(localRankings.book ?? [])],
     artist: [...(localRankings.artist ?? [])],
     boardgame: [...(localRankings.boardgame ?? [])],
+    song: [...(localRankings.song ?? [])],
   }
 
   for (const row of cloudRows) {
@@ -244,12 +245,13 @@ export async function pullCloudDuels(userId: string) {
   if (error || !data || data.length === 0) return
 
   const store = useStore.getState()
-  const nextDuels = {
+  const nextDuels: Record<ShelfType, Record<string, DuelRecord>> = {
     movie: { ...(store.duels.movie || {}) },
     series: { ...(store.duels.series || {}) },
     book: { ...(store.duels.book || {}) },
     artist: { ...(store.duels.artist || {}) },
     boardgame: { ...(store.duels.boardgame || {}) },
+    song: { ...(store.duels.song || {}) },
   }
 
   for (const row of data as CloudDuel[]) {

@@ -11,7 +11,7 @@ import { evaluateNudges, type Nudge } from '../lib/nudges'
 import { affinity } from '../lib/affinity'
 import { friendRanks } from '../lib/rank'
 import { useRanks } from '../store/useScores'
-import { SHELVES, SHELF_LABEL, type Friend, type Item, type ShelfType } from '../types'
+import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type Friend, type Item, type ShelfType } from '../types'
 import { SwipeDeck, type DeckHandle, type SwipeDir } from '../components/SwipeDeck'
 import { RatingFlow } from '../components/RatingFlow'
 import { NudgeCard } from '../components/NudgeCard'
@@ -20,8 +20,8 @@ import { Icon } from '../components/Icon'
 import { Button } from '../components/Button'
 
 const readShelf = (): ShelfType => {
-  try { const v = sessionStorage.getItem('discover-shelf') as ShelfType; if (v && (SHELVES as readonly string[]).includes(v)) return v } catch { /* sin almacenamiento */ }
-  return 'movie'
+  try { const v = sessionStorage.getItem('discover-shelf') as ShelfType; if (v && (ACTIVE_SHELVES as readonly string[]).includes(v)) return v } catch { /* sin almacenamiento */ }
+  return ACTIVE_SHELVES[0] ?? 'movie'
 }
 
 export function Discover() {
@@ -210,7 +210,7 @@ export function Discover() {
       {/* Cabecera mínima: las estanterías arriba del todo y el contador; todo el alto, para la tarjeta */}
       <div className="safe-top px-5 pb-2 shrink-0">
         <div className="flex gap-2 overflow-x-auto no-scrollbar" role="tablist" aria-label="Estantería">
-          {SHELVES.map((s) => (
+          {ACTIVE_SHELVES.map((s) => (
             <Chip key={s} active={s === shelf} onClick={() => setShelf(s)}>
               {SHELF_LABEL[s].plural}
             </Chip>
@@ -260,7 +260,7 @@ export function Discover() {
               </Button>
             </div>
             <div className="flex gap-2 mt-3">
-              {SHELVES.filter((s) => s !== shelf).map((s) => (
+              {ACTIVE_SHELVES.filter((s) => s !== shelf).map((s) => (
                 <Chip key={s} onClick={() => setShelf(s)}>
                   {SHELF_LABEL[s].plural}
                 </Chip>

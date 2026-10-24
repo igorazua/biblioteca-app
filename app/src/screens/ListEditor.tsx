@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { getItem, items, typeName } from '../data/catalog'
 import { useStore } from '../store/useStore'
-import { SHELVES, SHELF_LABEL, type ListItem, type ShelfType } from '../types'
+import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type ListItem, type ShelfType } from '../types'
 import { Poster } from '../components/Poster'
 import { posterAspectClass, posterRadius } from '../lib/posterShape'
 import { Chip, Confirm, ScreenHeader, Toast } from '../components/ui'
@@ -116,7 +116,7 @@ export function ListEditor() {
           </div>
           <div className="flex gap-2 mt-2.5 overflow-x-auto no-scrollbar">
             <Chip active={shelf === 'all'} onClick={() => setShelf('all')}>Todo</Chip>
-            {SHELVES.map((s) => <Chip key={s} active={shelf === s} onClick={() => setShelf(s)}>{SHELF_LABEL[s].plural}</Chip>)}
+            {ACTIVE_SHELVES.map((s) => <Chip key={s} active={shelf === s} onClick={() => setShelf(s)}>{SHELF_LABEL[s].plural}</Chip>)}
           </div>
           <div className="flex gap-2 mt-2 overflow-x-auto no-scrollbar">
             {([['mine', 'Mis guardados'], ['seen', 'Vistas'], ['pending', 'Pendientes'], ['all', 'Todo el catálogo']] as [Scope, string][]).map(([k, l]) => (
