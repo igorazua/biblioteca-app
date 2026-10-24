@@ -15,6 +15,7 @@ import { shareOrCopy } from '../lib/shareUi'
 import { generateShareCard, shareOrDownloadCard } from '../lib/shareCard'
 import { countryName } from '../lib/countries'
 import { Poster, posterLayoutId } from '../components/Poster'
+import { posterAspectClass, posterRadius } from '../lib/posterShape'
 import { Avatar, Sheet, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { ScreenTitle } from '../components/ScreenTitle'
@@ -186,7 +187,7 @@ export function Profile() {
                       return (
                         <Link key={id} to={`/i/${encodeURIComponent(id)}`}>
                           <div className="relative">
-                            <Poster item={it} layoutId={posterLayoutId(it.id)} style={{ borderRadius: 10 }} className="w-full aspect-[2/3] rounded-[10px]" />
+                            <Poster item={it} layoutId={posterLayoutId(it.id)} style={{ borderRadius: posterRadius(it.type, 10) }} className={`w-full ${posterAspectClass(it.type)} rounded-[10px]`} />
                             <span className="absolute top-1.5 left-1.5 w-5 h-5 rounded-full bg-accent text-accent-ink text-[11px] font-bold flex items-center justify-center tabular-nums">{i + 1}</span>
                           </div>
                           <div className="serif text-item text-ink leading-tight mt-1.5 line-clamp-2">{it.title}</div>

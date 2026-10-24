@@ -10,6 +10,7 @@ import { evaluateNudges } from '../lib/nudges'
 import { SHELVES, SHELF_LABEL, type ShelfType } from '../types'
 import { PosterTile } from '../components/ItemRow'
 import { Poster } from '../components/Poster'
+import { posterAspectClass, posterRadius } from '../lib/posterShape'
 import { Avatar, Sheet, Toast } from '../components/ui'
 import { AddFlow } from '../components/AddFlow'
 import { NudgeCard } from '../components/NudgeCard'
@@ -159,7 +160,7 @@ export function Library() {
                   <Link to={`/descubrir`} className="rounded-2xl bg-surface2 p-4 flex items-center gap-4 active:scale-[0.99] transition-transform">
                     <span className="flex -space-x-5 shrink-0" aria-hidden>
                       {items.filter((it) => it.type === t).slice(0, 3).map((it, i) => (
-                        <Poster key={it.id} item={it} showTitle={false} className="w-11 aspect-[2/3] rounded-[8px] border border-line" style={{ transform: `rotate(${(i - 1) * 7}deg)` }} />
+                        <Poster key={it.id} item={it} showTitle={false} className={`w-11 ${posterAspectClass(t)} rounded-[8px] border border-line`} style={{ borderRadius: posterRadius(t, 8), transform: `rotate(${(i - 1) * 7}deg)` }} />
                       ))}
                     </span>
                     <span className="flex-1 text-sm text-mute leading-snug">Aún está vacía. <span className="text-ink font-medium">Haz swipe en Descubrir</span> y se llena sola.</span>

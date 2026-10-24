@@ -5,6 +5,7 @@ import { getItem, items, typeName } from '../data/catalog'
 import { useStore } from '../store/useStore'
 import { SHELVES, SHELF_LABEL, type ListItem, type ShelfType } from '../types'
 import { Poster } from '../components/Poster'
+import { posterAspectClass, posterRadius } from '../lib/posterShape'
 import { Chip, Confirm, ScreenHeader, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { listUrl, type SharedList } from '../lib/share'
@@ -92,7 +93,7 @@ export function ListEditor() {
               if (!it) return null
               return (
                 <li key={s.itemId} className="flex gap-3 bg-surface rounded-2xl border border-line p-2.5">
-                  <Poster item={it} className="w-12 h-[72px] rounded-xl shrink-0" />
+                  <Poster item={it} style={{ borderRadius: posterRadius(it.type, 12) }} className={`w-12 ${posterAspectClass(it.type)} rounded-xl shrink-0 object-cover`} />
                   <div className="flex-1 min-w-0">
                     <div className="serif font-semibold leading-tight truncate">{it.title}</div>
                     <input value={s.note ?? ''} onChange={(e) => setSel((cur) => cur.map((x, i) => (i === idx ? { ...x, note: e.target.value } : x)))}

@@ -6,6 +6,7 @@ import { SHELVES, SHELF_LABEL, type ShelfType } from '../types'
 import { useCompareOverview } from '../lib/compareOverview'
 import { ItemRow } from '../components/ItemRow'
 import { Poster } from '../components/Poster'
+import { posterAspectClass, posterRadius } from '../lib/posterShape'
 import { Chip, Toast } from '../components/ui'
 import { AddFlow } from '../components/AddFlow'
 import { CleanupFlow } from '../components/CleanupFlow'
@@ -66,7 +67,7 @@ export function Shelf() {
       <div className="mx-5 mb-4 relative rounded-3xl overflow-hidden border border-line shrink-0" style={{ background: `linear-gradient(135deg, ${SHELF_COLOR[t]}55 0%, ${SHELF_COLOR[t]}14 55%, var(--color-surface) 100%)` }}>
         <div className="absolute inset-y-0 right-0 w-[52%] flex justify-end items-center gap-0 pr-2 opacity-45 pointer-events-none" aria-hidden>
           {ranking.slice(0, 3).map((id, i) => (
-            <Poster key={id} item={getItem(id)} showTitle={false} className="w-16 aspect-[2/3] rounded-lg border border-black/30 -ml-6 shadow-lg" style={{ transform: `rotate(${(i - 1) * 8}deg) translateY(${i === 1 ? -6 : 4}px)` }} />
+            <Poster key={id} item={getItem(id)} showTitle={false} className={`w-16 ${posterAspectClass(t)} rounded-lg border border-black/30 -ml-6 shadow-lg`} style={{ borderRadius: posterRadius(t, 8), transform: `rotate(${(i - 1) * 8}deg) translateY(${i === 1 ? -6 : 4}px)` }} />
           ))}
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-bg/70 via-bg/30 to-transparent pointer-events-none" aria-hidden />
@@ -159,7 +160,7 @@ export function Shelf() {
                           ) : (
                             <span className="w-6 shrink-0" aria-hidden />
                           )}
-                          <Poster item={it} className="w-9 aspect-[2/3] rounded-[6px] shrink-0 object-cover" />
+                          <Poster item={it} style={{ borderRadius: posterRadius(it.type, 6) }} className={`w-9 ${posterAspectClass(it.type)} rounded-[6px] shrink-0 object-cover`} />
                           <div className="flex-1 min-w-0">
                             <div className="serif text-item text-ink leading-tight line-clamp-1">{it.title}</div>
                             <div className="text-meta text-mute mt-0.5 truncate">{it.year} · {it.creator}</div>

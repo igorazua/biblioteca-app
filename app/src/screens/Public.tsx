@@ -7,6 +7,7 @@ import { useCatalog } from '../store/useCatalog'
 import { SHELVES, SHELF_LABEL } from '../types'
 import { decodeList, decodeProfile } from '../lib/share'
 import { Poster } from '../components/Poster'
+import { posterAspectClass, posterRadius } from '../lib/posterShape'
 import { Avatar, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { Button } from '../components/Button'
@@ -100,7 +101,7 @@ export function PublicList() {
           const mine = entries[id]
           return (
             <li key={id} className="flex gap-3.5 bg-surface rounded-2xl border border-line p-3.5">
-              <Poster item={it} className="w-[84px] aspect-[2/3] rounded-[10px] shrink-0 object-cover" />
+              <Poster item={it} style={{ borderRadius: posterRadius(it.type, 10) }} className={`w-[84px] ${posterAspectClass(it.type)} rounded-[10px] shrink-0 object-cover`} />
               <div className="flex-1 min-w-0 flex flex-col">
                 <div className="text-label text-mute">{typeName(it.type)} · {it.year}</div>
                 <div className="serif text-item font-medium text-ink leading-tight mt-0.5">{it.title}</div>
@@ -164,7 +165,7 @@ export function PublicProfile() {
                 return (
                   <li key={id}>
                     <div className="relative">
-                      <Poster item={it} className="w-full aspect-[2/3] rounded-[10px] border border-line" />
+                      <Poster item={it} style={{ borderRadius: posterRadius(it.type, 10) }} className={`w-full ${posterAspectClass(it.type)} rounded-[10px] border border-line`} />
                       <span className="absolute top-1.5 left-1.5 w-5 h-5 rounded-full bg-accent text-accent-ink text-[11px] font-bold flex items-center justify-center tabular-nums">{i + 1}</span>
                     </div>
                     <div className="serif text-item font-medium text-ink leading-tight mt-1.5 line-clamp-2">{it.title}</div>

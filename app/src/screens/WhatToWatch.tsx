@@ -24,6 +24,7 @@ import { affinity } from '../lib/affinity'
 import { friendRanks } from '../lib/rank'
 import { SHELVES, SHELF_LABEL, type Friend, type Item, type ShelfType } from '../types'
 import { Poster, posterLayoutId } from '../components/Poster'
+import { posterAspectClass, posterRadius } from '../lib/posterShape'
 import { SwipePair, type Side } from '../components/SwipePair'
 import { RatingFlow } from '../components/RatingFlow'
 import { PlatformPicker, Sheet, Toast } from '../components/ui'
@@ -470,6 +471,7 @@ export function WhatToWatch() {
     title: it.title,
     subtitle: `${it.year} · ${it.creator}`,
     bg: <Poster item={it} showTitle={false} className="absolute inset-0 w-full h-full" />,
+    type: it.type,
   })
 
   /* --------------------------------- pantallas --------------------------------- */
@@ -689,7 +691,7 @@ export function WhatToWatch() {
     )
     body = (
       <div className="flex-1 min-h-0 flex flex-col items-center justify-center px-6 text-center gap-4">
-        <Poster item={currentItem} className="w-36 aspect-[2/3] rounded-2xl border border-line" />
+        <Poster item={currentItem} style={{ borderRadius: posterRadius(currentItem.type, 16) }} className={`w-36 ${posterAspectClass(currentItem.type)} rounded-2xl border border-line`} />
         <div className="flex flex-col gap-2.5 w-full max-w-xs mt-2">
           {!isBook && plat && (
             <Button variant="primary" onClick={() => setToast('En la demo no abre la plataforma')} icon={<Icon name="tv" size={18} />}>
@@ -748,7 +750,7 @@ export function WhatToWatch() {
                   className="w-full flex items-center gap-3 px-2 py-2 rounded-xl text-left active:bg-surface2"
                 >
                   <span className="w-5 text-center text-meta tabular-nums">{i + 2}</span>
-                  <Poster item={it} showTitle={false} className="w-10 aspect-[2/3] rounded-md shrink-0" />
+                  <Poster item={it} showTitle={false} style={{ borderRadius: posterRadius(it.type, 6) }} className={`w-10 ${posterAspectClass(it.type)} rounded-md shrink-0`} />
                   <span className="flex-1 min-w-0">
                     <span className="block serif text-item text-ink truncate">{it.title}</span>
                     <span className="block text-meta truncate">{it.year} · {it.creator}</span>

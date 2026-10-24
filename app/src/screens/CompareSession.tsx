@@ -34,6 +34,7 @@ const sideOf = (it: Item): Side => ({
   title: it.title,
   subtitle: `${it.year} · ${it.creator}`,
   bg: <Poster item={it} showTitle={false} className="absolute inset-0 w-full h-full" />,
+  type: it.type,
 })
 
 function calcShelfOrdenado(
