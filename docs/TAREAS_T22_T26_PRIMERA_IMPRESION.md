@@ -21,10 +21,10 @@
 | **T22 · Anclas y guion de los 3 primeros duelos** | **Sonnet** (es la más delicada y define la primera impresión) | `app/src/data/anchors/*.json` (nuevo), `app/src/lib/engine/anchors.ts` (nuevo), `app/src/lib/engine/userSeeds.ts` (nuevo, solo el esqueleto), `app/src/lib/engine/decide.ts`, `decide.test.ts`, `anchors.test.ts` | nada · **en curso (Sonnet)** |
 | **T23 · Aprendizaje colectivo de «No conozco»** | — | — | ⏸ **aplazada** (hacen falta muchos usuarios) |
 | **T24 · Lo que se ve ahora en España, solo para sugerir** | — | — | ⏸ **no se hace ahora** (no toca los duelos) |
-| **T25 · Lo que ya trae el usuario** | Gemini | ver la tabla de archivos en la sección T25 | **A y C ya**; **B espera a T22** |
+| **T25 · Lo que ya trae el usuario** | — | — | ⏸ **no se hace** (el empujón de amigos en Descubrir ya existe) |
 | **T26 · Aprender qué parejas funcionan** | Gemini, **más adelante** | `app/scripts/engine/pair-stats.mjs` (nuevo), `app/src/data/engine/pair-stats.json` (nuevo), `app/src/lib/engine/pairStats.ts` (nuevo) | T22 y que haya ≥ 500 sesiones de Decidir reales |
 
-**Ahora: T22 (Sonnet, en curso), T21 (Gemini, en curso) y T25-A + T25-C (Gemini). T25-B cuando Claude dé por buena T22. T23, T24 y T26, más adelante.**
+**Ahora: solo T22 (Sonnet, en curso) y T21 (Gemini, en curso). T23, T24, T25 y T26 no se hacen por ahora.**
 
 ---
 
@@ -105,8 +105,9 @@ Cuando se haga, sirve solo para sugerir:
 
 ---
 
-## T25 — Lo que ya trae el usuario · ✅ SE HACE AHORA (Gemini)
-Se divide en tres partes. **Gemini hace ahora T25-A y T25-C. T25-B espera a que Claude dé por buena T22** (toca `decide.ts` y `userSeeds.ts`, que son de T22).
+## T25 — Lo que ya trae el usuario · ⏸ NO SE HACE (Igor, 24/10/2026)
+**Descartada por ahora.** El empujón a las obras de los amigos en Descubrir **ya existe**: son los cubos `social` (del 18 al 45 % del mazo, según cuántas obras tengas) y `friend_gem` de `lib/engine/deck.ts`, y las cartas ya llevan sus caras. Lo de abajo se queda como idea por si se retoma; **nadie debe ejecutarlo**.
+Se dividía en tres partes (A, B y C). **Ninguna se ejecuta.**
 
 ### Archivos de T25-A y T25-C (solo estos)
 | Archivo | Qué cambia |
@@ -199,5 +200,5 @@ Se divide en tres partes. **Gemini hace ahora T25-A y T25-C. T25-B espera a que 
 
 ## Lo que tiene que hacer Igor
 - **T22:** revisar `anchors/REVISION.md` (unas 260 obras, de un vistazo).
-- **T25:** lanzar un agente de Gemini con **T25-A y T25-C** (no T25-B).
-- T23, T24 y T26 se retoman más adelante.
+- T25 no se hace: el empujón de amigos en Descubrir ya existe.
+- T23, T24 y T26 se retoman más adelante, si hace falta.
