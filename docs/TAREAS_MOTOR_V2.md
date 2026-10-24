@@ -474,3 +474,9 @@ Encargo completo en **`docs/TAREA_T20_CIERRE.md`** (23/10/2026). **Es lo siguien
 # T21 — Etiquetas de sensación y temas reales, sin API
 
 Encargo completo en **`docs/TAREA_T21_ETIQUETAS_Y_TEMAS.md`** (24/10/2026). **Es lo siguiente que toca.** Sustituye a T20.5.
+
+---
+
+# T22-T26 — Primera impresión de Decidir (anclas, aprendizaje colectivo, actualidad, lo que trae el usuario)
+
+Encargos completos en **`docs/TAREAS_T22_T26_PRIMERA_IMPRESION.md`** (24/10/2026). Cinco tareas para agentes distintos, con archivos repartidos y orden de lanzamiento.
