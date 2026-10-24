@@ -6,7 +6,9 @@
 
 import { describe, it, expect } from 'vitest'
 import {
+  cleanDisplayTitle,
   deduplicateRecordings,
+  isDjOrGarbageVersion,
   pickCanonicalSong,
 } from './dedupe.mjs'
 
@@ -354,5 +356,56 @@ describe('T28 §28.3 · Deduplicación y normalización de canciones', () => {
     const song = pickCanonicalSong(groups[0])
     expect(song.title).toBe('Kids')
     expect(song.id).toBe('song:kids-mgmt-2007')
+  })
+
+  it('18. Colaboraciones: mismo MBID de grabación con artistas distintos (ej. Mamichula) → 1 canción fusionada', () => {
+    const input = [
+      {
+        title: 'Mamichula',
+        artist: 'Nicki Nicole',
+        artistId: 'artist:nicki-nicole',
+        recordingMbid: 'mbid-mamichula-rec',
+        year: 2020,
+        popularity: 80,
+      },
+      {
+        title: 'Mamichula',
+        artist: 'Trueno',
+        artistId: 'artist:trueno',
+        recordingMbid: 'mbid-mamichula-rec',
+        year: 2020,
+        popularity: 90,
+      },
+    ]
+    const groups = deduplicateRecordings(input)
+    expect(groups.length).toBe(1)
+    const song = pickCanonicalSong(groups[0])
+    expect(song.title).toBe('Mamichula')
+    expect(song.mbid).toBe('mbid-mamichula-rec')
+    expect(song.popularity).toBe(90)
+  })
+
+  it('19. Detección de versiones DJ y basura: filtra transiciones y club edits pero conserva títulos legítimos', () => {
+    expect(isDjOrGarbageVersion('LA NOCHE DE ANOCHE (Bpmlatino Transition 100-82) (clean extended)')).toBe(true)
+    expect(isDjOrGarbageVersion('China (BROSS Hype intro)')).toBe(true)
+    expect(isDjOrGarbageVersion('Fantasias (Luzquinos Transition 128-94) (clean)')).toBe(true)
+    expect(isDjOrGarbageVersion('Dance Yrself Clean')).toBe(false)
+    expect(isDjOrGarbageVersion('Smells Like Teen Spirit')).toBe(false)
+  })
+
+  it('20. Robustez ante títulos editoriales: nunca produce un título vacío ni slug song:-artista-año', () => {
+    const input = [
+      {
+        title: '[instrumental]',
+        artist: 'Red Hot Chili Peppers',
+        artistMbid: 'rhcp-mbid',
+        recordingMbid: 'rec-rhcp-inst',
+        year: 1999,
+      },
+    ]
+    const groups = deduplicateRecordings(input)
+    const song = pickCanonicalSong(groups[0])
+    expect(song.title.length).toBeGreaterThan(0)
+    expect(song.id).not.toContain('song:-')
   })
 })

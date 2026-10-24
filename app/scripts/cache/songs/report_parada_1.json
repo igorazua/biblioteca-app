@@ -1,24 +1,17 @@
 {
   "totalRecordingsIngested": 5062,
-  "resultingSongsCount": 4492,
-  "songsWithCoverCount": 4492,
+  "resultingSongsCount": 4474,
+  "songsWithCoverCount": 4474,
   "pctCover": "100.0",
-  "unresolvedCount": 672,
-  "pctUnresolved": "11.72",
+  "unresolvedCount": 671,
+  "pctUnresolved": "11.70",
   "coverBreakdown": {
-    "uploaded": 2799,
-    "cached": 1693,
+    "uploaded": 367,
+    "cached": 4107,
     "generated": 0,
-    "totalReal": 4492
+    "totalReal": 4474
   },
   "sample30MergedGroups": [
-    {
-      "canonical": "Waka Waka (Esto es África) (Shakira, 2010) [song:waka-waka-esto-es-africa-shakira-2010]",
-      "variants": [
-        "Waka Waka (Esto es África) (K-mix) [0f33d322-7c43-45e6-8dc3-8d273dd537f3] (src: promusicae-n1-anual-2010)",
-        "Waka Waka (Esto es África) [0f33d322-7c43-45e6-8dc3-8d273dd537f3] (src: itunes-top-artist)"
-      ]
-    },
     {
       "canonical": "Cero (Dani Martín, 2013) [song:cero-dani-martin-2013]",
       "variants": [
@@ -30,36 +23,7 @@
       "canonical": "Si antes te hubiera conocido (KAROL G, 2024) [song:si-antes-te-hubiera-conocido-karol-g-2024]",
       "variants": [
         "Si antes te hubiera conocido [e4847987-2ea7-4105-abc8-61e894364ae1] (src: promusicae-n1-anual-2024)",
-        "Si antes te hubiera conocido [34f3715c-2ae9-42cf-a1ac-908aa758ddeb] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "PROVENZA (KAROL G, 2022) [song:provenza-karol-g-2022]",
-      "variants": [
-        "PROVENZA [cd158362-84a3-44df-843a-cb6d9d27f554] (src: los40-historico-2000)",
-        "PROVENZA [cd158362-84a3-44df-843a-cb6d9d27f554] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "GATÚBELA (Karol G, 2022) [song:gatubela-karol-g-2022]",
-      "variants": [
-        "GATÚBELA [788e50d4-c4c7-4503-809a-6cfefccedcf9] (src: itunes-top-artist)",
-        "GATÚBELA [788e50d4-c4c7-4503-809a-6cfefccedcf9] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "Quevedo: Bzrp Music Sessions, Vol. 52 (Bizarrap, 2022) [song:quevedo-bzrp-music-sessions-vol-52-bizarrap-2022]",
-      "variants": [
-        "Quevedo: Bzrp Music Sessions, Vol. 52 [ceb41ddc-6fce-469e-b5b5-36106ca4aa18] (src: promusicae-n1-anual-2022)",
-        "Quevedo: Bzrp Music Sessions, Vol. 52 [ceb41ddc-6fce-469e-b5b5-36106ca4aa18] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "Shakira: Bzrp Music Sessions, Vol. 53 (Bizarrap, 2023) [song:shakira-bzrp-music-sessions-vol-53-bizarrap-2023]",
-      "variants": [
-        "Shakira: Bzrp Music Sessions, Vol. 53 [ed5abecd-e8dc-4e82-8d87-f19c86d27dbc] (src: promusicae-n1-anual-2023)",
-        "Shakira: Bzrp Music Sessions, Vol. 53 [ed5abecd-e8dc-4e82-8d87-f19c86d27dbc] (src: itunes-top-artist)",
-        "Shakira: Bzrp Music Sessions, Vol. 53 [ed5abecd-e8dc-4e82-8d87-f19c86d27dbc] (src: itunes-top-artist)"
+        "Si Antes Te Hubiera Conocido [34f3715c-2ae9-42cf-a1ac-908aa758ddeb] (src: itunes-top-artist)"
       ]
     },
     {
@@ -70,23 +34,10 @@
       ]
     },
     {
-      "canonical": "Barón rojo (Barón Rojo, 2002) [song:baron-rojo-baron-rojo-2002]",
+      "canonical": "I Just Called To Say I Love You (Stevie Wonder, 1998) [song:i-just-called-to-say-i-love-you-stevie-wonder-1998]",
       "variants": [
-        "Barón rojo [5b7a921b-69e6-4700-ac99-e02578362427] (src: itunes-top-artist)",
-        "Barón rojo [5b7a921b-69e6-4700-ac99-e02578362427] (src: itunes-top-artist)",
-        "Barón rojo [5b7a921b-69e6-4700-ac99-e02578362427] (src: itunes-top-artist)",
-        "Barón rojo [5b7a921b-69e6-4700-ac99-e02578362427] (src: itunes-top-artist)",
-        "Barón rojo [5b7a921b-69e6-4700-ac99-e02578362427] (src: itunes-top-artist)",
-        "Barón rojo [5b7a921b-69e6-4700-ac99-e02578362427] (src: itunes-top-artist)",
-        "Barón rojo [5b7a921b-69e6-4700-ac99-e02578362427] (src: itunes-top-artist)",
-        "Barón rojo [5b7a921b-69e6-4700-ac99-e02578362427] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "No hay marcha en Nueva York (Mecano, 1989) [song:no-hay-marcha-en-nueva-york-mecano-1989]",
-      "variants": [
-        "No hay marcha en Nueva York [7d91f5d9-c002-4761-a771-9a979a9c1e36] (src: los40-historico-1988)",
-        "No hay marcha en Nueva York [7d91f5d9-c002-4761-a771-9a979a9c1e36] (src: itunes-top-artist)"
+        "I Just Called To Say I Love You [32b23547-e386-46a8-903e-3c05531450e0] (src: los40-historico-1984)",
+        "I Just Called to Say I Love You [279c228e-6b80-4359-a918-4d7a152b568b] (src: itunes-top-artist)"
       ]
     },
     {
@@ -97,142 +48,31 @@
       ]
     },
     {
-      "canonical": "Can't Feel My Face (The Weeknd, 2015) [song:cant-feel-my-face-the-weeknd-2015]",
+      "canonical": "Holy Wars...The Punishment Due (Megadeth, 1990) [song:holy-wars-the-punishment-due-megadeth-1990]",
       "variants": [
-        "Can't Feel My Face [08b815da-5d60-4807-a605-f6af03d5471d] (src: itunes-top-artist)",
-        "Can't Feel My Face [08b815da-5d60-4807-a605-f6af03d5471d] (src: itunes-top-artist)"
+        "Holy Wars...The Punishment Due [e5d5f3ba-a11d-4fce-bb54-82a7a35d3315] (src: itunes-top-artist)",
+        "Holy Wars... The Punishment Due [547f814f-6c75-4685-ae3a-2ae3690ba9c9] (src: itunes-top-artist)"
       ]
     },
     {
-      "canonical": "Hawái (Maluma, 2020) [song:hawai-maluma-2020]",
+      "canonical": "Nuthin' but a \"G\" Thang (Dr. Dre, 2002) [song:nuthin-but-a-g-thang-dr-dre-2002]",
       "variants": [
-        "Hawái [8b4f7e85-af3d-402b-aa7b-eb1f5460bab6] (src: los40-historico-2000)",
-        "Hawái [8b4f7e85-af3d-402b-aa7b-eb1f5460bab6] (src: itunes-top-artist)"
+        "Nuthin' but a \"G\" Thang [2f7c193c-b6a2-4942-840e-15bd6cee08ca] (src: itunes-top-artist)",
+        "Nuthin’ But a \"G\" Thang [4bd0117d-61de-4a13-906e-c8a213ff2180] (src: itunes-top-artist)"
       ]
     },
     {
-      "canonical": "As It Was (Harry Styles, 2022) [song:as-it-was-harry-styles-2022]",
+      "canonical": "Y, Si Fuera Ella? (Alejandro Sanz, 2017) [song:y-si-fuera-ella-alejandro-sanz-2017]",
       "variants": [
-        "As It Was [1d1edf98-48d0-43ea-9b78-82c56a1960b5] (src: los40-historico-2000)",
-        "As It Was [1d1edf98-48d0-43ea-9b78-82c56a1960b5] (src: itunes-top-artist)"
+        "Y, Si Fuera Ella? [47a17889-1491-4713-8d89-35f04d26ff95] (src: itunes-top-artist)",
+        "Y, ¿Si Fuera Ella? [f3c2a0ad-8085-4174-98ab-0ad56f5b2b9b] (src: itunes-top-artist)"
       ]
     },
     {
-      "canonical": "BESO (Rosalía, 2023) [song:beso-rosalia-2023]",
+      "canonical": "¡Ahí estás tú! (Chambao, 2003) [song:ahi-estas-tu-chambao-2003]",
       "variants": [
-        "BESO [548005f2-125c-4e4a-aa03-71259469ca16] (src: itunes-top-artist)",
-        "BESO [548005f2-125c-4e4a-aa03-71259469ca16] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "LA FAMA (Rosalía, 2021) [song:la-fama-rosalia-2021]",
-      "variants": [
-        "LA FAMA [6b7313e9-3ced-43fd-9972-f174ccc1cd73] (src: itunes-top-artist)",
-        "LA FAMA [6b7313e9-3ced-43fd-9972-f174ccc1cd73] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "Another Brick in the Wall (Pink Floyd, 2016) [song:another-brick-in-the-wall-pink-floyd-2016]",
-      "variants": [
-        "Another Brick in the Wall [5164851a-33c6-4a35-8995-80cee6f40233] (src: itunes-top-artist)",
-        "Another Brick in the Wall [5164851a-33c6-4a35-8995-80cee6f40233] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "Baba O'Riley (The Who, 1993) [song:baba-oriley-the-who-1993]",
-      "variants": [
-        "Baba O'Riley [ba87d2bd-dd40-4bfc-bf6e-cfb649b97f2b] (src: itunes-top-artist)",
-        "Baba O'Riley [ba87d2bd-dd40-4bfc-bf6e-cfb649b97f2b] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "Freedom and You (Jimi Hendrix, 1997) [song:freedom-and-you-jimi-hendrix-1997]",
-      "variants": [
-        "Freedom and You [bc789786-2fee-4ea2-a243-42af4b5cd811] (src: itunes-top-artist)",
-        "Freedom and You [bc789786-2fee-4ea2-a243-42af4b5cd811] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "Angel (Jimi Hendrix, 1990) [song:angel-jimi-hendrix-1990]",
-      "variants": [
-        "Angel [b415215f-f796-46dd-a639-d7b5e4b5cb61] (src: itunes-top-artist)",
-        "Angel [b415215f-f796-46dd-a639-d7b5e4b5cb61] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "You Shook Me All Night Long (AC/DC, 2006) [song:you-shook-me-all-night-long-ac-dc-2006]",
-      "variants": [
-        "You Shook Me All Night Long [85035f58-9a67-4d12-b384-38cf8577f19f] (src: itunes-top-artist)",
-        "You Shook Me All Night Long [85035f58-9a67-4d12-b384-38cf8577f19f] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "Black Sabbath (Black Sabbath, 1995) [song:black-sabbath-black-sabbath-1995]",
-      "variants": [
-        "Black Sabbath [f6f2fa93-968b-41f5-9e69-5f03221599de] (src: itunes-top-artist)",
-        "Black Sabbath [f6f2fa93-968b-41f5-9e69-5f03221599de] (src: itunes-top-artist)",
-        "Black Sabbath [f6f2fa93-968b-41f5-9e69-5f03221599de] (src: itunes-top-artist)",
-        "Black Sabbath [f6f2fa93-968b-41f5-9e69-5f03221599de] (src: itunes-top-artist)",
-        "Black Sabbath [f6f2fa93-968b-41f5-9e69-5f03221599de] (src: itunes-top-artist)",
-        "Black Sabbath [f6f2fa93-968b-41f5-9e69-5f03221599de] (src: itunes-top-artist)",
-        "Black Sabbath [f6f2fa93-968b-41f5-9e69-5f03221599de] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "Sweet Child o' Mine (Guns N' Roses, 2025) [song:sweet-child-o-mine-guns-n-roses-2025]",
-      "variants": [
-        "Sweet Child o' Mine [b1cbf8b3-8823-43b9-bc13-4bc3b2f2577e] (src: itunes-top-artist)",
-        "Sweet Child o' Mine [b1cbf8b3-8823-43b9-bc13-4bc3b2f2577e] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "Welcome to the Jungle (Guns N' Roses, 2023) [song:welcome-to-the-jungle-guns-n-roses-2023]",
-      "variants": [
-        "Welcome to the Jungle [cc05f4ab-a173-46e0-bab2-48939cd1e1be] (src: itunes-top-artist)",
-        "Welcome to the Jungle [cc05f4ab-a173-46e0-bab2-48939cd1e1be] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "Rock You Like a Hurricane (Scorpions, 2020) [song:rock-you-like-a-hurricane-scorpions-2020]",
-      "variants": [
-        "Rock You Like a Hurricane [ea6054bc-0e8e-452c-acd8-a19cbbeb6ddc] (src: itunes-top-artist)",
-        "Rock You Like a Hurricane [ea6054bc-0e8e-452c-acd8-a19cbbeb6ddc] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "Livin’ on a Prayer (Bon Jovi, 1986) [song:livin-on-a-prayer-bon-jovi-1986]",
-      "variants": [
-        "Livin’ on a Prayer [a56def2e-bce4-4ec6-a69c-d9cdae3ef05d] (src: itunes-top-artist)",
-        "Livin’ on a Prayer [a56def2e-bce4-4ec6-a69c-d9cdae3ef05d] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "It's My Life (Bon Jovi, 2008) [song:its-my-life-bon-jovi-2008]",
-      "variants": [
-        "It's My Life [a61ee83e-cf8c-486a-ba46-3fad9da85a88] (src: itunes-top-artist)",
-        "It's My Life [a61ee83e-cf8c-486a-ba46-3fad9da85a88] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "Money for Nothing (Dire Straits, 1991) [song:money-for-nothing-dire-straits-1991]",
-      "variants": [
-        "Money for Nothing [ae6b2e1f-88de-4ee1-8f13-a2520cb1df7a] (src: itunes-top-artist)",
-        "Money for Nothing [ae6b2e1f-88de-4ee1-8f13-a2520cb1df7a] (src: itunes-top-artist)",
-        "Money for Nothing [ae6b2e1f-88de-4ee1-8f13-a2520cb1df7a] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "Sultans of Swing (Dire Straits, 1991) [song:sultans-of-swing-dire-straits-1991]",
-      "variants": [
-        "Sultans of Swing [83a743b4-f013-48d3-962e-0d0cc7f445d3] (src: itunes-top-artist)",
-        "Sultans of Swing [83a743b4-f013-48d3-962e-0d0cc7f445d3] (src: itunes-top-artist)"
-      ]
-    },
-    {
-      "canonical": "Roxanne (The Police, 2005) [song:roxanne-the-police-2005]",
-      "variants": [
-        "Roxanne [af7b62e2-778c-469b-890d-67456c5b8bdd] (src: itunes-top-artist)",
-        "Roxanne [af7b62e2-778c-469b-890d-67456c5b8bdd] (src: itunes-top-artist)"
+        "¡Ahí estás tú! [5fd437ec-e8b4-4c28-b22d-89618986e571] (src: itunes-top-artist)",
+        "Ahí Estas Tu [899f9e99-1503-4119-aa6f-edff17da3ed5] (src: itunes-top-artist)"
       ]
     }
   ],
@@ -252,13 +92,13 @@
       }
     },
     {
-      "id": "song:yesterday-the-ed-sullivan-show-1965-the-beatles-2020",
-      "title": "Yesterday (The Ed Sullivan Show, 1965)",
+      "id": "song:yesterday-the-beatles-2020",
+      "title": "Yesterday",
       "creator": "The Beatles",
       "year": 2020,
       "album": "Help!",
       "popularity": 98,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/yesterday-the-ed-sullivan-show-1965-the-beatles-2020.webp",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/yesterday-the-beatles-2020.webp",
       "src": {
         "recording": "musicbrainz",
         "popularity": "itunes",
@@ -280,13 +120,13 @@
       }
     },
     {
-      "id": "song:fields-of-gold-sting-1995",
-      "title": "Fields of Gold",
-      "creator": "Sting",
-      "year": 1995,
-      "album": "The Very Best of Sting & The Police",
+      "id": "song:no-me-conoce-bad-bunny-2019",
+      "title": "No Me Conoce",
+      "creator": "Bad Bunny",
+      "year": 2019,
+      "album": "Famouz",
       "popularity": 94,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/fields-of-gold-sting-1995.webp",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/no-me-conoce-bad-bunny-2019.webp",
       "src": {
         "recording": "musicbrainz",
         "popularity": "itunes",
@@ -294,41 +134,41 @@
       }
     },
     {
-      "id": "song:nino-soldado-ska-p-2003",
-      "title": "Niño soldado",
-      "creator": "Ska-P",
-      "year": 2003,
-      "album": "Incontrolable",
-      "popularity": 92,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/nino-soldado-ska-p-2003.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:georgia-on-my-mind-ray-charles-2005",
-      "title": "Georgia on My Mind",
+      "id": "song:hit-the-road-jack-ray-charles-1995",
+      "title": "Hit the Road Jack",
       "creator": "Ray Charles",
-      "year": 2005,
-      "album": "Georgia on My Mind (Original Master Recording) - Single",
-      "popularity": 90,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/georgia-on-my-mind-ray-charles-2005.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:one-more-chance-the-notorious-b-i-g-1995",
-      "title": "One More Chance",
-      "creator": "The Notorious B.I.G.",
       "year": 1995,
-      "album": "One More Chance",
+      "album": "True Genius",
+      "popularity": 92,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/hit-the-road-jack-ray-charles-1995.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:coming-down-the-weeknd-2012",
+      "title": "Coming Down",
+      "creator": "The Weeknd",
+      "year": 2012,
+      "album": "Trilogy",
+      "popularity": 90,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/coming-down-the-weeknd-2012.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:du-hast-rammstein-2001",
+      "title": "Du hast",
+      "creator": "Rammstein",
+      "year": 2001,
+      "album": "Sehnsucht",
       "popularity": 88,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/one-more-chance-the-notorious-b-i-g-1995.webp",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/du-hast-rammstein-2001.webp",
       "src": {
         "recording": "musicbrainz",
         "popularity": "itunes",
@@ -336,13 +176,13 @@
       }
     },
     {
-      "id": "song:my-immortal-evanescence-2004",
-      "title": "My Immortal",
-      "creator": "Evanescence",
-      "year": 2004,
-      "album": "Fallen",
+      "id": "song:flor-palida-marc-anthony-2013",
+      "title": "Flor Pálida",
+      "creator": "Marc Anthony",
+      "year": 2013,
+      "album": "3.0",
       "popularity": 86,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/my-immortal-evanescence-2004.webp",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/flor-palida-marc-anthony-2013.webp",
       "src": {
         "recording": "musicbrainz",
         "popularity": "itunes",
@@ -350,13 +190,13 @@
       }
     },
     {
-      "id": "song:la-cintura-alvaro-soler-2018",
-      "title": "La cintura",
-      "creator": "Álvaro Soler",
-      "year": 2018,
+      "id": "song:aqui-no-hay-playa-the-refrescos-1989",
+      "title": "Aquí no hay playa",
+      "creator": "The Refrescos",
+      "year": 1989,
       "album": null,
       "popularity": 84,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/la-cintura-alvaro-soler-2018.webp",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/aqui-no-hay-playa-the-refrescos-1989.webp",
       "src": {
         "recording": "musicbrainz",
         "popularity": "chart-promusicae-los40",
@@ -364,13 +204,13 @@
       }
     },
     {
-      "id": "song:dont-let-the-sun-go-down-on-me-george-michael-2004",
-      "title": "Don’t Let the Sun Go Down on Me",
-      "creator": "George Michael",
-      "year": 2004,
-      "album": "Ladies & Gentlemen",
+      "id": "song:la-copa-de-la-vida-la-cancion-oficial-de-la-copa-mundial-fra-ricky-martin-2017",
+      "title": "La Copa de la Vida (La Cancion Oficial de la Copa Mundial, Francia '98)",
+      "creator": "Ricky Martin",
+      "year": 2017,
+      "album": "Ricky Martin",
       "popularity": 82,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/dont-let-the-sun-go-down-on-me-george-michael-2004.webp",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/la-copa-de-la-vida-la-cancion-oficial-de-la-copa-mundial-fra-ricky-martin-2017.webp",
       "src": {
         "recording": "musicbrainz",
         "popularity": "itunes",
@@ -378,321 +218,13 @@
       }
     },
     {
-      "id": "song:fight-for-your-right-beastie-boys-1999",
-      "title": "Fight for Your Right",
-      "creator": "Beastie Boys",
-      "year": 1999,
-      "album": "Licensed to Ill",
-      "popularity": 80,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/fight-for-your-right-beastie-boys-1999.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:cosmic-love-florence-the-machine-2010",
-      "title": "Cosmic Love",
-      "creator": "Florence + The Machine",
-      "year": 2010,
-      "album": "Lungs",
-      "popularity": 78,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/cosmic-love-florence-the-machine-2010.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:cuts-like-a-knife-bryan-adams-1991",
-      "title": "Cuts Like a Knife",
-      "creator": "Bryan Adams",
-      "year": 1991,
-      "album": "Cuts Like a Knife",
-      "popularity": 76,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/cuts-like-a-knife-bryan-adams-1991.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:love-the-way-you-lie-eminem-2012",
-      "title": "Love the Way You Lie",
-      "creator": "Eminem",
-      "year": 2012,
-      "album": "Recovery",
-      "popularity": 75,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/love-the-way-you-lie-eminem-2012.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:turbo-lover-judas-priest-1998",
-      "title": "Turbo Lover",
-      "creator": "Judas Priest",
-      "year": 1998,
-      "album": "Turbo 30 (30th Anniversary Deluxe Edition)",
-      "popularity": 73,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/turbo-lover-judas-priest-1998.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:gotta-get-away-the-offspring-2008",
-      "title": "Gotta Get Away",
-      "creator": "The Offspring",
-      "year": 2008,
-      "album": "Smash (Remastered)",
-      "popularity": 71,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/gotta-get-away-the-offspring-2008.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:tu-falta-de-querer-mon-laferte-2015",
-      "title": "Tu falta de querer",
-      "creator": "Mon Laferte",
-      "year": 2015,
-      "album": "Mon Laferte, Vol. 1",
-      "popularity": 69,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/tu-falta-de-querer-mon-laferte-2015.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:count-on-me-bruno-mars-2010",
-      "title": "Count on Me",
-      "creator": "Bruno Mars",
-      "year": 2010,
-      "album": "Doo-Wops & Hooligans",
-      "popularity": 67,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/count-on-me-bruno-mars-2010.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:blue-light-mazzy-star-1993",
-      "title": "Blue Light",
-      "creator": "Mazzy Star",
-      "year": 1993,
-      "album": "So Tonight That I Might See",
-      "popularity": 65,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/blue-light-mazzy-star-1993.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:us-and-them-pink-floyd-1973",
-      "title": "Us and Them",
-      "creator": "Pink Floyd",
-      "year": 1973,
-      "album": "The Dark Side of the Moon",
-      "popularity": 63,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/us-and-them-pink-floyd-1973.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:hello-dolly-louis-armstrong-1969",
-      "title": "Hello, Dolly",
-      "creator": "Louis Armstrong",
-      "year": 1969,
-      "album": "Hello, Dolly! (Remastered)",
-      "popularity": 61,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/hello-dolly-louis-armstrong-1969.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:big-balls-ac-dc-2016",
-      "title": "Big Balls",
-      "creator": "AC/DC",
-      "year": 2016,
-      "album": "Dirty Deeds Done Dirt Cheap",
-      "popularity": 59,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/big-balls-ac-dc-2016.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:tear-in-my-heart-topxmm-live-twenty-one-pilots-2017",
-      "title": "Tear in My Heart (TOPxMM) Live",
-      "creator": "Twenty One Pilots",
-      "year": 2017,
-      "album": "Blurryface",
-      "popularity": 57,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/tear-in-my-heart-topxmm-live-twenty-one-pilots-2017.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:i-need-your-love-calvin-harris-2013",
-      "title": "I Need Your Love",
-      "creator": "Calvin Harris",
-      "year": 2013,
-      "album": "18 Months",
-      "popularity": 55,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/i-need-your-love-calvin-harris-2013.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:la-despedida-daddy-yankee-2010",
-      "title": "La despedida",
-      "creator": "Daddy Yankee",
-      "year": 2010,
-      "album": "Mundial (Bonus Deluxe Version)",
-      "popularity": 53,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/la-despedida-daddy-yankee-2010.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:parasail-travis-scott-2023",
-      "title": "PARASAIL",
-      "creator": "Travis Scott",
-      "year": 2023,
-      "album": "UTOPIA",
-      "popularity": 51,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/parasail-travis-scott-2023.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:sly-herbie-hancock-1973",
-      "title": "Sly",
-      "creator": "Herbie Hancock",
-      "year": 1973,
-      "album": "Head Hunters",
-      "popularity": 49,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/sly-herbie-hancock-1973.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:the-phoenix-fall-out-boy-2013",
-      "title": "The Phoenix",
-      "creator": "Fall Out Boy",
-      "year": 2013,
-      "album": "Save Rock And Roll",
-      "popularity": 47,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/the-phoenix-fall-out-boy-2013.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:mi-gran-noche-raphael-1967",
-      "title": "Mi gran noche",
-      "creator": "Raphael",
-      "year": 1967,
-      "album": "Raphael: 30 Éxitos Insuperables",
-      "popularity": 45,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/mi-gran-noche-raphael-1967.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:warriors-imagine-dragons-2014",
-      "title": "Warriors",
-      "creator": "Imagine Dragons",
-      "year": 2014,
-      "album": "Smoke + Mirrors (Deluxe)",
-      "popularity": 43,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/warriors-imagine-dragons-2014.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:a-little-less-sixteen-candles-a-little-more-touch-me-fall-out-boy-2005",
-      "title": "A Little Less Sixteen Candles, a Little More “Touch Me”",
-      "creator": "Fall Out Boy",
-      "year": 2005,
-      "album": "From Under the Cork Tree",
-      "popularity": 41,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/a-little-less-sixteen-candles-a-little-more-touch-me-fall-out-boy-2005.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:mala-mujer-c-tangana-2017",
-      "title": "Mala mujer",
-      "creator": "C. Tangana",
-      "year": 2017,
-      "album": "Mala Mujer - Single",
-      "popularity": 39,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/mala-mujer-c-tangana-2017.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:bandolero-don-omar-2019",
-      "title": "Bandolero",
-      "creator": "Don Omar",
+      "id": "song:ob-la-di-ob-la-da-the-beatles-2019",
+      "title": "Ob-La-Di, Ob-La-Da",
+      "creator": "The Beatles",
       "year": 2019,
-      "album": "Los Bandoleros",
-      "popularity": 37,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/bandolero-don-omar-2019.webp",
+      "album": "The Beatles (The White Album)",
+      "popularity": 80,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/ob-la-di-ob-la-da-the-beatles-2019.webp",
       "src": {
         "recording": "musicbrainz",
         "popularity": "itunes",
@@ -700,13 +232,13 @@
       }
     },
     {
-      "id": "song:loco-por-ti-andres-calamaro-1988",
-      "title": "Loco por ti",
-      "creator": "Andrés Calamaro",
-      "year": 1988,
-      "album": "Alta Suciedad",
-      "popularity": 35,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/loco-por-ti-andres-calamaro-1988.webp",
+      "id": "song:pet-sematary-ramones-1996",
+      "title": "Pet Sematary",
+      "creator": "Ramones",
+      "year": 1996,
+      "album": "Brain Drain",
+      "popularity": 78,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/pet-sematary-ramones-1996.webp",
       "src": {
         "recording": "musicbrainz",
         "popularity": "itunes",
@@ -714,13 +246,13 @@
       }
     },
     {
-      "id": "song:ooh-la-the-kooks-2007",
-      "title": "Ooh La",
-      "creator": "The Kooks",
-      "year": 2007,
-      "album": "Inside In / Inside Out (Bonus Track Version)",
-      "popularity": 33,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/ooh-la-the-kooks-2007.webp",
+      "id": "song:come-out-and-play-keep-em-separated-the-offspring-1994",
+      "title": "Come Out and Play (Keep 'Em Separated)",
+      "creator": "The Offspring",
+      "year": 1994,
+      "album": "Smash (Remastered)",
+      "popularity": 76,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/come-out-and-play-keep-em-separated-the-offspring-1994.webp",
       "src": {
         "recording": "musicbrainz",
         "popularity": "itunes",
@@ -728,13 +260,13 @@
       }
     },
     {
-      "id": "song:it-could-be-sweet-portishead-2001",
-      "title": "It Could Be Sweet",
-      "creator": "Portishead",
-      "year": 2001,
-      "album": "Dummy",
-      "popularity": 31,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/it-could-be-sweet-portishead-2001.webp",
+      "id": "song:the-hardest-button-to-button-the-white-stripes-2003",
+      "title": "The Hardest Button to Button",
+      "creator": "The White Stripes",
+      "year": 2003,
+      "album": "Elephant",
+      "popularity": 74,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/the-hardest-button-to-button-the-white-stripes-2003.webp",
       "src": {
         "recording": "musicbrainz",
         "popularity": "itunes",
@@ -742,13 +274,321 @@
       }
     },
     {
-      "id": "song:gil-la-jangada-trueno-2026",
-      "title": "Gil (La Jangada)",
-      "creator": "Trueno",
+      "id": "song:youve-got-the-love-florence-the-machine-2012",
+      "title": "You've Got the Love",
+      "creator": "Florence + The Machine",
+      "year": 2012,
+      "album": "Lungs (Digital Deluxe Version)",
+      "popularity": 72,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/youve-got-the-love-florence-the-machine-2012.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:lo-malo-aitana-2018",
+      "title": "Lo malo",
+      "creator": "Aitana",
+      "year": 2018,
+      "album": null,
+      "popularity": 70,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/lo-malo-aitana-2018.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "chart-promusicae-los40",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:try-everything-shakira-2026",
+      "title": "Try Everything",
+      "creator": "Shakira",
       "year": 2026,
+      "album": "Zootopia (Original Motion Picture Soundtrack)",
+      "popularity": 68,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/try-everything-shakira-2026.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:memory-one-ludovico-einaudi-2004",
+      "title": "Memory One",
+      "creator": "Ludovico Einaudi",
+      "year": 2004,
+      "album": "Solo Piano",
+      "popularity": 67,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/memory-one-ludovico-einaudi-2004.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:windowlicker-aphex-twin-2001",
+      "title": "Windowlicker",
+      "creator": "Aphex Twin",
+      "year": 2001,
+      "album": "Windowlicker - EP",
+      "popularity": 65,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/windowlicker-aphex-twin-2001.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:amiga-mia-alejandro-sanz-2001",
+      "title": "Amiga Mía",
+      "creator": "Alejandro Sanz",
+      "year": 2001,
+      "album": "Alejandro Sanz: Grandes Éxitos 1997-2004",
+      "popularity": 63,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/amiga-mia-alejandro-sanz-2001.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:why-i-sing-the-blues-b-b-king-1999",
+      "title": "Why I Sing the Blues",
+      "creator": "B.B. King",
+      "year": 1999,
+      "album": "Live & Well",
+      "popularity": 61,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/why-i-sing-the-blues-b-b-king-1999.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:jangadero-mercedes-sosa-2020",
+      "title": "Jangadero",
+      "creator": "Mercedes Sosa",
+      "year": 2020,
+      "album": "La Vida Era Más Corta",
+      "popularity": 59,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/jangadero-mercedes-sosa-2020.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:block-rockin-beats-the-chemical-brothers-1998",
+      "title": "Block Rockin' Beats",
+      "creator": "The Chemical Brothers",
+      "year": 1998,
+      "album": "Dig Your Own Hole",
+      "popularity": 57,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/block-rockin-beats-the-chemical-brothers-1998.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:roseblood-mazzy-star-1996",
+      "title": "Roseblood",
+      "creator": "Mazzy Star",
+      "year": 1996,
+      "album": "Among My Swan",
+      "popularity": 55,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/roseblood-mazzy-star-1996.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:knee-socks-arctic-monkeys-2013",
+      "title": "Knee Socks",
+      "creator": "Arctic Monkeys",
+      "year": 2013,
+      "album": "AM",
+      "popularity": 53,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/knee-socks-arctic-monkeys-2013.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:someone-somewhere-in-summertime-simple-minds-2004",
+      "title": "Someone Somewhere (In Summertime)",
+      "creator": "Simple Minds",
+      "year": 2004,
+      "album": "New Gold Dream (81–82–83–84) [Remastered]",
+      "popularity": 51,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/someone-somewhere-in-summertime-simple-minds-2004.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:misty-ella-fitzgerald-1991",
+      "title": "Misty",
+      "creator": "Ella Fitzgerald",
+      "year": 1991,
+      "album": "Let No Man Write My Epitaph (Soundtrack from the Motion Picture)",
+      "popularity": 49,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/misty-ella-fitzgerald-1991.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:drive-r-e-m-1992",
+      "title": "Drive",
+      "creator": "R.E.M.",
+      "year": 1992,
+      "album": "Automatic For The People (25th Anniversary Edition) [2017 Remaster]",
+      "popularity": 47,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/drive-r-e-m-1992.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:heaven-clairo-2018",
+      "title": "Heaven",
+      "creator": "Clairo",
+      "year": 2018,
+      "album": "Heaven - Single",
+      "popularity": 45,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/heaven-clairo-2018.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:pain-in-my-heart-otis-redding-1993",
+      "title": "Pain In My Heart",
+      "creator": "Otis Redding",
+      "year": 1993,
+      "album": "The Very Best of Otis Redding",
+      "popularity": 43,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/pain-in-my-heart-otis-redding-1993.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:la-maza-mercedes-sosa-2014",
+      "title": "La Maza",
+      "creator": "Mercedes Sosa",
+      "year": 2014,
+      "album": "Cantora",
+      "popularity": 41,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/la-maza-mercedes-sosa-2014.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:this-life-vampire-weekend-2022",
+      "title": "This Life",
+      "creator": "Vampire Weekend",
+      "year": 2022,
+      "album": "Father of the Bride",
+      "popularity": 39,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/this-life-vampire-weekend-2022.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:deja-vu-gustavo-cerati-2009",
+      "title": "Deja Vu",
+      "creator": "Gustavo Cerati",
+      "year": 2009,
+      "album": "Fuerza Natural",
+      "popularity": 37,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/deja-vu-gustavo-cerati-2009.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:ayer-la-vi-don-omar-2007",
+      "title": "Ayer la ví",
+      "creator": "Don Omar",
+      "year": 2007,
+      "album": "King of Kings (Armageddon Edition)",
+      "popularity": 35,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/ayer-la-vi-don-omar-2007.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:staralfur-sigur-ros-1999",
+      "title": "Starálfur",
+      "creator": "Sigur Rós",
+      "year": 1999,
+      "album": "Ágætis Byrjun",
+      "popularity": 33,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/staralfur-sigur-ros-1999.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:te-amare-silvio-rodriguez-2004",
+      "title": "Te Amaré",
+      "creator": "Silvio Rodríguez",
+      "year": 2004,
+      "album": "Rabo de Nube",
+      "popularity": 31,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/te-amare-silvio-rodriguez-2004.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:gil-trueno-2025",
+      "title": "Gil",
+      "creator": "Trueno",
+      "year": 2025,
       "album": "La Vida Era Más Corta",
       "popularity": 29,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/gil-la-jangada-trueno-2026.webp",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/gil-trueno-2025.webp",
       "src": {
         "recording": "musicbrainz",
         "popularity": "itunes",
@@ -757,7 +597,7 @@
     },
     {
       "id": "song:apuesta-por-el-rock-n-roll-heroes-del-silencio-2007",
-      "title": "Apuesta por el rock 'n' roll",
+      "title": "Apuesta por el Rock 'n' Roll",
       "creator": "Héroes del Silencio",
       "year": 2007,
       "album": "Héroes del Silencio: The Platinum Collection",
@@ -770,13 +610,13 @@
       }
     },
     {
-      "id": "song:quien-mas-quien-menos-joaquin-sabina-2017",
-      "title": "Quien más, quien menos",
-      "creator": "Joaquín Sabina",
-      "year": 2017,
-      "album": "Lo Niego Todo",
+      "id": "song:moon-herbie-hancock-2022",
+      "title": "MOON",
+      "creator": "Herbie Hancock",
+      "year": 2022,
+      "album": "NOT TiGHT",
       "popularity": 25,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/quien-mas-quien-menos-joaquin-sabina-2017.webp",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/moon-herbie-hancock-2022.webp",
       "src": {
         "recording": "musicbrainz",
         "popularity": "itunes",
@@ -784,13 +624,13 @@
       }
     },
     {
-      "id": "song:buenos-dias-eladio-carrion-2026",
-      "title": "Buenos Días",
-      "creator": "Eladio Carrión",
-      "year": 2026,
-      "album": "Buenos Días - Single",
-      "popularity": 24,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/buenos-dias-eladio-carrion-2026.webp",
+      "id": "song:poull-bojer-solo-piano-yann-tiersen-2022",
+      "title": "Poull Bojer (Solo Piano)",
+      "creator": "Yann Tiersen",
+      "year": 2022,
+      "album": "Kerber (Solo Piano)",
+      "popularity": 23,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/poull-bojer-solo-piano-yann-tiersen-2022.webp",
       "src": {
         "recording": "musicbrainz",
         "popularity": "itunes",
@@ -798,125 +638,13 @@
       }
     },
     {
-      "id": "song:taking-pictures-of-you-the-kooks-2011",
-      "title": "Taking Pictures of You",
-      "creator": "The Kooks",
-      "year": 2011,
-      "album": "Junk of the Heart (Bonus Track Version)",
-      "popularity": 22,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/taking-pictures-of-you-the-kooks-2011.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:around-town-the-kooks-2014",
-      "title": "Around Town",
-      "creator": "The Kooks",
-      "year": 2014,
-      "album": "Listen (Deluxe Version)",
-      "popularity": 20,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/around-town-the-kooks-2014.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:las-prendas-yung-beef-2021",
-      "title": "Las Prendas",
-      "creator": "Yung Beef",
-      "year": 2021,
-      "album": "Las Prendas (Remix) - Single",
-      "popularity": 18,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/las-prendas-yung-beef-2021.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:parallel-jalebi-hudson-mohawke-rmx-four-tet-2014",
-      "title": "Parallel Jalebi (Hudson Mohawke rmx)",
-      "creator": "Four Tet",
-      "year": 2014,
-      "album": "Beautiful Rewind",
-      "popularity": 16,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/parallel-jalebi-hudson-mohawke-rmx-four-tet-2014.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:me-gusta-manuel-carrasco-2018",
-      "title": "Me gusta",
-      "creator": "Manuel Carrasco",
-      "year": 2018,
-      "album": "La Cruz del Mapa",
-      "popularity": 14,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/me-gusta-manuel-carrasco-2018.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:kaiman-rigoberta-bandini-2025",
-      "title": "KAIMAN",
-      "creator": "Rigoberta Bandini",
-      "year": 2025,
-      "album": "Jesucrista Superstar",
-      "popularity": 12,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/kaiman-rigoberta-bandini-2025.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:amor-sin-clausulas-a-cappella-kase-o-2016",
-      "title": "Amor sin cláusulas (a cappella)",
-      "creator": "Kase.O",
-      "year": 2016,
-      "album": "El Círculo",
-      "popularity": 10,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/amor-sin-clausulas-a-cappella-kase-o-2016.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:mar-antiguo-el-ultimo-de-la-fila-2006",
-      "title": "Mar antiguo",
-      "creator": "El Último de la Fila",
-      "year": 2006,
-      "album": "El Último de la Fila, Los Burros & Los Rápidos...Historia de una Banda (Autobiografía Sónica)",
-      "popularity": 8,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/mar-antiguo-el-ultimo-de-la-fila-2006.webp",
-      "src": {
-        "recording": "musicbrainz",
-        "popularity": "itunes",
-        "posterUrl": "supabase"
-      }
-    },
-    {
-      "id": "song:uno-de-eses-gatos-sen-senra-2023",
-      "title": "Uno de eses gatos",
-      "creator": "Sen Senra",
+      "id": "song:cowboys-de-la-a3-arde-bogota-2023",
+      "title": "Cowboys de la A3",
+      "creator": "Arde Bogotá",
       "year": 2023,
-      "album": "PO2054AZ, Vol. 1",
-      "popularity": 6,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/uno-de-eses-gatos-sen-senra-2023.webp",
+      "album": "COWBOYS DE LA A3",
+      "popularity": 21,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/cowboys-de-la-a3-arde-bogota-2023.webp",
       "src": {
         "recording": "musicbrainz",
         "popularity": "itunes",
@@ -924,13 +652,125 @@
       }
     },
     {
-      "id": "song:buena-mala-alizzz-2019",
-      "title": "Buena mala",
-      "creator": "Alizzz",
+      "id": "song:a-tu-manera-macaco-2022",
+      "title": "A Tu Manera",
+      "creator": "Macaco",
+      "year": 2022,
+      "album": "Vuélame el Corazón",
+      "popularity": 19,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/a-tu-manera-macaco-2022.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:te-he-echado-de-menos-pablo-alboran-2022",
+      "title": "Te He Echado de Menos",
+      "creator": "Pablo Alborán",
+      "year": 2022,
+      "album": "Tanto (Nueva Edición)",
+      "popularity": 17,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/te-he-echado-de-menos-pablo-alboran-2022.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:pern-yann-tiersen-2016",
+      "title": "Pern",
+      "creator": "Yann Tiersen",
+      "year": 2016,
+      "album": "EUSA",
+      "popularity": 15,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/pern-yann-tiersen-2016.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:cuando-suba-la-marea-amaral-2011",
+      "title": "Cuando Suba La Marea",
+      "creator": "Amaral",
+      "year": 2011,
+      "album": "Hacia Lo Salvaje (Deluxe Edition)",
+      "popularity": 13,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/cuando-suba-la-marea-amaral-2011.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:moved-el-ano-violadores-del-verso-2001",
+      "title": "Moved el Ano",
+      "creator": "Violadores del Verso",
+      "year": 2001,
+      "album": "Violadores del Verso + Kase.O: Mierda",
+      "popularity": 11,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/moved-el-ano-violadores-del-verso-2001.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:la-revolucion-sexual-la-casa-azul-2019",
+      "title": "La Revolución Sexual",
+      "creator": "La Casa Azul",
       "year": 2019,
-      "album": "19",
+      "album": "La Revolución Sexual",
+      "popularity": 9,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/la-revolucion-sexual-la-casa-azul-2019.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:deja-de-bailar-alaska-y-dinarama-1983",
+      "title": "Deja de bailar",
+      "creator": "Alaska y Dinarama",
+      "year": 1983,
+      "album": "Canciones Profanas",
+      "popularity": 7,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/deja-de-bailar-alaska-y-dinarama-1983.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:como-la-luz-chambao-2018",
+      "title": "Como la Luz",
+      "creator": "Chambao",
+      "year": 2018,
+      "album": "Pokito a Poko",
+      "popularity": 5,
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/como-la-luz-chambao-2018.webp",
+      "src": {
+        "recording": "musicbrainz",
+        "popularity": "itunes",
+        "posterUrl": "supabase"
+      }
+    },
+    {
+      "id": "song:matematica-de-la-carne-rayden-2014",
+      "title": "Matemática de la Carne",
+      "creator": "Rayden",
+      "year": 2014,
+      "album": "En Alma y Hueso (Versión Comentada)",
       "popularity": 4,
-      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/buena-mala-alizzz-2019.webp",
+      "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/song/matematica-de-la-carne-rayden-2014.webp",
       "src": {
         "recording": "musicbrainz",
         "popularity": "itunes",

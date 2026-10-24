@@ -67,23 +67,76 @@ export function normalizeArtist(artist) {
     .trim()
 }
 
+/** Detecta si un título corresponde a versiones de DJ, transiciones o ediciones residuales de club */
+export function isDjOrGarbageVersion(title) {
+  if (!title) return false
+  const lower = title.toLowerCase()
+  if (/\b(bpmlatino|transition|transitions|hype intro|dj edit|club edit|intro outro|mashup)\b/i.test(lower)) {
+    return true
+  }
+  if (/[\(\[][^()\]]*(?:clean\s+extended|extended\s+dance|extended\s+mix|clean\s+version|\bclean\b|\bextended\b)[^()\]]*[\)\]]/i.test(lower)) {
+    return true
+  }
+  if (/[-–—]\s*(?:clean extended|extended mix|extended version|dj edit)\s*$/i.test(lower)) {
+    return true
+  }
+  return false
+}
+
 /** Detecta si una grabación parece ser en directo, demo, remix o versión no de estudio */
 export function isLiveOrAlternate(candidate) {
   const text = `${candidate.title || ''} ${candidate.disambiguation || ''} ${candidate.releaseName || ''}`.toLowerCase()
+  if (isDjOrGarbageVersion(candidate.title || '')) return true
   return (
     /\b(live|en directo|directo|demo|rehearsal|karaoke|instrumental|remix|club mix|extended mix|bootleg|tribute)\b/i.test(text)
   )
 }
 
 /**
- * Deduplica un conjunto de grabaciones agrupándolas por artista y obra/isrc/título normalizado.
+ * Deduplica un conjunto de grabaciones agrupándolas por MBID de grabación, artista y obra/isrc/título normalizado.
  * Devuelve un array de grupos: cada grupo es una lista de grabaciones fusionadas.
  */
 export function deduplicateRecordings(recordings) {
-  // Primero agrupamos por artista normalizado. Artistas distintos NUNCA se fusionan (ej. Hurt NIN vs Johnny Cash).
-  const byArtist = new Map()
+  // 1. Fusionar primero cualquier grabación que comparta el mismo MBID de grabación de MusicBrainz
+  // (un MBID de grabación identifica una única grabación de audio física; si varios artistas la comparten es una colaboración / feat).
+  const byMbid = new Map()
+  const withoutMbid = []
 
   for (const rec of recordings) {
+    const mbid = rec.recordingMbid || rec.mbid
+    if (mbid) {
+      if (!byMbid.has(mbid)) byMbid.set(mbid, [])
+      byMbid.get(mbid).push(rec)
+    } else {
+      withoutMbid.push(rec)
+    }
+  }
+
+  // Pre-agrupar grabaciones con mismo MBID en un solo candidato consolidado antes de deduplicar por artista
+  const preMerged = []
+  for (const [, recs] of byMbid) {
+    if (recs.length === 1) {
+      preMerged.push(recs[0])
+    } else {
+      // Priorizar el candidato con carátula o id de artista de catálogo
+      const best = recs.find((r) => r.rawArtworkUrl || r.posterUrl) || recs[0]
+      const bestArtistId = recs.find((r) => r.artistId)?.artistId || best.artistId
+      const maxPop = Math.max(...recs.map((r) => r.popularity || r.totalListenCount || 0))
+      preMerged.push({
+        ...best,
+        artistId: bestArtistId,
+        popularity: maxPop,
+        totalListenCount: maxPop,
+      })
+    }
+  }
+
+  const allRecordings = [...preMerged, ...withoutMbid]
+
+  // 2. Agrupar por artista normalizado. Artistas distintos nunca se fusionan para versiones distintas (ej. Hurt NIN vs Johnny Cash).
+  const byArtist = new Map()
+
+  for (const rec of allRecordings) {
     const artistKey = normalizeArtist(rec.artist || rec.creator || '')
     if (!byArtist.has(artistKey)) {
       byArtist.set(artistKey, [])
@@ -95,20 +148,26 @@ export function deduplicateRecordings(recordings) {
 
   for (const [, artistRecs] of byArtist) {
     // Dentro del artista, agrupamos con prioridad:
-    // 1. workId (MusicBrainz Work ID)
-    // 2. isrc
-    // 3. normalizedTitle
-    const groups = [] // array de { workIds: Set, isrcs: Set, normTitles: Set, recordings: [] }
+    // 1. mbid de grabación
+    // 2. workId (MusicBrainz Work ID)
+    // 3. isrc
+    // 4. normalizedTitle
+    const groups = [] // array de { mbids: Set, workIds: Set, isrcs: Set, normTitles: Set, recordings: [] }
 
     for (const rec of artistRecs) {
       const normTitle = normalizeTitle(rec.title)
       const workId = rec.workId || rec.workMbid
       const isrc = rec.isrc
+      const mbid = rec.recordingMbid || rec.mbid
 
       // Buscar si encaja en un grupo existente
       let matchedGroup = null
 
       for (const g of groups) {
+        if (mbid && g.mbids.has(mbid)) {
+          matchedGroup = g
+          break
+        }
         if (workId && g.workIds.has(workId)) {
           matchedGroup = g
           break
@@ -125,11 +184,13 @@ export function deduplicateRecordings(recordings) {
 
       if (matchedGroup) {
         matchedGroup.recordings.push(rec)
+        if (mbid) matchedGroup.mbids.add(mbid)
         if (workId) matchedGroup.workIds.add(workId)
         if (isrc) matchedGroup.isrcs.add(isrc)
         if (normTitle) matchedGroup.normTitles.add(normTitle)
       } else {
         const newGroup = {
+          mbids: new Set(mbid ? [mbid] : []),
           workIds: new Set(workId ? [workId] : []),
           isrcs: new Set(isrc ? [isrc] : []),
           normTitles: new Set(normTitle ? [normTitle] : []),
@@ -192,10 +253,13 @@ export function pickCanonicalSong(group) {
   }
 
   // Título limpio para mostrar y generar el slug canónico (sin coletillas de remaster, directo, edición, etc.)
-  const displayTitle = cleanDisplayTitle(canonical.title) || canonical.title
+  let displayTitle = cleanDisplayTitle(canonical.title) || canonical.title
+  if (!displayTitle || displayTitle.trim() === '') {
+    displayTitle = canonical.title || group.find((g) => g.title)?.title || 'Sin título'
+  }
   const artistName = canonical.artist || canonical.creator || 'Desconocido'
-  const titleSlug = slugify(displayTitle).slice(0, 60).replace(/-+$/, '')
-  const artistSlug = slugify(artistName).slice(0, 30).replace(/-+$/, '')
+  const titleSlug = (slugify(displayTitle).slice(0, 60).replace(/-+$/, '')) || 'cancion'
+  const artistSlug = (slugify(artistName).slice(0, 30).replace(/-+$/, '')) || 'artista'
   const songId = earliestYear
     ? `song:${titleSlug}-${artistSlug}-${earliestYear}`
     : `song:${titleSlug}-${artistSlug}`

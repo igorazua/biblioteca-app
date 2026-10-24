@@ -17,7 +17,7 @@ import { fileURLToPath } from 'node:url'
 import { gzipSync } from 'node:zlib'
 import { createClient } from '@supabase/supabase-js'
 import sharp from 'sharp'
-import { cleanDisplayTitle, deduplicateRecordings, normalizeArtist, pickCanonicalSong, slugify } from './dedupe.mjs'
+import { cleanDisplayTitle, deduplicateRecordings, isDjOrGarbageVersion, normalizeArtist, pickCanonicalSong, slugify } from './dedupe.mjs'
 import { getAllScrapedSpanishHits } from './spanish-charts.mjs'
 
 const here = dirname(fileURLToPath(import.meta.url))
@@ -148,7 +148,7 @@ async function resolveInMusicBrainz(title, artist, artistMbid = null) {
 /** 2. Ingestar y resolver éxitos de España raspados */
 async function processSpanishHits(unresolvedList, seedArtists = []) {
   console.log('\n=== Paso 1: Procesando éxitos oficiales en España ===')
-  const scraped = await getAllScrapedSpanishHits()
+  const scraped = (await getAllScrapedSpanishHits()).filter((h) => !isDjOrGarbageVersion(h.title))
   const resolvedRecordings = []
 
   for (let i = 0; i < scraped.length; i++) {
@@ -254,6 +254,7 @@ async function processSeedArtists(artists, unresolvedList) {
     const normArtist = normalizeArtist(artist.title)
     const matchingTracks = results
       .filter((r) => {
+        if (!r.trackName || isDjOrGarbageVersion(r.trackName)) return false
         const rNorm = normalizeArtist(r.artistName)
         return rNorm === normArtist || rNorm.includes(normArtist) || normArtist.includes(rNorm)
       })
@@ -294,9 +295,16 @@ async function processSeedArtists(artists, unresolvedList) {
       // 1. Buscar coincidencia en las 100 grabaciones del artista obtenidas de MusicBrainz
       let mb = null
       const match = mbRecs.find((mr) => {
+        if (!mr.title || (mr.title.startsWith('[') && mr.title.endsWith(']'))) return false
         const mrClean = cleanDisplayTitle(mr.title)
+        if (!mrClean) return false
         const mrNorm = mrClean.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim()
-        return mrNorm === normT || mrNorm.startsWith(normT) || normT.startsWith(mrNorm)
+        if (!mrNorm || !normT) return false
+        if (mrNorm === normT) return true
+        if (mrNorm.length >= 4 && normT.length >= 4) {
+          return mrNorm.startsWith(normT) || normT.startsWith(mrNorm)
+        }
+        return false
       })
 
       if (match) {
@@ -359,8 +367,11 @@ async function processSeedArtists(artists, unresolvedList) {
         const rankFactor = 1 - (rank / 15) * 0.6 // Rango de 1.0 (tema #1) a 0.4 (tema #15)
         const weightedPop = Math.round(artistBasePop * rankFactor * 100)
 
+        let songTitle = cleanDisplayTitle(t.trackName) || cleanDisplayTitle(mb.title) || t.trackName
+        if (!songTitle || songTitle.trim() === '') songTitle = t.trackName
+
         allRecordings.push({
-          title: cleanDisplayTitle(mb.title || t.trackName),
+          title: songTitle,
           artist: artist.title,
           artistId: artist.id,
           artistMbid: artist.mbid,
@@ -678,8 +689,9 @@ async function main() {
   const groups = deduplicateRecordings(allCandidates)
   console.log(`Grupos formados tras deduplicación: ${groups.length}`)
 
-  // Convertir cada grupo en una canción canónica y garantizar 0 IDs duplicados
+  // Convertir cada grupo en una canción canónica y garantizar 0 IDs y 0 MBIDs duplicados
   const songsById = new Map()
+  const songsByMbid = new Map()
   const mergedGroupsSample = []
 
   for (const group of groups) {
@@ -690,15 +702,26 @@ async function main() {
     const coverCand = group.find((g) => g.rawArtworkUrl)
     if (coverCand) song.rawArtworkUrl = coverCand.rawArtworkUrl
 
+    // Si ya existe este MBID exacto, fusionar variantes (elimina canciones con distinto ID que comparten MBID)
+    if (song.mbid && songsByMbid.has(song.mbid)) {
+      const existing = songsByMbid.get(song.mbid)
+      existing.popularity = Math.max(existing.popularity, song.popularity)
+      if (!existing.album && song.album) existing.album = song.album
+      if (!existing.rawArtworkUrl && song.rawArtworkUrl) existing.rawArtworkUrl = song.rawArtworkUrl
+      continue
+    }
+
     // Si ya existe este ID exacto, fusionar variantes
     if (songsById.has(song.id)) {
       const existing = songsById.get(song.id)
       existing.popularity = Math.max(existing.popularity, song.popularity)
       if (!existing.album && song.album) existing.album = song.album
       if (!existing.rawArtworkUrl && song.rawArtworkUrl) existing.rawArtworkUrl = song.rawArtworkUrl
-    } else {
-      songsById.set(song.id, song)
+      continue
     }
+
+    if (song.mbid) songsByMbid.set(song.mbid, song)
+    songsById.set(song.id, song)
 
     if (group.length > 1) {
       mergedGroupsSample.push({
