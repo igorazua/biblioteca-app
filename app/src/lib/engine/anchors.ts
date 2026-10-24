@@ -299,7 +299,7 @@ export interface BuildOptions {
   depth?: number
 }
 
-interface PathConstraint {
+export interface PathConstraint {
   dim: string
   side: Side
 }
@@ -321,6 +321,22 @@ const notorietyOf = (it?: Item): number => {
  * `labels`: etiquetas del catálogo visible (T21). Si no hay, el reparto se mide sobre las propias anclas.
  */
 export function buildTree(anchors: Anchor[], labels: CatalogLabels | null | undefined, opts: BuildOptions): AnchorTree {
+  const builder = createTreeBuilder(anchors, labels, opts)
+  return {
+    shelf: opts.shelf,
+    version: 1,
+    population: labels ? 'catalog' : 'anchors',
+    root: builder.build([], new Set(), 0),
+  }
+}
+
+export interface TreeBuilder {
+  /** nodo (con su subárbol) para un camino de respuestas, sin usar las anclas de `excluded` */
+  build: (path: PathConstraint[], excluded: Set<string>, depth: number) => TreeNode | null
+}
+
+/** El constructor de nodos de `buildTree`, reutilizable en ejecución para completar ramas que el árbol guardado no tiene. */
+export function createTreeBuilder(anchors: Anchor[], labels: CatalogLabels | null | undefined, opts: BuildOptions): TreeBuilder {
   const { shelf } = opts
   const maxAlts = opts.alternatives ?? 3
   const maxDepth = opts.depth ?? 3
@@ -442,12 +458,7 @@ export function buildTree(anchors: Anchor[], labels: CatalogLabels | null | unde
   }
 
   void anchorById
-  return {
-    shelf,
-    version: 1,
-    population: labels ? 'catalog' : 'anchors',
-    root: build([], new Set(), 0),
-  }
+  return { build }
 }
 
 /** Texto del árbol para revisión: «Duelo 1: A o B (dimensión). Si gana A → Duelo 2: …». */
@@ -493,6 +504,13 @@ export interface ScriptInput {
   recentOrienters?: string[][]
   /** anclas que aporta el usuario (T25); como mucho una por pareja */
   extraAnchors?: Anchor[]
+  /** lista de anclas de la estantería (por defecto, la de data/anchors) */
+  anchors?: Anchor[]
+  /**
+   * dimensiones que las preguntas previas ya fijaron (T17 §B.2: «se cuentan como respondidas y no se preguntan»):
+   * no se vuelven a preguntar y las parejas tienen que ser de ese lado. Con alguna, el guion se construye en ejecución.
+   */
+  preAnswered?: { dim: string; side: 'A' | 'B' }[]
   depth?: number
   /** mínimo de obras propias para mezclarlas (5) */
   minOwnToMix?: number
@@ -554,37 +572,48 @@ function rotationFactor(recent: string[][] | undefined, a: string, b: string): n
 export function nextScriptPair(inp: ScriptInput): ScriptSelection | null {
   const { tree, shelf, itemsById } = inp
   const maxDepth = inp.depth ?? 3
-  if (!tree?.root) return null
+  const pre = inp.preAnswered ?? []
+  if (!tree?.root && pre.length === 0) return null
 
-  let node: TreeNode | null = tree.root
+  // Si el árbol guardado no tiene una rama (estanterías escasas) o un hueco se queda sin parejas libres por culpa de
+  // obras de duelos anteriores, se completa con el mismo constructor que usa buildTree. Es determinista.
+  let builder: TreeBuilder | null = null
+  const getBuilder = () => (builder ??= createTreeBuilder(inp.anchors ?? getAnchors(shelf), null, { shelf, itemsById }))
+
+  let node: TreeNode | null = pre.length > 0 ? null : tree.root
   let depth = 0
-  const path: PathConstraint[] = []
+  const path: PathConstraint[] = pre.map((p) => ({ dim: p.dim, side: p.side }))
   const nodePath: string[] = []
   const seen = new Set<string>()
+  let passesAtNode = 0
 
-  const advance = (side: Side | null) => {
-    if (!node) return
+  const advance = (dim: string | null, side: Side | null) => {
     if (side === null) {
-      const sc = staticChild(node)
-      node = sc.child
-      nodePath.push(sc.side ?? '-')
+      if (node) {
+        const sc = staticChild(node)
+        node = sc.child
+        nodePath.push(sc.side ?? '-')
+      } else {
+        nodePath.push('-')
+      }
     } else {
-      path.push({ dim: node.dim, side })
+      path.push({ dim: dim!, side })
       nodePath.push(side)
-      node = node[side]
+      node = node ? node[side] : null
     }
     depth++
+    passesAtNode = 0
   }
 
   // 1. Reconstruir dónde estamos a partir de los duelos del guion ya jugados
   for (const d of inp.duels) {
     if (!isAnchorDimId(d.dimension)) continue
-    if (!node) return null
     seen.add(d.a)
     seen.add(d.b)
     const dim = d.dimension.slice(ANCHOR_DIM_PREFIX.length)
     if (d.unknown || !d.winner) {
-      if (remaining(node, seen, itemsById).length === 0) advance(null)
+      passesAtNode++
+      if (node && remaining(node, seen, itemsById).length === 0) advance(null, null)
     } else {
       const w = itemsById.get(d.winner)
       const l = itemsById.get(d.winner === d.a ? d.b : d.a)
@@ -593,15 +622,30 @@ export function nextScriptPair(inp: ScriptInput): ScriptSelection | null {
         const sl = resolveSide(l, dim, { inferred: true, extra: inp.extraAnchors })
         side = sl === 'A' ? 'B' : sl === 'B' ? 'A' : null
       }
-      advance(side)
+      advance(side ? dim : null, side)
     }
     if (depth >= maxDepth) return null
   }
 
-  // 2. Si el hueco actual se ha agotado (todo lo enseñado), seguir por la siguiente rama
+  // 2. Hueco actual: el del árbol; si no existe, uno construido; si se ha agotado, la siguiente rama
   const blocked = new Set([...inp.shown, ...seen])
-  while (node && depth < maxDepth && remaining(node, blocked, itemsById).length === 0) advance(null)
-  if (!node || depth >= maxDepth) return null
+  for (;;) {
+    if (depth >= maxDepth) return null
+    if (!node) {
+      node = getBuilder().build(path, blocked, depth)
+      if (!node) return null
+    }
+    if (remaining(node, blocked, itemsById).length > 0) break
+    if (passesAtNode === 0) {
+      // no se ha pasado nada aquí: las parejas están ocupadas por obras de duelos anteriores; se rehace el hueco
+      const fresh = getBuilder().build(path, blocked, depth)
+      if (fresh && remaining(fresh, blocked, itemsById).length > 0) {
+        node = fresh
+        break
+      }
+    }
+    advance(null, null)
+  }
 
   // 3. Elegir la alternativa con mayor R_a · R_b para este usuario, rotando respecto a sesiones recientes
   const alts = remaining(node, blocked, itemsById)

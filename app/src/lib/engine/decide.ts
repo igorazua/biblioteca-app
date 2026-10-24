@@ -4,9 +4,26 @@ import { PARAMS } from './params'
 import { MOOD_GENRES, NONFICTION_GENRES } from '../../data/questions'
 import { friendRanks } from '../rank'
 import { sim as engineSim, vecOf } from './features'
-import { recog, type RecogContext } from './recog'
+import { recog, inferBirthYear, type RecogContext } from './recog'
 import { computeUserVector, cosineWithUser } from './userVec'
 import { getDimensionsForShelf, mapAnswersToPrefs, type Dimension } from './dimensions'
+import { ANCHOR_DIM_PREFIX, getAnchorDimensions, getTree, legacyDimensionFor, nextScriptPair } from './anchors'
+import { userSeedAnchors } from './userSeeds'
+
+/** Dimensiones de contraste de la estantería: las de T17 (`dimensions.ts`) y las del guion de los 3 primeros duelos (T22). */
+function dimsFor(shelf: ShelfType): Dimension[] {
+  return [...getDimensionsForShelf(shelf), ...getAnchorDimensions(shelf)]
+}
+
+const itemsByIdCache = new WeakMap<Item[], Map<string, Item>>()
+function itemsMapOf(items: Item[]): Map<string, Item> {
+  let m = itemsByIdCache.get(items)
+  if (!m) {
+    m = new Map(items.map((it) => [it.id, it]))
+    itemsByIdCache.set(items, m)
+  }
+  return m
+}
 
 export type Answers = Record<string, string | string[] | undefined>
 
@@ -122,6 +139,8 @@ export interface DuelPair {
   b: Item
   phase: 'F1' | 'F2' | 'F3' | 'coarse' | 'fine'
   dimension?: string
+  /** true si sale del guion de anclas de los 3 primeros duelos (T22) */
+  scripted?: boolean
   infoGain: number
   rA?: number
   rB?: number
@@ -414,6 +433,66 @@ export function nextDuel(
     )
   }
 
+  // Guion de los 3 primeros duelos (T22): anclas conocidísimas de extremos opuestos, sacadas del árbol de la estantería.
+  // Va antes del cálculo de R de todo el catálogo: el guion solo necesita R de las anclas de la pareja.
+  if (state.round === 1 && state.rejected.length === 0) {
+    const tree = getTree(shelf)
+    if (tree?.root) {
+      const itemsById = itemsMapOf(items)
+      const birthYear = profile?.birthYear ?? inferBirthYear(userEntries, items) ?? undefined
+      const scriptCtx: RecogContext = {
+        user: profile ?? { country: 'ES', lang: 'es' },
+        entries,
+        deckLearn,
+        friends,
+        doubtfulItems: state.doubtfulItems,
+        birthYear,
+      }
+      const ownItems = items.filter((it) => it.type === shelf && !it.hidden && isOwn(it))
+      // Dimensiones que las preguntas previas ya fijaron: no se preguntan y las parejas son de ese lado (T17 §B.2)
+      const initialPrefs = mapAnswersToPrefs(shelf, state.answers)
+      const preAnswered: { dim: string; side: 'A' | 'B' }[] = []
+      for (const ad of getAnchorDimensions(shelf)) {
+        const legacyId = legacyDimensionFor(shelf, ad.id)
+        const p = legacyId ? initialPrefs[legacyId] ?? 0 : 0
+        if (Math.abs(p) >= 2) preAnswered.push({ dim: ad.id.slice(ANCHOR_DIM_PREFIX.length), side: p > 0 ? 'A' : 'B' })
+      }
+      const pick = nextScriptPair({
+        tree,
+        shelf,
+        itemsById,
+        duels: state.duels,
+        shown,
+        recogOf: (it) => recog(it, scriptCtx),
+        isOwn,
+        ownItems,
+        ranking: shelfRankings,
+        recentOrienters,
+        extraAnchors: userSeedAnchors({ shelf, profile, entries, friends }),
+        preAnswered,
+      })
+      if (pick) {
+        const [first, second] = rng() < 0.5 ? [pick.a, pick.b] : [pick.b, pick.a]
+        const [rFirst, rSecond] = first === pick.a ? [pick.rA, pick.rB] : [pick.rB, pick.rA]
+        const tierOf = (it: Item) => (typeof it.fameTier === 'number' ? it.fameTier : 1)
+        return {
+          a: first,
+          b: second,
+          phase: 'F1',
+          dimension: pick.dimensionId,
+          scripted: true,
+          infoGain: Math.round(pick.rA * pick.rB * 100) / 100,
+          rA: rFirst,
+          rB: rSecond,
+          tierA: tierOf(first),
+          tierB: tierOf(second),
+          isOwnA: isOwn(first),
+          isOwnB: isOwn(second),
+        }
+      }
+    }
+  }
+
   // Orientadores de la estantería aún no mostrados en la sesión (las obras ocultas no salen en duelos)
   // Las expansiones de un juego del catálogo («Carcassonne: The Castle» si existe «Carcassonne») no orientan: solo si son propias
   const baseTitles = new Set(items.filter((it) => it.type === shelf && !it.title.includes(':')).map((it) => normTitle(it.title)))
@@ -512,7 +591,8 @@ export function nextDuel(
     }
   }
 
-  const allDims = getDimensionsForShelf(shelf)
+  const allDims = dimsFor(shelf)
+  const legacyDims = getDimensionsForShelf(shelf)
   const closedSet = new Set(state.closedDims)
   const neutralSet = new Set(state.neutralDims)
   const poolItems = pool.map((id) => items.find((i) => i.id === id)).filter(Boolean) as Item[]
@@ -527,7 +607,7 @@ export function nextDuel(
   // FASES 1 Y 2: Contraste y Afinar (§C.2, §C.3, T19 §1.2)
   if (currentPhase === 'F1' || currentPhase === 'F2') {
     // Dimensiones que siguen abiertas y no neutrales
-    const openDims = allDims.filter((d) => !closedSet.has(d.id) && !neutralSet.has(d.id))
+    const openDims = legacyDims.filter((d) => !closedSet.has(d.id) && !neutralSet.has(d.id))
 
     // Evaluar masa de candidatas en lado A (la más cercana al 50 % parte mejor)
     const evaluatedDims: { dim: Dimension; massA: number; diffToHalf: number }[] = []
@@ -812,30 +892,35 @@ export function applyDuelChoice(
   // Actualizar preferencias explícitas de dimensión (T17 §C.4)
   const nextPrefs = { ...state.prefs }
   const nextNeutralDims = [...state.neutralDims]
-  const allDims = getDimensionsForShelf(state.shelf)
+  const allDims = dimsFor(state.shelf)
   const dim = dimensionId ? allDims.find((d) => d.id === dimensionId) : null
 
-  if (dim) {
-    const winSide = dim.side(winner)
-    const prevPref = nextPrefs[dim.id] || 0
-
+  // Suma +1 al lado ganador de una dimensión; si el usuario se contradice, vuelve a 0 y no se pregunta más (§C.4)
+  const bumpPref = (dimId: string, winSide: 'A' | 'B' | null) => {
+    const prevPref = nextPrefs[dimId] || 0
     if (winSide === 'A') {
       if (prevPref < 0) {
-        // Contradicción (+1 y luego −1): la dimensión vuelve a 0 y no se pregunta más (§C.4)
-        nextPrefs[dim.id] = 0
-        if (!nextNeutralDims.includes(dim.id)) nextNeutralDims.push(dim.id)
+        nextPrefs[dimId] = 0
+        if (!nextNeutralDims.includes(dimId)) nextNeutralDims.push(dimId)
       } else {
-        nextPrefs[dim.id] = Math.min(2, prevPref + 1)
+        nextPrefs[dimId] = Math.min(2, prevPref + 1)
       }
     } else if (winSide === 'B') {
       if (prevPref > 0) {
-        // Contradicción
-        nextPrefs[dim.id] = 0
-        if (!nextNeutralDims.includes(dim.id)) nextNeutralDims.push(dim.id)
+        nextPrefs[dimId] = 0
+        if (!nextNeutralDims.includes(dimId)) nextNeutralDims.push(dimId)
       } else {
-        nextPrefs[dim.id] = Math.max(-2, prevPref - 1)
+        nextPrefs[dimId] = Math.max(-2, prevPref - 1)
       }
     }
+  }
+
+  if (dim) {
+    const winSide = dim.side(winner)
+    bumpPref(dim.id, winSide)
+    // El guion de anclas (T22) también informa a la dimensión equivalente de T17, para Afinar y la propuesta
+    const mirrorId = legacyDimensionFor(state.shelf, dim.id)
+    if (mirrorId && winSide) bumpPref(mirrorId, winSide)
   }
 
   const nextClosedDims = Object.entries(nextPrefs)
@@ -1067,7 +1152,7 @@ export function getProposal(
   const rejectedSet = new Set(state.rejected)
   const rejectedItems = state.rejected.map((id) => itemsById.get(id)).filter(Boolean) as Item[]
 
-  const allDims = getDimensionsForShelf(state.shelf)
+  const allDims = dimsFor(state.shelf)
 
   // Filtro duro de dimensiones cerradas: solo obras de ese lado o «ninguno» (§C.4)
   const passesClosedDimensions = (it: Item): boolean => {
@@ -1164,7 +1249,7 @@ export function formatReasons(
   profile?: Profile
 ): string[] {
   const reasons: string[] = []
-  const allDims = getDimensionsForShelf(state.shelf)
+  const allDims = dimsFor(state.shelf)
 
   // 1. Preferencias cerradas primero (§C.5):
   for (const cdId of state.closedDims) {
