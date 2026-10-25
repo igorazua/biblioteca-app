@@ -10,7 +10,7 @@ export const SHELF_ENABLED: Record<ShelfType, boolean> = {
   book: true,
   artist: true,
   boardgame: true,
-  song: true,
+  song: false,
 }
 
 export const PLATFORMS = ['Netflix', 'Prime Video', 'HBO Max', 'Disney+', 'Movistar+', 'Filmin', 'Apple TV+'] as const

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { friends, itemsOfType } from '../data/catalog'
 import { nextCards } from '../lib/engine/deck'
@@ -6,6 +6,7 @@ import { useStore } from '../store/useStore'
 import { useCatalog } from '../store/useCatalog'
 import { supabase } from '../lib/supabase'
 import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type Item, type ShelfType } from '../types'
+import { cleanDisplayTitle, isDjOrGarbageVersion, slugify } from '../lib/cleanTitle'
 import { Portal } from './ui'
 import { Poster } from './Poster'
 import { Icon } from './Icon'
@@ -44,6 +45,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
   const [searchError, setSearchError] = useState(false)
   const [searchRetryKey, setSearchRetryKey] = useState(0)
   const [resolvingRef, setResolvingRef] = useState<string | null>(null)
+  const lastMbTimeRef = useRef(0)
 
   const catalogVersion = useCatalog((s) => s.version)
 
@@ -76,11 +78,10 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
       .slice(0, 40)
   }, [shelf, q, catalogVersion])
 
-  // Búsqueda en catálogo vivo (Wikidata / TVmaze / OL / MB) con debounce de 300 ms y mínimo 2 letras
+  // Búsqueda en catálogo vivo: para canciones MusicBrainz en directo (T28.8.3); para el resto, biblio-catalog (Wikidata / TVmaze / OL)
   useEffect(() => {
     const trimmed = q.trim()
-    const client = supabase
-    if (!shelf || shelf === 'boardgame' || trimmed.length < 2 || !client) {
+    if (!shelf || shelf === 'boardgame' || trimmed.length < 2) {
       setRemoteResults([])
       setSearchingRemote(false)
       setSearchError(false)
@@ -88,6 +89,121 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
     }
 
     const controller = new AbortController()
+
+    // Para canciones: si hay pocos resultados locales (< 5), buscar en MusicBrainz con debounce de 400ms (T28.8.3)
+    if (shelf === 'song') {
+      if (results.length >= 5) {
+        setRemoteResults([])
+        setSearchingRemote(false)
+        return
+      }
+
+      setSearchingRemote(true)
+      setSearchError(false)
+
+      const timer = setTimeout(async () => {
+        try {
+          const now = Date.now()
+          const waitMs = Math.max(0, 1000 - (now - lastMbTimeRef.current))
+          if (waitMs > 0) await new Promise((r) => setTimeout(r, waitMs))
+          lastMbTimeRef.current = Date.now()
+
+          const qString = trimmed.includes(' ')
+            ? `recording:"${trimmed.replace(/["«»]/g, '')}" OR (${trimmed.split(/\s+/).map((w) => `(recording:"${w}" OR artist:"${w}")`).join(' AND ')})`
+            : `recording:"${trimmed.replace(/["«»]/g, '')}" OR "${trimmed.replace(/["«»]/g, '')}"`
+
+          const res = await fetch(`https://musicbrainz.org/ws/2/recording?query=${encodeURIComponent(qString)}&limit=15&fmt=json`, {
+            signal: controller.signal,
+          })
+          if (!res.ok) throw new Error(`MB status ${res.status}`)
+          const data = await res.json()
+
+          if (!controller.signal.aborted) {
+            const rawRecs = data.recordings || []
+            const localTitles = new Set(results.flatMap((r) => [norm(r.title), norm(r.originalTitle ?? '')]))
+            const localMbids = new Set(results.map((r) => r.mbid).filter(Boolean))
+            const liveCatalog = useCatalog.getState().items
+
+            const candidates: RemoteSearchResult[] = []
+            const seenKeys = new Set<string>()
+
+            for (const r of rawRecs) {
+              if (isDjOrGarbageVersion(r.title)) continue
+              const cleanT = cleanDisplayTitle(r.title)
+              if (!cleanT) continue
+
+              const rawArt = r['artist-credit']?.[0]?.name || ''
+              const cleanArt = rawArt.replace(/\s+(?:feat\.|ft\.|con|with|junto a)\s+.*$/i, '').trim() || 'Desconocido'
+
+              const key = `${norm(cleanT)}|${norm(cleanArt)}`
+              if (seenKeys.has(key)) continue
+              seenKeys.add(key)
+
+              if (localTitles.has(norm(cleanT)) || localMbids.has(r.id)) continue
+
+              let minYear: number | null = null
+              if (r['first-release-date']) {
+                const y = parseInt(r['first-release-date'].slice(0, 4), 10)
+                if (y >= 1900 && y <= 2026) minYear = y
+              }
+              for (const rel of r.releases || []) {
+                if (rel.date) {
+                  const y = parseInt(rel.date.slice(0, 4), 10)
+                  if (y >= 1900 && y <= 2026 && (!minYear || y < minYear)) minYear = y
+                }
+                if (rel['release-group']?.['first-release-date']) {
+                  const y = parseInt(rel['release-group']['first-release-date'].slice(0, 4), 10)
+                  if (y >= 1900 && y <= 2026 && (!minYear || y < minYear)) minYear = y
+                }
+              }
+
+              const titleSlug = slugify(cleanT).slice(0, 60).replace(/-+$/, '') || 'cancion'
+              const artistSlug = slugify(cleanArt).slice(0, 30).replace(/-+$/, '') || 'artista'
+              const canonicalId = minYear ? `song:${titleSlug}-${artistSlug}-${minYear}` : `song:${titleSlug}-${artistSlug}`
+
+              if (liveCatalog[canonicalId]) continue
+
+              const caaRelease = r.releases?.find((rel: any) => rel.status === 'Official') || r.releases?.[0]
+              const coverUrl = caaRelease?.id ? `https://coverartarchive.org/release/${caaRelease.id}/front-250` : null
+
+              candidates.push({
+                ref: { source: 'musicbrainz', id: r.id },
+                title: cleanT,
+                year: minYear,
+                creator: cleanArt,
+                posterUrl: coverUrl,
+                catalogId: canonicalId,
+              })
+            }
+
+            setRemoteResults(candidates)
+            setSearchError(false)
+            setSearchingRemote(false)
+          }
+        } catch {
+          if (!controller.signal.aborted) {
+            // Sin conexión o si MusicBrainz falla, se muestran solo los resultados locales, sin errores en pantalla (T28.8.3 §5)
+            setRemoteResults([])
+            setSearchError(false)
+            setSearchingRemote(false)
+          }
+        }
+      }, 400)
+
+      return () => {
+        clearTimeout(timer)
+        controller.abort()
+      }
+    }
+
+    // Para el resto de estanterías (películas, libros, etc.): biblio-catalog Edge Function
+    const client = supabase
+    if (!client) {
+      setRemoteResults([])
+      setSearchingRemote(false)
+      return
+    }
+
     setSearchingRemote(true)
     setSearchError(false)
 
@@ -128,9 +244,45 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
   }, [shelf, q, results, searchRetryKey])
 
   const handleSelectRemote = async (hit: RemoteSearchResult) => {
-    const client = supabase
-    if (!shelf || !client || resolvingRef) return
+    if (!shelf || resolvingRef) return
     setResolvingRef(hit.ref.id)
+
+    // Para canciones de MusicBrainz: añadir directamente al catálogo vivo (T28.8.3 §4)
+    if (shelf === 'song' && hit.ref.source === 'musicbrainz') {
+      try {
+        const titleSlug = slugify(hit.title).slice(0, 60).replace(/-+$/, '') || 'cancion'
+        const artistSlug = slugify(hit.creator || 'artista').slice(0, 30).replace(/-+$/, '') || 'artista'
+        const songId = hit.catalogId || (hit.year ? `song:${titleSlug}-${artistSlug}-${hit.year}` : `song:${titleSlug}-${artistSlug}`)
+
+        const item: Item = {
+          id: songId,
+          type: 'song',
+          title: hit.title,
+          creator: hit.creator || 'Desconocido',
+          year: hit.year || 2000,
+          mbid: hit.ref.id,
+          synopsis: '',
+          popularity: 50,
+          posterUrl: hit.posterUrl || null,
+          genres: [],
+          src: {
+            recording: 'musicbrainz',
+            popularity: 'musicbrainz',
+            ...(hit.posterUrl ? { posterUrl: 'coverartarchive' } : {}),
+          },
+        }
+
+        useCatalog.getState().addItems([item])
+        setOpen(item.id)
+        setRemoteResults((prev) => prev.filter((r) => r.ref.id !== hit.ref.id))
+      } finally {
+        setResolvingRef(null)
+      }
+      return
+    }
+
+    const client = supabase
+    if (!client) return
     try {
       const { data, error } = await client.functions.invoke('biblio-catalog', {
         body: {

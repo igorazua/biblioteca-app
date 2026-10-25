@@ -24,13 +24,13 @@ export function cleanDisplayTitle(title) {
   let t = title.toString().trim()
   t = t.replace(/^["'«](.*)["'»]$/, '$1')
   // Quitar paréntesis y corchetes con información de versión, directo, remaster, feat, edit, etc.
-  const parenPattern = /[\(\[][^()\]]*(?:feat\.|ft\.|remaster|deluxe|anniversary|live|directo|mix|version|edit|mono|stereo|session|demo|take \d|acoustic|ac[uú]stico|original|full length|bonus track|instrumental)[^()\]]*[\)\]]/gi
+  const parenPattern = /[\(\[][^()\]]*(?:feat\.|ft\.|con\s+|with\s+|junto a\s+|remaster|deluxe|anniversary|live|directo|mix|version|edit|mono|stereo|session|demo|take \d|acoustic|ac[uú]stico|original|full length|bonus track|instrumental)[^()\]]*[\)\]]/gi
   t = t.replace(parenPattern, '')
   // Quitar coletillas separadas por guión al final: "- Remastered 2011", "- Live", "- Radio Edit", etc.
-  const dashPattern = /\s*[-–—]\s*(?:remaster|remastered|live|en directo|directo|radio edit|single edit|single version|album version|full length|deluxe|version|edit|mono|stereo|anniversary|\d{4} remaster|acoustic|ac[uú]stico|original mix|remix|bonus track).*$/i
+  const dashPattern = /\s*[-–—]\s*(?:feat\.|ft\.|con\s+|with\s+|junto a\s+|remaster|remastered|live|en directo|directo|radio edit|single edit|single version|album version|full length|deluxe|version|edit|mono|stereo|anniversary|\d{4} remaster|acoustic|ac[uú]stico|original mix|remix|bonus track).*$/i
   t = t.replace(dashPattern, '')
   // Quitar feat. residuales
-  t = t.replace(/\s+(?:feat\.|ft\.|con)\s+.*$/i, '')
+  t = t.replace(/\s+(?:feat\.|ft\.|con|with|junto a)\s+.*$/i, '')
   return t.replace(/\s+/g, ' ').trim()
 }
 
@@ -56,7 +56,7 @@ export function normalizeArtist(artist) {
   if (!artist) return ''
   let a = artist.toString().trim()
   // Quitar artistas invitados secundarios para encontrar el artista principal si están combinados
-  a = a.replace(/\s+(?:feat\.|ft\.|con)\s+.*$/i, '')
+  a = a.replace(/\s+(?:feat\.|ft\.|con|with|junto a)\s+.*$/i, '')
   return a
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
@@ -81,6 +81,38 @@ export function isDjOrGarbageVersion(title) {
     return true
   }
   return false
+}
+
+/**
+ * Determina el año original de una canción a partir de un conjunto de grabaciones de MusicBrainz
+ * buscando la fecha más antigua (first-release-date, releases, release-groups) entre grabaciones de estudio.
+ * (T28.8 §28.8.1)
+ */
+export function resolveOriginalYear(recordings) {
+  if (!recordings || recordings.length === 0) return null
+  const studio = recordings.filter(
+    (r) => !/\b(live|directo|en directo|demo|bootleg|karaoke|instrumental)\b/i.test(`${r.title || ''} ${r.disambiguation || ''}`)
+  )
+  const pool = studio.length > 0 ? studio : recordings
+
+  let minYear = 9999
+  for (const r of pool) {
+    if (r['first-release-date']) {
+      const y = parseInt(r['first-release-date'].slice(0, 4), 10)
+      if (y >= 1900 && y <= 2026 && y < minYear) minYear = y
+    }
+    for (const rel of (r.releases || [])) {
+      if (rel.date) {
+        const y = parseInt(rel.date.slice(0, 4), 10)
+        if (y >= 1900 && y <= 2026 && y < minYear) minYear = y
+      }
+      if (rel['release-group']?.['first-release-date']) {
+        const y = parseInt(rel['release-group']['first-release-date'].slice(0, 4), 10)
+        if (y >= 1900 && y <= 2026 && y < minYear) minYear = y
+      }
+    }
+  }
+  return minYear !== 9999 ? minYear : null
 }
 
 /** Detecta si una grabación parece ser en directo, demo, remix o versión no de estudio */
@@ -258,8 +290,9 @@ export function pickCanonicalSong(group) {
     displayTitle = canonical.title || group.find((g) => g.title)?.title || 'Sin título'
   }
   const artistName = canonical.artist || canonical.creator || 'Desconocido'
+  const cleanArtist = artistName.replace(/\s+(?:feat\.|ft\.|con|with|junto a)\s+.*$/i, '').trim()
   const titleSlug = (slugify(displayTitle).slice(0, 60).replace(/-+$/, '')) || 'cancion'
-  const artistSlug = (slugify(artistName).slice(0, 30).replace(/-+$/, '')) || 'artista'
+  const artistSlug = (slugify(cleanArtist).slice(0, 30).replace(/-+$/, '')) || 'artista'
   const songId = earliestYear
     ? `song:${titleSlug}-${artistSlug}-${earliestYear}`
     : `song:${titleSlug}-${artistSlug}`

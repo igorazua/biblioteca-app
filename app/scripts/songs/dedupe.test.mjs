@@ -5,12 +5,18 @@
  */
 
 import { describe, it, expect } from 'vitest'
+import { readFileSync } from 'node:fs'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import {
   cleanDisplayTitle,
   deduplicateRecordings,
   isDjOrGarbageVersion,
   pickCanonicalSong,
+  resolveOriginalYear,
 } from './dedupe.mjs'
+
+const here = dirname(fileURLToPath(import.meta.url))
 
 describe('T28 §28.3 · Deduplicación y normalización de canciones', () => {
   it('1. Bohemian Rhapsody: original vs remaster 2011 de Queen → 1 canción', () => {
@@ -407,5 +413,67 @@ describe('T28 §28.3 · Deduplicación y normalización de canciones', () => {
     const song = pickCanonicalSong(groups[0])
     expect(song.title.length).toBeGreaterThan(0)
     expect(song.id).not.toContain('song:-')
+  })
+
+  it('21. T28.8.2: Colaboraciones en título y en ID («con …», «with …», «feat. …», «ft. …», «junto a …»)', () => {
+    // Caso exacto señalado por Igor y Claude: Mamichula (con Nicki Nicole) de Bizarrap
+    const input1 = [
+      {
+        title: 'Mamichula (con Nicki Nicole)',
+        artist: 'Bizarrap',
+        artistMbid: 'bizarrap-mbid',
+        recordingMbid: 'mbid-mamichula-bizarrap',
+        year: 2020,
+      },
+    ]
+    const groups1 = deduplicateRecordings(input1)
+    const song1 = pickCanonicalSong(groups1[0])
+    expect(song1.title).toBe('Mamichula')
+    expect(song1.id).toBe('song:mamichula-bizarrap-2020')
+
+    // Variantes con with, junto a, feat y artista con colaboración
+    expect(cleanDisplayTitle('Mamichula - con Nicki Nicole')).toBe('Mamichula')
+    expect(cleanDisplayTitle('Mamichula (with Nicki Nicole)')).toBe('Mamichula')
+    expect(cleanDisplayTitle('Mamichula junto a Nicki Nicole')).toBe('Mamichula')
+    expect(cleanDisplayTitle('Mamichula [junto a Nicki Nicole]')).toBe('Mamichula')
+    expect(cleanDisplayTitle('Mamichula feat. Nicki Nicole')).toBe('Mamichula')
+
+    const input2 = [
+      {
+        title: 'Monotonía (feat. Ozuna)',
+        artist: 'Shakira con Ozuna',
+        recordingMbid: 'mbid-monotonia',
+        year: 2022,
+      },
+    ]
+    const groups2 = deduplicateRecordings(input2)
+    const song2 = pickCanonicalSong(groups2[0])
+    expect(song2.title).toBe('Monotonía')
+    expect(song2.id).toBe('song:monotonia-shakira-2022')
+  })
+
+  it('22. T28.8.1: Test de riesgo de datos de años históricos en las 10 canciones del encargo (sin red)', () => {
+    const fixturePath = join(here, 'fixtures', 'target_songs_mb_fixture.json')
+    const fixture = JSON.parse(readFileSync(fixturePath, 'utf8'))
+
+    const expectedTable = {
+      'Stairway to Heaven': 1971,
+      "Sweet Child O' Mine": 1987,
+      'Billie Jean': 1982,
+      'Bohemian Rhapsody': 1975,
+      'Wish You Were Here': 1975,
+      'Entre dos tierras': 1990,
+      'Like a Rolling Stone': 1965,
+      'Wonderwall': 1995,
+      'Mediterráneo': 1971,
+      'Hijo de la Luna': 1986,
+    }
+
+    for (const [title, expectedYear] of Object.entries(expectedTable)) {
+      const entry = fixture[title]
+      expect(entry, `Falta la canción ${title} en el fixture`).toBeDefined()
+      const resolved = resolveOriginalYear(entry.recordings)
+      expect(resolved, `Año resuelto para ${title} debe ser ${expectedYear}`).toBe(expectedYear)
+    }
   })
 })

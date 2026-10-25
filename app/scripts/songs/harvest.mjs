@@ -17,7 +17,7 @@ import { fileURLToPath } from 'node:url'
 import { gzipSync } from 'node:zlib'
 import { createClient } from '@supabase/supabase-js'
 import sharp from 'sharp'
-import { cleanDisplayTitle, deduplicateRecordings, isDjOrGarbageVersion, normalizeArtist, pickCanonicalSong, slugify } from './dedupe.mjs'
+import { cleanDisplayTitle, deduplicateRecordings, isDjOrGarbageVersion, normalizeArtist, pickCanonicalSong, resolveOriginalYear, slugify } from './dedupe.mjs'
 import { getAllScrapedSpanishHits } from './spanish-charts.mjs'
 
 const here = dirname(fileURLToPath(import.meta.url))
@@ -69,12 +69,12 @@ async function fetchJsonWithRetry(url, headers = {}, retries = 3, delayMs = 1100
   return { status: 0, data: null }
 }
 
-/** 1. Resolver un tema en MusicBrainz de forma precisa por título y artista */
+/** 1. Resolver un tema en MusicBrainz de forma precisa por título y artista con años canónicos (T28.8) */
 async function resolveInMusicBrainz(title, artist, artistMbid = null) {
   const cleanT = cleanDisplayTitle(title)
-  const normT = cleanT.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim()
-  const slug = slugify(`${normT}-${artist}`)
-  const cachePath = join(MB_CACHE_DIR, `mb_${slug}.json`)
+  const safeTitle = cleanT.replace(/["«»]/g, '').replace(/[’']/g, "'")
+  const slug = slugify(`${cleanT}-${artist}`)
+  const cachePath = join(MB_CACHE_DIR, `mb_official_${slug}.json`)
 
   let data = null
   if (existsSync(cachePath)) {
@@ -86,16 +86,26 @@ async function resolveInMusicBrainz(title, artist, artistMbid = null) {
   }
 
   if (!data) {
-    const mainArtist = artist.split(/\s+(?:ft\.|feat\.|&|y|con)\s+/i)[0].trim()
-    let q = `recording:"${cleanT.replace(/"/g, '')}"`
+    const mainArtist = artist.split(/\s+(?:ft\.|feat\.|&|y|con|with|junto a)\s+/i)[0].trim()
+    let q = `recording:"${safeTitle}"`
     if (artistMbid) {
       q += ` AND arid:${artistMbid}`
     } else {
-      q += ` AND artist:"${mainArtist.replace(/"/g, '')}"`
+      q += ` AND artist:"${mainArtist}"`
     }
-    const url = `https://musicbrainz.org/ws/2/recording?query=${encodeURIComponent(q)}&limit=5&fmt=json`
-    const resp = await fetchJsonWithRetry(url, {}, 3, 1100)
+    q += ` AND status:official`
+
+    let url = `https://musicbrainz.org/ws/2/recording?query=${encodeURIComponent(q)}&limit=100&fmt=json`
+    let resp = await fetchJsonWithRetry(url, {}, 4, 1200)
     data = resp.data
+
+    if (!data?.recordings || data.recordings.length === 0) {
+      const q2 = q.replace(' AND status:official', '')
+      url = `https://musicbrainz.org/ws/2/recording?query=${encodeURIComponent(q2)}&limit=100&fmt=json`
+      resp = await fetchJsonWithRetry(url, {}, 4, 1200)
+      data = resp.data
+    }
+
     if (data) writeFileSync(cachePath, JSON.stringify(data), 'utf8')
     await sleep(1100) // 1 req/segundo estricta
   }
@@ -103,42 +113,40 @@ async function resolveInMusicBrainz(title, artist, artistMbid = null) {
   const recordings = data?.recordings || []
   if (recordings.length === 0) return null
 
-  // Buscar la mejor grabación de estudio
-  const candidates = recordings.filter((r) => {
-    const rTitle = cleanDisplayTitle(r.title).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    return rTitle === normT || rTitle.startsWith(normT) || normT.startsWith(rTitle)
+  // Calcular año canónico original según T28.8.1 (el más antiguo entre estudio, releases y release-groups)
+  const earliestYear = resolveOriginalYear(recordings)
+
+  // Separar grabaciones de estudio de directo/demo
+  const studio = recordings.filter(
+    (r) => !/\b(live|directo|en directo|demo|bootleg|karaoke|instrumental)\b/i.test(`${r.title} ${r.disambiguation || ''}`)
+  )
+  const pool = studio.length > 0 ? studio : recordings
+
+  // Ordenar pool para elegir la mejor grabación de estudio original
+  pool.sort((a, b) => {
+    const aY = a['first-release-date'] ? parseInt(a['first-release-date'].slice(0, 4), 10) : 9999
+    const bY = b['first-release-date'] ? parseInt(b['first-release-date'].slice(0, 4), 10) : 9999
+    return aY - bY
   })
 
-  const pick = candidates[0] || recordings[0]
+  const pick = pool[0]
   if (!pick) return null
-
-  // Encontrar el año original más antiguo en MusicBrainz (>= 1900 y <= 2026)
-  let earliestYear = 9999
-  if (pick['first-release-date']) {
-    const y = parseInt(pick['first-release-date'].slice(0, 4), 10)
-    if (y >= 1900 && y <= 2026) earliestYear = y
-  }
-  if (pick.releases) {
-    for (const rel of pick.releases) {
-      if (rel.date) {
-        const y = parseInt(rel.date.slice(0, 4), 10)
-        if (y >= 1900 && y <= 2026 && y < earliestYear) earliestYear = y
-      }
-    }
-  }
 
   // Cover Art Archive si alguno de los releases tiene release-group o caa
   let caaReleaseMbid = null
-  if (pick.releases) {
-    const relWithCaa = pick.releases.find((rel) => rel.status === 'Official' && rel['release-group']?.id)
-    if (relWithCaa) caaReleaseMbid = relWithCaa.id
+  for (const r of pool) {
+    const relWithCaa = r.releases?.find((rel) => rel.status === 'Official' && rel['release-group']?.id)
+    if (relWithCaa) {
+      caaReleaseMbid = relWithCaa.id
+      break
+    }
   }
 
   return {
     mbid: pick.id,
     title: pick.title,
     artist: pick['artist-credit']?.[0]?.name || artist,
-    year: earliestYear !== 9999 ? earliestYear : null,
+    year: earliestYear,
     isrc: pick.isrcs?.[0] || null,
     caaReleaseMbid,
     disambiguation: pick.disambiguation || null,
@@ -344,10 +352,7 @@ async function processSeedArtists(artists, unresolvedList) {
 
       if (mb && mb.mbid) {
         let year = mb.year
-        if (!year && t.releaseDate) {
-          const y = parseInt(t.releaseDate.slice(0, 4), 10)
-          if (y >= 1900 && y <= 2026) year = y
-        }
+        // Cero invención y cero años de iTunes (T28.8.1): nunca se usa t.releaseDate como año de la canción
 
         // Cero invención: si no hay año verificado de lanzamiento, no entra al catálogo
         if (!year) {

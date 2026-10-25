@@ -8,13 +8,13 @@ export function cleanDisplayTitle(title: string): string {
   let t = title.toString().trim()
   t = t.replace(/^["'«](.*)["'»]$/, '$1')
   // Quitar paréntesis y corchetes con información de versión, directo, remaster, feat, edit, etc.
-  const parenPattern = /[\(\[][^()\]]*(?:feat\.|ft\.|remaster|deluxe|anniversary|live|directo|mix|version|edit|mono|stereo|session|demo|take \d|acoustic|ac[uú]stico|original|full length|bonus track|instrumental)[^()\]]*[\)\]]/gi
+  const parenPattern = /[\(\[][^()\]]*(?:feat\.|ft\.|con\s+|with\s+|junto a\s+|remaster|deluxe|anniversary|live|directo|mix|version|edit|mono|stereo|session|demo|take \d|acoustic|ac[uú]stico|original|full length|bonus track|instrumental)[^()\]]*[\)\]]/gi
   let cleaned = t.replace(parenPattern, '')
   // Quitar coletillas separadas por guión al final: "- Remastered 2011", "- Live", "- Radio Edit", etc.
-  const dashPattern = /\s*[-–—]\s*(?:remaster|remastered|live|en directo|directo|radio edit|single edit|single version|album version|full length|deluxe|version|edit|mono|stereo|anniversary|\d{4} remaster|acoustic|ac[uú]stico|original mix|remix|bonus track).*$/i
+  const dashPattern = /\s*[-–—]\s*(?:feat\.|ft\.|con\s+|with\s+|junto a\s+|remaster|remastered|live|en directo|directo|radio edit|single edit|single version|album version|full length|deluxe|version|edit|mono|stereo|anniversary|\d{4} remaster|acoustic|ac[uú]stico|original mix|remix|bonus track).*$/i
   cleaned = cleaned.replace(dashPattern, '')
   // Quitar feat. residuales
-  cleaned = cleaned.replace(/\s+(?:feat\.|ft\.|con)\s+.*$/i, '')
+  cleaned = cleaned.replace(/\s+(?:feat\.|ft\.|con|with|junto a)\s+.*$/i, '')
   cleaned = cleaned.replace(/\s+/g, ' ').trim()
   return cleaned.length > 0 ? cleaned : title.toString().trim()
 }
@@ -33,4 +33,17 @@ export function isDjOrGarbageVersion(title: string): boolean {
     return true
   }
   return false
+}
+
+/** Convierte a slug simple */
+export function slugify(text: string): string {
+  if (!text) return ''
+  return text
+    .toString()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/['’"”«»]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
 }
