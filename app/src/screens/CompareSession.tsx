@@ -5,8 +5,8 @@ import { getItem } from '../data/catalog'
 import { useStore, starsOfEntries } from '../store/useStore'
 import { ACTIVE_SHELVES, SHELF_LABEL, type Item, type ShelfType, type UserEntry, type DuelRecord } from '../types'
 import {
-  assignSides, buildPriors, DUEL_MILESTONE, fitRatings,
-  planNextDuel, RANK_DUELS_FOR_DONE, updateRankingFromRatings,
+  applyDuelToRanking, assignSides, DUEL_MILESTONE,
+  planNextDuel, RANK_DUELS_FOR_DONE,
   type PlannedDuel,
 } from '../lib/ranking'
 import { SwipePair, type Side } from '../components/SwipePair'
@@ -186,6 +186,7 @@ export function CompareSession() {
       sessionIndex: count,
       starsOf: starsOfEntries(st.entries),
       recent: recentRef.current,
+      anchor: startRank.current,
     })
 
     if (next) {
@@ -266,36 +267,21 @@ export function CompareSession() {
     seenCountRef.current[pair.right.id] = (seenCountRef.current[pair.right.id] || 0) + 1
     recentRef.current.push(pair.left.id, pair.right.id)
 
-    // Reajuste global Bradley-Terry (T30.2)
+    // Coloca las obras cuya búsqueda ya terminó y reordena las colocadas por su nota, con la prior del ranking al
+    // empezar la sesión (applyDuelToRanking). Las sin colocar no entran en el ranking hasta estar colocadas.
     const updatedState = useStore.getState()
     const shelfDuels = updatedState.duels[shelf] ?? {}
-    const allSeen = Object.values(updatedState.entries).filter(
-      (e) => e.status === 'seen' && (e.shelf ?? getItem(e.itemId)?.type) === shelf,
-    )
-    const allSeenIds = allSeen.map((e) => e.itemId)
-    const unrankedItems = allSeen
-      .filter((e) => !ranking.includes(e.itemId) || Boolean(e.provisional))
+    const unrankedItems = Object.values(updatedState.entries)
+      .filter((e) => e.status === 'seen' && (e.shelf ?? getItem(e.itemId)?.type) === shelf && (!ranking.includes(e.itemId) || Boolean(e.provisional)))
       .map((e) => ({ itemId: e.itemId, stars: e.stars }))
-
-    const priors = buildPriors(ranking, unrankedItems, starsOfEntries(updatedState.entries))
-    const fit = fitRatings(allSeenIds, shelfDuels, priors)
-    const newRanking = updateRankingFromRatings(ranking, allSeenIds, fit.ratings, shelfDuels, priors)
-
-    // Verificar si las obras participantes alcanzan los 3 duelos para salir de provisional
-    for (const playedId of [pair.left.id, pair.right.id]) {
-      const dCount = countDuelsForItem(shelfDuels, playedId)
-      if (dCount >= RANK_DUELS_FOR_DONE) {
-        st.markPlaced(playedId)
-      } else if (!ranking.includes(playedId)) {
-        // Obra nueva que juega su primer o segundo duelo: entra en el ranking con flag provisional
-        useStore.setState((s) => ({
-          entries: {
-            ...s.entries,
-            [playedId]: { ...(s.entries[playedId] ?? {}), ranked: true, provisional: true },
-          },
-        }))
-      }
-    }
+    const { ranking: newRanking, placed } = applyDuelToRanking({
+      ranking,
+      anchor: startRank.current,
+      unranked: unrankedItems,
+      duels: shelfDuels,
+      starsOf: starsOfEntries(updatedState.entries),
+    })
+    for (const id of placed) st.markPlaced(id)
 
     // Aplicar el nuevo ordenamiento general y ajustar estrellas de los que cambiaron (T30.2.4)
     st.applyRanking(shelf, newRanking)

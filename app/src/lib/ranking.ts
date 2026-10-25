@@ -29,6 +29,23 @@ export const MIN_UTILITY = 0.005
 /** Peso (precisión) de la prior para obras que ya estaban en el ranking (poca incertidumbre) */
 export const PRIOR_WEIGHT_RANKED = 1.5
 
+/**
+ * Pulido con ancla (Claude, 25/10): la prior sale del ranking al EMPEZAR la sesión, no del de cada turno. Con el del
+ * turno, cada duelo contaba dos veces (ya estaba dentro del ranking) y los errores se quedaban pegados: en la simulación
+ * justa el orden de lo ya colocado caía de 0,89 a 0,58 a los 50 duelos. Peso y escala elegidos con esa simulación.
+ */
+export const ANCHOR_PRIOR_WEIGHT = 3
+/** La nota de la prior va de +3·escala (1.ª) a −3·escala (última) */
+export const ANCHOR_PRIOR_SCALE = 2
+/** Peso de la prior de una obra colocada en esta sesión (su sitio sale de su búsqueda binaria, que ya cuenta en los duelos) */
+export const PLACED_PRIOR_WEIGHT = 1
+/** Proporción de duelos de colocación cuando hay obras sin colocar: n / (n + este número), acotada */
+export const PLACE_SHARE_K = 4
+export const PLACE_SHARE_MIN = 0.35
+export const PLACE_SHARE_MAX = 0.7
+/** Distancia máxima (en puestos) entre las dos obras de un duelo de pulido */
+export const POLISH_MAX_DIST = 3
+
 /** Peso (precisión) de la prior para obras sin colocar (mucha incertidumbre) */
 export const PRIOR_WEIGHT_UNRANKED = 0.5
 
@@ -541,6 +558,133 @@ export function updateRankingFromRatings(
   })
 }
 
+/* ============================ T30 (corrección): colocar y pulir mezclados ============================ */
+
+const normUnranked = (u: readonly (string | UnrankedItem)[]): UnrankedItem[] =>
+  u.map((x) => (typeof x === 'string' ? { itemId: x } : x))
+
+/**
+ * Prior del pulido: las obras del ancla (ranking al empezar la sesión) según su puesto en él; las colocadas después,
+ * con la media de sus vecinas del ancla en el ranking actual y menos peso.
+ */
+export function anchorPriors(anchor: readonly string[], ranking: readonly string[]): Record<string, ItemPrior> {
+  const priors: Record<string, ItemPrior> = {}
+  const N = anchor.length
+  const meanAt = (i: number) => (N <= 1 ? 0 : ANCHOR_PRIOR_SCALE * (3 - (6 * i) / (N - 1)))
+  const inAnchor = new Set(anchor)
+  anchor.forEach((id, i) => { priors[id] = { mean: meanAt(i), weight: ANCHOR_PRIOR_WEIGHT } })
+  ranking.forEach((id, i) => {
+    if (inAnchor.has(id)) return
+    let up: number | undefined
+    let down: number | undefined
+    for (let k = i - 1; k >= 0; k--) if (inAnchor.has(ranking[k])) { up = priors[ranking[k]].mean; break }
+    for (let k = i + 1; k < ranking.length; k++) if (inAnchor.has(ranking[k])) { down = priors[ranking[k]].mean; break }
+    const top = meanAt(0) + 1
+    const bottom = meanAt(Math.max(N - 1, 0)) - 1
+    const mean = ((up ?? top) + (down ?? bottom)) / 2
+    priors[id] = { mean, weight: PLACED_PRIOR_WEIGHT }
+  })
+  return priors
+}
+
+export interface MixedPlacement { done: boolean; insertIndex: number; opponent: string | null; played: number }
+
+/**
+ * Búsqueda binaria que no depende del orden del ranking en cada momento: el hueco de la obra sale de TODOS sus
+ * resultados contra las colocadas (por debajo de las que le ganaron, por encima de las que perdieron), dentro de su
+ * franja de estrellas. Hace falta porque entre dos duelos suyos el pulido puede reordenar el ranking.
+ */
+export function mixedPlacement(
+  ranking: readonly string[],
+  id: string,
+  stars: number | undefined,
+  duels: Record<string, DuelRecord>,
+  starsOf: StarsOf,
+  maxComparisons = PLACEMENT_MAX_COMPARISONS,
+  /** rivales que no pueden salir ahora (ventana sin repetición): se usa el más cercano al medio que sí pueda */
+  avoid: ReadonlySet<string> = new Set(),
+): MixedPlacement {
+  const base = ranking.filter((x) => x !== id)
+  let [lo, hi] = stars !== undefined ? starBand(base, starsOf, stars) : [0, base.length]
+  let played = 0
+  base.forEach((r, i) => {
+    const rec = duels[pairKey(id, r)]
+    if (!rec) return
+    played++
+    if (rec.w === id) hi = Math.min(hi, i)
+    else lo = Math.max(lo, i + 1)
+  })
+  if (lo >= hi) return { done: true, insertIndex: Math.min(Math.max(Math.round((lo + hi) / 2), 0), base.length), opponent: null, played }
+  if (played >= maxComparisons) return { done: true, insertIndex: Math.floor((lo + hi) / 2), opponent: null, played }
+  // rival: el del medio del hueco; si ya se jugó (el ranking se movió), el más cercano al medio sin jugar
+  const mid = Math.floor((lo + hi) / 2)
+  let opponent: string | null = null
+  for (let d = 0; d <= hi - lo && !opponent; d++) {
+    for (const k of [mid - d, mid + d]) {
+      if (k >= lo && k < hi && !duels[pairKey(id, base[k])] && !avoid.has(base[k])) { opponent = base[k]; break }
+    }
+  }
+  if (!opponent) {
+    // todos los del hueco jugados: terminada; si solo estaban ocupados por la ventana, se espera a otro turno
+    const free = base.slice(lo, hi).some((r) => !duels[pairKey(id, r)])
+    return { done: !free, insertIndex: mid, opponent: null, played }
+  }
+  return { done: false, insertIndex: mid, opponent, played }
+}
+
+/** Coloca, con el historial, todas las obras sin colocar cuya búsqueda binaria ya ha terminado. */
+export function settlePlacements(
+  ranking: readonly string[],
+  unranked: readonly (string | UnrankedItem)[],
+  duels: Record<string, DuelRecord>,
+  starsOf: StarsOf,
+): { ranking: string[]; placed: string[] } {
+  let rk = [...ranking]
+  const placed: string[] = []
+  let changed = true
+  // Al colocar una obra cambia el ranking y otra puede quedar resuelta: se repite hasta que no cambie nada
+  while (changed) {
+    changed = false
+    for (const u of normUnranked(unranked)) {
+      if (rk.includes(u.itemId)) continue
+      const p = mixedPlacement(rk, u.itemId, u.stars ?? starsOf(u.itemId), duels, starsOf)
+      if (p.done) {
+        rk = insertAt(rk, u.itemId, p.insertIndex)
+        placed.push(u.itemId)
+        changed = true
+      }
+    }
+  }
+  return { ranking: rk, placed }
+}
+
+/**
+ * Tras cada duelo: coloca las obras ya resueltas y reordena las colocadas por su nota (Bradley-Terry con la prior del
+ * ancla). Las obras sin colocar no entran en el ranking hasta que su búsqueda termina.
+ */
+export function applyDuelToRanking(input: {
+  ranking: readonly string[]
+  anchor?: readonly string[]
+  unranked: readonly (string | UnrankedItem)[]
+  duels: Record<string, DuelRecord>
+  starsOf: StarsOf
+}): { ranking: string[]; placed: string[] } {
+  const un = normUnranked(input.unranked)
+  const unIds = new Set(un.map((u) => u.itemId))
+  // las provisionales que T30 metió en el ranking tras un solo duelo vuelven a tratarse como sin colocar
+  const base = input.ranking.filter((id) => !unIds.has(id))
+  const settled = settlePlacements(base, un, input.duels, input.starsOf)
+  const anchor = (input.anchor ?? input.ranking).filter((id) => !unIds.has(id) || settled.placed.includes(id))
+  const priors = anchorPriors(anchor, settled.ranking)
+  const { ratings } = fitRatings(settled.ranking, input.duels, priors)
+  const pos = new Map(settled.ranking.map((id, i) => [id, i]))
+  const ranking = [...settled.ranking].sort((a, b) => {
+    const d = (ratings[b] ?? 0) - (ratings[a] ?? 0)
+    return Math.abs(d) > 1e-9 ? d : (pos.get(a) ?? 0) - (pos.get(b) ?? 0)
+  })
+  return { ranking, placed: settled.placed }
+}
+
 /* ============================ T30.3: Asignación persistente de lados ============================ */
 
 export interface SideAssignment {
@@ -674,6 +818,8 @@ export interface PlanNextDuelInput {
   starsOf?: StarsOf
   rng?: Rng
   recent?: string[]
+  /** ranking al empezar la sesión: la prior del pulido (por defecto, ranking) */
+  anchor?: readonly string[]
 }
 
 /**
@@ -690,77 +836,84 @@ export function planNextDuel(input: PlanNextDuelInput): PlannedDuel | null {
   const rng = input.rng ?? Math.random
   const starsOf = input.starsOf ?? (() => undefined)
   const recent = input.recent ?? []
+  const unrankedList = normUnranked(input.unranked ?? [])
+  const unIds = new Set(unrankedList.map((u) => u.itemId))
+  const placedRk = ranking.filter((id) => !unIds.has(id))
+  if (placedRk.length + unrankedList.length < 2) return null
 
-  const unrankedList: UnrankedItem[] = (input.unranked ?? []).map((u) =>
-    typeof u === 'string' ? { itemId: u } : u,
-  )
-
-  const allSeenIds = Array.from(new Set([...ranking, ...unrankedList.map((u) => u.itemId)]))
-  if (allSeenIds.length < 2) return null
-
-  const priors = buildPriors(ranking, unrankedList, starsOf)
-  const { ratings, uncertainties } = fitRatings(allSeenIds, duels, priors)
-
-  const sortedAll = [...allSeenIds].sort((a, b) => (ratings[b] ?? 0) - (ratings[a] ?? 0))
-  const candidateMap = new Map<string, { a: string; b: string; util: number }>()
-
-  for (let i = 0; i < sortedAll.length; i++) {
-    const a = sortedAll[i]
-    const neighbours: string[] = []
-    for (let d = 1; d <= NEIGHBORS_COUNT; d++) {
-      if (i - d >= 0) neighbours.push(sortedAll[i - d])
-      if (i + d < sortedAll.length) neighbours.push(sortedAll[i + d])
-    }
-    for (let r = 0; r < RANDOM_CANDIDATES_COUNT; r++) {
-      const randIdx = Math.floor(rng() * sortedAll.length)
-      if (randIdx !== i) neighbours.push(sortedAll[randIdx])
-    }
-
-    for (const b of neighbours) {
-      if (a === b) continue
-      const k = pairKey(a, b)
-      if (candidateMap.has(k)) continue
-
-      const diff = Math.abs((ratings[a] ?? 0) - (ratings[b] ?? 0))
-      const cercania = 1 / (1 + diff)
-      const incertidumbre = (uncertainties[a] ?? 1) + (uncertainties[b] ?? 1)
-      const novedad = duels[k] ? REPEAT_NOVELTY : 1.0
-      const util = cercania * incertidumbre * novedad
-      candidateMap.set(k, { a, b, util })
-    }
+  const duelCount: Record<string, number> = {}
+  for (const k of Object.keys(duels)) {
+    const sep = k.indexOf('|')
+    if (sep <= 0) continue
+    duelCount[k.slice(0, sep)] = (duelCount[k.slice(0, sep)] ?? 0) + 1
+    duelCount[k.slice(sep + 1)] = (duelCount[k.slice(sep + 1)] ?? 0) + 1
   }
 
-  const allCandidates = Array.from(candidateMap.values())
-  let windowCandidates: { a: string; b: string; util: number }[] = []
+  // Estantería vacía: el primer duelo enfrenta a dos sin colocar
+  if (placedRk.length === 0) {
+    const [a, b] = unrankedList
+    if (!b) return null
+    if (duels[pairKey(a.itemId, b.itemId)]) {
+      const w = duels[pairKey(a.itemId, b.itemId)].w
+      return planNextDuel({ ...input, ranking: [w, w === a.itemId ? b.itemId : a.itemId] })
+    }
+    return { kind: 'boot', a: a.itemId, b: b.itemId, subject: a.itemId, opponent: b.itemId }
+  }
 
-  // Relajación progresiva de la ventana sin repetición: NO_REPEAT_WINDOW -> 1 -> 0
+  // Obras sin colocar resueltas ya con el historial: se tratan como colocadas para planificar
+  const settled = settlePlacements(placedRk, unrankedList, duels, starsOf)
+  const rk = settled.ranking
+  const pending = unrankedList.filter((u) => !settled.placed.includes(u.itemId))
+
   for (const win of [NO_REPEAT_WINDOW, 1, 0]) {
-    const recentSlice = win > 0 ? recent.slice(-win * 2) : []
-    const recentSet = new Set(recentSlice)
-    windowCandidates = allCandidates.filter((c) => !recentSet.has(c.a) && !recentSet.has(c.b))
-    if (windowCandidates.length > 0) break
+    const blocked = new Set(win > 0 ? recent.slice(-win * 2) : [])
+
+    // 1. Colocar: el siguiente rival de la búsqueda binaria de cada obra sin colocar (todas a la vez, mezcladas)
+    const places: PlannedDuel[] = []
+    for (const u of pending) {
+      if (blocked.has(u.itemId)) continue
+      const p = mixedPlacement(rk, u.itemId, u.stars ?? starsOf(u.itemId), duels, starsOf, PLACEMENT_MAX_COMPARISONS, blocked)
+      const opp = p.opponent
+      if (!opp || blocked.has(opp)) continue
+      places.push({ kind: 'place', a: u.itemId, b: opp, subject: u.itemId, opponent: opp })
+    }
+
+    // 2. Pulir: parejas cercanas entre las colocadas, ordenadas por cercanía de nota × incertidumbre × novedad
+    const anchor = (input.anchor ?? ranking).filter((id) => rk.includes(id))
+    const { ratings, uncertainties } = fitRatings(rk, duels, anchorPriors(anchor, rk))
+    const polish: { a: string; b: string; util: number }[] = []
+    for (let i = 0; i < rk.length; i++) {
+      for (let j = i + 1; j <= Math.min(rk.length - 1, i + POLISH_MAX_DIST); j++) {
+        const a = rk[i]
+        const b = rk[j]
+        if (blocked.has(a) || blocked.has(b)) continue
+        const novelty = duels[pairKey(a, b)] ? REPEAT_NOVELTY : 1
+        const close = 1 / (1 + Math.abs((ratings[a] ?? 0) - (ratings[b] ?? 0)))
+        const util = close * ((uncertainties[a] ?? 1) + (uncertainties[b] ?? 1)) * novelty
+        if (util >= MIN_UTILITY) polish.push({ a, b, util })
+      }
+    }
+    polish.sort((x, y) => y.util - x.util)
+    const top = polish.slice(0, 5)
+    const onlyRepeats = top.length > 0 && top.every((c) => duels[pairKey(c.a, c.b)])
+
+    if (!places.length && (!top.length || (onlyRepeats && pending.length === 0 && Object.keys(duels).length > 0 && rk.every((id) => (duelCount[id] ?? 0) >= RANK_DUELS_FOR_DONE)))) {
+      if (win === 0) return null
+      continue
+    }
+
+    const share = Math.min(PLACE_SHARE_MAX, Math.max(PLACE_SHARE_MIN, pending.length / (pending.length + PLACE_SHARE_K)))
+    if (places.length && (!top.length || rng() < share)) {
+      // la que menos duelos lleva; empate al azar
+      const min = Math.min(...places.map((p) => duelCount[p.subject] ?? 0))
+      const pool = places.filter((p) => (duelCount[p.subject] ?? 0) === min)
+      return pool[Math.floor(rng() * pool.length)]
+    }
+    const c = top[Math.floor(rng() * top.length)]
+    const aFirst = (uncertainties[c.a] ?? 0) >= (uncertainties[c.b] ?? 0)
+    return { kind: 'rank', a: c.a, b: c.b, subject: aFirst ? c.a : c.b, opponent: aFirst ? c.b : c.a }
   }
-
-  // Filtrar candidatos por umbral de utilidad mínima
-  const filtered = windowCandidates.filter((c) => c.util >= MIN_UTILITY)
-  if (filtered.length === 0) return null
-
-  // Ordenar de mayor a menor utilidad y elegir al azar entre las 5 mejores
-  filtered.sort((x, y) => y.util - x.util)
-  const top5 = filtered.slice(0, 5)
-  const chosen = top5[Math.floor(rng() * top5.length)]
-
-  const aIsSubject = (uncertainties[chosen.a] ?? 0) >= (uncertainties[chosen.b] ?? 0)
-  const subject = aIsSubject ? chosen.a : chosen.b
-  const opponent = aIsSubject ? chosen.b : chosen.a
-
-  return {
-    kind: 'rank',
-    a: chosen.a,
-    b: chosen.b,
-    subject,
-    opponent,
-  }
+  return null
 }
 
 /**
