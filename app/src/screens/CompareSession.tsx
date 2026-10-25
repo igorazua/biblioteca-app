@@ -3,11 +3,11 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { getItem } from '../data/catalog'
 import { useStore, starsOfEntries } from '../store/useStore'
-import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type Item, type ShelfType, type UserEntry, type DuelRecord } from '../types'
+import { ACTIVE_SHELVES, SHELF_LABEL, type Item, type ShelfType, type UserEntry, type DuelRecord } from '../types'
 import {
-  advancePlacementWithDuels, answerPlacement, answerRefine, finishPlacement,
-  newRefineState, planNextDuel, RANK_DUELS_FOR_DONE,
-  type Placement, type PlannedDuel, type RefineState,
+  assignSides, buildPriors, DUEL_MILESTONE, fitRatings,
+  planNextDuel, RANK_DUELS_FOR_DONE, updateRankingFromRatings,
+  type PlannedDuel,
 } from '../lib/ranking'
 import { SwipePair, type Side } from '../components/SwipePair'
 import { Poster } from '../components/Poster'
@@ -17,15 +17,13 @@ import { ScreenTitle } from '../components/ScreenTitle'
 import { Button } from '../components/Button'
 import { Group, Row } from '../components/Group'
 
-export const PAIRS_PER_SESSION = 7
-
 interface Snapshot {
   entries: Record<string, UserEntry>
   ranking: string[]
   current: PlannedDuel | null
-  refine: RefineState
   count: number
-  activePlacement: Placement | null
+  sides: Record<string, 'L' | 'R'>
+  recent: string[]
   duelKey?: { a: string; b: string }
 }
 
@@ -67,6 +65,19 @@ function calcShelfOrdenado(
   return Math.round((100 * bien) / seen.length)
 }
 
+function countDuelsForItem(shDuels: Record<string, DuelRecord>, id: string): number {
+  let c = 0
+  for (const key of Object.keys(shDuels)) {
+    const sep = key.indexOf('|')
+    if (sep > 0) {
+      const a = key.slice(0, sep)
+      const b = key.slice(sep + 1)
+      if (a === id || b === id) c++
+    }
+  }
+  return c
+}
+
 export function CompareSession() {
   const nav = useNavigate()
   const location = useLocation()
@@ -84,18 +95,23 @@ export function CompareSession() {
 
   const [count, setCount] = useState(0)
   const [summary, setSummary] = useState(false)
-  const [activePlacement, setActivePlacement] = useState<Placement | null>(null)
   const [currentDuel, setCurrentDuel] = useState<PlannedDuel | null>(null)
   const [emptyState, setEmptyState] = useState<'none' | 'complete' | 'need-more'>('none')
 
-  const refineRef = useRef<RefineState>(newRefineState())
+  // Asignación persistente de lado (T30.3): si una obra se repite, siempre en el mismo lado
+  const [sides, setSides] = useState<Record<string, 'L' | 'R'>>({})
+  const seenCountRef = useRef<Record<string, number>>({})
+  const recentRef = useRef<string[]>([])
+
   const startRank = useRef<string[]>(ranking ?? [])
   const startOrdenado = useRef<number>(0)
   const [commentFor, setCommentFor] = useState<string | null>(null)
   const [undo, setUndo] = useState<Snapshot | null>(null)
-  // Aviso discreto del último duelo: cuál sube y cuál baja (no bloquea el siguiente)
+  // Aviso discreto del último duelo
   const [flash, setFlash] = useState<{ up: string; down: string; n: number } | null>(null)
-  // El último par se queda montado mientras se planifica el siguiente, para que las cartas no parpadeen
+  // Aviso de hito cada 25 duelos (DUEL_MILESTONE) que no bloquea la interacción
+  const [milestoneNotice, setMilestoneNotice] = useState<string | null>(null)
+
   const lastPair = useRef<{ left: Item; right: Item; leftIsSubject: boolean } | null>(null)
   const lastPairKey = useRef(0)
 
@@ -104,21 +120,15 @@ export function CompareSession() {
     useStore.getState().touchLastCompared(shelf)
   }, [shelf])
 
-  // Inicializar estado de refinado con los conteos de comparaciones existentes
-  const seededRefine = (): RefineState => ({
-    ...newRefineState(),
-    counts: Object.fromEntries(
-      Object.values(useStore.getState().entries).map((e) => [e.itemId, e.cmp ?? 0]),
-    ),
-  })
-
   const resetSession = () => {
     setCount(0)
     setSummary(false)
     setUndo(null)
-    setActivePlacement(null)
     setCurrentDuel(null)
     setEmptyState('none')
+    setSides({})
+    seenCountRef.current = {}
+    recentRef.current = []
     initialDuelConsumed.current = false
     startRank.current = useStore.getState().rankings[shelf] ?? []
     startOrdenado.current = calcShelfOrdenado(
@@ -131,17 +141,23 @@ export function CompareSession() {
   }
 
   useEffect(() => {
-    refineRef.current = seededRefine()
     resetSession()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [shelf])
 
-  // Planificar el siguiente duelo de la sesión
+  // Desvanecer aviso de hito a los 3.5 segundos
+  useEffect(() => {
+    if (!milestoneNotice) return
+    const t = window.setTimeout(() => setMilestoneNotice(null), 3500)
+    return () => window.clearTimeout(t)
+  }, [milestoneNotice])
+
+  // Planificar el siguiente duelo de la sesión (sin límite arbitrario)
   useEffect(() => {
     if (summary) return
 
-    // Si viene con un duelo inicial de la portada y estamos en el primer paso (T19 §4.2.2)
-    if (count === 0 && !initialDuelConsumed.current && initialDuel && !activePlacement) {
+    // Si viene con un duelo inicial de la portada
+    if (count === 0 && !initialDuelConsumed.current && initialDuel) {
       initialDuelConsumed.current = true
       setCurrentDuel(initialDuel)
       setEmptyState('none')
@@ -151,7 +167,6 @@ export function CompareSession() {
     const st = useStore.getState()
     const rk = st.rankings[shelf] ?? []
     const shDuels = st.duels[shelf] ?? {}
-    // Fuente de verdad: el array de ranking (T19 §3)
     const unranked = Object.values(st.entries)
       .filter((e) => e.status === 'seen' && (!rk.includes(e.itemId) || Boolean(e.provisional)) && (e.shelf ?? getItem(e.itemId)?.type) === shelf)
       .sort((a, b) => a.updatedAt - b.updatedAt)
@@ -169,9 +184,8 @@ export function CompareSession() {
       duels: shDuels,
       cmp: counts,
       sessionIndex: count,
-      activePlacement,
-      refineState: refineRef.current,
       starsOf: starsOfEntries(st.entries),
+      recent: recentRef.current,
     })
 
     if (next) {
@@ -179,7 +193,6 @@ export function CompareSession() {
       setEmptyState('none')
     } else {
       setCurrentDuel(null)
-      // Determinar si está completo o necesita más obras
       const totalSeen = Object.values(st.entries).filter(
         (e) => e.status === 'seen' && (e.shelf ?? getItem(e.itemId)?.type) === shelf,
       ).length
@@ -189,21 +202,30 @@ export function CompareSession() {
         setEmptyState('complete')
       }
     }
-  }, [summary, count, activePlacement, shelf, entries, ranking, duels])
+  }, [summary, count, shelf, entries, ranking, duels])
 
-  // Obtener los dos items a comparar
+  // Obtener los dos items a comparar respetando siempre su lado asignado (T30.3)
   const pair = useMemo<{ left: Item; right: Item; leftIsSubject: boolean } | null>(() => {
     if (!currentDuel) return null
     const itA = getItem(currentDuel.a)
     const itB = getItem(currentDuel.b)
     if (!itA || !itB) return null
 
-    // Alternar lado visual para colocación o refinado
-    const flip = (count % 2 === 1)
-    return flip
-      ? { left: itB, right: itA, leftIsSubject: false }
-      : { left: itA, right: itB, leftIsSubject: true }
-  }, [currentDuel, count])
+    const assign = assignSides(currentDuel.a, currentDuel.b, currentDuel.subject, sides, seenCountRef.current)
+    if (JSON.stringify(assign.nextSides) !== JSON.stringify(sides)) {
+      setSides(assign.nextSides)
+    }
+
+    const leftItem = assign.left === itA.id ? itA : itB
+    const rightItem = assign.right === itA.id ? itA : itB
+
+    return {
+      left: leftItem,
+      right: rightItem,
+      leftIsSubject: assign.leftIsSubject,
+    }
+  }, [currentDuel, sides])
+
   if (pair) {
     lastPair.current = pair
     lastPairKey.current = count
@@ -221,54 +243,72 @@ export function CompareSession() {
     const st = useStore.getState()
     const winnerId = w === 'a' ? pair.left.id : pair.right.id
     const loserId = w === 'a' ? pair.right.id : pair.left.id
-    const subjectWon = (w === 'a') === pair.leftIsSubject
 
-    // Guardar snapshot de deshacer
+    // Guardar snapshot de deshacer (T30.2 regla 9)
     setUndo({
       entries: st.entries,
       ranking: st.rankings[shelf] ?? [],
       current: currentDuel,
-      refine: refineRef.current,
       count,
-      activePlacement,
+      sides,
+      recent: [...recentRef.current],
       duelKey: { a: pair.left.id, b: pair.right.id },
     })
 
     setFlash({ up: winnerId, down: loserId, n: count })
 
-    // Registrar duelo y uso
+    // Registrar duelo
     st.recordDuel(shelf, pair.left.id, pair.right.id, winnerId)
     st.bumpCompared([pair.left.id, pair.right.id])
 
-    if (currentDuel.kind === 'boot') {
-      st.applyRanking(shelf, [winnerId, loserId], undefined)
-      st.markPlaced(winnerId)
-      st.markPlaced(loserId)
-      setCurrentDuel(null)
-    } else if (currentDuel.kind === 'place' && currentDuel.placement) {
-      const isPlacementSubjectWon = winnerId === currentDuel.placement.id
-      let nextP = answerPlacement(currentDuel.placement, isPlacementSubjectWon)
-      nextP = advancePlacementWithDuels(nextP, useStore.getState().duels[shelf])
+    // Actualizar recencia y conteos de aparición de obras
+    seenCountRef.current[pair.left.id] = (seenCountRef.current[pair.left.id] || 0) + 1
+    seenCountRef.current[pair.right.id] = (seenCountRef.current[pair.right.id] || 0) + 1
+    recentRef.current.push(pair.left.id, pair.right.id)
 
-      if (nextP.done) {
-        st.applyRanking(shelf, finishPlacement(nextP), currentDuel.placement.id)
-        setActivePlacement(null)
-      } else {
-        setActivePlacement(nextP)
+    // Reajuste global Bradley-Terry (T30.2)
+    const updatedState = useStore.getState()
+    const shelfDuels = updatedState.duels[shelf] ?? {}
+    const allSeen = Object.values(updatedState.entries).filter(
+      (e) => e.status === 'seen' && (e.shelf ?? getItem(e.itemId)?.type) === shelf,
+    )
+    const allSeenIds = allSeen.map((e) => e.itemId)
+    const unrankedItems = allSeen
+      .filter((e) => !ranking.includes(e.itemId) || Boolean(e.provisional))
+      .map((e) => ({ itemId: e.itemId, stars: e.stars }))
+
+    const priors = buildPriors(ranking, unrankedItems, starsOfEntries(updatedState.entries))
+    const fit = fitRatings(allSeenIds, shelfDuels, priors)
+    const newRanking = updateRankingFromRatings(ranking, allSeenIds, fit.ratings, shelfDuels, priors)
+
+    // Verificar si las obras participantes alcanzan los 3 duelos para salir de provisional
+    for (const playedId of [pair.left.id, pair.right.id]) {
+      const dCount = countDuelsForItem(shelfDuels, playedId)
+      if (dCount >= RANK_DUELS_FOR_DONE) {
+        st.markPlaced(playedId)
+      } else if (!ranking.includes(playedId)) {
+        // Obra nueva que juega su primer o segundo duelo: entra en el ranking con flag provisional
+        useStore.setState((s) => ({
+          entries: {
+            ...s.entries,
+            [playedId]: { ...(s.entries[playedId] ?? {}), ranked: true, provisional: true },
+          },
+        }))
       }
-      setCurrentDuel(null)
-    } else if (currentDuel.kind === 'refine' && currentDuel.pair) {
-      const res = answerRefine(st.rankings[shelf] ?? [], refineRef.current, currentDuel.pair, subjectWon)
-      refineRef.current = res.state
-      st.applyRanking(shelf, res.ranking)
-      setCurrentDuel(null)
     }
 
-    const n = count + 1
-    setCount(n)
-    if (n >= PAIRS_PER_SESSION) {
-      setSummary(true)
+    // Aplicar el nuevo ordenamiento general y ajustar estrellas de los que cambiaron (T30.2.4)
+    st.applyRanking(shelf, newRanking)
+    setCurrentDuel(null)
+
+    const nextCount = count + 1
+    setCount(nextCount)
+
+    // Cada 25 duelos, aviso discreto que no bloquea la sesión (T30.1)
+    if (nextCount > 0 && nextCount % DUEL_MILESTONE === 0) {
+      setMilestoneNotice(`Llevas ${nextCount}. Sigue o pulsa Terminar`)
     }
+
     if (settings.commentBoxInPairs) {
       setCommentFor(winnerId)
     }
@@ -284,16 +324,17 @@ export function CompareSession() {
       entries: undo.entries,
       rankings: { ...s.rankings, [shelf]: undo.ranking },
     }))
-    refineRef.current = undo.refine
+    setSides(undo.sides)
+    recentRef.current = undo.recent
     setCurrentDuel(undo.current)
     setCount(undo.count)
-    setActivePlacement(undo.activePlacement)
     setSummary(false)
     setUndo(null)
     setFlash(null)
+    setMilestoneNotice(null)
   }
 
-  // Resumen al terminar los 7 duelos
+  // Resumen al terminar
   const nowOrdenado = useMemo(() => {
     if (!summary) return 0
     return calcShelfOrdenado(entries, useStore.getState().rankings, duels, shelf)
@@ -312,15 +353,18 @@ export function CompareSession() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [summary])
 
+  const handleBack = () => {
+    if (count > 0 && !summary) {
+      setSummary(true)
+    } else {
+      nav('/comparar')
+    }
+  }
+
   return (
     <div className="h-full flex flex-col relative bg-bg select-none">
       <ScreenTitle
         label={`DUELOS · ${SHELF_LABEL[shelf].plural.toUpperCase()}`}
-        step={
-          !summary && currentDuel
-            ? { current: Math.min(count + 1, PAIRS_PER_SESSION), total: PAIRS_PER_SESSION }
-            : undefined
-        }
         title={
           summary
             ? 'Sesión completada'
@@ -333,24 +377,55 @@ export function CompareSession() {
             ? (startOrdenado.current !== nowOrdenado
                 ? `${SHELF_LABEL[shelf].plural}: del ${startOrdenado.current} % al ${nowOrdenado} %`
                 : `${SHELF_LABEL[shelf].plural}: ${nowOrdenado} % ordenado`)
-            : currentDuel
-            ? undefined
             : undefined
         }
-        onBack={() => nav('/comparar')}
+        onBack={handleBack}
         action={
-          undo && !summary ? (
-            <button
-              onClick={doUndo}
-              aria-label="Deshacer la última elección"
-              title="Deshacer"
-              className="w-9 h-9 rounded-full bg-accent text-accent-ink flex items-center justify-center active:scale-90 transition-transform"
-            >
-              <Icon name="rotateCcw" size={18} strokeWidth={2.4} />
-            </button>
+          !summary ? (
+            <div className="flex items-center gap-2.5">
+              {count > 0 && (
+                <span className="text-meta tabular-nums text-ink/75 font-medium">
+                  {count} {count === 1 ? 'duelo' : 'duelos'}
+                </span>
+              )}
+              {count > 0 && (
+                <button
+                  type="button"
+                  onClick={() => setSummary(true)}
+                  className="px-2.5 py-1 text-meta font-medium rounded-full bg-surface border border-line text-ink hover:text-ink/80 active:scale-95 transition-all"
+                >
+                  Terminar
+                </button>
+              )}
+              {undo && (
+                <button
+                  onClick={doUndo}
+                  aria-label="Deshacer la última elección"
+                  title="Deshacer"
+                  className="w-8 h-8 rounded-full bg-accent text-accent-ink flex items-center justify-center active:scale-90 transition-transform"
+                >
+                  <Icon name="rotateCcw" size={16} strokeWidth={2.4} />
+                </button>
+              )}
+            </div>
           ) : undefined
         }
       />
+
+      {/* Aviso flotante discreto del hito cada 25 duelos (T30.1) */}
+      <AnimatePresence>
+        {milestoneNotice && !summary && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.15 }}
+            className="absolute top-16 inset-x-0 mx-auto w-fit z-40 bg-surface/95 border border-line px-3.5 py-1.5 rounded-full text-meta text-ink shadow-lg pointer-events-none"
+          >
+            {milestoneNotice}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <div className="flex-1 min-h-0 px-5 pb-6 flex flex-col">
         {summary && moves ? (
@@ -368,6 +443,9 @@ export function CompareSession() {
               <Button variant="primary" onClick={resetSession} className="w-full">
                 Seguir con {SHELF_LABEL[shelf].plural}
               </Button>
+              <Button variant="secondary" onClick={() => nav(`/estanteria/${shelf}`)} className="w-full">
+                Ver tu ranking de {SHELF_LABEL[shelf].plural.toLowerCase()}
+              </Button>
               <Button variant="text" onClick={() => nav('/comparar')} className="w-full">
                 Elegir otra estantería
               </Button>
@@ -376,7 +454,6 @@ export function CompareSession() {
         ) : shownPair ? (
           <div className="relative flex-1 min-h-0 flex flex-col">
             <SwipePair key={lastPairKey.current} left={sideOf(shownPair.left)} right={sideOf(shownPair.right)} onChoose={onChoose} kind="rank" />
-            {/* aviso del último duelo en el centro: arriba la que sube, abajo la que baja; no bloquea el siguiente */}
             <div className="absolute inset-x-0 top-[42%] z-30 flex justify-center pointer-events-none px-6" aria-live="polite">
               <AnimatePresence mode="wait">
                 {flash && (
@@ -404,7 +481,10 @@ export function CompareSession() {
               Cuando marques más, seguimos ordenando.
             </p>
             <div className="mt-4 flex flex-col gap-2.5 w-full max-w-xs">
-              <Button variant="primary" onClick={() => nav('/descubrir')}>
+              <Button variant="primary" onClick={() => nav(`/estanteria/${shelf}`)}>
+                Ver tu ranking
+              </Button>
+              <Button variant="secondary" onClick={() => nav('/descubrir')}>
                 Ir a Descubrir
               </Button>
               <Button variant="text" onClick={() => nav('/comparar')}>
@@ -435,7 +515,6 @@ export function CompareSession() {
   )
 }
 
-/** «▲ Título» en verde o «▼ Título» en rojo: confirma el duelo sin estorbar. */
 function FlashName({ id, up = false }: { id: string; up?: boolean }) {
   const it = getItem(id)
   if (!it) return null

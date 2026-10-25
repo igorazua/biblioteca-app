@@ -6,8 +6,37 @@ import { SHELVES, type Stars, type DuelRecord, type ShelfType, type UserEntry } 
 export type StarsOf = (id: string) => number | undefined
 export type Rng = () => number
 
-export const PLACEMENT_MAX_COMPARISONS = 4
+/* ============================ Constantes de T30 (exportadas con comentario) ============================ */
+
+/** Ventana sin repetición: número de duelos recientes en los que no puede repetirse ninguna obra */
+export const NO_REPEAT_WINDOW = 2
+
+/** Hito de duelos para mostrar aviso discreto sin bloquear la sesión */
+export const DUEL_MILESTONE = 25
+
+/** Número de vecinos por arriba y por abajo en la lista ordenada por nota para generar candidatas */
+export const NEIGHBORS_COUNT = 8
+
+/** Número de obras candidatas al azar de toda la estantería para verificar el orden general */
+export const RANDOM_CANDIDATES_COUNT = 4
+
+/** Factor de novedad para una pareja que ya se jugó en el historial */
+export const REPEAT_NOVELTY = 0.1
+
+/** Utilidad mínima para considerar que un duelo merece jugarse; por debajo no quedan duelos */
+export const MIN_UTILITY = 0.005
+
+/** Peso (precisión) de la prior para obras que ya estaban en el ranking (poca incertidumbre) */
+export const PRIOR_WEIGHT_RANKED = 1.5
+
+/** Peso (precisión) de la prior para obras sin colocar (mucha incertidumbre) */
+export const PRIOR_WEIGHT_UNRANKED = 0.5
+
+/** Número de duelos necesarios para que una obra sin colocar pase de provisional a colocada */
 export const RANK_DUELS_FOR_DONE = 3
+
+/** Máximo de comparaciones binarias por colocación en PlaceFlow */
+export const PLACEMENT_MAX_COMPARISONS = 4
 
 /**
  * Repara consistencia entre entries y rankings:
@@ -56,18 +85,18 @@ export function repairRankingsAndEntries(
   return { entries: nextEntries, rankings: nextRankings, changed }
 }
 
-/* ============================ Colocación (búsqueda binaria) ============================ */
+/* ============================ Colocación binaria (PlaceFlow) ============================ */
 
 export interface Placement {
   id: string
   stars?: number
-  lo: number // posición de inserción mínima posible
-  hi: number // posición de inserción máxima posible
-  base: readonly string[] // ranking sin el item
+  lo: number
+  hi: number
+  base: readonly string[]
   comparisons: number
   maxComparisons: number
   done: boolean
-  insertIndex: number | null // definido cuando done
+  insertIndex: number | null
 }
 
 /** Franja contigua [a, b) de items con exactamente `stars` (el ranking mantiene las estrellas no crecientes). */
@@ -81,7 +110,6 @@ export function starBand(ranking: readonly string[], starsOf: StarsOf, stars: nu
     }
   })
   if (a >= 0) return [a, b]
-  // sin ninguno con esas estrellas: frontera entre los de más y los de menos
   let at = ranking.length
   for (let i = 0; i < ranking.length; i++) {
     const s = starsOf(ranking[i])
@@ -102,7 +130,6 @@ export function startPlacement(
   let hi = base.length
   if (stars !== undefined) [lo, hi] = starBand(base, starsOf, stars)
   const p: Placement = { id, stars, lo, hi, base, comparisons: 0, maxComparisons, done: false, insertIndex: null }
-  // Franja con un único rival: se coloca sin abrir el modal (junto a él, por debajo).
   if (stars !== undefined && hi - lo === 1) return { ...p, done: true, insertIndex: hi }
   return settle(p)
 }
@@ -113,13 +140,11 @@ function settle(p: Placement): Placement {
   return p
 }
 
-/** El rival al que se enfrenta ahora (el elemento medio del rango). */
 export function placementOpponent(p: Placement): string | null {
   if (p.done) return null
   return p.base[Math.floor((p.lo + p.hi) / 2)]
 }
 
-/** `won` = el item que se coloca gana al rival actual. */
 export function answerPlacement(p: Placement, won: boolean): Placement {
   if (p.done) return p
   const mid = Math.floor((p.lo + p.hi) / 2)
@@ -155,7 +180,7 @@ export function clampStars(ranking: readonly string[], starsOf: StarsOf, id: str
   return Math.max(lower, Math.min(upper, own)) as Stars
 }
 
-/* ============================ Refinado libre con rachas ============================ */
+/* ============================ Refinado y rachas (compatibilidad) ============================ */
 
 export const STREAK_TRIGGER = 3
 
@@ -163,8 +188,8 @@ export interface RefineState {
   subject: string | null
   wins: number
   losses: number
-  counts: Record<string, number> // nº de comparaciones por item
-  last: [string, string] | null // última pareja mostrada
+  counts: Record<string, number>
+  last: [string, string] | null
 }
 
 export const newRefineState = (): RefineState => ({ subject: null, wins: 0, losses: 0, counts: {}, last: null })
@@ -174,7 +199,7 @@ export interface RefinePair {
   subject: string
   opponent: string
   kind: PairKind
-  target?: number // jumpUp/jumpDown: posición del rival
+  target?: number
 }
 
 const samePair = (a: [string, string] | null, x: string, y: string) =>
@@ -191,14 +216,12 @@ export function nextRefinePair(ranking: readonly string[], st: RefineState, rng:
       return { subject: st.subject, opponent: ranking[idx - quart], kind: 'jumpUp', target: idx - quart }
     if (st.losses >= STREAK_TRIGGER && idx + quart <= n - 1)
       return { subject: st.subject, opponent: ranking[idx + quart], kind: 'jumpDown', target: idx + quart }
-    // la racha continúa contra el siguiente vecino en la misma dirección
     if (st.wins > 0 && idx > 0 && !samePair(st.last, st.subject, ranking[idx - 1]))
       return { subject: st.subject, opponent: ranking[idx - 1], kind: 'neighbor' }
     if (st.losses > 0 && idx < n - 1 && !samePair(st.last, st.subject, ranking[idx + 1]))
       return { subject: st.subject, opponent: ranking[idx + 1], kind: 'neighbor' }
   }
 
-  // sujeto nuevo: preferencia por los que menos comparaciones llevan
   const min = Math.min(...ranking.map((id) => st.counts[id] ?? 0))
   const pool = ranking.filter((id) => (st.counts[id] ?? 0) <= min + 1)
   for (let tries = 0; tries < 20; tries++) {
@@ -209,7 +232,6 @@ export function nextRefinePair(ranking: readonly string[], st: RefineState, rng:
     const opp = ranking[idx + offsets[Math.floor(rng() * offsets.length)]]
     if (!samePair(st.last, subject, opp)) return { subject, opponent: opp, kind: 'neighbor' }
   }
-  // sin alternativa (p. ej. solo dos items): se repite la única pareja posible
   return { subject: ranking[0], opponent: ranking[1], kind: 'neighbor' }
 }
 
@@ -217,10 +239,9 @@ export interface RefineResult {
   ranking: string[]
   state: RefineState
   jumped: boolean
-  movers: string[] // items movidos: sus estrellas hay que ajustarlas con clampStars (en este orden)
+  movers: string[]
 }
 
-/** `subjectWon` = gana `pair.subject`. */
 export function answerRefine(ranking: readonly string[], st: RefineState, pair: RefinePair, subjectWon: boolean): RefineResult {
   const { subject, opponent } = pair
   const counts = { ...st.counts, [subject]: (st.counts[subject] ?? 0) + 1, [opponent]: (st.counts[opponent] ?? 0) + 1 }
@@ -239,7 +260,6 @@ export function answerRefine(ranking: readonly string[], st: RefineState, pair: 
   } else {
     const i = out.indexOf(subject)
     const j = out.indexOf(opponent)
-    // intercambio solo si el de abajo gana al de arriba
     if (subjectWon && i > j) { [out[i], out[j]] = [out[j], out[i]]; movers.push(subject, opponent) }
     if (!subjectWon && i < j) { [out[i], out[j]] = [out[j], out[i]]; movers.push(opponent, subject) }
     state = subjectWon
@@ -253,7 +273,6 @@ export function answerRefine(ranking: readonly string[], st: RefineState, pair: 
 
 const BAND: Record<number, [number, number]> = { 5: [9, 10], 4: [7, 8.9], 3: [5, 6.9], 2: [3, 4.9], 1: [0.5, 2.9] }
 
-/** Notas 0-10 de todos los items ordenados de una estantería. */
 export function scoresForShelf(ranking: readonly string[], starsOf: StarsOf): Record<string, number> {
   const n = ranking.length
   const out: Record<string, number> = {}
@@ -276,20 +295,13 @@ export function scoresForShelf(ranking: readonly string[], starsOf: StarsOf): Re
   return out
 }
 
-/** `8,3` */
 export const formatScore = (x: number) => (Math.round(x * 10) / 10).toFixed(1).replace('.', ',')
 
-/* ============================ T16: Historial de duelos y planNextDuel ============================ */
-
-/** Clave canónica de un par de obras (orden alfabético para evitar asimetrías). */
+/** Clave canónica de un par de obras (orden alfabético). */
 export function pairKey(a: string, b: string): string {
   return a < b ? `${a}|${b}` : `${b}|${a}`
 }
 
-/**
- * Avanza una colocación binaria saltando rivales a los que esta obra ya se enfrentó en el historial.
- * Si todos los rivales restantes ya se jugaron, devuelve la colocación terminada (`p.done === true`).
- */
 export function advancePlacementWithDuels(
   placement: Placement,
   duels?: Record<string, DuelRecord>,
@@ -308,15 +320,341 @@ export function advancePlacementWithDuels(
   return cur
 }
 
+/* ============================ T30: Modelo Bradley-Terry y Duelos Largos ============================ */
+
+export interface ItemPrior {
+  mean: number
+  weight: number
+}
+
+export interface RatingFitResult {
+  ratings: Record<string, number>
+  uncertainties: Record<string, number>
+}
+
+/**
+ * Ajuste Bradley-Terry MAP (Maximum A Posteriori) con prior normal (T30.2).
+ * Calcula la habilidad latente (rating) y su incertidumbre para cada obra.
+ */
+export function fitRatings(
+  itemIds: readonly string[],
+  duels: Record<string, DuelRecord> = {},
+  priors: Record<string, ItemPrior> = {},
+  maxIterations = 25,
+): RatingFitResult {
+  const n = itemIds.length
+  if (n === 0) return { ratings: {}, uncertainties: {} }
+
+  const idx = new Map<string, number>()
+  for (let i = 0; i < n; i++) idx.set(itemIds[i], i)
+
+  const beta = new Float64Array(n)
+  const mu = new Float64Array(n)
+  const lambda = new Float64Array(n)
+  const wins = new Float32Array(n)
+  const duelCounts = new Int32Array(n)
+
+  for (let i = 0; i < n; i++) {
+    const id = itemIds[i]
+    const p = priors[id] || { mean: 0, weight: PRIOR_WEIGHT_RANKED }
+    mu[i] = p.mean
+    lambda[i] = p.weight
+    beta[i] = p.mean
+  }
+
+  const duelKeys = Object.keys(duels)
+  const m = duelKeys.length
+  const pairA = new Int32Array(m)
+  const pairB = new Int32Array(m)
+  let validM = 0
+
+  for (let k = 0; k < m; k++) {
+    const key = duelKeys[k]
+    const sep = key.indexOf('|')
+    if (sep <= 0) continue
+    const idA = key.slice(0, sep)
+    const idB = key.slice(sep + 1)
+    const i = idx.get(idA)
+    const j = idx.get(idB)
+    if (i === undefined || j === undefined) continue
+    const rec = duels[key]
+    if (!rec) continue
+    pairA[validM] = i
+    pairB[validM] = j
+    validM++
+    duelCounts[i]++
+    duelCounts[j]++
+    if (rec.w === idA) wins[i]++
+    else if (rec.w === idB) wins[j]++
+  }
+
+  // Estructura CSR (Compressed Sparse Row) para recorrido ultra-rápido en memoria continua
+  const rowPtr = new Int32Array(n + 1)
+  for (let k = 0; k < validM; k++) {
+    rowPtr[pairA[k] + 1]++
+    rowPtr[pairB[k] + 1]++
+  }
+  for (let i = 0; i < n; i++) rowPtr[i + 1] += rowPtr[i]
+
+  const colIdx = new Int32Array(validM * 2)
+  const currentPos = new Int32Array(rowPtr)
+  for (let k = 0; k < validM; k++) {
+    const u = pairA[k]
+    const v = pairB[k]
+    colIdx[currentPos[u]++] = v
+    colIdx[currentPos[v]++] = u
+  }
+
+  // Newton-Raphson amortiguado sobre la log-posterior (T30.2)
+  for (let it = 0; it < maxIterations; it++) {
+    let maxChange = 0
+    for (let i = 0; i < n; i++) {
+      const b_i = beta[i]
+      const start = rowPtr[i]
+      const end = rowPtr[i + 1]
+      let sumP = 0
+      let sumVar = 0
+      for (let pIdx = start; pIdx < end; pIdx++) {
+        const j = colIdx[pIdx]
+        const diff = b_i - beta[j]
+        if (diff > 8) {
+          sumP += 1.0
+        } else if (diff < -8) {
+          // p ~ 0, sumVar ~ 0
+        } else {
+          const expNeg = Math.exp(-diff)
+          const p = 1 / (1 + expNeg)
+          sumP += p
+          sumVar += p * (1 - p)
+        }
+      }
+      const grad = wins[i] - sumP - lambda[i] * (b_i - mu[i])
+      const hess = sumVar + lambda[i]
+      let step = grad / hess
+      if (step > 1.0) step = 1.0
+      else if (step < -1.0) step = -1.0
+      beta[i] += step
+      const absStep = Math.abs(step)
+      if (absStep > maxChange) maxChange = absStep
+    }
+    if (maxChange < 3e-3) break
+  }
+
+  const ratings: Record<string, number> = {}
+  const uncertainties: Record<string, number> = {}
+  for (let i = 0; i < n; i++) {
+    const id = itemIds[i]
+    ratings[id] = beta[i]
+    uncertainties[id] = 1 / Math.sqrt(duelCounts[i] + lambda[i])
+  }
+  return { ratings, uncertainties }
+}
+
+/**
+ * Construye el punto de partida (prior) de cada obra (T30.2):
+ * - Ya en el ranking: nota según su posición actual con poca incertidumbre (PRIOR_WEIGHT_RANKED).
+ * - Sin colocar con estrellas: nota del centro de su franja de estrellas con mucha incertidumbre (PRIOR_WEIGHT_UNRANKED).
+ * - Sin colocar y sin estrellas: nota del centro del ranking con mucha incertidumbre (PRIOR_WEIGHT_UNRANKED).
+ */
+export function buildPriors(
+  ranking: readonly string[],
+  unranked: readonly (string | UnrankedItem)[],
+  starsOf: StarsOf = () => undefined,
+): Record<string, ItemPrior> {
+  const priors: Record<string, ItemPrior> = {}
+  const N = Math.max(ranking.length, 1)
+
+  for (let i = 0; i < ranking.length; i++) {
+    const id = ranking[i]
+    const mean = N === 1 ? 0 : 3.0 - (6.0 * i) / (N - 1)
+    priors[id] = { mean, weight: PRIOR_WEIGHT_RANKED }
+  }
+
+  for (const u of unranked) {
+    const id = typeof u === 'string' ? u : u.itemId
+    const stars = typeof u === 'string' ? starsOf(u) : (u.stars ?? starsOf(u.itemId))
+    let mean = 0
+    if (stars !== undefined) {
+      let a = -1
+      let b = -1
+      ranking.forEach((rkId, i) => {
+        if (starsOf(rkId) === stars) {
+          if (a < 0) a = i
+          b = i + 1
+        }
+      })
+      let mid = (ranking.length - 1) / 2
+      if (a >= 0) {
+        mid = (a + b - 1) / 2
+      } else {
+        for (let i = 0; i < ranking.length; i++) {
+          const s = starsOf(ranking[i])
+          if (s !== undefined && s < stars) {
+            mid = i
+            break
+          }
+        }
+      }
+      mean = N === 1 ? 0 : 3.0 - (6.0 * mid) / (N - 1)
+    }
+    priors[id] = { mean, weight: PRIOR_WEIGHT_UNRANKED }
+  }
+
+  return priors
+}
+
+/**
+ * Reconstruye el ranking tras los duelos a partir de las notas de Bradley-Terry (T30.2).
+ * Contiene todas las obras que han jugado >= 1 duelo más las que ya estaban en el ranking.
+ */
+export function updateRankingFromRatings(
+  currentRanking: readonly string[],
+  allSeenIds: readonly string[],
+  ratings: Record<string, number>,
+  duels: Record<string, DuelRecord>,
+  priors: Record<string, ItemPrior>,
+): string[] {
+  const duelCounts: Record<string, number> = {}
+  for (const key of Object.keys(duels)) {
+    const sep = key.indexOf('|')
+    if (sep > 0) {
+      const a = key.slice(0, sep)
+      const b = key.slice(sep + 1)
+      duelCounts[a] = (duelCounts[a] || 0) + 1
+      duelCounts[b] = (duelCounts[b] || 0) + 1
+    }
+  }
+
+  const eligible = allSeenIds.filter((id) => (duelCounts[id] ?? 0) >= 1 || currentRanking.includes(id))
+
+  return [...eligible].sort((a, b) => {
+    const diff = (ratings[b] ?? 0) - (ratings[a] ?? 0)
+    if (Math.abs(diff) > 1e-6) return diff
+    const priorDiff = (priors[b]?.mean ?? 0) - (priors[a]?.mean ?? 0)
+    if (Math.abs(priorDiff) > 1e-6) return priorDiff
+    const idxA = currentRanking.indexOf(a)
+    const idxB = currentRanking.indexOf(b)
+    if (idxA !== -1 && idxB !== -1) return idxA - idxB
+    if (idxA !== -1) return -1
+    if (idxB !== -1) return 1
+    return a.localeCompare(b)
+  })
+}
+
+/* ============================ T30.3: Asignación persistente de lados ============================ */
+
+export interface SideAssignment {
+  left: string
+  right: string
+  leftIsSubject: boolean
+  nextSides: Record<string, 'L' | 'R'>
+}
+
+/**
+ * Asigna lado a cada obra en el duelo (T30.3):
+ * 1. Si una de las dos ya tiene lado, se queda en él y la otra va al contrario.
+ * 2. Si las dos coinciden, se queda la que más veces ha salido en la sesión (empate: subject).
+ * 3. Si ninguna tiene lado, subject va al lado donde haya menos obras guardadas (empate: izquierda).
+ */
+export function assignSides(
+  a: string,
+  b: string,
+  subject: string,
+  sides: Record<string, 'L' | 'R'> = {},
+  seenCount: Record<string, number> = {},
+): SideAssignment {
+  const sideA = sides[a]
+  const sideB = sides[b]
+
+  let curLeft: string
+  let curRight: string
+  const nextSides = { ...sides }
+
+  if (sideA && !sideB) {
+    if (sideA === 'L') {
+      curLeft = a
+      curRight = b
+      nextSides[b] = 'R'
+    } else {
+      curLeft = b
+      curRight = a
+      nextSides[b] = 'L'
+    }
+  } else if (!sideA && sideB) {
+    if (sideB === 'L') {
+      curLeft = b
+      curRight = a
+      nextSides[a] = 'R'
+    } else {
+      curLeft = a
+      curRight = b
+      nextSides[a] = 'L'
+    }
+  } else if (sideA && sideB) {
+    if (sideA !== sideB) {
+      curLeft = sideA === 'L' ? a : b
+      curRight = sideA === 'L' ? b : a
+    } else {
+      const countA = seenCount[a] ?? 0
+      const countB = seenCount[b] ?? 0
+      let winnerOfSide: string
+      if (countA > countB) winnerOfSide = a
+      else if (countB > countA) winnerOfSide = b
+      else winnerOfSide = subject === a ? a : b
+
+      const loserOfSide = winnerOfSide === a ? b : a
+      if (sideA === 'L') {
+        curLeft = winnerOfSide
+        curRight = loserOfSide
+      } else {
+        curLeft = loserOfSide
+        curRight = winnerOfSide
+      }
+    }
+  } else {
+    let countL = 0
+    let countR = 0
+    for (const s of Object.values(sides)) {
+      if (s === 'L') countL++
+      else if (s === 'R') countR++
+    }
+    const subjectSide: 'L' | 'R' = countR < countL ? 'R' : 'L'
+    const otherSide: 'L' | 'R' = subjectSide === 'L' ? 'R' : 'L'
+    const other = subject === a ? b : a
+
+    nextSides[subject] = subjectSide
+    nextSides[other] = otherSide
+
+    if (subjectSide === 'L') {
+      curLeft = subject
+      curRight = other
+    } else {
+      curLeft = other
+      curRight = subject
+    }
+  }
+
+  return {
+    left: curLeft,
+    right: curRight,
+    leftIsSubject: curLeft === subject,
+    nextSides,
+  }
+}
+
+/* ============================ T30: Planificación de duelos ============================ */
+
 export interface UnrankedItem {
   itemId: string
   stars?: number
 }
 
+export type PlannedDuelKind = 'place' | 'boot' | 'refine' | 'rank'
+
 export interface PlannedDuel {
   a: string
   b: string
-  kind: 'place' | 'boot' | 'refine'
+  kind: PlannedDuelKind
   subject: string
   opponent: string
   placement?: Placement
@@ -335,290 +673,117 @@ export interface PlanNextDuelInput {
   refineState?: RefineState | null
   starsOf?: StarsOf
   rng?: Rng
+  recent?: string[]
 }
 
 /**
- * Pulir: elige la pareja más útil que nunca se haya jugado en el historial.
- * docs/TAREA_T16_COMPARAR.md §1.3
+ * Planifica el siguiente duelo (T30.2):
+ * - Evalúa a todas las obras vistas con Bradley-Terry MAP.
+ * - Candidatas: vecinas por nota (NEIGHBORS_COUNT) + aleatorias (RANDOM_CANDIDATES_COUNT).
+ * - Utilidad = cercanía x incertidumbre x novedad.
+ * - Respeta ventana sin repetición NO_REPEAT_WINDOW.
+ * - Devuelve `{ kind: 'rank', a, b, subject, opponent }` o `null` si la estantería está completa.
  */
-export function planRefineDuel(
-  ranking: readonly string[],
-  duels: Record<string, DuelRecord> = {},
-  cmp: Record<string, number> = {},
-  refineState?: RefineState | null,
-  rng: Rng = Math.random,
-): PlannedDuel | null {
-  const n = ranking.length
-  if (n < 2) return null
+export function planNextDuel(input: PlanNextDuelInput): PlannedDuel | null {
+  const ranking = [...input.ranking]
+  const duels = input.duels ?? {}
+  const rng = input.rng ?? Math.random
+  const starsOf = input.starsOf ?? (() => undefined)
+  const recent = input.recent ?? []
 
-  // 1. Rachas (jumpUp / jumpDown o racha de vecinos)
-  if (refineState?.subject && ranking.includes(refineState.subject)) {
-    const sj = refineState.subject
-    const idx = ranking.indexOf(sj)
-    const quart = Math.max(2, Math.ceil(n / 4))
+  const unrankedList: UnrankedItem[] = (input.unranked ?? []).map((u) =>
+    typeof u === 'string' ? { itemId: u } : u,
+  )
 
-    if (refineState.wins >= STREAK_TRIGGER) {
-      const target = Math.max(0, idx - quart)
-      // Buscar el rival k < idx más cercano al objetivo que no esté en el historial
-      let bestK = -1
-      let bestDist = Infinity
-      for (let k = 0; k < idx; k++) {
-        const key = pairKey(sj, ranking[k])
-        if (!duels[key]) {
-          const d = Math.abs(k - target)
-          if (d < bestDist) {
-            bestDist = d
-            bestK = k
-          }
-        }
-      }
-      if (bestK >= 0) {
-        const opp = ranking[bestK]
-        return {
-          kind: 'refine',
-          pair: { subject: sj, opponent: opp, kind: 'jumpUp', target: bestK },
-          a: sj,
-          b: opp,
-          subject: sj,
-          opponent: opp,
-        }
-      }
-    } else if (refineState.losses >= STREAK_TRIGGER) {
-      const target = Math.min(n - 1, idx + quart)
-      let bestK = -1
-      let bestDist = Infinity
-      for (let k = idx + 1; k < n; k++) {
-        const key = pairKey(sj, ranking[k])
-        if (!duels[key]) {
-          const d = Math.abs(k - target)
-          if (d < bestDist) {
-            bestDist = d
-            bestK = k
-          }
-        }
-      }
-      if (bestK >= 0) {
-        const opp = ranking[bestK]
-        return {
-          kind: 'refine',
-          pair: { subject: sj, opponent: opp, kind: 'jumpDown', target: bestK },
-          a: sj,
-          b: opp,
-          subject: sj,
-          opponent: opp,
-        }
-      }
-    } else if (refineState.wins > 0) {
-      // Continuación de racha contra vecino hacia arriba
-      let bestK = -1
-      let bestDist = Infinity
-      for (let k = idx - 1; k >= 0; k--) {
-        const key = pairKey(sj, ranking[k])
-        if (!duels[key]) {
-          const d = idx - k
-          if (d < bestDist) {
-            bestDist = d
-            bestK = k
-          }
-        }
-      }
-      if (bestK >= 0) {
-        const opp = ranking[bestK]
-        return {
-          kind: 'refine',
-          pair: { subject: sj, opponent: opp, kind: 'neighbor' },
-          a: sj,
-          b: opp,
-          subject: sj,
-          opponent: opp,
-        }
-      }
-    } else if (refineState.losses > 0) {
-      // Continuación de racha contra vecino hacia abajo
-      let bestK = -1
-      let bestDist = Infinity
-      for (let k = idx + 1; k < n; k++) {
-        const key = pairKey(sj, ranking[k])
-        if (!duels[key]) {
-          const d = k - idx
-          if (d < bestDist) {
-            bestDist = d
-            bestK = k
-          }
-        }
-      }
-      if (bestK >= 0) {
-        const opp = ranking[bestK]
-        return {
-          kind: 'refine',
-          pair: { subject: sj, opponent: opp, kind: 'neighbor' },
-          a: sj,
-          b: opp,
-          subject: sj,
-          opponent: opp,
-        }
-      }
+  const allSeenIds = Array.from(new Set([...ranking, ...unrankedList.map((u) => u.itemId)]))
+  if (allSeenIds.length < 2) return null
+
+  const priors = buildPriors(ranking, unrankedList, starsOf)
+  const { ratings, uncertainties } = fitRatings(allSeenIds, duels, priors)
+
+  const sortedAll = [...allSeenIds].sort((a, b) => (ratings[b] ?? 0) - (ratings[a] ?? 0))
+  const candidateMap = new Map<string, { a: string; b: string; util: number }>()
+
+  for (let i = 0; i < sortedAll.length; i++) {
+    const a = sortedAll[i]
+    const neighbours: string[] = []
+    for (let d = 1; d <= NEIGHBORS_COUNT; d++) {
+      if (i - d >= 0) neighbours.push(sortedAll[i - d])
+      if (i + d < sortedAll.length) neighbours.push(sortedAll[i + d])
+    }
+    for (let r = 0; r < RANDOM_CANDIDATES_COUNT; r++) {
+      const randIdx = Math.floor(rng() * sortedAll.length)
+      if (randIdx !== i) neighbours.push(sortedAll[randIdx])
+    }
+
+    for (const b of neighbours) {
+      if (a === b) continue
+      const k = pairKey(a, b)
+      if (candidateMap.has(k)) continue
+
+      const diff = Math.abs((ratings[a] ?? 0) - (ratings[b] ?? 0))
+      const cercania = 1 / (1 + diff)
+      const incertidumbre = (uncertainties[a] ?? 1) + (uncertainties[b] ?? 1)
+      const novedad = duels[k] ? REPEAT_NOVELTY : 1.0
+      const util = cercania * incertidumbre * novedad
+      candidateMap.set(k, { a, b, util })
     }
   }
 
-  // 2. Candidatas: parejas (i, j) del ranking que no estén en el historial
-  const top20Limit = n * 0.2
-  const findCandidates = (maxDist: number) => {
-    const list: { i: number; j: number; util: number }[] = []
-    for (let i = 0; i < n; i++) {
-      const maxJ = maxDist === Infinity ? n : Math.min(n, i + maxDist + 1)
-      for (let j = i + 1; j < maxJ; j++) {
-        const a = ranking[i]
-        const b = ranking[j]
-        const key = pairKey(a, b)
-        if (duels[key]) continue
+  const allCandidates = Array.from(candidateMap.values())
+  let windowCandidates: { a: string; b: string; util: number }[] = []
 
-        const dist = j - i
-        const cercania = 1 / dist
-        const cmpA = cmp[a] ?? 0
-        const cmpB = cmp[b] ?? 0
-        const novedad = 1 / (1 + Math.min(cmpA, cmpB))
-        const pesoArriba = i < top20Limit && j < top20Limit ? 1.5 : 1
-        const util = cercania * novedad * pesoArriba
-        list.push({ i, j, util })
-      }
-    }
-    return list
+  // Relajación progresiva de la ventana sin repetición: NO_REPEAT_WINDOW -> 1 -> 0
+  for (const win of [NO_REPEAT_WINDOW, 1, 0]) {
+    const recentSlice = win > 0 ? recent.slice(-win * 2) : []
+    const recentSet = new Set(recentSlice)
+    windowCandidates = allCandidates.filter((c) => !recentSet.has(c.a) && !recentSet.has(c.b))
+    if (windowCandidates.length > 0) break
   }
 
-  // Progresión de distancias: <= 3, luego <= 6, luego cualquier distancia
-  let candidates = findCandidates(3)
-  if (candidates.length === 0) candidates = findCandidates(6)
-  if (candidates.length === 0) candidates = findCandidates(Infinity)
-  if (candidates.length === 0) return null
+  // Filtrar candidatos por umbral de utilidad mínima
+  const filtered = windowCandidates.filter((c) => c.util >= MIN_UTILITY)
+  if (filtered.length === 0) return null
 
-  // Ordenar de mayor a menor utilidad
-  candidates.sort((x, y) => y.util - x.util)
+  // Ordenar de mayor a menor utilidad y elegir al azar entre las 5 mejores
+  filtered.sort((x, y) => y.util - x.util)
+  const top5 = filtered.slice(0, 5)
+  const chosen = top5[Math.floor(rng() * top5.length)]
 
-  // Elegir al azar entre las hasta 3 mejores
-  const top3 = candidates.slice(0, 3)
-  const chosen = top3[Math.floor(rng() * top3.length)]
-  const subject = ranking[chosen.i]
-  const opponent = ranking[chosen.j]
+  const aIsSubject = (uncertainties[chosen.a] ?? 0) >= (uncertainties[chosen.b] ?? 0)
+  const subject = aIsSubject ? chosen.a : chosen.b
+  const opponent = aIsSubject ? chosen.b : chosen.a
 
   return {
-    kind: 'refine',
-    pair: { subject, opponent, kind: 'neighbor' },
-    a: subject,
-    b: opponent,
+    kind: 'rank',
+    a: chosen.a,
+    b: chosen.b,
     subject,
     opponent,
   }
 }
 
 /**
- * Función pura que planifica el siguiente duelo sin modificar nada.
- * docs/TAREA_T16_COMPARAR.md §1.3
+ * Coeficiente de correlación tau de Kendall entre dos listas de orden (T30.4).
  */
-export function planNextDuel(input: PlanNextDuelInput): PlannedDuel | null {
-  const ranking = [...input.ranking]
-  const duels = input.duels ?? {}
-  const cmp = input.cmp ?? {}
-  const rng = input.rng ?? Math.random
-  const starsOf = input.starsOf ?? (() => undefined)
-
-  // 1. Si hay una colocación activa en curso
-  if (input.activePlacement && !input.activePlacement.done) {
-    const adv = advancePlacementWithDuels(input.activePlacement, duels)
-    if (!adv.done) {
-      const opp = placementOpponent(adv)
-      if (opp) {
-        return {
-          kind: 'place',
-          placement: adv,
-          a: adv.id,
-          b: opp,
-          subject: adv.id,
-          opponent: opp,
-        }
+export function kendallTau(orderA: readonly string[], orderB: readonly string[]): number {
+  const posB = new Map(orderB.map((id, i) => [id, i]))
+  let concordant = 0
+  let discordant = 0
+  const n = orderA.length
+  for (let i = 0; i < n; i++) {
+    const pBi = posB.get(orderA[i])
+    if (pBi === undefined) continue
+    for (let j = i + 1; j < n; j++) {
+      const pBj = posB.get(orderA[j])
+      if (pBj === undefined) continue
+      if ((pBi < pBj && i < j) || (pBi > pBj && i > j)) {
+        concordant++
+      } else {
+        discordant++
       }
     }
   }
-
-  // 2. Normalizar la lista de obras sin ordenar
-  const unrankedList: UnrankedItem[] = (input.unranked ?? []).map((u) =>
-    typeof u === 'string' ? { itemId: u } : u,
-  )
-
-  // 3. Patrón de sesión: C C P C C P P (si unranked > 0 y ranking >= 6)
-  const hasUnranked = unrankedList.length > 0
-  let mode: 'C' | 'P' = 'P'
-  if (hasUnranked) {
-    if (ranking.length >= 6) {
-      const pattern = ['C', 'C', 'P', 'C', 'C', 'P', 'P'] as const
-      const idx = (input.sessionIndex ?? 0) % 7
-      mode = pattern[idx]
-    } else {
-      mode = 'C'
-    }
-  } else {
-    mode = 'P'
-  }
-
-  // 4. Intentar colocar
-  if (mode === 'C') {
-    if (ranking.length === 0) {
-      if (unrankedList.length >= 2) {
-        const a = unrankedList[0].itemId
-        const b = unrankedList[1].itemId
-        const key = pairKey(a, b)
-        if (duels[key]) {
-          // Duelo ya registrado: aplicar y continuar
-          const winner = duels[key].w
-          const loser = winner === a ? b : a
-          return planNextDuel({
-            ...input,
-            ranking: [winner, loser],
-            unranked: unrankedList.slice(2),
-          })
-        }
-        return { kind: 'boot', a, b, subject: a, opponent: b }
-      }
-      return null
-    }
-
-    let tempRanking = [...ranking]
-    for (let i = 0; i < unrankedList.length; i++) {
-      const u = unrankedList[i]
-      let p = startPlacement(tempRanking, starsOf, u.itemId, u.stars)
-      p = advancePlacementWithDuels(p, duels)
-      if (p.done) {
-        tempRanking = finishPlacement(p)
-        continue
-      }
-      const opp = placementOpponent(p)
-      if (opp) {
-        return {
-          kind: 'place',
-          placement: p,
-          a: u.itemId,
-          b: opp,
-          subject: u.itemId,
-          opponent: opp,
-        }
-      }
-    }
-
-    // Todas las sin ordenar se colocaron con el historial: pulir sobre el ranking actualizado
-    return planRefineDuel(tempRanking, duels, cmp, input.refineState, rng)
-  }
-
-  // 5. Modo 'P' (pulir)
-  const ref = planRefineDuel(ranking, duels, cmp, input.refineState, rng)
-  if (ref) return ref
-
-  // Si no se puede pulir más (estantería pequeña con todo jugado) y quedan sin ordenar, colocar
-  if (hasUnranked) {
-    return planNextDuel({
-      ...input,
-      sessionIndex: 0,
-    })
-  }
-
-  return null
+  const total = (n * (n - 1)) / 2
+  return total > 0 ? (concordant - discordant) / total : 1
 }
