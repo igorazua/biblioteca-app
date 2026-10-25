@@ -25,6 +25,8 @@ export function SwipePair(props: {
   left: Side
   right: Side
   onChoose: Choose
+  /** al elegir, antes de la pausa de confirmación */
+  onPick?: Choose
   kind?: DuelKind
   /** hueco entre las cartas y la pista (p. ej. «No conozco ninguna») */
   extra?: ReactNode

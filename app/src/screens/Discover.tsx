@@ -88,6 +88,12 @@ export function Discover() {
       userVec: userVectors?.[shelf],
     }, Array.from(existingIds), count)
   }, [shelf, entries, rankings, profile, activeFriends, getAffinity, getFriendPct, userVectors, songsLoaded])
+  // fetchBatch cambia con cada swipe (entries) y cuando llegan datos en segundo plano (amigos, vectores, canciones).
+  // Si el mazo dependiera de él, se rehacía de cero y la tarjeta de arriba se cambiaba por otra (imagen «fantasma»).
+  const fetchBatchRef = useRef(fetchBatch)
+  fetchBatchRef.current = fetchBatch
+  // Canciones: el mazo se arma cuando ha llegado songs.json; en el resto de estanterías no depende de eso
+  const shelfReady = shelf !== 'song' || songsLoaded
 
   // Inicializar o recargar mazo al cambiar estantería
   useEffect(() => {
@@ -98,7 +104,7 @@ export function Discover() {
     cardShownAt.current = Date.now()
     setDeckNudge(null)
 
-    const initial = fetchBatch(new Set(), 20)
+    const initial = fetchBatchRef.current(new Set(), 20)
     setDeckCards(initial)
 
     return () => {
@@ -108,18 +114,18 @@ export function Discover() {
         data: { cards: shownIds.current.size, swipes: swipeCount.current },
       })
     }
-  }, [shelf, fetchBatch, newSession, songsLoaded])
+  }, [shelf, newSession, shelfReady])
 
   // Reabastecer mazo cuando quedan <= 8 tarjetas (§7)
   useEffect(() => {
     if (deckCards.length > 0 && deckCards.length <= 8) {
       const existing = new Set(deckCards.map((c) => c.item.id))
-      const nextBatch = fetchBatch(existing, 20)
+      const nextBatch = fetchBatchRef.current(existing, 20)
       if (nextBatch.length > 0) {
         setDeckCards((prev) => [...prev, ...nextBatch])
       }
     }
-  }, [deckCards.length, fetchBatch])
+  }, [deckCards.length])
 
   // Registrar tarjeta mostrada
   const topCard = deckCards[0]

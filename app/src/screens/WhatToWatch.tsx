@@ -105,8 +105,20 @@ export function WhatToWatch() {
   const [showUnknownBtn, setShowUnknownBtn] = useState(false)
   const unknownTimerRef = useRef<number | null>(null)
 
+  // Ya elegida una de la pareja: mientras se confirma y se procesa, «Pasar» no aparece (Igor, 25/10)
+  const pickedRef = useRef(false)
+  const hidePass = () => {
+    pickedRef.current = true
+    setShowUnknownBtn(false)
+    if (unknownTimerRef.current) {
+      window.clearTimeout(unknownTimerRef.current)
+      unknownTimerRef.current = null
+    }
+  }
+
   // Botón «Pasar» tras 2,5 segundos sin elegir (T19 §1.3; antes «No conozco ninguna»)
   useEffect(() => {
+    pickedRef.current = false
     setShowUnknownBtn(false)
     if (unknownTimerRef.current) {
       window.clearTimeout(unknownTimerRef.current)
@@ -115,7 +127,7 @@ export function WhatToWatch() {
 
     if (phase === 'shape' && pair) {
       unknownTimerRef.current = window.setTimeout(() => {
-        setShowUnknownBtn(true)
+        if (!pickedRef.current) setShowUnknownBtn(true)
       }, 2500)
     }
 
@@ -489,7 +501,8 @@ export function WhatToWatch() {
       />
     )
     body = (
-      <div className="flex-1 min-h-0 flex flex-col px-5 pb-6 gap-3">
+      // con scroll y aire al final: en pantallas bajas la última tarjeta (Juegos de mesa) tiene que poder verse entera
+      <div className="flex-1 min-h-0 scroll-y flex flex-col px-5 pb-16 gap-3">
         {DECIDE_SHELVES.map((s, i) => {
           const cover = items.filter((it) => it.type === s).sort((a, b) => b.popularity - a.popularity).slice(0, 3)
           return (
@@ -612,6 +625,7 @@ export function WhatToWatch() {
           left={shaperSide(pair[0])}
           right={shaperSide(pair[1])}
           onChoose={onShaperChoose}
+          onPick={hidePass}
           kind="decide"
           extra={
             <div className="h-12 flex items-center justify-center shrink-0">

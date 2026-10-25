@@ -60,10 +60,10 @@ export function useDuelCopy(): [DuelCopy, (c: DuelCopy) => void] {
 
 /** Milisegundos que dura la confirmación antes de pasar al siguiente duelo (el ✓ se dibuja despacio). */
 export const pickDelay = (reduce: boolean | null) => (reduce ? 600 : 1050)
-/** En Comparar se encadenan duelos a toda velocidad: solo lo justo para ver la carta elegida moverse. */
-const FAST_DELAY = 170
-/** En Decidir, sin texto de confirmación: el borde iluminado basta (Igor, 23/10). */
-const DECIDE_DELAY = 380
+/** En Comparar se encadenan duelos rápido, pero la elegida se queda un instante grande e iluminada (Igor, 25/10). */
+const FAST_DELAY = 450
+/** En Decidir, sin texto de confirmación: el borde iluminado basta (Igor, 23/10); un poco más de tiempo en pantalla (25/10). */
+const DECIDE_DELAY = 650
 
 /** «Gana *título*» con el título en cursiva serif. */
 export function Chosen({ texts, title }: { texts: DuelTexts; title: string }) {
@@ -192,7 +192,7 @@ type FanLayout = ReturnType<typeof fanLayout>
  * de la izquierda, a la izquierda la de la derecha («empujarla hacia el centro»). La elegida sigue una trayectoria fija
  * hacia el centro, se endereza y crece hasta casi llenar la pantalla; la otra se apaga. Todo va ligado al progreso del gesto.
  */
-export function DuelFan({ left, right, onChoose, texts, fast = false, square = false }: { left: Side; right: Side; onChoose: (w: 'a' | 'b') => void; texts: DuelTexts; /** sin confirmación central y casi sin espera (Comparar) */ fast?: boolean; square?: boolean }) {
+export function DuelFan({ left, right, onChoose, onPick, texts, fast = false, square = false }: { left: Side; right: Side; onChoose: (w: 'a' | 'b') => void; /** al elegir, antes de la pausa de confirmación (p. ej. para ocultar «Pasar») */ onPick?: (w: 'a' | 'b') => void; texts: DuelTexts; /** sin confirmación central y casi sin espera (Comparar) */ fast?: boolean; square?: boolean }) {
   const reduce = useReducedMotion()
   const box = useRef<HTMLDivElement>(null)
   const size = useBoxSize(box)
@@ -246,6 +246,7 @@ export function DuelFan({ left, right, onChoose, texts, fast = false, square = f
     touched.current = true
     markDuelLearned()
     setPicked(w)
+    onPick?.(w)
     haptic('success')
     const to = w === 'a' ? W() * FAN_COMMIT : -W() * FAN_COMMIT
     animate(x, to, reduce ? { duration: 0 } : fast ? { duration: 0.16, ease: 'easeOut' } : { type: 'spring', stiffness: 300, damping: 30 })
