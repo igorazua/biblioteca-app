@@ -121,3 +121,62 @@ La misma canción aparece como original, remaster, directo, versión de un recop
 - Los tres tests de riesgo de datos (interruptor, versiones duplicadas e import) en verde.
 - tsc y vitest en verde, pegados en el registro.
 - `PROJECT_CONTEXT.md` actualizado: la estantería existe, está detrás de `SHELF_ENABLED.song` y está pendiente decidir si se activa en el lanzamiento.
+
+---
+
+## T28.8 — Correcciones tras la entrega (25/10/2026, revisión de Claude)
+
+> Revisado sobre `a8ac059`. Los títulos vacíos, los `mbid` repetidos, las versiones de DJ y las carátulas en Supabase están bien. Queda esto. **Va antes de que nadie guarde canciones**, porque el año va dentro del id y el id no puede cambiar una vez publicado. Mismas normas comunes de arriba, commits `T28.8: …`, registro en `docs/registro/T28.md` (sección nueva, con la salida real).
+
+### 28.8.1 Año de primera publicación (lo más importante)
+**Qué pasa:** el año sale de la grabación encontrada, que muchas veces es un remaster o un recopilatorio. 3.360 de 4.474 canciones tienen año ≥ 2000. Ejemplos de `songs.json`:
+
+| Canción | Año en el catálogo | Año real |
+|---|---|---|
+| Stairway to Heaven | 2022 | 1971 |
+| Sweet Child O' Mine | 2025 | 1987 |
+| Billie Jean | 2009 | 1982 |
+| Bohemian Rhapsody | 2004 | 1975 |
+| Wish You Were Here | 2005 | 1975 |
+| Entre dos tierras | 2005 | 1990 |
+| Like a Rolling Stone | 1978 | 1965 |
+| Wonderwall | 1996 | 1995 |
+| Mediterráneo (Serrat) | 2000 | 1971 |
+| Hijo de la Luna | 1989 | 1986 |
+
+**Cómo se arregla:** el año es la fecha **más antigua** entre:
+- todas las grabaciones de la misma **obra** de MusicBrainz (`work`) del mismo artista, contando solo las de estudio (las versiones de otros artistas no cuentan);
+- el `first-release-date` del *release-group* del disco o single original.
+
+Si una canción no tiene obra, se usa el `first-release-date` mínimo de los *release-groups* de su grabación. El año de iTunes **nunca** se usa para el año. Si no hay ninguno de estos datos, la canción va a `sin-resolver.json` con el motivo.
+
+**Después:** regenerar los ids (`song:<titulo>-<artista>-<año>`) y las rutas de las carátulas (`song/<slug>.webp`). Hay que borrar del bucket las carátulas con el slug viejo. No hay que migrar nada: aún no hay usuarios con canciones guardadas.
+
+**Test de riesgo de datos** (en `dedupe.test.mjs` o uno nuevo, con datos de MusicBrainz guardados en un archivo de prueba y sin red): las 10 canciones de la tabla salen con su año real.
+
+**En el registro:**
+- la tabla de arriba con el año nuevo;
+- cuántas canciones hay por década, antes y después del arreglo;
+- las 20 canciones que más han cambiado de año.
+
+### 28.8.2 Colaboraciones en el título y en el id
+`song:mamichula-con-nicki-nicole-bizarrap-2020`: «con …», «with …», «feat. …», «ft. …» y «junto a …» se quitan del título y del id, igual que el resto de coletillas. Añade este caso al test de 28.3.
+
+### 28.8.3 Búsqueda en MusicBrainz al añadir (faltaba de 28.5)
+Hoy el buscador de añadir solo encuentra las canciones de `songs.json`. Tiene que hacer esto:
+1. Si una búsqueda en la estantería de Canciones da pocos resultados locales (menos de 5), consulta en el momento la búsqueda de grabaciones de MusicBrainz (`/ws/2/recording?query=…&fmt=json`). Una petición por búsqueda, con espera de 400 ms tras la última tecla (*debounce*) y como mucho 1 por segundo.
+2. Cada resultado pasa por las mismas reglas que el catálogo: quitar coletillas, saltar versiones de DJ, año según 28.8.1 (si no se puede calcular en el momento, el de la grabación más antigua de la obra que devuelva la búsqueda) y el **mismo formato de id**. Si el id o el `mbid` ya existen en `songs.json`, se usa el que hay. Nunca se crea un duplicado.
+3. La carátula se toma de Cover Art Archive en ese momento. Si no hay, póster generado. Alojarla en nuestro Supabase puede quedar para un paso nocturno o en servidor; apúntalo como pendiente en el registro si no lo haces ahora.
+4. Lo que el usuario añade se guarda en el catálogo vivo (`store/useCatalog.ts`), como el resto de estanterías.
+5. Sin conexión o si MusicBrainz falla, se muestran solo los resultados locales, sin errores en pantalla.
+
+Prueba a mano y pega en el registro el resultado de buscar «Imagine», «Zombie» y «Macarena»: no están en el catálogo porque John Lennon, The Cranberries y Los del Río no están entre los artistas.
+
+### 28.8.4 Duelos de canciones
+Confirma en el registro, con el archivo y la línea, que los duelos A/B del ranking (Comparar) funcionan con canciones con tarjetas cuadradas (27.3 regla 4). Si no estaban conectados, conéctalos.
+
+### 28.8.5 Hecho cuando
+- `songs.json` regenerado: 0 años de iTunes, la tabla de 28.8.1 correcta, ids y carátulas con el año nuevo y 0 carátulas huérfanas en el bucket.
+- La búsqueda viva funciona con los tres ejemplos.
+- tsc limpio, y en verde los tests de riesgo (interruptor, versiones duplicadas con los casos nuevos, años, import), pegados en el registro.
+- Lista corta de qué tiene que mirar Igor en el móvil.
