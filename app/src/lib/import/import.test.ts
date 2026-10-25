@@ -1,4 +1,11 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
+
+// Estos tests comprueban las canciones de los imports: con el interruptor apagado (config.ts) no se crearían.
+// El caso «apagado» ya lo cubre src/data/songs.test.ts.
+vi.mock('../../config', async (importOriginal) => {
+  const orig = await importOriginal<typeof import('../../config')>()
+  return { ...orig, SHELF_ENABLED: { ...orig.SHELF_ENABLED, song: true } }
+})
 import { parseLetterboxd } from './letterboxd'
 import { parseImdb } from './imdb'
 import { parseGoodreads } from './goodreads'
