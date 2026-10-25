@@ -42,7 +42,9 @@ export const PLACED_PRIOR_WEIGHT = 1
 /** Proporción de duelos de colocación cuando hay obras sin colocar: n / (n + este número), acotada */
 export const PLACE_SHARE_K = 4
 export const PLACE_SHARE_MIN = 0.35
-export const PLACE_SHARE_MAX = 0.7
+export const PLACE_SHARE_MAX = 0.8
+/** Obras sin colocar que se están colocando a la vez (rotando entre ellas); al terminar una, entra otra */
+export const OPEN_PLACEMENTS = 4
 /** Distancia máxima (en puestos) entre las dos obras de un duelo de pulido */
 export const POLISH_MAX_DIST = 3
 
@@ -603,6 +605,8 @@ export function mixedPlacement(
   maxComparisons = PLACEMENT_MAX_COMPARISONS,
   /** rivales que no pueden salir ahora (ventana sin repetición): se usa el más cercano al medio que sí pueda */
   avoid: ReadonlySet<string> = new Set(),
+  /** para variar el rival: azar y veces que cada obra ha salido en la sesión (sin esto, siempre el del medio) */
+  spread?: { rng: Rng; seen: Record<string, number> },
 ): MixedPlacement {
   const base = ranking.filter((x) => x !== id)
   let [lo, hi] = stars !== undefined ? starBand(base, starsOf, stars) : [0, base.length]
@@ -619,6 +623,17 @@ export function mixedPlacement(
   // rival: el del medio del hueco; si ya se jugó (el ranking se movió), el más cercano al medio sin jugar
   const mid = Math.floor((lo + hi) / 2)
   let opponent: string | null = null
+  if (spread && hi - lo >= 3) {
+    // en el tercio central del hueco, la que menos ha salido en la sesión (empate al azar): parte el hueco casi igual
+    // de bien y evita que todas las nuevas se enfrenten a la misma obra del centro
+    const third = Math.max(1, Math.floor((hi - lo) / 3))
+    const opts = base.slice(lo + third, hi - third).filter((r) => !duels[pairKey(id, r)] && !avoid.has(r))
+    if (opts.length) {
+      const min = Math.min(...opts.map((r) => spread.seen[r] ?? 0))
+      const pool = opts.filter((r) => (spread.seen[r] ?? 0) === min)
+      opponent = pool[Math.floor(spread.rng() * pool.length)]
+    }
+  }
   for (let d = 0; d <= hi - lo && !opponent; d++) {
     for (const k of [mid - d, mid + d]) {
       if (k >= lo && k < hi && !duels[pairKey(id, base[k])] && !avoid.has(base[k])) { opponent = base[k]; break }
@@ -836,6 +851,8 @@ export function planNextDuel(input: PlanNextDuelInput): PlannedDuel | null {
   const rng = input.rng ?? Math.random
   const starsOf = input.starsOf ?? (() => undefined)
   const recent = input.recent ?? []
+  const sessionSeen: Record<string, number> = {}
+  for (const id of recent) sessionSeen[id] = (sessionSeen[id] ?? 0) + 1
   const unrankedList = normUnranked(input.unranked ?? [])
   const unIds = new Set(unrankedList.map((u) => u.itemId))
   const placedRk = ranking.filter((id) => !unIds.has(id))
@@ -868,11 +885,15 @@ export function planNextDuel(input: PlanNextDuelInput): PlannedDuel | null {
   for (const win of [NO_REPEAT_WINDOW, 1, 0]) {
     const blocked = new Set(win > 0 ? recent.slice(-win * 2) : [])
 
-    // 1. Colocar: el siguiente rival de la búsqueda binaria de cada obra sin colocar (todas a la vez, mezcladas)
+    // 1. Colocar: unas pocas a la vez (OPEN_PLACEMENTS), rotando y mezcladas con el pulido; primero las ya empezadas.
+    // Con todas a la vez ninguna terminaba: 30 sin ordenar seguían sin colocar tras 60 duelos (Igor, 25/10)
+    const open = [...pending]
+      .sort((x, y) => Number((duelCount[y.itemId] ?? 0) > 0) - Number((duelCount[x.itemId] ?? 0) > 0))
+      .slice(0, OPEN_PLACEMENTS)
     const places: PlannedDuel[] = []
-    for (const u of pending) {
+    for (const u of open) {
       if (blocked.has(u.itemId)) continue
-      const p = mixedPlacement(rk, u.itemId, u.stars ?? starsOf(u.itemId), duels, starsOf, PLACEMENT_MAX_COMPARISONS, blocked)
+      const p = mixedPlacement(rk, u.itemId, u.stars ?? starsOf(u.itemId), duels, starsOf, PLACEMENT_MAX_COMPARISONS, blocked, { rng, seen: sessionSeen })
       const opp = p.opponent
       if (!opp || blocked.has(opp)) continue
       places.push({ kind: 'place', a: u.itemId, b: opp, subject: u.itemId, opponent: opp })
@@ -889,8 +910,10 @@ export function planNextDuel(input: PlanNextDuelInput): PlannedDuel | null {
         if (blocked.has(a) || blocked.has(b)) continue
         const novelty = duels[pairKey(a, b)] ? REPEAT_NOVELTY : 1
         const close = 1 / (1 + Math.abs((ratings[a] ?? 0) - (ratings[b] ?? 0)))
-        const util = close * ((uncertainties[a] ?? 1) + (uncertainties[b] ?? 1)) * novelty
-        if (util >= MIN_UTILITY) polish.push({ a, b, util })
+        const tired = 1 + (sessionSeen[a] ?? 0) + (sessionSeen[b] ?? 0) // las que ya han salido mucho en la sesión, menos
+        const worth = close * ((uncertainties[a] ?? 1) + (uncertainties[b] ?? 1)) * novelty
+        // el cansancio solo reordena: no decide si quedan duelos que merezcan la pena
+        if (worth >= MIN_UTILITY) polish.push({ a, b, util: worth / tired })
       }
     }
     polish.sort((x, y) => y.util - x.util)

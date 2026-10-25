@@ -443,24 +443,27 @@ describe('T30 — Duelos largos y mezclados (Bradley-Terry)', () => {
     for (const c of [50, 150]) expect(mean(nw, c, 1)).toBeGreaterThanOrEqual(mean(od, c, 1) - 0.07)
   }, 120000)
 
-  it('mezcla: en los primeros 30 duelos salen muchas obras nuevas y muchas ya colocadas', () => {
+  it('mezcla: en 30 duelos se colocan obras nuevas, salen muchas ya colocadas y ninguna obra acapara los duelos', () => {
     const rng = (() => { let a = 4242; return () => { a = (a * 16807) % 2147483647; return a / 2147483647 } })()
     const truth = Array.from({ length: 60 }, (_, i) => `m_${i}`)
     let ranking = truth.slice(0, 40)
     const anchor = [...ranking]
     const unranked = truth.slice(40).map((itemId) => ({ itemId }))
     const duels: Record<string, DuelRecord> = {}; const recent: string[] = []
-    const nu = new Set<string>(); const old = new Set<string>()
+    const nu = new Set<string>(); const old = new Set<string>(); const times: Record<string, number> = {}
     for (let d = 0; d < 30; d++) {
       const un = unranked.filter((u) => !ranking.includes(u.itemId))
       const next = planNextDuel({ ranking, anchor, unranked: un, duels, rng, recent })!
-      for (const x of [next.a, next.b]) (+x.slice(2) >= 40 ? nu : old).add(x)
+      for (const x of [next.a, next.b]) { (+x.slice(2) >= 40 ? nu : old).add(x); times[x] = (times[x] ?? 0) + 1 }
       recent.push(next.a, next.b)
       duels[pairKey(next.a, next.b)] = { w: truth.indexOf(next.a) < truth.indexOf(next.b) ? next.a : next.b, at: d } as DuelRecord
       ranking = applyDuelToRanking({ ranking, anchor, unranked: un, duels, starsOf: () => undefined }).ranking
     }
-    expect(nu.size).toBeGreaterThanOrEqual(12)
+    console.log('mezcla 30 duelos: nuevas', nu.size, 'colocadas', unranked.filter((u) => ranking.includes(u.itemId)).length, 'viejas', old.size, 'máx. veces', Math.max(...Object.values(times)))
+    expect(unranked.filter((u) => ranking.includes(u.itemId)).length).toBeGreaterThanOrEqual(2) // ya hay nuevas colocadas
+    expect(nu.size).toBeGreaterThanOrEqual(4)
     expect(old.size).toBeGreaterThanOrEqual(10)
+    expect(Math.max(...Object.values(times))).toBeLessThanOrEqual(6) // antes, la obra del centro salía 14 veces en 60
   })
 
   it('deshacer quita el registro del duelo', () => {
