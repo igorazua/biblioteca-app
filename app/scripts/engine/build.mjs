@@ -118,7 +118,8 @@ async function main() {
           if (raw.basedOn) item.basedOn = raw.basedOn
           if (raw.awards?.length) item.awards = raw.awards
           if (raw.ongoing != null) item.ongoing = raw.ongoing
-          if (raw.synopsis && raw.synopsis.length > (item.synopsis?.length || 0)) {
+          // fixedBy: ficha corregida a mano en la caché (emparejamiento equivocado): su sinopsis manda aunque sea más corta
+          if (raw.synopsis && (raw.fixedBy || raw.synopsis.length > (item.synopsis?.length || 0))) {
             item.synopsis = raw.synopsis
             item.src.synopsis = raw.source || 'wikipedia'
           }
@@ -198,7 +199,7 @@ async function main() {
     'movie:star-wars-1977': 'Q17738',
     'series:friends-1994': 'Q79784',
     'boardgame:catan-1995': 'Q17271',
-    'boardgame:parchis-1900': 'Q2051664',
+    'boardgame:parchis-1900': 'Q945556', // Q2051664 era un insecto (25/10)
     'boardgame:uno-1971': 'Q17267',
   }
   for (const [gid, qid] of Object.entries(goldenQidPatches)) {

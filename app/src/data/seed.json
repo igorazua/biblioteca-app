@@ -286689,7 +286689,7 @@
       "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/love-letter-2019.webp?v=3",
       "popularity": 72,
       "wikidataId": "Q18456969",
-      "bggId": "129622",
+      "bggId": "277085",
       "voteAvg": 7.2,
       "voteCount": 600,
       "wikiLangs": 12,
@@ -286706,7 +286706,7 @@
         "voteAvg": "wikidata",
         "voteCount": "wikidata",
         "keywords": "wikidata",
-        "synopsis": "wikipedia",
+        "synopsis": "wikidata",
         "posterUrl": "bgg",
         "wikiLangs": "wikidata",
         "popPct": "computed",
@@ -369909,7 +369909,7 @@
       "titles": {
         "es-ES": "Cupido"
       },
-      "wikidataId": "Q286700",
+      "wikidataId": "Q109313219",
       "wikiLangs": 3,
       "peakDecades": [
         "2010s",
@@ -380483,9 +380483,9 @@
         "Familiar",
         "Carreras"
       ],
-      "synopsis": "Charles Kingsley Meek, or just C. K. Meek, was a British anthropologist. He wrote about the northern and southern tribes of Nigeria and studied the Jukun people. Meek took photographs during some of his field work.",
+      "synopsis": "El parchís es un clásico juego de carreras derivado del pachisi. Muy popular en España e Hispanoamérica, se juega con un dado y cuatro fichas por jugador con el objetivo de llevarlas todas a la casilla final.",
       "posterUrl": "https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers/boardgame/parchis-1900.webp?v=3",
-      "wikidataId": "Q2051664",
+      "wikidataId": "Q945556",
       "originCountry": [
         "ES"
       ],
