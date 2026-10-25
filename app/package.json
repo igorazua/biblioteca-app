@@ -17,6 +17,7 @@
     "engine:pageviews": "node scripts/engine/enrich-pageviews.mjs",
     "brain:users": "node scripts/brain/test-users.mjs",
     "brain:eval": "node scripts/brain/eval-brain.mjs",
+    "engine:ratios": "node scripts/engine/poster-ratios.mjs",
     "engine:build": "node scripts/engine/build.mjs",
     "engine:graph": "node scripts/engine/graph-import.mjs",
     "engine:context": "node scripts/engine/context.mjs",
@@ -25,8 +26,8 @@
     "engine:merge": "node scripts/engine/merge.mjs",
     "engine:coverage": "node scripts/engine/coverage.mjs",
     "engine:audit": "node scripts/engine/audit.mjs",
-    "engine:all": "npm run engine:sources && npm run engine:build && npm run engine:graph && npm run engine:context && npm run engine:vectors && npm run engine:neighbors && npm run engine:merge && npm run engine:coverage",
-    "engine": "npm run engine:sources && npm run engine:build && npm run engine:coverage",
+    "engine:all": "npm run engine:sources && npm run engine:ratios && npm run engine:build && npm run engine:graph && npm run engine:context && npm run engine:vectors && npm run engine:neighbors && npm run engine:merge && npm run engine:coverage",
+    "engine": "npm run engine:sources && npm run engine:ratios && npm run engine:build && npm run engine:coverage",
     "catalog:upload": "node --env-file-if-exists=.env.local scripts/catalog-upload.mjs",
     "build-preview": "npm run build && vite preview --port 4173 --host"
   },

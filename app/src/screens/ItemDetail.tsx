@@ -6,7 +6,7 @@ import { useStore } from '../store/useStore'
 import { useCatalog } from '../store/useCatalog'
 import { useRanks } from '../store/useScores'
 import { Poster, posterLayoutId } from '../components/Poster'
-import { posterShape } from '../lib/posterShape'
+import { boardgameDetailAspect, posterShape } from '../lib/posterShape'
 import { Avatar, RankBadge, Sheet, Tag, Toast } from '../components/ui'
 import { RatingFlow } from '../components/RatingFlow'
 import { AskFriend } from '../components/AskFriend'
@@ -103,13 +103,24 @@ export function ItemDetail() {
   }
   const askText = (name: string, pos: number) => `Oye ${name}, he visto que tienes ${item.title} en el puesto ${pos} de tus ${label.plural.toLowerCase()}, ¿me ${label.pronoun} recomiendas?`
 
+  const bgAspect = item.type === 'boardgame' ? boardgameDetailAspect(item.posterRatio) : null
+
   return (
     <div className="h-full relative bg-bg">
       <button onClick={goBack} aria-label="Volver" className="absolute left-4 z-20 w-10 h-10 rounded-full bg-bg/85 border border-line flex items-center justify-center text-ink active:scale-95 transition-transform" style={{ top: 'max(env(safe-area-inset-top), 16px)' }}>
         <Icon name="back" size={20} />
       </button>
       <div className="h-full scroll-y pb-10">
-        <div className={`relative ${posterShape(item.type) === 'square' ? 'w-full aspect-square' : 'h-[430px]'}`}>
+        <div
+          className={`relative ${
+            posterShape(item.type) === 'square'
+              ? 'w-full aspect-square'
+              : bgAspect != null
+                ? 'w-full'
+                : 'h-[430px]'
+          }`}
+          style={bgAspect != null ? { aspectRatio: bgAspect } : undefined}
+        >
           <Poster item={item} showTitle={false} layoutId={posterLayoutId(item.id)} style={{ borderRadius: 0 }} className="absolute inset-0 w-full h-full" />
           {/* el degradado y el título entran cuando el póster ya casi ha llegado */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.25, delay: 0.12 }} className="absolute inset-0 bg-gradient-to-t from-bg via-bg/50 to-black/30" />

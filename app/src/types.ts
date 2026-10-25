@@ -33,6 +33,8 @@ export interface Item {
   genres: string[]
   synopsis: string
   posterUrl: string | null
+  /** ancho / alto de la portada guardada (medido en scripts) */
+  posterRatio?: number
   platforms?: string[]
   popularity: number // 0-100
   tmdbId?: number

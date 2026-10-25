@@ -6,7 +6,7 @@ import { Poster, posterLayoutId } from './Poster'
 import { FriendBubbles, Tag } from './ui'
 import { itemFacts, typeName } from '../data/catalog'
 import { haptic } from '../lib/haptics'
-import { posterShape } from '../lib/posterShape'
+import { boardgameDeckLayout, posterShape } from '../lib/posterShape'
 
 export type SwipeDir = 'left' | 'right' | 'up'
 export interface DeckHandle { fling: (dir: SwipeDir) => void }
@@ -19,11 +19,22 @@ const FLICK = 600
 /** `flight`: solo la tarjeta de arriba vuela a la ficha (un único layoutId montado por obra). */
 function CardFace({ item, bubbles = true, flight = false }: { item: Item; bubbles?: boolean; flight?: boolean }) {
   const isSquare = posterShape(item.type) === 'square'
-  if (isSquare) {
+  const bgLayout = item.type === 'boardgame' ? boardgameDeckLayout(item.posterRatio) : null
+
+  if (isSquare || bgLayout?.mode === 'top') {
+    const isTopAspect = bgLayout?.mode === 'top'
     return (
       <div className="absolute inset-0 rounded-[28px] overflow-hidden bg-surface border border-line shadow-2xl shadow-black/60 flex flex-col">
-        <div className="relative w-full aspect-square shrink-0 overflow-hidden bg-surface2">
-          <Poster item={item} showTitle={false} layoutId={flight ? posterLayoutId(item.id) : undefined} className="w-full h-full object-cover" />
+        <div
+          className={`relative w-full shrink-0 overflow-hidden bg-surface2 ${isTopAspect ? '' : 'aspect-square'}`}
+          style={isTopAspect ? { aspectRatio: bgLayout.aspect } : undefined}
+        >
+          <Poster
+            item={item}
+            showTitle={false}
+            layoutId={flight ? posterLayoutId(item.id) : undefined}
+            className={`w-full h-full ${isTopAspect ? '' : 'object-cover'}`}
+          />
           {bubbles && <div className="absolute top-3 right-3"><FriendBubbles itemId={item.id} shelf={item.type} /></div>}
         </div>
         <div className="flex-1 p-5 pb-4 flex flex-col justify-between min-h-0 bg-surface">

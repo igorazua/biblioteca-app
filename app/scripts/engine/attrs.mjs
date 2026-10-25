@@ -7,6 +7,7 @@
 
 export const SOURCE_HIERARCHY = [
   'manual', // Revisión humana explícita: máxima autoridad para corregir errores
+  'measured', // Medición directa de la imagen guardada (T29)
   'wikidata',
   'openlibrary',
   'musicbrainz',
@@ -212,6 +213,14 @@ export const ATTRS = {
     consumers: ['R', 'era', 'popPct'],
     sources: ['wikidata', 'llm-infer', 'computed'],
     minCoverage: 0.80,
+    refresh: 'never',
+  },
+  posterRatio: {
+    type: 'number',
+    shelves: ['boardgame', 'movie', 'series', 'book', 'artist'],
+    consumers: ['UI', 'SwipeDeck', 'ItemDetail'],
+    sources: ['measured', 'manual'],
+    minCoverage: 0.95,
     refresh: 'never',
   },
 }

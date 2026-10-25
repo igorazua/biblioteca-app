@@ -28,6 +28,7 @@ const CACHE_DIR = join(ROOT, 'scripts', 'cache', 'covers')
 const ORIGINAL_FILE = join(ROOT, 'scripts', 'cache', 'posters', 'original.json')
 const ORIGINAL_POSTERS = existsSync(ORIGINAL_FILE) ? JSON.parse(readFileSync(ORIGINAL_FILE, 'utf8')) : {}
 const ATTRS_POSTER_FILE = join(ROOT, 'scripts', 'cache', 'attrs', 'posterUrl.jsonl')
+const ATTRS_RATIO_FILE = join(ROOT, 'scripts', 'cache', 'attrs', 'posterRatio.jsonl')
 
 const SUPABASE_URL = process.env.VITE_SUPABASE_URL
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY
@@ -501,18 +502,36 @@ async function processItem(item) {
   const { data: publicData } = supabase.storage.from(BUCKET).getPublicUrl(storagePath)
   const newUrl = `${publicData.publicUrl}?v=2`
 
-  // Registrar en posterUrl.jsonl si es real
+  // Registrar en posterUrl.jsonl y posterRatio.jsonl si es real (T29.1)
   if (!isGenerated) {
     mkdirSync(dirname(ATTRS_POSTER_FILE), { recursive: true })
+    const today = new Date().toISOString().slice(0, 10)
     const line = JSON.stringify({
       id: item.id,
       value: newUrl,
       src: `scrape:${imageSource}`,
       imageSrc: imageSource,
       conf: 0.95,
-      at: new Date().toISOString().slice(0, 10),
+      at: today,
     }) + '\n'
     appendFileSync(ATTRS_POSTER_FILE, line, 'utf8')
+
+    try {
+      const meta = await sharp(webpBuffer).metadata()
+      if (meta.width && meta.height) {
+        const ratio = Math.round((meta.width / meta.height) * 1000) / 1000
+        const ratioLine = JSON.stringify({
+          id: item.id,
+          value: ratio,
+          src: 'measured',
+          conf: 1,
+          at: today,
+        }) + '\n'
+        appendFileSync(ATTRS_RATIO_FILE, ratioLine, 'utf8')
+      }
+    } catch (err) {
+      console.warn(`No se pudo medir ratio para ${item.id}:`, err.message)
+    }
   }
 
   item.posterUrl = newUrl
