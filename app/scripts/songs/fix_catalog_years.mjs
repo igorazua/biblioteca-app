@@ -279,12 +279,19 @@ async function main() {
     }
   }
 
-  // Borrar carátulas viejas huérfanas de Supabase
-  console.log(`\n=== Borrando ${oldCoversToDelete.length} carátulas obsoletas del bucket de Supabase ===`)
+  // Borrar carátulas viejas huérfanas de Supabase (protegido contra borrado de carátulas activas T28.9)
+  const activeStoragePaths = new Set(
+    songs
+      .map((s) => (s.posterUrl && s.posterUrl.includes(`/${BUCKET}/`) ? s.posterUrl.split(`/${BUCKET}/`)[1] : null))
+      .filter(Boolean)
+  )
+  const safeCoversToDelete = Array.from(new Set(oldCoversToDelete)).filter((path) => !activeStoragePaths.has(path))
+
+  console.log(`\n=== Borrando ${safeCoversToDelete.length} carátulas verdaderamente obsoletas del bucket de Supabase (${oldCoversToDelete.length - safeCoversToDelete.length} conservadas por estar en uso) ===`)
   let deletedCount = 0
   const CHUNK_SIZE = 50
-  for (let i = 0; i < oldCoversToDelete.length; i += CHUNK_SIZE) {
-    const chunk = oldCoversToDelete.slice(i, i + CHUNK_SIZE)
+  for (let i = 0; i < safeCoversToDelete.length; i += CHUNK_SIZE) {
+    const chunk = safeCoversToDelete.slice(i, i + CHUNK_SIZE)
     try {
       const { data, error } = await supabase.storage.from(BUCKET).remove(chunk)
       if (!error && data) {
@@ -293,7 +300,7 @@ async function main() {
     } catch {}
     await sleep(80)
   }
-  console.log(`Carátulas obsoletas borradas con éxito: ${deletedCount}/${oldCoversToDelete.length}`)
+  console.log(`Carátulas obsoletas borradas con éxito: ${deletedCount}/${safeCoversToDelete.length}`)
 
   // Escribir songs.json actualizado
   writeFileSync(SONGS_FILE, JSON.stringify(songs, null, 2), 'utf8')
