@@ -17,7 +17,7 @@
 | Tarea | Archivos que solo toca ella |
 |---|---|
 | **T29 · Juegos a la medida de su portada** | `app/scripts/engine/poster-ratios.mjs` (nuevo), `app/scripts/engine/covers.mjs` (solo para apuntar la proporción al subir una portada), `app/scripts/cache/attrs/posterRatio.jsonl` (nuevo, generado), `app/src/data/seed.json` (solo regenerado por `npm run engine:build`), `app/src/types.ts` (un campo), `app/src/lib/posterShape.ts`, `app/src/lib/posterShape.test.ts` (nuevo), `app/src/components/Poster.tsx`, `app/src/components/SwipeDeck.tsx` (solo `CardFace`), `app/src/screens/ItemDetail.tsx` (solo la cabecera con la portada) |
-| **T30 · Duelos largos y mezclados** | `app/src/lib/ranking.ts`, `app/src/lib/ranking.test.ts`, `app/src/screens/CompareSession.tsx` |
+| **T30 · Duelos largos y mezclados** | `app/src/lib/ranking.ts`, `app/src/lib/ranking.test.ts`, `app/src/screens/CompareSession.tsx`, y solo para adaptar las llamadas a `planNextDuel`: `app/src/screens/CompareHome.tsx` y `app/src/lib/compareOverview.ts` |
 
 ---
 
@@ -111,7 +111,7 @@ En `CompareSession.tsx` y `lib/ranking.ts`:
 
 ### Lo que quiere Igor
 - **Sesiones mucho más largas:** se sigue hasta que el usuario decida parar.
-- **Más mezcla:** que no se note que coloca las obras una a una.
+- **Ordenar todo a la vez** (Igor, 25/10): *«no quiero que se escojan x pelis no colocadas y se coloquen mediante 3-4 duelos; quiero que de entre todas las obras sin colocar y las ya colocadas se vayan formando pares y vayamos ordenando todo a la vez»*.
 - **Si una obra se repite contra varias, siempre en el mismo lado** durante la sesión: si empezó a la izquierda, siempre a la izquierda.
 
 ### 30.1 Sin límite de duelos
@@ -123,16 +123,32 @@ En `CompareSession.tsx` y `lib/ranking.ts`:
 - **Progreso:** en lugar de «3 / 7», un contador sin total («12 duelos»). Cada **25 duelos**, un aviso discreto que **no bloquea** («Llevas 25. Sigue o pulsa Terminar») y que se va solo, como el `flash` de ahora. El 25 va en una constante (`DUEL_MILESTONE`).
 - Deshacer sigue funcionando como hoy.
 
-### 30.2 Mezcla: varias colocaciones a la vez, intercaladas con pulir
-**La idea:** en vez de terminar una obra antes de empezar la siguiente, se tienen **hasta 3 obras abiertas a la vez** colocándose, y se alternan entre ellas y con duelos de pulir.
+### 30.2 Ordenar todo a la vez: una nota por obra que aprende de todos los duelos
+**La idea:** se acaba lo de «colocar» una obra con una búsqueda de 3-4 duelos y luego «pulir». Cada obra de la estantería, colocada o no, tiene una **nota interna** que sale de **todos** los duelos del historial. En cada turno se elige, de entre **todas** las obras, la pareja que más ayuda a ordenar. El ranking es simplemente la lista ordenada por esa nota. Es el método clásico de Bradley-Terry, el mismo tipo de idea que el Elo del ajedrez, pero recalculado con todo el historial.
 
-1. **El estado de colocación no se guarda: se reconstruye.** Cada vez que toca colocar una obra, se calcula con `startPlacement(rankingActual, starsOf, id, stars)` + `advancePlacementWithDuels(p, duels)`. Así se rehace su búsqueda con los duelos que ya jugó. No hace falta guardar `activePlacement` (es lo que obliga a seguir con la misma obra), y como el ranking cambia entre turnos, un estado guardado se quedaría viejo. Deshacer funciona solo: al borrar el duelo del historial, la colocación vuelve atrás.
-2. **Obras abiertas:** las `PARALLEL_PLACEMENTS = 3` primeras obras sin ordenar (por `updatedAt`, como ahora). Cuando una termina, entra la siguiente.
-3. **Ventana sin repetición:** una obra no sale en dos duelos seguidos y, si se puede, tampoco dentro de los últimos `NO_REPEAT_WINDOW = 2` duelos. Si es imposible (estantería con muy pocas obras), se relaja: primero a 1 y después a 0. Esto vale para colocar y para pulir.
-4. **Qué toca en cada turno:** se mantiene el patrón de ahora (`C C P C C P P`, donde C es colocar y P es pulir). En los turnos C se elige, entre las obras abiertas que no estén en la ventana, la que hace más tiempo que no sale. Si ninguna puede, ese turno es P.
-5. **Pulir** (`planRefineDuel`) descarta las parejas con una obra que esté en la ventana. Las rachas (subir o bajar a saltos tras 3 victorias o derrotas seguidas) **siguen existiendo, pero no seguidas**: el estado de racha pasa a ser **por obra** (`Record<id, { wins, losses }>`) en lugar de un único `subject`. Cuando a esa obra le vuelva a tocar fuera de la ventana, continúa su racha.
-6. Todo esto va en funciones **puras** de `ranking.ts`: `planNextDuel` recibe además `recent: string[]` (ids de los últimos duelos de la sesión). La pantalla solo guarda `recent` y el contador.
-7. `PARALLEL_PLACEMENTS`, `NO_REPEAT_WINDOW` y `DUEL_MILESTONE` son constantes exportadas al principio de `ranking.ts`, con un comentario.
+1. **Qué obras entran:** todas las vistas (`status === 'seen'`) de la estantería, estén ya en el ranking o no.
+2. **Punto de partida de cada obra** (lo que se cree antes de mirar sus duelos):
+   - **Ya en el ranking:** una nota que respeta su posición actual (la 1.ª, la más alta; el resto, repartidas de forma uniforme hacia abajo) con **poca incertidumbre**. Así el orden que ya tiene el usuario no se pierde de golpe y solo cambia cuando los duelos lo piden.
+   - **Sin colocar con estrellas:** la nota del centro de su franja de estrellas en el ranking actual (`starBand`), con **mucha incertidumbre**.
+   - **Sin colocar y sin estrellas:** la nota del centro del ranking, con **mucha incertidumbre**.
+3. **Ajuste:** función pura `fitRatings(items, duels, prior)` en `ranking.ts`, que calcula la nota de cada obra con todos los duelos del historial de la estantería más el punto de partida (máximo a posteriori de Bradley-Terry con una prior normal; unas 50 iteraciones de un método de punto fijo o de gradiente bastan). Devuelve, por obra, `rating` e `uncertainty` (por ejemplo, 1 / √(duelos + peso de la prior)). Tiene que tardar menos de 30 ms con 500 obras y 3.000 duelos: mídelo en el test y pégalo en el registro.
+4. **Ranking:** tras cada duelo se vuelve a ajustar y el array de ranking pasa a ser **todas las obras que ya han jugado al menos un duelo, ordenadas por nota**, más las que ya estaban en el ranking aunque no tengan duelos. Se guarda con `applyRanking`, como ahora.
+   - **Estrellas:** a las obras que cambian de puesto se les ajustan las estrellas con `clampStars`, igual que hace hoy el pulido con sus `movers`.
+   - **Obras nuevas:** una obra sin colocar entra en el ranking en cuanto juega su primer duelo y queda `provisional` hasta tener `RANK_DUELS_FOR_DONE` (3) duelos. Después se marca colocada (`markPlaced`), como ahora.
+5. **Qué pareja toca** (función pura `planNextDuel`, con la misma forma de entrada y salida para no romper `CompareHome` ni `compareOverview`; añade `recent: string[]` a la entrada):
+   - **Candidatas:** para cada obra, sus vecinas por nota (las 8 de arriba y las 8 de abajo) más 4 obras al azar de toda la estantería, para que también salgan parejas lejanas que comprueben el orden general.
+   - **Utilidad de cada pareja:** `cercanía × incertidumbre × novedad`, donde
+     - `cercanía` = lo dudoso que es el resultado según las notas (máxima cuando las dos tienen la misma nota),
+     - `incertidumbre` = la suma de las incertidumbres de las dos (así las obras sin colocar salen a menudo, pero mezcladas con las demás),
+     - `novedad` = 1 si la pareja nunca se ha jugado y 0,1 si ya se jugó.
+   - Se descartan las parejas con alguna obra dentro de la **ventana sin repetición** (punto 6).
+   - Se elige al azar entre las **5 mejores**, para que haya variedad.
+   - Se devuelve `{ kind: 'rank', a, b, subject, opponent }`, donde `subject` es la de más incertidumbre de las dos.
+6. **Ventana sin repetición:** una obra no sale en dos duelos seguidos y, si se puede, tampoco dentro de los últimos `NO_REPEAT_WINDOW = 2` duelos. En estanterías con muy pocas obras se relaja: primero a 1 y después a 0. La pantalla guarda `recent` (ids de los últimos duelos de la sesión) y se lo pasa a `planNextDuel`.
+7. **Cuándo no quedan duelos:** `planNextDuel` devuelve `null` cuando todas las obras tienen al menos 3 duelos y ninguna pareja candidata supera `MIN_UTILITY` (ajústalo con la simulación de 30.4). Así siguen funcionando los estados «completo» y «necesitas más obras» de `CompareHome` y `compareOverview`.
+8. **Lo que se quita de la sesión de Duelos:** `activePlacement`, el patrón `C C P C C P P`, los duelos `place` / `boot` / `refine` y las rachas. **No borres** `startPlacement`, `answerPlacement` ni `finishPlacement`: los sigue usando `PlaceFlow.tsx` (colocar una obra al marcarla como vista), que **no se toca** en esta tarea. Borra solo lo que deje de usarse (búscalo con `grep`).
+9. **Deshacer:** borra el duelo del historial y vuelve a ajustar. El ranking vuelve a quedar como estaba antes de ese duelo; el test de 30.4 lo comprueba.
+10. Las constantes (`NO_REPEAT_WINDOW`, `DUEL_MILESTONE`, el número de vecinos, el de candidatas al azar, la novedad de una pareja repetida, `MIN_UTILITY` y los pesos de la prior) van exportadas al principio de `ranking.ts`, con un comentario cada una.
 
 ### 30.3 Cada obra, siempre en su lado
 - La pantalla guarda, para la sesión, el lado de cada obra que ya ha salido: `sides: Record<itemId, 'L' | 'R'>`. Se vacía al empezar una sesión nueva o cambiar de estantería.
@@ -145,18 +161,20 @@ En `CompareSession.tsx` y `lib/ranking.ts`:
 - **Solo en Comparar.** Decidir y el onboarding usan otros duelos y no se tocan.
 
 ### 30.4 Tests (`ranking.test.ts`, pocos y de riesgo de datos)
-1. **Simulación de usuario:** 30 obras con un orden «real» escondido, 20 ya en el ranking y 10 sin ordenar. Se responde según ese orden durante 200 duelos con `planNextDuel` y luego se comprueba:
+1. **Simulación de usuario:** 60 obras con un orden «real» escondido; 40 ya en el ranking, pero con 8 desordenadas a propósito, y 20 sin ordenar (10 con estrellas, 10 sin). El usuario simulado responde según ese orden, y en el 10 % de los duelos se equivoca. Se juegan 300 duelos con `planNextDuel` y se comprueba:
    - cada obra aparece **exactamente una vez** en el ranking final, sin perder ni duplicar ninguna;
-   - las 10 sin ordenar acaban colocadas;
+   - las 20 sin ordenar acaban en el ranking y con al menos 3 duelos;
    - **ninguna obra sale en dos duelos seguidos**;
-   - el ranking final se parece al orden real **al menos tanto** como con el sistema de ahora (mide la tau de Kendall con los dos sistemas y pega los números en el registro).
-2. **Deshacer:** tras 5 duelos, deshacer el último deja la colocación como estaba después del cuarto.
+   - **mezcla:** en los primeros 30 duelos aparecen al menos 12 obras sin ordenar distintas y al menos 10 de las ya colocadas;
+   - el ranking final se parece al orden real **más** que con el sistema de ahora con los mismos 300 duelos. Mide la tau de Kendall con los dos sistemas también a los 50 y a los 150 duelos, y pega la tabla en el registro.
+2. **Deshacer:** tras 10 duelos, deshacer el último deja el mismo ranking que había después del noveno.
 3. **Lados (`assignSides`):** una obra que se repite 4 veces contra rivales distintos sale siempre en el mismo lado; también se comprueba el caso de conflicto de 30.3.2.
 
 Pega la salida real de estos tests en el registro. No hacen falta tests de componentes.
 
 ### 30.5 Hecho cuando
 - Una sesión de Duelos no se corta sola; «Terminar» y volver enseñan el resumen.
-- En la simulación, ninguna obra sale dos veces seguidas y cada obra que se repite mantiene su lado.
+- En la simulación, ninguna obra sale dos veces seguidas, las obras sin colocar salen mezcladas con las colocadas desde el principio y el orden final mejora al de ahora.
+- Cada obra que se repite mantiene su lado.
 - tsc está limpio y los tests de 30.4 están en verde, pegados en el registro.
-- En el registro, **qué tiene que mirar Igor en el móvil:** una sesión de unos 30 duelos en Juegos de mesa con obras sin ordenar, fijándose en que no salga la misma seguida, en que la que se repite no cambie de lado, en el aviso de los 25 duelos y en el resumen al pulsar «Terminar».
+- En el registro, **qué tiene que mirar Igor en el móvil:** una sesión de unos 30 duelos en Juegos de mesa con obras sin ordenar, fijándose en que salgan mezcladas obras nuevas y ya colocadas, en que no salga la misma seguida, en que la que se repite no cambie de lado, en el aviso de los 25 duelos y en el resumen al pulsar «Terminar».
