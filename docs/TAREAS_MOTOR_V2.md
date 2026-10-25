@@ -486,3 +486,9 @@ Encargos completos en **`docs/TAREAS_T22_T26_PRIMERA_IMPRESION.md`** (24/10/2026
 # T27-T28 — Tarjetas cuadradas para la música y estantería de Canciones
 
 Encargos completos en **`docs/TAREAS_T27_T28_MUSICA.md`** (24/10/2026). Los hace **Gemini**, primero T27 y luego T28. Canciones queda detrás del interruptor `SHELF_ENABLED.song` de `config.ts`.
+
+---
+
+# T29-T30 — Juegos de mesa a la medida de su portada y duelos largos y mezclados
+
+Encargos completos en **`docs/TAREAS_T29_T30_JUEGOS_Y_DUELOS.md`** (25/10/2026). Los hace **Gemini** después de T28.8, uno detrás de otro.
