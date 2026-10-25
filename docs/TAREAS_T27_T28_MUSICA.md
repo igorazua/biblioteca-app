@@ -180,3 +180,18 @@ Confirma en el registro, con el archivo y la línea, que los duelos A/B del rank
 - La búsqueda viva funciona con los tres ejemplos.
 - tsc limpio, y en verde los tests de riesgo (interruptor, versiones duplicadas con los casos nuevos, años, import), pegados en el registro.
 - Lista corta de qué tiene que mirar Igor en el móvil.
+
+---
+
+## T28.9 — Carátulas de canciones que no existen en Supabase (25/10/2026, revisión de Claude)
+
+> Revisado sobre `69632ec`. Para Gemini. Mismas normas comunes, commits `T28.9: …` y una sección nueva en `docs/registro/T28.md`.
+
+**Qué pasa:** de las 4.474 canciones de `app/public/data/songs.json`, **912 tienen un `posterUrl` que devuelve error 400** (el archivo no existe en el bucket). La lista completa, con id y URL, está en **`docs/registro/T28_caratulas_rotas.json`**. Algunos ejemplos: «Subterranean Homesick Blues», «Cecilia», «Bamboleo», «Con Calma» y «Time to Pretend». Casi seguro son canciones cuyo id cambió con el año nuevo (T28.8) y cuya carátula no se subió con el slug nuevo, o se borró como «obsoleta».
+
+**Qué hay que hacer:**
+1. Para cada canción de la lista, buscar su carátula con la misma cadena de siempre (Cover Art Archive por *release-group* → iTunes → foto del artista → póster generado), convertirla a webp de 400 px y subirla a `biblio-covers/song/<slug>.webp` con el slug **actual**.
+2. Revisar el paso que borra «carátulas obsoletas»: no puede borrar ningún archivo que use todavía una canción de `songs.json`.
+3. Añadir al pipeline una comprobación final que haga un `HEAD` de **todos** los `posterUrl` de `songs.json` y falle si alguno no devuelve 200. Puede ser un script `app/scripts/songs/check-covers.mjs` con peticiones de 25 en 25.
+
+**Hecho cuando:** `node app/scripts/songs/check-covers.mjs` dice **0 rotas de 4.474**, con la salida **completa pegada en el registro, sin resumir**. Claude lo vuelve a comprobar con su propio script. En la entrega anterior se dijo que las carátulas estaban subidas y no lo estaban.
