@@ -8,6 +8,7 @@ import { planNextDuel, type PlannedDuel } from '../lib/ranking'
 import { ScreenTitle } from '../components/ScreenTitle'
 import { Button } from '../components/Button'
 import { Poster } from '../components/Poster'
+import { posterBox } from '../lib/posterShape'
 
 const MAX_POSTERS_ROW = 5
 
@@ -149,14 +150,14 @@ export function CompareHome() {
             {/* Dos cartas 118 x 177 (2:3, rounded-[10px], sin borde), solapadas 14 px y centradas */}
             <div className="relative flex items-center justify-center py-2">
               <div
-                className="w-[118px] h-[177px] rounded-[10px] overflow-hidden shadow-lg -rotate-[5deg] shrink-0"
-                style={{ transformOrigin: 'center center' }}
+                className={`w-[118px] ${pairItems.a?.type === 'boardgame' ? posterBox(pairItems.a).className : 'h-[177px]'} rounded-[10px] overflow-hidden shadow-lg -rotate-[5deg] shrink-0`}
+                style={{ transformOrigin: 'center center', ...(pairItems.a?.type === 'boardgame' ? posterBox(pairItems.a).style : {}) }}
               >
                 <Poster item={pairItems.a} showTitle={false} className="w-full h-full object-cover" />
               </div>
               <div
-                className="w-[118px] h-[177px] rounded-[10px] overflow-hidden shadow-lg rotate-[5deg] -ml-[14px] shrink-0"
-                style={{ transformOrigin: 'center center' }}
+                className={`w-[118px] ${pairItems.b?.type === 'boardgame' ? posterBox(pairItems.b).className : 'h-[177px]'} rounded-[10px] overflow-hidden shadow-lg rotate-[5deg] -ml-[14px] shrink-0`}
+                style={{ transformOrigin: 'center center', ...(pairItems.b?.type === 'boardgame' ? posterBox(pairItems.b).style : {}) }}
               >
                 <Poster item={pairItems.b} showTitle={false} className="w-full h-full object-cover" />
               </div>
@@ -264,7 +265,7 @@ export function CompareHome() {
                     {posterItems.length > 0 && (
                       <div className="mt-2.5 flex items-center gap-1.5 overflow-hidden">
                         {visiblePosters.map((it) => (
-                          <div key={it.id} className="w-[46px] h-[69px] rounded-md overflow-hidden shrink-0 bg-surface2">
+                          <div key={it.id} className={`w-[46px] ${it.type === 'boardgame' ? posterBox(it).className : 'h-[69px]'} rounded-md overflow-hidden shrink-0 bg-surface2`} style={it.type === 'boardgame' ? posterBox(it).style : undefined}>
                             <Poster item={it} showTitle={false} className="w-full h-full object-cover" />
                           </div>
                         ))}

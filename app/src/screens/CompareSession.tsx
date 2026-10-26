@@ -11,6 +11,7 @@ import {
 } from '../lib/ranking'
 import { SwipePair, type Side } from '../components/SwipePair'
 import { Poster } from '../components/Poster'
+import { posterBox } from '../lib/posterShape'
 import { CommentSheet } from '../components/RatingFlow'
 import { Icon } from '../components/Icon'
 import { ScreenTitle } from '../components/ScreenTitle'
@@ -535,7 +536,7 @@ function MoveList({
             key={r.id}
             title={
               <div className="flex items-center gap-3">
-                <Poster item={it} className="w-8 h-12 rounded-[6px] shrink-0 object-cover" />
+                <Poster item={it} style={it.type === 'boardgame' ? posterBox(it).style : undefined} className={`w-8 ${it.type === 'boardgame' ? posterBox(it).className : 'h-12'} rounded-[6px] shrink-0 object-cover`} />
                 <span className="serif text-item font-medium line-clamp-1">{it.title}</span>
               </div>
             }

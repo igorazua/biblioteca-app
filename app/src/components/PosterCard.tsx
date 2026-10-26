@@ -1,6 +1,6 @@
 import type { Item } from '../types'
 import { SHELF_LABEL } from '../types'
-import { posterAspectClass, posterRadius, posterShape } from '../lib/posterShape'
+import { posterBox, posterRadius, posterShape } from '../lib/posterShape'
 
 export interface PosterCardProps {
   item: Item
@@ -25,11 +25,14 @@ export function PosterCard({
   const shelfLabel = SHELF_LABEL[item.type]?.singular || item.type
   const metaText = subtitle || [item.year, item.creator].filter(Boolean).join(' · ')
   const isSquareMixed = mixed && posterShape(item.type) === 'square'
+  // Juego de mesa con la forma de su carátula (T32): la portada va pegada abajo de su celda
+  const shaped = item.type === 'boardgame' && item.posterRatio != null
+  const box = posterBox(item)
 
   return (
     <div
       onClick={onClick}
-      className={`group cursor-pointer select-none ${className}`}
+      className={`group cursor-pointer select-none ${shaped && !mixed ? 'flex flex-col justify-end h-full' : ''} ${className}`}
       role={onClick ? 'button' : undefined}
       tabIndex={onClick ? 0 : undefined}
     >
@@ -61,14 +64,35 @@ export function PosterCard({
             </div>
           )}
         </div>
-      ) : (
-        <div className={`relative ${posterAspectClass(item.type)} w-full rounded-[10px] overflow-hidden bg-surface`} style={{ borderRadius: posterRadius(item.type, 10) }}>
+      ) : shaped && mixed ? (
+        // Juego de mesa en rejilla mixta: hueco 2:3 y la carátula centrada dentro, sin relleno difuminado (T32)
+        <div className="relative aspect-[2/3] w-full rounded-[10px] overflow-hidden bg-surface flex items-center justify-center" style={{ borderRadius: posterRadius(item.type, 10) }}>
           {item.posterUrl ? (
             <img
               src={item.posterUrl}
               alt={item.title}
               loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+              className="max-w-full max-h-full object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center p-3 text-center bg-surface2 text-mute text-meta">
+              {item.title}
+            </div>
+          )}
+          {badge && (
+            <div className="absolute top-2 right-2 bg-bg/85 px-2 py-0.5 rounded-md text-[11px] font-medium text-ink tabular-nums">
+              {badge}
+            </div>
+          )}
+        </div>
+      ) : (
+        <div className={`relative ${box.className} w-full rounded-[10px] overflow-hidden bg-surface`} style={{ borderRadius: posterRadius(item.type, 10), ...box.style }}>
+          {item.posterUrl ? (
+            <img
+              src={item.posterUrl}
+              alt={item.title}
+              loading="lazy"
+              className={`w-full h-full ${shaped ? 'object-contain' : 'object-cover'} transition-transform duration-200 group-hover:scale-[1.02]`}
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center p-3 text-center bg-surface2 text-mute text-meta">

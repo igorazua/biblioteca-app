@@ -9,6 +9,7 @@ import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type Item, type ShelfType } from 
 import { cleanDisplayTitle, isDjOrGarbageVersion, slugify } from '../lib/cleanTitle'
 import { Portal } from './ui'
 import { Poster } from './Poster'
+import { posterBox } from '../lib/posterShape'
 import { Icon } from './Icon'
 import { RatingFlow } from './RatingFlow'
 import { PlaceFlow } from './PlaceFlow'
@@ -369,7 +370,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
                 return (
                   <li key={it.id} className="rounded-2xl bg-surface/70 border border-line">
                     <button onClick={() => setOpen(isOpen ? null : it.id)} aria-expanded={isOpen} className="w-full flex items-center gap-3 p-2.5 text-left">
-                      <Poster item={it} className="w-11 h-[66px] rounded-lg shrink-0" />
+                      <Poster item={it} style={it.type === 'boardgame' ? posterBox(it).style : undefined} className={`w-11 ${it.type === 'boardgame' ? posterBox(it).className : 'h-[66px]'} rounded-lg shrink-0 self-center`} />
                       <span className="flex-1 min-w-0">
                         <span className="block serif font-semibold leading-tight line-clamp-2">{it.title}</span>
                         <span className="block text-xs text-mute truncate">{it.year} · {it.creator}</span>

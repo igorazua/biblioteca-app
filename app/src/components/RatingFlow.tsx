@@ -6,7 +6,7 @@ import { Sheet, StarRating } from './ui'
 import { Button } from './Button'
 import { SHELF_LABEL, type Stars } from '../types'
 import { haptic } from '../lib/haptics'
-import { posterAspectClass, posterRadius } from '../lib/posterShape'
+import { posterBox, posterRadius } from '../lib/posterShape'
 
 /**
  * Hoja de valoración tras marcar una obra como vista. Cerrarla de cualquier forma guarda lo que haya.
@@ -42,7 +42,7 @@ export function RatingFlow({ itemId, onDone, withStars }: { itemId: string; onDo
   return (
     <Sheet label="Valorar" onClose={finish} height={stars0 ? '46%' : '36%'}>
       <div className="flex gap-3 items-center">
-        <Poster item={item} style={{ borderRadius: posterRadius(item?.type, 8) }} className={`w-14 ${posterAspectClass(item?.type)} rounded-[8px] shrink-0 object-cover`} />
+        <Poster item={item} style={{ borderRadius: posterRadius(item?.type, 8), ...posterBox(item).style }} className={`w-14 ${posterBox(item).className} rounded-[8px] shrink-0 object-cover`} />
         <div className="min-w-0">
           <div className="text-label text-mute uppercase">{label.actionPast}</div>
           <div className="serif text-title font-medium text-ink leading-tight line-clamp-2 mt-0.5">{item.title}</div>

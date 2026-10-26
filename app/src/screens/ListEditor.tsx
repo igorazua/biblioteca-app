@@ -5,7 +5,7 @@ import { getItem, items, typeName } from '../data/catalog'
 import { useStore } from '../store/useStore'
 import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type ListItem, type ShelfType } from '../types'
 import { Poster } from '../components/Poster'
-import { posterAspectClass, posterRadius } from '../lib/posterShape'
+import { posterBox, posterRadius } from '../lib/posterShape'
 import { Chip, Confirm, ScreenHeader, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { listUrl, type SharedList } from '../lib/share'
@@ -93,7 +93,7 @@ export function ListEditor() {
               if (!it) return null
               return (
                 <li key={s.itemId} className="flex gap-3 bg-surface rounded-2xl border border-line p-2.5">
-                  <Poster item={it} style={{ borderRadius: posterRadius(it.type, 12) }} className={`w-12 ${posterAspectClass(it.type)} rounded-xl shrink-0 object-cover`} />
+                  <Poster item={it} style={{ borderRadius: posterRadius(it.type, 12), ...posterBox(it).style }} className={`w-12 ${posterBox(it).className} rounded-xl shrink-0 self-center object-cover`} />
                   <div className="flex-1 min-w-0">
                     <div className="serif font-semibold leading-tight truncate">{it.title}</div>
                     <input value={s.note ?? ''} onChange={(e) => setSel((cur) => cur.map((x, i) => (i === idx ? { ...x, note: e.target.value } : x)))}
@@ -126,7 +126,7 @@ export function ListEditor() {
           <ul className="mt-3 space-y-2">
             {results.map((it) => (
               <li key={it.id} className="flex items-center gap-3 bg-surface/60 rounded-2xl border border-line p-2">
-                <Poster item={it} className="w-10 h-[60px] rounded-lg shrink-0" />
+                <Poster item={it} style={it.type === 'boardgame' ? posterBox(it).style : undefined} className={`w-10 ${it.type === 'boardgame' ? posterBox(it).className : 'h-[60px]'} rounded-lg shrink-0`} />
                 <div className="flex-1 min-w-0">
                   <div className="serif font-medium leading-tight truncate">{it.title}</div>
                   <div className="text-xs text-mute truncate">{typeName(it.type)} · {it.year}</div>
