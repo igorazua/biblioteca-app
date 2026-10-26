@@ -3,6 +3,7 @@
 import { useEffect, useLayoutEffect, useRef, useState, type RefObject } from 'react'
 import { animate, motion, useMotionValue, useReducedMotion, useTransform, type MotionValue } from 'framer-motion'
 import { haptic } from '../lib/haptics'
+import { duelCardSize, duelFitSize, getDuelFit, DUEL_FIT_EVENT, type DuelFit } from '../lib/posterShape'
 import type { Side } from './SwipePair'
 
 // ── Textos del duelo ────────────────────────────────────────────────────────────────────────────
@@ -156,8 +157,36 @@ export function markDuelLearned() {
 const clamp01 = (v: number) => Math.max(0, Math.min(1, v))
 const lerp = (a: number, b: number, k: number) => a + (b - a) * k
 
+interface CardLayout {
+  w: number
+  h: number
+  fitW: number
+  fitH: number
+}
+
+interface FanLayout {
+  w: number
+  h: number
+  cardW: number
+  cardH: number
+  qTop: number
+  qH: number
+  cy: number
+  titleTop: number
+  cx: { a: number; b: number }
+  fitW: number
+  cards: { a: CardLayout; b: CardLayout }
+}
+
 /** Reparto de la mesa del abanico según el tamaño disponible. */
-function fanLayout(w: number, h: number, square: boolean = false) {
+function fanLayout(
+  w: number,
+  h: number,
+  left?: Side,
+  right?: Side,
+  square: boolean = false,
+  fit: DuelFit = 'area',
+): FanLayout {
   const padTop = 8
   const qH = 0 // la pregunta va en la cabecera de la pantalla (SISTEMA_DISENO §5.5)
   const qGap = 0
@@ -165,12 +194,61 @@ function fanLayout(w: number, h: number, square: boolean = false) {
   const titleH = 56
   const gap = 14
   const availH = Math.max(220, h - padTop - hintH)
+
+  // T31: Solo juegos de mesa, y solo si las dos obras del duelo tienen posterRatio
+  const isBoardgameDuel =
+    left?.type === 'boardgame' &&
+    right?.type === 'boardgame' &&
+    typeof left?.ratio === 'number' &&
+    left.ratio > 0 &&
+    typeof right?.ratio === 'number' &&
+    right.ratio > 0
+
+  if (isBoardgameDuel) {
+    const bw = w * 0.48
+    const bh = Math.max(100, availH - qH - qGap - titleH - gap)
+    const sizeA = duelCardSize(left.ratio!, right.ratio!, bw, bh, fit)
+    const sizeB = duelCardSize(right.ratio!, left.ratio!, bw, bh, fit)
+    const fitA = duelFitSize(left.ratio!, w, h, FIT_MARGIN)
+    const fitB = duelFitSize(right.ratio!, w, h, FIT_MARGIN)
+
+    const maxCardH = Math.max(sizeA.h, sizeB.h)
+    const blockH = qH + qGap + maxCardH + gap + titleH
+    const qTop = padTop + Math.max(0, (availH - blockH) / 2)
+    const top = qTop + qH + qGap
+    const cy = top + maxCardH / 2
+    // Títulos en una línea común justo debajo de la carta más alta
+    const titleTop = top + maxCardH + gap
+
+    return {
+      w,
+      h,
+      cardW: sizeA.w,
+      cardH: sizeA.h,
+      qTop,
+      qH,
+      cy,
+      titleTop,
+      cx: { a: w * 0.3, b: w * 0.7 },
+      fitW: fitA.fitW,
+      cards: {
+        a: { w: sizeA.w, h: sizeA.h, fitW: fitA.fitW, fitH: fitA.fitH },
+        b: { w: sizeB.w, h: sizeB.h, fitW: fitB.fitW, fitH: fitB.fitH },
+      },
+    }
+  }
+
+  // Pelis, series, libros (verticales 1.5) y música (cuadradas 1)
   const ratio = square ? 1 : 1.5
   const cardW = Math.min(w * 0.48, (availH - qH - qGap - titleH - gap) / ratio)
   const cardH = cardW * ratio
   const blockH = qH + qGap + cardH + gap + titleH
   const qTop = padTop + Math.max(0, (availH - blockH) / 2)
   const top = qTop + qH + qGap
+  const fitW = Math.min(w - 2 * FIT_MARGIN, (h - 2 * FIT_MARGIN) / ratio)
+  const fitH = fitW * ratio
+  const stdCard: CardLayout = { w: cardW, h: cardH, fitW, fitH }
+
   return {
     w,
     h,
@@ -181,11 +259,10 @@ function fanLayout(w: number, h: number, square: boolean = false) {
     cy: top + cardH / 2,
     titleTop: top + cardH + gap,
     cx: { a: w * 0.3, b: w * 0.7 },
-    // el póster entero, con un margen igual por los cuatro lados para que el borde iluminado no se corte
-    fitW: Math.min(w - 2 * FIT_MARGIN, (h - 2 * FIT_MARGIN) / ratio),
+    fitW,
+    cards: { a: stdCard, b: stdCard },
   }
 }
-type FanLayout = ReturnType<typeof fanLayout>
 
 /**
  * 3 · Cartas en abanico, sin arrastre libre. Se desliza en horizontal en cualquier parte: a la derecha elige la carta
@@ -196,7 +273,15 @@ export function DuelFan({ left, right, onChoose, onPick, texts, fast = false, sq
   const reduce = useReducedMotion()
   const box = useRef<HTMLDivElement>(null)
   const size = useBoxSize(box)
-  const L = fanLayout(size.w, size.h, square)
+  const [fit, setFit] = useState<DuelFit>(getDuelFit)
+
+  useEffect(() => {
+    const onFit = () => setFit(getDuelFit())
+    window.addEventListener(DUEL_FIT_EVENT, onFit)
+    return () => window.removeEventListener(DUEL_FIT_EVENT, onFit)
+  }, [])
+
+  const L = fanLayout(size.w, size.h, left, right, square, fit)
   const lay = useRef(L)
   lay.current = L
   const x = useMotionValue(0)
@@ -341,12 +426,13 @@ function FanCard({
 }) {
   const isLeft = which === 'a'
   const L = lay.current
+  const card = L.cards[which]
   const rot0 = isLeft ? -6 : 6
   // Trayectoria fija: del sitio de reposo al centro, en línea recta; no depende del dedo en vertical.
   const tx = useTransform(g, (v) => (lay.current.w / 2 - lay.current.cx[which]) * v)
   const ty = useTransform(g, (v) => (lay.current.h / 2 - lay.current.cy) * v)
   const rotate = useTransform(g, (v) => rot0 * (1 - v))
-  const grow = useTransform(g, (v) => lerp(1, lay.current.fitW / lay.current.cardW, v))
+  const grow = useTransform(g, (v) => lerp(1, lay.current.cards[which].fitW / lay.current.cards[which].w, v))
   // la otra se aparta y se apaga
   const ox = useTransform(og, (v) => (isLeft ? -1 : 1) * lay.current.w * 0.22 * v)
   const oScale = useTransform(og, (v) => 1 - 0.1 * v)
@@ -364,10 +450,10 @@ function FanCard({
       disabled={!!picked}
       className="absolute outline-none"
       style={{
-        left: L.cx[which] - L.cardW / 2,
-        top: L.cy - L.cardH / 2,
-        width: L.cardW,
-        height: L.cardH,
+        left: L.cx[which] - card.w / 2,
+        top: L.cy - card.h / 2,
+        width: card.w,
+        height: card.h,
         x,
         y: ty,
         rotate,
@@ -379,8 +465,8 @@ function FanCard({
         touchAction: 'pan-y',
       }}
     >
-      {/* póster a sangre, sin marco ni relleno difuminado alrededor (los pósteres ya son verticales, T14) */}
-      <div className="absolute inset-0 overflow-hidden" style={{ borderRadius: 'inherit' }}>
+      {/* póster a sangre, sin marco ni relleno difuminado alrededor (T31) */}
+      <div className="absolute inset-0 overflow-hidden [&_.blur-xl]:hidden" style={{ borderRadius: 'inherit' }}>
         {side.bg}
       </div>
       {/* borde iluminado de la elegida: la confirmación del duelo */}
