@@ -492,3 +492,9 @@ Encargos completos en **`docs/TAREAS_T27_T28_MUSICA.md`** (24/10/2026). Los hace
 # T29-T30 — Juegos de mesa a la medida de su portada y duelos largos y mezclados
 
 Encargos completos en **`docs/TAREAS_T29_T30_JUEGOS_Y_DUELOS.md`** (25/10/2026). Los hace **Gemini** después de T28.8, uno detrás de otro.
+
+---
+
+# T31 — Duelos de juegos de mesa con cada carta de la forma de su portada
+
+Encargo completo en **`docs/TAREA_T31_DUELOS_JUEGOS.md`** (26/10/2026). **Aún no se hace:** Igor dirá quién lo hace. Incluye un selector en Ajustes para probar tres maneras de dar tamaño a las cartas.
