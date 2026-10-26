@@ -7,7 +7,7 @@ import { useCompareOverview } from '../lib/compareOverview'
 import { ItemRow } from '../components/ItemRow'
 import { Poster } from '../components/Poster'
 import { posterBox, posterRadius, posterShape } from '../lib/posterShape'
-import { Chip, Toast } from '../components/ui'
+import { Toast } from '../components/ui'
 import { AddFlow } from '../components/AddFlow'
 import { CleanupFlow } from '../components/CleanupFlow'
 import { Icon } from '../components/Icon'
@@ -58,10 +58,12 @@ export function Shelf() {
   const createList = () => nav(`/lista/nueva?title=${encodeURIComponent(`Mis ${label.plural.toLowerCase()} favoritas de ${profileName}`)}&ids=${sel.join(',')}`)
 
   return (
-    <div className="h-full flex flex-col bg-bg">
+    <div className="h-full flex flex-col bg-bg relative">
+      {/* Todo hace scroll, cabecera incluida (Igor, 26/10) */}
+      <div className="flex-1 min-h-0 scroll-y">
       {/* Cabecera a sangre (Igor, 26/10): un carrete de fotos inclinado con las obras de la estantería o, si hay
           pocas, con su icono repetido; encima, el nombre y cuánto está ordenado. Sin tarjeta y sin botón de Duelos. */}
-      <header className="relative shrink-0 overflow-hidden" style={{ background: `linear-gradient(160deg, ${SHELF_COLOR[t]}40 0%, var(--color-bg) 75%)` }}>
+      <header className="relative overflow-hidden" style={{ background: `linear-gradient(160deg, ${SHELF_COLOR[t]}40 0%, var(--color-bg) 75%)` }}>
         <FilmStrip ids={stripIds} shelf={t} />
         <div className="absolute inset-0 bg-gradient-to-b from-bg/30 via-bg/40 to-bg pointer-events-none" aria-hidden />
         <div className="relative px-5 pt-[max(env(safe-area-inset-top),18px)] pb-4">
@@ -91,17 +93,29 @@ export function Shelf() {
           </div>
         </div>
       </header>
-      <div className="px-5 pb-3 flex gap-2 overflow-x-auto no-scrollbar shrink-0">
-        <Chip active={seg === 'ord'} onClick={() => setSeg('ord')}>Mis {label.plural.toLowerCase()} · {totalSeen}</Chip>
-        <Chip active={seg === 'pend'} onClick={() => setSeg('pend')}>Pendientes · {pend.length}</Chip>
+      {/* Pestañas de texto con subrayado, en lugar de las dos píldoras */}
+      <div className="mx-5 mb-4 flex gap-6 border-b border-line" role="tablist">
+        {(['ord', 'pend'] as const).map((k) => (
+          <button
+            key={k}
+            role="tab"
+            aria-selected={seg === k}
+            onClick={() => setSeg(k)}
+            className={`relative pb-2.5 text-[15px] font-semibold transition-colors ${seg === k ? 'text-ink' : 'text-mute'}`}
+          >
+            {k === 'ord' ? `Mis ${label.plural.toLowerCase()}` : 'Pendientes'}{' '}
+            <span className="font-normal text-mute tabular-nums">{k === 'ord' ? totalSeen : pend.length}</span>
+            {seg === k && <span className="absolute inset-x-0 -bottom-px h-[2px] rounded-full bg-accent" />}
+          </button>
+        ))}
       </div>
       {selecting && (
-        <div className="px-5 pb-2 flex items-center gap-2 shrink-0">
+        <div className="px-5 pb-3 flex items-center gap-2">
           <button onClick={() => setSel(sel.length === visibleIds.length ? [] : visibleIds)} className="min-h-[36px] px-3.5 rounded-full bg-surface border border-line text-xs font-medium">{sel.length === visibleIds.length && visibleIds.length > 0 ? 'Quitar todas' : 'Seleccionar todas'}</button>
           <span className="text-meta text-mute">{sel.length} seleccionada{sel.length === 1 ? '' : 's'}</span>
         </div>
       )}
-      <div className="flex-1 min-h-0 scroll-y px-5 pb-6">
+      <div className="px-5 pb-28">
         {seg === 'ord' && (
           totalSeen ? (
             <div className="space-y-6">
@@ -120,9 +134,6 @@ export function Shelf() {
                 <div>
                   <div className="flex items-center justify-between mb-2.5">
                     <span className="text-label text-mute">NUEVAS · {unrankedIds.length}</span>
-                    <Link to={`/comparar/${t}`} className="text-label text-accent font-semibold hover:underline">
-                      Colocarlas →
-                    </Link>
                   </div>
                   <div className="rounded-2xl bg-surface border border-line divide-y divide-line overflow-hidden">
                     {unrankedIds.map((id) => {
@@ -228,6 +239,22 @@ export function Shelf() {
           )
         )}
       </div>
+      </div>
+      {/* Botón flotante para ordenar con duelos (Igor, 26/10): siempre a mano aunque la lista tenga 200 obras */}
+      {!selecting && seg === 'ord' && totalSeen >= 2 && (
+        <Link
+          to={`/comparar/${t}`}
+          className="absolute right-5 z-20 inline-flex items-center gap-2 min-h-[52px] pl-4 pr-5 rounded-full bg-accent text-accent-ink text-[15px] font-semibold shadow-xl shadow-black/40 active:scale-95 transition-transform"
+          style={{ bottom: 'max(env(safe-area-inset-bottom), 20px)' }}
+        >
+          <Icon name="scale" size={18} strokeWidth={2.2} /> Ordenar
+          {unrankedIds.length > 0 && (
+            <span className="min-w-[22px] h-[22px] px-1.5 rounded-full bg-accent-ink text-accent text-[12px] font-bold flex items-center justify-center tabular-nums" aria-label={`${unrankedIds.length} nuevas`}>
+              {unrankedIds.length}
+            </span>
+          )}
+        </Link>
+      )}
       {selecting && (
         <div className="shrink-0 p-4 border-t border-line bg-surface flex gap-3">
           <Button variant="secondary" onClick={() => setSelecting(false)}>Cancelar</Button>
