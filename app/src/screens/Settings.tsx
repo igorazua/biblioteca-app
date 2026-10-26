@@ -14,6 +14,7 @@ import { pushLocalEntriesToCloud, pullCloudEntries } from '../lib/sync'
 import { subscribeToPush, isPushSupported } from '../lib/push'
 import { supabase } from '../lib/supabase'
 import { PhoneDiscovery } from '../components/PhoneDiscovery'
+import { getDuelFit, setDuelFit, type DuelFit } from '../lib/posterShape'
 
 export function Settings() {
   const nav = useNavigate()
@@ -40,6 +41,12 @@ export function Settings() {
 
   // Zona de pruebas plegada
   const [testsOpen, setTestsOpen] = useState(false)
+  const [duelFit, setDuelFitState] = useState<DuelFit>(getDuelFit)
+
+  const handleDuelFitChange = (fit: DuelFit) => {
+    setDuelFit(fit)
+    setDuelFitState(fit)
+  }
 
   const handleSyncNow = async () => {
     if (!user) return
@@ -211,6 +218,37 @@ export function Settings() {
             <Row icon="trash" title="Borrar mi cuenta" onClick={() => setConfirmDelete(true)} danger />
           </Group>
         )}
+
+        <Group title="Pruebas">
+          <div className="p-4 space-y-3">
+            <div className="text-sm font-semibold text-ink">Duelos de juegos</div>
+            <p className="text-xs text-mute">
+              Elige cómo adaptar el tamaño de cada carta según la forma de su portada:
+            </p>
+            <div className="grid grid-cols-3 gap-1.5 p-1 bg-surface2 rounded-2xl border border-line">
+              {(
+                [
+                  { id: 'alto', label: 'Misma altura' },
+                  { id: 'area', label: 'Misma superficie' },
+                  { id: 'caja', label: 'Cada una en su hueco' },
+                ] as const
+              ).map((opt) => (
+                <button
+                  key={opt.id}
+                  type="button"
+                  onClick={() => handleDuelFitChange(opt.id)}
+                  className={`py-2 px-1 text-xs font-semibold rounded-xl text-center transition-colors ${
+                    duelFit === opt.id
+                      ? 'bg-accent text-accent-ink shadow-sm'
+                      : 'text-mute hover:text-ink active:bg-surface'
+                  }`}
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        </Group>
 
         <p className="text-[11px] text-mute leading-relaxed px-1">
           {APP_NAME} · Motor {ENGINE_VERSION}. Catálogo de fuentes públicas: Wikidata (CC0), Wikipedia, TVmaze (CC BY-SA), Open Library y MusicBrainz.
