@@ -134,7 +134,7 @@ export function Shelf() {
               {unrankedIds.length > 0 && (
                 <div>
                   <div className="flex items-center justify-between mb-2.5">
-                    <span className="text-label text-mute">SIN ORDENAR · {unrankedIds.length}</span>
+                    <span className="text-label text-mute">NUEVAS · {unrankedIds.length}</span>
                     <Link to={`/comparar/${t}`} className="text-label text-accent font-semibold hover:underline">
                       ¡Duelos!
                     </Link>
@@ -164,7 +164,7 @@ export function Shelf() {
                           <div className="flex-1 min-w-0">
                             <div className="serif text-item text-ink leading-tight line-clamp-1">{it.title}</div>
                             <div className="text-meta text-mute mt-0.5 truncate">{it.year} · {it.creator}</div>
-                            <div className="text-meta text-mute mt-0.5 truncate">sin ordenar</div>
+                            <div className="text-meta text-mute mt-0.5 truncate">nueva</div>
                           </div>
                         </>
                       )

@@ -248,7 +248,7 @@ export function CompareHome() {
                         </span>
                       </div>
                       <span className="text-meta text-mute">
-                        {o.sinOrdenar > 0 ? `${o.sinOrdenar} sin ordenar` : 'todo en su sitio'}
+                        {o.sinOrdenar > 0 ? `${o.sinOrdenar} ${o.sinOrdenar === 1 ? 'nueva' : 'nuevas'}` : 'todo en su sitio'}
                       </span>
                     </div>
 

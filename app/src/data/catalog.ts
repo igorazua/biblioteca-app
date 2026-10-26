@@ -14,7 +14,9 @@ setSeedChecker((id) => itemsById.has(canonicalId(id)))
 let dynamicSongs: Item[] = []
 const songsListeners = new Set<() => void>()
 
-export function registerLoadedSongs(songs: Item[]) {
+export function registerLoadedSongs(raw: Item[]) {
+  // songs.json no trae géneros ni sinopsis: sin esto, el mazo de Descubrir se caía al pintar la primera canción
+  const songs = raw.map((s) => ({ ...s, genres: s.genres ?? [], synopsis: s.synopsis ?? '' }))
   dynamicSongs = songs
   for (const s of songs) {
     itemsById.set(s.id, s)
