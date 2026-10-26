@@ -6,12 +6,11 @@ import { ACTIVE_SHELVES, SHELF_LABEL, type ShelfType } from '../types'
 import { useCompareOverview } from '../lib/compareOverview'
 import { ItemRow } from '../components/ItemRow'
 import { Poster } from '../components/Poster'
-import { posterAspectClass, posterRadius } from '../lib/posterShape'
+import { posterBox, posterRadius, posterShape } from '../lib/posterShape'
 import { Chip, Toast } from '../components/ui'
 import { AddFlow } from '../components/AddFlow'
 import { CleanupFlow } from '../components/CleanupFlow'
 import { Icon } from '../components/Icon'
-import { ScreenTitle } from '../components/ScreenTitle'
 import { Button } from '../components/Button'
 import { AnimatePresence } from 'framer-motion'
 import { WIZARD_PATH } from '../config'
@@ -53,59 +52,45 @@ export function Shelf() {
 
   const pend = all.filter((e) => e.status === 'pending')
   const visibleIds = seg === 'ord' ? [...ranking, ...unrankedIds] : pend.map((e) => e.itemId)
+  // el carrete: primero las mejor puestas, luego las nuevas y las pendientes
+  const stripIds = [...ranking, ...unrankedIds, ...pend.map((e) => e.itemId)].slice(0, 12)
   const toggle = (id: string) => setSel((c) => (c.includes(id) ? c.filter((x) => x !== id) : [...c, id]))
   const createList = () => nav(`/lista/nueva?title=${encodeURIComponent(`Mis ${label.plural.toLowerCase()} favoritas de ${profileName}`)}&ids=${sel.join(',')}`)
 
   return (
     <div className="h-full flex flex-col bg-bg">
-      <ScreenTitle
-        label={`ESTANTERÍA · ${label.plural.toUpperCase()}`}
-        onBack={() => (selecting ? setSelecting(false) : nav('/'))}
-        className="!pb-3"
-      />
-      {/* Portada de la estantería: su color, su icono y sus tres primeras obras de fondo */}
-      <div className="mx-5 mb-4 relative rounded-3xl overflow-hidden border border-line shrink-0" style={{ background: `linear-gradient(135deg, ${SHELF_COLOR[t]}55 0%, ${SHELF_COLOR[t]}14 55%, var(--color-surface) 100%)` }}>
-        <div className="absolute inset-y-0 right-0 w-[52%] flex justify-end items-center gap-0 pr-2 opacity-45 pointer-events-none" aria-hidden>
-          {ranking.slice(0, 3).map((id, i) => (
-            <Poster key={id} item={getItem(id)} showTitle={false} className={`w-16 ${posterAspectClass(t)} rounded-lg border border-black/30 -ml-6 shadow-lg`} style={{ borderRadius: posterRadius(t, 8), transform: `rotate(${(i - 1) * 8}deg) translateY(${i === 1 ? -6 : 4}px)` }} />
-          ))}
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-bg/70 via-bg/30 to-transparent pointer-events-none" aria-hidden />
-        <div className="relative p-4">
-          <div className="flex items-center gap-3">
-            <span className="w-11 h-11 rounded-2xl flex items-center justify-center shrink-0" style={{ background: SHELF_COLOR[t], color: '#14100c' }}>
-              <Icon name={SHELF_ICON[t]} size={22} strokeWidth={2.2} />
-            </span>
-            <h1 className="text-display text-ink flex-1 min-w-0 truncate">{label.plural}</h1>
+      {/* Cabecera a sangre (Igor, 26/10): un carrete de fotos inclinado con las obras de la estantería o, si hay
+          pocas, con su icono repetido; encima, el nombre y cuánto está ordenado. Sin tarjeta y sin botón de Duelos. */}
+      <header className="relative shrink-0 overflow-hidden" style={{ background: `linear-gradient(160deg, ${SHELF_COLOR[t]}40 0%, var(--color-bg) 75%)` }}>
+        <FilmStrip ids={stripIds} shelf={t} />
+        <div className="absolute inset-0 bg-gradient-to-b from-bg/30 via-bg/40 to-bg pointer-events-none" aria-hidden />
+        <div className="relative px-5 pt-[max(env(safe-area-inset-top),18px)] pb-4">
+          <div className="flex items-center justify-between">
+            <button onClick={() => (selecting ? setSelecting(false) : nav('/'))} aria-label="Volver" className="w-10 h-10 -ml-1 rounded-full bg-bg/60 backdrop-blur border border-line/60 flex items-center justify-center text-ink active:scale-95 transition-transform">
+              <Icon name="back" size={20} />
+            </button>
             {!selecting && (
-              <div className="flex items-center gap-2 shrink-0">
-                <button
-                  onClick={() => { setSelecting(true); setSel([]) }}
-                  aria-label="Compartir"
-                  className="w-9 h-9 rounded-full bg-bg/60 border border-line flex items-center justify-center text-ink active:scale-95 transition-transform"
-                >
+              <div className="flex items-center gap-2">
+                <button onClick={() => { setSelecting(true); setSel([]) }} aria-label="Compartir" className="w-10 h-10 rounded-full bg-bg/60 backdrop-blur border border-line/60 flex items-center justify-center text-ink active:scale-95 transition-transform">
                   <Icon name="share" size={18} />
                 </button>
-                <button
-                  onClick={() => setAdding(true)}
-                  aria-label={`Añadir a ${label.plural}`}
-                  className="w-9 h-9 rounded-full bg-accent text-accent-ink flex items-center justify-center active:scale-95 transition-transform"
-                >
+                <button onClick={() => setAdding(true)} aria-label={`Añadir a ${label.plural}`} className="w-10 h-10 rounded-full bg-accent text-accent-ink flex items-center justify-center active:scale-95 transition-transform">
                   <Icon name="plus" size={18} strokeWidth={2.5} />
                 </button>
               </div>
             )}
           </div>
-          <p className="text-meta text-ink/75 mt-2">
-            {seg === 'ord' ? <>{totalSeen} obras · <span className="font-semibold" style={{ color: pctColor(ordenadoPct) }}>{ordenadoPct} % ordenado</span></> : `${pend.length} pendientes`}
-          </p>
-          {totalSeen >= 2 && !selecting && (
-            <Link to={`/comparar/${t}`} className="mt-3 inline-flex items-center gap-1.5 min-h-[36px] px-4 rounded-full bg-accent text-accent-ink text-[14px] font-semibold active:scale-95 transition-transform">
-              <Icon name="scale" size={16} strokeWidth={2.2} /> ¡Duelos!
-            </Link>
-          )}
+          <div className="mt-24">
+            <div className="text-label flex items-center gap-1.5" style={{ color: SHELF_COLOR[t] }}>
+              <Icon name={SHELF_ICON[t]} size={14} strokeWidth={2.2} /> ESTANTERÍA
+            </div>
+            <h1 className="text-display text-ink mt-1 truncate">{label.plural}</h1>
+            <p className="text-meta text-ink/75 mt-1">
+              {seg === 'ord' ? <>{totalSeen} obras · <span className="font-semibold" style={{ color: pctColor(ordenadoPct) }}>{ordenadoPct} % ordenado</span></> : `${pend.length} pendientes`}
+            </p>
+          </div>
         </div>
-      </div>
+      </header>
       <div className="px-5 pb-3 flex gap-2 overflow-x-auto no-scrollbar shrink-0">
         <Chip active={seg === 'ord'} onClick={() => setSeg('ord')}>Mis {label.plural.toLowerCase()} · {totalSeen}</Chip>
         <Chip active={seg === 'pend'} onClick={() => setSeg('pend')}>Pendientes · {pend.length}</Chip>
@@ -136,7 +121,7 @@ export function Shelf() {
                   <div className="flex items-center justify-between mb-2.5">
                     <span className="text-label text-mute">NUEVAS · {unrankedIds.length}</span>
                     <Link to={`/comparar/${t}`} className="text-label text-accent font-semibold hover:underline">
-                      ¡Duelos!
+                      Colocarlas →
                     </Link>
                   </div>
                   <div className="rounded-2xl bg-surface border border-line divide-y divide-line overflow-hidden">
@@ -160,7 +145,7 @@ export function Shelf() {
                           ) : (
                             <span className="w-6 shrink-0" aria-hidden />
                           )}
-                          <Poster item={it} style={{ borderRadius: posterRadius(it.type, 6) }} className={`w-9 ${posterAspectClass(it.type)} rounded-[6px] shrink-0 object-cover`} />
+                          <Poster item={it} style={{ borderRadius: posterRadius(it.type, 6), ...posterBox(it).style }} className={`w-9 ${posterBox(it).className} rounded-[6px] shrink-0 self-center object-cover`} />
                           <div className="flex-1 min-w-0">
                             <div className="serif text-item text-ink leading-tight line-clamp-1">{it.title}</div>
                             <div className="text-meta text-mute mt-0.5 truncate">{it.year} · {it.creator}</div>
@@ -265,4 +250,37 @@ function Empty({ text, action }: { text: string; action?: React.ReactNode }) {
       {action}
     </div>
   )
+}
+
+/** Carrete de fotos inclinado de fondo: portadas reales y, para completar, el icono de la estantería en su color. */
+function FilmStrip({ ids, shelf }: { ids: string[]; shelf: ShelfType }) {
+  const items = ids.map((id) => getItem(id)).filter((it): it is NonNullable<typeof it> => Boolean(it))
+  const frames = Array.from({ length: Math.max(10, items.length) }, (_, i) => items[i] ?? null)
+  const holes = Array.from({ length: frames.length * 3 })
+  const perforations = (
+    <div className="flex gap-2.5 px-2 overflow-hidden">{holes.map((_, i) => <span key={i} className="w-2.5 h-2 rounded-[2px] bg-bg/80 shrink-0" />)}</div>
+  )
+  return (
+    <div className="absolute left-[-15%] right-[-15%] top-[38%] -translate-y-1/2 -rotate-6 bg-black/55 py-2 flex flex-col gap-2 pointer-events-none select-none" aria-hidden>
+      {perforations}
+      <div className="flex gap-2 px-2 items-center h-[96px] overflow-hidden">
+        {frames.map((it, i) =>
+          it ? (
+            <Poster key={it.id} item={it} showTitle={false} className="h-full shrink-0 rounded-[4px] opacity-80" style={{ aspectRatio: frameRatio(it) }} />
+          ) : (
+            <span key={'icono-' + i} className="h-full aspect-[2/3] shrink-0 rounded-[4px] flex items-center justify-center" style={{ background: `${SHELF_COLOR[shelf]}26`, color: SHELF_COLOR[shelf] }}>
+              <Icon name={SHELF_ICON[shelf]} size={26} strokeWidth={1.8} />
+            </span>
+          ),
+        )}
+      </div>
+      {perforations}
+    </div>
+  )
+}
+
+/** Forma de cada foto del carrete: la de su portada (juegos de mesa), cuadrada (música) o vertical. */
+function frameRatio(it: { type: ShelfType; posterRatio?: number }): number {
+  if (it.type === 'boardgame' && it.posterRatio) return Math.min(2, Math.max(0.5, it.posterRatio))
+  return posterShape(it.type) === 'square' ? 1 : 2 / 3
 }
