@@ -45,3 +45,90 @@ export function posterRadius(type?: ShelfType | null, base: number = 10): number
   if (ARTIST_ROUND && type === 'artist') return '50%'
   return base
 }
+
+// ── Duelos de juegos de mesa (T31) ─────────────────────────────────────────────────────────────
+export type DuelFit = 'alto' | 'area' | 'caja'
+export const DUEL_FIT_KEY = 'duelFit'
+export const DUEL_FIT_DEFAULT: DuelFit = 'area'
+export const DUEL_FIT_EVENT = 'duel-fit-change'
+
+export function getDuelFit(): DuelFit {
+  try {
+    if (typeof localStorage !== 'undefined') {
+      const val = localStorage.getItem(DUEL_FIT_KEY)
+      if (val === 'alto' || val === 'area' || val === 'caja') return val
+    }
+  } catch {}
+  return DUEL_FIT_DEFAULT
+}
+
+export function setDuelFit(fit: DuelFit): void {
+  try {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem(DUEL_FIT_KEY, fit)
+    }
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new Event(DUEL_FIT_EVENT))
+    }
+  } catch {}
+}
+
+/**
+ * Tamaño de cada carta de un duelo de juegos de mesa dentro de su hueco (boxW × boxH) (T31.2).
+ * ratio es ancho / alto de esta carta y other, el de la otra.
+ */
+export function duelCardSize(
+  ratio: number,
+  other: number,
+  boxW: number,
+  boxH: number,
+  fit: DuelFit,
+): { w: number; h: number } {
+  const r = Math.max(0.01, ratio)
+  const ro = Math.max(0.01, other)
+  const bw = Math.max(1, boxW)
+  const bh = Math.max(1, boxH)
+
+  if (fit === 'alto') {
+    // 1. alto: las dos cartas miden lo mismo de alto y el ancho sale de su proporción.
+    // Si una apaisada no cabe a lo ancho, las dos bajan de altura a la vez hasta que quepa.
+    const h = Math.min(bh, bw / r, bw / ro)
+    const w = h * r
+    return { w, h }
+  }
+
+  if (fit === 'caja') {
+    // 3. caja: cada carta ocupa todo lo que puede de su hueco sin deformarse (como object-contain).
+    const w = Math.min(bw, bh * r)
+    const h = w / r
+    return { w, h }
+  }
+
+  // 2. area: las dos ocupan la misma superficie, que es la mayor posible sin salirse del hueco:
+  // w = √(S·r) y h = √(S/r).
+  const maxS = Math.min(
+    (bw * bw) / r,
+    bh * bh * r,
+    (bw * bw) / ro,
+    bh * bh * ro,
+  )
+  const w = Math.sqrt(maxS * r)
+  const h = Math.sqrt(maxS / r)
+  return { w, h }
+}
+
+/** Tamaño de la carta elegida al crecer a pantalla completa con su propia proporción (FIT_MARGIN = 26). */
+export function duelFitSize(
+  ratio: number,
+  w: number,
+  h: number,
+  margin: number = 26,
+): { fitW: number; fitH: number } {
+  const maxW = Math.max(10, w - 2 * margin)
+  const maxH = Math.max(10, h - 2 * margin)
+  const r = Math.max(0.01, ratio)
+  const fitW = Math.min(maxW, maxH * r)
+  const fitH = fitW / r
+  return { fitW, fitH }
+}
+

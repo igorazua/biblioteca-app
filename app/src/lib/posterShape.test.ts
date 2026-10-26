@@ -6,6 +6,12 @@ import {
   posterAspectClass,
   posterRadius,
   posterShape,
+  duelCardSize,
+  duelFitSize,
+  getDuelFit,
+  setDuelFit,
+  type DuelFit,
+  DUEL_FIT_KEY,
 } from './posterShape'
 
 describe('posterShape & ARTIST_ROUND (T27)', () => {
@@ -71,5 +77,102 @@ describe('T29: Formas de juegos de mesa (boardgameDeckLayout y boardgameDetailAs
   it('ratio 2.4 (caja panorámica extrema) → top 1.6 en mazo y 1.6 en ficha (clamp max)', () => {
     expect(boardgameDeckLayout(2.4)).toEqual({ mode: 'top', aspect: 1.6 })
     expect(boardgameDetailAspect(2.4)).toBe(1.6)
+  })
+})
+
+describe('T31: Duelos de juegos de mesa: tamaños de cartas adaptables', () => {
+  const BOX_W = 180
+  const BOX_H = 300
+  const MODES: DuelFit[] = ['alto', 'area', 'caja']
+
+  const PAIRS: { name: string; rA: number; rB: number }[] = [
+    { name: 'vertical 0.7 contra apaisada 1.4', rA: 0.7, rB: 1.4 },
+    { name: 'cuadrada contra cuadrada', rA: 1.0, rB: 1.0 },
+    { name: 'vertical contra vertical', rA: 0.7, rB: 0.7 },
+  ]
+
+  for (const { name, rA, rB } of PAIRS) {
+    describe(`Pareja: ${name}`, () => {
+      for (const mode of MODES) {
+        it(`modo ${mode}: respeta hueco, proporción y propiedad del modo`, () => {
+          const cardA = duelCardSize(rA, rB, BOX_W, BOX_H, mode)
+          const cardB = duelCardSize(rB, rA, BOX_W, BOX_H, mode)
+
+          // 1. Ninguna carta se sale del hueco
+          expect(cardA.w).toBeLessThanOrEqual(BOX_W + 1e-4)
+          expect(cardA.h).toBeLessThanOrEqual(BOX_H + 1e-4)
+          expect(cardB.w).toBeLessThanOrEqual(BOX_W + 1e-4)
+          expect(cardB.h).toBeLessThanOrEqual(BOX_H + 1e-4)
+
+          // 2. Se respeta la proporción de cada carta (con un margen de 0.01)
+          expect(Math.abs(cardA.w / cardA.h - rA)).toBeLessThanOrEqual(0.01)
+          expect(Math.abs(cardB.w / cardB.h - rB)).toBeLessThanOrEqual(0.01)
+
+          // 3. En area, las dos superficies son iguales (con un margen del 1 %)
+          if (mode === 'area') {
+            const sA = cardA.w * cardA.h
+            const sB = cardB.w * cardB.h
+            const diff = Math.abs(sA - sB) / Math.max(sA, sB)
+            expect(diff).toBeLessThanOrEqual(0.01)
+          }
+
+          // 4. En alto, las dos alturas son iguales
+          if (mode === 'alto') {
+            expect(Math.abs(cardA.h - cardB.h)).toBeLessThanOrEqual(0.01)
+          }
+        })
+      }
+    })
+  }
+
+  it('duelFitSize escala la carta a pantalla completa respetando márgenes y proporción', () => {
+    const screenW = 390
+    const screenH = 700
+    const margin = 26
+
+    // Vertical (0.7)
+    const fitVert = duelFitSize(0.7, screenW, screenH, margin)
+    expect(fitVert.fitW).toBeLessThanOrEqual(screenW - 2 * margin + 1e-4)
+    expect(fitVert.fitH).toBeLessThanOrEqual(screenH - 2 * margin + 1e-4)
+    expect(Math.abs(fitVert.fitW / fitVert.fitH - 0.7)).toBeLessThanOrEqual(0.01)
+
+    // Apaisada (1.4)
+    const fitHoriz = duelFitSize(1.4, screenW, screenH, margin)
+    expect(fitHoriz.fitW).toBeLessThanOrEqual(screenW - 2 * margin + 1e-4)
+    expect(fitHoriz.fitH).toBeLessThanOrEqual(screenH - 2 * margin + 1e-4)
+    expect(Math.abs(fitHoriz.fitW / fitHoriz.fitH - 1.4)).toBeLessThanOrEqual(0.01)
+  })
+
+  it('persistencia de duelFit en localStorage con fallback seguro', () => {
+    const store: Record<string, string> = {}
+    const mockStorage = {
+      getItem: (k: string) => store[k] ?? null,
+      setItem: (k: string, v: string) => {
+        store[k] = v
+      },
+      removeItem: (k: string) => {
+        delete store[k]
+      },
+      clear: () => {
+        Object.keys(store).forEach((k) => delete store[k])
+      },
+    }
+    const orig = (globalThis as any).localStorage
+    ;(globalThis as any).localStorage = mockStorage
+    try {
+      mockStorage.removeItem(DUEL_FIT_KEY)
+      expect(getDuelFit()).toBe('area')
+
+      setDuelFit('alto')
+      expect(getDuelFit()).toBe('alto')
+
+      setDuelFit('caja')
+      expect(getDuelFit()).toBe('caja')
+
+      setDuelFit('area')
+      expect(getDuelFit()).toBe('area')
+    } finally {
+      ;(globalThis as any).localStorage = orig
+    }
   })
 })
