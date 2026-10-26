@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import type { ShelfType } from '../types'
 
 export type PosterShape = 'portrait' | 'square'
@@ -38,6 +39,23 @@ export function posterShape(type?: ShelfType | null): PosterShape {
 /** 'aspect-square' | 'aspect-[2/3]' */
 export function posterAspectClass(type?: ShelfType | null): string {
   return posterShape(type) === 'square' ? 'aspect-square' : 'aspect-[2/3]'
+}
+
+/** Límites de la proporción de una caja de juego de mesa, para que una caja extrema no rompa el layout. */
+export const POSTER_BOX_RATIO_LIMITS = { min: 0.5, max: 2 }
+
+/**
+ * Caja de una portada: la forma real de la carátula en juegos de mesa con posterRatio;
+ * si no, la proporción fija de su tipo (2:3 o cuadrada), como antes.
+ */
+export function posterBox(
+  item?: { type: ShelfType; posterRatio?: number } | null,
+): { className: string; style?: CSSProperties } {
+  if (item?.type === 'boardgame' && item.posterRatio != null) {
+    const ratio = clamp(item.posterRatio, POSTER_BOX_RATIO_LIMITS.min, POSTER_BOX_RATIO_LIMITS.max)
+    return { className: '', style: { aspectRatio: String(ratio) } }
+  }
+  return { className: posterAspectClass(item?.type) }
 }
 
 /** Con ARTIST_ROUND, '50%' para artistas; si no, el radio base */

@@ -61,9 +61,11 @@ export function Poster({ item, className = '', style, alt, showTitle = true, lay
   // (Igor, 23/10; excepción a SISTEMA_DISENO §1.3). Para música se usa object-cover en contenedor cuadrado (T27 §27.3 regla 7).
   if (src && !imgError && item.type === 'boardgame') {
     const done = loaded?.src === src
+    // Con posterRatio, el contenedor ya tiene la forma de la carátula: no hace falta el relleno difuminado (T32)
+    const hasShape = item.posterRatio != null
     return (
       <motion.div {...flight} className={`relative overflow-hidden bg-surface2 ${done ? '' : 'skeleton'} ${className}`} style={style}>
-        <img src={src} alt="" aria-hidden draggable={false} className="absolute inset-0 w-full h-full object-cover scale-125 blur-xl opacity-70" />
+        {!hasShape && <img src={src} alt="" aria-hidden draggable={false} className="absolute inset-0 w-full h-full object-cover scale-125 blur-xl opacity-70" />}
         <img
           ref={imgRef}
           src={src}

@@ -4,6 +4,7 @@ import {
   boardgameDeckLayout,
   boardgameDetailAspect,
   posterAspectClass,
+  posterBox,
   posterRadius,
   posterShape,
   duelCardSize,
@@ -30,6 +31,14 @@ describe('posterShape & ARTIST_ROUND (T27)', () => {
     expect(posterAspectClass('artist')).toBe('aspect-square')
     expect(posterAspectClass('song')).toBe('aspect-square')
     expect(posterAspectClass('movie')).toBe('aspect-[2/3]')
+  })
+
+  it('posterBox usa la forma real de juegos de mesa y la proporción fija del resto (T32)', () => {
+    expect(posterBox({ type: 'boardgame', posterRatio: 0.7 })).toEqual({ className: '', style: { aspectRatio: '0.7' } })
+    expect(posterBox({ type: 'boardgame', posterRatio: 3 })).toEqual({ className: '', style: { aspectRatio: '2' } })
+    expect(posterBox({ type: 'boardgame' })).toEqual({ className: 'aspect-[2/3]' })
+    expect(posterBox({ type: 'movie' })).toEqual({ className: 'aspect-[2/3]' })
+    expect(posterBox({ type: 'artist' })).toEqual({ className: 'aspect-square' })
   })
 
   it('posterRadius respeta el flag ARTIST_ROUND', () => {
