@@ -1,0 +1,212 @@
+{
+  "targets": [
+    {
+      "title": "Stairway to Heaven",
+      "expected": 1971,
+      "actual": 1971,
+      "id": "song:stairway-to-heaven-led-zeppelin-1971"
+    },
+    {
+      "title": "Sweet Child O' Mine",
+      "expected": 1987,
+      "actual": 1987,
+      "id": "song:sweet-child-o-mine-guns-n-roses-1987"
+    },
+    {
+      "title": "Billie Jean",
+      "expected": 1982,
+      "actual": 1982,
+      "id": "song:billie-jean-michael-jackson-1982"
+    },
+    {
+      "title": "Bohemian Rhapsody",
+      "expected": 1975,
+      "actual": 1975,
+      "id": "song:bohemian-rhapsody-queen-1975"
+    },
+    {
+      "title": "Wish You Were Here",
+      "expected": 1975,
+      "actual": 1975,
+      "id": "song:wish-you-were-here-pink-floyd-1975"
+    },
+    {
+      "title": "Entre dos tierras",
+      "expected": 1990,
+      "actual": 1990,
+      "id": "song:entre-dos-tierras-heroes-del-silencio-1990"
+    },
+    {
+      "title": "Like a Rolling Stone",
+      "expected": 1965,
+      "actual": 1965,
+      "id": "song:like-a-rolling-stone-bob-dylan-1965"
+    },
+    {
+      "title": "Wonderwall",
+      "expected": 1995,
+      "actual": 1995,
+      "id": "song:wonderwall-oasis-1995"
+    },
+    {
+      "title": "Mediterráneo",
+      "expected": 1971
+    },
+    {
+      "title": "Hijo de la Luna",
+      "expected": 1986,
+      "actual": 1986,
+      "id": "song:hijo-de-la-luna-mecano-1986"
+    }
+  ],
+  "decadesBefore": {
+    "1930": 6,
+    "1940": 3,
+    "1950": 39,
+    "1960": 128,
+    "1970": 289,
+    "1980": 474,
+    "1990": 980,
+    "2000": 730,
+    "2010": 997,
+    "2020": 828
+  },
+  "decadesAfter": {
+    "1930": 6,
+    "1940": 3,
+    "1950": 39,
+    "1960": 125,
+    "1970": 284,
+    "1980": 476,
+    "1990": 979,
+    "2000": 730,
+    "2010": 1002,
+    "2020": 830
+  },
+  "topChanges": [
+    {
+      "title": "Waiting Room",
+      "artist": "Phoebe Bridgers",
+      "oldYear": 2014,
+      "newYear": 2014,
+      "diff": 0
+    },
+    {
+      "title": "My Immortal",
+      "artist": "Evanescence",
+      "oldYear": 1998,
+      "newYear": 1998,
+      "diff": 0
+    },
+    {
+      "title": "Storybook Love",
+      "artist": "Mark Knopfler",
+      "oldYear": 1987,
+      "newYear": 1987,
+      "diff": 0
+    },
+    {
+      "title": "In Chains",
+      "artist": "Alizzz",
+      "oldYear": 2013,
+      "newYear": 2013,
+      "diff": 0
+    },
+    {
+      "title": "APA",
+      "artist": "Mora",
+      "oldYear": 2003,
+      "newYear": 2003,
+      "diff": 0
+    },
+    {
+      "title": "Intro",
+      "artist": "J. Cole",
+      "oldYear": 1995,
+      "newYear": 2006,
+      "diff": -11
+    },
+    {
+      "title": "Heaven",
+      "artist": "Bryan Adams",
+      "oldYear": 1971,
+      "newYear": 1984,
+      "diff": -13
+    },
+    {
+      "title": "One",
+      "artist": "U2",
+      "oldYear": 1965,
+      "newYear": 1983,
+      "diff": -18
+    },
+    {
+      "title": "Blinding Lights",
+      "artist": "The Weeknd",
+      "oldYear": 2000,
+      "newYear": 2019,
+      "diff": -19
+    },
+    {
+      "title": "DESPECHÁ",
+      "artist": "ROSALÍA",
+      "oldYear": 2000,
+      "newYear": 2022,
+      "diff": -22
+    },
+    {
+      "title": "One",
+      "artist": "Metallica",
+      "oldYear": 1965,
+      "newYear": 1988,
+      "diff": -23
+    },
+    {
+      "title": "LUNA",
+      "artist": "Feid",
+      "oldYear": 1986,
+      "newYear": 2015,
+      "diff": -29
+    },
+    {
+      "title": "Ven",
+      "artist": "Toteking",
+      "oldYear": 1971,
+      "newYear": 2008,
+      "diff": -37
+    },
+    {
+      "title": "Heaven",
+      "artist": "Clairo",
+      "oldYear": 1971,
+      "newYear": 2018,
+      "diff": -47
+    },
+    {
+      "title": "Heaven",
+      "artist": "Avicii",
+      "oldYear": 1971,
+      "newYear": 2019,
+      "diff": -48
+    },
+    {
+      "title": "Stone",
+      "artist": "Alice in Chains",
+      "oldYear": 1965,
+      "newYear": 2013,
+      "diff": -48
+    },
+    {
+      "title": "Her",
+      "artist": "John Legend",
+      "oldYear": 1975,
+      "newYear": 2026,
+      "diff": -51
+    }
+  ],
+  "totalSongs": 4474,
+  "totalResolved": 17,
+  "oldCoversDeleted": 7,
+  "rawSize": 2741859,
+  "gzSize": 434433
+}

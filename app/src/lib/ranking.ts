@@ -673,31 +673,294 @@ export function settlePlacements(
   return { ranking: rk, placed }
 }
 
+/* ============================ Sistema Elo con K decayente y entrada inmediata ============================ */
+
+export function getKFactor(duelsCount: number): number {
+  if (duelsCount <= 0) return 96
+  if (duelsCount === 1) return 64
+  if (duelsCount === 2) return 48
+  if (duelsCount === 3) return 36
+  if (duelsCount === 4) return 28
+  return 20
+}
+
+export function getInitialElo(
+  itemId: string,
+  ranking: readonly string[],
+  stars?: number,
+  ratings?: Record<string, number>,
+): number {
+  if (ratings && typeof ratings[itemId] === 'number') {
+    return ratings[itemId]
+  }
+  const idx = ranking.indexOf(itemId)
+  if (idx !== -1) {
+    const N = ranking.length
+    return N <= 1 ? 1500 : Math.round(1800 - (600 * idx) / (N - 1))
+  }
+  if (stars !== undefined) {
+    if (stars >= 5) return 1700
+    if (stars >= 4) return 1550
+    if (stars >= 3) return 1400
+    if (stars >= 2) return 1250
+    return 1100
+  }
+  return 1400
+}
+
+export interface EloUpdateResult {
+  deltaA: number
+  deltaB: number
+  newRatingA: number
+  newRatingB: number
+}
+
+export function calculateEloUpdate(
+  ratingA: number,
+  ratingB: number,
+  winner: 'a' | 'b',
+  duelsCountA: number,
+  duelsCountB: number,
+  isNewA = false,
+  isNewB = false,
+): EloUpdateResult {
+  const kA = getKFactor(duelsCountA)
+  const kB = getKFactor(duelsCountB)
+
+  const expectedA = 1 / (1 + Math.pow(10, (ratingB - ratingA) / 400))
+  const expectedB = 1 - expectedA
+
+  const scoreA = winner === 'a' ? 1 : 0
+  const scoreB = winner === 'b' ? 1 : 0
+
+  let deltaA = Math.round(kA * (scoreA - expectedA))
+  let deltaB = Math.round(kB * (scoreB - expectedB))
+
+  if (winner === 'a') {
+    if (deltaA <= 0) deltaA = 1
+    if (deltaB >= 0) deltaB = -1
+  } else {
+    if (deltaA >= 0) deltaA = -1
+    if (deltaB <= 0) deltaB = 1
+  }
+
+  let newRatingA = ratingA + deltaA
+  let newRatingB = ratingB + deltaB
+
+  // Regla sagrada: la que no estaba valorada entra por encima si gana o por debajo si pierde
+  if (isNewA && winner === 'a' && newRatingA <= newRatingB) {
+    newRatingA = newRatingB + 5
+    deltaA = newRatingA - ratingA
+  } else if (isNewA && winner === 'b' && newRatingA >= newRatingB) {
+    newRatingA = newRatingB - 5
+    deltaA = newRatingA - ratingA
+  }
+
+  if (isNewB && winner === 'b' && newRatingB <= newRatingA) {
+    newRatingB = newRatingA + 5
+    deltaB = newRatingB - ratingB
+  } else if (isNewB && winner === 'a' && newRatingB >= newRatingA) {
+    newRatingB = newRatingA - 5
+    deltaB = newRatingB - ratingB
+  }
+
+  return { deltaA, deltaB, newRatingA, newRatingB }
+}
+
 /**
- * Tras cada duelo: coloca las obras ya resueltas y reordena las colocadas por su nota (Bradley-Terry con la prior del
- * ancla). Las obras sin colocar no entran en el ranking hasta que su búsqueda termina.
+ * Tras cada duelo: actualiza los puntos Elo de ambas obras con K decayente,
+ * coloca a las obras nuevas de forma inmediata en el ranking y reordena por puntuación.
  */
 export function applyDuelToRanking(input: {
   ranking: readonly string[]
   anchor?: readonly string[]
-  unranked: readonly (string | UnrankedItem)[]
+  unranked?: readonly (string | UnrankedItem)[]
   duels: Record<string, DuelRecord>
-  starsOf: StarsOf
-}): { ranking: string[]; placed: string[] } {
-  const un = normUnranked(input.unranked)
-  const unIds = new Set(un.map((u) => u.itemId))
-  // las provisionales que T30 metió en el ranking tras un solo duelo vuelven a tratarse como sin colocar
-  const base = input.ranking.filter((id) => !unIds.has(id))
-  const settled = settlePlacements(base, un, input.duels, input.starsOf)
-  const anchor = (input.anchor ?? input.ranking).filter((id) => !unIds.has(id) || settled.placed.includes(id))
-  const priors = anchorPriors(anchor, settled.ranking)
-  const { ratings } = fitRatings(settled.ranking, input.duels, priors)
-  const pos = new Map(settled.ranking.map((id, i) => [id, i]))
-  const ranking = [...settled.ranking].sort((a, b) => {
-    const d = (ratings[b] ?? 0) - (ratings[a] ?? 0)
-    return Math.abs(d) > 1e-9 ? d : (pos.get(a) ?? 0) - (pos.get(b) ?? 0)
+  starsOf?: StarsOf
+  lastDuel?: { a: string; b: string; winner: string }
+  ratings?: Record<string, number>
+  entries?: Record<string, UserEntry>
+}): {
+  ranking: string[]
+  placed: string[]
+  ratings: Record<string, number>
+  deltaA: number
+  deltaB: number
+  newRatingA: number
+  newRatingB: number
+} {
+  const currentRk = [...input.ranking]
+  const nextRatings: Record<string, number> = { ...(input.ratings || {}) }
+
+  // Contar duelos históricos por obra
+  const duelCount: Record<string, number> = {}
+  for (const k of Object.keys(input.duels)) {
+    const sep = k.indexOf('|')
+    if (sep <= 0) continue
+    const a = k.slice(0, sep)
+    const b = k.slice(sep + 1)
+    duelCount[a] = (duelCount[a] ?? 0) + 1
+    duelCount[b] = (duelCount[b] ?? 0) + 1
+  }
+
+  const placed: string[] = []
+  let deltaA = 0
+  let deltaB = 0
+  let newRatingA = 0
+  let newRatingB = 0
+
+  if (input.lastDuel && input.ratings) {
+    // Modo incremental O(1) cuando se llama desde la sesión activa
+    const { a, b, winner } = input.lastDuel
+    const isNewA = !currentRk.includes(a)
+    const isNewB = !currentRk.includes(b)
+
+    const countA = (duelCount[a] ?? 1) - 1
+    const countB = (duelCount[b] ?? 1) - 1
+
+    const starsA = input.starsOf?.(a)
+    const starsB = input.starsOf?.(b)
+
+    let curA = nextRatings[a]
+    if (curA === undefined) {
+      curA = isNewA && !isNewB && nextRatings[b] !== undefined
+        ? nextRatings[b]
+        : getInitialElo(a, currentRk, starsA, nextRatings)
+    }
+
+    let curB = nextRatings[b]
+    if (curB === undefined) {
+      curB = isNewB && !isNewA && nextRatings[a] !== undefined
+        ? nextRatings[a]
+        : getInitialElo(b, currentRk, starsB, nextRatings)
+    }
+
+    const winSide = winner === a ? 'a' : 'b'
+    const update = calculateEloUpdate(curA, curB, winSide, countA, countB, isNewA, isNewB)
+
+    deltaA = update.deltaA
+    deltaB = update.deltaB
+    newRatingA = update.newRatingA
+    newRatingB = update.newRatingB
+
+    nextRatings[a] = newRatingA
+    nextRatings[b] = newRatingB
+
+    if (isNewA) placed.push(a)
+    if (isNewB) placed.push(b)
+  } else {
+    // Modo replay/batch: inicializar las obras iniciales del ranking y reproducir los duelos
+    const anchor = input.anchor ?? currentRk
+    anchor.forEach((id) => {
+      if (nextRatings[id] === undefined) {
+        nextRatings[id] = getInitialElo(id, anchor, input.starsOf?.(id), nextRatings)
+      }
+    })
+
+    // Lista de duelos ordenados cronológicamente
+    const duelList = Object.entries(input.duels)
+      .map(([k, d]) => {
+        const sep = k.indexOf('|')
+        return {
+          key: k,
+          a: k.slice(0, sep),
+          b: k.slice(sep + 1),
+          w: d?.w,
+          at: d?.at ?? 0,
+        }
+      })
+      .sort((x, y) => x.at - y.at)
+
+    const currentPlacedSet = new Set<string>(anchor)
+    const runningCounts: Record<string, number> = {}
+
+    for (const d of duelList) {
+      const isNewA = !currentPlacedSet.has(d.a)
+      const isNewB = !currentPlacedSet.has(d.b)
+
+      const countA = runningCounts[d.a] ?? 0
+      const countB = runningCounts[d.b] ?? 0
+
+      const starsA = input.starsOf?.(d.a)
+      const starsB = input.starsOf?.(d.b)
+
+      let curA = nextRatings[d.a]
+      if (curA === undefined) {
+        curA = isNewA && !isNewB && nextRatings[d.b] !== undefined
+          ? nextRatings[d.b]
+          : getInitialElo(d.a, anchor, starsA, nextRatings)
+      }
+
+      let curB = nextRatings[d.b]
+      if (curB === undefined) {
+        curB = isNewB && !isNewA && nextRatings[d.a] !== undefined
+          ? nextRatings[d.a]
+          : getInitialElo(d.b, anchor, starsB, nextRatings)
+      }
+
+      const winSide = d.w === d.a ? 'a' : 'b'
+      const update = calculateEloUpdate(curA, curB, winSide, countA, countB, isNewA, isNewB)
+
+      nextRatings[d.a] = update.newRatingA
+      nextRatings[d.b] = update.newRatingB
+
+      runningCounts[d.a] = countA + 1
+      runningCounts[d.b] = countB + 1
+
+      if (isNewA) {
+        currentPlacedSet.add(d.a)
+        if (!placed.includes(d.a)) placed.push(d.a)
+      }
+      if (isNewB) {
+        currentPlacedSet.add(d.b)
+        if (!placed.includes(d.b)) placed.push(d.b)
+      }
+
+      deltaA = update.deltaA
+      deltaB = update.deltaB
+      newRatingA = update.newRatingA
+      newRatingB = update.newRatingB
+    }
+  }
+
+  // Conjunto de todas las obras elegibles para el ranking
+  const allIds = new Set<string>(currentRk)
+  for (const id of placed) allIds.add(id)
+
+  // Obras unranked que ya hayan jugado algún duelo también entran al ranking
+  const un = normUnranked(input.unranked ?? [])
+  for (const u of un) {
+    if ((duelCount[u.itemId] ?? 0) > 0) {
+      if (!allIds.has(u.itemId)) {
+        allIds.add(u.itemId)
+        placed.push(u.itemId)
+        if (nextRatings[u.itemId] === undefined) {
+          nextRatings[u.itemId] = getInitialElo(u.itemId, currentRk, u.stars ?? input.starsOf?.(u.itemId), nextRatings)
+        }
+      }
+    }
+  }
+
+  // Ordenar el ranking completo por Elo descendente
+  const newRanking = [...allIds].sort((x, y) => {
+    const rx = nextRatings[x] ?? 1400
+    const ry = nextRatings[y] ?? 1400
+    if (rx !== ry) return ry - rx
+    const idxX = currentRk.indexOf(x)
+    const idxY = currentRk.indexOf(y)
+    if (idxX !== -1 && idxY !== -1) return idxX - idxY
+    return x.localeCompare(y)
   })
-  return { ranking, placed: settled.placed }
+
+  return {
+    ranking: newRanking,
+    placed,
+    ratings: nextRatings,
+    deltaA,
+    deltaB,
+    newRatingA,
+    newRatingB,
+  }
 }
 
 /* ============================ T30.3: Asignación persistente de lados ============================ */
@@ -833,17 +1096,17 @@ export interface PlanNextDuelInput {
   starsOf?: StarsOf
   rng?: Rng
   recent?: string[]
-  /** ranking al empezar la sesión: la prior del pulido (por defecto, ranking) */
+  /** ranking al empezar la sesión */
   anchor?: readonly string[]
+  ratings?: Record<string, number>
 }
 
 /**
- * Planifica el siguiente duelo (T30.2):
- * - Evalúa a todas las obras vistas con Bradley-Terry MAP.
- * - Candidatas: vecinas por nota (NEIGHBORS_COUNT) + aleatorias (RANDOM_CANDIDATES_COUNT).
- * - Utilidad = cercanía x incertidumbre x novedad.
- * - Respeta ventana sin repetición NO_REPEAT_WINDOW.
- * - Devuelve `{ kind: 'rank', a, b, subject, opponent }` o `null` si la estantería está completa.
+ * Planifica el siguiente duelo:
+ * - Cero películas pivote: fuerte rotación y descanso por cansancio en la sesión.
+ * - Prioridad a las obras que aún no han debutado o llevan pocos duelos.
+ * - Emparejamiento por cercanía de Elo / estrellas para duelos reñidos y divertidos.
+ * - Ventana anti-repetición estricta (las de los últimos 2 duelos no juegan).
  */
 export function planNextDuel(input: PlanNextDuelInput): PlannedDuel | null {
   const ranking = [...input.ranking]
@@ -851,12 +1114,16 @@ export function planNextDuel(input: PlanNextDuelInput): PlannedDuel | null {
   const rng = input.rng ?? Math.random
   const starsOf = input.starsOf ?? (() => undefined)
   const recent = input.recent ?? []
+  const ratings = input.ratings ?? {}
+
+  const unrankedList = normUnranked(input.unranked ?? [])
+  const unIds = unrankedList.map((u) => u.itemId)
+  const pool = [...new Set([...ranking, ...unIds])]
+
+  if (pool.length < 2) return null
+
   const sessionSeen: Record<string, number> = {}
   for (const id of recent) sessionSeen[id] = (sessionSeen[id] ?? 0) + 1
-  const unrankedList = normUnranked(input.unranked ?? [])
-  const unIds = new Set(unrankedList.map((u) => u.itemId))
-  const placedRk = ranking.filter((id) => !unIds.has(id))
-  if (placedRk.length + unrankedList.length < 2) return null
 
   const duelCount: Record<string, number> = {}
   for (const k of Object.keys(duels)) {
@@ -866,76 +1133,72 @@ export function planNextDuel(input: PlanNextDuelInput): PlannedDuel | null {
     duelCount[k.slice(sep + 1)] = (duelCount[k.slice(sep + 1)] ?? 0) + 1
   }
 
-  // Estantería vacía: el primer duelo enfrenta a dos sin colocar
-  if (placedRk.length === 0) {
-    const [a, b] = unrankedList
-    if (!b) return null
-    if (duels[pairKey(a.itemId, b.itemId)]) {
-      const w = duels[pairKey(a.itemId, b.itemId)].w
-      return planNextDuel({ ...input, ranking: [w, w === a.itemId ? b.itemId : a.itemId] })
-    }
-    return { kind: 'boot', a: a.itemId, b: b.itemId, subject: a.itemId, opponent: b.itemId }
-  }
-
-  // Obras sin colocar resueltas ya con el historial: se tratan como colocadas para planificar
-  const settled = settlePlacements(placedRk, unrankedList, duels, starsOf)
-  const rk = settled.ranking
-  const pending = unrankedList.filter((u) => !settled.placed.includes(u.itemId))
-
   for (const win of [NO_REPEAT_WINDOW, 1, 0]) {
     const blocked = new Set(win > 0 ? recent.slice(-win * 2) : [])
+    const available = pool.filter((id) => !blocked.has(id))
 
-    // 1. Colocar: unas pocas a la vez (OPEN_PLACEMENTS), rotando y mezcladas con el pulido; primero las ya empezadas.
-    // Con todas a la vez ninguna terminaba: 30 sin ordenar seguían sin colocar tras 60 duelos (Igor, 25/10)
-    const open = [...pending]
-      .sort((x, y) => Number((duelCount[y.itemId] ?? 0) > 0) - Number((duelCount[x.itemId] ?? 0) > 0))
-      .slice(0, OPEN_PLACEMENTS)
-    const places: PlannedDuel[] = []
-    for (const u of open) {
-      if (blocked.has(u.itemId)) continue
-      const p = mixedPlacement(rk, u.itemId, u.stars ?? starsOf(u.itemId), duels, starsOf, PLACEMENT_MAX_COMPARISONS, blocked, { rng, seen: sessionSeen })
-      const opp = p.opponent
-      if (!opp || blocked.has(opp)) continue
-      places.push({ kind: 'place', a: u.itemId, b: opp, subject: u.itemId, opponent: opp })
-    }
-
-    // 2. Pulir: parejas cercanas entre las colocadas, ordenadas por cercanía de nota × incertidumbre × novedad
-    const anchor = (input.anchor ?? ranking).filter((id) => rk.includes(id))
-    const { ratings, uncertainties } = fitRatings(rk, duels, anchorPriors(anchor, rk))
-    const polish: { a: string; b: string; util: number }[] = []
-    for (let i = 0; i < rk.length; i++) {
-      for (let j = i + 1; j <= Math.min(rk.length - 1, i + POLISH_MAX_DIST); j++) {
-        const a = rk[i]
-        const b = rk[j]
-        if (blocked.has(a) || blocked.has(b)) continue
-        const novelty = duels[pairKey(a, b)] ? REPEAT_NOVELTY : 1
-        const close = 1 / (1 + Math.abs((ratings[a] ?? 0) - (ratings[b] ?? 0)))
-        const tired = 1 + (sessionSeen[a] ?? 0) + (sessionSeen[b] ?? 0) // las que ya han salido mucho en la sesión, menos
-        const worth = close * ((uncertainties[a] ?? 1) + (uncertainties[b] ?? 1)) * novelty
-        // el cansancio solo reordena: no decide si quedan duelos que merezcan la pena
-        if (worth >= MIN_UTILITY) polish.push({ a, b, util: worth / tired })
-      }
-    }
-    polish.sort((x, y) => y.util - x.util)
-    const top = polish.slice(0, 5)
-    const onlyRepeats = top.length > 0 && top.every((c) => duels[pairKey(c.a, c.b)])
-
-    if (!places.length && (!top.length || (onlyRepeats && pending.length === 0 && Object.keys(duels).length > 0 && rk.every((id) => (duelCount[id] ?? 0) >= RANK_DUELS_FOR_DONE)))) {
+    if (available.length < 2) {
       if (win === 0) return null
       continue
     }
 
-    const share = Math.min(PLACE_SHARE_MAX, Math.max(PLACE_SHARE_MIN, pending.length / (pending.length + PLACE_SHARE_K)))
-    if (places.length && (!top.length || rng() < share)) {
-      // la que menos duelos lleva; empate al azar
-      const min = Math.min(...places.map((p) => duelCount[p.subject] ?? 0))
-      const pool = places.filter((p) => (duelCount[p.subject] ?? 0) === min)
-      return pool[Math.floor(rng() * pool.length)]
+    // 1. Elegir A: priorizar no valoradas y pocas veces vistas, penalizar fuerte sessionSeen
+    const weightsA = available.map((id) => {
+      const isUnranked = !ranking.includes(id) || (duelCount[id] ?? 0) === 0
+      const unrankedBonus = isUnranked ? 6 : 1
+      const sSeen = sessionSeen[id] ?? 0
+      const dCount = duelCount[id] ?? 0
+      return unrankedBonus / (Math.pow(1 + sSeen, 2.2) * (1 + dCount * 0.4))
+    })
+
+    const totalWA = weightsA.reduce((sum, w) => sum + w, 0)
+    let randA = rng() * totalWA
+    let idxA = 0
+    for (let i = 0; i < weightsA.length; i++) {
+      randA -= weightsA[i]
+      if (randA <= 0) {
+        idxA = i
+        break
+      }
     }
-    const c = top[Math.floor(rng() * top.length)]
-    const aFirst = (uncertainties[c.a] ?? 0) >= (uncertainties[c.b] ?? 0)
-    return { kind: 'rank', a: c.a, b: c.b, subject: aFirst ? c.a : c.b, opponent: aFirst ? c.b : c.a }
+    const idA = available[idxA]
+
+    // 2. Elegir B (rival de A)
+    const availableB = available.filter((id) => id !== idA)
+    const rA = ratings[idA] ?? getInitialElo(idA, ranking, starsOf(idA), ratings)
+
+    const weightsB = availableB.map((id) => {
+      const pair = pairKey(idA, id)
+      const novelty = duels[pair] ? 0.08 : 1.0
+      const sSeen = sessionSeen[id] ?? 0
+      const rest = 1 / Math.pow(1 + sSeen, 2)
+      const rB = ratings[id] ?? getInitialElo(id, ranking, starsOf(id), ratings)
+      const diff = Math.abs(rA - rB)
+      const closeness = 1 / (1 + Math.pow(diff / 220, 2))
+      return novelty * rest * closeness
+    })
+
+    const totalWB = weightsB.reduce((sum, w) => sum + w, 0)
+    let randB = rng() * totalWB
+    let idxB = 0
+    for (let i = 0; i < weightsB.length; i++) {
+      randB -= weightsB[i]
+      if (randB <= 0) {
+        idxB = i
+        break
+      }
+    }
+    const idB = availableB[idxB]
+
+    return {
+      kind: 'rank',
+      a: idA,
+      b: idB,
+      subject: idA,
+      opponent: idB,
+    }
   }
+
   return null
 }
 

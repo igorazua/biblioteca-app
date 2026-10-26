@@ -106,6 +106,7 @@ export function CompareSession() {
   const recentRef = useRef<string[]>([])
 
   const startRank = useRef<string[]>(ranking ?? [])
+  const startPositions = useRef<Map<string, number>>(new Map())
   const startOrdenado = useRef<number>(0)
   const [commentFor, setCommentFor] = useState<string | null>(null)
   const [undo, setUndo] = useState<Snapshot | null>(null)
@@ -132,7 +133,9 @@ export function CompareSession() {
     seenCountRef.current = {}
     recentRef.current = []
     initialDuelConsumed.current = false
-    startRank.current = useStore.getState().rankings[shelf] ?? []
+    const initialRk = useStore.getState().rankings[shelf] ?? []
+    startRank.current = initialRk
+    startPositions.current = new Map(initialRk.map((id, i) => [id, i + 1]))
     startOrdenado.current = calcShelfOrdenado(
       useStore.getState().entries,
       useStore.getState().rankings,
@@ -189,6 +192,7 @@ export function CompareSession() {
       starsOf: starsOfEntries(st.entries),
       recent: recentRef.current,
       anchor: startRank.current,
+      ratings: st.ratings?.[shelf] ?? {},
     })
 
     if (next) {
@@ -258,8 +262,6 @@ export function CompareSession() {
       duelKey: { a: pair.left.id, b: pair.right.id },
     })
 
-    setFlash({ up: winnerId, down: loserId, n: count })
-
     // Registrar duelo
     st.recordDuel(shelf, pair.left.id, pair.right.id, winnerId)
     st.bumpCompared([pair.left.id, pair.right.id])
@@ -269,24 +271,35 @@ export function CompareSession() {
     seenCountRef.current[pair.right.id] = (seenCountRef.current[pair.right.id] || 0) + 1
     recentRef.current.push(pair.left.id, pair.right.id)
 
-    // Coloca las obras cuya búsqueda ya terminó y reordena las colocadas por su nota, con la prior del ranking al
-    // empezar la sesión (applyDuelToRanking). Las sin colocar no entran en el ranking hasta estar colocadas.
+    // Actualizar puntos Elo y ranking en tiempo real
     const updatedState = useStore.getState()
     const shelfDuels = updatedState.duels[shelf] ?? {}
+    const shelfRatings = updatedState.ratings?.[shelf] ?? {}
     const unrankedItems = Object.values(updatedState.entries)
       .filter((e) => e.status === 'seen' && (e.shelf ?? getItem(e.itemId)?.type) === shelf && (!ranking.includes(e.itemId) || Boolean(e.provisional)))
       .map((e) => ({ itemId: e.itemId, stars: e.stars }))
-    const { ranking: newRanking, placed } = applyDuelToRanking({
+
+    const res = applyDuelToRanking({
       ranking,
       anchor: startRank.current,
       unranked: unrankedItems,
       duels: shelfDuels,
+      lastDuel: { a: pair.left.id, b: pair.right.id, winner: winnerId },
+      ratings: shelfRatings,
+      entries: updatedState.entries,
       starsOf: starsOfEntries(updatedState.entries),
     })
-    for (const id of placed) st.markPlaced(id)
 
-    // Aplicar el nuevo ordenamiento general y ajustar estrellas de los que cambiaron (T30.2.4)
-    st.applyRanking(shelf, newRanking)
+    setFlash({
+      up: winnerId,
+      down: loserId,
+      n: count,
+    })
+
+    for (const id of res.placed) st.markPlaced(id)
+
+    // Aplicar el nuevo ordenamiento general y persistir Elo
+    st.applyRanking(shelf, res.ranking, res.placed[0], res.ratings)
     setCurrentDuel(null)
 
     const nextCount = count + 1
@@ -331,15 +344,33 @@ export function CompareSession() {
   const moves = useMemo(() => {
     if (!summary) return null
     const now = useStore.getState().rankings[shelf] ?? []
-    const start = startRank.current
-    const list = now.map((id, i) => ({ id, delta: start.includes(id) ? start.indexOf(id) - i : null }))
-    return {
-      up: list.filter((m) => m.delta !== null && m.delta > 0).sort((a, b) => (b.delta as number) - (a.delta as number)).slice(0, 3),
-      down: list.filter((m) => m.delta !== null && m.delta < 0).sort((a, b) => (a.delta as number) - (b.delta as number)).slice(0, 3),
-      added: list.filter((m) => m.delta === null).slice(0, 4),
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [summary])
+    const startMap = startPositions.current
+    const ratings = useStore.getState().ratings?.[shelf] ?? {}
+
+    const up: { id: string; oldPos: number; newPos: number; delta: number; rating: number }[] = []
+    const down: { id: string; oldPos: number; newPos: number; delta: number; rating: number }[] = []
+    const added: { id: string; pos: number; rating: number }[] = []
+
+    now.forEach((id, i) => {
+      const newPos = i + 1
+      const oldPos = startMap.get(id)
+      const r = ratings[id] ?? 1400
+
+      if (oldPos === undefined) {
+        added.push({ id, pos: newPos, rating: r })
+      } else if (newPos < oldPos) {
+        up.push({ id, oldPos, newPos, delta: oldPos - newPos, rating: r })
+      } else if (newPos > oldPos) {
+        down.push({ id, oldPos, newPos, delta: newPos - oldPos, rating: r })
+      }
+    })
+
+    up.sort((a, b) => b.delta - a.delta)
+    down.sort((a, b) => b.delta - a.delta)
+    added.sort((a, b) => a.pos - b.pos)
+
+    return { up, down, added }
+  }, [summary, shelf])
 
   const handleBack = () => {
     if (count > 0 && !summary) {
@@ -419,9 +450,9 @@ export function CompareSession() {
         {summary && moves ? (
           <div className="flex-1 min-h-0 flex flex-col pop">
             <div className="flex-1 min-h-0 overflow-y-auto space-y-4">
-              <MoveList title="Han subido" arrow="▲" color="#3ec878" rows={moves.up} />
-              <MoveList title="Han bajado" arrow="▼" color="#ef4b4b" rows={moves.down} />
-              <MoveList title="Nuevas en tu ranking" arrow="★" color="#F5B544" rows={moves.added} />
+              <MoveList title="Nuevas en tu ranking" type="added" rows={moves.added} />
+              <MoveList title="Han subido" type="up" rows={moves.up} />
+              <MoveList title="Han bajado" type="down" rows={moves.down} />
               {!moves.up.length && !moves.down.length && !moves.added.length && (
                 <p className="text-body text-mute py-4">Tu ranking se ha confirmado: no ha cambiado nada.</p>
               )}
@@ -517,32 +548,55 @@ function FlashName({ id, up = false }: { id: string; up?: boolean }) {
 
 function MoveList({
   title,
-  arrow,
-  color,
+  type,
   rows,
 }: {
   title: string
-  arrow: string
-  color: string
-  rows: { id: string; delta: number | null }[]
+  type: 'up' | 'down' | 'added'
+  rows: { id: string; oldPos?: number; newPos?: number; pos?: number; delta?: number }[]
 }) {
   if (!rows.length) return null
+  const color = type === 'up' ? '#3ec878' : type === 'down' ? '#ef4b4b' : '#F5B544'
+
   return (
     <Group title={title}>
       {rows.map((r) => {
-        const it = getItem(r.id)!
+        const it = getItem(r.id)
+        if (!it) return null
+
+        let subtitle = ''
+        let badge = ''
+
+        if (type === 'added') {
+          subtitle = `Entra en el puesto #${r.pos}`
+          badge = `★ #${r.pos}`
+        } else if (type === 'up') {
+          subtitle = `Puesto #${r.oldPos} ➔ #${r.newPos}`
+          badge = `▲ +${r.delta}`
+        } else {
+          subtitle = `Puesto #${r.oldPos} ➔ #${r.newPos}`
+          badge = `▼ -${r.delta}`
+        }
+
         return (
           <Row
             key={r.id}
             title={
               <div className="flex items-center gap-3">
-                <Poster item={it} style={it.type === 'boardgame' ? posterBox(it).style : undefined} className={`w-8 ${it.type === 'boardgame' ? posterBox(it).className : 'h-12'} rounded-[6px] shrink-0 object-cover`} />
-                <span className="serif text-item font-medium line-clamp-1">{it.title}</span>
+                <Poster
+                  item={it}
+                  style={it.type === 'boardgame' ? posterBox(it).style : undefined}
+                  className={`w-8 ${it.type === 'boardgame' ? posterBox(it).className : 'h-12'} rounded-[6px] shrink-0 object-cover`}
+                />
+                <div className="min-w-0">
+                  <div className="serif text-item font-medium line-clamp-1">{it.title}</div>
+                  <div className="text-meta text-mute">{subtitle}</div>
+                </div>
               </div>
             }
             right={
-              <span className="font-semibold tabular-nums text-sm text-right shrink-0" style={{ color }}>
-                {arrow} {r.delta ? Math.abs(r.delta) : ''}
+              <span className="font-semibold tabular-nums text-xs px-2.5 py-1 rounded-full bg-surface border border-line text-right shrink-0" style={{ color }}>
+                {badge}
               </span>
             }
           />

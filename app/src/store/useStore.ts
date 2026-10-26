@@ -31,6 +31,7 @@ interface State {
   recentOrienters: Record<ShelfType, string[][]>
   userVectors: Record<ShelfType, number[] | null>
   duels: Record<ShelfType, Record<string, DuelRecord>>
+  ratings: Record<ShelfType, Record<string, number>>
   lastCompared: Record<ShelfType, number>
 
   completeOnboarding: (p: Partial<Profile>) => void
@@ -47,7 +48,8 @@ interface State {
   undoSwipe: () => string | null
   rate: (itemId: string, patch: { stars?: Stars | null; comment?: string }) => void
   setStatus: (itemId: string, status: Status | null) => void
-  applyRanking: (shelf: ShelfType, ranking: string[], placedId?: string) => void
+  applyRanking: (shelf: ShelfType, ranking: string[], placedId?: string, ratingsPatch?: Record<string, number>) => void
+  setRatings: (shelf: ShelfType, ratings: Record<string, number>) => void
   placeProvisional: (itemId: string) => void
   markPlaced: (itemId: string) => void
   bumpCompared: (ids: string[]) => void
@@ -105,6 +107,14 @@ const defaults = () => ({
     boardgame: {},
     song: {},
   } as Record<ShelfType, Record<string, DuelRecord>>,
+  ratings: {
+    movie: {},
+    series: {},
+    book: {},
+    artist: {},
+    boardgame: {},
+    song: {},
+  } as Record<ShelfType, Record<string, number>>,
   lastCompared: {
     movie: 0,
     series: 0,
@@ -150,6 +160,9 @@ export function migrateStore(persistedState: unknown, version: number) {
   if (version < 4 && state) {
     if (!state.duels) {
       state.duels = { movie: {}, series: {}, book: {}, artist: {}, boardgame: {}, song: {} }
+    }
+    if (!state.ratings) {
+      state.ratings = { movie: {}, series: {}, book: {}, artist: {}, boardgame: {}, song: {} }
     }
     if (!state.lastCompared) {
       state.lastCompared = { movie: 0, series: 0, book: 0, artist: 0, boardgame: 0, song: 0 }
@@ -405,7 +418,7 @@ export const useStore = create<State>()(
         }),
 
       // §5.3: manda el A/B; las estrellas de cada item se ajustan a las de sus vecinos
-      applyRanking: (shelf, ranking, placedId) =>
+      applyRanking: (shelf, ranking, placedId, ratingsPatch) =>
         set((s) => {
           const entries = { ...s.entries }
           const starsOf = (id: string) => entries[id]?.stars
@@ -426,12 +439,23 @@ export const useStore = create<State>()(
             })
           }
           const nextRankings = { ...s.rankings, [shelf]: ranking }
+          const nextRatings = ratingsPatch
+            ? { ...(s.ratings || {}), [shelf]: { ...(s.ratings?.[shelf] || {}), ...ratingsPatch } }
+            : s.ratings
           const userVectors = {
             ...s.userVectors,
             [shelf]: recomputeVectorForShelf(entries, nextRankings, shelf),
           }
-          return { entries, rankings: nextRankings, userVectors }
+          return { entries, rankings: nextRankings, ratings: nextRatings, userVectors }
         }),
+
+      setRatings: (shelf, shelfRatings) =>
+        set((s) => ({
+          ratings: {
+            ...(s.ratings || {}),
+            [shelf]: shelfRatings,
+          },
+        })),
 
       // Colocación provisional SIN comparaciones: con estrellas, en el límite inferior de su franja (Comparar la afina)
       placeProvisional: (itemId) =>
@@ -568,6 +592,10 @@ export const useStore = create<State>()(
         for (const shelf of SHELVES) {
           if (!mergedDuels[shelf]) mergedDuels[shelf] = {}
         }
+        const mergedRatings = { ...currentState.ratings, ...(p.ratings || {}) }
+        for (const shelf of SHELVES) {
+          if (!mergedRatings[shelf]) mergedRatings[shelf] = {}
+        }
         const mergedLastCompared = { ...currentState.lastCompared, ...(p.lastCompared || {}) }
         for (const shelf of SHELVES) {
           if (typeof mergedLastCompared[shelf] !== 'number') mergedLastCompared[shelf] = 0
@@ -579,6 +607,7 @@ export const useStore = create<State>()(
           rankings: finalRankings,
           userVectors: mergedVectors,
           duels: mergedDuels,
+          ratings: mergedRatings,
           lastCompared: mergedLastCompared,
         }
       },
