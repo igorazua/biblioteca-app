@@ -33,6 +33,7 @@ const sideOf = (it: Item): Side => ({
   subtitle: `${it.year} · ${it.creator}`,
   bg: <Poster item={it} showTitle={false} className="absolute inset-0 w-full h-full" />,
   type: it.type,
+  ratio: it.type === 'boardgame' ? it.posterRatio : undefined,
 })
 
 function calcShelfOrdenado(

@@ -11,6 +11,8 @@ export interface Side {
   bg: ReactNode
   /** estantería de la obra si se conoce */
   type?: ShelfType
+  /** proporción ancho / alto de la portada si se conoce (T31) */
+  ratio?: number
 }
 
 export const DUEL_LEFT = '#F5B544' // ámbar del acento
