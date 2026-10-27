@@ -37,6 +37,8 @@
 7. `docs/SISTEMA_BETA.md` — diseño técnico de la beta, listo para construir: catálogo vivo, cuentas, aviso de versión, botón «Todas», imports, foto de perfil y mejora visual.
 8. `docs/PLAN_MEJORAS.md` — mejoras tras revisar la app (19/10/2026): catálogo sin TMDB, portadas, onboarding, Perfil/Ajustes, recordatorios y notificaciones, animaciones.
 9. `docs/APP_NATIVA.md` — lo que exige la app nativa sea cual sea la tecnología: permisos de contactos, tiendas y la política de contactos de Google Play, RGPD, login nativo y límites de 0006 (20/10/2026).
+   - `docs/ARQUITECTURA.md` — **arquitectura futura (27/10/2026)**: núcleo común (`packages/core`), app nativa en Expo y web de escritorio real en Next.js; la PWA actual se congela como especificación y se retira al final.
+   - `docs/PLAN_NATIVO.md` — plan de la app nativa 1:1, por fases, empezando por cerrar la PWA (fase 0).
 10. `docs/TAREAS_MOTOR_V2.md` — **encargo actual (21/10/2026)**: tareas detalladas para dejar los tres motores y la metadata al máximo nivel, con criterios de aceptación.
 11. `docs/SISTEMA_DISENO.md` — sistema de diseño «Editorial sobria» (obligatorio en toda pantalla).
 12. `docs/CONECTAR.md` — importar desde otras apps y mantenerlo al día.
@@ -60,7 +62,7 @@
 - **No hay API de TMDB**: no pedirla ni depender de ella.
 - Claves en `app/.env.local`, nunca en el repositorio ni en el navegador.
 - Desplegar solo con confirmación de Igor.
-- **App nativa:** se programará desde cero en React Native o en nativo iOS (por decidir). No se envuelve la PWA (nada de Capacitor ni similares). La PWA sigue siendo la versión web. Requisitos en `docs/APP_NATIVA.md`.
+- **App nativa y web (27/10/2026, Igor):** app nativa en React Native (Expo, propuesto) y web de escritorio real, ambas de cero sobre un núcleo común, sin adaptadores ni envolver la PWA. La PWA actual se congela como especificación antes de empezar. Ver `docs/ARQUITECTURA.md`, `docs/PLAN_NATIVO.md` y los requisitos de `docs/APP_NATIVA.md`.
 
 ## Proyectos relacionados
 - `scratch/juegos-mesa-app/` — idea derivada: la misma mecánica aplicada a juegos de mesa.
