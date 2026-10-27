@@ -13,7 +13,11 @@ export const SHELF_ENABLED: Record<ShelfType, boolean> = {
   song: true,
 }
 
-export const PLATFORMS = ['Netflix', 'Prime Video', 'HBO Max', 'Disney+', 'Movistar+', 'Filmin', 'Apple TV+'] as const
+/** Listas (Igor, 27/10): aparcadas. Con false no se ven «Mis listas», «Añadir a una lista» ni «Compartir» de la estantería;
+ * los links ya compartidos (/lista, /p) siguen abriendo. */
+export const LISTS_ENABLED = false
+
+export const PLATFORMS =['Netflix', 'Prime Video', 'HBO Max', 'Disney+', 'Movistar+', 'Filmin', 'Apple TV+'] as const
 
 export const AVATAR_COLORS = ['#F5B544', '#E5707E', '#5B8DEF', '#6FCF97', '#B48CF2', '#F28FB8', '#56C2C9', '#F2994A']
 

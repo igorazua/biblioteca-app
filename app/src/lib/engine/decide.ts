@@ -64,7 +64,7 @@ export function loadPassedItems(): Record<string, number> {
   }
 }
 
-function savePassedItems(items: Record<string, number>): void {
+export function savePassedItems(items: Record<string, number>): void {
   passedMem = items
   try {
     if (typeof localStorage !== 'undefined') localStorage.setItem(PASSES_STORAGE_KEY, JSON.stringify(items))
@@ -187,8 +187,10 @@ export function passesFilters(it: Item, a: Answers, platforms: string[]): boolea
   const kind = asStr(a.kind)
   const players = asStr(a.players)
 
+  // con niños: animación o cine familiar
+  if ((it.type === 'movie' || it.type === 'series') && asStr(a.company) === 'ninos' && !it.genres.some((g) => ['Animación', 'Familiar', 'Children', 'Anime'].includes(g))) return false
   if (it.type === 'movie') {
-    if (time && time !== 'larga' && (it.durationMin ?? 0) > (time === 'corta' ? 100 : 135)) return false
+    if ((time === 'corta' || time === 'media') && (it.durationMin ?? 0) > (time === 'corta' ? 100 : 135)) return false
     if (era === 'reciente' && it.year < 2010) return false
     if (era === 'clasico' && it.year >= 2000) return false
   }
@@ -205,20 +207,23 @@ export function passesFilters(it: Item, a: Answers, platforms: string[]): boolea
   if (it.type === 'book') {
     const diff = asStr(a.difficulty)
     if (diff && diff !== 'igual' && it.depth && it.depth !== diff) return false
-    if (len && len !== 'larga' && (it.pages ?? 0) > (len === 'corta' ? 250 : 450)) return false
+    if ((len === 'corta' || len === 'media') && (it.pages ?? 0) > (len === 'corta' ? 250 : 450)) return false
     const nf = it.genres.some((g) => NONFICTION_GENRES.includes(g))
     if (kind === 'ficcion' && nf) return false
     if (kind === 'noficcion' && !nf) return false
   }
   if (it.type === 'boardgame') {
-    if (players && players !== 'igual') {
-      if (players === '2' && it.players && !it.players.includes('2')) return false
-      if (players === 'fiesta' && it.players) {
-        const match = it.players.match(/(\d+)/g)
-        const maxPlayers = match ? Math.max(...match.map(Number)) : 0
-        if (maxPlayers < 5) return false
-      }
+    // «1-5» es un rango: vale para dos aunque no lleve un «2» escrito (antes se comparaba como texto)
+    const range = it.players?.match(/\d+/g)?.map(Number)
+    if (players && players !== 'igual' && range?.length) {
+      const lo = Math.min(...range)
+      const hi = Math.max(...range)
+      if (players === '2' && !(lo <= 2 && hi >= 2)) return false
+      if (players === 'grupo' && !(lo <= 3 && hi >= 4)) return false
+      if (players === 'fiesta' && hi < 5) return false
     }
+    // «Cooperativo» es lo único del estilo que no admite término medio
+    if (asStr(a.mood) === 'coop' && it.cooperative === false) return false
     if (time && time !== 'igual' && it.durationMin) {
       if (time === 'corta' && it.durationMin > 35) return false
       if (time === 'media' && (it.durationMin < 30 || it.durationMin > 75)) return false
@@ -241,6 +246,7 @@ export function passesFilters(it: Item, a: Answers, platforms: string[]): boolea
 /** Calcula la similitud híbrida entre dos obras */
 export function calcSimilarity(a: Item, b: Item): number {
   if (a.id === b.id) return 1.0
+  if (a.type === 'boardgame' && b.type === 'boardgame') return boardgameSimilarity(a, b)
 
   const creatorMatch = a.creator && b.creator && a.creator === b.creator ? 0.35 : 0
   const commonGenres = a.genres.filter((g) => b.genres.includes(g)).length
@@ -254,34 +260,67 @@ export function calcSimilarity(a: Item, b: Item): number {
   return Math.min(1.0, creatorMatch + jaccardGenres + yearSim + popSim)
 }
 
+const jaccard = (x: readonly string[] = [], y: readonly string[] = []) => {
+  const total = new Set([...x, ...y]).size
+  return total ? x.filter((v) => y.includes(v)).length / total : 0
+}
+
+/**
+ * Juegos de mesa: lo que decide si te gusta uno es cómo se juega (cooperativo o no, mecánicas, peso), no el año.
+ * Antes solo contaban géneros y autor, y «cooperativo» (que va en `cooperative` y en las mecánicas) no movía nada:
+ * elegir tres cooperativos seguidos no acercaba la propuesta a un cooperativo (Igor, 27/10).
+ */
+function boardgameSimilarity(a: Item, b: Item): number {
+  const coop = a.cooperative != null && b.cooperative != null ? (a.cooperative === b.cooperative ? 0.3 : 0) : 0.15
+  const mech = jaccard(a.mechanics, b.mechanics) * 0.2
+  const genres = jaccard(a.genres, b.genres) * 0.2
+  const weight = a.weight != null && b.weight != null ? Math.max(0, 1 - Math.abs(a.weight - b.weight) / 2) * 0.15 : 0.07
+  const creator = a.creator && b.creator && a.creator === b.creator ? 0.1 : 0
+  const pop = (1 - Math.abs(a.popularity - b.popularity) / 100) * 0.05
+  return Math.min(1.0, coop + mech + genres + weight + creator + pop)
+}
+
 /**
  * Inicializa la sesión de Decidir (§8.2, §8.3, T17 §C.4, T19 §1.2)
  */
+/**
+ * ¿Puede ser candidata según de dónde quiere sacarla («una que ya vi», «de mis guardados», «nuevas»)? Lo usan el
+ * arranque y el re-muestreo: antes el re-muestreo del duelo 3 no lo miraba y colaba obras no vistas en «una que ya vi».
+ */
+export function sourceAllows(it: Item, answers: Answers, entries: Record<string, UserEntry>): boolean {
+  if (it.hidden) return false
+  const entry = entries[it.id]
+  if (asStr(answers.seen) === 'vista') return entry?.status === 'seen'
+  const source = asStr(answers.source)
+  if (source === 'pendientes') return entry?.status === 'pending'
+  if (source === 'nuevas') return !entry
+  return !entry || entry.status === 'pending'
+}
+
+/** Si eligió explícitamente sus vistas o sus guardados, la bolsa no se rellena con otras: mejor corta que con intrusas. */
+const strictSource = (a: Answers) => asStr(a.seen) === 'vista' || asStr(a.source) === 'pendientes'
+
+const platformsOf = (a: Answers, profile?: Profile) => (Array.isArray(a.platforms) ? a.platforms : profile?.platforms ?? [])
+
 export function initDecideSession(input: DecideInput): DecideState {
   const { shelf, items, entries, rankings, profile, friends, answers, affinity, friendPct } = input
-  const plats = (answers.platforms as string[]) || profile.platforms || []
-  const isRepeat = asStr(answers.seen) === 'vista'
-  const source = asStr(answers.source)
+  const plats = platformsOf(answers, profile)
 
   // 1. Filtrar bolsa de candidatas con fallback por niveles (§8.2) — obras ocultas nunca entran
-  const poolFilter = (it: Item, checkPlats: boolean) => {
-    if (it.hidden) return false
-    if (it.type !== shelf) return false
-    if (!passesFilters(it, answers, checkPlats ? plats : [])) return false
-    const entry = entries[it.id]
-    if (isRepeat) {
-      return entry?.status === 'seen'
-    }
-    if (source === 'pendientes') return entry?.status === 'pending'
-    if (source === 'nuevas') return !entry
-    return !entry || entry.status === 'pending'
-  }
+  const poolFilter = (it: Item, checkPlats: boolean, checkFilters = true) =>
+    it.type === shelf &&
+    sourceAllows(it, answers, entries) &&
+    (!checkFilters || passesFilters(it, answers, checkPlats ? plats : []))
 
   let rawCandidates = items.filter((it) => poolFilter(it, true))
   if (rawCandidates.length < 3 && plats.length > 0) {
     rawCandidates = items.filter((it) => poolFilter(it, false))
   }
-  if (rawCandidates.length < 3) {
+  if (rawCandidates.length < 3 && strictSource(answers)) {
+    // de sus vistas o sus guardados: se relajan los filtros prácticos, nunca el origen
+    rawCandidates = items.filter((it) => poolFilter(it, false, false))
+  }
+  if (rawCandidates.length < 3 && !strictSource(answers)) {
     rawCandidates = items.filter((it) => it.type === shelf && !it.hidden)
   }
 
@@ -328,7 +367,8 @@ export function initDecideSession(input: DecideInput): DecideState {
 
     let moodScore = 0.5
     if (moodGenres.length > 0) {
-      const matchCount = it.genres.filter((g) => moodGenres.includes(g)).length
+      // en juegos de mesa el estilo (cooperativo, cartas, draft…) va en las mecánicas, no en los géneros
+      const matchCount = [...it.genres, ...(it.mechanics ?? [])].filter((g) => moodGenres.includes(g)).length
       moodScore = Math.min(1.0, matchCount / Math.min(2, moodGenres.length))
     }
 
@@ -824,7 +864,8 @@ export function resamplePool(
   const poolFilter = (it: Item) =>
     it.type === state.shelf &&
     !rejectedSet.has(it.id) &&
-    passesFilters(it, state.answers, state.profile?.platforms ?? [])
+    sourceAllows(it, state.answers, state.entries ?? {}) &&
+    passesFilters(it, state.answers, platformsOf(state.answers, state.profile))
 
   const candidates = items.filter(poolFilter)
   if (candidates.length <= targetSize) return state

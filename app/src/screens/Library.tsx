@@ -16,6 +16,7 @@ import { AddFlow } from '../components/AddFlow'
 import { NudgeCard } from '../components/NudgeCard'
 import { Icon } from '../components/Icon'
 import { ScreenTitle } from '../components/ScreenTitle'
+import { LISTS_ENABLED } from '../config'
 
 const FUTURE_SHELVES: [string, number][] = [
   ['Documentales', 214], ['Anime', 187], ['Podcasts', 163], ['Videojuegos', 241],
@@ -157,7 +158,7 @@ export function Library() {
                 </div>
               ) : (
                 <div className="mx-4 space-y-2">
-                  <Link to={`/descubrir`} className="rounded-2xl bg-surface2 p-4 flex items-center gap-4 active:scale-[0.99] transition-transform">
+                  <Link to={`/descubrir?shelf=${t}`} className="rounded-2xl bg-surface2 p-4 flex items-center gap-4 active:scale-[0.99] transition-transform">
                     <span className="flex -space-x-5 shrink-0" aria-hidden>
                       {itemsOfType(t).slice(0, 3).map((it, i) => (
                         <Poster key={it.id} item={it} showTitle={false} className={`w-11 ${posterBox(it).className} rounded-[8px] border border-line`} style={{ borderRadius: posterRadius(t, 8), ...posterBox(it).style, transform: `rotate(${(i - 1) * 7}deg)` }} />
@@ -178,7 +179,7 @@ export function Library() {
           )
         })}
 
-        <section aria-label="Mis listas" className="pt-4">
+        {LISTS_ENABLED && <section aria-label="Mis listas" className="pt-4">
           <div className="flex items-center justify-between px-5 mb-2.5 min-h-[44px]">
             <h2 className="serif text-[22px] font-semibold">Mis listas</h2>
             <button onClick={() => nav('/lista/nueva')} className="min-h-[40px] px-3 rounded-full bg-surface border border-line text-sm flex items-center gap-1"><Icon name="plus" size={16} /> Nueva lista</button>
@@ -201,7 +202,7 @@ export function Library() {
           ) : (
             <button onClick={() => nav('/lista/nueva')} className="mx-5 w-[calc(100%-2.5rem)] text-left rounded-3xl bg-surface p-4 text-sm text-mute leading-snug active:scale-[0.99] transition-transform">Junta pelis, series y libros en una lista — «Para una ruptura», «Lo mejor de 2024» — y <span className="text-ink font-medium">compártela con un link</span>.</button>
           )}
-        </section>
+        </section>}
 
         <section className="px-5 space-y-3">
           <button onClick={() => setVoting(true)} className="w-full text-left rounded-3xl bg-surface p-4 flex items-center gap-3 active:scale-[0.99] transition-transform">

@@ -708,6 +708,45 @@ export function getInitialElo(
   return 1400
 }
 
+/**
+ * Da Elo a las obras del ranking que aún no tienen (colocadas sin duelo, importadas, rankings de antes del Elo) sin
+ * cambiar su orden: entre dos con Elo se interpola, y si no hay ninguna con Elo sale de la posición. Antes valían 1400
+ * al ordenar y un duelo podía recolocar media estantería que nadie había tocado (Igor, 27/10).
+ */
+export function seedMissingRatings(ranking: readonly string[], ratings: Record<string, number>): void {
+  const rated = ranking.flatMap((id, i) => (ratings[id] !== undefined ? [i] : []))
+  if (!rated.length) {
+    ranking.forEach((id) => { ratings[id] = getInitialElo(id, ranking) })
+    return
+  }
+  const STEP = 12 // separación entre puestos vecinos fuera de los extremos con Elo
+  ranking.forEach((id, i) => {
+    if (ratings[id] !== undefined) return
+    const prev = [...rated].reverse().find((j) => j < i)
+    const next = rated.find((j) => j > i)
+    if (prev !== undefined && next !== undefined) {
+      const hi = ratings[ranking[prev]]
+      const lo = ratings[ranking[next]]
+      ratings[id] = hi + ((lo - hi) * (i - prev)) / (next - prev)
+    } else if (next !== undefined) {
+      ratings[id] = ratings[ranking[next]] + STEP * (next - i)
+    } else if (prev !== undefined) {
+      ratings[id] = ratings[ranking[prev]] - STEP * (i - prev)
+    }
+  })
+}
+
+/**
+ * Manda el A/B: tras un duelo, la ganadora queda siempre por encima de la perdedora. Con K bajo (obras con muchos
+ * duelos) y vecinas separadas más de lo que da el Elo, elegir la de abajo no la movía y el resumen solo enseñaba
+ * «una subió y otra bajó» de 8 duelos (Igor, 27/10).
+ */
+function winnerAbove(u: EloUpdateResult, winner: 'a' | 'b'): EloUpdateResult {
+  if (winner === 'a' && u.newRatingA <= u.newRatingB) return { ...u, newRatingA: u.newRatingB + 1, deltaA: u.deltaA + (u.newRatingB + 1 - u.newRatingA) }
+  if (winner === 'b' && u.newRatingB <= u.newRatingA) return { ...u, newRatingB: u.newRatingA + 1, deltaB: u.deltaB + (u.newRatingA + 1 - u.newRatingB) }
+  return u
+}
+
 export interface EloUpdateResult {
   deltaA: number
   deltaB: number
@@ -811,6 +850,7 @@ export function applyDuelToRanking(input: {
 
   if (input.lastDuel && input.ratings) {
     // Modo incremental O(1) cuando se llama desde la sesión activa
+    seedMissingRatings(currentRk, nextRatings)
     const { a, b, winner } = input.lastDuel
     const isNewA = !currentRk.includes(a)
     const isNewB = !currentRk.includes(b)
@@ -836,7 +876,7 @@ export function applyDuelToRanking(input: {
     }
 
     const winSide = winner === a ? 'a' : 'b'
-    const update = calculateEloUpdate(curA, curB, winSide, countA, countB, isNewA, isNewB)
+    const update = winnerAbove(calculateEloUpdate(curA, curB, winSide, countA, countB, isNewA, isNewB), winSide)
 
     deltaA = update.deltaA
     deltaB = update.deltaB
@@ -856,6 +896,7 @@ export function applyDuelToRanking(input: {
         nextRatings[id] = getInitialElo(id, anchor, input.starsOf?.(id), nextRatings)
       }
     })
+    seedMissingRatings(currentRk, nextRatings)
 
     // Lista de duelos ordenados cronológicamente
     const duelList = Object.entries(input.duels)
@@ -899,6 +940,7 @@ export function applyDuelToRanking(input: {
       }
 
       const winSide = d.w === d.a ? 'a' : 'b'
+      // al reproducir el historial no se fuerza: una respuesta vieja contradictoria no debe pesar como la última
       const update = calculateEloUpdate(curA, curB, winSide, countA, countB, isNewA, isNewB)
 
       nextRatings[d.a] = update.newRatingA

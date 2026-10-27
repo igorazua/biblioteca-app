@@ -3,7 +3,7 @@ import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { friends as seedFriends, getItem, itemFacts, items, itemsById, typeName } from '../data/catalog'
 import { PLATFORMS, WIZARD_TITLE } from '../config'
-import { BOOK_QUESTIONS, QUESTIONS_BY_SHELF, type Question } from '../data/questions'
+import { BOOK_QUESTIONS, QUESTIONS_BY_SHELF, type Option, type OptionArt, type QCtx, type Question } from '../data/questions'
 import {
   initDecideSession,
   nextDuel,
@@ -13,9 +13,11 @@ import {
   getProposal,
   rejectAndContinue,
   type DecideProposal,
-  type DecideState,
+  duelBudget,
+  type Decide2State as DecideState,
   type DuelPair,
-} from '../lib/engine/decide'
+} from '../lib/engine/decide2'
+import { loadShelfEngine } from '../lib/engine/features'
 import { useStore } from '../store/useStore'
 import { useFriends } from '../store/useFriends'
 import { useRanks } from '../store/useScores'
@@ -27,14 +29,14 @@ import { Poster, posterLayoutId } from '../components/Poster'
 import { posterBox, posterRadius } from '../lib/posterShape'
 import { SwipePair, type Side } from '../components/SwipePair'
 import { RatingFlow } from '../components/RatingFlow'
-import { PlatformPicker, Sheet, Toast } from '../components/ui'
+import { Sheet, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { ScreenTitle } from '../components/ScreenTitle'
 import { Button } from '../components/Button'
 
 export type Answers = Record<string, string | string[] | undefined>
 
-const SNAP_KEY = 'biblioteca-decidir-v4'
+const SNAP_KEY = 'biblioteca-decidir-v5'
 interface Snap {
   shelf: ShelfType | null
   phase: string
@@ -160,9 +162,40 @@ export function WhatToWatch() {
     try { localStorage.setItem(SNAP_KEY, JSON.stringify(data)) } catch { /* ok */ }
   }, [shelf, phase, qi, answers, pair, duel, current, rejected])
 
+  // Cuántas vistas y guardadas tiene en la estantería: decide qué preguntas tienen sentido (sin vistas no hay «repetir»)
+  const qctx = useMemo<QCtx>(() => {
+    const c = { seen: 0, pending: 0 }
+    if (!shelf) return c
+    for (const e of Object.values(entries)) {
+      const it = getItem(e.itemId)
+      if (!it || it.hidden || it.type !== shelf) continue
+      if (e.status === 'seen') c.seen++
+      else if (e.status === 'pending') c.pending++
+    }
+    return c
+  }, [entries, shelf])
+
+  // Portadas del fondo de cada tarjeta de respuesta: tus mejores vistas, tus guardadas o las más conocidas que no tienes
+  const art = useMemo<Record<OptionArt, Item[]>>(() => {
+    const out: Record<OptionArt, Item[]> = { seen: [], pending: [], new: [] }
+    if (!shelf) return out
+    const mine = Object.values(entries).filter((e) => getItem(e.itemId)?.type === shelf)
+    const ranked = (rankings[shelf] ?? []).filter((id) => entries[id]?.status === 'seen')
+    out.seen = [...ranked, ...mine.filter((e) => e.status === 'seen' && !ranked.includes(e.itemId)).map((e) => e.itemId)]
+      .slice(0, 3).map(getItem).filter(Boolean) as Item[]
+    out.pending = mine.filter((e) => e.status === 'pending').sort((a, b) => b.updatedAt - a.updatedAt)
+      .slice(0, 3).map((e) => getItem(e.itemId)).filter(Boolean) as Item[]
+    out.new = items.filter((it) => it.type === shelf && !it.hidden && !entries[it.id] && it.posterUrl)
+      .sort((a, b) => b.popularity - a.popularity).slice(0, 3)
+    return out
+  }, [entries, rankings, shelf])
+
+  // los vectores de contenido de la estantería (cercanía entre obras): se cargan mientras responde las preguntas
+  useEffect(() => { if (shelf) void loadShelfEngine(shelf) }, [shelf])
+
   const isBook = shelf === 'book'
   const baseQs: Question[] = !shelf ? [] : isBook ? BOOK_QUESTIONS : QUESTIONS_BY_SHELF[shelf]
-  const activeQs = (a: Answers) => baseQs.filter((q) => !q.skipIf?.(a))
+  const activeQs = (a: Answers) => baseQs.filter((q) => !q.skipIf?.(a, qctx))
   const questions = activeQs(answers)
 
   /* ------------------------------- navegación ------------------------------- */
@@ -175,7 +208,7 @@ export function WhatToWatch() {
     track('dec_start', {
       shelf,
       sid: sessionSid.current,
-      data: { answers: a },
+      data: { answers: a, engine: 'v2' },
     })
 
     const userVec = useStore.getState().userVectors?.[shelf]
@@ -195,7 +228,8 @@ export function WhatToWatch() {
     })
     setDecideState(state)
 
-    const next = nextDuel(state, items, new Set())
+    // con una sola candidata (o ninguna) no hay nada que preguntar
+    const next = shouldPropose(state) ? null : nextDuel(state, items, new Set())
     if (!next) {
       const prop = getProposal(state, itemsById, activeFriends, profile)
       if (prop) {
@@ -212,7 +246,7 @@ export function WhatToWatch() {
     duelStartTimeRef.current = performance.now()
     setPair([next.a, next.b])
     setDuelPhase(next.phase as any)
-    setDuel({ n: 0, of: targetDuels })
+    setDuel({ n: 0, of: Math.min(targetDuels, duelBudget(state).max) })
     setPhase('shape')
   }
 
@@ -221,7 +255,7 @@ export function WhatToWatch() {
     setAnswers(next)
     clearTimeout(timer.current)
     timer.current = window.setTimeout(() => {
-      if (qi + 1 >= activeQs(next).length) startShaping(next, 5)
+      if (qi + 1 >= activeQs(next).length) startShaping(next, 6)
       else setQi(qi + 1)
     }, q.multi ? 0 : 200)
   }
@@ -444,7 +478,7 @@ export function WhatToWatch() {
       duelStartTimeRef.current = performance.now()
       setPair([next.a, next.b])
       setDuelPhase(next.phase as any)
-      setDuel({ n: 0, of: 3 })
+      setDuel({ n: 0, of: duelBudget(updatedState).max })
       setPhase('shape')
     } else {
       const prop = getProposal(updatedState, itemsById, activeFriends, profile)
@@ -556,41 +590,37 @@ export function WhatToWatch() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -16 }}
               transition={{ duration: 0.16 }}
-              className="flex-1 min-h-0 scroll-y"
+              className="flex-1 min-h-0 scroll-y flex flex-col"
             >
               {q.multi ? (
-                <div>
-                  <PlatformPicker
-                    value={(val as string[]) ?? []}
-                    onChange={(newPlatforms) => setAnswers({ ...answers, [q.id]: newPlatforms })}
-                  />
-                  <p className="text-meta mt-3">Sin ninguna o con todas marcadas, no filtramos por plataforma.</p>
-                  <Button
-                    variant="primary"
-                    onClick={() => (qi + 1 >= questions.length ? startShaping(answers, 5) : setQi(qi + 1))}
-                    className="mt-6 w-full"
-                  >
-                    Seguir
-                  </Button>
-                </div>
+                <PlatformTiles
+                  value={(val as string[]) ?? []}
+                  onChange={(newPlatforms) => setAnswers({ ...answers, [q.id]: newPlatforms })}
+                  onNext={() => (qi + 1 >= questions.length ? startShaping(answers, 6) : setQi(qi + 1))}
+                />
               ) : (
-                <div className="space-y-3">
-                  {q.options.map((o) => (
-                    <button
-                      key={o.id}
-                      onClick={() => answer(q, o.id)}
-                      aria-pressed={val === o.id}
-                      className={`w-full text-left rounded-2xl border px-5 py-4 min-h-[56px] transition-colors ${
-                        val === o.id
-                          ? 'bg-surface2 border-accent text-ink'
-                          : 'bg-surface border-line active:bg-surface2 text-ink'
-                      }`}
-                    >
-                      <div className="text-body font-medium">{o.label}</div>
-                      {o.sub && <div className="text-meta mt-0.5">{o.sub}</div>}
-                    </button>
-                  ))}
-                </div>
+                // Las respuestas también son tarjetas, como los duelos (Igor, 27/10); «Me da igual» queda debajo, en texto
+                (() => {
+                  const main = q.options.filter((o) => o.id !== 'igual')
+                  const any = q.options.find((o) => o.id === 'igual')
+                  return (
+                    <div className="flex-1 min-h-0 flex flex-col">
+                      <div
+                        className={`flex-1 grid gap-3 ${main.length === 4 ? 'grid-cols-2' : 'grid-cols-1'}`}
+                        style={{ gridTemplateRows: `repeat(${main.length === 4 ? 2 : main.length}, minmax(96px, 1fr))` }}
+                      >
+                        {main.map((o, i) => (
+                          <ChoiceCard key={o.id} option={o} posters={o.art ? art[o.art] : []} selected={val === o.id} delay={i * 0.04} onClick={() => answer(q, o.id)} />
+                        ))}
+                      </div>
+                      {any && (
+                        <button onClick={() => answer(q, any.id)} aria-pressed={val === any.id} className={`self-center mt-2 min-h-[44px] px-5 text-meta font-medium active:opacity-70 ${val === any.id ? 'text-ink' : 'text-accent'}`}>
+                          {any.label}
+                        </button>
+                      )}
+                    </div>
+                  )
+                })()
               )}
             </motion.div>
           )}
@@ -611,7 +641,7 @@ export function WhatToWatch() {
     header = (
       <ScreenTitle
         label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`}
-        step={{ current: duel.n + 1, total: duel.of }}
+        step={{ current: duel.n + 1, total: Math.max(duel.of, duel.n + 1) }}
         title={duelPhase === 'coarse' ? '¿Por dónde tiramos hoy?' : 'Afinando el tiro'}
         action={
           <Button variant="text" onClick={reset}>
@@ -737,8 +767,8 @@ export function WhatToWatch() {
         <Button variant="primary" onClick={reset}>
           Empezar de nuevo
         </Button>
-        <Button variant="text" onClick={() => nav('/descubrir')}>
-          Ir a Descubrir
+        <Button variant="text" onClick={() => nav(shelf ? `/descubrir?shelf=${shelf}` : '/descubrir')}>
+          Ir a Descubrir {shelf ? SHELF_LABEL[shelf].plural.toLowerCase() : ''}
         </Button>
       </div>
     )
@@ -778,6 +808,63 @@ export function WhatToWatch() {
           </ul>
         </Sheet>
       )}
+    </div>
+  )
+}
+
+/** Respuesta en tarjeta: título grande abajo y, si la opción lo pide, tres portadas de fondo (tus vistas, tus guardadas…). */
+function ChoiceCard({ option, posters, selected, delay, onClick }: { option: Option; posters: Item[]; selected: boolean; delay: number; onClick: () => void }) {
+  return (
+    <motion.button
+      type="button"
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay, duration: 0.2 }}
+      onClick={onClick}
+      aria-pressed={selected}
+      className={`relative min-h-[96px] rounded-2xl overflow-hidden border text-left bg-surface active:scale-[0.985] transition-transform ${selected ? 'border-accent' : 'border-line'}`}
+    >
+      {posters.length > 0 && (
+        <>
+          <div className="absolute inset-0 grid grid-cols-3 gap-px opacity-35">
+            {posters.map((it) => <Poster key={it.id} item={it} showTitle={false} className="w-full h-full" />)}
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/75 to-bg/10" />
+        </>
+      )}
+      <div className="absolute inset-x-0 bottom-0 p-4">
+        <div className="serif text-title text-ink font-semibold leading-tight">{option.label}</div>
+        {option.sub && <div className="text-meta mt-1">{option.sub}</div>}
+      </div>
+    </motion.button>
+  )
+}
+
+/** Plataformas en tarjetas (varias a la vez). Sin ninguna o con todas marcadas, no se filtra. */
+function PlatformTiles({ value, onChange, onNext }: { value: string[]; onChange: (v: string[]) => void; onNext: () => void }) {
+  const all = PLATFORMS.every((p) => value.includes(p))
+  const tile = (label: string, active: boolean, onClick: () => void) => (
+    <button
+      key={label}
+      type="button"
+      onClick={onClick}
+      aria-pressed={active}
+      className={`min-h-[64px] rounded-2xl border px-4 flex items-center justify-between gap-2 text-left text-body font-medium transition-colors active:scale-[0.985] ${active ? 'bg-surface2 border-accent text-ink' : 'bg-surface border-line text-ink/80'}`}
+    >
+      <span className="truncate">{label}</span>
+      {active && <Icon name="check" size={16} className="text-accent shrink-0" strokeWidth={2.5} />}
+    </button>
+  )
+  return (
+    <div className="flex-1 flex flex-col">
+      <div className="grid grid-cols-2 gap-2.5">
+        {tile('Todas', all, () => onChange(all ? [] : [...PLATFORMS]))}
+        {PLATFORMS.map((p) => tile(p, value.includes(p), () => onChange(value.includes(p) ? value.filter((x) => x !== p) : [...value, p])))}
+      </div>
+      <p className="text-meta mt-3 mb-6">Sin ninguna o con todas marcadas, no filtramos por plataforma.</p>
+      <Button variant="primary" onClick={onNext} className="mt-auto w-full">
+        Seguir
+      </Button>
     </div>
   )
 }

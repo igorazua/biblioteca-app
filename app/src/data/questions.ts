@@ -1,78 +1,112 @@
-// Preguntas del asistente «Decidir»: solo lo básico (ánimo + una práctica). Lo que más determina son los duelos orientadores.
+// Preguntas del asistente «Decidir»: solo lo básico. Lo que más determina son los duelos orientadores.
+// Flujo (Igor, 27/10): primero de dónde sale (una que ya conoces / de tus guardados / nueva) y luego lo práctico.
+// Cada respuesta abre su camino: con «una que ya vi» no se pregunta por guardados, y si de donde sale hay muy pocas
+// (≤ TINY_POOL) no se filtra más, que los duelos eligen entre ellas.
 import type { ShelfType } from '../types'
 
-export interface Option { id: string; label: string; sub?: string }
-export interface Question { id: string; q: string; options: Option[]; multi?: boolean; /** se salta si devuelve true con las respuestas dadas */ skipIf?: (a: Record<string, string | string[] | undefined>) => boolean }
+type A = Record<string, string | string[] | undefined>
+/** Lo que tiene el usuario en la estantería: decide qué preguntas tienen sentido. */
+export interface QCtx { seen: number; pending: number }
+/** De qué obras sacar las portadas del fondo de la tarjeta de una opción. */
+export type OptionArt = 'seen' | 'pending' | 'new'
+export interface Option { id: string; label: string; sub?: string; art?: OptionArt }
+export interface Question { id: string; q: string; options: Option[]; multi?: boolean; /** se salta si devuelve true con las respuestas dadas */ skipIf?: (a: A, ctx: QCtx) => boolean }
 
-const MOOD_AV: Question = {
-  id: 'mood', q: '¿Qué te apetece?',
+const TINY_POOL = 6
+/** De donde quiere sacarla hay tan pocas que filtrar más solo la dejaría sin ninguna. */
+const tinyPool = (a: A, c: QCtx) => (a.seen === 'vista' && c.seen <= TINY_POOL) || (a.source === 'pendientes' && c.pending <= TINY_POOL)
+const withSkip = (q: Question, skip: (a: A, c: QCtx) => boolean): Question => ({ ...q, skipIf: (a, c) => skip(a, c) || Boolean(q.skipIf?.(a, c)) })
+const filter = (q: Question) => withSkip(q, tinyPool)
+
+const SEEN_TEXT: Record<Exclude<ShelfType, 'song'>, { q: string; seen: string; seenSub: string; fresh: string; freshSub: string }> = {
+  movie: { q: '¿Repetir una que ya viste o algo nuevo?', seen: 'Una que ya vi', seenSub: 'Para volver a verla', fresh: 'Algo nuevo', freshSub: 'Que aún no he visto' },
+  series: { q: '¿Volver a una que ya viste o algo nuevo?', seen: 'Una que ya vi', seenSub: 'Para volver a verla', fresh: 'Algo nuevo', freshSub: 'Que aún no he visto' },
+  book: { q: '¿Releer uno o algo nuevo?', seen: 'Releer uno', seenSub: 'De los que ya leí', fresh: 'Uno nuevo', freshSub: 'Que aún no he leído' },
+  boardgame: { q: '¿Uno que ya conocéis o uno nuevo?', seen: 'Uno que ya hemos jugado', seenSub: 'Sin explicar reglas', fresh: 'Uno nuevo', freshSub: 'Para estrenar' },
+  artist: { q: '¿Alguien que ya escuchas o descubrir?', seen: 'Uno que ya escucho', seenSub: 'Sobre seguro', fresh: 'Descubrir', freshSub: 'Alguien nuevo para mí' },
+}
+const seenOrNew = (s: Exclude<ShelfType, 'song'>): Question => ({
+  id: 'seen',
+  q: SEEN_TEXT[s].q,
   options: [
-    { id: 'accion', label: 'Acción' }, { id: 'romantica', label: 'Romántica' }, { id: 'profunda', label: 'Profunda' },
-    { id: 'risas', label: 'Risas' }, { id: 'miedo', label: 'Miedo' }, { id: 'igual', label: 'Me da igual' },
+    { id: 'vista', label: SEEN_TEXT[s].seen, sub: SEEN_TEXT[s].seenSub, art: 'seen' },
+    { id: 'nueva', label: SEEN_TEXT[s].fresh, sub: SEEN_TEXT[s].freshSub, art: 'new' },
   ],
-}
-const COMPANY: Question = {
-  id: 'company', q: '¿Con quién?',
-  options: [{ id: 'solo', label: 'Solo', sub: 'Plan para mí' }, { id: 'pareja', label: 'En pareja', sub: 'Plan de dos' }, { id: 'amigos', label: 'Con amigos', sub: 'Que nos riamos o vibremos' }],
-}
-const PLATFORMS: Question = { id: 'platforms', q: '¿Qué plataformas tenéis?', multi: true, options: [] } // las opciones salen de config.PLATFORMS
+  // sin ninguna vista no hay nada que repetir
+  skipIf: (_a, c) => c.seen === 0,
+})
 
-const SOURCE: Question = {
-  id: 'source', q: '¿De tus guardados o de otras?',
+// Principio (Igor, 27/10): se pregunta solo lo que los duelos no pueden aprender y descansa en datos reales
+// (de dónde sale, con quién, cuánto tiempo, cuántos sois, plataformas). El gusto lo sacan los duelos.
+const COMPANY: Question = filter({
+  id: 'company', q: '¿Con quién?',
   options: [
-    { id: 'pendientes', label: 'De mis guardados', sub: 'Lo que ya tienes pendiente' },
-    { id: 'todas', label: 'De todas', sub: 'Guardadas y nuevas' },
+    { id: 'solo', label: 'Yo solo', sub: 'Plan para mí' },
+    { id: 'pareja', label: 'En pareja', sub: 'Plan de dos' },
+    { id: 'amigos', label: 'Con amigos', sub: 'Para pasarlo bien' },
+    { id: 'ninos', label: 'Con niños', sub: 'Animación y familiar' },
     { id: 'igual', label: 'Me da igual' },
   ],
-}
-const SOURCE_NEW: Question = {
+})
+const PLATFORMS: Question = filter({ id: 'platforms', q: '¿Qué plataformas tenéis?', multi: true, options: [] }) // las opciones salen de config.PLATFORMS
+
+// Solo si busca algo nuevo y tiene guardados: con «una que ya vi» ya se sabe de dónde sale
+const SOURCE: Question = {
   id: 'source', q: '¿De tus guardados o algo nuevo?',
   options: [
-    { id: 'pendientes', label: 'De mis guardados', sub: 'Lo que ya tienes pendiente' },
-    { id: 'nuevas', label: 'Nuevas', sub: 'Algo que aún no tienes' },
+    { id: 'pendientes', label: 'De mis guardados', sub: 'Lo que ya tienes pendiente', art: 'pending' },
+    { id: 'nuevas', label: 'Algo que no tengo', sub: 'Ni visto ni guardado', art: 'new' },
     { id: 'igual', label: 'Me da igual' },
   ],
-}
-const SEEN_OR_NEW: Question = {
-  id: 'seen', q: '¿Algo que ya has visto o algo nuevo?',
-  options: [
-    { id: 'vista', label: 'Una que ya vi', sub: 'Para repetir' },
-    { id: 'nueva', label: 'Nueva', sub: 'Que aún no he visto' },
-  ],
+  skipIf: (a, c) => a.seen === 'vista' || c.pending === 0,
 }
 
 export const QUESTIONS_BY_SHELF: Record<Exclude<ShelfType, 'book' | 'song'>, Question[]> = {
-  // Pelis: vista o nueva → de guardados / todas / da igual → plataformas
-  movie: [SEEN_OR_NEW, SOURCE, PLATFORMS],
-  // Series: miniserie o larga → terminada o en emisión → guardados / nuevas / da igual
+  // Pelis: ya vista o nueva → guardados → con quién → cuánto tiempo → plataformas
+  movie: [
+    seenOrNew('movie'),
+    SOURCE,
+    COMPANY,
+    filter({ id: 'time', q: '¿Cuánto tiempo tenéis?', options: [{ id: 'corta', label: 'Poco', sub: 'Menos de 1 h 40' }, { id: 'media', label: 'Lo normal', sub: 'Hasta 2 h 15' }, { id: 'igual', label: 'Me da igual' }] }),
+    PLATFORMS,
+  ],
+  // Series: ya vista o nueva → guardados → miniserie o larga → capítulos → plataformas.
+  // Sin «¿terminada o en emisión?»: casi nunca decide y alargaba el camino.
   series: [
-    { id: 'format', q: '¿Miniserie o algo largo?', options: [{ id: 'mini', label: 'Miniserie', sub: '1-2 temporadas' }, { id: 'larga', label: 'Algo largo', sub: 'Para meses' }, { id: 'igual', label: 'Me da igual' }] },
-    { id: 'airing', q: '¿Terminada o en emisión?', options: [{ id: 'terminada', label: 'Terminada', sub: 'Para verla del tirón' }, { id: 'emision', label: 'En emisión', sub: 'Para seguirla al día' }, { id: 'igual', label: 'Me da igual' }] },
-    SOURCE_NEW,
+    seenOrNew('series'),
+    SOURCE,
+    filter({ id: 'format', q: '¿Miniserie o algo largo?', options: [{ id: 'mini', label: 'Miniserie', sub: '1 o 2 temporadas' }, { id: 'larga', label: 'Algo largo', sub: 'Para semanas' }, { id: 'igual', label: 'Me da igual' }], skipIf: (a) => a.seen === 'vista' }),
+    filter({ id: 'episode', q: '¿Capítulos cortos o largos?', options: [{ id: 'corto', label: 'Cortos', sub: 'Media hora o menos' }, { id: 'largo', label: 'Largos', sub: 'Una hora' }, { id: 'igual', label: 'Me da igual' }], skipIf: (a) => a.seen === 'vista' }),
+    PLATFORMS,
   ],
-  // Juegos de mesa: cuántos sois → tiempo → estilo → guardados o nuevos
+  // Juegos de mesa: ya jugado o nuevo → guardados → cuántos sois → tiempo → estilo
   boardgame: [
-    { id: 'players', q: '¿Cuántos sois?', options: [{ id: '2', label: 'En pareja (2)', sub: 'Duelo o cooperativo para dos' }, { id: 'grupo', label: '3-4 personas', sub: 'El grupo estándar' }, { id: 'fiesta', label: '5 o más', sub: 'Mesa llena / Party' }, { id: 'igual', label: 'Me da igual' }] },
-    { id: 'time', q: '¿Cuánto tiempo tenéis?', options: [{ id: 'corta', label: 'Rápida', sub: '≤ 30 min' }, { id: 'media', label: 'Normal', sub: '~45-60 min' }, { id: 'larga', label: 'Sesión larga', sub: '≥ 90 min' }, { id: 'igual', label: 'Me da igual' }] },
-    { id: 'mood', q: '¿Qué estilo os apetece?', options: [{ id: 'risas', label: 'Party / Risas' }, { id: 'estrategia', label: 'Estrategia / Euro' }, { id: 'coop', label: 'Cooperativo' }, { id: 'cartas', label: 'Cartas' }, { id: 'igual', label: 'Me da igual' }] },
-    SOURCE_NEW,
+    seenOrNew('boardgame'),
+    SOURCE,
+    filter({ id: 'players', q: '¿Cuántos sois?', options: [{ id: '2', label: 'Dos', sub: 'En pareja' }, { id: 'grupo', label: '3 o 4', sub: 'El grupo de siempre' }, { id: 'fiesta', label: '5 o más', sub: 'Mesa llena' }, { id: 'igual', label: 'Me da igual' }] }),
+    filter({ id: 'time', q: '¿Cuánto tiempo tenéis?', options: [{ id: 'corta', label: 'Poco', sub: 'Media hora o menos' }, { id: 'media', label: 'Una hora', sub: 'Entre 45 y 60 minutos' }, { id: 'larga', label: 'Toda la tarde', sub: 'Hora y media o más' }, { id: 'igual', label: 'Me da igual' }] }),
+    // el estilo lo aprenderían los duelos, pero se dice en un toque y «cooperativo» es un sí o un no
+    filter({ id: 'mood', q: '¿Qué estilo os apetece?', options: [{ id: 'risas', label: 'Risas', sub: 'Party y de grupo' }, { id: 'estrategia', label: 'Estrategia', sub: 'Para pensar' }, { id: 'coop', label: 'Cooperativo', sub: 'Todos contra el juego' }, { id: 'cartas', label: 'Cartas', sub: 'Mazos y draft' }, { id: 'igual', label: 'Me da igual' }] }),
   ],
-  // Artistas: vibra → época → guardados o nuevos
+  // Artistas: ya lo escucho o descubrir → guardados → vibra → (si es nuevo) época
   artist: [
-    { id: 'mood', q: '¿Qué vibra buscas?', options: [{ id: 'foco', label: 'Concentración', sub: 'Para trabajar o leer' }, { id: 'energia', label: 'Energía', sub: 'Para motivarme o entrenar' }, { id: 'chill', label: 'Chill', sub: 'Para relajarme y desconectar' }, { id: 'fiesta', label: 'Arriba / Fiesta', sub: 'Buen rollo' }, { id: 'igual', label: 'Me da igual' }] },
-    { id: 'era', q: '¿Clásicos o actualidad?', options: [{ id: 'clasico', label: 'Clásicos', sub: 'Los de siempre' }, { id: 'actual', label: 'Actual', sub: 'Sonidos recientes' }, { id: 'igual', label: 'Me da igual' }] },
-    SOURCE_NEW,
+    seenOrNew('artist'),
+    SOURCE,
+    filter({ id: 'mood', q: '¿Qué vibra buscas?', options: [{ id: 'foco', label: 'Concentración', sub: 'Para trabajar o leer' }, { id: 'energia', label: 'Energía', sub: 'Para moverme' }, { id: 'chill', label: 'Chill', sub: 'Para desconectar' }, { id: 'fiesta', label: 'Fiesta', sub: 'Buen rollo' }, { id: 'igual', label: 'Me da igual' }] }),
+    filter({ id: 'era', q: '¿Clásicos o actualidad?', options: [{ id: 'clasico', label: 'Clásicos', sub: 'Los de siempre' }, { id: 'actual', label: 'Actual', sub: 'Sonidos recientes' }, { id: 'igual', label: 'Me da igual' }], skipIf: (a) => a.seen === 'vista' }),
   ],
 }
 
-// Libros: todo sobre la SIGUIENTE lectura (§14.1), nada de «cómo eres como lector».
+// Libros: todo sobre la SIGUIENTE lectura (§14.1). Sin «dificultad»: en el catálogo no es un dato, sale de una regla
+// por páginas y géneros; y «parecido o salir de tu zona» lo resuelven los duelos. Ficción o no y la extensión sí son datos.
 export const BOOK_QUESTIONS: Question[] = [
-  { id: 'difficulty', q: '¿Qué dificultad?', options: [{ id: 'ligera', label: 'Ligera', sub: 'Ágil y fácil de leer' }, { id: 'media', label: 'Media' }, { id: 'densa', label: 'Densa', sub: 'De fondo, aunque cueste' }, { id: 'igual', label: 'Me da igual' }] },
-  { id: 'novelty', q: '¿Parecido a lo que te gusta o salir de tu zona?', options: [{ id: 'parecido', label: 'Parecido', sub: 'En la línea de tus favoritos' }, { id: 'nuevo', label: 'Salir de mi zona', sub: 'Algo distinto a lo de siempre' }, { id: 'igual', label: 'Me da igual' }] },
-  SOURCE_NEW,
+  seenOrNew('book'),
+  SOURCE,
+  filter({ id: 'kind', q: '¿Ficción o no ficción?', options: [{ id: 'ficcion', label: 'Ficción', sub: 'Novela y cuentos' }, { id: 'noficcion', label: 'No ficción', sub: 'Ensayo, historia, divulgación' }, { id: 'igual', label: 'Me da igual' }], skipIf: (a) => a.seen === 'vista' }),
+  filter({ id: 'length', q: '¿Largo o corto?', options: [{ id: 'corta', label: 'Corto', sub: 'Menos de 250 páginas' }, { id: 'media', label: 'Normal', sub: 'Hasta 450 páginas' }, { id: 'igual', label: 'Me da igual' }] }),
 ]
 
-export const NONFICTION_GENRES = ['Ensayo', 'Historia', 'Biografía']
+export const NONFICTION_GENRES = ['Ensayo', 'Historia', 'Biografía', 'Filosofía', 'Divulgación', 'Ciencia']
 export const PACE_GENRES: Record<string, string[]> = {
   enganche: ['Thriller', 'Misterio', 'Crimen', 'Aventura', 'Fantasía', 'Ciencia ficción'],
   pausado: ['Clásico', 'Realismo mágico', 'Novela', 'Ensayo', 'Fábula'],

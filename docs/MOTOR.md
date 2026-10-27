@@ -770,6 +770,9 @@ Se compara con el `buildDeck` actual. Los amigos son sintéticos, así que la ci
 
 ## 8. Fase 5 — Motor de Decidir (`lib/engine/decide.ts`)
 
+> **27/10/2026: la app usa ya el motor v2 (§8b, `decide2.ts`).** Este apartado describe el v1, que se conserva para
+> compararlos en el banco de pruebas. La bolsa de candidatas, los filtros y la puntuación previa siguen saliendo de aquí.
+
 Sustituye a `nextShaperPair`, `applyShaper` y `scoreCandidates` de `recommend.ts`, con la misma pantalla `WhatToWatch.tsx`. Las preguntas de `questions.ts` se mantienen.
 
 ### 8.1 Estado de la sesión
@@ -893,6 +896,79 @@ Usuario simulado: un amigo con una obra «objetivo» oculta que tiene en su top 
 - las dos variantes de `DECIDE_MODE` funcionan.
 
 ---
+
+## 8b. Decidir v2: gusto bayesiano por rasgos y duelos por valor de la información (27/10/2026)
+
+Encaja como la **capa de sesión de §2c.4**: cuando exista el espacio fusionado de T7, sus vectores entran como la parte
+densa de cada obra y todo lo demás sigue igual.
+
+### 8b.1 Por qué se cambió (lo que se encontró)
+- **Los vectores no se cargaban nunca.** `loadShelfEngine` solo lo llamaban los tests. En la app, `vecOf` devolvía
+  `null`, y el «vector de gusto» de la sesión salía de un relleno con senos del id (ruido) y de ahí el re-muestreo.
+  Los vectores sí son buenos (cobertura 100 %; Toy Story → Pixar, 1984 → Rebelión en la granja, Un mundo feliz).
+- **Ninguna obra tiene `axes`**: todas las dimensiones basadas en ejes caían a géneros (T21 pendiente).
+- **El aprendizaje era demasiado afilado** (TAU 0,05, BETA 1,5): un duelo cambiaba las probabilidades en órdenes de
+  magnitud, justo el «un duelo descarta» que Igor no quiere. Y solo aprendía la dimensión por la que se preguntaba:
+  elegir tres cooperativos no enseñaba nada sobre «cooperativo» si el duelo era de otra cosa.
+- **Las 10 alternativas** salían de una bolsa re-muestreada sin mirar «una que ya vi» (arreglado en `sourceAllows`).
+
+### 8b.2 Cómo ve una obra (`traits.ts`)
+Vector disperso de rasgos legibles con datos reales + el vector denso de contenido (48 dimensiones):
+géneros o temas (traducidos y sin duplicados inglés/español), palabras clave (poco peso, nunca en motivos), autor,
+década, «en español», y por estantería: duración (pelis), temporadas y capítulos (series), no ficción y páginas
+(libros), cooperativo, mecánicas, peso, jugadores, duración y edad (juegos). Entra un rasgo si lo tienen ≥ 3 obras y
+≤ la mitad. Cada familia tiene su varianza previa (cuánto puede llegar a pesar): cooperativo 3, género 1, mecánica 0,8,
+palabra clave 0,2, el vector denso 1 en total.
+
+### 8b.3 El gusto de la sesión
+Peso por rasgo con media μ y covarianza Σ (modelo probit de Bradley-Terry, actualización bayesiana por densidad
+supuesta). Al empezar: lo pedido en las preguntas, casi firme (μ alta, varianza 0,15) y, suave (±0,8), lo que dice tu
+ranking (rasgos de tus favoritas frente a las de abajo y de tus descartes). Cada duelo es «A gusta más que B» con ruido 1:
+inclina, varios confirman y uno en contra no tira lo anterior. Utilidad de una candidata = 0,8·previa (calidad,
+amigos, tendencia, pendientes; la de §8.3) + μ·rasgos.
+
+**El tanteo sale solo de la covarianza**: si gana un juego cooperativo, narrativo y egipcio, los tres rasgos quedan
+correlacionados (no se sabe cuál importó) y el duelo más informativo pasa a ser el que los separa.
+
+### 8b.4 Qué pareja se pone
+Orientadores: si saca de sus vistas o guardadas, la propia bolsa; si busca nuevas, obras propias o reconocibles
+(R ≥ 0,55, sin nivel 4) y en los 3 primeros duelos solo propias o de nivel 1 (regla de Igor). Rotación entre sesiones.
+Lista corta: las 26 más reconocibles, las 14 más afines a lo que va ganando y, para los 8 rasgos más inciertos, la obra
+más conocida que lo tenga (sin esto, 16 cooperativos de 300 no salían nunca). Cada pareja se puntúa por **gradiente de
+conocimiento**: según cuál elija, cuánto subiría la mejor propuesta posible. Recoge a la vez la incertidumbre del
+resultado, los rasgos que no sabemos, que importen a las candidatas (el «¿Quién es quién?» sin descartar a nadie) y las
+correlaciones. × reconocibilidad; en los 3 primeros, × lo distintas que son.
+
+### 8b.5 Cuándo se propone
+Presupuesto según la bolsa: máx = log₂(candidatas) − 2, entre 2 y 6 (300 → 6, 20 → 3); mín 2, o 1 si hay ≤ 6. Con
+una sola candidata, sin duelos. Se para antes del máximo cuando la primera no se ha movido en los últimos
+`TUNE.stable` duelos y el mejor duelo posible ya mejoraría la propuesta menos de `TUNE.stopKG`.
+«Seguir buscando» = la rechazada pierde contra la media de las 10 siguientes (ruido 2,5), y otra ronda de 1-3 duelos.
+
+### 8b.6 Banco de pruebas (`decide2.sim.test.ts`, `SIM=1 npx vitest run src/lib/engine/decide2.sim.test.ts`; barrido con `SIM_SWEEP=1`)
+Usuarios sintéticos con un gusto que el motor no modela tal cual (interacciones como «cooperativo y además denso», una
+parte que no ve —año preferido, gusto por lo popular—, un capricho propio por obra y ruido al elegir). Los perfiles de
+`scripts/cache/eval/test-users.jsonl` no sirven: son sintéticos, generados a partir del catálogo. Resultados en §8b.7.
+
+### 8b.7 Resultados (27/10/2026, 16 usuarios sintéticos por estantería, mismos duelos para los dos motores)
+Acierto = la propuesta está en el 10 % favorito del usuario; «3 primeras» = la propuesta o una de las 2 siguientes.
+
+| Estantería | Motor | Acierto | En las 3 primeras | Percentil medio | Duelos |
+|---|---|---|---|---|---|
+| Juegos de mesa | v1 | 6 % | 19 % | 49 % (azar) | 5 |
+| | **v2** | **44 %** | **50 %** | 26 % | 5,6 |
+| Pelis | v1 | 31 % | 44 % | 36 % | 5 |
+| | **v2** | **44 %** | **50 %** | 28 % | 5,6 |
+| Libros | v1 | 31 % | 50 % | 21 % | 5 |
+| | **v2** | **44 %** | **69 %** | 24 % | 4,1 |
+
+El v1 se midió con los vectores cargados (en la app no lo estaban, así que en la app era aún peor).
+Barrido de la parada: más duelos = más acierto. Con `stopKG` 0 (siempre el máximo) el v2 llega al 50 % en juegos y
+pelis; con 0,35 y `stable` 1 para a los ~2 duelos pero el acierto cae a la mitad. Se deja 0,1 con `stable` 2.
+Con 16 usuarios, cada usuario es un 6 %: son tendencias, no decimales.
+
+**Pendiente:** medir con perfiles reales (los de `test-users.jsonl` son sintéticos) y, cuando llegue T7, meter los
+vectores fusionados como parte densa y repetir el banco.
 
 ## 9. Fase 6 — Limpieza de pendientes (`lib/engine/cleanup.ts` + `Shelf.tsx`)
 

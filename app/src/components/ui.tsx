@@ -214,19 +214,23 @@ export function FriendBubbles({ itemId, shelf, max = 4 }: { itemId: string; shel
               onPointerCancel={handlePointerUpOrCancel}
             >
               <Avatar name={h.friend.name} color={h.friend.avatarColor} url={h.friend.avatarUrl} size={34} className="ring-2 ring-black/70" />
+              {/* Cada señal en su esquina y pequeña, para que se vea la cara (Igor, 27/10): abajo a la derecha el puesto
+                  (o el marcador si la tiene pendiente, nunca los dos); arriba a la derecha, si ha escrito algo. */}
               {h.entry.status === 'seen' && rank ? (
-                <RankBadge pos={rank.pos} className="absolute -bottom-2 left-1/2 -translate-x-1/2 ring-1 ring-black/60 z-10" />
+                <span className="absolute -bottom-1 -right-1.5 min-w-[17px] h-[17px] px-[3px] rounded-full bg-accent text-accent-ink text-[10px] font-bold tabular-nums leading-none flex items-center justify-center ring-1 ring-black/60 z-10" title={`nº ${rank.pos} en su ranking`}>
+                  {rank.pos}
+                </span>
               ) : (
-                <span className="absolute -bottom-1.5 -right-1 bg-stamp-blue rounded-full p-[3px] ring-1 ring-black/60 z-10" title="Lo tiene pendiente">
-                  <Icon name="bookmark" size={9} fill="white" strokeWidth={2.5} />
+                <span className="absolute -bottom-1 -right-1 bg-stamp-blue rounded-full w-[15px] h-[15px] flex items-center justify-center ring-1 ring-black/60 z-10" title="Lo tiene pendiente">
+                  <Icon name="bookmark" size={8} fill="white" strokeWidth={2.5} />
                 </span>
               )}
               {hasComment && (
                 <span
-                  className="absolute -top-1 -right-1 bg-[#161513] rounded-full w-[15px] h-[15px] ring-1 ring-black/70 flex items-center justify-center text-white z-20"
+                  className="absolute -top-1 -right-1 bg-[#161513] rounded-full w-[14px] h-[14px] ring-1 ring-black/70 flex items-center justify-center text-white z-20"
                   title="Tiene comentario"
                 >
-                  <Icon name="message" size={8} fill="white" strokeWidth={1} />
+                  <Icon name="message" size={7} fill="white" strokeWidth={1} />
                 </span>
               )}
             </span>
@@ -240,31 +244,36 @@ export function FriendBubbles({ itemId, shelf, max = 4 }: { itemId: string; shel
         {label}{isMock ? ' (ejemplo)' : ''}
       </span>
 
-      {/* Globo con primera línea del comentario y puesto al mantener pulsado (§7.8) */}
-      {activeFriend && (
-        <div
-          className="absolute top-12 right-0 z-50 bg-[#181715] text-white border border-line rounded-2xl p-3 shadow-2xl min-w-[190px] max-w-[240px] text-left pointer-events-none"
-          role="tooltip"
-        >
-          <div className="flex items-center gap-2 mb-1.5 font-semibold text-xs">
-            <span>{activeFriend.friend.name}</span>
-            {friendRanks(activeFriend.friend, getItem)[itemId] ? (
-              <RankBadge pos={friendRanks(activeFriend.friend, getItem)[itemId].pos} />
-            ) : activeFriend.entry.status === 'pending' ? (
-              <span className="text-[10px] bg-stamp-blue/20 text-stamp-blue px-1.5 py-0.5 rounded font-medium">Pendiente</span>
-            ) : null}
+      {/* Al mantener pulsada una cara, el desglose: quién es, su puesto «de cuántas» y lo que escribió (§7.8, Igor 27/10) */}
+      {activeFriend && (() => {
+        const r = friendRanks(activeFriend.friend, getItem)[itemId]
+        return (
+          <div
+            className="absolute top-12 right-0 z-50 bg-[#181715] text-white border border-line rounded-2xl p-3 shadow-2xl min-w-[200px] max-w-[250px] text-left pointer-events-none"
+            role="tooltip"
+          >
+            <div className="flex items-center gap-2.5 mb-2">
+              <Avatar name={activeFriend.friend.name} color={activeFriend.friend.avatarColor} url={activeFriend.friend.avatarUrl} size={36} />
+              <div className="min-w-0">
+                <div className="font-semibold text-[13px] truncate">{activeFriend.friend.name}</div>
+                {r && activeFriend.entry.status === 'seen' ? (
+                  <div className="text-[11px] text-white/70">nº {r.pos} de sus {r.total} {terms.plural.toLowerCase()}</div>
+                ) : activeFriend.entry.status === 'pending' ? (
+                  <div className="text-[11px] text-stamp-blue font-medium">{terms.pendingSingular}</div>
+                ) : (
+                  <div className="text-[11px] text-white/70">{terms.verbPerfSingular}</div>
+                )}
+              </div>
+              {r && activeFriend.entry.status === 'seen' && <RankBadge pos={r.pos} className="ml-auto shrink-0" />}
+            </div>
+            {activeFriend.entry.comment && (
+              <p className="italic text-white/90 serif text-[13px] leading-snug">
+                «{activeFriend.entry.comment.split('\n')[0].slice(0, 120)}{activeFriend.entry.comment.length > 120 ? '…' : ''}»
+              </p>
+            )}
           </div>
-          {activeFriend.entry.comment ? (
-            <p className="italic text-white/90 serif text-[13px] leading-snug">
-              «{activeFriend.entry.comment.split('\n')[0].slice(0, 80)}{activeFriend.entry.comment.length > 80 ? '…' : ''}»
-            </p>
-          ) : (
-            <p className="text-white/60 text-[11px]">
-              {activeFriend.entry.status === 'seen' ? terms.verbPerfSingular : terms.pendingSingular}
-            </p>
-          )}
-        </div>
-      )}
+        )
+      })()}
     </div>
   )
 }

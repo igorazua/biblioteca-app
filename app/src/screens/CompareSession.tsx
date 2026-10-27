@@ -25,6 +25,7 @@ interface Snapshot {
   count: number
   sides: Record<string, 'L' | 'R'>
   recent: string[]
+  compared: Set<string>
   duelKey?: { a: string; b: string }
 }
 
@@ -104,6 +105,8 @@ export function CompareSession() {
   const [sides, setSides] = useState<Record<string, 'L' | 'R'>>({})
   const seenCountRef = useRef<Record<string, number>>({})
   const recentRef = useRef<string[]>([])
+  // obras comparadas en esta sesión: el resumen enseña también las que se han quedado en su sitio
+  const comparedRef = useRef<Set<string>>(new Set())
 
   const startRank = useRef<string[]>(ranking ?? [])
   const startPositions = useRef<Map<string, number>>(new Map())
@@ -132,6 +135,7 @@ export function CompareSession() {
     setSides({})
     seenCountRef.current = {}
     recentRef.current = []
+    comparedRef.current = new Set()
     initialDuelConsumed.current = false
     const initialRk = useStore.getState().rankings[shelf] ?? []
     startRank.current = initialRk
@@ -259,6 +263,7 @@ export function CompareSession() {
       count,
       sides,
       recent: [...recentRef.current],
+      compared: new Set(comparedRef.current),
       duelKey: { a: pair.left.id, b: pair.right.id },
     })
 
@@ -270,6 +275,7 @@ export function CompareSession() {
     seenCountRef.current[pair.left.id] = (seenCountRef.current[pair.left.id] || 0) + 1
     seenCountRef.current[pair.right.id] = (seenCountRef.current[pair.right.id] || 0) + 1
     recentRef.current.push(pair.left.id, pair.right.id)
+    comparedRef.current.add(pair.left.id).add(pair.right.id)
 
     // Actualizar puntos Elo y ranking en tiempo real
     const updatedState = useStore.getState()
@@ -327,6 +333,7 @@ export function CompareSession() {
     }))
     setSides(undo.sides)
     recentRef.current = undo.recent
+    comparedRef.current = undo.compared
     setCurrentDuel(undo.current)
     setCount(undo.count)
     setSummary(false)
@@ -350,6 +357,7 @@ export function CompareSession() {
     const up: { id: string; oldPos: number; newPos: number; delta: number; rating: number }[] = []
     const down: { id: string; oldPos: number; newPos: number; delta: number; rating: number }[] = []
     const added: { id: string; pos: number; rating: number }[] = []
+    const kept: { id: string; pos: number }[] = []
 
     now.forEach((id, i) => {
       const newPos = i + 1
@@ -362,14 +370,18 @@ export function CompareSession() {
         up.push({ id, oldPos, newPos, delta: oldPos - newPos, rating: r })
       } else if (newPos > oldPos) {
         down.push({ id, oldPos, newPos, delta: newPos - oldPos, rating: r })
+      } else if (comparedRef.current.has(id)) {
+        // la comparaste y ganó (o perdió) contra la que tenía que ganar (o perder): el duelo confirma su puesto
+        kept.push({ id, pos: newPos })
       }
     })
 
     up.sort((a, b) => b.delta - a.delta)
     down.sort((a, b) => b.delta - a.delta)
     added.sort((a, b) => a.pos - b.pos)
+    kept.sort((a, b) => a.pos - b.pos)
 
-    return { up, down, added }
+    return { up, down, added, kept }
   }, [summary, shelf])
 
   const handleBack = () => {
@@ -453,7 +465,8 @@ export function CompareSession() {
               <MoveList title="Nuevas en tu ranking" type="added" rows={moves.added} />
               <MoveList title="Han subido" type="up" rows={moves.up} />
               <MoveList title="Han bajado" type="down" rows={moves.down} />
-              {!moves.up.length && !moves.down.length && !moves.added.length && (
+              <MoveList title="Confirmadas en su puesto" type="kept" rows={moves.kept} />
+              {!moves.up.length && !moves.down.length && !moves.added.length && !moves.kept.length && (
                 <p className="text-body text-mute py-4">Tu ranking se ha confirmado: no ha cambiado nada.</p>
               )}
             </div>
@@ -503,8 +516,8 @@ export function CompareSession() {
               <Button variant="primary" onClick={() => nav(`/estanteria/${shelf}`)}>
                 Ver tu ranking
               </Button>
-              <Button variant="secondary" onClick={() => nav('/descubrir')}>
-                Ir a Descubrir
+              <Button variant="secondary" onClick={() => nav(`/descubrir?shelf=${shelf}`)}>
+                Ir a Descubrir {SHELF_LABEL[shelf].plural.toLowerCase()}
               </Button>
               <Button variant="text" onClick={() => nav('/comparar')}>
                 Elegir otra estantería
@@ -517,8 +530,11 @@ export function CompareSession() {
             <p className="text-mute text-body max-w-sm">
               Necesitas al menos dos {SHELF_LABEL[shelf].seen} para ordenarlas. Haz swipe en Descubrir o carga unos datos de ejemplo.
             </p>
-            <div className="mt-3 flex flex-col gap-2">
-              <Button variant="primary" onClick={loadSample}>
+            <div className="mt-3 flex flex-col gap-2 w-full max-w-xs">
+              <Button variant="primary" onClick={() => nav(`/descubrir?shelf=${shelf}`)}>
+                Descubrir {SHELF_LABEL[shelf].plural.toLowerCase()}
+              </Button>
+              <Button variant="secondary" onClick={loadSample}>
                 Importar datos de ejemplo
               </Button>
               <Button variant="text" onClick={() => nav('/comparar')}>
@@ -552,11 +568,11 @@ function MoveList({
   rows,
 }: {
   title: string
-  type: 'up' | 'down' | 'added'
+  type: 'up' | 'down' | 'added' | 'kept'
   rows: { id: string; oldPos?: number; newPos?: number; pos?: number; delta?: number }[]
 }) {
   if (!rows.length) return null
-  const color = type === 'up' ? '#3ec878' : type === 'down' ? '#ef4b4b' : '#F5B544'
+  const color = type === 'up' ? '#3ec878' : type === 'down' ? '#ef4b4b' : type === 'kept' ? 'var(--color-mute)' : '#F5B544'
 
   return (
     <Group title={title}>
@@ -570,6 +586,9 @@ function MoveList({
         if (type === 'added') {
           subtitle = `Entra en el puesto #${r.pos}`
           badge = `★ #${r.pos}`
+        } else if (type === 'kept') {
+          subtitle = `Sigue en el puesto #${r.pos}`
+          badge = `= #${r.pos}`
         } else if (type === 'up') {
           subtitle = `Puesto #${r.oldPos} ➔ #${r.newPos}`
           badge = `▲ +${r.delta}`

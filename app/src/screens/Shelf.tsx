@@ -13,7 +13,7 @@ import { CleanupFlow } from '../components/CleanupFlow'
 import { Icon } from '../components/Icon'
 import { Button } from '../components/Button'
 import { AnimatePresence } from 'framer-motion'
-import { WIZARD_PATH } from '../config'
+import { LISTS_ENABLED, WIZARD_PATH } from '../config'
 import { pctColor } from './CompareHome'
 import type { IconName } from '../components/Icon'
 
@@ -73,9 +73,11 @@ export function Shelf() {
             </button>
             {!selecting && (
               <div className="flex items-center gap-2">
-                <button onClick={() => { setSelecting(true); setSel([]) }} aria-label="Compartir" className="w-10 h-10 rounded-full bg-bg/60 backdrop-blur border border-line/60 flex items-center justify-center text-ink active:scale-95 transition-transform">
-                  <Icon name="share" size={18} />
-                </button>
+                {LISTS_ENABLED && (
+                  <button onClick={() => { setSelecting(true); setSel([]) }} aria-label="Compartir" className="w-10 h-10 rounded-full bg-bg/60 backdrop-blur border border-line/60 flex items-center justify-center text-ink active:scale-95 transition-transform">
+                    <Icon name="share" size={18} />
+                  </button>
+                )}
                 <button onClick={() => setAdding(true)} aria-label={`Añadir a ${label.plural}`} className="w-10 h-10 rounded-full bg-accent text-accent-ink flex items-center justify-center active:scale-95 transition-transform">
                   <Icon name="plus" size={18} strokeWidth={2.5} />
                 </button>
@@ -193,7 +195,7 @@ export function Shelf() {
               text="Todavía no hay nada aquí."
               action={
                 <div className="flex flex-col gap-2.5 w-full max-w-xs">
-                  <Button variant="primary" onClick={() => nav('/descubrir')}>Ir a Descubrir</Button>
+                  <Button variant="primary" onClick={() => nav(`/descubrir?shelf=${type}`)}>Ir a Descubrir</Button>
                   <Button variant="secondary" onClick={() => nav('/importar')}>Importar tus obras</Button>
                 </div>
               }
@@ -233,7 +235,14 @@ export function Shelf() {
             <Empty
               text="No tienes pendientes. Desliza hacia arriba en Descubrir para guardar."
               action={
-                <Button variant="secondary" onClick={() => nav('/importar')}>Importar tus listas</Button>
+                <div className="flex flex-col gap-2 w-full max-w-xs">
+                  <Button variant="primary" onClick={() => nav(`/descubrir?shelf=${t}`)}>
+                    Ir a Descubrir {label.plural.toLowerCase()}
+                  </Button>
+                  <Button variant="secondary" onClick={() => nav('/importar')}>
+                    Importar tus listas
+                  </Button>
+                </div>
               }
             />
           )

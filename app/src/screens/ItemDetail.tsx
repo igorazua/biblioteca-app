@@ -7,22 +7,18 @@ import { useCatalog } from '../store/useCatalog'
 import { useRanks } from '../store/useScores'
 import { Poster, posterLayoutId } from '../components/Poster'
 import { boardgameDetailAspect, posterShape } from '../lib/posterShape'
-import { Avatar, RankBadge, Sheet, Tag, Toast } from '../components/ui'
+import { Avatar, FriendBubbles, RankBadge, Sheet, Tag, Toast } from '../components/ui'
+import { friendRanks } from '../lib/rank'
+import { LISTS_ENABLED } from '../config'
 import { RatingFlow } from '../components/RatingFlow'
 import { AskFriend } from '../components/AskFriend'
 import { Icon } from '../components/Icon'
-import { SHELF_LABEL, type Friend, type Item, type Status } from '../types'
+import { SHELF_LABEL, type Friend, type Status } from '../types'
 import { AnimatePresence, motion } from 'framer-motion'
 import { haptic } from '../lib/haptics'
 
-/** Puesto de una obra en el ranking de un amigo para esa categoría (§14.6, D25): «nº 2 de sus 48 pelis». */
-function friendRank(friend: Friend, itemId: string, type: Item['type']): { pos: number; total: number } | null {
-  const mine = friend.entries
-    .filter((e) => e.status === 'seen' && e.score !== undefined && getItem(e.itemId)?.type === type)
-    .sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
-  const i = mine.findIndex((e) => e.itemId === itemId)
-  return i < 0 ? null : { pos: i + 1, total: mine.length }
-}
+/** Puesto de una obra en el ranking de un amigo (§14.6, D25): «nº 2 de sus 48 pelis». El mismo cálculo que las burbujas. */
+const friendRank = (friend: Friend, itemId: string) => friendRanks(friend, getItem)[itemId] ?? null
 
 export function ItemDetail() {
   const { id = '' } = useParams()
@@ -124,6 +120,12 @@ export function ItemDetail() {
           <Poster item={item} showTitle={false} layoutId={posterLayoutId(item.id)} style={{ borderRadius: 0 }} className="absolute inset-0 w-full h-full" />
           {/* el degradado y el título entran cuando el póster ya casi ha llegado */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.25, delay: 0.12 }} className="absolute inset-0 bg-gradient-to-t from-bg via-bg/50 to-black/30" />
+          {/* las caras de los amigos con su puesto, como en las tarjetas (Igor, 27/10) */}
+          {hits.length > 0 && (
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.25, delay: 0.16 }} className="absolute right-4 z-10" style={{ top: 'max(env(safe-area-inset-top), 16px)' }}>
+              <FriendBubbles itemId={item.id} shelf={item.type} />
+            </motion.div>
+          )}
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.16 }} className="absolute bottom-0 inset-x-0 px-5">
             <div className="text-label text-ink/80">{typeName(item.type)} · {item.year}</div>
             <h1 className="text-display text-ink mt-1">{item.title}</h1>
@@ -235,7 +237,7 @@ export function ItemDetail() {
             {seenBy.length === 0 && <p className="text-meta text-mute">Ninguno de tus amigos {label.verbPerfSingular} todavía.</p>}
             <ul className="space-y-3">
               {seenBy.map(({ friend, entry: e }) => {
-                const r = friendRank(friend, item.id, item.type)
+                const r = friendRank(friend, item.id)
                 return (
                   <li key={friend.id} className="rounded-2xl bg-surface border border-line p-3.5">
                     <div className="flex items-center gap-3">
@@ -257,9 +259,11 @@ export function ItemDetail() {
             )}
           </section>
 
-          <button onClick={() => setListSheet(true)} className="w-full min-h-[48px] rounded-2xl border border-line bg-surface text-ink font-medium flex items-center justify-center gap-2 hover:bg-surface2 active:scale-98 transition-all">
-            <Icon name="plus" size={18} /> Añadir a una lista
-          </button>
+          {LISTS_ENABLED && (
+            <button onClick={() => setListSheet(true)} className="w-full min-h-[48px] rounded-2xl border border-line bg-surface text-ink font-medium flex items-center justify-center gap-2 hover:bg-surface2 active:scale-98 transition-all">
+              <Icon name="plus" size={18} /> Añadir a una lista
+            </button>
+          )}
         </div>
       </div>
 
