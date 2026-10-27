@@ -392,11 +392,12 @@ cargaban nunca (Descubrir, Decidir y el vector de usuario trabajaban sin ellos).
 **Automejora:**
 1. Por usuario: lo aprendido en cada sesión de Decidir (pesos de rasgos) se guarda con olvido (60/40) en
    `decideTaste` y arranca la siguiente sesión; el vector de usuario se recalcula con cada acción.
-2. Global: tarea programada cada noche (`biblioteca-cerebro-nocturno`, 4:30, con la app de Claude abierta) que corre
+2. Global — **PAUSADA hasta que haya usuarios (Igor, 27/10/2026); pendiente de activar** (ver
+   `docs/TAREAS_CEREBRO_V3.md`, «Para Igor»). Tarea programada (`biblioteca-cerebro-nocturno`, 4:30, desactivada) que corre
    `node scripts/brain/nightly.mjs`: datos reales → reconstrucción → evaluación → escribe solo lo que mejora → tests →
    informe en `scripts/cache/eval/nightly-<fecha>.md`. **No hace commit ni push** (Igor decide).
 
-**Pendiente:** T5 (fichas de experiencia por LLM, para que el contenido lea algo más que la sinopsis); comportamiento
+**Pendiente (encargos en `docs/TAREAS_CEREBRO_V3.md`):** T5 (fichas de experiencia por LLM, para que el contenido lea algo más que la sinopsis); comportamiento
 para series (no hay dataset abierto: Trakt pide clave); cruzar más libros (480/988); la migración `0009_biblio_duels`
 está sin aplicar en Supabase; con cuentas, `biblio_entries` dará bibliotecas completas (hoy solo eventos anónimos).
 
