@@ -260,10 +260,15 @@ export const useStore = create<State>()(
       recomputeUserVectors: () =>
         set((s) => {
           const userVectors = { ...s.userVectors }
+          let changed = false
           for (const shelf of SHELVES) {
-            userVectors[shelf] = recomputeVectorForShelf(s.entries, s.rankings, shelf)
+            const next = recomputeVectorForShelf(s.entries, s.rankings, shelf)
+            const prev = s.userVectors?.[shelf]
+            // mismo vector → misma referencia: así Descubrir no rebaraja el mazo cuando llegan los de otra estantería
+            const same = prev === next || (prev && next && prev.length === next.length && prev.every((x, i) => x === next[i]))
+            if (!same) { userVectors[shelf] = next; changed = true }
           }
-          return { userVectors }
+          return changed ? { userVectors } : {}
         }),
 
       recordDuel: (shelf, a, b, winner) =>

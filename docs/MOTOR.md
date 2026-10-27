@@ -360,23 +360,30 @@ vec(obra) = normalizar( α·embContent  ⊕  β·embBehavior  ⊕  γ·embRelaci
 | Relaciones de Wikidata (`edges.jsonl`) | todas | sagas, mismo autor, adaptaciones (peso 0,5) | — |
 | Usuarios de la app (`nightly.mjs`) | todas | recuentos agregados en el propio SQL de Supabase; peso min(1, aportantes/200) | hoy 7 aportantes |
 
-**Espacio** (`scripts/brain/build_space.py`): PPMI por fuente → suma pesada → SVD (32 d) = comportamiento; se fusiona
-con el contenido (384 d) con β = β_max·grado/(grado + k), PCA a 48 d, int8, 20 vecinos. Sustituye `vec`, `nn` y `v`
-de `engine/<shelf>.json` y conserva lo demás. **Solo escribe si mejora** (puerta de evaluación).
+**Espacio** (`scripts/brain/build_space.py`): PPMI por fuente → suma pesada → SVD = comportamiento. El vector final
+(48 d) son tres bloques, cada uno con su propio PCA: contenido (24), metadatos (8: idioma, país, géneros, década) y
+comportamiento (16, × β = β_max·grado/(grado + k)). Así una obra sin datos de comportamiento conserva su geometría de
+contenido (con un único PCA, el comportamiento se lo llevaba y «La casa de papel» o «Patria» perdían a sus vecinas).
+Sustituye `vec`, `nn` y `v` de `engine/<shelf>.json` y conserva lo demás. **Solo escribe si mejora**: al contenido
+solo, al espacio publicado con usuarios reales y a la última puntuación guardada (`cache/eval/last-scores.json`).
+`space-params.json` → `hold` bloquea estanterías (hoy **series**: sin fuente real sus vecinos empeoraban; se queda
+el espacio m1.1).
 
-**Evaluación** (27/10/2026; usuarios reales fuera del grafo: 3.935 de MovieLens y 3.121 de goodbooks):
+**Evaluación** (27/10/2026). Usuarios reales fuera del grafo: 3.935 de MovieLens y 3.121 de goodbooks; se esconde el
+20 % de lo que les gustó. Enlaces: se esconde el 20 % de las aristas (también las relaciones de Wikidata).
 
-| | Espacio anterior (m1.1) | Solo contenido | **Cerebro** |
-|---|---|---|---|
-| Pelis, usuarios reales | recall@50 21,3 % · hit@10 39 % | 28,4 % · 49 % | **54,9 % · 75 %** |
-| Libros, usuarios reales | 21,9 % · 28 % | 33,3 % · 48 % | **56,2 % · 66 %** |
-| Juegos, enlaces escondidos (recall@20) | — | 8,1 % | **36,6 %** |
-| Artistas, enlaces escondidos | — | 13,2 % | **24,7 %** |
-| Series, enlaces escondidos | — | 36,5 % | **41,3 %** |
+| | Espacio anterior (m1.1) | Popularidad pura | Solo contenido | **Cerebro** |
+|---|---|---|---|---|
+| Pelis, usuarios reales (recall@50 · hit@10) | 21,3 % · 39 % | 26,4 % · 48 % | 25,3 % · 44 % | **51,7 % · 72 %** |
+| Libros, usuarios reales | 21,9 % · 28 % | 4,0 % · 11 % | 31,3 % · 44 % | **51,3 % · 62 %** |
+| Juegos, enlaces escondidos (recall@20) | — | — | 8,7 % | **34,8 %** |
+| Artistas, enlaces escondidos | — | — | 14,2 % | **23,8 %** |
 
-El espacio anterior era peor que el contenido solo (la mezcla de `merge.mjs` empeoraba) y su cifra de enlaces no vale
-como referencia: se construyó con esas mismas aristas. Los usuarios de MovieLens y goodbooks son de EE. UU. sobre todo:
-miden «gusto real», no «gusto español».
+Restringiendo a obras con datos de comportamiento, las cifras son las mismas (no gana solo por «tener datos»). El
+espacio anterior era peor que el contenido solo, y su cifra de enlaces no vale como referencia (se construyó con esas
+mismas aristas). Los usuarios de MovieLens y goodbooks son sobre todo de EE. UU.: miden gusto real, no gusto español.
+El banco sintético de Decidir (§8b.6) apenas se mueve con el cerebro: sus usuarios simulados tienen gusto por rasgos,
+no por comportamiento (esperable).
 
 **En la app:** los vectores se cargan perezosamente en toda la app (`lib/engine/loadEngine.ts`: la estantería en uso
 primero y las demás después de pintar) y, al llegar cada una, se recalcula el vector de usuario. Antes no se

@@ -126,7 +126,8 @@ export function Discover() {
   const entries = useStore((s) => s.entries)
   const profile = useStore((s) => s.profile)
   const rankings = useStore((s) => s.rankings)
-  const userVectors = useStore((s) => s.userVectors)
+  // solo el de esta estantería: si llegan los vectores de otra, el mazo no se rebaraja
+  const shelfUserVec = useStore((s) => s.userVectors?.[shelf])
   const ranks = useRanks()
   const swipe = useStore((s) => s.swipe)
   const settings = useStore((s) => s.settings)
@@ -186,13 +187,13 @@ export function Discover() {
           affinity: getAffinity,
           friendPct: getFriendPct,
           session: sessionStateRef.current,
-          userVec: userVectors?.[shelf],
+          userVec: shelfUserVec,
         },
         Array.from(existingIds),
         count
       )
     },
-    [shelf, entries, rankings, profile, activeFriends, getAffinity, getFriendPct, userVectors, songsLoaded]
+    [shelf, entries, rankings, profile, activeFriends, getAffinity, getFriendPct, shelfUserVec, songsLoaded]
   )
 
   const fetchBatchRef = useRef(fetchBatch)

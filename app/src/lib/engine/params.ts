@@ -3,7 +3,7 @@
  * Centraliza todos los números y umbrales (MOTOR.md §10).
  */
 
-export const ENGINE_VERSION = 'm1.1'
+export const ENGINE_VERSION = 'm2.0-brain' // 27/10/2026: cerebro (contenido + comportamiento real) y Decidir v2
 
 export type Bucket = 'seen_likely' | 'social' | 'friend_gem' | 'explore'
 

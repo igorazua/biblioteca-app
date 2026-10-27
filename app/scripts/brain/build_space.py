@@ -42,6 +42,7 @@ ENGINE_DIR = os.path.join(APP, 'src', 'data', 'engine')
 PARAMS_FILE = os.path.join(HERE, 'space-params.json')
 REPORT = os.path.join(CACHE, 'eval', 'space-report.md')
 HIST = os.path.join(CACHE, 'eval', 'historico.md')
+LAST = os.path.join(CACHE, 'eval', 'last-scores.json')
 
 SHELVES = ['movie', 'series', 'book', 'boardgame', 'artist']
 DIM = 48
@@ -175,10 +176,56 @@ def pca(x, dim=DIM):
     return xc @ vt[:dim].T
 
 
-def fuse(content, behavior, degree, beta_max, k):
+# Bloques del vector final (suman DIM): cada uno con su propio PCA, para que una obra sin comportamiento conserve
+# intacta su geometría de contenido y metadatos (con un único PCA, el comportamiento se lo llevaba todo y obras como
+# «La casa de papel» o «Patria» perdían a sus vecinas naturales).
+BLOCKS = {'content': 24, 'meta': 8, 'behavior': 16}
+
+
+def block(x, dim):
+    if x.shape[1] <= dim:
+        out = np.zeros((x.shape[0], dim))
+        out[:, :x.shape[1]] = x
+        return unit(out)
+    return unit(pca(x, dim))
+
+
+def fuse(content, behavior, degree, beta_max, k, meta=None, meta_w=0.7):
     beta = beta_max * degree / (degree + k)
-    x = np.hstack([content, behavior * beta[:, None]])
-    return unit(pca(unit(x)))
+    parts = [block(content, BLOCKS['content'])]
+    parts.append(block(meta, BLOCKS['meta']) * meta_w if meta is not None else np.zeros((len(content), BLOCKS['meta'])))
+    b = block(behavior, BLOCKS['behavior']) if behavior.shape[1] > 1 else np.zeros((len(content), BLOCKS['behavior']))
+    parts.append(b * beta[:, None])
+    return unit(np.hstack(parts))
+
+
+def meta_matrix(items_by_id, ids):
+    """Metadatos que el texto no capta bien: idioma original, país, géneros y década (multi-hot con idf)."""
+    feats = []
+    for iid in ids:
+        it = items_by_id[iid]
+        f = set()
+        if it.get('originalLanguage'):
+            f.add('l:' + it['originalLanguage'])
+        for c in (it.get('originCountry') or [])[:2]:
+            f.add('c:' + c)
+        for g in it.get('genres') or []:
+            f.add('g:' + g.lower())
+        if it.get('year'):
+            f.add('d:' + str(it['year'] // 10))
+        feats.append(f)
+    vocab = {}
+    for f in feats:
+        for x in f:
+            vocab[x] = vocab.get(x, 0) + 1
+    keys = [x for x, n in vocab.items() if n >= 3]
+    col = {x: i for i, x in enumerate(keys)}
+    m = np.zeros((len(ids), len(keys)))
+    for r, f in enumerate(feats):
+        for x in f:
+            if x in col:
+                m[r, col[x]] = math.log(len(ids) / vocab[x])
+    return unit(m)
 
 
 def neighbors(v, k=NN):
@@ -194,7 +241,7 @@ def split_edges(by_src, frac=0.2):
     for src, edges in by_src.items():
         for (i, j, n) in edges:
             key = f'{src}|{min(i, j)}|{max(i, j)}'
-            if src != 'relations' and stable_frac(key) < frac:
+            if stable_frac(key) < frac:
                 test.append((i, j))
             else:
                 train.setdefault(src, []).append((i, j, n))
@@ -211,7 +258,7 @@ def link_recall(v, test):
     return hits / (2 * len(test))
 
 
-def user_eval(v, ids, shelf):
+def user_eval(v, ids, shelf, allowed=None, pop=None):
     users = read_jsonl(os.path.join(CACHE, 'eval', f'real-users-{shelf}s.jsonl')) or read_jsonl(os.path.join(CACHE, 'eval', f'real-users-{shelf}.jsonl'))
     if not users:
         return None
@@ -225,9 +272,14 @@ def user_eval(v, ids, shelf):
         known = [i for i in liked if i not in hidden]
         if not hidden or not known:
             continue
-        prof = v[known].mean(axis=0)
-        scores = v @ prof
+        if pop is not None:
+            scores = pop.astype(np.float64).copy()
+        else:
+            prof = v[known].mean(axis=0)
+            scores = v @ prof
         scores[known] = -np.inf
+        if allowed is not None:
+            scores[~allowed] = -np.inf
         top = np.argsort(-scores)
         top50 = set(top[:50].tolist())
         top10 = set(top[:10].tolist())
@@ -285,21 +337,24 @@ def main():
 
     params = {**DEFAULT_PARAMS, **(load_json(PARAMS_FILE, {}) or {})}
     items, aliases = load_catalog()
+    items_by_id = {it['id']: it for it in items}
     shelves = [args.shelf] if args.shelf else SHELVES
     lines = [f'\n## Espacio del cerebro — {datetime.datetime.now():%Y-%m-%d %H:%M}\n']
     chosen = {}
+    last = load_json(LAST, {}) or {}
 
     for shelf in shelves:
         ids = [it['id'] for it in items if it.get('type') == shelf and not it.get('hidden')]
         idx = {iid: i for i, iid in enumerate(ids)}
         content, have = content_matrix(shelf, ids)
+        meta = meta_matrix(items_by_id, ids)
         by_src = behavior_edges(shelf, idx, aliases)
         n_edges = {s: len(e) for s, e in by_src.items()}
         cur, engine = current_space(shelf, ids)
         train, test = split_edges(by_src)
 
         # Referencias: el espacio de hoy y solo contenido (mismo PCA que el fusionado)
-        content48 = unit(pca(content))
+        content48 = fuse(content, np.zeros((len(ids), 1)), np.zeros(len(ids)), 0, 1, meta, 0.0)
         ref = {
             'actual': {'link': link_recall(cur, test) if cur is not None else None, 'users': user_eval(cur, ids, shelf) if cur is not None else None},
             'contenido': {'link': link_recall(content48, test), 'users': user_eval(content48, ids, shelf)},
@@ -309,16 +364,22 @@ def main():
         best = None
         for bm in params['grid']['beta_max']:
             for k in params['grid']['k']:
-                v = fuse(content, b_train, deg_train, bm, k)
-                link = link_recall(v, test)
-                score = link or 0
-                if best is None or score > best['score']:
-                    best = {'beta_max': bm, 'k': k, 'link': link, 'score': score}
+                for mw in params['grid'].get('meta_w', [0.0, 0.5, 1.0]):
+                    v = fuse(content, b_train, deg_train, bm, k, meta, mw)
+                    link = link_recall(v, test)
+                    score = link or 0
+                    if best is None or score > best['score']:
+                        best = {'beta_max': bm, 'k': k, 'meta_w': mw, 'link': link, 'score': score}
 
         # Espacio final con TODAS las aristas y el mejor ajuste; usuarios reales (no están en el grafo)
         b_all, deg_all = behavior_space(by_src, len(ids), params)
-        final = fuse(content, b_all, deg_all, best['beta_max'], best['k'])
+        final = fuse(content, b_all, deg_all, best['beta_max'], best['k'], meta, best['meta_w'])
         users_final = user_eval(final, ids, shelf)
+        # referencias honradas: popularidad pura, y todos los métodos solo entre obras con datos de comportamiento
+        pop = np.array([float(items_by_id[i].get('popularity') or 0) for i in ids])
+        covered = deg_all > 0
+        users_pop = user_eval(final, ids, shelf, pop=pop)
+        users_cov = {'contenido': user_eval(content48, ids, shelf, allowed=covered), 'cerebro': user_eval(final, ids, shelf, allowed=covered), 'popularidad': user_eval(final, ids, shelf, allowed=covered, pop=pop)}
         cover1 = float((deg_all >= 1).mean())
         cover10 = float((deg_all >= 10).mean())
 
@@ -329,7 +390,10 @@ def main():
             ok_link = (best['link'] or 0) > base_link
             base_users = ref['actual']['users']
             ok_users = users_final is None or base_users is None or users_final['recall50'] >= base_users['recall50']
-            return ok_link and ok_users
+            # y nunca peor que lo último que se publicó (para las estanterías sin usuarios reales es la única red)
+            prev = last.get(shelf, {})
+            ok_prev = (best['link'] or 0) >= prev.get('link', 0) - 0.005 and (users_final or {}).get('recall50', 1) >= prev.get('users', 0) - 0.005
+            return ok_link and ok_users and ok_prev
 
         ship = better()
         chosen[shelf] = ship
@@ -337,10 +401,16 @@ def main():
         fu = lambda u: '—' if not u else f"recall@50 {u['recall50'] * 100:.1f} % · hit@10 {u['hit10'] * 100:.1f} % ({u['users']} usuarios)"
         lines.append(f"### {shelf} ({len(ids)} obras, contenido {have}, aristas {sum(n_edges.values())}: {n_edges})")
         lines.append(f"- Obras con ≥ 1 arista: {cover1 * 100:.0f} % · con ≥ 10: {cover10 * 100:.0f} %")
-        lines.append(f"- Enlaces escondidos (recall@20): actual {fmt(ref['actual']['link'])} (contaminado: ya vio estas aristas) · solo contenido {fmt(ref['contenido']['link'])} · **fusionado {fmt(best['link'])}** (β_max {best['beta_max']}, k {best['k']}; {len(test)} aristas de prueba)")
-        lines.append(f"- Usuarios reales: actual {fu(ref['actual']['users'])} · solo contenido {fu(ref['contenido']['users'])} · **fusionado {fu(users_final)}**")
-        if args.write and ship and engine:
+        lines.append(f"- Enlaces escondidos (recall@20): actual {fmt(ref['actual']['link'])} (contaminado: ya vio estas aristas) · solo contenido {fmt(ref['contenido']['link'])} · **fusionado {fmt(best['link'])}** (β_max {best['beta_max']}, k {best['k']}, metadatos {best['meta_w']}; {len(test)} aristas de prueba)")
+        lines.append(f"- Usuarios reales: actual {fu(ref['actual']['users'])} · solo contenido {fu(ref['contenido']['users'])} · popularidad {fu(users_pop)} · **fusionado {fu(users_final)}**")
+        if users_final:
+            lines.append(f"- Solo entre obras con datos: contenido {fu(users_cov['contenido'])} · popularidad {fu(users_cov['popularidad'])} · **cerebro {fu(users_cov['cerebro'])}**")
+        held = (params.get('hold') or {}).get(shelf)
+        if held:
+            lines.append(f'- ⏸ Bloqueada: {held}')
+        elif args.write and ship and engine:
             size = write_engine(shelf, engine, ids, final)
+            last[shelf] = {'link': best['link'] or 0, 'users': (users_final or {}).get('recall50', 0), 'at': f'{datetime.datetime.now():%Y-%m-%d}'}
             lines.append(f"- ✅ Escrito engine/{shelf}.json ({size / 1024:.0f} KB)")
         elif args.write:
             lines.append('- ⏸ No se escribe: no mejora al espacio actual')
@@ -350,6 +420,9 @@ def main():
         sys.stdout.flush()
 
     os.makedirs(os.path.dirname(REPORT), exist_ok=True)
+    if args.write:
+        with open(LAST, 'w', encoding='utf-8') as f:
+            json.dump(last, f, indent=1)
     with open(REPORT, 'a', encoding='utf-8') as f:
         f.write('\n'.join(lines) + '\n')
     with open(HIST, 'a', encoding='utf-8') as f:

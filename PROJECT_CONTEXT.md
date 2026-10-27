@@ -14,6 +14,12 @@
 
 **El cerebro (21/10/2026, Igor):** el motor pasa a ser un espacio único que aprende: contenido (ficha de experiencia escrita por LLM) + comportamiento prestado (clickstream de Wikipedia y listas públicas raspadas) + vector de cada usuario + un modelo que aprende a ordenar. Se evalúa con perfiles públicos como usuarios de prueba. Diseño en `docs/MOTOR.md` §2c (con costes estimados); licencias aparcadas hasta que funcione con usuarios.
 
+**Cerebro (27/10/2026): construido, en la app y en automejora.** Espacio fusionado contenido + comportamiento real
+(MovieLens, goodbooks, BGG, ListenBrainz, Wikipedia Clickstream, relaciones de Wikidata). Con usuarios reales: pelis
+recall@50 21 % → 52 %, libros 22 % → 51 %. La app carga por fin los vectores (antes nunca). Decidir usa el motor v2
+(gusto bayesiano por rasgos) y recuerda lo aprendido entre sesiones. Tarea nocturna `nightly.mjs` (deja el cambio sin
+commit). Series bloqueada hasta tener datos de comportamiento. Detalle: `docs/MOTOR.md` §2c.9 y §8b.
+
 **Estado real (23/10/2026, comprobado y verificado con `tsc`, `vitest` y `coverage.mjs` tras completar Tarea 20):**
 - **Funciona y está probado:**
   - 148/148 tests en verde (`npm test`) y compilación TypeScript limpia (`tsc --noEmit`).
