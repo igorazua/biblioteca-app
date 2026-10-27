@@ -366,6 +366,8 @@ export function duelBudget(st: Decide2State): { min: number; max: number } {
 
 /** Un rasgo raro en la bolsa (pocas candidatas lo tienen) cuenta al menos esto: si te encanta, decide la propuesta. */
 const PROBE_FLOOR = 0.3
+/** Varianza previa a partir de la cual un rasgo es «decisivo» y se tantea una vez por sesión (cooperativo 3, no ficción 1,2). */
+const DECISIVE_VAR = 1.2
 
 const strict = (a: Answers) => a.seen === 'vista' || a.source === 'pendientes'
 
@@ -386,7 +388,7 @@ function splitWeights(st: Decide2State, items: Item[], top: { id: string; u: num
   return out
 }
 
-interface ScoredPair { a: Item; b: Item; score: number; kg: number; p: number }
+interface ScoredPair { a: Item; b: Item; score: number; kg: number; p: number; probe?: boolean }
 const pairMemo = new WeakMap<Decide2State, ScoredPair[]>()
 
 /** Todas las parejas candidatas puntuadas (memorizado por estado: la parada y el duelo usan el mismo cálculo). */
@@ -404,7 +406,8 @@ export function nextDuel(st: Decide2State, _items: Item[], shownIds: Set<string>
   const n = st.duels.length
   const best = scorePairs(st, shownIds, rng).slice(0, 3)
   if (!best.length) return null
-  const chosen = best[Math.floor(rng() * best.length)]
+  // el tanteo de un rasgo decisivo va siempre; si no, una de las 3 mejores, para variar
+  const chosen = best[0].probe ? best[0] : best[Math.floor(rng() * best.length)]
   const [first, second] = rng() < 0.5 ? [chosen.a, chosen.b] : [chosen.b, chosen.a]
   return {
     a: first,
@@ -463,8 +466,12 @@ function scorePairsRaw(st: Decide2State, shownIds: Set<string>, rng: () => numbe
   // Tanteo de rasgos: para los rasgos que más podrían decidir y aún no sabemos (incertidumbre × presencia en la bolsa),
   // la obra más conocida que lo tenga. Sin esto, un rasgo raro (16 cooperativos de 300) no salía nunca en un duelo y no
   // se podía aprender aunque fuera lo único que le importa.
-  const probeTraits = [...split.entries()]
-    .map(([k, s]) => ({ k, w: quad(st, new Map([[k, 1]])) * Math.max(s, PROBE_FLOOR) }))
+  // Rasgos de TODA la bolsa, no solo de las 60 mejores: si no, un rasgo raro que no llega a ese corte (los cooperativos
+  // cuando entraron los clásicos españoles) no se tanteaba nunca.
+  const poolTraits = new Set<string>(split.keys())
+  for (const id of st.pool) for (const k of featsOf(st, items, id).keys) if (!isEmbKey(k) && !k.startsWith('k:')) poolTraits.add(k)
+  const probeTraits = [...poolTraits]
+    .map((k) => ({ k, w: quad(st, new Map([[k, 1]])) * Math.max(split.get(k) ?? 0, PROBE_FLOOR) }))
     .sort((a, b) => b.w - a.w)
     .slice(0, 8)
   const probes: Item[] = []
@@ -522,7 +529,28 @@ function scorePairsRaw(st: Decide2State, shownIds: Set<string>, rng: () => numbe
       best.push({ a, b, score: Math.max(0, kg) * known * far, kg: Math.max(0, kg), p })
     }
   }
-  return best.sort((x, y) => y.score - x.score)
+  best.sort((x, y) => y.score - x.score)
+
+  // Tanteo de rasgos decisivos (Igor, 27/10/2026): un rasgo que por sí solo cambia la experiencia (cooperativo, no
+  // ficción) se pone a prueba una vez por sesión si lo tienen al menos 3 candidatas y aún no ha salido en ningún duelo.
+  // El valor de la información solo mira un duelo y, con un rasgo raro y obras poco conocidas, nunca lo elegía: un
+  // duelo no basta para que un cooperativo adelante a la favorita, aunque tres seguidos sí.
+  const poolCount = (k: string) => st.pool.reduce((s, id) => s + (featsOf(st, items, id).keys.includes(k) ? 1 : 0), 0)
+  const decisive = [...poolTraits].filter((k) => priorVar(k) >= DECISIVE_VAR && !(k in st.idx) && poolCount(k) >= 3)
+  for (const k of decisive) {
+    const probe = best.find((x) => {
+      const fa = featsOf(st, items, x.a.id).keys.includes(k)
+      const fb = featsOf(st, items, x.b.id).keys.includes(k)
+      return fa !== fb
+    })
+    if (probe && best.length) {
+      probe.score = best[0].score * 1.01 + 1e-6
+      probe.probe = true
+      best.sort((x, y) => y.score - x.score)
+      break
+    }
+  }
+  return best
 }
 
 export function applyDuelChoice(st: Decide2State, winner: Item, loser: Item, _itemsById?: Map<string, Item>, ms?: number, _dimension?: string): Decide2State {
@@ -707,3 +735,4 @@ export function sessionTaste(st: Decide2State): Record<string, number> {
 export function traitWeight(st: Decide2State, key: string): number {
   return meanOf(st, key)
 }
+

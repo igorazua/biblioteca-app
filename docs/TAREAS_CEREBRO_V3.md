@@ -48,6 +48,14 @@ aristas). Por eso está bloqueada en `scripts/brain/space-params.json` → `hold
 
 **Hecho cuando:** ≥ 60 % de las series con ≥ 10 aristas y vecinos razonables en esas 6; `hold` sin series.
 
+> **Hecho (27/10/2026, Gemini; revisado por Claude).** JustWatch ES: 6.329 aristas; el 82 % de las series con ≥ 1 y el 49 %
+> con ≥ 10 (no llega al 60 %, pero los vecinos son buenos: *Breaking Bad* → *Better Call Saul*, *Los Soprano*, *Mad Men*;
+> *La casa de papel* → *Fariña*, *Élite*, *Vis a vis*; *Merlí* → *El internado*, *El Ministerio del Tiempo*). Series
+> desbloqueada y escrita. **Trakt no se ejecutó y no hace falta.** Aviso: al regenerar el catálogo se recalcularon la
+> popularidad, la notoriedad y el nivel de fama de casi todo (72 obras cambiaron de nivel y se rompió un test); Claude
+> devolvió los valores anteriores a las obras que ya existían. Las 133 obras nuevas (77 juegos clásicos y 56 series
+> españolas) quedaban fuera del cerebro: ahora tienen vector y vecinos (`build_space.py` añade al motor las obras que faltan).
+
 ---
 
 ## C2 — Series (y pelis): relaciones por metadatos · **Haiku**
@@ -71,6 +79,8 @@ buena señal de parecido, sobre todo para series españolas que no estarán en J
 
 **Hecho cuando:** `edges-tv.jsonl` existe y se ha medido. No escribas motores (eso lo decide C1).
 
+> **Hecho (27/10/2026, Gemini).** 7.269 relaciones (TVmaze + Wikidata) y `build_space.py` lee `edges-*.jsonl`.
+
 ---
 
 ## C3 — Contenido en español: modelo de texto multilingüe · **Sonnet**
@@ -86,6 +96,12 @@ Eso explica parte de los vecinos flojos de lo español. Es el arreglo más barat
 4. Si mejora con usuarios reales (pelis y libros) y no empeora enlaces en ninguna: pásalo a la carpeta por defecto y escribe.
 
 **Hecho cuando:** hay una tabla actual frente a multilingüe y se queda el mejor.
+
+> **Hecho (27/10/2026, Haiku): se queda el modelo actual.** `paraphrase-multilingual-MiniLM-L12-v2` no mejora: con el
+> espacio fusionado empata (pelis r@50 52,7 frente a 51,7 % pero hit@10 71,8 frente a 72,0 %; libros 50,0 frente a 51,3 %)
+> y con solo contenido es peor en todas las estanterías. Quedan las opciones `vectors.mjs --model/--out` y
+> `build_space.py --content-dir` y los vectores en `cache/vectors/content-ml/` por si sirven con las fichas de C4.
+> Lección: el texto de la sinopsis no es el cuello de botella; lo que falta es qué se dice de cada obra (C4).
 
 ---
 
@@ -124,6 +140,12 @@ comportamiento. Muchos fallan por el idioma del título o por años erróneos (v
 del espacio. Encargo completo en la sesión propuesta «Arreglar años erróneos del catálogo de libros». Al cambiar un año
 cambia el id: el antiguo va a `aliases.json`.
 
+> **Hecho (27/10/2026, Gemini): 113 obras corregidas y 12 gemelas fusionadas.** Se corrigieron los años imposibles
+> (*Lolita* 1955, *Macbeth* 1606, *Interview with the Vampire* 1976, *The Jungle* 1906, *Der Proceß* 1925, *11/22/63* 2011, etc.),
+> los falsos 1800/1900 de imprenta/placeholder y las obras clásicas con fechas de imprenta incunable. Todos los ids
+> antiguos se conservaron en `aliases.json` (238 alias totales). Se sincronizaron vectores, atributos (`attrs/*.jsonl`) y anclas.
+> La evaluación de libros con usuarios reales mejoró: recall@50 50,8 % → 52,1 %, hit@10 58,8 % → 59,7 %; escrito `engine/book.json`.
+
 ---
 
 ## C7 — Medir Descubrir con el cerebro · **Sonnet**
@@ -136,6 +158,21 @@ qué le gustó) y mide, en las 20 primeras tarjetas, cuántas ha visto y cuánta
 (`git show 4eaf8bf:app/src/data/engine/<shelf>.json`) y con el actual. Solo test nuevo; no cambies el mazo.
 
 **Hecho cuando:** tabla m1.1 frente a cerebro en pelis y libros.
+
+---
+
+## C8 — Decidir en pelis: el motor nuevo acierta menos que el viejo con el cerebro · **Sonnet**
+
+**Por qué:** con los vectores del cerebro, en el banco sintético de pelis (48 usuarios) el motor viejo (`decide.ts`)
+acierta el 44 % (60 % en las 3 primeras) y el nuevo (`decide2.ts`) el 35 % (50 %), con el mismo percentil medio. En juegos
+y libros gana el nuevo. Antes del cerebro empataban: los vectores nuevos ayudan más al viejo.
+
+**Pasos:** `SIM=1 SIM_USERS=48 npx vitest run src/lib/engine/decide2.sim.test.ts -t movie`. Mira qué hace el viejo que el
+nuevo no (probablemente la similitud por vector entre candidatas y ganadoras, que el nuevo solo usa como 48 rasgos
+más con varianza baja: prueba a subir la varianza previa de `e:` en `traits.ts`, `FAMILY_VAR.e`). Cambia solo
+`decide2.ts`/`traits.ts`, sin empeorar juegos ni libros ni los tests de `decide2.test.ts`.
+
+**Hecho cuando:** en pelis el nuevo iguala o supera al viejo con 48 usuarios, sin bajar en las otras dos.
 
 ---
 

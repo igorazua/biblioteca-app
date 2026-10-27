@@ -24,7 +24,7 @@
 | 16 | **Un mundo feliz** | 1932 | Aldous Huxley | 0.99 | 1 | `book:un-mundo-feliz-1932` |
 | 17 | **Fahrenheit 451** | 1953 | Ray Bradbury | 0.98 | 1 | `book:fahrenheit-451-1953` |
 | 18 | **Drácula** | 1897 | Bram Stoker | 0.98 | 1 | `book:dracula-1897` |
-| 19 | **Macbeth** | 1508 | William Shakespeare | 0.98 | 1 | `book:macbeth-1508` |
+| 19 | **Macbeth** | 1606 | William Shakespeare | 0.98 | 1 | `book:macbeth-1606` |
 | 20 | **La metamorfosis** | 1915 | Franz Kafka | 0.98 | 1 | `book:la-metamorfosis-1915` |
 | 21 | **El gran Gatsby** | 1925 | F. Scott Fitzgerald | 0.98 | 1 | `book:el-gran-gatsby-1925` |
 | 22 | **La casa de los espíritus** | 1982 | Isabel Allende | 0.98 | 1 | `book:la-casa-de-los-espiritus-1982` |
@@ -47,7 +47,7 @@
 | 39 | **Pedro Páramo** | 1955 | Juan Rulfo | 0.92 | 1 | `book:pedro-paramo-1955` |
 | 40 | **La casa de Bernarda Alba** | 1936 | Federico García Lorca | 0.91 | 1 | `book:la-casa-de-bernarda-alba-1936` |
 
-## Series (40 obras en Nivel 1)
+## Series (43 obras en Nivel 1)
 
 | # | Título | Año | Creador | Notoriedad | FameLLM | ID |
 |---|---|---|---|---|---|---|
@@ -57,14 +57,14 @@
 | 4 | **La casa de papel** | 2017 | Álex Pina | 0.98 | 1 | `series:la-casa-de-papel-2017` |
 | 5 | **Aída** | 2005 | Nacho G. Velilla | 0.98 | 1 | `series:aida-2005` |
 | 6 | **Planet Earth** | 2006 | BBC One | 1 | 1 | `series:planet-earth-2006` |
-| 7 | **Peaky Blinders** | 2013 | Steven Knight | 1 | 1 | `series:peaky-blinders-2013` |
-| 8 | **The Boys** | 2019 | Eric Kripke | 1 | 1 | `series:the-boys-2019` |
-| 9 | **Yellowstone** | 2018 | Taylor Sheridan | 1 | 1 | `series:yellowstone-2018` |
-| 10 | **From** | 2022 | John Griffin | 1 | 1 | `series:from-2022` |
-| 11 | **Euphoria** | 2019 | Sam Levinson | 1 | 1 | `series:euphoria-2019` |
-| 12 | **Roma** | 2005 | Bruno Heller, John Milius y William J. MacDonald | 0.99 | 1 | `series:roma-2005` |
-| 13 | **The Walking Dead** | 2010 | Frank Darabont | 0.99 | 1 | `series:the-walking-dead-2010` |
-| 14 | **Anatomía de Grey** | 2005 | ABC | 0.99 | 1 | `series:grey-s-anatomy-2005` |
+| 7 | **Anatomía de Grey** | 2005 | ABC | 1 | 1 | `series:grey-s-anatomy-2005` |
+| 8 | **Peaky Blinders** | 2013 | Steven Knight | 1 | 1 | `series:peaky-blinders-2013` |
+| 9 | **The Boys** | 2019 | Eric Kripke | 1 | 1 | `series:the-boys-2019` |
+| 10 | **Yellowstone** | 2018 | Taylor Sheridan | 1 | 1 | `series:yellowstone-2018` |
+| 11 | **From** | 2022 | John Griffin | 1 | 1 | `series:from-2022` |
+| 12 | **Euphoria** | 2019 | Sam Levinson | 1 | 1 | `series:euphoria-2019` |
+| 13 | **Roma** | 2005 | Bruno Heller, John Milius y William J. MacDonald | 0.99 | 1 | `series:roma-2005` |
+| 14 | **The Walking Dead** | 2010 | Frank Darabont | 0.99 | 1 | `series:the-walking-dead-2010` |
 | 15 | **Ataque a los titanes** | 2013 | Hajime Isayama | 0.99 | 1 | `series:attack-on-titan-2013` |
 | 16 | **American Horror Story** | 2011 | FX | 0.99 | 1 | `series:american-horror-story-2011` |
 | 17 | **Twin Peaks** | 1990 | David Lynch y Mark Frost | 0.99 | 1 | `series:twin-peaks-1990` |
@@ -76,23 +76,26 @@
 | 23 | **Ted Lasso** | 2020 | Bill Lawrence y Jason Sudeikis | 0.99 | 1 | `series:ted-lasso-2020` |
 | 24 | **Dexter** | 2006 | James Manos Jr. | 0.99 | 1 | `series:dexter-2006` |
 | 25 | **Dark** | 2017 | Baran bo Odar y Jantje Friese | 0.99 | 1 | `series:dark-2017` |
-| 26 | **Sobrenatural** | 2005 | The CW | 0.98 | 1 | `series:supernatural-2005` |
-| 27 | **Crónicas vampíricas** | 2009 | The CW | 0.98 | 1 | `series:the-vampire-diaries-2009` |
-| 28 | **Mentes criminales** | 2005 | Paramount+ | 0.98 | 1 | `series:criminal-minds-2005` |
-| 29 | **Smallville** | 2001 | The CW | 0.98 | 1 | `series:smallville-2001` |
-| 30 | **Sexo en Nueva York** | 1998 | HBO | 0.98 | 1 | `series:sex-and-the-city-1998` |
-| 31 | **Demon Slayer: Kimetsu no Yaiba** | 2019 | Haruo Sotozaki | 0.98 | 1 | `series:demon-slayer-kimetsu-no-yaiba-2019` |
-| 32 | **Black Mirror** | 2011 | Charlie Brooker | 0.98 | 1 | `series:black-mirror-2011` |
-| 33 | **Urgencias** | 1994 | NBC | 0.98 | 1 | `series:er-1994` |
-| 34 | **Las chicas Gilmore** | 2000 | The CW | 0.98 | 1 | `series:gilmore-girls-2000` |
-| 35 | **True Detective** | 2014 | Nic Pizzolatto | 0.98 | 1 | `series:true-detective-2014` |
-| 36 | **Vigilados: Person of Interest** | 2011 | Jonathan Nolan | 0.98 | 1 | `series:person-of-interest-2011` |
-| 37 | **The Bear** | 2022 | Christopher Storer | 0.98 | 1 | `series:the-bear-2022` |
-| 38 | **Slow Horses** | 2022 | Will Smith | 0.98 | 1 | `series:slow-horses-2022` |
-| 39 | **The Wire** | 2002 | David Simon | 0.98 | 1 | `series:the-wire-2002` |
-| 40 | **Bob Esponja** | 1999 | Nickelodeon | 0.97 | 1 | `series:spongebob-squarepants-1999` |
+| 26 | **Naruto** | 2002 | TV Tokyo | 0.98 | 1 | `series:naruto-2002` |
+| 27 | **Expediente X** | 1993 | Chris Carter | 0.98 | 1 | `series:expediente-x-1993` |
+| 28 | **Sobrenatural** | 2005 | The CW | 0.98 | 1 | `series:supernatural-2005` |
+| 29 | **Mujeres desesperadas** | 2004 | ABC | 0.98 | 1 | `series:desperate-housewives-2004` |
+| 30 | **Crónicas vampíricas** | 2009 | The CW | 0.98 | 1 | `series:the-vampire-diaries-2009` |
+| 31 | **Mentes criminales** | 2005 | Paramount+ | 0.98 | 1 | `series:criminal-minds-2005` |
+| 32 | **Smallville** | 2001 | The CW | 0.98 | 1 | `series:smallville-2001` |
+| 33 | **Sexo en Nueva York** | 1998 | HBO | 0.98 | 1 | `series:sex-and-the-city-1998` |
+| 34 | **Demon Slayer: Kimetsu no Yaiba** | 2019 | Haruo Sotozaki | 0.98 | 1 | `series:demon-slayer-kimetsu-no-yaiba-2019` |
+| 35 | **Black Mirror** | 2011 | Charlie Brooker | 0.98 | 1 | `series:black-mirror-2011` |
+| 36 | **Urgencias** | 1994 | NBC | 0.98 | 1 | `series:er-1994` |
+| 37 | **Las chicas Gilmore** | 2000 | The CW | 0.98 | 1 | `series:gilmore-girls-2000` |
+| 38 | **True Detective** | 2014 | Nic Pizzolatto | 0.98 | 1 | `series:true-detective-2014` |
+| 39 | **Vigilados: Person of Interest** | 2011 | Jonathan Nolan | 0.98 | 1 | `series:person-of-interest-2011` |
+| 40 | **The Bear** | 2022 | Christopher Storer | 0.98 | 1 | `series:the-bear-2022` |
+| 41 | **Slow Horses** | 2022 | Will Smith | 0.98 | 1 | `series:slow-horses-2022` |
+| 42 | **Chicago Fire** | 2012 | NBC | 0.98 | 1 | `series:chicago-fire-2012` |
+| 43 | **The Wire** | 2002 | David Simon | 0.98 | 1 | `series:the-wire-2002` |
 
-## Juegos de mesa (41 obras en Nivel 1)
+## Juegos de mesa (44 obras en Nivel 1)
 
 | # | Título | Año | Creador | Notoriedad | FameLLM | ID |
 |---|---|---|---|---|---|---|
@@ -103,21 +106,21 @@
 | 5 | **Trivial Pursuit** | 1981 | Scott Abbott y Chris Haney | 0.98 | 1 | `boardgame:trivial-pursuit-1981` |
 | 6 | **Risk Legacy** | 2011 | Chris Dupuis, Rob Daviau | 1 | 1 | `boardgame:risk-legacy-2011` |
 | 7 | **Ajedrez** | 1475 | (Uncredited) | 0.99 | 1 | `boardgame:chess-1475` |
-| 8 | **Scrabble** | 1948 | Alfred Mosher Butts | 0.97 | 1 | `boardgame:scrabble-1948` |
-| 9 | **Risk** | 1959 | Albert Lamorisse, Michael I. Levin | 0.97 | 1 | `boardgame:risk-1959` |
-| 10 | **Catan** | 1995 | Klaus Teuber | 0.97 | 1 | `boardgame:catan-1995` |
-| 11 | **Kingdomino** | 2016 | Bruno Cathala | 0.91 | 1 | `boardgame:kingdomino-2016` |
+| 8 | **Scrabble** | 1948 | Alfred Mosher Butts | 0.98 | 1 | `boardgame:scrabble-1948` |
+| 9 | **Catan** | 1995 | Klaus Teuber | 0.98 | 1 | `boardgame:catan-1995` |
+| 10 | **Risk** | 1959 | Albert Lamorisse, Michael I. Levin | 0.97 | 1 | `boardgame:risk-1959` |
+| 11 | **Kingdomino** | 2016 | Bruno Cathala | 0.92 | 1 | `boardgame:kingdomino-2016` |
 | 12 | **Coup** | 2012 | Rikki Tahta | 0.87 | 0.75 | `boardgame:coup-2012` |
 | 13 | **Go** | -2200 | (Uncredited) | 0.87 | 0.75 | `boardgame:go--2200` |
 | 14 | **Rococo** | 2013 | Louis Malz, Matthias Cramer | 0.87 | 0.75 | `boardgame:rococo-2013` |
 | 15 | **Bora Bora** | 2013 | Stefan Feld | 0.87 | 0.75 | `boardgame:bora-bora-2013` |
 | 16 | **Chinatown** | 1999 | Karsten Hartwig | 0.87 | 0.75 | `boardgame:chinatown-1999` |
 | 17 | **Pan Am** | 2020 | Peter Lee, Prospero Hall | 0.87 | 0.75 | `boardgame:pan-am-2020` |
-| 18 | **Automobile** | 2009 | Martin Wallace | 0.86 | 0.75 | `boardgame:automobile-2009` |
-| 19 | **Maracaibo** | 2019 | Alexander Pfister | 0.86 | 0.75 | `boardgame:maracaibo-2019` |
-| 20 | **Magic: The Gathering** | 1993 | Richard Garfield | 0.86 | 0.75 | `boardgame:magic-the-gathering-1993` |
+| 18 | **Magic: The Gathering** | 1993 | Richard Garfield | 0.87 | 0.75 | `boardgame:magic-the-gathering-1993` |
+| 19 | **Automobile** | 2009 | Martin Wallace | 0.86 | 0.75 | `boardgame:automobile-2009` |
+| 20 | **Maracaibo** | 2019 | Alexander Pfister | 0.86 | 0.75 | `boardgame:maracaibo-2019` |
 | 21 | **Santorini** | 2016 | Gord! | 0.84 | 0.75 | `boardgame:santorini-2016` |
-| 22 | **Queendomino** | 2017 | Bruno Cathala | 0.82 | 1 | `boardgame:queendomino-2017` |
+| 22 | **Queendomino** | 2017 | Bruno Cathala | 0.83 | 1 | `boardgame:queendomino-2017` |
 | 23 | **Dixit: Journey** | 2012 | Jean-Louis Roubira | 0.75 | 0.75 | `boardgame:dixit-journey-2012` |
 | 24 | **Ticket to Ride: Rails & Sails** | 2016 | Alan R. Moon | 0.75 | 0.75 | `boardgame:ticket-to-ride-rails-sails-2016` |
 | 25 | **Ticket to Ride: Märklin** | 2006 | Alan R. Moon | 0.75 | 0.75 | `boardgame:ticket-to-ride-marklin-2006` |
@@ -129,14 +132,17 @@
 | 31 | **Bus** | 1999 | Jeroen Doumen, Joris Wiersinga | 0.75 | 0.5 | `boardgame:bus-1999` |
 | 32 | **Barrage** | 2019 | Simone Luciani, Tommaso Battista | 0.75 | 0.5 | `boardgame:barrage-2019` |
 | 33 | **Coimbra** | 2018 | Flaminia Brasini, Virginio Gigli | 0.75 | 0.5 | `boardgame:coimbra-2018` |
-| 34 | **Cacao** | 2015 | Phil Walker-Harding | 0.75 | 0.5 | `boardgame:cacao-2015` |
-| 35 | **The Great Wall** | 2021 | Kamil 'Sanex' Cieśla, Robert Plesowicz | 0.75 | 0.5 | `boardgame:the-great-wall-2021` |
-| 36 | **Friday** | 2011 | Friedemann Friese | 0.74 | 0.5 | `boardgame:friday-2011` |
-| 37 | **Village** | 2011 | Inka Brand, Markus Brand | 0.74 | 0.5 | `boardgame:village-2011` |
-| 38 | **Belfort** | 2011 | Jay Cormier, Sen-Foong Lim | 0.74 | 0.5 | `boardgame:belfort-2011` |
+| 34 | **Belfort** | 2011 | Jay Cormier, Sen-Foong Lim | 0.75 | 0.5 | `boardgame:belfort-2011` |
+| 35 | **Cacao** | 2015 | Phil Walker-Harding | 0.75 | 0.5 | `boardgame:cacao-2015` |
+| 36 | **The Great Wall** | 2021 | Kamil 'Sanex' Cieśla, Robert Plesowicz | 0.75 | 0.5 | `boardgame:the-great-wall-2021` |
+| 37 | **Friday** | 2011 | Friedemann Friese | 0.74 | 0.5 | `boardgame:friday-2011` |
+| 38 | **Village** | 2011 | Inka Brand, Markus Brand | 0.74 | 0.5 | `boardgame:village-2011` |
 | 39 | **Imperial** | 2006 | Mac Gerdts | 0.74 | 0.5 | `boardgame:imperial-2006` |
 | 40 | **Maquis** | 2013 | Jake Staines | 0.74 | 0.5 | `boardgame:maquis-2013` |
 | 41 | **QE** | 2019 | Gavin Birnbaum | 0.74 | 0.5 | `boardgame:qe-2019` |
+| 42 | **In the Hall of the Mountain King** | 2019 | Graeme Jahns, Jay Cormier | 0.74 | 0.5 | `boardgame:in-the-hall-of-the-mountain-king-2019` |
+| 43 | **Dixit** | 2008 | Jean-Louis Roubira | 0.74 | 0.5 | `boardgame:dixit-2008` |
+| 44 | **Tapestry** | 2019 | Jamey Stegmaier | 0.74 | 0.5 | `boardgame:tapestry-2019` |
 
 ## Artistas (40 obras en Nivel 1)
 

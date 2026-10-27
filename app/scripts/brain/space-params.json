@@ -2,7 +2,5 @@
   "sources": {
     "users": 0.04
   },
-  "hold": {
-    "series": "Sin datos de comportamiento reales (solo clickstream); sus vecinos empeoran. Se queda el espacio m1.1 hasta tener una fuente (27/10/2026)."
-  }
+  "hold": {}
 }

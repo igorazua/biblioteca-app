@@ -5,7 +5,7 @@
  * de 384 dimensiones a partir del contexto compacto de cada obra.
  *
  * Uso:
- *   node scripts/engine/vectors.mjs [--shelf <shelf>] [--limit <n>] [--refresh]
+ *   node scripts/engine/vectors.mjs [--shelf <shelf>] [--limit <n>] [--refresh] [--model <hf-id>] [--out <subcarpeta>]
  */
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
@@ -20,11 +20,20 @@ const CONTEXT_DIR = join(here, '..', 'cache', 'context')
 const ENRICHED_DIR = join(here, '..', 'cache', 'llm', 'enriched')
 const VECTORS_DIR = join(here, '..', 'cache', 'vectors')
 const CONTENT_VECTORS_DIR = join(VECTORS_DIR, 'content')
+const DEFAULT_MODEL = 'Xenova/all-MiniLM-L6-v2'
 
 const args = process.argv.slice(2)
 const FILTER_SHELF = args.includes('--shelf') ? args[args.indexOf('--shelf') + 1] : null
 const LIMIT = args.includes('--limit') ? parseInt(args[args.indexOf('--limit') + 1], 10) : null
 const REFRESH = args.includes('--refresh')
+const MODEL = args.includes('--model') ? args[args.indexOf('--model') + 1] : DEFAULT_MODEL
+// --out <subcarpeta de cache/vectors>: escribe solo ahí (sin tocar content/ ni el legado).
+const OUT = args.includes('--out')
+  ? args[args.indexOf('--out') + 1].replace(/^cache[\/]vectors[\/]/, '').replace(/[\/]+$/, '')
+  : null
+const OUT_VECTORS_DIR = OUT ? join(VECTORS_DIR, OUT) : null
+// Los modelos e5 esperan el prefijo "passage: " en los textos a indexar.
+const PASSAGE_PREFIX = MODEL.toLowerCase().includes('e5') ? 'passage: ' : ''
 
 function ensureDir(p) {
   if (!existsSync(p)) mkdirSync(p, { recursive: true })
@@ -37,9 +46,10 @@ async function main() {
   }
 
   console.log('--- Iniciando vectorización local (vectors.mjs) ---')
-  console.log('Modelo: Xenova/all-MiniLM-L6-v2 (384 dimensiones, L2 normalizado)')
+  console.log(`Modelo: ${MODEL} (L2 normalizado)`)
+  if (OUT) console.log(`Salida: cache/vectors/${OUT}/<shelf>/`)
 
-  const extractor = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2')
+  const extractor = await pipeline('feature-extraction', MODEL)
 
   const seed = JSON.parse(readFileSync(SEED_FILE, 'utf8'))
   const items = seed.items || []
@@ -69,7 +79,7 @@ async function main() {
       const vector = list[i]
       const payload = JSON.stringify({ id: item.id, vector })
       writeFileSync(targetFile, payload, 'utf8')
-      writeFileSync(legacyFile, payload, 'utf8') // Compatibilidad
+      if (legacyFile) writeFileSync(legacyFile, payload, 'utf8') // Compatibilidad
       processed++
     }
     process.stdout.write(`[${processed + cached}/${itemsToProcess.length}] Vectorizados hasta: ${batch[batch.length - 1].item.title}\n`)
@@ -77,12 +87,15 @@ async function main() {
 
   for (const item of itemsToProcess) {
     const slug = item.id.replace(/^[^:]+:/, '')
-    const contentShelfDir = join(CONTENT_VECTORS_DIR, item.type)
-    const shelfDir = join(VECTORS_DIR, item.type)
+    const contentShelfDir = join(OUT_VECTORS_DIR || CONTENT_VECTORS_DIR, item.type)
     ensureDir(contentShelfDir)
-    ensureDir(shelfDir)
     const targetFile = join(contentShelfDir, `${slug}.json`)
-    const legacyFile = join(shelfDir, `${slug}.json`)
+    let legacyFile = null
+    if (!OUT) {
+      const shelfDir = join(VECTORS_DIR, item.type)
+      ensureDir(shelfDir)
+      legacyFile = join(shelfDir, `${slug}.json`)
+    }
 
     if (!REFRESH && existsSync(targetFile)) {
       cached++
@@ -129,7 +142,7 @@ async function main() {
       if (item.moments?.length) textToEmbed += `\nMOMENTOS: ${item.moments.join(', ')}`
     }
 
-    pendingItems.push({ item, slug, targetFile, legacyFile, text: textToEmbed.slice(0, 1500) })
+    pendingItems.push({ item, slug, targetFile, legacyFile, text: (PASSAGE_PREFIX + textToEmbed).slice(0, 1500) })
 
     if (pendingItems.length >= BATCH_SIZE) {
       await processBatch(pendingItems)

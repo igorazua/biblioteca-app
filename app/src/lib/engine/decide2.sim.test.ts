@@ -140,7 +140,7 @@ describe.runIf(process.env.SIM && !process.env.SIM_SWEEP)('Decidir: banco de pru
 
   for (const shelf of ['boardgame', 'movie', 'book'] as ShelfType[]) {
     it(`${shelf}: el nuevo acierta al menos como el viejo`, () => {
-      const USERS = 16
+      const USERS = Number(process.env.SIM_USERS ?? 16)
       const o = run(OLD, shelf, USERS)
       const nw = run(NEW, shelf, USERS)
       const f = (x: ReturnType<typeof run>) => `acierto ${(x.hit * 100).toFixed(0)} % · en las 3 primeras ${(x.hit3 * 100).toFixed(0)} % · percentil medio ${(x.pct * 100).toFixed(0)} % · duelos ${x.duels.toFixed(1)} [${x.hist}]`

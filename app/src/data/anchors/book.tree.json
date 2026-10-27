@@ -38,7 +38,7 @@
         "pairs": [
           {
             "a": "book:la-metamorfosis-1915",
-            "b": "book:macbeth-1508",
+            "b": "book:macbeth-1606",
             "relaxed": true
           }
         ],
@@ -51,7 +51,7 @@
         "pairs": [
           {
             "a": "book:la-metamorfosis-1915",
-            "b": "book:macbeth-1508",
+            "b": "book:macbeth-1606",
             "relaxed": true
           }
         ],

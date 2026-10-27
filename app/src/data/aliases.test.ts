@@ -92,4 +92,15 @@ describe('Gemelas fusionadas (aliases)', () => {
     expect(canonicalId('book:the-picture-of-dorian-gray-1890')).toBe('book:el-retrato-de-dorian-gray-1890')
     expect(canonicalId('book:the-prince-1515')).toBe('book:el-principe-1532')
   })
+
+  it('C6: los años corregidos del catálogo de libros resuelven a su nuevo id', () => {
+    expect(canonicalId('book:lolita-1777')).toBe('book:lolita-1955')
+    expect(canonicalId('book:macbeth-1508')).toBe('book:macbeth-1606')
+    expect(canonicalId('book:interview-with-the-vampire-1672')).toBe('book:interview-with-the-vampire-1976')
+    expect(canonicalId('book:the-jungle-1791')).toBe('book:the-jungle-1906')
+    expect(canonicalId('book:tess-of-the-d-urbervilles-1707')).toBe('book:tess-of-the-d-urbervilles-1891')
+    expect(canonicalId('book:goldsmith-s-the-vicar-of-wakefield-1111')).toBe('book:goldsmith-s-the-vicar-of-wakefield-1766')
+    expect(canonicalId('book:11-22-63-1925')).toBe('book:11-22-63-2011')
+    expect(canonicalId('book:der-proce-1825')).toBe('book:der-proce-1925')
+  })
 })

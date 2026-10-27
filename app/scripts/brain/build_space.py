@@ -47,6 +47,7 @@ LAST = os.path.join(CACHE, 'eval', 'last-scores.json')
 SHELVES = ['movie', 'series', 'book', 'boardgame', 'artist']
 DIM = 48
 NN = 20
+CONTENT_DIR = 'content'  # subcarpeta de cache/vectors con los vectores de contenido (--content-dir)
 
 DEFAULT_PARAMS = {
     'sources': {'wikipedia-clickstream': 1.0, 'listenbrainz': 1.0, 'goodbooks': 1.0, 'bgg-recs': 1.0, 'movielens': 1.0, 'users': 1.0, 'relations': 0.5},
@@ -97,12 +98,15 @@ def load_catalog():
     return items, aliases
 
 
-def content_matrix(shelf, ids):
+def content_matrix(shelf, ids, aliases=None):
     """Vector de contenido de cada obra (384 d); las que no tienen, ceros."""
     by_id = {}
-    for p in glob.glob(os.path.join(CACHE, 'vectors', 'content', shelf, '*.json')):
+    aliases = aliases or {}
+    for p in glob.glob(os.path.join(CACHE, 'vectors', CONTENT_DIR, shelf, '*.json')):
         d = load_json(p)
         if d and 'id' in d and 'vector' in d:
+            canonical_id = aliases.get(d['id'], d['id'])
+            by_id[canonical_id] = d['vector']
             by_id[d['id']] = d['vector']
     dim = len(next(iter(by_id.values()))) if by_id else 384
     m = np.zeros((len(ids), dim), dtype=np.float64)
@@ -128,10 +132,12 @@ def behavior_edges(shelf, idx, aliases):
             src = e.get('source') or os.path.basename(f)[5:-6]
             n = float(e.get('n') or e.get('count') or e.get('w') or 1)
             by_src.setdefault(src, []).append((idx[a], idx[b], n))
-    for e in read_jsonl(os.path.join(CACHE, 'graph', 'edges.jsonl')):
-        a, b = canon(e.get('a', '')), canon(e.get('b', ''))
-        if a in idx and b in idx and a != b:
-            by_src.setdefault('relations', []).append((idx[a], idx[b], float(e.get('w') or 1)))
+    edge_files = sorted(set([os.path.join(CACHE, 'graph', 'edges.jsonl')] + glob.glob(os.path.join(CACHE, 'graph', 'edges-*.jsonl'))))
+    for f in edge_files:
+        for e in read_jsonl(f):
+            a, b = canon(e.get('a', '')), canon(e.get('b', ''))
+            if a in idx and b in idx and a != b:
+                by_src.setdefault('relations', []).append((idx[a], idx[b], float(e.get('w') or 1)))
     return by_src
 
 
@@ -289,13 +295,14 @@ def user_eval(v, ids, shelf, allowed=None, pop=None):
     return {'users': n, 'recall50': rec / n, 'hit10': hit / n} if n else None
 
 
-def current_space(shelf, ids):
+def current_space(shelf, ids, aliases=None):
     e = load_json(os.path.join(ENGINE_DIR, f'{shelf}.json'))
     if not e:
         return None, None
     raw = np.frombuffer(__import__('base64').b64decode(e['vec']), dtype=np.int8).astype(np.float64)
     m = raw.reshape(len(e['ids']), -1)
-    pos = {iid: i for i, iid in enumerate(e['ids'])}
+    aliases = aliases or {}
+    pos = {aliases.get(iid, iid): i for i, iid in enumerate(e['ids'])}
     out = np.zeros((len(ids), m.shape[1]))
     for i, iid in enumerate(ids):
         if iid in pos:
@@ -305,11 +312,36 @@ def current_space(shelf, ids):
 
 # ---------------------------------------------------------------------------------------------- escritura
 
-def write_engine(shelf, e, ids, v):
+def write_engine(shelf, e, ids, v, aliases=None):
     """Sustituye vec y nn del engine/<shelf>.json actual (mismos ids y orden; ejes, clústeres y meta se conservan)."""
+    aliases = aliases or {}
+    canon_e_ids = [aliases.get(iid, iid) for iid in e['ids']]
     pos = {iid: i for i, iid in enumerate(ids)}
+    # Obras del catálogo que aún no estaban en el motor (p. ej. los clásicos españoles añadidos el 27/10/2026): se
+    # añaden al final con ejes neutros (3), sin temas, y el clúster de su vecina más cercana de las que ya estaban.
+    known = set(canon_e_ids)
+    extra = [iid for iid in ids if iid not in known]
+    n_old = len(canon_e_ids)
+    if extra:
+        b64 = __import__('base64')
+        n_axes = len(e['axisIds'])
+        axes = bytearray(b64.b64decode(e['axes']))
+        axes += bytes([3] * (n_axes * len(extra)))
+        e = dict(e)
+        e['axes'] = b64.b64encode(bytes(axes)).decode('ascii')
+        old_rows = unit(np.array([v[pos[iid]] if iid in pos else np.zeros(DIM) for iid in canon_e_ids]))
+        macro, micro, meta = list(e['macro']), list(e['micro']), dict(e['meta'])
+        for iid in extra:
+            j = int(np.argmax(old_rows @ v[pos[iid]]))
+            macro.append(macro[j])
+            micro.append(micro[j])
+            meta[iid] = {'themes': [], 'moments': [], 'conf': 0}
+        e['macro'], e['micro'], e['meta'] = macro, micro, meta
+        canon_e_ids = canon_e_ids + extra
+        e['ids'] = canon_e_ids
+        print(f'  + {len(extra)} obras nuevas en el motor de {shelf} (antes {n_old})')
     rows = np.zeros((len(e['ids']), DIM))
-    for r, iid in enumerate(e['ids']):
+    for r, iid in enumerate(canon_e_ids):
         if iid in pos:
             rows[r] = v[pos[iid]]
     mx = np.abs(rows).max(axis=1, keepdims=True)
@@ -317,6 +349,7 @@ def write_engine(shelf, e, ids, v):
     q = np.clip(np.round(rows / mx * 127), -127, 127).astype(np.int8)
     nn = neighbors(unit(rows))
     e = dict(e)
+    e['ids'] = canon_e_ids
     e['vec'] = __import__('base64').b64encode(q.tobytes()).decode('ascii')
     e['nn'] = nn.tolist()
     e['v'] = 'm2.0-brain'
@@ -333,7 +366,10 @@ def main():
     ap.add_argument('--shelf', default=None)
     ap.add_argument('--eval', action='store_true')
     ap.add_argument('--write', action='store_true')
+    ap.add_argument('--content-dir', default='content')
     args = ap.parse_args()
+    global CONTENT_DIR
+    CONTENT_DIR = args.content_dir
 
     params = {**DEFAULT_PARAMS, **(load_json(PARAMS_FILE, {}) or {})}
     items, aliases = load_catalog()
@@ -346,11 +382,11 @@ def main():
     for shelf in shelves:
         ids = [it['id'] for it in items if it.get('type') == shelf and not it.get('hidden')]
         idx = {iid: i for i, iid in enumerate(ids)}
-        content, have = content_matrix(shelf, ids)
+        content, have = content_matrix(shelf, ids, aliases)
         meta = meta_matrix(items_by_id, ids)
         by_src = behavior_edges(shelf, idx, aliases)
         n_edges = {s: len(e) for s, e in by_src.items()}
-        cur, engine = current_space(shelf, ids)
+        cur, engine = current_space(shelf, ids, aliases)
         train, test = split_edges(by_src)
 
         # Referencias: el espacio de hoy y solo contenido (mismo PCA que el fusionado)
@@ -409,7 +445,7 @@ def main():
         if held:
             lines.append(f'- ⏸ Bloqueada: {held}')
         elif args.write and ship and engine:
-            size = write_engine(shelf, engine, ids, final)
+            size = write_engine(shelf, engine, ids, final, aliases)
             last[shelf] = {'link': best['link'] or 0, 'users': (users_final or {}).get('recall50', 0), 'at': f'{datetime.datetime.now():%Y-%m-%d}'}
             lines.append(f"- ✅ Escrito engine/{shelf}.json ({size / 1024:.0f} KB)")
         elif args.write:
