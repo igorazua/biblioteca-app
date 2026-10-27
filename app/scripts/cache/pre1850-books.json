@@ -1,0 +1,1839 @@
+[
+  {
+    "id": "book:la-odisea--800",
+    "title": "La Odisea",
+    "creator": "Homero",
+    "year": -800,
+    "genres": [
+      "Fantasía",
+      "Clásico"
+    ],
+    "olid": "OL32264086W"
+  },
+  {
+    "id": "book:la-iliada--800",
+    "title": "La Ilíada",
+    "creator": "Homero",
+    "year": -800,
+    "genres": [
+      "Histórica",
+      "Clásico"
+    ],
+    "wikidataId": "Q8275",
+    "olid": "OL29244542W"
+  },
+  {
+    "id": "book:el-arte-de-la-guerra--500",
+    "title": "El arte de la guerra",
+    "creator": "Sun Tzu",
+    "year": -500,
+    "genres": [
+      "Ensayo",
+      "Clásico"
+    ],
+    "wikidataId": "Q8251",
+    "olid": "OL34911959W"
+  },
+  {
+    "id": "book:el-banquete--385",
+    "title": "El banquete",
+    "creator": "Platón",
+    "year": -385,
+    "genres": [
+      "Filosofía",
+      "Clásico"
+    ],
+    "wikidataId": "Q486727",
+    "olid": "OL24755095W"
+  },
+  {
+    "id": "book:la-republica--375",
+    "title": "La república",
+    "creator": "Platón",
+    "year": -375,
+    "genres": [
+      "Filosofía",
+      "Clásico"
+    ],
+    "wikidataId": "Q123397",
+    "olid": "OL38044568W"
+  },
+  {
+    "id": "book:etica-a-nicomaco--340",
+    "title": "Ética a Nicómaco",
+    "creator": "Aristóteles",
+    "year": -340,
+    "genres": [
+      "Filosofía",
+      "Clásico"
+    ],
+    "wikidataId": "Q474537",
+    "olid": "OL24142517W"
+  },
+  {
+    "id": "book:sobre-la-brevedad-de-la-vida-49",
+    "title": "Sobre la brevedad de la vida",
+    "creator": "Séneca",
+    "year": 49,
+    "genres": [
+      "Ensayo",
+      "Filosofía"
+    ],
+    "olid": "OL34738972W"
+  },
+  {
+    "id": "book:cartas-a-lucilio-65",
+    "title": "Cartas a Lucilio",
+    "creator": "Séneca",
+    "year": 65,
+    "genres": [
+      "Ensayo",
+      "Filosofía"
+    ],
+    "wikidataId": "Q720535",
+    "olid": "OL17927898W"
+  },
+  {
+    "id": "book:meditaciones-180",
+    "title": "Meditaciones",
+    "creator": "Marco Aurelio",
+    "year": 180,
+    "genres": [
+      "Ensayo",
+      "Filosofía"
+    ],
+    "wikidataId": "Q1152283",
+    "olid": "OL22480215W"
+  },
+  {
+    "id": "book:goldsmith-s-the-vicar-of-wakefield-1111",
+    "title": "Goldsmith's The vicar of Wakefield",
+    "creator": "Oliver Goldsmith",
+    "year": 1111,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q1196205",
+    "olid": "OL890896W"
+  },
+  {
+    "id": "book:bible-1200",
+    "title": "Bible",
+    "creator": "Bible",
+    "year": 1200,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "olid": "OL17732W"
+  },
+  {
+    "id": "book:la-divina-comedia-1320",
+    "title": "La divina comedia",
+    "creator": "Dante Alighieri",
+    "year": 1320,
+    "genres": [
+      "Poesía",
+      "Clásico"
+    ],
+    "wikidataId": "Q40185",
+    "olid": "OL44909298W"
+  },
+  {
+    "id": "book:de-officiis-1465",
+    "title": "De officiis",
+    "creator": "Cicero",
+    "year": 1465,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q1180721",
+    "olid": "OL67551W"
+  },
+  {
+    "id": "book:summa-theologica-1467",
+    "title": "Summa Theologica",
+    "creator": "Thomas Aquinas",
+    "year": 1467,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q653871",
+    "olid": "OL15314568W"
+  },
+  {
+    "id": "book:la-divina-commedia-1472",
+    "title": "La Divina Commedia",
+    "creator": "Dante Alighieri",
+    "year": 1472,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "olid": "OL93082W"
+  },
+  {
+    "id": "book:the-guide-of-the-perplexed-of-maimonides-1473",
+    "title": "The guide of the perplexed of Maimonides",
+    "creator": "Moses Maimonides",
+    "year": 1473,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q138357451",
+    "olid": "OL158224W"
+  },
+  {
+    "id": "book:metamorfosi-1474",
+    "title": "Metamorfosi",
+    "creator": "Ovid",
+    "year": 1474,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q184742",
+    "olid": "OL97727W"
+  },
+  {
+    "id": "book:the-canterbury-tales-1478",
+    "title": "The Canterbury Tales",
+    "creator": "Geoffrey Chaucer",
+    "year": 1478,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q191663",
+    "olid": "OL531767W"
+  },
+  {
+    "id": "book:la-poetica-1479",
+    "title": "La Poetica",
+    "creator": "Aristotle",
+    "year": 1479,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q264714",
+    "olid": "OL151515W"
+  },
+  {
+    "id": "book:ab-urbe-condita-1481",
+    "title": "Ab urbe condita",
+    "creator": "Titus Livius",
+    "year": 1481,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q1155892",
+    "olid": "OL1261147W"
+  },
+  {
+    "id": "book:confessions-1482",
+    "title": "Confessions",
+    "creator": "Augustine of Hippo",
+    "year": 1482,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q372941",
+    "olid": "OL137872W"
+  },
+  {
+    "id": "book:de-consolatione-philosophiae-1483",
+    "title": "De consolatione philosophiae",
+    "creator": "Boethius",
+    "year": 1483,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q30344481",
+    "olid": "OL1393130W"
+  },
+  {
+    "id": "book:de-rerum-natura-1486",
+    "title": "De rerum natura",
+    "creator": "Titus Lucretius Carus",
+    "year": 1486,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q861986",
+    "olid": "OL1548597W"
+  },
+  {
+    "id": "book:-1488",
+    "title": "Ὀδύσσεια",
+    "creator": "Ὅμηρος",
+    "year": 1488,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q35160",
+    "olid": "OL61982W"
+  },
+  {
+    "id": "book:politika-1492",
+    "title": "Πολιτικά (Politiká)",
+    "creator": "Aristotle",
+    "year": 1492,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q69539",
+    "olid": "OL16247898W"
+  },
+  {
+    "id": "book:moralia-1500",
+    "title": "Moralia",
+    "creator": "Plutarch",
+    "year": 1500,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q11875770",
+    "olid": "OL723491W"
+  },
+  {
+    "id": "book:-1505",
+    "title": "Ἰλιάς",
+    "creator": "Ὅμηρος",
+    "year": 1505,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "olid": "OL61981W"
+  },
+  {
+    "id": "book:macbeth-1508",
+    "title": "Macbeth",
+    "creator": "William Shakespeare",
+    "year": 1508,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q130283",
+    "olid": "OL258902W"
+  },
+  {
+    "id": "book:el-elogio-de-la-locura-1511",
+    "title": "El elogio de la locura",
+    "creator": "Erasmo de Róterdam",
+    "year": 1511,
+    "genres": [
+      "Ensayo",
+      "Filosofía"
+    ]
+  },
+  {
+    "id": "book:decamerone-1516",
+    "title": "Decamerone",
+    "creator": "Giovanni Boccaccio",
+    "year": 1516,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q16438",
+    "olid": "OL7180368W"
+  },
+  {
+    "id": "book:-1520",
+    "title": "Τίμαιος",
+    "creator": "Plato",
+    "year": 1520,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q371884",
+    "olid": "OL51823W"
+  },
+  {
+    "id": "book:cyropaedia-1527",
+    "title": "Cyropaedia",
+    "creator": "Xenophon",
+    "year": 1527,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q1145374",
+    "olid": "OL687224W"
+  },
+  {
+    "id": "book:el-principe-1532",
+    "title": "El príncipe",
+    "creator": "Nicolás Maquiavelo",
+    "year": 1532,
+    "genres": [
+      "Ensayo",
+      "Clásico"
+    ],
+    "wikidataId": "Q131719",
+    "olid": "OL26381803W"
+  },
+  {
+    "id": "book:poetics-1536",
+    "title": "Poetics",
+    "creator": "Aristotle",
+    "year": 1536,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "olid": "OL13703833W"
+  },
+  {
+    "id": "book:book-of-common-prayer-1537",
+    "title": "Book of common prayer",
+    "creator": "Church of England",
+    "year": 1537,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q111836967",
+    "olid": "OL769120W"
+  },
+  {
+    "id": "book:dell-arte-della-guerra-1540",
+    "title": "Dell'Arte della Guerra",
+    "creator": "Niccolò Machiavelli",
+    "year": 1540,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q610942",
+    "olid": "OL15968W"
+  },
+  {
+    "id": "book:-1554",
+    "title": "πολιτεία",
+    "creator": "Plato",
+    "year": 1554,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "olid": "OL51831W"
+  },
+  {
+    "id": "book:nicomachean-ethics-1558",
+    "title": "Nicomachean Ethics",
+    "creator": "Aristotle",
+    "year": 1558,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "olid": "OL8273964W"
+  },
+  {
+    "id": "book:-1559",
+    "title": "Συμπόσιον",
+    "creator": "Plato",
+    "year": 1559,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "olid": "OL51815W"
+  },
+  {
+    "id": "book:-1562",
+    "title": "Νόμοι",
+    "creator": "Plato",
+    "year": 1562,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q752285",
+    "olid": "OL51792W"
+  },
+  {
+    "id": "book:aeneis-1592",
+    "title": "Aeneis",
+    "creator": "Publius Vergilius Maro",
+    "year": 1592,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q62052944",
+    "olid": "OL47087W"
+  },
+  {
+    "id": "book:romeo-and-juliet-1597",
+    "title": "Romeo and Juliet",
+    "creator": "William Shakespeare",
+    "year": 1597,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q83186",
+    "olid": "OL362427W"
+  },
+  {
+    "id": "book:richard-iii-1597",
+    "title": "Richard III",
+    "creator": "William Shakespeare",
+    "year": 1597,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "olid": "OL362684W"
+  },
+  {
+    "id": "book:king-richard-ii-1597",
+    "title": "King Richard II",
+    "creator": "William Shakespeare",
+    "year": 1597,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q649562",
+    "olid": "OL362665W"
+  },
+  {
+    "id": "book:henry-iv-part-1-1598",
+    "title": "Henry IV, Part 1",
+    "creator": "William Shakespeare",
+    "year": 1598,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q631855",
+    "olid": "OL1348798W"
+  },
+  {
+    "id": "book:a-midsummer-night-s-dream-1600",
+    "title": "A Midsummer Night's Dream",
+    "creator": "William Shakespeare",
+    "year": 1600,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "olid": "OL259010W"
+  },
+  {
+    "id": "book:the-merchant-of-venice-1600",
+    "title": "The Merchant of Venice",
+    "creator": "William Shakespeare",
+    "year": 1600,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q206400",
+    "olid": "OL258758W"
+  },
+  {
+    "id": "book:henry-vi-part-3-1600",
+    "title": "Henry VI, Part 3",
+    "creator": "William Shakespeare",
+    "year": 1600,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q1241754",
+    "olid": "OL258713W"
+  },
+  {
+    "id": "book:henry-v-1600",
+    "title": "Henry V",
+    "creator": "William Shakespeare",
+    "year": 1600,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q495954",
+    "olid": "OL361466W"
+  },
+  {
+    "id": "book:henry-iv-part-2-1600",
+    "title": "Henry IV, Part 2",
+    "creator": "William Shakespeare",
+    "year": 1600,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q1232349",
+    "olid": "OL362697W"
+  },
+  {
+    "id": "book:essais-1600",
+    "title": "Essais",
+    "creator": "Montaigne, Michel de",
+    "year": 1600,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q624852",
+    "olid": "OL1086528W"
+  },
+  {
+    "id": "book:don-quijote-de-la-mancha-1605",
+    "title": "Don Quijote de la Mancha",
+    "creator": "Miguel de Cervantes",
+    "year": 1605,
+    "genres": [
+      "Novela",
+      "Clásico"
+    ],
+    "wikidataId": "Q480",
+    "olid": "OL503666W"
+  },
+  {
+    "id": "book:the-advancement-of-learning-1605",
+    "title": "The advancement of learning",
+    "creator": "Francis Bacon",
+    "year": 1605,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q7712425",
+    "olid": "OL15403036W"
+  },
+  {
+    "id": "book:troilus-and-cressida-1609",
+    "title": "Troilus and Cressida",
+    "creator": "William Shakespeare",
+    "year": 1609,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q183304",
+    "olid": "OL362685W"
+  },
+  {
+    "id": "book:essays-1618",
+    "title": "Essays",
+    "creator": "Francis Bacon",
+    "year": 1618,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q3944819",
+    "olid": "OL69382W"
+  },
+  {
+    "id": "book:meditations-1626",
+    "title": "Meditations",
+    "creator": "Marcus Aurelius",
+    "year": 1626,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "olid": "OL30687578W"
+  },
+  {
+    "id": "book:the-taming-of-the-shrew-1631",
+    "title": "The Taming of the Shrew",
+    "creator": "William Shakespeare",
+    "year": 1631,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q332387",
+    "olid": "OL362690W"
+  },
+  {
+    "id": "book:junkyard-planet-1631",
+    "title": "Junkyard Planet",
+    "creator": "H. Beam Piper",
+    "year": 1631,
+    "genres": [
+      "Ciencia ficción",
+      "Literatura"
+    ],
+    "wikidataId": "Q134446599",
+    "olid": "OL579075W"
+  },
+  {
+    "id": "book:discours-de-la-methode-1644",
+    "title": "Discours de la méthode",
+    "creator": "René Descartes",
+    "year": 1644,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q731224",
+    "olid": "OL1151518W"
+  },
+  {
+    "id": "book:areopagitica-1644",
+    "title": "Areopagitica",
+    "creator": "John Milton",
+    "year": 1644,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q642635",
+    "olid": "OL810614W"
+  },
+  {
+    "id": "book:julius-caesar-1656",
+    "title": "Julius Caesar",
+    "creator": "William Shakespeare",
+    "year": 1656,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q215750",
+    "olid": "OL362702W"
+  },
+  {
+    "id": "book:lorna-doone-1656",
+    "title": "Lorna Doone",
+    "creator": "R. D. Blackmore",
+    "year": 1656,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q3400981",
+    "olid": "OL3686133W"
+  },
+  {
+    "id": "book:the-description-of-a-new-world-1666",
+    "title": "The description of a new world",
+    "creator": "Margaret Cavendish, Duchess of Newcastle",
+    "year": 1666,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "olid": "OL1112413W"
+  },
+  {
+    "id": "book:henry-viii-1670",
+    "title": "Henry VIII",
+    "creator": "William Shakespeare",
+    "year": 1670,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q672059",
+    "olid": "OL361246W"
+  },
+  {
+    "id": "book:pensees-1670",
+    "title": "Pensées",
+    "creator": "Blaise Pascal",
+    "year": 1670,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q17360856",
+    "olid": "OL1262495W"
+  },
+  {
+    "id": "book:interview-with-the-vampire-1672",
+    "title": "Interview With the Vampire",
+    "creator": "Anne Rice",
+    "year": 1672,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q176470",
+    "olid": "OL77826W"
+  },
+  {
+    "id": "book:-1675",
+    "title": "Ἀπολογία Σωκράτους",
+    "creator": "Plato",
+    "year": 1675,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q273668",
+    "olid": "OL51948W"
+  },
+  {
+    "id": "book:the-pilgrim-s-progress-1678",
+    "title": "The Pilgrim's Progress",
+    "creator": "John Bunyan",
+    "year": 1678,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q268211",
+    "olid": "OL107195W"
+  },
+  {
+    "id": "book:robinson-crusoe-1686",
+    "title": "Robinson Crusoe",
+    "creator": "Daniel Defoe",
+    "year": 1686,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q483034",
+    "olid": "OL45089W"
+  },
+  {
+    "id": "book:two-treatises-on-government-1689",
+    "title": "Two Treatises on Government",
+    "creator": "John Locke",
+    "year": 1689,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q231949",
+    "olid": "OL880131W"
+  },
+  {
+    "id": "book:tess-of-the-d-urbervilles-1707",
+    "title": "Tess of the d'Urbervilles",
+    "creator": "Thomas Hardy",
+    "year": 1707,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q649409",
+    "olid": "OL44927W"
+  },
+  {
+    "id": "book:-1713",
+    "title": "Φαίδων",
+    "creator": "Plato",
+    "year": 1713,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q244161",
+    "olid": "OL51784W"
+  },
+  {
+    "id": "book:coriolanus-1721",
+    "title": "Coriolanus",
+    "creator": "William Shakespeare",
+    "year": 1721,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q463126",
+    "olid": "OL362166W"
+  },
+  {
+    "id": "book:moll-flanders-1722",
+    "title": "Moll Flanders",
+    "creator": "Daniel Defoe",
+    "year": 1722,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q612523",
+    "olid": "OL45139W"
+  },
+  {
+    "id": "book:-1728",
+    "title": "Παρμενίδης",
+    "creator": "Plato",
+    "year": 1728,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q1130762",
+    "olid": "OL51802W"
+  },
+  {
+    "id": "book:an-essay-on-man-1733",
+    "title": "An essay on man",
+    "creator": "Alexander Pope",
+    "year": 1733,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q3121862",
+    "olid": "OL79353W"
+  },
+  {
+    "id": "book:cymbeline-1734",
+    "title": "Cymbeline",
+    "creator": "William Shakespeare",
+    "year": 1734,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q730212",
+    "olid": "OL258656W"
+  },
+  {
+    "id": "book:all-s-well-that-ends-well-1734",
+    "title": "All's Well That Ends Well",
+    "creator": "William Shakespeare",
+    "year": 1734,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q506865",
+    "olid": "OL362676W"
+  },
+  {
+    "id": "book:antony-and-cleopatra-1734",
+    "title": "Antony and Cleopatra",
+    "creator": "William Shakespeare",
+    "year": 1734,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q606830",
+    "olid": "OL362695W"
+  },
+  {
+    "id": "book:the-comedy-of-errors-1734",
+    "title": "The Comedy of Errors",
+    "creator": "William Shakespeare",
+    "year": 1734,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q506505",
+    "olid": "OL362679W"
+  },
+  {
+    "id": "book:as-you-like-it-1734",
+    "title": "As You Like It",
+    "creator": "William Shakespeare",
+    "year": 1734,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q237572",
+    "olid": "OL362698W"
+  },
+  {
+    "id": "book:a-treatise-of-human-nature-1739",
+    "title": "A treatise of human nature",
+    "creator": "David Hume",
+    "year": 1739,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q2451675",
+    "olid": "OL93569W"
+  },
+  {
+    "id": "book:candide-1746",
+    "title": "Candide",
+    "creator": "Voltaire",
+    "year": 1746,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q215894",
+    "olid": "OL100672W"
+  },
+  {
+    "id": "book:de-l-esprit-des-lois-1748",
+    "title": "De l'esprit des lois",
+    "creator": "Charles-Louis de Secondat baron de La Brède et de Montesquieu",
+    "year": 1748,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "olid": "OL453554W"
+  },
+  {
+    "id": "book:lun-yu-1750",
+    "title": "Lun yu",
+    "creator": "Confucius",
+    "year": 1750,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q276015",
+    "olid": "OL15335450W"
+  },
+  {
+    "id": "book:du-contrat-social-1762",
+    "title": "Du contrat social",
+    "creator": "Jean-Jacques Rousseau",
+    "year": 1762,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q190126",
+    "olid": "OL80609W"
+  },
+  {
+    "id": "book:emile-or-education-1762",
+    "title": "Emile or Education",
+    "creator": "Jean-Jacques Rousseau",
+    "year": 1762,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q913599",
+    "olid": "OL80613W"
+  },
+  {
+    "id": "book:dei-delitte-e-delle-pene-1764",
+    "title": "Dei delitte e delle pene",
+    "creator": "Cesare Beccaria",
+    "year": 1764,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "olid": "OL1223677W"
+  },
+  {
+    "id": "book:inferno-1767",
+    "title": "Inferno",
+    "creator": "Dante Alighieri",
+    "year": 1767,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q4509219",
+    "olid": "OL93227W"
+  },
+  {
+    "id": "book:common-sense-1776",
+    "title": "Common Sense",
+    "creator": "Thomas Paine",
+    "year": 1776,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q843940",
+    "olid": "OL60358W"
+  },
+  {
+    "id": "book:lolita-1777",
+    "title": "Lolita",
+    "creator": "Vladimir Nabokov",
+    "year": 1777,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q127149",
+    "olid": "OL627084W"
+  },
+  {
+    "id": "book:dialogues-concerning-natural-religion-1779",
+    "title": "Dialogues Concerning Natural Religion",
+    "creator": "David Hume",
+    "year": 1779,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q965564",
+    "olid": "OL93568W"
+  },
+  {
+    "id": "book:kritik-der-reinen-vernunft-1781",
+    "title": "Kritik der reinen Vernunft",
+    "creator": "Immanuel Kant",
+    "year": 1781,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q19213002",
+    "olid": "OL99844W"
+  },
+  {
+    "id": "book:les-confessions-1782",
+    "title": "Les confessions",
+    "creator": "Jean-Jacques Rousseau",
+    "year": 1782,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q1207595",
+    "olid": "OL80592W"
+  },
+  {
+    "id": "book:persuasion-1789",
+    "title": "Persuasion",
+    "creator": "Jane Austen",
+    "year": 1789,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q333179",
+    "olid": "OL66544W"
+  },
+  {
+    "id": "book:the-autobiography-of-benjamin-franklin-1791",
+    "title": "The Autobiography of Benjamin Franklin",
+    "creator": "Benjamin Franklin",
+    "year": 1791,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q7714957",
+    "olid": "OL26492W"
+  },
+  {
+    "id": "book:the-jungle-1791",
+    "title": "The Jungle",
+    "creator": "Upton Sinclair",
+    "year": 1791,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q260205",
+    "olid": "OL114967W"
+  },
+  {
+    "id": "book:the-scarlet-letter-1800",
+    "title": "The Scarlet Letter",
+    "creator": "Nathaniel Hawthorne",
+    "year": 1800,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q907568",
+    "olid": "OL455305W"
+  },
+  {
+    "id": "book:a-tale-of-two-cities-1800",
+    "title": "A Tale of Two Cities",
+    "creator": "Charles Dickens",
+    "year": 1800,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q308918",
+    "olid": "OL8193465W"
+  },
+  {
+    "id": "book:the-moonstone-1800",
+    "title": "The Moonstone",
+    "creator": "Wilkie Collins",
+    "year": 1800,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q2362563",
+    "olid": "OL176092W"
+  },
+  {
+    "id": "book:david-copperfield-1800",
+    "title": "David Copperfield",
+    "creator": "Charles Dickens",
+    "year": 1800,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q189811",
+    "olid": "OL8662242W"
+  },
+  {
+    "id": "book:the-old-curiosity-shop-1800",
+    "title": "The Old Curiosity Shop",
+    "creator": "Charles Dickens",
+    "year": 1800,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q2700616",
+    "olid": "OL14869167W"
+  },
+  {
+    "id": "book:the-mill-on-the-floss-1800",
+    "title": "The Mill on the Floss",
+    "creator": "George Eliot",
+    "year": 1800,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q1215018",
+    "olid": "OL20938W"
+  },
+  {
+    "id": "book:silas-marner-1800",
+    "title": "Silas Marner",
+    "creator": "George Eliot",
+    "year": 1800,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q638327",
+    "olid": "OL20874W"
+  },
+  {
+    "id": "book:the-prisoner-of-zenda-1800",
+    "title": "The Prisoner of Zenda",
+    "creator": "Anthony Hope",
+    "year": 1800,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q1193766",
+    "olid": "OL245401W"
+  },
+  {
+    "id": "book:la-chartreuse-de-parme-1800",
+    "title": "La chartreuse de Parme",
+    "creator": "Stendhal",
+    "year": 1800,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q1165714",
+    "olid": "OL733285W"
+  },
+  {
+    "id": "book:adam-bede-1800",
+    "title": "Adam Bede",
+    "creator": "George Eliot",
+    "year": 1800,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q2611046",
+    "olid": "OL20935W"
+  },
+  {
+    "id": "book:the-pickwick-papers-1800",
+    "title": "The Pickwick Papers",
+    "creator": "Charles Dickens",
+    "year": 1800,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q460583",
+    "olid": "OL8763776W"
+  },
+  {
+    "id": "book:patrologiae-cursus-completus-1800",
+    "title": "Patrologiae cursus completus",
+    "creator": "J.-P Migne",
+    "year": 1800,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q548044",
+    "olid": "OL177456W"
+  },
+  {
+    "id": "book:ivanhoe-1800",
+    "title": "Ivanhoe",
+    "creator": "Sir Walter Scott",
+    "year": 1800,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q840974",
+    "olid": "OL863808W"
+  },
+  {
+    "id": "book:a-history-of-new-york-1800",
+    "title": "A history of New York",
+    "creator": "Washington Irving",
+    "year": 1800,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q14920548",
+    "olid": "OL63871W"
+  },
+  {
+    "id": "book:the-alhambra-1800",
+    "title": "The Alhambra",
+    "creator": "Washington Irving",
+    "year": 1800,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q1210997",
+    "olid": "OL63996W"
+  },
+  {
+    "id": "book:civil-disobedience-1800",
+    "title": "Civil Disobedience",
+    "creator": "Henry David Thoreau",
+    "year": 1800,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q331092",
+    "olid": "OL55631W"
+  },
+  {
+    "id": "book:the-seven-lamps-of-architecture-1800",
+    "title": "The Seven Lamps of Architecture",
+    "creator": "John Ruskin",
+    "year": 1800,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q218578",
+    "olid": "OL88638W"
+  },
+  {
+    "id": "book:sesame-and-lilies-three-lectures-1800",
+    "title": "Sesame and Lilies, three lectures",
+    "creator": "John Ruskin",
+    "year": 1800,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "olid": "OL88547W"
+  },
+  {
+    "id": "book:sartor-resartus-1800",
+    "title": "Sartor resartus",
+    "creator": "Thomas Carlyle",
+    "year": 1800,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q1134140",
+    "olid": "OL1064699W"
+  },
+  {
+    "id": "book:goethe-s-werke-1800",
+    "title": "Goethe's Werke",
+    "creator": "Johann Wolfgang von Goethe",
+    "year": 1800,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q131708587",
+    "olid": "OL15116693W"
+  },
+  {
+    "id": "book:the-pathfinder-1800",
+    "title": "The Pathfinder",
+    "creator": "James Fenimore Cooper",
+    "year": 1800,
+    "genres": [
+      "Thriller",
+      "Literatura"
+    ],
+    "wikidataId": "Q238652",
+    "olid": "OL78009W"
+  },
+  {
+    "id": "book:sense-and-sensibility-1811",
+    "title": "Sense and Sensibility",
+    "creator": "Jane Austen",
+    "year": 1811,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q274744",
+    "olid": "OL66562W"
+  },
+  {
+    "id": "book:orgullo-y-prejuicio-1813",
+    "title": "Orgullo y prejuicio",
+    "creator": "Jane Austen",
+    "year": 1813,
+    "genres": [
+      "Romance",
+      "Clásico"
+    ],
+    "wikidataId": "Q170583",
+    "olid": "OL34810920W"
+  },
+  {
+    "id": "book:mansfield-park-1814",
+    "title": "Mansfield Park",
+    "creator": "Jane Austen",
+    "year": 1814,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q469690",
+    "olid": "OL66530W"
+  },
+  {
+    "id": "book:emma-1815",
+    "title": "Emma",
+    "creator": "Jane Austen",
+    "year": 1815,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q223880",
+    "olid": "OL66513W"
+  },
+  {
+    "id": "book:my-bondage-and-my-freedom-1815",
+    "title": "My bondage and my freedom",
+    "creator": "Frederick Douglass",
+    "year": 1815,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q6945057",
+    "olid": "OL69179W"
+  },
+  {
+    "id": "book:the-adventures-of-tom-sawyer-1817",
+    "title": "The Adventures of Tom Sawyer",
+    "creator": "Mark Twain",
+    "year": 1817,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q326914",
+    "olid": "OL53919W"
+  },
+  {
+    "id": "book:frankenstein-1818",
+    "title": "Frankenstein",
+    "creator": "Mary Shelley",
+    "year": 1818,
+    "genres": [
+      "Terror",
+      "Clásico"
+    ],
+    "wikidataId": "Q150827",
+    "olid": "OL450063W"
+  },
+  {
+    "id": "book:my-antonia-1818",
+    "title": "My Ántonia",
+    "creator": "Willa Cather",
+    "year": 1818,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q2776448",
+    "olid": "OL12791W"
+  },
+  {
+    "id": "book:a-portrait-of-the-artist-as-a-young-man-1818",
+    "title": "A Portrait of the Artist as a Young Man",
+    "creator": "James Joyce",
+    "year": 1818,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "olid": "OL86343W"
+  },
+  {
+    "id": "book:the-legend-of-sleepy-hollow-1820",
+    "title": "The Legend of Sleepy Hollow",
+    "creator": "Washington Irving",
+    "year": 1820,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q72309",
+    "olid": "OL63985W"
+  },
+  {
+    "id": "book:oliver-twist-1822",
+    "title": "Oliver Twist",
+    "creator": "Charles Dickens",
+    "year": 1822,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q164974",
+    "olid": "OL8193478W"
+  },
+  {
+    "id": "book:der-proce-1825",
+    "title": "Der Proceß",
+    "creator": "Franz Kafka",
+    "year": 1825,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q36097",
+    "olid": "OL498463W"
+  },
+  {
+    "id": "book:the-last-man-1826",
+    "title": "The Last Man",
+    "creator": "Mary Shelley",
+    "year": 1826,
+    "genres": [
+      "Ciencia ficción",
+      "Literatura"
+    ],
+    "wikidataId": "Q2323961",
+    "olid": "OL450124W"
+  },
+  {
+    "id": "book:-1827",
+    "title": "Γοργίας",
+    "creator": "Plato",
+    "year": 1827,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q264241",
+    "olid": "OL51785W"
+  },
+  {
+    "id": "book:-1828",
+    "title": "Πρωταγόρας",
+    "creator": "Plato",
+    "year": 1828,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q520328",
+    "olid": "OL51938W"
+  },
+  {
+    "id": "book:le-comte-de-monte-cristo-ii-1830",
+    "title": "Le Comte de Monte-Cristo, II",
+    "creator": "Alexandre Dumas",
+    "year": 1830,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "olid": "OL36287W"
+  },
+  {
+    "id": "book:el-arte-de-tener-razon-1831",
+    "title": "El arte de tener razón",
+    "creator": "Arthur Schopenhauer",
+    "year": 1831,
+    "genres": [
+      "Ensayo",
+      "Filosofía"
+    ],
+    "wikidataId": "Q432196",
+    "olid": "OL1183496W"
+  },
+  {
+    "id": "book:the-princess-and-curdie-1832",
+    "title": "The Princess and Curdie",
+    "creator": "George MacDonald",
+    "year": 1832,
+    "genres": [
+      "Ciencia ficción",
+      "Literatura"
+    ],
+    "wikidataId": "Q2603469",
+    "olid": "OL15448W"
+  },
+  {
+    "id": "book:the-king-of-the-golden-river-or-the-black-brothers-1839",
+    "title": "The king of the Golden River; or, The black brothers",
+    "creator": "John Ruskin",
+    "year": 1839,
+    "genres": [
+      "Ciencia ficción",
+      "Literatura"
+    ],
+    "wikidataId": "Q42191860",
+    "olid": "OL88599W"
+  },
+  {
+    "id": "book:the-murders-in-the-rue-morgue-1841",
+    "title": "The Murders in the Rue Morgue",
+    "creator": "Edgar Allan Poe",
+    "year": 1841,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q459667",
+    "olid": "OL41072W"
+  },
+  {
+    "id": "book:the-deerslayer-1841",
+    "title": "The deerslayer",
+    "creator": "James Fenimore Cooper",
+    "year": 1841,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q855801",
+    "olid": "OL77950W"
+  },
+  {
+    "id": "book:tao-te-ching-1842",
+    "title": "Tao te Ching",
+    "creator": "老子",
+    "year": 1842,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q134425",
+    "olid": "OL45499W"
+  },
+  {
+    "id": "book:a-christmas-carol-1843",
+    "title": "A Christmas Carol",
+    "creator": "Charles Dickens",
+    "year": 1843,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q62879",
+    "olid": "OL32466W"
+  },
+  {
+    "id": "book:el-conde-de-montecristo-1844",
+    "title": "El conde de Montecristo",
+    "creator": "Alexandre Dumas",
+    "year": 1844,
+    "genres": [
+      "Aventura",
+      "Clásico"
+    ],
+    "wikidataId": "Q191838",
+    "olid": "OL21861650W"
+  },
+  {
+    "id": "book:los-tres-mosqueteros-1844",
+    "title": "Los tres mosqueteros",
+    "creator": "Alexandre Dumas",
+    "year": 1844,
+    "genres": [
+      "Aventura",
+      "Clásico"
+    ],
+    "wikidataId": "Q140527",
+    "olid": "OL29287975W"
+  },
+  {
+    "id": "book:les-trois-mousquetaires-1844",
+    "title": "Les trois Mousquetaires",
+    "creator": "Alexandre Dumas",
+    "year": 1844,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "olid": "OL36861W"
+  },
+  {
+    "id": "book:war-and-peace-1845",
+    "title": "War and Peace",
+    "creator": "Лев Толстой",
+    "year": 1845,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "olid": "OL267171W"
+  },
+  {
+    "id": "book:the-raven-1845",
+    "title": "The Raven",
+    "creator": "Edgar Allan Poe",
+    "year": 1845,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q22726",
+    "olid": "OL41081W"
+  },
+  {
+    "id": "book:narrative-of-the-life-of-frederick-douglass-1845",
+    "title": "Narrative of the life of Frederick Douglass",
+    "creator": "Frederick Douglass",
+    "year": 1845,
+    "genres": [
+      "Historia",
+      "Literatura"
+    ],
+    "wikidataId": "Q54638790",
+    "olid": "OL69178W"
+  },
+  {
+    "id": "book:wuthering-heights-1846",
+    "title": "Wuthering Heights",
+    "creator": "Emily Brontë",
+    "year": 1846,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "olid": "OL21177W"
+  },
+  {
+    "id": "book:the-battle-of-life-1846",
+    "title": "The Battle of Life",
+    "creator": "Charles Dickens",
+    "year": 1846,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q2054880",
+    "olid": "OL14868497W"
+  },
+  {
+    "id": "book:cumbres-borrascosas-1847",
+    "title": "Cumbres borrascosas",
+    "creator": "Emily Brontë",
+    "year": 1847,
+    "genres": [
+      "Romance",
+      "Clásico"
+    ],
+    "wikidataId": "Q202975",
+    "olid": "OL45726200W"
+  },
+  {
+    "id": "book:jane-eyre-1847",
+    "title": "Jane Eyre",
+    "creator": "Charlotte Brontë",
+    "year": 1847,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q182961",
+    "olid": "OL1095427W"
+  },
+  {
+    "id": "book:agnes-grey-1847",
+    "title": "Agnes Grey",
+    "creator": "Anne Brontë",
+    "year": 1847,
+    "genres": [
+      "Clásico",
+      "Literatura"
+    ],
+    "wikidataId": "Q517172",
+    "olid": "OL2462427W"
+  },
+  {
+    "id": "book:-1848",
+    "title": "Белые ночи",
+    "creator": "Fiódor Dostoievski",
+    "year": 1848,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q600461",
+    "olid": "OL166952W"
+  },
+  {
+    "id": "book:manifest-der-kommunistischen-partei-1848",
+    "title": "Manifest der Kommunistischen Partei",
+    "creator": "Karl Marx",
+    "year": 1848,
+    "genres": [
+      "Novela",
+      "Literatura"
+    ],
+    "wikidataId": "Q40591",
+    "olid": "OL629052W"
+  },
+  {
+    "id": "book:principles-of-political-economy-1848",
+    "title": "Principles of Political Economy",
+    "creator": "John Stuart Mill",
+    "year": 1848,
+    "genres": [
+      "Ensayo",
+      "Literatura"
+    ],
+    "wikidataId": "Q5946782",
+    "olid": "OL1068184W"
+  }
+]
