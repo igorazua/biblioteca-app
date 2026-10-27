@@ -1,5 +1,5 @@
 // app/src/screens/Settings.tsx
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { APP_NAME } from '../config'
@@ -31,7 +31,18 @@ export function Settings() {
   const [confirmDelete, setConfirmDelete] = useState(false)
   const [emailInput, setEmailInput] = useState('')
   const [emailSent, setEmailSent] = useState(false)
-  const [pushEnabled, setPushEnabled] = useState(false)
+  const [pushEnabled, setPushEnabled] = useState(() => {
+    if (typeof Notification === 'undefined' || Notification.permission !== 'granted') return false
+    return settings.notificationTier !== 'none'
+  })
+
+  useEffect(() => {
+    if (typeof Notification !== 'undefined' && Notification.permission === 'granted' && settings.notificationTier !== 'none') {
+      setPushEnabled(true)
+    } else {
+      setPushEnabled(false)
+    }
+  }, [settings.notificationTier])
 
   // Feedback modal
   const [feedbackOpen, setFeedbackOpen] = useState(false)
@@ -63,14 +74,21 @@ export function Settings() {
   }
 
   const handleTogglePush = async () => {
+    if (pushEnabled) {
+      setSettings({ notificationTier: 'none' })
+      setPushEnabled(false)
+      setToast('Notificaciones desactivadas')
+      return
+    }
     if (!isPushSupported()) {
       alert('Tu navegador o dispositivo no soporta notificaciones push directamente.')
       return
     }
     const ok = await subscribeToPush()
     if (ok) {
+      setSettings({ notificationTier: 'important' })
       setPushEnabled(true)
-      setToast('Avisos activados correctamente')
+      setToast('Avisos activados (Solo importantes)')
     } else {
       setToast('No se pudo activar las notificaciones')
     }
@@ -189,9 +207,44 @@ export function Settings() {
             icon="bell"
             tint="#e0584b"
             title="Notificaciones"
-            sub="Amigos y recordatorios"
+            sub={pushEnabled ? ((settings.notificationTier ?? 'important') === 'important' ? 'Solo importantes' : 'Todas las notificaciones') : 'Desactivadas'}
             right={<Toggle on={pushEnabled} onChange={handleTogglePush} label="Notificaciones" />}
           />
+          {pushEnabled && (
+            <div className="px-4 py-2.5 bg-surface2/60 border-t border-line/60 flex items-center justify-between text-xs">
+              <span className="text-mute font-medium">Frecuencia de avisos</span>
+              <div className="flex bg-surface p-0.5 rounded-xl border border-line">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSettings({ notificationTier: 'important' })
+                    setToast('Preferencia: Solo importantes')
+                  }}
+                  className={`px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
+                    (settings.notificationTier ?? 'important') === 'important'
+                      ? 'bg-accent text-accent-ink font-semibold shadow-xs'
+                      : 'text-mute hover:text-ink'
+                  }`}
+                >
+                  Solo importantes
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSettings({ notificationTier: 'all' })
+                    setToast('Preferencia: Todas')
+                  }}
+                  className={`px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
+                    settings.notificationTier === 'all'
+                      ? 'bg-accent text-accent-ink font-semibold shadow-xs'
+                      : 'text-mute hover:text-ink'
+                  }`}
+                >
+                  Todas
+                </button>
+              </div>
+            </div>
+          )}
         </Group>
 
         {user && (

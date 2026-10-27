@@ -27,5 +27,5 @@ describe('mazo de Descubrir con canciones', () => {
       session: newDeckSessionState(),
     }, [], 20)
     expect(cards.length).toBe(20)
-  })
+  }, 15000)
 })

@@ -287,7 +287,10 @@ export function CompareHome() {
         {unavailableShelves.length > 0 && (
           <div className="mt-8 text-meta text-mute text-center">
             {formatShelfNames(unavailableShelves)}:{' '}
-            <Link to="/descubrir" className="underline hover:text-ink">
+            <Link
+              to={unavailableShelves.length === 1 ? `/descubrir?shelf=${unavailableShelves[0]}` : '/descubrir'}
+              className="underline hover:text-ink"
+            >
               marca alguna en Descubrir para empezar
             </Link>
           </div>

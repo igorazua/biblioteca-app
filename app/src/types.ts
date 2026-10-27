@@ -146,10 +146,14 @@ export interface ReaderProfile {
   at: number
 }
 
+export type NotificationTier = 'important' | 'all' | 'none'
+
 export interface Settings {
   commentBoxInPairs: boolean
   /** Descubrir: abrir la hoja de valoración al guardar como vista (se puede quitar y reactivar en Perfil) */
   rateOnSwipe?: boolean
+  /** Preferencia de notificaciones: 'important' (solo importantes), 'all' (todas), 'none' (ninguna) */
+  notificationTier?: NotificationTier
 }
 
 export interface ShelfTerms {

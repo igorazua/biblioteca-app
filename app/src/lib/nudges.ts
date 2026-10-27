@@ -118,12 +118,25 @@ export function evaluateNudges(input: NudgeInput): Nudge | null {
 
   // 4. rank: >= 5 vistas sin colocar
   if (unrankedSeen >= 5 && check('rank')) {
+    let bestShelf: ShelfType | undefined
+    let maxUnranked = 0
+    for (const s of ACTIVE_SHELVES) {
+      const c = allEntries.filter(
+        (e) => e.status === 'seen' && (!e.ranked || e.provisional) && (e.shelf ?? 'movie') === s
+      ).length
+      if (c > maxUnranked) {
+        maxUnranked = c
+        bestShelf = s
+      }
+    }
+    const shelfSuffix = bestShelf ? ` de ${SHELF_LABEL[bestShelf].plural.toLowerCase()}` : ''
     return {
       id: 'rank',
-      message: `Tienes ${unrankedSeen} sin colocar en tu ranking. 1 minuto de duelos.`,
+      shelf: bestShelf,
+      message: `Tienes ${unrankedSeen} sin colocar en tu ranking${shelfSuffix}. 1 minuto de duelos.`,
       actionLabel: 'Ir a Comparar',
       actionType: 'navigate',
-      targetRoute: '/comparar',
+      targetRoute: bestShelf ? `/comparar/${bestShelf}` : '/comparar',
     }
   }
 
