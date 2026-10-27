@@ -1,0 +1,9112 @@
+[
+  {
+    "id": "book:cien-anos-de-soledad-1967",
+    "title": "Cien años de soledad",
+    "creator": "Gabriel García Márquez",
+    "year": 1967,
+    "wikidataId": "Q178869",
+    "wdYears": [
+      1960,
+      1967
+    ]
+  },
+  {
+    "id": "book:don-quijote-de-la-mancha-1605",
+    "title": "Don Quijote de la Mancha",
+    "creator": "Miguel de Cervantes",
+    "year": 1605,
+    "wikidataId": "Q480",
+    "wdYears": [
+      1605,
+      1615
+    ]
+  },
+  {
+    "id": "book:la-sombra-del-viento-2001",
+    "title": "La sombra del viento",
+    "creator": "Carlos Ruiz Zafón",
+    "year": 2001,
+    "wikidataId": "Q52910",
+    "wdYears": [
+      2001
+    ]
+  },
+  {
+    "id": "book:el-principito-1943",
+    "title": "El principito",
+    "creator": "Antoine de Saint-Exupéry",
+    "year": 1943,
+    "wikidataId": "Q25338",
+    "wdYears": [
+      1943
+    ]
+  },
+  {
+    "id": "book:1984-1949",
+    "title": "1984",
+    "creator": "George Orwell",
+    "year": 1949,
+    "wikidataId": "Q208460",
+    "wdYears": [
+      1948,
+      1949
+    ]
+  },
+  {
+    "id": "book:un-mundo-feliz-1932",
+    "title": "Un mundo feliz",
+    "creator": "Aldous Huxley",
+    "year": 1932,
+    "wikidataId": "Q191949",
+    "wdYears": [
+      1932
+    ]
+  },
+  {
+    "id": "book:fahrenheit-451-1953",
+    "title": "Fahrenheit 451",
+    "creator": "Ray Bradbury",
+    "year": 1953,
+    "wikidataId": "Q202009",
+    "wdYears": [
+      1951,
+      1953
+    ]
+  },
+  {
+    "id": "book:el-nombre-de-la-rosa-1980",
+    "title": "El nombre de la rosa",
+    "creator": "Umberto Eco",
+    "year": 1980,
+    "wikidataId": "Q172850",
+    "wdYears": [
+      1980
+    ]
+  },
+  {
+    "id": "book:los-pilares-de-la-tierra-1989",
+    "title": "Los pilares de la Tierra",
+    "creator": "Ken Follett",
+    "year": 1989,
+    "wikidataId": "Q1163227",
+    "wdYears": [
+      1989
+    ]
+  },
+  {
+    "id": "book:el-hobbit-1937",
+    "title": "El Hobbit",
+    "creator": "J. R. R. Tolkien",
+    "year": 1937,
+    "wikidataId": "Q74287",
+    "wdYears": [
+      1937
+    ]
+  },
+  {
+    "id": "book:el-senor-de-los-anillos-1954",
+    "title": "El Señor de los Anillos",
+    "creator": "J. R. R. Tolkien",
+    "year": 1954,
+    "wikidataId": "Q15228",
+    "wdYears": [
+      1954
+    ]
+  },
+  {
+    "id": "book:harry-potter-y-la-piedra-filosofal-1997",
+    "title": "Harry Potter y la piedra filosofal",
+    "creator": "J. K. Rowling",
+    "year": 1997,
+    "wikidataId": "Q43361",
+    "wdYears": [
+      1990,
+      1997
+    ]
+  },
+  {
+    "id": "book:juego-de-tronos-1996",
+    "title": "Juego de tronos",
+    "creator": "George R. R. Martin",
+    "year": 1996,
+    "wikidataId": "Q1751870",
+    "wdYears": [
+      1996
+    ]
+  },
+  {
+    "id": "book:dune-1965",
+    "title": "Dune",
+    "creator": "Frank Herbert",
+    "year": 1965,
+    "wikidataId": "Q190192",
+    "wdYears": [
+      1965
+    ]
+  },
+  {
+    "id": "book:fundacion-1951",
+    "title": "Fundación",
+    "creator": "Isaac Asimov",
+    "year": 1951,
+    "wikidataId": "Q753894",
+    "wdYears": [
+      1942,
+      1951
+    ]
+  },
+  {
+    "id": "book:yo-robot-1950",
+    "title": "Yo, robot",
+    "creator": "Isaac Asimov",
+    "year": 1950,
+    "wikidataId": "Q393018",
+    "wdYears": [
+      1950
+    ]
+  },
+  {
+    "id": "book:el-codigo-da-vinci-2003",
+    "title": "El código Da Vinci",
+    "creator": "Dan Brown",
+    "year": 2003,
+    "wikidataId": "Q81689",
+    "wdYears": [
+      2003
+    ]
+  },
+  {
+    "id": "book:los-hombres-que-no-amaban-a-las-mujeres-2005",
+    "title": "Los hombres que no amaban a las mujeres",
+    "creator": "Stieg Larsson",
+    "year": 2005,
+    "wikidataId": "Q678288",
+    "wdYears": [
+      2005
+    ]
+  },
+  {
+    "id": "book:crimen-y-castigo-1866",
+    "title": "Crimen y castigo",
+    "creator": "Fiódor Dostoievski",
+    "year": 1866,
+    "wikidataId": "Q165318",
+    "wdYears": [
+      1865,
+      1866,
+      1886
+    ]
+  },
+  {
+    "id": "book:orgullo-y-prejuicio-1813",
+    "title": "Orgullo y prejuicio",
+    "creator": "Jane Austen",
+    "year": 1813,
+    "wikidataId": "Q170583",
+    "wdYears": [
+      1800,
+      1813
+    ]
+  },
+  {
+    "id": "book:cumbres-borrascosas-1847",
+    "title": "Cumbres borrascosas",
+    "creator": "Emily Brontë",
+    "year": 1847,
+    "wikidataId": "Q202975",
+    "wdYears": [
+      1847
+    ]
+  },
+  {
+    "id": "book:el-gran-gatsby-1925",
+    "title": "El gran Gatsby",
+    "creator": "F. Scott Fitzgerald",
+    "year": 1925,
+    "wikidataId": "Q214371",
+    "wdYears": [
+      1925
+    ]
+  },
+  {
+    "id": "book:matar-a-un-ruisenor-1960",
+    "title": "Matar a un ruiseñor",
+    "creator": "Harper Lee",
+    "year": 1960,
+    "wikidataId": "Q212340",
+    "wdYears": [
+      1960
+    ]
+  },
+  {
+    "id": "book:el-guardian-entre-el-centeno-1951",
+    "title": "El guardián entre el centeno",
+    "creator": "J. D. Salinger",
+    "year": 1951,
+    "wikidataId": "Q183883",
+    "wdYears": [
+      1951
+    ]
+  },
+  {
+    "id": "book:la-metamorfosis-1915",
+    "title": "La metamorfosis",
+    "creator": "Franz Kafka",
+    "year": 1915,
+    "wikidataId": "Q184222",
+    "wdYears": [
+      1912,
+      1915
+    ]
+  },
+  {
+    "id": "book:el-extranjero-1942",
+    "title": "El extranjero",
+    "creator": "Albert Camus",
+    "year": 1942,
+    "wikidataId": "Q163297",
+    "wdYears": [
+      1940,
+      1942
+    ]
+  },
+  {
+    "id": "book:rayuela-1963",
+    "title": "Rayuela",
+    "creator": "Julio Cortázar",
+    "year": 1963,
+    "wikidataId": "Q934430",
+    "wdYears": [
+      1934
+    ]
+  },
+  {
+    "id": "book:la-casa-de-los-espiritus-1982",
+    "title": "La casa de los espíritus",
+    "creator": "Isabel Allende",
+    "year": 1982,
+    "wikidataId": "Q1168267",
+    "wdYears": [
+      1982
+    ]
+  },
+  {
+    "id": "book:pedro-paramo-1955",
+    "title": "Pedro Páramo",
+    "creator": "Juan Rulfo",
+    "year": 1955,
+    "wikidataId": "Q1427966",
+    "wdYears": [
+      1955
+    ]
+  },
+  {
+    "id": "book:la-ciudad-y-los-perros-1963",
+    "title": "La ciudad y los perros",
+    "creator": "Mario Vargas Llosa",
+    "year": 1963,
+    "wikidataId": "Q763199",
+    "wdYears": [
+      1958,
+      1963
+    ]
+  },
+  {
+    "id": "book:patria-2016",
+    "title": "Patria",
+    "creator": "Fernando Aramburu",
+    "year": 2016,
+    "wikidataId": "Q28530525",
+    "wdYears": [
+      2016
+    ]
+  },
+  {
+    "id": "book:soldados-de-salamina-2001",
+    "title": "Soldados de Salamina",
+    "creator": "Javier Cercas",
+    "year": 2001,
+    "wikidataId": "Q1971450",
+    "wdYears": [
+      2001
+    ]
+  },
+  {
+    "id": "book:la-catedral-del-mar-2006",
+    "title": "La catedral del mar",
+    "creator": "Ildefonso Falcones",
+    "year": 2006,
+    "wikidataId": "Q2081254",
+    "wdYears": [
+      2006
+    ]
+  },
+  {
+    "id": "book:nada-1945",
+    "title": "Nada",
+    "creator": "Carmen Laforet",
+    "year": 1945,
+    "wikidataId": "Q1623656",
+    "wdYears": [
+      1945
+    ]
+  },
+  {
+    "id": "book:el-tunel-1948",
+    "title": "El túnel",
+    "creator": "Ernesto Sabato",
+    "year": 1948,
+    "wikidataId": "Q2833629",
+    "wdYears": [
+      1948
+    ]
+  },
+  {
+    "id": "book:sapiens-de-animales-a-dioses-2011",
+    "title": "Sapiens: De animales a dioses",
+    "creator": "Yuval Noah Harari",
+    "year": 2011,
+    "wikidataId": "Q12411055",
+    "wdYears": [
+      2011
+    ]
+  },
+  {
+    "id": "book:los-juegos-del-hambre-2008",
+    "title": "Los juegos del hambre",
+    "creator": "Suzanne Collins",
+    "year": 2008,
+    "wikidataId": "Q11679",
+    "wdYears": [
+      2008
+    ]
+  },
+  {
+    "id": "book:ensayo-sobre-la-ceguera-1995",
+    "title": "Ensayo sobre la ceguera",
+    "creator": "José Saramago",
+    "year": 1995,
+    "wikidataId": "Q826428",
+    "wdYears": [
+      1995
+    ]
+  },
+  {
+    "id": "book:marina-1999",
+    "title": "Marina",
+    "creator": "Carlos Ruiz Zafón",
+    "year": 1999,
+    "wikidataId": "Q941006",
+    "wdYears": [
+      1999
+    ]
+  },
+  {
+    "id": "book:el-alquimista-1988",
+    "title": "El alquimista",
+    "creator": "Paulo Coelho",
+    "year": 1988,
+    "wikidataId": "Q179021",
+    "wdYears": [
+      1988
+    ]
+  },
+  {
+    "id": "book:el-infinito-en-un-junco-2019",
+    "title": "El infinito en un junco",
+    "creator": "Irene Vallejo",
+    "year": 2019,
+    "wikidataId": "Q100502971",
+    "wdYears": [
+      2019
+    ]
+  },
+  {
+    "id": "book:pensar-rapido-pensar-despacio-2011",
+    "title": "Pensar rápido, pensar despacio",
+    "creator": "Daniel Kahneman",
+    "year": 2011,
+    "wikidataId": "Q983718",
+    "wdYears": [
+      2011
+    ]
+  },
+  {
+    "id": "book:el-hombre-en-busca-de-sentido-1946",
+    "title": "El hombre en busca de sentido",
+    "creator": "Viktor Frankl",
+    "year": 1946,
+    "wikidataId": "Q426369",
+    "wdYears": [
+      1946
+    ]
+  },
+  {
+    "id": "book:meditaciones-180",
+    "title": "Meditaciones",
+    "creator": "Marco Aurelio",
+    "year": 180,
+    "wikidataId": "Q1152283",
+    "wdYears": [
+      200
+    ]
+  },
+  {
+    "id": "book:el-mundo-de-ayer-1942",
+    "title": "El mundo de ayer",
+    "creator": "Stefan Zweig",
+    "year": 1942,
+    "wikidataId": "Q1217507",
+    "wdYears": [
+      1942
+    ]
+  },
+  {
+    "id": "book:una-breve-historia-de-casi-todo-2003",
+    "title": "Una breve historia de casi todo",
+    "creator": "Bill Bryson",
+    "year": 2003,
+    "wikidataId": "Q1306809",
+    "wdYears": [
+      2003
+    ]
+  },
+  {
+    "id": "book:armas-germenes-y-acero-1997",
+    "title": "Armas, gérmenes y acero",
+    "creator": "Jared Diamond",
+    "year": 1997,
+    "wikidataId": "Q279022",
+    "wdYears": [
+      1997
+    ]
+  },
+  {
+    "id": "book:antifragil-2012",
+    "title": "Antifrágil",
+    "creator": "Nassim Nicholas Taleb",
+    "year": 2012,
+    "wikidataId": "Q4774726",
+    "wdYears": [
+      2012
+    ]
+  },
+  {
+    "id": "book:homo-deus-2015",
+    "title": "Homo Deus",
+    "creator": "Yuval Noah Harari",
+    "year": 2015,
+    "wdYears": []
+  },
+  {
+    "id": "book:21-lecciones-para-el-siglo-xxi-2018",
+    "title": "21 lecciones para el siglo XXI",
+    "creator": "Yuval Noah Harari",
+    "year": 2018,
+    "wikidataId": "Q56605000",
+    "wdYears": [
+      2018
+    ]
+  },
+  {
+    "id": "book:el-gen-egoista-1976",
+    "title": "El gen egoísta",
+    "creator": "Richard Dawkins",
+    "year": 1976,
+    "wikidataId": "Q212789",
+    "wdYears": [
+      1976
+    ]
+  },
+  {
+    "id": "book:breve-historia-del-tiempo-1988",
+    "title": "Breve historia del tiempo",
+    "creator": "Stephen Hawking",
+    "year": 1988,
+    "wikidataId": "Q471726",
+    "wdYears": [
+      1988
+    ]
+  },
+  {
+    "id": "book:el-arte-de-la-guerra--500",
+    "title": "El arte de la guerra",
+    "creator": "Sun Tzu",
+    "year": -500,
+    "wikidataId": "Q8251",
+    "wdYears": []
+  },
+  {
+    "id": "book:el-principe-1532",
+    "title": "El príncipe",
+    "creator": "Nicolás Maquiavelo",
+    "year": 1532,
+    "wikidataId": "Q131719",
+    "wdYears": [
+      1513,
+      1532
+    ]
+  },
+  {
+    "id": "book:steve-jobs-2011",
+    "title": "Steve Jobs",
+    "creator": "Walter Isaacson",
+    "year": 2011,
+    "wikidataId": "Q625645",
+    "wdYears": [
+      2011
+    ]
+  },
+  {
+    "id": "book:fouche-el-genio-tenebroso-1929",
+    "title": "Fouché, el genio tenebroso",
+    "creator": "Stefan Zweig",
+    "year": 1929,
+    "wikidataId": "Q3184958",
+    "wdYears": [
+      1929
+    ]
+  },
+  {
+    "id": "book:momentos-estelares-de-la-humanidad-1927",
+    "title": "Momentos estelares de la humanidad",
+    "creator": "Stefan Zweig",
+    "year": 1927,
+    "wikidataId": "Q875183",
+    "wdYears": [
+      1927
+    ]
+  },
+  {
+    "id": "book:cosmos-1980",
+    "title": "Cosmos",
+    "creator": "Carl Sagan",
+    "year": 1980,
+    "wikidataId": "Q1194705",
+    "wdYears": [
+      1980
+    ]
+  },
+  {
+    "id": "book:el-elogio-de-la-locura-1511",
+    "title": "El elogio de la locura",
+    "creator": "Erasmo de Róterdam",
+    "year": 1511,
+    "wdYears": []
+  },
+  {
+    "id": "book:por-que-fracasan-los-paises-2012",
+    "title": "Por qué fracasan los países",
+    "creator": "Daron Acemoglu y James A. Robinson",
+    "year": 2012,
+    "wikidataId": "Q7997840",
+    "wdYears": [
+      2012
+    ]
+  },
+  {
+    "id": "book:los-renglones-torcidos-de-dios-1979",
+    "title": "Los renglones torcidos de Dios",
+    "creator": "Torcuato Luca de Tena",
+    "year": 1979,
+    "wikidataId": "Q5981151",
+    "wdYears": [
+      1979
+    ]
+  },
+  {
+    "id": "book:la-verdad-sobre-el-caso-harry-quebert-2012",
+    "title": "La verdad sobre el caso Harry Quebert",
+    "creator": "Joël Dicker",
+    "year": 2012,
+    "wikidataId": "Q3213985",
+    "wdYears": [
+      2012
+    ]
+  },
+  {
+    "id": "book:el-paciente-ingles-1992",
+    "title": "El paciente inglés",
+    "creator": "Michael Ondaatje",
+    "year": 1992,
+    "wikidataId": "Q1292533",
+    "wdYears": [
+      1992
+    ]
+  },
+  {
+    "id": "book:tokio-blues-norwegian-wood-1987",
+    "title": "Tokio blues (Norwegian Wood)",
+    "creator": "Haruki Murakami",
+    "year": 1987,
+    "wikidataId": "Q751348",
+    "wdYears": [
+      1987
+    ]
+  },
+  {
+    "id": "book:cronica-del-pajaro-que-da-cuerda-al-mundo-1994",
+    "title": "Crónica del pájaro que da cuerda al mundo",
+    "creator": "Haruki Murakami",
+    "year": 1994,
+    "wikidataId": "Q976992",
+    "wdYears": [
+      1992,
+      1994
+    ]
+  },
+  {
+    "id": "book:kafka-en-la-orilla-2002",
+    "title": "Kafka en la orilla",
+    "creator": "Haruki Murakami",
+    "year": 2002,
+    "wikidataId": "Q579744",
+    "wdYears": [
+      2002
+    ]
+  },
+  {
+    "id": "book:la-insoportable-levedad-del-ser-1984",
+    "title": "La insoportable levedad del ser",
+    "creator": "Milan Kundera",
+    "year": 1984,
+    "wikidataId": "Q917055",
+    "wdYears": [
+      1984
+    ]
+  },
+  {
+    "id": "book:en-busca-del-tiempo-perdido-por-el-camino-de-swann-1913",
+    "title": "En busca del tiempo perdido: Por el camino de Swann",
+    "creator": "Marcel Proust",
+    "year": 1913,
+    "wikidataId": "Q2700307",
+    "wdYears": [
+      1913,
+      2000
+    ]
+  },
+  {
+    "id": "book:ulises-1922",
+    "title": "Ulises",
+    "creator": "James Joyce",
+    "year": 1922,
+    "wikidataId": "Q6511",
+    "wdYears": [
+      1914,
+      1922
+    ]
+  },
+  {
+    "id": "book:guerra-y-paz-1869",
+    "title": "Guerra y paz",
+    "creator": "León Tolstói",
+    "year": 1869,
+    "wikidataId": "Q161531",
+    "wdYears": [
+      1863,
+      1869
+    ]
+  },
+  {
+    "id": "book:ana-karenina-1877",
+    "title": "Ana Karenina",
+    "creator": "León Tolstói",
+    "year": 1877,
+    "wikidataId": "Q147787",
+    "wdYears": [
+      1873,
+      1877
+    ]
+  },
+  {
+    "id": "book:los-hermanos-karamazov-1880",
+    "title": "Los hermanos Karamázov",
+    "creator": "Fiódor Dostoievski",
+    "year": 1880,
+    "wikidataId": "Q183157",
+    "wdYears": [
+      1878,
+      1880
+    ]
+  },
+  {
+    "id": "book:el-idiota-1869",
+    "title": "El idiota",
+    "creator": "Fiódor Dostoievski",
+    "year": 1869,
+    "wikidataId": "Q210784",
+    "wdYears": [
+      1867,
+      1869
+    ]
+  },
+  {
+    "id": "book:madame-bovary-1857",
+    "title": "Madame Bovary",
+    "creator": "Gustave Flaubert",
+    "year": 1857,
+    "wikidataId": "Q193417",
+    "wdYears": [
+      1856,
+      1857
+    ]
+  },
+  {
+    "id": "book:los-miserables-1862",
+    "title": "Los miserables",
+    "creator": "Victor Hugo",
+    "year": 1862,
+    "wikidataId": "Q180736",
+    "wdYears": [
+      1862,
+      1900
+    ]
+  },
+  {
+    "id": "book:el-conde-de-montecristo-1844",
+    "title": "El conde de Montecristo",
+    "creator": "Alexandre Dumas",
+    "year": 1844,
+    "wikidataId": "Q191838",
+    "wdYears": [
+      1844
+    ]
+  },
+  {
+    "id": "book:los-tres-mosqueteros-1844",
+    "title": "Los tres mosqueteros",
+    "creator": "Alexandre Dumas",
+    "year": 1844,
+    "wikidataId": "Q140527",
+    "wdYears": [
+      1844
+    ]
+  },
+  {
+    "id": "book:frankenstein-1818",
+    "title": "Frankenstein",
+    "creator": "Mary Shelley",
+    "year": 1818,
+    "wikidataId": "Q150827",
+    "wdYears": [
+      1816,
+      1818
+    ]
+  },
+  {
+    "id": "book:dracula-1897",
+    "title": "Drácula",
+    "creator": "Bram Stoker",
+    "year": 1897,
+    "wikidataId": "Q41542",
+    "wdYears": [
+      1890,
+      1897
+    ]
+  },
+  {
+    "id": "book:el-retrato-de-dorian-gray-1890",
+    "title": "El retrato de Dorian Gray",
+    "creator": "Oscar Wilde",
+    "year": 1890,
+    "wikidataId": "Q82464",
+    "wdYears": [
+      1890,
+      1891
+    ]
+  },
+  {
+    "id": "book:la-odisea--800",
+    "title": "La Odisea",
+    "creator": "Homero",
+    "year": -800,
+    "wdYears": []
+  },
+  {
+    "id": "book:la-iliada--800",
+    "title": "La Ilíada",
+    "creator": "Homero",
+    "year": -800,
+    "wikidataId": "Q8275",
+    "wdYears": [
+      -800
+    ]
+  },
+  {
+    "id": "book:la-divina-comedia-1320",
+    "title": "La divina comedia",
+    "creator": "Dante Alighieri",
+    "year": 1320,
+    "wikidataId": "Q40185",
+    "wdYears": [
+      1320
+    ]
+  },
+  {
+    "id": "book:ficciones-1944",
+    "title": "Ficciones",
+    "creator": "Jorge Luis Borges",
+    "year": 1944,
+    "wikidataId": "Q2483432",
+    "wdYears": [
+      1944
+    ]
+  },
+  {
+    "id": "book:el-aleph-1949",
+    "title": "El Aleph",
+    "creator": "Jorge Luis Borges",
+    "year": 1949,
+    "wikidataId": "Q743304",
+    "wdYears": [
+      1949
+    ]
+  },
+  {
+    "id": "book:el-amor-en-los-tiempos-del-colera-1985",
+    "title": "El amor en los tiempos del cólera",
+    "creator": "Gabriel García Márquez",
+    "year": 1985,
+    "wikidataId": "Q499396",
+    "wdYears": [
+      1985
+    ]
+  },
+  {
+    "id": "book:cronica-de-una-muerte-anunciada-1981",
+    "title": "Crónica de una muerte anunciada",
+    "creator": "Gabriel García Márquez",
+    "year": 1981,
+    "wikidataId": "Q935935",
+    "wdYears": [
+      1981,
+      2021
+    ]
+  },
+  {
+    "id": "book:ensayo-sobre-la-lucidez-2004",
+    "title": "Ensayo sobre la lucidez",
+    "creator": "José Saramago",
+    "year": 2004,
+    "wikidataId": "Q1216446",
+    "wdYears": [
+      2004
+    ]
+  },
+  {
+    "id": "book:las-intermitencias-de-la-muerte-2005",
+    "title": "Las intermitencias de la muerte",
+    "creator": "José Saramago",
+    "year": 2005,
+    "wikidataId": "Q2713340",
+    "wdYears": [
+      1965
+    ]
+  },
+  {
+    "id": "book:la-carretera-2006",
+    "title": "La carretera",
+    "creator": "Cormac McCarthy",
+    "year": 2006,
+    "wikidataId": "Q1140295",
+    "wdYears": [
+      2006
+    ]
+  },
+  {
+    "id": "book:meridiano-de-sangre-1985",
+    "title": "Meridiano de sangre",
+    "creator": "Cormac McCarthy",
+    "year": 1985,
+    "wikidataId": "Q581426",
+    "wdYears": [
+      1985
+    ]
+  },
+  {
+    "id": "book:el-camino-1950",
+    "title": "El camino",
+    "creator": "Miguel Delibes",
+    "year": 1950,
+    "wikidataId": "Q1324713",
+    "wdYears": [
+      1950
+    ]
+  },
+  {
+    "id": "book:los-santos-inocentes-1981",
+    "title": "Los santos inocentes",
+    "creator": "Miguel Delibes",
+    "year": 1981,
+    "wikidataId": "Q1218618",
+    "wdYears": [
+      1981
+    ]
+  },
+  {
+    "id": "book:cinco-horas-con-mario-1966",
+    "title": "Cinco horas con Mario",
+    "creator": "Miguel Delibes",
+    "year": 1966,
+    "wikidataId": "Q125537565",
+    "wdYears": []
+  },
+  {
+    "id": "book:la-colmena-1951",
+    "title": "La colmena",
+    "creator": "Camilo José Cela",
+    "year": 1951,
+    "wikidataId": "Q3212510",
+    "wdYears": [
+      1951
+    ]
+  },
+  {
+    "id": "book:la-familia-de-pascual-duarte-1942",
+    "title": "La familia de Pascual Duarte",
+    "creator": "Camilo José Cela",
+    "year": 1942,
+    "wikidataId": "Q1002647",
+    "wdYears": [
+      2008
+    ]
+  },
+  {
+    "id": "book:el-arbol-de-la-ciencia-1911",
+    "title": "El árbol de la ciencia",
+    "creator": "Pío Baroja",
+    "year": 1911,
+    "wikidataId": "Q3726567",
+    "wdYears": [
+      1911
+    ]
+  },
+  {
+    "id": "book:niebla-1914",
+    "title": "Niebla",
+    "creator": "Miguel de Unamuno",
+    "year": 1914,
+    "wikidataId": "Q2604439",
+    "wdYears": [
+      1907,
+      1914
+    ]
+  },
+  {
+    "id": "book:bodas-de-sangre-1933",
+    "title": "Bodas de sangre",
+    "creator": "Federico García Lorca",
+    "year": 1933,
+    "wikidataId": "Q886624",
+    "wdYears": []
+  },
+  {
+    "id": "book:la-casa-de-bernarda-alba-1936",
+    "title": "La casa de Bernarda Alba",
+    "creator": "Federico García Lorca",
+    "year": 1936,
+    "wikidataId": "Q822850",
+    "wdYears": [
+      1946
+    ]
+  },
+  {
+    "id": "book:platero-y-yo-1914",
+    "title": "Platero y yo",
+    "creator": "Juan Ramón Jiménez",
+    "year": 1914,
+    "wikidataId": "Q2916224",
+    "wdYears": [
+      1914
+    ]
+  },
+  {
+    "id": "book:el-tiempo-entre-costuras-2009",
+    "title": "El tiempo entre costuras",
+    "creator": "María Dueñas",
+    "year": 2009,
+    "wikidataId": "Q3823406",
+    "wdYears": [
+      2009
+    ]
+  },
+  {
+    "id": "book:dime-quien-soy-2010",
+    "title": "Dime quién soy",
+    "creator": "Julia Navarro",
+    "year": 2010,
+    "wikidataId": "Q5807201",
+    "wdYears": [
+      2010
+    ]
+  },
+  {
+    "id": "book:el-medico-1986",
+    "title": "El médico",
+    "creator": "Noah Gordon",
+    "year": 1986,
+    "wikidataId": "Q687787",
+    "wdYears": [
+      1986
+    ]
+  },
+  {
+    "id": "book:el-clan-del-oso-cavernario-1980",
+    "title": "El clan del oso cavernario",
+    "creator": "Jean M. Auel",
+    "year": 1980,
+    "wikidataId": "Q2328959",
+    "wdYears": [
+      1980
+    ]
+  },
+  {
+    "id": "book:la-chica-del-tren-2015",
+    "title": "La chica del tren",
+    "creator": "Paula Hawkins",
+    "year": 2015,
+    "wikidataId": "Q19843206",
+    "wdYears": [
+      2015
+    ]
+  },
+  {
+    "id": "book:perdida-2012",
+    "title": "Perdida",
+    "creator": "Gillian Flynn",
+    "year": 2012,
+    "wikidataId": "Q5581570",
+    "wdYears": [
+      2012
+    ]
+  },
+  {
+    "id": "book:el-silencio-de-la-ciudad-blanca-2016",
+    "title": "El silencio de la ciudad blanca",
+    "creator": "Eva García Sáenz de Urturi",
+    "year": 2016,
+    "wikidataId": "Q27067964",
+    "wdYears": [
+      2016
+    ]
+  },
+  {
+    "id": "book:reina-roja-2018",
+    "title": "Reina roja",
+    "creator": "Juan Gómez-Jurado",
+    "year": 2018,
+    "wikidataId": "Q102046706",
+    "wdYears": []
+  },
+  {
+    "id": "book:loba-negra-2019",
+    "title": "Loba negra",
+    "creator": "Juan Gómez-Jurado",
+    "year": 2019,
+    "wikidataId": "Q110763759",
+    "wdYears": [
+      2019
+    ]
+  },
+  {
+    "id": "book:rey-blanco-2020",
+    "title": "Rey blanco",
+    "creator": "Juan Gómez-Jurado",
+    "year": 2020,
+    "wdYears": []
+  },
+  {
+    "id": "book:todo-esto-te-dare-2016",
+    "title": "Todo esto te daré",
+    "creator": "Dolores Redondo",
+    "year": 2016,
+    "wikidataId": "Q29872584",
+    "wdYears": [
+      2016
+    ]
+  },
+  {
+    "id": "book:el-guardian-invisible-2013",
+    "title": "El guardián invisible",
+    "creator": "Dolores Redondo",
+    "year": 2013,
+    "wikidataId": "Q31281729",
+    "wdYears": [
+      2013
+    ]
+  },
+  {
+    "id": "book:el-nombre-del-viento-2007",
+    "title": "El nombre del viento",
+    "creator": "Patrick Rothfuss",
+    "year": 2007,
+    "wikidataId": "Q1195989",
+    "wdYears": [
+      2007
+    ]
+  },
+  {
+    "id": "book:el-temor-de-un-hombre-sabio-2011",
+    "title": "El temor de un hombre sabio",
+    "creator": "Patrick Rothfuss",
+    "year": 2011,
+    "wikidataId": "Q2016359",
+    "wdYears": [
+      2011
+    ]
+  },
+  {
+    "id": "book:la-nausea-1938",
+    "title": "La náusea",
+    "creator": "Jean-Paul Sartre",
+    "year": 1938,
+    "wikidataId": "Q658288",
+    "wdYears": [
+      1932,
+      1938
+    ]
+  },
+  {
+    "id": "book:el-mito-de-sisifo-1942",
+    "title": "El mito de Sísifo",
+    "creator": "Albert Camus",
+    "year": 1942,
+    "wikidataId": "Q1125903",
+    "wdYears": [
+      1942
+    ]
+  },
+  {
+    "id": "book:asi-hablo-zaratustra-1883",
+    "title": "Así habló Zaratustra",
+    "creator": "Friedrich Nietzsche",
+    "year": 1883,
+    "wikidataId": "Q199774",
+    "wdYears": [
+      1883,
+      1885
+    ]
+  },
+  {
+    "id": "book:mas-alla-del-bien-y-del-mal-1886",
+    "title": "Más allá del bien y del mal",
+    "creator": "Friedrich Nietzsche",
+    "year": 1886,
+    "wikidataId": "Q579794",
+    "wdYears": [
+      1886
+    ]
+  },
+  {
+    "id": "book:el-banquete--385",
+    "title": "El banquete",
+    "creator": "Platón",
+    "year": -385,
+    "wikidataId": "Q486727",
+    "wdYears": []
+  },
+  {
+    "id": "book:la-republica--375",
+    "title": "La república",
+    "creator": "Platón",
+    "year": -375,
+    "wikidataId": "Q123397",
+    "wdYears": [
+      -379,
+      1963
+    ]
+  },
+  {
+    "id": "book:etica-a-nicomaco--340",
+    "title": "Ética a Nicómaco",
+    "creator": "Aristóteles",
+    "year": -340,
+    "wikidataId": "Q474537",
+    "wdYears": []
+  },
+  {
+    "id": "book:cartas-a-lucilio-65",
+    "title": "Cartas a Lucilio",
+    "creator": "Séneca",
+    "year": 65,
+    "wikidataId": "Q720535",
+    "wdYears": []
+  },
+  {
+    "id": "book:sobre-la-brevedad-de-la-vida-49",
+    "title": "Sobre la brevedad de la vida",
+    "creator": "Séneca",
+    "year": 49,
+    "wdYears": []
+  },
+  {
+    "id": "book:el-arte-de-tener-razon-1831",
+    "title": "El arte de tener razón",
+    "creator": "Arthur Schopenhauer",
+    "year": 1831,
+    "wikidataId": "Q432196",
+    "wdYears": [
+      1830,
+      1864
+    ]
+  },
+  {
+    "id": "book:vigilar-y-castigar-1975",
+    "title": "Vigilar y castigar",
+    "creator": "Michel Foucault",
+    "year": 1975,
+    "wikidataId": "Q334370",
+    "wdYears": [
+      1975
+    ]
+  },
+  {
+    "id": "book:la-sociedad-del-cansancio-2010",
+    "title": "La sociedad del cansancio",
+    "creator": "Byung-Chul Han",
+    "year": 2010,
+    "wikidataId": "Q138528911",
+    "wdYears": [
+      2024
+    ]
+  },
+  {
+    "id": "book:el-aroma-del-tiempo-2009",
+    "title": "El aroma del tiempo",
+    "creator": "Byung-Chul Han",
+    "year": 2009,
+    "wikidataId": "Q130172397",
+    "wdYears": []
+  },
+  {
+    "id": "book:el-laberinto-de-la-soledad-1950",
+    "title": "El laberinto de la soledad",
+    "creator": "Octavio Paz",
+    "year": 1950,
+    "wikidataId": "Q645470",
+    "wdYears": [
+      1950
+    ]
+  },
+  {
+    "id": "book:las-venas-abiertas-de-america-latina-1971",
+    "title": "Las venas abiertas de América Latina",
+    "creator": "Eduardo Galeano",
+    "year": 1971,
+    "wikidataId": "Q1084670",
+    "wdYears": [
+      1971
+    ]
+  },
+  {
+    "id": "book:el-libro-de-los-abrazos-1989",
+    "title": "El libro de los abrazos",
+    "creator": "Eduardo Galeano",
+    "year": 1989,
+    "wikidataId": "Q130219689",
+    "wdYears": []
+  },
+  {
+    "id": "book:el-corazon-de-las-tinieblas-1899",
+    "title": "El corazón de las tinieblas",
+    "creator": "Joseph Conrad",
+    "year": 1899,
+    "wikidataId": "Q129778",
+    "wdYears": [
+      1899
+    ]
+  },
+  {
+    "id": "book:lord-jim-1900",
+    "title": "Lord Jim",
+    "creator": "Joseph Conrad",
+    "year": 1900,
+    "wikidataId": "Q727408",
+    "wdYears": [
+      1900
+    ]
+  },
+  {
+    "id": "book:cronicas-marcianas-1950",
+    "title": "Crónicas marcianas",
+    "creator": "Ray Bradbury",
+    "year": 1950,
+    "wikidataId": "Q918052",
+    "wdYears": [
+      1950
+    ]
+  },
+  {
+    "id": "book:solaris-1961",
+    "title": "Solaris",
+    "creator": "Stanislaw Lem",
+    "year": 1961,
+    "wikidataId": "Q261281",
+    "wdYears": [
+      1960,
+      1961
+    ]
+  },
+  {
+    "id": "book:el-fin-de-la-eternidad-1955",
+    "title": "El fin de la eternidad",
+    "creator": "Isaac Asimov",
+    "year": 1955,
+    "wikidataId": "Q466196",
+    "wdYears": [
+      1955
+    ]
+  },
+  {
+    "id": "book:neuromante-1984",
+    "title": "Neuromante",
+    "creator": "William Gibson",
+    "year": 1984,
+    "wikidataId": "Q662029",
+    "wdYears": [
+      1983,
+      1984
+    ]
+  },
+  {
+    "id": "book:suenan-los-androides-con-ovejas-electricas-1968",
+    "title": "¿Sueñan los androides con ovejas eléctricas?",
+    "creator": "Philip K. Dick",
+    "year": 1968,
+    "wikidataId": "Q605249",
+    "wdYears": [
+      1968
+    ]
+  },
+  {
+    "id": "book:ubik-1969",
+    "title": "Ubik",
+    "creator": "Philip K. Dick",
+    "year": 1969,
+    "wikidataId": "Q617357",
+    "wdYears": [
+      1969
+    ]
+  },
+  {
+    "id": "book:el-hombre-en-el-castillo-1962",
+    "title": "El hombre en el castillo",
+    "creator": "Philip K. Dick",
+    "year": 1962,
+    "wikidataId": "Q749783",
+    "wdYears": [
+      1962
+    ]
+  },
+  {
+    "id": "book:la-maquina-del-tiempo-1895",
+    "title": "La máquina del tiempo",
+    "creator": "H. G. Wells",
+    "year": 1895,
+    "wikidataId": "Q627333",
+    "wdYears": [
+      1895
+    ]
+  },
+  {
+    "id": "book:la-guerra-de-los-mundos-1898",
+    "title": "La guerra de los mundos",
+    "creator": "H. G. Wells",
+    "year": 1898,
+    "wikidataId": "Q213019",
+    "wdYears": [
+      1897
+    ]
+  },
+  {
+    "id": "book:el-hombre-invisible-1897",
+    "title": "El hombre invisible",
+    "creator": "H. G. Wells",
+    "year": 1897,
+    "wikidataId": "Q1539509",
+    "wdYears": [
+      1897
+    ]
+  },
+  {
+    "id": "book:la-isla-del-tesoro-1883",
+    "title": "La isla del tesoro",
+    "creator": "Robert Louis Stevenson",
+    "year": 1883,
+    "wikidataId": "Q185118",
+    "wdYears": [
+      1883
+    ]
+  },
+  {
+    "id": "book:el-extrano-caso-del-doctor-jekyll-y-el-senor-hyde-1886",
+    "title": "El extraño caso del doctor Jekyll y el señor Hyde",
+    "creator": "Robert Louis Stevenson",
+    "year": 1886,
+    "wikidataId": "Q217352",
+    "wdYears": [
+      1885,
+      1886
+    ]
+  },
+  {
+    "id": "book:las-aventuras-de-sherlock-holmes-1892",
+    "title": "Las aventuras de Sherlock Holmes",
+    "creator": "Arthur Conan Doyle",
+    "year": 1892,
+    "wikidataId": "Q392147",
+    "wdYears": [
+      1892
+    ]
+  },
+  {
+    "id": "book:el-sabueso-de-los-baskerville-1902",
+    "title": "El sabueso de los Baskerville",
+    "creator": "Arthur Conan Doyle",
+    "year": 1902,
+    "wikidataId": "Q45192",
+    "wdYears": [
+      1902
+    ]
+  },
+  {
+    "id": "book:diez-negritos-y-no-quedo-ninguno-1939",
+    "title": "Diez negritos (Y no quedó ninguno)",
+    "creator": "Agatha Christie",
+    "year": 1939,
+    "wikidataId": "Q214132",
+    "wdYears": [
+      1939
+    ]
+  },
+  {
+    "id": "book:asesinato-en-el-orient-express-1934",
+    "title": "Asesinato en el Orient Express",
+    "creator": "Agatha Christie",
+    "year": 1934,
+    "wikidataId": "Q845889",
+    "wdYears": [
+      1934
+    ]
+  },
+  {
+    "id": "book:el-asesinato-de-roger-ackroyd-1926",
+    "title": "El asesinato de Roger Ackroyd",
+    "creator": "Agatha Christie",
+    "year": 1926,
+    "wikidataId": "Q224078",
+    "wdYears": [
+      1926
+    ]
+  },
+  {
+    "id": "book:muerte-en-el-nilo-1937",
+    "title": "Muerte en el Nilo",
+    "creator": "Agatha Christie",
+    "year": 1937,
+    "wikidataId": "Q381756",
+    "wdYears": [
+      1937
+    ]
+  },
+  {
+    "id": "book:el-dragon-rojo-1981",
+    "title": "El dragón rojo",
+    "creator": "Thomas Harris",
+    "year": 1981,
+    "wikidataId": "Q9144808",
+    "wdYears": [
+      1981
+    ]
+  },
+  {
+    "id": "book:la-campana-de-cristal-1963",
+    "title": "La campana de cristal",
+    "creator": "Sylvia Plath",
+    "year": 1963,
+    "wikidataId": "Q1213085",
+    "wdYears": [
+      1963
+    ]
+  },
+  {
+    "id": "book:una-habitacion-propia-1929",
+    "title": "Una habitación propia",
+    "creator": "Virginia Woolf",
+    "year": 1929,
+    "wikidataId": "Q1204366",
+    "wdYears": [
+      1929
+    ]
+  },
+  {
+    "id": "book:orlando-1928",
+    "title": "Orlando",
+    "creator": "Virginia Woolf",
+    "year": 1928,
+    "wikidataId": "Q1629456",
+    "wdYears": [
+      1928
+    ]
+  },
+  {
+    "id": "book:al-faro-1927",
+    "title": "Al faro",
+    "creator": "Virginia Woolf",
+    "year": 1927,
+    "wikidataId": "Q478016",
+    "wdYears": [
+      1927
+    ]
+  },
+  {
+    "id": "book:la-senora-dalloway-1925",
+    "title": "La señora Dalloway",
+    "creator": "Virginia Woolf",
+    "year": 1925,
+    "wikidataId": "Q752584",
+    "wdYears": [
+      1925
+    ]
+  },
+  {
+    "id": "book:pedro-y-juan-1887",
+    "title": "Pedro y Juan",
+    "creator": "Guy de Maupassant",
+    "year": 1887,
+    "wdYears": []
+  },
+  {
+    "id": "book:bel-ami-1885",
+    "title": "Bel-Ami",
+    "creator": "Guy de Maupassant",
+    "year": 1885,
+    "wikidataId": "Q339761",
+    "wdYears": [
+      1885
+    ]
+  },
+  {
+    "id": "book:bola-de-sebo-1880",
+    "title": "Bola de sebo",
+    "creator": "Guy de Maupassant",
+    "year": 1880,
+    "wikidataId": "Q63971",
+    "wdYears": [
+      1880
+    ]
+  },
+  {
+    "id": "book:atomic-habits-2016",
+    "title": "Hábitos atómicos",
+    "creator": "James Clear",
+    "year": 2016,
+    "wikidataId": "Q98178602",
+    "wdYears": [
+      2018
+    ]
+  },
+  {
+    "id": "book:the-48-laws-of-power-1998",
+    "title": "Las 48 leyes del poder",
+    "creator": "Robert Greene",
+    "year": 1998,
+    "wikidataId": "Q574219",
+    "wdYears": [
+      2000
+    ]
+  },
+  {
+    "id": "book:rich-dad-poor-dad-1990",
+    "title": "Rich Dad, Poor Dad",
+    "creator": "Robert T. Kiyosaki",
+    "year": 1990,
+    "wikidataId": "Q2342159",
+    "wdYears": [
+      1997
+    ]
+  },
+  {
+    "id": "book:it-1986",
+    "title": "It",
+    "creator": "Stephen King",
+    "year": 1986,
+    "wikidataId": "Q602288",
+    "wdYears": [
+      1986
+    ]
+  },
+  {
+    "id": "book:the-psychology-of-money-2020",
+    "title": "La psicología del dinero",
+    "creator": "Morgan Housel",
+    "year": 2020,
+    "wikidataId": "Q119572212",
+    "wdYears": [
+      2020
+    ]
+  },
+  {
+    "id": "book:how-to-win-friends-and-influence-people-1936",
+    "title": "How to Win Friends and Influence People",
+    "creator": "Dale Carnegie",
+    "year": 1936,
+    "wikidataId": "Q960077",
+    "wdYears": [
+      1936
+    ]
+  },
+  {
+    "id": "book:think-and-grow-rich-1937",
+    "title": "Think and Grow Rich",
+    "creator": "Napoleon Hill",
+    "year": 1937,
+    "wikidataId": "Q1187907",
+    "wdYears": [
+      1937
+    ]
+  },
+  {
+    "id": "book:this-thing-called-love-2024",
+    "title": "This Thing Called love",
+    "creator": "Deblina Bhattacharya",
+    "year": 2024,
+    "wdYears": []
+  },
+  {
+    "id": "book:haunting-adeline-2021",
+    "title": "Haunting Adeline",
+    "creator": "H. D. Carlton",
+    "year": 2021,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-subtle-art-of-not-giving-a-f-ck-2016",
+    "title": "The Subtle Art of Not Giving a F*ck",
+    "creator": "Mark Manson",
+    "year": 2016,
+    "wikidataId": "Q54488972",
+    "wdYears": [
+      2016
+    ]
+  },
+  {
+    "id": "book:twisted-love-2021",
+    "title": "Twisted Love",
+    "creator": "Ana Huang",
+    "year": 2021,
+    "wikidataId": "Q105481050",
+    "wdYears": [
+      1893
+    ]
+  },
+  {
+    "id": "book:the-power-of-your-subconscious-mind-1963",
+    "title": "The Power of Your Subconscious Mind",
+    "creator": "Joseph Murphy",
+    "year": 1963,
+    "wikidataId": "Q60907398",
+    "wdYears": []
+  },
+  {
+    "id": "book:the-7-habits-of-highly-effective-people-1989",
+    "title": "The 7 Habits of Highly Effective People",
+    "creator": "Stephen R. Covey",
+    "year": 1989,
+    "wikidataId": "Q1053942",
+    "wdYears": [
+      1989
+    ]
+  },
+  {
+    "id": "book:the-laws-of-human-nature-2018",
+    "title": "The Laws of Human Nature",
+    "creator": "Robert Greene",
+    "year": 2018,
+    "wikidataId": "Q105952010",
+    "wdYears": [
+      2019
+    ]
+  },
+  {
+    "id": "book:can-t-hurt-me-2018",
+    "title": "Can't Hurt Me",
+    "creator": "David Goggins",
+    "year": 2018,
+    "wikidataId": "Q59390773",
+    "wdYears": [
+      2018
+    ]
+  },
+  {
+    "id": "book:we-were-never-meant-to-be-2025",
+    "title": "We Were Never Meant To Be",
+    "creator": "Palle Vasu",
+    "year": 2025,
+    "wdYears": []
+  },
+  {
+    "id": "book:diary-of-a-wimpy-kid-2007",
+    "title": "Diary of a Wimpy Kid",
+    "creator": "Jeff Kinney",
+    "year": 2007,
+    "wikidataId": "Q3285408",
+    "wdYears": [
+      2007
+    ]
+  },
+  {
+    "id": "book:the-lightning-thief-2005",
+    "title": "The Lightning Thief",
+    "creator": "Rick Riordan",
+    "year": 2005,
+    "wikidataId": "Q501514",
+    "wdYears": [
+      2005
+    ]
+  },
+  {
+    "id": "book:the-hunger-games-2008",
+    "title": "The Hunger Games",
+    "creator": "Suzanne Collins",
+    "year": 2008,
+    "wikidataId": "Q11678",
+    "wdYears": [
+      2008
+    ]
+  },
+  {
+    "id": "book:trotzdem-ja-zum-leben-sagen-1946",
+    "title": "... Trotzdem Ja zum Leben sagen",
+    "creator": "Viktor Emil Frankl",
+    "year": 1946,
+    "wdYears": []
+  },
+  {
+    "id": "book:thinking-fast-and-slow-2011",
+    "title": "Thinking, fast and slow",
+    "creator": "Daniel Kahneman",
+    "year": 2011,
+    "wdYears": []
+  },
+  {
+    "id": "book:can-we-be-strangers-again-2024",
+    "title": "Can We Be Strangers Again?",
+    "creator": "Shrijeet Shandilya",
+    "year": 2024,
+    "wdYears": []
+  },
+  {
+    "id": "book:esquire-s-the-new-rules-for-men-2016",
+    "title": "Esquire's The New Rules for Men",
+    "creator": "Esquire",
+    "year": 2016,
+    "wdYears": []
+  },
+  {
+    "id": "book:wuthering-heights-1846",
+    "title": "Wuthering Heights",
+    "creator": "Emily Brontë",
+    "year": 1846,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-art-of-seduction-2001",
+    "title": "The Art of Seduction",
+    "creator": "Robert Greene",
+    "year": 2001,
+    "wikidataId": "Q7714481",
+    "wdYears": [
+      2001
+    ]
+  },
+  {
+    "id": "book:it-ends-with-us-2012",
+    "title": "It Ends With Us",
+    "creator": "Colleen Hoover",
+    "year": 2012,
+    "wikidataId": "Q94292018",
+    "wdYears": [
+      2016
+    ]
+  },
+  {
+    "id": "book:animal-farm-1945",
+    "title": "Animal Farm",
+    "creator": "George Orwell",
+    "year": 1945,
+    "wikidataId": "Q1396889",
+    "wdYears": [
+      1945
+    ]
+  },
+  {
+    "id": "book:the-deal-2000",
+    "title": "The Deal",
+    "creator": "Elle Kennedy",
+    "year": 2000,
+    "wikidataId": "Q21428151",
+    "wdYears": [
+      2015
+    ]
+  },
+  {
+    "id": "book:heated-rivalry-2019",
+    "title": "Heated Rivalry",
+    "creator": "Rachel Reid",
+    "year": 2019,
+    "wikidataId": "Q137730902",
+    "wdYears": [
+      2019
+    ]
+  },
+  {
+    "id": "book:the-mountain-is-you-2020",
+    "title": "The Mountain Is You",
+    "creator": "Brianna Wiest",
+    "year": 2020,
+    "wikidataId": "Q7752482",
+    "wdYears": [
+      1958
+    ]
+  },
+  {
+    "id": "book:22-cells-in-nuremberg-1947",
+    "title": "22 cells in Nuremberg",
+    "creator": "Douglas McGlashan Kelley",
+    "year": 1947,
+    "wdYears": []
+  },
+  {
+    "id": "book:a-little-life-2008",
+    "title": "A Little Life",
+    "creator": "Hanya Yanagihara",
+    "year": 2008,
+    "wikidataId": "Q20709044",
+    "wdYears": [
+      2015
+    ]
+  },
+  {
+    "id": "book:-1866",
+    "title": "Преступление и наказание",
+    "creator": "Fiódor Dostoievski",
+    "year": 1866,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-love-hypothesis-2021",
+    "title": "La hipótesis del amor",
+    "creator": "Ali Hazelwood",
+    "year": 2021,
+    "wikidataId": "Q110269198",
+    "wdYears": []
+  },
+  {
+    "id": "book:girl-in-pieces-2000",
+    "title": "Chicas de papel",
+    "creator": "Kathleen Glasgow",
+    "year": 2000,
+    "wdYears": []
+  },
+  {
+    "id": "book:a-good-girl-s-guide-to-murder-2019",
+    "title": "A Good Girl's Guide to Murder",
+    "creator": "Holly Jackson",
+    "year": 2019,
+    "wikidataId": "Q108749605",
+    "wdYears": [
+      2019
+    ]
+  },
+  {
+    "id": "book:the-silent-patient-2018",
+    "title": "La paciente silenciosa",
+    "creator": "Alex Michaelides",
+    "year": 2018,
+    "wikidataId": "Q97516163",
+    "wdYears": [
+      2019
+    ]
+  },
+  {
+    "id": "book:talking-with-psychopaths-and-savages-2019",
+    "title": "Talking With Psychopaths and Savages",
+    "creator": "Christopher Berry-Dee",
+    "year": 2019,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-housemaid-2022",
+    "title": "La asistenta",
+    "creator": "Freida McFadden",
+    "year": 2022,
+    "wikidataId": "Q121304605",
+    "wdYears": [
+      2022
+    ]
+  },
+  {
+    "id": "book:ikigai-2016",
+    "title": "Ikigai",
+    "creator": "Héctor García",
+    "year": 2016,
+    "wdYears": []
+  },
+  {
+    "id": "book:twilight-2005",
+    "title": "Twilight",
+    "creator": "Stephenie Meyer",
+    "year": 2005,
+    "wikidataId": "Q189378",
+    "wdYears": [
+      2005
+    ]
+  },
+  {
+    "id": "book:harry-potter-and-the-chamber-of-secrets-1998",
+    "title": "Harry Potter y la cámara secreta",
+    "creator": "J. K. Rowling",
+    "year": 1998,
+    "wikidataId": "Q47209",
+    "wdYears": [
+      1998
+    ]
+  },
+  {
+    "id": "book:icebreaker-2020",
+    "title": "Romper el hielo",
+    "creator": "Hannah Grace",
+    "year": 2020,
+    "wikidataId": "Q2636040",
+    "wdYears": [
+      1989
+    ]
+  },
+  {
+    "id": "book:deep-work-2016",
+    "title": "Deep Work",
+    "creator": "Cal Newport",
+    "year": 2016,
+    "wikidataId": "Q54408847",
+    "wdYears": [
+      2016
+    ]
+  },
+  {
+    "id": "book:diary-of-a-wimpy-kid-party-pooper-2025",
+    "title": "Diary of a Wimpy Kid Party Pooper",
+    "creator": "Jeff Kinney",
+    "year": 2025,
+    "wikidataId": "Q133278529",
+    "wdYears": []
+  },
+  {
+    "id": "book:the-let-them-theory-2024",
+    "title": "La teoría Let Them",
+    "creator": "Mel Robbins",
+    "year": 2024,
+    "wikidataId": "Q134348080",
+    "wdYears": []
+  },
+  {
+    "id": "book:lights-out-2024",
+    "title": "Lights Out",
+    "creator": "Navessa Allen",
+    "year": 2024,
+    "wdYears": []
+  },
+  {
+    "id": "book:powerless-2023",
+    "title": "Powerless",
+    "creator": "Lauren Roberts",
+    "year": 2023,
+    "wdYears": []
+  },
+  {
+    "id": "book:-2013",
+    "title": "嫌われる勇気",
+    "creator": "Ichirō Kishimi",
+    "year": 2013,
+    "wikidataId": "Q125584224",
+    "wdYears": [
+      2018
+    ]
+  },
+  {
+    "id": "book:sapiens-2011",
+    "title": "Sapiens",
+    "creator": "Yuval Noah Harari",
+    "year": 2011,
+    "wdYears": []
+  },
+  {
+    "id": "book:project-hail-mary-2021",
+    "title": "Proyecto Hail Mary",
+    "creator": "Andy Weir",
+    "year": 2021,
+    "wikidataId": "Q106852836",
+    "wdYears": [
+      2021
+    ]
+  },
+  {
+    "id": "book:verity-2018",
+    "title": "Verity (La sombra de un engaño)",
+    "creator": "Colleen Hoover",
+    "year": 2018,
+    "wikidataId": "Q120790558",
+    "wdYears": [
+      2018
+    ]
+  },
+  {
+    "id": "book:the-richest-man-in-babylon-1926",
+    "title": "El hombre más rico de Babilonia",
+    "creator": "George S. Clason",
+    "year": 1926,
+    "wikidataId": "Q124751561",
+    "wdYears": [
+      1930
+    ]
+  },
+  {
+    "id": "book:a-court-of-thorns-and-roses-2013",
+    "title": "Una corte de rosas y espinas",
+    "creator": "Sarah J. Maas",
+    "year": 2013,
+    "wikidataId": "Q60979203",
+    "wdYears": []
+  },
+  {
+    "id": "book:mindset-2006",
+    "title": "Mindset: La actitud del éxito",
+    "creator": "Carol S. Dweck",
+    "year": 2006,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-art-of-being-alone-2023",
+    "title": "The Art of Being Alone",
+    "creator": "Renuka Gavrani",
+    "year": 2023,
+    "wdYears": []
+  },
+  {
+    "id": "book:i-don-t-love-you-anymore-2024",
+    "title": "I Don't Love You Anymore",
+    "creator": "Rithvik Singh",
+    "year": 2024,
+    "wikidataId": "Q139262851",
+    "wdYears": []
+  },
+  {
+    "id": "book:a-thousand-splendid-suns-2007",
+    "title": "Mil soles espléndidos",
+    "creator": "Khaled Hosseini",
+    "year": 2007,
+    "wikidataId": "Q860633",
+    "wdYears": [
+      2007
+    ]
+  },
+  {
+    "id": "book:harry-potter-and-the-order-of-the-phoenix-2003",
+    "title": "Harry Potter y la Orden del Fénix",
+    "creator": "J. K. Rowling",
+    "year": 2003,
+    "wdYears": []
+  },
+  {
+    "id": "book:shatter-me-2011",
+    "title": "Shatter Me",
+    "creator": "Tahereh Mafi",
+    "year": 2011,
+    "wikidataId": "Q7490684",
+    "wdYears": [
+      2011
+    ]
+  },
+  {
+    "id": "book:the-great-gatsby-1920",
+    "title": "The Great Gatsby",
+    "creator": "F. Scott Fitzgerald",
+    "year": 1920,
+    "wdYears": []
+  },
+  {
+    "id": "book:hunting-adeline-2021",
+    "title": "Hunting Adeline",
+    "creator": "H. D. Carlton",
+    "year": 2021,
+    "wdYears": []
+  },
+  {
+    "id": "book:fourth-wing-2023",
+    "title": "Fourth Wing",
+    "creator": "Rebecca Yarros",
+    "year": 2023,
+    "wikidataId": "Q120798796",
+    "wdYears": [
+      2023
+    ]
+  },
+  {
+    "id": "book:the-kite-runner-2003",
+    "title": "The Kite Runner",
+    "creator": "Khaled Hosseini",
+    "year": 2003,
+    "wikidataId": "Q637839",
+    "wdYears": [
+      2003
+    ]
+  },
+  {
+    "id": "book:zero-to-one-2001",
+    "title": "Zero to One",
+    "creator": "Peter A. Thiel",
+    "year": 2001,
+    "wikidataId": "Q18786805",
+    "wdYears": [
+      2014
+    ]
+  },
+  {
+    "id": "book:twisted-games-2021",
+    "title": "Twisted Games",
+    "creator": "Ana Huang",
+    "year": 2021,
+    "wikidataId": "Q141430194",
+    "wdYears": [
+      2021
+    ]
+  },
+  {
+    "id": "book:never-lie-2022",
+    "title": "Never Lie",
+    "creator": "Freida McFadden",
+    "year": 2022,
+    "wdYears": []
+  },
+  {
+    "id": "book:better-than-the-movies-2021",
+    "title": "Better Than the Movies",
+    "creator": "Lynn Painter",
+    "year": 2021,
+    "wikidataId": "Q139023502",
+    "wdYears": [
+      2021
+    ]
+  },
+  {
+    "id": "book:how-to-talk-to-anyone-1999",
+    "title": "How to Talk to Anyone",
+    "creator": "Leil Lowndes",
+    "year": 1999,
+    "wdYears": []
+  },
+  {
+    "id": "book:emotional-intelligence-1995",
+    "title": "Emotional Intelligence",
+    "creator": "Daniel Goleman",
+    "year": 1995,
+    "wikidataId": "Q1275716",
+    "wdYears": [
+      1995
+    ]
+  },
+  {
+    "id": "book:surrounded-by-idiots-2014",
+    "title": "Surrounded by Idiots",
+    "creator": "Thomas Erikson",
+    "year": 2014,
+    "wikidataId": "Q110080050",
+    "wdYears": [
+      2014
+    ]
+  },
+  {
+    "id": "book:meditations-1626",
+    "title": "Meditations",
+    "creator": "Marcus Aurelius",
+    "year": 1626,
+    "wdYears": []
+  },
+  {
+    "id": "book:-1848",
+    "title": "Белые ночи",
+    "creator": "Fiódor Dostoievski",
+    "year": 1848,
+    "wikidataId": "Q600461",
+    "wdYears": [
+      1848
+    ]
+  },
+  {
+    "id": "book:thank-you-for-leaving-2025",
+    "title": "Thank You for Leaving",
+    "creator": "Rithvik Singh",
+    "year": 2025,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-secret-2000",
+    "title": "The Secret",
+    "creator": "Rhonda Byrne",
+    "year": 2000,
+    "wikidataId": "Q641423",
+    "wdYears": [
+      2006
+    ]
+  },
+  {
+    "id": "book:harry-potter-and-the-deathly-hallows-2007",
+    "title": "Harry Potter and the Deathly Hallows",
+    "creator": "J. K. Rowling",
+    "year": 2007,
+    "wikidataId": "Q46758",
+    "wdYears": [
+      2007
+    ]
+  },
+  {
+    "id": "book:fifty-shades-of-grey-2000",
+    "title": "Fifty Shades of Grey",
+    "creator": "E. L. James",
+    "year": 2000,
+    "wikidataId": "Q557867",
+    "wdYears": [
+      2011
+    ]
+  },
+  {
+    "id": "book:read-people-like-a-book-2020",
+    "title": "Read People Like a Book",
+    "creator": "Patrick King",
+    "year": 2020,
+    "wdYears": []
+  },
+  {
+    "id": "book:and-then-there-were-none-1939",
+    "title": "And Then There Were None",
+    "creator": "Agatha Christie",
+    "year": 1939,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-mistake-2015",
+    "title": "The Mistake",
+    "creator": "Elle Kennedy",
+    "year": 2015,
+    "wikidataId": "Q69447835",
+    "wdYears": [
+      1860
+    ]
+  },
+  {
+    "id": "book:the-intelligent-investor-1949",
+    "title": "The Intelligent Investor",
+    "creator": "Benjamin Graham",
+    "year": 1949,
+    "wikidataId": "Q1813889",
+    "wdYears": [
+      1949
+    ]
+  },
+  {
+    "id": "book:the-cruel-prince-2018",
+    "title": "The Cruel Prince",
+    "creator": "Holly Black",
+    "year": 2018,
+    "wikidataId": "Q47008389",
+    "wdYears": [
+      2018
+    ]
+  },
+  {
+    "id": "book:the-bell-jar-1948",
+    "title": "The Bell Jar",
+    "creator": "Sylvia Plath",
+    "year": 1948,
+    "wdYears": []
+  },
+  {
+    "id": "book:carrie-1974",
+    "title": "Carrie",
+    "creator": "Stephen King",
+    "year": 1974,
+    "wikidataId": "Q623394",
+    "wdYears": [
+      1974
+    ]
+  },
+  {
+    "id": "book:the-deal-the-mistake-the-score-the-goal-the-legacy-2021",
+    "title": "The Deal / The Mistake / The Score / The Goal / The Legacy",
+    "creator": "Elle Kennedy",
+    "year": 2021,
+    "wdYears": []
+  },
+  {
+    "id": "book:-1880",
+    "title": "Братья Карамазовы",
+    "creator": "Fiódor Dostoievski",
+    "year": 1880,
+    "wdYears": []
+  },
+  {
+    "id": "book:brave-new-world-1932",
+    "title": "Brave New World",
+    "creator": "Aldous Huxley",
+    "year": 1932,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-power-of-now-1997",
+    "title": "The Power of Now",
+    "creator": "Eckhart Tolle",
+    "year": 1997,
+    "wikidataId": "Q3225854",
+    "wdYears": [
+      1997
+    ]
+  },
+  {
+    "id": "book:lolita-1777",
+    "title": "Lolita",
+    "creator": "Vladimir Nabokov",
+    "year": 1777,
+    "wikidataId": "Q127149",
+    "wdYears": [
+      1950,
+      1955
+    ]
+  },
+  {
+    "id": "book:the-handmaid-s-tale-1985",
+    "title": "The Handmaid's Tale",
+    "creator": "Margaret Atwood",
+    "year": 1985,
+    "wikidataId": "Q1541914",
+    "wdYears": [
+      1985
+    ]
+  },
+  {
+    "id": "book:-1948",
+    "title": "人間失格",
+    "creator": "太宰 治",
+    "year": 1948,
+    "wikidataId": "Q1147583",
+    "wdYears": [
+      1948
+    ]
+  },
+  {
+    "id": "book:der-proce-1825",
+    "title": "Der Proceß",
+    "creator": "Franz Kafka",
+    "year": 1825,
+    "wikidataId": "Q36097",
+    "wdYears": [
+      1914,
+      1925
+    ]
+  },
+  {
+    "id": "book:the-art-of-persuasion-2011",
+    "title": "The art of persuasion",
+    "creator": "Bob Burg",
+    "year": 2011,
+    "wdYears": []
+  },
+  {
+    "id": "book:bible-1200",
+    "title": "Bible",
+    "creator": "Bible",
+    "year": 1200,
+    "wdYears": []
+  },
+  {
+    "id": "book:trading-in-the-zone-2001",
+    "title": "Trading in the zone",
+    "creator": "Mark Douglas",
+    "year": 2001,
+    "wikidataId": "Q106098714",
+    "wdYears": [
+      2000
+    ]
+  },
+  {
+    "id": "book:the-sea-of-monsters-2005",
+    "title": "The Sea of Monsters",
+    "creator": "Rick Riordan",
+    "year": 2005,
+    "wikidataId": "Q901384",
+    "wdYears": [
+      2006
+    ]
+  },
+  {
+    "id": "book:u-n-me-it-s-complicated-2015",
+    "title": "U n Me ... It's Complicated",
+    "creator": "Aditya Nighhot",
+    "year": 2015,
+    "wdYears": []
+  },
+  {
+    "id": "book:twisted-lies-2022",
+    "title": "Twisted Lies",
+    "creator": "Ana Huang",
+    "year": 2022,
+    "wikidataId": "Q141430331",
+    "wdYears": []
+  },
+  {
+    "id": "book:twisted-hate-2022",
+    "title": "Twisted Hate",
+    "creator": "Ana Huang",
+    "year": 2022,
+    "wikidataId": "Q140681545",
+    "wdYears": [
+      2023
+    ]
+  },
+  {
+    "id": "book:harry-potter-and-the-half-blood-prince-2005",
+    "title": "Harry Potter and the Half-Blood Prince",
+    "creator": "J. K. Rowling",
+    "year": 2005,
+    "wikidataId": "Q46887",
+    "wdYears": [
+      2005
+    ]
+  },
+  {
+    "id": "book:moby-dick-1851",
+    "title": "Moby Dick",
+    "creator": "Herman Melville",
+    "year": 1851,
+    "wikidataId": "Q3387840",
+    "wdYears": [
+      1852
+    ]
+  },
+  {
+    "id": "book:influence-1983",
+    "title": "Influence",
+    "creator": "Robert B. Cialdini",
+    "year": 1983,
+    "wdYears": []
+  },
+  {
+    "id": "book:cadaver-exquisito-2015",
+    "title": "Cadáver exquisito",
+    "creator": "Agustina Bazterrica",
+    "year": 2015,
+    "wikidataId": "Q106610620",
+    "wdYears": [
+      2012
+    ]
+  },
+  {
+    "id": "book:alice-s-adventures-in-wonderland-1865",
+    "title": "Alice's Adventures in Wonderland",
+    "creator": "Lewis Carroll",
+    "year": 1865,
+    "wikidataId": "Q92640",
+    "wdYears": [
+      1862,
+      1865
+    ]
+  },
+  {
+    "id": "book:forbidden-knowledge-1996",
+    "title": "Forbidden knowledge",
+    "creator": "Roger Shattuck",
+    "year": 1996,
+    "wikidataId": "Q5467351",
+    "wdYears": [
+      1991
+    ]
+  },
+  {
+    "id": "book:-1883",
+    "title": "कामसूत्र",
+    "creator": "Vatsyāyana",
+    "year": 1883,
+    "wikidataId": "Q47228",
+    "wdYears": []
+  },
+  {
+    "id": "book:it-starts-with-us-2022",
+    "title": "It Starts with Us",
+    "creator": "Colleen Hoover",
+    "year": 2022,
+    "wikidataId": "Q114732771",
+    "wdYears": [
+      2022
+    ]
+  },
+  {
+    "id": "book:corrupt-2015",
+    "title": "Corrupt",
+    "creator": "Penelope Douglas",
+    "year": 2015,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-titan-s-curse-2007",
+    "title": "The Titan's Curse",
+    "creator": "Rick Riordan",
+    "year": 2007,
+    "wikidataId": "Q1140036",
+    "wdYears": [
+      2007
+    ]
+  },
+  {
+    "id": "book:romeo-and-juliet-1597",
+    "title": "Romeo and Juliet",
+    "creator": "William Shakespeare",
+    "year": 1597,
+    "wikidataId": "Q83186",
+    "wdYears": [
+      1590,
+      1597
+    ]
+  },
+  {
+    "id": "book:-1864",
+    "title": "Записки изъ подполья",
+    "creator": "Fiódor Dostoievski",
+    "year": 1864,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-last-olympian-2008",
+    "title": "The Last Olympian",
+    "creator": "Rick Riordan",
+    "year": 2008,
+    "wikidataId": "Q2077641",
+    "wdYears": [
+      2009
+    ]
+  },
+  {
+    "id": "book:the-fellowship-of-the-ring-1954",
+    "title": "The Fellowship of the Ring",
+    "creator": "J.R.R. Tolkien",
+    "year": 1954,
+    "wikidataId": "Q208002",
+    "wdYears": [
+      1954
+    ]
+  },
+  {
+    "id": "book:the-body-keeps-the-score-2014",
+    "title": "The Body Keeps the Score",
+    "creator": "Bessel van der Kolk",
+    "year": 2014,
+    "wikidataId": "Q85806607",
+    "wdYears": [
+      2014
+    ]
+  },
+  {
+    "id": "book:the-score-2016",
+    "title": "The Score",
+    "creator": "Elle Kennedy",
+    "year": 2016,
+    "wdYears": []
+  },
+  {
+    "id": "book:suicide-med-2014",
+    "title": "Suicide Med",
+    "creator": "Freida McFadden",
+    "year": 2014,
+    "wdYears": []
+  },
+  {
+    "id": "book:i-have-no-mouth-and-i-must-scream-1972",
+    "title": "I Have No Mouth and I Must Scream",
+    "creator": "Harlan Ellison",
+    "year": 1972,
+    "wikidataId": "Q2307397",
+    "wdYears": [
+      1966,
+      1967
+    ]
+  },
+  {
+    "id": "book:the-secret-garden-1911",
+    "title": "The Secret Garden",
+    "creator": "Frances Hodgson Burnett",
+    "year": 1911,
+    "wikidataId": "Q472194",
+    "wdYears": [
+      1910,
+      1912
+    ]
+  },
+  {
+    "id": "book:het-achterhuis-1944",
+    "title": "Het Achterhuis",
+    "creator": "Anne Frank",
+    "year": 1944,
+    "wikidataId": "Q6911",
+    "wdYears": [
+      1942,
+      1947
+    ]
+  },
+  {
+    "id": "book:catching-fire-2009",
+    "title": "Catching Fire",
+    "creator": "Suzanne Collins",
+    "year": 2009,
+    "wikidataId": "Q837140",
+    "wdYears": [
+      2009
+    ]
+  },
+  {
+    "id": "book:the-seven-husbands-of-evelyn-hugo-2017",
+    "title": "Los siete maridos de Evelyn Hugo",
+    "creator": "Taylor Jenkins Reid",
+    "year": 2017,
+    "wikidataId": "Q54488337",
+    "wdYears": [
+      2017
+    ]
+  },
+  {
+    "id": "book:the-science-of-getting-rich-or-financial-success-through-creative-thought-1910",
+    "title": "The science of getting rich, or, financial success through creative thought",
+    "creator": "Wallace D. Wattles",
+    "year": 1910,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-midnight-library-2020",
+    "title": "La biblioteca de la medianoche",
+    "creator": "Matt Haig",
+    "year": 2020,
+    "wikidataId": "Q106814534",
+    "wdYears": [
+      2020
+    ]
+  },
+  {
+    "id": "book:the-hitchhiker-s-guide-to-the-galaxy-1979",
+    "title": "The Hitchhiker's Guide to the Galaxy",
+    "creator": "Douglas Adams",
+    "year": 1979,
+    "wikidataId": "Q3107329",
+    "wdYears": [
+      1979
+    ]
+  },
+  {
+    "id": "book:psychology-1977",
+    "title": "Psychology",
+    "creator": "Robert A. Baron",
+    "year": 1977,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-battle-of-the-labyrinth-2005",
+    "title": "The Battle of the Labyrinth",
+    "creator": "Rick Riordan",
+    "year": 2005,
+    "wikidataId": "Q1991641",
+    "wdYears": [
+      2008
+    ]
+  },
+  {
+    "id": "book:the-book-thief-1998",
+    "title": "The Book Thief",
+    "creator": "Markus Zusak",
+    "year": 1998,
+    "wikidataId": "Q819101",
+    "wdYears": [
+      2005,
+      2006
+    ]
+  },
+  {
+    "id": "book:fire-blood-2014",
+    "title": "Fire & Blood",
+    "creator": "George R. R. Martin",
+    "year": 2014,
+    "wikidataId": "Q55611675",
+    "wdYears": [
+      2018
+    ]
+  },
+  {
+    "id": "book:-2015",
+    "title": "コーヒーが冷めないうちに",
+    "creator": "川口俊和",
+    "year": 2015,
+    "wdYears": []
+  },
+  {
+    "id": "book:jane-eyre-1847",
+    "title": "Jane Eyre",
+    "creator": "Charlotte Brontë",
+    "year": 1847,
+    "wikidataId": "Q182961",
+    "wdYears": [
+      1847
+    ]
+  },
+  {
+    "id": "book:red-queen-2015",
+    "title": "Red Queen",
+    "creator": "Victoria Aveyard",
+    "year": 2015,
+    "wikidataId": "Q20967683",
+    "wdYears": [
+      2015
+    ]
+  },
+  {
+    "id": "book:the-lost-hero-2010",
+    "title": "The Lost Hero",
+    "creator": "Rick Riordan",
+    "year": 2010,
+    "wikidataId": "Q2356878",
+    "wdYears": [
+      2010
+    ]
+  },
+  {
+    "id": "book:lord-of-the-flies-1954",
+    "title": "Lord of the Flies",
+    "creator": "William Golding",
+    "year": 1954,
+    "wikidataId": "Q271764",
+    "wdYears": [
+      1954
+    ]
+  },
+  {
+    "id": "book:the-yellow-wallpaper-1892",
+    "title": "The Yellow Wallpaper",
+    "creator": "Charlotte Perkins Gilman",
+    "year": 1892,
+    "wikidataId": "Q462373",
+    "wdYears": [
+      1892
+    ]
+  },
+  {
+    "id": "book:the-hired-girl-2015",
+    "title": "The Hired Girl",
+    "creator": "Laura Amy Schlitz",
+    "year": 2015,
+    "wdYears": []
+  },
+  {
+    "id": "book:rich-dad-poor-dad-for-teens-2004",
+    "title": "Rich Dad, Poor Dad for Teens",
+    "creator": "Robert T. Kiyosaki",
+    "year": 2004,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-song-of-achilles-2011",
+    "title": "The Song of Achilles",
+    "creator": "Madeline Miller",
+    "year": 2011,
+    "wikidataId": "Q21189971",
+    "wdYears": [
+      2011
+    ]
+  },
+  {
+    "id": "book:the-strange-case-of-dr-jekyll-and-mr-hyde-1875",
+    "title": "The Strange Case of Dr. Jekyll and Mr. Hyde",
+    "creator": "Robert Louis Stevenson",
+    "year": 1875,
+    "wdYears": []
+  },
+  {
+    "id": "book:breaking-the-habit-of-being-yourself-2012",
+    "title": "Breaking the habit of being yourself",
+    "creator": "Joe Dispenza",
+    "year": 2012,
+    "wdYears": []
+  },
+  {
+    "id": "book:things-fall-apart-1958",
+    "title": "Things Fall Apart",
+    "creator": "Chinua Achebe",
+    "year": 1958,
+    "wikidataId": "Q622400",
+    "wdYears": [
+      1958,
+      1968
+    ]
+  },
+  {
+    "id": "book:the-catcher-in-the-rye-1945",
+    "title": "The Catcher in the Rye",
+    "creator": "J. D. Salinger",
+    "year": 1945,
+    "wdYears": []
+  },
+  {
+    "id": "book:le-comte-de-monte-cristo-ii-1830",
+    "title": "Le Comte de Monte-Cristo, II",
+    "creator": "Alexandre Dumas",
+    "year": 1830,
+    "wdYears": []
+  },
+  {
+    "id": "book:as-a-man-thinketh-1902",
+    "title": "As a Man Thinketh",
+    "creator": "James Allen",
+    "year": 1902,
+    "wikidataId": "Q4803053",
+    "wdYears": []
+  },
+  {
+    "id": "book:brain-damage-2016",
+    "title": "Brain Damage",
+    "creator": "Freida McFadden",
+    "year": 2016,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-giver-1993",
+    "title": "The Giver",
+    "creator": "Lois Lowry",
+    "year": 1993,
+    "wikidataId": "Q258953",
+    "wdYears": [
+      1993
+    ]
+  },
+  {
+    "id": "book:wings-of-fire-1999",
+    "title": "Wings of Fire",
+    "creator": "A. P. J. Abdul Kalam",
+    "year": 1999,
+    "wikidataId": "Q48995944",
+    "wdYears": []
+  },
+  {
+    "id": "book:the-four-agreements-1997",
+    "title": "The Four Agreements",
+    "creator": "Don Miguel Ruiz",
+    "year": 1997,
+    "wikidataId": "Q11384755",
+    "wdYears": [
+      1997
+    ]
+  },
+  {
+    "id": "book:october-junction-2019",
+    "title": "October Junction",
+    "creator": "Divya Prakash Dubey",
+    "year": 2019,
+    "wdYears": []
+  },
+  {
+    "id": "book:-1874",
+    "title": "Идиот",
+    "creator": "Fiódor Dostoievski",
+    "year": 1874,
+    "wdYears": []
+  },
+  {
+    "id": "book:dark-psychology-and-manipulation-2020",
+    "title": "Dark Psychology and Manipulation",
+    "creator": "William Cooper",
+    "year": 2020,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-art-of-loving-1956",
+    "title": "The Art of Loving",
+    "creator": "Erich Fromm",
+    "year": 1956,
+    "wikidataId": "Q973382",
+    "wdYears": [
+      1956
+    ]
+  },
+  {
+    "id": "book:the-power-of-logic-2009",
+    "title": "The Power of Logic",
+    "creator": "Frances Howard-Snyder",
+    "year": 2009,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-outsiders-1967",
+    "title": "The Outsiders",
+    "creator": "S. E. Hinton",
+    "year": 1967,
+    "wikidataId": "Q1215312",
+    "wdYears": [
+      1967
+    ]
+  },
+  {
+    "id": "book:murder-on-the-orient-express-1933",
+    "title": "Murder on the Orient Express",
+    "creator": "Agatha Christie",
+    "year": 1933,
+    "wikidataId": "Q2352386",
+    "wdYears": [
+      2006
+    ]
+  },
+  {
+    "id": "book:throne-of-glass-2012",
+    "title": "Throne of Glass",
+    "creator": "Sarah J. Maas",
+    "year": 2012,
+    "wikidataId": "Q7798359",
+    "wdYears": [
+      2012
+    ]
+  },
+  {
+    "id": "book:god-of-malice-2022",
+    "title": "God of Malice",
+    "creator": "Rina Kent",
+    "year": 2022,
+    "wdYears": []
+  },
+  {
+    "id": "book:rich-dad-poor-dad-2-2000",
+    "title": "Rich Dad, Poor Dad 2",
+    "creator": "Robert T. Kiyosaki",
+    "year": 2000,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-war-of-the-worlds-2005",
+    "title": "The War of the Worlds",
+    "creator": "H. G. Wells",
+    "year": 2005,
+    "wdYears": []
+  },
+  {
+    "id": "book:until-love-sets-us-apart-2018",
+    "title": "Until Love Sets Us Apart",
+    "creator": "Aditya Nighhot",
+    "year": 2018,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-power-of-positive-thinking-1952",
+    "title": "The Power of Positive Thinking",
+    "creator": "Norman Vincent Peale",
+    "year": 1952,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-summer-i-turned-pretty-trilogy-2009",
+    "title": "The Summer I Turned Pretty Trilogy",
+    "creator": "Jenny Han",
+    "year": 2009,
+    "wikidataId": "Q7637348",
+    "wdYears": []
+  },
+  {
+    "id": "book:red-rising-2014",
+    "title": "Red Rising",
+    "creator": "Pierce Brown",
+    "year": 2014,
+    "wikidataId": "Q18393778",
+    "wdYears": [
+      2014
+    ]
+  },
+  {
+    "id": "book:once-upon-a-broken-heart-2021",
+    "title": "Once Upon a Broken Heart",
+    "creator": "Stephanie Garber",
+    "year": 2021,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-housemaid-s-secret-2023",
+    "title": "The Housemaid's Secret",
+    "creator": "Freida McFadden",
+    "year": 2023,
+    "wikidataId": "Q127896402",
+    "wdYears": [
+      2023
+    ]
+  },
+  {
+    "id": "book:ego-is-the-enemy-2016",
+    "title": "Ego is the Enemy",
+    "creator": "Ryan Holiday",
+    "year": 2016,
+    "wikidataId": "Q28859263",
+    "wdYears": [
+      2016
+    ]
+  },
+  {
+    "id": "book:mein-kampf-1922",
+    "title": "Mein Kampf",
+    "creator": "Adolf Hitler",
+    "year": 1922,
+    "wikidataId": "Q1323886",
+    "wdYears": [
+      1987
+    ]
+  },
+  {
+    "id": "book:the-adventures-of-sherlock-holmes-12-stories-1892",
+    "title": "The Adventures of Sherlock Holmes [12 stories]",
+    "creator": "Arthur Conan Doyle",
+    "year": 1892,
+    "wikidataId": "Q228119",
+    "wdYears": [
+      1891,
+      1893
+    ]
+  },
+  {
+    "id": "book:wrecking-ball-2019",
+    "title": "Wrecking Ball",
+    "creator": "Jeff Kinney",
+    "year": 2019,
+    "wikidataId": "Q73821564",
+    "wdYears": [
+      2019
+    ]
+  },
+  {
+    "id": "book:emma-1815",
+    "title": "Emma",
+    "creator": "Jane Austen",
+    "year": 1815,
+    "wikidataId": "Q223880",
+    "wdYears": [
+      1815
+    ]
+  },
+  {
+    "id": "book:laut-bercerita-2017",
+    "title": "Laut Bercerita",
+    "creator": "Leila S. Chudori",
+    "year": 2017,
+    "wikidataId": "Q97198574",
+    "wdYears": [
+      2017
+    ]
+  },
+  {
+    "id": "book:white-nights-2016",
+    "title": "White Nights",
+    "creator": "Фёдор Михайлович Достоевский",
+    "year": 2016,
+    "wdYears": []
+  },
+  {
+    "id": "book:who-moved-my-cheese-1998",
+    "title": "Who Moved My Cheese?",
+    "creator": "Spencer Johnson",
+    "year": 1998,
+    "wikidataId": "Q139791727",
+    "wdYears": []
+  },
+  {
+    "id": "book:of-mice-and-men-1937",
+    "title": "Of Mice and Men",
+    "creator": "John Steinbeck",
+    "year": 1937,
+    "wikidataId": "Q457977",
+    "wdYears": [
+      1937
+    ]
+  },
+  {
+    "id": "book:dog-days-2007",
+    "title": "Dog Days",
+    "creator": "Jeff Kinney",
+    "year": 2007,
+    "wikidataId": "Q2460841",
+    "wdYears": [
+      2009
+    ]
+  },
+  {
+    "id": "book:charlotte-s-web-1952",
+    "title": "Charlotte's Web",
+    "creator": "E. B. White",
+    "year": 1952,
+    "wikidataId": "Q45735",
+    "wdYears": [
+      1952
+    ]
+  },
+  {
+    "id": "book:tuesdays-with-morrie-1994",
+    "title": "Tuesdays with Morrie",
+    "creator": "Mitch Albom",
+    "year": 1994,
+    "wikidataId": "Q1154340",
+    "wdYears": [
+      1997
+    ]
+  },
+  {
+    "id": "book:the-power-of-habit-2012",
+    "title": "The Power of Habit",
+    "creator": "Charles Duhigg",
+    "year": 2012,
+    "wikidataId": "Q16979586",
+    "wdYears": [
+      2012
+    ]
+  },
+  {
+    "id": "book:-1488",
+    "title": "Ὀδύσσεια",
+    "creator": "Ὅμηρος",
+    "year": 1488,
+    "wikidataId": "Q35160",
+    "wdYears": []
+  },
+  {
+    "id": "book:control-your-mind-and-master-your-feelings-2019",
+    "title": "Control Your Mind and Master Your Feelings",
+    "creator": "Eric Robertson",
+    "year": 2019,
+    "wikidataId": "Q125630911",
+    "wdYears": [
+      2019
+    ]
+  },
+  {
+    "id": "book:charlie-and-the-chocolate-factory-1964",
+    "title": "Charlie and the Chocolate Factory",
+    "creator": "Roald Dahl",
+    "year": 1964,
+    "wikidataId": "Q466605",
+    "wdYears": [
+      1964
+    ]
+  },
+  {
+    "id": "book:how-to-stop-overthinking-forever-2025",
+    "title": "How To Stop Overthinking Forever",
+    "creator": "Rithvik Singh",
+    "year": 2025,
+    "wdYears": []
+  },
+  {
+    "id": "book:100m-offers-2021",
+    "title": "$100M Offers",
+    "creator": "Alex Hormozi",
+    "year": 2021,
+    "wdYears": []
+  },
+  {
+    "id": "book:salem-s-lot-1959",
+    "title": "'Salem’s Lot",
+    "creator": "Stephen King",
+    "year": 1959,
+    "wikidataId": "Q753290",
+    "wdYears": [
+      1975
+    ]
+  },
+  {
+    "id": "book:sense-and-sensibility-1811",
+    "title": "Sense and Sensibility",
+    "creator": "Jane Austen",
+    "year": 1811,
+    "wikidataId": "Q274744",
+    "wdYears": [
+      1811
+    ]
+  },
+  {
+    "id": "book:ugly-love-2014",
+    "title": "Ugly Love",
+    "creator": "Colleen Hoover",
+    "year": 2014,
+    "wdYears": []
+  },
+  {
+    "id": "book:games-people-play-1964",
+    "title": "Games People Play",
+    "creator": "Eric Berne",
+    "year": 1964,
+    "wikidataId": "Q834383",
+    "wdYears": [
+      1964
+    ]
+  },
+  {
+    "id": "book:the-way-of-the-superior-man-1997",
+    "title": "The way of the superior man",
+    "creator": "David Deida",
+    "year": 1997,
+    "wdYears": []
+  },
+  {
+    "id": "book:siddhartha-1922",
+    "title": "Siddhartha",
+    "creator": "Hermann Hesse",
+    "year": 1922,
+    "wikidataId": "Q457289",
+    "wdYears": [
+      1922
+    ]
+  },
+  {
+    "id": "book:dark-psychology-2017",
+    "title": "Dark Psychology",
+    "creator": "Modern Psychology Publishing",
+    "year": 2017,
+    "wdYears": []
+  },
+  {
+    "id": "book:king-of-wrath-2022",
+    "title": "King of Wrath",
+    "creator": "Ana Huang",
+    "year": 2022,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-maze-runner-2009",
+    "title": "The Maze Runner",
+    "creator": "James Dashner",
+    "year": 2009,
+    "wikidataId": "Q18669965",
+    "wdYears": [
+      2009
+    ]
+  },
+  {
+    "id": "book:madilog-1951",
+    "title": "Madilog",
+    "creator": "Tan Malaka",
+    "year": 1951,
+    "wikidataId": "Q22673993",
+    "wdYears": [
+      1943
+    ]
+  },
+  {
+    "id": "book:gunaho-ka-devta-2020",
+    "title": "Gunaho ka Devta",
+    "creator": "Autor",
+    "year": 2020,
+    "wdYears": []
+  },
+  {
+    "id": "book:sunrise-on-the-reaping-2025",
+    "title": "Sunrise on the Reaping",
+    "creator": "Suzanne Collins",
+    "year": 2025,
+    "wikidataId": "Q126390804",
+    "wdYears": [
+      2025
+    ]
+  },
+  {
+    "id": "book:mastery-2012",
+    "title": "Mastery",
+    "creator": "Robert Greene",
+    "year": 2012,
+    "wikidataId": "Q6785515",
+    "wdYears": [
+      2012
+    ]
+  },
+  {
+    "id": "book:me-before-you-2012",
+    "title": "Me Before You",
+    "creator": "Jojo Moyes",
+    "year": 2012,
+    "wikidataId": "Q20657314",
+    "wdYears": [
+      2016
+    ]
+  },
+  {
+    "id": "book:why-i-am-an-atheist-2008",
+    "title": "Why I am an atheist",
+    "creator": "Bhagat Singh",
+    "year": 2008,
+    "wikidataId": "Q16224234",
+    "wdYears": [
+      1930,
+      1931
+    ]
+  },
+  {
+    "id": "book:rodrick-rules-2007",
+    "title": "Rodrick Rules",
+    "creator": "Jeff Kinney",
+    "year": 2007,
+    "wikidataId": "Q20565148",
+    "wdYears": [
+      2012
+    ]
+  },
+  {
+    "id": "book:angels-demons-2000",
+    "title": "Angels & Demons",
+    "creator": "Dan Brown",
+    "year": 2000,
+    "wikidataId": "Q182502",
+    "wdYears": [
+      2000
+    ]
+  },
+  {
+    "id": "book:the-gunslinger-1976",
+    "title": "The Gunslinger",
+    "creator": "Stephen King",
+    "year": 1976,
+    "wikidataId": "Q1422318",
+    "wdYears": [
+      1982
+    ]
+  },
+  {
+    "id": "book:culpa-mia-2014",
+    "title": "Culpa mía",
+    "creator": "Mercedes Ron",
+    "year": 2014,
+    "wikidataId": "Q119352871",
+    "wdYears": [
+      2017
+    ]
+  },
+  {
+    "id": "book:anne-of-green-gables-1908",
+    "title": "Anne of Green Gables",
+    "creator": "Lucy Maud Montgomery",
+    "year": 1908,
+    "wikidataId": "Q3209782",
+    "wdYears": []
+  },
+  {
+    "id": "book:a-court-of-mist-and-fury-2014",
+    "title": "A Court of Mist and Fury",
+    "creator": "Sarah J. Maas",
+    "year": 2014,
+    "wikidataId": "Q101987239",
+    "wdYears": [
+      2016
+    ]
+  },
+  {
+    "id": "book:broken-2016",
+    "title": "Broken",
+    "creator": "Willow Winters",
+    "year": 2016,
+    "wdYears": []
+  },
+  {
+    "id": "book:12-rules-for-life-2015",
+    "title": "12 Rules for Life",
+    "creator": "Jordan B. Peterson",
+    "year": 2015,
+    "wikidataId": "Q51530290",
+    "wdYears": [
+      2018
+    ]
+  },
+  {
+    "id": "book:sofies-verden-1991",
+    "title": "Sofies verden",
+    "creator": "Jostein Gaarder",
+    "year": 1991,
+    "wikidataId": "Q61324",
+    "wdYears": [
+      1991
+    ]
+  },
+  {
+    "id": "book:a-gentle-reminder-2020",
+    "title": "A Gentle Reminder",
+    "creator": "Bianca Sparacino",
+    "year": 2020,
+    "wdYears": []
+  },
+  {
+    "id": "book:-1876",
+    "title": "Анна Каренина",
+    "creator": "Лев Толстой",
+    "year": 1876,
+    "wdYears": []
+  },
+  {
+    "id": "book:pet-sematary-1983",
+    "title": "Pet Sematary",
+    "creator": "Stephen King",
+    "year": 1983,
+    "wikidataId": "Q742226",
+    "wdYears": [
+      1983
+    ]
+  },
+  {
+    "id": "book:the-art-of-thinking-clearly-2013",
+    "title": "The art of thinking clearly",
+    "creator": "Rolf Dobelli",
+    "year": 2013,
+    "wikidataId": "Q105703397",
+    "wdYears": [
+      2011,
+      2013,
+      2014
+    ]
+  },
+  {
+    "id": "book:dog-man-2015",
+    "title": "Dog Man",
+    "creator": "Dav Pilkey",
+    "year": 2015,
+    "wikidataId": "Q56302682",
+    "wdYears": [
+      2016
+    ]
+  },
+  {
+    "id": "book:to-all-the-boys-i-ve-loved-before-2014",
+    "title": "To All the Boys I've Loved Before",
+    "creator": "Jenny Han",
+    "year": 2014,
+    "wikidataId": "Q110946230",
+    "wdYears": []
+  },
+  {
+    "id": "book:the-long-haul-2014",
+    "title": "The Long Haul",
+    "creator": "Jeff Kinney",
+    "year": 2014,
+    "wikidataId": "Q17109240",
+    "wdYears": [
+      2014
+    ]
+  },
+  {
+    "id": "book:i-cannot-say-goodbye-to-you-2025",
+    "title": "I cannot say goodbye to you",
+    "creator": "Rithvik Singh",
+    "year": 2025,
+    "wdYears": []
+  },
+  {
+    "id": "book:becoming-supernatural-2017",
+    "title": "Becoming Supernatural",
+    "creator": "Joe Dispenza",
+    "year": 2017,
+    "wdYears": []
+  },
+  {
+    "id": "book:one-of-us-is-lying-2014",
+    "title": "One Of Us Is Lying",
+    "creator": "Karen M. McManus",
+    "year": 2014,
+    "wikidataId": "Q65070068",
+    "wdYears": [
+      2017
+    ]
+  },
+  {
+    "id": "book:eat-that-frog-21-great-ways-to-stop-procrastinating-and-get-more-done-in-less-time-2001",
+    "title": "Eat That Frog! 21 Great Ways to Stop Procrastinating and Get More Done in Less Time",
+    "creator": "Brian Tracy",
+    "year": 2001,
+    "wdYears": []
+  },
+  {
+    "id": "book:caraval-2000",
+    "title": "Caraval",
+    "creator": "Stephanie Garber",
+    "year": 2000,
+    "wikidataId": "Q105457810",
+    "wdYears": []
+  },
+  {
+    "id": "book:adventures-of-huckleberry-finn-1876",
+    "title": "Adventures of Huckleberry Finn",
+    "creator": "Mark Twain",
+    "year": 1876,
+    "wikidataId": "Q215410",
+    "wdYears": [
+      1884
+    ]
+  },
+  {
+    "id": "book:the-monk-who-sold-his-ferrari-1996",
+    "title": "The Monk Who Sold His Ferrari",
+    "creator": "Robin S. Sharma",
+    "year": 1996,
+    "wikidataId": "Q17069725",
+    "wdYears": [
+      1999
+    ]
+  },
+  {
+    "id": "book:the-law-of-success-1969",
+    "title": "The Law of Success",
+    "creator": "Napoleon Hill",
+    "year": 1969,
+    "wikidataId": "Q6830070",
+    "wdYears": [
+      1928
+    ]
+  },
+  {
+    "id": "book:reminders-of-him-2022",
+    "title": "Reminders of Him",
+    "creator": "Colleen Hoover",
+    "year": 2022,
+    "wdYears": []
+  },
+  {
+    "id": "book:study-guide-the-other-wes-moore-by-wes-moore-2018",
+    "title": "Study Guide -- The Other Wes Moore by Wes Moore",
+    "creator": "SuperSummary",
+    "year": 2018,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-murder-of-roger-ackroyd-1926",
+    "title": "The Murder of Roger Ackroyd",
+    "creator": "Agatha Christie",
+    "year": 1926,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-summer-i-turned-pretty-2000",
+    "title": "The Summer I Turned Pretty",
+    "creator": "Jenny Han",
+    "year": 2000,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-old-man-and-the-sea-1952",
+    "title": "The Old Man and the Sea",
+    "creator": "Ernest Hemingway",
+    "year": 1952,
+    "wikidataId": "Q26505",
+    "wdYears": [
+      1952,
+      1958
+    ]
+  },
+  {
+    "id": "book:matilda-1988",
+    "title": "Matilda",
+    "creator": "Roald Dahl",
+    "year": 1988,
+    "wikidataId": "Q1426188",
+    "wdYears": [
+      1986
+    ]
+  },
+  {
+    "id": "book:ward-d-2025",
+    "title": "Ward D",
+    "creator": "Freida McFadden",
+    "year": 2025,
+    "wdYears": []
+  },
+  {
+    "id": "book:fear-no-evil-1988",
+    "title": "Fear no evil",
+    "creator": "Anatoly Shcharansky",
+    "year": 1988,
+    "wdYears": []
+  },
+  {
+    "id": "book:psycho-cybernetics-1960",
+    "title": "Psycho-cybernetics",
+    "creator": "Maxwell Maltz",
+    "year": 1960,
+    "wikidataId": "Q859295",
+    "wdYears": [
+      1960
+    ]
+  },
+  {
+    "id": "book:the-duke-and-i-2000",
+    "title": "The Duke and I",
+    "creator": "Julia Quinn",
+    "year": 2000,
+    "wikidataId": "Q112262248",
+    "wdYears": [
+      2000
+    ]
+  },
+  {
+    "id": "book:regretting-you-2019",
+    "title": "Regretting You",
+    "creator": "Colleen Hoover",
+    "year": 2019,
+    "wdYears": []
+  },
+  {
+    "id": "book:mockingjay-2010",
+    "title": "Mockingjay",
+    "creator": "Suzanne Collins",
+    "year": 2010,
+    "wikidataId": "Q40354",
+    "wdYears": [
+      2010
+    ]
+  },
+  {
+    "id": "book:macbeth-1508",
+    "title": "Macbeth",
+    "creator": "William Shakespeare",
+    "year": 1508,
+    "wikidataId": "Q130283",
+    "wdYears": [
+      1606,
+      1623
+    ]
+  },
+  {
+    "id": "book:punk-57-2016",
+    "title": "Punk 57",
+    "creator": "Penelope Douglas",
+    "year": 2016,
+    "wikidataId": "Q141100181",
+    "wdYears": []
+  },
+  {
+    "id": "book:biology-1987",
+    "title": "Biology",
+    "creator": "Neil Alexander Campbell",
+    "year": 1987,
+    "wdYears": []
+  },
+  {
+    "id": "book:attached-2010",
+    "title": "Attached",
+    "creator": "Amir Levine",
+    "year": 2010,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-lean-startup-2011",
+    "title": "The Lean Startup",
+    "creator": "Eric Ries",
+    "year": 2011,
+    "wikidataId": "Q7746545",
+    "wdYears": [
+      2011
+    ]
+  },
+  {
+    "id": "book:binding-13-2018",
+    "title": "Binding 13",
+    "creator": "Chloe Walsh",
+    "year": 2018,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-stand-1978",
+    "title": "The Stand",
+    "creator": "Stephen King",
+    "year": 1978,
+    "wikidataId": "Q149552",
+    "wdYears": [
+      1978
+    ]
+  },
+  {
+    "id": "book:the-secret-history-1992",
+    "title": "The Secret History",
+    "creator": "Donna Tartt",
+    "year": 1992,
+    "wikidataId": "Q1218321",
+    "wdYears": [
+      1992
+    ]
+  },
+  {
+    "id": "book:the-two-towers-1954",
+    "title": "The Two Towers",
+    "creator": "J.R.R. Tolkien",
+    "year": 1954,
+    "wikidataId": "Q332388",
+    "wdYears": [
+      1954
+    ]
+  },
+  {
+    "id": "book:inferno-1767",
+    "title": "Inferno",
+    "creator": "Dante Alighieri",
+    "year": 1767,
+    "wikidataId": "Q4509219",
+    "wdYears": [
+      1304
+    ]
+  },
+  {
+    "id": "book:holes-1988",
+    "title": "Holes",
+    "creator": "Louis Sachar",
+    "year": 1988,
+    "wikidataId": "Q175421",
+    "wdYears": [
+      1998
+    ]
+  },
+  {
+    "id": "book:deception-point-2001",
+    "title": "Deception Point",
+    "creator": "Dan Brown",
+    "year": 2001,
+    "wikidataId": "Q202531",
+    "wdYears": [
+      2001
+    ]
+  },
+  {
+    "id": "book:manifest-der-kommunistischen-partei-1848",
+    "title": "Manifest der Kommunistischen Partei",
+    "creator": "Karl Marx",
+    "year": 1848,
+    "wikidataId": "Q40591",
+    "wdYears": [
+      1848
+    ]
+  },
+  {
+    "id": "book:persuasion-1789",
+    "title": "Persuasion",
+    "creator": "Jane Austen",
+    "year": 1789,
+    "wikidataId": "Q333179",
+    "wdYears": [
+      1817
+    ]
+  },
+  {
+    "id": "book:a-short-history-of-nearly-everything-2003",
+    "title": "A short history of nearly everything",
+    "creator": "Bill Bryson",
+    "year": 2003,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-scarlet-letter-1800",
+    "title": "The Scarlet Letter",
+    "creator": "Nathaniel Hawthorne",
+    "year": 1800,
+    "wikidataId": "Q907568",
+    "wdYears": [
+      1850
+    ]
+  },
+  {
+    "id": "book:forgotten-home-apothecary-2024",
+    "title": "Forgotten Home Apothecary",
+    "creator": "Nicole Apelian",
+    "year": 2024,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-wonderful-wizard-of-oz-1899",
+    "title": "The Wonderful Wizard of Oz",
+    "creator": "L. Frank Baum",
+    "year": 1899,
+    "wikidataId": "Q130295",
+    "wdYears": [
+      1900
+    ]
+  },
+  {
+    "id": "book:the-lion-the-witch-and-the-wardrobe-1950",
+    "title": "The Lion, the Witch and the Wardrobe",
+    "creator": "C. S. Lewis",
+    "year": 1950,
+    "wikidataId": "Q485093",
+    "wdYears": [
+      1950
+    ]
+  },
+  {
+    "id": "book:the-mysterious-affair-at-styles-1920",
+    "title": "The Mysterious Affair at Styles",
+    "creator": "Agatha Christie",
+    "year": 1920,
+    "wikidataId": "Q472228",
+    "wdYears": [
+      1916,
+      1920
+    ]
+  },
+  {
+    "id": "book:percy-jackson-s-greek-gods-2006",
+    "title": "Percy Jackson's Greek Gods",
+    "creator": "Rick Riordan",
+    "year": 2006,
+    "wikidataId": "Q18387659",
+    "wdYears": [
+      2014
+    ]
+  },
+  {
+    "id": "book:gorin-no-sho-1963",
+    "title": "Gorin no sho",
+    "creator": "Miyamoto Musashi",
+    "year": 1963,
+    "wikidataId": "Q572180",
+    "wdYears": [
+      1642
+    ]
+  },
+  {
+    "id": "book:the-awakening-1991",
+    "title": "The Awakening",
+    "creator": "Lisa Jane Smith",
+    "year": 1991,
+    "wikidataId": "Q2718258",
+    "wdYears": [
+      1991
+    ]
+  },
+  {
+    "id": "book:the-book-2022",
+    "title": "The Book",
+    "creator": "Hungry Minds",
+    "year": 2022,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-personal-mba-2010",
+    "title": "The personal MBA",
+    "creator": "Josh Kaufman",
+    "year": 2010,
+    "wikidataId": "Q61112982",
+    "wdYears": []
+  },
+  {
+    "id": "book:101-essays-that-will-change-the-way-you-think-2018",
+    "title": "101 Essays That Will Change The Way You Think",
+    "creator": "Brianna Wiest",
+    "year": 2018,
+    "wdYears": []
+  },
+  {
+    "id": "book:good-girl-bad-blood-2020",
+    "title": "Good Girl, Bad Blood",
+    "creator": "Holly Jackson",
+    "year": 2020,
+    "wikidataId": "Q141453218",
+    "wdYears": []
+  },
+  {
+    "id": "book:harry-potter-and-the-cursed-child-2001",
+    "title": "Harry Potter and the Cursed Child",
+    "creator": "Jack Thorne",
+    "year": 2001,
+    "wikidataId": "Q20711488",
+    "wdYears": [
+      2016
+    ]
+  },
+  {
+    "id": "book:save-me-an-orange-2024",
+    "title": "Save me an orange",
+    "creator": "Hayley Grace",
+    "year": 2024,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-long-walk-1979",
+    "title": "The Long Walk",
+    "creator": "Stephen King",
+    "year": 1979,
+    "wikidataId": "Q384160",
+    "wdYears": [
+      1979
+    ]
+  },
+  {
+    "id": "book:foundation-1951",
+    "title": "Foundation",
+    "creator": "Isaac Asimov",
+    "year": 1951,
+    "wdYears": []
+  },
+  {
+    "id": "book:seporsi-mie-ayam-sebelum-mati-2025",
+    "title": "Seporsi mie ayam sebelum mati",
+    "creator": "Brian Khrisna",
+    "year": 2025,
+    "wdYears": []
+  },
+  {
+    "id": "book:men-are-from-mars-women-are-from-venus-1992",
+    "title": "Men are From Mars, Women are From Venus",
+    "creator": "John Gray",
+    "year": 1992,
+    "wikidataId": "Q2462224",
+    "wdYears": [
+      1994
+    ]
+  },
+  {
+    "id": "book:little-stranger-2023",
+    "title": "Little Stranger",
+    "creator": "Leigh Rivers",
+    "year": 2023,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-final-empire-2001",
+    "title": "The Final Empire",
+    "creator": "Brandon Sanderson",
+    "year": 2001,
+    "wikidataId": "Q2778373",
+    "wdYears": [
+      2006
+    ]
+  },
+  {
+    "id": "book:needful-things-1991",
+    "title": "Needful Things",
+    "creator": "Stephen King",
+    "year": 1991,
+    "wikidataId": "Q1411928",
+    "wdYears": [
+      1991
+    ]
+  },
+  {
+    "id": "book:what-every-body-is-saying-2008",
+    "title": "What every BODY is saying",
+    "creator": "Joe Navarro",
+    "year": 2008,
+    "wikidataId": "Q60445126",
+    "wdYears": [
+      2008
+    ]
+  },
+  {
+    "id": "book:women-who-run-with-the-wolves-1982",
+    "title": "Women Who Run with the Wolves",
+    "creator": "Clarissa Pinkola Estés",
+    "year": 1982,
+    "wikidataId": "Q9171157",
+    "wdYears": [
+      1992
+    ]
+  },
+  {
+    "id": "book:norwegian-wood-1987",
+    "title": "Norwegian Wood",
+    "creator": "村上春樹",
+    "year": 1987,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-return-of-the-king-1950",
+    "title": "The Return of the King",
+    "creator": "J.R.R. Tolkien",
+    "year": 1950,
+    "wikidataId": "Q332581",
+    "wdYears": [
+      1955
+    ]
+  },
+  {
+    "id": "book:the-housemaid-is-watching-2024",
+    "title": "The Housemaid Is Watching",
+    "creator": "Freida McFadden",
+    "year": 2024,
+    "wikidataId": "Q131036844",
+    "wdYears": [
+      2024
+    ]
+  },
+  {
+    "id": "book:a-tale-of-two-cities-1800",
+    "title": "A Tale of Two Cities",
+    "creator": "Charles Dickens",
+    "year": 1800,
+    "wikidataId": "Q308918",
+    "wdYears": [
+      1859
+    ]
+  },
+  {
+    "id": "book:cabin-fever-2007",
+    "title": "Cabin Fever",
+    "creator": "Jeff Kinney",
+    "year": 2007,
+    "wikidataId": "Q3258338",
+    "wdYears": [
+      2011
+    ]
+  },
+  {
+    "id": "book:new-moon-2006",
+    "title": "New Moon",
+    "creator": "Stephenie Meyer",
+    "year": 2006,
+    "wikidataId": "Q191540",
+    "wdYears": [
+      2006
+    ]
+  },
+  {
+    "id": "book:watchmen-1986",
+    "title": "Watchmen",
+    "creator": "Alan Moore",
+    "year": 1986,
+    "wikidataId": "Q128444",
+    "wdYears": [
+      1986
+    ]
+  },
+  {
+    "id": "book:divergent-2010",
+    "title": "Divergent",
+    "creator": "Veronica Roth",
+    "year": 2010,
+    "wikidataId": "Q627192",
+    "wdYears": [
+      2011
+    ]
+  },
+  {
+    "id": "book:god-of-fury-2023",
+    "title": "God of Fury",
+    "creator": "Rina Kent",
+    "year": 2023,
+    "wdYears": []
+  },
+  {
+    "id": "book:shatter-me-complete-collection-2011",
+    "title": "Shatter Me Complete Collection",
+    "creator": "Tahereh Mafi",
+    "year": 2011,
+    "wdYears": []
+  },
+  {
+    "id": "book:why-men-love-bitches-2018",
+    "title": "Why Men Love Bitches",
+    "creator": "Sharon Misty",
+    "year": 2018,
+    "wikidataId": "Q7997830",
+    "wdYears": [
+      2002
+    ]
+  },
+  {
+    "id": "book:the-five-love-languages-1992",
+    "title": "The Five Love Languages",
+    "creator": "Gary D. Chapman",
+    "year": 1992,
+    "wikidataId": "Q786405",
+    "wdYears": [
+      1992
+    ]
+  },
+  {
+    "id": "book:interview-with-the-vampire-1672",
+    "title": "Interview With the Vampire",
+    "creator": "Anne Rice",
+    "year": 1672,
+    "wikidataId": "Q176470",
+    "wdYears": [
+      1976
+    ]
+  },
+  {
+    "id": "book:to-sir-phillip-with-love-2003",
+    "title": "To Sir Phillip, With Love",
+    "creator": "Julia Quinn",
+    "year": 2003,
+    "wikidataId": "Q113165002",
+    "wdYears": []
+  },
+  {
+    "id": "book:a-nation-of-idiots-2019",
+    "title": "A Nation of Idiots",
+    "creator": "Daksh Tyagi",
+    "year": 2019,
+    "wdYears": []
+  },
+  {
+    "id": "book:iron-flame-2023",
+    "title": "Iron Flame",
+    "creator": "Rebecca Yarros",
+    "year": 2023,
+    "wikidataId": "Q123452043",
+    "wdYears": [
+      2023
+    ]
+  },
+  {
+    "id": "book:the-nightingale-2000",
+    "title": "The Nightingale",
+    "creator": "Kristin Hannah",
+    "year": 2000,
+    "wikidataId": "Q25218724",
+    "wdYears": [
+      2015
+    ]
+  },
+  {
+    "id": "book:house-of-hades-2013",
+    "title": "House of Hades",
+    "creator": "Rick Riordan",
+    "year": 2013,
+    "wikidataId": "Q2274863",
+    "wdYears": [
+      2013
+    ]
+  },
+  {
+    "id": "book:warmth-2024",
+    "title": "Warmth",
+    "creator": "Rithvik Singh",
+    "year": 2024,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-son-of-neptune-2011",
+    "title": "The Son of Neptune",
+    "creator": "Rick Riordan",
+    "year": 2011,
+    "wikidataId": "Q1277076",
+    "wdYears": [
+      2011
+    ]
+  },
+  {
+    "id": "book:thirty-days-to-better-english-1965",
+    "title": "Thirty Days to Better English",
+    "creator": "Norman Lewis",
+    "year": 1965,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-lost-symbol-2009",
+    "title": "The Lost Symbol",
+    "creator": "Dan Brown",
+    "year": 2009,
+    "wikidataId": "Q211006",
+    "wdYears": [
+      2009
+    ]
+  },
+  {
+    "id": "book:onyx-storm-2025",
+    "title": "Onyx Storm",
+    "creator": "Rebecca Yarros",
+    "year": 2025,
+    "wikidataId": "Q130681191",
+    "wdYears": [
+      2025
+    ]
+  },
+  {
+    "id": "book:six-of-crows-2015",
+    "title": "Six of Crows",
+    "creator": "Leigh Bardugo",
+    "year": 2015,
+    "wikidataId": "Q23763076",
+    "wdYears": [
+      2015
+    ]
+  },
+  {
+    "id": "book:the-king-in-yellow-1895",
+    "title": "The King in Yellow",
+    "creator": "Robert W. Chambers",
+    "year": 1895,
+    "wikidataId": "Q1195112",
+    "wdYears": [
+      1895
+    ]
+  },
+  {
+    "id": "book:treasure-island-1880",
+    "title": "Treasure Island",
+    "creator": "Robert Louis Stevenson",
+    "year": 1880,
+    "wdYears": []
+  },
+  {
+    "id": "book:chemistry-1977",
+    "title": "Chemistry",
+    "creator": "Theodore L. Brown",
+    "year": 1977,
+    "wdYears": []
+  },
+  {
+    "id": "book:beloved-1987",
+    "title": "Beloved",
+    "creator": "Toni Morrison",
+    "year": 1987,
+    "wikidataId": "Q971767",
+    "wdYears": [
+      1987
+    ]
+  },
+  {
+    "id": "book:jenseits-von-gut-und-bose-1885",
+    "title": "Jenseits von Gut und Böse",
+    "creator": "Friedrich Nietzsche",
+    "year": 1885,
+    "wdYears": []
+  },
+  {
+    "id": "book:le-fantome-de-l-opera-1911",
+    "title": "Le fantôme de l'opéra",
+    "creator": "Gaston Leroux",
+    "year": 1911,
+    "wikidataId": "Q272506",
+    "wdYears": [
+      1910
+    ]
+  },
+  {
+    "id": "book:the-5-a-m-club-2018",
+    "title": "The 5 a.m. Club",
+    "creator": "Robin S. Sharma",
+    "year": 2018,
+    "wdYears": []
+  },
+  {
+    "id": "book:war-and-peace-1845",
+    "title": "War and Peace",
+    "creator": "Лев Толстой",
+    "year": 1845,
+    "wdYears": []
+  },
+  {
+    "id": "book:concepts-of-physics-1993",
+    "title": "Concepts of physics",
+    "creator": "Harish Chandra Verma",
+    "year": 1993,
+    "wdYears": []
+  },
+  {
+    "id": "book:le-mythe-de-sisyphe-1941",
+    "title": "Le mythe de Sisyphe",
+    "creator": "Albert Camus",
+    "year": 1941,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-curious-incident-of-the-dog-in-the-night-time-2002",
+    "title": "The Curious Incident of the Dog in the Night-Time",
+    "creator": "Mark Haddon",
+    "year": 2002,
+    "wikidataId": "Q876848",
+    "wdYears": [
+      2003
+    ]
+  },
+  {
+    "id": "book:the-magic-of-thinking-big-1900",
+    "title": "The Magic of Thinking Big",
+    "creator": "David Joseph Schwartz",
+    "year": 1900,
+    "wikidataId": "Q7749505",
+    "wdYears": [
+      1959
+    ]
+  },
+  {
+    "id": "book:a-christmas-carol-1843",
+    "title": "A Christmas Carol",
+    "creator": "Charles Dickens",
+    "year": 1843,
+    "wikidataId": "Q62879",
+    "wdYears": [
+      1843
+    ]
+  },
+  {
+    "id": "book:dungeon-crawler-carl-2020",
+    "title": "Dungeon Crawler Carl",
+    "creator": "Matt Dinniman",
+    "year": 2020,
+    "wikidataId": "Q135898069",
+    "wdYears": [
+      2025
+    ]
+  },
+  {
+    "id": "book:le-tour-du-monde-en-quatre-vingts-jours-1872",
+    "title": "Le Tour du Monde en Quatre-Vingts Jours",
+    "creator": "Jules Verne",
+    "year": 1872,
+    "wikidataId": "Q1219561",
+    "wdYears": [
+      1872
+    ]
+  },
+  {
+    "id": "book:the-mark-of-athena-2011",
+    "title": "The Mark of Athena",
+    "creator": "Rick Riordan",
+    "year": 2011,
+    "wikidataId": "Q3283718",
+    "wdYears": [
+      2012
+    ]
+  },
+  {
+    "id": "book:le-deuxieme-sexe-1949",
+    "title": "Le Deuxième Sexe",
+    "creator": "Simone de Beauvoir",
+    "year": 1949,
+    "wikidataId": "Q470098",
+    "wdYears": [
+      1949
+    ]
+  },
+  {
+    "id": "book:heartstopper-volume-1-2018",
+    "title": "Heartstopper, Volume 1",
+    "creator": "Alice Oseman",
+    "year": 2018,
+    "wdYears": []
+  },
+  {
+    "id": "book:double-down-2007",
+    "title": "Double Down",
+    "creator": "Jeff Kinney",
+    "year": 2007,
+    "wikidataId": "Q24211366",
+    "wdYears": [
+      2016
+    ]
+  },
+  {
+    "id": "book:omgiven-av-psykopater-2020",
+    "title": "Omgiven av Psykopater",
+    "creator": "Thomas Erikson",
+    "year": 2020,
+    "wdYears": []
+  },
+  {
+    "id": "book:alchemised-2025",
+    "title": "Alchemised",
+    "creator": "SenLinYu",
+    "year": 2025,
+    "wikidataId": "Q136541260",
+    "wdYears": [
+      2025
+    ]
+  },
+  {
+    "id": "book:if-he-had-been-with-me-2013",
+    "title": "If He Had Been With Me",
+    "creator": "Laura Nowlin",
+    "year": 2013,
+    "wikidataId": "Q138745222",
+    "wdYears": []
+  },
+  {
+    "id": "book:improve-your-communication-skills-2010",
+    "title": "Improve Your Communication Skills",
+    "creator": "Alan Barker",
+    "year": 2010,
+    "wdYears": []
+  },
+  {
+    "id": "book:das-parfum-1985",
+    "title": "Das Parfum",
+    "creator": "Patrick Süskind",
+    "year": 1985,
+    "wikidataId": "Q459303",
+    "wdYears": [
+      1949,
+      1985
+    ]
+  },
+  {
+    "id": "book:-1554",
+    "title": "πολιτεία",
+    "creator": "Plato",
+    "year": 1554,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-hate-u-give-2017",
+    "title": "The Hate U Give",
+    "creator": "Angie Thomas",
+    "year": 2017,
+    "wikidataId": "Q29831398",
+    "wdYears": [
+      2017
+    ]
+  },
+  {
+    "id": "book:indian-polity-2011",
+    "title": "Indian polity",
+    "creator": "Laxmikanta Mishra",
+    "year": 2011,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-raven-1845",
+    "title": "The Raven",
+    "creator": "Edgar Allan Poe",
+    "year": 1845,
+    "wikidataId": "Q22726",
+    "wdYears": [
+      1845
+    ]
+  },
+  {
+    "id": "book:game-changer-2018",
+    "title": "Game Changer",
+    "creator": "Rachel Reid",
+    "year": 2018,
+    "wikidataId": "Q138028337",
+    "wdYears": [
+      2018
+    ]
+  },
+  {
+    "id": "book:la-peste-1942",
+    "title": "La Peste",
+    "creator": "Albert Camus",
+    "year": 1942,
+    "wikidataId": "Q320372",
+    "wdYears": [
+      1947
+    ]
+  },
+  {
+    "id": "book:mere-christianity-1943",
+    "title": "Mere Christianity",
+    "creator": "C. S. Lewis",
+    "year": 1943,
+    "wikidataId": "Q1078487",
+    "wdYears": [
+      1952
+    ]
+  },
+  {
+    "id": "book:twisted-love-twisted-games-twisted-hate-twisted-lies-2023",
+    "title": "Twisted Love / Twisted Games / Twisted Hate / Twisted Lies",
+    "creator": "Ana Huang",
+    "year": 2023,
+    "wdYears": []
+  },
+  {
+    "id": "book:never-let-me-go-2005",
+    "title": "Nunca me abandones",
+    "creator": "Kazuo Ishiguro",
+    "year": 2005,
+    "wikidataId": "Q951587",
+    "wdYears": [
+      2005
+    ]
+  },
+  {
+    "id": "book:the-33-strategies-of-war-1998",
+    "title": "The 33 Strategies of War",
+    "creator": "Robert Greene",
+    "year": 1998,
+    "wikidataId": "Q5005986",
+    "wdYears": [
+      2006
+    ]
+  },
+  {
+    "id": "book:house-of-leaves-1998",
+    "title": "House of Leaves",
+    "creator": "Mark Z. Danielewski",
+    "year": 1998,
+    "wikidataId": "Q521688",
+    "wdYears": [
+      2000
+    ]
+  },
+  {
+    "id": "book:summary-the-psychology-of-money-2022",
+    "title": "Summary the Psychology of Money",
+    "creator": "Book PRO",
+    "year": 2022,
+    "wdYears": []
+  },
+  {
+    "id": "book:as-good-as-dead-2021",
+    "title": "As Good As Dead",
+    "creator": "Holly Jackson",
+    "year": 2021,
+    "wikidataId": "Q141455465",
+    "wdYears": []
+  },
+  {
+    "id": "book:ender-s-game-1985",
+    "title": "Ender's Game",
+    "creator": "Orson Scott Card",
+    "year": 1985,
+    "wikidataId": "Q816016",
+    "wdYears": [
+      1985
+    ]
+  },
+  {
+    "id": "book:the-third-wheel-2003",
+    "title": "The Third Wheel",
+    "creator": "Jeff Kinney",
+    "year": 2003,
+    "wikidataId": "Q3661966",
+    "wdYears": [
+      2012
+    ]
+  },
+  {
+    "id": "book:talk-like-ted-2014",
+    "title": "Talk Like TED",
+    "creator": "Carmine Gallo",
+    "year": 2014,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-foundation-trilogy-1950",
+    "title": "The Foundation Trilogy",
+    "creator": "Isaac Asimov",
+    "year": 1950,
+    "wikidataId": "Q20899148",
+    "wdYears": []
+  },
+  {
+    "id": "book:the-viscount-who-loved-me-2000",
+    "title": "The Viscount Who Loved Me",
+    "creator": "Julia Quinn",
+    "year": 2000,
+    "wikidataId": "Q111190660",
+    "wdYears": [
+      2000
+    ]
+  },
+  {
+    "id": "book:don-t-believe-everything-you-think-2022",
+    "title": "Don't Believe Everything You Think",
+    "creator": "Joseph Nguyen",
+    "year": 2022,
+    "wdYears": []
+  },
+  {
+    "id": "book:death-on-the-nile-1937",
+    "title": "Death on the Nile",
+    "creator": "Agatha Christie",
+    "year": 1937,
+    "wikidataId": "Q17332965",
+    "wdYears": [
+      2009
+    ]
+  },
+  {
+    "id": "book:the-forty-rules-of-love-2010",
+    "title": "The Forty Rules of Love",
+    "creator": "Elif Şafak",
+    "year": 2010,
+    "wikidataId": "Q6097842",
+    "wdYears": [
+      2009
+    ]
+  },
+  {
+    "id": "book:old-school-2007",
+    "title": "Old School",
+    "creator": "Jeff Kinney",
+    "year": 2007,
+    "wikidataId": "Q20856881",
+    "wdYears": [
+      2015
+    ]
+  },
+  {
+    "id": "book:build-don-t-talk-2023",
+    "title": "Build, Don't Talk",
+    "creator": "Raj Shamani",
+    "year": 2023,
+    "wdYears": []
+  },
+  {
+    "id": "book:eclipse-2006",
+    "title": "Eclipse",
+    "creator": "Stephenie Meyer",
+    "year": 2006,
+    "wikidataId": "Q212473",
+    "wdYears": [
+      2007
+    ]
+  },
+  {
+    "id": "book:the-silmarillion-1977",
+    "title": "The Silmarillion",
+    "creator": "J.R.R. Tolkien",
+    "year": 1977,
+    "wikidataId": "Q502579",
+    "wdYears": [
+      1987
+    ]
+  },
+  {
+    "id": "book:heli-hogu-karana-2003",
+    "title": "Hēḷi hōgu kāraṇa",
+    "creator": "Ravi Beḷagere",
+    "year": 2003,
+    "wdYears": []
+  },
+  {
+    "id": "book:eragon-2000",
+    "title": "Eragon",
+    "creator": "Christopher Paolini",
+    "year": 2000,
+    "wikidataId": "Q185449",
+    "wdYears": [
+      2003
+    ]
+  },
+  {
+    "id": "book:the-man-who-mistook-his-wife-for-a-hat-1980",
+    "title": "The Man Who Mistook His Wife for a Hat",
+    "creator": "Oliver Sacks",
+    "year": 1980,
+    "wikidataId": "Q2603302",
+    "wdYears": [
+      1985
+    ]
+  },
+  {
+    "id": "book:maus-i-1986",
+    "title": "Maus I",
+    "creator": "Art Spiegelman",
+    "year": 1986,
+    "wikidataId": "Q116299185",
+    "wdYears": [
+      2003
+    ]
+  },
+  {
+    "id": "book:a-midsummer-night-s-dream-1600",
+    "title": "A Midsummer Night's Dream",
+    "creator": "William Shakespeare",
+    "year": 1600,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-adventures-of-tom-sawyer-1817",
+    "title": "The Adventures of Tom Sawyer",
+    "creator": "Mark Twain",
+    "year": 1817,
+    "wikidataId": "Q326914",
+    "wdYears": [
+      1876
+    ]
+  },
+  {
+    "id": "book:11-22-63-1925",
+    "title": "11/22/63",
+    "creator": "Stephen King",
+    "year": 1925,
+    "wikidataId": "Q723020",
+    "wdYears": [
+      2011
+    ]
+  },
+  {
+    "id": "book:the-long-game-2022",
+    "title": "The Long Game",
+    "creator": "Rachel Reid",
+    "year": 2022,
+    "wikidataId": "Q138028388",
+    "wdYears": [
+      2022
+    ]
+  },
+  {
+    "id": "book:dell-arte-della-guerra-1540",
+    "title": "Dell'Arte della Guerra",
+    "creator": "Niccolò Machiavelli",
+    "year": 1540,
+    "wikidataId": "Q610942",
+    "wdYears": [
+      1521
+    ]
+  },
+  {
+    "id": "book:the-last-straw-2008",
+    "title": "The Last Straw",
+    "creator": "Jeff Kinney",
+    "year": 2008,
+    "wikidataId": "Q77174017",
+    "wdYears": []
+  },
+  {
+    "id": "book:the-locked-door-2021",
+    "title": "The Locked Door",
+    "creator": "Freida McFadden",
+    "year": 2021,
+    "wdYears": []
+  },
+  {
+    "id": "book:diper-overlode-2014",
+    "title": "Diper Overlode",
+    "creator": "Jeff Kinney",
+    "year": 2014,
+    "wikidataId": "Q114889831",
+    "wdYears": [
+      2022
+    ]
+  },
+  {
+    "id": "book:the-game-of-life-and-how-to-play-it-1925",
+    "title": "The game of life and how to play it",
+    "creator": "Florence Scovel Shinn",
+    "year": 1925,
+    "wikidataId": "Q7735724",
+    "wdYears": []
+  },
+  {
+    "id": "book:good-vibes-good-life-2015",
+    "title": "Good Vibes, Good Life",
+    "creator": "Vex King",
+    "year": 2015,
+    "wdYears": []
+  },
+  {
+    "id": "book:psicologia-oscura-2019",
+    "title": "Psicología oscura",
+    "creator": "Steven Turner",
+    "year": 2019,
+    "wdYears": []
+  },
+  {
+    "id": "book:a-clash-of-kings-1998",
+    "title": "A Clash of Kings",
+    "creator": "George R. R. Martin",
+    "year": 1998,
+    "wikidataId": "Q300370",
+    "wdYears": [
+      1998
+    ]
+  },
+  {
+    "id": "book:bumi-2014",
+    "title": "Bumi",
+    "creator": "Tere Liye",
+    "year": 2014,
+    "wikidataId": "Q125819373",
+    "wdYears": [
+      2014
+    ]
+  },
+  {
+    "id": "book:also-sprach-zarathustra-1883",
+    "title": "Also sprach Zarathustra",
+    "creator": "Friedrich Nietzsche",
+    "year": 1883,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-defender-2025",
+    "title": "The Defender",
+    "creator": "Ana Huang",
+    "year": 2025,
+    "wdYears": []
+  },
+  {
+    "id": "book:-1966",
+    "title": "Мастер и Маргарита",
+    "creator": "Михаил Афанасьевич Булгаков",
+    "year": 1966,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-way-of-kings-2010",
+    "title": "The Way of Kings",
+    "creator": "Brandon Sanderson",
+    "year": 2010,
+    "wikidataId": "Q2136877",
+    "wdYears": [
+      2010
+    ]
+  },
+  {
+    "id": "book:the-alchemist-graphic-novel-2010",
+    "title": "The Alchemist Graphic Novel",
+    "creator": "Paulo Coelho",
+    "year": 2010,
+    "wdYears": []
+  },
+  {
+    "id": "book:vingt-mille-lieues-sous-les-mers-1870",
+    "title": "Vingt mille lieues sous les mers",
+    "creator": "Jules Verne",
+    "year": 1870,
+    "wikidataId": "Q183565",
+    "wdYears": [
+      1869
+    ]
+  },
+  {
+    "id": "book:a-study-in-scarlet-1887",
+    "title": "A Study in Scarlet",
+    "creator": "Arthur Conan Doyle",
+    "year": 1887,
+    "wikidataId": "Q223131",
+    "wdYears": [
+      1887
+    ]
+  },
+  {
+    "id": "book:carmilla-1871",
+    "title": "Carmilla",
+    "creator": "Sheridan Le Fanu",
+    "year": 1871,
+    "wikidataId": "Q1043792",
+    "wdYears": [
+      1871,
+      1872
+    ]
+  },
+  {
+    "id": "book:hard-luck-2013",
+    "title": "Hard Luck",
+    "creator": "Jeff Kinney",
+    "year": 2013,
+    "wikidataId": "Q14622962",
+    "wdYears": [
+      2013
+    ]
+  },
+  {
+    "id": "book:educational-psychology-1987",
+    "title": "Educational psychology",
+    "creator": "Anita Woolfolk Hoy",
+    "year": 1987,
+    "wdYears": []
+  },
+  {
+    "id": "book:voyage-au-centre-de-la-terre-1867",
+    "title": "Voyage au Centre de la Terre",
+    "creator": "Jules Verne",
+    "year": 1867,
+    "wikidataId": "Q219457",
+    "wdYears": [
+      1864
+    ]
+  },
+  {
+    "id": "book:the-way-i-used-to-be-2016",
+    "title": "The Way I Used To Be",
+    "creator": "Amber Smith",
+    "year": 2016,
+    "wdYears": []
+  },
+  {
+    "id": "book:oliver-twist-1822",
+    "title": "Oliver Twist",
+    "creator": "Charles Dickens",
+    "year": 1822,
+    "wikidataId": "Q164974",
+    "wdYears": [
+      1839,
+      2026
+    ]
+  },
+  {
+    "id": "book:the-diary-of-a-ceo-2023",
+    "title": "The Diary of a CEO",
+    "creator": "Steven Bartlett",
+    "year": 2023,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-gifts-of-imperfection-2010",
+    "title": "The Gifts of Imperfection",
+    "creator": "Brené Brown",
+    "year": 2010,
+    "wikidataId": "Q117747431",
+    "wdYears": []
+  },
+  {
+    "id": "book:hujan-2018",
+    "title": "Hujan",
+    "creator": "Tere Liye",
+    "year": 2018,
+    "wikidataId": "Q132731497",
+    "wdYears": [
+      2016
+    ]
+  },
+  {
+    "id": "book:the-eye-of-the-world-1990",
+    "title": "The Eye of the World",
+    "creator": "Robert Jordan",
+    "year": 1990,
+    "wikidataId": "Q477994",
+    "wdYears": [
+      1990
+    ]
+  },
+  {
+    "id": "book:an-offer-from-a-gentleman-2001",
+    "title": "An Offer from a Gentleman",
+    "creator": "Julia Quinn",
+    "year": 2001,
+    "wikidataId": "Q111993992",
+    "wdYears": []
+  },
+  {
+    "id": "book:se-questo-e-un-uomo-1947",
+    "title": "Se questo è un uomo",
+    "creator": "Primo Levi",
+    "year": 1947,
+    "wikidataId": "Q836036",
+    "wdYears": [
+      1946
+    ]
+  },
+  {
+    "id": "book:the-tale-of-peter-rabbit-1920",
+    "title": "The Tale of Peter Rabbit",
+    "creator": "Beatrix Potter",
+    "year": 1920,
+    "wikidataId": "Q580463",
+    "wdYears": [
+      1902
+    ]
+  },
+  {
+    "id": "book:do-it-today-2018",
+    "title": "Do It Today",
+    "creator": "Darius Foroux",
+    "year": 2018,
+    "wdYears": []
+  },
+  {
+    "id": "book:as-long-as-the-lemon-trees-grow-2022",
+    "title": "As Long As the Lemon Trees Grow",
+    "creator": "Zoulfa Katouh",
+    "year": 2022,
+    "wikidataId": "Q131386573",
+    "wdYears": [
+      2022
+    ]
+  },
+  {
+    "id": "book:principles-of-anatomy-and-physiology-1975",
+    "title": "Principles of Anatomy and Physiology",
+    "creator": "Gerard J. Tortora",
+    "year": 1975,
+    "wdYears": []
+  },
+  {
+    "id": "book:great-expectations-1861",
+    "title": "Great Expectations",
+    "creator": "Charles Dickens",
+    "year": 1861,
+    "wikidataId": "Q219552",
+    "wdYears": [
+      1860,
+      1861
+    ]
+  },
+  {
+    "id": "book:moonwalk-1988",
+    "title": "Moonwalk",
+    "creator": "Michael Jackson",
+    "year": 1988,
+    "wikidataId": "Q2457954",
+    "wdYears": [
+      1988
+    ]
+  },
+  {
+    "id": "book:lisey-s-story-2006",
+    "title": "Lisey's Story",
+    "creator": "Stephen King",
+    "year": 2006,
+    "wikidataId": "Q957123",
+    "wdYears": [
+      2006
+    ]
+  },
+  {
+    "id": "book:100-ways-to-motivate-yourself-1996",
+    "title": "100 Ways to Motivate Yourself",
+    "creator": "Steve Chandler",
+    "year": 1996,
+    "wdYears": []
+  },
+  {
+    "id": "book:-1871",
+    "title": "Бѣсы",
+    "creator": "Fiódor Dostoievski",
+    "year": 1871,
+    "wdYears": []
+  },
+  {
+    "id": "book:aplikasi-analisis-multivariate-dengan-program-ibm-spss-25-9th-ed-2018",
+    "title": "Aplikasi Analisis Multivariate Dengan Program IBM SPSS 25 (9th ed)",
+    "creator": "Imam ghozali, 2018",
+    "year": 2018,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-inmate-2022",
+    "title": "The Inmate",
+    "creator": "Freida McFadden",
+    "year": 2022,
+    "wdYears": []
+  },
+  {
+    "id": "book:a-course-of-instruction-in-personal-magnetism-1917",
+    "title": "A course of instruction in personal magnetism",
+    "creator": "Charles V Hutchen",
+    "year": 1917,
+    "wdYears": []
+  },
+  {
+    "id": "book:dark-matter-2016",
+    "title": "Dark Matter",
+    "creator": "Blake Crouch",
+    "year": 2016,
+    "wikidataId": "Q107920499",
+    "wdYears": [
+      2016
+    ]
+  },
+  {
+    "id": "book:origin-2013",
+    "title": "Origin",
+    "creator": "Dan Brown",
+    "year": 2013,
+    "wikidataId": "Q30610044",
+    "wdYears": [
+      2017
+    ]
+  },
+  {
+    "id": "book:flowers-for-algernon-1966",
+    "title": "Flowers for Algernon",
+    "creator": "Daniel Keyes",
+    "year": 1966,
+    "wikidataId": "Q837934",
+    "wdYears": [
+      1959
+    ]
+  },
+  {
+    "id": "book:big-shot-2016",
+    "title": "Big Shot",
+    "creator": "Jeff Kinney",
+    "year": 2016,
+    "wikidataId": "Q107490260",
+    "wdYears": [
+      2021
+    ]
+  },
+  {
+    "id": "book:a-court-of-wings-and-ruin-2017",
+    "title": "A Court of Wings and Ruin",
+    "creator": "Sarah J. Maas",
+    "year": 2017,
+    "wikidataId": "Q101987946",
+    "wdYears": [
+      2017
+    ]
+  },
+  {
+    "id": "book:king-of-pride-2023",
+    "title": "King of Pride",
+    "creator": "Ana Huang",
+    "year": 2023,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-complete-sherlock-holmes-4-novels-56-stories-1900",
+    "title": "The Complete Sherlock Holmes [4 novels, 56 stories]",
+    "creator": "Arthur Conan Doyle",
+    "year": 1900,
+    "wdYears": []
+  },
+  {
+    "id": "book:never-split-the-difference-2016",
+    "title": "Never Split the Difference",
+    "creator": "Chris Voss",
+    "year": 2016,
+    "wdYears": []
+  },
+  {
+    "id": "book:word-power-made-easy-1949",
+    "title": "Word Power Made Easy",
+    "creator": "Norman Lewis",
+    "year": 1949,
+    "wdYears": []
+  },
+  {
+    "id": "book:american-psycho-1991",
+    "title": "American Psycho",
+    "creator": "Bret Easton Ellis",
+    "year": 1991,
+    "wikidataId": "Q466504",
+    "wdYears": [
+      1991
+    ]
+  },
+  {
+    "id": "book:playground-2022",
+    "title": "Playground",
+    "creator": "Aron Beauregard",
+    "year": 2022,
+    "wdYears": []
+  },
+  {
+    "id": "book:outwitting-the-devil-2011",
+    "title": "Outwitting the devil",
+    "creator": "Napoleon Hill",
+    "year": 2011,
+    "wikidataId": "Q7113089",
+    "wdYears": [
+      2011
+    ]
+  },
+  {
+    "id": "book:briefe-an-milena-1952",
+    "title": "Briefe an Milena",
+    "creator": "Franz Kafka",
+    "year": 1952,
+    "wikidataId": "Q6533784",
+    "wdYears": [
+      1952
+    ]
+  },
+  {
+    "id": "book:crucial-conversations-2001",
+    "title": "Crucial Conversations",
+    "creator": "Kerry Patterson",
+    "year": 2001,
+    "wikidataId": "Q17109111",
+    "wdYears": [
+      2002
+    ]
+  },
+  {
+    "id": "book:analisis-laporan-keuangan-2012",
+    "title": "Analisis laporan keuangan",
+    "creator": "Kasmir",
+    "year": 2012,
+    "wdYears": []
+  },
+  {
+    "id": "book:queen-of-shadows-2015",
+    "title": "Queen of Shadows",
+    "creator": "Sarah J. Maas",
+    "year": 2015,
+    "wikidataId": "Q134480818",
+    "wdYears": []
+  },
+  {
+    "id": "book:technical-analysis-of-the-financial-markets-1999",
+    "title": "Technical Analysis of the Financial Markets",
+    "creator": "John J. Murphy",
+    "year": 1999,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-autobiography-of-benjamin-franklin-1791",
+    "title": "The Autobiography of Benjamin Franklin",
+    "creator": "Benjamin Franklin",
+    "year": 1791,
+    "wikidataId": "Q7714957",
+    "wdYears": [
+      1791
+    ]
+  },
+  {
+    "id": "book:wicked-1995",
+    "title": "Wicked",
+    "creator": "Gregory Maguire",
+    "year": 1995,
+    "wikidataId": "Q1735754",
+    "wdYears": [
+      1995
+    ]
+  },
+  {
+    "id": "book:the-boyfriend-2024",
+    "title": "The Boyfriend",
+    "creator": "Freida McFadden",
+    "year": 2024,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-magician-s-nephew-1955",
+    "title": "The Magician's Nephew",
+    "creator": "C. S. Lewis",
+    "year": 1955,
+    "wikidataId": "Q477831",
+    "wdYears": [
+      1955
+    ]
+  },
+  {
+    "id": "book:la-chute-1917",
+    "title": "La chute",
+    "creator": "Albert Camus",
+    "year": 1917,
+    "wikidataId": "Q690362",
+    "wdYears": [
+      1956
+    ]
+  },
+  {
+    "id": "book:the-blood-of-olympus-2001",
+    "title": "The Blood of Olympus",
+    "creator": "Rick Riordan",
+    "year": 2001,
+    "wikidataId": "Q17985964",
+    "wdYears": [
+      2014
+    ]
+  },
+  {
+    "id": "book:la-divina-commedia-1472",
+    "title": "La Divina Commedia",
+    "creator": "Dante Alighieri",
+    "year": 1472,
+    "wdYears": []
+  },
+  {
+    "id": "book:welcome-to-dead-house-1992",
+    "title": "Welcome to Dead House",
+    "creator": "Robert Lawrence Stine",
+    "year": 1992,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-ugly-truth-2010",
+    "title": "The Ugly Truth",
+    "creator": "Jeff Kinney",
+    "year": 2010,
+    "wikidataId": "Q77173248",
+    "wdYears": []
+  },
+  {
+    "id": "book:the-7-habits-of-highly-effective-teens-1998",
+    "title": "The 7 Habits of Highly Effective Teens",
+    "creator": "Sean Covey",
+    "year": 1998,
+    "wikidataId": "Q7711983",
+    "wdYears": [
+      1998
+    ]
+  },
+  {
+    "id": "book:hatchet-1986",
+    "title": "Hatchet",
+    "creator": "Gary Paulsen",
+    "year": 1986,
+    "wikidataId": "Q5681091",
+    "wdYears": [
+      1987
+    ]
+  },
+  {
+    "id": "book:the-sign-of-four-1889",
+    "title": "The Sign of Four",
+    "creator": "Arthur Conan Doyle",
+    "year": 1889,
+    "wikidataId": "Q500688",
+    "wdYears": [
+      1890
+    ]
+  },
+  {
+    "id": "book:heartless-2000",
+    "title": "Heartless",
+    "creator": "Marissa Meyer",
+    "year": 2000,
+    "wdYears": []
+  },
+  {
+    "id": "book:janji-2021",
+    "title": "Janji",
+    "creator": "Tere Liye",
+    "year": 2021,
+    "wdYears": []
+  },
+  {
+    "id": "book:how-to-read-a-book-1940",
+    "title": "How to Read a Book",
+    "creator": "Mortimer J. Adler",
+    "year": 1940,
+    "wikidataId": "Q1091079",
+    "wdYears": [
+      1940
+    ]
+  },
+  {
+    "id": "book:slaughterhouse-five-1956",
+    "title": "Slaughterhouse-Five",
+    "creator": "Kurt Vonnegut",
+    "year": 1956,
+    "wikidataId": "Q265954",
+    "wdYears": [
+      1969
+    ]
+  },
+  {
+    "id": "book:breakthrough-advertising-1966",
+    "title": "Breakthrough advertising",
+    "creator": "Eugene M. Schwartz",
+    "year": 1966,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-inheritance-games-2020",
+    "title": "The Inheritance Games",
+    "creator": "Jennifer Lynn Barnes",
+    "year": 2020,
+    "wikidataId": "Q110269463",
+    "wdYears": [
+      2020
+    ]
+  },
+  {
+    "id": "book:god-of-wrath-2022",
+    "title": "God of Wrath",
+    "creator": "Rina Kent",
+    "year": 2022,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-teacher-2024",
+    "title": "The Teacher",
+    "creator": "Freida McFadden",
+    "year": 2024,
+    "wdYears": []
+  },
+  {
+    "id": "book:autobiography-of-a-yogi-1946",
+    "title": "Autobiography of a Yogi",
+    "creator": "Yogananda Paramahansa",
+    "year": 1946,
+    "wikidataId": "Q784092",
+    "wdYears": [
+      1946
+    ]
+  },
+  {
+    "id": "book:the-jungle-1791",
+    "title": "The Jungle",
+    "creator": "Upton Sinclair",
+    "year": 1791,
+    "wikidataId": "Q260205",
+    "wdYears": [
+      1905,
+      1906
+    ]
+  },
+  {
+    "id": "book:the-colour-of-magic-1983",
+    "title": "The Colour of Magic",
+    "creator": "Terry Pratchett",
+    "year": 1983,
+    "wikidataId": "Q32136",
+    "wdYears": [
+      1983
+    ]
+  },
+  {
+    "id": "book:the-art-of-public-speaking-1983",
+    "title": "The Art of Public Speaking",
+    "creator": "Stephen E. Lucas",
+    "year": 1983,
+    "wdYears": []
+  },
+  {
+    "id": "book:objective-ncert-at-your-fingertips-for-neet-aiims-biology-2020",
+    "title": "Objective NCERT at your FINGERTIPS for NEET-AIIMS - Biology",
+    "creator": "MTG Editorial Board",
+    "year": 2020,
+    "wdYears": []
+  },
+  {
+    "id": "book:las-mujeres-que-aman-demasiado-2000",
+    "title": "Las mujeres que aman demasiado",
+    "creator": "Robin Norwood",
+    "year": 2000,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-mystery-of-the-blue-train-1928",
+    "title": "The Mystery of the Blue Train",
+    "creator": "Agatha Christie",
+    "year": 1928,
+    "wikidataId": "Q636815",
+    "wdYears": [
+      1928
+    ]
+  },
+  {
+    "id": "book:das-schlo-1926",
+    "title": "Das Schloß",
+    "creator": "Franz Kafka",
+    "year": 1926,
+    "wikidataId": "Q682733",
+    "wdYears": [
+      1922,
+      1926
+    ]
+  },
+  {
+    "id": "book:a-wizard-of-earthsea-1968",
+    "title": "A Wizard of Earthsea",
+    "creator": "Ursula K. Le Guin",
+    "year": 1968,
+    "wikidataId": "Q1771810",
+    "wdYears": [
+      1968
+    ]
+  },
+  {
+    "id": "book:romancing-mister-bridgerton-2002",
+    "title": "Romancing Mister Bridgerton",
+    "creator": "Julia Quinn",
+    "year": 2002,
+    "wikidataId": "Q113165000",
+    "wdYears": []
+  },
+  {
+    "id": "book:the-butterfly-garden-2016",
+    "title": "The Butterfly Garden",
+    "creator": "Dot Hutchison",
+    "year": 2016,
+    "wdYears": []
+  },
+  {
+    "id": "book:ulysses-1914",
+    "title": "Ulysses",
+    "creator": "James Joyce",
+    "year": 1914,
+    "wdYears": []
+  },
+  {
+    "id": "book:dune-messiah-1969",
+    "title": "Dune Messiah",
+    "creator": "Frank Herbert",
+    "year": 1969,
+    "wikidataId": "Q437383",
+    "wdYears": [
+      1969
+    ]
+  },
+  {
+    "id": "book:think-again-2021",
+    "title": "Think Again",
+    "creator": "Adam Grant",
+    "year": 2021,
+    "wikidataId": "Q107693279",
+    "wdYears": [
+      2021
+    ]
+  },
+  {
+    "id": "book:the-bluest-eye-1970",
+    "title": "The Bluest Eye",
+    "creator": "Toni Morrison",
+    "year": 1970,
+    "wikidataId": "Q1069956",
+    "wdYears": [
+      1970
+    ]
+  },
+  {
+    "id": "book:the-gita-for-gen-z-2025",
+    "title": "The Gita For Gen Z",
+    "creator": "Rania sen",
+    "year": 2025,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-dragonet-prophecy-2012",
+    "title": "The Dragonet Prophecy",
+    "creator": "Tui T. Sutherland",
+    "year": 2012,
+    "wikidataId": "Q123521605",
+    "wdYears": [
+      2012
+    ]
+  },
+  {
+    "id": "book:guess-how-much-i-love-you-1994",
+    "title": "Guess How Much I Love You",
+    "creator": "Sam McBratney",
+    "year": 1994,
+    "wikidataId": "Q123551184",
+    "wdYears": [
+      2020
+    ]
+  },
+  {
+    "id": "book:the-god-of-small-things-1997",
+    "title": "The God of Small Things",
+    "creator": "Arundhati Roy",
+    "year": 1997,
+    "wikidataId": "Q378786",
+    "wdYears": [
+      1997
+    ]
+  },
+  {
+    "id": "book:the-last-letter-2019",
+    "title": "The Last Letter",
+    "creator": "Rebecca Yarros",
+    "year": 2019,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-new-jim-crow-2000",
+    "title": "The New Jim Crow",
+    "creator": "Michelle Alexander",
+    "year": 2000,
+    "wikidataId": "Q7753648",
+    "wdYears": [
+      2010
+    ]
+  },
+  {
+    "id": "book:credence-2020",
+    "title": "Credence",
+    "creator": "Penelope Douglas",
+    "year": 2020,
+    "wdYears": []
+  },
+  {
+    "id": "book:think-faster-talk-smarter-2023",
+    "title": "Think Faster, Talk Smarter",
+    "creator": "Matt Abrahams",
+    "year": 2023,
+    "wdYears": []
+  },
+  {
+    "id": "book:models-2016",
+    "title": "Models",
+    "creator": "Mark Manson",
+    "year": 2016,
+    "wdYears": []
+  },
+  {
+    "id": "book:start-with-why-2009",
+    "title": "Start with why",
+    "creator": "Simon Sinek",
+    "year": 2009,
+    "wikidataId": "Q16909426",
+    "wdYears": [
+      2011
+    ]
+  },
+  {
+    "id": "book:tao-te-ching-1842",
+    "title": "Tao te Ching",
+    "creator": "老子",
+    "year": 1842,
+    "wikidataId": "Q134425",
+    "wdYears": []
+  },
+  {
+    "id": "book:a-knight-of-the-seven-kingdoms-2013",
+    "title": "A Knight of the Seven Kingdoms",
+    "creator": "George R. R. Martin",
+    "year": 2013,
+    "wikidataId": "Q2975594",
+    "wdYears": [
+      1998
+    ]
+  },
+  {
+    "id": "book:-2007",
+    "title": "채식주의자",
+    "creator": "Han Kang",
+    "year": 2007,
+    "wikidataId": "Q24082770",
+    "wdYears": [
+      2007
+    ]
+  },
+  {
+    "id": "book:fantastic-mr-fox-1970",
+    "title": "Fantastic Mr Fox",
+    "creator": "Roald Dahl",
+    "year": 1970,
+    "wikidataId": "Q2320903",
+    "wdYears": [
+      1962,
+      1970
+    ]
+  },
+  {
+    "id": "book:i-m-glad-my-mom-died-2022",
+    "title": "I'm Glad My Mom Died",
+    "creator": "Jennette McCurdy",
+    "year": 2022,
+    "wikidataId": "Q113474338",
+    "wdYears": [
+      2022
+    ]
+  },
+  {
+    "id": "book:purple-hibiscus-2003",
+    "title": "Purple Hibiscus",
+    "creator": "Chimamanda Ngozi Adichie",
+    "year": 2003,
+    "wikidataId": "Q7261426",
+    "wdYears": [
+      2003
+    ]
+  },
+  {
+    "id": "book:the-hard-thing-about-hard-things-2014",
+    "title": "The Hard Thing About Hard Things",
+    "creator": "Ben Horowitz",
+    "year": 2014,
+    "wikidataId": "Q22673752",
+    "wdYears": [
+      2014
+    ]
+  },
+  {
+    "id": "book:-1505",
+    "title": "Ἰλιάς",
+    "creator": "Ὅμηρος",
+    "year": 1505,
+    "wdYears": []
+  },
+  {
+    "id": "book:i-hope-this-doesn-t-find-you-2024",
+    "title": "I Hope This Doesn't Find You",
+    "creator": "Ann Liang",
+    "year": 2024,
+    "wdYears": []
+  },
+  {
+    "id": "book:memoirs-of-sherlock-holmes-11-stories-1893",
+    "title": "Memoirs of Sherlock Holmes [11 stories]",
+    "creator": "Arthur Conan Doyle",
+    "year": 1893,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-bad-beginning-1999",
+    "title": "The Bad Beginning",
+    "creator": "Lemony Snicket",
+    "year": 1999,
+    "wikidataId": "Q678277",
+    "wdYears": [
+      1999
+    ]
+  },
+  {
+    "id": "book:nesnesitelna-lehkost-byti-1984",
+    "title": "Nesnesitelná lehkost bytí",
+    "creator": "Milan Kundera",
+    "year": 1984,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-hound-of-the-baskervilles-1900",
+    "title": "The Hound of the Baskervilles",
+    "creator": "Arthur Conan Doyle",
+    "year": 1900,
+    "wdYears": []
+  },
+  {
+    "id": "book:how-to-win-friends-and-influence-people-in-the-digital-age-2011",
+    "title": "How to Win Friends and Influence People in the Digital Age",
+    "creator": "The Dale Carnegie Organization",
+    "year": 2011,
+    "wdYears": []
+  },
+  {
+    "id": "book:i-want-to-die-but-i-want-to-eat-tteokbokki-2022",
+    "title": "I Want to Die but I Want to Eat Tteokbokki",
+    "creator": "Baek Se-Hee [백세희]",
+    "year": 2022,
+    "wdYears": []
+  },
+  {
+    "id": "book:fearless-2025",
+    "title": "Fearless",
+    "creator": "Lauren Roberts",
+    "year": 2025,
+    "wdYears": []
+  },
+  {
+    "id": "book:gunahon-ka-devta-1966",
+    "title": "Gunahon Ka Devta",
+    "creator": "Dharamvir Bharti",
+    "year": 1966,
+    "wdYears": []
+  },
+  {
+    "id": "book:insatiable-2023",
+    "title": "Insatiable",
+    "creator": "Leigh Rivers",
+    "year": 2023,
+    "wdYears": []
+  },
+  {
+    "id": "book:ritual-2021",
+    "title": "Ritual",
+    "creator": "Shantel Tessier",
+    "year": 2021,
+    "wdYears": []
+  },
+  {
+    "id": "book:believe-it-to-achieve-it-2017",
+    "title": "Believe It to Achieve It",
+    "creator": "Brian Tracy",
+    "year": 2017,
+    "wdYears": []
+  },
+  {
+    "id": "book:how-to-win-at-chess-2023",
+    "title": "How to Win at Chess",
+    "creator": "Levy Rozman",
+    "year": 2023,
+    "wikidataId": "Q132254438",
+    "wdYears": []
+  },
+  {
+    "id": "book:man-som-hatar-kvinnor-2005",
+    "title": "Män som hatar kvinnor",
+    "creator": "Stieg Larsson",
+    "year": 2005,
+    "wdYears": []
+  },
+  {
+    "id": "book:los-secretos-de-la-mente-millonaria-2013",
+    "title": "Los secretos de la mente millonaria",
+    "creator": "T. Harv Eker",
+    "year": 2013,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-psychology-of-everyday-things-1988",
+    "title": "The Psychology of Everyday Things",
+    "creator": "Donald A. Norman",
+    "year": 1988,
+    "wikidataId": "Q7729821",
+    "wdYears": [
+      1988
+    ]
+  },
+  {
+    "id": "book:the-world-of-psychology-1992",
+    "title": "The world of psychology",
+    "creator": "Samuel E. Wood",
+    "year": 1992,
+    "wdYears": []
+  },
+  {
+    "id": "book:stellaluna-1990",
+    "title": "Stellaluna",
+    "creator": "Janell Cannon",
+    "year": 1990,
+    "wikidataId": "Q7607168",
+    "wdYears": [
+      1993
+    ]
+  },
+  {
+    "id": "book:hacking-2003",
+    "title": "Hacking",
+    "creator": "Jon Erickson",
+    "year": 2003,
+    "wikidataId": "Q5637303",
+    "wdYears": [
+      2003,
+      2008
+    ]
+  },
+  {
+    "id": "book:midnight-sun-2020",
+    "title": "Midnight Sun",
+    "creator": "Stephenie Meyer",
+    "year": 2020,
+    "wikidataId": "Q1052268",
+    "wdYears": [
+      2020
+    ]
+  },
+  {
+    "id": "book:den-of-vipers-2020",
+    "title": "Den of Vipers",
+    "creator": "K. A. Knight",
+    "year": 2020,
+    "wdYears": []
+  },
+  {
+    "id": "book:-2008",
+    "title": "三体",
+    "creator": "刘慈欣",
+    "year": 2008,
+    "wikidataId": "Q607112",
+    "wdYears": [
+      2006
+    ]
+  },
+  {
+    "id": "book:november-9-2015",
+    "title": "November 9",
+    "creator": "Colleen Hoover",
+    "year": 2015,
+    "wdYears": []
+  },
+  {
+    "id": "book:nonviolent-communication-1999",
+    "title": "Nonviolent Communication",
+    "creator": "Marshall B. Rosenberg",
+    "year": 1999,
+    "wdYears": []
+  },
+  {
+    "id": "book:days-at-the-morisaki-bookshop-2022",
+    "title": "Days at the Morisaki Bookshop",
+    "creator": "Satoshi Yagisawa",
+    "year": 2022,
+    "wikidataId": "Q11539572",
+    "wdYears": [
+      2010
+    ]
+  },
+  {
+    "id": "book:man-and-his-symbols-1964",
+    "title": "Man and His Symbols",
+    "creator": "Carl Gustav Jung",
+    "year": 1964,
+    "wikidataId": "Q3181843",
+    "wdYears": [
+      1964
+    ]
+  },
+  {
+    "id": "book:the-ballad-of-songbirds-and-snakes-2020",
+    "title": "The Ballad of Songbirds and Snakes",
+    "creator": "Suzanne Collins",
+    "year": 2020,
+    "wikidataId": "Q81925268",
+    "wdYears": [
+      2020
+    ]
+  },
+  {
+    "id": "book:the-satanic-bible-1969",
+    "title": "The Satanic Bible",
+    "creator": "Anton Szandor LaVey",
+    "year": 1969,
+    "wikidataId": "Q9702",
+    "wdYears": [
+      1969
+    ]
+  },
+  {
+    "id": "book:rose-madder-1995",
+    "title": "Rose Madder",
+    "creator": "Stephen King",
+    "year": 1995,
+    "wikidataId": "Q468121",
+    "wdYears": [
+      1995
+    ]
+  },
+  {
+    "id": "book:you-are-a-badass-2013",
+    "title": "You Are a Badass",
+    "creator": "Jen Sincero",
+    "year": 2013,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-cat-in-the-hat-1957",
+    "title": "The Cat in the Hat",
+    "creator": "Dr. Seuss",
+    "year": 1957,
+    "wikidataId": "Q973053",
+    "wdYears": [
+      1957
+    ]
+  },
+  {
+    "id": "book:bobby-fischer-teaches-chess-1966",
+    "title": "Bobby Fischer Teaches Chess",
+    "creator": "Bobby Fischer",
+    "year": 1966,
+    "wikidataId": "Q121036149",
+    "wdYears": [
+      1994
+    ]
+  },
+  {
+    "id": "book:christine-1983",
+    "title": "Christine",
+    "creator": "Stephen King",
+    "year": 1983,
+    "wikidataId": "Q250123",
+    "wdYears": [
+      1983
+    ]
+  },
+  {
+    "id": "book:a-child-called-it-1987",
+    "title": "A child called \"it\"",
+    "creator": "David J. Pelzer",
+    "year": 1987,
+    "wdYears": []
+  },
+  {
+    "id": "book:a-dance-with-dragons-2008",
+    "title": "A Dance With Dragons",
+    "creator": "George R. R. Martin",
+    "year": 2008,
+    "wikidataId": "Q28306",
+    "wdYears": [
+      2011
+    ]
+  },
+  {
+    "id": "book:along-came-a-spider-1993",
+    "title": "Along Came a Spider",
+    "creator": "James Patterson",
+    "year": 1993,
+    "wikidataId": "Q3935111",
+    "wdYears": [
+      1992,
+      1993
+    ]
+  },
+  {
+    "id": "book:noches-blancas-2020",
+    "title": "Noches Blancas",
+    "creator": "Фёдор Михайлович Достоевский",
+    "year": 2020,
+    "wdYears": []
+  },
+  {
+    "id": "book:1st-to-die-2001",
+    "title": "1st to Die",
+    "creator": "James Patterson",
+    "year": 2001,
+    "wikidataId": "Q3921864",
+    "wdYears": [
+      2001
+    ]
+  },
+  {
+    "id": "book:red-white-royal-blue-2019",
+    "title": "Red, White & Royal Blue",
+    "creator": "Casey McQuiston",
+    "year": 2019,
+    "wikidataId": "Q104876272",
+    "wdYears": [
+      2019
+    ]
+  },
+  {
+    "id": "book:the-call-of-the-wild-1903",
+    "title": "The Call of the Wild",
+    "creator": "Jack London",
+    "year": 1903,
+    "wikidataId": "Q476871",
+    "wdYears": [
+      1903
+    ]
+  },
+  {
+    "id": "book:a-wrinkle-in-time-1962",
+    "title": "A Wrinkle in Time",
+    "creator": "Madeleine L'Engle",
+    "year": 1962,
+    "wikidataId": "Q2268391",
+    "wdYears": [
+      1962,
+      1963
+    ]
+  },
+  {
+    "id": "book:we-need-to-talk-about-kevin-2003",
+    "title": "We need to talk about Kevin",
+    "creator": "Lionel Shriver",
+    "year": 2003,
+    "wikidataId": "Q2107910",
+    "wdYears": [
+      2003
+    ]
+  },
+  {
+    "id": "book:das-kapital-1867",
+    "title": "Das Kapital",
+    "creator": "Karl Marx",
+    "year": 1867,
+    "wikidataId": "Q58784",
+    "wdYears": [
+      1867
+    ]
+  },
+  {
+    "id": "book:king-of-greed-2023",
+    "title": "King of Greed",
+    "creator": "Ana Huang",
+    "year": 2023,
+    "wdYears": []
+  },
+  {
+    "id": "book:indigno-de-ser-humano-2022",
+    "title": "Indigno de ser humano",
+    "creator": "太宰 治",
+    "year": 2022,
+    "wdYears": []
+  },
+  {
+    "id": "book:why-nations-fail-2012",
+    "title": "Why Nations Fail",
+    "creator": "Daron Acemoglu",
+    "year": 2012,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-secret-agent-1907",
+    "title": "The Secret Agent",
+    "creator": "Joseph Conrad",
+    "year": 1907,
+    "wikidataId": "Q1247666",
+    "wdYears": [
+      1907
+    ]
+  },
+  {
+    "id": "book:breaking-dawn-2000",
+    "title": "Breaking Dawn",
+    "creator": "Stephenie Meyer",
+    "year": 2000,
+    "wikidataId": "Q53945",
+    "wdYears": [
+      2008
+    ]
+  },
+  {
+    "id": "book:the-coldest-winter-ever-1999",
+    "title": "The coldest winter ever",
+    "creator": "Sister Souljah",
+    "year": 1999,
+    "wikidataId": "Q7726644",
+    "wdYears": [
+      1999
+    ]
+  },
+  {
+    "id": "book:the-chalice-of-the-gods-2023",
+    "title": "The Chalice of the Gods",
+    "creator": "Rick Riordan",
+    "year": 2023,
+    "wikidataId": "Q120134887",
+    "wdYears": [
+      2023
+    ]
+  },
+  {
+    "id": "book:the-simple-path-to-wealth-2000",
+    "title": "The Simple Path to Wealth",
+    "creator": "J. L. Collins",
+    "year": 2000,
+    "wdYears": []
+  },
+  {
+    "id": "book:little-liar-2024",
+    "title": "Little Liar",
+    "creator": "Leigh Rivers",
+    "year": 2024,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-c-programming-language-1978",
+    "title": "The C Programming Language",
+    "creator": "Brian W. Kernighan",
+    "year": 1978,
+    "wdYears": []
+  },
+  {
+    "id": "book:bag-of-bones-1998",
+    "title": "Bag of Bones",
+    "creator": "Stephen King",
+    "year": 1998,
+    "wikidataId": "Q302960",
+    "wdYears": [
+      1998
+    ]
+  },
+  {
+    "id": "book:fifty-shades-darker-2011",
+    "title": "Fifty Shades Darker",
+    "creator": "E. L. James",
+    "year": 2011,
+    "wikidataId": "Q2195511",
+    "wdYears": [
+      2011,
+      2012
+    ]
+  },
+  {
+    "id": "book:circe-2018",
+    "title": "Circe",
+    "creator": "Madeline Miller",
+    "year": 2018,
+    "wikidataId": "Q64590884",
+    "wdYears": [
+      2018
+    ]
+  },
+  {
+    "id": "book:campbell-biology-2015",
+    "title": "Campbell biology",
+    "creator": "Lisa A. Urry",
+    "year": 2015,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-murders-in-the-rue-morgue-1841",
+    "title": "The Murders in the Rue Morgue",
+    "creator": "Edgar Allan Poe",
+    "year": 1841,
+    "wikidataId": "Q459667",
+    "wdYears": [
+      1841
+    ]
+  },
+  {
+    "id": "book:the-artist-s-way-1992",
+    "title": "The Artist's Way",
+    "creator": "Julia Cameron",
+    "year": 1992,
+    "wikidataId": "Q7714574",
+    "wdYears": [
+      1992
+    ]
+  },
+  {
+    "id": "book:the-art-of-spending-money-2025",
+    "title": "The Art Of Spending Money",
+    "creator": "Morgan Housel",
+    "year": 2025,
+    "wdYears": []
+  },
+  {
+    "id": "book:dubliners-1914",
+    "title": "Dubliners",
+    "creator": "James Joyce",
+    "year": 1914,
+    "wikidataId": "Q459592",
+    "wdYears": [
+      1904,
+      1914
+    ]
+  },
+  {
+    "id": "book:the-blue-umbrella-1974",
+    "title": "The Blue Umbrella",
+    "creator": "Ruskin Bond",
+    "year": 1974,
+    "wikidataId": "Q7718854",
+    "wdYears": [
+      1980
+    ]
+  },
+  {
+    "id": "book:robinson-crusoe-1686",
+    "title": "Robinson Crusoe",
+    "creator": "Daniel Defoe",
+    "year": 1686,
+    "wikidataId": "Q483034",
+    "wdYears": [
+      1719
+    ]
+  },
+  {
+    "id": "book:julius-caesar-1656",
+    "title": "Julius Caesar",
+    "creator": "William Shakespeare",
+    "year": 1656,
+    "wikidataId": "Q215750",
+    "wdYears": [
+      1599
+    ]
+  },
+  {
+    "id": "book:through-the-looking-glass-1865",
+    "title": "Through the Looking-Glass",
+    "creator": "Lewis Carroll",
+    "year": 1865,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-wind-in-the-willows-1908",
+    "title": "The Wind in the Willows",
+    "creator": "Kenneth Grahame",
+    "year": 1908,
+    "wikidataId": "Q936276",
+    "wdYears": [
+      1908
+    ]
+  },
+  {
+    "id": "book:walden-1854",
+    "title": "Walden",
+    "creator": "Henry David Thoreau",
+    "year": 1854,
+    "wikidataId": "Q863534",
+    "wdYears": [
+      1854
+    ]
+  },
+  {
+    "id": "book:three-men-in-a-boat-to-say-nothing-of-the-dog-1889",
+    "title": "Three Men in a Boat (to say nothing of the dog)",
+    "creator": "Jerome Klapka Jérôme",
+    "year": 1889,
+    "wikidataId": "Q955910",
+    "wdYears": [
+      1889
+    ]
+  },
+  {
+    "id": "book:moll-flanders-1722",
+    "title": "Moll Flanders",
+    "creator": "Daniel Defoe",
+    "year": 1722,
+    "wikidataId": "Q612523",
+    "wdYears": [
+      1722
+    ]
+  },
+  {
+    "id": "book:mansfield-park-1814",
+    "title": "Mansfield Park",
+    "creator": "Jane Austen",
+    "year": 1814,
+    "wikidataId": "Q469690",
+    "wdYears": [
+      1814
+    ]
+  },
+  {
+    "id": "book:the-man-who-was-thursday-1908",
+    "title": "The Man Who Was Thursday",
+    "creator": "Gilbert Keith Chesterton",
+    "year": 1908,
+    "wikidataId": "Q959816",
+    "wdYears": [
+      1908
+    ]
+  },
+  {
+    "id": "book:les-trois-mousquetaires-1844",
+    "title": "Les trois Mousquetaires",
+    "creator": "Alexandre Dumas",
+    "year": 1844,
+    "wdYears": []
+  },
+  {
+    "id": "book:king-solomon-s-mines-1876",
+    "title": "King Solomon's Mines",
+    "creator": "H. Rider Haggard",
+    "year": 1876,
+    "wikidataId": "Q1137494",
+    "wdYears": [
+      1885
+    ]
+  },
+  {
+    "id": "book:candide-1746",
+    "title": "Candide",
+    "creator": "Voltaire",
+    "year": 1746,
+    "wikidataId": "Q215894",
+    "wdYears": [
+      1759,
+      1782
+    ]
+  },
+  {
+    "id": "book:the-moonstone-1800",
+    "title": "The Moonstone",
+    "creator": "Wilkie Collins",
+    "year": 1800,
+    "wikidataId": "Q2362563",
+    "wdYears": [
+      1868
+    ]
+  },
+  {
+    "id": "book:ethan-frome-1910",
+    "title": "Ethan Frome",
+    "creator": "Edith Wharton",
+    "year": 1910,
+    "wikidataId": "Q5402934",
+    "wdYears": [
+      1911
+    ]
+  },
+  {
+    "id": "book:captains-courageous-1896",
+    "title": "Captains Courageous",
+    "creator": "Rudyard Kipling",
+    "year": 1896,
+    "wikidataId": "Q1035138",
+    "wdYears": [
+      1897
+    ]
+  },
+  {
+    "id": "book:richard-iii-1597",
+    "title": "Richard III",
+    "creator": "William Shakespeare",
+    "year": 1597,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-railway-children-1900",
+    "title": "The Railway Children",
+    "creator": "Edith Nesbit",
+    "year": 1900,
+    "wikidataId": "Q969970",
+    "wdYears": [
+      1906
+    ]
+  },
+  {
+    "id": "book:kim-1901",
+    "title": "Kim",
+    "creator": "Rudyard Kipling",
+    "year": 1901,
+    "wikidataId": "Q589868",
+    "wdYears": [
+      1901
+    ]
+  },
+  {
+    "id": "book:david-copperfield-1800",
+    "title": "David Copperfield",
+    "creator": "Charles Dickens",
+    "year": 1800,
+    "wikidataId": "Q189811",
+    "wdYears": [
+      1849,
+      1850
+    ]
+  },
+  {
+    "id": "book:cymbeline-1734",
+    "title": "Cymbeline",
+    "creator": "William Shakespeare",
+    "year": 1734,
+    "wikidataId": "Q730212",
+    "wdYears": [
+      1610,
+      1623
+    ]
+  },
+  {
+    "id": "book:my-antonia-1818",
+    "title": "My Ántonia",
+    "creator": "Willa Cather",
+    "year": 1818,
+    "wikidataId": "Q2776448",
+    "wdYears": [
+      1918
+    ]
+  },
+  {
+    "id": "book:the-old-curiosity-shop-1800",
+    "title": "The Old Curiosity Shop",
+    "creator": "Charles Dickens",
+    "year": 1800,
+    "wikidataId": "Q2700616",
+    "wdYears": [
+      1840
+    ]
+  },
+  {
+    "id": "book:all-s-well-that-ends-well-1734",
+    "title": "All's Well That Ends Well",
+    "creator": "William Shakespeare",
+    "year": 1734,
+    "wikidataId": "Q506865",
+    "wdYears": [
+      1605,
+      1623
+    ]
+  },
+  {
+    "id": "book:anne-of-avonlea-1909",
+    "title": "Anne of Avonlea",
+    "creator": "Lucy Maud Montgomery",
+    "year": 1909,
+    "wikidataId": "Q1331757",
+    "wdYears": [
+      1909
+    ]
+  },
+  {
+    "id": "book:the-secret-adversary-1922",
+    "title": "The Secret Adversary",
+    "creator": "Agatha Christie",
+    "year": 1922,
+    "wikidataId": "Q617379",
+    "wdYears": [
+      1922
+    ]
+  },
+  {
+    "id": "book:a-portrait-of-the-artist-as-a-young-man-1818",
+    "title": "A Portrait of the Artist as a Young Man",
+    "creator": "James Joyce",
+    "year": 1818,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-mill-on-the-floss-1800",
+    "title": "The Mill on the Floss",
+    "creator": "George Eliot",
+    "year": 1800,
+    "wikidataId": "Q1215018",
+    "wdYears": [
+      1860
+    ]
+  },
+  {
+    "id": "book:the-prince-and-the-pauper-1881",
+    "title": "The Prince and the Pauper",
+    "creator": "Mark Twain",
+    "year": 1881,
+    "wikidataId": "Q869725",
+    "wdYears": [
+      1881
+    ]
+  },
+  {
+    "id": "book:leaves-of-grass-1855",
+    "title": "Leaves of Grass",
+    "creator": "Walt Whitman",
+    "year": 1855,
+    "wikidataId": "Q132042",
+    "wdYears": [
+      1855
+    ]
+  },
+  {
+    "id": "book:a-room-with-a-view-1905",
+    "title": "A Room with a View",
+    "creator": "E. M. Forster",
+    "year": 1905,
+    "wikidataId": "Q120288",
+    "wdYears": [
+      1908
+    ]
+  },
+  {
+    "id": "book:the-princess-and-the-goblin-1872",
+    "title": "The Princess and the Goblin",
+    "creator": "George MacDonald",
+    "year": 1872,
+    "wikidataId": "Q466505",
+    "wdYears": [
+      1872
+    ]
+  },
+  {
+    "id": "book:tess-of-the-d-urbervilles-1707",
+    "title": "Tess of the d'Urbervilles",
+    "creator": "Thomas Hardy",
+    "year": 1707,
+    "wikidataId": "Q649409",
+    "wdYears": [
+      1891
+    ]
+  },
+  {
+    "id": "book:the-canterbury-tales-1478",
+    "title": "The Canterbury Tales",
+    "creator": "Geoffrey Chaucer",
+    "year": 1478,
+    "wikidataId": "Q191663",
+    "wdYears": [
+      1387
+    ]
+  },
+  {
+    "id": "book:riders-of-the-purple-sage-1912",
+    "title": "Riders of the Purple Sage",
+    "creator": "Zane Grey",
+    "year": 1912,
+    "wikidataId": "Q3398694",
+    "wdYears": [
+      1912
+    ]
+  },
+  {
+    "id": "book:decamerone-1516",
+    "title": "Decamerone",
+    "creator": "Giovanni Boccaccio",
+    "year": 1516,
+    "wikidataId": "Q16438",
+    "wdYears": [
+      1351
+    ]
+  },
+  {
+    "id": "book:the-house-of-mirth-1905",
+    "title": "The House of Mirth",
+    "creator": "Edith Wharton",
+    "year": 1905,
+    "wikidataId": "Q6474536",
+    "wdYears": [
+      1905
+    ]
+  },
+  {
+    "id": "book:uncle-tom-s-cabin-1850",
+    "title": "Uncle Tom's Cabin",
+    "creator": "Harriet Beecher Stowe",
+    "year": 1850,
+    "wikidataId": "Q2222",
+    "wdYears": [
+      1852
+    ]
+  },
+  {
+    "id": "book:the-pilgrim-s-progress-1678",
+    "title": "The Pilgrim's Progress",
+    "creator": "John Bunyan",
+    "year": 1678,
+    "wikidataId": "Q268211",
+    "wdYears": [
+      1678
+    ]
+  },
+  {
+    "id": "book:the-jewel-of-seven-stars-1902",
+    "title": "The Jewel of Seven Stars",
+    "creator": "Bram Stoker",
+    "year": 1902,
+    "wikidataId": "Q7743210",
+    "wdYears": [
+      1903
+    ]
+  },
+  {
+    "id": "book:the-woman-in-white-1859",
+    "title": "The Woman in White",
+    "creator": "Wilkie Collins",
+    "year": 1859,
+    "wikidataId": "Q1212672",
+    "wdYears": [
+      1860
+    ]
+  },
+  {
+    "id": "book:the-battle-of-life-1846",
+    "title": "The Battle of Life",
+    "creator": "Charles Dickens",
+    "year": 1846,
+    "wikidataId": "Q2054880",
+    "wdYears": [
+      1846
+    ]
+  },
+  {
+    "id": "book:the-red-badge-of-courage-1855",
+    "title": "The Red Badge of Courage",
+    "creator": "Stephen Crane",
+    "year": 1855,
+    "wikidataId": "Q1219239",
+    "wdYears": [
+      1894,
+      1895
+    ]
+  },
+  {
+    "id": "book:du-cote-de-chez-swann-1908",
+    "title": "Du côté de chez Swann",
+    "creator": "Marcel Proust",
+    "year": 1908,
+    "wdYears": []
+  },
+  {
+    "id": "book:this-side-of-paradise-1920",
+    "title": "This Side of Paradise",
+    "creator": "F. Scott Fitzgerald",
+    "year": 1920,
+    "wikidataId": "Q2581681",
+    "wdYears": [
+      1920
+    ]
+  },
+  {
+    "id": "book:silas-marner-1800",
+    "title": "Silas Marner",
+    "creator": "George Eliot",
+    "year": 1800,
+    "wikidataId": "Q638327",
+    "wdYears": [
+      1861
+    ]
+  },
+  {
+    "id": "book:herland-1915",
+    "title": "Herland",
+    "creator": "Charlotte Perkins Gilman",
+    "year": 1915,
+    "wikidataId": "Q5739278",
+    "wdYears": [
+      1915
+    ]
+  },
+  {
+    "id": "book:the-prisoner-of-zenda-1800",
+    "title": "The Prisoner of Zenda",
+    "creator": "Anthony Hope",
+    "year": 1800,
+    "wikidataId": "Q1193766",
+    "wdYears": [
+      1894
+    ]
+  },
+  {
+    "id": "book:dorothy-and-the-wizard-in-oz-1908",
+    "title": "Dorothy and the Wizard in Oz",
+    "creator": "L. Frank Baum",
+    "year": 1908,
+    "wikidataId": "Q473588",
+    "wdYears": [
+      1908
+    ]
+  },
+  {
+    "id": "book:agnes-grey-1847",
+    "title": "Agnes Grey",
+    "creator": "Anne Brontë",
+    "year": 1847,
+    "wikidataId": "Q517172",
+    "wdYears": [
+      1847
+    ]
+  },
+  {
+    "id": "book:o-pioneers-1913",
+    "title": "O Pioneers!",
+    "creator": "Willa Cather",
+    "year": 1913,
+    "wikidataId": "Q2008343",
+    "wdYears": [
+      1913
+    ]
+  },
+  {
+    "id": "book:the-second-jungle-book-1887",
+    "title": "The Second Jungle Book",
+    "creator": "Rudyard Kipling",
+    "year": 1887,
+    "wikidataId": "Q1101819",
+    "wdYears": [
+      1895
+    ]
+  },
+  {
+    "id": "book:goldsmith-s-the-vicar-of-wakefield-1111",
+    "title": "Goldsmith's The vicar of Wakefield",
+    "creator": "Oliver Goldsmith",
+    "year": 1111,
+    "wikidataId": "Q1196205",
+    "wdYears": [
+      1766
+    ]
+  },
+  {
+    "id": "book:the-mystery-of-edwin-drood-1870",
+    "title": "The mystery of Edwin Drood",
+    "creator": "Charles Dickens",
+    "year": 1870,
+    "wikidataId": "Q1168105",
+    "wdYears": [
+      1870
+    ]
+  },
+  {
+    "id": "book:the-iron-heel-1907",
+    "title": "The Iron Heel",
+    "creator": "Jack London",
+    "year": 1907,
+    "wikidataId": "Q2465752",
+    "wdYears": [
+      1908
+    ]
+  },
+  {
+    "id": "book:jo-s-boys-1886",
+    "title": "Jo's Boys",
+    "creator": "Louisa May Alcott",
+    "year": 1886,
+    "wikidataId": "Q1436824",
+    "wdYears": [
+      1886
+    ]
+  },
+  {
+    "id": "book:eight-cousins-1874",
+    "title": "Eight cousins",
+    "creator": "Louisa May Alcott",
+    "year": 1874,
+    "wikidataId": "Q3281243",
+    "wdYears": [
+      1875
+    ]
+  },
+  {
+    "id": "book:the-lost-princess-of-oz-1917",
+    "title": "The Lost Princess of Oz",
+    "creator": "L. Frank Baum",
+    "year": 1917,
+    "wikidataId": "Q7748719",
+    "wdYears": [
+      1917
+    ]
+  },
+  {
+    "id": "book:the-scarlet-pimpernel-1900",
+    "title": "The Scarlet Pimpernel",
+    "creator": "Emma Orczy",
+    "year": 1900,
+    "wikidataId": "Q1249536",
+    "wdYears": [
+      1905
+    ]
+  },
+  {
+    "id": "book:flatland-1884",
+    "title": "Flatland",
+    "creator": "Edwin Abbott Abbott",
+    "year": 1884,
+    "wikidataId": "Q728312",
+    "wdYears": [
+      1884
+    ]
+  },
+  {
+    "id": "book:his-last-bow-8-stories-1917",
+    "title": "His Last Bow [8 stories]",
+    "creator": "Arthur Conan Doyle",
+    "year": 1917,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-story-of-the-amulet-1905",
+    "title": "The Story of the Amulet",
+    "creator": "Edith Nesbit",
+    "year": 1905,
+    "wikidataId": "Q7766831",
+    "wdYears": [
+      1906
+    ]
+  },
+  {
+    "id": "book:the-blithedale-romance-1852",
+    "title": "The Blithedale Romance",
+    "creator": "Nathaniel Hawthorne",
+    "year": 1852,
+    "wikidataId": "Q4007947",
+    "wdYears": [
+      1852
+    ]
+  },
+  {
+    "id": "book:women-in-love-1877",
+    "title": "Women in Love",
+    "creator": "D. H. Lawrence",
+    "year": 1877,
+    "wikidataId": "Q2443714",
+    "wdYears": [
+      1920
+    ]
+  },
+  {
+    "id": "book:the-complete-life-and-adventures-of-santa-claus-1902",
+    "title": "The Complete Life and Adventures of Santa Claus",
+    "creator": "L. Frank Baum",
+    "year": 1902,
+    "wdYears": []
+  },
+  {
+    "id": "book:la-chartreuse-de-parme-1800",
+    "title": "La chartreuse de Parme",
+    "creator": "Stendhal",
+    "year": 1800,
+    "wikidataId": "Q1165714",
+    "wdYears": [
+      1838,
+      1839
+    ]
+  },
+  {
+    "id": "book:pollyanna-1912",
+    "title": "Pollyanna",
+    "creator": "Eleanor Hodgman Porter",
+    "year": 1912,
+    "wikidataId": "Q2348190",
+    "wdYears": [
+      1913
+    ]
+  },
+  {
+    "id": "book:alice-s-adventures-in-wonderland-through-the-looking-glass-1889",
+    "title": "Alice's Adventures in Wonderland / Through the Looking Glass",
+    "creator": "Lewis Carroll",
+    "year": 1889,
+    "wdYears": []
+  },
+  {
+    "id": "book:adam-bede-1800",
+    "title": "Adam Bede",
+    "creator": "George Eliot",
+    "year": 1800,
+    "wikidataId": "Q2611046",
+    "wdYears": [
+      1859
+    ]
+  },
+  {
+    "id": "book:the-pickwick-papers-1800",
+    "title": "The Pickwick Papers",
+    "creator": "Charles Dickens",
+    "year": 1800,
+    "wikidataId": "Q460583",
+    "wdYears": [
+      1836
+    ]
+  },
+  {
+    "id": "book:the-road-to-oz-1909",
+    "title": "The Road to Oz",
+    "creator": "L. Frank Baum",
+    "year": 1909,
+    "wikidataId": "Q1250364",
+    "wdYears": [
+      1909
+    ]
+  },
+  {
+    "id": "book:the-jungle-book-1893",
+    "title": "The Jungle Book",
+    "creator": "Rudyard Kipling",
+    "year": 1893,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-riddle-of-the-sands-1903",
+    "title": "The Riddle of the Sands",
+    "creator": "Erskine Childers",
+    "year": 1903,
+    "wikidataId": "Q1170204",
+    "wdYears": [
+      1903
+    ]
+  },
+  {
+    "id": "book:the-sea-fairies-1911",
+    "title": "The Sea Fairies",
+    "creator": "L. Frank Baum",
+    "year": 1911,
+    "wikidataId": "Q7762755",
+    "wdYears": [
+      1911
+    ]
+  },
+  {
+    "id": "book:the-club-of-queer-trades-1900",
+    "title": "The Club of Queer Trades",
+    "creator": "Gilbert Keith Chesterton",
+    "year": 1900,
+    "wikidataId": "Q3221512",
+    "wdYears": [
+      1905
+    ]
+  },
+  {
+    "id": "book:greenmantle-1915",
+    "title": "Greenmantle",
+    "creator": "John Buchan",
+    "year": 1915,
+    "wikidataId": "Q5604315",
+    "wdYears": [
+      1916
+    ]
+  },
+  {
+    "id": "book:to-the-lighthouse-1927",
+    "title": "To the Lighthouse",
+    "creator": "Virginia Woolf",
+    "year": 1927,
+    "wdYears": []
+  },
+  {
+    "id": "book:moonfleet-1898",
+    "title": "Moonfleet",
+    "creator": "John Meade Falkner",
+    "year": 1898,
+    "wikidataId": "Q1795631",
+    "wdYears": [
+      1898
+    ]
+  },
+  {
+    "id": "book:villette-a-novel-1853",
+    "title": "Villette, a novel",
+    "creator": "Charlotte Brontë",
+    "year": 1853,
+    "wikidataId": "Q2449570",
+    "wdYears": [
+      1853
+    ]
+  },
+  {
+    "id": "book:the-taming-of-the-shrew-1631",
+    "title": "The Taming of the Shrew",
+    "creator": "William Shakespeare",
+    "year": 1631,
+    "wikidataId": "Q332387",
+    "wdYears": [
+      1591,
+      1623
+    ]
+  },
+  {
+    "id": "book:coriolanus-1721",
+    "title": "Coriolanus",
+    "creator": "William Shakespeare",
+    "year": 1721,
+    "wikidataId": "Q463126",
+    "wdYears": [
+      1608,
+      1623
+    ]
+  },
+  {
+    "id": "book:narrative-of-the-life-of-frederick-douglass-1845",
+    "title": "Narrative of the life of Frederick Douglass",
+    "creator": "Frederick Douglass",
+    "year": 1845,
+    "wikidataId": "Q54638790",
+    "wdYears": []
+  },
+  {
+    "id": "book:twelve-years-a-slave-1853",
+    "title": "Twelve years a slave",
+    "creator": "Solomon Northup",
+    "year": 1853,
+    "wikidataId": "Q7857661",
+    "wdYears": [
+      1853
+    ]
+  },
+  {
+    "id": "book:hard-times-1854",
+    "title": "Hard Times",
+    "creator": "Charles Dickens",
+    "year": 1854,
+    "wikidataId": "Q1340493",
+    "wdYears": [
+      1854
+    ]
+  },
+  {
+    "id": "book:the-legend-of-sleepy-hollow-1820",
+    "title": "The Legend of Sleepy Hollow",
+    "creator": "Washington Irving",
+    "year": 1820,
+    "wikidataId": "Q72309",
+    "wdYears": [
+      1819
+    ]
+  },
+  {
+    "id": "book:troilus-and-cressida-1609",
+    "title": "Troilus and Cressida",
+    "creator": "William Shakespeare",
+    "year": 1609,
+    "wikidataId": "Q183304",
+    "wdYears": [
+      1600
+    ]
+  },
+  {
+    "id": "book:henry-iv-part-1-1598",
+    "title": "Henry IV, Part 1",
+    "creator": "William Shakespeare",
+    "year": 1598,
+    "wikidataId": "Q631855",
+    "wdYears": [
+      1597
+    ]
+  },
+  {
+    "id": "book:five-children-and-it-1905",
+    "title": "Five Children and It",
+    "creator": "Edith Nesbit",
+    "year": 1905,
+    "wikidataId": "Q651866",
+    "wdYears": [
+      1902
+    ]
+  },
+  {
+    "id": "book:antony-and-cleopatra-1734",
+    "title": "Antony and Cleopatra",
+    "creator": "William Shakespeare",
+    "year": 1734,
+    "wikidataId": "Q606830",
+    "wdYears": [
+      1606,
+      1623
+    ]
+  },
+  {
+    "id": "book:king-richard-ii-1597",
+    "title": "King Richard II",
+    "creator": "William Shakespeare",
+    "year": 1597,
+    "wikidataId": "Q649562",
+    "wdYears": [
+      1595
+    ]
+  },
+  {
+    "id": "book:anne-s-house-of-dreams-1917",
+    "title": "Anne's House of Dreams",
+    "creator": "Lucy Maud Montgomery",
+    "year": 1917,
+    "wikidataId": "Q2420701",
+    "wdYears": [
+      1917
+    ]
+  },
+  {
+    "id": "book:the-merchant-of-venice-1600",
+    "title": "The Merchant of Venice",
+    "creator": "William Shakespeare",
+    "year": 1600,
+    "wikidataId": "Q206400",
+    "wdYears": [
+      1596,
+      1600
+    ]
+  },
+  {
+    "id": "book:a-connecticut-yankee-in-king-arthur-s-court-1889",
+    "title": "A Connecticut Yankee in King Arthur's Court",
+    "creator": "Mark Twain",
+    "year": 1889,
+    "wikidataId": "Q848612",
+    "wdYears": [
+      1889
+    ]
+  },
+  {
+    "id": "book:anne-of-the-island-1915",
+    "title": "Anne of the Island",
+    "creator": "Lucy Maud Montgomery",
+    "year": 1915,
+    "wikidataId": "Q1352419",
+    "wdYears": [
+      1915
+    ]
+  },
+  {
+    "id": "book:metamorfosi-1474",
+    "title": "Metamorfosi",
+    "creator": "Ovid",
+    "year": 1474,
+    "wikidataId": "Q184742",
+    "wdYears": [
+      1
+    ]
+  },
+  {
+    "id": "book:aeneis-1592",
+    "title": "Aeneis",
+    "creator": "Publius Vergilius Maro",
+    "year": 1592,
+    "wikidataId": "Q62052944",
+    "wdYears": [
+      1490
+    ]
+  },
+  {
+    "id": "book:henry-viii-1670",
+    "title": "Henry VIII",
+    "creator": "William Shakespeare",
+    "year": 1670,
+    "wikidataId": "Q672059",
+    "wdYears": [
+      1613,
+      1623
+    ]
+  },
+  {
+    "id": "book:the-comedy-of-errors-1734",
+    "title": "The Comedy of Errors",
+    "creator": "William Shakespeare",
+    "year": 1734,
+    "wikidataId": "Q506505",
+    "wdYears": [
+      1594,
+      1734
+    ]
+  },
+  {
+    "id": "book:the-story-of-the-treasure-seekers-1899",
+    "title": "The Story of the Treasure Seekers",
+    "creator": "Edith Nesbit",
+    "year": 1899,
+    "wikidataId": "Q7766848",
+    "wdYears": [
+      1899
+    ]
+  },
+  {
+    "id": "book:henry-vi-part-3-1600",
+    "title": "Henry VI, Part 3",
+    "creator": "William Shakespeare",
+    "year": 1600,
+    "wikidataId": "Q1241754",
+    "wdYears": [
+      1591,
+      1623
+    ]
+  },
+  {
+    "id": "book:henry-v-1600",
+    "title": "Henry V",
+    "creator": "William Shakespeare",
+    "year": 1600,
+    "wikidataId": "Q495954",
+    "wdYears": [
+      1599
+    ]
+  },
+  {
+    "id": "book:henry-iv-part-2-1600",
+    "title": "Henry IV, Part 2",
+    "creator": "William Shakespeare",
+    "year": 1600,
+    "wikidataId": "Q1232349",
+    "wdYears": [
+      1598
+    ]
+  },
+  {
+    "id": "book:ab-urbe-condita-1481",
+    "title": "Ab urbe condita",
+    "creator": "Titus Livius",
+    "year": 1481,
+    "wikidataId": "Q1155892",
+    "wdYears": [
+      10
+    ]
+  },
+  {
+    "id": "book:lorna-doone-1656",
+    "title": "Lorna Doone",
+    "creator": "R. D. Blackmore",
+    "year": 1656,
+    "wikidataId": "Q3400981",
+    "wdYears": [
+      1869
+    ]
+  },
+  {
+    "id": "book:orthodoxy-1874",
+    "title": "Orthodoxy",
+    "creator": "Gilbert Keith Chesterton",
+    "year": 1874,
+    "wikidataId": "Q3486423",
+    "wdYears": [
+      1908
+    ]
+  },
+  {
+    "id": "book:saint-francis-of-assisi-1923",
+    "title": "Saint Francis of Assisi",
+    "creator": "Gilbert Keith Chesterton",
+    "year": 1923,
+    "wdYears": []
+  },
+  {
+    "id": "book:book-of-common-prayer-1537",
+    "title": "Book of common prayer",
+    "creator": "Church of England",
+    "year": 1537,
+    "wikidataId": "Q111836967",
+    "wdYears": [
+      1845
+    ]
+  },
+  {
+    "id": "book:de-rerum-natura-1486",
+    "title": "De rerum natura",
+    "creator": "Titus Lucretius Carus",
+    "year": 1486,
+    "wikidataId": "Q861986",
+    "wdYears": [
+      -100
+    ]
+  },
+  {
+    "id": "book:patrologiae-cursus-completus-1800",
+    "title": "Patrologiae cursus completus",
+    "creator": "J.-P Migne",
+    "year": 1800,
+    "wikidataId": "Q548044",
+    "wdYears": []
+  },
+  {
+    "id": "book:little-men-1885",
+    "title": "Little men",
+    "creator": "Louisa May Alcott",
+    "year": 1885,
+    "wikidataId": "Q3902626",
+    "wdYears": [
+      1871
+    ]
+  },
+  {
+    "id": "book:my-bondage-and-my-freedom-1815",
+    "title": "My bondage and my freedom",
+    "creator": "Frederick Douglass",
+    "year": 1815,
+    "wikidataId": "Q6945057",
+    "wdYears": []
+  },
+  {
+    "id": "book:the-deerslayer-1841",
+    "title": "The deerslayer",
+    "creator": "James Fenimore Cooper",
+    "year": 1841,
+    "wikidataId": "Q855801",
+    "wdYears": [
+      1841
+    ]
+  },
+  {
+    "id": "book:the-beautiful-and-damned-1920",
+    "title": "The Beautiful and Damned",
+    "creator": "F. Scott Fitzgerald",
+    "year": 1920,
+    "wikidataId": "Q2531205",
+    "wdYears": [
+      1922
+    ]
+  },
+  {
+    "id": "book:ivanhoe-1800",
+    "title": "Ivanhoe",
+    "creator": "Sir Walter Scott",
+    "year": 1800,
+    "wikidataId": "Q840974",
+    "wdYears": [
+      1819
+    ]
+  },
+  {
+    "id": "book:the-enchanted-castle-1907",
+    "title": "The Enchanted Castle",
+    "creator": "Edith Nesbit",
+    "year": 1907,
+    "wikidataId": "Q2920166",
+    "wdYears": [
+      1907
+    ]
+  },
+  {
+    "id": "book:eugenics-and-other-evils-1922",
+    "title": "Eugenics and Other Evils",
+    "creator": "Gilbert Keith Chesterton",
+    "year": 1922,
+    "wikidataId": "Q19096890",
+    "wdYears": [
+      1922
+    ]
+  },
+  {
+    "id": "book:the-book-of-tea-1900",
+    "title": "The Book of Tea",
+    "creator": "Okakura Kakuzō",
+    "year": 1900,
+    "wikidataId": "Q7719311",
+    "wdYears": [
+      1906
+    ]
+  },
+  {
+    "id": "book:a-history-of-new-york-1800",
+    "title": "A history of New York",
+    "creator": "Washington Irving",
+    "year": 1800,
+    "wikidataId": "Q14920548",
+    "wdYears": [
+      1809
+    ]
+  },
+  {
+    "id": "book:the-house-of-seven-gables-readalong-1851",
+    "title": "The House of Seven Gables Readalong",
+    "creator": "Nathaniel Hawthorne",
+    "year": 1851,
+    "wdYears": []
+  },
+  {
+    "id": "book:as-you-like-it-1734",
+    "title": "As You Like It",
+    "creator": "William Shakespeare",
+    "year": 1734,
+    "wikidataId": "Q237572",
+    "wdYears": [
+      1599,
+      1623
+    ]
+  },
+  {
+    "id": "book:the-alhambra-1800",
+    "title": "The Alhambra",
+    "creator": "Washington Irving",
+    "year": 1800,
+    "wikidataId": "Q1210997",
+    "wdYears": [
+      1832
+    ]
+  },
+  {
+    "id": "book:quo-vadis-powiesc-z-czasow-nerona-1895",
+    "title": "Quo Vadis? Powieść z czasów Nerona",
+    "creator": "Henryk Sienkiewicz",
+    "year": 1895,
+    "wikidataId": "Q335315",
+    "wdYears": [
+      1895,
+      1896
+    ]
+  },
+  {
+    "id": "book:confessions-1482",
+    "title": "Confessions",
+    "creator": "Augustine of Hippo",
+    "year": 1482,
+    "wikidataId": "Q372941",
+    "wdYears": []
+  },
+  {
+    "id": "book:la-poetica-1479",
+    "title": "La Poetica",
+    "creator": "Aristotle",
+    "year": 1479,
+    "wikidataId": "Q264714",
+    "wdYears": []
+  },
+  {
+    "id": "book:on-liberty-1859",
+    "title": "On Liberty",
+    "creator": "John Stuart Mill",
+    "year": 1859,
+    "wikidataId": "Q1055881",
+    "wdYears": [
+      1859
+    ]
+  },
+  {
+    "id": "book:nicomachean-ethics-1558",
+    "title": "Nicomachean Ethics",
+    "creator": "Aristotle",
+    "year": 1558,
+    "wdYears": []
+  },
+  {
+    "id": "book:pensees-1670",
+    "title": "Pensées",
+    "creator": "Blaise Pascal",
+    "year": 1670,
+    "wikidataId": "Q17360856",
+    "wdYears": [
+      1670
+    ]
+  },
+  {
+    "id": "book:der-antichrist-1895",
+    "title": "Der Antichrist",
+    "creator": "Friedrich Nietzsche",
+    "year": 1895,
+    "wikidataId": "Q538396",
+    "wdYears": [
+      1889
+    ]
+  },
+  {
+    "id": "book:the-golden-bough-1890",
+    "title": "The Golden Bough",
+    "creator": "James George Frazer",
+    "year": 1890,
+    "wikidataId": "Q651283",
+    "wdYears": [
+      1890
+    ]
+  },
+  {
+    "id": "book:the-description-of-a-new-world-1666",
+    "title": "The description of a new world",
+    "creator": "Margaret Cavendish, Duchess of Newcastle",
+    "year": 1666,
+    "wdYears": []
+  },
+  {
+    "id": "book:-1559",
+    "title": "Συμπόσιον",
+    "creator": "Plato",
+    "year": 1559,
+    "wdYears": []
+  },
+  {
+    "id": "book:dialogues-concerning-natural-religion-1779",
+    "title": "Dialogues Concerning Natural Religion",
+    "creator": "David Hume",
+    "year": 1779,
+    "wikidataId": "Q965564",
+    "wdYears": [
+      1779
+    ]
+  },
+  {
+    "id": "book:an-essay-on-man-1733",
+    "title": "An essay on man",
+    "creator": "Alexander Pope",
+    "year": 1733,
+    "wikidataId": "Q3121862",
+    "wdYears": [
+      1733,
+      1734
+    ]
+  },
+  {
+    "id": "book:anthem-1936",
+    "title": "Anthem",
+    "creator": "Ayn Rand",
+    "year": 1936,
+    "wikidataId": "Q2743935",
+    "wdYears": [
+      1938
+    ]
+  },
+  {
+    "id": "book:essais-1600",
+    "title": "Essais",
+    "creator": "Montaigne, Michel de",
+    "year": 1600,
+    "wikidataId": "Q624852",
+    "wdYears": []
+  },
+  {
+    "id": "book:-1713",
+    "title": "Φαίδων",
+    "creator": "Plato",
+    "year": 1713,
+    "wikidataId": "Q244161",
+    "wdYears": [
+      -360
+    ]
+  },
+  {
+    "id": "book:the-problems-of-philosophy-1900",
+    "title": "The Problems of Philosophy",
+    "creator": "Bertrand Russell",
+    "year": 1900,
+    "wikidataId": "Q3393210",
+    "wdYears": [
+      1912
+    ]
+  },
+  {
+    "id": "book:summa-theologica-1467",
+    "title": "Summa Theologica",
+    "creator": "Thomas Aquinas",
+    "year": 1467,
+    "wikidataId": "Q653871",
+    "wdYears": [
+      1274
+    ]
+  },
+  {
+    "id": "book:the-coming-race-1871",
+    "title": "The Coming Race",
+    "creator": "Edward Bulwer Lytton, Baron Lytton",
+    "year": 1871,
+    "wdYears": []
+  },
+  {
+    "id": "book:civil-disobedience-1800",
+    "title": "Civil Disobedience",
+    "creator": "Henry David Thoreau",
+    "year": 1800,
+    "wikidataId": "Q331092",
+    "wdYears": [
+      1849
+    ]
+  },
+  {
+    "id": "book:bushido-1899",
+    "title": "Bushidō",
+    "creator": "Inazo Nitobe",
+    "year": 1899,
+    "wikidataId": "Q2928718",
+    "wdYears": [
+      1899
+    ]
+  },
+  {
+    "id": "book:poetics-1536",
+    "title": "Poetics",
+    "creator": "Aristotle",
+    "year": 1536,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-seven-lamps-of-architecture-1800",
+    "title": "The Seven Lamps of Architecture",
+    "creator": "John Ruskin",
+    "year": 1800,
+    "wikidataId": "Q218578",
+    "wdYears": [
+      1849
+    ]
+  },
+  {
+    "id": "book:les-confessions-1782",
+    "title": "Les confessions",
+    "creator": "Jean-Jacques Rousseau",
+    "year": 1782,
+    "wikidataId": "Q1207595",
+    "wdYears": [
+      1782
+    ]
+  },
+  {
+    "id": "book:picasso-1926",
+    "title": "Picasso",
+    "creator": "Pablo Picasso",
+    "year": 1926,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-theory-of-the-leisure-class-1899",
+    "title": "The Theory of the Leisure Class",
+    "creator": "Thorstein Veblen",
+    "year": 1899,
+    "wikidataId": "Q1265755",
+    "wdYears": [
+      1899
+    ]
+  },
+  {
+    "id": "book:-1675",
+    "title": "Ἀπολογία Σωκράτους",
+    "creator": "Plato",
+    "year": 1675,
+    "wikidataId": "Q273668",
+    "wdYears": [
+      -395
+    ]
+  },
+  {
+    "id": "book:politika-1492",
+    "title": "Πολιτικά (Politiká)",
+    "creator": "Aristotle",
+    "year": 1492,
+    "wikidataId": "Q69539",
+    "wdYears": [
+      -400
+    ]
+  },
+  {
+    "id": "book:-1827",
+    "title": "Γοργίας",
+    "creator": "Plato",
+    "year": 1827,
+    "wikidataId": "Q264241",
+    "wdYears": []
+  },
+  {
+    "id": "book:gitanjali-song-offerings-1910",
+    "title": "Gitanjali (song offerings)",
+    "creator": "Rabindranath Tagore",
+    "year": 1910,
+    "wikidataId": "Q2358930",
+    "wdYears": [
+      1908
+    ]
+  },
+  {
+    "id": "book:du-contrat-social-1762",
+    "title": "Du contrat social",
+    "creator": "Jean-Jacques Rousseau",
+    "year": 1762,
+    "wikidataId": "Q190126",
+    "wdYears": [
+      1762
+    ]
+  },
+  {
+    "id": "book:tractatus-logico-philosophicus-1921",
+    "title": "Tractatus logico-philosophicus",
+    "creator": "Ludwig Wittgenstein",
+    "year": 1921,
+    "wdYears": []
+  },
+  {
+    "id": "book:moralia-1500",
+    "title": "Moralia",
+    "creator": "Plutarch",
+    "year": 1500,
+    "wikidataId": "Q11875770",
+    "wdYears": []
+  },
+  {
+    "id": "book:der-zauberberg-1924",
+    "title": "Der Zauberberg",
+    "creator": "Thomas Mann",
+    "year": 1924,
+    "wikidataId": "Q212898",
+    "wdYears": [
+      1924
+    ]
+  },
+  {
+    "id": "book:essays-1618",
+    "title": "Essays",
+    "creator": "Francis Bacon",
+    "year": 1618,
+    "wikidataId": "Q3944819",
+    "wdYears": [
+      1597
+    ]
+  },
+  {
+    "id": "book:sesame-and-lilies-three-lectures-1800",
+    "title": "Sesame and Lilies, three lectures",
+    "creator": "John Ruskin",
+    "year": 1800,
+    "wdYears": []
+  },
+  {
+    "id": "book:familiar-quotations-a-collection-of-passages-phrases-and-proverbs-traced-to-their-sources-in-ancient-and-modern-literature-1855",
+    "title": "Familiar quotations; a collection of passages, phrases, and proverbs traced to their sources in ancient and modern literature",
+    "creator": "John Bartlett",
+    "year": 1855,
+    "wdYears": []
+  },
+  {
+    "id": "book:democracy-and-education-1916",
+    "title": "Democracy and Education",
+    "creator": "John Dewey",
+    "year": 1916,
+    "wikidataId": "Q5255511",
+    "wdYears": [
+      1916
+    ]
+  },
+  {
+    "id": "book:prince-1998",
+    "title": "Prince",
+    "creator": "Niccolò Machiavelli",
+    "year": 1998,
+    "wdYears": []
+  },
+  {
+    "id": "book:walking-1914",
+    "title": "Walking",
+    "creator": "Henry David Thoreau",
+    "year": 1914,
+    "wikidataId": "Q1067239",
+    "wdYears": [
+      1862
+    ]
+  },
+  {
+    "id": "book:emile-or-education-1762",
+    "title": "Emile or Education",
+    "creator": "Jean-Jacques Rousseau",
+    "year": 1762,
+    "wikidataId": "Q913599",
+    "wdYears": [
+      1762
+    ]
+  },
+  {
+    "id": "book:principles-of-internal-medicine-1950",
+    "title": "Principles of internal medicine",
+    "creator": "Tinsley Randolph Harrison",
+    "year": 1950,
+    "wdYears": []
+  },
+  {
+    "id": "book:mutual-aid-1891",
+    "title": "Mutual Aid",
+    "creator": "Peter Kropotkin",
+    "year": 1891,
+    "wikidataId": "Q1498315",
+    "wdYears": [
+      1902
+    ]
+  },
+  {
+    "id": "book:common-sense-1776",
+    "title": "Common Sense",
+    "creator": "Thomas Paine",
+    "year": 1776,
+    "wikidataId": "Q843940",
+    "wdYears": [
+      1776
+    ]
+  },
+  {
+    "id": "book:-1828",
+    "title": "Πρωταγόρας",
+    "creator": "Plato",
+    "year": 1828,
+    "wikidataId": "Q520328",
+    "wdYears": []
+  },
+  {
+    "id": "book:dei-delitte-e-delle-pene-1764",
+    "title": "Dei delitte e delle pene",
+    "creator": "Cesare Beccaria",
+    "year": 1764,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-genius-1915",
+    "title": "The \"genius\"",
+    "creator": "Theodore Dreiser",
+    "year": 1915,
+    "wikidataId": "Q4593382",
+    "wdYears": [
+      1915
+    ]
+  },
+  {
+    "id": "book:discours-de-la-methode-1644",
+    "title": "Discours de la méthode",
+    "creator": "René Descartes",
+    "year": 1644,
+    "wikidataId": "Q731224",
+    "wdYears": [
+      1637
+    ]
+  },
+  {
+    "id": "book:-1520",
+    "title": "Τίμαιος",
+    "creator": "Plato",
+    "year": 1520,
+    "wikidataId": "Q371884",
+    "wdYears": [
+      -359
+    ]
+  },
+  {
+    "id": "book:-1861",
+    "title": "Θεαίτητος",
+    "creator": "Plato",
+    "year": 1861,
+    "wikidataId": "Q846241",
+    "wdYears": []
+  },
+  {
+    "id": "book:philosophical-essays-concerning-human-understanding-1900",
+    "title": "Philosophical essays concerning human understanding",
+    "creator": "David Hume",
+    "year": 1900,
+    "wikidataId": "Q1306656",
+    "wdYears": [
+      1748
+    ]
+  },
+  {
+    "id": "book:kokuritsu-kokkai-toshokan-shozo-meijiki-kanko-tosho-maikuro-ban-shusei-1991",
+    "title": "Kokuritsu Kokkai Toshokan shozō Meijiki kankō tosho maikuro-ban shūsei",
+    "creator": "Kokuritsu Kokkai Toshokan (Japan)",
+    "year": 1991,
+    "wdYears": []
+  },
+  {
+    "id": "book:kritik-der-reinen-vernunft-1781",
+    "title": "Kritik der reinen Vernunft",
+    "creator": "Immanuel Kant",
+    "year": 1781,
+    "wikidataId": "Q19213002",
+    "wdYears": [
+      1881
+    ]
+  },
+  {
+    "id": "book:-1869",
+    "title": "Μένων",
+    "creator": "Plato",
+    "year": 1869,
+    "wikidataId": "Q746253",
+    "wdYears": []
+  },
+  {
+    "id": "book:the-story-of-philosophy-1926",
+    "title": "The Story of Philosophy",
+    "creator": "Will Durant",
+    "year": 1926,
+    "wikidataId": "Q3595682",
+    "wdYears": [
+      1926
+    ]
+  },
+  {
+    "id": "book:the-stones-of-venice-1851",
+    "title": "The Stones of Venice",
+    "creator": "John Ruskin",
+    "year": 1851,
+    "wikidataId": "Q7766650",
+    "wdYears": [
+      1850
+    ]
+  },
+  {
+    "id": "book:an-autobiography-1927",
+    "title": "An autobiography",
+    "creator": "Mohandas Karamchand Gandhi",
+    "year": 1927,
+    "wikidataId": "Q2719827",
+    "wdYears": []
+  },
+  {
+    "id": "book:der-untergang-des-abendlandes-1918",
+    "title": "Der Untergang des Abendlandes",
+    "creator": "Oswald Spengler",
+    "year": 1918,
+    "wikidataId": "Q854921",
+    "wdYears": [
+      1918
+    ]
+  },
+  {
+    "id": "book:culture-and-anarchy-an-essay-in-political-and-social-criticism-1869",
+    "title": "Culture and anarchy; an essay in political and social criticism",
+    "creator": "Matthew Arnold",
+    "year": 1869,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-defendant-1901",
+    "title": "The Defendant",
+    "creator": "Gilbert Keith Chesterton",
+    "year": 1901,
+    "wikidataId": "Q16653725",
+    "wdYears": [
+      1901
+    ]
+  },
+  {
+    "id": "book:the-way-we-live-now-1875",
+    "title": "The way we live now",
+    "creator": "Anthony Trollope",
+    "year": 1875,
+    "wikidataId": "Q7773866",
+    "wdYears": [
+      1875
+    ]
+  },
+  {
+    "id": "book:darkwater-voices-from-within-the-veil-1920",
+    "title": "Darkwater; voices from within the veil",
+    "creator": "W. E. B. Du Bois",
+    "year": 1920,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-master-key-system-in-twenty-four-parts-with-questionnaire-and-glossary-1919",
+    "title": "The master key system in twenty-four parts with questionnaire and glossary",
+    "creator": "Charles F. Haanel",
+    "year": 1919,
+    "wdYears": []
+  },
+  {
+    "id": "book:principles-of-political-economy-1848",
+    "title": "Principles of Political Economy",
+    "creator": "John Stuart Mill",
+    "year": 1848,
+    "wikidataId": "Q5946782",
+    "wdYears": [
+      1848
+    ]
+  },
+  {
+    "id": "book:state-and-revolution-1900",
+    "title": "State and Revolution",
+    "creator": "Vladimir Il’ich Lenin",
+    "year": 1900,
+    "wdYears": []
+  },
+  {
+    "id": "book:sozialgeschichte-der-kunst-und-literatur-1951",
+    "title": "Sozialgeschichte der Kunst und Literatur",
+    "creator": "Arnold Hauser",
+    "year": 1951,
+    "wdYears": []
+  },
+  {
+    "id": "book:de-officiis-1465",
+    "title": "De officiis",
+    "creator": "Cicero",
+    "year": 1465,
+    "wikidataId": "Q1180721",
+    "wdYears": [
+      -45
+    ]
+  },
+  {
+    "id": "book:del-sentimiento-tragico-de-la-vida-en-los-hombres-y-en-los-pueblos-1900",
+    "title": "Del sentimiento trágico de la vida en los hombres y en los pueblos",
+    "creator": "Miguel de Unamuno",
+    "year": 1900,
+    "wikidataId": "Q3227098",
+    "wdYears": [
+      1912
+    ]
+  },
+  {
+    "id": "book:unto-this-last-1860",
+    "title": "Unto This Last",
+    "creator": "John Ruskin",
+    "year": 1860,
+    "wikidataId": "Q144132",
+    "wdYears": [
+      1860,
+      1862
+    ]
+  },
+  {
+    "id": "book:l-evolution-creatrice-1907",
+    "title": "L'Évolution créatrice",
+    "creator": "Henri Bergson",
+    "year": 1907,
+    "wikidataId": "Q1132319",
+    "wdYears": [
+      1907
+    ]
+  },
+  {
+    "id": "book:the-kybalion-1912",
+    "title": "The Kybalion",
+    "creator": "Three Initiates",
+    "year": 1912,
+    "wdYears": []
+  },
+  {
+    "id": "book:cyropaedia-1527",
+    "title": "Cyropaedia",
+    "creator": "Xenophon",
+    "year": 1527,
+    "wikidataId": "Q1145374",
+    "wdYears": []
+  },
+  {
+    "id": "book:the-everlasting-man-1925",
+    "title": "The Everlasting Man",
+    "creator": "Gilbert Keith Chesterton",
+    "year": 1925,
+    "wikidataId": "Q3820059",
+    "wdYears": [
+      1925
+    ]
+  },
+  {
+    "id": "book:de-l-esprit-des-lois-1748",
+    "title": "De l'esprit des lois",
+    "creator": "Charles-Louis de Secondat baron de La Brède et de Montesquieu",
+    "year": 1748,
+    "wdYears": []
+  },
+  {
+    "id": "book:a-study-of-history-1900",
+    "title": "A Study of History",
+    "creator": "Arnold J. Toynbee",
+    "year": 1900,
+    "wikidataId": "Q1193697",
+    "wdYears": [
+      1934
+    ]
+  },
+  {
+    "id": "book:de-consolatione-philosophiae-1483",
+    "title": "De consolatione philosophiae",
+    "creator": "Boethius",
+    "year": 1483,
+    "wikidataId": "Q30344481",
+    "wdYears": [
+      1470
+    ]
+  },
+  {
+    "id": "book:-1913",
+    "title": "Обломов",
+    "creator": "Ива́н Алекса́ндрович Гончаро́в",
+    "year": 1913,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-guide-of-the-perplexed-of-maimonides-1473",
+    "title": "The guide of the perplexed of Maimonides",
+    "creator": "Moses Maimonides",
+    "year": 1473,
+    "wikidataId": "Q138357451",
+    "wdYears": [
+      1200
+    ]
+  },
+  {
+    "id": "book:-1562",
+    "title": "Νόμοι",
+    "creator": "Plato",
+    "year": 1562,
+    "wikidataId": "Q752285",
+    "wdYears": []
+  },
+  {
+    "id": "book:the-light-of-asia-1879",
+    "title": "The Light of Asia",
+    "creator": "Edwin Arnold",
+    "year": 1879,
+    "wikidataId": "Q4410249",
+    "wdYears": [
+      1879
+    ]
+  },
+  {
+    "id": "book:sein-und-zeit-1927",
+    "title": "Sein und Zeit",
+    "creator": "Martin Heidegger",
+    "year": 1927,
+    "wikidataId": "Q404567",
+    "wdYears": [
+      1927
+    ]
+  },
+  {
+    "id": "book:a-treatise-of-human-nature-1739",
+    "title": "A treatise of human nature",
+    "creator": "David Hume",
+    "year": 1739,
+    "wikidataId": "Q2451675",
+    "wdYears": [
+      1739
+    ]
+  },
+  {
+    "id": "book:areopagitica-1644",
+    "title": "Areopagitica",
+    "creator": "John Milton",
+    "year": 1644,
+    "wikidataId": "Q642635",
+    "wdYears": [
+      1644
+    ]
+  },
+  {
+    "id": "book:sartor-resartus-1800",
+    "title": "Sartor resartus",
+    "creator": "Thomas Carlyle",
+    "year": 1800,
+    "wikidataId": "Q1134140",
+    "wdYears": [
+      1833
+    ]
+  },
+  {
+    "id": "book:dieu-et-l-etat-1882",
+    "title": "Dieu et l'Etat",
+    "creator": "Mikhail Aleksandrovich Bakunin",
+    "year": 1882,
+    "wikidataId": "Q1369908",
+    "wdYears": [
+      1882
+    ]
+  },
+  {
+    "id": "book:two-treatises-on-government-1689",
+    "title": "Two Treatises on Government",
+    "creator": "John Locke",
+    "year": 1689,
+    "wikidataId": "Q231949",
+    "wdYears": [
+      1689,
+      1690
+    ]
+  },
+  {
+    "id": "book:-1728",
+    "title": "Παρμενίδης",
+    "creator": "Plato",
+    "year": 1728,
+    "wikidataId": "Q1130762",
+    "wdYears": []
+  },
+  {
+    "id": "book:jonathan-livingston-le-goeland-1970",
+    "title": "Jonathan Livingston Le Goeland",
+    "creator": "Richard Bach",
+    "year": 1970,
+    "wikidataId": "Q373536",
+    "wdYears": [
+      1970
+    ]
+  },
+  {
+    "id": "book:poems-1853",
+    "title": "Poems",
+    "creator": "Matthew Arnold",
+    "year": 1853,
+    "wikidataId": "Q5302469",
+    "wdYears": [
+      1867
+    ]
+  },
+  {
+    "id": "book:the-advancement-of-learning-1605",
+    "title": "The advancement of learning",
+    "creator": "Francis Bacon",
+    "year": 1605,
+    "wikidataId": "Q7712425",
+    "wdYears": [
+      1605
+    ]
+  },
+  {
+    "id": "book:goethe-s-werke-1800",
+    "title": "Goethe's Werke",
+    "creator": "Johann Wolfgang von Goethe",
+    "year": 1800,
+    "wikidataId": "Q131708587",
+    "wdYears": []
+  },
+  {
+    "id": "book:lun-yu-1750",
+    "title": "Lun yu",
+    "creator": "Confucius",
+    "year": 1750,
+    "wikidataId": "Q276015",
+    "wdYears": [
+      -480
+    ]
+  },
+  {
+    "id": "book:the-princess-and-curdie-1832",
+    "title": "The Princess and Curdie",
+    "creator": "George MacDonald",
+    "year": 1832,
+    "wikidataId": "Q2603469",
+    "wdYears": [
+      1883
+    ]
+  },
+  {
+    "id": "book:a-princess-of-mars-1912",
+    "title": "A Princess of Mars",
+    "creator": "Edgar Rice Burroughs",
+    "year": 1912,
+    "wikidataId": "Q475589",
+    "wdYears": [
+      1911,
+      1912,
+      1917
+    ]
+  },
+  {
+    "id": "book:the-napoleon-of-notting-hill-1904",
+    "title": "The Napoleon of Notting Hill",
+    "creator": "Gilbert Keith Chesterton",
+    "year": 1904,
+    "wikidataId": "Q3792823",
+    "wdYears": []
+  },
+  {
+    "id": "book:the-last-man-1826",
+    "title": "The Last Man",
+    "creator": "Mary Shelley",
+    "year": 1826,
+    "wikidataId": "Q2323961",
+    "wdYears": [
+      1826
+    ]
+  },
+  {
+    "id": "book:the-warlord-of-mars-3-1914",
+    "title": "The warlord of Mars #3",
+    "creator": "Edgar Rice Burroughs",
+    "year": 1914,
+    "wdYears": []
+  },
+  {
+    "id": "book:news-from-nowhere-or-an-epoch-of-rest-being-some-chapters-from-a-utopian-romance-1890",
+    "title": "News from nowhere, or, An epoch of rest, being some chapters from a utopian romance",
+    "creator": "William Morris",
+    "year": 1890,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-poison-belt-1913",
+    "title": "The Poison Belt",
+    "creator": "Arthur Conan Doyle",
+    "year": 1913,
+    "wikidataId": "Q2660166",
+    "wdYears": [
+      1913
+    ]
+  },
+  {
+    "id": "book:the-gods-of-mars-1918",
+    "title": "The Gods of Mars",
+    "creator": "Edgar Rice Burroughs",
+    "year": 1918,
+    "wikidataId": "Q673493",
+    "wdYears": [
+      1913,
+      1918
+    ]
+  },
+  {
+    "id": "book:the-chessmen-of-mars-1922",
+    "title": "The Chessmen of Mars",
+    "creator": "Edgar Rice Burroughs",
+    "year": 1922,
+    "wikidataId": "Q2043958",
+    "wdYears": [
+      1921,
+      1922
+    ]
+  },
+  {
+    "id": "book:the-machine-stops-1909",
+    "title": "The Machine Stops",
+    "creator": "E. M. Forster",
+    "year": 1909,
+    "wikidataId": "Q287448",
+    "wdYears": [
+      1909
+    ]
+  },
+  {
+    "id": "book:the-island-of-dr-moreau-1896",
+    "title": "The Island of Dr. Moreau",
+    "creator": "H. G. Wells",
+    "year": 1896,
+    "wikidataId": "Q718268",
+    "wdYears": [
+      1895,
+      1896
+    ]
+  },
+  {
+    "id": "book:gullivar-of-mars-1964",
+    "title": "Gullivar of Mars",
+    "creator": "Edwin Lester Linden Arnold",
+    "year": 1964,
+    "wdYears": []
+  },
+  {
+    "id": "book:after-london-1885",
+    "title": "After London",
+    "creator": "Richard Jefferies",
+    "year": 1885,
+    "wikidataId": "Q42184070",
+    "wdYears": [
+      1885
+    ]
+  },
+  {
+    "id": "book:the-wood-beyond-the-world-1894",
+    "title": "The wood beyond the world",
+    "creator": "William Morris",
+    "year": 1894,
+    "wikidataId": "Q7775713",
+    "wdYears": [
+      1894
+    ]
+  },
+  {
+    "id": "book:the-king-of-the-golden-river-or-the-black-brothers-1839",
+    "title": "The king of the Golden River; or, The black brothers",
+    "creator": "John Ruskin",
+    "year": 1839,
+    "wikidataId": "Q42191860",
+    "wdYears": [
+      1841
+    ]
+  },
+  {
+    "id": "book:the-moon-pool-1919",
+    "title": "The Moon Pool",
+    "creator": "A. Merritt",
+    "year": 1919,
+    "wikidataId": "Q7752160",
+    "wdYears": [
+      1919
+    ]
+  },
+  {
+    "id": "book:at-the-earth-s-core-1914",
+    "title": "At the Earth's Core",
+    "creator": "Edgar Rice Burroughs",
+    "year": 1914,
+    "wikidataId": "Q2870358",
+    "wdYears": [
+      1914
+    ]
+  },
+  {
+    "id": "book:in-the-days-of-the-comet-1906",
+    "title": "In the days of the comet",
+    "creator": "H. G. Wells",
+    "year": 1906,
+    "wikidataId": "Q2637002",
+    "wdYears": [
+      1906
+    ]
+  },
+  {
+    "id": "book:-1924",
+    "title": "Мы",
+    "creator": "Евгений Иванович Замятин",
+    "year": 1924,
+    "wdYears": []
+  },
+  {
+    "id": "book:de-la-terre-a-la-lune-1865",
+    "title": "De la terre à la lune",
+    "creator": "Jules Verne",
+    "year": 1865,
+    "wikidataId": "Q53592",
+    "wdYears": [
+      1865
+    ]
+  },
+  {
+    "id": "book:thuvia-maid-of-mars-1916",
+    "title": "Thuvia, Maid of Mars",
+    "creator": "Edgar Rice Burroughs",
+    "year": 1916,
+    "wikidataId": "Q1927788",
+    "wdYears": [
+      1914,
+      1920
+    ]
+  },
+  {
+    "id": "book:when-the-sleeper-awakes-1899",
+    "title": "When the Sleeper Awakes",
+    "creator": "H. G. Wells",
+    "year": 1899,
+    "wikidataId": "Q650949",
+    "wdYears": [
+      1899
+    ]
+  },
+  {
+    "id": "book:the-food-of-the-gods-and-how-it-came-to-earth-1900",
+    "title": "The food of the gods and how it came to earth",
+    "creator": "H. G. Wells",
+    "year": 1900,
+    "wikidataId": "Q1215802",
+    "wdYears": [
+      1904
+    ]
+  },
+  {
+    "id": "book:the-beasts-of-tarzan-classic-ace-sf-f-203-1914",
+    "title": "The Beasts of Tarzan (Classic Ace SF, F-203)",
+    "creator": "Edgar Rice Burroughs",
+    "year": 1914,
+    "wdYears": []
+  },
+  {
+    "id": "book:when-the-world-shook-1919",
+    "title": "When the World Shook",
+    "creator": "H. Rider Haggard",
+    "year": 1919,
+    "wikidataId": "Q14980988",
+    "wdYears": [
+      1919
+    ]
+  },
+  {
+    "id": "book:it-can-t-happen-here-1935",
+    "title": "It Can't Happen Here",
+    "creator": "Sinclair Lewis",
+    "year": 1935,
+    "wikidataId": "Q2943868",
+    "wdYears": [
+      1935
+    ]
+  },
+  {
+    "id": "book:r-u-r-and-the-insect-play-1920",
+    "title": "R.U.R. and The insect play",
+    "creator": "Karel Čapek",
+    "year": 1920,
+    "wikidataId": "Q1164094",
+    "wdYears": [
+      1920
+    ]
+  },
+  {
+    "id": "book:a-fighting-man-of-mars-1931",
+    "title": "A Fighting Man Of Mars",
+    "creator": "Edgar Rice Burroughs",
+    "year": 1931,
+    "wikidataId": "Q3223416",
+    "wdYears": [
+      1929,
+      1930
+    ]
+  },
+  {
+    "id": "book:the-master-mind-of-mars-1928",
+    "title": "The Master Mind of Mars",
+    "creator": "Edgar Rice Burroughs",
+    "year": 1928,
+    "wikidataId": "Q372746",
+    "wdYears": [
+      1927,
+      1928
+    ]
+  },
+  {
+    "id": "book:armageddon-2419-ad-1962",
+    "title": "Armageddon 2419 AD",
+    "creator": "Philip Francis Nowlan",
+    "year": 1962,
+    "wikidataId": "Q676538",
+    "wdYears": [
+      1928
+    ]
+  },
+  {
+    "id": "book:charlie-and-the-great-glass-elevator-1972",
+    "title": "Charlie and the Great Glass Elevator",
+    "creator": "Roald Dahl",
+    "year": 1972,
+    "wikidataId": "Q530406",
+    "wdYears": [
+      1972
+    ]
+  },
+  {
+    "id": "book:on-the-beach-1957",
+    "title": "On the Beach",
+    "creator": "Nevil Shute",
+    "year": 1957,
+    "wikidataId": "Q3819831",
+    "wdYears": [
+      1957
+    ]
+  },
+  {
+    "id": "book:2001-1968",
+    "title": "2001",
+    "creator": "Arthur C. Clarke",
+    "year": 1968,
+    "wikidataId": "Q7748812",
+    "wdYears": [
+      1972
+    ]
+  },
+  {
+    "id": "book:synthetic-men-of-mars-1940",
+    "title": "Synthetic Men of Mars",
+    "creator": "Edgar Rice Burroughs",
+    "year": 1940,
+    "wikidataId": "Q3233237",
+    "wdYears": [
+      1938,
+      1940
+    ]
+  },
+  {
+    "id": "book:the-first-men-in-the-moon-1900",
+    "title": "The First Men in the Moon",
+    "creator": "H. G. Wells",
+    "year": 1900,
+    "wikidataId": "Q1218232",
+    "wdYears": [
+      1901
+    ]
+  },
+  {
+    "id": "book:cinq-semaines-en-ballon-1867",
+    "title": "Cinq semaines en ballon",
+    "creator": "Jules Verne",
+    "year": 1867,
+    "wikidataId": "Q622634",
+    "wdYears": [
+      1863
+    ]
+  },
+  {
+    "id": "book:little-fuzzy-1961",
+    "title": "Little Fuzzy",
+    "creator": "H. Beam Piper",
+    "year": 1961,
+    "wikidataId": "Q3233220",
+    "wdYears": [
+      1962
+    ]
+  },
+  {
+    "id": "book:a-strange-manuscript-found-in-a-copper-cylinder-1888",
+    "title": "A strange manuscript found in a copper cylinder",
+    "creator": "James De Mille",
+    "year": 1888,
+    "wikidataId": "Q4659834",
+    "wdYears": [
+      1888
+    ]
+  },
+  {
+    "id": "book:swords-of-mars-1936",
+    "title": "Swords of Mars",
+    "creator": "Edgar Rice Burroughs",
+    "year": 1936,
+    "wikidataId": "Q596369",
+    "wdYears": [
+      1936
+    ]
+  },
+  {
+    "id": "book:llana-of-gathol-mars-10-1948",
+    "title": "Llana of Gathol (Mars #10)",
+    "creator": "Edgar Rice Burroughs",
+    "year": 1948,
+    "wdYears": []
+  },
+  {
+    "id": "book:the-house-behind-the-cedars-1900",
+    "title": "The house behind the cedars",
+    "creator": "Charles Waddell Chesnutt",
+    "year": 1900,
+    "wdYears": []
+  },
+  {
+    "id": "book:lord-of-the-world-1907",
+    "title": "Lord of the World",
+    "creator": "Robert Hugh Benson",
+    "year": 1907,
+    "wikidataId": "Q1194272",
+    "wdYears": [
+      1908
+    ]
+  },
+  {
+    "id": "book:the-ship-of-ishtar-1924",
+    "title": "The ship of Ishtar",
+    "creator": "A. Merritt",
+    "year": 1924,
+    "wikidataId": "Q7763845",
+    "wdYears": [
+      1924
+    ]
+  },
+  {
+    "id": "book:a-modern-utopia-1900",
+    "title": "A Modern Utopia",
+    "creator": "H. G. Wells",
+    "year": 1900,
+    "wikidataId": "Q1249074",
+    "wdYears": [
+      1905
+    ]
+  },
+  {
+    "id": "book:the-water-of-the-wondrous-isles-1897",
+    "title": "The water of the Wondrous isles",
+    "creator": "William Morris",
+    "year": 1897,
+    "wikidataId": "Q7773721",
+    "wdYears": [
+      1897
+    ]
+  },
+  {
+    "id": "book:the-restaurant-at-the-end-of-the-universe-1980",
+    "title": "The Restaurant at the End of the Universe",
+    "creator": "Douglas Adams",
+    "year": 1980,
+    "wikidataId": "Q578895",
+    "wdYears": [
+      1980
+    ]
+  },
+  {
+    "id": "book:the-left-hand-of-darkness-1969",
+    "title": "The Left Hand of Darkness",
+    "creator": "Ursula K. Le Guin",
+    "year": 1969,
+    "wikidataId": "Q2008211",
+    "wdYears": [
+      1969
+    ]
+  },
+  {
+    "id": "book:plague-ship-1956",
+    "title": "Plague Ship",
+    "creator": "Andre Norton",
+    "year": 1956,
+    "wikidataId": "Q7200565",
+    "wdYears": [
+      1956
+    ]
+  },
+  {
+    "id": "book:the-time-traders-1958",
+    "title": "The Time Traders",
+    "creator": "Andre Norton",
+    "year": 1958,
+    "wikidataId": "Q7769332",
+    "wdYears": [
+      1958
+    ]
+  },
+  {
+    "id": "book:the-blind-assassin-2000",
+    "title": "The Blind Assassin",
+    "creator": "Margaret Atwood",
+    "year": 2000,
+    "wikidataId": "Q1198405",
+    "wdYears": [
+      2000
+    ]
+  },
+  {
+    "id": "book:star-born-1957",
+    "title": "Star Born",
+    "creator": "Andre Norton",
+    "year": 1957,
+    "wikidataId": "Q19902789",
+    "wdYears": [
+      1957
+    ]
+  },
+  {
+    "id": "book:the-amber-spyglass-1999",
+    "title": "The Amber Spyglass",
+    "creator": "Philip Pullman",
+    "year": 1999,
+    "wikidataId": "Q129929",
+    "wdYears": [
+      2000
+    ]
+  },
+  {
+    "id": "book:la-casa-verde-1966",
+    "title": "La casa verde",
+    "creator": "Mario Vargas Llosa",
+    "year": 1966,
+    "wikidataId": "Q463698",
+    "wdYears": [
+      1966
+    ]
+  },
+  {
+    "id": "book:junkyard-planet-1631",
+    "title": "Junkyard Planet",
+    "creator": "H. Beam Piper",
+    "year": 1631,
+    "wikidataId": "Q134446599",
+    "wdYears": []
+  },
+  {
+    "id": "book:cat-s-cradle-1963",
+    "title": "Cat's Cradle",
+    "creator": "Kurt Vonnegut",
+    "year": 1963,
+    "wikidataId": "Q41359",
+    "wdYears": [
+      1963
+    ]
+  },
+  {
+    "id": "book:the-adventures-of-captain-underpants-1997",
+    "title": "The Adventures of Captain Underpants",
+    "creator": "Dav Pilkey",
+    "year": 1997,
+    "wikidataId": "Q3283542",
+    "wdYears": [
+      1997
+    ]
+  },
+  {
+    "id": "book:atlas-shrugged-centennial-ed-hc-1936",
+    "title": "Atlas Shrugged (Centennial Ed. HC)",
+    "creator": "Ayn Rand",
+    "year": 1936,
+    "wdYears": []
+  },
+  {
+    "id": "book:l-ile-mysterieuse-1870",
+    "title": "L'Île mystérieuse",
+    "creator": "Jules Verne",
+    "year": 1870,
+    "wikidataId": "Q471005",
+    "wdYears": [
+      1888
+    ]
+  },
+  {
+    "id": "book:the-man-in-the-high-castle-1962",
+    "title": "The Man in the High Castle",
+    "creator": "Philip K. Dick",
+    "year": 1962,
+    "wdYears": []
+  },
+  {
+    "id": "book:foundation-and-empire-1945",
+    "title": "Foundation and Empire",
+    "creator": "Isaac Asimov",
+    "year": 1945,
+    "wikidataId": "Q839800",
+    "wdYears": [
+      1945,
+      1952
+    ]
+  },
+  {
+    "id": "book:the-illustrated-man-1951",
+    "title": "The Illustrated Man",
+    "creator": "Ray Bradbury",
+    "year": 1951,
+    "wikidataId": "Q1756055",
+    "wdYears": [
+      1946,
+      1951
+    ]
+  },
+  {
+    "id": "book:second-foundation-1953",
+    "title": "Second Foundation",
+    "creator": "Isaac Asimov",
+    "year": 1953,
+    "wikidataId": "Q853927",
+    "wdYears": [
+      1948,
+      1953
+    ]
+  },
+  {
+    "id": "book:childhood-s-end-1952",
+    "title": "Childhood’s End",
+    "creator": "Arthur C. Clarke",
+    "year": 1952,
+    "wikidataId": "Q466057",
+    "wdYears": [
+      1953
+    ]
+  },
+  {
+    "id": "book:stranger-in-a-strange-land-1961",
+    "title": "Stranger in a Strange Land",
+    "creator": "Robert A. Heinlein",
+    "year": 1961,
+    "wikidataId": "Q929821",
+    "wdYears": [
+      1951,
+      1961
+    ]
+  },
+  {
+    "id": "book:dragonflight-1968",
+    "title": "Dragonflight",
+    "creator": "Anne McCaffrey",
+    "year": 1968,
+    "wikidataId": "Q2196893",
+    "wdYears": [
+      1968
+    ]
+  },
+  {
+    "id": "book:the-man-who-ended-war-1908",
+    "title": "The man who ended war",
+    "creator": "Hollis Godfrey",
+    "year": 1908,
+    "wikidataId": "Q133801628",
+    "wdYears": []
+  },
+  {
+    "id": "book:firestarter-1980",
+    "title": "Firestarter",
+    "creator": "Stephen King",
+    "year": 1980,
+    "wikidataId": "Q828031",
+    "wdYears": [
+      1980
+    ]
+  },
+  {
+    "id": "book:storm-over-warlock-1960",
+    "title": "Storm Over Warlock",
+    "creator": "Andre Norton",
+    "year": 1960,
+    "wikidataId": "Q23307416",
+    "wdYears": [
+      1960
+    ]
+  },
+  {
+    "id": "book:tales-of-space-and-time-1899",
+    "title": "Tales of space and time",
+    "creator": "H. G. Wells",
+    "year": 1899,
+    "wikidataId": "Q7679355",
+    "wdYears": [
+      1899
+    ]
+  },
+  {
+    "id": "book:children-of-dune-1976",
+    "title": "Children of Dune",
+    "creator": "Frank Herbert",
+    "year": 1976,
+    "wikidataId": "Q437365",
+    "wdYears": [
+      1976
+    ]
+  },
+  {
+    "id": "book:star-maker-1937",
+    "title": "Star Maker",
+    "creator": "Olaf Stapledon",
+    "year": 1937,
+    "wikidataId": "Q3006092",
+    "wdYears": [
+      1937
+    ]
+  },
+  {
+    "id": "book:the-thirty-nine-steps-1915",
+    "title": "The Thirty-Nine Steps",
+    "creator": "John Buchan",
+    "year": 1915,
+    "wikidataId": "Q2609365",
+    "wdYears": [
+      1915
+    ]
+  },
+  {
+    "id": "book:mr-standfast-1918",
+    "title": "Mr. Standfast",
+    "creator": "John Buchan",
+    "year": 1918,
+    "wikidataId": "Q16387145",
+    "wdYears": [
+      1919
+    ]
+  },
+  {
+    "id": "book:the-pathfinder-1800",
+    "title": "The Pathfinder",
+    "creator": "James Fenimore Cooper",
+    "year": 1800,
+    "wikidataId": "Q238652",
+    "wdYears": [
+      1840
+    ]
+  },
+  {
+    "id": "book:a-strange-disappearance-1879",
+    "title": "A strange disappearance",
+    "creator": "Anna Katharine Green",
+    "year": 1879,
+    "wdYears": []
+  },
+  {
+    "id": "book:white-fang-1905",
+    "title": "White Fang",
+    "creator": "Jack London",
+    "year": 1905,
+    "wdYears": []
+  },
+  {
+    "id": "book:kidnapped-1886",
+    "title": "Kidnapped",
+    "creator": "Robert Louis Stevenson",
+    "year": 1886,
+    "wikidataId": "Q2349094",
+    "wdYears": [
+      1886
+    ]
+  },
+  {
+    "id": "book:the-evil-shepherd-1922",
+    "title": "The Evil Shepherd",
+    "creator": "Edward Phillips Oppenheim",
+    "year": 1922,
+    "wdYears": []
+  },
+  {
+    "id": "book:la-chica-de-nieve-2020",
+    "title": "La chica de nieve",
+    "creator": "Javier Castillo",
+    "year": 2020,
+    "wikidataId": "Q129730303",
+    "wdYears": []
+  },
+  {
+    "id": "book:el-dia-que-se-perdio-la-cordura-2017",
+    "title": "El día que se perdió la cordura",
+    "creator": "Javier Castillo",
+    "year": 2017,
+    "wdYears": []
+  },
+  {
+    "id": "book:el-corazon-helado-2007",
+    "title": "El corazón helado",
+    "creator": "Almudena Grandes",
+    "year": 2007,
+    "wdYears": []
+  },
+  {
+    "id": "book:roma-soy-yo-2022",
+    "title": "Roma soy yo",
+    "creator": "Santiago Posteguillo",
+    "year": 2022,
+    "wdYears": []
+  },
+  {
+    "id": "book:africanus-el-hijo-del-consul-2006",
+    "title": "Africanus: El hijo del cónsul",
+    "creator": "Santiago Posteguillo",
+    "year": 2006,
+    "wdYears": []
+  },
+  {
+    "id": "book:la-novia-gitana-2018",
+    "title": "La novia gitana",
+    "creator": "Carmen Mola",
+    "year": 2018,
+    "wdYears": []
+  },
+  {
+    "id": "book:memorias-de-idhun-la-resistencia-2004",
+    "title": "Memorias de Idhún: La Resistencia",
+    "creator": "Laura Gallego",
+    "year": 2004,
+    "wdYears": []
+  },
+  {
+    "id": "book:el-capitan-alatriste-1996",
+    "title": "El capitán Alatriste",
+    "creator": "Arturo Pérez-Reverte",
+    "year": 1996,
+    "wikidataId": "Q2311434",
+    "wdYears": [
+      1996
+    ]
+  },
+  {
+    "id": "book:la-reina-del-sur-2002",
+    "title": "La reina del sur",
+    "creator": "Arturo Pérez-Reverte",
+    "year": 2002,
+    "wdYears": []
+  },
+  {
+    "id": "book:la-tabla-de-flandes-1990",
+    "title": "La tabla de Flandes",
+    "creator": "Arturo Pérez-Reverte",
+    "year": 1990,
+    "wikidataId": "Q2713045",
+    "wdYears": [
+      1990
+    ]
+  },
+  {
+    "id": "book:el-legado-en-los-huesos-2013",
+    "title": "El legado en los huesos",
+    "creator": "Dolores Redondo",
+    "year": 2013,
+    "wikidataId": "Q76858060",
+    "wdYears": [
+      2013
+    ]
+  },
+  {
+    "id": "book:un-mundo-sin-fin-2007",
+    "title": "Un mundo sin fin",
+    "creator": "Ken Follett",
+    "year": 2007,
+    "wikidataId": "Q1216826",
+    "wdYears": [
+      2007
+    ]
+  },
+  {
+    "id": "book:el-juego-del-angel-2008",
+    "title": "El juego del ángel",
+    "creator": "Carlos Ruiz Zafón",
+    "year": 2008,
+    "wikidataId": "Q1170423",
+    "wdYears": [
+      2008
+    ]
+  },
+  {
+    "id": "book:el-chico-que-dibujaba-constelaciones-2018",
+    "title": "El chico que dibujaba constelaciones",
+    "creator": "Alice Kellen",
+    "year": 2018,
+    "wdYears": []
+  },
+  {
+    "id": "book:sin-noticias-de-gurb-1991",
+    "title": "Sin noticias de Gurb",
+    "creator": "Eduardo Mendoza",
+    "year": 1991,
+    "wdYears": []
+  }
+]

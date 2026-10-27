@@ -1,0 +1,906 @@
+[
+  {
+    "oldId": "book:lolita-1777",
+    "title": "Lolita",
+    "creator": "Vladimir Nabokov",
+    "oldYear": 1777,
+    "newYear": 1955,
+    "reason": "Vladimir Nabokov, Olympia Press Paris 1955"
+  },
+  {
+    "oldId": "book:macbeth-1508",
+    "title": "Macbeth",
+    "creator": "William Shakespeare",
+    "oldYear": 1508,
+    "newYear": 1606,
+    "reason": "William Shakespeare, written ~1606, First Folio 1623"
+  },
+  {
+    "oldId": "book:interview-with-the-vampire-1672",
+    "title": "Interview With the Vampire",
+    "creator": "Anne Rice",
+    "oldYear": 1672,
+    "newYear": 1976,
+    "reason": "Anne Rice, Alfred A. Knopf 1976"
+  },
+  {
+    "oldId": "book:goldsmith-s-the-vicar-of-wakefield-1111",
+    "title": "Goldsmith's The vicar of Wakefield",
+    "creator": "Oliver Goldsmith",
+    "oldYear": 1111,
+    "newYear": 1766,
+    "reason": "Oliver Goldsmith, published 1766"
+  },
+  {
+    "oldId": "book:the-jungle-1791",
+    "title": "The Jungle",
+    "creator": "Upton Sinclair",
+    "oldYear": 1791,
+    "newYear": 1906,
+    "reason": "Upton Sinclair (born 1878), published 1906"
+  },
+  {
+    "oldId": "book:tess-of-the-d-urbervilles-1707",
+    "title": "Tess of the d'Urbervilles",
+    "creator": "Thomas Hardy",
+    "oldYear": 1707,
+    "newYear": 1891,
+    "reason": "Thomas Hardy (born 1840), published 1891"
+  },
+  {
+    "oldId": "book:lorna-doone-1656",
+    "title": "Lorna Doone",
+    "creator": "R. D. Blackmore",
+    "oldYear": 1656,
+    "newYear": 1869,
+    "reason": "R. D. Blackmore (born 1825), published 1869"
+  },
+  {
+    "oldId": "book:junkyard-planet-1631",
+    "title": "Junkyard Planet",
+    "creator": "H. Beam Piper",
+    "oldYear": 1631,
+    "newYear": 1962,
+    "reason": "H. Beam Piper (born 1904), published 1962"
+  },
+  {
+    "oldId": "book:persuasion-1789",
+    "title": "Persuasion",
+    "creator": "Jane Austen",
+    "oldYear": 1789,
+    "newYear": 1817,
+    "reason": "Jane Austen (born 1775), published Dec 1817 (dated 1818)"
+  },
+  {
+    "oldId": "book:my-antonia-1818",
+    "title": "My Ántonia",
+    "creator": "Willa Cather",
+    "oldYear": 1818,
+    "newYear": 1918,
+    "reason": "Willa Cather (born 1873), published 1918"
+  },
+  {
+    "oldId": "book:a-portrait-of-the-artist-as-a-young-man-1818",
+    "title": "A Portrait of the Artist as a Young Man",
+    "creator": "James Joyce",
+    "oldYear": 1818,
+    "newYear": 1916,
+    "reason": "James Joyce (born 1882), published 1916"
+  },
+  {
+    "oldId": "book:the-adventures-of-tom-sawyer-1817",
+    "title": "The Adventures of Tom Sawyer",
+    "creator": "Mark Twain",
+    "oldYear": 1817,
+    "newYear": 1876,
+    "reason": "Mark Twain (born 1835), published 1876"
+  },
+  {
+    "oldId": "book:oliver-twist-1822",
+    "title": "Oliver Twist",
+    "creator": "Charles Dickens",
+    "oldYear": 1822,
+    "newYear": 1838,
+    "reason": "Charles Dickens (born 1812), published 1838"
+  },
+  {
+    "oldId": "book:der-proce-1825",
+    "title": "Der Proceß",
+    "creator": "Franz Kafka",
+    "oldYear": 1825,
+    "newYear": 1925,
+    "reason": "Franz Kafka (born 1883), published 1925"
+  },
+  {
+    "oldId": "book:war-and-peace-1845",
+    "title": "War and Peace",
+    "creator": "Лев Толстой",
+    "oldYear": 1845,
+    "newYear": 1869,
+    "reason": "Leo Tolstoy (born 1828), published 1869"
+  },
+  {
+    "oldId": "book:the-princess-and-curdie-1832",
+    "title": "The Princess and Curdie",
+    "creator": "George MacDonald",
+    "oldYear": 1832,
+    "newYear": 1883,
+    "reason": "George MacDonald (born 1824), published 1883"
+  },
+  {
+    "oldId": "book:the-king-of-the-golden-river-or-the-black-brothers-1839",
+    "title": "The king of the Golden River; or, The black brothers",
+    "creator": "John Ruskin",
+    "oldYear": 1839,
+    "newYear": 1851,
+    "reason": "John Ruskin (born 1819), published 1851"
+  },
+  {
+    "oldId": "book:my-bondage-and-my-freedom-1815",
+    "title": "My bondage and my freedom",
+    "creator": "Frederick Douglass",
+    "oldYear": 1815,
+    "newYear": 1855,
+    "reason": "Frederick Douglass (born 1818), published 1855"
+  },
+  {
+    "oldId": "book:11-22-63-1925",
+    "title": "11/22/63",
+    "creator": "Stephen King",
+    "oldYear": 1925,
+    "newYear": 2011,
+    "reason": "Stephen King (born 1947), published 2011"
+  },
+  {
+    "oldId": "book:why-i-am-an-atheist-2008",
+    "title": "Why I am an atheist",
+    "creator": "Bhagat Singh",
+    "oldYear": 2008,
+    "newYear": 1931,
+    "reason": "Bhagat Singh (died 1931), written 1930, published 1931"
+  },
+  {
+    "oldId": "book:the-magic-of-thinking-big-1900",
+    "title": "The Magic of Thinking Big",
+    "creator": "David Joseph Schwartz",
+    "oldYear": 1900,
+    "newYear": 1959,
+    "reason": "David J. Schwartz (born 1927), published 1959"
+  },
+  {
+    "oldId": "book:state-and-revolution-1900",
+    "title": "State and Revolution",
+    "creator": "Vladimir Il’ich Lenin",
+    "oldYear": 1900,
+    "newYear": 1918,
+    "reason": "Vladimir Lenin, written 1917, published 1918"
+  },
+  {
+    "oldId": "book:del-sentimiento-tragico-de-la-vida-en-los-hombres-y-en-los-pueblos-1900",
+    "title": "Del sentimiento trágico de la vida en los hombres y en los pueblos",
+    "creator": "Miguel de Unamuno",
+    "oldYear": 1900,
+    "newYear": 1912,
+    "reason": "Miguel de Unamuno, published 1912"
+  },
+  {
+    "oldId": "book:a-study-of-history-1900",
+    "title": "A Study of History",
+    "creator": "Arnold J. Toynbee",
+    "oldYear": 1900,
+    "newYear": 1934,
+    "reason": "Arnold J. Toynbee (born 1889), published 1934"
+  },
+  {
+    "oldId": "book:the-problems-of-philosophy-1900",
+    "title": "The Problems of Philosophy",
+    "creator": "Bertrand Russell",
+    "oldYear": 1900,
+    "newYear": 1912,
+    "reason": "Bertrand Russell, published 1912"
+  },
+  {
+    "oldId": "book:philosophical-essays-concerning-human-understanding-1900",
+    "title": "Philosophical essays concerning human understanding",
+    "creator": "David Hume",
+    "oldYear": 1900,
+    "newYear": 1748,
+    "reason": "David Hume (died 1776), published 1748"
+  },
+  {
+    "oldId": "book:robinson-crusoe-1686",
+    "title": "Robinson Crusoe",
+    "creator": "Daniel Defoe",
+    "oldYear": 1686,
+    "newYear": 1719,
+    "reason": "Daniel Defoe (born 1660), published 1719"
+  },
+  {
+    "oldId": "book:candide-1746",
+    "title": "Candide",
+    "creator": "Voltaire",
+    "oldYear": 1746,
+    "newYear": 1759,
+    "reason": "Voltaire, published 1759"
+  },
+  {
+    "oldId": "book:women-in-love-1877",
+    "title": "Women in Love",
+    "creator": "D. H. Lawrence",
+    "oldYear": 1877,
+    "newYear": 1920,
+    "reason": "D. H. Lawrence (born 1885), published 1920"
+  },
+  {
+    "oldId": "book:the-red-badge-of-courage-1855",
+    "title": "The Red Badge of Courage",
+    "creator": "Stephen Crane",
+    "oldYear": 1855,
+    "newYear": 1895,
+    "reason": "Stephen Crane (born 1871), published 1895"
+  },
+  {
+    "oldId": "book:orthodoxy-1874",
+    "title": "Orthodoxy",
+    "creator": "Gilbert Keith Chesterton",
+    "oldYear": 1874,
+    "newYear": 1908,
+    "reason": "G. K. Chesterton (born 1874), published 1908"
+  },
+  {
+    "oldId": "book:salem-s-lot-1959",
+    "title": "'Salem’s Lot",
+    "creator": "Stephen King",
+    "oldYear": 1959,
+    "newYear": 1975,
+    "reason": "Stephen King (born 1947), published 1975"
+  },
+  {
+    "oldId": "book:la-chute-1917",
+    "title": "La chute",
+    "creator": "Albert Camus",
+    "oldYear": 1917,
+    "newYear": 1956,
+    "reason": "Albert Camus (born 1913), published 1956"
+  },
+  {
+    "oldId": "book:gorin-no-sho-1963",
+    "title": "Gorin no sho",
+    "creator": "Miyamoto Musashi",
+    "oldYear": 1963,
+    "newYear": 1645,
+    "reason": "Miyamoto Musashi (died 1645), written 1645"
+  },
+  {
+    "oldId": "book:walking-1914",
+    "title": "Walking",
+    "creator": "Henry David Thoreau",
+    "oldYear": 1914,
+    "newYear": 1862,
+    "reason": "Henry David Thoreau (died 1862), published 1862"
+  },
+  {
+    "oldId": "book:armageddon-2419-ad-1962",
+    "title": "Armageddon 2419 AD",
+    "creator": "Philip Francis Nowlan",
+    "oldYear": 1962,
+    "newYear": 1928,
+    "reason": "Philip Francis Nowlan (died 1940), published 1928"
+  },
+  {
+    "oldId": "book:the-law-of-success-1969",
+    "title": "The Law of Success",
+    "creator": "Napoleon Hill",
+    "oldYear": 1969,
+    "newYear": 1928,
+    "reason": "Napoleon Hill, published 1928"
+  },
+  {
+    "oldId": "book:cymbeline-1734",
+    "title": "Cymbeline",
+    "creator": "William Shakespeare",
+    "oldYear": 1734,
+    "newYear": 1611,
+    "reason": "William Shakespeare, written ~1610-1611, First Folio 1623"
+  },
+  {
+    "oldId": "book:all-s-well-that-ends-well-1734",
+    "title": "All's Well That Ends Well",
+    "creator": "William Shakespeare",
+    "oldYear": 1734,
+    "newYear": 1605,
+    "reason": "William Shakespeare, written ~1605, First Folio 1623"
+  },
+  {
+    "oldId": "book:antony-and-cleopatra-1734",
+    "title": "Antony and Cleopatra",
+    "creator": "William Shakespeare",
+    "oldYear": 1734,
+    "newYear": 1606,
+    "reason": "William Shakespeare, written ~1606, First Folio 1623"
+  },
+  {
+    "oldId": "book:as-you-like-it-1734",
+    "title": "As You Like It",
+    "creator": "William Shakespeare",
+    "oldYear": 1734,
+    "newYear": 1599,
+    "reason": "William Shakespeare, written ~1599, First Folio 1623"
+  },
+  {
+    "oldId": "book:the-comedy-of-errors-1734",
+    "title": "The Comedy of Errors",
+    "creator": "William Shakespeare",
+    "oldYear": 1734,
+    "newYear": 1594,
+    "reason": "William Shakespeare, written ~1594, First Folio 1623"
+  },
+  {
+    "oldId": "book:henry-viii-1670",
+    "title": "Henry VIII",
+    "creator": "William Shakespeare",
+    "oldYear": 1670,
+    "newYear": 1613,
+    "reason": "William Shakespeare, written 1613, First Folio 1623"
+  },
+  {
+    "oldId": "book:julius-caesar-1656",
+    "title": "Julius Caesar",
+    "creator": "William Shakespeare",
+    "oldYear": 1656,
+    "newYear": 1599,
+    "reason": "William Shakespeare, written 1599, First Folio 1623"
+  },
+  {
+    "oldId": "book:coriolanus-1721",
+    "title": "Coriolanus",
+    "creator": "William Shakespeare",
+    "oldYear": 1721,
+    "newYear": 1608,
+    "reason": "William Shakespeare, written ~1608, First Folio 1623"
+  },
+  {
+    "oldId": "book:the-taming-of-the-shrew-1631",
+    "title": "The Taming of the Shrew",
+    "creator": "William Shakespeare",
+    "oldYear": 1631,
+    "newYear": 1594,
+    "reason": "William Shakespeare, written ~1590-1592, published 1594"
+  },
+  {
+    "oldId": "book:a-tale-of-two-cities-1800",
+    "title": "A Tale of Two Cities",
+    "creator": "Charles Dickens",
+    "oldYear": 1800,
+    "newYear": 1859,
+    "reason": "Charles Dickens (born 1812), published 1859"
+  },
+  {
+    "oldId": "book:the-moonstone-1800",
+    "title": "The Moonstone",
+    "creator": "Wilkie Collins",
+    "oldYear": 1800,
+    "newYear": 1868,
+    "reason": "Wilkie Collins (born 1824), published 1868"
+  },
+  {
+    "oldId": "book:david-copperfield-1800",
+    "title": "David Copperfield",
+    "creator": "Charles Dickens",
+    "oldYear": 1800,
+    "newYear": 1850,
+    "reason": "Charles Dickens (born 1812), published 1850"
+  },
+  {
+    "oldId": "book:the-old-curiosity-shop-1800",
+    "title": "The Old Curiosity Shop",
+    "creator": "Charles Dickens",
+    "oldYear": 1800,
+    "newYear": 1841,
+    "reason": "Charles Dickens (born 1812), published 1841"
+  },
+  {
+    "oldId": "book:the-scarlet-letter-1800",
+    "title": "The Scarlet Letter",
+    "creator": "Nathaniel Hawthorne",
+    "oldYear": 1800,
+    "newYear": 1850,
+    "reason": "Nathaniel Hawthorne (born 1804), published 1850"
+  },
+  {
+    "oldId": "book:the-mill-on-the-floss-1800",
+    "title": "The Mill on the Floss",
+    "creator": "George Eliot",
+    "oldYear": 1800,
+    "newYear": 1860,
+    "reason": "George Eliot (born 1819), published 1860"
+  },
+  {
+    "oldId": "book:silas-marner-1800",
+    "title": "Silas Marner",
+    "creator": "George Eliot",
+    "oldYear": 1800,
+    "newYear": 1861,
+    "reason": "George Eliot (born 1819), published 1861"
+  },
+  {
+    "oldId": "book:adam-bede-1800",
+    "title": "Adam Bede",
+    "creator": "George Eliot",
+    "oldYear": 1800,
+    "newYear": 1859,
+    "reason": "George Eliot (born 1819), published 1859"
+  },
+  {
+    "oldId": "book:the-prisoner-of-zenda-1800",
+    "title": "The Prisoner of Zenda",
+    "creator": "Anthony Hope",
+    "oldYear": 1800,
+    "newYear": 1894,
+    "reason": "Anthony Hope (born 1863), published 1894"
+  },
+  {
+    "oldId": "book:la-chartreuse-de-parme-1800",
+    "title": "La chartreuse de Parme",
+    "creator": "Stendhal",
+    "oldYear": 1800,
+    "newYear": 1839,
+    "reason": "Stendhal, published 1839"
+  },
+  {
+    "oldId": "book:the-pickwick-papers-1800",
+    "title": "The Pickwick Papers",
+    "creator": "Charles Dickens",
+    "oldYear": 1800,
+    "newYear": 1837,
+    "reason": "Charles Dickens (born 1812), published 1837"
+  },
+  {
+    "oldId": "book:ivanhoe-1800",
+    "title": "Ivanhoe",
+    "creator": "Sir Walter Scott",
+    "oldYear": 1800,
+    "newYear": 1819,
+    "reason": "Sir Walter Scott, published 1819"
+  },
+  {
+    "oldId": "book:a-history-of-new-york-1800",
+    "title": "A history of New York",
+    "creator": "Washington Irving",
+    "oldYear": 1800,
+    "newYear": 1809,
+    "reason": "Washington Irving, published 1809"
+  },
+  {
+    "oldId": "book:the-alhambra-1800",
+    "title": "The Alhambra",
+    "creator": "Washington Irving",
+    "oldYear": 1800,
+    "newYear": 1832,
+    "reason": "Washington Irving, published 1832"
+  },
+  {
+    "oldId": "book:civil-disobedience-1800",
+    "title": "Civil Disobedience",
+    "creator": "Henry David Thoreau",
+    "oldYear": 1800,
+    "newYear": 1849,
+    "reason": "Henry David Thoreau (born 1817), published 1849"
+  },
+  {
+    "oldId": "book:the-seven-lamps-of-architecture-1800",
+    "title": "The Seven Lamps of Architecture",
+    "creator": "John Ruskin",
+    "oldYear": 1800,
+    "newYear": 1849,
+    "reason": "John Ruskin (born 1819), published 1849"
+  },
+  {
+    "oldId": "book:sesame-and-lilies-three-lectures-1800",
+    "title": "Sesame and Lilies, three lectures",
+    "creator": "John Ruskin",
+    "oldYear": 1800,
+    "newYear": 1865,
+    "reason": "John Ruskin (born 1819), published 1865"
+  },
+  {
+    "oldId": "book:sartor-resartus-1800",
+    "title": "Sartor resartus",
+    "creator": "Thomas Carlyle",
+    "oldYear": 1800,
+    "newYear": 1836,
+    "reason": "Thomas Carlyle, published 1836"
+  },
+  {
+    "oldId": "book:the-pathfinder-1800",
+    "title": "The Pathfinder",
+    "creator": "James Fenimore Cooper",
+    "oldYear": 1800,
+    "newYear": 1840,
+    "reason": "James Fenimore Cooper, published 1840"
+  },
+  {
+    "oldId": "book:patrologiae-cursus-completus-1800",
+    "title": "Patrologiae cursus completus",
+    "creator": "J.-P Migne",
+    "oldYear": 1800,
+    "newYear": 1844,
+    "reason": "J.-P. Migne, published 1844"
+  },
+  {
+    "oldId": "book:the-hound-of-the-baskervilles-1900",
+    "title": "The Hound of the Baskervilles",
+    "creator": "Arthur Conan Doyle",
+    "oldYear": 1900,
+    "newYear": 1902,
+    "reason": "Arthur Conan Doyle, published 1902"
+  },
+  {
+    "oldId": "book:the-railway-children-1900",
+    "title": "The Railway Children",
+    "creator": "Edith Nesbit",
+    "oldYear": 1900,
+    "newYear": 1906,
+    "reason": "Edith Nesbit, published 1906"
+  },
+  {
+    "oldId": "book:the-scarlet-pimpernel-1900",
+    "title": "The Scarlet Pimpernel",
+    "creator": "Emma Orczy",
+    "oldYear": 1900,
+    "newYear": 1905,
+    "reason": "Emma Orczy, published 1905"
+  },
+  {
+    "oldId": "book:the-club-of-queer-trades-1900",
+    "title": "The Club of Queer Trades",
+    "creator": "Gilbert Keith Chesterton",
+    "oldYear": 1900,
+    "newYear": 1905,
+    "reason": "G. K. Chesterton, published 1905"
+  },
+  {
+    "oldId": "book:the-book-of-tea-1900",
+    "title": "The Book of Tea",
+    "creator": "Okakura Kakuzō",
+    "oldYear": 1900,
+    "newYear": 1906,
+    "reason": "Okakura Kakuzo, published 1906"
+  },
+  {
+    "oldId": "book:the-food-of-the-gods-and-how-it-came-to-earth-1900",
+    "title": "The food of the gods and how it came to earth",
+    "creator": "H. G. Wells",
+    "oldYear": 1900,
+    "newYear": 1904,
+    "reason": "H. G. Wells, published 1904"
+  },
+  {
+    "oldId": "book:the-first-men-in-the-moon-1900",
+    "title": "The First Men in the Moon",
+    "creator": "H. G. Wells",
+    "oldYear": 1900,
+    "newYear": 1901,
+    "reason": "H. G. Wells, published 1901"
+  },
+  {
+    "oldId": "book:a-modern-utopia-1900",
+    "title": "A Modern Utopia",
+    "creator": "H. G. Wells",
+    "oldYear": 1900,
+    "newYear": 1905,
+    "reason": "H. G. Wells, published 1905"
+  },
+  {
+    "oldId": "book:the-deal-2000",
+    "title": "The Deal",
+    "creator": "Elle Kennedy",
+    "oldYear": 2000,
+    "newYear": 2015,
+    "reason": "Elle Kennedy, published 2015"
+  },
+  {
+    "oldId": "book:harry-potter-and-the-cursed-child-2001",
+    "title": "Harry Potter and the Cursed Child",
+    "creator": "Jack Thorne",
+    "oldYear": 2001,
+    "newYear": 2016,
+    "reason": "J. K. Rowling / Jack Thorne, published 2016"
+  },
+  {
+    "oldId": "book:the-nightingale-2000",
+    "title": "The Nightingale",
+    "creator": "Kristin Hannah",
+    "oldYear": 2000,
+    "newYear": 2015,
+    "reason": "Kristin Hannah, published 2015"
+  },
+  {
+    "oldId": "book:zero-to-one-2001",
+    "title": "Zero to One",
+    "creator": "Peter A. Thiel",
+    "oldYear": 2001,
+    "newYear": 2014,
+    "reason": "Peter Thiel, published 2014"
+  },
+  {
+    "oldId": "book:the-blood-of-olympus-2001",
+    "title": "The Blood of Olympus",
+    "creator": "Rick Riordan",
+    "oldYear": 2001,
+    "newYear": 2014,
+    "reason": "Rick Riordan, published 2014"
+  },
+  {
+    "oldId": "book:slaughterhouse-five-1956",
+    "title": "Slaughterhouse-Five",
+    "creator": "Kurt Vonnegut",
+    "oldYear": 1956,
+    "newYear": 1969,
+    "reason": "Kurt Vonnegut, published 1969"
+  },
+  {
+    "oldId": "book:fifty-shades-of-grey-2000",
+    "title": "Fifty Shades of Grey",
+    "creator": "E. L. James",
+    "oldYear": 2000,
+    "newYear": 2011,
+    "reason": "E. L. James, published 2011"
+  },
+  {
+    "oldId": "book:the-new-jim-crow-2000",
+    "title": "The New Jim Crow",
+    "creator": "Michelle Alexander",
+    "oldYear": 2000,
+    "newYear": 2010,
+    "reason": "Michelle Alexander, published 2010"
+  },
+  {
+    "oldId": "book:holes-1988",
+    "title": "Holes",
+    "creator": "Louis Sachar",
+    "oldYear": 1988,
+    "newYear": 1998,
+    "reason": "Louis Sachar, published 1998"
+  },
+  {
+    "oldId": "book:women-who-run-with-the-wolves-1982",
+    "title": "Women Who Run with the Wolves",
+    "creator": "Clarissa Pinkola Estés",
+    "oldYear": 1982,
+    "newYear": 1992,
+    "reason": "Clarissa Pinkola Estés, published 1992"
+  },
+  {
+    "oldId": "book:the-tale-of-peter-rabbit-1920",
+    "title": "The Tale of Peter Rabbit",
+    "creator": "Beatrix Potter",
+    "oldYear": 1920,
+    "newYear": 1902,
+    "reason": "Beatrix Potter, published 1902"
+  },
+  {
+    "oldId": "book:breaking-dawn-2000",
+    "title": "Breaking Dawn",
+    "creator": "Stephenie Meyer",
+    "oldYear": 2000,
+    "newYear": 2008,
+    "reason": "Stephenie Meyer, published 2008"
+  },
+  {
+    "oldId": "book:lun-yu-1750",
+    "title": "Lun yu",
+    "creator": "Confucius",
+    "oldYear": 1750,
+    "newYear": -480,
+    "reason": "Confucius Analects, written ~ -480"
+  },
+  {
+    "oldId": "book:politika-1492",
+    "title": "Πολιτικά (Politiká)",
+    "creator": "Aristotle",
+    "oldYear": 1492,
+    "newYear": -350,
+    "reason": "Aristotle Politics, written ~ -350"
+  },
+  {
+    "oldId": "book:la-poetica-1479",
+    "title": "La Poetica",
+    "creator": "Aristotle",
+    "oldYear": 1479,
+    "newYear": -335,
+    "reason": "Aristotle Poetics, written ~ -335"
+  },
+  {
+    "oldId": "book:de-rerum-natura-1486",
+    "title": "De rerum natura",
+    "creator": "Titus Lucretius Carus",
+    "oldYear": 1486,
+    "newYear": -50,
+    "reason": "Lucretius De rerum natura, written ~ -50"
+  },
+  {
+    "oldId": "book:de-officiis-1465",
+    "title": "De officiis",
+    "creator": "Cicero",
+    "oldYear": 1465,
+    "newYear": -44,
+    "reason": "Cicero De officiis, written 44 BC"
+  },
+  {
+    "oldId": "book:metamorfosi-1474",
+    "title": "Metamorfosi",
+    "creator": "Ovid",
+    "oldYear": 1474,
+    "newYear": 8,
+    "reason": "Ovid Metamorphoses, written 8 AD"
+  },
+  {
+    "oldId": "book:ab-urbe-condita-1481",
+    "title": "Ab urbe condita",
+    "creator": "Titus Livius",
+    "oldYear": 1481,
+    "newYear": -27,
+    "reason": "Livy Ab urbe condita, written ~27 BC"
+  },
+  {
+    "oldId": "book:aeneis-1592",
+    "title": "Aeneis",
+    "creator": "Publius Vergilius Maro",
+    "oldYear": 1592,
+    "newYear": -19,
+    "reason": "Virgil Aeneid, written 19 BC"
+  },
+  {
+    "oldId": "book:confessions-1482",
+    "title": "Confessions",
+    "creator": "Augustine of Hippo",
+    "oldYear": 1482,
+    "newYear": 397,
+    "reason": "Augustine of Hippo Confessions, written 397 AD"
+  },
+  {
+    "oldId": "book:de-consolatione-philosophiae-1483",
+    "title": "De consolatione philosophiae",
+    "creator": "Boethius",
+    "oldYear": 1483,
+    "newYear": 524,
+    "reason": "Boethius Consolation of Philosophy, written 524 AD"
+  },
+  {
+    "oldId": "book:summa-theologica-1467",
+    "title": "Summa Theologica",
+    "creator": "Thomas Aquinas",
+    "oldYear": 1467,
+    "newYear": 1274,
+    "reason": "Thomas Aquinas Summa Theologica, written 1274 AD"
+  },
+  {
+    "oldId": "book:the-guide-of-the-perplexed-of-maimonides-1473",
+    "title": "The guide of the perplexed of Maimonides",
+    "creator": "Moses Maimonides",
+    "oldYear": 1473,
+    "newYear": 1190,
+    "reason": "Moses Maimonides, written 1190 AD"
+  },
+  {
+    "oldId": "book:the-canterbury-tales-1478",
+    "title": "The Canterbury Tales",
+    "creator": "Geoffrey Chaucer",
+    "oldYear": 1478,
+    "newYear": 1387,
+    "reason": "Geoffrey Chaucer The Canterbury Tales, written 1387 AD"
+  },
+  {
+    "oldId": "book:decamerone-1516",
+    "title": "Decamerone",
+    "creator": "Giovanni Boccaccio",
+    "oldYear": 1516,
+    "newYear": 1351,
+    "reason": "Giovanni Boccaccio Decameron, written 1351 AD"
+  },
+  {
+    "oldId": "book:moralia-1500",
+    "title": "Moralia",
+    "creator": "Plutarch",
+    "oldYear": 1500,
+    "newYear": 100,
+    "reason": "Plutarch Moralia, written ~100 AD"
+  },
+  {
+    "oldId": "book:cyropaedia-1527",
+    "title": "Cyropaedia",
+    "creator": "Xenophon",
+    "oldYear": 1527,
+    "newYear": -370,
+    "reason": "Xenophon Cyropaedia, written ~ -370"
+  },
+  {
+    "oldId": "book:tao-te-ching-1842",
+    "title": "Tao te Ching",
+    "creator": "老子",
+    "oldYear": 1842,
+    "newYear": -400,
+    "reason": "Laozi Tao Te Ching, written ~ -400"
+  },
+  {
+    "oldId": "book:-1713",
+    "title": "Φαίδων",
+    "creator": "Plato",
+    "oldYear": 1713,
+    "newYear": -360,
+    "reason": "Plato Phaedo (Φαίδων), written ~ -360"
+  },
+  {
+    "oldId": "book:-1675",
+    "title": "Ἀπολογία Σωκράτους",
+    "creator": "Plato",
+    "oldYear": 1675,
+    "newYear": -395,
+    "reason": "Plato Apology (Ἀπολογία Σωκράτους), written ~ -395"
+  },
+  {
+    "oldId": "book:-1520",
+    "title": "Τίμαιος",
+    "creator": "Plato",
+    "oldYear": 1520,
+    "newYear": -360,
+    "reason": "Plato Timaeus (Τίμαιος), written ~ -360"
+  },
+  {
+    "oldId": "book:-1562",
+    "title": "Νόμοι",
+    "creator": "Plato",
+    "oldYear": 1562,
+    "newYear": -350,
+    "reason": "Plato Laws (Νόμοι), written ~ -350"
+  },
+  {
+    "oldId": "book:-1728",
+    "title": "Παρμενίδης",
+    "creator": "Plato",
+    "oldYear": 1728,
+    "newYear": -370,
+    "reason": "Plato Parmenides (Παρμενίδης), written ~ -370"
+  },
+  {
+    "oldId": "book:-1827",
+    "title": "Γοργίας",
+    "creator": "Plato",
+    "oldYear": 1827,
+    "newYear": -380,
+    "reason": "Plato Gorgias (Γοργίας), written ~ -380"
+  },
+  {
+    "oldId": "book:-1828",
+    "title": "Πρωταγόρας",
+    "creator": "Plato",
+    "oldYear": 1828,
+    "newYear": -380,
+    "reason": "Plato Protagoras (Πρωταγόρας), written ~ -380"
+  },
+  {
+    "oldId": "book:-1861",
+    "title": "Θεαίτητος",
+    "creator": "Plato",
+    "oldYear": 1861,
+    "newYear": -369,
+    "reason": "Plato Theaetetus (Θεαίτητος), written ~ -369"
+  },
+  {
+    "oldId": "book:-1869",
+    "title": "Μένων",
+    "creator": "Plato",
+    "oldYear": 1869,
+    "newYear": -385,
+    "reason": "Plato Meno (Μένων), written ~ -385"
+  },
+  {
+    "oldId": "book:-1883",
+    "title": "कामसूत्र",
+    "creator": "Vatsyāyana",
+    "oldYear": 1883,
+    "newYear": 300,
+    "reason": "Vatsyayana Kamasutra (कामसूत्र), written ~ 300 AD"
+  }
+]
