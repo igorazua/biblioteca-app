@@ -5,3 +5,9 @@ scripts/cache/sources/
 scripts/cache/tvmaze/
 
 scripts/cache/llm/enriched/
+
+# Datos de terceros (goodbooks-10k) y derivados de evaluación
+scripts/cache/graph/sources/
+# Grafos derivados de datos de terceros (MovieLens, goodbooks, BGG, ListenBrainz) y de usuarios reales: no se
+# redistribuyen; se regeneran con scripts/brain/sources/* y scripts/brain/nightly.mjs
+scripts/cache/graph/cooc-*.jsonl

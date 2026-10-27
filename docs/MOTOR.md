@@ -242,6 +242,9 @@ Cada cambio sube `ENGINE_VERSION` y se compara en `/metricas` y con los scripts 
 
 ## 2c. El cerebro: un espacio único que aprende (v2, 21/10/2026)
 
+> **Estado (27/10/2026): construido, en la app y en automejora** (ver §2c.9). Faltan la capa 1 de fichas de experiencia
+> escritas por LLM (T5) y datos de comportamiento para series.
+
 > Decisión de Igor (21/10/2026): el motor tiene que ser un **cerebro** que aprende y se adapta, no una suma de atributos. Los atributos de §2b.1 sirven para filtros y para R; **el gusto sale del cerebro**. Tareas en `docs/TAREAS_MOTOR_V2.md` (bloque B, T4-T7, y T11).
 
 ### 2c.0 Idea
@@ -342,6 +345,53 @@ vec(obra) = normalizar( α·embContent  ⊕  β·embBehavior  ⊕  γ·embRelaci
 
 - Los vectores caben en el navegador hasta ~50.000 obras por estantería; por encima, búsqueda en el servidor con pgvector.
 - Mantenimiento: obras nuevas y tendencias cada semana, < 30 $/mes de LLM.
+
+### 2c.9 Lo que está hecho (27/10/2026, `m2.0-brain`)
+
+**Fuentes de comportamiento** (`scripts/brain/sources/`, salida `scripts/cache/graph/cooc-<fuente>.jsonl`, sin versionar):
+
+| Fuente | Estantería | Qué es | Cobertura (obras con ≥ 10 aristas) |
+|---|---|---|---|
+| MovieLens ml-32m (`movielens.py`) | pelis | 32 M valoraciones reales; co-gusto ≥ 4 de 174.649 usuarios; 750/935 pelis cruzadas por tmdbId | 79 % |
+| goodbooks-10k (`goodbooks.mjs`) | libros | 6 M valoraciones de Goodreads; 480/988 libros cruzados (118 dudosos en `informe-cruces.md`) | 56 % |
+| BGG «fans also like» (`bgg.mjs`, aprobado por Igor) | juegos | id de BGG de 1.001/1.018 juegos (Wikidata P2339 + búsqueda; 38 dudosos) | 93 % |
+| ListenBrainz similar artists (`listenbrainz.mjs`) | artistas | por mbid, 409/410 | 95 % |
+| Wikipedia Clickstream (`clickstream.mjs`) | todas | 12 meses × es, en, fr, de, it | series 0,2 %, el resto bajo: complementa |
+| Relaciones de Wikidata (`edges.jsonl`) | todas | sagas, mismo autor, adaptaciones (peso 0,5) | — |
+| Usuarios de la app (`nightly.mjs`) | todas | recuentos agregados en el propio SQL de Supabase; peso min(1, aportantes/200) | hoy 7 aportantes |
+
+**Espacio** (`scripts/brain/build_space.py`): PPMI por fuente → suma pesada → SVD (32 d) = comportamiento; se fusiona
+con el contenido (384 d) con β = β_max·grado/(grado + k), PCA a 48 d, int8, 20 vecinos. Sustituye `vec`, `nn` y `v`
+de `engine/<shelf>.json` y conserva lo demás. **Solo escribe si mejora** (puerta de evaluación).
+
+**Evaluación** (27/10/2026; usuarios reales fuera del grafo: 3.935 de MovieLens y 3.121 de goodbooks):
+
+| | Espacio anterior (m1.1) | Solo contenido | **Cerebro** |
+|---|---|---|---|
+| Pelis, usuarios reales | recall@50 21,3 % · hit@10 39 % | 28,4 % · 49 % | **54,9 % · 75 %** |
+| Libros, usuarios reales | 21,9 % · 28 % | 33,3 % · 48 % | **56,2 % · 66 %** |
+| Juegos, enlaces escondidos (recall@20) | — | 8,1 % | **36,6 %** |
+| Artistas, enlaces escondidos | — | 13,2 % | **24,7 %** |
+| Series, enlaces escondidos | — | 36,5 % | **41,3 %** |
+
+El espacio anterior era peor que el contenido solo (la mezcla de `merge.mjs` empeoraba) y su cifra de enlaces no vale
+como referencia: se construyó con esas mismas aristas. Los usuarios de MovieLens y goodbooks son de EE. UU. sobre todo:
+miden «gusto real», no «gusto español».
+
+**En la app:** los vectores se cargan perezosamente en toda la app (`lib/engine/loadEngine.ts`: la estantería en uso
+primero y las demás después de pintar) y, al llegar cada una, se recalcula el vector de usuario. Antes no se
+cargaban nunca (Descubrir, Decidir y el vector de usuario trabajaban sin ellos).
+
+**Automejora:**
+1. Por usuario: lo aprendido en cada sesión de Decidir (pesos de rasgos) se guarda con olvido (60/40) en
+   `decideTaste` y arranca la siguiente sesión; el vector de usuario se recalcula con cada acción.
+2. Global: tarea programada cada noche (`biblioteca-cerebro-nocturno`, 4:30, con la app de Claude abierta) que corre
+   `node scripts/brain/nightly.mjs`: datos reales → reconstrucción → evaluación → escribe solo lo que mejora → tests →
+   informe en `scripts/cache/eval/nightly-<fecha>.md`. **No hace commit ni push** (Igor decide).
+
+**Pendiente:** T5 (fichas de experiencia por LLM, para que el contenido lea algo más que la sinopsis); comportamiento
+para series (no hay dataset abierto: Trakt pide clave); cruzar más libros (480/988); la migración `0009_biblio_duels`
+está sin aplicar en Supabase; con cuentas, `biblio_entries` dará bibliotecas completas (hoy solo eventos anónimos).
 
 ### 2c.8 Licencias
 Aparcado por decisión de Igor (21/10/2026) hasta que la app funcione con usuarios. Para no cerrarse puertas: todo dato e imagen lleva su procedencia (`src`, `imageSrc`), los datos de comportamiento solo se guardan agregados y sin personas, y lo que se publica (fichas, motivos) lo escribe nuestro LLM. Con eso, `purge-source.mjs` puede sustituir cualquier fuente el día que haga falta.

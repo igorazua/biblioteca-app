@@ -331,6 +331,11 @@ export function initDecideSession(input: DecideInput): Decide2State {
   }
   const hist = historyTraits(st, items)
   for (const [k, v] of Object.entries(hist)) if (!(k in asked)) st.muInit[k] = v
+  // lo aprendido en tus sesiones anteriores (con olvido): suma, sin pasar de ±1,2
+  for (const [k, v] of Object.entries(input.tasteMemory ?? {})) {
+    if (k in asked) continue
+    st.muInit[k] = Math.max(-1.2, Math.min(1.2, (st.muInit[k] ?? 0) + v))
+  }
   // el espacio denso siempre activo: así el gusto por «cercanía» se correlaciona con los rasgos desde el principio
   const dense = (featsOf(st, items, pool[0] ?? '').keys ?? []).filter(isEmbKey)
   st = activate(st, dense)
@@ -680,6 +685,22 @@ export function rejectAndContinue(st: Decide2State, rejectedId: string): Decide2
     }
   }
   return next
+}
+
+/** Lo aprendido en los duelos de esta sesión (solo rasgos legibles que se han puesto a prueba), para recordarlo. */
+export function sessionTaste(st: Decide2State): Record<string, number> {
+  const out: Record<string, number> = {}
+  const tested = new Set<string>()
+  for (const d of st.duels) {
+    if (!d.winner) continue
+    for (const id of [d.a, d.b]) for (const k of featsOf(st, st.catalog, id).keys) if (!isEmbKey(k)) tested.add(k)
+  }
+  for (const k of tested) {
+    if (st.asked.includes(k)) continue
+    const learned = meanOf(st, k) - (st.muInit[k] ?? 0)
+    if (Math.abs(learned) >= 0.1) out[k] = Math.round(learned * 100) / 100
+  }
+  return out
 }
 
 /** Para los tests y las métricas: peso aprendido de un rasgo. */

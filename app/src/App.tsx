@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { prefetchEngines } from './lib/engine/loadEngine'
 import { Navigate, Outlet, Route, Routes, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { TabBar } from './components/TabBar'
@@ -97,6 +98,9 @@ export function App() {
     if (SHELF_ENABLED.song) {
       loadSongs()
     }
+    // el espacio de obras de cada estantería (vectores): después de pintar, sin bloquear la primera pantalla
+    const t = window.setTimeout(() => prefetchEngines(), 1500)
+    return () => window.clearTimeout(t)
   }, [])
 
   useEffect(() => {

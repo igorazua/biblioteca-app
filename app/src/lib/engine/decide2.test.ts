@@ -1,7 +1,7 @@
 // Motor v2 de Decidir: los casos que pidió Igor (27/10/2026), con el catálogo real.
 import { beforeAll, describe, expect, it } from 'vitest'
 import { items, itemsById } from '../../data/catalog'
-import { applyDuelChoice, getProposal, initDecideSession, nextDuel, rejectAndContinue, shouldPropose, traitWeight, type Decide2State } from './decide2'
+import { applyDuelChoice, getProposal, initDecideSession, nextDuel, rejectAndContinue, sessionTaste, shouldPropose, traitWeight, type Decide2State } from './decide2'
 import { loadShelfEngine } from './features'
 import type { Item, Profile, ShelfType, UserEntry } from '../../types'
 
@@ -97,6 +97,17 @@ describe('Decidir v2', { timeout: 120_000 }, () => {
     st = rejectAndContinue(st, first.id)
     const second = getProposal(st, null, [])!.item
     expect(second.id).not.toBe(first.id)
+  })
+
+  it('automejora: lo aprendido en una sesión arranca la siguiente', () => {
+    let st = start('boardgame', { seen: 'nueva', source: 'igual' })
+    for (const [w, l] of [[coop[0], comp[0]], [coop[3], comp[5]], [coop[7], comp[11]]] as [Item, Item][]) st = applyDuelChoice(st, w, l)
+    const memory = sessionTaste(st)
+    expect(memory['coop:si']).toBeGreaterThan(0.3)
+    const next = initDecideSession({ shelf: 'boardgame', items, entries: {}, rankings, profile, friends: [], answers: { seen: 'nueva', source: 'igual' }, affinity: () => null, friendPct: () => null, tasteMemory: memory })
+    expect(traitWeight(next, 'coop:si')).toBeGreaterThan(0.3)
+    // y sin duelos, la primera candidata ya tira a cooperativo
+    expect(getProposal(next, null, [])!.item.cooperative).toBe(true)
   })
 
   it('cada duelo se calcula rápido (< 400 ms en node, con el catálogo entero)', () => {

@@ -14,10 +14,11 @@ import {
   rejectAndContinue,
   type DecideProposal,
   duelBudget,
+  sessionTaste,
   type Decide2State as DecideState,
   type DuelPair,
 } from '../lib/engine/decide2'
-import { loadShelfEngine } from '../lib/engine/features'
+import { ensureShelfEngine } from '../lib/engine/loadEngine'
 import { useStore } from '../store/useStore'
 import { useFriends } from '../store/useFriends'
 import { useRanks } from '../store/useScores'
@@ -191,7 +192,7 @@ export function WhatToWatch() {
   }, [entries, rankings, shelf])
 
   // los vectores de contenido de la estantería (cercanía entre obras): se cargan mientras responde las preguntas
-  useEffect(() => { if (shelf) void loadShelfEngine(shelf) }, [shelf])
+  useEffect(() => { if (shelf) void ensureShelfEngine(shelf) }, [shelf])
 
   const isBook = shelf === 'book'
   const baseQs: Question[] = !shelf ? [] : isBook ? BOOK_QUESTIONS : QUESTIONS_BY_SHELF[shelf]
@@ -225,6 +226,7 @@ export function WhatToWatch() {
       deckLearn: useStore.getState().deckLearn?.[shelf],
       recentOrienters: useStore.getState().recentOrienters?.[shelf],
       userVec,
+      tasteMemory: useStore.getState().decideTaste?.[shelf],
     })
     setDecideState(state)
 
@@ -312,6 +314,7 @@ export function WhatToWatch() {
       const prop = getProposal(updatedState, itemsById, activeFriends, profile)
       if (prop) {
         useStore.getState().recordOrienters(shelf, updatedState.shown)
+        useStore.getState().saveDecideTaste(shelf, sessionTaste(updatedState))
         setProposal(prop)
         setCurrent(prop.item.id)
         setPair(null)
@@ -341,6 +344,7 @@ export function WhatToWatch() {
       const prop = getProposal(updatedState, itemsById, activeFriends, profile)
       if (prop) {
         useStore.getState().recordOrienters(shelf, updatedState.shown)
+        useStore.getState().saveDecideTaste(shelf, sessionTaste(updatedState))
         setProposal(prop)
         setCurrent(prop.item.id)
         setPair(null)
@@ -400,6 +404,7 @@ export function WhatToWatch() {
       const prop = getProposal(updatedState, itemsById, activeFriends, profile)
       if (prop) {
         useStore.getState().recordOrienters(shelf, updatedState.shown)
+        useStore.getState().saveDecideTaste(shelf, sessionTaste(updatedState))
         setProposal(prop)
         setCurrent(prop.item.id)
         setPair(null)
@@ -429,6 +434,7 @@ export function WhatToWatch() {
       const prop = getProposal(updatedState, itemsById, activeFriends, profile)
       if (prop) {
         useStore.getState().recordOrienters(shelf, updatedState.shown)
+        useStore.getState().saveDecideTaste(shelf, sessionTaste(updatedState))
         setProposal(prop)
         setCurrent(prop.item.id)
         setPair(null)

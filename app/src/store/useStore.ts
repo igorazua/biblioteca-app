@@ -29,6 +29,8 @@ interface State {
   nudgeDismiss: Record<string, { count: number; lastDismissedAt: number }>
   deckLearn: DeckLearn
   recentOrienters: Record<ShelfType, string[][]>
+  /** lo que Decidir ha aprendido de tus duelos, por rasgo (con olvido): arranca la siguiente sesión */
+  decideTaste?: Partial<Record<ShelfType, Record<string, number>>>
   userVectors: Record<ShelfType, number[] | null>
   duels: Record<ShelfType, Record<string, DuelRecord>>
   ratings: Record<ShelfType, Record<string, number>>
@@ -41,6 +43,7 @@ interface State {
   decayDeckLearn: (shelf?: ShelfType) => void
   recordOrienters: (shelf: ShelfType, ids: string[]) => void
   recomputeUserVectors: () => void
+  saveDecideTaste: (shelf: ShelfType, learned: Record<string, number>) => void
   recordDuel: (shelf: ShelfType, a: string, b: string, winner: string) => void
   deleteDuel: (shelf: ShelfType, a: string, b: string) => void
   touchLastCompared: (shelf: ShelfType) => void
@@ -240,6 +243,18 @@ export const useStore = create<State>()(
               [shelf]: updated,
             },
           }
+        }),
+
+      // Media con olvido: 60 % lo de antes, 40 % la sesión; acotada para que nunca pese más que una respuesta
+      saveDecideTaste: (shelf, learned) =>
+        set((s) => {
+          const prev = s.decideTaste?.[shelf] ?? {}
+          const next: Record<string, number> = {}
+          for (const k of new Set([...Object.keys(prev), ...Object.keys(learned)])) {
+            const v = 0.6 * (prev[k] ?? 0) + 0.4 * (learned[k] ?? 0)
+            if (Math.abs(v) >= 0.05) next[k] = Math.max(-1, Math.min(1, Math.round(v * 100) / 100))
+          }
+          return { decideTaste: { ...(s.decideTaste ?? {}), [shelf]: next } }
         }),
 
       recomputeUserVectors: () =>

@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion'
 import { friends as seedFriends, getItem, itemsOfType } from '../data/catalog'
 import { useSongsLoaded } from '../data/songs'
 import { nextCards, newDeckSessionState, type DeckCard, type DeckSessionState } from '../lib/engine/deck'
+import { ensureShelfEngine } from '../lib/engine/loadEngine'
 import { useStore } from '../store/useStore'
 import { useAuth } from '../store/useAuth'
 import { useFriends } from '../store/useFriends'
@@ -72,7 +73,7 @@ const readVariant = (): DiscoverVariant => {
   } catch {
     /* ok */
   }
-  return 'bottom_dock'
+  return 'hub'
 }
 
 export function Discover() {
@@ -96,6 +97,9 @@ export function Discover() {
       /* ok */
     }
   }
+
+  // el espacio de obras de esta estantería, antes que las demás (al llegar se recalcula tu vector y el mazo)
+  useEffect(() => { void ensureShelfEngine(shelf) }, [shelf])
 
   useEffect(() => {
     if (validParamShelf && validParamShelf !== shelf) {
@@ -465,19 +469,23 @@ export function Discover() {
       )}
 
       {variant === 'hub' && (
-        <div className="safe-top px-5 pt-2 pb-2 shrink-0 flex items-center justify-between">
+        <div className="safe-top px-5 pt-2 pb-1 shrink-0 flex items-center justify-between">
+          {/* Enlace de navegación estilo nativo iOS (limpio, no compite con la tarjeta) */}
           <button
             type="button"
             onClick={() => setShowHub(true)}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface border border-line text-xs font-semibold text-ink active:scale-95 transition-transform shadow-xs"
+            className="flex items-center gap-1 text-[13px] font-medium text-accent hover:text-accent/80 active:opacity-60 transition-opacity -ml-1 py-1 px-1.5 rounded-lg"
           >
-            <Icon name="back" size={14} />
-            <span>Todas las categorías</span>
-            <span className="text-meta text-mute font-normal ml-1 tabular-nums">
-              ({SHELF_LABEL[shelf].plural})
-            </span>
+            <Icon name="back" size={15} strokeWidth={2.4} />
+            <span>Categorías</span>
           </button>
-          <VariantSwitchButton variant={variant} onClick={() => setShowVariantMenu(true)} />
+
+          <div className="flex items-center gap-2">
+            <span className="text-xs text-mute font-medium tabular-nums">
+              {SHELF_LABEL[shelf].plural} · {remainingCount > 0 ? `${remainingCount} por ver` : 'Al día'}
+            </span>
+            <VariantSwitchButton variant={variant} onClick={() => setShowVariantMenu(true)} />
+          </div>
         </div>
       )}
 

@@ -173,6 +173,8 @@ export interface DecideInput {
   recentOrienters?: string[][]
   userVec?: Float32Array | number[] | null
   doubtfulItems?: Record<string, number>
+  /** v2: rasgos aprendidos en sesiones anteriores (`useStore.decideTaste`) */
+  tasteMemory?: Record<string, number>
 }
 
 const asStr = (v: Answers[string]): string | undefined => (typeof v === 'string' ? v : undefined)
