@@ -70,6 +70,8 @@ export function Connect() {
     } else if (s.method === 'file') setSheet({ kind: 'file', service: s })
     else if (s.method === 'username') setSheet({ kind: 'username', service: s })
     else if (spotifyEnabled) setSheet({ kind: 'oauth', service: s })
+    // sin conexión configurada (o para quien la tenga en modo desarrollo): siempre queda subir el historial descargado
+    else if (s.file) setSheet({ kind: 'file', service: s })
   }
 
   const handleDisconnectSpotify = () => {
@@ -131,12 +133,12 @@ export function Connect() {
               <Group key={g.id} title={g.title}>
                 {list.map((s) => {
                   const soon = s.method === 'soon'
-                  const offSpotify = s.method === 'oauth' && !spotifyEnabled
+                  const offSpotify = s.method === 'oauth' && !spotifyEnabled && !s.file
                   const isAsked = asked.has(s.id)
                   const actionLabel =
                     offSpotify ? 'Pronto'
                     : soon ? (isAsked ? 'Anotado' : 'Avísame')
-                    : s.method === 'file' ? 'Importar'
+                    : s.method === 'file' || (s.method === 'oauth' && !spotifyEnabled) ? 'Importar'
                     : 'Conectar'
 
                   return (
