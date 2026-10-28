@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
-import { friends as seedFriends, getItem, itemsOfType } from '../data/catalog'
+import { ensureShelfCatalog, friends as seedFriends, getItem, itemsOfType } from '../data/catalog'
 import { useSongsLoaded } from '../data/songs'
 import { nextCards, newDeckSessionState, type DeckCard, type DeckSessionState } from '../lib/engine/deck'
 import { ensureShelfEngine } from '../lib/engine/loadEngine'
+import { useCatalog } from '../store/useCatalog'
 import { useStore } from '../store/useStore'
 import { useAuth } from '../store/useAuth'
 import { useFriends } from '../store/useFriends'
@@ -99,7 +100,10 @@ export function Discover() {
   }
 
   // el espacio de obras de esta estantería, antes que las demás (al llegar se recalcula tu vector y el mazo)
-  useEffect(() => { void ensureShelfEngine(shelf) }, [shelf])
+  useEffect(() => {
+    void ensureShelfEngine(shelf)
+    void ensureShelfCatalog(shelf)
+  }, [shelf])
 
   useEffect(() => {
     if (validParamShelf && validParamShelf !== shelf) {
@@ -128,6 +132,8 @@ export function Discover() {
   const rankings = useStore((s) => s.rankings)
   // solo el de esta estantería: si llegan los vectores de otra, el mazo no se rebaraja
   const shelfUserVec = useStore((s) => s.userVectors?.[shelf])
+  // al llegar el detalle de la estantería (plataformas, nota…) el mazo se recalcula con datos completos
+  const catalogVersion = useCatalog((s) => s.version)
   const ranks = useRanks()
   const swipe = useStore((s) => s.swipe)
   const settings = useStore((s) => s.settings)
@@ -193,7 +199,7 @@ export function Discover() {
         count
       )
     },
-    [shelf, entries, rankings, profile, activeFriends, getAffinity, getFriendPct, shelfUserVec, songsLoaded]
+    [shelf, entries, rankings, profile, activeFriends, getAffinity, getFriendPct, shelfUserVec, songsLoaded, catalogVersion]
   )
 
   const fetchBatchRef = useRef(fetchBatch)

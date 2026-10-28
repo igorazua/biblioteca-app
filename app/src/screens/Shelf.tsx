@@ -1,6 +1,6 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link, Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom'
-import { getItem } from '../data/catalog'
+import { ensureShelfCatalog, getItem } from '../data/catalog'
 import { useStore } from '../store/useStore'
 import { ACTIVE_SHELVES, SHELF_LABEL, type ShelfType } from '../types'
 import { useCompareOverview } from '../lib/compareOverview'
@@ -37,6 +37,11 @@ export function Shelf() {
   const [toast, setToast] = useState<string | null>(null)
   const profileName = useStore((s) => s.profile.name)
   const t = type as ShelfType
+
+  useEffect(() => {
+    if (t) ensureShelfCatalog(t)
+  }, [t])
+
   const all = useMemo(() => Object.values(entries).filter((e) => getItem(e.itemId)?.type === t), [entries, t])
   if (!type || !(ACTIVE_SHELVES as readonly string[]).includes(t)) return <Navigate to="/" replace />
   const label = SHELF_LABEL[t]

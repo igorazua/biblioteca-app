@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import { prefetchEngines } from './lib/engine/loadEngine'
+import { prefetchShelfCatalogs } from './data/catalog'
 import { Navigate, Outlet, Route, Routes, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { TabBar } from './components/TabBar'
@@ -13,24 +14,27 @@ import { useAuth } from './store/useAuth'
 import { useFriends } from './store/useFriends'
 import { useCatalog } from './store/useCatalog'
 import { pullCloudEntries, pushLocalEntriesToCloud, initStoreSync } from './lib/sync'
-import { Discover } from './screens/Discover'
 import { Library } from './screens/Library'
-import { Shelf } from './screens/Shelf'
-import { ItemDetail } from './screens/ItemDetail'
-import { CompareHome } from './screens/CompareHome'
-import { CompareSession } from './screens/CompareSession'
-import { WhatToWatch } from './screens/WhatToWatch'
-import { Profile } from './screens/Profile'
-import { Onboarding } from './screens/Onboarding'
-import { Import } from './screens/Import'
-import { Connect } from './screens/Connect'
-import { ConnectSpotify } from './screens/ConnectSpotify'
-import { ListEditor } from './screens/ListEditor'
-import { PublicList, PublicProfile } from './screens/Public'
-import { JoinInvite } from './screens/JoinInvite'
-import { Metrics } from './screens/Metrics'
-import { Settings } from './screens/Settings'
-import { EditProfile } from './screens/EditProfile'
+
+// Rutas secundarias cargadas de forma diferida para mantener el bundle inicial < 300 KB
+const Discover = lazy(() => import('./screens/Discover').then((m) => ({ default: m.Discover })))
+const Shelf = lazy(() => import('./screens/Shelf').then((m) => ({ default: m.Shelf })))
+const ItemDetail = lazy(() => import('./screens/ItemDetail').then((m) => ({ default: m.ItemDetail })))
+const CompareHome = lazy(() => import('./screens/CompareHome').then((m) => ({ default: m.CompareHome })))
+const CompareSession = lazy(() => import('./screens/CompareSession').then((m) => ({ default: m.CompareSession })))
+const WhatToWatch = lazy(() => import('./screens/WhatToWatch').then((m) => ({ default: m.WhatToWatch })))
+const Profile = lazy(() => import('./screens/Profile').then((m) => ({ default: m.Profile })))
+const Onboarding = lazy(() => import('./screens/Onboarding').then((m) => ({ default: m.Onboarding })))
+const Import = lazy(() => import('./screens/Import').then((m) => ({ default: m.Import })))
+const Connect = lazy(() => import('./screens/Connect').then((m) => ({ default: m.Connect })))
+const ConnectSpotify = lazy(() => import('./screens/ConnectSpotify').then((m) => ({ default: m.ConnectSpotify })))
+const ListEditor = lazy(() => import('./screens/ListEditor').then((m) => ({ default: m.ListEditor })))
+const PublicList = lazy(() => import('./screens/Public').then((m) => ({ default: m.PublicList })))
+const PublicProfile = lazy(() => import('./screens/Public').then((m) => ({ default: m.PublicProfile })))
+const JoinInvite = lazy(() => import('./screens/JoinInvite').then((m) => ({ default: m.JoinInvite })))
+const Metrics = lazy(() => import('./screens/Metrics').then((m) => ({ default: m.Metrics })))
+const Settings = lazy(() => import('./screens/Settings').then((m) => ({ default: m.Settings })))
+const EditProfile = lazy(() => import('./screens/EditProfile').then((m) => ({ default: m.EditProfile })))
 
 function Frame() {
   const onboarded = useStore((s) => s.onboarded)
@@ -39,28 +43,30 @@ function Frame() {
   return (
     <div className="desk-bg h-full w-full flex items-center justify-center">
       <div className="frame">
-        <Routes>
-          <Route element={<TabLayout />}>
-            <Route index element={<Library />} />
-            <Route path="descubrir" element={<Discover />} />
-            <Route path="decidir" element={<WhatToWatch />} />
-            <Route path="que-vemos" element={<Navigate to="/decidir" replace />} />
-            <Route path="comparar" element={<CompareHome />} />
-            <Route path="comparar/:shelf" element={<CompareSession />} />
-            <Route path="perfil" element={<Profile />} />
-          </Route>
-          <Route path="estanteria/:type" element={<Shelf />} />
-          <Route path="i/:id" element={<ItemDetail />} />
-          <Route path="lista/:id" element={<ListEditor />} />
-          <Route path="conectar" element={<Connect />} />
-          <Route path="conectar/spotify" element={<ConnectSpotify />} />
-          <Route path="importar" element={<Import />} />
-          <Route path="ajustes" element={<Settings />} />
-          <Route path="perfil/editar" element={<EditProfile />} />
-          <Route path="metricas" element={<Metrics />} />
-          <Route path="onboarding" element={<Onboarding />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
+        <Suspense fallback={null}>
+          <Routes>
+            <Route element={<TabLayout />}>
+              <Route index element={<Library />} />
+              <Route path="descubrir" element={<Discover />} />
+              <Route path="decidir" element={<WhatToWatch />} />
+              <Route path="que-vemos" element={<Navigate to="/decidir" replace />} />
+              <Route path="comparar" element={<CompareHome />} />
+              <Route path="comparar/:shelf" element={<CompareSession />} />
+              <Route path="perfil" element={<Profile />} />
+            </Route>
+            <Route path="estanteria/:type" element={<Shelf />} />
+            <Route path="i/:id" element={<ItemDetail />} />
+            <Route path="lista/:id" element={<ListEditor />} />
+            <Route path="conectar" element={<Connect />} />
+            <Route path="conectar/spotify" element={<ConnectSpotify />} />
+            <Route path="importar" element={<Import />} />
+            <Route path="ajustes" element={<Settings />} />
+            <Route path="perfil/editar" element={<EditProfile />} />
+            <Route path="metricas" element={<Metrics />} />
+            <Route path="onboarding" element={<Onboarding />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </Suspense>
       </div>
     </div>
   )
@@ -77,8 +83,8 @@ function TabLayout() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.12 }}
-            className="h-full w-full"
+            transition={{ duration: 0.15 }}
+            className="h-full"
           >
             <Outlet />
           </motion.div>
@@ -90,16 +96,20 @@ function TabLayout() {
 }
 
 export function App() {
+  const [syncToast, setSyncToast] = useState<string | null>(null)
   const user = useAuth((s) => s.user)
   const hasHydrated = useCatalog((s) => s._hasHydrated)
-  const [syncToast, setSyncToast] = useState<string | null>(null)
 
   useEffect(() => {
+    // Si la estantería de canciones está encendida, se carga songs.json de /data
     if (SHELF_ENABLED.song) {
       loadSongs()
     }
-    // el espacio de obras de cada estantería (vectores): después de pintar, sin bloquear la primera pantalla
-    const t = window.setTimeout(() => prefetchEngines(), 1500)
+    // el espacio de obras de cada estantería (vectores) y el catálogo detallado: después de pintar, sin bloquear la primera pantalla
+    const t = window.setTimeout(() => {
+      prefetchEngines()
+      prefetchShelfCatalogs()
+    }, 1500)
     return () => window.clearTimeout(t)
   }, [])
 
@@ -153,13 +163,14 @@ export function App() {
       <UpdatePrompt />
       <PushPrompt />
       {syncToast && <Toast message={syncToast} onDone={() => setSyncToast(null)} />}
-      <Routes>
-        {/* Vistas públicas de links compartidos: sin marco ni barra, como una web normal */}
-        <Route path="/l/:payload" element={<PublicList />} />
-        <Route path="/p/:payload" element={<PublicProfile />} />
-        <Route path="/unete/:code" element={<JoinInvite />} />
-        <Route path="/*" element={<Frame />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path="/l/:payload" element={<PublicList />} />
+          <Route path="/p/:payload" element={<PublicProfile />} />
+          <Route path="/unete/:code" element={<JoinInvite />} />
+          <Route path="/*" element={<Frame />} />
+        </Routes>
+      </Suspense>
     </>
   )
 }

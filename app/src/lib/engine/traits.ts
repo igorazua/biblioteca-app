@@ -12,6 +12,7 @@
 import type { Item, ShelfType } from '../../types'
 import { canonicalId } from '../../data/aliases'
 import { vecOf } from './features'
+import { catalogDetailStamp } from '../../data/catalog'
 
 export const EMB_DIM = 48
 const EMB_PREFIX = 'e:'
@@ -125,7 +126,7 @@ function rawTraits(it: Item): { key: string; label: string }[] {
 export interface Features { keys: string[]; vals: number[] }
 interface Space { labels: Map<string, string>; feats: Map<string, Features> }
 
-const spaces = new WeakMap<Item[], Map<ShelfType, { space: Space; probe: string; withEmb: boolean }>>()
+const spaces = new WeakMap<Item[], Map<ShelfType, { space: Space; probe: string; withEmb: boolean; stamp: number }>>()
 
 /**
  * Espacio de rasgos de una estantería. Un rasgo entra si lo tienen al menos 3 obras y no más de la mitad
@@ -134,7 +135,8 @@ const spaces = new WeakMap<Item[], Map<ShelfType, { space: Space; probe: string;
 export function traitSpace(shelf: ShelfType, items: Item[]): Space {
   let byShelf = spaces.get(items)
   const hit = byShelf?.get(shelf)
-  if (hit && hit.withEmb === Boolean(vecOf(shelf, hit.probe))) return hit.space
+  // se rehace si llegan los vectores o el detalle de una estantería (géneros, palabras clave, país…)
+  if (hit && hit.withEmb === Boolean(vecOf(shelf, hit.probe)) && hit.stamp === catalogDetailStamp()) return hit.space
 
   const shelfItems = items.filter((it) => it.type === shelf)
   const probe = canonicalId(shelfItems[0]?.id ?? '')
@@ -175,7 +177,7 @@ export function traitSpace(shelf: ShelfType, items: Item[]): Space {
   }
   const space = { labels, feats }
   if (!byShelf) { byShelf = new Map(); spaces.set(items, byShelf) }
-  byShelf.set(shelf, { space, probe, withEmb })
+  byShelf.set(shelf, { space, probe, withEmb, stamp: catalogDetailStamp() })
   return space
 }
 

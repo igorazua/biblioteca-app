@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import { friends as seedFriends, getItem, itemFacts, items, itemsById, typeName } from '../data/catalog'
+import { ensureShelfCatalog, friends as seedFriends, getItem, itemFacts, items, itemsById, typeName } from '../data/catalog'
 import { PLATFORMS, WIZARD_TITLE } from '../config'
 import { BOOK_QUESTIONS, QUESTIONS_BY_SHELF, type Option, type OptionArt, type QCtx, type Question } from '../data/questions'
 import {
@@ -192,7 +192,12 @@ export function WhatToWatch() {
   }, [entries, rankings, shelf])
 
   // los vectores de contenido de la estantería (cercanía entre obras): se cargan mientras responde las preguntas
-  useEffect(() => { if (shelf) void ensureShelfEngine(shelf) }, [shelf])
+  useEffect(() => {
+    if (shelf) {
+      void ensureShelfEngine(shelf)
+      void ensureShelfCatalog(shelf)
+    }
+  }, [shelf])
 
   const isBook = shelf === 'book'
   const baseQs: Question[] = !shelf ? [] : isBook ? BOOK_QUESTIONS : QUESTIONS_BY_SHELF[shelf]
@@ -201,7 +206,12 @@ export function WhatToWatch() {
 
   /* ------------------------------- navegación ------------------------------- */
   // Duelos orientadores (§8): obras concretas de la categoría; no son candidatas.
+  // Los duelos necesitan el detalle completo de la estantería (plataformas, nota media, país…): se espera a que llegue
   const startShaping = (a: Answers, targetDuels = 5) => {
+    if (!shelf) return
+    void ensureShelfCatalog(shelf).then(() => startShapingNow(a, targetDuels))
+  }
+  const startShapingNow = (a: Answers, targetDuels = 5) => {
     if (!shelf) return
     sessionSid.current = newSession('dec')
     roundRef.current = 1

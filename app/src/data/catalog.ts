@@ -1,15 +1,151 @@
-import seed from './seed.json'
+import indexData from './catalog-index.json'
 import type { Friend, FriendEntry, Item, ShelfType } from '../types'
 import { friendRanks } from '../lib/rank'
 
 import { useCatalog, setSeedChecker } from '../store/useCatalog'
 import { canonicalId } from './aliases'
 
-export const items = seed.items as Item[]
-export const friends = seed.friends as Friend[]
+const COVER_BASE = 'https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers'
+
+function restorePosterUrl(id: string, shelf: ShelfType, p: string | null | undefined): string | null {
+  if (p === null) return null
+  if (!p) return `${COVER_BASE}/${shelf}/${id.split(':')[1]}.webp?v=2`
+  if (p.startsWith('http://') || p.startsWith('https://')) return p
+  return `${COVER_BASE}/${p}`
+}
+
+type CompactRow = [
+  id: string,
+  title: string,
+  year: number,
+  creator: string,
+  popularity: number,
+  poster: string | null,
+  posterRatio: number,
+  popPct: number,
+  notoriety: number,
+  fameTier: number,
+  isCanon: number,
+  dur: number,
+  seas: number,
+  pg: number,
+  play: string,
+  depth: string,
+  orig: string,
+  g: string[],
+  coop: number,
+  mech: string[],
+  weight: number,
+  minAge: number
+]
+
+export const items: Item[] = (indexData.items as CompactRow[]).map(
+  ([id, title, year, creator, popularity, poster, posterRatio, popPct, notoriety, fameTier, isCanon, dur, seas, pg, play, depth, orig, g, coop, mech, weight, minAge]) => {
+    const shelf = id.split(':')[0] as ShelfType
+    const it: Item = {
+      id,
+      type: shelf,
+      title,
+      year,
+      creator,
+      popularity,
+      genres: g || [],
+      synopsis: '',
+      posterUrl: restorePosterUrl(id, shelf, poster),
+    }
+    if (posterRatio) it.posterRatio = posterRatio
+    if (popPct) it.popPct = popPct
+    if (notoriety) it.notoriety = notoriety
+    if (fameTier) it.fameTier = fameTier as 1 | 2 | 3 | 4
+    if (isCanon) it.isCanon = true
+    if (dur) it.durationMin = dur
+    if (seas) it.seasons = seas
+    if (pg) it.pages = pg
+    if (play) it.players = play
+    if (depth) it.depth = depth as Item['depth']
+    if (orig) it.originalTitle = orig
+    if (coop === 1) it.cooperative = true
+    else if (coop === -1) it.cooperative = false
+    if (mech && mech.length > 0) it.mechanics = mech
+    if (weight) it.weight = weight
+    if (minAge) it.minAge = minAge
+    return it
+  }
+)
+
+export const friends = indexData.friends as Friend[]
 
 export const itemsById = new Map<string, Item>(items.map((i) => [i.id, i]))
 setSeedChecker((id) => itemsById.has(canonicalId(id)))
+
+const shelfLoaders: Partial<Record<ShelfType, () => Promise<{ default: unknown }>>> = {
+  movie: () => import('./shelves/movie.json'),
+  series: () => import('./shelves/series.json'),
+  book: () => import('./shelves/book.json'),
+  boardgame: () => import('./shelves/boardgame.json'),
+  artist: () => import('./shelves/artist.json'),
+}
+
+const shelfPromises = new Map<ShelfType, Promise<Item[]>>()
+const loadedShelves = new Set<ShelfType>()
+
+let detailStamp = 0
+/** Cambia cada vez que llega el detalle de una estantería: los cachés del motor (rasgos) se rehacen al verlo cambiar. */
+export const catalogDetailStamp = () => detailStamp
+
+export function isShelfLoaded(shelf: ShelfType): boolean {
+  return loadedShelves.has(shelf)
+}
+
+/** Carga los detalles completos de una estantería y los fusiona en el catálogo en memoria. */
+export function ensureShelfCatalog(shelf: ShelfType): Promise<Item[]> {
+  if (shelf === 'song') return Promise.resolve(dynamicSongs)
+  if (loadedShelves.has(shelf)) {
+    return Promise.resolve(items.filter((i) => i.type === shelf))
+  }
+  const hit = shelfPromises.get(shelf)
+  if (hit) return hit
+
+  const loader = shelfLoaders[shelf]
+  if (!loader) return Promise.resolve([])
+
+  const p = loader()
+    .then((mod) => {
+      const shelfItems = mod.default as Item[]
+      for (const it of shelfItems) {
+        const cid = canonicalId(it.id)
+        const existing = itemsById.get(cid)
+        if (existing) {
+          Object.assign(existing, it)
+        } else {
+          itemsById.set(cid, it)
+          items.push(it)
+        }
+      }
+      loadedShelves.add(shelf)
+      detailStamp++
+      // Despertar componentes suscritos a useCatalog((s) => s.version) (p. ej. ItemDetail)
+      useCatalog.setState((s) => ({ version: s.version + 1 }))
+      return shelfItems
+    })
+    .catch((err) => {
+      console.error(`Error al cargar catálogo de estantería ${shelf}:`, err)
+      shelfPromises.delete(shelf)
+      return []
+    })
+
+  shelfPromises.set(shelf, p)
+  return p
+}
+
+/** Precarga las estanterías en segundo plano sin bloquear la primera pantalla. */
+export function prefetchShelfCatalogs(first?: ShelfType): void {
+  const order = [...new Set([...(first ? [first] : []), 'movie', 'series', 'book', 'boardgame', 'artist'])] as ShelfType[]
+  let chain: Promise<unknown> = Promise.resolve()
+  for (const s of order) {
+    chain = chain.then(() => ensureShelfCatalog(s)).catch(() => false)
+  }
+}
 
 let dynamicSongs: Item[] = []
 const songsListeners = new Set<() => void>()
@@ -123,4 +259,3 @@ export const typeName = (t: ShelfType) => {
     case 'song': return 'Canción'
   }
 }
-

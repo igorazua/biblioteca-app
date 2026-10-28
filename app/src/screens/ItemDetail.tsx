@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, Navigate, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { canonicalId } from '../data/aliases'
-import { friendHits, getItem, itemFacts, typeName } from '../data/catalog'
+import { ensureShelfCatalog, friendHits, getItem, itemFacts, typeName } from '../data/catalog'
 import { useStore } from '../store/useStore'
 import { useCatalog } from '../store/useCatalog'
 import { useRanks } from '../store/useScores'
@@ -38,6 +38,12 @@ export function ItemDetail() {
       setLoading(false)
     }
   }, [id, catalogVersion])
+
+  useEffect(() => {
+    if (item?.type) {
+      ensureShelfCatalog(item.type)
+    }
+  }, [item?.type])
 
   const entry = useStore((s) => s.entries[id])
   const rankings = useStore((s) => s.rankings)
