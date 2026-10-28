@@ -22,7 +22,7 @@ En cada obra del catálogo (`seed.json` y, al partirlo, `catalog-index.json` y `
 ```jsonc
 {
   "title": "…",            // como hoy: el nombre que se enseña en España (no se toca)
-  "origTitle": "The Godfather",   // título original (nuevo; el de la versión original)
+  "originalTitle": "The Godfather",   // título original (YA EXISTE en 479 obras; rellenar donde falte)
   "posterUrl": "…",        // como hoy: la carátula ORIGINAL (no se toca)
   "local": {               // nuevo: versiones por idioma; cada una con su título y su carátula juntos
     "es": { "title": "El padrino", "poster": "https://…/biblio-covers/es/movie/el-padrino-1972.webp", "src": "justwatch-es" }
@@ -52,7 +52,7 @@ de fuente dura; cada dato con su procedencia (`src`).
 4. **Subida:** cada carátula, en vertical (comprueba la forma, como en T14) y en webp, a Supabase Storage
    `biblio-covers/es/<shelf>/<slug>.webp` (el mismo bucket y forma que hoy, con `/es/`). Mira cómo sube
    `app/scripts/engine/covers.mjs`.
-5. **Escritura:** `origTitle` (el título original que dé la fuente) y `local.es` en `seed.json`, con un atributo en el
+5. **Escritura:** `originalTitle` donde falte (el título original que dé la fuente; el campo ya existe) y `local.es` en `seed.json`, con un atributo en el
    registro de atributos (`app/scripts/engine/fill-attr.mjs`) para que no se pierda al regenerar el catálogo; luego
    `npm run catalog:split`.
 6. **Informe:** cobertura por estantería (con `local.es` / total), 20 ejemplos por estantería (título antes → después y
@@ -68,7 +68,7 @@ carátula, los dudosos están listados, `npx tsc -p app/tsconfig.json --noEmit` 
 
 ## Parte B — App: elegir versión por idioma · **Haiku**
 
-1. `app/src/types.ts`: en `Item`, `origTitle?: string` y
+1. `app/src/types.ts`: en `Item`,
    `local?: Partial<Record<string, { title?: string; poster?: string; src?: string }>>`.
 2. `app/src/lib/locale.ts` (nuevo, puro):
    - `userLang()`: el idioma del perfil (`profile.lang`, hoy `'es'`);
@@ -78,7 +78,9 @@ carátula, los dudosos están listados, `npx tsc -p app/tsconfig.json --noEmit` 
 3. Que **todas** las carátulas y títulos de obras pasen por esas dos funciones: el componente `Poster`
    (`app/src/components/Poster.tsx`) y los sitios que pintan `item.title` (búscalos todos con grep: fichas, listas,
    mazo, duelos, Decidir, compartir). No cambies nada más de esas pantallas.
-4. `app/scripts/split-catalog.mjs`: que `catalog-index.json` lleve `local` (título y carátula) y `origTitle`.
+4. `app/scripts/split-catalog.mjs`: que `catalog-index.json` lleve `local` (título y carátula).
+
+> **Hecho (28/10/2026, Haiku; revisado por Claude).** `lib/locale.ts` (`displayTitle`, `displayPoster`, `searchTitles`) con tests; todas las carátulas y títulos de obras pasan por ahí; el índice lleva `local`. Se usa el `originalTitle` que ya existía (no hay `origTitle`).
 5. Sin datos de la parte A todo debe verse exactamente igual que hoy.
 
 **Reglas:** sin commits, sin revisiones visuales, `npx tsc -p app/tsconfig.json --noEmit` y `cd app && npx vitest run`

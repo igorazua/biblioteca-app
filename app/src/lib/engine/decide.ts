@@ -1,3 +1,5 @@
+import { userLang } from '../userLang'
+import { displayTitle } from '../locale'
 import type { Friend, Item, Profile, ShelfType, UserEntry, DeckLearnShelf } from '../../types'
 import { PLATFORMS } from '../../config'
 import { PARAMS } from './params'
@@ -1318,9 +1320,9 @@ export function formatReasons(
       )
       const bestWinners = sortedBySim.slice(0, 2)
       if (bestWinners.length >= 2) {
-        reasons.push(`Porque elegiste ${bestWinners[0].title} y ${bestWinners[1].title}`)
+        reasons.push(`Porque elegiste ${displayTitle(bestWinners[0], userLang())} y ${displayTitle(bestWinners[1], userLang())}`)
       } else if (bestWinners.length === 1) {
-        reasons.push(`Porque elegiste ${bestWinners[0].title}`)
+        reasons.push(`Porque elegiste ${displayTitle(bestWinners[0], userLang())}`)
       }
     }
   }

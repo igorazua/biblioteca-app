@@ -1,3 +1,5 @@
+import { userLang } from '../lib/userLang'
+import { displayTitle } from '../lib/locale'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -31,7 +33,7 @@ interface Snapshot {
 
 const sideOf = (it: Item): Side => ({
   key: it.id,
-  title: it.title,
+  title: displayTitle(it, userLang()),
   subtitle: `${it.year} · ${it.creator}`,
   bg: <Poster item={it} showTitle={false} className="absolute inset-0 w-full h-full" />,
   type: it.type,
@@ -556,7 +558,7 @@ function FlashName({ id, up = false }: { id: string; up?: boolean }) {
   return (
     <span className="flex items-center gap-1 min-w-0">
       <span aria-hidden style={{ color: up ? '#3ec878' : '#ef4b4b' }}>{up ? '▲' : '▼'}</span>
-      <span className="truncate max-w-[14rem] text-ink">{it.title}</span>
+      <span className="truncate max-w-[14rem] text-ink">{displayTitle(it, userLang())}</span>
       <span className="sr-only">{up ? 'sube' : 'baja'}</span>
     </span>
   )
@@ -608,7 +610,7 @@ function MoveList({
                   className={`w-8 ${it.type === 'boardgame' ? posterBox(it).className : 'h-12'} rounded-[6px] shrink-0 object-cover`}
                 />
                 <div className="min-w-0">
-                  <div className="serif text-item font-medium line-clamp-1">{it.title}</div>
+                  <div className="serif text-item font-medium line-clamp-1">{displayTitle(it, userLang())}</div>
                   <div className="text-meta text-mute">{subtitle}</div>
                 </div>
               </div>

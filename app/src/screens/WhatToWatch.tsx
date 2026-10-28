@@ -1,3 +1,5 @@
+import { userLang } from '../lib/userLang'
+import { displayTitle } from '../lib/locale'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -532,7 +534,7 @@ export function WhatToWatch() {
   const currentItem = proposal?.item ?? (current ? getItem(current) : null)
   const shaperSide = (it: Item): Side => ({
     key: it.id,
-    title: it.title,
+    title: displayTitle(it, userLang()),
     subtitle: `${it.year} · ${it.creator}`,
     bg: <Poster item={it} showTitle={false} className="absolute inset-0 w-full h-full" />,
     type: it.type,
@@ -723,7 +725,7 @@ export function WhatToWatch() {
             <div className="text-label text-mute">
               {typeName(currentItem.type)} · {currentItem.year} · {itemFacts(currentItem)}
             </div>
-            <h2 className="text-display text-ink mt-1">{currentItem.title}</h2>
+            <h2 className="text-display text-ink mt-1">{displayTitle(currentItem, userLang())}</h2>
             <p className="text-meta text-accent mt-2 font-medium">{reasonsText}</p>
             <p className="text-body text-mute mt-1.5 line-clamp-2">{currentItem.synopsis}</p>
           </div>
@@ -749,7 +751,7 @@ export function WhatToWatch() {
       <ScreenTitle
         label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`}
         title={shelf === 'book' ? 'A leer' : shelf === 'boardgame' ? 'A jugar' : shelf === 'artist' ? 'A escuchar' : 'A disfrutar'}
-        subtitle={currentItem.title}
+        subtitle={displayTitle(currentItem, userLang())}
       />
     )
     body = (
@@ -815,7 +817,7 @@ export function WhatToWatch() {
                   <span className="w-5 text-center text-meta tabular-nums">{i + 2}</span>
                   <Poster item={it} showTitle={false} style={{ borderRadius: posterRadius(it.type, 6), ...posterBox(it).style }} className={`w-10 ${posterBox(it).className} rounded-md shrink-0 self-center`} />
                   <span className="flex-1 min-w-0">
-                    <span className="block serif text-item text-ink truncate">{it.title}</span>
+                    <span className="block serif text-item text-ink truncate">{displayTitle(it, userLang())}</span>
                     <span className="block text-meta truncate">{it.year} · {it.creator}</span>
                   </span>
                 </button>

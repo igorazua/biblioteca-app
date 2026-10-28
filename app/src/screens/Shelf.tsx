@@ -1,3 +1,5 @@
+import { userLang } from '../lib/userLang'
+import { displayTitle } from '../lib/locale'
 import { useEffect, useMemo, useState } from 'react'
 import { Link, Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { ensureShelfCatalog, getItem } from '../data/catalog'
@@ -165,7 +167,7 @@ export function Shelf() {
                           )}
                           <Poster item={it} style={{ borderRadius: posterRadius(it.type, 6), ...posterBox(it).style }} className={`w-9 ${posterBox(it).className} rounded-[6px] shrink-0 self-center object-cover`} />
                           <div className="flex-1 min-w-0">
-                            <div className="serif text-item text-ink leading-tight line-clamp-1">{it.title}</div>
+                            <div className="serif text-item text-ink leading-tight line-clamp-1">{displayTitle(it, userLang())}</div>
                             <div className="text-meta text-mute mt-0.5 truncate">{it.year} · {it.creator}</div>
                             <div className="text-meta text-mute mt-0.5 truncate">nueva</div>
                           </div>

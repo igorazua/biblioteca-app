@@ -1,3 +1,5 @@
+import { userLang } from '../lib/userLang'
+import { displayPoster, displayTitle } from '../lib/locale'
 import { useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
 import { motion, type Transition } from 'framer-motion'
 import type { Item } from '../types'
@@ -40,7 +42,8 @@ export function Poster({ item, className = '', style, alt, showTitle = true, lay
   // fade: solo si llegó por red después de montar; si ya estaba en caché aparece sin animación
   const [loaded, setLoaded] = useState<{ src: string; fade: boolean } | null>(null)
   const imgRef = useRef<HTMLImageElement>(null)
-  const src = item?.posterUrl ?? null
+  const src = item ? displayPoster(item, userLang()) : null
+  const title = item ? displayTitle(item, userLang()) : ''
   // una imagen ya en caché puede haber cargado antes de enganchar onLoad: sin esto se quedaría con el brillo
   useLayoutEffect(() => {
     const img = imgRef.current
@@ -69,7 +72,7 @@ export function Poster({ item, className = '', style, alt, showTitle = true, lay
         <img
           ref={imgRef}
           src={src}
-          alt={alt ?? `Portada de ${item.title}`}
+          alt={alt ?? `Portada de ${title}`}
           onLoad={() => setLoaded((l) => (l?.src === src ? l : { src, fade: true }))}
           onError={() => setImgError(true)}
           draggable={false}
@@ -84,7 +87,7 @@ export function Poster({ item, className = '', style, alt, showTitle = true, lay
       <motion.img
         ref={imgRef}
         src={src}
-        alt={alt ?? `Portada de ${item.title}`}
+        alt={alt ?? `Portada de ${title}`}
         onLoad={() => setLoaded((l) => (l?.src === src ? l : { src, fade: true }))}
         onError={() => setImgError(true)}
         draggable={false}
@@ -100,7 +103,7 @@ export function Poster({ item, className = '', style, alt, showTitle = true, lay
   const cx = 25 + ((h >> 9) % 50)
   const cy = 18 + ((h >> 13) % 30)
   const shape = (h >> 17) % 3 // 0 círculo, 1 arco, 2 franja
-  const len = item.title.length
+  const len = title.length
   const isSquare = posterShape(item.type) === 'square'
   const size = isSquare
     ? len > 30 ? '8.5cqw' : len > 18 ? '10.5cqw' : len > 10 ? '12.5cqw' : '15cqw'
@@ -109,7 +112,7 @@ export function Poster({ item, className = '', style, alt, showTitle = true, lay
     <motion.div
       {...flight}
       role="img"
-      aria-label={alt ?? `Portada de ${item.title}`}
+      aria-label={alt ?? `Portada de ${title}`}
       className={`relative overflow-hidden ${className}`}
       style={{ background: `linear-gradient(${angle}deg, ${mid} 0%, ${deep} 72%)`, containerType: 'inline-size', ...style }}
     >
@@ -126,7 +129,7 @@ export function Poster({ item, className = '', style, alt, showTitle = true, lay
         <div className={`absolute inset-0 flex flex-col justify-end ${isSquare ? 'p-[6.5cqw]' : 'p-[8cqw]'}`}>
           <div className="uppercase tracking-[0.24em] text-white/60 font-semibold" style={{ fontSize: isSquare ? '4.2cqw' : '4.6cqw' }}>{typeName(item.type)}</div>
           <div className="serif text-white font-semibold leading-[1.02] mt-[2.5cqw] break-words hyphens-auto" lang="es" style={{ fontSize: size, textWrap: 'balance' } as CSSProperties}>
-            {item.title}
+            {title}
           </div>
           <div className="mt-[3cqw] h-px w-[18cqw]" style={{ background: light, opacity: 0.8 }} />
           <div className="text-white/65 mt-[2.5cqw] truncate" style={{ fontSize: isSquare ? '4.5cqw' : '5cqw' }}>{item.year} · {item.creator}</div>

@@ -1,3 +1,5 @@
+import { userLang } from '../lib/userLang'
+import { displayTitle } from '../lib/locale'
 import { useRef, useState } from 'react'
 import { getItem } from '../data/catalog'
 import { useStore } from '../store/useStore'
@@ -45,7 +47,7 @@ export function RatingFlow({ itemId, onDone, withStars }: { itemId: string; onDo
         <Poster item={item} style={{ borderRadius: posterRadius(item?.type, 8), ...posterBox(item).style }} className={`w-14 ${posterBox(item).className} rounded-[8px] shrink-0 object-cover`} />
         <div className="min-w-0">
           <div className="text-label text-mute uppercase">{label.actionPast}</div>
-          <div className="serif text-title font-medium text-ink leading-tight line-clamp-2 mt-0.5">{item.title}</div>
+          <div className="serif text-title font-medium text-ink leading-tight line-clamp-2 mt-0.5">{displayTitle(item, userLang())}</div>
         </div>
       </div>
       {stars0 && (
@@ -93,7 +95,7 @@ export function CommentSheet({ itemId, onClose }: { itemId: string; onClose: () 
   }
   return (
     <Sheet label="Comentario" onClose={finish} height="34%">
-      <h3 className="serif text-title font-medium text-ink leading-tight">¿Algo que decir de <i>{item.title}</i>?</h3>
+      <h3 className="serif text-title font-medium text-ink leading-tight">¿Algo que decir de <i>{displayTitle(item, userLang())}</i>?</h3>
       <textarea
         value={comment}
         onChange={(e) => setComment(e.target.value)}

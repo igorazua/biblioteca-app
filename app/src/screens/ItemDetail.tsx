@@ -1,3 +1,5 @@
+import { userLang } from '../lib/userLang'
+import { displayTitle } from '../lib/locale'
 import { useEffect, useState } from 'react'
 import { Link, Navigate, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { canonicalId } from '../data/aliases'
@@ -103,7 +105,7 @@ export function ItemDetail() {
     setListSheet(false)
     setToast(`Añadida a «${l.title}»`)
   }
-  const askText = (name: string, pos: number) => `Oye ${name}, he visto que tienes ${item.title} en el puesto ${pos} de tus ${label.plural.toLowerCase()}, ¿me ${label.pronoun} recomiendas?`
+  const askText = (name: string, pos: number) => `Oye ${name}, he visto que tienes ${displayTitle(item, userLang())} en el puesto ${pos} de tus ${label.plural.toLowerCase()}, ¿me ${label.pronoun} recomiendas?`
 
   const bgAspect = item.type === 'boardgame' ? boardgameDetailAspect(item.posterRatio) : null
 
@@ -134,7 +136,7 @@ export function ItemDetail() {
           )}
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.16 }} className="absolute bottom-0 inset-x-0 px-5">
             <div className="text-label text-ink/80">{typeName(item.type)} · {item.year}</div>
-            <h1 className="text-display text-ink mt-1">{item.title}</h1>
+            <h1 className="text-display text-ink mt-1">{displayTitle(item, userLang())}</h1>
             <div className="text-meta text-ink/80 mt-1">
               {item.artistId ? (
                 <Link to={`/i/${encodeURIComponent(item.artistId)}`} className="underline underline-offset-2">

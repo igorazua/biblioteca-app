@@ -1,3 +1,5 @@
+import { userLang } from '../lib/userLang'
+import { displayTitle } from '../lib/locale'
 import { useMemo } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { getItem } from '../data/catalog'
@@ -172,9 +174,9 @@ export function CompareHome() {
 
             {/* A 14 px: Título A o Título B */}
             <div className="serif text-[15px] text-center truncate max-w-full px-2 mt-[14px]">
-              <span className="italic">{pairItems.a.title}</span>{' '}
+              <span className="italic">{displayTitle(pairItems.a, userLang())}</span>{' '}
               <span className="text-mute not-italic">o</span>{' '}
-              <span className="italic">{pairItems.b.title}</span>
+              <span className="italic">{displayTitle(pairItems.b, userLang())}</span>
             </div>
 
             {/* A 20 px: Botón principal al ancho del contenido */}

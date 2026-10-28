@@ -1,3 +1,5 @@
+import { userLang } from '../lib/userLang'
+import { displayTitle } from '../lib/locale'
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { animate, motion, useMotionValue, useTransform } from 'framer-motion'
 import type { Item } from '../types'
@@ -18,7 +20,7 @@ function PairCard({ item, side, picked, onChoose }: { item: Item; side: 'top' | 
   return (
     <motion.button
       type="button"
-      aria-label={`Elegir ${item.title}`}
+      aria-label={`Elegir ${displayTitle(item, userLang())}`}
       className="relative flex-1 min-h-0 rounded-3xl overflow-hidden border border-line bg-surface text-left touch-none-all"
       style={{ y, scale, touchAction: 'none' }}
       drag="y"
@@ -40,7 +42,7 @@ function PairCard({ item, side, picked, onChoose }: { item: Item; side: 'top' | 
       <motion.div className="absolute inset-0 ring-4 ring-inset ring-accent rounded-3xl" style={{ opacity: hint }} />
       <div className="absolute bottom-0 inset-x-0 p-4">
         <div className="text-[11px] uppercase tracking-wider text-white/70">{typeName(item.type)} · {item.year}</div>
-        <div className="serif text-[22px] leading-tight font-semibold text-white mt-0.5 line-clamp-2">{item.title}</div>
+        <div className="serif text-[22px] leading-tight font-semibold text-white mt-0.5 line-clamp-2">{displayTitle(item, userLang())}</div>
         <div className="text-xs text-white/70 mt-0.5 truncate">{item.creator}{itemFacts(item) ? ` · ${itemFacts(item)}` : ''}</div>
       </div>
       {picked === 'win' && (

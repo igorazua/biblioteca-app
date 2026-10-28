@@ -1,3 +1,5 @@
+import { userLang } from '../lib/userLang'
+import { displayTitle, searchTitles } from '../lib/locale'
 import { useMemo, useState } from 'react'
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
@@ -48,7 +50,7 @@ export function ListEditor() {
         const st = entries[i.id]?.status
         return scope === 'all' || (scope === 'mine' ? st === 'seen' || st === 'pending' : st === scope)
       })
-      .filter((i) => !needle || i.title.toLowerCase().includes(needle) || (i.originalTitle ?? '').toLowerCase().includes(needle) || i.creator.toLowerCase().includes(needle))
+      .filter((i) => !needle || searchTitles(i).some((t) => t.toLowerCase().includes(needle)) || i.creator.toLowerCase().includes(needle))
       .sort((a, b) => b.popularity - a.popularity)
       .slice(0, 40)
   }, [q, shelf, scope, entries, sel])
@@ -95,12 +97,12 @@ export function ListEditor() {
                 <li key={s.itemId} className="flex gap-3 bg-surface rounded-2xl border border-line p-2.5">
                   <Poster item={it} style={{ borderRadius: posterRadius(it.type, 12), ...posterBox(it).style }} className={`w-12 ${posterBox(it).className} rounded-xl shrink-0 self-center object-cover`} />
                   <div className="flex-1 min-w-0">
-                    <div className="serif font-semibold leading-tight truncate">{it.title}</div>
+                    <div className="serif font-semibold leading-tight truncate">{displayTitle(it, userLang())}</div>
                     <input value={s.note ?? ''} onChange={(e) => setSel((cur) => cur.map((x, i) => (i === idx ? { ...x, note: e.target.value } : x)))}
-                      placeholder="Nota (p. ej. «Escúchala con cascos»)" maxLength={100} aria-label={`Nota para ${it.title}`}
+                      placeholder="Nota (p. ej. «Escúchala con cascos»)" maxLength={100} aria-label={`Nota para ${displayTitle(it, userLang())}`}
                       className="mt-1.5 w-full bg-surface2 rounded-xl px-3 min-h-[40px] text-sm placeholder:text-mute/70 focus:outline-none focus:ring-1 focus:ring-accent" />
                   </div>
-                  <button onClick={() => setSel((cur) => cur.filter((x) => x.itemId !== s.itemId))} aria-label={`Quitar ${it.title}`} className="w-11 h-11 flex items-center justify-center text-mute shrink-0"><Icon name="x" size={18} /></button>
+                  <button onClick={() => setSel((cur) => cur.filter((x) => x.itemId !== s.itemId))} aria-label={`Quitar ${displayTitle(it, userLang())}`} className="w-11 h-11 flex items-center justify-center text-mute shrink-0"><Icon name="x" size={18} /></button>
                 </li>
               )
             })}
@@ -128,10 +130,10 @@ export function ListEditor() {
               <li key={it.id} className="flex items-center gap-3 bg-surface/60 rounded-2xl border border-line p-2">
                 <Poster item={it} style={it.type === 'boardgame' ? posterBox(it).style : undefined} className={`w-10 ${it.type === 'boardgame' ? posterBox(it).className : 'h-[60px]'} rounded-lg shrink-0`} />
                 <div className="flex-1 min-w-0">
-                  <div className="serif font-medium leading-tight truncate">{it.title}</div>
+                  <div className="serif font-medium leading-tight truncate">{displayTitle(it, userLang())}</div>
                   <div className="text-xs text-mute truncate">{typeName(it.type)} · {it.year}</div>
                 </div>
-                <button onClick={() => setSel((c) => [...c, { itemId: it.id }])} aria-label={`Añadir ${it.title}`} className="w-11 h-11 rounded-full bg-accent text-accent-ink flex items-center justify-center shrink-0"><Icon name="plus" size={20} /></button>
+                <button onClick={() => setSel((c) => [...c, { itemId: it.id }])} aria-label={`Añadir ${displayTitle(it, userLang())}`} className="w-11 h-11 rounded-full bg-accent text-accent-ink flex items-center justify-center shrink-0"><Icon name="plus" size={20} /></button>
               </li>
             ))}
             {results.length === 0 && <li className="text-sm text-mute text-center py-6">Nada que mostrar con estos filtros.{scope !== 'all' && ' Prueba con «Todo el catálogo».'}</li>}

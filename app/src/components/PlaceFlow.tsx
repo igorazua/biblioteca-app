@@ -1,3 +1,5 @@
+import { userLang } from '../lib/userLang'
+import { displayTitle } from '../lib/locale'
 import { useEffect, useState } from 'react'
 import { getItem } from '../data/catalog'
 import { useStore, starsOfEntries } from '../store/useStore'
@@ -10,7 +12,7 @@ import { ScreenTitle } from './ScreenTitle'
 
 const sideOf = (id: string): Side => {
   const it = getItem(id)!
-  return { key: id, title: it.title, subtitle: `${it.year} · ${it.creator}`, bg: <Poster item={it} showTitle={false} className="absolute inset-0 w-full h-full" />, type: it.type, ratio: it.type === 'boardgame' ? it.posterRatio : undefined }
+  return { key: id, title: displayTitle(it, userLang()), subtitle: `${it.year} · ${it.creator}`, bg: <Poster item={it} showTitle={false} className="absolute inset-0 w-full h-full" />, type: it.type, ratio: it.type === 'boardgame' ? it.posterRatio : undefined }
 }
 
 /**

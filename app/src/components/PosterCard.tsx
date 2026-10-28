@@ -1,3 +1,5 @@
+import { userLang } from '../lib/userLang'
+import { displayTitle, displayPoster } from '../lib/locale'
 import type { Item } from '../types'
 import { SHELF_LABEL } from '../types'
 import { posterBox, posterRadius, posterShape } from '../lib/posterShape'
@@ -40,22 +42,22 @@ export function PosterCard({
         // Hueco vertical 2:3 fijo para no descuadrar la rejilla mixta (T27 §27.3 regla 2)
         <div className="relative aspect-[2/3] w-full rounded-[10px] overflow-hidden bg-surface flex flex-col" style={{ borderRadius: posterRadius(item.type, 10) }}>
           <div className="w-full aspect-square overflow-hidden shrink-0">
-            {item.posterUrl ? (
+            {displayPoster(item, userLang()) ? (
               <img
-                src={item.posterUrl}
-                alt={item.title}
+                src={displayPoster(item, userLang()) ?? undefined}
+                alt={displayTitle(item, userLang())}
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-[1.02]"
               />
             ) : (
               <div className="w-full h-full flex items-center justify-center p-2 text-center bg-surface2 text-mute text-meta">
-                {item.title}
+                {displayTitle(item, userLang())}
               </div>
             )}
           </div>
           <div className="flex-1 p-2 flex flex-col justify-center min-w-0 bg-surface">
             {showType && <div className="text-[10px] text-mute uppercase tracking-wide truncate">{shelfLabel}</div>}
-            <div className="serif text-xs font-semibold text-ink line-clamp-2 leading-tight">{item.title}</div>
+            <div className="serif text-xs font-semibold text-ink line-clamp-2 leading-tight">{displayTitle(item, userLang())}</div>
             <div className="text-[11px] text-mute truncate mt-0.5">{item.creator}</div>
           </div>
           {badge && (
@@ -67,16 +69,16 @@ export function PosterCard({
       ) : shaped && mixed ? (
         // Juego de mesa en rejilla mixta: hueco 2:3 y la carátula centrada dentro, sin relleno difuminado (T32)
         <div className="relative aspect-[2/3] w-full rounded-[10px] overflow-hidden bg-surface flex items-center justify-center" style={{ borderRadius: posterRadius(item.type, 10) }}>
-          {item.posterUrl ? (
+          {displayPoster(item, userLang()) ? (
             <img
-              src={item.posterUrl}
-              alt={item.title}
+              src={displayPoster(item, userLang()) ?? undefined}
+              alt={displayTitle(item, userLang())}
               loading="lazy"
               className="max-w-full max-h-full object-contain transition-transform duration-200 group-hover:scale-[1.02]"
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center p-3 text-center bg-surface2 text-mute text-meta">
-              {item.title}
+              {displayTitle(item, userLang())}
             </div>
           )}
           {badge && (
@@ -87,16 +89,16 @@ export function PosterCard({
         </div>
       ) : (
         <div className={`relative ${box.className} w-full rounded-[10px] overflow-hidden bg-surface`} style={{ borderRadius: posterRadius(item.type, 10), ...box.style }}>
-          {item.posterUrl ? (
+          {displayPoster(item, userLang()) ? (
             <img
-              src={item.posterUrl}
-              alt={item.title}
+              src={displayPoster(item, userLang()) ?? undefined}
+              alt={displayTitle(item, userLang())}
               loading="lazy"
               className={`w-full h-full ${shaped ? 'object-contain' : 'object-cover'} transition-transform duration-200 group-hover:scale-[1.02]`}
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center p-3 text-center bg-surface2 text-mute text-meta">
-              {item.title}
+              {displayTitle(item, userLang())}
             </div>
           )}
 
@@ -118,7 +120,7 @@ export function PosterCard({
             </div>
           )}
           <h3 className="text-item text-ink line-clamp-2" lang="es">
-            {item.title}
+            {displayTitle(item, userLang())}
           </h3>
           {metaText && (
             <p className="text-meta line-clamp-1 mt-0.5">

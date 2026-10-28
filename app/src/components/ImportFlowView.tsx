@@ -1,4 +1,6 @@
 // Pantallas del flujo compartido de importación: buscando → revisar dudosas → hecho.
+import { userLang } from '../lib/userLang'
+import { displayTitle } from '../lib/locale'
 import { useNavigate } from 'react-router-dom'
 import type { ImportFlow } from '../lib/import/useImportFlow'
 
@@ -47,7 +49,7 @@ export function ImportFlowView({ flow }: { flow: ImportFlow }) {
                           onClick={() => flow.resolveCandidate(idx, c)}
                           className={`min-h-[40px] text-xs px-3 rounded-xl border text-left ${chosen ? 'bg-accent text-accent-ink border-accent' : 'bg-surface2 border-line text-ink'}`}
                         >
-                          {c.title} ({c.year ?? '?'}){chosen ? ' ✓' : ''}
+                          {displayTitle(c, userLang())} ({c.year ?? '?'}){chosen ? ' ✓' : ''}
                         </button>
                       )
                     })}

@@ -1,3 +1,5 @@
+import { userLang } from '../lib/userLang'
+import { displayTitle } from '../lib/locale'
 import { Link } from 'react-router-dom'
 import type { Item } from '../types'
 import { Poster, posterLayoutId } from './Poster'
@@ -27,7 +29,7 @@ export function PosterTile({ item, size = 104, rank, faded }: { item?: Item | nu
       to={`/i/${encodeURIComponent(item.id)}`}
       className="relative shrink-0 block active:scale-[0.97] transition-transform duration-200"
       style={{ width: size + numW, paddingLeft: numW }}
-      aria-label={`${rank ? `Nº ${rank}: ` : ''}${item.title}`}
+      aria-label={`${rank ? `Nº ${rank}: ` : ''}${displayTitle(item, userLang())}`}
     >
       {rank !== undefined && <span className="rank-num absolute left-0 bottom-0 text-[86px] select-none" aria-hidden>{rank}</span>}
       <div className={`relative ${faded ? 'opacity-55 saturate-50' : ''}`}>
@@ -76,7 +78,7 @@ export function ItemRow({ item, rank, note, highlight, selecting, selected, onTo
       )}
       <Poster item={item} style={{ borderRadius: posterRadius(item.type, 6), ...posterBox(item).style }} className={`w-9 ${posterBox(item).className} rounded-[6px] shrink-0 self-center object-cover`} />
       <div className="flex-1 min-w-0">
-        <div className="serif text-item text-ink leading-tight line-clamp-1">{item.title}</div>
+        <div className="serif text-item text-ink leading-tight line-clamp-1">{displayTitle(item, userLang())}</div>
         <div className="text-meta text-mute mt-0.5 truncate">{item.year} · {item.creator}</div>
         {note && <div className="text-label text-accent mt-0.5 truncate">{note}</div>}
       </div>

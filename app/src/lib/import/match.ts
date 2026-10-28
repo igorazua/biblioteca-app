@@ -1,3 +1,4 @@
+import { searchTitles } from '../locale'
 import type { Item } from '../../types'
 import type { ImportRow } from './types'
 
@@ -26,7 +27,7 @@ export function buildLocalIndex(items: Item[]): LocalIndex {
       if (!byWikidata.has(k)) byWikidata.set(k, it)
     }
     // también por título original: Letterboxd e IMDb exportan «Back to the Future», no «Regreso al futuro»
-    for (const t of new Set([it.title, it.originalTitle].filter(Boolean) as string[])) {
+    for (const t of new Set(searchTitles(it))) {
       const k = `${it.type}|${normTitle(t)}`
       const list = byTitle.get(k)
       if (list) list.push(it)

@@ -24,6 +24,19 @@ const SEED_DROP = new Set([
 
 const COVER_BASE = 'https://pvewnpemlwmvaduzhjso.supabase.co/storage/v1/object/public/biblio-covers'
 
+// Versiones locales para el índice: la carátula, relativa a COVER_BASE como las demás (catalog.ts la restaura).
+function localForIndex(local) {
+  if (!local) return 0
+  const out = {}
+  for (const [lang, v] of Object.entries(local)) {
+    if (!v) continue
+    const o = { ...v }
+    if (o.poster && o.poster.startsWith(COVER_BASE + '/')) o.poster = o.poster.slice(COVER_BASE.length + 1)
+    out[lang] = o
+  }
+  return Object.keys(out).length ? out : 0
+}
+
 export function splitCatalog() {
   const seed = JSON.parse(readFileSync(SEED_FILE, 'utf8'))
   const items = seed.items || []
@@ -81,6 +94,7 @@ export function splitCatalog() {
       it.mechanics || [],
       it.weight || 0,
       it.minAge || 0,
+      localForIndex(it.local),
     ]
   })
 

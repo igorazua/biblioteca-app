@@ -1,3 +1,5 @@
+import { userLang } from '../lib/userLang'
+import { displayTitle, searchTitles } from '../lib/locale'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { friends, itemsOfType } from '../data/catalog'
@@ -74,7 +76,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
       return cards.map((c) => c.item)
     }
     return allItems
-      .filter((i) => i.type === shelf && (norm(i.title).includes(n) || norm(i.originalTitle ?? '').includes(n) || norm(i.creator).includes(n)))
+      .filter((i) => i.type === shelf && (searchTitles(i).some((t) => norm(t).includes(n)) || norm(i.creator).includes(n)))
       .sort((a, b) => (norm(a.title).startsWith(n) ? 0 : 1) - (norm(b.title).startsWith(n) ? 0 : 1) || b.popularity - a.popularity)
       .slice(0, 40)
   }, [shelf, q, catalogVersion])
@@ -372,7 +374,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
                     <button onClick={() => setOpen(isOpen ? null : it.id)} aria-expanded={isOpen} className="w-full flex items-center gap-3 p-2.5 text-left">
                       <Poster item={it} style={it.type === 'boardgame' ? posterBox(it).style : undefined} className={`w-11 ${it.type === 'boardgame' ? posterBox(it).className : 'h-[66px]'} rounded-lg shrink-0 self-center`} />
                       <span className="flex-1 min-w-0">
-                        <span className="block serif font-semibold leading-tight line-clamp-2">{it.title}</span>
+                        <span className="block serif font-semibold leading-tight line-clamp-2">{displayTitle(it, userLang())}</span>
                         <span className="block text-xs text-mute truncate">{it.year} · {it.creator}</span>
                       </span>
                       {st && <Icon name={st === 'seen' ? 'check' : 'bookmark'} size={18} className="text-accent shrink-0" />}

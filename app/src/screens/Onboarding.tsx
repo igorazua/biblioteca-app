@@ -1,3 +1,5 @@
+import { userLang } from '../lib/userLang'
+import { displayTitle } from '../lib/locale'
 import { useState, useRef } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { AnimatePresence, motion, useMotionValue, useTransform, animate, type MotionValue } from 'framer-motion'
@@ -331,7 +333,7 @@ export function Onboarding() {
                         {SHELF_LABEL[currentCard.type]?.singular || 'Obra'} · {currentCard.year}
                       </div>
                       <h3 className="serif text-xl font-bold leading-tight mt-0.5 line-clamp-2">
-                        {currentCard.title}
+                        {displayTitle(currentCard, userLang())}
                       </h3>
                       <p className="text-xs text-white/70 truncate mt-0.5">{currentCard.creator}</p>
                     </div>
@@ -412,13 +414,13 @@ export function Onboarding() {
               const itemB = TUTORIAL_ITEMS[1]
               const sideA: Side = {
                 key: itemA.id,
-                title: itemA.title,
+                title: displayTitle(itemA, userLang()),
                 subtitle: `${itemA.year} · ${itemA.creator}`,
                 bg: <Poster item={itemA} showTitle={false} className="w-full h-full object-cover" />,
               }
               const sideB: Side = {
                 key: itemB.id,
-                title: itemB.title,
+                title: displayTitle(itemB, userLang()),
                 subtitle: `${itemB.year} · ${itemB.creator}`,
                 bg: <Poster item={itemB} showTitle={false} className="w-full h-full object-cover" />,
               }
@@ -455,7 +457,7 @@ export function Onboarding() {
 
                   <p className="text-xs text-mute font-medium py-1">
                     {winner
-                      ? `¡Elegida! Has votado por ${winner === 'a' ? itemA.title : itemB.title}.`
+                      ? `¡Elegida! Has votado por ${winner === 'a' ? displayTitle(itemA, userLang()) : displayTitle(itemB, userLang())}.`
                       : 'Desliza hacia la que prefieras o toca una carta'}
                   </p>
 
@@ -499,7 +501,7 @@ export function Onboarding() {
                       <Poster item={TUTORIAL_ITEMS[0]} showTitle={false} className="w-full h-full object-cover" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <div className="text-xs font-bold text-ink truncate">{TUTORIAL_ITEMS[0].title}</div>
+                      <div className="text-xs font-bold text-ink truncate">{displayTitle(TUTORIAL_ITEMS[0], userLang())}</div>
                       <div className="text-[11px] text-mute">{TUTORIAL_ITEMS[0].year} · Coppola</div>
                       <div className="flex items-center gap-1.5 mt-1.5">
                         <Avatar name="Carlos" color="#f59e0b" size={24} />

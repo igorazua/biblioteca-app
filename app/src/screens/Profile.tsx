@@ -1,5 +1,7 @@
 // app/src/screens/Profile.tsx
 // Perfil: lo que ven los demás de ti. Aquí no se edita nada: «Editar perfil» abre tus datos y el engranaje, los Ajustes.
+import { userLang } from '../lib/userLang'
+import { displayTitle } from '../lib/locale'
 import { useMemo, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
@@ -190,7 +192,7 @@ export function Profile() {
                             <Poster item={it} layoutId={posterLayoutId(it.id)} style={{ borderRadius: posterRadius(it.type, 10), ...posterBox(it).style }} className={`w-full ${posterBox(it).className} rounded-[10px]`} />
                             <span className="absolute top-1.5 left-1.5 w-5 h-5 rounded-full bg-accent text-accent-ink text-[11px] font-bold flex items-center justify-center tabular-nums">{i + 1}</span>
                           </div>
-                          <div className="serif text-item text-ink leading-tight mt-1.5 line-clamp-2">{it.title}</div>
+                          <div className="serif text-item text-ink leading-tight mt-1.5 line-clamp-2">{displayTitle(it, userLang())}</div>
                         </Link>
                       )
                     })}

@@ -1,3 +1,5 @@
+import { userLang } from '../lib/userLang'
+import { displayTitle } from '../lib/locale'
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
@@ -105,7 +107,7 @@ export function PublicList() {
               <Poster item={it} style={{ borderRadius: posterRadius(it.type, 10), ...posterBox(it).style }} className={`w-[84px] ${posterBox(it).className} rounded-[10px] shrink-0 self-center object-cover`} />
               <div className="flex-1 min-w-0 flex flex-col">
                 <div className="text-label text-mute">{typeName(it.type)} · {it.year}</div>
-                <div className="serif text-item font-medium text-ink leading-tight mt-0.5">{it.title}</div>
+                <div className="serif text-item font-medium text-ink leading-tight mt-0.5">{displayTitle(it, userLang())}</div>
                 <div className="text-meta text-mute mt-0.5">{it.creator}{itemFacts(it) ? ` · ${itemFacts(it)}` : ''}</div>
                 {note && <p className="serif italic text-body text-accent mt-1.5">«{note}»</p>}
                 <p className="text-meta text-mute mt-1.5 line-clamp-2">{it.synopsis}</p>
@@ -181,7 +183,7 @@ export function PublicProfile() {
                       <Poster item={it} style={{ borderRadius: posterRadius(it.type, 10), ...posterBox(it).style }} className={`w-full ${posterBox(it).className} rounded-[10px] border border-line`} />
                       <span className="absolute top-1.5 left-1.5 w-5 h-5 rounded-full bg-accent text-accent-ink text-[11px] font-bold flex items-center justify-center tabular-nums">{i + 1}</span>
                     </div>
-                    <div className="serif text-item font-medium text-ink leading-tight mt-1.5 line-clamp-2">{it.title}</div>
+                    <div className="serif text-item font-medium text-ink leading-tight mt-1.5 line-clamp-2">{displayTitle(it, userLang())}</div>
                   </li>
                 )
               })}

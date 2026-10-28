@@ -10,6 +10,8 @@ export interface Item {
   title: string
   /** título original cuando se muestra el de España («Back to the Future»); sirve para buscar y para imports */
   originalTitle?: string
+  /** versiones por idioma: título y carátula de la misma versión, juntos (ver lib/locale.ts) */
+  local?: Partial<Record<string, { title?: string; poster?: string; src?: string }>>
   year: number
   creator: string
   durationMin?: number

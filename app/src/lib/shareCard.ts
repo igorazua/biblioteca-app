@@ -1,3 +1,5 @@
+import { userLang } from './userLang'
+import { displayTitle, displayPoster } from './locale'
 import type { Item } from '../types'
 
 export interface ShareCardOptions {
@@ -122,8 +124,8 @@ export async function generateShareCard({
     const posterH = 150
 
     let drewPoster = false
-    if (it.posterUrl) {
-      const img = await loadImage(it.posterUrl)
+    if (displayPoster(it, userLang())) {
+      const img = await loadImage(displayPoster(it, userLang())!)
       if (img) {
         ctx.save()
         ctx.beginPath()
@@ -142,13 +144,14 @@ export async function generateShareCard({
       ctx.fill()
       ctx.fillStyle = '#A39D92'
       ctx.font = 'bold 32px system-ui, sans-serif'
-      ctx.fillText(it.title.slice(0, 1), posterX + 38, posterY + 85)
+      ctx.fillText(displayTitle(it, userLang()).slice(0, 1), posterX + 38, posterY + 85)
     }
 
     // Título de la obra
     ctx.fillStyle = '#F4EFE6'
     ctx.font = 'bold 38px Georgia, serif'
-    const titleText = it.title.length > 28 ? `${it.title.slice(0, 27)}…` : it.title
+    const shown = displayTitle(it, userLang())
+    const titleText = shown.length > 28 ? `${shown.slice(0, 27)}…` : shown
     ctx.fillText(titleText, 330, y + 80)
 
     // Creador y año

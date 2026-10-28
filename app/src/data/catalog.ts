@@ -36,11 +36,23 @@ type CompactRow = [
   coop: number,
   mech: string[],
   weight: number,
-  minAge: number
+  minAge: number,
+  local: NonNullable<Item['local']> | 0
 ]
 
+// Las carátulas de versiones locales se guardan relativas a COVER_BASE, como posterUrl.
+function restoreLocal(raw: NonNullable<Item['local']>): Item['local'] {
+  const out: NonNullable<Item['local']> = {}
+  for (const [lang, v] of Object.entries(raw)) {
+    if (!v) continue
+    const poster = v.poster && !v.poster.startsWith('http') ? `${COVER_BASE}/${v.poster}` : v.poster
+    out[lang] = { ...v, ...(poster ? { poster } : {}) }
+  }
+  return out
+}
+
 export const items: Item[] = (indexData.items as CompactRow[]).map(
-  ([id, title, year, creator, popularity, poster, posterRatio, popPct, notoriety, fameTier, isCanon, dur, seas, pg, play, depth, orig, g, coop, mech, weight, minAge]) => {
+  ([id, title, year, creator, popularity, poster, posterRatio, popPct, notoriety, fameTier, isCanon, dur, seas, pg, play, depth, orig, g, coop, mech, weight, minAge, loc]) => {
     const shelf = id.split(':')[0] as ShelfType
     const it: Item = {
       id,
@@ -69,6 +81,7 @@ export const items: Item[] = (indexData.items as CompactRow[]).map(
     if (mech && mech.length > 0) it.mechanics = mech
     if (weight) it.weight = weight
     if (minAge) it.minAge = minAge
+    if (loc) it.local = restoreLocal(loc)
     return it
   }
 )
