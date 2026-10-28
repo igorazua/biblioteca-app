@@ -223,6 +223,22 @@ export const ATTRS = {
     minCoverage: 0.95,
     refresh: 'never',
   },
+  originalTitle: {
+    type: 'string',
+    shelves: ['movie', 'series', 'book', 'boardgame'],
+    consumers: ['UI', 'ItemDetail', 'locale'],
+    sources: ['tmdb', 'tvmaze', 'wikidata', 'openlibrary', 'bgg', 'justwatch-es'],
+    minCoverage: 0.5,
+    refresh: 'never',
+  },
+  local: {
+    type: 'map<lang,object>',
+    shelves: ['movie', 'series', 'book', 'boardgame'],
+    consumers: ['UI', 'locale', 'Poster'],
+    sources: ['justwatch-es', 'openlibrary', 'bgg', 'manual'],
+    minCoverage: 0.5,
+    refresh: 'never',
+  },
 }
 
 export function validateAttrValue(attrName, val, evidence, source) {

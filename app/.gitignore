@@ -13,3 +13,6 @@ scripts/cache/graph/sources/
 scripts/cache/graph/cooc-*.jsonl
 
 scripts/brain/__pycache__/
+
+# Caché de la localización (JustWatch, Google Books, Open Library): se regenera con scripts/localize/
+scripts/cache/localize/

@@ -66,6 +66,15 @@ carátula, los dudosos están listados, `npx tsc -p app/tsconfig.json --noEmit` 
 
 ---
 
+> **Hecho (28/10/2026, Gemini; revisado por Claude).** Carátulas españolas subidas a `biblio-covers/es/` y aplicadas con
+> `app/scripts/localize/apply.mjs`. **Corrección de Claude — regla de España:** JustWatch ES saca los títulos de TMDB en
+> español, que mezclan España y Latinoamérica («Pulp Fiction: Tiempos violentos», «Otro día para matar», «Bajo escucha»),
+> y hubo cruces con otra obra (*Regreso al futuro* → la II, *Top Gun: Maverick* → la de 1986) porque nuestro `tmdbId`
+> estaba mal. Ahora la versión local solo se acepta si su título coincide con nuestro `title` (de Wikidata en español,
+> que acierta con el uso de España); los juegos, siempre (se localiza el nombre). Resultado: pelis 588/935 (63 %),
+> series 523/1.054 (50 %), libros 601/976 (62 %), juegos 34. Descartadas: 267 pelis, 299 series, 23 libros (lista en
+> `scripts/localize/localization-report.json`). Pendiente: corregir los `tmdbId` erróneos del catálogo.
+
 ## Parte B — App: elegir versión por idioma · **Haiku**
 
 1. `app/src/types.ts`: en `Item`,
