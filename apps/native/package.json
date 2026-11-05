@@ -7,8 +7,10 @@
     "@biblioteca/tokens": "*",
     "@react-native-async-storage/async-storage": "2.2.0",
     "expo": "~58.0.23",
+    "expo-asset": "~58.0.20",
     "expo-blur": "~58.0.5",
     "expo-constants": "~58.0.15",
+    "expo-file-system": "~58.0.13",
     "expo-font": "~58.0.11",
     "expo-haptics": "~58.0.7",
     "expo-image": "~58.0.18",
@@ -32,10 +34,14 @@
     "typescript": "~6.0.3"
   },
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "start": "node scripts/copy-data.mjs && expo start",
+    "android": "node scripts/copy-data.mjs && expo start --android",
+    "ios": "node scripts/copy-data.mjs && expo start --ios",
+    "web": "node scripts/copy-data.mjs && expo start --web",
+    "copy-data": "node scripts/copy-data.mjs",
+    "make-grain": "node scripts/make-grain.mjs",
+    "typecheck": "tsc --noEmit",
+    "postinstall": "node scripts/copy-data.mjs"
   },
   "private": true
 }

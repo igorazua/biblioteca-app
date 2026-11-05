@@ -1,17 +1,21 @@
 {
   "expo": {
-    "name": "native",
-    "slug": "native",
+    "name": "Biblioteca",
+    "slug": "biblioteca",
+    "scheme": "biblioteca",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#100e0c",
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "app.biblioteca.dev",
+      "supportsTablet": false
     },
     "android": {
+      "package": "app.biblioteca.dev",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#100e0c",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
@@ -25,7 +29,15 @@
       "expo-router",
       "expo-image",
       "expo-font",
-      "expo-splash-screen"
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#100e0c",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200
+        }
+      ],
+      "expo-asset"
     ]
   }
 }
