@@ -7,5 +7,9 @@
     "test": "cd app && npm test",
     "brain:users": "cd app && npm run brain:users",
     "brain:eval": "cd app && npm run brain:eval"
-  }
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ]
 }
