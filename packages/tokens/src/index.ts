@@ -27,6 +27,7 @@ export const shelfColors = {
   book: '#e37d8c',
   artist: '#9d8cff',
   boardgame: '#4fd1a5',
+  song: '#c084fc',
 } as const
 
 // ── Familias ──────────────────────────────────────────────────────────────────────────────────────
