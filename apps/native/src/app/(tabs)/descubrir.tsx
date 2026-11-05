@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { ScrollView, View } from 'react-native'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import { Image } from 'expo-image'
 import { router } from 'expo-router'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
@@ -15,6 +16,7 @@ import { colors, tx } from '../../theme'
 
 const SHELVES: ShelfType[] = ['movie', 'series', 'book', 'boardgame', 'artist']
 const LEGEND_UNTIL = 10 // D3: la leyenda se ve hasta que la persona ha hecho 10 gestos
+const GESTURES_KEY = 'biblioteca-deck-gestures' // el contador es de la persona, no de la sesión
 
 /**
  * Lista del mazo con `nextCards` de core (motor de Descubrir). Sin entradas, amigos ni perfil: es la prueba de gestos, con
@@ -61,8 +63,8 @@ function ActionBtn({ size, color, icon, iconSize, stroke, onPress, disabled, fil
         backgroundColor: filled && !disabled ? colors.accent : colors.surface,
         borderWidth: filled && !disabled ? 0 : 1,
         borderColor: colors.line,
-        opacity: disabled ? (filled ? 0.4 : 0.25) : undefined,
       }}
+      dim={disabled ? (filled ? 0.4 : 0.25) : 1}
     >
       <Icon name={icon} size={iconSize} strokeWidth={stroke} color={filled && !disabled ? colors.accentInk : disabled && filled ? colors.mute : color} />
     </Press>
@@ -87,7 +89,12 @@ export default function Descubrir() {
   const [shelf, setShelf] = useState<ShelfType>('movie')
   const [deck, setDeck] = useState<Item[]>(() => buildDeck('movie'))
   const [history, setHistory] = useState<{ item: Item; dir: SwipeDir }[]>([])
-  const [gestures, setGestures] = useState(0)
+  const [gestures, setGestures] = useState(LEGEND_UNTIL) // oculta hasta leer el valor guardado, para que no parpadee
+  useEffect(() => {
+    AsyncStorage.getItem(GESTURES_KEY)
+      .then((v) => setGestures(Number(v) || 0))
+      .catch(() => setGestures(0))
+  }, [])
   const handle = useRef<DeckHandle>(null)
 
   const pick = (s: ShelfType) => {
@@ -99,7 +106,10 @@ export default function Descubrir() {
   const onSwipe = useCallback((item: Item, dir: SwipeDir) => {
     setDeck((d) => (d[0]?.id === item.id ? d.slice(1) : d))
     setHistory((h) => [...h, { item, dir }])
-    setGestures((n) => n + 1)
+    setGestures((n) => {
+      if (n < LEGEND_UNTIL) void AsyncStorage.setItem(GESTURES_KEY, String(n + 1))
+      return n + 1
+    })
   }, [])
   const undo = () => {
     const last = history[history.length - 1]

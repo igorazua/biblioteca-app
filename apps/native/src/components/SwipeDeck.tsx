@@ -265,7 +265,8 @@ const DeckCard = forwardRef<CardHandle, CardProps>(function DeckCard({ item, dep
       </View>
     </Animated.View>
   )
-  return isTop ? <GestureDetector gesture={gesture}>{body}</GestureDetector> : body
+  // Siempre dentro de GestureDetector (los gestos llevan `enabled: isTop`): así la carta que sube de segunda a primera conserva su árbol.
+  return <GestureDetector gesture={gesture}>{body}</GestureDetector>
 })
 
 function TintLayer({ color, opacity }: { color: string; opacity: SharedValue<number> }) {

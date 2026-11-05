@@ -8,13 +8,13 @@ const APressable = Animated.createAnimatedComponent(Pressable)
  * Pulsable con el estado pulsado de D21: opacidad 0,7 en 100 ms y, si se pide (`scaleTo`, tarjetas grandes), escala 0,98.
  * Las animaciones corren en el hilo de UI.
  */
-export const Press = forwardRef<View, Omit<PressableProps, 'style'> & { style?: StyleProp<ViewStyle>; scaleTo?: number }>(function Press(
-  { style, scaleTo, onPressIn, onPressOut, ...rest },
+export const Press = forwardRef<View, Omit<PressableProps, 'style'> & { style?: StyleProp<ViewStyle>; scaleTo?: number; dim?: number }>(function Press(
+  { style, scaleTo, dim = 1, onPressIn, onPressOut, ...rest },
   ref,
 ) {
   const down = useSharedValue(0)
   const anim = useAnimatedStyle(() => ({
-    opacity: 1 - 0.3 * down.value,
+    opacity: dim * (1 - 0.3 * down.value),
     transform: scaleTo ? [{ scale: 1 - (1 - scaleTo) * down.value }] : [],
   }))
   return (
