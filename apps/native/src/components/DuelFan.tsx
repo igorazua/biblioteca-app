@@ -12,7 +12,7 @@ import Animated, {
   type SharedValue,
 } from 'react-native-reanimated'
 import { GestureDetector, useCompetingGestures, usePanGesture, useTapGesture } from 'react-native-gesture-handler'
-import { scheduleOnRN } from 'react-native-worklets'
+import { runOnUI, scheduleOnRN } from 'react-native-worklets'
 import type { ShelfType } from '@biblioteca/core'
 import { duelCardSize, duelFitSize, type DuelFit } from '@biblioteca/core/src/lib/posterShape'
 import { haptic } from '../lib/haptics'
@@ -249,7 +249,7 @@ export function DuelFan({
         accessibilityActions={[{ name: 'a', label: `Elegir ${left.title}` }, { name: 'b', label: `Elegir ${right.title}` }]}
         onAccessibilityAction={(e) => {
           const n = e.nativeEvent.actionName
-          if (n === 'a' || n === 'b') choose(n)
+          if (n === 'a' || n === 'b') runOnUI(choose)(n)
         }}
         style={{ flex: 1, minHeight: 0, marginHorizontal: -16, overflow: 'hidden' }}
       >
