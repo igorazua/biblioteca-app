@@ -41,7 +41,7 @@ const P = {
 
 export type IconName = keyof typeof P
 
-export function Icon({ name, size = 22, color = '#f4efe6', strokeWidth = 1.75, fill = 'none' }: { name: IconName; size?: number; color?: string; strokeWidth?: number; fill?: string }) {
+export function Icon({ name, size = 22, color = '#f4efe6', strokeWidth = 1.9, fill = 'none' }: { name: IconName; size?: number; color?: string; strokeWidth?: number; fill?: string }) {
   return (
     <Svg width={size} height={size} viewBox="0 0 24 24" fill="none">
       <Path d={P[name]} fill={fill} stroke={color} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" />
