@@ -78,7 +78,7 @@ export async function imdbToQids(imdbIds: string[], fetchImpl: typeof fetch = fe
         body: new URLSearchParams({ query: sparql }).toString(),
       })
       if (!res.ok) continue
-      const data = await res.json()
+      const data = (await res.json()) as { results?: { bindings?: { item?: { value?: string }; imdb?: { value?: string } }[] } }
       for (const b of data.results?.bindings ?? []) {
         const qid = b.item?.value?.split('/').pop()
         if (qid && b.imdb?.value && !map.has(b.imdb.value)) map.set(b.imdb.value, qid)

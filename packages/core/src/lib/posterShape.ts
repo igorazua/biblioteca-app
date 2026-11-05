@@ -1,4 +1,3 @@
-import type { CSSProperties } from 'react'
 import type { ShelfType } from '../types'
 
 export type PosterShape = 'portrait' | 'square'
@@ -50,7 +49,7 @@ export const POSTER_BOX_RATIO_LIMITS = { min: 0.5, max: 2 }
  */
 export function posterBox(
   item?: { type: ShelfType; posterRatio?: number } | null,
-): { className: string; style?: CSSProperties } {
+): { className: string; style?: { aspectRatio: string } } {
   if (item?.type === 'boardgame' && item.posterRatio != null) {
     const ratio = clamp(item.posterRatio, POSTER_BOX_RATIO_LIMITS.min, POSTER_BOX_RATIO_LIMITS.max)
     return { className: '', style: { aspectRatio: String(ratio) } }
