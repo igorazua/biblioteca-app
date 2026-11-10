@@ -53,3 +53,7 @@ export * from './lib/nudges'
 export * from './lib/compareOverview'
 // `Question` ya existe en data/questions (las preguntas de Decidir): la del lector se expone como `ReaderQuestion`
 export { MOTIVATIONS, QUESTIONS, scoreReader, topMotivations, bookFit, type Question as ReaderQuestion } from './lib/reader'
+
+// Teléfonos y enlaces compartidos
+export * from './lib/phone'
+export * from './lib/share'
