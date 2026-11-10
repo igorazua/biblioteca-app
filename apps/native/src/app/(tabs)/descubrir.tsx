@@ -62,12 +62,14 @@ export default function Descubrir() {
   }, [shelf])
 
   useEffect(() => {
-    if (paramShelf && paramShelf !== shelf) {
+    // Llega `?shelf=` (aviso, enlace de Biblioteca): se abre el mazo de esa estantería aunque ya fuera la actual. A
+    // diferencia de la PWA, aquí la pestaña sigue montada con el hub visible, y por eso no se compara con `shelf`.
+    if (paramShelf) {
       setShelfState(paramShelf)
       setShowHub(false)
       sessionShelf = paramShelf
     }
-  }, [paramShelf, shelf])
+  }, [paramShelf])
 
   const setShelf = (s: ShelfType) => {
     setShelfState(s)
@@ -296,7 +298,10 @@ export default function Descubrir() {
     <View style={{ flex: 1, backgroundColor: colors.bg }}>
       {/* Cabecera de la variante hub (Discover.tsx:478) */}
       <View style={{ paddingTop: Math.max(insets.top, 12), paddingHorizontal: 20, paddingBottom: 4, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-        <Press onPress={() => setShowHub(true)} accessibilityRole="button" accessibilityLabel="Categorías" style={{ flexDirection: 'row', alignItems: 'center', gap: 4, marginLeft: -4, paddingVertical: 4, paddingHorizontal: 6, borderRadius: 8 }}>
+        <Press onPress={() => {
+            setShowHub(true)
+            router.setParams({ shelf: undefined }) // para que un nuevo `?shelf=` igual al anterior vuelva a abrir el mazo
+          }} accessibilityRole="button" accessibilityLabel="Categorías" style={{ flexDirection: 'row', alignItems: 'center', gap: 4, marginLeft: -4, paddingVertical: 4, paddingHorizontal: 6, borderRadius: 8 }}>
           <Icon name="back" size={15} strokeWidth={2.4} color={colors.accent} />
           <AppText style={{ fontFamily: 'Inter-500', fontSize: 13, lineHeight: 18, color: colors.accent }}>Categorías</AppText>
         </Press>
