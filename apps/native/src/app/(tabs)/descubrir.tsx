@@ -34,7 +34,7 @@ import { useFlight } from '../../lib/flight'
 import { posterOf } from '../../lib/item'
 import { kv } from '../../lib/storage'
 import { BUILT } from '../../lib/phase'
-import { track, useCatalog, useEvents, useFriends, useRanks, useStore } from '../../store'
+import { track, useAuth, useCatalog, useEvents, useFriends, useRanks, useStore } from '../../store'
 import { colors, tx } from '../../theme'
 
 const LEGEND_UNTIL = 10 // D3: la leyenda se ve hasta que la persona ha hecho 10 gestos
@@ -217,12 +217,12 @@ export default function Descubrir() {
     checkRestock(remaining.length)
     swipe(item.id, dir)
 
-    // Aviso dentro del mazo cada ~15 tarjetas (§5.2). Sin cuenta (D7) ni pantallas por construir: esos avisos quedan
-    // como «descartados 3 veces» para que el motor pase al siguiente. Instalar no aplica (no es una PWA).
+    // Aviso dentro del mazo cada ~15 tarjetas (§5.2). Los que llevan a pantallas por construir (phase.ts) quedan como
+    // «descartados 3 veces» para que el motor pase al siguiente. Instalar no aplica (no es una PWA).
     if (swipeCount.current % 15 === 0 && !deckNudge) {
       const off = { count: 3, lastDismissedAt: Date.now() }
       const candidate = evaluateNudges({
-        hasAccount: false,
+        hasAccount: Boolean(useAuth.getState().user),
         entries: useStore.getState().entries,
         rankings,
         hasImported: false,
@@ -231,7 +231,7 @@ export default function Descubrir() {
         isStandalonePwa: true,
         isMobile: true,
         daysOfUsage: 2,
-        dismissHistory: { ...dismissHistory, login: off, invite: off, install: off, ...(BUILT.importar ? null : { import: off }) },
+        dismissHistory: { ...dismissHistory, install: off, ...(BUILT.perfil ? null : { login: off, invite: off }), ...(BUILT.importar ? null : { import: off }) },
       })
       if (candidate) {
         setDeckNudge(candidate)
@@ -320,7 +320,8 @@ export default function Descubrir() {
                 nudge={deckNudge}
                 onAction={() => {
                   track('nudge_tap', { itemId: deckNudge.id, data: { location: 'deck' } })
-                  if (deckNudge.targetRoute) router.navigate(deckNudge.targetRoute as never)
+                  if (deckNudge.actionType === 'login' || deckNudge.actionType === 'invite') router.navigate('/perfil') // Discover.tsx:508-510
+                  else if (deckNudge.targetRoute) router.navigate(deckNudge.targetRoute as never)
                   setDeckNudge(null)
                 }}
                 onDismiss={() => {

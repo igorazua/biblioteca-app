@@ -3,23 +3,22 @@ import { ScrollView, View } from 'react-native'
 import { useScrollToTop, useRouter } from 'expo-router'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { ACTIVE_SHELVES, evaluateNudges, getItem, items as catalogItems, type Nudge, type ShelfType } from '@biblioteca/core'
-import { useFriends, useStore, track } from '../../store'
+import { useAuth, useFriends, useStore, track } from '../../store'
 import { AppText } from '../../components/AppText'
 import { Icon } from '../../components/Icon'
 import { Press } from '../../components/Press'
 import { AddFlow } from '../../components/flows/AddFlow'
-import { NudgeCard, Toast } from '../../components/ui'
+import { Avatar, NudgeCard, Toast } from '../../components/ui'
 import { ShelfCard } from '../../components/library/ShelfCard'
 import { TitleBar } from '../../components/library/LibraryParts'
 import { VoteSheet } from '../../components/library/VoteSheet'
 import { useCatalogTick } from '../../components/library/shelfMeta'
 import { colors, tx } from '../../theme'
+import { BUILT, isBuiltRoute } from '../../lib/phase'
 
-// Rutas que la app todavía no tiene (phase.ts): un recordatorio que lleve allí no se muestra.
-const UNBUILT_ROUTE = /^\/(importar|perfil|lista|ajustes|conectar|metricas|onboarding)/
 
 /**
- * Biblioteca (Library.tsx). Sin cuenta (D7): los recordatorios que llevan a perfil o a invitar no se muestran, y el de
+ * Biblioteca (Library.tsx). Los recordatorios que llevan a una pantalla aún sin construir (phase.ts) no se muestran, y el de
  * instalar tampoco (la app ya está instalada). El botón «Cargar datos de ejemplo» aparece como en la PWA.
  */
 export default function Biblioteca() {
@@ -29,6 +28,7 @@ export default function Biblioteca() {
   useCatalogTick()
 
   const profile = useStore((s) => s.profile)
+  const user = useAuth((s) => s.user)
   const entries = useStore((s) => s.entries)
   const rankings = useStore((s) => s.rankings)
   const votes = useStore((s) => s.categoryVotes)
@@ -59,7 +59,7 @@ export default function Biblioteca() {
   const nudge: Nudge | null = useMemo(() => {
     if (sessionDismissed) return null
     const n = evaluateNudges({
-      hasAccount: false,
+      hasAccount: Boolean(user),
       entries,
       rankings,
       hasImported: flags.imported,
@@ -72,18 +72,21 @@ export default function Biblioteca() {
       sessionNudgeShown: sessionDismissed,
     })
     if (!n) return null
-    if (n.actionType !== 'navigate' || !n.targetRoute || UNBUILT_ROUTE.test(n.targetRoute)) return null
+    // login e invitar llevan al perfil, como en la PWA (Library.tsx:77-82); instalar no aplica en nativo
+    const route = n.actionType === 'navigate' ? n.targetRoute : n.actionType === 'login' || n.actionType === 'invite' ? '/perfil' : null
+    if (!route || !isBuiltRoute(route)) return null
     return n
-  }, [entries, rankings, flags, realFriends.length, nudgeDismiss, sessionDismissed])
+  }, [entries, rankings, flags, realFriends.length, nudgeDismiss, sessionDismissed, user])
 
   useEffect(() => {
     if (nudge) track('nudge_shown', { itemId: nudge.id, data: { location: 'library' } })
   }, [nudge?.id])
 
   const onNudgeAction = () => {
-    if (!nudge || !nudge.targetRoute) return
+    if (!nudge) return
     track('nudge_tap', { itemId: nudge.id, data: { location: 'library' } })
-    router.navigate(nudge.targetRoute as never)
+    const route = nudge.actionType === 'navigate' ? nudge.targetRoute : '/perfil'
+    if (route) router.navigate(route as never)
   }
   const onNudgeDismiss = () => {
     if (!nudge) return
@@ -99,6 +102,12 @@ export default function Biblioteca() {
         title={`Hola, ${firstName}.`}
         subtitle={`${seen} en tu biblioteca · ${pending} pendientes`}
         action={
+          <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+          {BUILT.perfil && (
+            <Press onPress={() => router.navigate('/perfil')} accessibilityRole="link" accessibilityLabel="Tu perfil">
+              <Avatar name={profile.name} color={profile.avatarColor} url={profile.avatarUrl} size={32} />
+            </Press>
+          )}
           <Press
             onPress={() => setAdding({})}
             accessibilityRole="button"
@@ -107,6 +116,7 @@ export default function Biblioteca() {
           >
             <Icon name="plus" size={18} strokeWidth={2.5} color={colors.accentInk} />
           </Press>
+          </View>
         }
       />
 

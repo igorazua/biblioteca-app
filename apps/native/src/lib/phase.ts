@@ -22,3 +22,13 @@ export const BUILT_AUTH = {
   google: false,
   apple: false,
 } as const
+
+/** `true` si la ruta lleva a una pantalla que ya existe (para recordatorios y enlaces que llegan del motor). */
+export function isBuiltRoute(route: string): boolean {
+  const path = route.split('?')[0]
+  if (path.startsWith('/perfil/editar')) return BUILT.editarPerfil
+  if (path.startsWith('/perfil')) return BUILT.perfil
+  if (path.startsWith('/lista')) return BUILT.listas
+  for (const k of ['importar', 'ajustes', 'conectar', 'metricas', 'onboarding'] as const) if (path.startsWith(`/${k}`)) return BUILT[k]
+  return true
+}
