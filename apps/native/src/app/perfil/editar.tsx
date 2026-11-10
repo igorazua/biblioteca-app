@@ -15,7 +15,6 @@ import { DuelHeader } from '../../components/duel/DuelHeader'
 import { AvatarCropper, type CroppedAvatar } from '../../components/profile/AvatarCropper'
 import { toDataUri, uploadAvatarToCloud } from '../../components/profile/avatarUpload'
 import { Avatar, Group, PlatformPicker, Sheet, Toast } from '../../components/ui'
-import { haptic } from '../../lib/haptics'
 import { colors, tx } from '../../theme'
 
 /**
@@ -120,7 +119,6 @@ export default function EditarPerfil() {
         platforms,
         avatarColor: color,
       })
-      haptic('success')
       back()
     } catch {
       setToast('No se pudo guardar. Revisa la conexión y reintenta.')

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { StyleSheet, View } from 'react-native'
 import Animated, { useAnimatedStyle, useReducedMotion, useSharedValue, withSpring } from 'react-native-reanimated'
 import { ACTIVE_SHELVES, SHELF_LABEL, type Item, type ShelfType } from '@biblioteca/core'
@@ -35,8 +35,10 @@ function Cover({ item, w, h, from, to, z }: { item: Item; w: number; h: number; 
     return { transform: [{ translateX: f(from.x, to.x) }, { translateY: f(from.y, to.y) }, { rotate: `${f(from.rotate, to.rotate)}deg` }, { scale: f(from.scale, to.scale) }] }
   })
   return (
-    <Animated.View style={[styles.cover, { width: w, height: h, zIndex: z, borderColor: z > 10 ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.1)' }, style]}>
-      <Poster item={item} showTitle={false} style={StyleSheet.absoluteFill} />
+    <Animated.View style={[styles.cover, { width: w, height: h, zIndex: z }, style]}>
+      <View style={[styles.coverClip, { borderColor: z > 10 ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.1)' }]}>
+        <Poster item={item} showTitle={false} style={StyleSheet.absoluteFill} />
+      </View>
     </Animated.View>
   )
 }
@@ -101,11 +103,20 @@ function GestureButton({ dir, tried, onPress }: { dir: PracticeDir; tried: boole
   )
 }
 
-export function StepGestures({ items, onNext }: { items: Item[]; onNext: () => void }) {
+export function StepGestures({
+  items,
+  tried,
+  onTry,
+  onNext,
+}: {
+  items: Item[]
+  tried: Record<PracticeDir, boolean>
+  onTry: (dir: PracticeDir) => void
+  onNext: () => void
+}) {
   const card = useRef<PracticeHandle>(null)
-  const [tried, setTried] = useState({ left: false, right: false, up: false })
   const all = tried.left && tried.right && tried.up
-  const mark = (dir: PracticeDir) => setTried((t) => ({ ...t, [dir]: true }))
+  const mark = onTry
   return (
     <View style={{ width: '100%', gap: 16 }}>
       <View style={{ alignItems: 'center', gap: 4 }}>
@@ -136,8 +147,7 @@ export function StepGestures({ items, onNext }: { items: Item[]; onNext: () => v
 
 // ─── Paso 2: ranking A/B simulado ────────────────────────────────────────────────────────────────
 
-export function StepDuel({ items, onNext }: { items: Item[]; onNext: () => void }) {
-  const [winner, setWinner] = useState<'a' | 'b' | null>(null)
+export function StepDuel({ items, winner, onWinner, onNext }: { items: Item[]; winner: 'a' | 'b' | null; onWinner: (w: 'a' | 'b') => void; onNext: () => void }) {
   const a = items[0]
   const b = items[1]
   if (!a || !b) return null
@@ -156,7 +166,7 @@ export function StepDuel({ items, onNext }: { items: Item[]; onNext: () => void 
           left={sideOf(a)}
           right={sideOf(b)}
           onChoose={(w) => {
-            setWinner(w)
+            onWinner(w)
             haptic('success')
           }}
         />
@@ -337,7 +347,8 @@ export function StepShelves({ selected, onToggle, onFinish }: { selected: ShelfT
 }
 
 const styles = StyleSheet.create({
-  cover: { position: 'absolute', borderRadius: 16, overflow: 'hidden', borderWidth: 1, shadowColor: '#000000', shadowOffset: { width: 0, height: 25 }, shadowOpacity: 0.5, shadowRadius: 25, elevation: 16, backgroundColor: colors.surface2 },
+  coverClip: { flex: 1, borderRadius: 16, overflow: 'hidden', borderWidth: 1 },
+  cover: { position: 'absolute', borderRadius: 16, shadowColor: '#000000', shadowOffset: { width: 0, height: 25 }, shadowOpacity: 0.5, shadowRadius: 25, elevation: 16, backgroundColor: colors.surface2 },
   fan: { height: 176, width: '100%', alignItems: 'center', justifyContent: 'center', paddingTop: 8 },
   kicker: { fontFamily: 'Inter-700', fontSize: 11, lineHeight: 16.5, letterSpacing: 2.2, textTransform: 'uppercase', color: colors.accent },
   hero: { fontFamily: 'Fraunces72-700', fontSize: 32, lineHeight: 34.56, color: colors.ink, textAlign: 'center' },

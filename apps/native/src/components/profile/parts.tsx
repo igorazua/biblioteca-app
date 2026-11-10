@@ -27,7 +27,7 @@ export function Section({ title, right, children }: { title: string; right?: Rea
   return (
     <View accessibilityLabel={title}>
       <View style={styles.sectionHead}>
-        <AppText style={[tx('title', { fontFamily: 'Inter-500', fontSize: 20, lineHeight: 28, letterSpacing: 0 }), { color: colors.ink }]}>{title}</AppText>
+        <AppText style={[tx('title'), { color: colors.ink }]}>{title}</AppText>
         {right}
       </View>
       {children}

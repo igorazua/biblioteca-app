@@ -12,7 +12,6 @@ import { LoginSheet } from '../components/auth/LoginSheet'
 import { StepDuel, StepFriends, StepGestures, StepShelves, StepStart, StepWelcome } from '../components/onboarding/Steps'
 import { tutorialItems } from '../components/onboarding/parts'
 import { useCatalogTick } from '../components/library/shelfMeta'
-import { haptic } from '../lib/haptics'
 import { useAuth } from '../store/useAuth'
 import { useStore } from '../store'
 import { alpha, colors } from '../theme'
@@ -39,6 +38,9 @@ export default function Onboarding() {
   const [shown, setShown] = useState(0) // el paso que se ve (cambia cuando termina la salida del anterior)
   const [selectedShelves, setSelectedShelves] = useState<ShelfType[]>([...ACTIVE_SHELVES])
   const [login, setLogin] = useState(false)
+  // Lo que se ha probado en los pasos 1 y 2 vive aquí para que no se pierda al volver atrás (Onboarding.tsx:68, 94)
+  const [tried, setTried] = useState({ left: false, right: false, up: false })
+  const [winner, setWinner] = useState<'a' | 'b' | null>(null)
 
   // Transición: sale el paso anterior (opacidad 1 → 0, y 0 → -14) y entra el nuevo (0 → 1, y 14 → 0), 220 ms cada una (mode="wait").
   const p = useSharedValue(1)
@@ -93,6 +95,8 @@ export default function Onboarding() {
 
   // Sesión iniciada desde el paso de cuenta: la PWA lo resuelve con el efecto de App.tsx:123-131 (nombre y foto del usuario).
   const onLoggedIn = () => {
+    // Si ya había onboarding hecho (tutorial reabierto desde Ajustes), no se pisa el nombre ni la foto que ya tiene.
+    if (useStore.getState().onboarded) return finish()
     const user = useAuth.getState().user
     finish({
       name: (user?.user_metadata?.full_name as string | undefined) || user?.email?.split('@')[0] || 'Tú',
@@ -105,6 +109,7 @@ export default function Onboarding() {
       {/* No se vuelve atrás desde aquí con el gesto de iOS: el onboarding es el principio de la pila */}
       <Stack.Screen options={{ gestureEnabled: false, animation: 'fade' }} />
       <ScrollView
+        bounces={false}
         contentContainerStyle={[styles.scroll, { paddingTop: Math.max(insets.top, 12), paddingBottom: 24 }]}
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}
@@ -138,8 +143,8 @@ export default function Onboarding() {
         <View style={styles.center}>
           <Animated.View style={[styles.stepBox, stepStyle]}>
             {shown === 0 && <StepWelcome items={items} onNext={() => setStep(1)} />}
-            {shown === 1 && <StepGestures items={items} onNext={() => setStep(2)} />}
-            {shown === 2 && <StepDuel items={items} onNext={() => setStep(3)} />}
+            {shown === 1 && <StepGestures items={items} tried={tried} onTry={(d) => setTried((t) => ({ ...t, [d]: true }))} onNext={() => setStep(2)} />}
+            {shown === 2 && <StepDuel items={items} winner={winner} onWinner={setWinner} onNext={() => setStep(3)} />}
             {shown === 3 && <StepFriends items={items} onNext={() => setStep(4)} />}
             {shown === 4 && (
               <StepStart
@@ -147,10 +152,7 @@ export default function Onboarding() {
                 onGoogle={() => void useAuth.getState().signInWithGoogle()}
                 onEmail={() => setLogin(true)}
                 onImport={() => finish({}, '/importar')}
-                onExplore={() => {
-                  haptic('tap')
-                  setStep(5)
-                }}
+                onExplore={() => setStep(5)}
               />
             )}
             {shown === 5 && <StepShelves selected={selectedShelves} onToggle={toggleShelf} onFinish={() => finish()} />}

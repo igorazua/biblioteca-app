@@ -67,6 +67,18 @@ export function AvatarCropper({ uri, onCancel, onDone }: Props) {
   const h = img?.h ?? 1
   const base = VIEW / Math.min(w, h) // px de pantalla por px de la foto a zoom 1
 
+  // Medidas en valores compartidos: los gestos son worklets y no deben depender de lo capturado en un render anterior (w y h valen 1 hasta que carga la foto)
+  const photoW = useSharedValue(1)
+  const photoH = useSharedValue(1)
+  const barW = useSharedValue(sliderW)
+  useEffect(() => {
+    photoW.value = w * base
+    photoH.value = h * base
+  }, [w, h, base, photoW, photoH])
+  useEffect(() => {
+    barW.value = sliderW
+  }, [sliderW, barW])
+
   const zoom = useSharedValue(1)
   const ox = useSharedValue(0) // centro de la foto respecto al centro del círculo, en px de pantalla
   const oy = useSharedValue(0)
@@ -78,11 +90,11 @@ export function AvatarCropper({ uri, onCancel, onDone }: Props) {
   // la foto siempre cubre el círculo entero (clamp, AvatarCropper.tsx:39)
   const limitX = (z: number) => {
     'worklet'
-    return Math.max(0, (w * base * z - VIEW) / 2)
+    return Math.max(0, (photoW.value * z - VIEW) / 2)
   }
   const limitY = (z: number) => {
     'worklet'
-    return Math.max(0, (h * base * z - VIEW) / 2)
+    return Math.max(0, (photoH.value * z - VIEW) / 2)
   }
   const clampTo = (v: number, m: number) => {
     'worklet'
@@ -133,7 +145,7 @@ export function AvatarCropper({ uri, onCancel, onDone }: Props) {
   // Barra de zoom: la posición del dedo en la barra fija el zoom (de 1 a 4, paso 0,01)
   const slide = (x: number) => {
     'worklet'
-    const f = Math.max(0, Math.min(1, x / sliderW))
+    const f = Math.max(0, Math.min(1, x / barW.value))
     setZoomClamped(Math.round((1 + f * (MAX_ZOOM - 1)) * 100) / 100)
   }
   const sliderPan = usePanGesture({
