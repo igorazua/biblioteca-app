@@ -1,5 +1,4 @@
 // Componentes pequeños de interfaz portados de la PWA (app/src/components/ui.tsx, Button, Group, NudgeCard).
-// Sheet no está aquí: lo porta otro agente.
 export { Button, type ButtonProps, type ButtonVariant } from './Button'
 export { Chip, type ChipProps } from './Chip'
 export { Toast, type ToastProps, type ToastAction } from './Toast'
@@ -15,3 +14,4 @@ export { PlatformPicker, type PlatformPickerProps } from './PlatformPicker'
 export { StarRating, type StarRatingProps } from './StarRating'
 export { ScreenHeader, type ScreenHeaderProps } from './ScreenHeader'
 export { Confirm, type ConfirmProps } from './Confirm'
+export { Sheet, type SheetProps } from './Sheet'

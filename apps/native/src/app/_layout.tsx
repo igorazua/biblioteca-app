@@ -10,6 +10,7 @@ import { Grain } from '../components/Grain'
 import { AppText } from '../components/AppText'
 import { loadCore, loadShelves } from '../data/loadData'
 import { FlightProvider } from '../lib/flight'
+import { useHydrated } from '../store'
 import { colors } from '../theme'
 
 void SplashScreen.preventAutoHideAsync()
@@ -31,6 +32,7 @@ const FONTS = {
 export default function RootLayout() {
   const [fontsLoaded, fontError] = useFonts(FONTS)
   const [data, setData] = useState<'loading' | 'ready' | Error>('loading')
+  const hydrated = useHydrated() // stores leídos de AsyncStorage tras el catálogo: sin esto la biblioteca se pinta vacía un instante
 
   useEffect(() => {
     loadCore()
@@ -41,7 +43,7 @@ export default function RootLayout() {
       .catch((e: unknown) => setData(e instanceof Error ? e : new Error(String(e))))
   }, [])
 
-  const ready = (fontsLoaded || fontError) && data !== 'loading'
+  const ready = (fontsLoaded || fontError) && data !== 'loading' && (hydrated || data instanceof Error)
   useEffect(() => {
     if (ready) void SplashScreen.hideAsync()
   }, [ready])
