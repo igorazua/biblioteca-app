@@ -57,3 +57,13 @@ La app carga los datos y se los entrega al paquete; el paquete no lee nada por s
 - Regenerar las fuentes (`packages/tokens/scripts/make-fonts.py`) requiere el paquete `brotli` de Python.
 - Iconos con trazo 1,9 como en la PWA. `SISTEMA_DISENO.md` dice 1,75: manda la PWA por el 1:1.
 - Los motores de `packages/core` son una copia de `web-congelada-v1`. Para ver lo que cambie en la PWA: `git diff web-congelada-v1 main -- app/src/lib`.
+
+## Estado al cerrar la fase 2 (10/11/2026)
+
+Hechas: Biblioteca, Estantería, Ficha, Descubrir (hub y mazo), ¡Duelos! (portada y sesión), Decidir, y los flujos de valorar, colocar, añadir y limpiar. Comprobado sin móvil: `tsc` limpio, 16 tests en la app y 286/17/6 en core, bundles de Android e iOS (4,8 MB) y dependencias del SDK 58 al día. **Nada se ha visto en un móvil.**
+
+- **Fallo de la PWA copiado tal cual:** `biblio_used_decide` se lee en `Library.tsx:59` y `Discover.tsx:289`, pero nadie lo escribe. El aviso de «prueba Decidir» se comporta como si nunca se hubiera usado. Arreglarlo en las dos apps a la vez, cuando Igor decida.
+- **Dos cabeceras:** `ScreenTitle` (fase 1, reducida) y `duel/DuelHeader` (completa). Unificarlas en una sola con `step`, `onBack` y `action`.
+- **Cursivas sintéticas:** no hay Fraunces cursiva estática; en Android puede no verse. Generar `Fraunces72-400-italic` con `make-fonts.py`.
+- **Sin cuenta:** `AddFlow` solo busca en el catálogo local (y canciones en MusicBrainz); la búsqueda remota de `biblio-catalog` llega con la fase 3.
+- **Riesgos a probar en el móvil:** `Modal` anidados (`AddFlow`/`CleanupFlow` con la hoja de `RatingFlow`), `SwipeDeck` dentro de un `Modal` en Android, caras de amigos sin disparar el swipe, `measureInWindow` en el vuelo con Android a borde completo, teclado en la búsqueda y en las hojas de comentario, y fluidez de `nextCards` al entrar en una estantería.
