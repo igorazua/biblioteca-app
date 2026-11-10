@@ -608,6 +608,7 @@ export const useStore = create<State>()(
       name: 'biblioteca-v1',
       version: 5,
       storage: jsonStorage(),
+      skipHydration: true, // la rehidratación la lanza `hydrateAll` cuando el catálogo ya está cargado
       onRehydrateStorage: () => () => markHydrated('store'),
       migrate: migrateStore,
       merge: (persistedState: unknown, currentState: State) => {

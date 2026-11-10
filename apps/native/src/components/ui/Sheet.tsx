@@ -98,7 +98,8 @@ export function Sheet({ children, onClose, height = '48%', label }: SheetProps) 
   }, [kb, reduce])
 
   const pan = usePanGesture({
-    activeOffsetY: [-3, 3], // framer empieza a arrastrar a ~3 px
+    activeOffsetY: 3, // solo hacia abajo (hacia arriba la hoja no se mueve): framer empieza a arrastrar a ~3 px
+    failOffsetY: -3, // un gesto hacia arriba falla enseguida y deja desplazarse a la lista de dentro
     failOffsetX: [-12, 12], // un gesto horizontal es de las filas que se desplazan, no de la hoja
     onBegin: () => {
       'worklet'

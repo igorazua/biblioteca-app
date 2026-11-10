@@ -47,6 +47,7 @@ export const useCatalog = create<CatalogState>()(
     {
       name: 'biblio-catalog-cache',
       storage: jsonStorage(),
+      skipHydration: true, // la rehidratación la lanza `hydrateAll` cuando el catálogo ya está cargado
       partialize: (state) => ({ items: state.items, version: state.version }),
       onRehydrateStorage: () => (state) => {
         state?.setHasHydrated(true)

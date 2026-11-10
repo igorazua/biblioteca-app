@@ -39,6 +39,7 @@ export const useEvents = create<EventsState>()(
     {
       name: 'biblioteca-events-v1',
       storage: jsonStorage(),
+      skipHydration: true, // la rehidratación la lanza `hydrateAll` cuando el catálogo ya está cargado
       partialize: (s) => ({ events: s.events }),
       onRehydrateStorage: () => () => markHydrated('events'),
     }
