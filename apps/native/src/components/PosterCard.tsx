@@ -1,8 +1,9 @@
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native'
 import { Image } from 'expo-image'
 import { SHELF_LABEL, type Item } from '@biblioteca/core'
+import { posterRadius } from '@biblioteca/core/src/lib/posterShape'
 import { posterAspect, posterOf, posterShape, titleOf } from '../lib/item'
-import { colors, tx } from '../theme'
+import { alpha, colors, tx } from '../theme'
 import { AppText } from './AppText'
 import { Press } from './Press'
 
@@ -14,24 +15,26 @@ export interface PosterCardProps {
   showType?: boolean
   /** Si true, mantiene el hueco vertical 2:3 para no descuadrar la rejilla mixta */
   mixed?: boolean
+  style?: StyleProp<ViewStyle>
 }
 
 function Badge({ text }: { text: string }) {
   return (
-    <View style={{ position: 'absolute', top: 8, right: 8, backgroundColor: 'rgba(16,14,12,0.85)', paddingHorizontal: 8, paddingVertical: 2, borderRadius: 6 }}>
+    <View style={{ position: 'absolute', top: 8, right: 8, backgroundColor: alpha(colors.bg, 0.85), paddingHorizontal: 8, paddingVertical: 2, borderRadius: 6 }}>
       <AppText style={{ fontFamily: 'Inter-500', fontSize: 11, color: colors.ink, fontVariant: ['tabular-nums'] }}>{text}</AppText>
     </View>
   )
 }
 
 /** PosterCard.tsx: portada con título y metadatos debajo (8 pt). Tres ramas: normal, cuadrada en rejilla mixta, juego con forma en rejilla mixta. */
-export function PosterCard({ item, subtitle, badge, onPress, showType = false, mixed = false }: PosterCardProps) {
+export function PosterCard({ item, subtitle, badge, onPress, showType = false, mixed = false, style }: PosterCardProps) {
   const shelfLabel = SHELF_LABEL[item.type]?.singular || item.type
   const metaText = subtitle || [item.year, item.creator].filter(Boolean).join(' · ')
   const isSquareMixed = mixed && posterShape(item.type) === 'square'
   const shaped = item.type === 'boardgame' && item.posterRatio != null
   const src = posterOf(item)
   const title = titleOf(item)
+  const radius = posterRadius(item.type, 10) as number
 
   const placeholder = (pad: number, bg: string) => (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: pad, backgroundColor: bg }}>
@@ -45,10 +48,10 @@ export function PosterCard({ item, subtitle, badge, onPress, showType = false, m
       disabled={!onPress}
       accessibilityRole={onPress ? 'button' : undefined}
       accessibilityLabel={title}
-      style={shaped && !mixed ? { height: '100%', justifyContent: 'flex-end' } : undefined}
+      style={[shaped && !mixed ? { height: '100%', justifyContent: 'flex-end' } : null, style]}
     >
       {isSquareMixed ? (
-        <View style={{ aspectRatio: 2 / 3, width: '100%', borderRadius: 10, overflow: 'hidden', backgroundColor: colors.surface }}>
+        <View style={{ aspectRatio: 2 / 3, width: '100%', borderRadius: radius, overflow: 'hidden', backgroundColor: colors.surface }}>
           <View style={{ width: '100%', aspectRatio: 1, overflow: 'hidden' }}>
             {src ? <Image source={{ uri: src }} contentFit="cover" cachePolicy="memory-disk" recyclingKey={item.id} style={StyleSheet.absoluteFill} /> : placeholder(8, colors.surface2)}
           </View>
@@ -60,12 +63,12 @@ export function PosterCard({ item, subtitle, badge, onPress, showType = false, m
           {badge && <Badge text={badge} />}
         </View>
       ) : shaped && mixed ? (
-        <View style={{ aspectRatio: 2 / 3, width: '100%', borderRadius: 10, overflow: 'hidden', backgroundColor: colors.surface, alignItems: 'center', justifyContent: 'center' }}>
+        <View style={{ aspectRatio: 2 / 3, width: '100%', borderRadius: radius, overflow: 'hidden', backgroundColor: colors.surface, alignItems: 'center', justifyContent: 'center' }}>
           {src ? <Image source={{ uri: src }} contentFit="contain" cachePolicy="memory-disk" recyclingKey={item.id} style={StyleSheet.absoluteFill} /> : placeholder(12, colors.surface2)}
           {badge && <Badge text={badge} />}
         </View>
       ) : (
-        <View style={{ aspectRatio: posterAspect(item), width: '100%', borderRadius: 10, overflow: 'hidden', backgroundColor: colors.surface }}>
+        <View style={{ aspectRatio: posterAspect(item), width: '100%', borderRadius: radius, overflow: 'hidden', backgroundColor: colors.surface }}>
           {src ? <Image source={{ uri: src }} contentFit={shaped ? 'contain' : 'cover'} cachePolicy="memory-disk" recyclingKey={item.id} style={StyleSheet.absoluteFill} /> : placeholder(12, colors.surface2)}
           {badge && <Badge text={badge} />}
         </View>

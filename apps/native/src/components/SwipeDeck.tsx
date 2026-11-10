@@ -22,7 +22,8 @@ import { easeIn, SPRING_SETTLE } from '../lib/motion'
 import { colors, tx } from '../theme'
 import { AppText } from './AppText'
 import { Poster } from './Poster'
-import { Tag } from './Tag'
+import { Tag } from './ui/Tag'
+import { CardBubbles } from './discover/CardBubbles'
 
 export type SwipeDir = 'left' | 'right' | 'up'
 export interface DeckHandle {
@@ -47,9 +48,9 @@ function CardFace({ item }: { item: Item }) {
   const facts = itemFacts(item)
   const tags = (
     <View style={{ flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: 6 }}>
-      {!!facts && <Tag>{facts}</Tag>}
+      {!!facts && <Tag variant="brand">{facts}</Tag>}
       {item.genres.slice(0, 2).map((g) => (
-        <Tag key={g}>{g}</Tag>
+        <Tag key={g} variant="brand">{g}</Tag>
       ))}
     </View>
   )
@@ -236,9 +237,11 @@ const DeckCard = forwardRef<CardHandle, CardProps>(function DeckCard({ item, dep
   })
 
   const tint = (c: string, o: SharedValue<number>) => <TintLayer color={c} opacity={o} />
-  const body = (
-    <Animated.View
-      style={[{ position: 'absolute', left: 0, right: 0, top: 0, bottom: STACK_GAP, zIndex: 10 - depth }, depth > 0 ? { transformOrigin: '50% 100%' } : null, style]}
+  const face = (
+    <View
+      ref={faceRef}
+      collapsable={false}
+      style={StyleSheet.absoluteFill}
       accessible={isTop}
       accessibilityRole="button"
       accessibilityLabel={`${titleOf(item)}. Desliza a la derecha si ${SHELF_LABEL[shelf].pronoun} has ${SHELF_LABEL[shelf].seenPastPart}, a la izquierda si no te interesa, arriba para pendientes. Toca para ver la ficha.`}
@@ -248,25 +251,36 @@ const DeckCard = forwardRef<CardHandle, CardProps>(function DeckCard({ item, dep
         if (n === 'right' || n === 'left' || n === 'up') runOnUI(commit)(n)
       }}
     >
-      <View ref={faceRef} collapsable={false} style={StyleSheet.absoluteFill}>
-        <CardFace item={item} />
-        {isTop && (
-          <>
-            {tint(colors.stampGreen, rightO)}
-            {tint(colors.stampRed, leftO)}
-            {tint(colors.stampBlue, upO)}
-            <Stamp label={stamps?.right ?? SHELF_LABEL[shelf].stamp} color={colors.stampGreen} opacity={rightO} style={{ top: '22%', left: 20, transform: [{ rotate: '-12deg' }] }} />
-            <Stamp label={stamps?.left ?? 'NO ME INTERESA'} color={colors.stampRed} opacity={leftO} size={22} style={{ top: '22%', right: 16, transform: [{ rotate: '12deg' }] }} />
-            <View pointerEvents="none" style={{ position: 'absolute', left: 0, right: 0, top: '38%', alignItems: 'center' }}>
-              <Stamp label={stamps?.up ?? 'PENDIENTE'} color={colors.stampBlue} opacity={upO} style={{ position: 'relative', transform: [{ rotate: '-6deg' }] }} />
-            </View>
-          </>
-        )}
-      </View>
+      <CardFace item={item} />
+      {isTop && (
+        <>
+          {tint(colors.stampGreen, rightO)}
+          {tint(colors.stampRed, leftO)}
+          {tint(colors.stampBlue, upO)}
+          <Stamp label={stamps?.right ?? SHELF_LABEL[shelf].stamp} color={colors.stampGreen} opacity={rightO} style={{ top: '22%', left: 20, transform: [{ rotate: '-12deg' }] }} />
+          <Stamp label={stamps?.left ?? 'NO ME INTERESA'} color={colors.stampRed} opacity={leftO} size={22} style={{ top: '22%', right: 16, transform: [{ rotate: '12deg' }] }} />
+          <View pointerEvents="none" style={{ position: 'absolute', left: 0, right: 0, top: '38%', alignItems: 'center' }}>
+            <Stamp label={stamps?.up ?? 'PENDIENTE'} color={colors.stampBlue} opacity={upO} style={{ position: 'relative', transform: [{ rotate: '-6deg' }] }} />
+          </View>
+        </>
+      )}
+    </View>
+  )
+  // Los gestos van solo en la cara; las caras de amigos son hermanas de ella (no hijas del detector), así tocarlas o
+  // mantenerlas pulsadas no arrastra ni abre la carta (en la PWA lo corta `stopPropagation`). Siempre dentro de
+  // GestureDetector (los gestos llevan `enabled: isTop`): la carta que sube de segunda a primera conserva su árbol.
+  return (
+    <Animated.View
+      style={[{ position: 'absolute', left: 0, right: 0, top: 0, bottom: STACK_GAP, zIndex: 10 - depth }, depth > 0 ? { transformOrigin: '50% 100%' } : null, style]}
+    >
+      <GestureDetector gesture={gesture}>{face}</GestureDetector>
+      {depth < 2 && (
+        <View pointerEvents={isTop ? 'box-none' : 'none'} style={{ position: 'absolute', top: 12, right: 12 }}>
+          <CardBubbles itemId={item.id} shelf={item.type} />
+        </View>
+      )}
     </Animated.View>
   )
-  // Siempre dentro de GestureDetector (los gestos llevan `enabled: isTop`): así la carta que sube de segunda a primera conserva su árbol.
-  return <GestureDetector gesture={gesture}>{body}</GestureDetector>
 })
 
 function TintLayer({ color, opacity }: { color: string; opacity: SharedValue<number> }) {
