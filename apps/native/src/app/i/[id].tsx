@@ -8,7 +8,7 @@ import { AppText } from '../../components/AppText'
 import { Icon } from '../../components/Icon'
 import { Poster } from '../../components/Poster'
 import { Press } from '../../components/Press'
-import { detailPosterSize, useFlight } from '../../lib/flight'
+import { detailHeroSize, useFlight } from '../../lib/flight'
 import { titleOf } from '../../lib/item'
 import { colors, tx } from '../../theme'
 
@@ -31,7 +31,7 @@ export default function Ficha() {
       </View>
     )
   }
-  const { w, h } = detailPosterSize(item, width)
+  const { w, h } = detailHeroSize(item, width)
   const flying = flight.activeId === item.id
 
   return (
