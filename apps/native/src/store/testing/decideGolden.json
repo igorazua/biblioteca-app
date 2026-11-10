@@ -1,0 +1,301 @@
+{
+  "now": 1793491200000,
+  "doubtful": {
+    "movie:mi-vecino-totoro-1988": 1792627200000,
+    "movie:parasitos-2019": 1791763200000,
+    "movie:anand-1971": 1790899200000,
+    "movie:el-bueno-el-feo-y-el-malo-1966": 1790035200000,
+    "movie:el-lobo-de-wall-street-2013": 1792627200000
+  },
+  "passed": {
+    "movie:la-la-land-2016": 1,
+    "movie:el-lobo-de-wall-street-2013": 2,
+    "movie:city-lights-1931": 1,
+    "movie:edge-of-tomorrow-2014": 3
+  },
+  "watch": [
+    "movie:la-la-land-2016",
+    "movie:el-rey-leon-1994",
+    "movie:parque-jurasico-1993",
+    "movie:el-lobo-de-wall-street-2013",
+    "movie:mi-vecino-totoro-1988",
+    "movie:parasitos-2019",
+    "movie:anand-1971",
+    "movie:el-bueno-el-feo-y-el-malo-1966",
+    "movie:city-lights-1931",
+    "movie:edge-of-tomorrow-2014",
+    "movie:once-2007",
+    "movie:e-t-el-extraterrestre-1982",
+    "movie:spider-man-un-nuevo-universo-2018",
+    "movie:del-reves-2015",
+    "movie:seven-1995",
+    "movie:toy-story-4-2019",
+    "movie:top-gun-maverick-2022",
+    "movie:the-irishman-2019"
+  ],
+  "initial": {
+    "doubtful": {
+      "movie:anand-1971": 1790899200000,
+      "movie:el-bueno-el-feo-y-el-malo-1966": 1790035200000,
+      "movie:el-lobo-de-wall-street-2013": 1792627200000,
+      "movie:mi-vecino-totoro-1988": 1792627200000,
+      "movie:parasitos-2019": 1791763200000
+    },
+    "recog": {
+      "movie:la-la-land-2016": 1,
+      "movie:el-rey-leon-1994": 0.98,
+      "movie:parque-jurasico-1993": 0.98,
+      "movie:el-lobo-de-wall-street-2013": 0.98,
+      "movie:mi-vecino-totoro-1988": 0.7020000000000001,
+      "movie:parasitos-2019": 0.85,
+      "movie:anand-1971": 0.01,
+      "movie:el-bueno-el-feo-y-el-malo-1966": 0.82,
+      "movie:city-lights-1931": 0.3600000000000001,
+      "movie:edge-of-tomorrow-2014": 0.6930000000000001,
+      "movie:once-2007": 0.33299999999999996,
+      "movie:e-t-el-extraterrestre-1982": 0.83,
+      "movie:spider-man-un-nuevo-universo-2018": 0.7290000000000001,
+      "movie:del-reves-2015": 0.54,
+      "movie:seven-1995": 0.85,
+      "movie:toy-story-4-2019": 0.96,
+      "movie:top-gun-maverick-2022": 0.85,
+      "movie:the-irishman-2019": 0.7290000000000001
+    },
+    "pool": [
+      "movie:once-2007",
+      "movie:e-t-el-extraterrestre-1982",
+      "movie:spider-man-un-nuevo-universo-2018",
+      "movie:del-reves-2015",
+      "movie:seven-1995",
+      "movie:toy-story-4-2019",
+      "movie:top-gun-maverick-2022",
+      "movie:the-irishman-2019",
+      "movie:el-viaje-de-chihiro-2001",
+      "movie:casino-1995",
+      "movie:hamilton-2020",
+      "movie:toy-story-3-2010",
+      "movie:pozos-de-ambicion-2007",
+      "movie:la-la-land-2016",
+      "movie:barbie-2023",
+      "movie:up-2009",
+      "movie:logan-2017",
+      "movie:paddington-2-2017",
+      "movie:el-silencio-de-los-corderos-1991",
+      "movie:soorarai-pottru-2020",
+      "movie:la-doncella-2016",
+      "movie:incredibles-2-2018",
+      "movie:modern-times-1936",
+      "movie:el-caballero-oscuro-2008",
+      "movie:ayla-the-daughter-of-war-2017",
+      "movie:the-incredibles-2004",
+      "movie:how-to-train-your-dragon-2010",
+      "movie:ocho-apellidos-vascos-2014",
+      "movie:boyhood-2014",
+      "movie:queen-2013",
+      "movie:the-avengers-2012",
+      "movie:vikram-vedha-2017",
+      "movie:babam-ve-oglum-2005",
+      "movie:ran-1985",
+      "movie:el-gran-hotel-budapest-2014",
+      "movie:captain-phillips-2013",
+      "movie:wall-e-2008",
+      "movie:hunt-for-the-wilderpeople-2016",
+      "movie:ex-machina-2014",
+      "movie:blade-runner-2049-2017"
+    ],
+    "poolSize": 300,
+    "inputKeys": [
+      "affinity",
+      "answers",
+      "entries",
+      "friendPct",
+      "friends",
+      "profile",
+      "rankings",
+      "recentOrienters",
+      "shelf",
+      "userVec"
+    ]
+  },
+  "afterSkip1": {
+    "doubtful": {
+      "movie:anand-1971": 1790899200000,
+      "movie:el-bueno-el-feo-y-el-malo-1966": 1790035200000,
+      "movie:el-lobo-de-wall-street-2013": 1792627200000,
+      "movie:la-la-land-2016": 1793491200000,
+      "movie:mi-vecino-totoro-1988": 1792627200000,
+      "movie:parasitos-2019": 1791763200000
+    },
+    "recog": {
+      "movie:la-la-land-2016": 0.5,
+      "movie:el-rey-leon-1994": 0.98,
+      "movie:parque-jurasico-1993": 0.98,
+      "movie:el-lobo-de-wall-street-2013": 0.98,
+      "movie:mi-vecino-totoro-1988": 0.7020000000000001,
+      "movie:parasitos-2019": 0.85,
+      "movie:anand-1971": 0.01,
+      "movie:el-bueno-el-feo-y-el-malo-1966": 0.82,
+      "movie:city-lights-1931": 0.3600000000000001,
+      "movie:edge-of-tomorrow-2014": 0.6930000000000001,
+      "movie:once-2007": 0.33299999999999996,
+      "movie:e-t-el-extraterrestre-1982": 0.83,
+      "movie:spider-man-un-nuevo-universo-2018": 0.7290000000000001,
+      "movie:del-reves-2015": 0.54,
+      "movie:seven-1995": 0.85,
+      "movie:toy-story-4-2019": 0.96,
+      "movie:top-gun-maverick-2022": 0.85,
+      "movie:the-irishman-2019": 0.7290000000000001
+    },
+    "storage": {
+      "doubtful": {
+        "movie:mi-vecino-totoro-1988": 1792627200000,
+        "movie:parasitos-2019": 1791763200000,
+        "movie:anand-1971": 1790899200000,
+        "movie:el-bueno-el-feo-y-el-malo-1966": 1790035200000,
+        "movie:el-lobo-de-wall-street-2013": 1792627200000,
+        "movie:la-la-land-2016": 1793491200000
+      },
+      "passed": {
+        "movie:la-la-land-2016": 2,
+        "movie:el-lobo-de-wall-street-2013": 2,
+        "movie:city-lights-1931": 1,
+        "movie:edge-of-tomorrow-2014": 3,
+        "movie:el-rey-leon-1994": 1
+      }
+    },
+    "preferFameOrOwn": true
+  },
+  "afterSkip2": {
+    "doubtful": {
+      "movie:anand-1971": 1790899200000,
+      "movie:el-bueno-el-feo-y-el-malo-1966": 1790035200000,
+      "movie:el-lobo-de-wall-street-2013": 1793491200000,
+      "movie:la-la-land-2016": 1793491200000,
+      "movie:mi-vecino-totoro-1988": 1792627200000,
+      "movie:parasitos-2019": 1791763200000
+    },
+    "recog": {
+      "movie:la-la-land-2016": 0.5,
+      "movie:el-rey-leon-1994": 0.98,
+      "movie:parque-jurasico-1993": 0.98,
+      "movie:el-lobo-de-wall-street-2013": 0.49,
+      "movie:mi-vecino-totoro-1988": 0.7020000000000001,
+      "movie:parasitos-2019": 0.85,
+      "movie:anand-1971": 0.01,
+      "movie:el-bueno-el-feo-y-el-malo-1966": 0.82,
+      "movie:city-lights-1931": 0.3600000000000001,
+      "movie:edge-of-tomorrow-2014": 0.6930000000000001,
+      "movie:once-2007": 0.33299999999999996,
+      "movie:e-t-el-extraterrestre-1982": 0.83,
+      "movie:spider-man-un-nuevo-universo-2018": 0.7290000000000001,
+      "movie:del-reves-2015": 0.54,
+      "movie:seven-1995": 0.85,
+      "movie:toy-story-4-2019": 0.96,
+      "movie:top-gun-maverick-2022": 0.85,
+      "movie:the-irishman-2019": 0.7290000000000001
+    },
+    "storage": {
+      "doubtful": {
+        "movie:mi-vecino-totoro-1988": 1792627200000,
+        "movie:parasitos-2019": 1791763200000,
+        "movie:anand-1971": 1790899200000,
+        "movie:el-bueno-el-feo-y-el-malo-1966": 1790035200000,
+        "movie:el-lobo-de-wall-street-2013": 1793491200000,
+        "movie:la-la-land-2016": 1793491200000
+      },
+      "passed": {
+        "movie:la-la-land-2016": 2,
+        "movie:el-lobo-de-wall-street-2013": 3,
+        "movie:city-lights-1931": 1,
+        "movie:edge-of-tomorrow-2014": 3,
+        "movie:el-rey-leon-1994": 1,
+        "movie:parque-jurasico-1993": 1
+      }
+    },
+    "preferFameOrOwn": true
+  },
+  "pairs": [
+    [
+      "movie:la-la-land-2016",
+      "movie:el-rey-leon-1994"
+    ],
+    [
+      "movie:parque-jurasico-1993",
+      "movie:el-lobo-de-wall-street-2013"
+    ],
+    [
+      "movie:vengadores-endgame-2019",
+      "movie:pulp-fiction-1994"
+    ],
+    [
+      "movie:interstellar-2014",
+      "movie:toy-story-1995"
+    ],
+    [
+      "movie:avatar-2009",
+      "movie:el-caballero-oscuro-la-leyenda-renace-2012"
+    ],
+    [
+      "movie:el-padrino-1972",
+      "movie:brazil-1985"
+    ],
+    [
+      "movie:shutter-island-2010",
+      "movie:knives-out-2019"
+    ]
+  ],
+  "proposal": {
+    "id": "movie:blade-runner-2049-2017",
+    "reasons": [
+      "Porque elegiste acción"
+    ]
+  },
+  "final": {
+    "doubtful": {
+      "movie:anand-1971": 1790899200000,
+      "movie:el-bueno-el-feo-y-el-malo-1966": 1790035200000,
+      "movie:el-lobo-de-wall-street-2013": 1793491200000,
+      "movie:la-la-land-2016": 1793491200000,
+      "movie:mi-vecino-totoro-1988": 1792627200000,
+      "movie:parasitos-2019": 1791763200000
+    },
+    "recog": {
+      "movie:la-la-land-2016": 0.5,
+      "movie:el-rey-leon-1994": 0.98,
+      "movie:parque-jurasico-1993": 0.98,
+      "movie:el-lobo-de-wall-street-2013": 0.49,
+      "movie:mi-vecino-totoro-1988": 0.7020000000000001,
+      "movie:parasitos-2019": 0.85,
+      "movie:anand-1971": 0.01,
+      "movie:el-bueno-el-feo-y-el-malo-1966": 0.82,
+      "movie:city-lights-1931": 0.3600000000000001,
+      "movie:edge-of-tomorrow-2014": 0.6930000000000001,
+      "movie:once-2007": 0.33299999999999996,
+      "movie:e-t-el-extraterrestre-1982": 0.83,
+      "movie:spider-man-un-nuevo-universo-2018": 0.7290000000000001,
+      "movie:del-reves-2015": 0.54,
+      "movie:seven-1995": 0.85,
+      "movie:toy-story-4-2019": 0.96,
+      "movie:top-gun-maverick-2022": 0.85,
+      "movie:the-irishman-2019": 0.7290000000000001
+    },
+    "storage": {
+      "doubtful": {
+        "movie:mi-vecino-totoro-1988": 1792627200000,
+        "movie:parasitos-2019": 1791763200000,
+        "movie:anand-1971": 1790899200000,
+        "movie:el-bueno-el-feo-y-el-malo-1966": 1790035200000,
+        "movie:el-lobo-de-wall-street-2013": 1793491200000,
+        "movie:la-la-land-2016": 1793491200000
+      },
+      "passed": {
+        "movie:la-la-land-2016": 2,
+        "movie:el-lobo-de-wall-street-2013": 3,
+        "movie:city-lights-1931": 1,
+        "movie:edge-of-tomorrow-2014": 3,
+        "movie:el-rey-leon-1994": 1,
+        "movie:parque-jurasico-1993": 1
+      }
+    }
+  }
+}

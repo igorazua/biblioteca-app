@@ -6,9 +6,11 @@ import {
   setCrossEngine,
   setShelfAnchors,
   setShelfCatalog,
+  setLiveItems,
   setShelfEngine,
   type ShelfType,
 } from '@biblioteca/core'
+import { useCatalog } from '../store/useCatalog'
 
 // D27: los archivos de app/src/data se copian a assets/data (scripts/copy-data.mjs) y se cargan como assets, no dentro del JS.
 // Los `require` tienen que ser literales para que Metro los vea.
@@ -66,6 +68,8 @@ export function loadCore(): Promise<void> {
     setAliases(await readJson<Record<string, string>>(A.aliases))
     await breathe()
     setCatalogIndex(await readJson(A.index))
+    // caché viva (obras añadidas por el usuario): `useCatalog` ya la entrega al cambiar; aquí se asegura con lo rehidratado
+    setLiveItems(useCatalog.getState().items)
     for (const s of ACTIVE) {
       const [file, tree] = await Promise.all([readJson(A.anchors[s][0]), readJson(A.anchors[s][1])])
       setShelfAnchors(s, file, tree)
