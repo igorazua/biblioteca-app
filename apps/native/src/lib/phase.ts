@@ -13,3 +13,12 @@ export const BUILT = {
   metricas: false,
   listas: false,
 } as const
+
+/**
+ * Inicios de sesión de terceros. Google y Apple necesitan un dev build (módulos nativos) y el bundle ID definitivo:
+ * mientras estén a `false`, ninguna pantalla muestra su botón. El correo con código de 6 dígitos ya funciona en Expo Go.
+ */
+export const BUILT_AUTH = {
+  google: false,
+  apple: false,
+} as const

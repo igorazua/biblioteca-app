@@ -10,6 +10,8 @@ import { Grain } from '../components/Grain'
 import { AppText } from '../components/AppText'
 import { loadCore, loadShelves } from '../data/loadData'
 import { FlightProvider } from '../lib/flight'
+import { useCloudBoot } from '../lib/sync'
+import { Toast } from '../components/ui'
 import { useHydrated } from '../store'
 import { colors } from '../theme'
 
@@ -33,6 +35,7 @@ export default function RootLayout() {
   const [fontsLoaded, fontError] = useFonts(FONTS)
   const [data, setData] = useState<'loading' | 'ready' | Error>('loading')
   const hydrated = useHydrated() // stores leídos de AsyncStorage tras el catálogo: sin esto la biblioteca se pinta vacía un instante
+  const { syncToast, clearSyncToast } = useCloudBoot(hydrated) // sesión de Supabase, subida/bajada de la nube y amigos reales (no hace nada sin cuenta)
 
   useEffect(() => {
     loadCore()
@@ -67,6 +70,7 @@ export default function RootLayout() {
             </Stack>
           </FlightProvider>
         )}
+        {syncToast ? <Toast message={syncToast} onDone={clearSyncToast} /> : null}
         <Grain />
       </SafeAreaProvider>
     </GestureHandlerRootView>

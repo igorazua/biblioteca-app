@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import { isAlias, setLiveItems, subscribeCatalog, type Item } from '@biblioteca/core'
+import { isAlias, isSeedItem, setLiveItems, subscribeCatalog, type Item } from '@biblioteca/core'
+import { supabase } from '../lib/supabase'
 import { jsonStorage } from '../lib/storage'
 import { markHydrated } from './hydrationFlags'
 
@@ -17,7 +18,7 @@ export interface CatalogState {
 
 export const useCatalog = create<CatalogState>()(
   persist(
-    (set) => ({
+    (set, get) => ({
       items: {},
       version: 0,
       _hasHydrated: false,
@@ -40,9 +41,26 @@ export const useCatalog = create<CatalogState>()(
         })
       },
 
-      // Sin cuenta (D7) no hay nube de la que traer obras. Fase 3: aquí se pedirán a Supabase (`biblio_catalog`) las que falten,
-      // saltando las del catálogo semilla (`isSeedItem`) y las que ya estén en `items`, en trozos de 100.
-      ensureItems: async () => {},
+      // Trae de Supabase (`biblio_catalog`) las obras que faltan, en trozos de 100: las que no son del catálogo semilla ni están
+      // ya en la caché viva. Sin Supabase (sin `.env.local`) no hace nada, como la PWA sin conexión.
+      ensureItems: async (ids) => {
+        if (!ids || ids.length === 0 || !supabase) return
+        const missing = Array.from(new Set(ids)).filter((id) => !isSeedItem(id) && !get().items[id])
+        if (missing.length === 0) return
+
+        for (let i = 0; i < missing.length; i += 100) {
+          const chunk = missing.slice(i, i + 100)
+          try {
+            const { data, error } = await supabase.from('biblio_catalog').select('data').in('id', chunk)
+            if (!error && data && data.length > 0) {
+              const fetched = data.map((d: { data: Item }) => d.data).filter(Boolean)
+              if (fetched.length > 0) get().addItems(fetched)
+            }
+          } catch (err) {
+            console.warn('Error fetching items from biblio_catalog:', err)
+          }
+        }
+      },
     }),
     {
       name: 'biblio-catalog-cache',

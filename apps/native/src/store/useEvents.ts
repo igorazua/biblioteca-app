@@ -46,6 +46,12 @@ export const useEvents = create<EventsState>()(
   )
 )
 
+/** Destino opcional de cada evento (la subida a Supabase). Lo pone `useCloudBoot`; sin él, los eventos se quedan en local. */
+let eventSink: ((e: EngineEvent) => void) | null = null
+export function setEventSink(fn: ((e: EngineEvent) => void) | null) {
+  eventSink = fn
+}
+
 export interface TrackPayload {
   shelf?: ShelfType
   itemId?: string
@@ -72,9 +78,14 @@ export function track(type: EventType, payload: TrackPayload = {}) {
     data: payload.data,
   }
 
-  // Los eventos se guardan solo en local, con el mismo formato (D7).
+  // Los eventos se guardan siempre en local, con el mismo formato (D7).
   store.addEvent(event)
-  // Fase 3: aquí se enviará el evento a Supabase en segundo plano (la PWA llamaba a `sendCloudEvent`).
+  // Con Supabase configurado, además se sube en segundo plano (la PWA llamaba a `sendCloudEvent`); un fallo nunca afecta a la app.
+  try {
+    eventSink?.(event)
+  } catch {
+    // solo analítica
+  }
 
   return event
 }
