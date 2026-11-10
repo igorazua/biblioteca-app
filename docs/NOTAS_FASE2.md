@@ -67,3 +67,14 @@ Hechas: Biblioteca, Estantería, Ficha, Descubrir (hub y mazo), ¡Duelos! (porta
 - **Cursivas sintéticas:** no hay Fraunces cursiva estática; en Android puede no verse. Generar `Fraunces72-400-italic` con `make-fonts.py`.
 - **Sin cuenta:** `AddFlow` solo busca en el catálogo local (y canciones en MusicBrainz); la búsqueda remota de `biblio-catalog` llega con la fase 3.
 - **Riesgos a probar en el móvil:** `Modal` anidados (`AddFlow`/`CleanupFlow` con la hoja de `RatingFlow`), `SwipeDeck` dentro de un `Modal` en Android, caras de amigos sin disparar el swipe, `measureInWindow` en el vuelo con Android a borde completo, teclado en la búsqueda y en las hojas de comentario, y fluidez de `nextCards` al entrar en una estantería.
+
+## Estado al cerrar la fase 3 (10/11/2026)
+
+Hechos: cuenta por correo con código (`LoginSheet`), cliente de Supabase, sincronización (`useCloudBoot`), amigos reales, contactos con pantalla previa y hashes, Onboarding con redirección, Perfil, Editar perfil con recorte de foto, Ajustes, y las rutas `/l/`, `/p/` y `/unete/`. Comprobado sin móvil: `tsc` limpio, 32 tests en la app y 286/17/6 en core, bundles de Android e iOS (5,7 MB) y dependencias al día.
+
+- **Escrito pero sin probar de punta a punta:** todo lo que pasa por Supabase (login, perfil, subida y bajada, eventos, duelos, amigos, invitaciones, `ensureItems`, borrar la cuenta, foto en `biblio-avatars`). Antes hace falta configurar Supabase: `docs/TAREAS_BETA_AMIGOS.md` §1, más SMTP propio y `{{ .Token }}` en la plantilla de Magic Link.
+- **Solo con dev build:** Google y Apple (`BUILT_AUTH`), enlaces con esquema propio, Universal Links y App Links. En `app.json` faltan el plugin de `expo-contacts` con el texto de iOS de `docs/APP_NATIVA.md`, `READ_CONTACTS` en Android y los dominios asociados.
+- **Decidido sin cobertura (E):** un número cruzado que no estaba en la app se vuelve a cruzar a los 7 días, y uno que sí estaba a los 30.
+- **Fallos de la PWA copiados tal cual:** al entrar no se bajan los duelos de la nube (`pullCloudDuels` no se llama), los eventos se suben aunque no haya sesión, y el paso 5 del onboarding no guarda las estanterías elegidas.
+- **Pendiente para la fase 4:** tarjeta de perfil para Story (`react-native-view-shot` y `expo-sharing`) y notificaciones (`expo-notifications`, más el envío a tokens nativos en el servidor).
+- **Tres cabeceras:** `ScreenTitle`, `duel/DuelHeader` y `library/TitleBar`. Unificarlas.
