@@ -44,6 +44,18 @@ const REDUCED_DELAY = 600 // pickDelay con movimiento reducido (DuelVariants.tsx
 const LEARNED_KEY = 'biblioteca-duel-learned'
 const CARD_RADIUS = 18
 
+/** Ya vio la pista del abanico o ya eligió alguna vez (DuelVariants.tsx isDuelLearned / markDuelLearned). */
+export async function isDuelLearned(): Promise<boolean> {
+  try {
+    return (await AsyncStorage.getItem(LEARNED_KEY)) === 'true'
+  } catch {
+    return false
+  }
+}
+export function markDuelLearned(): void {
+  void AsyncStorage.setItem(LEARNED_KEY, 'true').catch(() => {})
+}
+
 const lerp = (a: number, b: number, k: number) => {
   'worklet'
   return a + (b - a) * k
@@ -201,6 +213,7 @@ export function DuelFan({
     onBegin: () => {
       'worklet'
       touched.value = true
+      scheduleOnRN(markDuelLearned)
       x.value = x.value // detiene la pista si está en marcha
     },
     onUpdate: (e) => {
