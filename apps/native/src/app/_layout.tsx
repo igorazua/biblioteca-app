@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { View } from 'react-native'
-import { Stack } from 'expo-router'
+import { Stack, usePathname, useRootNavigationState, useRouter } from 'expo-router'
 import { useFonts } from 'expo-font'
 import * as SplashScreen from 'expo-splash-screen'
 import { StatusBar } from 'expo-status-bar'
@@ -12,7 +12,7 @@ import { loadCore, loadShelves } from '../data/loadData'
 import { FlightProvider } from '../lib/flight'
 import { useCloudBoot } from '../lib/sync'
 import { Toast } from '../components/ui'
-import { useHydrated } from '../store'
+import { useHydrated, useStore } from '../store'
 import { colors } from '../theme'
 
 void SplashScreen.preventAutoHideAsync()
@@ -29,6 +29,22 @@ const FONTS = {
   'Inter-600': require('../../assets/fonts/Inter-600.ttf'),
   'Inter-700': require('../../assets/fonts/Inter-700.ttf'),
   'Inter-900': require('../../assets/fonts/Inter-900.ttf'),
+}
+
+// App.tsx:42 de la PWA: sin onboarding hecho, todo lleva a /onboarding?next=… Las rutas públicas (/l, /p, /unete) quedan
+// fuera, igual que en la PWA, donde están fuera del Frame.
+const OUTSIDE_ONBOARDING = /^\/(onboarding|l\/|p\/|unete\/)/
+
+function OnboardingGate() {
+  const onboarded = useStore((s) => s.onboarded)
+  const pathname = usePathname()
+  const router = useRouter()
+  const navReady = !!useRootNavigationState()?.key
+  useEffect(() => {
+    if (!navReady || onboarded || OUTSIDE_ONBOARDING.test(pathname)) return
+    router.replace({ pathname: '/onboarding', params: { next: pathname } })
+  }, [navReady, onboarded, pathname, router])
+  return null
 }
 
 export default function RootLayout() {
@@ -68,6 +84,7 @@ export default function RootLayout() {
               <Stack.Screen name="(tabs)" />
               <Stack.Screen name="i/[id]" options={{ animation: 'fade' }} />
             </Stack>
+            <OnboardingGate />
           </FlightProvider>
         )}
         {syncToast ? <Toast message={syncToast} onDone={clearSyncToast} /> : null}
