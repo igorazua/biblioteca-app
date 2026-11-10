@@ -4,10 +4,10 @@
  * Se cambia a `true` en la fase que construye cada una (docs/PLAN_NATIVO.md §7).
  */
 export const BUILT = {
-  onboarding: false,
-  perfil: false,
-  editarPerfil: false,
-  ajustes: false,
+  onboarding: true,
+  perfil: true,
+  editarPerfil: true,
+  ajustes: true,
   conectar: false,
   importar: false,
   metricas: false,
