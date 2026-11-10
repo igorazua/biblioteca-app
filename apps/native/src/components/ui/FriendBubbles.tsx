@@ -5,19 +5,13 @@ import { Icon } from '../Icon'
 import { Press } from '../Press'
 import { alpha, colors } from '../../theme'
 import { haptic } from '../../lib/haptics'
+import type { ShelfTerms } from '@biblioteca/core'
 import { Avatar } from './Avatar'
 import { RankBadge } from './RankBadge'
 
 // FriendBubbles de ui.tsx de la PWA: caras de amigos con su señal. Recibe datos por props; no lee stores.
-export interface ShelfTerms {
-  plural: string
-  verbPerfSingular: string
-  verbPerfPlural: string
-  pendingSingular: string
-  pendingPlural: string
-}
-
-export interface FriendHit {
+// Tipo local `BubbleFriend` (no `FriendHit`: en core ese nombre es otra forma, con `friend` y `entry`).
+export interface BubbleFriend {
   id: string
   name: string
   avatarColor: string
@@ -30,7 +24,7 @@ export interface FriendHit {
 
 export interface FriendBubblesProps {
   /** Amigos con esta obra, ya filtrados. */
-  hits: FriendHit[]
+  hits: BubbleFriend[]
   /** Textos de la estantería (SHELF_LABEL en la PWA). */
   terms: ShelfTerms
   /** Caras visibles antes del «+N». 4 por defecto. */
@@ -44,7 +38,7 @@ const RING = 'rgba(0, 0, 0, 0.7)'
 const BADGE_RING = 'rgba(0, 0, 0, 0.6)'
 
 /** Orden de la PWA (§7.8): primero las que tienen comentario, luego por puesto. */
-function byCommentThenRank(a: FriendHit, b: FriendHit): number {
+function byCommentThenRank(a: BubbleFriend, b: BubbleFriend): number {
   const ac = Boolean(a.comment)
   const bc = Boolean(b.comment)
   if (ac !== bc) return ac ? -1 : 1
@@ -159,13 +153,15 @@ const styles = StyleSheet.create({
     borderRadius: 999,
     borderWidth: 2,
   },
+  // Los badges llevan el anillo de 1 px dentro de la caja (borderWidth): la caja es 2 pt mayor que la de la PWA
+  // y el desplazamiento 1 pt menor, para que el borde exterior caiga donde cae el ring-1 de Tailwind.
   rankBadge: {
     position: 'absolute',
-    bottom: -4,
-    right: -6,
+    bottom: -5,
+    right: -7,
     zIndex: 10,
-    minWidth: 17,
-    height: 17,
+    minWidth: 19,
+    height: 19,
     paddingHorizontal: 3,
     borderRadius: 999,
     borderWidth: 1,
@@ -177,11 +173,11 @@ const styles = StyleSheet.create({
   rankText: { fontFamily: 'Inter-700', fontSize: 10, lineHeight: 10, color: colors.accentInk, fontVariant: ['tabular-nums'] },
   pendingBadge: {
     position: 'absolute',
-    bottom: -4,
-    right: -4,
+    bottom: -5,
+    right: -5,
     zIndex: 10,
-    width: 15,
-    height: 15,
+    width: 17,
+    height: 17,
     borderRadius: 999,
     borderWidth: 1,
     borderColor: BADGE_RING,
@@ -191,11 +187,11 @@ const styles = StyleSheet.create({
   },
   commentBadge: {
     position: 'absolute',
-    top: -4,
-    right: -4,
+    top: -5,
+    right: -5,
     zIndex: 20,
-    width: 14,
-    height: 14,
+    width: 16,
+    height: 16,
     borderRadius: 999,
     borderWidth: 1,
     borderColor: RING,
@@ -227,9 +223,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.line,
     backgroundColor: '#181715',
-    shadowColor: '#000000',
+    // shadow-2xl: color fijado en index.css (rgb(20 12 2 / 0.7)).
+    shadowColor: 'rgb(20, 12, 2)',
     shadowOffset: { width: 0, height: 25 },
-    shadowOpacity: 0.4,
+    shadowOpacity: 0.7,
     shadowRadius: 25,
   },
   tipHead: { flexDirection: 'row', alignItems: 'center', gap: 10, marginBottom: 8 },
@@ -238,6 +235,6 @@ const styles = StyleSheet.create({
   tipSub: { fontFamily: 'Inter-400', fontSize: 11, lineHeight: 15, color: alpha('#ffffff', 0.7) },
   tipPending: { fontFamily: 'Inter-500', color: colors.stampBlue },
   tipRank: { marginLeft: 'auto' },
-  // La PWA usa la serif en cursiva; Fraunces no trae cursiva en la fase 1 (anotado en el informe).
-  tipComment: { fontFamily: 'Fraunces72-400', fontSize: 13, lineHeight: 18, color: alpha('#ffffff', 0.9) },
+  // La PWA usa la serif en cursiva (leading-snug = 1,375 × 13); Fraunces no trae cursiva en la fase 1 (anotado en el informe).
+  tipComment: { fontFamily: 'Fraunces72-400', fontSize: 13, lineHeight: 17.875, color: alpha('#ffffff', 0.9) },
 })

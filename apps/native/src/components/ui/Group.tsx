@@ -6,7 +6,8 @@ import { alpha, colors, tx } from '../../theme'
 // Group de Group.tsx de la PWA: título pequeño, una tarjeta y filas separadas por líneas, estilo ajustes.
 export interface GroupProps {
   title?: string
-  footer?: ReactNode
+  /** Texto bajo la tarjeta. Solo texto: va dentro de AppText. */
+  footer?: string
   /** Filas (normalmente `Row` o `Toggle` dentro de `Row`). Los nulos no cuentan para los separadores. */
   children: ReactNode
   style?: StyleProp<ViewStyle>
@@ -40,5 +41,6 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   divider: { height: 1, backgroundColor: alpha(colors.line, 0.6) },
-  footer: { fontFamily: 'Inter-400', fontSize: 11, lineHeight: 18, color: colors.mute, paddingHorizontal: 4, marginTop: 8 },
+  // leading-relaxed = 1,625 × 11
+  footer: { fontFamily: 'Inter-400', fontSize: 11, lineHeight: 17.875, color: colors.mute, paddingHorizontal: 4, marginTop: 8 },
 })

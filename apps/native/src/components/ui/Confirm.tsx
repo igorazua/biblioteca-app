@@ -15,7 +15,7 @@ export interface ConfirmProps {
 
 export function Confirm({ title, text, confirmLabel, onConfirm, onCancel }: ConfirmProps) {
   return (
-    <Modal transparent animationType="fade" visible onRequestClose={onCancel} statusBarTranslucent>
+    <Modal transparent animationType="none" visible onRequestClose={onCancel} statusBarTranslucent>
       <View style={styles.overlay}>
         <View accessibilityRole="alert" accessibilityLabel={title} style={styles.card}>
           <AppText style={styles.title}>{title}</AppText>
@@ -61,7 +61,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  cancelText: { fontFamily: 'Inter-500', fontSize: 16, lineHeight: 22, color: colors.ink },
+  // Sin interlineado en la PWA: los botones heredan la fuente del body (16 px) con interlineado «normal» de Inter (~1,21).
+  cancelText: { fontFamily: 'Inter-500', fontSize: 16, lineHeight: 19.4, color: colors.ink },
   confirm: {
     flex: 1,
     minHeight: 46,
@@ -70,5 +71,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  confirmText: { fontFamily: 'Inter-600', fontSize: 16, lineHeight: 22, color: '#ffffff' },
+  confirmText: { fontFamily: 'Inter-600', fontSize: 16, lineHeight: 19.4, color: '#ffffff' },
 })

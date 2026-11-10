@@ -6,9 +6,16 @@ import { AppText } from '../AppText'
 import { Icon } from '../Icon'
 import { Press } from '../Press'
 import { alpha, colors, tx } from '../../theme'
-import { SPRING_SETTLE, easeOut } from '../../lib/motion'
 
 // NudgeCard de la PWA. Dos variantes: `banner` (franja sobre la lista) y `card` (tarjeta grande).
+// Animaciones de entrada, de framer en la PWA:
+//  - banner: opacidad y `y` con transición de 220 ms, easeOut (0,0,0.58,1).
+//  - card: opacidad con tween 300 ms por defecto de framer; `scale` con muelle criticamente amortiguado (550, 30).
+// Sin salida: en la PWA no van envueltas en AnimatePresence, así que desaparecen de golpe.
+const EASE_OUT = Easing.bezier(0, 0, 0.58, 1)
+const EASE_DEFAULT = Easing.bezier(0.25, 0.1, 0.35, 1)
+const SPRING_SCALE = { stiffness: 550, damping: 30, mass: 1 }
+
 export interface NudgeData {
   message: string
   actionLabel: string
@@ -22,40 +29,37 @@ export interface NudgeCardProps {
 }
 
 export function NudgeCard({ nudge, onAction, onDismiss, variant = 'banner' }: NudgeCardProps) {
-  // Entrada. La PWA: banner, opacidad 0→1 y y −12→0 en 220 ms (easeOut); card, opacidad 0→1 y escala 0,96→1 con muelle por defecto.
-  const p = useSharedValue(0)
+  const opacity = useSharedValue(0)
+  // Progreso del desplazamiento (banner: y −12 → 0) o de la escala (card: 0,96 → 1).
+  const shift = useSharedValue(0)
   useEffect(() => {
-    p.value = variant === 'card' ? withSpring(1, SPRING_SETTLE) : withTiming(1, { duration: 220, easing: easeOut })
-  }, [p, variant])
+    if (variant === 'card') {
+      opacity.value = withTiming(1, { duration: 300, easing: EASE_DEFAULT })
+      shift.value = withSpring(1, SPRING_SCALE)
+    } else {
+      opacity.value = withTiming(1, { duration: 220, easing: EASE_OUT })
+      shift.value = withTiming(1, { duration: 220, easing: EASE_OUT })
+    }
+  }, [opacity, shift, variant])
 
   const bannerAnim = useAnimatedStyle(() => ({
-    opacity: p.value,
-    transform: [{ translateY: -12 * (1 - p.value) }],
+    opacity: opacity.value,
+    transform: [{ translateY: -12 * (1 - shift.value) }],
   }))
   const cardAnim = useAnimatedStyle(() => ({
-    opacity: Math.max(0, Math.min(1, p.value)),
-    transform: [{ scale: 0.96 + 0.04 * p.value }],
+    opacity: opacity.value,
+    transform: [{ scale: 0.96 + 0.04 * shift.value }],
   }))
 
   if (variant === 'card') {
     return (
       <Animated.View style={[styles.cardShadow, cardAnim]}>
-        <LinearGradient
-          colors={[colors.surface, colors.surface2]}
-          start={{ x: 0, y: 0 }}
-          end={{ x: 1, y: 1 }}
-          style={styles.card}
-        >
+        <LinearGradient colors={[colors.surface, colors.surface2]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.card}>
           <View style={styles.cardTop}>
             <View style={styles.cardIcon}>
               <Icon name="sparkle" size={20} color={colors.accent} />
             </View>
-            <Press
-              accessibilityRole="button"
-              accessibilityLabel="Cerrar aviso"
-              onPress={onDismiss}
-              style={styles.cardClose}
-            >
+            <Press accessibilityRole="button" accessibilityLabel="Cerrar aviso" onPress={onDismiss} style={styles.cardClose}>
               <Icon name="x" size={16} color={colors.mute} />
             </Press>
           </View>
@@ -95,12 +99,13 @@ export function NudgeCard({ nudge, onAction, onDismiss, variant = 'banner' }: Nu
 }
 
 const styles = StyleSheet.create({
-  // Sombra fuera del recorte: la tarjeta recorta su degradado, y la sombra va en el contenedor exterior.
+  // La sombra va fuera del recorte del degradado: el contenedor exterior la lleva.
   cardShadow: {
     borderRadius: 28,
-    shadowColor: '#000000',
+    // shadow-2xl: su color lo fija index.css (rgb(20 12 2 / 0.7)); desenfoque 50 → radio 25 aprox.
+    shadowColor: 'rgb(20, 12, 2)',
     shadowOffset: { width: 0, height: 25 },
-    shadowOpacity: 0.25,
+    shadowOpacity: 0.7,
     shadowRadius: 25,
     elevation: 12,
   },
@@ -157,10 +162,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'flex-start',
     gap: 12,
+    // shadow-lg de Tailwind: 0 10px 15px -3px rgb(0 0 0 / 0.1)
     shadowColor: '#000000',
     shadowOffset: { width: 0, height: 10 },
     shadowOpacity: 0.1,
-    shadowRadius: 15,
+    shadowRadius: 7.5,
     elevation: 4,
   },
   bannerIcon: {
@@ -173,7 +179,7 @@ const styles = StyleSheet.create({
     flexShrink: 0,
   },
   bannerText: { flex: 1, minWidth: 0, paddingTop: 2 },
-  bannerMessage: { fontFamily: 'Inter-400', fontSize: 13, lineHeight: 17.9, color: alpha(colors.ink, 0.9) },
+  bannerMessage: { fontFamily: 'Inter-400', fontSize: 13, lineHeight: 17.875, color: alpha(colors.ink, 0.9) },
   bannerAction: {
     marginTop: 10,
     minHeight: 40,
