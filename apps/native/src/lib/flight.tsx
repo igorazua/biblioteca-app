@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useMemo, useRef, useState, type ReactNode, type RefObject, type ComponentRef } from 'react'
+import { createContext, useCallback, useContext, useMemo, useRef, useState, type ReactNode, type RefObject } from 'react'
 import { StyleSheet, useWindowDimensions, View } from 'react-native'
 import { router } from 'expo-router'
 import Animated, { useAnimatedStyle, useReducedMotion, useSharedValue, withSpring, type SharedValue } from 'react-native-reanimated'
@@ -35,8 +35,8 @@ interface FlightCtx {
   land: (id: string, to: Rect) => void
   /** Abre la ficha de `item` con el póster volando desde el hueco medido `from`. Sin vuelo si reducir movimiento está activo. */
   openFrom: (item: Item, from: Rect, radius?: number) => void
-  /** Mide `ref` en la ventana y abre la ficha con vuelo. Si la medida falla, abre sin vuelo. */
-  openFromRef: (item: Item, ref: RefObject<ComponentRef<typeof View> | null>, radius?: number) => void
+  /** Mide `ref` (cualquier ref a un View) en la ventana y abre la ficha con vuelo. Si la medida falla, abre sin vuelo. */
+  openFromRef: (item: Item, ref: RefObject<unknown>, radius?: number) => void
 }
 
 const Ctx = createContext<FlightCtx>({ activeId: null, reduceMotion: false, start: () => {}, land: () => {}, openFrom: () => {}, openFromRef: () => {} })
@@ -96,9 +96,9 @@ export function FlightProvider({ children }: { children: ReactNode }) {
     [start],
   )
   const openFromRef = useCallback(
-    (item: Item, ref: RefObject<ComponentRef<typeof View> | null>, radius = 10) => {
-      const node = ref.current
-      if (!node) {
+    (item: Item, ref: RefObject<unknown>, radius = 10) => {
+      const node = ref.current as { measureInWindow?: (cb: (x: number, y: number, w: number, h: number) => void) => void } | null
+      if (!node?.measureInWindow) {
         router.push({ pathname: '/i/[id]', params: { id: item.id } })
         return
       }
