@@ -89,7 +89,11 @@ export function FilmStrip({ ids, shelf }: { ids: string[]; shelf: ShelfType }) {
       <View style={{ flexDirection: 'row', gap: 8, paddingHorizontal: 8, alignItems: 'center', height: 96, overflow: 'hidden' }}>
         {frames.map((it, i) =>
           it ? (
-            <Poster key={it.id} item={it} showTitle={false} style={{ height: 96, aspectRatio: posterAspect(it), borderRadius: 4, opacity: 0.8 }} />
+            // la clave lleva el índice: una obra puede repetirse en el carrete; la opacidad va en un envoltorio porque
+            // `Poster` es un componente animado y Reanimated avisa de que su `opacity` la pisa la animación de entrada
+            <View key={`${it.id}-${i}`} style={{ opacity: 0.8 }}>
+              <Poster item={it} showTitle={false} style={{ height: 96, aspectRatio: posterAspect(it), borderRadius: 4 }} />
+            </View>
           ) : (
             <View
               key={'icono-' + i}
