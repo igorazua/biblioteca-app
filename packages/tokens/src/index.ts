@@ -6,12 +6,14 @@
 // ── Colores ───────────────────────────────────────────────────────────────────────────────────────
 // Equivalen a --color-* de @theme. `accent-ink` se escribe accentInk (no hay guiones en las claves).
 export const colors = {
-  bg: '#100e0c',
-  surface: '#1a1816',
-  surface2: '#25221f',
-  line: '#2c2824',
+  // D30 (11/11/2026): fondo, superficies, bordes y texto secundario más claros que la PWA (#100e0c, #1a1816, #25221f,
+  // #2c2824, #a39d92). En el móvil todo se veía negro y las tarjetas no se distinguían del fondo.
+  bg: '#171411',
+  surface: '#221e1a',
+  surface2: '#2d2823',
+  line: '#3a342d',
   ink: '#f4efe6',
-  mute: '#a39d92',
+  mute: '#b2ab9f',
   accent: '#f2b04a',
   accentInk: '#100e0c',
   secundario: '#d9714e',

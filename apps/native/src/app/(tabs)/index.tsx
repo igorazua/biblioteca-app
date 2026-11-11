@@ -14,7 +14,8 @@ import { TitleBar } from '../../components/library/LibraryParts'
 import { VoteSheet } from '../../components/library/VoteSheet'
 import { useCatalogTick } from '../../components/library/shelfMeta'
 import { colors, tx } from '../../theme'
-import { BUILT, isBuiltRoute } from '../../lib/phase'
+import { BUILT, isBuiltRoute, nudgeActionLabel } from '../../lib/phase'
+import { LoginSheet } from '../../components/auth/LoginSheet'
 
 
 /**
@@ -41,6 +42,7 @@ export default function Biblioteca() {
   const [voting, setVoting] = useState(false)
   const [adding, setAdding] = useState<{ shelf?: ShelfType } | null>(null)
   const [toast, setToast] = useState<string | null>(null)
+  const [login, setLogin] = useState(false)
   const [sessionDismissed, setSessionDismissed] = useState(false)
   const [flags, setFlags] = useState({ imported: false, decided: false })
 
@@ -85,6 +87,7 @@ export default function Biblioteca() {
   const onNudgeAction = () => {
     if (!nudge) return
     track('nudge_tap', { itemId: nudge.id, data: { location: 'library' } })
+    if (nudge.actionType === 'login') return setLogin(true) // la PWA iba a /perfil para entrar con Google; aquí se entra sin salir
     const route = nudge.actionType === 'navigate' ? nudge.targetRoute : '/perfil'
     if (route) router.navigate(route as never)
   }
@@ -122,7 +125,7 @@ export default function Biblioteca() {
 
       {nudge && (
         <View style={{ marginBottom: 16 }}>
-          <NudgeCard nudge={{ message: nudge.message, actionLabel: nudge.actionLabel }} onAction={onNudgeAction} onDismiss={onNudgeDismiss} />
+          <NudgeCard nudge={{ message: nudge.message, actionLabel: nudgeActionLabel(nudge) }} onAction={onNudgeAction} onDismiss={onNudgeDismiss} />
         </View>
       )}
 
@@ -173,6 +176,7 @@ export default function Biblioteca() {
         />
       )}
       {toast && <Toast key={toast} message={toast} onDone={() => setToast(null)} />}
+      {login && <LoginSheet onClose={() => setLogin(false)} onDone={() => setLogin(false)} />}
       {voting && <VoteSheet votes={votes} onToggle={toggleVote} onClose={() => setVoting(false)} />}
     </ScrollView>
   )

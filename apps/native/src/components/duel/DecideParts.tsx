@@ -40,7 +40,7 @@ export function Fade({ dir, stops }: { dir: 'right' | 'up'; stops: [number, stri
   )
 }
 
-const BG = '#100e0c'
+const BG = '#171411'
 
 /** Tres portadas en rejilla de tres columnas con 1 pt de separación. */
 function PosterStrip({ items, opacity }: { items: Item[]; opacity: number }) {

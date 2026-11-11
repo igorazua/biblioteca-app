@@ -108,7 +108,7 @@ export function DiscoverHub({ entries, catalogVersion, onPick }: { entries: Reco
             </View>
             <AppText style={{ fontFamily: 'Inter-700', fontSize: 16, lineHeight: 20, color: colors.ink }}>{SHELF_LABEL[s].plural}</AppText>
 
-            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 12 }}>
+            <View style={{ flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', columnGap: 8, rowGap: 2, marginTop: 12 }}>
               <AppText style={{ fontFamily: 'Inter-500', fontSize: 12, lineHeight: 16, color: colors.mute, fontVariant: ['tabular-nums'] }}>{`${count} por ver`}</AppText>
               <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <AppText style={{ fontFamily: 'Inter-600', fontSize: 11, lineHeight: 16, color: colors.accent }}>Swipear</AppText>

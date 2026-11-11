@@ -44,3 +44,9 @@
 - **D27. Catálogo en la fase 1:** los archivos ya generados (`catalog-index.json`, `shelves/*`, `engine/*`, `anchors/*`) se copian a `apps/native/assets/data` con un script y se cargan como assets, no dentro del JS. Es lo más cercano a la PWA, funciona sin red y no pide cambios en el servidor. Pasar más al servidor (`docs/ARQUITECTURA.md`) se decide cuando el cerebro corra allí.
 - **D28. Fase 1 sin compilación propia:** Expo SDK 58 y solo módulos que funcionan en Expo Go, con `AsyncStorage` en lugar de MMKV. Igor la abre con `npx expo start` por la red local. MMKV, Google y Apple llegan en la fase 3 con un dev build. **Ningún agente ejecuta `eas build`.**
 - **D29. Nombre y bundle ID provisionales:** «Biblioteca», `app.biblioteca.dev`. Cambiarlos sigue siendo posible hasta publicar.
+
+## Tras la primera prueba en el móvil (11/11/2026)
+
+- **D30. Paleta más clara que la PWA:** fondo `#171411`, `surface` `#221e1a`, `surface2` `#2d2823`, `line` `#3a342d` y `mute` `#b2ab9f` (antes `#100e0c`, `#1a1816`, `#25221f`, `#2c2824` y `#a39d92`). Igor veía todo negro y las tarjetas no se distinguían del fondo. Se lleva a la PWA si la aprueba.
+- **D31. Aviso de iniciar sesión:** dice «Entrar con tu correo» y abre `LoginSheet` sin salir de la pantalla. La PWA iba a Perfil para entrar con Google, que aún no existe en nativo.
+- **D32. Elegir en un duelo:** un borde que recorre la carta elegida (como la serpiente) y un destello al cerrarse para confirmar. Cartas del duelo más centradas en vertical. Petición de Igor.

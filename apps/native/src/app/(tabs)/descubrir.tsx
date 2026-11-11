@@ -33,7 +33,8 @@ import { loadShelves } from '../../data/loadData'
 import { useFlight } from '../../lib/flight'
 import { posterOf } from '../../lib/item'
 import { kv } from '../../lib/storage'
-import { BUILT } from '../../lib/phase'
+import { BUILT, nudgeActionLabel } from '../../lib/phase'
+import { LoginSheet } from '../../components/auth/LoginSheet'
 import { track, useAuth, useCatalog, useEvents, useFriends, useRanks, useStore } from '../../store'
 import { colors, tx } from '../../theme'
 
@@ -92,6 +93,7 @@ export default function Descubrir() {
 
   const [rating, setRating] = useState<string | null>(null)
   const [toast, setToast] = useState<string | null>(null)
+  const [login, setLogin] = useState(false)
   const [deckNudge, setDeckNudge] = useState<Nudge | null>(null)
   const deckRef = useRef<DeckHandle>(null)
 
@@ -317,10 +319,11 @@ export default function Descubrir() {
             <View style={{ width: '100%' }}>
               <NudgeCard
                 variant="card"
-                nudge={deckNudge}
+                nudge={{ ...deckNudge, actionLabel: nudgeActionLabel(deckNudge) }}
                 onAction={() => {
                   track('nudge_tap', { itemId: deckNudge.id, data: { location: 'deck' } })
-                  if (deckNudge.actionType === 'login' || deckNudge.actionType === 'invite') router.navigate('/perfil') // Discover.tsx:508-510
+                  if (deckNudge.actionType === 'login') setLogin(true) // la PWA iba a /perfil para entrar con Google; aquí se entra sin salir del mazo
+                  else if (deckNudge.actionType === 'invite') router.navigate('/perfil') // Discover.tsx:510
                   else if (deckNudge.targetRoute) router.navigate(deckNudge.targetRoute as never)
                   setDeckNudge(null)
                 }}
@@ -380,6 +383,7 @@ export default function Descubrir() {
         />
       )}
       {toast && <Toast key={toast} message={toast} ms={1500} onDone={() => setToast(null)} />}
+      {login && <LoginSheet onClose={() => setLogin(false)} onDone={() => setLogin(false)} />}
     </View>
   )
 }

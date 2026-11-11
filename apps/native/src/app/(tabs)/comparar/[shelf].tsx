@@ -460,7 +460,7 @@ export default function CompareSession() {
                   key={flash.n}
                   entering={FadeIn.duration(140)}
                   exiting={FadeOut.duration(140)}
-                  style={{ gap: 4, borderRadius: 12, backgroundColor: 'rgba(16,14,12,0.8)', paddingHorizontal: 12, paddingVertical: 8, maxWidth: '100%' }}
+                  style={{ gap: 4, borderRadius: 12, backgroundColor: 'rgba(23,20,17,0.8)', paddingHorizontal: 12, paddingVertical: 8, maxWidth: '100%' }}
                 >
                   <FlashName id={flash.up} up />
                   <FlashName id={flash.down} />

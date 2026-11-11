@@ -7,7 +7,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
-    "backgroundColor": "#100e0c",
+    "backgroundColor": "#171411",
     "ios": {
       "bundleIdentifier": "app.biblioteca.dev",
       "supportsTablet": false
@@ -15,7 +15,7 @@
     "android": {
       "package": "app.biblioteca.dev",
       "adaptiveIcon": {
-        "backgroundColor": "#100e0c",
+        "backgroundColor": "#171411",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
@@ -32,7 +32,7 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#100e0c",
+          "backgroundColor": "#171411",
           "image": "./assets/splash-icon.png",
           "imageWidth": 200
         }

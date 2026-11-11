@@ -32,3 +32,8 @@ export function isBuiltRoute(route: string): boolean {
   for (const k of ['importar', 'ajustes', 'conectar', 'metricas', 'onboarding'] as const) if (path.startsWith(`/${k}`)) return BUILT[k]
   return true
 }
+
+/** Texto del botón de un aviso: el de iniciar sesión dice «Entrar con Google» en core, y Google aún no está (BUILT_AUTH). */
+export function nudgeActionLabel(n: { actionType: string; actionLabel: string }): string {
+  return n.actionType === 'login' && !BUILT_AUTH.google ? 'Entrar con tu correo' : n.actionLabel
+}
