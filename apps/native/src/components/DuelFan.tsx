@@ -1,7 +1,10 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { memo, useEffect, useMemo, useState, type ReactNode } from 'react'
 import { StyleSheet, View, type LayoutChangeEvent } from 'react-native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
+import Svg, { Rect } from 'react-native-svg'
 import Animated, {
+  useAnimatedProps,
+  useAnimatedReaction,
   useAnimatedStyle,
   useDerivedValue,
   useReducedMotion,
@@ -43,6 +46,12 @@ const DECIDE_DELAY = 650 // Decidir (DuelVariants.tsx:67)
 const REDUCED_DELAY = 600 // pickDelay con movimiento reducido (DuelVariants.tsx:63)
 const LEARNED_KEY = 'biblioteca-duel-learned'
 const CARD_RADIUS = 18
+const RIM_W = 3 // grosor final del borde, en pt de pantalla
+const DRAW_SHARE = 0.55 // parte del tiempo de confirmacion que tarda en cerrarse el borde; el resto es el destello
+const AnimatedRect = Animated.createAnimatedComponent(Rect)
+
+/** Espera tras elegir hasta pasar al siguiente duelo; el borde y el destello caben dentro. */
+const pickDelay = (fast: boolean, reduce: boolean) => (fast ? FAST_DELAY : reduce ? REDUCED_DELAY : DECIDE_DELAY)
 
 /** Ya vio la pista del abanico o ya eligió alguna vez (DuelVariants.tsx isDuelLearned / markDuelLearned). */
 export async function isDuelLearned(): Promise<boolean> {
@@ -102,7 +111,7 @@ export function fanLayout(w: number, h: number, left?: Side, right?: Side, squar
     const fitB = duelFitSize(rr, w, h, FIT_MARGIN)
     const maxCardH = Math.max(sizeA.h, sizeB.h)
     const blockH = maxCardH + gap + titleH
-    const top = padTop + Math.max(0, (availH - blockH) / 2)
+    const top = Math.max(padTop, (h - blockH) / 2) // centrado en todo el alto: la pista inferior no esta dentro del abanico
     return {
       w,
       h,
@@ -121,7 +130,7 @@ export function fanLayout(w: number, h: number, left?: Side, right?: Side, squar
   const cardW = Math.min(w * 0.48, (availH - titleH - gap) / ratio)
   const cardH = cardW * ratio
   const blockH = cardH + gap + titleH
-  const top = padTop + Math.max(0, (availH - blockH) / 2)
+  const top = Math.max(padTop, (h - blockH) / 2)
   const fitW = Math.min(w - 2 * FIT_MARGIN, (h - 2 * FIT_MARGIN) / ratio)
   const std: CardLayout = { w: cardW, h: cardH, fitW, fitH: fitW * ratio }
   return { w, h, cy: top + cardH / 2, titleTop: top + cardH + gap, cx: { a: w * 0.3, b: w * 0.7 }, cards: { a: std, b: std } }
@@ -157,7 +166,15 @@ export function DuelFan({
     const { width, height } = e.nativeEvent.layout
     setSize((o) => (o.w === width && o.h === height ? o : { w: width, h: height }))
   }
-  const L = fanLayout(size.w, size.h, left, right, square, fit)
+  // El reparto solo cambia con la medida y el par: no se recalcula en cada render (las cartas llevan memo)
+  const L = useMemo(
+    () => fanLayout(size.w, size.h, left, right, square, fit),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [size.w, size.h, left.key, right.key, left.ratio, right.ratio, left.type, right.type, square, fit],
+  )
+  const delay = pickDelay(fast, reduce)
+  const drawMs = Math.round(delay * DRAW_SHARE)
+  const flashMs = Math.max(120, delay - drawMs - 40)
   const W = size.w
 
   const x = useSharedValue(0)
@@ -195,7 +212,7 @@ export function DuelFan({
     onPick?.(w)
     haptic('tick') // D22: de selección al elegir en un duelo
     void AsyncStorage.setItem(LEARNED_KEY, 'true')
-    setTimeout(() => onChoose(w), fast ? FAST_DELAY : reduce ? REDUCED_DELAY : DECIDE_DELAY)
+    setTimeout(() => onChoose(w), delay)
   }
 
   const choose = (w: 'a' | 'b') => {
@@ -270,11 +287,11 @@ export function DuelFan({
           <>
             <Backdrop g={gA} />
             <Backdrop g={gB} />
-            <FanCard side={left} which="a" color={DUEL_LEFT} g={gA} og={gB} L={L} picked={picked} />
-            <FanCard side={right} which="b" color={DUEL_RIGHT} g={gB} og={gA} L={L} picked={picked} />
+            <FanCard side={left} which="a" color={DUEL_LEFT} g={gA} og={gB} L={L} picked={picked} drawMs={drawMs} flashMs={flashMs} reduce={reduce} />
+            <FanCard side={right} which="b" color={DUEL_RIGHT} g={gB} og={gA} L={L} picked={picked} drawMs={drawMs} flashMs={flashMs} reduce={reduce} />
             {(['a', 'b'] as const).map((k) => {
               const s = k === 'a' ? left : right
-              const tw = L.w * 0.4
+              const tw = L.w * 0.4 - 12 // cada lado tiene su ancho y quedan 12 pt entre los dos
               return (
                 <Animated.View key={k} pointerEvents="none" style={[{ position: 'absolute', left: L.cx[k] - tw / 2, width: tw, top: L.titleTop, alignItems: 'center' }, uiOp]}>
                   <AppText numberOfLines={2} style={{ fontFamily: 'Fraunces72-600', fontSize: 16, lineHeight: 20, color: colors.ink, textAlign: 'center' }}>
@@ -296,17 +313,65 @@ export function DuelFan({
 }
 
 /** Fondo liso que tapa la mesa mientras la elegida crece (sin desenfoques). */
-function Backdrop({ g }: { g: SharedValue<number> }) {
+const Backdrop = memo(function Backdrop({ g }: { g: SharedValue<number> }) {
   const anim = useAnimatedStyle(() => ({ opacity: clamp01(g.value) * 0.95 }))
   return <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, { backgroundColor: colors.bg }, anim]} />
+})
+
+interface FanCardProps {
+  side: Side
+  which: 'a' | 'b'
+  color: string
+  g: SharedValue<number>
+  og: SharedValue<number>
+  L: FanLayout
+  picked: SharedValue<number>
+  drawMs: number
+  flashMs: number
+  reduce: boolean
 }
 
-function FanCard({ side, which, color, g, og, L, picked }: { side: Side; which: 'a' | 'b'; color: string; g: SharedValue<number>; og: SharedValue<number>; L: FanLayout; picked: SharedValue<number> }) {
+const FanCard = memo(function FanCard({ side, which, color, g, og, L, picked, drawMs, flashMs, reduce }: FanCardProps) {
   const isLeft = which === 'a'
+  const mine = isLeft ? 1 : 2
   const card = L.cards[which]
   const rot0 = isLeft ? -6 : 6
   const cx = L.cx[which]
   const grown = card.fitW / card.w
+
+  // Borde que recorre el contorno (D32). Se dibuja a tamaño de carta y crece con ella, así que el trazo se compensa con la escala final.
+  const sw = RIM_W / grown
+  const rw = card.w - sw
+  const rh = card.h - sw
+  const rr = Math.max(0, CARD_RADIUS - sw / 2)
+  const perimeter = 2 * (rw + rh) - 8 * rr + 2 * Math.PI * rr
+  const rim = useSharedValue(0) // 0 sin dibujar ... 1 contorno cerrado
+  const glow = useSharedValue(0) // destello de confirmación
+
+  useAnimatedReaction(
+    () => picked.value === mine,
+    (now, prev) => {
+      if (!now || prev) return
+      if (reduce) {
+        rim.value = 1 // borde completo al instante y sin destello
+        scheduleOnRN(haptic, 'success')
+        return
+      }
+      rim.value = withTiming(1, { duration: drawMs, easing: easeInOut }, (done) => {
+        if (!done) return
+        scheduleOnRN(haptic, 'success') // el borde se cierra: vibración de éxito
+        glow.value = withSequence(
+          withTiming(1, { duration: Math.round(flashMs * 0.35), easing: easeOut }),
+          withTiming(0, { duration: Math.round(flashMs * 0.65), easing: easeInOut }),
+        )
+      })
+    },
+    [reduce, drawMs, flashMs, mine],
+  )
+
+  const rimProps = useAnimatedProps(() => ({ strokeDashoffset: perimeter * (1 - rim.value) }))
+  const halo = useAnimatedStyle(() => ({ opacity: glow.value * 0.55, transform: [{ scale: 1 + glow.value * 0.04 }] }))
+  const flare = useAnimatedStyle(() => ({ opacity: glow.value * 0.28 }))
 
   const anim = useAnimatedStyle(() => {
     const gv = g.value
@@ -324,7 +389,6 @@ function FanCard({ side, which, color, g, og, L, picked }: { side: Side; which: 
       transform: [{ translateX: tx }, { translateY: ty }, { rotate: `${rot0 * (1 - gv)}deg` }, { scale }],
     }
   })
-  const lit = useAnimatedStyle(() => ({ opacity: withTiming(picked.value === (isLeft ? 1 : 2) ? 1 : 0, { duration: 120 }) }))
 
   return (
     <Animated.View
@@ -344,17 +408,30 @@ function FanCard({ side, which, color, g, og, L, picked }: { side: Side; which: 
         anim,
       ]}
     >
-      {/* póster a sangre, sin marco ni relleno difuminado alrededor */}
-      <View style={{ ...(StyleSheet.absoluteFill as object), borderRadius: CARD_RADIUS, overflow: 'hidden' }}>{side.bg}</View>
-      {/* borde iluminado de la elegida: la confirmación del duelo (el resplandor solo se ve en iOS) */}
+      {/* resplandor del acento que asoma por detras de la carta al cerrarse el borde */}
       <Animated.View
         pointerEvents="none"
-        style={[
-          StyleSheet.absoluteFill,
-          { borderRadius: CARD_RADIUS, borderWidth: 2, borderColor: color, shadowColor: color, shadowOpacity: 0.67, shadowRadius: 5, shadowOffset: { width: 0, height: 0 } },
-          lit,
-        ]}
+        style={[{ position: 'absolute', left: -10, right: -10, top: -10, bottom: -10, borderRadius: CARD_RADIUS + 10, backgroundColor: color }, halo]}
       />
+      {/* poster a sangre, sin marco ni relleno difuminado alrededor */}
+      <View style={{ ...(StyleSheet.absoluteFill as object), borderRadius: CARD_RADIUS, overflow: 'hidden' }}>{side.bg}</View>
+      {/* velo de luz del acento sobre el poster en el destello */}
+      <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, { borderRadius: CARD_RADIUS, backgroundColor: color }, flare]} />
+      <Svg width={card.w} height={card.h} pointerEvents="none" style={StyleSheet.absoluteFill}>
+        <AnimatedRect
+          x={sw / 2}
+          y={sw / 2}
+          width={rw}
+          height={rh}
+          rx={rr}
+          ry={rr}
+          fill="none"
+          stroke={color}
+          strokeWidth={sw}
+          strokeDasharray={[perimeter, perimeter]}
+          animatedProps={rimProps}
+        />
+      </Svg>
     </Animated.View>
   )
-}
+})
