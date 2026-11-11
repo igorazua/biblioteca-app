@@ -25,10 +25,10 @@ export function TabBar({ state, descriptors, emitter, navigateToTab }: BottomTab
   const insets = useSafeAreaInsets()
   const Bg = Platform.OS === 'ios' ? (
     <BlurView intensity={45} tint="dark" style={StyleSheet.absoluteFill}>
-      <View style={[StyleSheet.absoluteFill, { backgroundColor: 'rgba(23,20,17,0.78)' }]} />
+      <View style={[StyleSheet.absoluteFill, { backgroundColor: 'rgba(30,27,23,0.78)' }]} />
     </BlurView>
   ) : (
-    <View style={[StyleSheet.absoluteFill, { backgroundColor: 'rgba(23,20,17,0.96)' }]} />
+    <View style={[StyleSheet.absoluteFill, { backgroundColor: 'rgba(30,27,23,0.96)' }]} />
   )
   return (
     <View

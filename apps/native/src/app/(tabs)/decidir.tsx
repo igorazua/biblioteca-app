@@ -700,7 +700,7 @@ export default function Decidir() {
           style={{ flex: 1, minHeight: 0, borderRadius: 16, overflow: 'hidden', borderWidth: 1, borderColor: colors.line, backgroundColor: colors.surface }}
         >
           <Poster item={currentItem} showTitle={false} noBlur style={StyleSheet.absoluteFill} />
-          <Fade dir="up" stops={[[0, '#171411', 1], [0.5, '#171411', 0.4], [1, '#171411', 0]]} />
+          <Fade dir="up" stops={[[0, '#1e1b17', 1], [0.5, '#1e1b17', 0.4], [1, '#1e1b17', 0]]} />
           <View style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: 20 }}>
             <AppText style={tx('label')}>
               {typeName(currentItem.type)} · {currentItem.year} · {itemFacts(currentItem)}

@@ -47,6 +47,8 @@
 
 ## Tras la primera prueba en el móvil (11/11/2026)
 
-- **D30. Paleta más clara que la PWA:** fondo `#171411`, `surface` `#221e1a`, `surface2` `#2d2823`, `line` `#3a342d` y `mute` `#b2ab9f` (antes `#100e0c`, `#1a1816`, `#25221f`, `#2c2824` y `#a39d92`). Igor veía todo negro y las tarjetas no se distinguían del fondo. Se lleva a la PWA si la aprueba.
+- **D30. Paleta más clara que la PWA:** fondo `#1e1b17`, `surface` `#2a2620`, `surface2` `#36312a`, `line` `#4a433b` y `mute` `#bdb6a9` (segunda subida, 11/11) (antes `#100e0c`, `#1a1816`, `#25221f`, `#2c2824` y `#a39d92`). Igor veía todo negro y las tarjetas no se distinguían del fondo. Se lleva a la PWA si la aprueba.
 - **D31. Aviso de iniciar sesión:** dice «Entrar con tu correo» y abre `LoginSheet` sin salir de la pantalla. La PWA iba a Perfil para entrar con Google, que aún no existe en nativo.
 - **D32. Elegir en un duelo:** un borde que recorre la carta elegida (como la serpiente) y un destello al cerrarse para confirmar. Cartas del duelo más centradas en vertical. Petición de Igor.
+- **D33. Borde del duelo ligado al arrastre (sustituye a la animación de D32):** al arrastrar una carta hacia el centro, su borde se va dibujando en proporción al recorrido. Al superar el umbral se completa y le recorre un destello sobre el propio borde, sin halo exterior. El borde es metálico (degradado del acento) y se ajusta exactamente al contorno de la carta. Petición de Igor tras probarlo.
+- **D34. Cabecera de la sesión de duelos:** baja hacia el contenido y el botón de volver pasa abajo a la izquierda, como «Categorías» en Descubrir. «Terminar» se ve más claro y su texto dice lo que hace: ir al resumen de la sesión.
