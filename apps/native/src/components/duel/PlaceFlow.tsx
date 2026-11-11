@@ -16,11 +16,12 @@ import { colors } from '../../theme'
 import { DuelHeader } from './DuelHeader'
 import { SwipePair } from './SwipePair'
 import { sideOf } from './sides'
+import { byGender } from '@biblioteca/core'
 
 /**
  * Colocación por duelos (§13.1): solo al añadir una obra vista a mano. 2-4 duelos (búsqueda binaria dentro de su
  * franja de estrellas, o en toda la estantería si no tiene estrellas). Sin comentario: ya se pidió en la hoja.
- * Si no hay con quién comparar, termina al instante. Al acabar llama a `onDone('Guardada ✓')`.
+ * Si no hay con quién comparar, termina al instante. Al acabar llama a `onDone(byGender(item.type, 'Guardada ✓', 'Guardado ✓'))`.
  * La PWA la pinta en un portal sobre el marco; aquí es un Modal a pantalla completa (atrás de Android = `onDone()` sin msg).
  */
 export function PlaceFlow({ itemId, onDone }: { itemId: string; onDone: (msg?: string) => void }) {
@@ -33,14 +34,14 @@ export function PlaceFlow({ itemId, onDone }: { itemId: string; onDone: (msg?: s
     const base = ranking.filter((x) => x !== itemId)
     const stars = st.entries[itemId]?.stars
     if (base.length < 2) {
-      onDone('Guardada ✓')
+      onDone(byGender(item.type, 'Guardada ✓', 'Guardado ✓'))
       return
     }
     let start = startPlacement(ranking, starsOfEntries(st.entries), itemId, stars ?? undefined)
     start = advancePlacementWithDuels(start, st.duels?.[item.type])
     if (start.done) {
       st.applyRanking(item.type, finishPlacement(start), itemId)
-      onDone('Guardada ✓')
+      onDone(byGender(item.type, 'Guardada ✓', 'Guardado ✓'))
       return
     }
     setP(start)
@@ -63,7 +64,7 @@ export function PlaceFlow({ itemId, onDone }: { itemId: string; onDone: (msg?: s
     next = advancePlacementWithDuels(next, st.duels?.[item.type])
     if (next.done) {
       useStore.getState().applyRanking(item.type, finishPlacement(next), itemId)
-      onDone('Guardada ✓')
+      onDone(byGender(item.type, 'Guardada ✓', 'Guardado ✓'))
     } else setP(next)
   }
 

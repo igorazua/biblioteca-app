@@ -11,6 +11,7 @@ import { Press } from '../../../components/Press'
 import { Button } from '../../../components/ui'
 import { DuelHeader } from '../../../components/duel/DuelHeader'
 import { pctColor, setDuelHandoff, useCompareOverview, useFrozenWhenBlurred } from '../../../components/duel/overview'
+import { byGender } from '@biblioteca/core'
 
 const MAX_POSTERS_ROW = 5
 
@@ -224,7 +225,7 @@ export default function CompareHome() {
                         <AppText style={{ fontFamily: 'Fraunces72-400', fontSize: 18, lineHeight: 18, color: colors.ink }}>{SHELF_LABEL[s].plural}</AppText>
                         <AppText style={[tx('meta'), { fontFamily: 'Inter-600', color: pctColor(o.ordenado), fontVariant: ['tabular-nums'] }]}>{o.ordenado} %</AppText>
                       </View>
-                      <AppText style={tx('meta')}>{o.sinOrdenar > 0 ? `${o.sinOrdenar} ${o.sinOrdenar === 1 ? 'nueva' : 'nuevas'}` : 'todo en su sitio'}</AppText>
+                      <AppText style={tx('meta')}>{o.sinOrdenar > 0 ? `${o.sinOrdenar} ${o.sinOrdenar === 1 ? byGender(s, 'nueva', 'nuevo') : byGender(s, 'nuevas', 'nuevos')}` : 'todo en su sitio'}</AppText>
                     </View>
                     <View style={{ marginTop: 8, height: 2, width: '100%', backgroundColor: colors.surface2, borderRadius: 1, overflow: 'hidden' }}>
                       <View style={{ height: '100%', width: `${pct}%`, borderRadius: 1, backgroundColor: pctColor(o.ordenado) }} />

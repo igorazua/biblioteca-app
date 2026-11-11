@@ -37,6 +37,7 @@ import { BUILT, nudgeActionLabel } from '../../lib/phase'
 import { LoginSheet } from '../../components/auth/LoginSheet'
 import { track, useAuth, useCatalog, useEvents, useFriends, useRanks, useStore } from '../../store'
 import { colors, tx } from '../../theme'
+import { byGender } from '@biblioteca/core'
 
 const LEGEND_UNTIL = 10 // D3: la leyenda se ve hasta que la persona ha hecho 10 gestos
 const GESTURES_KEY = 'biblioteca-deck-gestures' // el contador es de la persona, no de la sesión
@@ -242,9 +243,9 @@ export default function Descubrir() {
     }
 
     if (dir === 'right') {
-      if (settings.rateOnSwipe === false) setToast('Guardada ✓')
+      if (settings.rateOnSwipe === false) setToast(byGender(shelf, 'Guardada ✓', 'Guardado ✓'))
       else setRating(item.id)
-    } else if (dir === 'up') setToast('Guardada en pendientes ✓')
+    } else if (dir === 'up') setToast(byGender(shelf, 'Guardada en pendientes ✓', 'Guardado en pendientes ✓'))
   }
 
   const undo = () => {

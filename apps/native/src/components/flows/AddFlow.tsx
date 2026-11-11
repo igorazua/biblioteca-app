@@ -16,6 +16,7 @@ import { useCatalog, useStore } from '../../store'
 import { alpha, colors, tx } from '../../theme'
 import { PlaceFlow } from '../duel/PlaceFlow'
 import { RatingFlow } from './RatingFlow'
+import { byGender } from '@biblioteca/core'
 
 const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 const STATUS_TXT = {
@@ -250,7 +251,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
                   accessibilityRole="button"
                   onPress={() => {
                     setStatus(it.id, 'pending')
-                    onClose('Guardada en pendientes ✓')
+                    onClose(byGender(it.type, 'Guardada en pendientes ✓', 'Guardado en pendientes ✓'))
                   }}
                   style={{ flex: 1, minHeight: 46, borderRadius: 12, backgroundColor: colors.surface2, borderWidth: 1, borderColor: colors.line, alignItems: 'center', justifyContent: 'center' }}
                 >

@@ -11,6 +11,7 @@ import { Icon } from '../Icon'
 import { Poster } from '../Poster'
 import { Press } from '../Press'
 import { Button, Sheet, StarRating } from '../ui'
+import { byGender } from '@biblioteca/core'
 
 // RatingFlow.tsx de la PWA: hoja de valoración tras marcar una obra como vista, y hoja de comentario de ¡Duelos!.
 // Cerrarla de cualquier forma guarda lo que haya. Las estrellas solo existen aquí, la primera vez (`withStars`).
@@ -105,7 +106,7 @@ export function RatingFlow({ itemId, onDone, withStars }: { itemId: string; onDo
       if (stars && !entry?.ranked) placeProvisional(itemId)
     } else rate(itemId, { comment })
     if (stars || comment) haptic('success')
-    onDone('Guardada ✓')
+    onDone(byGender(getItem(itemId)?.type ?? 'movie', 'Guardada ✓', 'Guardado ✓'))
   }
 
   return (

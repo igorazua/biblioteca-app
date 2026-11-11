@@ -90,7 +90,7 @@ export function CleanupFlow({ shelf, onClose }: CleanupFlowProps) {
       const now = Date.now()
       useStore.setState((s) => ({ entries: { ...s.entries, [item.id]: { ...prevEntry, status: 'pending', reviewedAt: now, updatedAt: now } } }))
       setCounts((c) => ({ ...c, kept: c.kept + 1 }))
-      setToast('Sigue guardada')
+      setToast(label.fem ? 'Sigue guardada' : 'Sigue guardado')
     } else {
       const now = Date.now()
       useStore.setState((s) => ({ entries: { ...s.entries, [item.id]: { ...prevEntry, status: 'dismissed', dismissedAt: now, updatedAt: now } } }))
@@ -219,7 +219,7 @@ export function CleanupFlow({ shelf, onClose }: CleanupFlowProps) {
                     <Icon name="undo" size={20} color={colors.mute} />
                   </Press>
                   {roundBtn(56, colors.stampRed, 'x', 26, 2.6, 'No me interesa', 'left')}
-                  {roundBtn(48, colors.stampBlue, 'bookmark', 22, 2.4, 'La guardo (mantener en pendientes)', 'up')}
+                  {roundBtn(48, colors.stampBlue, 'bookmark', 22, 2.4, `${label.pronounCap} guardo (mantener en pendientes)`, 'up')}
                   {roundBtn(56, colors.stampGreen, 'check', 26, 2.8, `¡${label.stamp}! (marcar como ${label.seenPastPart})`, 'right')}
                   <View style={{ width: 44 }} />
                 </View>

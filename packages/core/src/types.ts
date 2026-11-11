@@ -159,6 +159,8 @@ export interface Settings {
 }
 
 export interface ShelfTerms {
+  /** Género gramatical de la palabra de la estantería (peli, serie, canción: femenino) */
+  fem: boolean
   plural: string
   singular: string
   seen: string
@@ -177,6 +179,7 @@ export interface ShelfTerms {
 
 export const SHELF_LABEL: Record<ShelfType, ShelfTerms> = {
   movie: {
+    fem: true,
     plural: 'Pelis',
     singular: 'peli',
     seen: 'vistas',
@@ -193,6 +196,7 @@ export const SHELF_LABEL: Record<ShelfType, ShelfTerms> = {
     pendingPlural: 'la tienen pendiente',
   },
   series: {
+    fem: true,
     plural: 'Series',
     singular: 'serie',
     seen: 'vistas',
@@ -209,6 +213,7 @@ export const SHELF_LABEL: Record<ShelfType, ShelfTerms> = {
     pendingPlural: 'la tienen pendiente',
   },
   book: {
+    fem: false,
     plural: 'Libros',
     singular: 'libro',
     seen: 'leídos',
@@ -225,6 +230,7 @@ export const SHELF_LABEL: Record<ShelfType, ShelfTerms> = {
     pendingPlural: 'lo tienen pendiente',
   },
   artist: {
+    fem: false,
     plural: 'Artistas',
     singular: 'artista',
     seen: 'escuchados',
@@ -241,6 +247,7 @@ export const SHELF_LABEL: Record<ShelfType, ShelfTerms> = {
     pendingPlural: 'lo tienen pendiente',
   },
   boardgame: {
+    fem: false,
     plural: 'Juegos de mesa',
     singular: 'juego',
     seen: 'jugados',
@@ -257,6 +264,7 @@ export const SHELF_LABEL: Record<ShelfType, ShelfTerms> = {
     pendingPlural: 'lo tienen pendiente',
   },
   song: {
+    fem: true,
     plural: 'Canciones',
     singular: 'canción',
     seen: 'escuchadas',
@@ -288,3 +296,6 @@ export interface DeckLearnShelf {
 
 export type DeckLearn = Record<ShelfType, DeckLearnShelf>
 
+
+/** Elige la forma femenina o masculina según la estantería: «Te propongo esta» (peli) / «este» (libro). */
+export const byGender = (type: ShelfType, fem: string, masc: string): string => (SHELF_LABEL[type].fem ? fem : masc)

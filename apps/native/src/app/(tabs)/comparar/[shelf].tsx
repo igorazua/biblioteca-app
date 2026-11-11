@@ -31,6 +31,7 @@ import { DuelHeader } from '../../../components/duel/DuelHeader'
 import { takeDuelHandoff } from '../../../components/duel/overview'
 import { SwipePair } from '../../../components/duel/SwipePair'
 import { sideOf } from '../../../components/duel/sides'
+import { byGender } from '@biblioteca/core'
 
 interface Snapshot {
   entries: Record<string, UserEntry>
@@ -430,7 +431,7 @@ export default function CompareSession() {
         {summary && moves ? (
           <Animated.View entering={FadeIn.duration(260)} style={{ flex: 1, minHeight: 0 }}>
             <ScrollView style={{ flex: 1 }} contentContainerStyle={{ gap: 16 }}>
-              <MoveList title="Nuevas en tu ranking" type="added" rows={moves.added} />
+              <MoveList title={byGender(shelf, 'Nuevas en tu ranking', 'Nuevos en tu ranking')} type="added" rows={moves.added} />
               <MoveList title="Han subido" type="up" rows={moves.up} />
               <MoveList title="Han bajado" type="down" rows={moves.down} />
               <MoveList title="Confirmadas en su puesto" type="kept" rows={moves.kept} />
@@ -478,7 +479,7 @@ export default function CompareSession() {
           </View>
         ) : emptyState === 'complete' ? (
           <View style={styles.empty}>
-            <AppText style={[tx('title'), { color: colors.ink, textAlign: 'center' }]}>{`Has comparado todas tus ${plural.toLowerCase()} entre sí`}</AppText>
+            <AppText style={[tx('title'), { color: colors.ink, textAlign: 'center' }]}>{`Has comparado ${byGender(shelf, 'todas', 'todos')} tus ${plural.toLowerCase()} entre sí`}</AppText>
             <AppText style={[tx('body'), { color: colors.mute, textAlign: 'center', maxWidth: 384 }]}>Cuando marques más, seguimos ordenando.</AppText>
             <View style={{ marginTop: 16, gap: 10, width: '100%', maxWidth: 320 }}>
               <Button variant="primary" onPress={goRanking}>

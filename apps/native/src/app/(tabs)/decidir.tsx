@@ -688,7 +688,7 @@ export default function Decidir() {
     )
   } else if (phase === 'propose' && currentItem) {
     const reasonsText = proposal?.reasons.join(' · ') || 'Sugerencia basada en tus respuestas'
-    header = <DuelHeader label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`} title="Te propongo esta" action={resetBtn} />
+    header = <DuelHeader label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`} title={`Te propongo ${shelfTerms.fem ? 'esta' : 'este'}`} action={resetBtn} />
     body = (
       <View style={{ flex: 1, minHeight: 0, paddingHorizontal: 20, paddingBottom: 24 }}>
         <View ref={cardRef} collapsable={false} style={{ flex: 1, minHeight: 0 }}>
@@ -715,7 +715,7 @@ export default function Decidir() {
         </View>
         {!!proposal?.alternatives?.length && (
           <Press onPress={() => setShowAlts(true)} accessibilityRole="button" style={{ alignSelf: 'center', marginTop: 12, minHeight: 36, paddingHorizontal: 12, flexDirection: 'row', alignItems: 'center', gap: 4 }}>
-            <AppText style={[tx('meta'), { fontFamily: 'Inter-500', color: colors.accent }]}>Ver otras {proposal.alternatives.length} candidatas</AppText>
+            <AppText style={[tx('meta'), { fontFamily: 'Inter-500', color: colors.accent }]}>Ver {shelfTerms.fem ? 'otras' : 'otros'} {proposal.alternatives.length} {shelfTerms.fem ? 'candidatas' : 'candidatos'}</AppText>
             <Icon name="chevron" size={14} color={colors.accent} />
           </Press>
         )}
@@ -724,7 +724,7 @@ export default function Decidir() {
             Seguir buscando
           </Button>
           <Button variant="primary" onPress={handleAccept} style={{ flex: 1.2 }}>
-            ¡Esta!
+            {shelfTerms.fem ? '¡Esta!' : '¡Este!'}
           </Button>
         </View>
       </View>
@@ -765,7 +765,7 @@ export default function Decidir() {
       </View>
     )
   } else if (phase === 'none') {
-    header = <DuelHeader label="DECIDIR" title="Se acabaron las candidatas" subtitle="Prueba con otras respuestas, o guarda más pendientes en Descubrir." />
+    header = <DuelHeader label="DECIDIR" title={shelfTerms.fem ? 'Se acabaron las candidatas' : 'Se acabaron los candidatos'} subtitle="Prueba con otras respuestas, o guarda más pendientes en Descubrir." />
     body = (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 24, gap: 12 }}>
         <Button variant="primary" onPress={reset}>
@@ -796,9 +796,9 @@ export default function Decidir() {
       )}
       {toast && <Toast key={toast} message={toast} onDone={() => setToast(null)} />}
       {showAlts && proposal?.alternatives && (
-        <Sheet label="Otras candidatas" onClose={() => setShowAlts(false)} height="70%">
-          <AppText style={[tx('title'), { color: colors.ink }]}>Otras candidatas</AppText>
-          <AppText style={[tx('meta'), { marginBottom: 12 }]}>Por orden, según lo que has elegido. Toca una para que sea la propuesta.</AppText>
+        <Sheet label={shelfTerms.fem ? 'Otras candidatas' : 'Otros candidatos'} onClose={() => setShowAlts(false)} height="70%">
+          <AppText style={[tx('title'), { color: colors.ink }]}>{shelfTerms.fem ? 'Otras candidatas' : 'Otros candidatos'}</AppText>
+          <AppText style={[tx('meta'), { marginBottom: 12 }]}>Por orden, según lo que has elegido. Toca {shelfTerms.fem ? 'una' : 'uno'} para que sea la propuesta.</AppText>
           <FlatList
             data={proposal.alternatives}
             keyExtractor={(it) => it.id}
@@ -810,7 +810,7 @@ export default function Decidir() {
                 accessibilityLabel={titleOf(it)}
                 onPress={() => {
                   const rest = [proposal.item, ...proposal.alternatives!.filter((x) => x.id !== it.id)]
-                  setProposal({ ...proposal, item: it, reasons: ['Elegida de tus otras candidatas'], alternatives: rest })
+                  setProposal({ ...proposal, item: it, reasons: [shelfTerms.fem ? 'Elegida de tus otras candidatas' : 'Elegido de tus otros candidatos'], alternatives: rest })
                   setCurrent(it.id)
                   setShowAlts(false)
                 }}

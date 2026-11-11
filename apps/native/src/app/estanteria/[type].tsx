@@ -15,6 +15,7 @@ import { AddFlow } from '../../components/flows/AddFlow'
 import { CleanupFlow } from '../../components/flows/CleanupFlow'
 import { CardRow, Empty, FilmStrip, HeroBackdrop } from '../../components/library/LibraryParts'
 import { SHELF_ICON, pctColor, useCatalogTick } from '../../components/library/shelfMeta'
+import { byGender } from '@biblioteca/core'
 
 type Seg = 'ord' | 'pend'
 const NO_IDS: string[] = []
@@ -95,7 +96,7 @@ function ShelfScreen({ t }: { t: ShelfType }) {
       section.key === 'rk' ? (
         <ItemRow item={it} rank={item.rank} highlight={item.rank === 1} />
       ) : section.key === 'un' ? (
-        <ItemRow item={it} indent tail="nueva" />
+        <ItemRow item={it} indent tail={byGender(it.type, 'nueva', 'nuevo')} />
       ) : (
         <ItemRow item={it} note={item.note} />
       )
