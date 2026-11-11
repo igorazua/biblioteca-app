@@ -36,6 +36,8 @@ export interface PosterProps {
   showTitle?: boolean
   /** Dentro de un duelo se oculta el relleno difuminado de los juegos de mesa (`[&_.blur-xl]:hidden`). */
   noBlur?: boolean
+  /** Sin fundido de entrada: la portada de la ficha queda bajo la capa del vuelo y debe estar ya pintada al retirarla. */
+  instant?: boolean
 }
 
 /**
@@ -43,7 +45,7 @@ export interface PosterProps {
  * grano, y el título en la serif). Los tamaños de la generada van en «cqw» de la PWA: 1 cqw = 1 % del ancho medido.
  * Mientras no hay imagen se ve el fondo `surface2` (el brillo de carga de la PWA no se porta).
  */
-export const Poster = memo(function Poster({ item, style, showTitle = true, noBlur = false }: PosterProps) {
+export const Poster = memo(function Poster({ item, style, showTitle = true, noBlur = false, instant = false }: PosterProps) {
   const [size, setSize] = useState({ w: 0, h: 0 })
   const [failed, setFailed] = useState<string | null>(null)
   const uid = useId().replace(/[^a-zA-Z0-9]/g, '')
@@ -77,7 +79,7 @@ export const Poster = memo(function Poster({ item, style, showTitle = true, noBl
           source={{ uri: src }}
           accessibilityLabel={`Portada de ${title}`}
           contentFit="contain"
-          transition={280}
+          transition={instant ? 0 : 280}
           cachePolicy="memory-disk"
           recyclingKey={item.id}
           onError={() => setFailed(src)}
@@ -93,7 +95,7 @@ export const Poster = memo(function Poster({ item, style, showTitle = true, noBl
           source={{ uri: src }}
           accessibilityLabel={`Portada de ${title}`}
           contentFit="cover"
-          transition={280}
+          transition={instant ? 0 : 280}
           cachePolicy="memory-disk"
           recyclingKey={item.id}
           onError={() => setFailed(src)}

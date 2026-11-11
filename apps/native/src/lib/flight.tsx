@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useMemo, useRef, useState, type ReactNode, type RefObject } from 'react'
 import { StyleSheet, useWindowDimensions, View } from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient'
 import { router } from 'expo-router'
 import Animated, { useAnimatedStyle, useReducedMotion, useSharedValue, withSpring, type SharedValue } from 'react-native-reanimated'
 import { scheduleOnRN } from 'react-native-worklets'
@@ -8,6 +9,11 @@ import { boardgameDetailAspect } from '@biblioteca/core/src/lib/posterShape'
 import { Poster } from '../components/Poster'
 import { SPRING_FLIGHT } from './motion'
 import { posterShape } from './item'
+import { alpha, colors } from '../theme'
+
+/** Degradado que la ficha pone sobre su portada a sangre: el póster que vuela acaba debajo de él, como el real. */
+export const DETAIL_SCRIM = ['rgba(0,0,0,0.3)', alpha(colors.bg, 0.5), colors.bg] as const
+export const DETAIL_SCRIM_AT = [0, 0.5, 1] as const
 
 /** Rectángulo en coordenadas de ventana: [x, y, ancho, alto]. */
 export type Rect = [number, number, number, number]
@@ -139,6 +145,8 @@ function FlightLayer({ item, radius, prog, from, to }: { item: Item; radius: num
       borderRadius: radius + (DETAIL_RADIUS - radius) * p,
     }
   })
+  // El degradado de la portada aparece a la vez que el póster llega (en la ficha ya está puesto debajo, sin fundido)
+  const scrim = useAnimatedStyle(() => ({ opacity: prog.value }))
   // El póster se pinta una vez al tamaño final y se escala (GPU), cubriendo la caja como `cover`.
   const inner = useAnimatedStyle(() => {
     const p = prog.value
@@ -155,6 +163,9 @@ function FlightLayer({ item, radius, prog, from, to }: { item: Item; radius: num
       <Animated.View style={[{ position: 'absolute', overflow: 'hidden' }, outer]}>
         <Animated.View style={[{ width: tw, height: th, transformOrigin: 'top left' }, inner]}>
           <Poster item={item} noBlur showTitle={false} style={{ width: tw, height: th }} />
+        </Animated.View>
+        <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, scrim]}>
+          <LinearGradient colors={DETAIL_SCRIM} locations={DETAIL_SCRIM_AT} style={{ flex: 1 }} />
         </Animated.View>
       </Animated.View>
     </View>

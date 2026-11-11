@@ -15,12 +15,11 @@ import { FriendsSection } from '../../components/detail/FriendsSection'
 import { DetailSkeleton } from '../../components/detail/Skeleton'
 import { StatusSection } from '../../components/detail/StatusSection'
 import { bubbleHits } from '../../components/detail/friends'
-import { RatingFlow } from '../../components/flows/RatingFlow'
 import { FriendBubbles, Tag, Toast } from '../../components/ui'
-import { detailHeroSize, useFlight } from '../../lib/flight'
+import { DETAIL_SCRIM, DETAIL_SCRIM_AT, detailHeroSize, useFlight } from '../../lib/flight'
 import { titleOf } from '../../lib/item'
 import { loadShelves } from '../../data/loadData'
-import { useCatalog, useStore } from '../../store'
+import { useCatalog } from '../../store'
 import { alpha, colors, tx } from '../../theme'
 
 const goBack = () => (router.canGoBack() ? router.back() : router.replace('/'))
@@ -76,16 +75,17 @@ function Detail({ item }: { item: Item }) {
   const { width } = useWindowDimensions()
   const flight = useFlight()
   const slot = useRef<ComponentRef<typeof View>>(null)
-  const entry = useStore((s) => s.entries[item.id])
-  const [rating, setRating] = useState(false)
   const [toast, setToast] = useState<string | null>(null)
   const hits = friendHits(item.id)
   const topInset = Math.max(insets.top, 16)
   const { w: heroW, h: heroH } = detailHeroSize(item, width)
   const flying = flight.activeId === item.id
+  // Si la ficha se abrió con vuelo: la portada se pinta sin fundido (queda bajo la capa) y el texto entra al aterrizar, sin retraso.
+  const [fromFlight] = useState(flying)
+  const textDelay = fromFlight ? 0 : 0.16
   const facts = itemFacts(item)
 
-  const poster = <Poster item={item} showTitle={false} style={{ position: 'absolute', left: 0, top: 0, right: 0, bottom: 0, borderRadius: 0 }} />
+  const poster = <Poster item={item} showTitle={false} instant={fromFlight} style={{ position: 'absolute', left: 0, top: 0, right: 0, bottom: 0, borderRadius: 0 }} />
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.bg }}>
@@ -106,20 +106,20 @@ function Detail({ item }: { item: Item }) {
           onLayout={() => slot.current?.measureInWindow((x, y, pw, ph) => flight.land(item.id, [x, y, pw, ph]))}
           style={{ width: heroW, height: heroH, backgroundColor: colors.surface2 }}
         >
-          <View style={{ position: 'absolute', left: 0, top: 0, right: 0, bottom: 0, opacity: flying ? 0 : 1 }}>
+          <View style={{ position: 'absolute', left: 0, top: 0, right: 0, bottom: 0, }}>
             {flight.reduceMotion ? <Animated.View entering={FadeIn.duration(200)} style={{ flex: 1 }}>{poster}</Animated.View> : poster}
           </View>
-          {/* el degradado y el título entran cuando el póster ya casi ha llegado */}
-          <Enter delay={0.12} duration={0.25} style={{ position: 'absolute', left: 0, top: 0, right: 0, bottom: 0 }}>
-            <LinearGradient pointerEvents="none" colors={['rgba(0,0,0,0.3)', alpha(colors.bg, 0.5), colors.bg]} locations={[0, 0.5, 1]} style={{ flex: 1 }} />
-          </Enter>
+          {/* el degradado va siempre puesto (la capa del vuelo lo trae a su vez): el póster aterriza debajo de él, como la portada real */}
+          <LinearGradient pointerEvents="none" colors={DETAIL_SCRIM} locations={DETAIL_SCRIM_AT} style={{ position: 'absolute', left: 0, top: 0, right: 0, bottom: 0 }} />
           {/* las caras de los amigos con su puesto, como en las tarjetas (Igor, 27/10) */}
-          {hits.length > 0 && (
-            <Enter delay={0.16} duration={0.25} style={{ position: 'absolute', right: 16, top: topInset, zIndex: 10 }}>
+          {!flying && hits.length > 0 && (
+            <Enter delay={textDelay} duration={0.25} style={{ position: 'absolute', right: 16, top: topInset, zIndex: 10 }}>
               <FriendBubbles hits={bubbleHits(item.id, hits)} terms={SHELF_LABEL[item.type]} example />
             </Enter>
           )}
-          <Enter delay={0.16} duration={0.3} y={12} style={{ position: 'absolute', left: 0, right: 0, bottom: 0, paddingHorizontal: 20 }}>
+          {/* el título espera a que el póster haya aterrizado: así no se pinta por debajo de la capa del vuelo */}
+          {!flying && (
+          <Enter delay={textDelay} duration={0.3} y={12} style={{ position: 'absolute', left: 0, right: 0, bottom: 0, paddingHorizontal: 20 }}>
             <AppText style={[tx('label'), { color: alpha(colors.ink, 0.8) }]}>{`${typeName(item.type)} · ${item.year}`}</AppText>
             <AppText style={[tx('display'), { color: colors.ink, marginTop: 4 }]}>{titleOf(item)}</AppText>
             <AppText style={[tx('meta'), { color: alpha(colors.ink, 0.8), marginTop: 4 }]}>
@@ -137,6 +137,7 @@ function Detail({ item }: { item: Item }) {
               {facts ? ` · ${facts}` : ''}
             </AppText>
           </Enter>
+          )}
         </View>
 
         <View style={{ paddingHorizontal: 20, marginTop: 16, gap: 20 }}>
@@ -157,22 +158,11 @@ function Detail({ item }: { item: Item }) {
 
           {!!item.synopsis && <AppText style={[tx('body'), { lineHeight: 24.375, color: alpha(colors.ink, 0.9) }]}>{item.synopsis}</AppText>}
 
-          <StatusSection item={item} onRate={() => setRating(true)} />
+          <StatusSection item={item} onNotify={setToast} />
           <FriendsSection item={item} hits={hits} onNotify={setToast} />
         </View>
       </ScrollView>
 
-      {rating && (
-        <RatingFlow
-          key={String(rating)}
-          withStars={!entry?.stars && !entry?.ranked}
-          itemId={item.id}
-          onDone={(m) => {
-            setRating(false)
-            if (m) setToast(m)
-          }}
-        />
-      )}
       {toast && <Toast key={toast} message={toast} onDone={() => setToast(null)} />}
     </View>
   )
