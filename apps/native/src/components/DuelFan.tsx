@@ -43,8 +43,13 @@ const DECIDE_DELAY = 650 // Decidir (DuelVariants.tsx:67)
 const REDUCED_DELAY = 600 // pickDelay con movimiento reducido (DuelVariants.tsx:63)
 const LEARNED_KEY = 'biblioteca-duel-learned'
 const CARD_RADIUS = 18
-const RIM_W = 3 // grosor final del borde, en pt de pantalla
+const RIM_W = 4 // grosor del borde, en pt de pantalla con la carta a tamaño final
+const RIM_PULSE_W = 6 // grosor del pulso al confirmar
+const RIM_PAD = 6 // margen del lienzo del borde fuera de la carta (cabe el pulso y lo que sobresale)
+const RIM_INSET = 0.5 // la línea central del trazo va 0,5 pt dentro del canto: 1,5 pt por fuera y 2,5 sobre la imagen
 const CLOSE_MS = 140 // lo que tarda en completarse el borde al confirmar (D33)
+const PULSE_UP_MS = 110
+const PULSE_DOWN_MS = 190
 const AnimatedPath = Animated.createAnimatedComponent(Path)
 
 /** Mezcla del acento con blanco (k > 0) o negro (k < 0): los tonos del metal salen de `colors.accent`, sin hexadecimales sueltos. */
@@ -55,15 +60,17 @@ function tone(hex: string, k: number): string {
   const c = (v: number) => Math.round(v + (t - v) * m)
   return `rgb(${c((n >> 16) & 255)}, ${c((n >> 8) & 255)}, ${c(n & 255)})`
 }
-const RIM_STOPS = [
-  { at: 0, color: tone(colors.accent, 0.5) }, // claro
-  { at: 0.3, color: colors.accent }, // acento
-  { at: 0.56, color: tone(colors.accent, -0.45) }, // oscuro
-  { at: 0.8, color: colors.accent },
-  { at: 1, color: tone(colors.accent, 0.5) }, // claro
+/** Degradado metálico: claro, tono, oscuro, tono, claro. */
+const metal = (hex: string) => [
+  { at: 0, color: tone(hex, 0.5) },
+  { at: 0.3, color: hex },
+  { at: 0.56, color: tone(hex, -0.45) },
+  { at: 0.8, color: hex },
+  { at: 1, color: tone(hex, 0.5) },
 ]
-const FLASH_CORE = tone(colors.accent, 0.88) // casi blanco cálido
-const FLASH_TAIL = tone(colors.accent, 0.6)
+const RIM_STOPS = { a: metal(colors.stampBlue), b: metal(colors.accent) } // azul acero a la izquierda, dorado a la derecha
+const DONE_STOPS = metal(colors.stampGreen)
+const DONE_FLASH = { core: tone(colors.stampGreen, 0.9), tail: tone(colors.stampGreen, 0.65) }
 
 /** Espera tras elegir hasta pasar al siguiente duelo; el borde y el destello caben dentro. */
 const pickDelay = (fast: boolean, reduce: boolean) => (fast ? FAST_DELAY : reduce ? REDUCED_DELAY : DECIDE_DELAY)
@@ -359,39 +366,48 @@ const FanCard = memo(function FanCard({ side, which, g, og, L, picked, flashMs, 
   const cx = L.cx[which]
   const grown = card.fitW / card.w
 
-  // Borde (D33). Se dibuja ya a tamaño final de carta (la carta a escala `grown`) y se encoge con el mismo transform que ella,
-  // así el trazo es nítido y mide 3 pt con la carta grande. Sigue el contorno de la carta: mismo radio y trazo hacia dentro.
+  // Borde (D33). Se dibuja a tamaño final de carta (la carta a escala `grown`) y se encoge con el mismo transform que ella.
+  // El trazo sigue el contorno 0,5 pt hacia dentro: su borde exterior sobresale 1,5 pt del canto y el interior se monta 2,5 pt
+  // sobre la imagen. El lienzo es RIM_PAD más grande por cada lado para que lo que sobresale no se recorte.
   const bw = card.w * grown
   const bh = card.h * grown
-  const half = RIM_W / 2
-  const r = Math.max(0, CARD_RADIUS * grown - half)
-  const x0 = half
-  const y0 = half
-  const x1 = bw - half
-  const y1 = bh - half
+  const cw = bw + 2 * RIM_PAD
+  const ch = bh + 2 * RIM_PAD
+  const r = Math.max(0, CARD_RADIUS * grown - RIM_INSET)
+  const x0 = RIM_INSET
+  const y0 = RIM_INSET
+  const x1 = bw - RIM_INSET
+  const y1 = bh - RIM_INSET
   const mx = bw / 2
-  // Sale del centro de arriba y gira a la derecha
-  const d =
-    `M ${mx} ${y0} L ${x1 - r} ${y0} A ${r} ${r} 0 0 1 ${x1} ${y0 + r} L ${x1} ${y1 - r} A ${r} ${r} 0 0 1 ${x1 - r} ${y1} ` +
-    `L ${x0 + r} ${y1} A ${r} ${r} 0 0 1 ${x0} ${y1 - r} L ${x0} ${y0 + r} A ${r} ${r} 0 0 1 ${x0 + r} ${y0} L ${mx} ${y0}`
+  // Empieza arriba en el centro y baja primero por el lado que mira al centro de la mesa: la izquierda gira a la derecha
+  // (horario) y la derecha a la izquierda (antihorario), en espejo; ambas terminan por el lado exterior.
+  const d = isLeft
+    ? `M ${mx} ${y0} L ${x1 - r} ${y0} A ${r} ${r} 0 0 1 ${x1} ${y0 + r} L ${x1} ${y1 - r} A ${r} ${r} 0 0 1 ${x1 - r} ${y1} ` +
+      `L ${x0 + r} ${y1} A ${r} ${r} 0 0 1 ${x0} ${y1 - r} L ${x0} ${y0 + r} A ${r} ${r} 0 0 1 ${x0 + r} ${y0} L ${mx} ${y0}`
+    : `M ${mx} ${y0} L ${x0 + r} ${y0} A ${r} ${r} 0 0 0 ${x0} ${y0 + r} L ${x0} ${y1 - r} A ${r} ${r} 0 0 0 ${x0 + r} ${y1} ` +
+      `L ${x1 - r} ${y1} A ${r} ${r} 0 0 0 ${x1} ${y1 - r} L ${x1} ${y0 + r} A ${r} ${r} 0 0 0 ${x1 - r} ${y0} L ${mx} ${y0}`
   const perimeter = 2 * (x1 - x0 - 2 * r) + 2 * (y1 - y0 - 2 * r) + 2 * Math.PI * r
   const tailLen = perimeter * 0.16
   const coreLen = perimeter * 0.06
   const gradId = `rim-${which}`
+  const doneId = `rim-done-${which}`
 
-  const done = useSharedValue(0) // 0 … 1: el borde se completa al confirmar
+  const done = useSharedValue(0) // 0 … 1: el borde se completa y pasa a verde al confirmar
   const flash = useSharedValue(0) // 0 … 1: recorrido del destello
+  const pulse = useSharedValue(0) // 0 … 1: el grosor sube de 4 a 6 pt y vuelve
 
   useAnimatedReaction(
     () => picked.value === mine,
     (now, prev) => {
       if (!now || prev) return
       if (reduce) {
-        done.value = 1 // borde completo al confirmar, sin destello
+        done.value = 1 // borde verde completo al confirmar, sin animación
         return
       }
       done.value = withTiming(1, { duration: CLOSE_MS, easing: easeOut }, (fin) => {
-        if (fin) flash.value = withTiming(1, { duration: flashMs, easing: easeInOut })
+        if (!fin) return
+        flash.value = withTiming(1, { duration: flashMs, easing: easeInOut })
+        pulse.value = withSequence(withTiming(1, { duration: PULSE_UP_MS, easing: easeOut }), withTiming(0, { duration: PULSE_DOWN_MS, easing: easeInOut }))
       })
     },
     [reduce, flashMs, mine],
@@ -400,9 +416,10 @@ const FanCard = memo(function FanCard({ side, which, g, og, L, picked, flashMs, 
   // El borde sigue al arrastre (g llega a 1 justo en el umbral de elección); al confirmar se completa aparte
   const prog = useDerivedValue(() => Math.max(g.value, done.value))
   const rimProps = useAnimatedProps(() => ({ strokeDashoffset: perimeter * (1 - prog.value) }))
+  const greenProps = useAnimatedProps(() => ({ strokeOpacity: done.value, strokeWidth: RIM_W + (RIM_PULSE_W - RIM_W) * pulse.value }))
   const tailProps = useAnimatedProps(() => {
     const f = flash.value
-    return { strokeDashoffset: tailLen - f * (perimeter + tailLen), strokeOpacity: f > 0.001 && f < 0.999 ? 0.5 : 0 }
+    return { strokeDashoffset: tailLen - f * (perimeter + tailLen), strokeOpacity: f > 0.001 && f < 0.999 ? 0.75 : 0 }
   })
   const coreProps = useAnimatedProps(() => {
     const f = flash.value
@@ -440,7 +457,8 @@ const FanCard = memo(function FanCard({ side, which, g, og, L, picked, flashMs, 
     return {
       opacity: prog.value > 0.002 ? p.op : 0,
       zIndex: gv > 0.01 ? 5 : 3,
-      transform: [{ translateX: p.tx }, { translateY: p.ty }, { rotate: `${p.rot}deg` }, { scale: p.scale / grown }],
+      // El lienzo del borde está centrado en la mesa (siempre dentro del contenedor, sin recortes) y se lleva a la posición de la carta
+      transform: [{ translateX: cx - L.w / 2 + p.tx }, { translateY: L.cy - L.h / 2 + p.ty }, { rotate: `${p.rot}deg` }, { scale: p.scale / grown }],
     }
   })
 
@@ -466,21 +484,28 @@ const FanCard = memo(function FanCard({ side, which, g, og, L, picked, flashMs, 
         {/* poster a sangre, sin marco ni relleno difuminado alrededor */}
         <View style={{ ...(StyleSheet.absoluteFill as object), borderRadius: CARD_RADIUS, overflow: 'hidden' }}>{side.bg}</View>
       </Animated.View>
-      <Animated.View pointerEvents="none" style={[{ position: 'absolute', left: cx - bw / 2, top: L.cy - bh / 2, width: bw, height: bh }, rimAnim]}>
-        <Svg width={bw} height={bh} viewBox={`0 0 ${bw} ${bh}`} pointerEvents="none">
+      <Animated.View pointerEvents="none" style={[{ position: 'absolute', left: (L.w - cw) / 2, top: (L.h - ch) / 2, width: cw, height: ch }, rimAnim]}>
+        <Svg width={cw} height={ch} viewBox={`${-RIM_PAD} ${-RIM_PAD} ${cw} ${ch}`} pointerEvents="none">
           <Defs>
-            <LinearGradient id={gradId} gradientUnits="userSpaceOnUse" x1={0} y1={0} x2={bw} y2={bh}>
-              {RIM_STOPS.map((st) => (
+            <LinearGradient id={gradId} gradientUnits="userSpaceOnUse" x1={isLeft ? 0 : bw} y1={0} x2={isLeft ? bw : 0} y2={bh}>
+              {RIM_STOPS[which].map((st) => (
+                <Stop key={st.at} offset={st.at} stopColor={st.color} />
+              ))}
+            </LinearGradient>
+            <LinearGradient id={doneId} gradientUnits="userSpaceOnUse" x1={isLeft ? 0 : bw} y1={0} x2={isLeft ? bw : 0} y2={bh}>
+              {DONE_STOPS.map((st) => (
                 <Stop key={st.at} offset={st.at} stopColor={st.color} />
               ))}
             </LinearGradient>
           </Defs>
           <AnimatedPath d={d} fill="none" stroke={`url(#${gradId})`} strokeWidth={RIM_W} strokeLinejoin="round" strokeDasharray={[perimeter + 2, perimeter + 2]} animatedProps={rimProps} />
+          {/* al confirmar, el trazo completo pasa a verde metálico y pulsa de grosor */}
+          <AnimatedPath d={d} fill="none" stroke={`url(#${doneId})`} strokeWidth={RIM_W} strokeOpacity={0} strokeLinejoin="round" animatedProps={greenProps} />
           {!reduce && (
             <>
-              {/* destello sobre el propio trazo: una cola más tenue y un núcleo casi blanco */}
-              <AnimatedPath d={d} fill="none" stroke={FLASH_TAIL} strokeWidth={RIM_W} strokeLinecap="round" strokeDasharray={[tailLen, perimeter + tailLen]} animatedProps={tailProps} />
-              <AnimatedPath d={d} fill="none" stroke={FLASH_CORE} strokeWidth={RIM_W} strokeLinecap="round" strokeDasharray={[coreLen, perimeter + coreLen]} animatedProps={coreProps} />
+              {/* destello sobre el propio trazo: una cola más tenue y un núcleo casi blanco, en verde claro */}
+              <AnimatedPath d={d} fill="none" stroke={DONE_FLASH.tail} strokeWidth={RIM_PULSE_W} strokeLinecap="round" strokeDasharray={[tailLen, perimeter + tailLen]} animatedProps={tailProps} />
+              <AnimatedPath d={d} fill="none" stroke={DONE_FLASH.core} strokeWidth={RIM_PULSE_W} strokeLinecap="round" strokeDasharray={[coreLen, perimeter + coreLen]} animatedProps={coreProps} />
             </>
           )}
         </Svg>
