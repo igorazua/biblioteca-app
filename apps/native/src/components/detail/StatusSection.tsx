@@ -1,9 +1,11 @@
+import { useEffect, useRef, useState } from 'react'
 import { View } from 'react-native'
 import { SHELF_LABEL, type Item, type Status } from '@biblioteca/core'
 import { AppText } from '../AppText'
 import { Icon } from '../Icon'
 import { Press } from '../Press'
 import { RankBadge } from '../ui'
+import { RatingFlow } from '../flows/RatingFlow'
 import { haptic } from '../../lib/haptics'
 import { useRanks, useStore } from '../../store'
 import { alpha, colors, tx } from '../../theme'
@@ -47,7 +49,7 @@ function StateButton({ status, active, label, icon, truncate, onPress }: { statu
 }
 
 /** «Tu estado»: tres botones, aviso de quién te la pasó y el panel «Tu puesto» (ItemDetail.tsx:171-241). */
-export function StatusSection({ item, onRate }: { item: Item; onRate: () => void }) {
+export function StatusSection({ item, onNotify }: { item: Item; onNotify: (m: string) => void }) {
   const label = SHELF_LABEL[item.type]
   const entry = useStore((s) => s.entries[item.id])
   const ranking = useStore((s) => s.rankings[item.type]) ?? []
@@ -57,14 +59,28 @@ export function StatusSection({ item, onRate }: { item: Item; onRate: () => void
   const pos = ranking.indexOf(item.id)
   const myRank = ranks[item.id]
 
+  // La hoja de valorar vive aquí: abrirla solo vuelve a pintar esta sección, no toda la ficha.
+  const [rating, setRating] = useState<{ withStars: boolean } | null>(null)
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  useEffect(() => () => { if (timer.current) clearTimeout(timer.current) }, [])
+  const openRating = () => setRating({ withStars: !entry?.stars && !entry?.ranked })
+
   const toggle = (s: Status) => {
     haptic('tap')
     if (status === s) {
       setStatus(item.id, null)
       return
     }
+    if (s === 'seen') {
+      // La hoja se abre en el mismo toque; el cambio de estado (y todo lo que repinta) espera a que ya esté en marcha.
+      // Si la hoja se cierra antes, `rate` ya deja la obra como vista.
+      openRating()
+      timer.current = setTimeout(() => {
+        if (useStore.getState().entries[item.id]?.status !== 'seen') setStatus(item.id, 'seen')
+      }, 150)
+      return
+    }
     setStatus(item.id, s)
-    if (s === 'seen') onRate()
   }
 
   return (
@@ -91,7 +107,7 @@ export function StatusSection({ item, onRate }: { item: Item; onRate: () => void
           )}
           {entry?.comment ? <AppText style={[tx('body'), { marginTop: 8, fontFamily: 'Fraunces72-400', fontStyle: 'italic', color: alpha(colors.ink, 0.9) }]}>{`«${entry.comment}»`}</AppText> : null}
           <Press
-            onPress={onRate}
+            onPress={openRating}
             accessibilityRole="button"
             style={{ marginTop: 12, alignSelf: 'flex-start', minHeight: 44, paddingHorizontal: 16, borderRadius: 12, backgroundColor: colors.surface2, borderWidth: 1, borderColor: colors.line, flexDirection: 'row', alignItems: 'center', gap: 8 }}
           >
@@ -99,6 +115,16 @@ export function StatusSection({ item, onRate }: { item: Item; onRate: () => void
             <AppText style={[tx('meta'), { fontFamily: 'Inter-500', color: colors.ink }]}>{entry?.comment ? 'Editar comentario' : entry?.stars ? 'Añadir comentario' : 'Valorar'}</AppText>
           </Press>
         </View>
+      )}
+      {rating && (
+        <RatingFlow
+          withStars={rating.withStars}
+          itemId={item.id}
+          onDone={(m) => {
+            setRating(null)
+            if (m) onNotify(m)
+          }}
+        />
       )}
     </View>
   )
