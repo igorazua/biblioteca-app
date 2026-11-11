@@ -4,6 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import { isHydrated } from './hydrationFlags'
 import { useStore } from './useStore'
 import { useEvents } from './useEvents'
+import { flushStorage } from '../lib/storage'
 
 describe('rehidratación desde AsyncStorage', () => {
   it('lee entradas y rankings guardados con la clave y la versión de la PWA, y marca el store como hidratado', async () => {
@@ -26,7 +27,7 @@ describe('rehidratación desde AsyncStorage', () => {
 
   it('lo que se escribe después se guarda con la misma clave', async () => {
     useStore.getState().setProfile({ name: 'Igor' })
-    await new Promise((r) => setTimeout(r, 20))
+    await flushStorage() // la escritura va diferida (lib/storage.ts): se fuerza para leerla
     const raw = JSON.parse((await AsyncStorage.getItem('biblioteca-v1')) as string)
     expect(raw.version).toBe(5)
     expect(raw.state.profile.name).toBe('Igor')

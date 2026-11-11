@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { View } from 'react-native'
+import { AppState, View } from 'react-native'
 import { Stack, usePathname, useRootNavigationState, useRouter } from 'expo-router'
 import { useFonts } from 'expo-font'
 import * as SplashScreen from 'expo-splash-screen'
@@ -13,6 +13,7 @@ import { FlightProvider } from '../lib/flight'
 import { useCloudBoot } from '../lib/sync'
 import { Toast } from '../components/ui'
 import { useHydrated, useStore } from '../store'
+import { flushStorage } from '../lib/storage'
 import { colors } from '../theme'
 
 void SplashScreen.preventAutoHideAsync()
@@ -46,6 +47,11 @@ function OnboardingGate() {
   }, [navReady, onboarded, pathname, router])
   return null
 }
+
+// Lo pendiente de guardar se escribe al pasar a segundo plano: el sistema puede cerrar la app sin avisar.
+AppState.addEventListener('change', (st) => {
+  if (st !== 'active') void flushStorage()
+})
 
 export default function RootLayout() {
   const [fontsLoaded, fontError] = useFonts(FONTS)
