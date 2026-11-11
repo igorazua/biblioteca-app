@@ -19,6 +19,7 @@ export function SwipePair({
   kind = 'rank',
   extra,
   square,
+  bottomLeft,
 }: {
   left: Side
   right: Side
@@ -29,15 +30,27 @@ export function SwipePair({
   /** hueco entre las cartas y la pista (p. ej. «Pasar») */
   extra?: ReactNode
   square?: boolean
+  /** botón a la izquierda de la pista (p. ej. deshacer, D34) */
+  bottomLeft?: ReactNode
 }) {
   const isSquare = square ?? (posterShape(left.type) === 'square' && posterShape(right.type) === 'square')
   return (
     <View style={{ flex: 1, minHeight: 0 }}>
       <DuelFan left={left} right={right} onChoose={onChoose} onPick={onPick} fast={kind === 'rank'} square={isSquare} />
       {extra}
-      <AppText pointerEvents="none" style={[tx('meta'), { textAlign: 'center', paddingVertical: 6 }]}>
-        ← Desliza hacia la que prefieras →
-      </AppText>
+      {bottomLeft !== undefined ? (
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8, minHeight: 48 }}>
+          <View style={{ width: 48, height: 48 }}>{bottomLeft}</View>
+          <AppText pointerEvents="none" style={[tx('meta'), { flex: 1, textAlign: 'center' }]}>
+            ← Desliza hacia la que prefieras →
+          </AppText>
+          <View style={{ width: 48 }} />
+        </View>
+      ) : (
+        <AppText pointerEvents="none" style={[tx('meta'), { textAlign: 'center', paddingVertical: 6 }]}>
+          ← Desliza hacia la que prefieras →
+        </AppText>
+      )}
     </View>
   )
 }

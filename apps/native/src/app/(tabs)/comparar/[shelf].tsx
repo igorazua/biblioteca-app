@@ -22,7 +22,7 @@ import { haptic } from '../../../lib/haptics'
 import { posterAspect, titleOf } from '../../../lib/item'
 import { colors, tx } from '../../../theme'
 import { AppText } from '../../../components/AppText'
-import { Icon } from '../../../components/Icon'
+import { ActionBtn } from '../../../components/discover/ActionBtn'
 import { Poster } from '../../../components/Poster'
 import { Press } from '../../../components/Press'
 import { Button, Group } from '../../../components/ui'
@@ -302,7 +302,7 @@ export default function CompareSession() {
     setCount(nextCount)
 
     // Cada 25 duelos, aviso discreto que no bloquea la sesión (T30.1)
-    if (nextCount > 0 && nextCount % DUEL_MILESTONE === 0) setMilestoneNotice(`Llevas ${nextCount}. Sigue o pulsa Terminar`)
+    if (nextCount > 0 && nextCount % DUEL_MILESTONE === 0) setMilestoneNotice(`Llevas ${nextCount}. Sigue o pulsa Ver resumen`)
 
     if (settings.commentBoxInPairs) setCommentFor(winnerId)
   }
@@ -386,32 +386,18 @@ export default function CompareSession() {
               : undefined
         }
         onBack={handleBack}
+        topExtra={28}
         action={
-          !summary ? (
-            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
-              {count > 0 && (
-                <Press
-                  onPress={finish}
-                  accessibilityRole="button"
-                  accessibilityLabel="Terminar"
-                  scaleTo={0.95}
-                  style={{ paddingHorizontal: 10, paddingVertical: 4, borderRadius: 999, backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.line }}
-                >
-                  <AppText style={[tx('meta'), { fontFamily: 'Inter-500', color: colors.ink }]}>Terminar</AppText>
-                </Press>
-              )}
-              {undo && (
-                <Press
-                  onPress={doUndo}
-                  accessibilityRole="button"
-                  accessibilityLabel="Deshacer la última elección"
-                  scaleTo={0.9}
-                  style={{ width: 32, height: 32, borderRadius: 16, backgroundColor: colors.accent, alignItems: 'center', justifyContent: 'center' }}
-                >
-                  <Icon name="rotateCcw" size={16} strokeWidth={2.4} color={colors.accentInk} />
-                </Press>
-              )}
-            </View>
+          !summary && count > 0 ? (
+            <Press
+              onPress={finish}
+              accessibilityRole="button"
+              accessibilityLabel="Ver resumen de la sesión"
+              scaleTo={0.95}
+              style={{ paddingHorizontal: 12, paddingVertical: 6, borderRadius: 999, borderWidth: 1, borderColor: colors.mute }}
+            >
+              <AppText style={[tx('meta'), { fontFamily: 'Inter-500', color: colors.ink }]}>Ver resumen</AppText>
+            </Press>
           ) : undefined
         }
       />
@@ -466,7 +452,16 @@ export default function CompareSession() {
           </Animated.View>
         ) : shownPair ? (
           <View style={{ flex: 1, minHeight: 0 }}>
-            {leftSide && rightSide && <SwipePair key={lastPairKey.current} left={leftSide} right={rightSide} onChoose={onChoose} kind="rank" />}
+            {leftSide && rightSide && (
+              <SwipePair
+                key={lastPairKey.current}
+                left={leftSide}
+                right={rightSide}
+                onChoose={onChoose}
+                kind="rank"
+                bottomLeft={<ActionBtn size={48} color={colors.accentInk} icon="rotateCcw" iconSize={20} stroke={2.4} filled disabled={!undo} onPress={doUndo} label="Deshacer el último duelo" />}
+              />
+            )}
             <View pointerEvents="none" accessibilityLiveRegion="polite" style={{ position: 'absolute', left: 0, right: 0, top: '42%', zIndex: 30, alignItems: 'center', paddingHorizontal: 24 }}>
               {flash && (
                 <Animated.View

@@ -18,6 +18,7 @@ export function DuelHeader({
   subtitle,
   action,
   onBack,
+  topExtra = 0,
 }: {
   label?: string
   step?: { current: number; total: number }
@@ -25,6 +26,8 @@ export function DuelHeader({
   subtitle?: string
   action?: ReactNode
   onBack?: () => void
+  /** pt extra por encima del bloque: lo baja hacia el contenido (D34) */
+  topExtra?: number
 }) {
   const insets = useSafeAreaInsets()
   const frac = step ? Math.min(1, Math.max(0, step.current / step.total)) : 0
@@ -34,7 +37,7 @@ export function DuelHeader({
   }, [frac, w])
   const bar = useAnimatedStyle(() => ({ width: `${w.value * 100}%` }))
   return (
-    <View style={{ paddingHorizontal: 20, paddingTop: Math.max(insets.top, 22), paddingBottom: 24 }}>
+    <View style={{ paddingHorizontal: 20, paddingTop: Math.max(insets.top, 22) + topExtra, paddingBottom: 24 }}>
       <View style={{ minHeight: 24, marginBottom: 12, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8, flexShrink: 1, minWidth: 0 }}>
           {onBack && (
