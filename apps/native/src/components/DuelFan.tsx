@@ -1,7 +1,7 @@
 import { memo, useEffect, useMemo, useState, type ReactNode } from 'react'
 import { StyleSheet, View, type LayoutChangeEvent } from 'react-native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import Svg, { Rect } from 'react-native-svg'
+import Svg, { Defs, LinearGradient, Path, Stop } from 'react-native-svg'
 import Animated, {
   useAnimatedProps,
   useAnimatedReaction,
@@ -35,9 +35,6 @@ export interface Side {
   ratio?: number
 }
 
-export const DUEL_LEFT = '#F5B544' // ámbar del acento (SwipePair.tsx:18)
-export const DUEL_RIGHT = '#9A86FF' // violeta contrastado (SwipePair.tsx:19)
-
 const FIT_MARGIN = 26 // pt libres alrededor de la carta elegida a tamaño completo (DuelVariants.tsx:139)
 const IDLE_HINT_FIRST_MS = 4800 // pista solo para usuarios noveles (DuelVariants.tsx:140)
 const FAN_COMMIT = 0.28 // fracción del ancho para elegir al soltar (DuelVariants.tsx:141)
@@ -47,8 +44,26 @@ const REDUCED_DELAY = 600 // pickDelay con movimiento reducido (DuelVariants.tsx
 const LEARNED_KEY = 'biblioteca-duel-learned'
 const CARD_RADIUS = 18
 const RIM_W = 3 // grosor final del borde, en pt de pantalla
-const DRAW_SHARE = 0.55 // parte del tiempo de confirmacion que tarda en cerrarse el borde; el resto es el destello
-const AnimatedRect = Animated.createAnimatedComponent(Rect)
+const CLOSE_MS = 140 // lo que tarda en completarse el borde al confirmar (D33)
+const AnimatedPath = Animated.createAnimatedComponent(Path)
+
+/** Mezcla del acento con blanco (k > 0) o negro (k < 0): los tonos del metal salen de `colors.accent`, sin hexadecimales sueltos. */
+function tone(hex: string, k: number): string {
+  const n = parseInt(hex.slice(1), 16)
+  const t = k >= 0 ? 255 : 0
+  const m = Math.abs(k)
+  const c = (v: number) => Math.round(v + (t - v) * m)
+  return `rgb(${c((n >> 16) & 255)}, ${c((n >> 8) & 255)}, ${c(n & 255)})`
+}
+const RIM_STOPS = [
+  { at: 0, color: tone(colors.accent, 0.5) }, // claro
+  { at: 0.3, color: colors.accent }, // acento
+  { at: 0.56, color: tone(colors.accent, -0.45) }, // oscuro
+  { at: 0.8, color: colors.accent },
+  { at: 1, color: tone(colors.accent, 0.5) }, // claro
+]
+const FLASH_CORE = tone(colors.accent, 0.88) // casi blanco cálido
+const FLASH_TAIL = tone(colors.accent, 0.6)
 
 /** Espera tras elegir hasta pasar al siguiente duelo; el borde y el destello caben dentro. */
 const pickDelay = (fast: boolean, reduce: boolean) => (fast ? FAST_DELAY : reduce ? REDUCED_DELAY : DECIDE_DELAY)
@@ -173,13 +188,13 @@ export function DuelFan({
     [size.w, size.h, left.key, right.key, left.ratio, right.ratio, left.type, right.type, square, fit],
   )
   const delay = pickDelay(fast, reduce)
-  const drawMs = Math.round(delay * DRAW_SHARE)
-  const flashMs = Math.max(120, delay - drawMs - 40)
+  const flashMs = Math.max(180, delay - CLOSE_MS - 60)
   const W = size.w
 
   const x = useSharedValue(0)
   const picked = useSharedValue(0) // 0 nada, 1 elegida la izquierda (a), 2 la derecha (b)
   const touched = useSharedValue(false)
+  const crossed = useSharedValue(false) // el arrastre ya pasó el umbral de elección
 
   // Pista inicial: solo la primera vez, si la persona es nueva y tarda en tocar (DuelVariants.tsx:289-312).
   useEffect(() => {
@@ -210,7 +225,7 @@ export function DuelFan({
 
   const picks = (w: 'a' | 'b') => {
     onPick?.(w)
-    haptic('tick') // D22: de selección al elegir en un duelo
+    haptic('success') // D33: al confirmar. El «tick» ya sonó al cruzar el umbral arrastrando
     void AsyncStorage.setItem(LEARNED_KEY, 'true')
     setTimeout(() => onChoose(w), delay)
   }
@@ -230,12 +245,19 @@ export function DuelFan({
     onBegin: () => {
       'worklet'
       touched.value = true
+      crossed.value = false
       scheduleOnRN(markDuelLearned)
       x.value = x.value // detiene la pista si está en marcha
     },
     onUpdate: (e) => {
       'worklet'
-      if (!picked.value) x.value = e.translationX
+      if (picked.value) return
+      x.value = e.translationX
+      const over = Math.abs(e.translationX) > W * FAN_COMMIT
+      if (over !== crossed.value) {
+        crossed.value = over
+        if (over) scheduleOnRN(haptic, 'tick') // D33: cruza el umbral de elección
+      }
     },
     onDeactivate: (e) => {
       'worklet'
@@ -287,8 +309,8 @@ export function DuelFan({
           <>
             <Backdrop g={gA} />
             <Backdrop g={gB} />
-            <FanCard side={left} which="a" color={DUEL_LEFT} g={gA} og={gB} L={L} picked={picked} drawMs={drawMs} flashMs={flashMs} reduce={reduce} />
-            <FanCard side={right} which="b" color={DUEL_RIGHT} g={gB} og={gA} L={L} picked={picked} drawMs={drawMs} flashMs={flashMs} reduce={reduce} />
+            <FanCard side={left} which="a" g={gA} og={gB} L={L} picked={picked} flashMs={flashMs} reduce={reduce} />
+            <FanCard side={right} which="b" g={gB} og={gA} L={L} picked={picked} flashMs={flashMs} reduce={reduce} />
             {(['a', 'b'] as const).map((k) => {
               const s = k === 'a' ? left : right
               const tw = L.w * 0.4 - 12 // cada lado tiene su ancho y quedan 12 pt entre los dos
@@ -321,17 +343,15 @@ const Backdrop = memo(function Backdrop({ g }: { g: SharedValue<number> }) {
 interface FanCardProps {
   side: Side
   which: 'a' | 'b'
-  color: string
   g: SharedValue<number>
   og: SharedValue<number>
   L: FanLayout
   picked: SharedValue<number>
-  drawMs: number
   flashMs: number
   reduce: boolean
 }
 
-const FanCard = memo(function FanCard({ side, which, color, g, og, L, picked, drawMs, flashMs, reduce }: FanCardProps) {
+const FanCard = memo(function FanCard({ side, which, g, og, L, picked, flashMs, reduce }: FanCardProps) {
   const isLeft = which === 'a'
   const mine = isLeft ? 1 : 2
   const card = L.cards[which]
@@ -339,99 +359,132 @@ const FanCard = memo(function FanCard({ side, which, color, g, og, L, picked, dr
   const cx = L.cx[which]
   const grown = card.fitW / card.w
 
-  // Borde que recorre el contorno (D32). Se dibuja a tamaño de carta y crece con ella, así que el trazo se compensa con la escala final.
-  const sw = RIM_W / grown
-  const rw = card.w - sw
-  const rh = card.h - sw
-  const rr = Math.max(0, CARD_RADIUS - sw / 2)
-  const perimeter = 2 * (rw + rh) - 8 * rr + 2 * Math.PI * rr
-  const rim = useSharedValue(0) // 0 sin dibujar ... 1 contorno cerrado
-  const glow = useSharedValue(0) // destello de confirmación
+  // Borde (D33). Se dibuja ya a tamaño final de carta (la carta a escala `grown`) y se encoge con el mismo transform que ella,
+  // así el trazo es nítido y mide 3 pt con la carta grande. Sigue el contorno de la carta: mismo radio y trazo hacia dentro.
+  const bw = card.w * grown
+  const bh = card.h * grown
+  const half = RIM_W / 2
+  const r = Math.max(0, CARD_RADIUS * grown - half)
+  const x0 = half
+  const y0 = half
+  const x1 = bw - half
+  const y1 = bh - half
+  const mx = bw / 2
+  // Sale del centro de arriba y gira a la derecha
+  const d =
+    `M ${mx} ${y0} L ${x1 - r} ${y0} A ${r} ${r} 0 0 1 ${x1} ${y0 + r} L ${x1} ${y1 - r} A ${r} ${r} 0 0 1 ${x1 - r} ${y1} ` +
+    `L ${x0 + r} ${y1} A ${r} ${r} 0 0 1 ${x0} ${y1 - r} L ${x0} ${y0 + r} A ${r} ${r} 0 0 1 ${x0 + r} ${y0} L ${mx} ${y0}`
+  const perimeter = 2 * (x1 - x0 - 2 * r) + 2 * (y1 - y0 - 2 * r) + 2 * Math.PI * r
+  const tailLen = perimeter * 0.16
+  const coreLen = perimeter * 0.06
+  const gradId = `rim-${which}`
+
+  const done = useSharedValue(0) // 0 … 1: el borde se completa al confirmar
+  const flash = useSharedValue(0) // 0 … 1: recorrido del destello
 
   useAnimatedReaction(
     () => picked.value === mine,
     (now, prev) => {
       if (!now || prev) return
       if (reduce) {
-        rim.value = 1 // borde completo al instante y sin destello
-        scheduleOnRN(haptic, 'success')
+        done.value = 1 // borde completo al confirmar, sin destello
         return
       }
-      rim.value = withTiming(1, { duration: drawMs, easing: easeInOut }, (done) => {
-        if (!done) return
-        scheduleOnRN(haptic, 'success') // el borde se cierra: vibración de éxito
-        glow.value = withSequence(
-          withTiming(1, { duration: Math.round(flashMs * 0.35), easing: easeOut }),
-          withTiming(0, { duration: Math.round(flashMs * 0.65), easing: easeInOut }),
-        )
+      done.value = withTiming(1, { duration: CLOSE_MS, easing: easeOut }, (fin) => {
+        if (fin) flash.value = withTiming(1, { duration: flashMs, easing: easeInOut })
       })
     },
-    [reduce, drawMs, flashMs, mine],
+    [reduce, flashMs, mine],
   )
 
-  const rimProps = useAnimatedProps(() => ({ strokeDashoffset: perimeter * (1 - rim.value) }))
-  const halo = useAnimatedStyle(() => ({ opacity: glow.value * 0.55, transform: [{ scale: 1 + glow.value * 0.04 }] }))
-  const flare = useAnimatedStyle(() => ({ opacity: glow.value * 0.28 }))
+  // El borde sigue al arrastre (g llega a 1 justo en el umbral de elección); al confirmar se completa aparte
+  const prog = useDerivedValue(() => Math.max(g.value, done.value))
+  const rimProps = useAnimatedProps(() => ({ strokeDashoffset: perimeter * (1 - prog.value) }))
+  const tailProps = useAnimatedProps(() => {
+    const f = flash.value
+    return { strokeDashoffset: tailLen - f * (perimeter + tailLen), strokeOpacity: f > 0.001 && f < 0.999 ? 0.5 : 0 }
+  })
+  const coreProps = useAnimatedProps(() => {
+    const f = flash.value
+    return { strokeDashoffset: coreLen - f * (perimeter + coreLen), strokeOpacity: f > 0.001 && f < 0.999 ? 1 : 0 }
+  })
+
+  const pose = (gv: number, ov: number) => {
+    'worklet'
+    // Trayectoria fija al centro; la otra se aparta ancho × 0,22 y se reduce a 0,9.
+    return {
+      tx: (L.w / 2 - cx) * gv + (isLeft ? -1 : 1) * L.w * 0.22 * ov,
+      ty: (L.h / 2 - L.cy) * gv,
+      scale: lerp(1, grown, gv) * (1 - 0.1 * ov),
+      rot: rot0 * (1 - gv),
+      op: clamp01(1 - ov * 1.15),
+    }
+  }
 
   const anim = useAnimatedStyle(() => {
     const gv = g.value
-    const ov = og.value
-    // Trayectoria fija al centro; la otra se aparta ancho × 0,22 y se reduce a 0,9.
-    const tx = (L.w / 2 - cx) * gv + (isLeft ? -1 : 1) * L.w * 0.22 * ov
-    const ty = (L.h / 2 - L.cy) * gv
-    const scale = lerp(1, grown, gv) * (1 - 0.1 * ov)
+    const p = pose(gv, og.value)
     return {
-      opacity: clamp01(1 - ov * 1.15),
+      opacity: p.op,
       zIndex: gv > 0.01 ? 4 : 2,
       shadowOffset: { width: 0, height: lerp(18, 6, gv) },
       shadowRadius: lerp(36, 20, gv) / 2,
       shadowOpacity: lerp(0.65, 0.4, gv),
-      transform: [{ translateX: tx }, { translateY: ty }, { rotate: `${rot0 * (1 - gv)}deg` }, { scale }],
+      transform: [{ translateX: p.tx }, { translateY: p.ty }, { rotate: `${p.rot}deg` }, { scale: p.scale }],
+    }
+  })
+  // Misma pose que la carta, pero partiendo de su tamaño final: la escala se divide entre `grown`
+  const rimAnim = useAnimatedStyle(() => {
+    const gv = g.value
+    const p = pose(gv, og.value)
+    return {
+      opacity: prog.value > 0.002 ? p.op : 0,
+      zIndex: gv > 0.01 ? 5 : 3,
+      transform: [{ translateX: p.tx }, { translateY: p.ty }, { rotate: `${p.rot}deg` }, { scale: p.scale / grown }],
     }
   })
 
   return (
-    <Animated.View
-      pointerEvents="none"
-      style={[
-        {
-          position: 'absolute',
-          left: cx - card.w / 2,
-          top: L.cy - card.h / 2,
-          width: card.w,
-          height: card.h,
-          borderRadius: CARD_RADIUS,
-          backgroundColor: colors.surface,
-          shadowColor: '#000',
-          elevation: 12,
-        },
-        anim,
-      ]}
-    >
-      {/* resplandor del acento que asoma por detras de la carta al cerrarse el borde */}
+    <>
       <Animated.View
         pointerEvents="none"
-        style={[{ position: 'absolute', left: -10, right: -10, top: -10, bottom: -10, borderRadius: CARD_RADIUS + 10, backgroundColor: color }, halo]}
-      />
-      {/* poster a sangre, sin marco ni relleno difuminado alrededor */}
-      <View style={{ ...(StyleSheet.absoluteFill as object), borderRadius: CARD_RADIUS, overflow: 'hidden' }}>{side.bg}</View>
-      {/* velo de luz del acento sobre el poster en el destello */}
-      <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, { borderRadius: CARD_RADIUS, backgroundColor: color }, flare]} />
-      <Svg width={card.w} height={card.h} pointerEvents="none" style={StyleSheet.absoluteFill}>
-        <AnimatedRect
-          x={sw / 2}
-          y={sw / 2}
-          width={rw}
-          height={rh}
-          rx={rr}
-          ry={rr}
-          fill="none"
-          stroke={color}
-          strokeWidth={sw}
-          strokeDasharray={[perimeter, perimeter]}
-          animatedProps={rimProps}
-        />
-      </Svg>
-    </Animated.View>
+        style={[
+          {
+            position: 'absolute',
+            left: cx - card.w / 2,
+            top: L.cy - card.h / 2,
+            width: card.w,
+            height: card.h,
+            borderRadius: CARD_RADIUS,
+            backgroundColor: colors.surface,
+            shadowColor: '#000',
+            elevation: 12,
+          },
+          anim,
+        ]}
+      >
+        {/* poster a sangre, sin marco ni relleno difuminado alrededor */}
+        <View style={{ ...(StyleSheet.absoluteFill as object), borderRadius: CARD_RADIUS, overflow: 'hidden' }}>{side.bg}</View>
+      </Animated.View>
+      <Animated.View pointerEvents="none" style={[{ position: 'absolute', left: cx - bw / 2, top: L.cy - bh / 2, width: bw, height: bh }, rimAnim]}>
+        <Svg width={bw} height={bh} viewBox={`0 0 ${bw} ${bh}`} pointerEvents="none">
+          <Defs>
+            <LinearGradient id={gradId} gradientUnits="userSpaceOnUse" x1={0} y1={0} x2={bw} y2={bh}>
+              {RIM_STOPS.map((st) => (
+                <Stop key={st.at} offset={st.at} stopColor={st.color} />
+              ))}
+            </LinearGradient>
+          </Defs>
+          <AnimatedPath d={d} fill="none" stroke={`url(#${gradId})`} strokeWidth={RIM_W} strokeLinejoin="round" strokeDasharray={[perimeter + 2, perimeter + 2]} animatedProps={rimProps} />
+          {!reduce && (
+            <>
+              {/* destello sobre el propio trazo: una cola más tenue y un núcleo casi blanco */}
+              <AnimatedPath d={d} fill="none" stroke={FLASH_TAIL} strokeWidth={RIM_W} strokeLinecap="round" strokeDasharray={[tailLen, perimeter + tailLen]} animatedProps={tailProps} />
+              <AnimatedPath d={d} fill="none" stroke={FLASH_CORE} strokeWidth={RIM_W} strokeLinecap="round" strokeDasharray={[coreLen, perimeter + coreLen]} animatedProps={coreProps} />
+            </>
+          )}
+        </Svg>
+      </Animated.View>
+    </>
   )
 })
