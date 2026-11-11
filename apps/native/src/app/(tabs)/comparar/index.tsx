@@ -10,7 +10,7 @@ import { Poster } from '../../../components/Poster'
 import { Press } from '../../../components/Press'
 import { Button } from '../../../components/ui'
 import { DuelHeader } from '../../../components/duel/DuelHeader'
-import { pctColor, setDuelHandoff, useCompareOverview } from '../../../components/duel/overview'
+import { pctColor, setDuelHandoff, useCompareOverview, useFrozenWhenBlurred } from '../../../components/duel/overview'
 
 const MAX_POSTERS_ROW = 5
 
@@ -55,9 +55,9 @@ export default function CompareHome() {
   const ref = useRef<ComponentRef<typeof ScrollView>>(null)
   useScrollToTop(ref)
   const overview = useCompareOverview()
-  const entries = useStore((s) => s.entries)
-  const rankings = useStore((s) => s.rankings)
-  const duels = useStore((s) => s.duels)
+  const entries = useFrozenWhenBlurred(useStore((s) => s.entries))
+  const rankings = useFrozenWhenBlurred(useStore((s) => s.rankings))
+  const duels = useFrozenWhenBlurred(useStore((s) => s.duels))
 
   // Comparaciones por obra para el planificador
   const counts = useMemo(() => {

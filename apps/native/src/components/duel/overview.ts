@@ -1,14 +1,27 @@
-import { useMemo } from 'react'
+import { useMemo, useRef } from 'react'
+import { useIsFocused } from 'expo-router'
 import { computeCompareOverview, type CompareOverviewData, type PlannedDuel } from '@biblioteca/core'
 import { useStore } from '../../store'
 
 /** `useCompareOverview` de la PWA (lib/compareOverview.ts): la función pura vive en core, el hook aquí. */
 export function useCompareOverview(): CompareOverviewData {
-  const entries = useStore((s) => s.entries)
-  const rankings = useStore((s) => s.rankings)
-  const duels = useStore((s) => s.duels)
-  const lastCompared = useStore((s) => s.lastCompared)
+  const entries = useFrozenWhenBlurred(useStore((s) => s.entries))
+  const rankings = useFrozenWhenBlurred(useStore((s) => s.rankings))
+  const duels = useFrozenWhenBlurred(useStore((s) => s.duels))
+  const lastCompared = useFrozenWhenBlurred(useStore((s) => s.lastCompared))
   return useMemo(() => computeCompareOverview(entries, rankings, duels, lastCompared), [entries, rankings, duels, lastCompared])
+}
+
+/**
+ * La portada de ¡Duelos! sigue montada bajo la sesion (D19) y el almacen cambia en cada duelo: sin esto recalcularia el
+ * resumen y el planificador en el hilo de JS en cada eleccion, con la pantalla tapada. Mientras no tiene el foco devuelve
+ * el ultimo valor visto; al volver a verse se pone al dia de una vez.
+ */
+export function useFrozenWhenBlurred<T>(value: T): T {
+  const focused = useIsFocused()
+  const last = useRef(value)
+  if (focused) last.current = value
+  return last.current
 }
 
 /** Color del % ordenado: verde desde el 80 %, luego amarillo, naranja y rojo (CompareHome.tsx:26-31). */

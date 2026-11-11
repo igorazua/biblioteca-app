@@ -36,7 +36,7 @@ export function DuelHeader({
   return (
     <View style={{ paddingHorizontal: 20, paddingTop: Math.max(insets.top, 22), paddingBottom: 24 }}>
       <View style={{ minHeight: 24, marginBottom: 12, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8, flexShrink: 1 }}>
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8, flexShrink: 1, minWidth: 0 }}>
           {onBack && (
             <Press accessibilityRole="button" accessibilityLabel="Volver" onPress={onBack} hitSlop={8} style={{ padding: 4, marginLeft: -4 }}>
               <Icon name="back" size={20} color={colors.ink} />
@@ -48,7 +48,7 @@ export function DuelHeader({
             </AppText>
           )}
         </View>
-        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12, flexShrink: 0, marginLeft: 12 }}>
           {step && (
             <AppText style={[tx('meta'), { fontVariant: ['tabular-nums'] }]}>
               {step.current} de {step.total}

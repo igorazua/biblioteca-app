@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { ScrollView, StyleSheet, View } from 'react-native'
 import { router, useLocalSearchParams } from 'expo-router'
 import Animated, { FadeIn, FadeOut } from 'react-native-reanimated'
@@ -41,6 +41,14 @@ interface Snapshot {
   recent: string[]
   compared: Set<string>
   duelKey?: { a: string; b: string }
+}
+
+/** Igualdad superficial de dos mapas obra a lado: evita serializar a JSON en cada render. */
+function sameSides(a: Record<string, 'L' | 'R'>, b: Record<string, 'L' | 'R'>): boolean {
+  const ka = Object.keys(a)
+  if (ka.length !== Object.keys(b).length) return false
+  for (const k of ka) if (a[k] !== b[k]) return false
+  return true
 }
 
 function calcShelfOrdenado(entries: Record<string, UserEntry>, rankings: Record<ShelfType, string[]>, shDuels: Record<string, DuelRecord>, shelf: ShelfType): number {
@@ -209,7 +217,7 @@ export default function CompareSession() {
   const pair = assigned
 
   useEffect(() => {
-    if (assigned && JSON.stringify(assigned.nextSides) !== JSON.stringify(sides)) setSides(assigned.nextSides)
+    if (assigned && !sameSides(assigned.nextSides, sides)) setSides(assigned.nextSides)
   }, [assigned, sides])
 
   if (pair) {
@@ -217,6 +225,12 @@ export default function CompareSession() {
     lastPairKey.current = count
   }
   const shownPair = pair ?? (emptyState === 'none' && !summary ? lastPair.current : null)
+  // Los lados (con su <Poster> dentro) se crean una vez por par: si no, cada setState de la sesion repinta las dos portadas
+  const leftId = shownPair?.left.id
+  const rightId = shownPair?.right.id
+  const leftSide = useMemo(() => (leftId ? sideOf(getItem(leftId) as Item) : null), [leftId])
+  const rightSide = useMemo(() => (rightId ? sideOf(getItem(rightId) as Item) : null), [rightId])
+  const finish = useCallback(() => setSummary(true), [])
 
   useEffect(() => {
     if (!flash) return
@@ -365,20 +379,19 @@ export default function CompareSession() {
             ? startOrdenado.current !== nowOrdenado
               ? `${plural}: del ${startOrdenado.current} % al ${nowOrdenado} %`
               : `${plural}: ${nowOrdenado} % ordenado`
-            : undefined
+            : currentDuel || shownPair
+              ? count > 0
+                ? `${count} ${count === 1 ? 'duelo' : 'duelos'} en esta sesión`
+                : '\u00A0' // reserva la línea para que el abanico no cambie de alto al primer duelo
+              : undefined
         }
         onBack={handleBack}
         action={
           !summary ? (
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10 }}>
               {count > 0 && (
-                <AppText style={[tx('meta'), { fontFamily: 'Inter-500', color: 'rgba(244,239,230,0.75)', fontVariant: ['tabular-nums'] }]}>
-                  {count} {count === 1 ? 'duelo' : 'duelos'}
-                </AppText>
-              )}
-              {count > 0 && (
                 <Press
-                  onPress={() => setSummary(true)}
+                  onPress={finish}
                   accessibilityRole="button"
                   accessibilityLabel="Terminar"
                   scaleTo={0.95}
@@ -453,7 +466,7 @@ export default function CompareSession() {
           </Animated.View>
         ) : shownPair ? (
           <View style={{ flex: 1, minHeight: 0 }}>
-            <SwipePair key={lastPairKey.current} left={sideOf(shownPair.left)} right={sideOf(shownPair.right)} onChoose={onChoose} kind="rank" />
+            {leftSide && rightSide && <SwipePair key={lastPairKey.current} left={leftSide} right={rightSide} onChoose={onChoose} kind="rank" />}
             <View pointerEvents="none" accessibilityLiveRegion="polite" style={{ position: 'absolute', left: 0, right: 0, top: '42%', zIndex: 30, alignItems: 'center', paddingHorizontal: 24 }}>
               {flash && (
                 <Animated.View
