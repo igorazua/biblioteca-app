@@ -57,3 +57,37 @@ export { MOTIVATIONS, QUESTIONS, scoreReader, topMotivations, bookFit, type Ques
 // Teléfonos y enlaces compartidos
 export * from './lib/phone'
 export * from './lib/share'
+
+// Importación (lectores de archivos, emparejado con el catálogo, aplicar a la biblioteca)
+export * from './lib/import/types'
+export * from './lib/import/apply'
+export * from './lib/import/match'
+export { parseAppleMusic } from './lib/import/apple-music'
+export { parseGoodreads } from './lib/import/goodreads'
+export { parseImdb, imdbShelf } from './lib/import/imdb'
+export { parseKindle } from './lib/import/kindle'
+export { parseLetterboxd, letterboxdKind } from './lib/import/letterboxd'
+export { parseNetflix } from './lib/import/netflix'
+export { parsePrimeVideo } from './lib/import/prime-video'
+export { parseSpotifyHistory } from './lib/import/spotify-history'
+export { parseStoryGraph } from './lib/import/storygraph'
+export { parseYouTubeMusic } from './lib/import/youtube-music'
+
+// Conectar (servicios y conectores sin navegador: la app entrega el cliente de Supabase y el entorno de Spotify)
+export * from './lib/connect/types'
+export * from './lib/connect/services'
+export { anilist, anilistUsername } from './lib/connect/anilist'
+export { openLibrary, olUsername } from './lib/connect/openlibrary'
+export { setConnectClient, letterboxd, goodreads, letterboxdUsername, goodreadsId, type ConnectClient } from './lib/connect/server'
+export {
+  configureSpotify,
+  spotifyEnabled,
+  loadSpotifyTokens,
+  disconnectSpotify,
+  startSpotifyAuth,
+  finishSpotifyAuth,
+  fetchSpotifyArtists,
+  spotify,
+  type SpotifyEnv,
+  type SpotifyTokens,
+} from './lib/connect/spotify'
