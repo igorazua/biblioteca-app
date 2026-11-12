@@ -3,6 +3,7 @@ Genera las fuentes estáticas (TTF) de la app nativa a partir de los archivos va
 
 Origen (paquetes @fontsource-variable de app/node_modules):
   - Fraunces: fraunces-latin-full-normal.woff2 (ejes opsz, wght, SOFT, WONK)
+              fraunces-latin-full-italic.woff2 (mismos ejes; cursivas Fraunces72-400-italic y -500-italic)
   - Inter:    inter-latin-wght-normal.woff2    (eje wght)
 
 Destino: apps/native/assets/fonts/. Cada archivo lleva el nombre lógico de tokens.fontFiles
@@ -30,6 +31,7 @@ SOURCE_DIRS = [
 ]
 
 FRAUNCES = os.path.join("fraunces", "files", "fraunces-latin-full-normal.woff2")
+FRAUNCES_ITALIC = os.path.join("fraunces", "files", "fraunces-latin-full-italic.woff2")
 INTER = os.path.join("inter", "files", "inter-latin-wght-normal.woff2")
 
 # (nombre lógico, archivo de origen, coordenadas del eje)
@@ -40,6 +42,9 @@ JOBS = [
     ("Fraunces72-600", FRAUNCES, {"opsz": 72, "wght": 600, "SOFT": 0, "WONK": 1}),
     ("Fraunces72-700", FRAUNCES, {"opsz": 72, "wght": 700, "SOFT": 0, "WONK": 1}),
     ("Fraunces144-800", FRAUNCES, {"opsz": 144, "wght": 800, "SOFT": 0, "WONK": 1}),
+    # Cursivas: mismos ejes que la normal (la PWA usa la cursiva variable con esos valores).
+    ("Fraunces72-400-italic", FRAUNCES_ITALIC, {"opsz": 72, "wght": 400, "SOFT": 0, "WONK": 1}),
+    ("Fraunces72-500-italic", FRAUNCES_ITALIC, {"opsz": 72, "wght": 500, "SOFT": 0, "WONK": 1}),
     ("Inter-400", INTER, {"wght": 400}),
     ("Inter-500", INTER, {"wght": 500}),
     ("Inter-600", INTER, {"wght": 600}),

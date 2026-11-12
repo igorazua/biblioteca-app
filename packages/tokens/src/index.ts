@@ -51,6 +51,8 @@ export const fontFiles = {
   'Fraunces72-600': 'Fraunces72-600.ttf', // opsz 72, wght 600
   'Fraunces72-700': 'Fraunces72-700.ttf', // opsz 72, wght 700
   'Fraunces144-800': 'Fraunces144-800.ttf', // opsz 144, wght 800 (número de ranking)
+  'Fraunces72-400-italic': 'Fraunces72-400-italic.ttf', // cursiva, opsz 72, wght 400
+  'Fraunces72-500-italic': 'Fraunces72-500-italic.ttf', // cursiva, opsz 72, wght 500
   'Inter-400': 'Inter-400.ttf',
   'Inter-500': 'Inter-500.ttf',
   'Inter-600': 'Inter-600.ttf',

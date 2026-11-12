@@ -25,6 +25,8 @@ const FONTS = {
   'Fraunces72-600': require('../../assets/fonts/Fraunces72-600.ttf'),
   'Fraunces72-700': require('../../assets/fonts/Fraunces72-700.ttf'),
   'Fraunces144-800': require('../../assets/fonts/Fraunces144-800.ttf'),
+  'Fraunces72-400-italic': require('../../assets/fonts/Fraunces72-400-italic.ttf'),
+  'Fraunces72-500-italic': require('../../assets/fonts/Fraunces72-500-italic.ttf'),
   'Inter-400': require('../../assets/fonts/Inter-400.ttf'),
   'Inter-500': require('../../assets/fonts/Inter-500.ttf'),
   'Inter-600': require('../../assets/fonts/Inter-600.ttf'),

@@ -106,7 +106,7 @@ function ListRow({ item: it, note, saved, onSave }: { item: Item; note?: string;
         </AppText>
         <AppText style={[tx('item'), { color: colors.ink, marginTop: 2 }]}>{titleOf(it)}</AppText>
         <AppText style={[tx('meta'), { color: colors.mute, marginTop: 2 }]}>{facts ? `${it.creator} · ${facts}` : it.creator}</AppText>
-        {note ? <AppText style={[tx('body'), { color: colors.accent, marginTop: 6, fontStyle: 'italic' }]}>«{note}»</AppText> : null}
+        {note ? <AppText style={[tx('body'), { color: colors.accent, marginTop: 6, fontFamily: 'Fraunces72-400-italic' }]}>«{note}»</AppText> : null}
         <AppText style={[tx('meta'), { color: colors.mute, marginTop: 6 }]} numberOfLines={2}>
           {it.synopsis}
         </AppText>

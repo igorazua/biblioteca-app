@@ -33,7 +33,7 @@ export function FriendsSection({ item, hits, onNotify }: { item: Item; hits: Fri
                 </View>
                 {r ? <RankBadge pos={r.pos} size="lg" /> : null}
               </View>
-              {e.comment ? <AppText style={[tx('body'), { marginTop: 8, fontFamily: 'Fraunces72-400', fontStyle: 'italic', color: alpha(colors.ink, 0.9) }]}>{`«${e.comment}»`}</AppText> : null}
+              {e.comment ? <AppText style={[tx('body'), { marginTop: 8, fontFamily: 'Fraunces72-400-italic', color: alpha(colors.ink, 0.9) }]}>{`«${e.comment}»`}</AppText> : null}
               {r ? <AskFriend friend={friend} message={askText(friend.name, r.pos)} onNotify={onNotify} /> : null}
             </View>
           )

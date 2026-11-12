@@ -105,7 +105,7 @@ export function StatusSection({ item, onNotify }: { item: Item; onNotify: (m: st
               {` de tus ${ranking.length} ${label.plural.toLowerCase()}`}
             </AppText>
           )}
-          {entry?.comment ? <AppText style={[tx('body'), { marginTop: 8, fontFamily: 'Fraunces72-400', fontStyle: 'italic', color: alpha(colors.ink, 0.9) }]}>{`«${entry.comment}»`}</AppText> : null}
+          {entry?.comment ? <AppText style={[tx('body'), { marginTop: 8, fontFamily: 'Fraunces72-400-italic', color: alpha(colors.ink, 0.9) }]}>{`«${entry.comment}»`}</AppText> : null}
           <Press
             onPress={openRating}
             accessibilityRole="button"

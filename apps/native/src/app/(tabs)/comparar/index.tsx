@@ -179,11 +179,11 @@ export default function CompareHome() {
               </View>
             </View>
             <AppText numberOfLines={1} style={{ fontFamily: 'Fraunces72-400', fontSize: 15, marginTop: 14, paddingHorizontal: 8, maxWidth: '100%', textAlign: 'center', color: colors.ink }}>
-              <AppText style={{ fontStyle: 'italic' }}>{titleOf(pairItems.a)}</AppText>
+              <AppText style={{ fontFamily: 'Fraunces72-400-italic' }}>{titleOf(pairItems.a)}</AppText>
               {' '}
               <AppText style={{ color: colors.mute }}>o</AppText>
               {' '}
-              <AppText style={{ fontStyle: 'italic' }}>{titleOf(pairItems.b)}</AppText>
+              <AppText style={{ fontFamily: 'Fraunces72-400-italic' }}>{titleOf(pairItems.b)}</AppText>
             </AppText>
             <Button variant="primary" onPress={startDuel} style={{ alignSelf: 'stretch', marginTop: 20 }}>
               Empezar · 7 duelos

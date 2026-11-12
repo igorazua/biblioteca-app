@@ -158,7 +158,7 @@ export function CommentSheet({ itemId, onClose }: { itemId: string; onClose: () 
     <Sheet label="Comentario" onClose={finish} height="34%">
       <Pressable accessible={false} onPress={Keyboard.dismiss} style={{ flex: 1 }}>
         <AppText style={[tx('title'), { color: colors.ink }]}>
-          ¿Algo que decir de <AppText style={{ fontFamily: 'Fraunces72-500', fontStyle: 'italic' }}>{titleOf(item)}</AppText>?
+          ¿Algo que decir de <AppText style={{ fontFamily: 'Fraunces72-500-italic' }}>{titleOf(item)}</AppText>?
         </AppText>
         <CommentInput value={comment} onChange={setComment} placeholder="Tu comentario (opcional)" />
         <View style={{ marginTop: 12 }}>
