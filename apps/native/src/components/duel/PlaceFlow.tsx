@@ -13,7 +13,7 @@ import {
 } from '@biblioteca/core'
 import { starsOfEntries, useStore } from '../../store'
 import { colors } from '../../theme'
-import { DuelHeader } from './DuelHeader'
+import { ScreenTitle } from '../ScreenTitle'
 import { SwipePair } from './SwipePair'
 import { sideOf } from './sides'
 import { byGender } from '@biblioteca/core'
@@ -71,7 +71,7 @@ export function PlaceFlow({ itemId, onDone }: { itemId: string; onDone: (msg?: s
   return (
     <Modal visible animationType="fade" onRequestClose={() => onDone()} supportedOrientations={['portrait']} statusBarTranslucent navigationBarTranslucent>
       <GestureHandlerRootView style={{ flex: 1, backgroundColor: colors.bg }} accessibilityViewIsModal accessibilityLabel="Colocar en tu ranking">
-        <DuelHeader
+        <ScreenTitle
           label={`COLOCAR · ${SHELF_LABEL[item.type].plural.toUpperCase()}`}
           step={{ current: p.comparisons + 1, total: 3 }}
           title="¿Cuál te gustó más?"

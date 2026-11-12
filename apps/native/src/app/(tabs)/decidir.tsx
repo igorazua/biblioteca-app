@@ -51,7 +51,7 @@ import { Press } from '../../components/Press'
 import { Button, Sheet, Toast } from '../../components/ui'
 import { RatingFlow } from '../../components/flows/RatingFlow'
 import { Appear, ChoiceCard, Fade, PassButton, PlatformTiles, ShelfCard } from '../../components/duel/DecideParts'
-import { DuelHeader } from '../../components/duel/DuelHeader'
+import { ScreenTitle } from '../../components/ScreenTitle'
 import { SwipePair } from '../../components/duel/SwipePair'
 import { sideOf } from '../../components/duel/sides'
 
@@ -562,7 +562,7 @@ export default function Decidir() {
   let body: React.ReactNode = null
 
   if (phase === 'shelf') {
-    header = <DuelHeader label="DECIDIR" title="¿Por dónde tiramos hoy?" subtitle="Elige qué te apetece y te hago unas preguntas rápidas." />
+    header = <ScreenTitle label="DECIDIR" title="¿Por dónde tiramos hoy?" subtitle="Elige qué te apetece y te hago unas preguntas rápidas." />
     body = (
       // con scroll y aire al final: en pantallas bajas la última tarjeta tiene que poder verse entera
       <ScrollView ref={scrollRef} style={{ flex: 1 }} contentContainerStyle={{ flexGrow: 1, paddingHorizontal: 20, paddingBottom: 64, gap: 12 }} contentInsetAdjustmentBehavior="never">
@@ -587,7 +587,7 @@ export default function Decidir() {
     const q = questions[qi]
     const val = answers[q?.id]
     header = (
-      <DuelHeader
+      <ScreenTitle
         label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`}
         step={{ current: qi + 1, total: questions.length }}
         title={q?.q || 'Pregunta'}
@@ -658,7 +658,7 @@ export default function Decidir() {
     )
   } else if (phase === 'shape' && pair) {
     header = (
-      <DuelHeader
+      <ScreenTitle
         label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`}
         step={{ current: duel.n + 1, total: Math.max(duel.of, duel.n + 1) }}
         title={duelPhase === 'coarse' ? '¿Por dónde tiramos hoy?' : 'Afinando el tiro'}
@@ -688,7 +688,7 @@ export default function Decidir() {
     )
   } else if (phase === 'propose' && currentItem) {
     const reasonsText = proposal?.reasons.join(' · ') || 'Sugerencia basada en tus respuestas'
-    header = <DuelHeader label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`} title={`Te propongo ${shelfTerms.fem ? 'esta' : 'este'}`} action={resetBtn} />
+    header = <ScreenTitle label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`} title={`Te propongo ${shelfTerms.fem ? 'esta' : 'este'}`} action={resetBtn} />
     body = (
       <View style={{ flex: 1, minHeight: 0, paddingHorizontal: 20, paddingBottom: 24 }}>
         <View ref={cardRef} collapsable={false} style={{ flex: 1, minHeight: 0 }}>
@@ -732,7 +732,7 @@ export default function Decidir() {
   } else if (phase === 'done' && currentItem) {
     const plat = currentItem.platforms?.find((p) => profile.platforms.includes(p)) ?? currentItem.platforms?.[0]
     header = (
-      <DuelHeader
+      <ScreenTitle
         label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`}
         title={shelf === 'book' ? 'A leer' : shelf === 'boardgame' ? 'A jugar' : shelf === 'artist' ? 'A escuchar' : 'A disfrutar'}
         subtitle={titleOf(currentItem)}
@@ -765,7 +765,7 @@ export default function Decidir() {
       </View>
     )
   } else if (phase === 'none') {
-    header = <DuelHeader label="DECIDIR" title={shelfTerms.fem ? 'Se acabaron las candidatas' : 'Se acabaron los candidatos'} subtitle="Prueba con otras respuestas, o guarda más pendientes en Descubrir." />
+    header = <ScreenTitle label="DECIDIR" title={shelfTerms.fem ? 'Se acabaron las candidatas' : 'Se acabaron los candidatos'} subtitle="Prueba con otras respuestas, o guarda más pendientes en Descubrir." />
     body = (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 24, gap: 12 }}>
         <Button variant="primary" onPress={reset}>

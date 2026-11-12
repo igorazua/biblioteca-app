@@ -11,7 +11,7 @@ import { useStore } from '../../store'
 import { AppText } from '../../components/AppText'
 import { Icon } from '../../components/Icon'
 import { Press } from '../../components/Press'
-import { DuelHeader } from '../../components/duel/DuelHeader'
+import { ScreenTitle } from '../../components/ScreenTitle'
 import { AvatarCropper, type CroppedAvatar } from '../../components/profile/AvatarCropper'
 import { toDataUri, uploadAvatarToCloud } from '../../components/profile/avatarUpload'
 import { Avatar, Group, PlatformPicker, Sheet, Toast } from '../../components/ui'
@@ -134,7 +134,7 @@ export default function EditarPerfil() {
     <View style={{ flex: 1, backgroundColor: colors.bg }}>
       <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
         <ScrollView contentContainerStyle={{ paddingBottom: 48 }} keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag">
-          <DuelHeader
+          <ScreenTitle
             label="PERFIL"
             title="Editar perfil"
             onBack={back}

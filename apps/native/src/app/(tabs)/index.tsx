@@ -10,7 +10,7 @@ import { Press } from '../../components/Press'
 import { AddFlow } from '../../components/flows/AddFlow'
 import { Avatar, NudgeCard, Toast } from '../../components/ui'
 import { ShelfCard } from '../../components/library/ShelfCard'
-import { TitleBar } from '../../components/library/LibraryParts'
+import { ScreenTitle } from '../../components/ScreenTitle'
 import { VoteSheet } from '../../components/library/VoteSheet'
 import { useCatalogTick } from '../../components/library/shelfMeta'
 import { colors, tx } from '../../theme'
@@ -100,7 +100,7 @@ export default function Biblioteca() {
 
   return (
     <ScrollView ref={ref} style={{ flex: 1, backgroundColor: colors.bg }} contentContainerStyle={{ paddingBottom: 24 }}>
-      <TitleBar
+      <ScreenTitle actionPlacement="title"
         label="TU BIBLIOTECA"
         title={`Hola, ${firstName}.`}
         subtitle={`${seen} en tu biblioteca · ${pending} pendientes`}

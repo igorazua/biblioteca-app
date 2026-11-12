@@ -27,7 +27,7 @@ import { Poster } from '../../../components/Poster'
 import { Press } from '../../../components/Press'
 import { Button, Group } from '../../../components/ui'
 import { CommentSheet } from '../../../components/flows/RatingFlow'
-import { DuelHeader } from '../../../components/duel/DuelHeader'
+import { ScreenTitle } from '../../../components/ScreenTitle'
 import { takeDuelHandoff } from '../../../components/duel/overview'
 import { SwipePair } from '../../../components/duel/SwipePair'
 import { sideOf } from '../../../components/duel/sides'
@@ -372,7 +372,7 @@ export default function CompareSession() {
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.bg }}>
-      <DuelHeader
+      <ScreenTitle
         label={`DUELOS · ${plural.toUpperCase()}`}
         title={summary ? 'Sesión completada' : currentDuel ? '¿Cuál te gustó más?' : 'Tu ranking'}
         subtitle={

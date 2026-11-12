@@ -9,7 +9,7 @@ import { AppText } from '../../../components/AppText'
 import { Poster } from '../../../components/Poster'
 import { Press } from '../../../components/Press'
 import { Button } from '../../../components/ui'
-import { DuelHeader } from '../../../components/duel/DuelHeader'
+import { ScreenTitle } from '../../../components/ScreenTitle'
 import { pctColor, setDuelHandoff, useCompareOverview, useFrozenWhenBlurred } from '../../../components/duel/overview'
 import { byGender } from '@biblioteca/core'
 
@@ -146,7 +146,7 @@ export default function CompareHome() {
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.bg }}>
-      <DuelHeader label="DUELOS" title={title} subtitle={subtitle} />
+      <ScreenTitle label="DUELOS" title={title} subtitle={subtitle} />
       <ScrollView ref={ref} style={{ flex: 1 }} contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 24 }} contentInsetAdjustmentBehavior="never">
         {/* 2. El próximo duelo (24 px bajo el título) */}
         {pairItems && recShelf ? (

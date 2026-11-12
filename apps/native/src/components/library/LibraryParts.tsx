@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
-import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { getItem, itemsOfType, type Item, type ShelfType } from '@biblioteca/core'
 import { posterAspect } from '../../lib/item'
 import { alpha, colors, shelfColors, tx } from '../../theme'
@@ -9,25 +8,6 @@ import { AppText } from '../AppText'
 import { Icon } from '../Icon'
 import { Poster } from '../Poster'
 import { SHELF_ICON } from './shelfMeta'
-
-/** Cabecera de pantalla con una acción a la derecha (ScreenTitle.tsx sin acciones). px 20; arriba max(zona segura, 22). */
-export function TitleBar({ label, title, subtitle, action }: { label: string; title: string; subtitle?: string; action?: ReactNode }) {
-  const insets = useSafeAreaInsets()
-  return (
-    <View style={{ paddingHorizontal: 20, paddingTop: Math.max(insets.top, 22), paddingBottom: 24 }}>
-      <View style={{ minHeight: 24, marginBottom: 12, flexDirection: 'row', alignItems: 'center' }}>
-        <AppText style={tx('label')}>{label}</AppText>
-      </View>
-      <View style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 12 }}>
-        <View style={{ flex: 1, minWidth: 0 }}>
-          <AppText style={[tx('display'), { color: colors.ink }]}>{title}</AppText>
-          {!!subtitle && <AppText style={[tx('meta'), { marginTop: 6 }]}>{subtitle}</AppText>}
-        </View>
-        {action}
-      </View>
-    </View>
-  )
-}
 
 /** Pila de hasta tres portadas giradas, para las estanterías vacías (Library.tsx:162-165). */
 export function PosterPile({ shelf }: { shelf: ShelfType }) {

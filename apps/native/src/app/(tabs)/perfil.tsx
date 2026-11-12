@@ -17,7 +17,7 @@ import { useAuth } from '../../store/useAuth'
 import { AppText } from '../../components/AppText'
 import { Icon } from '../../components/Icon'
 import { Press } from '../../components/Press'
-import { DuelHeader } from '../../components/duel/DuelHeader'
+import { ScreenTitle } from '../../components/ScreenTitle'
 import { FindFriends } from '../../components/friends/FindFriends'
 import { useCatalogTick } from '../../components/library/shelfMeta'
 import { AffinityRow, Counter, NoticeLink, Section, StatCard, TopTile } from '../../components/profile/parts'
@@ -94,7 +94,7 @@ export default function Perfil() {
   return (
     <View style={{ flex: 1 }}>
       <ScrollView ref={ref} contentInsetAdjustmentBehavior="never" contentContainerStyle={{ paddingBottom: 32 }}>
-        <DuelHeader
+        <ScreenTitle
           label="PERFIL"
           title={unnamed ? 'Tu perfil' : profile.name}
           subtitle={subtitle || undefined}
