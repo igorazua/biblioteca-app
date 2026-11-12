@@ -1,14 +1,12 @@
 import { userLang } from '../lib/userLang'
-import { displayTitle } from '../lib/locale'
+import { type Item, type ShelfType, SHELF_LABEL, itemFacts, typeName } from '@biblioteca/core'
+import { displayTitle } from '@biblioteca/core/src/lib/locale'
+import { boardgameDeckLayout, posterShape } from '@biblioteca/core/src/lib/posterShape'
 import { forwardRef, useImperativeHandle, useLayoutEffect, useRef } from 'react'
 import { animate, motion, useMotionValue, useTransform, type MotionValue } from 'framer-motion'
-import type { Item, ShelfType } from '../types'
-import { SHELF_LABEL } from '../types'
 import { Poster, posterLayoutId } from './Poster'
 import { FriendBubbles, Tag } from './ui'
-import { itemFacts, typeName } from '../data/catalog'
 import { haptic } from '../lib/haptics'
-import { boardgameDeckLayout, posterShape } from '../lib/posterShape'
 
 export type SwipeDir = 'left' | 'right' | 'up'
 export interface DeckHandle { fling: (dir: SwipeDir) => void }

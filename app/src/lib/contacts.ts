@@ -1,7 +1,7 @@
 // Amigos a partir de la agenda (migración 0006). Los números se envían a la función de Supabase, que los compara
 // con los de quienes han activado «que me encuentren por mi teléfono» y no los guarda.
 import { supabase } from './supabase'
-import { normalizePhone } from './phone'
+import { normalizePhone } from '@biblioteca/core'
 
 /** PostgREST responde PGRST202 cuando la función no existe (migración 0006 sin aplicar). */
 export const isMissingFunction = (e: { code?: string; message?: string } | null | undefined) =>

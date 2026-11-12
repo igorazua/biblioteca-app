@@ -1,21 +1,29 @@
 import { userLang } from '../lib/userLang'
-import { displayTitle } from '../lib/locale'
+import {
+  canonicalId,
+  friendHits,
+  getItem,
+  itemFacts,
+  typeName,
+  friendRanks,
+  LISTS_ENABLED,
+  SHELF_LABEL,
+  type Friend,
+  type Status,
+} from '@biblioteca/core'
+import { displayTitle } from '@biblioteca/core/src/lib/locale'
+import { boardgameDetailAspect, posterShape } from '@biblioteca/core/src/lib/posterShape'
+import { ensureShelfCatalog } from '../data/loadData'
 import { useEffect, useState } from 'react'
 import { Link, Navigate, useLocation, useNavigate, useParams } from 'react-router-dom'
-import { canonicalId } from '../data/aliases'
-import { ensureShelfCatalog, friendHits, getItem, itemFacts, typeName } from '../data/catalog'
 import { useStore } from '../store/useStore'
 import { useCatalog } from '../store/useCatalog'
 import { useRanks } from '../store/useScores'
 import { Poster, posterLayoutId } from '../components/Poster'
-import { boardgameDetailAspect, posterShape } from '../lib/posterShape'
 import { Avatar, FriendBubbles, RankBadge, Sheet, Tag, Toast } from '../components/ui'
-import { friendRanks } from '../lib/rank'
-import { LISTS_ENABLED } from '../config'
 import { RatingFlow } from '../components/RatingFlow'
 import { AskFriend } from '../components/AskFriend'
 import { Icon } from '../components/Icon'
-import { SHELF_LABEL, type Friend, type Status } from '../types'
 import { AnimatePresence, motion } from 'framer-motion'
 import { haptic } from '../lib/haptics'
 

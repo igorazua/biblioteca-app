@@ -1,10 +1,8 @@
 import { create } from 'zustand'
 import { supabase } from '../lib/supabase'
 import { useAuth } from './useAuth'
-import { friends as seedFriends, setFriendHitsProvider } from '../data/catalog'
+import { friends as seedFriends, setFriendHitsProvider, canonicalId, type Friend, type FriendEntry } from '@biblioteca/core'
 import { useCatalog } from './useCatalog'
-import { canonicalId } from '../data/aliases'
-import type { Friend, FriendEntry } from '../types'
 import { isMissingFunction } from '../lib/contacts'
 
 export interface FriendHit {

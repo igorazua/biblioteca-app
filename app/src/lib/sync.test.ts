@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { mergeCloudAndLocal } from './sync'
-import type { UserEntry, ShelfType } from '../types'
+import type { UserEntry, ShelfType } from '@biblioteca/core'
 
 describe('mergeCloudAndLocal', () => {
   const emptyRankings: Record<ShelfType, string[]> = {

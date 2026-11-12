@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import type { Friend } from '../types'
+import type { Friend } from '@biblioteca/core'
 import { Icon } from './Icon'
 
 /** «Pregúntale» (§12.7): WhatsApp con el texto prellenado, o Instagram (copia el mensaje y abre el chat). */

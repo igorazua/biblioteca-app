@@ -3,7 +3,8 @@
 import { useEffect, useLayoutEffect, useRef, useState, type RefObject } from 'react'
 import { animate, motion, useMotionValue, useReducedMotion, useTransform, type MotionValue } from 'framer-motion'
 import { haptic } from '../lib/haptics'
-import { duelCardSize, duelFitSize, getDuelFit, DUEL_FIT_EVENT, type DuelFit } from '../lib/posterShape'
+import { duelCardSize, duelFitSize, type DuelFit } from '@biblioteca/core/src/lib/posterShape'
+import { getDuelFit, DUEL_FIT_EVENT } from '../lib/duelFit'
 import type { Side } from './SwipePair'
 
 // ── Textos del duelo ────────────────────────────────────────────────────────────────────────────

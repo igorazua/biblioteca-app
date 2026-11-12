@@ -1,10 +1,17 @@
 import { userLang } from '../lib/userLang'
-import { displayTitle } from '../lib/locale'
+import {
+  getItem,
+  answerPlacement,
+  advancePlacementWithDuels,
+  finishPlacement,
+  placementOpponent,
+  startPlacement,
+  type Placement,
+  SHELF_LABEL,
+} from '@biblioteca/core'
+import { displayTitle } from '@biblioteca/core/src/lib/locale'
 import { useEffect, useState } from 'react'
-import { getItem } from '../data/catalog'
 import { useStore, starsOfEntries } from '../store/useStore'
-import { answerPlacement, advancePlacementWithDuels, finishPlacement, placementOpponent, startPlacement, type Placement } from '../lib/ranking'
-import { SHELF_LABEL } from '../types'
 import { Portal } from './ui'
 import { Poster } from './Poster'
 import { SwipePair, type Side } from './SwipePair'

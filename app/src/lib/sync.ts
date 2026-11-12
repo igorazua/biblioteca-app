@@ -1,11 +1,17 @@
 import { supabase } from './supabase'
-import { getItem } from '../data/catalog'
-import { collapseCloudRows } from '../data/aliases'
+import {
+  getItem,
+  collapseCloudRows,
+  SHELVES,
+  type ShelfType,
+  type UserEntry,
+  type DuelRecord,
+  pairKey,
+  repairRankingsAndEntries,
+} from '@biblioteca/core'
 import { useStore } from '../store/useStore'
 import { useAuth } from '../store/useAuth'
 import { useCatalog } from '../store/useCatalog'
-import { SHELVES, type ShelfType, type UserEntry, type DuelRecord } from '../types'
-import { pairKey, repairRankingsAndEntries } from './ranking'
 
 const resolveShelf = (itemId: string, shelfFromEntry?: string): ShelfType | undefined => {
   if (shelfFromEntry && shelfFromEntry in { movie: 1, series: 1, book: 1, artist: 1, boardgame: 1 }) {

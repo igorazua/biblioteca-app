@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { Icon, type IconName } from './Icon'
-import { WIZARD_NAME, WIZARD_PATH } from '../config'
+import { WIZARD_NAME, WIZARD_PATH } from '@biblioteca/core'
 
 const TABS: { to: string; label: string; icon: IconName; center?: boolean; end?: boolean }[] = [
   { to: '/', label: 'Biblioteca', icon: 'library', end: true },

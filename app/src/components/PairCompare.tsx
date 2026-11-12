@@ -1,10 +1,9 @@
 import { userLang } from '../lib/userLang'
-import { displayTitle } from '../lib/locale'
+import { type Item, itemFacts, typeName } from '@biblioteca/core'
+import { displayTitle } from '@biblioteca/core/src/lib/locale'
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { animate, motion, useMotionValue, useTransform } from 'framer-motion'
-import type { Item } from '../types'
 import { Poster } from './Poster'
-import { itemFacts, typeName } from '../data/catalog'
 import { Icon } from './Icon'
 import { haptic } from '../lib/haptics'
 

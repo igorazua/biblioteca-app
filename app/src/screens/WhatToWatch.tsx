@@ -1,16 +1,21 @@
 import { userLang } from '../lib/userLang'
-import { displayTitle } from '../lib/locale'
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { Link, useNavigate, useSearchParams } from 'react-router-dom'
-import { AnimatePresence, motion } from 'framer-motion'
-import { ensureShelfCatalog, friends as seedFriends, getItem, itemFacts, items, itemsById, typeName } from '../data/catalog'
-import { PLATFORMS, WIZARD_TITLE } from '../config'
-import { BOOK_QUESTIONS, QUESTIONS_BY_SHELF, type Option, type OptionArt, type QCtx, type Question } from '../data/questions'
 import {
-  initDecideSession,
+  friends as seedFriends,
+  getItem,
+  itemFacts,
+  items,
+  itemsById,
+  typeName,
+  PLATFORMS,
+  WIZARD_TITLE,
+  BOOK_QUESTIONS,
+  QUESTIONS_BY_SHELF,
+  type Option,
+  type OptionArt,
+  type QCtx,
+  type Question,
   nextDuel,
   applyDuelChoice,
-  skipDuelUnknown,
   shouldPropose,
   getProposal,
   rejectAndContinue,
@@ -19,17 +24,27 @@ import {
   sessionTaste,
   type Decide2State as DecideState,
   type DuelPair,
-} from '../lib/engine/decide2'
-import { ensureShelfEngine } from '../lib/engine/loadEngine'
+  affinity,
+  friendRanks,
+  ACTIVE_SHELVES,
+  SHELVES,
+  SHELF_LABEL,
+  type Friend,
+  type Item,
+  type ShelfType,
+} from '@biblioteca/core'
+import { displayTitle } from '@biblioteca/core/src/lib/locale'
+import { posterBox, posterRadius } from '@biblioteca/core/src/lib/posterShape'
+import { ensureShelfCatalog, ensureShelfEngine } from '../data/loadData'
+import { startDecide, skipDecide } from '../lib/decideMemory'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { Link, useNavigate, useSearchParams } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useStore } from '../store/useStore'
 import { useFriends } from '../store/useFriends'
 import { useRanks } from '../store/useScores'
 import { track, useEvents } from '../store/useEvents'
-import { affinity } from '../lib/affinity'
-import { friendRanks } from '../lib/rank'
-import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type Friend, type Item, type ShelfType } from '../types'
 import { Poster, posterLayoutId } from '../components/Poster'
-import { posterBox, posterRadius } from '../lib/posterShape'
 import { SwipePair, type Side } from '../components/SwipePair'
 import { RatingFlow } from '../components/RatingFlow'
 import { Sheet, Toast } from '../components/ui'
@@ -225,7 +240,7 @@ export function WhatToWatch() {
     })
 
     const userVec = useStore.getState().userVectors?.[shelf]
-    const state = initDecideSession({
+    const state = startDecide({
       shelf,
       items,
       entries,
@@ -380,7 +395,7 @@ export function WhatToWatch() {
     const elapsedMs = Math.round(performance.now() - duelStartTimeRef.current)
     const currentDuel = currentDuelPairRef.current
 
-    const updatedState = skipDuelUnknown(
+    const updatedState = skipDecide(
       decideState,
       a,
       b,

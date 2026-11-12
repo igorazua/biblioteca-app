@@ -1,3 +1,6 @@
+// Primero: entrega a @biblioteca/core los alias, el índice del catálogo y las anclas, antes de crear ningún store
+import './data/boot'
+import { setupConnectors } from './lib/connectSetup'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
@@ -7,6 +10,9 @@ import { MotionConfig, MotionGlobalConfig } from 'framer-motion'
 
 // Solo en desarrollo: abre la app con ?fast para saltar las animaciones (pruebas automáticas en un navegador sin pintar)
 if (import.meta.env.DEV && new URLSearchParams(location.search).has('fast')) MotionGlobalConfig.skipAnimations = true
+
+// cliente de Supabase y entorno de Spotify para los conectores de Conectar
+setupConnectors()
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

@@ -1,6 +1,6 @@
 import { userLang } from './userLang'
-import { displayTitle, displayPoster } from './locale'
-import type { Item } from '../types'
+import type { Item } from '@biblioteca/core'
+import { displayTitle, displayPoster } from '@biblioteca/core/src/lib/locale'
 
 export interface ShareCardOptions {
   title: string

@@ -1,6 +1,6 @@
 // app/src/components/NudgeCard.tsx
 import { motion } from 'framer-motion'
-import { type Nudge } from '../lib/nudges'
+import type { Nudge } from '@biblioteca/core'
 import { Icon } from './Icon'
 
 interface Props {

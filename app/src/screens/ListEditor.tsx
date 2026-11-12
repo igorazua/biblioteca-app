@@ -1,16 +1,25 @@
 import { userLang } from '../lib/userLang'
-import { displayTitle, searchTitles } from '../lib/locale'
+import {
+  getItem,
+  items,
+  typeName,
+  ACTIVE_SHELVES,
+  SHELVES,
+  SHELF_LABEL,
+  type ListItem,
+  type ShelfType,
+  listUrl,
+  type SharedList,
+} from '@biblioteca/core'
+import { displayTitle, searchTitles } from '@biblioteca/core/src/lib/locale'
+import { posterBox, posterRadius } from '@biblioteca/core/src/lib/posterShape'
 import { useMemo, useState } from 'react'
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
-import { getItem, items, typeName } from '../data/catalog'
 import { useStore } from '../store/useStore'
-import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type ListItem, type ShelfType } from '../types'
 import { Poster } from '../components/Poster'
-import { posterBox, posterRadius } from '../lib/posterShape'
 import { Chip, Confirm, ScreenHeader, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
-import { listUrl, type SharedList } from '../lib/share'
 import { shareOrCopy } from '../lib/shareUi'
 
 type Scope = 'mine' | 'seen' | 'pending' | 'all'

@@ -6,12 +6,17 @@ import { useCatalog } from '../../store/useCatalog'
 import { useAuth } from '../../store/useAuth'
 import { track } from '../../store/useEvents'
 import { supabase } from '../supabase'
-import { items as seedItems, getItem } from '../../data/catalog'
-import { buildLocalIndex, imdbToQids, matchLocal } from './match'
-import { applyImportRows } from './apply'
+import {
+  items as seedItems,
+  getItem,
+  buildLocalIndex,
+  imdbToQids,
+  matchLocal,
+  applyImportRows,
+  type ImportRow,
+  type Item,
+} from '@biblioteca/core'
 import { pushLocalEntriesToCloud } from '../sync'
-import type { ImportRow } from './types'
-import type { Item } from '../../types'
 
 export interface MatchedPair {
   row: ImportRow

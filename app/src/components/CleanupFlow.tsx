@@ -1,15 +1,13 @@
 import { useState, useRef, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import { getItem, friendHits } from '../data/catalog'
+import { getItem, friendHits, SHELF_LABEL, type Item, type ShelfType, type UserEntry, cleanupOrder } from '@biblioteca/core'
 import { useStore } from '../store/useStore'
 import { track, useEvents } from '../store/useEvents'
-import { SHELF_LABEL, type Item, type ShelfType, type UserEntry } from '../types'
 import { SwipeDeck, type DeckHandle, type SwipeDir } from './SwipeDeck'
 import { RatingFlow } from './RatingFlow'
 import { Icon } from './Icon'
 import { Toast } from './ui'
-import { cleanupOrder } from '../lib/engine/cleanup'
 
 interface CleanupFlowProps {
   shelf: ShelfType

@@ -1,19 +1,27 @@
 import { userLang } from '../lib/userLang'
-import { displayTitle } from '../lib/locale'
+import {
+  getItem,
+  isKnownItem,
+  itemFacts,
+  typeName,
+  ACTIVE_SHELVES,
+  SHELVES,
+  SHELF_LABEL,
+  decodeList,
+  decodeProfile,
+  APP_NAME,
+} from '@biblioteca/core'
+import { displayTitle } from '@biblioteca/core/src/lib/locale'
+import { posterBox, posterRadius } from '@biblioteca/core/src/lib/posterShape'
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
-import { getItem, isKnownItem, itemFacts, typeName } from '../data/catalog'
 import { useStore } from '../store/useStore'
 import { useCatalog } from '../store/useCatalog'
-import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL } from '../types'
-import { decodeList, decodeProfile } from '../lib/share'
 import { Poster } from '../components/Poster'
-import { posterBox, posterRadius } from '../lib/posterShape'
 import { Avatar, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { Button } from '../components/Button'
-import { APP_NAME } from '../config'
 
 /** Vistas públicas: sin marco ni barra de pestañas, como una web normal para quien no tiene la app. */
 function PublicShell({ children }: { children: React.ReactNode }) {

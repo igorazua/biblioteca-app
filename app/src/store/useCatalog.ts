@@ -2,8 +2,7 @@ import { create } from 'zustand'
 import { persist, createJSONStorage, type StateStorage } from 'zustand/middleware'
 import { get, set, del } from 'idb-keyval'
 import { supabase } from '../lib/supabase'
-import type { Item } from '../types'
-import { isAlias } from '../data/aliases'
+import { type Item, isAlias, isSeedItem, setLiveItems, subscribeCatalog } from '@biblioteca/core'
 
 const memoryStore = new Map<string, string>()
 
@@ -51,11 +50,6 @@ export interface CatalogState {
   ensureItems: (ids: string[]) => Promise<void>
 }
 
-let seedChecker: ((id: string) => boolean) | null = null
-export const setSeedChecker = (fn: (id: string) => boolean) => {
-  seedChecker = fn
-}
-
 export const useCatalog = create<CatalogState>()(
   persist(
     (set, get) => ({
@@ -85,7 +79,7 @@ export const useCatalog = create<CatalogState>()(
         if (!ids || ids.length === 0) return
         const currentItems = get().items
         const missing = Array.from(new Set(ids)).filter(
-          (id) => (!seedChecker || !seedChecker(id)) && !currentItems[id]
+          (id) => !isSeedItem(id) && !currentItems[id]
         )
 
         if (missing.length === 0 || !supabase) return
@@ -120,3 +114,14 @@ export const useCatalog = create<CatalogState>()(
     }
   )
 )
+
+// La caché viva vive en @biblioteca/core (antes `getItem` leía `useCatalog.getState().items`): se le entrega cada vez
+// que cambia `items` (acciones, `setState` directo o rehidratación), de forma síncrona, como antes.
+setLiveItems(useCatalog.getState().items)
+useCatalog.subscribe((st, prev) => {
+  if (st.items !== prev.items) setLiveItems(st.items)
+})
+
+// Sustituye al `version + 1` que hacía data/catalog.ts al llegar el detalle de una estantería (despierta, p. ej., ItemDetail).
+// El índice ya se entregó en data/boot.ts, antes de crear este store, así que no cuenta.
+subscribeCatalog(() => useCatalog.setState((st) => ({ version: st.version + 1 })))

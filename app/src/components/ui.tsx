@@ -1,11 +1,8 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
 import { animate, motion, useMotionValue } from 'framer-motion'
-import { friendHits, getItem, type FriendHit } from '../data/catalog'
+import { friendHits, getItem, type FriendHit, friendRanks, PLATFORMS, SHELF_LABEL, type ShelfType } from '@biblioteca/core'
 import { Icon } from './Icon'
-import { friendRanks } from '../lib/rank'
-import { PLATFORMS } from '../config'
-import { SHELF_LABEL, type ShelfType } from '../types'
 import { useAuth } from '../store/useAuth'
 import { haptic } from '../lib/haptics'
 

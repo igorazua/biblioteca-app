@@ -1,7 +1,6 @@
 import { useMemo } from 'react'
 import { useStore } from './useStore'
-import { SHELVES } from '../types'
-import { ranksOf, type Rank } from '../lib/rank'
+import { SHELVES, ranksOf, type Rank } from '@biblioteca/core'
 
 /** Puesto (y percentil interno) de cada obra ordenada del usuario, por estantería (D25). */
 export function useRanks(): Record<string, Rank> {

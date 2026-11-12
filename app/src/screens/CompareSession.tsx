@@ -1,19 +1,27 @@
 import { userLang } from '../lib/userLang'
-import { displayTitle } from '../lib/locale'
+import {
+  getItem,
+  ACTIVE_SHELVES,
+  SHELF_LABEL,
+  type Item,
+  type ShelfType,
+  type UserEntry,
+  type DuelRecord,
+  applyDuelToRanking,
+  assignSides,
+  DUEL_MILESTONE,
+  planNextDuel,
+  RANK_DUELS_FOR_DONE,
+  type PlannedDuel,
+} from '@biblioteca/core'
+import { displayTitle } from '@biblioteca/core/src/lib/locale'
+import { posterBox } from '@biblioteca/core/src/lib/posterShape'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import { getItem } from '../data/catalog'
 import { useStore, starsOfEntries } from '../store/useStore'
-import { ACTIVE_SHELVES, SHELF_LABEL, type Item, type ShelfType, type UserEntry, type DuelRecord } from '../types'
-import {
-  applyDuelToRanking, assignSides, DUEL_MILESTONE,
-  planNextDuel, RANK_DUELS_FOR_DONE,
-  type PlannedDuel,
-} from '../lib/ranking'
 import { SwipePair, type Side } from '../components/SwipePair'
 import { Poster } from '../components/Poster'
-import { posterBox } from '../lib/posterShape'
 import { CommentSheet } from '../components/RatingFlow'
 import { Icon } from '../components/Icon'
 import { ScreenTitle } from '../components/ScreenTitle'

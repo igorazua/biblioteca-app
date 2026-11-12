@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { isPushSupported, subscribeToPush } from '../lib/push'
 import { useStore } from '../store/useStore'
 import { Icon } from './Icon'
-import type { NotificationTier } from '../types'
+import type { NotificationTier } from '@biblioteca/core'
 
 const DISMISSED_KEY = 'biblio_push_prompt_dismissed'
 

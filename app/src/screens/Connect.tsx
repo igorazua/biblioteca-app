@@ -9,20 +9,28 @@ import { ScreenTitle } from '../components/ScreenTitle'
 import { BrandLogo } from '../components/BrandLogo'
 import { track } from '../store/useEvents'
 import { useImportFlow } from '../lib/import/useImportFlow'
-import { parseLetterboxd } from '../lib/import/letterboxd'
-import { parseImdb } from '../lib/import/imdb'
-import { parseGoodreads } from '../lib/import/goodreads'
-import { parseNetflix } from '../lib/import/netflix'
-import { parseStoryGraph } from '../lib/import/storygraph'
-import { parseSpotifyHistory } from '../lib/import/spotify-history'
-import { parseYouTubeMusic } from '../lib/import/youtube-music'
-import { parseAppleMusic } from '../lib/import/apple-music'
-import { parsePrimeVideo } from '../lib/import/prime-video'
-import { parseKindle } from '../lib/import/kindle'
-import { GROUPS, SERVICES, type Service } from '../lib/connect/services'
-import { ConnectorUnavailable, ConnectorUserError } from '../lib/connect/types'
-import { disconnectSpotify, loadSpotifyTokens, spotifyEnabled, startSpotifyAuth } from '../lib/connect/spotify'
-import type { ImportRow } from '../lib/import/types'
+import {
+  parseLetterboxd,
+  parseImdb,
+  parseGoodreads,
+  parseNetflix,
+  parseStoryGraph,
+  parseSpotifyHistory,
+  parseYouTubeMusic,
+  parseAppleMusic,
+  parsePrimeVideo,
+  parseKindle,
+  GROUPS,
+  SERVICES,
+  type Service,
+  ConnectorUnavailable,
+  ConnectorUserError,
+  disconnectSpotify,
+  spotifyEnabled,
+  startSpotifyAuth,
+  type ImportRow,
+} from '@biblioteca/core'
+import { loadSpotifyTokensSync } from '../lib/connectSetup'
 
 async function rowsFromFile(service: Service, file: File): Promise<ImportRow[]> {
   const kind = service.file!.kind
@@ -50,7 +58,7 @@ export function Connect() {
   const [sheet, setSheet] = useState<SheetState>(null)
   const [toast, setToast] = useState<string | null>(null)
   const [asked, setAsked] = useState<Set<string>>(new Set())
-  const [spotifyConnected, setSpotifyConnected] = useState<boolean>(() => Boolean(loadSpotifyTokens()) && spotifyEnabled)
+  const [spotifyConnected, setSpotifyConnected] = useState<boolean>(() => Boolean(loadSpotifyTokensSync()) && spotifyEnabled())
 
   const startRows = async (rows: ImportRow[], serviceId: string) => {
     setSheet(null)
@@ -69,13 +77,13 @@ export function Connect() {
       setToast('Anotado. Te avisaremos cuando esté listo.')
     } else if (s.method === 'file') setSheet({ kind: 'file', service: s })
     else if (s.method === 'username') setSheet({ kind: 'username', service: s })
-    else if (spotifyEnabled) setSheet({ kind: 'oauth', service: s })
+    else if (spotifyEnabled()) setSheet({ kind: 'oauth', service: s })
     // sin conexión configurada (o para quien la tenga en modo desarrollo): siempre queda subir el historial descargado
     else if (s.file) setSheet({ kind: 'file', service: s })
   }
 
   const handleDisconnectSpotify = () => {
-    disconnectSpotify()
+    void disconnectSpotify()
     setSpotifyConnected(false)
     setToast('Desconectado de Spotify.')
   }
@@ -133,12 +141,12 @@ export function Connect() {
               <Group key={g.id} title={g.title}>
                 {list.map((s) => {
                   const soon = s.method === 'soon'
-                  const offSpotify = s.method === 'oauth' && !spotifyEnabled && !s.file
+                  const offSpotify = s.method === 'oauth' && !spotifyEnabled() && !s.file
                   const isAsked = asked.has(s.id)
                   const actionLabel =
                     offSpotify ? 'Pronto'
                     : soon ? (isAsked ? 'Anotado' : 'Avísame')
-                    : s.method === 'file' || (s.method === 'oauth' && !spotifyEnabled) ? 'Importar'
+                    : s.method === 'file' || (s.method === 'oauth' && !spotifyEnabled()) ? 'Importar'
                     : 'Conectar'
 
                   return (

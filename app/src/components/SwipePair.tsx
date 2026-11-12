@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
-import type { ShelfType } from '../types'
+import type { ShelfType } from '@biblioteca/core'
+import { posterShape } from '@biblioteca/core/src/lib/posterShape'
 import { DuelFan, duelTexts, type DuelKind } from './DuelVariants'
-import { posterShape } from '../lib/posterShape'
 
 export interface Side {
   key: string

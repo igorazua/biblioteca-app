@@ -1,6 +1,6 @@
 // Pantallas del flujo compartido de importación: buscando → revisar dudosas → hecho.
 import { userLang } from '../lib/userLang'
-import { displayTitle } from '../lib/locale'
+import { displayTitle } from '@biblioteca/core/src/lib/locale'
 import { useNavigate } from 'react-router-dom'
 import type { ImportFlow } from '../lib/import/useImportFlow'
 

@@ -1,9 +1,7 @@
 import { useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useEvents } from '../store/useEvents'
-import { calcAllMetrics } from '../lib/engine/metrics'
-import { ENGINE_VERSION, type Bucket } from '../lib/engine/params'
-import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type ShelfType } from '../types'
+import { calcAllMetrics, ENGINE_VERSION, type Bucket, ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type ShelfType } from '@biblioteca/core'
 import { Icon } from '../components/Icon'
 import { Chip, Confirm, Toast } from '../components/ui'
 

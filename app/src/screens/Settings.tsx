@@ -2,8 +2,9 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
-import { APP_NAME } from '../config'
-import { ENGINE_VERSION } from '../lib/engine/params'
+import { APP_NAME, ENGINE_VERSION } from '@biblioteca/core'
+import type { DuelFit } from '@biblioteca/core/src/lib/posterShape'
+import { getDuelFit, setDuelFit } from '../lib/duelFit'
 import { useStore } from '../store/useStore'
 import { useAuth } from '../store/useAuth'
 import { Avatar, Confirm, Sheet, Toast } from '../components/ui'
@@ -14,7 +15,6 @@ import { pushLocalEntriesToCloud, pullCloudEntries } from '../lib/sync'
 import { subscribeToPush, isPushSupported } from '../lib/push'
 import { supabase } from '../lib/supabase'
 import { PhoneDiscovery } from '../components/PhoneDiscovery'
-import { getDuelFit, setDuelFit, type DuelFit } from '../lib/posterShape'
 
 export function Settings() {
   const nav = useNavigate()

@@ -1,14 +1,13 @@
 import { userLang } from '../lib/userLang'
-import { displayTitle } from '../lib/locale'
+import { getItem, SHELF_LABEL, type Stars } from '@biblioteca/core'
+import { displayTitle } from '@biblioteca/core/src/lib/locale'
+import { posterBox, posterRadius } from '@biblioteca/core/src/lib/posterShape'
 import { useRef, useState } from 'react'
-import { getItem } from '../data/catalog'
 import { useStore } from '../store/useStore'
 import { Poster } from './Poster'
 import { Sheet, StarRating } from './ui'
 import { Button } from './Button'
-import { SHELF_LABEL, type Stars } from '../types'
 import { haptic } from '../lib/haptics'
-import { posterBox, posterRadius } from '../lib/posterShape'
 
 /**
  * Hoja de valoración tras marcar una obra como vista. Cerrarla de cualquier forma guarda lo que haya.

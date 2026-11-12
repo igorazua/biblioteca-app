@@ -1,22 +1,12 @@
 import { describe, it, expect, beforeEach } from 'vitest'
-import { SHELVES, ACTIVE_SHELVES, type UserEntry } from '../types'
-import { SHELF_ENABLED } from '../config'
+import { SHELVES, type UserEntry, SHELF_ENABLED, getItem, itemsOfType } from '@biblioteca/core'
+import { loadSongs } from './loadData'
 import { useStore } from '../store/useStore'
-import { getItem, itemsOfType } from './catalog'
-import { loadSongs } from './songs'
 
+// Casos que usan el store y el cargador de la PWA; el resto vive en packages/core/src/data/songs.test.ts.
 describe('T28.0 — Interruptor de la estantería de canciones', () => {
   beforeEach(() => {
     useStore.getState().resetAll()
-  })
-
-  it('SHELVES incluye "song", pero ACTIVE_SHELVES respeta SHELF_ENABLED.song', () => {
-    expect(SHELVES).toContain('song')
-    if (SHELF_ENABLED.song) {
-      expect(ACTIVE_SHELVES).toContain('song')
-    } else {
-      expect(ACTIVE_SHELVES).not.toContain('song')
-    }
   })
 
   it('con el interruptor apagado, una entrada de canción del usuario sigue en su estado sin tocar', () => {

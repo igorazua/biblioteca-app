@@ -1,16 +1,24 @@
 import { userLang } from '../lib/userLang'
-import { displayTitle } from '../lib/locale'
+import {
+  getItem,
+  ACTIVE_SHELVES,
+  SHELVES,
+  SHELF_LABEL,
+  type ShelfType,
+  type Item,
+  type ShelfOverview,
+  planNextDuel,
+  type PlannedDuel,
+} from '@biblioteca/core'
+import { displayTitle } from '@biblioteca/core/src/lib/locale'
+import { posterBox } from '@biblioteca/core/src/lib/posterShape'
+import { useCompareOverview } from '../lib/useCompareOverview'
 import { useMemo } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { getItem } from '../data/catalog'
 import { useStore, starsOfEntries } from '../store/useStore'
-import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type ShelfType, type Item } from '../types'
-import { useCompareOverview, type ShelfOverview } from '../lib/compareOverview'
-import { planNextDuel, type PlannedDuel } from '../lib/ranking'
 import { ScreenTitle } from '../components/ScreenTitle'
 import { Button } from '../components/Button'
 import { Poster } from '../components/Poster'
-import { posterBox } from '../lib/posterShape'
 
 const MAX_POSTERS_ROW = 5
 

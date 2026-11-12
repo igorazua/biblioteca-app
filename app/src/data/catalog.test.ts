@@ -1,8 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest'
-import { getItem, isKnownItem, itemsOfType } from './catalog'
+import { getItem, isKnownItem, itemsOfType, type Item, type UserEntry } from '@biblioteca/core'
 import { useCatalog } from '../store/useCatalog'
 import { useStore, shelfOf } from '../store/useStore'
-import type { Item, UserEntry } from '../types'
 
 describe('Catálogo vivo y sincronización (F-B1)', () => {
   const sampleLiveSeries: Item = {

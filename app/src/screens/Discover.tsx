@@ -1,20 +1,32 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
-import { ensureShelfCatalog, friends as seedFriends, getItem, itemsOfType } from '../data/catalog'
-import { useSongsLoaded } from '../data/songs'
-import { nextCards, newDeckSessionState, type DeckCard, type DeckSessionState } from '../lib/engine/deck'
-import { ensureShelfEngine } from '../lib/engine/loadEngine'
+import {
+  friends as seedFriends,
+  getItem,
+  itemsOfType,
+  nextCards,
+  newDeckSessionState,
+  type DeckCard,
+  type DeckSessionState,
+  evaluateNudges,
+  type Nudge,
+  affinity,
+  friendRanks,
+  ACTIVE_SHELVES,
+  SHELVES,
+  SHELF_LABEL,
+  type Friend,
+  type Item,
+  type ShelfType,
+} from '@biblioteca/core'
+import { ensureShelfCatalog, useSongsLoaded, ensureShelfEngine } from '../data/loadData'
 import { useCatalog } from '../store/useCatalog'
 import { useStore } from '../store/useStore'
 import { useAuth } from '../store/useAuth'
 import { useFriends } from '../store/useFriends'
 import { track, useEvents } from '../store/useEvents'
-import { evaluateNudges, type Nudge } from '../lib/nudges'
-import { affinity } from '../lib/affinity'
-import { friendRanks } from '../lib/rank'
 import { useRanks } from '../store/useScores'
-import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type Friend, type Item, type ShelfType } from '../types'
 import { SwipeDeck, type DeckHandle, type SwipeDir } from '../components/SwipeDeck'
 import { RatingFlow } from '../components/RatingFlow'
 import { NudgeCard } from '../components/NudgeCard'

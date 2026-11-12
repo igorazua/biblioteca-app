@@ -1,10 +1,28 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import { items, getItem } from '../data/catalog'
-import { canonicalId, canonicalizeUserData } from '../data/aliases'
-import { clampStars, insertAt, starBand, pairKey, repairRankingsAndEntries } from '../lib/ranking'
-import { SHELVES, type List, type Profile, type Settings, type ShelfType, type Stars, type Status, type UserEntry, type DeckLearn, type DeckLearnShelf, type DuelRecord } from '../types'
-import { computeUserVector } from '../lib/engine/userVec'
+import {
+  items,
+  getItem,
+  canonicalId,
+  canonicalizeUserData,
+  clampStars,
+  insertAt,
+  starBand,
+  pairKey,
+  repairRankingsAndEntries,
+  SHELVES,
+  type List,
+  type Profile,
+  type Settings,
+  type ShelfType,
+  type Stars,
+  type Status,
+  type UserEntry,
+  type DeckLearn,
+  type DeckLearnShelf,
+  type DuelRecord,
+  computeUserVector,
+} from '@biblioteca/core'
 import { track } from './useEvents'
 
 interface HistoryItem {

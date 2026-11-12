@@ -1,23 +1,29 @@
 // app/src/screens/Profile.tsx
 // Perfil: lo que ven los demás de ti. Aquí no se edita nada: «Editar perfil» abre tus datos y el engranaje, los Ajustes.
 import { userLang } from '../lib/userLang'
-import { displayTitle } from '../lib/locale'
+import {
+  friends,
+  getItem,
+  APP_NAME,
+  friendRanks,
+  ACTIVE_SHELVES,
+  SHELVES,
+  SHELF_LABEL,
+  affinity,
+  profileUrl,
+  type SharedProfile,
+} from '@biblioteca/core'
+import { countryName } from '@biblioteca/core/src/lib/countries'
+import { displayTitle } from '@biblioteca/core/src/lib/locale'
+import { posterBox, posterRadius } from '@biblioteca/core/src/lib/posterShape'
 import { useMemo, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
-import { friends, getItem } from '../data/catalog'
-import { APP_NAME } from '../config'
 import { useStore } from '../store/useStore'
 import { useRanks } from '../store/useScores'
-import { friendRanks } from '../lib/rank'
-import { ACTIVE_SHELVES, SHELVES, SHELF_LABEL } from '../types'
-import { affinity } from '../lib/affinity'
-import { profileUrl, type SharedProfile } from '../lib/share'
 import { shareOrCopy } from '../lib/shareUi'
 import { generateShareCard, shareOrDownloadCard } from '../lib/shareCard'
-import { countryName } from '../lib/countries'
 import { Poster, posterLayoutId } from '../components/Poster'
-import { posterBox, posterRadius } from '../lib/posterShape'
 import { Avatar, Sheet, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { ScreenTitle } from '../components/ScreenTitle'

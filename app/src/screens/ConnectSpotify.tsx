@@ -4,7 +4,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import { ScreenHeader } from '../components/ui'
 import { ImportFlowView } from '../components/ImportFlowView'
 import { useImportFlow } from '../lib/import/useImportFlow'
-import { fetchSpotifyArtists, finishSpotifyAuth, spotifyEnabled } from '../lib/connect/spotify'
+import { fetchSpotifyArtists, finishSpotifyAuth, spotifyEnabled } from '@biblioteca/core'
 import { track } from '../store/useEvents'
 
 export function ConnectSpotify() {
@@ -18,7 +18,7 @@ export function ConnectSpotify() {
     if (started.current) return
     started.current = true
     const code = params.get('code')
-    if (!spotifyEnabled) return setError('Spotify estará disponible muy pronto.')
+    if (!spotifyEnabled()) return setError('Spotify estará disponible muy pronto.')
     if (params.get('error') || !code) return setError('No has dado permiso a Spotify, así que no hemos traído nada.')
     ;(async () => {
       try {

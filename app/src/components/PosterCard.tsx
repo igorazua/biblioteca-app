@@ -1,8 +1,7 @@
 import { userLang } from '../lib/userLang'
-import { displayTitle, displayPoster } from '../lib/locale'
-import type { Item } from '../types'
-import { SHELF_LABEL } from '../types'
-import { posterBox, posterRadius, posterShape } from '../lib/posterShape'
+import { type Item, SHELF_LABEL } from '@biblioteca/core'
+import { displayTitle, displayPoster } from '@biblioteca/core/src/lib/locale'
+import { posterBox, posterRadius, posterShape } from '@biblioteca/core/src/lib/posterShape'
 
 export interface PosterCardProps {
   item: Item

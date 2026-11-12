@@ -1,10 +1,9 @@
 import { userLang } from '../lib/userLang'
-import { displayPoster, displayTitle } from '../lib/locale'
+import { type Item, typeName } from '@biblioteca/core'
+import { displayPoster, displayTitle } from '@biblioteca/core/src/lib/locale'
+import { posterShape } from '@biblioteca/core/src/lib/posterShape'
 import { useLayoutEffect, useRef, useState, type CSSProperties } from 'react'
 import { motion, type Transition } from 'framer-motion'
-import type { Item } from '../types'
-import { typeName } from '../data/catalog'
-import { posterShape } from '../lib/posterShape'
 
 function hash(s: string) {
   let h = 2166136261

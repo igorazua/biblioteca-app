@@ -1,10 +1,10 @@
 import { userLang } from '../lib/userLang'
-import { displayTitle } from '../lib/locale'
+import type { Item } from '@biblioteca/core'
+import { displayTitle } from '@biblioteca/core/src/lib/locale'
+import { posterAspectClass, posterBox, posterRadius } from '@biblioteca/core/src/lib/posterShape'
 import { Link } from 'react-router-dom'
-import type { Item } from '../types'
 import { Poster, posterLayoutId } from './Poster'
 import { Icon } from './Icon'
-import { posterAspectClass, posterBox, posterRadius } from '../lib/posterShape'
 
 /**
  * Portada con su puesto (filas horizontales de la biblioteca, D25). Con `rank`, un número grande y hueco asoma por detrás
