@@ -24,10 +24,11 @@ Medidas de estas pantallas: `docs/MEDIDAS_NATIVA_2.md`, en `main`.
 | **B2 · Fraunces en cursiva** | Las cursivas (comentarios, «¿Algo que decir de *título*?») salen falsas porque no hay fuente cursiva. Se genera `Fraunces72-400-italic` y `-500-italic` desde el archivo variable de la PWA con `make-fonts.py` (hace falta el paquete `brotli` de Python) y se usan donde la PWA pone cursiva. | Haiku |
 | **B3 · Fallos copiados de la PWA** | (1) El aviso de «prueba Decidir» nunca sabe que lo has usado (`biblio_used_decide` no se escribe). (2) Al entrar con la cuenta no se bajan los duelos de la nube (`pullCloudDuels`). (3) El paso 5 del onboarding no guarda las estanterías elegidas. Se arreglan en la nativa ahora y en la PWA en el bloque C. | Claude |
 | **B4 · Expo 58.0.24** | Hecho. | Claude |
+| **B5 · Paso 5 del onboarding** | Decidido por Claude (Igor: «si sirve, haz que funcione»): las estanterías elegidas se guardan (`settings.shelves`) y la Biblioteca y Descubrir las muestran primero; el resto sigue debajo. Se cambia en Ajustes más adelante. | Claude |
 
 ## Bloque C — Una web para escritorio y móvil
 
-### Decisión que hace falta (Igor)
+### Decisión (Igor, 12/11/2026): la PWA es la web, responsive. Push a `main` autorizado para C0.
 
 `docs/ARQUITECTURA.md` decía: web nueva en Next.js (`apps/web`) y retirar la PWA. Igor propone ahora que **la PWA sea la web**, con dos versiones: escritorio y dispositivo, que viene a ser lo que ya hay. **Recomendación: hacerlo así.**
 - La PWA ya funciona entera y la usa gente. Rehacerla en Next.js costaría semanas y daría lo mismo.
