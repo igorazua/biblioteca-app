@@ -8,8 +8,8 @@ export const BUILT = {
   perfil: true,
   editarPerfil: true,
   ajustes: true,
-  conectar: false,
-  importar: false,
+  conectar: true,
+  importar: true,
   metricas: true,
   listas: false,
 } as const

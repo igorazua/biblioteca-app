@@ -27,5 +27,5 @@ describe('mazo de Descubrir con canciones', () => {
       session: newDeckSessionState(),
     }, [], 20)
     expect(cards.length).toBe(20)
-  }, 15000)
+  }, 60000) // en la suite completa (en paralelo) tarda ~25 s; solo, menos de 15
 })
