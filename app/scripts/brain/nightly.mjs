@@ -102,7 +102,7 @@ async function main() {
   const out = execFileSync('python', py, { cwd: APP, encoding: 'utf8', env: { ...process.env, PYTHONIOENCODING: 'utf-8' }, maxBuffer: 64 * 1024 * 1024 })
   say(out.trim())
   try {
-    execFileSync('npx', ['vitest', 'run', 'src/lib/engine'], { cwd: APP, encoding: 'utf8', shell: true, stdio: 'pipe' })
+    execFileSync('npx', ['vitest', 'run', 'src/lib/engine'], { cwd: join(APP, '..', 'packages', 'core'), encoding: 'utf8', shell: true, stdio: 'pipe' })
     say('- ✅ Tests del motor en verde')
   } catch (e) {
     say(`- ❌ Tests del motor fallan: revisa antes de subir nada\n${String(e.stdout ?? '').slice(-1500)}`)
