@@ -8,7 +8,7 @@ import type { ShelfType } from '../../types'
 /** Lo mínimo que se usa de `SupabaseClient`: invocar una función de servidor. */
 export interface ConnectClient {
   functions: {
-    invoke(name: string, options: { body: unknown }): Promise<{ data: any; error: any }>
+    invoke(name: string, options: { body: Record<string, any> }): Promise<{ data: any; error: any }>
   }
 }
 
