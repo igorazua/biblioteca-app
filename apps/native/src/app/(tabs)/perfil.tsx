@@ -26,6 +26,7 @@ import { Avatar, Button, Sheet, Toast } from '../../components/ui'
 import { BUILT } from '../../lib/phase'
 import { haptic } from '../../lib/haptics'
 import { colors, tx } from '../../theme'
+import { useShareStoryCard } from '../../lib/shareCard'
 
 /**
  * Perfil (Profile.tsx): lo que ven los demás de ti. Aquí no se edita nada: «Editar perfil» abre tus datos y «Ajustes», los ajustes.
@@ -47,6 +48,7 @@ export default function Perfil() {
 
   const [toast, setToast] = useState<string | null>(null)
   const [shareOpen, setShareOpen] = useState(false)
+  const { shareStoryCard, generating, cardHost } = useShareStoryCard()
   const [findFriends, setFindFriends] = useState(false)
 
   const stats = useMemo(() => {
@@ -242,11 +244,26 @@ export default function Perfil() {
               <Icon name="link" size={18} color={colors.ink} />
               <AppText style={styles.sheetBtnText}>Enviar enlace</AppText>
             </Press>
-            {/* «Tarjeta para Story» no se porta todavía: necesita pintar la tarjeta a imagen (react-native-view-shot + expo-sharing) */}
+            <Press
+              accessibilityRole="button"
+              accessibilityLabel="Tarjeta para Story"
+              disabled={generating}
+              scaleTo={0.98}
+              onPress={async () => {
+                const r = await shareStoryCard(profile, rankings)
+                if (r.message) setToast(r.message)
+                if (r.ok) setShareOpen(false)
+              }}
+              style={[styles.sheetBtn, { backgroundColor: colors.accent, borderColor: colors.accent, opacity: generating ? 0.6 : 1 }]}
+            >
+              <Icon name="cards" size={18} color={colors.accentInk} />
+              <AppText style={[styles.sheetBtnText, { color: colors.accentInk }]}>{generating ? 'Creando la tarjeta…' : 'Tarjeta para Story'}</AppText>
+            </Press>
           </View>
         </Sheet>
       )}
 
+      {cardHost}
       {findFriends && <FindFriends onClose={() => setFindFriends(false)} onToast={setToast} />}
       {toast ? <Toast key={toast} message={toast} onDone={() => setToast(null)} /> : null}
     </View>

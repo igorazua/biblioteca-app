@@ -11,6 +11,7 @@ import { AppText } from '../components/AppText'
 import { loadCore, loadShelves } from '../data/loadData'
 import { FlightProvider } from '../lib/flight'
 import { useCloudBoot } from '../lib/sync'
+import { PushPrompt, useReminders } from '../components/notify'
 import { Toast } from '../components/ui'
 import { useHydrated, useStore } from '../store'
 import { flushStorage } from '../lib/storage'
@@ -55,6 +56,12 @@ AppState.addEventListener('change', (st) => {
   if (st !== 'active') void flushStorage()
 })
 
+/** Avisos locales y su pantalla de permiso: van dentro del navegador (abren rutas al tocar un aviso). */
+function Reminders() {
+  useReminders()
+  return <PushPrompt />
+}
+
 export default function RootLayout() {
   const [fontsLoaded, fontError] = useFonts(FONTS)
   const [data, setData] = useState<'loading' | 'ready' | Error>('loading')
@@ -93,6 +100,7 @@ export default function RootLayout() {
               <Stack.Screen name="i/[id]" options={{ animation: 'fade' }} />
             </Stack>
             <OnboardingGate />
+            <Reminders />
           </FlightProvider>
         )}
         {syncToast ? <Toast message={syncToast} onDone={clearSyncToast} /> : null}

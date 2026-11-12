@@ -11,13 +11,14 @@ import { LoginSheet } from '../components/auth/LoginSheet'
 import { Group, Row, Toast, Toggle, Confirm, ScreenHeader } from '../components/ui'
 import { pullCloudEntries, pushLocalEntriesToCloud } from '../lib/sync'
 import { BUILT } from '../lib/phase'
+import { NotificationRows } from '../components/notify'
 import { useAuth } from '../store/useAuth'
 import { useStore } from '../store'
 import { colors, tx } from '../theme'
 
 /**
- * Ajustes (Settings.tsx). Sin los selectores de duelos (D4), sin listas aparcadas (D5) y sin avisos push: la app
- * nativa no tiene push todavía (ni expo-notifications instalado), así que esa fila no se muestra.
+ * Ajustes (Settings.tsx). Sin los selectores de duelos (D4) ni listas aparcadas (D5). Los avisos son locales
+ * (expo-notifications): los enviados desde el servidor esperan al dev build.
  * Cada salida a una pantalla sin construir se oculta según BUILT (phase.ts), como manda el encargo.
  */
 export default function Ajustes() {
@@ -99,6 +100,7 @@ export default function Ajustes() {
             title="Nota tras cada duelo"
             right={<Toggle on={settings.commentBoxInPairs} onChange={(commentBoxInPairs) => setSettings({ commentBoxInPairs })} label="Nota tras cada duelo" />}
           />
+          <NotificationRows onToast={setToast} />
         </Group>
 
         {user ? (

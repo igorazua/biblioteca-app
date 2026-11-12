@@ -10,7 +10,7 @@ export const BUILT = {
   ajustes: true,
   conectar: false,
   importar: false,
-  metricas: false,
+  metricas: true,
   listas: false,
 } as const
 
