@@ -37,7 +37,10 @@
           "imageWidth": 200
         }
       ],
-      "expo-asset"
+      "expo-asset",
+      "expo-status-bar",
+      "expo-sharing",
+      "expo-web-browser"
     ]
   }
 }
