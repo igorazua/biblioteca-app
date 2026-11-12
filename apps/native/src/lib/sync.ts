@@ -356,9 +356,11 @@ export async function syncOnLogin(userId: string): Promise<number> {
   let pushed = 0
   if (localCount > 0 && !(await kv.getItem(syncedKey(userId)))) {
     pushed = await pushLocalEntriesToCloud(userId)
+    await pushLocalDuelsToCloud(userId) // B3: la PWA subía las obras pero no los duelos hechos sin cuenta
     await kv.setItem(syncedKey(userId), '1')
   }
   await pullCloudEntries(userId)
+  await pullCloudDuels(userId) // B3: la PWA nunca bajaba los duelos al entrar
   void useFriends.getState().loadFriends()
   return pushed
 }
