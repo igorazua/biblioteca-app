@@ -10,6 +10,13 @@
   - **¡Duelos!:** ranking por comparación A/B con Elo/Bradley-Terry.
   - **Decidir:** propone qué ver haciendo preguntas y duelos.
   - Debajo de los tres está **el cerebro**: vectores de obra y de usuario.
+- **Objetivo de producto** (Igor, 21/10/2026): cero fricción y **los mejores tres motores que existan**, sobre la ficha de obra con más metadatos posible. Cada motor tiene su puntuación y su trabajo (`docs/MOTOR.md` §2b.0, léelo entero, es corto):
+  - **R — reconocibilidad** (`recog.ts`): probabilidad de que *este usuario* conozca la obra. Elige los orientadores de los duelos y ordena el cupo `seen_likely` del mazo. Una obra que el usuario no conoce no sirve para un duelo.
+  - **A — propuesta** (`decide2.ts`): qué obra proponer hoy en Decidir (encaje × calidad). **No lleva reconocibilidad**: una propuesta desconocida puede ser justo el descubrimiento.
+  - **D — posición en el mazo** (`deck.ts`): orden de Descubrir por cupos (§7), para que cada carta merezca el gesto: ni todo famoso ni todo raro.
+  - **Ranking** (`ranking.ts`): ordenar lo visto con pocos duelos, colocar una obra nueva en 2-4 duelos y no repetir parejas sin necesidad.
+  - Principios que el código debe cumplir: señales pasadas a **percentil dentro de su estantería** (nada de umbrales absolutos), nada deducido del texto del título y todo número ajustable en `params.ts`.
+- **Los datos de cada obra:** qué campos tiene una ficha y de dónde salen está en `docs/MOTOR.md` §2b.1 (tabla). Para **ver datos reales sin abrir los JSON**, ejecuta `node packages/core/scripts/muestra-datos.mjs` (unos 17 KB en total) o `… book 5` para una sola estantería con 5 ejemplos. Saca la cobertura de cada campo por estantería, la obra más famosa, una del medio y la menos conocida, y la forma de los datos del motor (`engine/<estantería>.json`: ejes, vectores, vecinos y clústeres). Si un hallazgo depende de los datos (un campo vacío, mal escalado, un valor imposible), apúntalo también: los datos malos estropean el mejor motor.
 - **Dónde está el código:** `packages/core/src`, TypeScript puro, sin navegador ni React. Mapa en `packages/core/src/index.ts`. Los motores:
   - `lib/engine/` — `deck`, `decide2` (el vivo), `decide` (v1, usado por v2), `recog`, `features`, `userVec`, `traits`, `anchors`, `cleanup`, `metrics`, `params`, `ranker`, `dimensions` y `axes`.
   - `lib/ranking.ts`, `rank.ts`, `deck.ts`, `recommend.ts`, `affinity.ts` y `nudges.ts`.
@@ -26,7 +33,7 @@
 
 ## 2. Para gastar poco (obligatorio)
 
-- **No abras los JSON de datos**: `app/src/data/seed.json`, `catalog-index.json`, `shelves/*`, `engine/*` y `anchors/*`. Pesan megas. Si necesitas su forma, mira el tipo en `types.ts` o en `features.ts`.
+- **No abras los JSON de datos** (`app/src/data/seed.json`, `catalog-index.json`, `shelves/*`, `engine/*`, `anchors/*`): pesan megas. Para verlos, usa `muestra-datos.mjs` (arriba) o un `node -e` corto que imprima solo lo que necesitas (un campo, un recuento, una obra por id).
 - **No abras** `app/scripts/cache/**`, `node_modules`, `apps/native` ni `app/src/screens`. La revisión es de los motores, no de las pantallas.
 - **No leas archivos enteros si no hace falta:**
   - Usa `grep` para encontrar usos y llamadas.
