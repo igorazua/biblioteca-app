@@ -1,4 +1,6 @@
-# DISEÑO DE ESCRITORIO — propuesta para aprobar (C3)
+# DISEÑO DE ESCRITORIO (C3)
+
+> **Aprobado por Igor el 12/11/2026, con las recomendaciones de las decisiones abiertas:** Estantería en rejilla sin conmutador; Perfil abajo en la barra lateral; hojas como diálogo centrado; entre 768 y 1023 px, barra inferior con contenido centrado; mazo con la carta centrada de 400 px; y se quita el selector de variantes de Descubrir de la PWA (D1).
 
 > Propuesta de Claude (12/11/2026) para la tarea C3 de `docs/PLAN_SIGUIENTE.md`. **Es solo un documento: no se ha tocado código.** Igor la aprueba, la recorta o la veta antes de que empiece C4.
 > Base: `SISTEMA_DISENO.md` (Editorial sobria), la paleta D30 de `DECISIONES_NATIVA.md` y las pantallas actuales de `app/src/screens` y `app/src/components`.
