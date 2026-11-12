@@ -8,6 +8,7 @@ import { Icon, type IconName } from '../Icon'
 import { Poster } from '../Poster'
 import { Press } from '../Press'
 import { colors } from '../../theme'
+import { useMyShelves } from '../../lib/myShelves'
 
 export const SHELF_ICON: Record<ShelfType, IconName> = {
   movie: 'film',
@@ -27,15 +28,16 @@ export function remainingOf(shelf: ShelfType, entries: Record<string, UserEntry>
 export function DiscoverHub({ entries, catalogVersion, onPick }: { entries: Record<string, UserEntry>; catalogVersion: number; onPick: (s: ShelfType) => void }) {
   const insets = useSafeAreaInsets()
   const { width } = useWindowDimensions()
+  const myShelves = useMyShelves()
   const cardW = (width - 40 - 14) / 2 // grid-cols-2 gap-3.5
   const cards = useMemo(
     () =>
-      ACTIVE_SHELVES.map((s) => {
+      myShelves.map((s) => {
         const items = itemsOfType(s)
         return { s, count: items.filter((i) => !entries[i.id]).length, top3: items.slice(0, 3) }
       }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [entries, catalogVersion],
+    [entries, catalogVersion, myShelves.join()],
   )
   return (
     <ScrollView

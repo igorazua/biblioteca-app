@@ -38,6 +38,7 @@ import { LoginSheet } from '../../components/auth/LoginSheet'
 import { track, useAuth, useCatalog, useEvents, useFriends, useRanks, useStore } from '../../store'
 import { colors, tx } from '../../theme'
 import { byGender } from '@biblioteca/core'
+import { orderShelves } from '../../lib/myShelves'
 
 const LEGEND_UNTIL = 10 // D3: la leyenda se ve hasta que la persona ha hecho 10 gestos
 const GESTURES_KEY = 'biblioteca-deck-gestures' // el contador es de la persona, no de la sesión
@@ -56,7 +57,7 @@ export default function Descubrir() {
   const params = useLocalSearchParams<{ shelf?: string }>()
   const paramShelf = isActive(params.shelf) ? params.shelf : null
 
-  const [shelf, setShelfState] = useState<ShelfType>(() => paramShelf ?? sessionShelf ?? ACTIVE_SHELVES[0] ?? 'movie')
+  const [shelf, setShelfState] = useState<ShelfType>(() => paramShelf ?? sessionShelf ?? orderShelves(useStore.getState().settings.shelves)[0] ?? 'movie')
   const [showHub, setShowHub] = useState(() => !paramShelf)
 
   useEffect(() => {
@@ -346,7 +347,7 @@ export default function Descubrir() {
               Ordenar con ¡Duelos!
             </Button>
             <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', gap: 8, marginTop: 24 }}>
-              {ACTIVE_SHELVES.filter((s) => s !== shelf).map((s) => (
+              {orderShelves(settings.shelves).filter((s) => s !== shelf).map((s) => (
                 <Chip key={s} onPress={() => setShelf(s)}>
                   {SHELF_LABEL[s].plural}
                 </Chip>

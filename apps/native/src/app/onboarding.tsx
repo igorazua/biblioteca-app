@@ -155,7 +155,10 @@ export default function Onboarding() {
                 onExplore={() => setStep(5)}
               />
             )}
-            {shown === 5 && <StepShelves selected={selectedShelves} onToggle={toggleShelf} onFinish={() => finish()} />}
+            {shown === 5 && <StepShelves selected={selectedShelves} onToggle={toggleShelf} onFinish={() => {
+                  useStore.getState().setSettings({ shelves: selectedShelves }) // B5: lo elegido aquí ordena Biblioteca y Descubrir
+                  finish()
+                }} />}
           </Animated.View>
         </View>
       </ScrollView>

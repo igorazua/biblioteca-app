@@ -16,6 +16,7 @@ import { useCatalogTick } from '../../components/library/shelfMeta'
 import { colors, tx } from '../../theme'
 import { BUILT, isBuiltRoute, nudgeActionLabel } from '../../lib/phase'
 import { LoginSheet } from '../../components/auth/LoginSheet'
+import { useMyShelves } from '../../lib/myShelves'
 
 
 /**
@@ -30,6 +31,7 @@ export default function Biblioteca() {
 
   const profile = useStore((s) => s.profile)
   const user = useAuth((s) => s.user)
+  const myShelves = useMyShelves()
   const entries = useStore((s) => s.entries)
   const rankings = useStore((s) => s.rankings)
   const votes = useStore((s) => s.categoryVotes)
@@ -130,7 +132,7 @@ export default function Biblioteca() {
       )}
 
       <View style={{ gap: 16 }}>
-        {ACTIVE_SHELVES.map((t) => {
+        {myShelves.map((t) => {
           const ranked = (rankings[t] ?? []).filter((id) => getItem(id))
           const unranked = all.filter((e) => e.status === 'seen' && !e.ranked && getItem(e.itemId)?.type === t).map((e) => e.itemId)
           const pendingCount = all.filter((e) => e.status === 'pending' && getItem(e.itemId)?.type === t).length

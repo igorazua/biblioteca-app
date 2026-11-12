@@ -156,6 +156,8 @@ export interface Settings {
   rateOnSwipe?: boolean
   /** Preferencia de notificaciones: 'important' (solo importantes), 'all' (todas), 'none' (ninguna) */
   notificationTier?: NotificationTier
+  /** Estanterías elegidas en el onboarding: la app las muestra primero (el resto sigue debajo) */
+  shelves?: ShelfType[]
 }
 
 export interface ShelfTerms {

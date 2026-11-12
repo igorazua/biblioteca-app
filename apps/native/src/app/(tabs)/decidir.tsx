@@ -54,6 +54,7 @@ import { Appear, ChoiceCard, Fade, PassButton, PlatformTiles, ShelfCard } from '
 import { ScreenTitle } from '../../components/ScreenTitle'
 import { SwipePair } from '../../components/duel/SwipePair'
 import { sideOf } from '../../components/duel/sides'
+import { kv } from '../../lib/storage'
 
 const SNAP_KEY = 'biblioteca-decidir-v5'
 interface Snap {
@@ -469,6 +470,11 @@ export default function Decidir() {
     })
     afterDuel(updatedState, shelf, true)
   }
+
+  // B3: marca que ya has usado Decidir (la PWA leía `biblio_used_decide` en Biblioteca y Descubrir pero nunca lo escribía)
+  useEffect(() => {
+    if (phase === 'propose') void kv.setItem('biblio_used_decide', '1')
+  }, [phase])
 
   const handleAccept = () => {
     const currentItem = proposal?.item ?? (current ? getItem(current) : null)
