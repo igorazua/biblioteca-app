@@ -20,7 +20,9 @@
  *    con una bolsa pequeña o respuestas muy claras, a los 1-2 duelos; si no, hasta 6.
  *
  * Reglas de Igor que se mantienen: en los 3 primeros duelos solo obras propias o muy famosas; parejas muy distintas al
- * principio; rotación de orientadores entre sesiones; «Pasar» no descarta; un orientador puede acabar siendo la propuesta.
+ * principio; rotación de orientadores entre sesiones; «Pasar» no descarta.
+ * Orientar no es proponer (PLAN_DECIDIR M1, cambia D19): si pide «algo nuevo», la propuesta descuenta la probabilidad
+ * de que ya la haya visto. Un orientador aún puede ser la propuesta si destaca mucho, pero no solo por ganar su duelo.
  */
 
 import type { Item, ShelfType } from '../../types'
@@ -197,8 +199,53 @@ function utility(st: Decide2State, items: Item[], id: string): number {
   return s
 }
 
+/* ----------------------------------------------------------------------------- orientar ≠ proponer (PLAN_DECIDIR M1) */
+
+// Quien pide «algo nuevo» no quiere que le propongan lo que ya ha visto y no ha apuntado. La obra que gana un duelo es
+// la que más se parece a sí misma (tiene todos sus rasgos), y los orientadores son, por diseño, obras que casi todo el
+// mundo conoce: sin descuento, la propuesta era el orientador elegido el 73-98 % de las veces (DECIDIR_MEDIDAS.md).
+// El gusto aprendido (`observe`, μ, Σ) no cambia: solo con qué se ordena la propuesta y, por tanto, qué duelos aclaran.
+
+/** Probabilidad de que ya la haya visto, según haya respondido un duelo con ella (`answered`) y si la eligió (`won`). */
+function pSeen(st: Decide2State, id: string, answered: boolean, won: boolean): number {
+  const e = st.input.entries[id]
+  if (e?.status === 'pending') return 0 // la guardó para verla
+  const sgk = PARAMS.SEEN_GIVEN_KNOWN[st.shelf] ?? PARAMS.SEEN_GIVEN_KNOWN_DEFAULT
+  let p = (st.recogMap[id] ?? 0.5) * sgk
+  // si respondió un duelo con ella, la conoce (R = 1); si la eligió, casi seguro la ha visto
+  if (answered) p = Math.max(p, sgk)
+  if (won) p = Math.max(p, PARAMS.SEEN_WINNER_FLOOR)
+  return p
+}
+const noveltyOf = (p: number) => PARAMS.NOVELTY_W * Math.log(1 - 0.95 * p)
+
+interface Novelty { off: Map<string, number>; answered: Set<string>; won: Set<string> }
+const noveltyMemo = new WeakMap<Decide2State, Novelty | null>()
+/** El descuento de cada candidata de la bolsa (`null` con la bolsa estricta: ahí todas son vistas o guardadas). */
+function novelty(st: Decide2State): Novelty | null {
+  if (noveltyMemo.has(st)) return noveltyMemo.get(st)!
+  let out: Novelty | null = null
+  if (!strict(st.answers)) {
+    const answered = new Set<string>()
+    const won = new Set<string>()
+    for (const d of st.duels) if (d.winner) { answered.add(d.a); answered.add(d.b); won.add(d.winner) }
+    const off = new Map<string, number>()
+    for (const id of st.pool) { const a = answered.has(id); off.set(id, noveltyOf(pSeen(st, id, a, won.has(id)))) }
+    out = { off, answered, won }
+  }
+  noveltyMemo.set(st, out)
+  return out
+}
+/** Cuánto cambia el descuento de una candidata si sale en el duelo que se está valorando (la gane o la pierda). */
+function noveltyDelta(st: Decide2State, nov: Novelty, id: string, wins: boolean): number {
+  const cur = nov.off.get(id)
+  if (cur === undefined) return 0
+  return noveltyOf(pSeen(st, id, true, wins || nov.won.has(id))) - cur
+}
+
 function ranked(st: Decide2State, items: Item[], byId: Map<string, Item>): { id: string; u: number }[] {
   const rejected = st.rejected.map((id) => byId.get(id)).filter(Boolean) as Item[]
+  const nov = novelty(st)
   return st.pool
     .filter((id) => {
       if (st.rejected.includes(id)) return false
@@ -206,7 +253,7 @@ function ranked(st: Decide2State, items: Item[], byId: Map<string, Item>): { id:
       // tras «Seguir buscando», ni su secuela ni su expansión
       return it ? !rejected.some((r) => familyKey(r) === familyKey(it)) : false
     })
-    .map((id) => ({ id, u: utility(st, items, id) }))
+    .map((id) => ({ id, u: nov ? utility(st, items, id) + (nov.off.get(id) ?? 0) : utility(st, items, id) }))
     .sort((a, b) => b.u - a.u)
 }
 
@@ -477,6 +524,13 @@ function scorePairsRaw(st: Decide2State, shownIds: Set<string>, rng: () => numbe
   const decList = [...decIds]
   const decU = decList.map((id) => uOf.get(id) ?? 0)
   const bestU = Math.max(...decU)
+  // Lo que cambia el descuento de «ya la has visto» de una candidata que sale en el duelo (M1): si gana, casi seguro la
+  // ha visto. Sin esto, el motor valoraba duelos que suben a una candidata por sus propios rasgos y luego la descarta.
+  const nov = novelty(st)
+  const decIdx = new Map(decList.map((id, c) => [id, c]))
+  const dOfShort = shortlist.map((it) => decIdx.get(it.id) ?? -1)
+  const winD = shortlist.map((it, i) => (nov && dOfShort[i] >= 0 ? noveltyDelta(st, nov, it.id, true) : 0))
+  const loseD = shortlist.map((it, i) => (nov && dOfShort[i] >= 0 ? noveltyDelta(st, nov, it.id, false) : 0))
 
   // Todo lo que sigue es lineal en los rasgos (Σ·(a − b) = Σ·a − Σ·b), así que se calcula una vez por obra y no por
   // pareja: antes cada una de las ~1.100 parejas recorría la covarianza entera y hacía miles de búsquedas en mapas
@@ -589,10 +643,15 @@ function scorePairsRaw(st: Decide2State, shownIds: Set<string>, rng: () => numbe
       const stepB = phi(t) / Math.max(1e-12, 1 - p) / c // si elige b
       let maxA = -Infinity
       let maxB = -Infinity
+      const di = dOfShort[i]
+      const dj = dOfShort[j]
       for (let cand = 0; cand < nD; cand++) {
         const sc = C[cand * nS + i] - C[cand * nS + j]
-        maxA = Math.max(maxA, decU[cand] + sc * stepA)
-        maxB = Math.max(maxB, decU[cand] - sc * stepB)
+        let ua = decU[cand] + sc * stepA
+        let ub = decU[cand] - sc * stepB
+        if (cand === di) { ua += winD[i]; ub += loseD[i] } else if (cand === dj) { ua += loseD[j]; ub += winD[j] }
+        maxA = Math.max(maxA, ua)
+        maxB = Math.max(maxB, ub)
       }
       const kg = p * maxA + (1 - p) * maxB - bestU
       const known = Math.sqrt((st.recogMap[a.id] ?? 0.8) * (st.recogMap[b.id] ?? 0.8)) * rot(a) * rot(b)

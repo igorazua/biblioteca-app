@@ -27,6 +27,12 @@ function play(st0: Decide2State, taste: (it: Item) => number, maxDuels = 8) {
   return { st, n, pairs }
 }
 
+// Firmas del modo estricto con el motor de antes de M1 (duelos | parejas | propuesta | puntuación | alternativas | tras «Seguir buscando»)
+const STRICT_VISTA =
+  '4 | movie:el-caballero-oscuro-2008/movie:parque-jurasico-1993 movie:parasitos-2019/movie:el-caballero-oscuro-la-leyenda-renace-2012 movie:wall-e-2008/movie:shutter-island-2010 movie:infiltrados-2006/movie:el-club-de-la-lucha-1999 | movie:parasitos-2019 | 1.11 | movie:el-club-de-la-lucha-1999 movie:shutter-island-2010 movie:seven-1995 movie:cadena-perpetua-1994 movie:pulp-fiction-1994 movie:forrest-gump-1994 movie:el-truco-final-el-prestigio-2006 movie:spider-man-un-nuevo-universo-2018 movie:origen-2010 movie:oppenheimer-2023 | movie:el-club-de-la-lucha-1999'
+const STRICT_GUARDADOS =
+  '3 | boardgame:concordia-2013/boardgame:gloomhaven-jaws-of-the-lion-2020 boardgame:a-feast-for-odin-2016/boardgame:gloomhaven-2017 boardgame:ark-nova-2021/boardgame:the-castles-of-burgundy-2011 | boardgame:gloomhaven-2017 | 2.71 | boardgame:arkham-horror-the-card-game-2016 boardgame:spirit-island-2017 boardgame:frosthaven-2022 boardgame:lost-ruins-of-arnak-2020 boardgame:ark-nova-2021 boardgame:gloomhaven-jaws-of-the-lion-2020 boardgame:slay-the-spire-the-board-game-2024 boardgame:pandemic-legacy-season-1-2015 boardgame:the-lord-of-the-rings-duel-for-middle-earth-2024 boardgame:dune-imperium-2020 | boardgame:lost-ruins-of-arnak-2020'
+
 const games = items.filter((it) => it.type === 'boardgame' && !it.hidden)
 const coop = games.filter((g) => g.cooperative).sort((a, b) => b.popularity - a.popularity)
 const comp = games.filter((g) => g.cooperative === false).sort((a, b) => b.popularity - a.popularity)
@@ -121,6 +127,50 @@ describe('Decidir v2', { timeout: 120_000 }, () => {
       shouldPropose(st)
     }
     expect((performance.now() - t0) / 4).toBeLessThan(100)
+  })
+
+  // PLAN_DECIDIR M1: con la bolsa estricta («una que ya vi», «de mis guardados») el descuento por «ya la has visto» no
+  // se aplica. Esta firma se fijó con el motor de antes de M1 (commit 6e62455, con M2) y no debe cambiar.
+  it('M1: con «una que ya vi» o «de mis guardados» el resultado es idéntico al de antes', () => {
+    const sig = (st0: Decide2State, taste: (it: Item) => number) => {
+      const { st, n, pairs } = play(st0, taste, 8)
+      const prop = getProposal(st, null, [])!
+      const again = getProposal(rejectAndContinue(st, prop.item.id), null, [])!
+      return [n, pairs.map(([a, b]) => `${a.id}/${b.id}`).join(' '), prop.item.id, prop.finalScore, (prop.alternatives ?? []).map((x) => x.id).join(' '), again.item.id].join(' | ')
+    }
+    const pop = (shelf: ShelfType, k: number) => items.filter((it) => it.type === shelf && !it.hidden).sort((a, b) => b.popularity - a.popularity || (a.id < b.id ? -1 : 1)).slice(0, k).map((it) => it.id)
+    const vista = sig(start('movie', { seen: 'vista', platforms: [] }, entriesOf(pop('movie', 40), 'seen', 'movie')), (it) => (it.genres.includes('Drama') ? 1 : 0) + it.year / 3000)
+    const guardados = sig(start('boardgame', { seen: 'nueva', source: 'pendientes' }, entriesOf(pop('boardgame', 30), 'pending', 'boardgame')), (it) => (it.cooperative ? 1 : 0) + it.popularity / 1000)
+    expect(vista).toBe(STRICT_VISTA)
+    expect(guardados).toBe(STRICT_GUARDADOS)
+  })
+
+  // PLAN_DECIDIR M1 (decisión 1 de Igor): quien pide «algo nuevo» no recibe la obra famosa que acaba de elegir en un
+  // duelo (gana The Beatles → proponía The Beatles): casi seguro ya la conoce y no la ha apuntado.
+  it('M1: para «nueva», la propuesta no es una de las obras enseñadas en los duelos', () => {
+    for (const shelf of ['movie', 'boardgame'] as ShelfType[]) {
+      const taste = shelf === 'movie' ? (it: Item) => (it.genres.includes('Animación') ? 1 : 0) + (it.genres.includes('Comedia') ? 0.5 : 0) : (it: Item) => (it.cooperative ? 1 : 0)
+      const { st } = play(start(shelf, { seen: 'nueva', source: 'igual', platforms: [] }), taste, 6)
+      const prop = getProposal(st, null, [])!
+      expect(st.shown).not.toContain(prop.item.id)
+    }
+  })
+
+  it('M1: tras ganar un duelo una obra muy famosa sin entrada, no es la propuesta', () => {
+    let st = start('movie', { seen: 'nueva', source: 'igual', platforms: [] })
+    const d = nextDuel(st, items, new Set(), () => 0.37)!
+    st = applyDuelChoice(st, d.a, d.b)
+    const d2 = nextDuel(st, items, new Set(), () => 0.37)!
+    st = applyDuelChoice(st, d2.a, d2.b)
+    const prop = getProposal(st, null, [])!
+    expect([d.a.id, d2.a.id]).not.toContain(prop.item.id)
+  })
+
+  it('M1: una obra guardada como pendiente sí puede ser la propuesta aunque haya salido en un duelo', () => {
+    const famous = coop[0]
+    let st = start('boardgame', { seen: 'nueva', source: 'igual' }, entriesOf([famous.id], 'pending', 'boardgame'))
+    for (const l of [comp[0], comp[5], comp[11]]) st = applyDuelChoice(st, famous, l)
+    expect(getProposal(st, null, [])!.item.id).toBe(famous.id)
   })
 
   it('las parejas puntuadas no dependen del atajo de cálculo: valor de la información finito y no negativo', () => {

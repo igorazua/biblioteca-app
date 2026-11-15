@@ -3,7 +3,7 @@
  * Centraliza todos los números y umbrales (MOTOR.md §10).
  */
 
-export const ENGINE_VERSION = 'm2.1-quality' // 15/11/2026: la calidad pesa en Decidir (PLAN_DECIDIR M2); antes 'm2.0-brain' (27/10/2026: cerebro y Decidir v2)
+export const ENGINE_VERSION = 'm2.2-novelty' // 15/11/2026: la propuesta de Decidir descuenta lo que ya has visto (PLAN_DECIDIR M1); antes 'm2.1-quality' (M2) y 'm2.0-brain' (27/10/2026: cerebro y Decidir v2)
 
 export type Bucket = 'seen_likely' | 'social' | 'friend_gem' | 'explore'
 
@@ -88,6 +88,14 @@ export interface EngineParams {
 
   /** Boost por tendencia en el país */
   TREND_BOOST: number
+
+  /** Decidir, «algo nuevo» (PLAN_DECIDIR M1): probabilidad de haberla visto si la conoce, por estantería */
+  SEEN_GIVEN_KNOWN: Partial<Record<'movie' | 'series' | 'book' | 'boardgame' | 'artist' | 'song', number>>
+  SEEN_GIVEN_KNOWN_DEFAULT: number
+  /** Decidir M1: probabilidad mínima de haberla visto si la eligió en un duelo */
+  SEEN_WINNER_FLOOR: number
+  /** Decidir M1: peso del descuento ln(1 − 0,95·pVista) en la utilidad de la propuesta */
+  NOVELTY_W: number
 }
 
 export const PARAMS: EngineParams = {
@@ -170,6 +178,18 @@ export const PARAMS: EngineParams = {
   },
 
   TREND_BOOST: 0.05,
+
+  // PLAN_DECIDIR M1 (15/11/2026). Conocer una peli o una serie famosa casi siempre es haberla visto (o empezado); un
+  // libro, la mitad de las veces (se conoce de oídas); un artista que conoces lo has escuchado. De partida 0,7 / 0,5 /
+  // 0,3 / 0,5 / 0,9; series y libros subidos con el banco (240 usuarios): con 0,5 y 0,3 seguía proponiendo lo ya visto.
+  SEEN_GIVEN_KNOWN: { movie: 0.7, series: 0.8, book: 0.5, boardgame: 0.5, artist: 0.9 },
+  SEEN_GIVEN_KNOWN_DEFAULT: 0.5,
+  // si la eligió en un duelo, casi seguro la conoce bien: con NOVELTY_W 2 eso le resta ≈ 3,3 (deja de ser la propuesta
+  // salvo que destaque mucho)
+  SEEN_WINNER_FLOOR: 0.85,
+  // ajustado con el banco: 1 apenas bajaba «propuesta ya vista» en series; 2 sube el acierto entre lo no visto en las
+  // cinco estanterías sin bajar la calidad media más de 4 puntos
+  NOVELTY_W: 2,
 }
 
 /** Devuelve el valor o variante para pruebas A/B futuras */
