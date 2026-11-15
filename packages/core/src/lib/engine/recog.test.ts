@@ -102,6 +102,20 @@ describe('Motor R: Reconocibilidad (recog.ts)', () => {
     expect(inferred).toBe(1981)
   })
 
+  it('la zona se lee de deckLearn.byDecade, que es la forma que guarda el store (REVISION_MOTORES A1)', () => {
+    const base = recog(dummyItem, { birthYear: 1990 })
+    // el mazo le enseñó 40 obras de los 2000 y solo marcó 2 como vistas: las de esa década se reconocen menos
+    const learn = (shown: number, seen: number) => ({ byMacro: {}, byDecade: { '2000s': { shown, seen, up: 0, left: shown - seen } } })
+    const pocas = recog(dummyItem, { birthYear: 1990, deckLearn: learn(40, 2) })
+    const muchas = recog(dummyItem, { birthYear: 1990, deckLearn: learn(40, 38) })
+    expect(pocas).toBeLessThan(base)
+    expect(muchas).toBeGreaterThan(pocas)
+    // con menos de 10 tarjetas de la década no hay dato: zona neutra
+    expect(recog(dummyItem, { birthYear: 1990, deckLearn: learn(5, 0) })).toBe(base)
+    // la forma plana (la de los tests antiguos) sigue valiendo
+    expect(recog(dummyItem, { birthYear: 1990, deckLearn: { '2000s': { shown: 40, seen: 2 } } })).toBe(pocas)
+  })
+
   it('usuario nuevo (contexto vacío, España): nivel 1 con notoriedad >= 0.9 da R >= 0.85, nivel 4 da R < 0.5 (T17 §A.4)', () => {
     const itemNivel1: Item = {
       id: 'movie:titanic-1997',

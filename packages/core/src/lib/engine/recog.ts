@@ -27,6 +27,18 @@ export interface RecogContext {
   doubtfulItems?: Record<string, number>
 }
 
+type DecadeStats = Record<string, { shown: number; seen: number } | undefined>
+
+/**
+ * Contadores del mazo por década. El store guarda `{ byMacro, byDecade }` (`DeckLearnShelf`); los tests antiguos pasaban
+ * el mapa de décadas suelto. Antes solo se leía la forma suelta y, con la del store, la zona no se aplicaba nunca.
+ */
+export function decadeStats(deckLearn: RecogContext['deckLearn']): DecadeStats {
+  if (!deckLearn) return {}
+  const byDecade = (deckLearn as Partial<DeckLearnShelf>).byDecade
+  return (byDecade && typeof byDecade === 'object' ? byDecade : deckLearn) as DecadeStats
+}
+
 /**
  * Calcula el factor de época según la edad del usuario al estreno de la obra (MOTOR §2b.4).
  */
@@ -221,7 +233,7 @@ export function recog(item: Item, ctx: RecogContext): number {
   let zonaMult = 1.0
   if (ctx.deckLearn) {
     const decadeStr = `${Math.floor((item.year || 2000) / 10) * 10}s`
-    const stats = (ctx.deckLearn as Record<string, { shown: number; seen: number } | undefined>)[decadeStr]
+    const stats = decadeStats(ctx.deckLearn)[decadeStr]
     if (stats && stats.shown >= 10) {
       const tasa = (stats.seen + 2) / (stats.shown + 4)
       zonaMult = Math.min(1.1, Math.max(0.75, 0.8 + 0.4 * tasa))
