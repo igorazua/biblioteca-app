@@ -26,7 +26,6 @@
 import type { Item, ShelfType } from '../../types'
 import {
   initDecideSession as initPool,
-  sameFamily,
   familyKey,
   PASSES_FOR_DOUBTFUL,
   type Answers,
@@ -135,26 +134,6 @@ function quad(st: Decide2State, x: Sparse): number {
   }
   for (const [i, vi] of act) for (const [j, vj] of act) s += st.cov[i * k + j] * vi * vj
   return s
-}
-
-/** Σ·d como mapa disperso: filas de los rasgos activos (correlacionados) y varianza previa para los demás. */
-function sigmaTimes(st: Decide2State, d: Sparse): Sparse {
-  const k = st.keys.length
-  const g: Sparse = new Map()
-  const act: [number, number][] = []
-  for (const [key, v] of d) {
-    const i = st.idx[key]
-    if (i === undefined) g.set(key, varOf(st, key) * v)
-    else act.push([i, v])
-  }
-  if (act.length) {
-    for (let r = 0; r < k; r++) {
-      let s = 0
-      for (const [j, v] of act) s += st.cov[r * k + j] * v
-      if (s) g.set(st.keys[r], (g.get(st.keys[r]) ?? 0) + s)
-    }
-  }
-  return g
 }
 
 /** Activa rasgos nuevos (con su media y varianza previas) para poder correlacionarlos. */
@@ -492,24 +471,114 @@ function scorePairsRaw(st: Decide2State, shownIds: Set<string>, rng: () => numbe
     }
   }
   const uOf = new Map(order.map((c) => [c.id, c.u]))
-  const dec = [...decIds].map((id) => ({ f: featsOf(st, items, id), u: uOf.get(id) ?? 0 }))
-  const bestU = Math.max(...dec.map((c) => c.u))
+  const decList = [...decIds]
+  const decU = decList.map((id) => uOf.get(id) ?? 0)
+  const bestU = Math.max(...decU)
+
+  // Todo lo que sigue es lineal en los rasgos (Σ·(a − b) = Σ·a − Σ·b), así que se calcula una vez por obra y no por
+  // pareja: antes cada una de las ~1.100 parejas recorría la covarianza entera y hacía miles de búsquedas en mapas
+  // (REVISION_MOTORES A3). Los números son los mismos salvo redondeo.
+  const kAct = st.keys.length
+  const colOfKey = new Map<string, number>()
+  st.keys.forEach((key, i) => colOfKey.set(key, i))
+  const meanCol: number[] = Array.from(st.mu)
+  const varCol: number[] = new Array(kAct).fill(0) // la de los rasgos activos está en `cov`
+  const pack = (id: string): { cols: Int32Array; vals: Float64Array } => {
+    const f = featsOf(st, items, id)
+    const acc = new Map<number, number>() // un rasgo repetido en la ficha suma, como en `diff`
+    for (let q = 0; q < f.keys.length; q++) {
+      const key = f.keys[q]
+      let c = colOfKey.get(key)
+      if (c === undefined) {
+        c = colOfKey.size
+        colOfKey.set(key, c)
+        meanCol.push(st.muInit[key] ?? 0)
+        varCol.push(varOf(st, key))
+      }
+      acc.set(c, (acc.get(c) ?? 0) + f.vals[q])
+    }
+    return { cols: Int32Array.from(acc.keys()), vals: Float64Array.from(acc.values()) }
+  }
+  const sp = shortlist.map((it) => pack(it.id))
+  const dp = decList.map(pack)
+  const nCols = colOfKey.size
+  const nS = shortlist.length
+  // S[i] = Σ·rasgos(i), M[i] = μ·rasgos(i)
+  const S: Float64Array[] = []
+  const M = new Float64Array(nS)
+  for (let i = 0; i < nS; i++) {
+    const { cols, vals } = sp[i]
+    const s = new Float64Array(nCols)
+    const actJ: number[] = []
+    const actV: number[] = []
+    let mi = 0
+    for (let q = 0; q < cols.length; q++) {
+      const c = cols[q]
+      mi += meanCol[c] * vals[q]
+      if (c < kAct) { actJ.push(c); actV.push(vals[q]) } else s[c] = varCol[c] * vals[q]
+    }
+    if (actJ.length) {
+      for (let r = 0; r < kAct; r++) {
+        let x = 0
+        const row = r * kAct
+        for (let q = 0; q < actJ.length; q++) x += st.cov[row + actJ[q]] * actV[q]
+        s[r] = x
+      }
+    }
+    S.push(s)
+    M[i] = mi
+  }
+  const dotS = (f: { cols: Int32Array; vals: Float64Array }, s: Float64Array) => {
+    let x = 0
+    for (let q = 0; q < f.cols.length; q++) x += s[f.cols[q]] * f.vals[q]
+    return x
+  }
+  // Q[i][j] = rasgos(i)·Σ·rasgos(j) (entre las de la lista corta) y C[c][j] = rasgos(candidata c)·Σ·rasgos(j)
+  const Q = new Float64Array(nS * nS)
+  for (let i = 0; i < nS; i++) for (let j = 0; j < nS; j++) Q[i * nS + j] = dotS(sp[i], S[j])
+  const nD = dp.length
+  const C = new Float64Array(nD * nS)
+  for (let c = 0; c < nD; c++) for (let j = 0; j < nS; j++) C[c * nS + j] = dotS(dp[c], S[j])
+  // familia (saga, expansión o mismo autor), una vez por obra
+  const fam = shortlist.map((it) => familyKey(it))
+  const creators = shortlist.map((it) => (it.creator ?? '').split(',').map((x) => x.trim().toLowerCase()).filter(Boolean))
+  const related = (i: number, j: number) => {
+    const ka = fam[i]
+    const kb = fam[j]
+    if (ka && kb && (ka === kb || ka.startsWith(kb + ' ') || kb.startsWith(ka + ' '))) return true
+    return creators[i].some((x) => creators[j].includes(x))
+  }
+  // para contar en cuántos rasgos difieren dos obras sin construir el mapa de la diferencia
+  const valA = new Float64Array(nCols)
+  const stampA = new Int32Array(nCols).fill(-1)
 
   const best: ScoredPair[] = []
-  for (let i = 0; i < shortlist.length; i++) {
-    for (let j = i + 1; j < shortlist.length; j++) {
+  for (let i = 0; i < nS; i++) {
+    const fa = sp[i]
+    let sizeA = 0
+    for (let q = 0; q < fa.cols.length; q++) {
+      valA[fa.cols[q]] = fa.vals[q]
+      stampA[fa.cols[q]] = i
+      if (Math.abs(fa.vals[q]) >= 1e-9) sizeA++
+    }
+    for (let j = i + 1; j < nS; j++) {
       const a = shortlist[i]
       const b = shortlist[j]
-      if (sameFamily(a, b)) continue
-      const d = diff(featsOf(st, items, a.id), featsOf(st, items, b.id))
-      if (!d.size) continue
+      if (related(i, j)) continue
+      const fb = sp[j]
+      let dSize = sizeA
+      for (let q = 0; q < fb.cols.length; q++) {
+        const c = fb.cols[q]
+        const vb = fb.vals[q]
+        if (stampA[c] === i) dSize += (Math.abs(valA[c] - vb) >= 1e-9 ? 1 : 0) - (Math.abs(valA[c]) >= 1e-9 ? 1 : 0)
+        else if (Math.abs(vb) >= 1e-9) dSize++
+      }
+      if (!dSize) continue
       // Valor de la información para la decisión (gradiente de conocimiento): según cuál elija, cuánto sube la mejor
       // propuesta posible. Recoge a la vez que el resultado sea incierto, que toque rasgos que no sabemos, que esos
       // rasgos importen a las candidatas (aunque sean pocas, como los cooperativos) y las correlaciones (el tanteo).
-      const g = sigmaTimes(st, d)
-      let m = 0
-      let s2 = 0
-      for (const [k, v] of d) { m += meanOf(st, k) * v; s2 += (g.get(k) ?? 0) * v }
+      const m = M[i] - M[j]
+      const s2 = Q[i * nS + i] - Q[i * nS + j] - Q[j * nS + i] + Q[j * nS + j]
       const c = Math.sqrt(TUNE.noise + s2)
       const t = m / c
       const p = Phi(t)
@@ -517,16 +586,15 @@ function scorePairsRaw(st: Decide2State, shownIds: Set<string>, rng: () => numbe
       const stepB = phi(t) / Math.max(1e-12, 1 - p) / c // si elige b
       let maxA = -Infinity
       let maxB = -Infinity
-      for (const cand of dec) {
-        let sc = 0
-        for (let q = 0; q < cand.f.keys.length; q++) sc += (g.get(cand.f.keys[q]) ?? 0) * cand.f.vals[q]
-        maxA = Math.max(maxA, cand.u + sc * stepA)
-        maxB = Math.max(maxB, cand.u - sc * stepB)
+      for (let cand = 0; cand < nD; cand++) {
+        const sc = C[cand * nS + i] - C[cand * nS + j]
+        maxA = Math.max(maxA, decU[cand] + sc * stepA)
+        maxB = Math.max(maxB, decU[cand] - sc * stepB)
       }
       const kg = p * maxA + (1 - p) * maxB - bestU
       const known = Math.sqrt((st.recogMap[a.id] ?? 0.8) * (st.recogMap[b.id] ?? 0.8)) * rot(a) * rot(b)
       // al principio, parejas muy distintas (muchos rasgos en juego)
-      const far = n < 3 ? 1 + Math.min(1, d.size / 25) : 1
+      const far = n < 3 ? 1 + Math.min(1, dSize / 25) : 1
       best.push({ a, b, score: Math.max(0, kg) * known * far, kg: Math.max(0, kg), p })
     }
   }
@@ -735,4 +803,3 @@ export function sessionTaste(st: Decide2State): Record<string, number> {
 export function traitWeight(st: Decide2State, key: string): number {
   return meanOf(st, key)
 }
-

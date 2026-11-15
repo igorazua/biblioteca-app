@@ -110,7 +110,9 @@ describe('Decidir v2', { timeout: 120_000 }, () => {
     expect(getProposal(next, null, [])!.item.cooperative).toBe(true)
   })
 
-  it('cada duelo se calcula rápido (< 400 ms en node, con el catálogo entero)', () => {
+  // Antes el límite era 400 ms y el motor tardaba ~200 (480 con la máquina ocupada): en un móvil, más de un segundo por
+  // duelo. Con el cálculo por obra en vez de por pareja (REVISION_MOTORES A3) tarda ~20 ms.
+  it('cada duelo se calcula rápido (< 100 ms en node, con el catálogo entero)', () => {
     let st = start('movie', { seen: 'nueva', source: 'igual', platforms: [] })
     const t0 = performance.now()
     for (let i = 0; i < 4; i++) {
@@ -118,6 +120,17 @@ describe('Decidir v2', { timeout: 120_000 }, () => {
       st = applyDuelChoice(st, d.a, d.b)
       shouldPropose(st)
     }
-    expect((performance.now() - t0) / 4).toBeLessThan(400)
+    expect((performance.now() - t0) / 4).toBeLessThan(100)
+  })
+
+  it('las parejas puntuadas no dependen del atajo de cálculo: valor de la información finito y no negativo', () => {
+    let st = start('boardgame', { seen: 'nueva', source: 'igual' })
+    for (let i = 0; i < 5; i++) {
+      const d = nextDuel(st, items, new Set(), () => 0.37)!
+      expect(Number.isFinite(d.infoGain)).toBe(true)
+      expect(d.infoGain).toBeGreaterThanOrEqual(0)
+      expect(d.a.id).not.toBe(d.b.id)
+      st = applyDuelChoice(st, d.a, d.b)
+    }
   })
 })
