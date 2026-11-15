@@ -8,52 +8,11 @@ import { items, itemsById } from '../../data/catalog'
 import * as v1 from './decide'
 import * as v2 from './decide2'
 import { loadShelfEngine } from '../../testing/engineData'
+import { gauss, rngOf, tasteFor } from '../../testing/simUsers'
 import type { Item, Profile, ShelfType } from '../../types'
 
 const profile: Profile = { name: 'Sim', avatarColor: '#fff', platforms: [], country: 'ES', lang: 'es' }
 const rankings = { movie: [], series: [], book: [], artist: [], boardgame: [], song: [] }
-
-function rngOf(seed: number) {
-  let a = seed | 0
-  return () => { a = (a + 0x6d2b79f5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296 }
-}
-const gauss = (r: () => number) => Math.sqrt(-2 * Math.log(r() + 1e-12)) * Math.cos(2 * Math.PI * r())
-const has = (it: Item, g: string) => (it.genres ?? []).includes(g)
-
-type Taste = (it: Item) => number
-
-/** Gustos por estantería: arquetipos con interacción + uno al azar por género. */
-function tasteFor(shelf: ShelfType, k: number, r: () => number): Taste {
-  const pool = items.filter((x) => x.type === shelf && !x.hidden)
-  const genres = [...new Set(pool.flatMap((x) => x.genres))].filter((g) => pool.filter((x) => has(x, g)).length >= 25)
-  const g1 = genres[Math.floor(r() * genres.length)]
-  const g2 = genres[Math.floor(r() * genres.length)]
-  const year = 1960 + Math.floor(r() * 60)
-  const popTaste = gauss(r) * 0.6
-  const whim = new Map(pool.map((x) => [x.id, gauss(r) * 0.7]))
-  const hidden: Taste = (it) => -Math.abs((it.year || 2000) - year) / 25 + popTaste * ((it.popularity ?? 50) - 50) / 30 + (whim.get(it.id) ?? 0)
-  const arche: Taste[] = shelf === 'boardgame'
-    ? [
-        (it) => (it.cooperative ? 3 : 0) + (it.cooperative && (it.weight ?? 2) > 2.5 ? 1.5 : 0),
-        (it) => (has(it, 'Antigüedad') ? 2.5 : 0) + ((it.weight ?? 2) > 3 ? 1.5 : 0),
-        (it) => ((it.weight ?? 3) < 1.9 ? 2 : 0) + (has(it, 'Party Game') || has(it, 'Faroleo') ? 2 : 0),
-        (it) => (has(it, g1) ? 2.5 : 0) + (has(it, g2) ? 1.2 : 0),
-      ]
-    : shelf === 'movie'
-      ? [
-          (it) => (has(it, 'Animación') ? 3 : 0) + (has(it, 'Comedia') && has(it, 'Animación') ? 1 : 0),
-          (it) => (has(it, 'Terror') || has(it, 'Thriller') ? 2.5 : 0) + ((it.year ?? 2000) >= 2000 ? 1 : 0),
-          (it) => (has(it, 'Drama') && has(it, 'Historia') ? 3 : 0) + ((it.durationMin ?? 120) > 140 ? 0.8 : 0),
-          (it) => (has(it, g1) ? 2.5 : 0) + (has(it, g2) ? 1.2 : 0),
-        ]
-      : [
-          (it) => (has(it, 'Ensayo') || has(it, 'Filosofía') || has(it, 'Historia') ? 3 : 0) + ((it.pages ?? 300) < 300 ? 1 : 0),
-          (it) => (has(it, 'Ciencia ficción') ? 3 : 0) + (has(it, 'Clásico') ? 1 : 0),
-          (it) => (has(it, g1) ? 2.5 : 0) + (has(it, g2) ? 1.2 : 0),
-        ]
-  const a = arche[k % arche.length]
-  return (it) => a(it) + hidden(it)
-}
 
 interface Engine {
   init: (shelf: ShelfType) => unknown
