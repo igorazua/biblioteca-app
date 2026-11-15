@@ -33,6 +33,13 @@ export function tasteFor(shelf: ShelfType, k: number, r: () => number): Taste {
         (it) => ((it.weight ?? 3) < 1.9 ? 2 : 0) + (has(it, 'Party Game') || has(it, 'Faroleo') ? 2 : 0),
         (it) => (has(it, g1) ? 2.5 : 0) + (has(it, g2) ? 1.2 : 0),
       ]
+    : shelf === 'series'
+      ? [
+          (it) => (has(it, 'Comedia') ? 3 : 0) + (has(it, 'Comedia') && has(it, 'Animación') ? 1 : 0),
+          (it) => (has(it, 'Crimen') || has(it, 'Thriller') || has(it, 'Misterio') ? 2.5 : 0) + ((it.year ?? 2000) >= 2010 ? 1 : 0),
+          (it) => (has(it, 'Drama') ? 3 : 0) + ((it.seasons ?? 1) >= 4 ? 0.8 : 0),
+          (it) => (has(it, g1) ? 2.5 : 0) + (has(it, g2) ? 1.2 : 0),
+        ]
     : shelf === 'movie'
       ? [
           (it) => (has(it, 'Animación') ? 3 : 0) + (has(it, 'Comedia') && has(it, 'Animación') ? 1 : 0),
