@@ -17,7 +17,8 @@ export interface RecogFriend {
 
 export interface RecogContext {
   country?: string
-  birthYear?: number
+  /** año de nacimiento; `null` = ya se intentó inferir y no se sabe (así recog no lo reintenta por cada obra) */
+  birthYear?: number | null
   user?: Partial<Profile>
   entries?: Record<string, UserEntry>
   friends?: (Friend | RecogFriend)[]
@@ -121,16 +122,16 @@ export function eraFactor(
 export function inferBirthYear(
   entries: Record<string, UserEntry>,
   items: Item[],
-  deckLearn?: Record<string, { shown: number; seen: number }>
+  deckLearn?: RecogContext['deckLearn']
 ): number | null {
   const medianAge = PARAMS.ERA_MEDIAN_AGE || 25
 
   // 1. Si tenemos datos de deckLearn por década (§2b.3)
   if (deckLearn) {
     const decadeRates: { decade: number; rate: number; count: number }[] = []
-    for (const [key, stats] of Object.entries(deckLearn)) {
+    for (const [key, stats] of Object.entries(decadeStats(deckLearn))) {
       const match = key.match(/^(\d{4})s?$/)
-      if (match && stats.shown >= 10) {
+      if (match && stats && stats.shown >= 10) {
         const decade = parseInt(match[1], 10)
         decadeRates.push({
           decade,
@@ -170,6 +171,18 @@ export function inferBirthYear(
   return Math.min(2012, Math.max(1940, Math.round(inferred)))
 }
 
+/** Año inferido de cada contexto: se calcula una vez, no por cada obra (antes, un Map de todo el catálogo por obra). */
+const inferredByCtx = new WeakMap<RecogContext, number | null>()
+function inferredFor(ctx: RecogContext): number | undefined {
+  if (!ctx.items || !ctx.entries) return undefined
+  let y = inferredByCtx.get(ctx)
+  if (y === undefined) {
+    y = inferBirthYear(ctx.entries, ctx.items, ctx.deckLearn)
+    inferredByCtx.set(ctx, y)
+  }
+  return y ?? undefined
+}
+
 /**
  * Reconocibilidad R de una obra para un usuario (MOTOR §2b.4, T17 §A.4).
  * Devuelve una probabilidad calibrada en [0.01, 1.0].
@@ -192,10 +205,7 @@ export function recog(item: Item, ctx: RecogContext): number {
   // Descartada no cuenta: «no me interesa» no significa «la conozco»
 
   const country = ctx.country ?? ctx.user?.country ?? 'ES'
-  const birthYear =
-    ctx.birthYear ??
-    ctx.user?.birthYear ??
-    (ctx.items && ctx.entries ? inferBirthYear(ctx.entries, ctx.items) ?? undefined : undefined)
+  const birthYear = ctx.birthYear === null ? undefined : ctx.birthYear ?? ctx.user?.birthYear ?? inferredFor(ctx)
 
   // Nivel de fama calibrado (fameTier: 1..4)
   const tierVal = typeof item.fameTier === 'object' && item.fameTier !== null

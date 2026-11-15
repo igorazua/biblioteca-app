@@ -289,7 +289,8 @@ export function initDecideSession(input: DecideInput): Decide2State {
   for (const k of Object.keys(asked)) varInit[k] = 0.15
 
   const userEntries = input.entries
-  const birthYear = input.profile?.birthYear ?? inferBirthYear(userEntries, items) ?? undefined
+  // una sola vez, y con lo aprendido del mazo; `null` = no se sabe (recog no lo reintenta por cada obra)
+  const birthYear = input.profile?.birthYear ?? inferBirthYear(userEntries, items, input.deckLearn)
   const ctx: RecogContext = {
     user: input.profile ?? { country: 'ES', lang: 'es' },
     entries: userEntries,

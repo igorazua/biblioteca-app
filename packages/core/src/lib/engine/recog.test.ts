@@ -116,6 +116,46 @@ describe('Motor R: Reconocibilidad (recog.ts)', () => {
     expect(recog(dummyItem, { birthYear: 1990, deckLearn: { '2000s': { shown: 40, seen: 2 } } })).toBe(pocas)
   })
 
+  it('sin año declarado, el año de nacimiento se infiere una vez por contexto, no por cada obra (REVISION_MOTORES A2)', () => {
+    const items: Item[] = Array.from({ length: 50 }, (_, i) => ({ ...dummyItem, id: `movie:x-${i}`, year: 1980 + (i % 40) }))
+    const entries: Record<string, UserEntry> = {}
+    for (const it of items.slice(0, 8)) entries[it.id] = { itemId: it.id, status: 'seen', ranked: false, updatedAt: 1704067200000 }
+    // inferBirthYear recorre el catálogo con `items.map`: se cuenta cuántas veces lo hace
+    let walks = 0
+    const map = items.map.bind(items)
+    items.map = ((...args: Parameters<typeof map>) => { walks++; return map(...args) }) as typeof items.map
+    const ctx = { entries, items }
+    const first = items.slice(8).map((it) => recog(it, ctx))
+    expect(walks).toBe(1)
+    // y el resultado es el mismo que dando el año ya inferido
+    const birthYear = inferBirthYear(entries, items) ?? undefined
+    expect(first).toEqual(items.slice(8).map((it) => recog(it, { entries, birthYear })))
+  })
+
+  it('usuario nuevo sin datos para inferir: tampoco se reintenta por cada obra, y birthYear: null lo desactiva', () => {
+    const items: Item[] = Array.from({ length: 30 }, (_, i) => ({ ...dummyItem, id: `movie:y-${i}` }))
+    let walks = 0
+    const map = items.map.bind(items)
+    items.map = ((...args: Parameters<typeof map>) => { walks++; return map(...args) }) as typeof items.map
+    const ctx = { entries: {}, items }
+    for (const it of items) recog(it, ctx)
+    expect(walks).toBe(1)
+    walks = 0
+    for (const it of items) recog(it, { entries: {}, items, birthYear: null })
+    expect(walks).toBe(0)
+  })
+
+  it('el año se infiere de la tasa de «la vi» por década del mazo, en la forma que guarda el store (MOTOR §2b.3)', () => {
+    const st = (shown: number, seen: number) => ({ shown, seen, up: 0, left: shown - seen })
+    const byDecade = { '1980s': st(20, 4), '1990s': st(20, 6), '2000s': st(20, 15), '2010s': st(20, 5) }
+    // la década con más «la vi» es la de los 2000: 2000 + 5 − 25 = 1980
+    expect(inferBirthYear({}, [], { byMacro: {}, byDecade })).toBe(1980)
+    expect(inferBirthYear({}, [], byDecade)).toBe(1980)
+    // y recog lo usa: una obra de 2005 cae en su ventana formativa
+    const conMazo = recog(dummyItem, { entries: {}, items: [], deckLearn: { byMacro: {}, byDecade } })
+    expect(conMazo).toBe(recog(dummyItem, { birthYear: 1980, deckLearn: { byMacro: {}, byDecade } }))
+  })
+
   it('usuario nuevo (contexto vacío, España): nivel 1 con notoriedad >= 0.9 da R >= 0.85, nivel 4 da R < 0.5 (T17 §A.4)', () => {
     const itemNivel1: Item = {
       id: 'movie:titanic-1997',
