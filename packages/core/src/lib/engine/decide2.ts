@@ -36,6 +36,7 @@ import {
 import { recog, inferBirthYear, type RecogContext } from './recog'
 import { traitSpace, traitLabel, priorVar, isEmbKey, type Features } from './traits'
 import { MOOD_GENRES } from '../../data/questions'
+import { PARAMS } from './params'
 
 export type { Answers, DecideInput, DecideProposal, DuelPair }
 
@@ -44,7 +45,7 @@ export const TUNE = {
   /** ruido de una respuesta: con 1, un rasgo de peso 1 gana su duelo el 76 % de las veces */
   noise: 1.0,
   /** peso de la puntuación previa (calidad, amigos, tendencia, pendientes) frente al gusto aprendido */
-  baseW: 0.8,
+  baseW: 1.0,
   /** para parar: lo que tendría que poder mejorar la propuesta un duelo más para que valga la pena */
   stopKG: 0.1,
   /** para parar: duelos seguidos con la misma primera */
@@ -255,12 +256,14 @@ function historyTraits(st: Decide2State, items: Item[]): Record<string, number> 
 }
 
 export function initDecideSession(input: DecideInput): Decide2State {
-  const old = initPool(input)
+  const old = initPool({ ...input, priorMode: 'v2' })
   const pool = old.pool
+  // la previa tipificada dentro de la bolsa (media 0, desviación 1) por PARAMS.PRIOR_W; sin dispersión, todo 0 (M2)
   const logs = pool.map((id) => Math.log(Math.max(1e-6, old.prior[id] ?? 1e-6)))
   const mean = logs.reduce((s, x) => s + x, 0) / (logs.length || 1)
+  const sd = Math.sqrt(logs.reduce((s, x) => s + (x - mean) ** 2, 0) / (logs.length || 1))
   const base: Record<string, number> = {}
-  pool.forEach((id, i) => { base[id] = logs[i] - mean })
+  pool.forEach((id, i) => { base[id] = sd > 1e-9 ? (PARAMS.PRIOR_W * (logs[i] - mean)) / sd : 0 })
 
   const { items, ...rest } = input
   const asked = askedTraits(input.shelf, input.answers)

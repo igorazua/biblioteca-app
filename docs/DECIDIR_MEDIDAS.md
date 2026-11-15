@@ -907,3 +907,345 @@ Solo `sabe`, entre lo que el usuario no ha visto: «acierto nuevo» = la propues
 - `st.base` al iniciar (log de la previa, 300 obras): máximo -0.00, mediana -0.00, mínimo -0.00.
 - Calidad media de la propuesta (percentil de `voteAvg` en su estantería, 0 de 60 propuestas con dato): **NaN %**.
 
+
+## 2026-11-15 · commit 7bd0033
+
+Banco `decide2.bench.test.ts` (BENCH=1). Usuario nuevo: 40 sesiones; curvas: 60 usuarios simulados; semillas fijas.
+
+### Resumen
+
+| Medida | Pelis | Series | Libros | Juegos | Artistas |
+|---|---|---|---|---|---|
+| Acierto tras 6 duelos, modo sabe | 43 % | 48 % | 47 % | 53 % | 20 % |
+| Acierto tras 6 duelos, modo azar | 40 % | 42 % | 33 % | 33 % | 23 % |
+| Acierto tras 6 duelos, modo pasa | 40 % | 53 % | 42 % | 47 % | 17 % |
+| Acierto tras 6 duelos, modo ruido | 15 % | 12 % | 15 % | 20 % | 12 % |
+| Acierto nuevo tras 6 duelos (sabe, entre lo no visto) | 15 % | 20 % | 35 % | 38 % | 0 % |
+| Propuesta ya vista tras 6 duelos (sabe) | 62 % | 48 % | 27 % | 28 % | 82 % |
+| Media de rA·rB, duelos 4-6 (usuario nuevo) | 0.65 | 0.65 | 0.68 | 0.49 | 0.65 |
+| Sesiones con el orientador más repetido en los duelos 1-3 (usuario nuevo) | 88 % | 78 % | 90 % | 83 % | 100 % |
+| La propuesta es un orientador enseñado (sabe) | 85 % | 93 % | 100 % | 60 % | 100 % |
+| R media de la propuesta (sabe) | 0.77 | 0.85 | 0.81 | 0.53 | 0.88 |
+| Calidad media de la propuesta (percentil de voteAvg) | 88 % | 56 % | 81 % | 85 % | — |
+| Peso de la previa: rango de st.base (máx − mín) | 0.62 | 0.49 | 0.59 | 0.61 | 0.66 |
+
+### Pelis (935 obras visibles)
+
+#### Censo de orientadores, usuario nuevo (40 sesiones, respuestas al azar)
+
+| Duelo | Duelos medidos | R media | R mínima | Media de rA·rB | Propia | Nivel 1 | Nivel 2 | Nivel 3 | Nivel 4 |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | 40 | 0.98 | 0.98 | 0.97 | 0 % | 100 % | 0 % | 0 % | 0 % |
+| 2 | 40 | 0.99 | 0.97 | 0.97 | 0 % | 100 % | 0 % | 0 % | 0 % |
+| 3 | 39 | 0.98 | 0.97 | 0.97 | 0 % | 100 % | 0 % | 0 % | 0 % |
+| 4 | 39 | 0.79 | 0.58 | 0.62 | 0 % | 14 % | 36 % | 50 % | 0 % |
+| 5 | 34 | 0.81 | 0.58 | 0.65 | 0 % | 21 % | 34 % | 46 % | 0 % |
+| 6 | 24 | 0.83 | 0.61 | 0.68 | 0 % | 27 % | 31 % | 42 % | 0 % |
+| 7 | 0 | — | — | — | 0 % | 0 % | 0 % | 0 % | 0 % |
+
+Media de rA·rB en los duelos 4-6: **0.65**. Obras más repetidas en los duelos 1-3 (% de sesiones en que salen): Toy Story 88 %; El lobo de Wall Street 57 %; El caballero oscuro: La leyenda renace 48 %; La guerra de las galaxias 48 %; El rey león 45 %; Parque Jurásico 43 %; Avatar 33 %; Vengadores: Endgame 28 %; Dune 20 %; El señor de los anillos: La comunidad del anillo 20 %; El padrino 15 %; Harry Potter y la piedra filosofal 15 %; Regreso al futuro 15 %; Todo a la vez en todas partes 15 %; Malditos bastardos 13 %.
+
+Orientador más repetido en los duelos 1-3: **88 %** de las sesiones.
+
+#### Censo de orientadores, usuario con 30 obras propias (40 sesiones)
+
+| Duelo | Duelos medidos | R media | R mínima | Media de rA·rB | Propia | Nivel 1 | Nivel 2 | Nivel 3 | Nivel 4 |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | 40 | 0.98 | 0.92 | 0.96 | 60 % | 40 % | 0 % | 0 % | 0 % |
+| 2 | 40 | 0.98 | 0.92 | 0.95 | 53 % | 48 % | 0 % | 0 % | 0 % |
+| 3 | 37 | 0.98 | 0.92 | 0.96 | 54 % | 46 % | 0 % | 0 % | 0 % |
+| 4 | 37 | 0.78 | 0.55 | 0.60 | 19 % | 11 % | 28 % | 42 % | 0 % |
+| 5 | 29 | 0.84 | 0.56 | 0.70 | 31 % | 17 % | 21 % | 31 % | 0 % |
+| 6 | 22 | 0.85 | 0.57 | 0.71 | 34 % | 18 % | 14 % | 34 % | 0 % |
+| 7 | 0 | — | — | — | 0 % | 0 % | 0 % | 0 % | 0 % |
+
+Media de rA·rB en los duelos 4-6: **0.66**. Obras más repetidas en los duelos 1-3 (% de sesiones en que salen): El caballero oscuro: La leyenda renace 20 %; El resplandor 20 %; Shutter Island 20 %; El rey león 18 %; Toy Story 18 %; Parque Jurásico 15 %; Psicosis 13 %; Todo a la vez en todas partes 13 %; El padrino 10 %; El señor de los anillos: La comunidad del anillo 10 %; Forrest Gump 10 %; La La Land 10 %; Pulp Fiction 10 %; La ventana indiscreta 10 %; Blade Runner 8 %.
+
+Orientador más repetido en los duelos 1-3: **20 %** de las sesiones.
+
+#### Curva de acierto (60 usuarios; acierto = propuesta en su 10 % favorito; «3» = la propuesta o una de sus 2 primeras alternativas)
+
+| Duelos | sabe acierto | sabe en 3 | sabe percentil | azar acierto | azar en 3 | azar percentil | pasa acierto | pasa en 3 | pasa percentil | ruido acierto | ruido en 3 | ruido percentil |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 0 | 5 % | 33 % | 53 % | 5 % | 33 % | 53 % | 5 % | 33 % | 53 % | 5 % | 33 % | 53 % |
+| 1 | 32 % | 40 % | 35 % | 32 % | 40 % | 35 % | 32 % | 40 % | 35 % | 10 % | 20 % | 45 % |
+| 2 | 35 % | 43 % | 35 % | 35 % | 45 % | 36 % | 35 % | 43 % | 35 % | 12 % | 25 % | 49 % |
+| 3 | 42 % | 47 % | 30 % | 43 % | 48 % | 30 % | 40 % | 45 % | 31 % | 15 % | 25 % | 46 % |
+| 4 | 40 % | 50 % | 26 % | 38 % | 53 % | 29 % | 42 % | 48 % | 29 % | 12 % | 22 % | 50 % |
+| 5 | 42 % | 52 % | 23 % | 35 % | 48 % | 30 % | 38 % | 42 % | 27 % | 17 % | 23 % | 45 % |
+| 6 | 43 % | 57 % | 23 % | 40 % | 53 % | 31 % | 40 % | 48 % | 28 % | 15 % | 22 % | 46 % |
+
+Solo `sabe`, entre lo que el usuario no ha visto: «acierto nuevo» = la propuesta está en su 10 % favorito de las obras que no ha visto y además no la ha visto; «propuesta ya vista» = % de propuestas que ya había visto.
+
+| Duelos | acierto | acierto nuevo | propuesta ya vista |
+|---|---|---|---|
+| 0 | 5 % | 3 % | 20 % |
+| 1 | 32 % | 12 % | 62 % |
+| 2 | 35 % | 15 % | 62 % |
+| 3 | 42 % | 25 % | 55 % |
+| 4 | 40 % | 15 % | 67 % |
+| 5 | 42 % | 15 % | 67 % |
+| 6 | 43 % | 15 % | 62 % |
+
+#### Propuesta = orientador y peso de la previa (modo sabe, tras 6 duelos)
+
+- La propuesta es una obra enseñada en un duelo de la sesión: **85 %**; R media de la propuesta: **0.77**.
+- `st.base` al iniciar (log de la previa, 300 obras): máximo 0.42, mediana -0.03, mínimo -0.20.
+- Calidad media de la propuesta (percentil de `voteAvg` en su estantería, 57 de 60 propuestas con dato): **88 %**.
+
+### Series (1022 obras visibles)
+
+#### Censo de orientadores, usuario nuevo (40 sesiones, respuestas al azar)
+
+| Duelo | Duelos medidos | R media | R mínima | Media de rA·rB | Propia | Nivel 1 | Nivel 2 | Nivel 3 | Nivel 4 |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | 40 | 0.98 | 0.97 | 0.96 | 0 % | 100 % | 0 % | 0 % | 0 % |
+| 2 | 40 | 0.99 | 0.97 | 0.98 | 0 % | 100 % | 0 % | 0 % | 0 % |
+| 3 | 34 | 0.99 | 0.97 | 0.97 | 0 % | 100 % | 0 % | 0 % | 0 % |
+| 4 | 34 | 0.83 | 0.64 | 0.68 | 0 % | 19 % | 38 % | 43 % | 0 % |
+| 5 | 28 | 0.82 | 0.63 | 0.67 | 0 % | 27 % | 29 % | 45 % | 0 % |
+| 6 | 23 | 0.76 | 0.63 | 0.58 | 0 % | 15 % | 20 % | 65 % | 0 % |
+| 7 | 0 | — | — | — | 0 % | 0 % | 0 % | 0 % | 0 % |
+
+Media de rA·rB en los duelos 4-6: **0.65**. Obras más repetidas en los duelos 1-3 (% de sesiones en que salen): Bob Esponja 78 %; Anatomía de Grey 48 %; Sobrenatural 48 %; Crónicas vampíricas 45 %; The Boys 43 %; Mentes criminales 38 %; Juego de tronos 28 %; Sexo en Nueva York 28 %; El mentalista 25 %; American Horror Story 18 %; Smallville 18 %; Urgencias 15 %; Friends 15 %; The Bear 15 %; Demon Slayer: Kimetsu no Yaiba 13 %.
+
+Orientador más repetido en los duelos 1-3: **78 %** de las sesiones.
+
+#### Censo de orientadores, usuario con 30 obras propias (40 sesiones)
+
+| Duelo | Duelos medidos | R media | R mínima | Media de rA·rB | Propia | Nivel 1 | Nivel 2 | Nivel 3 | Nivel 4 |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | 40 | 0.99 | 0.93 | 0.98 | 53 % | 48 % | 0 % | 0 % | 0 % |
+| 2 | 40 | 0.98 | 0.93 | 0.96 | 51 % | 49 % | 0 % | 0 % | 0 % |
+| 3 | 36 | 0.99 | 0.93 | 0.98 | 65 % | 35 % | 0 % | 0 % | 0 % |
+| 4 | 36 | 0.81 | 0.56 | 0.66 | 11 % | 13 % | 33 % | 43 % | 0 % |
+| 5 | 30 | 0.85 | 0.57 | 0.73 | 25 % | 25 % | 20 % | 30 % | 0 % |
+| 6 | 19 | 0.82 | 0.56 | 0.69 | 24 % | 18 % | 11 % | 47 % | 0 % |
+| 7 | 0 | — | — | — | 0 % | 0 % | 0 % | 0 % | 0 % |
+
+Media de rA·rB en los duelos 4-6: **0.69**. Obras más repetidas en los duelos 1-3 (% de sesiones en que salen): El mentalista 25 %; Dexter 18 %; Smallville 18 %; Bob Esponja 18 %; Crónicas vampíricas 18 %; True Detective 18 %; Las chicas Gilmore 15 %; Sexo en Nueva York 15 %; Sobrenatural 13 %; The Boys 13 %; Urgencias 10 %; Friends 10 %; Planet Earth 10 %; Arrow 8 %; Beauty & the Beast 8 %.
+
+Orientador más repetido en los duelos 1-3: **25 %** de las sesiones.
+
+#### Curva de acierto (60 usuarios; acierto = propuesta en su 10 % favorito; «3» = la propuesta o una de sus 2 primeras alternativas)
+
+| Duelos | sabe acierto | sabe en 3 | sabe percentil | azar acierto | azar en 3 | azar percentil | pasa acierto | pasa en 3 | pasa percentil | ruido acierto | ruido en 3 | ruido percentil |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 0 | 0 % | 17 % | 69 % | 0 % | 17 % | 69 % | 0 % | 17 % | 69 % | 0 % | 17 % | 69 % |
+| 1 | 28 % | 53 % | 27 % | 27 % | 52 % | 29 % | 27 % | 53 % | 28 % | 7 % | 22 % | 51 % |
+| 2 | 37 % | 58 % | 24 % | 35 % | 57 % | 24 % | 35 % | 57 % | 24 % | 7 % | 20 % | 55 % |
+| 3 | 43 % | 60 % | 23 % | 42 % | 58 % | 23 % | 43 % | 60 % | 23 % | 8 % | 18 % | 54 % |
+| 4 | 58 % | 72 % | 16 % | 53 % | 65 % | 18 % | 53 % | 65 % | 18 % | 13 % | 22 % | 54 % |
+| 5 | 57 % | 78 % | 17 % | 47 % | 70 % | 20 % | 53 % | 68 % | 19 % | 13 % | 27 % | 56 % |
+| 6 | 48 % | 77 % | 18 % | 42 % | 63 % | 23 % | 53 % | 75 % | 18 % | 12 % | 25 % | 54 % |
+
+Solo `sabe`, entre lo que el usuario no ha visto: «acierto nuevo» = la propuesta está en su 10 % favorito de las obras que no ha visto y además no la ha visto; «propuesta ya vista» = % de propuestas que ya había visto.
+
+| Duelos | acierto | acierto nuevo | propuesta ya vista |
+|---|---|---|---|
+| 0 | 0 % | 0 % | 48 % |
+| 1 | 28 % | 7 % | 63 % |
+| 2 | 37 % | 12 % | 58 % |
+| 3 | 43 % | 18 % | 53 % |
+| 4 | 58 % | 32 % | 47 % |
+| 5 | 57 % | 28 % | 45 % |
+| 6 | 48 % | 20 % | 48 % |
+
+#### Propuesta = orientador y peso de la previa (modo sabe, tras 6 duelos)
+
+- La propuesta es una obra enseñada en un duelo de la sesión: **93 %**; R media de la propuesta: **0.85**.
+- `st.base` al iniciar (log de la previa, 300 obras): máximo 0.27, mediana -0.01, mínimo -0.23.
+- Calidad media de la propuesta (percentil de `voteAvg` en su estantería, 60 de 60 propuestas con dato): **56 %**.
+
+### Libros (971 obras visibles)
+
+#### Censo de orientadores, usuario nuevo (40 sesiones, respuestas al azar)
+
+| Duelo | Duelos medidos | R media | R mínima | Media de rA·rB | Propia | Nivel 1 | Nivel 2 | Nivel 3 | Nivel 4 |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | 40 | 0.98 | 0.97 | 0.96 | 0 % | 100 % | 0 % | 0 % | 0 % |
+| 2 | 40 | 0.98 | 0.93 | 0.96 | 0 % | 100 % | 0 % | 0 % | 0 % |
+| 3 | 30 | 0.98 | 0.92 | 0.96 | 0 % | 100 % | 0 % | 0 % | 0 % |
+| 4 | 30 | 0.80 | 0.59 | 0.65 | 0 % | 27 % | 35 % | 38 % | 0 % |
+| 5 | 27 | 0.85 | 0.59 | 0.71 | 0 % | 43 % | 30 % | 28 % | 0 % |
+| 6 | 20 | 0.84 | 0.59 | 0.70 | 0 % | 35 % | 40 % | 25 % | 0 % |
+| 7 | 0 | — | — | — | 0 % | 0 % | 0 % | 0 % | 0 % |
+
+Media de rA·rB en los duelos 4-6: **0.68**. Obras más repetidas en los duelos 1-3 (% de sesiones en que salen): Dune 90 %; El hombre en busca de sentido 90 %; El arte de la guerra 60 %; El Señor de los Anillos 43 %; Animal Farm 30 %; El amor en los tiempos del cólera 23 %; El retrato de Dorian Gray 20 %; La casa de los espíritus 20 %; Un mundo feliz 20 %; Don Quijote de la Mancha 15 %; El conde de Montecristo 15 %; Fahrenheit 451 13 %; Matar a un ruiseñor 13 %; El guardián entre el centeno 10 %; Harry Potter y la piedra filosofal 10 %.
+
+Orientador más repetido en los duelos 1-3: **90 %** de las sesiones.
+
+#### Censo de orientadores, usuario con 30 obras propias (40 sesiones)
+
+| Duelo | Duelos medidos | R media | R mínima | Media de rA·rB | Propia | Nivel 1 | Nivel 2 | Nivel 3 | Nivel 4 |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | 40 | 0.98 | 0.92 | 0.97 | 63 % | 38 % | 0 % | 0 % | 0 % |
+| 2 | 40 | 0.97 | 0.88 | 0.95 | 50 % | 50 % | 0 % | 0 % | 0 % |
+| 3 | 30 | 0.97 | 0.90 | 0.95 | 52 % | 48 % | 0 % | 0 % | 0 % |
+| 4 | 20 | 0.88 | 0.57 | 0.76 | 38 % | 28 % | 20 % | 15 % | 0 % |
+| 5 | 12 | 0.83 | 0.59 | 0.68 | 21 % | 29 % | 21 % | 29 % | 0 % |
+| 6 | 8 | 0.83 | 0.55 | 0.69 | 25 % | 31 % | 19 % | 25 % | 0 % |
+| 7 | 0 | — | — | — | 0 % | 0 % | 0 % | 0 % | 0 % |
+
+Media de rA·rB en los duelos 4-6: **0.72**. Obras más repetidas en los duelos 1-3 (% de sesiones en que salen): Dune 53 %; El extraño caso del doctor Jekyll y el señor Hyde 30 %; El conde de Montecristo 25 %; Los tres mosqueteros 25 %; El hombre en busca de sentido 23 %; Cumbres borrascosas 20 %; El Señor de los Anillos 15 %; Picasso 10 %; A Fighting Man Of Mars 8 %; Agnes Grey 8 %; Anne of the Island 8 %; Orgullo y prejuicio 8 %; The warlord of Mars #3 8 %; Мы 5 %; Alice's Adventures in Wonderland / Through the Looking Glass 5 %.
+
+Orientador más repetido en los duelos 1-3: **53 %** de las sesiones.
+
+#### Curva de acierto (60 usuarios; acierto = propuesta en su 10 % favorito; «3» = la propuesta o una de sus 2 primeras alternativas)
+
+| Duelos | sabe acierto | sabe en 3 | sabe percentil | azar acierto | azar en 3 | azar percentil | pasa acierto | pasa en 3 | pasa percentil | ruido acierto | ruido en 3 | ruido percentil |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 0 | 2 % | 35 % | 44 % | 2 % | 35 % | 44 % | 2 % | 35 % | 44 % | 2 % | 35 % | 44 % |
+| 1 | 50 % | 53 % | 25 % | 48 % | 52 % | 26 % | 48 % | 53 % | 25 % | 20 % | 38 % | 51 % |
+| 2 | 47 % | 60 % | 24 % | 45 % | 58 % | 25 % | 43 % | 58 % | 26 % | 22 % | 32 % | 37 % |
+| 3 | 33 % | 52 % | 32 % | 30 % | 48 % | 33 % | 30 % | 48 % | 32 % | 25 % | 33 % | 43 % |
+| 4 | 48 % | 53 % | 22 % | 42 % | 50 % | 27 % | 42 % | 53 % | 26 % | 20 % | 35 % | 45 % |
+| 5 | 47 % | 63 % | 22 % | 32 % | 52 % | 29 % | 42 % | 58 % | 25 % | 17 % | 32 % | 46 % |
+| 6 | 47 % | 65 % | 23 % | 33 % | 57 % | 28 % | 42 % | 58 % | 28 % | 15 % | 28 % | 45 % |
+
+Solo `sabe`, entre lo que el usuario no ha visto: «acierto nuevo» = la propuesta está en su 10 % favorito de las obras que no ha visto y además no la ha visto; «propuesta ya vista» = % de propuestas que ya había visto.
+
+| Duelos | acierto | acierto nuevo | propuesta ya vista |
+|---|---|---|---|
+| 0 | 2 % | 0 % | 18 % |
+| 1 | 50 % | 28 % | 32 % |
+| 2 | 47 % | 28 % | 30 % |
+| 3 | 33 % | 22 % | 32 % |
+| 4 | 48 % | 37 % | 27 % |
+| 5 | 47 % | 38 % | 23 % |
+| 6 | 47 % | 35 % | 27 % |
+
+#### Propuesta = orientador y peso de la previa (modo sabe, tras 6 duelos)
+
+- La propuesta es una obra enseñada en un duelo de la sesión: **100 %**; R media de la propuesta: **0.81**.
+- `st.base` al iniciar (log de la previa, 300 obras): máximo 0.39, mediana -0.03, mínimo -0.20.
+- Calidad media de la propuesta (percentil de `voteAvg` en su estantería, 51 de 60 propuestas con dato): **81 %**.
+
+### Juegos (1095 obras visibles)
+
+#### Censo de orientadores, usuario nuevo (40 sesiones, respuestas al azar)
+
+| Duelo | Duelos medidos | R media | R mínima | Media de rA·rB | Propia | Nivel 1 | Nivel 2 | Nivel 3 | Nivel 4 |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | 40 | 0.91 | 0.75 | 0.83 | 0 % | 100 % | 0 % | 0 % | 0 % |
+| 2 | 40 | 0.86 | 0.74 | 0.73 | 0 % | 100 % | 0 % | 0 % | 0 % |
+| 3 | 38 | 0.84 | 0.74 | 0.71 | 0 % | 100 % | 0 % | 0 % | 0 % |
+| 4 | 38 | 0.70 | 0.58 | 0.49 | 0 % | 17 % | 83 % | 0 % | 0 % |
+| 5 | 35 | 0.69 | 0.58 | 0.47 | 0 % | 17 % | 83 % | 0 % | 0 % |
+| 6 | 33 | 0.72 | 0.57 | 0.51 | 0 % | 33 % | 67 % | 0 % | 0 % |
+| 7 | 0 | — | — | — | 0 % | 0 % | 0 % | 0 % | 0 % |
+
+Media de rA·rB en los duelos 4-6: **0.49**. Obras más repetidas en los duelos 1-3 (% de sesiones en que salen): Maracaibo 83 %; Risk Legacy 73 %; Risk 48 %; Barrage 45 %; Monopoly 45 %; Magic: The Gathering 35 %; Scrabble 35 %; Stella: Dixit Universe 30 %; Friday 28 %; Bus 18 %; QE 18 %; Automobile 13 %; Coup 13 %; Santorini 13 %; Coimbra 10 %.
+
+Orientador más repetido en los duelos 1-3: **83 %** de las sesiones.
+
+#### Censo de orientadores, usuario con 30 obras propias (40 sesiones)
+
+| Duelo | Duelos medidos | R media | R mínima | Media de rA·rB | Propia | Nivel 1 | Nivel 2 | Nivel 3 | Nivel 4 |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | 40 | 1.00 | 0.87 | 1.00 | 95 % | 5 % | 0 % | 0 % | 0 % |
+| 2 | 40 | 0.95 | 0.70 | 0.90 | 70 % | 30 % | 0 % | 0 % | 0 % |
+| 3 | 37 | 0.97 | 0.74 | 0.93 | 76 % | 24 % | 0 % | 0 % | 0 % |
+| 4 | 35 | 0.79 | 0.55 | 0.62 | 36 % | 13 % | 40 % | 11 % | 0 % |
+| 5 | 31 | 0.79 | 0.55 | 0.62 | 34 % | 16 % | 45 % | 5 % | 0 % |
+| 6 | 24 | 0.82 | 0.55 | 0.66 | 38 % | 25 % | 25 % | 13 % | 0 % |
+| 7 | 0 | — | — | — | 0 % | 0 % | 0 % | 0 % | 0 % |
+
+Media de rA·rB en los duelos 4-6: **0.63**. Obras más repetidas en los duelos 1-3 (% de sesiones en que salen): Maracaibo 18 %; Robinson Crusoe: Adventures on the Cursed Island 15 %; Coup 13 %; Gloomhaven 10 %; Pandemic Legacy: Season 2 10 %; Risk Legacy 10 %; Wonderland's War 10 %; Barrage 8 %; Belfort 8 %; Eldritch Horror 8 %; Food Chain Magnate 8 %; Gloomhaven: Jaws of the Lion 8 %; Imperial 8 %; Just One 8 %; Kemet 8 %.
+
+Orientador más repetido en los duelos 1-3: **18 %** de las sesiones.
+
+#### Curva de acierto (60 usuarios; acierto = propuesta en su 10 % favorito; «3» = la propuesta o una de sus 2 primeras alternativas)
+
+| Duelos | sabe acierto | sabe en 3 | sabe percentil | azar acierto | azar en 3 | azar percentil | pasa acierto | pasa en 3 | pasa percentil | ruido acierto | ruido en 3 | ruido percentil |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 0 | 13 % | 20 % | 43 % | 13 % | 20 % | 43 % | 13 % | 20 % | 43 % | 13 % | 20 % | 43 % |
+| 1 | 8 % | 28 % | 49 % | 8 % | 30 % | 47 % | 10 % | 25 % | 45 % | 5 % | 32 % | 52 % |
+| 2 | 13 % | 32 % | 38 % | 17 % | 38 % | 41 % | 17 % | 35 % | 40 % | 8 % | 25 % | 51 % |
+| 3 | 18 % | 38 % | 36 % | 20 % | 42 % | 40 % | 20 % | 40 % | 38 % | 8 % | 20 % | 52 % |
+| 4 | 43 % | 52 % | 26 % | 38 % | 53 % | 30 % | 32 % | 50 % | 31 % | 18 % | 32 % | 45 % |
+| 5 | 50 % | 70 % | 23 % | 35 % | 58 % | 31 % | 43 % | 55 % | 26 % | 18 % | 38 % | 42 % |
+| 6 | 53 % | 67 % | 23 % | 33 % | 52 % | 31 % | 47 % | 58 % | 25 % | 20 % | 37 % | 41 % |
+
+Solo `sabe`, entre lo que el usuario no ha visto: «acierto nuevo» = la propuesta está en su 10 % favorito de las obras que no ha visto y además no la ha visto; «propuesta ya vista» = % de propuestas que ya había visto.
+
+| Duelos | acierto | acierto nuevo | propuesta ya vista |
+|---|---|---|---|
+| 0 | 13 % | 7 % | 27 % |
+| 1 | 8 % | 5 % | 43 % |
+| 2 | 13 % | 13 % | 27 % |
+| 3 | 18 % | 13 % | 25 % |
+| 4 | 43 % | 28 % | 37 % |
+| 5 | 50 % | 37 % | 30 % |
+| 6 | 53 % | 38 % | 28 % |
+
+#### Propuesta = orientador y peso de la previa (modo sabe, tras 6 duelos)
+
+- La propuesta es una obra enseñada en un duelo de la sesión: **60 %**; R media de la propuesta: **0.53**.
+- `st.base` al iniciar (log de la previa, 300 obras): máximo 0.41, mediana -0.04, mínimo -0.20.
+- Calidad media de la propuesta (percentil de `voteAvg` en su estantería, 56 de 60 propuestas con dato): **85 %**.
+
+### Artistas (410 obras visibles)
+
+#### Censo de orientadores, usuario nuevo (40 sesiones, respuestas al azar)
+
+| Duelo | Duelos medidos | R media | R mínima | Media de rA·rB | Propia | Nivel 1 | Nivel 2 | Nivel 3 | Nivel 4 |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | 40 | 0.98 | 0.98 | 0.97 | 0 % | 100 % | 0 % | 0 % | 0 % |
+| 2 | 40 | 0.92 | 0.81 | 0.85 | 0 % | 100 % | 0 % | 0 % | 0 % |
+| 3 | 33 | 0.88 | 0.81 | 0.77 | 0 % | 100 % | 0 % | 0 % | 0 % |
+| 4 | 30 | 0.81 | 0.58 | 0.65 | 0 % | 52 % | 45 % | 3 % | 0 % |
+| 5 | 26 | 0.81 | 0.57 | 0.65 | 0 % | 56 % | 37 % | 8 % | 0 % |
+| 6 | 17 | 0.80 | 0.57 | 0.64 | 0 % | 47 % | 50 % | 3 % | 0 % |
+| 7 | 0 | — | — | — | 0 % | 0 % | 0 % | 0 % | 0 % |
+
+Media de rA·rB en los duelos 4-6: **0.65**. Obras más repetidas en los duelos 1-3 (% de sesiones en que salen): Rosalía 100 %; Queen 85 %; The Beatles 68 %; Michael Jackson 65 %; Bad Bunny 35 %; Bruno Mars 25 %; Elton John 20 %; Prince 20 %; Harry Styles 18 %; Katy Perry 18 %; Kiss 18 %; Amy Winehouse 15 %; David Bowie 10 %; Alejandro Sanz 8 %; Lady Gaga 8 %.
+
+Orientador más repetido en los duelos 1-3: **100 %** de las sesiones.
+
+#### Censo de orientadores, usuario con 30 obras propias (40 sesiones)
+
+| Duelo | Duelos medidos | R media | R mínima | Media de rA·rB | Propia | Nivel 1 | Nivel 2 | Nivel 3 | Nivel 4 |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | 40 | 0.96 | 0.78 | 0.91 | 54 % | 46 % | 0 % | 0 % | 0 % |
+| 2 | 40 | 0.92 | 0.78 | 0.84 | 46 % | 54 % | 0 % | 0 % | 0 % |
+| 3 | 25 | 0.94 | 0.77 | 0.88 | 56 % | 44 % | 0 % | 0 % | 0 % |
+| 4 | 20 | 0.81 | 0.57 | 0.66 | 35 % | 15 % | 40 % | 10 % | 0 % |
+| 5 | 14 | 0.83 | 0.55 | 0.68 | 36 % | 18 % | 29 % | 18 % | 0 % |
+| 6 | 10 | 0.84 | 0.55 | 0.69 | 45 % | 15 % | 30 % | 10 % | 0 % |
+| 7 | 0 | — | — | — | 0 % | 0 % | 0 % | 0 % | 0 % |
+
+Media de rA·rB en los duelos 4-6: **0.67**. Obras más repetidas en los duelos 1-3 (% de sesiones en que salen): Michael Jackson 20 %; Rosalía 20 %; Led Zeppelin 18 %; Queen 18 %; The Rolling Stones 18 %; Amy Winehouse 15 %; The Beatles 13 %; AC/DC 10 %; Alejandro Sanz 10 %; Kiss 10 %; Prince 10 %; Ricky Martin 10 %; Avicii 8 %; Bad Bunny 8 %; Calvin Harris 8 %.
+
+Orientador más repetido en los duelos 1-3: **20 %** de las sesiones.
+
+#### Curva de acierto (60 usuarios; acierto = propuesta en su 10 % favorito; «3» = la propuesta o una de sus 2 primeras alternativas)
+
+| Duelos | sabe acierto | sabe en 3 | sabe percentil | azar acierto | azar en 3 | azar percentil | pasa acierto | pasa en 3 | pasa percentil | ruido acierto | ruido en 3 | ruido percentil |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 0 | 15 % | 20 % | 38 % | 15 % | 20 % | 38 % | 15 % | 20 % | 38 % | 15 % | 20 % | 38 % |
+| 1 | 12 % | 35 % | 37 % | 12 % | 35 % | 37 % | 12 % | 35 % | 37 % | 7 % | 25 % | 56 % |
+| 2 | 13 % | 37 % | 34 % | 13 % | 37 % | 36 % | 13 % | 38 % | 34 % | 7 % | 23 % | 54 % |
+| 3 | 20 % | 37 % | 34 % | 18 % | 32 % | 34 % | 18 % | 35 % | 33 % | 8 % | 23 % | 52 % |
+| 4 | 23 % | 43 % | 31 % | 18 % | 40 % | 35 % | 23 % | 38 % | 35 % | 12 % | 20 % | 50 % |
+| 5 | 22 % | 42 % | 29 % | 23 % | 38 % | 31 % | 20 % | 40 % | 31 % | 10 % | 23 % | 50 % |
+| 6 | 20 % | 48 % | 32 % | 23 % | 38 % | 30 % | 17 % | 37 % | 31 % | 12 % | 30 % | 46 % |
+
+Solo `sabe`, entre lo que el usuario no ha visto: «acierto nuevo» = la propuesta está en su 10 % favorito de las obras que no ha visto y además no la ha visto; «propuesta ya vista» = % de propuestas que ya había visto.
+
+| Duelos | acierto | acierto nuevo | propuesta ya vista |
+|---|---|---|---|
+| 0 | 15 % | 0 % | 92 % |
+| 1 | 12 % | 0 % | 78 % |
+| 2 | 13 % | 0 % | 85 % |
+| 3 | 20 % | 2 % | 77 % |
+| 4 | 23 % | 0 % | 82 % |
+| 5 | 22 % | 0 % | 85 % |
+| 6 | 20 % | 0 % | 82 % |
+
+#### Propuesta = orientador y peso de la previa (modo sabe, tras 6 duelos)
+
+- La propuesta es una obra enseñada en un duelo de la sesión: **100 %**; R media de la propuesta: **0.88**.
+- `st.base` al iniciar (log de la previa, 300 obras): máximo 0.35, mediana 0.01, mínimo -0.31.
+- Calidad media de la propuesta (percentil de `voteAvg` en su estantería, 0 de 60 propuestas con dato): **NaN %**.
+

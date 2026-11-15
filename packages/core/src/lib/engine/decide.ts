@@ -3,6 +3,7 @@ import { displayTitle } from '../locale'
 import type { Friend, Item, Profile, ShelfType, UserEntry, DeckLearnShelf } from '../../types'
 import { PLATFORMS } from '../../config'
 import { PARAMS } from './params'
+import { norm as normTrait, translate as translateTrait } from './traits'
 import { MOOD_GENRES, NONFICTION_GENRES } from '../../data/questions'
 import { friendRanks } from '../rank'
 import { sim as engineSim, vecOf } from './features'
@@ -144,6 +145,8 @@ export interface DecideInput {
   passedItems?: Record<string, number>
   /** v2: rasgos aprendidos en sesiones anteriores (`useStore.decideTaste`) */
   tasteMemory?: Record<string, number>
+  /** Cómo se calcula la previa: 'v1' (por defecto, exacto de antes) o 'v2' (calidad por percentil, ánimo normalizado, `trend` número o mapa; PLAN_DECIDIR M2). Solo lo pide decide2. */
+  priorMode?: 'v1' | 'v2'
 }
 
 const asStr = (v: Answers[string]): string | undefined => (typeof v === 'string' ? v : undefined)
@@ -273,6 +276,58 @@ const strictSource = (a: Answers) => asStr(a.seen) === 'vista' || asStr(a.source
 
 const platformsOf = (a: Answers, profile?: Profile) => (Array.isArray(a.platforms) ? a.platforms : profile?.platforms ?? [])
 
+
+/** Número o mapa por país → número (para `trend` y `notoriety`). */
+const byCountry = (v: Record<string, number> | number | undefined, country: string): number | undefined =>
+  typeof v === 'number' ? v : v && typeof v === 'object' ? v[country] : undefined
+
+/** Percentil de x (0-1, empates a medias) dentro de una lista ya ordenada. */
+function percentileIn(sorted: number[], x: number): number {
+  let lo = 0, hi = sorted.length
+  while (lo < hi) { const m = (lo + hi) >> 1; if (sorted[m] < x) lo = m + 1; else hi = m }
+  const less = lo
+  hi = sorted.length
+  while (lo < hi) { const m = (lo + hi) >> 1; if (sorted[m] <= x) lo = m + 1; else hi = m }
+  return sorted.length ? (less + 0.5 * (lo - less)) / sorted.length : 0.5
+}
+
+interface ShelfQuality { voteAvg: Map<string, number>; votes: Map<string, number> }
+const qualityCache = new WeakMap<Item[], Map<ShelfType, ShelfQuality>>()
+
+/**
+ * Percentiles de nota y de votos dentro de la estantería (M8): los recuentos de fuentes distintas no son comparables
+ * contra un umbral fijo, pero sí su posición dentro de la estantería. Una vez por catálogo y estantería.
+ */
+function shelfQuality(items: Item[], shelf: ShelfType): ShelfQuality {
+  let perShelf = qualityCache.get(items)
+  if (!perShelf) { perShelf = new Map(); qualityCache.set(items, perShelf) }
+  const hit = perShelf.get(shelf)
+  if (hit) return hit
+  const own = items.filter((it) => it.type === shelf && !it.hidden)
+  const avgs = own.filter((it) => it.voteAvg).map((it) => it.voteAvg as number).sort((a, b) => a - b)
+  const votes = own.map((it) => it.voteCount || it.readers || 0).filter((v) => v > 0).sort((a, b) => a - b)
+  const out: ShelfQuality = { voteAvg: new Map(), votes: new Map() }
+  for (const it of own) {
+    if (it.voteAvg) out.voteAvg.set(it.id, percentileIn(avgs, it.voteAvg))
+    const v = it.voteCount || it.readers || 0
+    if (v > 0) out.votes.set(it.id, percentileIn(votes, v))
+  }
+  perShelf.set(shelf, out)
+  return out
+}
+
+/** Calidad global 0-1 de una obra: percentil de nota encogido hacia 0,5 según su percentil de votos; sin nota, según su fama. */
+function globalQuality(it: Item, sq: ShelfQuality, country: string): number {
+  const pAvg = sq.voteAvg.get(it.id)
+  if (pAvg == null) {
+    const n = byCountry(it.notoriety, country)
+    const fame = n ?? (it.popPct != null ? it.popPct / 100 : (it.popularity ?? 50) / 100)
+    return PARAMS.Q_NOVOTE_BASE + PARAMS.Q_NOVOTE_FAME * Math.max(0, Math.min(1, fame))
+  }
+  const w = sq.votes.get(it.id) ?? 0
+  return 0.5 + (pAvg - 0.5) * w
+}
+
 export function initDecideSession(input: DecideInput): DecideState {
   const { shelf, items, entries, rankings, profile, friends, answers, affinity, friendPct } = input
   const plats = platformsOf(answers, profile)
@@ -312,15 +367,22 @@ export function initDecideSession(input: DecideInput): DecideState {
 
   // 4. Puntuación previa (§8.3)
   const prior: Record<string, number> = {}
-  const mVotes = PARAMS.Q_PRIOR_VOTES
+  const v2 = input.priorMode === 'v2'
+  const sq = v2 ? shelfQuality(items, shelf) : null
+  const country = profile.country || 'ES'
   const mood = asStr(answers.mood)
   const moodGenres = (mood && MOOD_GENRES[shelf]?.[mood]) || []
+  const moodNorm = new Set(moodGenres.map((g) => normTrait(translateTrait(g))))
   const shelfDimensions = getDimensionsForShelf(shelf)
 
   for (const it of rawCandidates) {
-    const votes = it.voteCount || it.readers || 0
-    const rating = (it.voteAvg ? it.voteAvg / 10 : (it.popularity || 50) / 100)
-    const qGlobal = (votes * rating + mVotes * 0.65) / (votes + mVotes)
+    let qGlobal: number
+    if (sq) qGlobal = globalQuality(it, sq, country)
+    else {
+      const votes = it.voteCount || it.readers || 0
+      const rating = (it.voteAvg ? it.voteAvg / 10 : (it.popularity || 50) / 100)
+      qGlobal = (votes * rating + PARAMS.Q_PRIOR_VOTES * 0.65) / (votes + PARAMS.Q_PRIOR_VOTES)
+    }
 
     let qFriendsWeight = 0
     let qFriendsSum = 0
@@ -338,8 +400,9 @@ export function initDecideSession(input: DecideInput): DecideState {
 
     let moodScore = 0.5
     if (moodGenres.length > 0) {
-      // en juegos de mesa el estilo (cooperativo, cartas, draft…) va en las mecánicas, no en los géneros
-      const matchCount = [...it.genres, ...(it.mechanics ?? [])].filter((g) => moodGenres.includes(g)).length
+      // en juegos de mesa el estilo (cooperativo, cartas, draft…) va en las mecánicas, no en los géneros;
+      // los géneros están en dos idiomas, así que se comparan normalizados en los dos lados (M10)
+      const matchCount = [...it.genres, ...(it.mechanics ?? [])].filter((g) => (v2 ? moodNorm.has(normTrait(translateTrait(g))) : moodGenres.includes(g))).length
       moodScore = Math.min(1.0, matchCount / Math.min(2, moodGenres.length))
     }
 
@@ -355,8 +418,7 @@ export function initDecideSession(input: DecideInput): DecideState {
         }
       }
     }
-    const country = profile.country || 'ES'
-    const trendVal = (it.trend as Record<string, number> | undefined)?.[country] ?? 0
+    const trendVal = (v2 ? byCountry(it.trend, country) : (it.trend as Record<string, number> | undefined)?.[country]) ?? 0
     boost += PARAMS.TREND_BOOST * trendVal
 
     // Ajuste por dimensiones fijadas inicialmente (T17 §C.4)

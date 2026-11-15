@@ -3,7 +3,7 @@
  * Centraliza todos los números y umbrales (MOTOR.md §10).
  */
 
-export const ENGINE_VERSION = 'm2.0-brain' // 27/10/2026: cerebro (contenido + comportamiento real) y Decidir v2
+export const ENGINE_VERSION = 'm2.1-quality' // 15/11/2026: la calidad pesa en Decidir (PLAN_DECIDIR M2); antes 'm2.0-brain' (27/10/2026: cerebro y Decidir v2)
 
 export type Bucket = 'seen_likely' | 'social' | 'friend_gem' | 'explore'
 
@@ -39,8 +39,15 @@ export interface EngineParams {
     maxConsecutiveCreator: number
   }
 
-  /** Mínimo de votos bayesiano en Decidir (m) */
+  /** Mínimo de votos bayesiano en Decidir v1 (m); la v2 usa percentiles */
   Q_PRIOR_VOTES: number
+
+  /** Calidad de una obra sin nota (Decidir, M2): `Q_NOVOTE_BASE + Q_NOVOTE_FAME · fama` (fama 0-1), entre 0,25 y 0,75 */
+  Q_NOVOTE_BASE: number
+  Q_NOVOTE_FAME: number
+
+  /** Peso de la previa en la utilidad de Decidir v2 (M2): la previa se tipifica en la bolsa (media 0, desviación 1) y se multiplica por esto */
+  PRIOR_W: number
 
   /** Modo de Decidir: 'fixed' (5 duelos) o 'adaptive' */
   DECIDE_MODE: 'fixed' | 'adaptive'
@@ -125,6 +132,10 @@ export const PARAMS: EngineParams = {
   },
 
   Q_PRIOR_VOTES: 200,
+
+  Q_NOVOTE_BASE: 0.25,
+  Q_NOVOTE_FAME: 0.5,
+  PRIOR_W: 0.15,
 
   DECIDE_MODE: 'fixed',
 

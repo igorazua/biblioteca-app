@@ -118,6 +118,48 @@ describe('Decidir: obras dudosas y pasadas en localStorage, igual que la PWA de 
     expect({ ...snap(st, golden.watch), storage: stored() }).toEqual(golden.final)
   })
 
+  // Regenerar el golden con el motor ACTUAL del core (hay que hacerlo cuando cambia el motor a propósito):
+  //   cd app && GOLDEN_WRITE=1 npx vitest run src/lib/decideMemory.test.ts -t "regenera el golden"
+  // Mismas entradas (localStorage de golden.doubtful/passed, fecha fija golden.now, rng 0,37, mismas dos pasadas y mismo
+  // desempate por popularidad) y el mismo formato; sobrescribe apps/native/src/store/testing/decideGolden.json.
+  // Sin GOLDEN_WRITE se salta. Tras regenerar, el golden solo garantiza que web y nativa dan lo mismo entre sí.
+  it.skipIf(!(globalThis as { process?: { env?: Record<string, string | undefined> } }).process?.env?.GOLDEN_WRITE)('regenera el golden', async () => {
+    const fsName = 'node:fs'
+    const { writeFileSync } = (await import(/* @vite-ignore */ fsName)) as { writeFileSync: (to: URL, data: string) => void }
+    fill()
+    let st = startDecide(input())
+    const initial = { doubtful: snap(st, golden.watch).doubtful, recog: snap(st, golden.watch).recog, pool: st.pool.slice(0, 40), poolSize: st.pool.length, inputKeys: Object.keys(st.input).sort() }
+    const pairs: string[][] = []
+    const step = (x: Decide2State) => {
+      const d = nextDuel(x, items, new Set(), rng)
+      if (!d) return null
+      pairs.push([d.a.id, d.b.id])
+      return d
+    }
+    let d = step(st)!
+    st = skipDecide(st, d.a, d.b, 900)
+    const afterSkip1 = { ...snap(st, golden.watch), storage: stored(), preferFameOrOwn: st.preferFameOrOwn }
+    d = step(st)!
+    st = skipDecide(st, d.a, d.b, 700)
+    const afterSkip2 = { ...snap(st, golden.watch), storage: stored(), preferFameOrOwn: st.preferFameOrOwn }
+    let n = 0
+    while (n < 10 && !shouldPropose(st)) {
+      d = step(st)!
+      if (!d) break
+      const [w, l] = d.a.popularity >= d.b.popularity ? [d.a, d.b] : [d.b, d.a]
+      st = applyDuelChoice(st, w, l)
+      n++
+    }
+    const prop = getProposal(st, null, [])
+    const out = {
+      now: golden.now, doubtful: golden.doubtful, passed: golden.passed, watch: golden.watch,
+      initial, afterSkip1, afterSkip2, pairs,
+      proposal: prop ? { id: prop.item.id, reasons: prop.reasons } : null,
+      final: { ...snap(st, golden.watch), storage: stored() },
+    }
+    writeFileSync(new URL('../../../apps/native/src/store/testing/decideGolden.json', import.meta.url), JSON.stringify(out, null, 2) + String.fromCharCode(10))
+  })
+
   it('el almacenamiento conserva las dudosas antiguas al guardar las nuevas', () => {
     const { doubtful } = stored()
     for (const id of Object.keys(golden.doubtful)) expect(doubtful[id]).toBeDefined()

@@ -34,7 +34,7 @@ const FAMILY_VAR: Record<string, number> = {
 export const familyOf = (key: string) => key.slice(0, key.indexOf(':'))
 export const priorVar = (key: string) => FAMILY_VAR[familyOf(key)] ?? 0.5
 
-const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').trim()
+export const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').trim()
 
 /** Géneros y palabras clave en inglés → su nombre en español: un mismo concepto es un solo rasgo y el motivo se lee bien. */
 const ES: Record<string, string> = {
@@ -49,7 +49,7 @@ const ES: Record<string, string> = {
   'medio ambiente': 'naturaleza', antiguedad: 'la Antigüedad', 'ancient': 'la Antigüedad', 'spies/secret agents': 'espías',
   'fiction': '', 'nonfiction': '', 'literature': '', 'general': '',
 }
-const translate = (raw: string): string => {
+export const translate = (raw: string): string => {
   const n = norm(raw)
   return n in ES ? ES[n] : raw.trim()
 }

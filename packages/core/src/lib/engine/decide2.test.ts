@@ -134,3 +134,42 @@ describe('Decidir v2', { timeout: 120_000 }, () => {
     }
   })
 })
+
+/* PLAN_DECIDIR M2 · que la calidad pese: catálogo sintético, sin depender de los datos reales */
+describe('Decidir v2 · la previa de calidad (M2)', () => {
+  const mk = (id: string, shelf: ShelfType, o: Partial<Item> = {}): Item => ({
+    id, type: shelf, title: id, year: 2000, creator: 'x' + id, genres: ['Drama'], synopsis: '', posterUrl: null, popularity: 50, ...o,
+  } as Item)
+  const startOn = (list: Item[], shelf: ShelfType, answers: Record<string, string | string[]> = { seen: 'nueva', source: 'igual' }) =>
+    initDecideSession({ shelf, items: list, entries: {}, rankings, profile, friends: [], answers, affinity: () => null, friendPct: () => null, recentOrienters: [], userVec: null, doubtfulItems: {} })
+
+  it('dos obras con los mismos rasgos y distinta calidad: se propone la mejor', () => {
+    const filler = Array.from({ length: 20 }, (_, i) => mk(`f${i}`, 'movie', { voteAvg: 5 + (i % 5) * 0.2, voteCount: 500 + i * 100, genres: ['Drama'] }))
+    const good = mk('good', 'movie', { voteAvg: 9.0, voteCount: 5000, genres: ['Drama'], creator: 'z' })
+    const bad = mk('bad', 'movie', { voteAvg: 4.0, voteCount: 5000, genres: ['Drama'], creator: 'z' })
+    const st = startOn([...filler, bad, good], 'movie')
+    expect(st.base['good']).toBeGreaterThan(st.base['bad'])
+    expect(getProposal(st, null, [])!.item.id).toBe('good')
+  })
+
+  it('«Comedy» y «Comedia» puntúan igual en el ánimo', () => {
+    const list = [mk('en', 'movie', { genres: ['Comedy'], voteAvg: 7, voteCount: 1000 }), mk('es', 'movie', { genres: ['Comedia'], voteAvg: 7, voteCount: 1000 }), mk('dr', 'movie', { genres: ['Drama'], voteAvg: 7, voteCount: 1000 }), mk('dr2', 'movie', { genres: ['Drama'], voteAvg: 7, voteCount: 1000 })]
+    const st = startOn(list, 'movie', { seen: 'nueva', source: 'igual', mood: 'risas' })
+    expect(st.base['en']).toBeCloseTo(st.base['es'], 6)
+    expect(st.base['en']).toBeGreaterThan(st.base['dr'])
+  })
+
+  it('una obra con trend 1 recibe más previa que con 0 (el dato es un número, no un mapa)', () => {
+    const list = [mk('t1', 'movie', { trend: 1, voteAvg: 7, voteCount: 1000 }), mk('t0', 'movie', { trend: 0, voteAvg: 7, voteCount: 1000 }), mk('t2', 'movie', { voteAvg: 7, voteCount: 1000 }), mk('t3', 'movie', { voteAvg: 7, voteCount: 1000 })]
+    const st = startOn(list, 'movie')
+    expect(st.base['t1']).toBeGreaterThan(st.base['t0'])
+  })
+
+  it('en una estantería sin voteAvg (artistas) la previa no es toda ceros', () => {
+    const list = Array.from({ length: 12 }, (_, i) => mk(`a${i}`, 'artist', { popularity: 10 + i * 7, notoriety: 0.1 + i * 0.07, voteAvg: undefined }))
+    const st = startOn(list, 'artist')
+    const vals = st.pool.map((id) => st.base[id])
+    expect(Math.max(...vals) - Math.min(...vals)).toBeGreaterThan(0.3)
+    expect(vals.reduce((s, x) => s + x, 0) / vals.length).toBeCloseTo(0, 6)
+  })
+})
