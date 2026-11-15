@@ -11,7 +11,7 @@ import { beforeAll, describe, expect, it } from 'vitest'
 import { items, itemsById } from '../../data/catalog'
 import * as v2 from './decide2'
 import { loadShelfEngine } from '../../testing/engineData'
-import { gauss, rngOf, tasteFor, type Taste } from '../../testing/simUsers'
+import { gauss, rngOf, seenSetFor, tasteFor, type Taste } from '../../testing/simUsers'
 import type { Item, Profile, ShelfType, UserEntry } from '../../types'
 
 const ALL_SHELVES: ShelfType[] = ['movie', 'series', 'book', 'boardgame', 'artist']
@@ -109,13 +109,15 @@ function censusTables(c: ReturnType<typeof census>): string {
 /* ------------------------------------------------------------------------------------------ curva */
 
 interface Point { hit: number; hit3: number; pct: number }
-interface CurveResult { points: Point[]; orienterShare: number; propR: number; quality: number; qualityN: number }
+interface CurveResult { hitNew: number[]; seenProp: number[]; points: Point[]; orienterShare: number; propR: number; quality: number; qualityN: number }
 
 function curve(shelf: ShelfType, mode: Mode): CurveResult {
   const pool = shelfPool(shelf)
   const hitSum = new Array(CURVE_DUELS + 1).fill(0)
   const hit3Sum = new Array(CURVE_DUELS + 1).fill(0)
   const pctSum = new Array(CURVE_DUELS + 1).fill(0)
+  const hitNewSum = new Array(CURVE_DUELS + 1).fill(0)
+  const seenSum = new Array(CURVE_DUELS + 1).fill(0)
   let orienter = 0, rSum = 0
   const qual: number[] = []
   const voteSorted = pool.filter((x) => x.voteAvg != null).map((x) => x.voteAvg as number).sort((a, b) => a - b)
@@ -138,9 +140,22 @@ function curve(shelf: ShelfType, mode: Mode): CurveResult {
       while (lo < hi) { const m = (lo + hi) >> 1; if (sorted[m] > v) lo = m + 1; else hi = m }
       return lo / sorted.length
     }
+    // lo que ya ha visto (solo se mide en `sabe`; flujo de azar propio: no cambia nada de lo demás)
+    const seen = mode === 'sabe' ? seenSetFor(shelf, taste, rngOf(31000 + u * 13 + shelf.length)) : new Set<string>()
+    const unseenSorted = pool.filter((x) => !seen.has(x.id)).map((x) => tv.get(x.id) as number).sort((a, b) => b - a)
+    const pctNew = (it: Item) => {
+      const v = tv.get(it.id) ?? taste(it)
+      let lo = 0, hi = unseenSorted.length
+      while (lo < hi) { const m = (lo + hi) >> 1; if (unseenSorted[m] > v) lo = m + 1; else hi = m }
+      return lo / (unseenSorted.length || 1)
+    }
     let st = v2.initDecideSession(makeInput(shelf))
     const score = (k: number) => {
       const prop = v2.getProposal(st, null, [])!
+      if (mode === 'sabe') {
+        if (seen.has(prop.item.id)) seenSum[k]++
+        else if (pctNew(prop.item) <= 0.1) hitNewSum[k]++
+      }
       const p = pct(prop.item)
       hitSum[k] += p <= 0.1 ? 1 : 0
       hit3Sum[k] += [prop.item, ...(prop.alternatives ?? []).slice(0, 2)].some((x) => pct(x) <= 0.1) ? 1 : 0
@@ -171,6 +186,7 @@ function curve(shelf: ShelfType, mode: Mode): CurveResult {
     }
   }
   return {
+    hitNew: hitNewSum.map((x) => x / CURVE_USERS), seenProp: seenSum.map((x) => x / CURVE_USERS),
     points: hitSum.map((_, k) => ({ hit: hitSum[k] / CURVE_USERS, hit3: hit3Sum[k] / CURVE_USERS, pct: pctSum[k] / CURVE_USERS })),
     orienterShare: orienter / CURVE_USERS, propR: rSum / CURVE_USERS, quality: mean(qual), qualityN: qual.length,
   }
@@ -201,6 +217,7 @@ describe.runIf(process.env.BENCH)('Decidir: banco repetible', () => {
     summary.push('|---|' + SHELVES.map(() => '---').join('|') + '|')
     const sum: Record<string, string[]> = {
       'Acierto tras 6 duelos, modo sabe': [], 'Acierto tras 6 duelos, modo azar': [], 'Acierto tras 6 duelos, modo pasa': [], 'Acierto tras 6 duelos, modo ruido': [],
+      'Acierto nuevo tras 6 duelos (sabe, entre lo no visto)': [], 'Propuesta ya vista tras 6 duelos (sabe)': [],
       'Media de rA·rB, duelos 4-6 (usuario nuevo)': [], 'Sesiones con el orientador más repetido en los duelos 1-3 (usuario nuevo)': [],
       'La propuesta es un orientador enseñado (sabe)': [], 'R media de la propuesta (sabe)': [], 'Calidad media de la propuesta (percentil de voteAvg)': [],
       'Peso de la previa: rango de st.base (máx − mín)': [],
@@ -221,6 +238,11 @@ describe.runIf(process.env.BENCH)('Decidir: banco repetible', () => {
       out.push('|---|' + MODES.map(() => '---|---|---').join('|') + '|')
       for (let k = 0; k <= CURVE_DUELS; k++) out.push(`| ${k} | ` + MODES.map((m) => { const p = res[m].points[k]; return `${pct1(p.hit)} | ${pct1(p.hit3)} | ${pct1(p.pct)}` }).join(' | ') + ' |')
       out.push('')
+      out.push('Solo `sabe`, entre lo que el usuario no ha visto: «acierto nuevo» = la propuesta está en su 10 % favorito de las obras que no ha visto y además no la ha visto; «propuesta ya vista» = % de propuestas que ya había visto.\n')
+      out.push('| Duelos | acierto | acierto nuevo | propuesta ya vista |')
+      out.push('|---|---|---|---|')
+      for (let k = 0; k <= CURVE_DUELS; k++) out.push(`| ${k} | ${pct1(res.sabe.points[k].hit)} | ${pct1(res.sabe.hitNew[k])} | ${pct1(res.sabe.seenProp[k])} |`)
+      out.push('')
       const sabe = res.sabe
       const pw = priorWeight(shelf)
       out.push(`#### Propuesta = orientador y peso de la previa (modo sabe, tras ${CURVE_DUELS} duelos)\n`)
@@ -232,6 +254,8 @@ describe.runIf(process.env.BENCH)('Decidir: banco repetible', () => {
       sum['Acierto tras 6 duelos, modo azar'].push(pct1(res.azar.points[6].hit))
       sum['Acierto tras 6 duelos, modo pasa'].push(pct1(res.pasa.points[6].hit))
       sum['Acierto tras 6 duelos, modo ruido'].push(pct1(res.ruido.points[6].hit))
+      sum['Acierto nuevo tras 6 duelos (sabe, entre lo no visto)'].push(pct1(sabe.hitNew[6]))
+      sum['Propuesta ya vista tras 6 duelos (sabe)'].push(pct1(sabe.seenProp[6]))
       sum['Media de rA·rB, duelos 4-6 (usuario nuevo)'].push(f2(mean(cNew.rows.slice(3, 6).flatMap((r) => r.prod))))
       sum['Sesiones con el orientador más repetido en los duelos 1-3 (usuario nuevo)'].push(pct1(cNew.top[0]?.share ?? 0))
       sum['La propuesta es un orientador enseñado (sabe)'].push(pct1(sabe.orienterShare))

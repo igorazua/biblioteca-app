@@ -77,3 +77,30 @@ function artistTaste(pool: Item[], r: () => number): Taste {
     return v
   }
 }
+
+const SEEN_FACTOR: Partial<Record<ShelfType, number>> = { movie: 0.7, series: 0.5, book: 0.3, boardgame: 0.5, artist: 0.9 }
+
+/**
+ * Obras que el usuario simulado ya ha visto, fijas por semilla e independientes del motor. Cada obra visible está vista
+ * con probabilidad notoriety (o popularity/100·0,5) × factor de la estantería, ×1,3 si está en su 30 % favorito y ×0,7
+ * si está en el 30 % de abajo; acotada a [0, 0,97].
+ */
+export function seenSetFor(shelf: ShelfType, taste: Taste, r: () => number): Set<string> {
+  const pool = items.filter((x) => x.type === shelf && !x.hidden)
+  const vals = pool.map((x) => ({ x, v: taste(x) })).sort((a, b) => b.v - a.v)
+  const top = Math.floor(vals.length * 0.3)
+  const bottom = vals.length - top
+  const rank = new Map(vals.map((e, i) => [e.x.id, i]))
+  const seen = new Set<string>()
+  for (const x of pool) {
+    const n = x.notoriety
+    const noto = typeof n === 'number' ? n : n ? (n.ES ?? Object.values(n)[0]) : undefined
+    let p = (noto ?? (x.popularity ?? 0) / 100 * 0.5) * (SEEN_FACTOR[shelf] ?? 0.5)
+    const i = rank.get(x.id) ?? 0
+    if (i < top) p *= 1.3
+    else if (i >= bottom) p *= 0.7
+    p = Math.max(0, Math.min(0.97, p))
+    if (r() < p) seen.add(x.id)
+  }
+  return seen
+}
