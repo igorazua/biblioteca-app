@@ -1,0 +1,231 @@
+diff --git a/packages/core/src/lib/engine/decide2.test.ts b/packages/core/src/lib/engine/decide2.test.ts
+index bf1d73e..67cf377 100644
+--- a/packages/core/src/lib/engine/decide2.test.ts
++++ b/packages/core/src/lib/engine/decide2.test.ts
+@@ -27,6 +27,12 @@ function play(st0: Decide2State, taste: (it: Item) => number, maxDuels = 8) {
+   return { st, n, pairs }
+ }
+ 
++// Firmas del modo estricto con el motor de antes de M1 (duelos | parejas | propuesta | puntuación | alternativas | tras «Seguir buscando»)
++const STRICT_VISTA =
++  '3 | movie:wall-e-2008/movie:el-caballero-oscuro-la-leyenda-renace-2012 movie:el-caballero-oscuro-2008/movie:el-senor-de-los-anillos-la-comunidad-del-anillo-2001 movie:interstellar-2014/movie:el-club-de-la-lucha-1999 | movie:el-caballero-oscuro-la-leyenda-renace-2012 | 1.87 | movie:vengadores-endgame-2019 movie:interstellar-2014 movie:oppenheimer-2023 movie:the-godfather-part-ii-1974 movie:gladiator-2000 movie:matrix-1999 movie:spider-man-un-nuevo-universo-2018 movie:el-caballero-oscuro-2008 movie:el-truco-final-el-prestigio-2006 movie:the-lord-of-the-rings-the-return-of-the-king-2003 | movie:interstellar-2014'
++const STRICT_GUARDADOS =
++  '3 | boardgame:through-the-ages-a-new-story-of-civilization-2015/boardgame:gloomhaven-jaws-of-the-lion-2020 boardgame:dune-imperium-uprising-2023/boardgame:gloomhaven-2017 boardgame:star-wars-rebellion-2016/boardgame:the-castles-of-burgundy-2011 | boardgame:gloomhaven-2017 | 2.78 | boardgame:spirit-island-2017 boardgame:frosthaven-2022 boardgame:arkham-horror-the-card-game-2016 boardgame:gloomhaven-jaws-of-the-lion-2020 boardgame:pandemic-legacy-season-1-2015 boardgame:star-wars-rebellion-2016 boardgame:clank-legacy-acquisitions-incorporated-2019 boardgame:lost-ruins-of-arnak-2020 boardgame:slay-the-spire-the-board-game-2024 boardgame:seti-search-for-extraterrestrial-intelligence-2024 | boardgame:frosthaven-2022'
++
+ const games = items.filter((it) => it.type === 'boardgame' && !it.hidden)
+ const coop = games.filter((g) => g.cooperative).sort((a, b) => b.popularity - a.popularity)
+ const comp = games.filter((g) => g.cooperative === false).sort((a, b) => b.popularity - a.popularity)
+@@ -123,6 +129,50 @@ describe('Decidir v2', { timeout: 120_000 }, () => {
+     expect((performance.now() - t0) / 4).toBeLessThan(100)
+   })
+ 
++  // PLAN_DECIDIR M1: con la bolsa estricta («una que ya vi», «de mis guardados») el descuento por «ya la has visto» no
++  // se aplica. Esta firma se fijó con el motor de antes de M1 (commit 270226f) y no debe cambiar.
++  it('M1: con «una que ya vi» o «de mis guardados» el resultado es idéntico al de antes', () => {
++    const sig = (st0: Decide2State, taste: (it: Item) => number) => {
++      const { st, n, pairs } = play(st0, taste, 8)
++      const prop = getProposal(st, null, [])!
++      const again = getProposal(rejectAndContinue(st, prop.item.id), null, [])!
++      return [n, pairs.map(([a, b]) => `${a.id}/${b.id}`).join(' '), prop.item.id, prop.finalScore, (prop.alternatives ?? []).map((x) => x.id).join(' '), again.item.id].join(' | ')
++    }
++    const pop = (shelf: ShelfType, k: number) => items.filter((it) => it.type === shelf && !it.hidden).sort((a, b) => b.popularity - a.popularity || (a.id < b.id ? -1 : 1)).slice(0, k).map((it) => it.id)
++    const vista = sig(start('movie', { seen: 'vista', platforms: [] }, entriesOf(pop('movie', 40), 'seen', 'movie')), (it) => (it.genres.includes('Drama') ? 1 : 0) + it.year / 3000)
++    const guardados = sig(start('boardgame', { seen: 'nueva', source: 'pendientes' }, entriesOf(pop('boardgame', 30), 'pending', 'boardgame')), (it) => (it.cooperative ? 1 : 0) + it.popularity / 1000)
++    expect(vista).toBe(STRICT_VISTA)
++    expect(guardados).toBe(STRICT_GUARDADOS)
++  })
++
++  // PLAN_DECIDIR M1 (decisión 1 de Igor): quien pide «algo nuevo» no recibe la obra famosa que acaba de elegir en un
++  // duelo (gana The Beatles → proponía The Beatles): casi seguro ya la conoce y no la ha apuntado.
++  it('M1: para «nueva», la propuesta no es una de las obras enseñadas en los duelos', () => {
++    for (const shelf of ['movie', 'boardgame'] as ShelfType[]) {
++      const taste = shelf === 'movie' ? (it: Item) => (it.genres.includes('Animación') ? 1 : 0) + (it.genres.includes('Comedia') ? 0.5 : 0) : (it: Item) => (it.cooperative ? 1 : 0)
++      const { st } = play(start(shelf, { seen: 'nueva', source: 'igual', platforms: [] }), taste, 6)
++      const prop = getProposal(st, null, [])!
++      expect(st.shown).not.toContain(prop.item.id)
++    }
++  })
++
++  it('M1: tras ganar un duelo una obra muy famosa sin entrada, no es la propuesta', () => {
++    let st = start('movie', { seen: 'nueva', source: 'igual', platforms: [] })
++    const d = nextDuel(st, items, new Set(), () => 0.37)!
++    st = applyDuelChoice(st, d.a, d.b)
++    const d2 = nextDuel(st, items, new Set(), () => 0.37)!
++    st = applyDuelChoice(st, d2.a, d2.b)
++    const prop = getProposal(st, null, [])!
++    expect([d.a.id, d2.a.id]).not.toContain(prop.item.id)
++  })
++
++  it('M1: una obra guardada como pendiente sí puede ser la propuesta aunque haya salido en un duelo', () => {
++    const famous = coop[0]
++    let st = start('boardgame', { seen: 'nueva', source: 'igual' }, entriesOf([famous.id], 'pending', 'boardgame'))
++    for (const l of [comp[0], comp[5], comp[11]]) st = applyDuelChoice(st, famous, l)
++    expect(getProposal(st, null, [])!.item.id).toBe(famous.id)
++  })
++
+   it('las parejas puntuadas no dependen del atajo de cálculo: valor de la información finito y no negativo', () => {
+     let st = start('boardgame', { seen: 'nueva', source: 'igual' })
+     for (let i = 0; i < 5; i++) {
+diff --git a/packages/core/src/lib/engine/decide2.ts b/packages/core/src/lib/engine/decide2.ts
+index 10cddc6..7f412f1 100644
+--- a/packages/core/src/lib/engine/decide2.ts
++++ b/packages/core/src/lib/engine/decide2.ts
+@@ -20,7 +20,9 @@
+  *    con una bolsa pequeña o respuestas muy claras, a los 1-2 duelos; si no, hasta 6.
+  *
+  * Reglas de Igor que se mantienen: en los 3 primeros duelos solo obras propias o muy famosas; parejas muy distintas al
+- * principio; rotación de orientadores entre sesiones; «Pasar» no descarta; un orientador puede acabar siendo la propuesta.
++ * principio; rotación de orientadores entre sesiones; «Pasar» no descarta.
++ * Orientar no es proponer (PLAN_DECIDIR M1, cambia D19): si pide «algo nuevo», la propuesta descuenta la probabilidad
++ * de que ya la haya visto. Un orientador aún puede ser la propuesta si destaca mucho, pero no solo por ganar su duelo.
+  */
+ 
+ import type { Item, ShelfType } from '../../types'
+@@ -36,6 +38,7 @@ import {
+ import { recog, inferBirthYear, type RecogContext } from './recog'
+ import { traitSpace, traitLabel, priorVar, isEmbKey, type Features } from './traits'
+ import { MOOD_GENRES } from '../../data/questions'
++import { PARAMS } from './params'
+ 
+ export type { Answers, DecideInput, DecideProposal, DuelPair }
+ 
+@@ -196,8 +199,53 @@ function utility(st: Decide2State, items: Item[], id: string): number {
+   return s
+ }
+ 
++/* ----------------------------------------------------------------------------- orientar ≠ proponer (PLAN_DECIDIR M1) */
++
++// Quien pide «algo nuevo» no quiere que le propongan lo que ya ha visto y no ha apuntado. La obra que gana un duelo es
++// la que más se parece a sí misma (tiene todos sus rasgos), y los orientadores son, por diseño, obras que casi todo el
++// mundo conoce: sin descuento, la propuesta era el orientador elegido el 73-98 % de las veces (DECIDIR_MEDIDAS.md).
++// El gusto aprendido (`observe`, μ, Σ) no cambia: solo con qué se ordena la propuesta y, por tanto, qué duelos aclaran.
++
++/** Probabilidad de que ya la haya visto, según haya respondido un duelo con ella (`answered`) y si la eligió (`won`). */
++function pSeen(st: Decide2State, id: string, answered: boolean, won: boolean): number {
++  const e = st.input.entries[id]
++  if (e?.status === 'pending') return 0 // la guardó para verla
++  const sgk = PARAMS.SEEN_GIVEN_KNOWN[st.shelf] ?? PARAMS.SEEN_GIVEN_KNOWN_DEFAULT
++  let p = (st.recogMap[id] ?? 0.5) * sgk
++  // si respondió un duelo con ella, la conoce (R = 1); si la eligió, casi seguro la ha visto
++  if (answered) p = Math.max(p, sgk)
++  if (won) p = Math.max(p, PARAMS.SEEN_WINNER_FLOOR)
++  return p
++}
++const noveltyOf = (p: number, shown: boolean) => (PARAMS.NOVELTY_W + (shown ? PARAMS.NOVELTY_SHOWN_W : 0)) * Math.log(1 - 0.95 * p)
++
++interface Novelty { off: Map<string, number>; answered: Set<string>; won: Set<string> }
++const noveltyMemo = new WeakMap<Decide2State, Novelty | null>()
++/** El descuento de cada candidata de la bolsa (`null` con la bolsa estricta: ahí todas son vistas o guardadas). */
++function novelty(st: Decide2State): Novelty | null {
++  if (noveltyMemo.has(st)) return noveltyMemo.get(st)!
++  let out: Novelty | null = null
++  if (!strict(st.answers)) {
++    const answered = new Set<string>()
++    const won = new Set<string>()
++    for (const d of st.duels) if (d.winner) { answered.add(d.a); answered.add(d.b); won.add(d.winner) }
++    const off = new Map<string, number>()
++    for (const id of st.pool) { const a = answered.has(id); off.set(id, noveltyOf(pSeen(st, id, a, won.has(id)), a)) }
++    out = { off, answered, won }
++  }
++  noveltyMemo.set(st, out)
++  return out
++}
++/** Cuánto cambia el descuento de una candidata si sale en el duelo que se está valorando (la gane o la pierda). */
++function noveltyDelta(st: Decide2State, nov: Novelty, id: string, wins: boolean): number {
++  const cur = nov.off.get(id)
++  if (cur === undefined) return 0
++  return noveltyOf(pSeen(st, id, true, wins || nov.won.has(id)), true) - cur
++}
++
+ function ranked(st: Decide2State, items: Item[], byId: Map<string, Item>): { id: string; u: number }[] {
+   const rejected = st.rejected.map((id) => byId.get(id)).filter(Boolean) as Item[]
++  const nov = novelty(st)
+   return st.pool
+     .filter((id) => {
+       if (st.rejected.includes(id)) return false
+@@ -205,7 +253,7 @@ function ranked(st: Decide2State, items: Item[], byId: Map<string, Item>): { id:
+       // tras «Seguir buscando», ni su secuela ni su expansión
+       return it ? !rejected.some((r) => familyKey(r) === familyKey(it)) : false
+     })
+-    .map((id) => ({ id, u: utility(st, items, id) }))
++    .map((id) => ({ id, u: nov ? utility(st, items, id) + (nov.off.get(id) ?? 0) : utility(st, items, id) }))
+     .sort((a, b) => b.u - a.u)
+ }
+ 
+@@ -474,6 +522,13 @@ function scorePairsRaw(st: Decide2State, shownIds: Set<string>, rng: () => numbe
+   const decList = [...decIds]
+   const decU = decList.map((id) => uOf.get(id) ?? 0)
+   const bestU = Math.max(...decU)
++  // Lo que cambia el descuento de «ya la has visto» de una candidata que sale en el duelo (M1): si gana, casi seguro la
++  // ha visto. Sin esto, el motor valoraba duelos que suben a una candidata por sus propios rasgos y luego la descarta.
++  const nov = novelty(st)
++  const decIdx = new Map(decList.map((id, c) => [id, c]))
++  const dOfShort = shortlist.map((it) => decIdx.get(it.id) ?? -1)
++  const winD = shortlist.map((it, i) => (nov && dOfShort[i] >= 0 ? noveltyDelta(st, nov, it.id, true) : 0))
++  const loseD = shortlist.map((it, i) => (nov && dOfShort[i] >= 0 ? noveltyDelta(st, nov, it.id, false) : 0))
+ 
+   // Todo lo que sigue es lineal en los rasgos (Σ·(a − b) = Σ·a − Σ·b), así que se calcula una vez por obra y no por
+   // pareja: antes cada una de las ~1.100 parejas recorría la covarianza entera y hacía miles de búsquedas en mapas
+@@ -586,10 +641,15 @@ function scorePairsRaw(st: Decide2State, shownIds: Set<string>, rng: () => numbe
+       const stepB = phi(t) / Math.max(1e-12, 1 - p) / c // si elige b
+       let maxA = -Infinity
+       let maxB = -Infinity
++      const di = dOfShort[i]
++      const dj = dOfShort[j]
+       for (let cand = 0; cand < nD; cand++) {
+         const sc = C[cand * nS + i] - C[cand * nS + j]
+-        maxA = Math.max(maxA, decU[cand] + sc * stepA)
+-        maxB = Math.max(maxB, decU[cand] - sc * stepB)
++        let ua = decU[cand] + sc * stepA
++        let ub = decU[cand] - sc * stepB
++        if (cand === di) { ua += winD[i]; ub += loseD[i] } else if (cand === dj) { ua += loseD[j]; ub += winD[j] }
++        maxA = Math.max(maxA, ua)
++        maxB = Math.max(maxB, ub)
+       }
+       const kg = p * maxA + (1 - p) * maxB - bestU
+       const known = Math.sqrt((st.recogMap[a.id] ?? 0.8) * (st.recogMap[b.id] ?? 0.8)) * rot(a) * rot(b)
+diff --git a/packages/core/src/lib/engine/params.ts b/packages/core/src/lib/engine/params.ts
+index c30d0e3..3d04dbc 100644
+--- a/packages/core/src/lib/engine/params.ts
++++ b/packages/core/src/lib/engine/params.ts
+@@ -3,7 +3,7 @@
+  * Centraliza todos los números y umbrales (MOTOR.md §10).
+  */
+ 
+-export const ENGINE_VERSION = 'm2.0-brain' // 27/10/2026: cerebro (contenido + comportamiento real) y Decidir v2
++export const ENGINE_VERSION = 'm2.1-decidir-m1' // 15/11/2026: la propuesta de Decidir descuenta lo que ya has visto (M1). Antes: m2.0-brain
+ 
+ export type Bucket = 'seen_likely' | 'social' | 'friend_gem' | 'explore'
+ 
+@@ -81,6 +81,16 @@ export interface EngineParams {
+ 
+   /** Boost por tendencia en el país */
+   TREND_BOOST: number
++
++  /** Decidir, «algo nuevo» (PLAN_DECIDIR M1): probabilidad de haberla visto si la conoce, por estantería */
++  SEEN_GIVEN_KNOWN: Partial<Record<'movie' | 'series' | 'book' | 'boardgame' | 'artist' | 'song', number>>
++  SEEN_GIVEN_KNOWN_DEFAULT: number
++  /** Decidir M1: probabilidad mínima de haberla visto si la eligió en un duelo */
++  SEEN_WINNER_FLOOR: number
++  /** Decidir M1: peso del descuento ln(1 − 0,95·pVista) en la utilidad de la propuesta */
++  NOVELTY_W: number
++  /** Decidir M1: peso extra del descuento para las obras que ya salieron en un duelo respondido */
++  NOVELTY_SHOWN_W: number
+ }
+ 
+ export const PARAMS: EngineParams = {
+@@ -159,6 +169,14 @@ export const PARAMS: EngineParams = {
+   },
+ 
+   TREND_BOOST: 0.05,
++
++  // PLAN_DECIDIR M1 (15/11/2026). Conocer una peli casi siempre es haberla visto; un libro, mucho menos (se conoce de
++  // oídas); un artista que conoces lo has escuchado.
++  SEEN_GIVEN_KNOWN: { movie: 0.7, series: 0.5, book: 0.3, boardgame: 0.5, artist: 0.9 },
++  SEEN_GIVEN_KNOWN_DEFAULT: 0.5,
++  SEEN_WINNER_FLOOR: 0.85,
++  NOVELTY_W: 0,
++  NOVELTY_SHOWN_W: 1.5,
+ }
+ 
+ /** Devuelve el valor o variante para pruebas A/B futuras */
