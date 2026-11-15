@@ -37,7 +37,7 @@ export function PlaceFlow({ itemId, onDone }: { itemId: string; onDone: (msg?: s
       onDone(byGender(item.type, 'Guardada ✓', 'Guardado ✓'))
       return
     }
-    let start = startPlacement(ranking, starsOfEntries(st.entries), itemId, stars ?? undefined)
+    let start = startPlacement(ranking, starsOfEntries(st.entries), itemId, stars ?? undefined, undefined, st.ratings?.[item.type])
     start = advancePlacementWithDuels(start, st.duels?.[item.type])
     if (start.done) {
       st.applyRanking(item.type, finishPlacement(start), itemId)

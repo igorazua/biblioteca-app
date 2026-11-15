@@ -37,7 +37,7 @@ export function PlaceFlow({ itemId, onDone }: { itemId: string; onDone: (msg?: s
     const base = ranking.filter((x) => x !== itemId)
     const stars = st.entries[itemId]?.stars
     if (base.length < 2) { onDone('Guardada ✓'); return }
-    let start = startPlacement(ranking, starsOfEntries(st.entries), itemId, stars ?? undefined)
+    let start = startPlacement(ranking, starsOfEntries(st.entries), itemId, stars ?? undefined, undefined, st.ratings?.[item.type])
     start = advancePlacementWithDuels(start, st.duels?.[item.type])
     if (start.done) { st.applyRanking(item.type, finishPlacement(start), itemId); onDone('Guardada ✓'); return }
     setP(start)

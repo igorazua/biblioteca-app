@@ -137,17 +137,72 @@ export function starBand(ranking: readonly string[], starsOf: StarsOf, stars: nu
   return [at, at]
 }
 
+/** Radio (en puntos Elo) del tramo del ranking donde se busca el hueco de una obra nueva con estrellas. */
+export const PLACEMENT_ELO_WINDOW = 150
+
+/**
+ * Hueco de una obra nueva con estrellas según el Elo (REVISION_MOTORES A5: manda el duelo, no las estrellas).
+ * El Elo inicial sale de las estrellas (`getInitialElo`); las obras sin nota se siembran sin cambiar el orden.
+ * Devuelve el punto de inserción (`at`: tras todas las que tienen un Elo igual o mayor) y la ventana [lo, hi) de
+ * obras a ±`PLACEMENT_ELO_WINDOW` donde buscar. Devuelve null si el ranking no tiene ninguna nota Elo (ranking
+ * de antes del Elo): entonces vale la franja de estrellas de siempre.
+ */
+export function eloPlacementWindow(
+  base: readonly string[],
+  stars: number,
+  ratings?: Record<string, number>,
+): { lo: number; hi: number; at: number } | null {
+  if (!ratings || !base.some((x) => typeof ratings[x] === 'number')) return null
+  const r = { ...ratings }
+  seedMissingRatings(base, r)
+  const init = getInitialElo('__nuevo__', base, stars, r)
+  let at = base.length
+  let lo = base.length
+  let hi = 0
+  base.forEach((x, i) => {
+    const e = r[x]
+    if (e < init && at === base.length && i < at) at = i
+    if (e <= init + PLACEMENT_ELO_WINDOW && i < lo) lo = i
+    if (e >= init - PLACEMENT_ELO_WINDOW) hi = i + 1
+  })
+  return { lo: Math.min(lo, at), hi: Math.max(hi, at), at }
+}
+
+/**
+ * Puesto de una obra nueva con estrellas colocada sin comparaciones (importación, marcar como vista): por Elo inicial
+ * si el ranking tiene notas; si no, al final de su franja de estrellas como antes.
+ */
+export function provisionalIndex(
+  base: readonly string[],
+  starsOf: StarsOf,
+  stars: number,
+  ratings?: Record<string, number>,
+): number {
+  const w = eloPlacementWindow(base, stars, ratings)
+  return w ? w.at : starBand(base, starsOf, stars)[1]
+}
+
 export function startPlacement(
   ranking: readonly string[],
   starsOf: StarsOf,
   id: string,
   stars?: number,
   maxComparisons = PLACEMENT_MAX_COMPARISONS,
+  /** notas Elo de la estantería: si las hay, la ventana sale del Elo inicial y no de una franja de estrellas */
+  ratings?: Record<string, number>,
 ): Placement {
   const base = ranking.filter((x) => x !== id)
   let lo = 0
   let hi = base.length
-  if (stars !== undefined) [lo, hi] = starBand(base, starsOf, stars)
+  if (stars !== undefined) {
+    const w = eloPlacementWindow(base, stars, ratings)
+    if (w) {
+      ;({ lo, hi } = w)
+      const p: Placement = { id, stars, lo, hi, base, comparisons: 0, maxComparisons, done: false, insertIndex: null }
+      return settle(p)
+    }
+    ;[lo, hi] = starBand(base, starsOf, stars)
+  }
   const p: Placement = { id, stars, lo, hi, base, comparisons: 0, maxComparisons, done: false, insertIndex: null }
   if (stars !== undefined && hi - lo === 1) return { ...p, done: true, insertIndex: hi }
   return settle(p)
@@ -187,6 +242,7 @@ export function finishPlacement(p: Placement): string[] {
 /**
  * Tras mover `id`, ajusta sus estrellas para que las de los items con estrellas sigan sin crecer hacia abajo.
  * El A/B manda: el item toma las estrellas de sus vecinos. Devuelve las estrellas nuevas (o undefined si no tenía).
+ * OBSOLETA desde A5 (15/11/2026): los duelos ya no cambian las estrellas y los stores no la llaman; se conserva por sus tests.
  */
 export function clampStars(ranking: readonly string[], starsOf: StarsOf, id: string): Stars | undefined {
   const i = ranking.indexOf(id)
@@ -607,9 +663,11 @@ export function mixedPlacement(
   avoid: ReadonlySet<string> = new Set(),
   /** para variar el rival: azar y veces que cada obra ha salido en la sesión (sin esto, siempre el del medio) */
   spread?: { rng: Rng; seen: Record<string, number> },
+  ratings?: Record<string, number>,
 ): MixedPlacement {
   const base = ranking.filter((x) => x !== id)
-  let [lo, hi] = stars !== undefined ? starBand(base, starsOf, stars) : [0, base.length]
+  const win = stars !== undefined ? eloPlacementWindow(base, stars, ratings) : null
+  let [lo, hi] = win ? [win.lo, win.hi] : stars !== undefined ? starBand(base, starsOf, stars) : [0, base.length]
   let played = 0
   base.forEach((r, i) => {
     const rec = duels[pairKey(id, r)]
@@ -653,6 +711,7 @@ export function settlePlacements(
   unranked: readonly (string | UnrankedItem)[],
   duels: Record<string, DuelRecord>,
   starsOf: StarsOf,
+  ratings?: Record<string, number>,
 ): { ranking: string[]; placed: string[] } {
   let rk = [...ranking]
   const placed: string[] = []
@@ -662,7 +721,7 @@ export function settlePlacements(
     changed = false
     for (const u of normUnranked(unranked)) {
       if (rk.includes(u.itemId)) continue
-      const p = mixedPlacement(rk, u.itemId, u.stars ?? starsOf(u.itemId), duels, starsOf)
+      const p = mixedPlacement(rk, u.itemId, u.stars ?? starsOf(u.itemId), duels, starsOf, undefined, undefined, undefined, ratings)
       if (p.done) {
         rk = insertAt(rk, u.itemId, p.insertIndex)
         placed.push(u.itemId)

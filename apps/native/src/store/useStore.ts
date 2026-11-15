@@ -4,14 +4,13 @@ import {
   SHELVES,
   canonicalId,
   canonicalizeUserData,
-  clampStars,
   computeUserVector,
   getItem,
   insertAt,
   items,
   pairKey,
   repairRankingsAndEntries,
-  starBand,
+  provisionalIndex,
   type DeckLearn,
   type DeckLearnShelf,
   type DuelRecord,
@@ -457,15 +456,12 @@ export const useStore = create<State>()(
           return { entries, rankings: nextRankings, userVectors }
         }),
 
-      // §5.3: manda el A/B; las estrellas de cada item se ajustan a las de sus vecinos
+      // §5.3 / A5: manda el A/B; las estrellas no cambian con los duelos
       applyRanking: (shelf, ranking, placedId, ratingsPatch) =>
         set((s) => {
           const entries = { ...s.entries }
-          const starsOf = (id: string) => entries[id]?.stars
-          for (const id of ranking) {
-            const c = clampStars(ranking, starsOf, id)
-            entries[id] = { ...entries[id], ranked: true, ...(c ? { stars: c } : {}) }
-          }
+          // el duelo manda (A5): las estrellas no se tocan; solo se marca la obra como colocada
+          for (const id of ranking) entries[id] = { ...entries[id], ranked: true }
           if (placedId && entries[placedId]) {
             const { provisional: _p, ...rest } = entries[placedId]
             entries[placedId] = rest
@@ -497,15 +493,14 @@ export const useStore = create<State>()(
           },
         })),
 
-      // Colocación provisional SIN comparaciones: con estrellas, en el límite inferior de su franja (Comparar la afina)
+      // Colocación provisional SIN comparaciones: con estrellas, por su Elo inicial (Comparar la afina)
       placeProvisional: (itemId) =>
         set((s) => {
           const e = s.entries[itemId]
           const shelf = shelfOf(itemId, e)
           if (!e || e.status !== 'seen' || !e.stars) return s
           const base = (s.rankings[shelf] ?? []).filter((x) => x !== itemId)
-          const [, hi] = starBand(base, (id) => s.entries[id]?.stars, e.stars)
-          const ranking = insertAt(base, itemId, hi)
+          const ranking = insertAt(base, itemId, provisionalIndex(base, (id) => s.entries[id]?.stars, e.stars, s.ratings?.[shelf]))
           const pos = ranking.indexOf(itemId) + 1
           const total = ranking.length
           const pct = total > 1 ? (total - pos) / (total - 1) : 1

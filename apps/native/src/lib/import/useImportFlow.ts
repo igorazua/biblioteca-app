@@ -91,8 +91,8 @@ export function useImportFlow() {
     const all: MatchedPair[] = [...sure]
     for (const d of doubtful) if (d.chosenItem) all.push({ row: d.row, item: d.chosenItem })
 
-    const { entries, rankings } = useStore.getState()
-    const result = applyImportRows(entries, rankings, all.map((p) => ({ row: p.row, itemId: p.item.id })), source)
+    const { entries, rankings, ratings } = useStore.getState()
+    const result = applyImportRows(entries, rankings, all.map((p) => ({ row: p.row, itemId: p.item.id })), source, ratings)
     useStore.setState({ entries: result.entries, rankings: result.rankings })
     if (user) void pushLocalEntriesToCloud(user.id)
 
