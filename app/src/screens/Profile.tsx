@@ -139,7 +139,7 @@ export function Profile() {
         }
       />
 
-      <div className="px-5 space-y-7 lg:px-8 xl:px-12 lg:grid lg:grid-cols-12 lg:gap-8 lg:items-start lg:space-y-0">
+      <div className="px-5 lg:px-8 xl:px-12 lg:grid lg:grid-cols-12 lg:gap-8 lg:items-start">
         <div className="space-y-7 lg:col-span-8">
         {/* Cabecera: foto y contadores */}
         <div>
