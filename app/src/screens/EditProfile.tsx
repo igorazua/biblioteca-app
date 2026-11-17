@@ -129,7 +129,7 @@ export function EditProfile() {
         label="PERFIL"
         title="Editar perfil"
         onBack={() => nav(-1)}
-        className="lg:px-8 xl:px-12 lg:max-w-xl lg:mx-auto"
+        className="lg:max-w-xl lg:mx-auto"
         action={
           <button
             onClick={save}

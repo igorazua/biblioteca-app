@@ -74,7 +74,7 @@ export function PlaceFlow({ itemId, onDone }: { itemId: string; onDone: (msg?: s
           title="¿Cuál te gustó más?"
           onBack={() => onDone()}
         />
-        <div className="flex-1 min-h-0 px-5 pb-6 flex flex-col">
+        <div className="flex-1 min-h-0 px-5 lg:px-8 xl:px-12 pb-6 flex flex-col">
           <SwipePair
             left={sideOf(newOnTop ? itemId : opp)}
             right={sideOf(newOnTop ? opp : itemId)}

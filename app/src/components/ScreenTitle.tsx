@@ -24,7 +24,7 @@ export function ScreenTitle({
   className = '',
 }: ScreenTitleProps) {
   return (
-    <header className={`px-5 pt-[max(env(safe-area-inset-top),22px)] pb-6 ${className}`}>
+    <header className={`px-5 lg:px-8 xl:px-12 pt-[max(env(safe-area-inset-top),22px)] pb-6 ${className}`}>
       {/* Fila superior: etiqueta / volver + contador / acción */}
       <div className="flex items-center justify-between min-h-[24px] mb-3">
         <div className="flex items-center gap-2">

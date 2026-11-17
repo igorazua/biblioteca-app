@@ -129,7 +129,6 @@ export function Profile() {
     <div className="h-full scroll-y pb-8 bg-bg">
       <ScreenTitle
         label="PERFIL"
-        className="lg:px-8 xl:px-12"
         title={unnamed ? 'Tu perfil' : profile.name}
         subtitle={[authProfile?.handle ? `@${authProfile.handle}` : null, place ?? null].filter(Boolean).join(' · ')}
         action={

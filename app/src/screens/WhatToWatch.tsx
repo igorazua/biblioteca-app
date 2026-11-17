@@ -86,7 +86,7 @@ const clearSnap = () => { try { localStorage.removeItem(SNAP_KEY) } catch { /* o
 const titleOf = (s: ShelfType) => (s === 'book' ? '¿Qué leo ahora?' : s === 'boardgame' ? '¿A qué jugamos hoy?' : s === 'artist' ? '¿Qué escucho hoy?' : '¿Qué vemos hoy?')
 
 /** Escritorio: el asistente va en una columna centrada de 640 px (DISENO_ESCRITORIO §3.6). Sin efecto por debajo de `lg:`. */
-const COL = 'lg:max-w-column lg:mx-auto lg:w-full'
+const COL = 'lg:max-w-column lg:mx-auto lg:w-full lg:px-8 xl:px-12'
 
 const DECIDE_SHELVES = ACTIVE_SHELVES.filter((s): s is Exclude<ShelfType, 'song'> => s !== 'song')
 
@@ -739,7 +739,6 @@ export function WhatToWatch() {
       <ScreenTitle
         label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`}
         title={`Te propongo ${shelfTerms.fem ? 'esta' : 'este'}`}
-        className="lg:px-gutter"
         action={
           <Button variant="text" onClick={reset}>
             Reiniciar

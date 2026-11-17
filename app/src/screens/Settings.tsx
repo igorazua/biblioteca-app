@@ -125,7 +125,7 @@ export function Settings() {
         label="AJUSTES"
         title="Ajustes"
         onBack={() => nav(-1)}
-        className="lg:px-8 xl:px-12 lg:max-w-column lg:mx-auto"
+        className="lg:max-w-column lg:mx-auto"
       />
 
       <div className="px-5 space-y-6 lg:px-8 xl:px-12 lg:max-w-column lg:mx-auto">

@@ -96,7 +96,7 @@ export function Connect() {
         label="CONECTAR"
         title="Conectar"
         onBack={() => (inFlow ? flow.reset() : nav(-1))}
-        className="lg:px-8 xl:px-12 lg:max-w-content lg:mx-auto"
+        className="lg:max-w-content lg:mx-auto"
       />
 
       {inFlow ? (
