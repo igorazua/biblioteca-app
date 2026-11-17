@@ -5,6 +5,7 @@ import { animate, motion, useMotionValue, useReducedMotion, useTransform, type M
 import { haptic } from '../lib/haptics'
 import { duelCardSize, duelFitSize, type DuelFit } from '@biblioteca/core/src/lib/posterShape'
 import { getDuelFit, DUEL_FIT_EVENT } from '../lib/duelFit'
+import { useIsDesktop } from '../lib/useMediaQuery'
 import type { Side } from './SwipePair'
 
 // ── Textos del duelo ────────────────────────────────────────────────────────────────────────────
@@ -137,6 +138,9 @@ export function useBoxSize(ref: RefObject<HTMLElement | null>) {
   return size
 }
 
+/** Escritorio: alto máximo de la carta y hueco entre las dos (px). */
+const DESKTOP_CARD_MAX_H = 640
+const DESKTOP_CARD_GAP = 48
 const FIT_MARGIN = 26 // px libres alrededor de la carta elegida a tamaño completo
 const IDLE_HINT_FIRST_MS = 4800 // solo para usuarios noveles: espera previa a la primera insinuación
 const FAN_COMMIT = 0.28 // fracción del ancho para elegir al soltar (igual que el diseño 1)
@@ -153,6 +157,29 @@ export function isDuelLearned(): boolean {
 export function markDuelLearned() {
   try {
     localStorage.setItem(LEARNED_KEY, 'true')
+  } catch {}
+}
+/** ¿El foco está en algo donde se escribe? Entonces las teclas de los atajos no se tocan. */
+export function isTypingTarget(t: EventTarget | null): boolean {
+  const el = t as HTMLElement | null
+  if (!el || !el.tagName) return false
+  return el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT' || el.isContentEditable
+}
+
+const KEYS_USED_KEY = 'biblioteca-duel-keys-used'
+const KEYS_HINT_UNTIL = 10
+/** Veces que se ha usado el teclado en los duelos (la leyenda se oculta a las 10, como D3). */
+export function duelKeysUsed(): number {
+  try {
+    return Number(localStorage.getItem(KEYS_USED_KEY)) || 0
+  } catch {
+    return 0
+  }
+}
+export const duelKeysHintVisible = () => duelKeysUsed() < KEYS_HINT_UNTIL
+export function noteDuelKeyUsed() {
+  try {
+    localStorage.setItem(KEYS_USED_KEY, String(duelKeysUsed() + 1))
   } catch {}
 }
 const clamp01 = (v: number) => Math.max(0, Math.min(1, v))
@@ -175,6 +202,8 @@ interface FanLayout {
   cy: number
   titleTop: number
   cx: { a: number; b: number }
+  /** ancho de la columna de título bajo cada carta */
+  titleW: number
   fitW: number
   cards: { a: CardLayout; b: CardLayout }
 }
@@ -187,6 +216,7 @@ function fanLayout(
   right?: Side,
   square: boolean = false,
   fit: DuelFit = 'area',
+  desktop: boolean = false,
 ): FanLayout {
   const padTop = 8
   const qH = 0 // la pregunta va en la cabecera de la pantalla (SISTEMA_DISENO §5.5)
@@ -195,6 +225,11 @@ function fanLayout(
   const titleH = 56
   const gap = 14
   const availH = Math.max(220, h - padTop - hintH)
+  // Escritorio (C4): cartas mayores, con tope de 640 px de alto; el bloque se centra en la altura real de la caja.
+  const sizeH = desktop ? Math.min(availH, DESKTOP_CARD_MAX_H + titleH + gap) : availH
+  // En escritorio las cartas no se solapan: se separan del centro según su ancho (en móvil, 0,3 / 0,7 del ancho como siempre).
+  const cxOf = (cw: number) => (desktop ? { a: w / 2 - cw / 2 - DESKTOP_CARD_GAP / 2, b: w / 2 + cw / 2 + DESKTOP_CARD_GAP / 2 } : { a: w * 0.3, b: w * 0.7 })
+  const maxW = desktop ? (w - 2 * DESKTOP_CARD_GAP) / 2 : w * 0.48
 
   // T31: Solo juegos de mesa, y solo si las dos obras del duelo tienen posterRatio
   const isBoardgameDuel =
@@ -206,8 +241,8 @@ function fanLayout(
     right.ratio > 0
 
   if (isBoardgameDuel) {
-    const bw = w * 0.48
-    const bh = Math.max(100, availH - qH - qGap - titleH - gap)
+    const bw = Math.min(w * 0.48, maxW)
+    const bh = Math.max(100, sizeH - qH - qGap - titleH - gap)
     const sizeA = duelCardSize(left.ratio!, right.ratio!, bw, bh, fit)
     const sizeB = duelCardSize(right.ratio!, left.ratio!, bw, bh, fit)
     const fitA = duelFitSize(left.ratio!, w, h, FIT_MARGIN)
@@ -230,7 +265,8 @@ function fanLayout(
       qH,
       cy,
       titleTop,
-      cx: { a: w * 0.3, b: w * 0.7 },
+      cx: cxOf(Math.max(sizeA.w, sizeB.w)),
+      titleW: desktop ? Math.max(sizeA.w, sizeB.w) : w * 0.4,
       fitW: fitA.fitW,
       cards: {
         a: { w: sizeA.w, h: sizeA.h, fitW: fitA.fitW, fitH: fitA.fitH },
@@ -241,7 +277,7 @@ function fanLayout(
 
   // Pelis, series, libros (verticales 1.5) y música (cuadradas 1)
   const ratio = square ? 1 : 1.5
-  const cardW = Math.min(w * 0.48, (availH - qH - qGap - titleH - gap) / ratio)
+  const cardW = Math.min(maxW, (sizeH - qH - qGap - titleH - gap) / ratio)
   const cardH = cardW * ratio
   const blockH = qH + qGap + cardH + gap + titleH
   const qTop = padTop + Math.max(0, (availH - blockH) / 2)
@@ -259,7 +295,8 @@ function fanLayout(
     qH,
     cy: top + cardH / 2,
     titleTop: top + cardH + gap,
-    cx: { a: w * 0.3, b: w * 0.7 },
+    cx: cxOf(cardW),
+    titleW: desktop ? cardW : w * 0.4,
     fitW,
     cards: { a: stdCard, b: stdCard },
   }
@@ -282,7 +319,8 @@ export function DuelFan({ left, right, onChoose, onPick, texts, fast = false, sq
     return () => window.removeEventListener(DUEL_FIT_EVENT, onFit)
   }, [])
 
-  const L = fanLayout(size.w, size.h, left, right, square, fit)
+  const desktop = useIsDesktop()
+  const L = fanLayout(size.w, size.h, left, right, square, fit, desktop)
   const lay = useRef(L)
   lay.current = L
   const x = useMotionValue(0)
@@ -339,6 +377,27 @@ export function DuelFan({ left, right, onChoose, onPick, texts, fast = false, sq
     setTimeout(() => onChoose(w), fast ? FAST_DELAY : reduce ? pickDelay(reduce) : DECIDE_DELAY)
   }
 
+  // Teclado en escritorio (C4): ← elige la carta de la izquierda y → la de la derecha, con la misma animación que el gesto.
+  // Se ignora con un campo de texto enfocado, con modificadores o con una hoja/diálogo abierto distinto del que contiene el duelo.
+  const chooseRef = useRef(choose)
+  chooseRef.current = choose
+  useEffect(() => {
+    if (!desktop) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.defaultPrevented || e.ctrlKey || e.metaKey || e.altKey || e.shiftKey) return
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return
+      if (isTypingTarget(e.target) || isTypingTarget(document.activeElement)) return
+      const mine = box.current
+      const otherDialog = Array.from(document.querySelectorAll('[role="dialog"]')).some((d) => !mine || !d.contains(mine))
+      if (otherDialog) return
+      e.preventDefault()
+      noteDuelKeyUsed()
+      chooseRef.current(e.key === 'ArrowLeft' ? 'a' : 'b')
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [desktop])
+
   return (
     <motion.div
       ref={box}
@@ -376,7 +435,7 @@ export function DuelFan({ left, right, onChoose, onPick, texts, fast = false, sq
       {/* Títulos: texto liso bajo cada carta, que se desvanece al crecer la elegida */}
       {(['a', 'b'] as const).map((k) => {
         const s = k === 'a' ? left : right
-        const tw = L.w * 0.4
+        const tw = L.titleW
         return (
           <motion.div
             key={k}
@@ -449,7 +508,7 @@ function FanCard({
       onClick={onTap}
       aria-label={`Elegir ${side.title}`}
       disabled={!!picked}
-      className="absolute outline-none"
+      className="absolute outline-none lg:cursor-pointer"
       style={{
         left: L.cx[which] - card.w / 2,
         top: L.cy - card.h / 2,

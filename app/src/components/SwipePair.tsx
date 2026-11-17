@@ -1,7 +1,8 @@
 import type { ReactNode } from 'react'
 import type { ShelfType } from '@biblioteca/core'
 import { posterShape } from '@biblioteca/core/src/lib/posterShape'
-import { DuelFan, duelTexts, type DuelKind } from './DuelVariants'
+import { DuelFan, duelTexts, duelKeysHintVisible, type DuelKind } from './DuelVariants'
+import { useIsDesktop, useMediaQuery } from '../lib/useMediaQuery'
 
 export interface Side {
   key: string
@@ -33,8 +34,13 @@ export function SwipePair(props: {
   /** hueco entre las cartas y la pista (p. ej. «No conozco ninguna») */
   extra?: ReactNode
   square?: boolean
+  /** hay un duelo que deshacer (la leyenda de escritorio añade «Z deshacer») */
+  canUndo?: boolean
 }) {
-  const { kind = 'rank', extra, square, ...rest } = props
+  const { kind = 'rank', extra, square, canUndo, ...rest } = props
+  const desktop = useIsDesktop()
+  const finePointer = useMediaQuery('(hover: hover) and (pointer: fine)')
+  const showKeys = desktop && finePointer && duelKeysHintVisible()
   const texts = duelTexts(kind, 'A')
   const isSquare = square ?? (posterShape(rest.left.type) === 'square' && posterShape(rest.right.type) === 'square')
 
@@ -43,9 +49,15 @@ export function SwipePair(props: {
       <DuelFan {...rest} texts={texts} fast={kind === 'rank'} square={isSquare} />
       {extra}
       <p className="text-center text-meta text-mute py-1.5 pointer-events-none select-none shrink-0">
-        {/* con ratón no se desliza: se hace clic en la carta */}
-        <span className="[@media(hover:hover)_and_(pointer:fine)]:hidden">← Desliza hacia la que prefieras →</span>
-        <span className="hidden [@media(hover:hover)_and_(pointer:fine)]:inline">Haz clic en la que prefieras</span>
+        {showKeys ? (
+          <span>← → para elegir{canUndo ? ' · Z deshacer' : ''}</span>
+        ) : (
+          <>
+            {/* con ratón no se desliza: se hace clic en la carta */}
+            <span className="[@media(hover:hover)_and_(pointer:fine)]:hidden">← Desliza hacia la que prefieras →</span>
+            <span className="hidden [@media(hover:hover)_and_(pointer:fine)]:inline">Haz clic en la que prefieras</span>
+          </>
+        )}
       </p>
     </div>
   )

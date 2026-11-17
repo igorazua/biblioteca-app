@@ -22,6 +22,8 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useStore, starsOfEntries } from '../store/useStore'
 import { SwipePair, type Side } from '../components/SwipePair'
+import { isTypingTarget } from '../components/DuelVariants'
+import { useIsDesktop } from '../lib/useMediaQuery'
 import { Poster } from '../components/Poster'
 import { CommentSheet } from '../components/RatingFlow'
 import { Icon } from '../components/Icon'
@@ -353,6 +355,25 @@ export function CompareSession() {
     setMilestoneNotice(null)
   }
 
+  // Atajo de escritorio (C4): Z deshace el último duelo, igual que el botón. No con campos de texto, hojas abiertas ni en el resumen.
+  const desktop = useIsDesktop()
+  const undoRef = useRef(doUndo)
+  undoRef.current = doUndo
+  const canUndoKey = !!undo && !summary
+  useEffect(() => {
+    if (!desktop || !canUndoKey) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.defaultPrevented || e.ctrlKey || e.metaKey || e.altKey || e.shiftKey || e.key.toLowerCase() !== 'z') return
+      if (isTypingTarget(e.target) || isTypingTarget(document.activeElement)) return
+      // cualquier diálogo abierto (p. ej. el comentario) bloquea el atajo
+      if (document.querySelector('[role="dialog"]')) return
+      e.preventDefault()
+      undoRef.current()
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [desktop, canUndoKey])
+
   // Resumen al terminar
   const nowOrdenado = useMemo(() => {
     if (!summary) return 0
@@ -469,7 +490,7 @@ export function CompareSession() {
         )}
       </AnimatePresence>
 
-      <div className="flex-1 min-h-0 px-5 pb-6 flex flex-col">
+      <div className="flex-1 min-h-0 px-5 pb-6 lg:pb-8 flex flex-col">
         {summary && moves ? (
           <div className="flex-1 min-h-0 flex flex-col pop">
             <div className="flex-1 min-h-0 overflow-y-auto space-y-4">
@@ -496,7 +517,7 @@ export function CompareSession() {
           </div>
         ) : shownPair ? (
           <div className="relative flex-1 min-h-0 flex flex-col">
-            <SwipePair key={lastPairKey.current} left={sideOf(shownPair.left)} right={sideOf(shownPair.right)} onChoose={onChoose} kind="rank" />
+            <SwipePair key={lastPairKey.current} left={sideOf(shownPair.left)} right={sideOf(shownPair.right)} onChoose={onChoose} kind="rank" canUndo={!!undo} />
             <div className="absolute inset-x-0 top-[42%] z-30 flex justify-center pointer-events-none px-6" aria-live="polite">
               <AnimatePresence mode="wait">
                 {flash && (
