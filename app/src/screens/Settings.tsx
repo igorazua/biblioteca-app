@@ -125,9 +125,10 @@ export function Settings() {
         label="AJUSTES"
         title="Ajustes"
         onBack={() => nav(-1)}
+        className="lg:px-8 xl:px-12 lg:max-w-column lg:mx-auto"
       />
 
-      <div className="px-5 space-y-6">
+      <div className="px-5 space-y-6 lg:px-8 xl:px-12 lg:max-w-column lg:mx-auto">
         {/* Tú: tarjeta de cabecera con tu foto; tocarla abre tus datos. Sin cuenta, el acceso va en la misma tarjeta. */}
         <section className="rounded-3xl bg-surface border border-line overflow-hidden">
           <button onClick={() => nav('/perfil/editar')} className="w-full p-4 flex items-center gap-3.5 text-left active:bg-surface2 transition-colors">
