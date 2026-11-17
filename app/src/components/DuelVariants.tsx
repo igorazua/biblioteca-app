@@ -87,7 +87,7 @@ const metal = (v: string) => [
   { at: 0.8, color: v },
   { at: 1, color: `color-mix(in srgb, ${v} 50%, white)` },
 ]
-const RIM_STOPS = { a: metal('var(--color-accent)'), b: metal('var(--color-stamp-blue)') } // dorado a la izquierda, azul a la derecha
+const RIM_STOPS = { a: metal('var(--color-stamp-blue)'), b: metal('var(--color-accent)') } // azul acero a la izquierda, dorado a la derecha, como la nativa (D33)
 const DONE_STOPS = metal('var(--color-stamp-green)')
 const DONE_FLASH = { core: 'color-mix(in srgb, var(--color-stamp-green) 10%, white)', tail: 'color-mix(in srgb, var(--color-stamp-green) 35%, white)' }
 
