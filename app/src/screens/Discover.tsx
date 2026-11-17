@@ -36,19 +36,8 @@ import { Chip, Sheet, Toast } from '../components/ui'
 import { Icon, type IconName } from '../components/Icon'
 import { Button } from '../components/Button'
 import { Poster } from '../components/Poster'
-import { useShortcuts } from '../lib/useShortcuts'
+import { useShortcuts, readKbUses, noteKbUse, KB_LEGEND_UNTIL } from '../lib/useShortcuts'
 import { useIsDesktop } from '../lib/useMediaQuery'
-
-const KB_USES_KEY = 'biblio_kb_uses'
-/** Tras tantos usos del teclado se deja de mostrar la leyenda de teclas (misma regla que D3). */
-const KB_LEGEND_UNTIL = 10
-const readKbUses = (): number => {
-  try {
-    return Number(localStorage.getItem(KB_USES_KEY)) || 0
-  } catch {
-    return 0
-  }
-}
 
 export type DiscoverVariant = 'bottom_dock' | 'hub' | 'header_sheet' | 'tabs'
 
@@ -361,15 +350,7 @@ export function Discover() {
   // Escritorio: atajos a nivel de pantalla (←/→/↑ animan el mismo gesto que el arrastre; Z deshace)
   const isDesktop = useIsDesktop()
   const [kbUses, setKbUses] = useState(readKbUses)
-  const countKbUse = () => {
-    const n = kbUses + 1
-    setKbUses(n)
-    try {
-      localStorage.setItem(KB_USES_KEY, String(n))
-    } catch {
-      /* ok */
-    }
-  }
+  const countKbUse = () => setKbUses(noteKbUse())
   const kbFling = (dir: SwipeDir) => () => {
     if (!deck.length) return
     countKbUse()

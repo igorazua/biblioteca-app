@@ -1,7 +1,8 @@
 import type { ReactNode } from 'react'
 import type { ShelfType } from '@biblioteca/core'
 import { posterShape } from '@biblioteca/core/src/lib/posterShape'
-import { DuelFan, duelTexts, duelKeysHintVisible, type DuelKind } from './DuelVariants'
+import { DuelFan, duelTexts, type DuelKind } from './DuelVariants'
+import { kbLegendVisible } from '../lib/useShortcuts'
 import { useIsDesktop, useMediaQuery } from '../lib/useMediaQuery'
 
 export interface Side {
@@ -40,7 +41,7 @@ export function SwipePair(props: {
   const { kind = 'rank', extra, square, canUndo, ...rest } = props
   const desktop = useIsDesktop()
   const finePointer = useMediaQuery('(hover: hover) and (pointer: fine)')
-  const showKeys = desktop && finePointer && duelKeysHintVisible()
+  const showKeys = desktop && finePointer && kbLegendVisible()
   const texts = duelTexts(kind, 'A')
   const isSquare = square ?? (posterShape(rest.left.type) === 'square' && posterShape(rest.right.type) === 'square')
 

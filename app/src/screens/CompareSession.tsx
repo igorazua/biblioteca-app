@@ -22,7 +22,7 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useStore, starsOfEntries } from '../store/useStore'
 import { SwipePair, type Side } from '../components/SwipePair'
-import { isTypingTarget } from '../components/DuelVariants'
+import { useShortcuts } from '../lib/useShortcuts'
 import { useIsDesktop } from '../lib/useMediaQuery'
 import { Poster } from '../components/Poster'
 import { CommentSheet } from '../components/RatingFlow'
@@ -357,22 +357,8 @@ export function CompareSession() {
 
   // Atajo de escritorio (C4): Z deshace el último duelo, igual que el botón. No con campos de texto, hojas abiertas ni en el resumen.
   const desktop = useIsDesktop()
-  const undoRef = useRef(doUndo)
-  undoRef.current = doUndo
   const canUndoKey = !!undo && !summary
-  useEffect(() => {
-    if (!desktop || !canUndoKey) return
-    const onKey = (e: KeyboardEvent) => {
-      if (e.defaultPrevented || e.ctrlKey || e.metaKey || e.altKey || e.shiftKey || e.key.toLowerCase() !== 'z') return
-      if (isTypingTarget(e.target) || isTypingTarget(document.activeElement)) return
-      // cualquier diálogo abierto (p. ej. el comentario) bloquea el atajo
-      if (document.querySelector('[role="dialog"]')) return
-      e.preventDefault()
-      undoRef.current()
-    }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [desktop, canUndoKey])
+  useShortcuts({ z: doUndo }, desktop && canUndoKey)
 
   // Resumen al terminar
   const nowOrdenado = useMemo(() => {

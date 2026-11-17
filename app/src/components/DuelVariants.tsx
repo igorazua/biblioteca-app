@@ -6,6 +6,7 @@ import { haptic } from '../lib/haptics'
 import { duelCardSize, duelFitSize, type DuelFit } from '@biblioteca/core/src/lib/posterShape'
 import { getDuelFit, DUEL_FIT_EVENT } from '../lib/duelFit'
 import { useIsDesktop } from '../lib/useMediaQuery'
+import { useShortcuts, noteKbUse } from '../lib/useShortcuts'
 import type { Side } from './SwipePair'
 
 // ── Textos del duelo ────────────────────────────────────────────────────────────────────────────
@@ -157,29 +158,6 @@ export function isDuelLearned(): boolean {
 export function markDuelLearned() {
   try {
     localStorage.setItem(LEARNED_KEY, 'true')
-  } catch {}
-}
-/** ¿El foco está en algo donde se escribe? Entonces las teclas de los atajos no se tocan. */
-export function isTypingTarget(t: EventTarget | null): boolean {
-  const el = t as HTMLElement | null
-  if (!el || !el.tagName) return false
-  return el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT' || el.isContentEditable
-}
-
-const KEYS_USED_KEY = 'biblioteca-duel-keys-used'
-const KEYS_HINT_UNTIL = 10
-/** Veces que se ha usado el teclado en los duelos (la leyenda se oculta a las 10, como D3). */
-export function duelKeysUsed(): number {
-  try {
-    return Number(localStorage.getItem(KEYS_USED_KEY)) || 0
-  } catch {
-    return 0
-  }
-}
-export const duelKeysHintVisible = () => duelKeysUsed() < KEYS_HINT_UNTIL
-export function noteDuelKeyUsed() {
-  try {
-    localStorage.setItem(KEYS_USED_KEY, String(duelKeysUsed() + 1))
   } catch {}
 }
 const clamp01 = (v: number) => Math.max(0, Math.min(1, v))
@@ -378,25 +356,12 @@ export function DuelFan({ left, right, onChoose, onPick, texts, fast = false, sq
   }
 
   // Teclado en escritorio (C4): ← elige la carta de la izquierda y → la de la derecha, con la misma animación que el gesto.
-  // Se ignora con un campo de texto enfocado, con modificadores o con una hoja/diálogo abierto distinto del que contiene el duelo.
-  const chooseRef = useRef(choose)
-  chooseRef.current = choose
-  useEffect(() => {
-    if (!desktop) return
-    const onKey = (e: KeyboardEvent) => {
-      if (e.defaultPrevented || e.ctrlKey || e.metaKey || e.altKey || e.shiftKey) return
-      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return
-      if (isTypingTarget(e.target) || isTypingTarget(document.activeElement)) return
-      const mine = box.current
-      const otherDialog = Array.from(document.querySelectorAll('[role="dialog"]')).some((d) => !mine || !d.contains(mine))
-      if (otherDialog) return
-      e.preventDefault()
-      noteDuelKeyUsed()
-      chooseRef.current(e.key === 'ArrowLeft' ? 'a' : 'b')
-    }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [desktop])
+  // Mismas reglas que el resto de atajos (useShortcuts): no con un campo de texto ni con un diálogo que no contenga el duelo.
+  const pickKey = (w: 'a' | 'b') => () => {
+    noteKbUse()
+    choose(w)
+  }
+  useShortcuts({ arrowleft: pickKey('a'), arrowright: pickKey('b') }, desktop, box)
 
   return (
     <motion.div
