@@ -36,6 +36,19 @@ import { Chip, Sheet, Toast } from '../components/ui'
 import { Icon, type IconName } from '../components/Icon'
 import { Button } from '../components/Button'
 import { Poster } from '../components/Poster'
+import { useShortcuts } from '../lib/useShortcuts'
+import { useIsDesktop } from '../lib/useMediaQuery'
+
+const KB_USES_KEY = 'biblio_kb_uses'
+/** Tras tantos usos del teclado se deja de mostrar la leyenda de teclas (misma regla que D3). */
+const KB_LEGEND_UNTIL = 10
+const readKbUses = (): number => {
+  try {
+    return Number(localStorage.getItem(KB_USES_KEY)) || 0
+  } catch {
+    return 0
+  }
+}
 
 export type DiscoverVariant = 'bottom_dock' | 'hub' | 'header_sheet' | 'tabs'
 
@@ -345,25 +358,56 @@ export function Discover() {
   const label = SHELF_LABEL[shelf]
   const blocked = !!rating || !!deckNudge
 
+  // Escritorio: atajos a nivel de pantalla (←/→/↑ animan el mismo gesto que el arrastre; Z deshace)
+  const isDesktop = useIsDesktop()
+  const [kbUses, setKbUses] = useState(readKbUses)
+  const countKbUse = () => {
+    const n = kbUses + 1
+    setKbUses(n)
+    try {
+      localStorage.setItem(KB_USES_KEY, String(n))
+    } catch {
+      /* ok */
+    }
+  }
+  const kbFling = (dir: SwipeDir) => () => {
+    if (!deck.length) return
+    countKbUse()
+    deckRef.current?.fling(dir)
+  }
+  useShortcuts(
+    {
+      arrowleft: kbFling('left'),
+      arrowright: kbFling('right'),
+      arrowup: kbFling('up'),
+      z: () => {
+        if (!hasHistory) return
+        countKbUse()
+        undo()
+      },
+    },
+    isDesktop && !(variant === 'hub' && showHub) && !blocked && !showSheetSelector && !showVariantMenu
+  )
+
   // RENDER: Pantalla Intermedia / Hub de Exploración (V2)
   if (variant === 'hub' && showHub) {
     return (
-      <div className="h-full flex flex-col scroll-y bg-bg px-5 pb-8 safe-top">
-        <div className="flex items-center justify-between pt-3 pb-3">
+      <div className="h-full flex flex-col scroll-y bg-bg px-gutter pb-8 lg:pb-12 safe-top">
+        <div className="flex items-center justify-between pt-3 pb-3 lg:pt-8">
           <div>
             <span className="text-[11px] font-bold uppercase tracking-wider text-accent">
               Explorar Catálogo
             </span>
-            <h1 className="text-2xl font-bold text-ink tracking-tight">¿Qué te apetece hoy?</h1>
+            <h1 className="text-2xl lg:text-display font-bold lg:font-medium text-ink tracking-tight">¿Qué te apetece hoy?</h1>
           </div>
           <VariantSwitchButton variant={variant} onClick={() => setShowVariantMenu(true)} />
         </div>
 
-        <p className="text-xs text-mute mb-5 leading-relaxed">
+        <p className="text-xs lg:text-body text-mute mb-5 lg:mb-8 leading-relaxed">
           Elige una estantería cultural para empezar una sesión de tarjetas y descubrir obras afines.
         </p>
 
-        <div className="grid grid-cols-2 gap-3.5">
+        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5 lg:gap-4">
           {myShelves.map((s) => {
             const items = itemsOfType(s)
             const count = items.filter((i) => !entries[i.id]).length
@@ -376,7 +420,7 @@ export function Discover() {
                   setShelf(s)
                   setShowHub(false)
                 }}
-                className="rounded-3xl bg-surface border border-line p-4 flex flex-col text-left active:scale-[0.98] transition-all hover:border-line2 group shadow-xs relative overflow-hidden"
+                className="rounded-3xl bg-surface border border-line p-4 flex flex-col text-left active:scale-[0.98] transition-all hover:border-line2 group shadow-xs relative overflow-hidden hover-card"
               >
                 {/* Mini previsualización de portadas */}
                 <div className="h-20 w-full flex items-center justify-center mb-3 relative">
@@ -384,7 +428,7 @@ export function Discover() {
                     {top3.map((it, i) => (
                       <div
                         key={it.id}
-                        className="w-12 h-16 rounded-lg border border-line shadow-md overflow-hidden bg-surface2 transform transition-transform group-hover:scale-105"
+                        className="w-12 h-16 rounded-lg border border-line shadow-md overflow-hidden bg-surface2 transform transition-transform group-hover:scale-105 lg:group-hover:-translate-y-0.5"
                         style={{ transform: `rotate(${(i - 1) * 8}deg)` }}
                       >
                         <Poster item={it} showTitle={false} className="w-full h-full object-cover" />
@@ -491,7 +535,34 @@ export function Discover() {
       )}
 
       {variant === 'hub' && (
-        <div className="safe-top px-5 pt-2 pb-1 shrink-0 flex items-center justify-between">
+        <div className="hidden lg:block shrink-0 px-gutter pt-8 pb-4">
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <span className="text-[11px] font-bold uppercase tracking-wider text-accent">Descubrir</span>
+              <h1 className="text-display text-ink">{SHELF_LABEL[shelf].plural}</h1>
+              <div className="text-meta text-mute mt-1 tabular-nums">
+                {remainingCount > 0 ? `${remainingCount} por ver` : 'Al día'}
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <Button variant="secondary" onClick={() => setShowHub(true)}>
+                Cambiar estantería
+              </Button>
+              <VariantSwitchButton variant={variant} onClick={() => setShowVariantMenu(true)} />
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-2 mt-4" role="group" aria-label="Estantería">
+            {myShelves.map((s) => (
+              <Chip key={s} active={s === shelf} onClick={() => setShelf(s)}>
+                {SHELF_LABEL[s].plural}
+              </Chip>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {variant === 'hub' && (
+        <div className="lg:hidden safe-top px-5 pt-2 pb-1 shrink-0 flex items-center justify-between">
           {/* Enlace de navegación estilo nativo iOS (limpio, no compite con la tarjeta) */}
           <button
             type="button"
@@ -512,7 +583,7 @@ export function Discover() {
       )}
 
       {/* 2. ZONA CENTRAL: TARJETA DE SWIPEDECK */}
-      <div className="flex-1 min-h-0 px-5 relative">
+      <div className="flex-1 min-h-0 px-5 lg:px-gutter relative lg:flex lg:flex-col lg:items-center lg:justify-center">
         {deckNudge ? (
           <div className="h-full flex items-center justify-center">
             <NudgeCard
@@ -533,16 +604,19 @@ export function Discover() {
             />
           </div>
         ) : deck.length > 0 ? (
-          <SwipeDeck
-            ref={deckRef}
-            deck={deck}
-            shelf={shelf}
-            onSwipe={onSwipe}
-            onOpen={(it) => {
-              track('deck_open', { shelf, itemId: it.id, sid: sessionSid.current })
-              nav(`/i/${encodeURIComponent(it.id)}`)
-            }}
-          />
+          // escritorio: carta de móvil centrada, 400 px de ancho máximo y ~630 de alto (misma proporción)
+          <div className="h-full lg:w-full lg:max-w-100 lg:max-h-157">
+            <SwipeDeck
+              ref={deckRef}
+              deck={deck}
+              shelf={shelf}
+              onSwipe={onSwipe}
+              onOpen={(it) => {
+                track('deck_open', { shelf, itemId: it.id, sid: sessionSid.current })
+                nav(`/i/${encodeURIComponent(it.id)}`)
+              }}
+            />
+          </div>
         ) : (
           <div className="h-full flex flex-col items-center justify-center text-center px-5 gap-3">
             <h2 className="text-title text-ink font-medium">¡Has repasado todo {label.plural.toLowerCase()}!</h2>
@@ -564,7 +638,7 @@ export function Discover() {
       </div>
 
       {/* 3. PARTE INFERIOR: DOCK SEGÚN VARIANTE + BOTONES DE ACCIÓN */}
-      <div className="shrink-0 px-5 pt-1 pb-4">
+      <div className="shrink-0 px-5 lg:px-gutter pt-1 pb-4 lg:pb-8">
         {/* Selector Flotante Inferior de la Variante 1 (Dock) */}
         {variant === 'bottom_dock' && (
           <div className="flex items-center justify-center mb-2.5 px-1">
@@ -630,6 +704,12 @@ export function Discover() {
           </ActionBtn>
           <span className="w-12" aria-hidden />
         </div>
+        {/* Escritorio: leyenda de teclas, hasta que se ha usado el teclado 10 veces */}
+        {deck.length > 0 && kbUses < KB_LEGEND_UNTIL && (
+          <p className="hidden lg:block text-meta text-mute text-center mt-4">
+            ← No me interesa · ↑ Pendiente · → {label.seenPastPart.charAt(0).toUpperCase() + label.seenPastPart.slice(1)} · Z Deshacer
+          </p>
+        )}
       </div>
 
       {/* MODAL / SHEET: Selector de Categorías para la Variante 3 (Header Sheet) */}
@@ -824,7 +904,7 @@ function ActionBtn({
       onClick={onClick}
       disabled={disabled}
       aria-label={label}
-      className="rounded-full flex items-center justify-center bg-surface border border-line disabled:opacity-25 active:scale-90 transition-transform duration-150"
+      className="rounded-full flex items-center justify-center bg-surface border border-line disabled:opacity-25 active:scale-90 transition-transform duration-150 lg:hover:bg-surface2"
       style={{ width: size, height: size, color }}
     >
       {children}
