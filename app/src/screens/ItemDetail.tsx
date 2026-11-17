@@ -15,6 +15,8 @@ import { displayTitle } from '@biblioteca/core/src/lib/locale'
 import { boardgameDetailAspect, posterShape } from '@biblioteca/core/src/lib/posterShape'
 import { ensureShelfCatalog } from '../data/loadData'
 import { useEffect, useState } from 'react'
+import { useIsDesktop } from '../lib/useMediaQuery'
+import { DetailTwoCol } from '../components/DetailTwoCol'
 import { Link, Navigate, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { useStore } from '../store/useStore'
 import { useCatalog } from '../store/useCatalog'
@@ -36,6 +38,7 @@ export function ItemDetail() {
   const loc = useLocation()
   // sin historial (recarga o link directo) «volver» lleva a la biblioteca; antes no hacía nada y parecía bloqueado
   const goBack = () => (loc.key !== 'default' ? nav(-1) : nav('/', { replace: true }))
+  const isDesktop = useIsDesktop() // solo para no montar dos pósteres con el mismo layoutId
   const catalogVersion = useCatalog((s) => s.version)
   const item = getItem(id)
   const [loading, setLoading] = useState(!item)
@@ -116,13 +119,29 @@ export function ItemDetail() {
   const askText = (name: string, pos: number) => `Oye ${name}, he visto que tienes ${displayTitle(item, userLang())} en el puesto ${pos} de tus ${label.plural.toLowerCase()}, ¿me ${label.pronoun} recomiendas?`
 
   const bgAspect = item.type === 'boardgame' ? boardgameDetailAspect(item.posterRatio) : null
+  // escritorio: póster completo en su proporción, sin degradado ni título encima (el título va al lado)
+  const deskPoster = (
+    <div
+      className={`relative w-full overflow-hidden rounded-2xl border border-line bg-surface2 ${posterShape(item.type) === 'square' ? 'aspect-square' : bgAspect != null ? '' : 'aspect-[2/3]'}`}
+      style={bgAspect != null ? { aspectRatio: bgAspect } : undefined}
+    >
+      <Poster item={item} showTitle={false} layoutId={posterLayoutId(item.id)} style={{ borderRadius: 0 }} className="absolute inset-0 w-full h-full" />
+    </div>
+  )
 
   return (
     <div className="h-full relative bg-bg">
-      <button onClick={goBack} aria-label="Volver" className="absolute left-4 z-20 w-10 h-10 rounded-full bg-bg/85 border border-line flex items-center justify-center text-ink active:scale-95 transition-transform" style={{ top: 'max(env(safe-area-inset-top), 16px)' }}>
+      <button onClick={goBack} aria-label="Volver" className="lg:hidden absolute left-4 z-20 w-10 h-10 rounded-full bg-bg/85 border border-line flex items-center justify-center text-ink active:scale-95 transition-transform" style={{ top: 'max(env(safe-area-inset-top), 16px)' }}>
         <Icon name="back" size={20} />
       </button>
-      <div className="h-full scroll-y pb-10">
+      <div className="h-full scroll-y pb-10 lg:pb-16">
+        <div className="hidden lg:block px-gutter pt-6 pb-5">
+          <button onClick={goBack} className="inline-flex items-center gap-2 min-h-[44px] -ml-2 px-2 rounded-xl text-meta text-mute hover:text-ink hover:underline">
+            <Icon name="back" size={18} /> Volver
+          </button>
+        </div>
+        <DetailTwoCol
+          poster={isDesktop ? deskPoster : (
         <div
           className={`relative ${
             posterShape(item.type) === 'square'
@@ -157,8 +176,23 @@ export function ItemDetail() {
             </div>
           </motion.div>
         </div>
-
-        <div className="px-5 mt-4 space-y-5">
+          )}
+          posterFooter={hits.length > 0 ? <FriendBubbles itemId={item.id} shelf={item.type} /> : null}
+        >
+          <header className="hidden lg:block">
+            <div className="text-label text-mute uppercase">{typeName(item.type)} · {item.year}</div>
+            <h1 className="text-display text-ink mt-2">{displayTitle(item, userLang())}</h1>
+            <div className="text-body text-mute mt-2">
+              {item.artistId ? (
+                <Link to={`/i/${encodeURIComponent(item.artistId)}`} className="underline underline-offset-2 hover:text-ink">
+                  {item.creator}
+                </Link>
+              ) : (
+                item.creator
+              )}
+              {itemFacts(item) ? ` · ${itemFacts(item)}` : ''}
+            </div>
+          </header>
           <div className="flex flex-wrap gap-1.5">
             {item.genres.map((g) => <Tag key={g}>{g}</Tag>)}
             {item.platforms?.map((p) => <Tag key={p} variant="accent">{p}</Tag>)}
@@ -174,9 +208,9 @@ export function ItemDetail() {
               </a>
             )}
           </div>
-          <p className="text-body leading-relaxed text-ink/90">{item.synopsis}</p>
+          <p className="text-body leading-relaxed text-ink/90 lg:max-w-prose">{item.synopsis}</p>
 
-          <section aria-label="Tu estado">
+          <section aria-label="Tu estado" className="lg:max-w-prose">
             <h2 className="text-label text-mute uppercase mb-2.5">Tu estado</h2>
             <div className="grid grid-cols-3 gap-2">
               <button
@@ -185,7 +219,7 @@ export function ItemDetail() {
                 className={`min-h-[52px] px-2 py-2.5 rounded-2xl border flex flex-col items-center justify-center gap-1 transition-all active:scale-95 ${
                   status === 'dismissed'
                     ? 'bg-rose-500/15 border-rose-500/60 text-rose-400 font-medium'
-                    : 'bg-surface border-line text-mute hover:text-ink font-medium'
+                    : 'bg-surface border-line text-mute hover:text-ink lg:hover:bg-surface2 font-medium'
                 }`}
               >
                 <Icon
@@ -203,7 +237,7 @@ export function ItemDetail() {
                 className={`min-h-[52px] px-2 py-2.5 rounded-2xl border flex flex-col items-center justify-center gap-1 transition-all active:scale-95 ${
                   status === 'pending'
                     ? 'bg-sky-500/15 border-sky-500/60 text-sky-400 font-medium'
-                    : 'bg-surface border-line text-mute hover:text-ink font-medium'
+                    : 'bg-surface border-line text-mute hover:text-ink lg:hover:bg-surface2 font-medium'
                 }`}
               >
                 <Icon
@@ -222,7 +256,7 @@ export function ItemDetail() {
                 className={`min-h-[52px] px-2 py-2.5 rounded-2xl border flex flex-col items-center justify-center gap-1 transition-all active:scale-95 ${
                   status === 'seen'
                     ? 'bg-emerald-500/15 border-emerald-500/60 text-emerald-400 font-medium'
-                    : 'bg-surface border-line text-mute hover:text-ink font-medium'
+                    : 'bg-surface border-line text-mute hover:text-ink lg:hover:bg-surface2 font-medium'
                 }`}
               >
                 <Icon
@@ -248,7 +282,7 @@ export function ItemDetail() {
             )}
           </section>
 
-          <section aria-label="Tus amigos">
+          <section aria-label="Tus amigos" className="lg:max-w-prose">
             <h2 className="text-label text-mute uppercase mb-2">¿Quién {label.pronoun} {label.verbPast} antes que yo?</h2>
             {seenBy.length === 0 && <p className="text-meta text-mute">Ninguno de tus amigos {label.verbPerfSingular} todavía.</p>}
             <ul className="space-y-3">
@@ -276,11 +310,11 @@ export function ItemDetail() {
           </section>
 
           {LISTS_ENABLED && (
-            <button onClick={() => setListSheet(true)} className="w-full min-h-[48px] rounded-2xl border border-line bg-surface text-ink font-medium flex items-center justify-center gap-2 hover:bg-surface2 active:scale-98 transition-all">
+            <button onClick={() => setListSheet(true)} className="w-full lg:w-auto lg:px-6 lg:self-start min-h-[48px] rounded-2xl border border-line bg-surface text-ink font-medium flex items-center justify-center gap-2 hover:bg-surface2 active:scale-98 transition-all">
               <Icon name="plus" size={18} /> Añadir a una lista
             </button>
           )}
-        </div>
+        </DetailTwoCol>
       </div>
 
       {rating && <RatingFlow key={String(rating)} withStars={!entry?.stars && !entry?.ranked} itemId={item.id} onDone={(m) => { setRating(false); if (m) setToast(m) }} />}
