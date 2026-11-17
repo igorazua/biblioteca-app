@@ -4,6 +4,8 @@ import { displayTitle } from '@biblioteca/core/src/lib/locale'
 import { posterBox, posterRadius, posterShape } from '@biblioteca/core/src/lib/posterShape'
 import { ensureShelfCatalog } from '../data/loadData'
 import { useCompareOverview } from '../lib/useCompareOverview'
+import { useIsDesktop } from '../lib/useMediaQuery'
+import { PosterGrid } from '../components/PosterGrid'
 import { useEffect, useMemo, useState } from 'react'
 import { Link, Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { useStore } from '../store/useStore'
@@ -26,6 +28,7 @@ type Seg = 'ord' | 'pend'
 export function Shelf() {
   const { type } = useParams()
   const nav = useNavigate()
+  const desktop = useIsDesktop()
   const overview = useCompareOverview()
   const entries = useStore((s) => s.entries)
   const ranking = useStore((s) => (type && (ACTIVE_SHELVES as readonly string[]).includes(type) ? (s.rankings[type as ShelfType] ?? []) : []))
@@ -69,10 +72,11 @@ export function Shelf() {
       <div className="flex-1 min-h-0 scroll-y">
       {/* Cabecera a sangre (Igor, 26/10): un carrete de fotos inclinado con las obras de la estantería o, si hay
           pocas, con su icono repetido; encima, el nombre y cuánto está ordenado. Sin tarjeta y sin botón de Duelos. */}
-      <header className="relative overflow-hidden" style={{ background: `linear-gradient(160deg, ${SHELF_COLOR[t]}40 0%, var(--color-bg) 75%)` }}>
+      <div className="lg:px-gutter lg:pt-6">
+      <header className="relative overflow-hidden lg:h-56 lg:rounded-2xl" style={{ background: `linear-gradient(160deg, ${SHELF_COLOR[t]}40 0%, var(--color-bg) 75%)` }}>
         <FilmStrip ids={stripIds} shelf={t} />
         <div className="absolute inset-0 bg-gradient-to-b from-bg/30 via-bg/40 to-bg pointer-events-none" aria-hidden />
-        <div className="relative px-5 pt-[max(env(safe-area-inset-top),18px)] pb-4">
+        <div className="relative px-5 pt-[max(env(safe-area-inset-top),18px)] pb-4 lg:px-6 lg:pt-5 lg:h-full lg:flex lg:flex-col lg:justify-between">
           <div className="flex items-center justify-between">
             <button onClick={() => (selecting ? setSelecting(false) : nav('/'))} aria-label="Volver" className="w-10 h-10 -ml-1 rounded-full bg-bg/60 backdrop-blur border border-line/60 flex items-center justify-center text-ink active:scale-95 transition-transform">
               <Icon name="back" size={20} />
@@ -80,7 +84,7 @@ export function Shelf() {
             {!selecting && (
               <div className="flex items-center gap-2">
                 {LISTS_ENABLED && (
-                  <button onClick={() => { setSelecting(true); setSel([]) }} aria-label="Compartir" className="w-10 h-10 rounded-full bg-bg/60 backdrop-blur border border-line/60 flex items-center justify-center text-ink active:scale-95 transition-transform">
+                  <button onClick={() => { setSelecting(true); setSel([]) }} aria-label="Compartir" className="lg:hidden w-10 h-10 rounded-full bg-bg/60 backdrop-blur border border-line/60 flex items-center justify-center text-ink active:scale-95 transition-transform">
                     <Icon name="share" size={18} />
                   </button>
                 )}
@@ -90,7 +94,7 @@ export function Shelf() {
               </div>
             )}
           </div>
-          <div className="mt-24">
+          <div className="mt-24 lg:mt-0">
             <div className="text-label flex items-center gap-1.5" style={{ color: SHELF_COLOR[t] }}>
               <Icon name={SHELF_ICON[t]} size={14} strokeWidth={2.2} /> ESTANTERÍA
             </div>
@@ -101,8 +105,10 @@ export function Shelf() {
           </div>
         </div>
       </header>
+      </div>
       {/* Pestañas de texto con subrayado, en lugar de las dos píldoras */}
-      <div className="mx-5 mb-4 flex gap-6 border-b border-line" role="tablist">
+      <div className="px-5 lg:px-gutter lg:mt-6">
+      <div className="mb-4 flex gap-6 border-b border-line" role="tablist">
         {(['ord', 'pend'] as const).map((k) => (
           <button
             key={k}
@@ -117,18 +123,27 @@ export function Shelf() {
           </button>
         ))}
       </div>
+      </div>
       {selecting && (
-        <div className="px-5 pb-3 flex items-center gap-2">
+        <div className="px-5 lg:px-gutter pb-3 flex items-center gap-2">
           <button onClick={() => setSel(sel.length === visibleIds.length ? [] : visibleIds)} className="min-h-[36px] px-3.5 rounded-full bg-surface border border-line text-xs font-medium">{sel.length === visibleIds.length && visibleIds.length > 0 ? 'Quitar todas' : 'Seleccionar todas'}</button>
           <span className="text-meta text-mute">{sel.length} seleccionada{sel.length === 1 ? '' : 's'}</span>
         </div>
       )}
-      <div className="px-5 pb-28">
+      <div className="px-5 lg:px-gutter pb-28">
         {seg === 'ord' && (
           totalSeen ? (
             <div className="space-y-6">
               {/* Obras numeradas en el ranking */}
-              {ranking.length > 0 && (
+              {ranking.length > 0 && desktop && (
+                <PosterGrid>
+                  {ranking.map((id, i) => {
+                    const it = getItem(id)
+                    return it ? <GridCell key={id} item={it} rank={i + 1} /> : null
+                  })}
+                </PosterGrid>
+              )}
+              {ranking.length > 0 && !desktop && (
                 <div className="rounded-2xl bg-surface border border-line divide-y divide-line overflow-hidden">
                   {ranking.map((id, i) => {
                     const it = getItem(id)
@@ -143,6 +158,14 @@ export function Shelf() {
                   <div className="flex items-center justify-between mb-2.5">
                     <span className="text-label text-mute">NUEVAS · {unrankedIds.length}</span>
                   </div>
+                  {desktop ? (
+                    <PosterGrid>
+                      {unrankedIds.map((id) => {
+                        const it = getItem(id)
+                        return it ? <GridCell key={id} item={it} note={byGender(it.type, 'Nueva', 'Nuevo')} faded /> : null
+                      })}
+                    </PosterGrid>
+                  ) : (
                   <div className="rounded-2xl bg-surface border border-line divide-y divide-line overflow-hidden">
                     {unrankedIds.map((id) => {
                       const it = getItem(id)
@@ -193,6 +216,7 @@ export function Shelf() {
                       )
                     })}
                   </div>
+                  )}
                 </div>
               )}
             </div>
@@ -216,7 +240,7 @@ export function Shelf() {
                   <Button
                     variant="secondary"
                     onClick={() => setCleaning(true)}
-                    className="flex-1"
+                    className="flex-1 lg:flex-none"
                     icon={<Icon name="sparkle" size={16} />}
                   >
                     Limpieza ({pend.length})
@@ -225,17 +249,26 @@ export function Shelf() {
                 <Button
                   variant="primary"
                   onClick={() => nav(`${WIZARD_PATH}?t=${t}`)}
-                  className="flex-1"
+                  className="flex-1 lg:flex-none"
                 >
                   {t === 'book' ? '¿Qué leo?' : t === 'boardgame' ? '¿A qué jugamos?' : t === 'artist' ? '¿Qué escucho?' : '¿Qué vemos?'}
                 </Button>
               </div>
+              {desktop ? (
+                <PosterGrid>
+                  {pend.map((e) => {
+                    const it = getItem(e.itemId)
+                    return it ? <GridCell key={e.itemId} item={it} note={e.origin ? `De ${e.origin}` : undefined} /> : null
+                  })}
+                </PosterGrid>
+              ) : (
               <div className="rounded-2xl bg-surface border border-line divide-y divide-line overflow-hidden">
                 {pend.map((e) => {
                   const it = getItem(e.itemId)
                   return it ? <ItemRow key={e.itemId} item={it} note={e.origin ? `De ${e.origin}` : undefined} selecting={selecting} selected={sel.includes(e.itemId)} onToggle={() => toggle(e.itemId)} /> : null
                 })}
               </div>
+              )}
             </div>
           ) : (
             <Empty
@@ -259,7 +292,7 @@ export function Shelf() {
       {!selecting && seg === 'ord' && totalSeen >= 2 && (
         <Link
           to={`/comparar/${t}`}
-          className="absolute right-5 z-20 inline-flex items-center gap-2 min-h-[52px] pl-4 pr-5 rounded-full bg-accent text-accent-ink text-[15px] font-semibold shadow-xl shadow-black/40 active:scale-95 transition-transform"
+          className="absolute right-5 lg:right-8 z-20 inline-flex items-center gap-2 min-h-[52px] pl-4 pr-5 rounded-full bg-accent text-accent-ink text-[15px] font-semibold shadow-xl shadow-black/40 active:scale-95 transition-transform"
           style={{ bottom: 'max(env(safe-area-inset-bottom), 20px)' }}
         >
           <Icon name="scale" size={18} strokeWidth={2.2} /> Ordenar
@@ -282,6 +315,26 @@ export function Shelf() {
       {cleaning && <CleanupFlow shelf={t} onClose={() => setCleaning(false)} />}
       <AnimatePresence>{toast && <Toast key={toast} message={toast} onDone={() => setToast(null)} />}</AnimatePresence>
     </div>
+  )
+}
+
+/** Celda de la rejilla de escritorio: póster con el puesto hueco encima, título y año · autor debajo (DISENO_ESCRITORIO §3.2). */
+function GridCell({ item, rank, note, faded }: { item: NonNullable<ReturnType<typeof getItem>>; rank?: number; note?: string; faded?: boolean }) {
+  const title = displayTitle(item, userLang())
+  return (
+    <Link to={`/i/${encodeURIComponent(item.id)}`} className="block min-w-0 hover-lift" aria-label={`${rank ? `Nº ${rank}: ` : ''}${title}`}>
+      <div className="relative">
+        <div className={faded ? 'opacity-55 saturate-50' : ''}>
+          <Poster item={item} style={{ borderRadius: posterRadius(item.type, 10), ...posterBox(item).style }} className={`w-full ${posterBox(item).className} rounded-[10px]`} />
+        </div>
+        {rank !== undefined && <span className="rank-num absolute left-2 bottom-2 text-5xl drop-shadow-md select-none" aria-hidden>{rank}</span>}
+      </div>
+      <div className="mt-2.5">
+        <div className="serif text-item text-ink leading-tight line-clamp-2">{title}</div>
+        <div className="text-meta text-mute mt-0.5 truncate">{item.year} · {item.creator}</div>
+        {note && <div className="text-label text-accent mt-0.5 truncate">{note}</div>}
+      </div>
+    </Link>
   )
 }
 
