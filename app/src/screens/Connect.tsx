@@ -96,16 +96,18 @@ export function Connect() {
         label="CONECTAR"
         title="Conectar"
         onBack={() => (inFlow ? flow.reset() : nav(-1))}
+        className="lg:px-8 xl:px-12 lg:max-w-content lg:mx-auto"
       />
 
       {inFlow ? (
         <ImportFlowView flow={flow} />
       ) : (
-        <div className="px-5 pb-16 pt-2 w-full max-w-md mx-auto space-y-7">
-          <p className="text-sm text-mute leading-relaxed">
+        <div className="px-5 pb-16 pt-2 w-full max-w-md mx-auto space-y-7 lg:px-8 xl:px-12 lg:max-w-content lg:grid lg:grid-cols-2 lg:gap-6 lg:space-y-0 lg:items-start">
+          <p className="text-sm text-mute leading-relaxed lg:col-span-2">
             Trae lo que ya has visto, leído o escuchado desde tus plataformas de siempre. Sin notas numéricas vacías y sin pedirte nunca tu contraseña.
           </p>
 
+          <div className="lg:col-span-2">
           <Group title="Tus conexiones">
             {spotifyConnected ? (
               <div className="min-h-[64px] px-4 py-3 flex items-center justify-between gap-3">
@@ -133,6 +135,7 @@ export function Connect() {
               </div>
             )}
           </Group>
+          </div>
 
           {GROUPS.map((g) => {
             const list = SERVICES.filter((s) => s.group === g.id)
