@@ -6,9 +6,9 @@ import { Icon } from './Icon'
 
 type IconName = Parameters<typeof Icon>[0]['name']
 
-export function Group({ title, footer, children }: { title?: string; footer?: ReactNode; children: ReactNode }) {
+export function Group({ title, footer, children, id }: { title?: string; footer?: ReactNode; children: ReactNode; /** ancla para un índice lateral (Ajustes en escritorio) */ id?: string }) {
   return (
-    <section aria-label={title}>
+    <section aria-label={title} id={id} className="scroll-mt-6">
       {title && <h2 className="label-caps text-mute px-1 mb-2">{title}</h2>}
       <div className="rounded-3xl bg-surface border border-line divide-y divide-line/60 overflow-hidden">{children}</div>
       {footer && <p className="text-[11px] text-mute leading-relaxed px-1 mt-2">{footer}</p>}

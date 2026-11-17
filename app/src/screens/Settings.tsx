@@ -119,18 +119,49 @@ export function Settings() {
     }
   }
 
+  const sections = [
+    { id: 'ajustes-cuenta', label: 'Cuenta' },
+    { id: 'ajustes-listas', label: 'Tus listas' },
+    { id: 'ajustes-preferencias', label: 'Preferencias' },
+    ...(user ? [{ id: 'ajustes-privacidad', label: 'Privacidad' }] : []),
+    { id: 'ajustes-ayuda', label: 'Ayuda' },
+    ...(user ? [{ id: 'ajustes-sesion', label: 'Sesión' }] : []),
+    { id: 'ajustes-pruebas', label: 'Pruebas' },
+  ]
+  const goTo = (id: string) => {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    document.getElementById(id)?.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' })
+  }
+
   return (
     <div className="h-full scroll-y pb-12 bg-bg">
       <ScreenTitle
         label="AJUSTES"
         title="Ajustes"
         onBack={() => nav(-1)}
-        className="lg:max-w-column lg:mx-auto"
+        className="lg:max-w-content lg:mx-auto"
       />
 
-      <div className="px-5 space-y-6 lg:px-8 xl:px-12 lg:max-w-column lg:mx-auto">
+      <div className="px-5 lg:px-8 xl:px-12 lg:max-w-content lg:mx-auto lg:grid lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-10 lg:items-start">
+        {/* Escritorio (§3.8): índice fijo a la izquierda con desplazamiento suave a cada sección */}
+        <nav aria-label="Secciones de Ajustes" className="hidden lg:block sticky top-6">
+          <ul className="space-y-0.5">
+            {sections.map((sec) => (
+              <li key={sec.id}>
+                <button
+                  type="button"
+                  onClick={() => goTo(sec.id)}
+                  className="w-full text-left px-3 py-2 rounded-xl text-meta text-mute hover-row hover:text-ink"
+                >
+                  {sec.label}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <div className="space-y-6 lg:max-w-column lg:w-full">
         {/* Tú: tarjeta de cabecera con tu foto; tocarla abre tus datos. Sin cuenta, el acceso va en la misma tarjeta. */}
-        <section className="rounded-3xl bg-surface border border-line overflow-hidden">
+        <section id="ajustes-cuenta" className="scroll-mt-6 rounded-3xl bg-surface border border-line overflow-hidden">
           <button onClick={() => nav('/perfil/editar')} className="w-full p-4 flex items-center gap-3.5 text-left active:bg-surface2 transition-colors">
             <Avatar name={profile.name} color={profile.avatarColor} url={profile.avatarUrl} size={56} />
             <span className="flex-1 min-w-0">
@@ -187,11 +218,11 @@ export function Settings() {
           )}
         </section>
 
-        <Group title="Tus listas">
+        <Group title="Tus listas" id="ajustes-listas">
           <Row icon="link" tint="#2f9e6e" title="Conectar otras apps" sub="Letterboxd, Goodreads, Netflix…" to="/conectar" />
         </Group>
 
-        <Group title="Preferencias">
+        <Group title="Preferencias" id="ajustes-preferencias">
           <Row
             icon="star"
             tint="#d9932b"
@@ -249,20 +280,20 @@ export function Settings() {
         </Group>
 
         {user && (
-          <Group title="Privacidad">
+          <Group title="Privacidad" id="ajustes-privacidad">
             <div className="p-4">
               <PhoneDiscovery onToast={setToast} />
             </div>
           </Group>
         )}
 
-        <Group title="Ayuda">
+        <Group title="Ayuda" id="ajustes-ayuda">
           <Row icon="cards" tint="#3d7fd9" title="Ver el tutorial otra vez" onClick={() => nav('/onboarding')} />
           <Row icon="mail" tint="#3d7fd9" title="Enviar una sugerencia o un error" onClick={() => setFeedbackOpen(true)} />
         </Group>
 
         {user && (
-          <Group title="Sesión">
+          <Group title="Sesión" id="ajustes-sesion">
             <Row
               icon="rotateCcw"
               title={syncing ? 'Sincronizando…' : 'Sincronizar ahora'}
@@ -273,7 +304,7 @@ export function Settings() {
           </Group>
         )}
 
-        <Group title="Pruebas">
+        <Group title="Pruebas" id="ajustes-pruebas">
           <div className="p-4 space-y-3">
             <div className="text-sm font-semibold text-ink">Duelos de juegos</div>
             <p className="text-xs text-mute">
@@ -332,6 +363,7 @@ export function Settings() {
             </div>
           )}
         </section>
+        </div>
       </div>
 
       {/* Modales y Hojas */}
