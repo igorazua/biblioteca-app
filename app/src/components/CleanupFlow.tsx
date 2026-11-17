@@ -119,7 +119,7 @@ export function CleanupFlow({ shelf, onClose }: CleanupFlowProps) {
         },
       }))
       setCounts((c) => ({ ...c, kept: c.kept + 1 }))
-      setToast('Sigue guardada')
+      setToast(label.fem ? 'Sigue guardada' : 'Sigue guardado')
     } else if (dir === 'left') {
       // Fuera / descartada
       const now = Date.now()
@@ -248,7 +248,7 @@ export function CleanupFlow({ shelf, onClose }: CleanupFlowProps) {
                 stamps={{
                   right: label.stamp,
                   left: 'FUERA',
-                  up: 'LA GUARDO',
+                  up: `${label.pronounCap.toUpperCase()} GUARDO`,
                 }}
               />
             ) : (
@@ -287,7 +287,7 @@ export function CleanupFlow({ shelf, onClose }: CleanupFlowProps) {
 
               <button
                 onClick={() => deckRef.current?.fling('up')}
-                aria-label="La guardo (mantener en pendientes)"
+                aria-label={`${label.pronounCap} guardo (mantener en pendientes)`}
                 className="w-12 h-12 rounded-full bg-surface border-2 border-line text-stamp-blue flex items-center justify-center active:scale-90 transition-transform"
               >
                 <Icon name="bookmark" size={22} strokeWidth={2.4} />

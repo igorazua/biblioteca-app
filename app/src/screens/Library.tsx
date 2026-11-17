@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { getItem, items, itemsOfType, evaluateNudges, ACTIVE_SHELVES, SHELF_LABEL, type ShelfType, LISTS_ENABLED } from '@biblioteca/core'
+import { useMyShelves } from '../lib/myShelves'
 import { posterBox, posterRadius } from '@biblioteca/core/src/lib/posterShape'
 import { useStore } from '../store/useStore'
 import { useAuth } from '../store/useAuth'
@@ -23,6 +24,7 @@ const FUTURE_SHELVES: [string, number][] = [
 export function Library() {
   const nav = useNavigate()
   const profile = useStore((s) => s.profile)
+  const myShelves = useMyShelves()
   const entries = useStore((s) => s.entries)
   const rankings = useStore((s) => s.rankings)
   const lists = useStore((s) => s.lists)
@@ -124,7 +126,7 @@ export function Library() {
       </AnimatePresence>
 
       <div className="space-y-4">
-        {ACTIVE_SHELVES.map((t) => {
+        {myShelves.map((t) => {
           const rk = rankings[t] ?? []
           const unranked = all.filter((e) => e.status === 'seen' && !e.ranked && getItem(e.itemId)?.type === t)
           const unrankedCount = unranked.length

@@ -5,12 +5,12 @@
 @theme {
   --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-serif: 'Fraunces Variable', Georgia, serif;
-  --color-bg: #100e0c;
-  --color-surface: #1a1816;
-  --color-surface2: #25221f;
-  --color-line: #2c2824;
+  --color-bg: #1e1b17;
+  --color-surface: #2a2620;
+  --color-surface2: #36312a;
+  --color-line: #4a433b;
   --color-ink: #f4efe6;
-  --color-mute: #a39d92;
+  --color-mute: #bdb6a9;
   --color-accent: #f2b04a;
   --color-accent-ink: #100e0c;
   --color-secundario: #d9714e;
@@ -158,7 +158,7 @@ h1, h2 { letter-spacing: -0.015em; }
   font-variation-settings: 'opsz' 144;
 }
 .glass {
-  background: rgb(15 14 13 / 0.78);
+  background: rgb(30 27 23 / 0.78);
   backdrop-filter: blur(18px) saturate(1.4);
   -webkit-backdrop-filter: blur(18px) saturate(1.4);
 }

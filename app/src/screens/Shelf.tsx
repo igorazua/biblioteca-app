@@ -1,5 +1,5 @@
 import { userLang } from '../lib/userLang'
-import { getItem, ACTIVE_SHELVES, SHELF_LABEL, type ShelfType, LISTS_ENABLED, WIZARD_PATH } from '@biblioteca/core'
+import { getItem, ACTIVE_SHELVES, SHELF_LABEL, byGender, type ShelfType, LISTS_ENABLED, WIZARD_PATH } from '@biblioteca/core'
 import { displayTitle } from '@biblioteca/core/src/lib/locale'
 import { posterBox, posterRadius, posterShape } from '@biblioteca/core/src/lib/posterShape'
 import { ensureShelfCatalog } from '../data/loadData'
@@ -168,7 +168,7 @@ export function Shelf() {
                           <div className="flex-1 min-w-0">
                             <div className="serif text-item text-ink leading-tight line-clamp-1">{displayTitle(it, userLang())}</div>
                             <div className="text-meta text-mute mt-0.5 truncate">{it.year} · {it.creator}</div>
-                            <div className="text-meta text-mute mt-0.5 truncate">nueva</div>
+                            <div className="text-meta text-mute mt-0.5 truncate">{byGender(it.type, 'nueva', 'nuevo')}</div>
                           </div>
                         </>
                       )
@@ -264,7 +264,7 @@ export function Shelf() {
         >
           <Icon name="scale" size={18} strokeWidth={2.2} /> Ordenar
           {unrankedIds.length > 0 && (
-            <span className="min-w-[22px] h-[22px] px-1.5 rounded-full bg-accent-ink text-accent text-[12px] font-bold flex items-center justify-center tabular-nums" aria-label={`${unrankedIds.length} nuevas`}>
+            <span className="min-w-[22px] h-[22px] px-1.5 rounded-full bg-accent-ink text-accent text-[12px] font-bold flex items-center justify-center tabular-nums" aria-label={`${unrankedIds.length} ${byGender(t, 'nuevas', 'nuevos')}`}>
               {unrankedIds.length}
             </span>
           )}

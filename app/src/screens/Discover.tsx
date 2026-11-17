@@ -16,11 +16,13 @@ import {
   ACTIVE_SHELVES,
   SHELVES,
   SHELF_LABEL,
+  byGender,
   type Friend,
   type Item,
   type ShelfType,
 } from '@biblioteca/core'
 import { ensureShelfCatalog, useSongsLoaded, ensureShelfEngine } from '../data/loadData'
+import { orderShelves, useMyShelves } from '../lib/myShelves'
 import { useCatalog } from '../store/useCatalog'
 import { useStore } from '../store/useStore'
 import { useAuth } from '../store/useAuth'
@@ -76,7 +78,7 @@ const readShelf = (): ShelfType => {
   } catch {
     /* sin almacenamiento */
   }
-  return ACTIVE_SHELVES[0] ?? 'movie'
+  return orderShelves(useStore.getState().settings.shelves)[0] ?? 'movie'
 }
 
 const readVariant = (): DiscoverVariant => {
@@ -91,6 +93,7 @@ const readVariant = (): DiscoverVariant => {
 
 export function Discover() {
   const nav = useNavigate()
+  const myShelves = useMyShelves()
   const [searchParams, setSearchParams] = useSearchParams()
   const shelfParam = searchParams.get('shelf') as ShelfType | null
   const validParamShelf =
@@ -314,9 +317,9 @@ export function Discover() {
     }
 
     if (dir === 'right') {
-      if (settings.rateOnSwipe === false) setToast('Guardada ✓')
+      if (settings.rateOnSwipe === false) setToast(byGender(item.type, 'Guardada ✓', 'Guardado ✓'))
       else setRating(item.id)
-    } else if (dir === 'up') setToast('Guardada en pendientes ✓')
+    } else if (dir === 'up') setToast(byGender(item.type, 'Guardada en pendientes ✓', 'Guardado en pendientes ✓'))
   }
 
   const undo = () => {
@@ -361,7 +364,7 @@ export function Discover() {
         </p>
 
         <div className="grid grid-cols-2 gap-3.5">
-          {ACTIVE_SHELVES.map((s) => {
+          {myShelves.map((s) => {
             const items = itemsOfType(s)
             const count = items.filter((i) => !entries[i.id]).length
             const top3 = items.slice(0, 3)
@@ -440,7 +443,7 @@ export function Discover() {
             <VariantSwitchButton variant={variant} onClick={() => setShowVariantMenu(true)} />
           </div>
           <div className="flex gap-2 overflow-x-auto no-scrollbar" role="tablist" aria-label="Estantería">
-            {ACTIVE_SHELVES.map((s) => (
+            {myShelves.map((s) => (
               <Chip key={s} active={s === shelf} onClick={() => setShelf(s)}>
                 {SHELF_LABEL[s].plural}
               </Chip>
@@ -550,7 +553,7 @@ export function Discover() {
               </Button>
             </div>
             <div className="flex gap-2 mt-3 flex-wrap justify-center">
-              {ACTIVE_SHELVES.filter((s) => s !== shelf).map((s) => (
+              {myShelves.filter((s) => s !== shelf).map((s) => (
                 <Chip key={s} onClick={() => setShelf(s)}>
                   {SHELF_LABEL[s].plural}
                 </Chip>
@@ -566,7 +569,7 @@ export function Discover() {
         {variant === 'bottom_dock' && (
           <div className="flex items-center justify-center mb-2.5 px-1">
             <div className="flex items-center gap-1 bg-surface/90 backdrop-blur-md p-1 rounded-full border border-line shadow-lg max-w-full overflow-x-auto no-scrollbar">
-              {ACTIVE_SHELVES.map((s) => {
+              {myShelves.map((s) => {
                 const active = s === shelf
                 return (
                   <button
@@ -635,7 +638,7 @@ export function Discover() {
           <div className="space-y-3">
             <h3 className="text-title text-ink font-bold">Elige qué descubrir</h3>
             <div className="space-y-1.5">
-              {ACTIVE_SHELVES.map((s) => {
+              {myShelves.map((s) => {
                 const isCurrent = s === shelf
                 const count = itemsOfType(s).filter((i) => !entries[i.id]).length
                 return (

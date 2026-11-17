@@ -3,6 +3,7 @@ import {
   getItem,
   ACTIVE_SHELVES,
   SHELF_LABEL,
+  byGender,
   type Item,
   type ShelfType,
   type UserEntry,
@@ -472,7 +473,7 @@ export function CompareSession() {
         {summary && moves ? (
           <div className="flex-1 min-h-0 flex flex-col pop">
             <div className="flex-1 min-h-0 overflow-y-auto space-y-4">
-              <MoveList title="Nuevas en tu ranking" type="added" rows={moves.added} />
+              <MoveList title={byGender(shelf, 'Nuevas en tu ranking', 'Nuevos en tu ranking')} type="added" rows={moves.added} />
               <MoveList title="Han subido" type="up" rows={moves.up} />
               <MoveList title="Han bajado" type="down" rows={moves.down} />
               <MoveList title="Confirmadas en su puesto" type="kept" rows={moves.kept} />
@@ -517,7 +518,7 @@ export function CompareSession() {
         ) : emptyState === 'complete' ? (
           <div className="flex-1 flex flex-col items-center justify-center text-center gap-3 px-5">
             <h2 className="text-title text-ink">
-              Has comparado todas tus {SHELF_LABEL[shelf].plural.toLowerCase()} entre sí
+              Has comparado {byGender(shelf, 'todas', 'todos')} tus {SHELF_LABEL[shelf].plural.toLowerCase()} entre sí
             </h2>
             <p className="text-mute text-body max-w-sm">
               Cuando marques más, seguimos ordenando.

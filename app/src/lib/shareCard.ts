@@ -37,8 +37,8 @@ export async function generateShareCard({
 
   // 1. Fondo oscuro cálido con degradado sutil
   const bgGrad = ctx.createRadialGradient(540, 400, 100, 540, 960, 1200)
-  bgGrad.addColorStop(0, '#1A1816')
-  bgGrad.addColorStop(0.6, '#100E0C')
+  bgGrad.addColorStop(0, '#2A2620')
+  bgGrad.addColorStop(0.6, '#1E1B17')
   bgGrad.addColorStop(1, '#0A0908')
   ctx.fillStyle = bgGrad
   ctx.fillRect(0, 0, 1080, 1920)
@@ -138,7 +138,7 @@ export async function generateShareCard({
     }
 
     if (!drewPoster) {
-      ctx.fillStyle = '#25221F'
+      ctx.fillStyle = '#36312A'
       ctx.beginPath()
       ctx.roundRect(posterX, posterY, posterW, posterH, 14)
       ctx.fill()

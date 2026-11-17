@@ -4,6 +4,7 @@ import {
   ACTIVE_SHELVES,
   SHELVES,
   SHELF_LABEL,
+  byGender,
   type ShelfType,
   type Item,
   type ShelfOverview,
@@ -259,7 +260,7 @@ export function CompareHome() {
                         </span>
                       </div>
                       <span className="text-meta text-mute">
-                        {o.sinOrdenar > 0 ? `${o.sinOrdenar} ${o.sinOrdenar === 1 ? 'nueva' : 'nuevas'}` : 'todo en su sitio'}
+                        {o.sinOrdenar > 0 ? `${o.sinOrdenar} ${o.sinOrdenar === 1 ? byGender(s, 'nueva', 'nuevo') : byGender(s, 'nuevas', 'nuevos')}` : 'todo en su sitio'}
                       </span>
                     </div>
 

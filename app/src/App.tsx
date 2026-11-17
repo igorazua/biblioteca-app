@@ -11,7 +11,7 @@ import { useStore } from './store/useStore'
 import { useAuth } from './store/useAuth'
 import { useFriends } from './store/useFriends'
 import { useCatalog } from './store/useCatalog'
-import { pullCloudEntries, pushLocalEntriesToCloud, initStoreSync } from './lib/sync'
+import { pullCloudEntries, pushLocalEntriesToCloud, pullCloudDuels, pushLocalDuelsToCloud, initStoreSync } from './lib/sync'
 import { Library } from './screens/Library'
 
 // Rutas secundarias cargadas de forma diferida para mantener el bundle inicial < 300 KB
@@ -132,15 +132,18 @@ export function App() {
       const localCount = Object.keys(useStore.getState().entries).length
       const syncKey = `biblio_synced_${user.id}`
       if (localCount > 0 && !localStorage.getItem(syncKey)) {
-        pushLocalEntriesToCloud(user.id).then((pushed) => {
+        ;(async () => {
+          const pushed = await pushLocalEntriesToCloud(user.id)
+          await pushLocalDuelsToCloud(user.id) // B3: también los duelos hechos sin cuenta
           localStorage.setItem(syncKey, '1')
           if (pushed > 0) {
             setSyncToast(`Hemos guardado tus ${pushed} obras en tu cuenta`)
           }
-          pullCloudEntries(user.id)
-        })
+          await pullCloudEntries(user.id)
+          await pullCloudDuels(user.id)
+        })().catch((e) => console.warn('Error al sincronizar con la nube:', e))
       } else {
-        pullCloudEntries(user.id)
+        pullCloudEntries(user.id).then(() => pullCloudDuels(user.id)).catch((e) => console.warn('Error al sincronizar con la nube:', e))
       }
       useFriends.getState().loadFriends()
     }

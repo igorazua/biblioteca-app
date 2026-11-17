@@ -577,6 +577,7 @@ export function Onboarding() {
                     type="button"
                     onClick={() => {
                       haptic('tap')
+                      useStore.getState().setSettings({ shelves: selectedShelves })
                       finish(true, '/importar')
                     }}
                     className="w-full min-h-[48px] rounded-2xl bg-surface2 border border-line text-sm font-semibold flex items-center justify-center gap-2 active:scale-[0.98] transition-transform text-ink"
@@ -665,6 +666,7 @@ export function Onboarding() {
                     type="button"
                     onClick={() => {
                       haptic('tap')
+                      useStore.getState().setSettings({ shelves: selectedShelves })
                       finish(false)
                     }}
                     className="w-full min-h-[48px] rounded-2xl bg-accent text-accent-ink font-semibold text-sm tracking-wide active:scale-[0.98] transition-transform"

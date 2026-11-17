@@ -29,6 +29,7 @@ import {
   ACTIVE_SHELVES,
   SHELVES,
   SHELF_LABEL,
+  byGender,
   type Friend,
   type Item,
   type ShelfType,
@@ -472,6 +473,15 @@ export function WhatToWatch() {
     }
   }
 
+  // B3: marca que ya has usado Decidir (la PWA leía `biblio_used_decide` en Biblioteca y Descubrir pero nunca lo escribía)
+  useEffect(() => {
+    if (phase === 'propose') {
+      try {
+        localStorage.setItem('biblio_used_decide', '1')
+      } catch {}
+    }
+  }, [phase])
+
   const handleAccept = () => {
     const currentItem = proposal?.item ?? (current ? getItem(current) : null)
     if (currentItem && shelf) {
@@ -719,7 +729,7 @@ export function WhatToWatch() {
     header = (
       <ScreenTitle
         label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`}
-        title="Te propongo esta"
+        title={`Te propongo ${shelfTerms.fem ? 'esta' : 'este'}`}
         action={
           <Button variant="text" onClick={reset}>
             Reiniciar
@@ -747,7 +757,7 @@ export function WhatToWatch() {
         </Link>
         {!!proposal?.alternatives?.length && (
           <button onClick={() => setShowAlts(true)} className="self-center mt-3 min-h-[36px] px-3 text-meta text-accent font-medium flex items-center gap-1 active:opacity-70">
-            Ver otras {proposal.alternatives.length} candidatas <Icon name="chevron" size={14} />
+            {shelfTerms.fem ? `Ver otras ${proposal.alternatives.length} candidatas` : `Ver otros ${proposal.alternatives.length} candidatos`} <Icon name="chevron" size={14} />
           </button>
         )}
         <div className="flex gap-3 mt-2">
@@ -755,7 +765,7 @@ export function WhatToWatch() {
             Seguir buscando
           </Button>
           <Button variant="primary" onClick={handleAccept} className="flex-[1.2]">
-            ¡Esta!
+            {shelfTerms.fem ? '¡Esta!' : '¡Este!'}
           </Button>
         </div>
       </div>
@@ -791,7 +801,7 @@ export function WhatToWatch() {
     header = (
       <ScreenTitle
         label="DECIDIR"
-        title="Se acabaron las candidatas"
+        title={shelfTerms.fem ? 'Se acabaron las candidatas' : 'Se acabaron los candidatos'}
         subtitle="Prueba con otras respuestas, o guarda más pendientes en Descubrir."
       />
     )
@@ -814,16 +824,16 @@ export function WhatToWatch() {
       {rating && <RatingFlow key={rating} itemId={rating} withStars onDone={(m) => { setRating(null); if (m) setToast(m); reset() }} />}
       <AnimatePresence>{toast && <Toast key={toast} message={toast} onDone={() => setToast(null)} />}</AnimatePresence>
       {showAlts && proposal?.alternatives && (
-        <Sheet label="Otras candidatas" onClose={() => setShowAlts(false)} height="70%">
-          <h3 className="text-title text-ink">Otras candidatas</h3>
-          <p className="text-meta mb-3">Por orden, según lo que has elegido. Toca una para que sea la propuesta.</p>
+        <Sheet label={shelfTerms.fem ? 'Otras candidatas' : 'Otros candidatos'} onClose={() => setShowAlts(false)} height="70%">
+          <h3 className="text-title text-ink">{shelfTerms.fem ? 'Otras candidatas' : 'Otros candidatos'}</h3>
+          <p className="text-meta mb-3">Por orden, según lo que has elegido. Toca {shelfTerms.fem ? 'una' : 'uno'} para que sea la propuesta.</p>
           <ul className="space-y-1 overflow-y-auto -mx-2" style={{ maxHeight: '56vh' }}>
             {proposal.alternatives.map((it, i) => (
               <li key={it.id}>
                 <button
                   onClick={() => {
                     const rest = [proposal.item, ...proposal.alternatives!.filter((x) => x.id !== it.id)]
-                    setProposal({ ...proposal, item: it, reasons: ['Elegida de tus otras candidatas'], alternatives: rest })
+                    setProposal({ ...proposal, item: it, reasons: [shelfTerms.fem ? 'Elegida de tus otras candidatas' : 'Elegido de tus otros candidatos'], alternatives: rest })
                     setCurrent(it.id)
                     setShowAlts(false)
                   }}

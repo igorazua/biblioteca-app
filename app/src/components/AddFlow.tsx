@@ -1,5 +1,5 @@
 import { userLang } from '../lib/userLang'
-import { friends, itemsOfType, nextCards, ACTIVE_SHELVES, SHELVES, SHELF_LABEL, type Item, type ShelfType } from '@biblioteca/core'
+import { friends, itemsOfType, nextCards, ACTIVE_SHELVES, SHELVES, SHELF_LABEL, byGender, type Item, type ShelfType } from '@biblioteca/core'
 import { cleanDisplayTitle, isDjOrGarbageVersion, slugify } from '@biblioteca/core/src/lib/cleanTitle'
 import { displayTitle, searchTitles } from '@biblioteca/core/src/lib/locale'
 import { posterBox } from '@biblioteca/core/src/lib/posterShape'
@@ -406,7 +406,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
                             <button
                               onClick={() => {
                                 setStatus(it.id, 'pending')
-                                onClose('Guardada en pendientes ✓')
+                                onClose(byGender(it.type, 'Guardada en pendientes ✓', 'Guardado en pendientes ✓'))
                               }}
                               className="flex-1 min-h-[46px] rounded-xl bg-surface2 border border-line font-semibold text-sm"
                             >

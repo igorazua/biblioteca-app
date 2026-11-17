@@ -1,5 +1,5 @@
 import { userLang } from '../lib/userLang'
-import { getItem, SHELF_LABEL, type Stars } from '@biblioteca/core'
+import { getItem, SHELF_LABEL, byGender, type Stars } from '@biblioteca/core'
 import { displayTitle } from '@biblioteca/core/src/lib/locale'
 import { posterBox, posterRadius } from '@biblioteca/core/src/lib/posterShape'
 import { useRef, useState } from 'react'
@@ -37,7 +37,7 @@ export function RatingFlow({ itemId, onDone, withStars }: { itemId: string; onDo
       if (stars && !entry?.ranked) placeProvisional(itemId)
     } else rate(itemId, { comment })
     if (stars || comment) haptic('success')
-    onDone('Guardada ✓')
+    onDone(byGender(item.type, 'Guardada ✓', 'Guardado ✓'))
   }
 
   return (
