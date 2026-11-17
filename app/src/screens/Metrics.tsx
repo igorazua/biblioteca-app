@@ -60,7 +60,7 @@ export function Metrics() {
   return (
     <div className="h-full flex flex-col bg-bg text-white overflow-y-auto">
       {/* Header */}
-      <div className="safe-top px-4 pb-3 pt-2 shrink-0 border-b border-line flex items-center justify-between">
+      <div className="safe-top px-4 pb-3 pt-2 shrink-0 border-b border-line flex items-center justify-between lg:px-8 xl:px-12">
         <div className="flex items-center gap-3">
           <button
             onClick={() => nav('/perfil')}
@@ -96,7 +96,7 @@ export function Metrics() {
       </div>
 
       {/* Filtros */}
-      <div className="px-4 py-3 border-b border-line/60 space-y-2 bg-surface/50">
+      <div className="px-4 py-3 border-b border-line/60 space-y-2 bg-surface/50 lg:px-8 xl:px-12">
         <div className="flex items-center gap-2 overflow-x-auto no-scrollbar">
           <span className="text-xs text-mute shrink-0">Estantería:</span>
           <Chip active={selectedShelf === 'all'} onClick={() => setSelectedShelf('all')}>
@@ -123,7 +123,7 @@ export function Metrics() {
       </div>
 
       {/* Contenido KPIs */}
-      <div className="p-4 space-y-6">
+      <div className="p-4 space-y-6 lg:px-8 lg:py-6 xl:px-12">
         {/* KPI 1: Descubrir */}
         <section className="space-y-3">
           <div className="flex items-center justify-between">
