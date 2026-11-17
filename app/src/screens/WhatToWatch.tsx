@@ -36,7 +36,8 @@ import {
 } from '@biblioteca/core'
 import { displayTitle } from '@biblioteca/core/src/lib/locale'
 import { posterBox, posterRadius } from '@biblioteca/core/src/lib/posterShape'
-import { ensureShelfCatalog, ensureShelfEngine } from '../data/loadData'
+import { ensureShelfCatalog, ensureShelfEngine, useSongsLoaded } from '../data/loadData'
+import { useCatalog } from '../store/useCatalog'
 import { startDecide, skipDecide } from '../lib/decideMemory'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate, useSearchParams } from 'react-router-dom'
@@ -201,19 +202,37 @@ export function WhatToWatch() {
   }, [entries, shelf])
 
   // Portadas del fondo de cada tarjeta de respuesta: tus mejores vistas, tus guardadas o las más conocidas que no tienes
+  // Solo obras con póster. Si faltan propias, se completa hasta 3 con las más conocidas de la estantería.
+  // Se recalcula al cargar el catálogo de la estantería (catalogVersion) y las canciones (songsLoaded).
+  const catalogVersion = useCatalog((s) => s.version)
+  const songsLoaded = useSongsLoaded()
   const art = useMemo<Record<OptionArt, Item[]>>(() => {
     const out: Record<OptionArt, Item[]> = { seen: [], pending: [], new: [] }
     if (!shelf) return out
+    const withPoster = (id: string) => {
+      const it = getItem(id)
+      return it && !it.hidden && it.type === shelf && it.posterUrl ? it : null
+    }
+    const popular = items.filter((it) => it.type === shelf && !it.hidden && it.posterUrl).sort((a, b) => b.popularity - a.popularity)
+    const complete = (own: Item[]) => {
+      const res = own.slice(0, 3)
+      for (const it of popular) {
+        if (res.length >= 3) break
+        if (!res.some((r) => r.id === it.id)) res.push(it)
+      }
+      return res
+    }
     const mine = Object.values(entries).filter((e) => getItem(e.itemId)?.type === shelf)
     const ranked = (rankings[shelf] ?? []).filter((id) => entries[id]?.status === 'seen')
-    out.seen = [...ranked, ...mine.filter((e) => e.status === 'seen' && !ranked.includes(e.itemId)).map((e) => e.itemId)]
-      .slice(0, 3).map(getItem).filter(Boolean) as Item[]
-    out.pending = mine.filter((e) => e.status === 'pending').sort((a, b) => b.updatedAt - a.updatedAt)
-      .slice(0, 3).map((e) => getItem(e.itemId)).filter(Boolean) as Item[]
-    out.new = items.filter((it) => it.type === shelf && !it.hidden && !entries[it.id] && it.posterUrl)
-      .sort((a, b) => b.popularity - a.popularity).slice(0, 3)
+    const seenIds = [...ranked, ...mine.filter((e) => e.status === 'seen' && !ranked.includes(e.itemId)).map((e) => e.itemId)]
+    out.seen = complete(seenIds.map(withPoster).filter(Boolean) as Item[])
+    out.pending = complete(
+      mine.filter((e) => e.status === 'pending').sort((a, b) => b.updatedAt - a.updatedAt).map((e) => withPoster(e.itemId)).filter(Boolean) as Item[],
+    )
+    out.new = popular.filter((it) => !entries[it.id]).slice(0, 3)
     return out
-  }, [entries, rankings, shelf])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [entries, rankings, shelf, catalogVersion, songsLoaded])
 
   // los vectores de contenido de la estantería (cercanía entre obras): se cargan mientras responde las preguntas
   useEffect(() => {
