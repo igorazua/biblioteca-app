@@ -123,7 +123,7 @@ export function Metrics() {
       </div>
 
       {/* Contenido KPIs */}
-      <div className="p-4 space-y-6 lg:px-8 lg:py-6 xl:px-12">
+      <div className="p-4 space-y-6 lg:px-8 lg:py-6 xl:px-12 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-6 lg:items-start lg:max-w-content lg:mx-auto lg:w-full">
         {/* KPI 1: Descubrir */}
         <section className="space-y-3">
           <div className="flex items-center justify-between">
@@ -131,7 +131,7 @@ export function Metrics() {
             <span className="text-xs text-mute">{kpis.deck.totalSwipes} swipes</span>
           </div>
 
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-2 lg:grid-cols-3">
             <KpiCard label="Acierto primeras 20" value={`${kpis.deck.first20Accuracy}%`} sub="Tarjetas marcadas vistas" />
             <KpiCard label="AUC de R" value={`${kpis.deck.aucR}`} sub="Discriminación de R vs 'la vi'" />
             <KpiCard label="Tasa de guardado" value={`${kpis.deck.discoveryRate}%`} sub="Añadidas a pendientes (arriba)" />
@@ -163,13 +163,13 @@ export function Metrics() {
         </section>
 
         {/* KPI 2: Decidir */}
-        <section className="space-y-3">
+        <section className="space-y-3 lg:col-start-2 lg:row-start-1 lg:row-span-2">
           <div className="flex items-center justify-between">
             <h2 className="serif text-lg font-semibold text-accent">Decidir</h2>
             <span className="text-xs text-mute">{kpis.decide.totalSessions} sesiones</span>
           </div>
 
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-2 lg:grid-cols-3">
             <KpiCard label="Aceptación 1ª ronda" value={`${kpis.decide.firstRoundAcceptRate}%`} sub="Eligieron la primera propuesta" />
             <KpiCard label="Tasa de abandono" value={`${kpis.decide.abandonRate}%`} sub="Salieron sin elegir obra" />
             <KpiCard label="Duelos por sesión" value={`${kpis.decide.avgDuels}`} sub="Media hasta aceptar" />
