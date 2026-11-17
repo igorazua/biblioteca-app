@@ -52,6 +52,8 @@ import { Sheet, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { ScreenTitle } from '../components/ScreenTitle'
 import { Button } from '../components/Button'
+import { DetailTwoCol } from '../components/DetailTwoCol'
+import { useIsDesktop } from '../lib/useMediaQuery'
 
 export type Answers = Record<string, string | string[] | undefined>
 
@@ -83,10 +85,14 @@ const clearSnap = () => { try { localStorage.removeItem(SNAP_KEY) } catch { /* o
 
 const titleOf = (s: ShelfType) => (s === 'book' ? '¿Qué leo ahora?' : s === 'boardgame' ? '¿A qué jugamos hoy?' : s === 'artist' ? '¿Qué escucho hoy?' : '¿Qué vemos hoy?')
 
+/** Escritorio: el asistente va en una columna centrada de 640 px (DISENO_ESCRITORIO §3.6). Sin efecto por debajo de `lg:`. */
+const COL = 'lg:max-w-column lg:mx-auto lg:w-full'
+
 const DECIDE_SHELVES = ACTIVE_SHELVES.filter((s): s is Exclude<ShelfType, 'song'> => s !== 'song')
 
 export function WhatToWatch() {
   const nav = useNavigate()
+  const isDesktop = useIsDesktop()
   const [params] = useSearchParams()
   const t0 = params.get('t')
   const urlShelf = t0 && (DECIDE_SHELVES as string[]).includes(t0) ? (t0 as Exclude<ShelfType, 'song'>) : null
@@ -576,11 +582,12 @@ export function WhatToWatch() {
         label="DECIDIR"
         title="¿Por dónde tiramos hoy?"
         subtitle="Elige qué te apetece y te hago unas preguntas rápidas."
+        className={COL}
       />
     )
     body = (
       // con scroll y aire al final: en pantallas bajas la última tarjeta (Juegos de mesa) tiene que poder verse entera
-      <div className="flex-1 min-h-0 scroll-y flex flex-col px-5 pb-16 gap-3">
+      <div className={`flex-1 min-h-0 scroll-y flex flex-col px-5 pb-16 gap-3 ${COL}`}>
         {DECIDE_SHELVES.map((s, i) => {
           const cover = items.filter((it) => it.type === s).sort((a, b) => b.popularity - a.popularity).slice(0, 3)
           return (
@@ -590,7 +597,7 @@ export function WhatToWatch() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05, duration: 0.2 }}
               onClick={() => { setShelf(s); setAnswers({ platforms: profile.platforms }); setPhase('ask'); setQi(0) }}
-              className="relative flex-1 min-h-[110px] rounded-2xl overflow-hidden border border-line text-left active:scale-[0.985] transition-transform bg-surface"
+              className="relative flex-1 min-h-[110px] lg:flex-none lg:h-36 rounded-2xl overflow-hidden border border-line text-left active:scale-[0.985] transition-transform bg-surface hover-card"
             >
               <div className="absolute inset-0 grid grid-cols-3 gap-px opacity-30">
                 {cover.map((it) => <Poster key={it.id} item={it} showTitle={false} className="w-full h-full" />)}
@@ -616,6 +623,7 @@ export function WhatToWatch() {
         label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`}
         step={{ current: qi + 1, total: questions.length }}
         title={q?.q || 'Pregunta'}
+        className={COL}
         action={
           <Button variant="text" onClick={reset}>
             Reiniciar
@@ -624,7 +632,7 @@ export function WhatToWatch() {
       />
     )
     body = (
-      <div className="flex-1 min-h-0 flex flex-col px-5 pb-5">
+      <div className={`flex-1 min-h-0 flex flex-col px-5 pb-5 ${COL}`}>
         <AnimatePresence mode="wait">
           {q && (
             <motion.div
@@ -649,8 +657,8 @@ export function WhatToWatch() {
                   return (
                     <div className="flex-1 min-h-0 flex flex-col">
                       <div
-                        className={`flex-1 grid gap-3 ${main.length === 4 ? 'grid-cols-2' : 'grid-cols-1'}`}
-                        style={{ gridTemplateRows: `repeat(${main.length === 4 ? 2 : main.length}, minmax(96px, 1fr))` }}
+                        className={`flex-1 lg:flex-none grid gap-3 lg:grid-cols-2 lg:auto-rows-fr ${main.length === 4 ? 'grid-cols-2' : 'grid-cols-1'}`}
+                        style={isDesktop ? undefined : { gridTemplateRows: `repeat(${main.length === 4 ? 2 : main.length}, minmax(96px, 1fr))` }}
                       >
                         {main.map((o, i) => (
                           <ChoiceCard key={o.id} option={o} posters={o.art ? art[o.art] : []} selected={val === o.id} delay={i * 0.04} onClick={() => answer(q, o.id)} />
@@ -686,6 +694,7 @@ export function WhatToWatch() {
         label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`}
         step={{ current: duel.n + 1, total: Math.max(duel.of, duel.n + 1) }}
         title={duelPhase === 'coarse' ? '¿Por dónde tiramos hoy?' : 'Afinando el tiro'}
+        className={COL}
         action={
           <Button variant="text" onClick={reset}>
             Reiniciar
@@ -694,7 +703,7 @@ export function WhatToWatch() {
       />
     )
     body = (
-      <div className="flex-1 min-h-0 flex flex-col px-5 pb-6">
+      <div className={`flex-1 min-h-0 flex flex-col px-5 pb-6 ${COL}`}>
         <SwipePair
           left={shaperSide(pair[0])}
           right={shaperSide(pair[1])}
@@ -730,6 +739,7 @@ export function WhatToWatch() {
       <ScreenTitle
         label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`}
         title={`Te propongo ${shelfTerms.fem ? 'esta' : 'este'}`}
+        className="lg:px-gutter"
         action={
           <Button variant="text" onClick={reset}>
             Reiniciar
@@ -737,7 +747,61 @@ export function WhatToWatch() {
         }
       />
     )
-    body = (
+    const alts = proposal?.alternatives ?? []
+    const pickAlt = (it: Item) => {
+      if (!proposal) return
+      const rest = [proposal.item, ...alts.filter((x) => x.id !== it.id)]
+      setProposal({ ...proposal, item: it, reasons: [shelfTerms.fem ? 'Elegida de tus otras candidatas' : 'Elegido de tus otros candidatos'], alternatives: rest })
+      setCurrent(it.id)
+    }
+    // Escritorio (§3.6): el resultado con la maquetación de la ficha (póster a la izquierda, motivos y acciones a la derecha)
+    // y las otras candidatas a la vista, en una fila de pósteres bajo el resultado. En móvil, el diseño de siempre.
+    body = isDesktop ? (
+      <div className="flex-1 min-h-0 scroll-y pb-16">
+        <DetailTwoCol
+          poster={
+            <Link to={`/i/${encodeURIComponent(currentItem.id)}`} key={currentItem.id} className="block">
+              <Poster item={currentItem} showTitle={false} layoutId={posterLayoutId(currentItem.id)} style={{ borderRadius: posterRadius(currentItem.type, 16), ...posterBox(currentItem).style }} className={`w-full ${posterBox(currentItem).className} rounded-2xl border border-line`} />
+            </Link>
+          }
+        >
+          <div>
+            <div className="text-label text-mute">
+              {typeName(currentItem.type)} · {currentItem.year} · {itemFacts(currentItem)}
+            </div>
+            <h2 className="text-title text-ink mt-1">{displayTitle(currentItem, userLang())}</h2>
+            <p className="text-meta mt-1">{currentItem.creator}</p>
+            <p className="text-meta text-accent mt-3 font-medium">{reasonsText}</p>
+            <p className="text-body text-mute mt-3 max-w-prose">{currentItem.synopsis}</p>
+            <div className="flex gap-3 mt-6 max-w-md">
+              <Button variant="secondary" onClick={seguir} className="flex-1">
+                Seguir buscando
+              </Button>
+              <Button variant="primary" onClick={handleAccept} className="flex-[1.2]">
+                {shelfTerms.fem ? '¡Esta!' : '¡Este!'}
+              </Button>
+            </div>
+          </div>
+          {alts.length > 0 && (
+            <section aria-label={shelfTerms.fem ? 'Otras candidatas' : 'Otros candidatos'}>
+              <h3 className="text-title text-ink">{shelfTerms.fem ? 'Otras candidatas' : 'Otros candidatos'}</h3>
+              <p className="text-meta mb-3">Por orden, según lo que has elegido. Elige {shelfTerms.fem ? 'una' : 'uno'} para que sea la propuesta.</p>
+              <ul className="grid grid-cols-4 gap-4">
+                {alts.slice(0, 4).map((it) => (
+                  <li key={it.id} className="min-w-0">
+                    <button type="button" onClick={() => pickAlt(it)} className="block w-full text-left hover-lift">
+                      <Poster item={it} showTitle={false} style={{ borderRadius: posterRadius(it.type, 12), ...posterBox(it).style }} className={`w-full ${posterBox(it).className} rounded-xl border border-line`} />
+                      <span className="block serif text-item text-ink truncate mt-2">{displayTitle(it, userLang())}</span>
+                      <span className="block text-meta truncate">{it.year} · {it.creator}</span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+        </DetailTwoCol>
+      </div>
+    ) : (
       <div className="flex-1 min-h-0 flex flex-col px-5 pb-6">
         <Link
           to={`/i/${encodeURIComponent(currentItem.id)}`}
@@ -777,10 +841,11 @@ export function WhatToWatch() {
         label={`DECIDIR · ${shelfTerms.plural.toUpperCase()}`}
         title={shelf === 'book' ? 'A leer' : shelf === 'boardgame' ? 'A jugar' : shelf === 'artist' ? 'A escuchar' : 'A disfrutar'}
         subtitle={displayTitle(currentItem, userLang())}
+        className={COL}
       />
     )
     body = (
-      <div className="flex-1 min-h-0 flex flex-col items-center justify-center px-6 text-center gap-4">
+      <div className={`flex-1 min-h-0 flex flex-col items-center justify-center px-6 text-center gap-4 ${COL}`}>
         <Poster item={currentItem} style={{ borderRadius: posterRadius(currentItem.type, 16), ...posterBox(currentItem).style }} className={`w-36 ${posterBox(currentItem).className} rounded-2xl border border-line`} />
         <div className="flex flex-col gap-2.5 w-full max-w-xs mt-2">
           {!isBook && plat && (
@@ -803,10 +868,11 @@ export function WhatToWatch() {
         label="DECIDIR"
         title={shelfTerms.fem ? 'Se acabaron las candidatas' : 'Se acabaron los candidatos'}
         subtitle="Prueba con otras respuestas, o guarda más pendientes en Descubrir."
+        className={COL}
       />
     )
     body = (
-      <div className="flex-1 flex flex-col items-center justify-center text-center px-6 gap-3">
+      <div className={`flex-1 flex flex-col items-center justify-center text-center px-6 gap-3 ${COL}`}>
         <Button variant="primary" onClick={reset}>
           Empezar de nuevo
         </Button>
@@ -865,7 +931,7 @@ function ChoiceCard({ option, posters, selected, delay, onClick }: { option: Opt
       transition={{ delay, duration: 0.2 }}
       onClick={onClick}
       aria-pressed={selected}
-      className={`relative min-h-[96px] rounded-2xl overflow-hidden border text-left bg-surface active:scale-[0.985] transition-transform ${selected ? 'border-accent' : 'border-line'}`}
+      className={`relative min-h-[96px] lg:min-h-40 rounded-2xl overflow-hidden border text-left bg-surface hover-card active:scale-[0.985] transition-transform ${selected ? 'border-accent' : 'border-line'}`}
     >
       {posters.length > 0 && (
         <>
