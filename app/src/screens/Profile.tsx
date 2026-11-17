@@ -129,6 +129,7 @@ export function Profile() {
     <div className="h-full scroll-y pb-8 bg-bg">
       <ScreenTitle
         label="PERFIL"
+        className="lg:px-8 xl:px-12"
         title={unnamed ? 'Tu perfil' : profile.name}
         subtitle={[authProfile?.handle ? `@${authProfile.handle}` : null, place ?? null].filter(Boolean).join(' · ')}
         action={
@@ -138,7 +139,8 @@ export function Profile() {
         }
       />
 
-      <div className="px-5 space-y-7">
+      <div className="px-5 space-y-7 lg:px-8 xl:px-12 lg:grid lg:grid-cols-12 lg:gap-8 lg:items-start lg:space-y-0">
+        <div className="space-y-7 lg:col-span-8">
         {/* Cabecera: foto y contadores */}
         <div>
           <div className="flex items-center gap-4">
@@ -280,6 +282,31 @@ export function Profile() {
             </div>
           )}
         </section>
+        </div>
+
+        {/* Columna de accesos (solo escritorio) */}
+        <aside aria-label="Accesos" className="hidden lg:block lg:col-span-4 lg:sticky lg:top-6">
+          <div className="bg-surface rounded-3xl border border-line p-3">
+            <div className="label-caps text-mute px-3 pt-2 pb-2">Cuenta</div>
+            <Link to="/ajustes" className="hover-row flex items-center justify-between rounded-xl px-3 py-2.5 text-body text-ink">
+              Ajustes <Icon name="chevron" size={14} className="text-mute" />
+            </Link>
+            <Link to="/conectar" className="hover-row flex items-center justify-between rounded-xl px-3 py-2.5 text-body text-ink">
+              Conectar apps <Icon name="chevron" size={14} className="text-mute" />
+            </Link>
+            <Link to="/importar" className="hover-row flex items-center justify-between rounded-xl px-3 py-2.5 text-body text-ink">
+              Importar <Icon name="chevron" size={14} className="text-mute" />
+            </Link>
+            <Link to="/metricas" className="hover-row flex items-center justify-between rounded-xl px-3 py-2.5 text-body text-ink">
+              Métricas <Icon name="chevron" size={14} className="text-mute" />
+            </Link>
+            <div className="px-3 pt-3 pb-1">
+              <Button variant="secondary" onClick={() => setShareOpen(true)} className="w-full" icon={<Icon name="share" size={16} />}>
+                Compartir perfil
+              </Button>
+            </div>
+          </div>
+        </aside>
       </div>
 
       {shareOpen && (
