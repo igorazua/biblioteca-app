@@ -6,6 +6,17 @@
   "installCommand": "npm install",
   "rewrites": [
     {
+      "source": "/(l|p|unete)/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": ".*([Ww]hats[Aa]pp|facebookexternalhit|[Ff]acebot|[Tt]witterbot|[Tt]elegram[Bb]ot|[Ll]inked[Ii]n[Bb]ot|[Ss]lackbot|[Dd]iscordbot|[Aa]pplebot|[Bb]ingbot|[Gg]ooglebot).*"
+        }
+      ],
+      "destination": "/api/og?path=/$1/$2"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
