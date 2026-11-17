@@ -126,13 +126,14 @@ export function Library() {
       </AnimatePresence>
 
       <div className="space-y-4">
+        <div className="space-y-4 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-4 lg:items-start lg:px-8 xl:px-12">
         {myShelves.map((t) => {
           const rk = rankings[t] ?? []
           const unranked = all.filter((e) => e.status === 'seen' && !e.ranked && getItem(e.itemId)?.type === t)
           const unrankedCount = unranked.length
           const pendingCount = all.filter((e) => e.status === 'pending' && getItem(e.itemId)?.type === t).length
           return (
-            <section key={t} aria-label={SHELF_LABEL[t].plural} className="mx-4 rounded-3xl bg-surface border border-line pt-1 pb-4">
+            <section key={t} aria-label={SHELF_LABEL[t].plural} className="mx-4 lg:mx-0 rounded-3xl bg-surface border border-line pt-1 pb-4 lg:transition-colors lg:hover:bg-surface2 lg:[&:last-child:nth-child(odd)]:col-span-2">
               {/* toda la cabecera abre la estantería */}
               <Link to={`/estanteria/${t}`} className="flex items-center gap-2 px-4 min-h-[52px] active:opacity-70 transition-opacity">
                 <h2 className="text-title font-medium text-ink">{SHELF_LABEL[t].plural}</h2>
@@ -177,6 +178,7 @@ export function Library() {
             </section>
           )
         })}
+        </div>
 
         {LISTS_ENABLED && <section aria-label="Mis listas" className="pt-4">
           <div className="flex items-center justify-between px-5 mb-2.5 min-h-[44px]">
@@ -203,7 +205,7 @@ export function Library() {
           )}
         </section>}
 
-        <section className="px-5 space-y-3">
+        <section className="px-5 space-y-3 lg:px-8 xl:px-12">
           <button onClick={() => setVoting(true)} className="w-full text-left rounded-3xl bg-surface p-4 flex items-center gap-3 active:scale-[0.99] transition-transform">
             <span className="w-11 h-11 rounded-2xl bg-accent/15 text-accent flex items-center justify-center"><Icon name="heart" size={22} /></span>
             <span className="flex-1">
