@@ -19,6 +19,7 @@ import { useStore } from '../store/useStore'
 import { useCatalog } from '../store/useCatalog'
 import { Poster } from '../components/Poster'
 import { PublicHeader } from '../components/PublicHeader'
+import { PosterGrid } from '../components/PosterGrid'
 import { Avatar, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { Button } from '../components/Button'
@@ -178,7 +179,7 @@ export function PublicProfile() {
         return (
           <section key={t} className="mt-7">
             <h2 className="text-title font-medium text-ink mb-3">{SHELF_LABEL[t].plural}</h2>
-            <ol className="grid grid-cols-3 gap-3 lg:grid-cols-6 lg:gap-4">
+            <PosterGrid as="ol" fromLg cols={6} className="grid grid-cols-3 gap-3">
               {ids.map((id, i) => {
                 const it = getItem(id)
                 if (!it) return null
@@ -192,7 +193,7 @@ export function PublicProfile() {
                   </li>
                 )
               })}
-            </ol>
+            </PosterGrid>
           </section>
         )
       })}
