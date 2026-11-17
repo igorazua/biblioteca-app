@@ -9,7 +9,6 @@ import {
   SHELF_LABEL,
   decodeList,
   decodeProfile,
-  APP_NAME,
 } from '@biblioteca/core'
 import { displayTitle } from '@biblioteca/core/src/lib/locale'
 import { posterBox, posterRadius } from '@biblioteca/core/src/lib/posterShape'
@@ -19,6 +18,7 @@ import { AnimatePresence } from 'framer-motion'
 import { useStore } from '../store/useStore'
 import { useCatalog } from '../store/useCatalog'
 import { Poster } from '../components/Poster'
+import { PublicHeader } from '../components/PublicHeader'
 import { Avatar, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { Button } from '../components/Button'
@@ -27,11 +27,8 @@ import { Button } from '../components/Button'
 function PublicShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-full bg-bg text-ink">
-      <div className="mx-auto max-w-[480px] min-h-screen px-5 pt-[max(env(safe-area-inset-top),20px)] pb-32 relative">
-        <div className="flex items-center justify-between mb-6">
-          <span className="text-label text-accent">{APP_NAME}</span>
-          <Link to="/" className="text-meta text-mute hover:text-ink underline underline-offset-2">Abrir la app</Link>
-        </div>
+      <div className="mx-auto max-w-[480px] lg:max-w-4xl min-h-screen px-5 pt-[max(env(safe-area-inset-top),20px)] pb-32 relative">
+        <PublicHeader />
         {children}
       </div>
     </div>
@@ -105,7 +102,7 @@ export function PublicList() {
       {list.d && <p className="text-body text-mute mt-2">{list.d}</p>}
       <div className="text-meta text-mute mt-3">{ids.length} obra{ids.length !== 1 ? 's' : ''}{data.missing ? ` · ${data.missing} ya no está${data.missing > 1 ? 'n' : ''} en el catálogo` : ''}</div>
 
-      <ul className="mt-6 space-y-3">
+      <ul className="mt-6 space-y-3 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-4">
         {items.map(([id, note]) => {
           const it = getItem(id)
           if (!it) return null
@@ -142,7 +139,7 @@ export function PublicList() {
       </ul>
 
       <div className="fixed bottom-0 inset-x-0 p-4 bg-gradient-to-t from-bg via-bg/95 to-transparent">
-        <div className="mx-auto max-w-[480px]">
+        <div className="mx-auto max-w-[480px] lg:max-w-4xl">
           <Button variant="primary" onClick={() => save(ids)} className="w-full">Guardar toda la lista</Button>
         </div>
       </div>
@@ -181,7 +178,7 @@ export function PublicProfile() {
         return (
           <section key={t} className="mt-7">
             <h2 className="text-title font-medium text-ink mb-3">{SHELF_LABEL[t].plural}</h2>
-            <ol className="grid grid-cols-3 gap-3">
+            <ol className="grid grid-cols-3 gap-3 lg:grid-cols-6 lg:gap-4">
               {ids.map((id, i) => {
                 const it = getItem(id)
                 if (!it) return null
@@ -200,7 +197,7 @@ export function PublicProfile() {
         )
       })}
       <div className="fixed bottom-0 inset-x-0 p-4 bg-gradient-to-t from-bg via-bg/95 to-transparent">
-        <div className="mx-auto max-w-[480px]">
+        <div className="mx-auto max-w-[480px] lg:max-w-4xl">
           <Link to="/" className="w-full min-h-[48px] rounded-2xl bg-accent text-accent-ink font-medium text-base flex items-center justify-center">Crear mi biblioteca</Link>
         </div>
       </div>
