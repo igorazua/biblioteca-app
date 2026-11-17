@@ -1,6 +1,6 @@
 // app/src/components/DuelVariants.tsx
 // Diseño 3 (abanico) del duelo A/B: cartas que responden al gesto y póster entero (T19 §4.1).
-import { useEffect, useLayoutEffect, useRef, useState, type RefObject } from 'react'
+import { useEffect, useId, useLayoutEffect, useRef, useState, type RefObject } from 'react'
 import { animate, motion, useMotionValue, useReducedMotion, useTransform, type MotionValue } from 'framer-motion'
 import { haptic } from '../lib/haptics'
 import { duelCardSize, duelFitSize, type DuelFit } from '@biblioteca/core/src/lib/posterShape'
@@ -68,6 +68,28 @@ export const pickDelay = (reduce: boolean | null) => (reduce ? 600 : 1050)
 const FAST_DELAY = 450
 /** En Decidir, sin texto de confirmación: el borde iluminado basta (Igor, 23/10); un poco más de tiempo en pantalla (25/10). */
 const DECIDE_DELAY = 650
+
+// Borde del duelo ligado al arrastre (D33 de la nativa)
+const CARD_RADIUS = 18
+const RIM_W = 4 // grosor a tamaño final de carta, en px
+const RIM_PULSE_W = 6 // grosor del pulso al confirmar
+const RIM_INSET = 0.5 // la línea central del trazo va medio píxel dentro del canto
+const RIM_CLOSE_MS = 140 // lo que tarda en completarse el borde al confirmar
+const RIM_PULSE_UP_S = 0.11
+const RIM_PULSE_DOWN_S = 0.19
+const FLASH_TAIL = 0.16
+const FLASH_CORE = 0.06
+/** Degradado metálico: claro, tono, oscuro, tono, claro. Los tonos salen de una variable de color. */
+const metal = (v: string) => [
+  { at: 0, color: `color-mix(in srgb, ${v} 50%, white)` },
+  { at: 0.3, color: v },
+  { at: 0.56, color: `color-mix(in srgb, ${v} 55%, black)` },
+  { at: 0.8, color: v },
+  { at: 1, color: `color-mix(in srgb, ${v} 50%, white)` },
+]
+const RIM_STOPS = { a: metal('var(--color-accent)'), b: metal('var(--color-stamp-blue)') } // dorado a la izquierda, azul a la derecha
+const DONE_STOPS = metal('var(--color-stamp-green)')
+const DONE_FLASH = { core: 'color-mix(in srgb, var(--color-stamp-green) 10%, white)', tail: 'color-mix(in srgb, var(--color-stamp-green) 35%, white)' }
 
 /** «Gana *título*» con el título en cursiva serif. */
 export function Chosen({ texts, title }: { texts: DuelTexts; title: string }) {
@@ -343,6 +365,9 @@ export function DuelFan({ left, right, onChoose, onPick, texts, fast = false, sq
   const uiOp = useTransform(any, (v) => clamp01(1 - v * 1.7))
   const uiBlur = useTransform(any, (v) => `blur(${Math.min(1, v) * 9}px)`)
 
+  // duración del destello del borde: cabe entre que se completa y el cambio al siguiente duelo
+  const flashS = Math.max(0.18, ((fast ? FAST_DELAY : reduce ? pickDelay(reduce) : DECIDE_DELAY) - RIM_CLOSE_MS - 60) / 1000)
+
   const choose = (w: 'a' | 'b') => {
     if (picked) return
     touched.current = true
@@ -394,8 +419,8 @@ export function DuelFan({ left, right, onChoose, onPick, texts, fast = false, sq
       <FanBackdrop side={left} g={gA} />
       <FanBackdrop side={right} g={gB} />
 
-      <FanCard side={left} which="a" color="#F5B544" g={gA} og={gB} lay={lay} picked={picked} onTap={() => { if (!dragged.current) choose('a') }} />
-      <FanCard side={right} which="b" color="#9A86FF" g={gB} og={gA} lay={lay} picked={picked} onTap={() => { if (!dragged.current) choose('b') }} />
+      <FanCard side={left} which="a" flashS={flashS} reduce={!!reduce} g={gA} og={gB} lay={lay} picked={picked} onTap={() => { if (!dragged.current) choose('a') }} />
+      <FanCard side={right} which="b" flashS={flashS} reduce={!!reduce} g={gB} og={gA} lay={lay} picked={picked} onTap={() => { if (!dragged.current) choose('b') }} />
 
       {/* Títulos: texto liso bajo cada carta, que se desvanece al crecer la elegida */}
       {(['a', 'b'] as const).map((k) => {
@@ -432,7 +457,8 @@ function FanBackdrop({ side, g }: { side: Side; g: MotionValue<number> }) {
 function FanCard({
   side,
   which,
-  color,
+  flashS,
+  reduce,
   g,
   og,
   lay,
@@ -441,8 +467,8 @@ function FanCard({
 }: {
   side: Side
   which: 'a' | 'b'
-  /** color del borde que se ilumina al elegirla (DUEL_LEFT / DUEL_RIGHT de SwipePair.tsx) */
-  color: string
+  flashS: number
+  reduce: boolean
   g: MotionValue<number>
   og: MotionValue<number>
   lay: RefObject<FanLayout>
@@ -466,6 +492,65 @@ function FanCard({
   const opacity = useTransform(og, (v) => clamp01(1 - v * 1.15))
   const zIndex = useTransform(g, (v) => (v > 0.01 ? 4 : 2))
   const shadow = useTransform(g, (v) => `0 ${lerp(18, 6, v)}px ${lerp(36, 20, v)}px -10px rgba(0,0,0,${lerp(0.65, 0.4, v)})`)
+
+  // Borde ligado al arrastre. Se dibuja a tamaño final de carta y se encoge con la propia carta (mismo transform),
+  // así el grosor llega a RIM_W justo al completarse. El trazo sigue el contorno redondeado exacto.
+  const uid = useId().replace(/:/g, '')
+  const grown = card.fitW / card.w
+  const bw = card.w * grown
+  const bh = card.h * grown
+  const r = Math.max(0, CARD_RADIUS * grown - RIM_INSET)
+  const x0 = RIM_INSET
+  const y0 = RIM_INSET
+  const x1 = bw - RIM_INSET
+  const y1 = bh - RIM_INSET
+  const mx = bw / 2
+  // Empieza arriba en el centro y baja primero por el lado que mira al centro de la mesa (en espejo); termina por el exterior.
+  const d = isLeft
+    ? `M ${mx} ${y0} L ${x1 - r} ${y0} A ${r} ${r} 0 0 1 ${x1} ${y0 + r} L ${x1} ${y1 - r} A ${r} ${r} 0 0 1 ${x1 - r} ${y1} ` +
+      `L ${x0 + r} ${y1} A ${r} ${r} 0 0 1 ${x0} ${y1 - r} L ${x0} ${y0 + r} A ${r} ${r} 0 0 1 ${x0 + r} ${y0} L ${mx} ${y0}`
+    : `M ${mx} ${y0} L ${x0 + r} ${y0} A ${r} ${r} 0 0 0 ${x0} ${y0 + r} L ${x0} ${y1 - r} A ${r} ${r} 0 0 0 ${x0 + r} ${y1} ` +
+      `L ${x1 - r} ${y1} A ${r} ${r} 0 0 0 ${x1} ${y1 - r} L ${x1} ${y0 + r} A ${r} ${r} 0 0 0 ${x1 - r} ${y0} L ${mx} ${y0}`
+
+  const done = useMotionValue(0) // 0 … 1: el borde se completa y pasa a verde al confirmar
+  const flash = useMotionValue(0) // 0 … 1: recorrido del destello
+  const pulse = useMotionValue(0) // 0 … 1: el grosor sube y vuelve
+  useEffect(() => {
+    if (picked !== which) {
+      done.set(0)
+      flash.set(0)
+      pulse.set(0)
+      return
+    }
+    if (reduce) {
+      done.set(1) // borde verde completo, sin animación
+      return
+    }
+    const lag = RIM_CLOSE_MS / 1000
+    const up = RIM_PULSE_UP_S
+    const total = up + RIM_PULSE_DOWN_S
+    const c1 = animate(done, 1, { duration: lag, ease: 'easeOut' })
+    const c2 = animate(flash, 1, { duration: flashS, ease: 'easeInOut', delay: lag })
+    const c3 = animate(pulse, [0, 1, 0], { duration: total, times: [0, up / total, 1], ease: 'easeInOut', delay: lag })
+    return () => {
+      c1.stop()
+      c2.stop()
+      c3.stop()
+    }
+  }, [picked, which, reduce, flashS, done, flash, pulse])
+
+  // g llega a 1 justo en el umbral; con clic o teclado x se anima y el borde se dibuja durante esa animación
+  const prog = useTransform([g, done] as MotionValue<number>[], ([a, b]: number[]) => Math.max(a, b))
+  const greenW = useTransform(pulse, (v) => RIM_W + (RIM_PULSE_W - RIM_W) * v)
+  const flashing = (v: number) => (v > 0.001 && v < 0.999 ? 1 : 0)
+  const tailOff = useTransform(flash, (v) => -FLASH_TAIL + v * (1 + FLASH_TAIL))
+  const coreOff = useTransform(flash, (v) => -FLASH_CORE + v * (1 + FLASH_CORE))
+  const coreOp = useTransform(flash, flashing)
+  const tailOp = useTransform(flash, (v) => flashing(v) * 0.75)
+  const gradA = `rim-${uid}`
+  const gradDone = `rim-done-${uid}`
+  const stops = (list: { at: number; color: string }[]) => list.map((st) => <stop key={st.at} offset={st.at} style={{ stopColor: st.color }} />)
+  const grad = { gradientUnits: 'userSpaceOnUse' as const, x1: isLeft ? 0 : bw, y1: 0, x2: isLeft ? bw : 0, y2: bh }
 
   return (
     <motion.button
@@ -494,15 +579,29 @@ function FanCard({
       <div className="absolute inset-0 overflow-hidden [&_.blur-xl]:hidden" style={{ borderRadius: 'inherit' }}>
         {side.bg}
       </div>
-      {/* borde iluminado de la elegida: la confirmación del duelo */}
-      <motion.div
+      {/* borde metálico que se dibuja con el recorrido; al confirmar se completa, pasa a verde y le recorre un destello */}
+      <svg
         aria-hidden
-        className="absolute inset-0 pointer-events-none"
-        style={{ borderRadius: 'inherit', boxShadow: `0 0 0 2px ${color}, 0 0 10px 1px ${color}aa` }}
-        initial={false}
-        animate={{ opacity: picked === which ? 1 : 0 }}
-        transition={{ duration: 0.12 }}
-      />
+        className="absolute pointer-events-none"
+        width={bw}
+        height={bh}
+        viewBox={`0 0 ${bw} ${bh}`}
+        style={{ left: (card.w - bw) / 2, top: (card.h - bh) / 2, overflow: 'visible', transform: `scale(${1 / grown})` }}
+        fill="none"
+      >
+        <defs>
+          <linearGradient id={gradA} {...grad}>{stops(RIM_STOPS[which])}</linearGradient>
+          <linearGradient id={gradDone} {...grad}>{stops(DONE_STOPS)}</linearGradient>
+        </defs>
+        <motion.path d={d} pathLength={1} stroke={`url(#${gradA})`} strokeWidth={RIM_W} strokeLinejoin="round" style={{ pathLength: prog }} />
+        <motion.path d={d} pathLength={1} stroke={`url(#${gradDone})`} strokeLinejoin="round" style={{ opacity: done, strokeWidth: greenW }} />
+        {!reduce && (
+          <>
+            <motion.path d={d} pathLength={1} stroke={DONE_FLASH.tail} strokeWidth={RIM_PULSE_W} strokeLinecap="round" style={{ pathLength: FLASH_TAIL, pathOffset: tailOff, opacity: tailOp }} />
+            <motion.path d={d} pathLength={1} stroke={DONE_FLASH.core} strokeWidth={RIM_PULSE_W} strokeLinecap="round" style={{ pathLength: FLASH_CORE, pathOffset: coreOff, opacity: coreOp }} />
+          </>
+        )}
+      </svg>
     </motion.button>
   )
 }
