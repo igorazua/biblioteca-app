@@ -12,7 +12,7 @@ const TABS: { to: string; label: string; icon: IconName; center?: boolean; end?:
 
 export function TabBar() {
   return (
-    <nav className="shrink-0 glass border-t border-white/[0.06] safe-bottom relative z-30" aria-label="Navegación principal">
+    <nav className="lg:hidden shrink-0 glass border-t border-white/[0.06] safe-bottom relative z-30" aria-label="Navegación principal">
       <ul className="flex items-end justify-around px-1 pt-1.5 pb-1.5">
         {TABS.map((t) => (
           <li key={t.to} className="flex-1">

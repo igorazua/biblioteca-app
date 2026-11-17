@@ -31,7 +31,7 @@ export function UpdatePrompt() {
           exit={{ y: 50, opacity: 0 }}
           role="status"
           aria-live="polite"
-          className="fixed bottom-20 left-4 right-4 z-50 mx-auto max-w-sm rounded-2xl bg-ink px-4 py-3 text-bg shadow-2xl flex items-center justify-between gap-3 border border-white/10"
+          className="fixed bottom-20 left-4 right-4 z-50 mx-auto max-w-sm lg:bottom-6 lg:left-auto lg:right-6 lg:mx-0 lg:w-80 rounded-2xl bg-ink px-4 py-3 text-bg shadow-2xl flex items-center justify-between gap-3 border border-white/10"
         >
           <span className="text-sm font-medium">Hay una versión nueva</span>
           <div className="flex items-center gap-2">

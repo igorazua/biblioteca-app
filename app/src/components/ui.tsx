@@ -5,10 +5,11 @@ import { friendHits, getItem, type FriendHit, friendRanks, PLATFORMS, SHELF_LABE
 import { Icon } from './Icon'
 import { useAuth } from '../store/useAuth'
 import { haptic } from '../lib/haptics'
+import { useIsDesktop } from '../lib/useMediaQuery'
 
-/** Pinta superposiciones (hojas, diálogos) sobre todo el marco de móvil, barra de pestañas incluida. */
+/** Pinta superposiciones (hojas, diálogos) sobre toda la app, barra de pestañas incluida. */
 export function Portal({ children }: { children: ReactNode }) {
-  const host = typeof document !== 'undefined' ? (document.querySelector('.frame') as HTMLElement | null) : null
+  const host = typeof document !== 'undefined' ? (document.querySelector('[data-overlay-host]') as HTMLElement | null) : null
   return host ? createPortal(children, host) : <>{children}</>
 }
 
@@ -297,34 +298,83 @@ export function StarRating({ value, onChange, size = 40, readOnly }: { value?: n
   )
 }
 
-/** Hoja inferior con muelle. Cerrarla (fondo, arrastrar hacia abajo) llama siempre a `onClose`. */
+/**
+ * Hoja inferior con muelle. Cerrarla (fondo, arrastrar hacia abajo) llama siempre a `onClose`.
+ * En escritorio (>= 1024 px) es un diálogo centrado (DISENO_ESCRITORIO §3.11): sin asa ni arrastre,
+ * alto según el contenido (`height` se ignora), fundido + escala, Esc cierra y el foco queda dentro.
+ */
 export function Sheet({ children, onClose, height = '48%', label }: { children: ReactNode; onClose: () => void; height?: string; label: string }) {
+  const desktop = useIsDesktop()
   const y = useMotionValue(0)
   const closing = useRef(false)
+  const [leaving, setLeaving] = useState(false)
+  const panelRef = useRef<HTMLDivElement>(null)
   const close = () => {
     if (closing.current) return
     closing.current = true
-    animate(y, 520, { duration: 0.2, ease: 'easeIn' }).then(onClose)
+    if (desktop) {
+      setLeaving(true)
+      window.setTimeout(onClose, 150)
+    } else {
+      animate(y, 520, { duration: 0.2, ease: 'easeIn' }).then(onClose)
+    }
   }
+  const closeRef = useRef(close)
+  closeRef.current = close
+
+  // Escritorio: Esc cierra, el foco entra en el diálogo (Tab no sale de él) y vuelve a quien lo abrió
+  useEffect(() => {
+    if (!desktop) return
+    const opener = document.activeElement as HTMLElement | null
+    const panel = panelRef.current
+    panel?.focus({ preventScroll: true })
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { e.stopPropagation(); closeRef.current(); return }
+      if (e.key !== 'Tab' || !panel) return
+      const f = Array.from(panel.querySelectorAll<HTMLElement>('a[href],button:not(:disabled),input:not(:disabled),textarea:not(:disabled),select:not(:disabled),[tabindex]:not([tabindex="-1"])'))
+      if (f.length === 0) { e.preventDefault(); return }
+      const first = f[0], last = f[f.length - 1], cur = document.activeElement
+      if (e.shiftKey && (cur === first || cur === panel)) { e.preventDefault(); last.focus() }
+      else if (!e.shiftKey && cur === last) { e.preventDefault(); first.focus() }
+    }
+    document.addEventListener('keydown', onKey, true)
+    return () => { document.removeEventListener('keydown', onKey, true); opener?.focus?.({ preventScroll: true }) }
+  }, [desktop])
+
   return (
-    <Portal><div className="absolute inset-0 z-40" role="dialog" aria-modal="true" aria-label={label}>
-      <motion.div className="absolute inset-0 bg-black/60" initial={{ opacity: 0 }} animate={{ opacity: 1 }} onClick={close} />
-      <motion.div
-        className="absolute bottom-0 inset-x-0 bg-surface rounded-t-[24px] border-t border-line shadow-2xl flex flex-col"
-        style={{ y, minHeight: height, maxHeight: '88%', touchAction: 'none' }}
-        initial={{ y: 600 }}
-        animate={{ y: 0 }}
-        transition={{ type: 'spring', stiffness: 380, damping: 36 }}
-        drag="y"
-        dragConstraints={{ top: 0, bottom: 0 }}
-        dragElastic={{ top: 0, bottom: 0.6 }}
-        onDragEnd={(_, info) => { if (info.offset.y > 90 || info.velocity.y > 500) close(); else animate(y, 0, { type: 'spring', stiffness: 400, damping: 30 }) }}
-      >
-        <div className="mx-auto mt-3 mb-2 h-1.5 w-11 rounded-full bg-line shrink-0" />
-        <div className="px-5 pb-5 pt-2 flex-1 flex flex-col" style={{ touchAction: 'pan-y' }} onPointerDownCapture={(e) => { if ((e.target as HTMLElement).closest('textarea,input')) e.stopPropagation() }}>
-          {children}
-        </div>
-      </motion.div>
+    <Portal><div className={`absolute inset-0 z-40 ${desktop ? 'flex items-center justify-center p-8' : ''}`} role="dialog" aria-modal="true" aria-label={label}>
+      <motion.div className="absolute inset-0 bg-black/60" initial={{ opacity: 0 }} animate={{ opacity: leaving ? 0 : 1 }} transition={desktop ? { duration: 0.15 } : undefined} onClick={close} />
+      {desktop ? (
+        <motion.div
+          ref={panelRef}
+          tabIndex={-1}
+          className="relative w-full max-w-dialog max-h-[80dvh] overflow-y-auto scroll-y bg-surface rounded-3xl border border-line shadow-2xl flex flex-col outline-none"
+          initial={{ opacity: 0, scale: 0.98 }}
+          animate={{ opacity: leaving ? 0 : 1, scale: leaving ? 0.98 : 1 }}
+          transition={{ duration: 0.18, ease: 'easeOut' }}
+        >
+          <div className="px-6 py-6 flex-1 flex flex-col" onPointerDownCapture={(e) => { if ((e.target as HTMLElement).closest('textarea,input')) e.stopPropagation() }}>
+            {children}
+          </div>
+        </motion.div>
+      ) : (
+        <motion.div
+          className="absolute bottom-0 inset-x-0 md:max-w-column md:mx-auto bg-surface rounded-t-[24px] border-t border-line shadow-2xl flex flex-col"
+          style={{ y, minHeight: height, maxHeight: '88%', touchAction: 'none' }}
+          initial={{ y: 600 }}
+          animate={{ y: 0 }}
+          transition={{ type: 'spring', stiffness: 380, damping: 36 }}
+          drag="y"
+          dragConstraints={{ top: 0, bottom: 0 }}
+          dragElastic={{ top: 0, bottom: 0.6 }}
+          onDragEnd={(_, info) => { if (info.offset.y > 90 || info.velocity.y > 500) close(); else animate(y, 0, { type: 'spring', stiffness: 400, damping: 30 }) }}
+        >
+          <div className="mx-auto mt-3 mb-2 h-1.5 w-11 rounded-full bg-line shrink-0" />
+          <div className="px-5 pb-5 pt-2 flex-1 flex flex-col" style={{ touchAction: 'pan-y' }} onPointerDownCapture={(e) => { if ((e.target as HTMLElement).closest('textarea,input')) e.stopPropagation() }}>
+            {children}
+          </div>
+        </motion.div>
+      )}
     </div></Portal>
   )
 }
@@ -333,7 +383,7 @@ export function Toast({ message, onDone, ms = 1800 }: { message: string; onDone:
   useEffect(() => { const t = setTimeout(onDone, ms); return () => clearTimeout(t) }, [message, onDone, ms])
   return (
     <motion.div initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ opacity: 0 }}
-      className="absolute left-4 right-4 bottom-24 z-50 bg-ink text-bg rounded-2xl px-4 py-3 text-sm font-medium text-center shadow-xl" role="status">
+      className="absolute left-4 right-4 bottom-24 z-50 lg:fixed lg:left-auto lg:right-6 lg:bottom-6 lg:w-80 bg-ink text-bg rounded-2xl px-4 py-3 text-sm font-medium text-center shadow-xl" role="status">
       {message}
     </motion.div>
   )

@@ -4,6 +4,7 @@ import { prefetchEngines, prefetchShelfCatalogs, loadSongs } from './data/loadDa
 import { Navigate, Outlet, Route, Routes, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { TabBar } from './components/TabBar'
+import { AppShell, SkipLink } from './components/AppShell'
 import { Toast } from './components/ui'
 import { UpdatePrompt } from './components/UpdatePrompt'
 import { PushPrompt } from './components/PushPrompt'
@@ -39,10 +40,11 @@ function Frame() {
   const { pathname, search } = useLocation()
   if (!onboarded && pathname !== '/onboarding') return <Navigate to={`/onboarding?next=${encodeURIComponent(pathname + search)}`} replace />
   return (
-    <div className="desk-bg h-full w-full flex items-center justify-center">
-      <div className="frame">
-        <Suspense fallback={null}>
-          <Routes>
+    <div className="relative h-full w-full overflow-hidden bg-bg" data-overlay-host>
+      <SkipLink />
+      <Suspense fallback={null}>
+        <Routes>
+          <Route element={<AppShell />}>
             <Route element={<TabLayout />}>
               <Route index element={<Library />} />
               <Route path="descubrir" element={<Discover />} />
@@ -61,11 +63,12 @@ function Frame() {
             <Route path="ajustes" element={<Settings />} />
             <Route path="perfil/editar" element={<EditProfile />} />
             <Route path="metricas" element={<Metrics />} />
-            <Route path="onboarding" element={<Onboarding />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </Suspense>
-      </div>
+          </Route>
+          {/* Sin barra lateral: la persona aún no ha entrado */}
+          <Route path="onboarding" element={<div className="h-full w-full mx-auto md:max-w-column"><Onboarding /></div>} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Suspense>
     </div>
   )
 }
@@ -151,10 +154,8 @@ export function App() {
 
   if (!hasHydrated) {
     return (
-      <div className="desk-bg h-full w-full flex items-center justify-center">
-        <div className="frame flex flex-col items-center justify-center gap-3">
-          <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin" />
-        </div>
+      <div className="h-full w-full flex items-center justify-center bg-bg">
+        <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin" />
       </div>
     )
   }
