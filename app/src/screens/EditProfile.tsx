@@ -129,6 +129,7 @@ export function EditProfile() {
         label="PERFIL"
         title="Editar perfil"
         onBack={() => nav(-1)}
+        className="lg:px-8 xl:px-12 lg:max-w-xl lg:mx-auto"
         action={
           <button
             onClick={save}
@@ -140,7 +141,7 @@ export function EditProfile() {
         }
       />
 
-      <div className="px-5 space-y-6">
+      <div className="px-5 space-y-6 lg:px-8 xl:px-12 lg:max-w-xl lg:mx-auto">
         {/* Foto y color */}
         <div className="flex flex-col items-center gap-3 pt-1">
           <Avatar name={name || profile.name} color={color} url={profile.avatarUrl} size={96} />
