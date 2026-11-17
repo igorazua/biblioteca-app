@@ -154,7 +154,7 @@ export function CompareHome() {
         subtitle={subtitle}
       />
 
-      <div className="flex-1 min-h-0 overflow-y-auto px-5 pb-6">
+      <div className="flex-1 min-h-0 overflow-y-auto px-5 pb-6 lg:px-8 xl:px-12">
         {/* 2. El próximo duelo (24 px bajo el título) */}
         {pairItems && recShelf ? (
           <div className="mt-6 flex flex-col items-center">
@@ -215,7 +215,7 @@ export function CompareHome() {
             <div className="text-label text-mute">OTRAS ESTANTERÍAS</div>
             <div className="h-px bg-line mt-2.5" />
 
-            <div className="flex flex-col gap-5 mt-5">
+            <div className="flex flex-col gap-5 mt-5 lg:grid lg:grid-cols-3">
               {otherShelves.map((s, idx) => {
                 const o = overview.shelves[s]
                 const rk = rankings[s] ?? []
