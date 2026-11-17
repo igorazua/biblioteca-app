@@ -32,7 +32,7 @@ export function PosterTile({ item, size = 104, rank, faded }: { item?: Item | nu
       aria-label={`${rank ? `Nº ${rank}: ` : ''}${displayTitle(item, userLang())}`}
     >
       {rank !== undefined && <span className="rank-num absolute left-0 bottom-0 text-[86px] select-none" aria-hidden>{rank}</span>}
-      <div className={`relative ${faded ? 'opacity-55 saturate-50' : ''}`}>
+      <div className={`relative hover-lift ${faded ? 'opacity-55 saturate-50' : ''}`}>
         <Poster item={item} layoutId={posterLayoutId(item.id)} style={{ borderRadius: posterRadius(item.type, 10), ...posterBox(item).style }} className={`w-full ${posterBox(item).className} rounded-[10px]`} />
       </div>
     </Link>
