@@ -389,9 +389,9 @@ export function Toast({ message, onDone, ms = 1800 }: { message: string; onDone:
   )
 }
 
-export function ScreenHeader({ title, onBack, right }: { title: string; onBack?: () => void; right?: ReactNode }) {
+export function ScreenHeader({ title, onBack, right, className = '' }: { title: string; onBack?: () => void; right?: ReactNode; className?: string }) {
   return (
-    <div className="safe-top px-3 pb-2 flex items-center gap-1 shrink-0">
+    <div className={`safe-top px-3 pb-2 flex items-center gap-1 shrink-0 ${className}`}>
       {onBack && (
         <button onClick={onBack} aria-label="Volver" className="w-11 h-11 flex items-center justify-center rounded-full active:bg-surface2">
           <Icon name="back" />

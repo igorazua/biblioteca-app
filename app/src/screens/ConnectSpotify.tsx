@@ -36,7 +36,7 @@ export function ConnectSpotify() {
 
   return (
     <div className="h-full flex flex-col bg-bg text-ink scroll-y">
-      <ScreenHeader title="Spotify" onBack={() => nav('/conectar', { replace: true })} />
+      <ScreenHeader title="Spotify" onBack={() => nav('/conectar', { replace: true })} className="lg:max-w-column lg:mx-auto lg:w-full" />
       {error ? (
         <div className="flex-1 flex flex-col items-center justify-center text-center p-8 gap-4">
           <p className="text-sm text-mute max-w-xs leading-relaxed">{error}</p>
