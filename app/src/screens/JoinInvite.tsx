@@ -7,6 +7,7 @@ import { isMissingFunction } from '../lib/contacts'
 import { Avatar, Toast } from '../components/ui'
 import { Icon } from '../components/Icon'
 import { Button } from '../components/Button'
+import { PublicHeader } from '../components/PublicHeader'
 
 type InviteStatus = 'ok' | 'used' | 'expired' | 'missing'
 
@@ -85,7 +86,10 @@ export function JoinInvite() {
 
   return (
     <div className="h-full flex flex-col items-center justify-center p-6 bg-bg text-ink text-center">
-      <div className="w-full max-w-sm bg-surface border border-line rounded-2xl p-6 shadow-xl space-y-5">
+      <div className="hidden lg:block w-full max-w-4xl">
+        <PublicHeader />
+      </div>
+      <div className="w-full max-w-sm bg-surface border border-line rounded-2xl p-6 shadow-xl lg:shadow-lg space-y-5">
         <div className="flex justify-center">
           <Avatar name={creatorName} url={creatorAvatar} color="#F5B544" size={64} />
         </div>
