@@ -73,7 +73,7 @@ const SPREAD = 0.83
 /** cartas visibles en el mazo boca abajo */
 const DECK = 6
 /** escala de las cartas del mazo respecto a las de la pareja */
-const DECK_SCALE = 0.36
+const DECK_SCALE = 0.3
 const clamp01 = (v: number) => Math.max(0, Math.min(1, v))
 
 export function DuelReel() {
@@ -335,8 +335,9 @@ function Reel({ shelf }: { shelf: ShelfType }) {
   const cardW = Math.round(cardW0)
   const cardH = Math.round(cardW0 / ratio)
   const cy = Math.round(stageH / 2 + cardH * 0.08)
-  // el mazo asoma por encima de la pareja, pero su carta más alta nunca queda bajo la barra superior (top ≥ 72)
-  const deckY = -Math.round(Math.min(cardH * 0.56, 80 + cy - 72 - (cardH * DECK_SCALE) / 2 - (DECK - 1) * 7))
+  // el mazo va detrás de la pareja y solo asoma su mitad de arriba por encima de las cartas; su carta más alta nunca
+  // queda bajo la barra superior (top ≥ 72)
+  const deckY = -Math.round(Math.min(cardH * 0.58, 80 + cy - 72 - (cardH * DECK_SCALE) / 2 - (DECK - 1) * 5))
   // lo que se aparta la perdedora: sin meterse bajo la cabecera ni bajo el ranking
   const outX = Math.round(Math.max(24, Math.min(cardW * 0.42, (fanW - 1.83 * cardW) / 2 + 20)))
 
@@ -373,7 +374,11 @@ function Reel({ shelf }: { shelf: ShelfType }) {
       {pair && (
         <div className="absolute inset-x-0" style={{ top: 80, height: stageH }}>
           <div className="absolute left-1/2" style={{ top: cy, width: 0, height: 0 }}>
-            <Deck dealt={pair.seq} w={cardW} h={cardH} y={deckY} reduce={!!reduce} />
+            {/* dos capas con su propio apilado: el mazo (z 0) siempre queda DETRÁS de la pareja (z 10), también mientras reparte */}
+            <div className="absolute" style={{ left: 0, top: 0, width: 0, height: 0, zIndex: 0, isolation: 'isolate' }}>
+              <Deck dealt={pair.seq} w={cardW} h={cardH} y={deckY} reduce={!!reduce} />
+            </div>
+            <div className="absolute" style={{ left: 0, top: 0, width: 0, height: 0, zIndex: 10, isolation: 'isolate' }}>
             <AnimatePresence initial={false} mode="wait">
               <Fan
                 key={pair.seq}
@@ -388,6 +393,7 @@ function Reel({ shelf }: { shelf: ShelfType }) {
                 reduce={!!reduce}
               />
             </AnimatePresence>
+            </div>
           </div>
         </div>
       )}
@@ -448,7 +454,8 @@ function Deck({ dealt, w, h, y, reduce }: { dealt: number; w: number; h: number;
       <AnimatePresence initial={false}>
         {ids.map((id) => {
           const i = id - base
-          const slot = { x: (i - (DECK - 1) / 2) * 3, y: y - i * 7, scale: DECK_SCALE * (1 - i * 0.025), opacity: 1 - i * 0.12, rotate: (i % 2 ? 1 : -1) * (1 + i * 0.4) }
+          // cuanto más al fondo, más pequeña, más arriba y más apagada (opacidad sobre el fondo oscuro)
+          const slot = { x: (i % 2 ? 1 : -1) * Math.min(i, 3), y: y - i * 5, scale: DECK_SCALE * (1 - i * 0.03), opacity: 0.92 - i * 0.13, rotate: (i % 2 ? 1 : -1) * (0.8 + i * 0.5) }
           return (
             <motion.div
               key={id}
@@ -459,7 +466,7 @@ function Deck({ dealt, w, h, y, reduce }: { dealt: number; w: number; h: number;
               exit={{ opacity: 0, transition: { duration: 0.12 } }}
               transition={{ type: 'spring', stiffness: 220, damping: 26 }}
             >
-              <CardBack />
+              <CardBack w={w} />
             </motion.div>
           )
         })}
@@ -468,12 +475,49 @@ function Deck({ dealt, w, h, y, reduce }: { dealt: number; w: number; h: number;
   )
 }
 
-/** Dorso de carta: Taquilla, sin carátula. */
-function CardBack() {
+/**
+ * Dorso de carta: una entrada de taquilla. Fondo liso con trama fina de imprenta, doble filete con las dos tintas del duelo
+ * (cian por fuera, rojo por dentro), «VS» hueco en Archivo condensada y una matriz troquelada abajo con la marca. Las medidas
+ * van en proporción al ancho de la carta, porque en el mazo se pinta reducida.
+ */
+function CardBack({ w }: { w: number }) {
+  const u = w / 100
+  const line = Math.max(1.5, 0.7 * u)
+  const notch = 9 * u
+  const stubAt = 0.8
   return (
-    <div className="absolute inset-0 rounded-[18px] bg-surface2 border-[3px] border-line overflow-hidden flex items-center justify-center" style={{ boxShadow: '0 18px 40px -16px rgb(0 0 0 / 0.7)' }}>
-      <div className="absolute inset-3 rounded-[12px] border-2 border-ink/10" />
-      <span className="display text-[64px] leading-none text-ink/15 -rotate-90 whitespace-nowrap">Biblioteca</span>
+    <div
+      className="absolute inset-0 rounded-[18px] overflow-hidden"
+      style={{ background: 'var(--color-surface)', border: `${Math.max(2, u)}px solid var(--color-line)`, boxShadow: '0 18px 40px -16px rgb(0 0 0 / 0.7)' }}
+    >
+      {/* trama de imprenta, casi invisible */}
+      <div className="absolute inset-0" style={{ background: 'repeating-linear-gradient(135deg, rgb(244 243 241 / 0.035) 0 1.5px, transparent 1.5px 11px)' }} />
+      {/* doble filete: las dos caras del duelo */}
+      <div className="absolute rounded-[12px]" style={{ inset: 5 * u, border: `${line}px solid var(--color-duel-a)`, opacity: 0.75 }} />
+      <div className="absolute rounded-[9px]" style={{ inset: 5 * u + 2.6 * u, border: `${line}px solid var(--color-duel-b)`, opacity: 0.75 }} />
+      {/* cuerpo de la entrada */}
+      <div className="absolute inset-x-0 top-0 flex flex-col items-center justify-center" style={{ height: `${stubAt * 100}%` }}>
+        <span className="display leading-none text-ink/45" style={{ fontSize: 7 * u, letterSpacing: '0.24em' }}>Entrada · duelo</span>
+        <span
+          className="display leading-[0.8]"
+          style={{ fontSize: 46 * u, marginTop: 3 * u, color: 'transparent', WebkitTextStroke: `${Math.max(1.5, 0.9 * u)}px var(--color-duel-b)` }}
+        >
+          VS
+        </span>
+        <span className="flex items-center" style={{ gap: 3 * u, marginTop: 4 * u }}>
+          <span className="rounded-full" style={{ width: 2.4 * u, height: 2.4 * u, background: 'var(--color-duel-a)' }} />
+          <span className="block" style={{ width: 18 * u, height: Math.max(1, 0.5 * u), background: 'rgb(244 243 241 / 0.25)' }} />
+          <span className="rounded-full" style={{ width: 2.4 * u, height: 2.4 * u, background: 'var(--color-duel-b)' }} />
+        </span>
+      </div>
+      {/* troquel: línea discontinua y muescas a los lados */}
+      <div className="absolute" style={{ left: 9 * u, right: 9 * u, top: `${stubAt * 100}%`, borderTop: `${Math.max(1, 0.5 * u)}px dashed rgb(244 243 241 / 0.3)` }} />
+      <div className="absolute rounded-full" style={{ width: notch, height: notch, left: -notch / 2, top: `calc(${stubAt * 100}% - ${notch / 2}px)`, background: 'var(--color-bg)' }} />
+      <div className="absolute rounded-full" style={{ width: notch, height: notch, right: -notch / 2, top: `calc(${stubAt * 100}% - ${notch / 2}px)`, background: 'var(--color-bg)' }} />
+      {/* matriz con la marca */}
+      <div className="absolute inset-x-0 bottom-0 flex items-center justify-center" style={{ top: `${stubAt * 100}%` }}>
+        <span className="display leading-none text-ink/70" style={{ fontSize: 9 * u, letterSpacing: '0.12em' }}>Biblioteca</span>
+      </div>
     </div>
   )
 }
@@ -628,7 +672,7 @@ function FanCard({
         </div>
         {/* dorso: lo que se ve mientras viene del mazo */}
         <div className="absolute inset-0" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
-          <CardBack />
+          <CardBack w={w} />
         </div>
         {/* sello de la ganadora */}
         <AnimatePresence>
