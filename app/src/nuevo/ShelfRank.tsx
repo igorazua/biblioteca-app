@@ -9,8 +9,8 @@ import { SHELF_TINT, isShelf, titleOf, useCatalogFor, useShelfData } from './dat
 import { RankAccordion } from './RankAccordion'
 
 /**
- * Estantería / ranking de una categoría. Arriba, tu ranking en un acordeón vertical (la n.º 1 ancha a la izquierda; al
- * pasar el ratón se expande otra). Debajo, el ranking entero en columnas de cartelera: puesto, carátula, título y año.
+ * Estantería / ranking de una categoría. Arriba, tu ranking en un acordeón 3D (portadas de canto; la n.º 1 de frente; al
+ * pasar el ratón se abre otra). Debajo, el ranking entero en columnas de cartelera: puesto, carátula, título y año.
  */
 export function ShelfRank() {
   const { type } = useParams()

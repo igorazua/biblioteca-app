@@ -37,7 +37,7 @@ export function Home() {
   )
 }
 
-// ── Escaparate: tu ranking en acordeón (la n.º 1 ancha a la izquierda) ───────────────────────────
+// ── Escaparate: tu ranking en acordeón 3D (la n.º 1 de frente, las demás de canto) ───────────────────────────
 function Hero({ data, shelves, onShelf, name }: { data: ShelfData; shelves: ShelfData[]; onShelf: (s: ShelfType) => void; name: string }) {
   const vh = useViewportH()
   const reduce = useReducedMotion()
