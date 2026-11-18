@@ -136,7 +136,7 @@ export function Library() {
             <section key={t} aria-label={SHELF_LABEL[t].plural} className="mx-4 lg:mx-0 rounded-3xl bg-surface border border-line pt-1 pb-4 lg:transition-colors lg:hover:bg-surface2 lg:[&:last-child:nth-child(odd)]:col-span-2">
               {/* toda la cabecera abre la estantería */}
               <Link to={`/estanteria/${t}`} className="flex items-center gap-2 px-4 min-h-[52px] active:opacity-70 transition-opacity">
-                <h2 className="text-title font-medium text-ink">{SHELF_LABEL[t].plural}</h2>
+                <h2 className="text-title text-ink">{SHELF_LABEL[t].plural}</h2>
                 <span className="text-meta text-mute tabular-nums">
                   {rk.length + unrankedCount}
                   {pendingCount > 0 && ` · ${pendingCount} pendientes`}
@@ -182,7 +182,7 @@ export function Library() {
 
         {LISTS_ENABLED && <section aria-label="Mis listas" className="pt-4">
           <div className="flex items-center justify-between px-5 mb-2.5 min-h-[44px]">
-            <h2 className="serif text-[22px] font-semibold">Mis listas</h2>
+            <h2 className="display text-3xl">Mis listas</h2>
             <button onClick={() => nav('/lista/nueva')} className="min-h-[40px] px-3 rounded-full bg-surface border border-line text-sm flex items-center gap-1"><Icon name="plus" size={16} /> Nueva lista</button>
           </div>
           {lists.length ? (

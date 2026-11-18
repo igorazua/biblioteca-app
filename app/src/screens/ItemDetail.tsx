@@ -163,7 +163,7 @@ export function ItemDetail() {
           )}
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.16 }} className="absolute bottom-0 inset-x-0 px-5">
             <div className="text-label text-ink/80">{typeName(item.type)} · {item.year}</div>
-            <h1 className="text-display text-ink mt-1">{displayTitle(item, userLang())}</h1>
+            <h1 className="text-work-lg text-ink mt-1">{displayTitle(item, userLang())}</h1>
             <div className="text-meta text-ink/80 mt-1">
               {item.artistId ? (
                 <Link to={`/i/${encodeURIComponent(item.artistId)}`} className="underline underline-offset-2">
@@ -181,7 +181,7 @@ export function ItemDetail() {
         >
           <header className="hidden lg:block">
             <div className="text-label text-mute uppercase">{typeName(item.type)} · {item.year}</div>
-            <h1 className="text-display text-ink mt-2">{displayTitle(item, userLang())}</h1>
+            <h1 className="text-work-lg text-ink mt-2">{displayTitle(item, userLang())}</h1>
             <div className="text-body text-mute mt-2">
               {item.artistId ? (
                 <Link to={`/i/${encodeURIComponent(item.artistId)}`} className="underline underline-offset-2 hover:text-ink">
@@ -276,7 +276,7 @@ export function ItemDetail() {
                   {entry?.ranked && myRank ? <RankBadge pos={myRank.pos} className="!text-xs !px-2.5 !py-1" /> : null}
                 </div>
                 {pos >= 0 && <div className="text-meta text-mute mt-1">nº <b className="text-ink">{pos + 1}</b> de tus {(rankings[item.type] ?? []).length} {label.plural.toLowerCase()}</div>}
-                {entry?.comment && <p className="mt-2 text-body serif italic text-ink/90">«{entry.comment}»</p>}
+                {entry?.comment && <p className="mt-2 text-body serif text-ink/90">«{entry.comment}»</p>}
                 <button onClick={() => setRating(true)} className="mt-3 min-h-[44px] px-4 rounded-xl bg-surface2 border border-line text-meta text-ink font-medium flex items-center gap-2"><Icon name="edit" size={16} /> {entry?.comment ? 'Editar comentario' : entry?.stars ? 'Añadir comentario' : 'Valorar'}</button>
               </div>
             )}
@@ -298,7 +298,7 @@ export function ItemDetail() {
                       </div>
                       {r && <span className="shrink-0 rounded-full bg-accent text-accent-ink font-bold text-xs px-2.5 py-1 tabular-nums">nº {r.pos}</span>}
                     </div>
-                    {e.comment && <p className="mt-2 text-body text-ink/90 serif italic">«{e.comment}»</p>}
+                    {e.comment && <p className="mt-2 text-body text-ink/90 serif">«{e.comment}»</p>}
                     {r && <AskFriend friend={friend} message={askText(friend.name, r.pos)} onNotify={setToast} />}
                   </li>
                 )

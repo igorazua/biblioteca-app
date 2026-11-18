@@ -46,7 +46,7 @@ export function RatingFlow({ itemId, onDone, withStars }: { itemId: string; onDo
         <Poster item={item} style={{ borderRadius: posterRadius(item?.type, 8), ...posterBox(item).style }} className={`w-14 ${posterBox(item).className} rounded-[8px] shrink-0 object-cover`} />
         <div className="min-w-0">
           <div className="text-label text-mute uppercase">{label.actionPast}</div>
-          <div className="serif text-title font-medium text-ink leading-tight line-clamp-2 mt-0.5">{displayTitle(item, userLang())}</div>
+          <div className="text-work text-ink leading-tight line-clamp-2 mt-0.5">{displayTitle(item, userLang())}</div>
         </div>
       </div>
       {stars0 && (
@@ -63,7 +63,7 @@ export function RatingFlow({ itemId, onDone, withStars }: { itemId: string; onDo
       />
       {stars0 && (
         <label className="flex items-center gap-3 mt-2 min-h-[40px] text-meta text-mute">
-          <input type="checkbox" checked={never} onChange={(e) => setNever(e.target.checked)} className="w-5 h-5 accent-[#F5B544]" />
+          <input type="checkbox" checked={never} onChange={(e) => setNever(e.target.checked)} className="w-5 h-5 accent-accent" />
           No preguntar más al guardar (se reactiva en Perfil)
         </label>
       )}
@@ -94,7 +94,7 @@ export function CommentSheet({ itemId, onClose }: { itemId: string; onClose: () 
   }
   return (
     <Sheet label="Comentario" onClose={finish} height="34%">
-      <h3 className="serif text-title font-medium text-ink leading-tight">¿Algo que decir de <i>{displayTitle(item, userLang())}</i>?</h3>
+      <h3 className="serif text-title text-ink leading-tight">¿Algo que decir de <strong className="font-extrabold">{displayTitle(item, userLang())}</strong>?</h3>
       <textarea
         value={comment}
         onChange={(e) => setComment(e.target.value)}
@@ -103,7 +103,7 @@ export function CommentSheet({ itemId, onClose }: { itemId: string; onClose: () 
         className="mt-3 w-full bg-surface2 border border-line rounded-2xl px-4 py-3 text-body resize-none placeholder:text-mute/70 focus:outline-none focus:border-accent"
       />
       <label className="flex items-center gap-3 mt-3 min-h-[44px] text-meta text-mute">
-        <input type="checkbox" checked={never} onChange={(e) => setNever(e.target.checked)} className="w-5 h-5 accent-[#F5B544]" />
+        <input type="checkbox" checked={never} onChange={(e) => setNever(e.target.checked)} className="w-5 h-5 accent-accent" />
         No preguntar más
       </label>
       <div className="mt-2">

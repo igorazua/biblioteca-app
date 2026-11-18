@@ -178,7 +178,7 @@ export function Profile() {
 
         {/* «Lo que más me marcó» (top 3 por estantería) */}
         <section aria-label="Lo que más me marcó">
-          <h2 className="text-title font-medium text-ink mb-3">Lo que más me marcó</h2>
+          <h2 className="text-title text-ink mb-3">Lo que más me marcó</h2>
           {hasTop ? (
             <div className="space-y-4">
               {ACTIVE_SHELVES.filter((t) => (rankings[t] ?? []).length > 0).map((t) => (
@@ -216,7 +216,7 @@ export function Profile() {
 
         {/* Mis números */}
         <section aria-label="Estadísticas">
-          <h2 className="text-title font-medium text-ink mb-3">Mis números</h2>
+          <h2 className="text-title text-ink mb-3">Mis números</h2>
           <div className="grid grid-cols-2 gap-2.5">
             {ACTIVE_SHELVES.map((t) => (
               <Link key={t} to={`/estanteria/${t}`} className="bg-surface rounded-2xl border border-line p-3 active:bg-surface2">
@@ -234,7 +234,7 @@ export function Profile() {
         {/* Amigos y afinidad */}
         <section aria-label="Amigos">
           <div className="flex items-center justify-between mb-3">
-            <h2 className="text-title font-medium text-ink">Amigos</h2>
+            <h2 className="text-title text-ink">Amigos</h2>
             {user && (
               <button
                 onClick={() => setFindFriends(true)}
@@ -310,7 +310,7 @@ export function Profile() {
 
       {shareOpen && (
         <Sheet label="Compartir perfil" onClose={() => setShareOpen(false)} height="auto">
-          <h3 className="serif text-lg font-bold mb-3">Compartir tu perfil</h3>
+          <h3 className="display text-lg mb-3">Compartir tu perfil</h3>
           <div className="space-y-2.5 pb-2">
             <button onClick={shareLink} className="w-full min-h-[52px] rounded-2xl bg-surface2 border border-line px-4 flex items-center gap-3 text-sm font-semibold active:scale-[0.98] transition-transform">
               <Icon name="link" size={18} />

@@ -43,7 +43,7 @@ function Broken() {
         <div className="w-12 h-12 rounded-full bg-surface border border-line flex items-center justify-center mx-auto text-mute">
           <Icon name="link" size={24} />
         </div>
-        <h1 className="text-title font-medium text-ink">Este link no funciona</h1>
+        <h1 className="text-title text-ink">Este link no funciona</h1>
         <p className="text-body text-mute max-w-xs mx-auto">Puede que esté cortado o incompleto. Pide que te lo vuelvan a enviar.</p>
       </div>
     </PublicShell>
@@ -99,7 +99,7 @@ export function PublicList() {
         <Avatar name={list.a} color={list.c} size={40} />
         <p className="text-meta text-mute"><b className="text-ink font-semibold">{list.a}</b> te ha preparado esta lista</p>
       </div>
-      <h1 className="text-display font-medium text-ink mt-3">{list.t}</h1>
+      <h1 className="text-display text-ink mt-3">{list.t}</h1>
       {list.d && <p className="text-body text-mute mt-2">{list.d}</p>}
       <div className="text-meta text-mute mt-3">{ids.length} obra{ids.length !== 1 ? 's' : ''}{data.missing ? ` · ${data.missing} ya no está${data.missing > 1 ? 'n' : ''} en el catálogo` : ''}</div>
 
@@ -115,7 +115,7 @@ export function PublicList() {
                 <div className="text-label text-mute">{typeName(it.type)} · {it.year}</div>
                 <div className="serif text-item font-medium text-ink leading-tight mt-0.5">{displayTitle(it, userLang())}</div>
                 <div className="text-meta text-mute mt-0.5">{it.creator}{itemFacts(it) ? ` · ${itemFacts(it)}` : ''}</div>
-                {note && <p className="serif italic text-body text-accent mt-1.5">«{note}»</p>}
+                {note && <p className="serif text-body text-accent mt-1.5">«{note}»</p>}
                 <p className="text-meta text-mute mt-1.5 line-clamp-2">{it.synopsis}</p>
                 {it.type === 'song' && (
                   <a
@@ -169,7 +169,7 @@ export function PublicProfile() {
       <div className="flex items-center gap-4">
         <Avatar name={data.n} color={data.c} size={56} />
         <div>
-          <h1 className="text-display font-medium text-ink">{data.n}</h1>
+          <h1 className="text-display text-ink">{data.n}</h1>
           <p className="text-meta text-mute">Lo que más le ha marcado</p>
         </div>
       </div>
@@ -178,7 +178,7 @@ export function PublicProfile() {
         if (!ids.length) return null
         return (
           <section key={t} className="mt-7">
-            <h2 className="text-title font-medium text-ink mb-3">{SHELF_LABEL[t].plural}</h2>
+            <h2 className="text-title text-ink mb-3">{SHELF_LABEL[t].plural}</h2>
             <PosterGrid as="ol" fromLg cols={6} className="grid grid-cols-3 gap-3">
               {ids.map((id, i) => {
                 const it = getItem(id)

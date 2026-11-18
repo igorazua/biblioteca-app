@@ -265,7 +265,7 @@ export function FriendBubbles({ itemId, shelf, max = 4 }: { itemId: string; shel
               {r && activeFriend.entry.status === 'seen' && <RankBadge pos={r.pos} className="ml-auto shrink-0" />}
             </div>
             {activeFriend.entry.comment && (
-              <p className="italic text-white/90 serif text-[13px] leading-snug">
+              <p className="text-white/90 serif text-[13px] leading-snug">
                 «{activeFriend.entry.comment.split('\n')[0].slice(0, 120)}{activeFriend.entry.comment.length > 120 ? '…' : ''}»
               </p>
             )}
@@ -291,7 +291,7 @@ export function StarRating({ value, onChange, size = 40, readOnly }: { value?: n
           className="p-1 transition-transform active:scale-90 disabled:cursor-default"
           style={{ minWidth: readOnly ? undefined : 44, minHeight: readOnly ? undefined : 44 }}
         >
-          <Icon name="star" size={size} fill={(value ?? 0) >= n ? '#F5B544' : 'none'} style={{ color: (value ?? 0) >= n ? '#F5B544' : '#5b5b63' }} strokeWidth={1.6} />
+          <Icon name="star" size={size} fill={(value ?? 0) >= n ? 'var(--color-accent)' : 'none'} style={{ color: (value ?? 0) >= n ? 'var(--color-accent)' : '#5b5b63' }} strokeWidth={1.6} />
         </button>
       ))}
     </div>

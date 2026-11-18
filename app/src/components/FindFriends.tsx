@@ -92,7 +92,7 @@ export function FindFriends({ onClose, onToast }: { onClose: () => void; onToast
 
   return (
     <Sheet label="Añadir amigos" onClose={onClose} height={step === 'results' ? '82%' : '58%'}>
-      <h2 className="serif text-[24px] font-semibold">Añadir amigos</h2>
+      <h2 className="display text-3xl">Añadir amigos</h2>
 
       {step === 'intro' && (
         <div className="mt-3 flex flex-col gap-3 min-h-0">

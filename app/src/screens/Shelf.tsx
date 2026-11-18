@@ -20,7 +20,7 @@ import { AnimatePresence } from 'framer-motion'
 import { pctColor } from './CompareHome'
 import type { IconName } from '../components/Icon'
 
-const SHELF_COLOR: Record<ShelfType, string> = { movie: '#f2b04a', series: '#ff6b5b', book: '#e37d8c', artist: '#9d8cff', boardgame: '#4fd1a5', song: '#c084fc' }
+const SHELF_COLOR: Record<ShelfType, string> = { movie: '#2ec4c8', series: '#ff6b5b', book: '#e37d8c', artist: '#9d8cff', boardgame: '#4fd1a5', song: '#c084fc' }
 const SHELF_ICON: Record<ShelfType, IconName> = { movie: 'film', series: 'tv', book: 'bookOpen', artist: 'music', boardgame: 'dice', song: 'disc' }
 
 type Seg = 'ord' | 'pend'

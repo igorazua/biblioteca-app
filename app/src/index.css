@@ -1,24 +1,28 @@
 @import 'tailwindcss';
-@import '@fontsource-variable/inter';
-@import '@fontsource-variable/fraunces';
+@import '@fontsource-variable/archivo/wdth.css';
 
 @theme {
-  --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-serif: 'Fraunces Variable', Georgia, serif;
+  --font-sans: 'Archivo Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  /* Títulos de obra: Archivo normal en 600 (Taquilla). El titular condensado es --font-display / .display */
+  --font-serif: 'Archivo Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Archivo Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --color-bg: #1e1b17;
   --color-surface: #2a2620;
   --color-surface2: #36312a;
   --color-line: #4a433b;
-  --color-ink: #f4efe6;
+  --color-ink: #f4f3f1;
   --color-mute: #bdb6a9;
-  --color-accent: #f2b04a;
-  --color-accent-ink: #100e0c;
+  --color-accent: #ff5a3c;
+  --color-accent-ink: #120f0a;
   --color-secundario: #d9714e;
   --color-stamp-red: #ef4b4b;
-  --color-stamp-green: #3ec878;
-  --color-stamp-blue: #4a8df0;
+  --color-stamp-green: #38c172;
+  --color-stamp-blue: #2ec4c8;
+  /* Lados del duelo (D33): cian a la izquierda, rojo cartel a la derecha */
+  --color-duel-a: #2ec4c8;
+  --color-duel-b: #ff5a3c;
 
-  --color-shelf-movie: #f2b04a;
+  --color-shelf-movie: #2ec4c8;
   --color-shelf-series: #ff6b5b;
   --color-shelf-book: #e37d8c;
   --color-shelf-artist: #9d8cff;
@@ -31,29 +35,53 @@
   --spacing-sidenav: 240px;
 }
 
+/* Titulares de pantalla y de sección: Archivo condensada 800 en mayúsculas (Taquilla) */
 @utility text-display {
-  font-family: var(--font-serif);
-  font-size: 30px;
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 800;
+  font-stretch: 62%;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  @media (min-width: 1024px) { font-size: 52px; }
+}
+
+@utility text-title {
+  font-family: var(--font-display);
+  font-size: 28px;
   line-height: 1.05;
-  font-weight: 500;
+  font-weight: 800;
+  font-stretch: 62%;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  @media (min-width: 1024px) { font-size: 34px; }
+}
+
+/* Título de obra (o de persona) grande y mediano: Archivo normal 600, sin mayúsculas */
+@utility text-work-lg {
+  font-family: var(--font-sans);
+  font-size: 30px;
+  line-height: 1.1;
+  font-weight: 600;
   letter-spacing: -0.02em;
   @media (min-width: 1024px) { font-size: 40px; }
 }
 
-@utility text-title {
-  font-family: var(--font-serif);
+@utility text-work {
+  font-family: var(--font-sans);
   font-size: 22px;
   line-height: 1.15;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.015em;
   @media (min-width: 1024px) { font-size: 26px; }
 }
 
 @utility text-item {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.2;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @utility text-body {
@@ -103,7 +131,10 @@ body {
   a { color: inherit; text-decoration: none; }
 }
 
-.serif { font-family: var(--font-serif); font-variation-settings: 'opsz' 72; }
+/* .serif ya no es serif: título de obra en Archivo normal 600 (nombre histórico, 70 usos) */
+.serif { font-family: var(--font-serif); font-weight: 600; }
+/* Titular, número o sello: Archivo condensada 800 en mayúsculas */
+.display { font-family: var(--font-display); font-weight: 800; font-stretch: 62%; text-transform: uppercase; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
 .no-scrollbar { scrollbar-width: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .scroll-y { overflow-y: auto; overscroll-behavior-y: contain; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
@@ -119,7 +150,7 @@ body {
 :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-radius: 8px; }
 
 /* Sombras teñidas de ámbar oscuro en lugar de negro puro */
-.shadow-2xl { --tw-shadow-color: rgb(20 12 2 / 0.7); }
+.shadow-2xl { --tw-shadow-color: rgb(18 15 10 / 0.7); }
 h1, h2, h3 { text-wrap: balance; }
 
 /* --- Pulido v1.2 --- */
@@ -128,15 +159,16 @@ h1, h2 { letter-spacing: -0.015em; }
 .label-caps { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
 /* Número de ranking grande y hueco (top de cada estantería) */
 .rank-num {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 800;
+  font-stretch: 62%;
+  font-variant-numeric: tabular-nums;
   line-height: 0.8;
   /* hueco editorial, pero con contorno firme y un velo oscuro dentro y debajo para leerse sobre pósteres claros */
   color: rgb(16 14 12 / 0.4);
-  -webkit-text-stroke: 2px rgb(244 241 234 / 0.95);
+  -webkit-text-stroke: 2px rgb(244 243 241 / 0.95);
   paint-order: stroke fill;
   filter: drop-shadow(0 1px 3px rgb(0 0 0 / 0.8));
-  font-variation-settings: 'opsz' 144;
 }
 .glass {
   background: rgb(30 27 23 / 0.78);

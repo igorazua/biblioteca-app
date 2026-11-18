@@ -36,7 +36,7 @@ export function NudgeCard({ nudge, onAction, onDismiss, variant = 'banner' }: Pr
         </div>
 
         <div className="my-6">
-          <h3 className="serif text-2xl font-bold leading-snug text-ink mb-2">Un recordatorio</h3>
+          <h3 className="display text-2xl leading-snug text-ink mb-2">Un recordatorio</h3>
           <p className="text-mute text-base leading-relaxed">{nudge.message}</p>
         </div>
 

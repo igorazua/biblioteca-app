@@ -34,7 +34,7 @@ export function SideNav() {
   return (
     <aside className="hidden lg:flex flex-col shrink-0 w-sidenav h-dvh sticky top-0 bg-surface border-r border-line">
       <nav className="flex-1 flex flex-col px-3 pt-6 min-h-0" aria-label="Navegación principal">
-        <div className="px-4 pb-6 serif text-title text-ink">Biblioteca</div>
+        <div className="px-4 pb-6 display text-title text-ink">Biblioteca</div>
         <ul className="flex flex-col gap-1">
           {ITEMS.map((it) => {
             const active = inSection(pathname, it.sections)

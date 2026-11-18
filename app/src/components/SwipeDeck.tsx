@@ -40,7 +40,7 @@ function CardFace({ item, bubbles = true, flight = false }: { item: Item; bubble
         <div className="flex-1 p-5 pb-4 flex flex-col justify-between min-h-0 bg-surface">
           <div>
             <div className="text-label text-ink/80">{typeName(item.type)} · {item.year}</div>
-            <h2 className="text-display text-ink mt-1 line-clamp-2" style={{ textWrap: 'balance' } as React.CSSProperties}>{displayTitle(item, userLang())}</h2>
+            <h2 className="text-work-lg text-ink mt-1 line-clamp-2" style={{ textWrap: 'balance' } as React.CSSProperties}>{displayTitle(item, userLang())}</h2>
             <div className="text-meta text-ink/80 mt-1 truncate">{item.creator}</div>
           </div>
           <div className="flex flex-wrap items-center gap-1.5 mt-2">
@@ -61,7 +61,7 @@ function CardFace({ item, bubbles = true, flight = false }: { item: Item; bubble
       {bubbles && <div className="absolute top-3 right-3"><FriendBubbles itemId={item.id} shelf={item.type} /></div>}
       <div className="absolute bottom-0 inset-x-0 p-5 pb-4">
         <div className="text-label text-ink/80">{typeName(item.type)} · {item.year}</div>
-        <h2 className="text-display text-ink mt-1 line-clamp-3" style={{ textWrap: 'balance' } as React.CSSProperties}>{displayTitle(item, userLang())}</h2>
+        <h2 className="text-work-lg text-ink mt-1 line-clamp-3" style={{ textWrap: 'balance' } as React.CSSProperties}>{displayTitle(item, userLang())}</h2>
         <div className="text-meta text-ink/80 mt-1 truncate">{item.creator}</div>
         <div className="flex flex-wrap items-center gap-1.5 mt-2.5">
           {itemFacts(item) && <Tag variant="brand">{itemFacts(item)}</Tag>}

@@ -573,7 +573,7 @@ function FlashName({ id, up = false }: { id: string; up?: boolean }) {
   if (!it) return null
   return (
     <span className="flex items-center gap-1 min-w-0">
-      <span aria-hidden style={{ color: up ? '#3ec878' : '#ef4b4b' }}>{up ? '▲' : '▼'}</span>
+      <span aria-hidden style={{ color: up ? '#38c172' : '#ef4b4b' }}>{up ? '▲' : '▼'}</span>
       <span className="truncate max-w-[14rem] text-ink">{displayTitle(it, userLang())}</span>
       <span className="sr-only">{up ? 'sube' : 'baja'}</span>
     </span>
@@ -590,7 +590,7 @@ function MoveList({
   rows: { id: string; oldPos?: number; newPos?: number; pos?: number; delta?: number }[]
 }) {
   if (!rows.length) return null
-  const color = type === 'up' ? '#3ec878' : type === 'down' ? '#ef4b4b' : type === 'kept' ? 'var(--color-mute)' : '#F5B544'
+  const color = type === 'up' ? '#38c172' : type === 'down' ? '#ef4b4b' : type === 'kept' ? 'var(--color-mute)' : 'var(--color-accent)'
 
   return (
     <Group title={title}>

@@ -623,7 +623,7 @@ export function WhatToWatch() {
               </div>
               <div className="absolute inset-0 bg-gradient-to-r from-bg via-bg/80 to-transparent" />
               <div className="absolute inset-y-0 left-0 flex flex-col justify-center px-5">
-                <span className="text-title text-ink font-semibold">{SHELF_LABEL[s].plural}</span>
+                <span className="text-title text-ink">{SHELF_LABEL[s].plural}</span>
                 <span className="text-meta mt-1">{titleOf(s)}</span>
               </div>
               <span className="absolute right-4 bottom-4 w-9 h-9 rounded-full bg-surface2 border border-line text-ink flex items-center justify-center">
@@ -832,7 +832,7 @@ export function WhatToWatch() {
             <div className="text-label text-mute">
               {typeName(currentItem.type)} · {currentItem.year} · {itemFacts(currentItem)}
             </div>
-            <h2 className="text-display text-ink mt-1">{displayTitle(currentItem, userLang())}</h2>
+            <h2 className="text-work-lg text-ink mt-1">{displayTitle(currentItem, userLang())}</h2>
             <p className="text-meta text-accent mt-2 font-medium">{reasonsText}</p>
             <p className="text-body text-mute mt-1.5 line-clamp-2">{currentItem.synopsis}</p>
           </div>
@@ -960,7 +960,7 @@ function ChoiceCard({ option, posters, selected, delay, onClick }: { option: Opt
         </>
       )}
       <div className="absolute inset-x-0 bottom-0 p-4">
-        <div className="serif text-title text-ink font-semibold leading-tight">{option.label}</div>
+        <div className="text-work text-ink leading-tight">{option.label}</div>
         {option.sub && <div className="text-meta mt-1">{option.sub}</div>}
       </div>
     </motion.button>

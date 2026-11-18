@@ -70,7 +70,7 @@ export function Metrics() {
             <Icon name="chevron" size={20} className="rotate-180" />
           </button>
           <div>
-            <h1 className="text-xl font-bold font-serif">Métricas del motor</h1>
+            <h1 className="text-xl display">Métricas del motor</h1>
             <div className="text-xs text-mute">{events.length} eventos registrados</div>
           </div>
         </div>
@@ -127,7 +127,7 @@ export function Metrics() {
         {/* KPI 1: Descubrir */}
         <section className="space-y-3">
           <div className="flex items-center justify-between">
-            <h2 className="serif text-lg font-semibold text-accent">Descubrir (Mazo)</h2>
+            <h2 className="display text-lg text-accent">Descubrir (Mazo)</h2>
             <span className="text-xs text-mute">{kpis.deck.totalSwipes} swipes</span>
           </div>
 
@@ -165,7 +165,7 @@ export function Metrics() {
         {/* KPI 2: Decidir */}
         <section className="space-y-3 lg:col-start-2 lg:row-start-1 lg:row-span-2">
           <div className="flex items-center justify-between">
-            <h2 className="serif text-lg font-semibold text-accent">Decidir</h2>
+            <h2 className="display text-lg text-accent">Decidir</h2>
             <span className="text-xs text-mute">{kpis.decide.totalSessions} sesiones</span>
           </div>
 
@@ -187,21 +187,21 @@ export function Metrics() {
             <div className="grid grid-cols-3 gap-2 text-center pt-1">
               <div className="rounded-xl bg-surface2/60 p-2 border border-line/40">
                 <div className="text-[11px] text-mute">F1 · Conocidas</div>
-                <div className="text-lg font-bold font-serif tabular-nums text-white mt-0.5">
+                <div className="text-lg display tabular-nums text-white mt-0.5">
                   {kpis.decide.slowDuelsByPhase.F1?.pct ?? 0}%
                 </div>
                 <div className="text-[9px] text-mute">{kpis.decide.slowDuelsByPhase.F1?.slow ?? 0}/{kpis.decide.slowDuelsByPhase.F1?.total ?? 0} duelos</div>
               </div>
               <div className="rounded-xl bg-surface2/60 p-2 border border-line/40">
                 <div className="text-[11px] text-mute">F2 · Afinar</div>
-                <div className="text-lg font-bold font-serif tabular-nums text-white mt-0.5">
+                <div className="text-lg display tabular-nums text-white mt-0.5">
                   {kpis.decide.slowDuelsByPhase.F2?.pct ?? 0}%
                 </div>
                 <div className="text-[9px] text-mute">{kpis.decide.slowDuelsByPhase.F2?.slow ?? 0}/{kpis.decide.slowDuelsByPhase.F2?.total ?? 0} duelos</div>
               </div>
               <div className="rounded-xl bg-surface2/60 p-2 border border-line/40">
                 <div className="text-[11px] text-mute">F3 · Parecidas</div>
-                <div className="text-lg font-bold font-serif tabular-nums text-white mt-0.5">
+                <div className="text-lg display tabular-nums text-white mt-0.5">
                   {kpis.decide.slowDuelsByPhase.F3?.pct ?? 0}%
                 </div>
                 <div className="text-[9px] text-mute">{kpis.decide.slowDuelsByPhase.F3?.slow ?? 0}/{kpis.decide.slowDuelsByPhase.F3?.total ?? 0} duelos</div>
@@ -217,13 +217,13 @@ export function Metrics() {
             </div>
             <div className="flex items-baseline justify-between pt-1">
               <div>
-                <div className="text-2xl font-serif font-bold text-white tabular-nums">
+                <div className="text-2xl display text-white tabular-nums">
                   {kpis.decide.realSuccessRate14d}%
                 </div>
                 <div className="text-xs text-mute">Acabaron vistas en 14 días</div>
               </div>
               <div className="text-right">
-                <div className="text-xl font-serif font-bold text-accent tabular-nums">
+                <div className="text-xl display text-accent tabular-nums">
                   {kpis.decide.realAvgPercentile > 0 ? `Top ${(100 - kpis.decide.realAvgPercentile * 100).toFixed(0)}%` : '—'}
                 </div>
                 <div className="text-xs text-mute">Puesto medio en tu ranking</div>
@@ -235,7 +235,7 @@ export function Metrics() {
         {/* KPI 3: Limpieza */}
         <section className="space-y-3">
           <div className="flex items-center justify-between">
-            <h2 className="serif text-lg font-semibold text-accent">Limpieza de pendientes</h2>
+            <h2 className="display text-lg text-accent">Limpieza de pendientes</h2>
             <span className="text-xs text-mute">{kpis.cleanup.totalSwipes} revisadas</span>
           </div>
 
@@ -266,7 +266,7 @@ function KpiCard({ label, value, sub }: { label: string; value: string; sub?: st
   return (
     <div className="rounded-2xl bg-surface border border-line p-3">
       <div className="text-xs text-mute">{label}</div>
-      <div className="serif text-xl font-bold text-white tabular-nums mt-0.5">{value}</div>
+      <div className="display text-xl text-white tabular-nums mt-0.5">{value}</div>
       {sub && <div className="text-[10px] text-mute/80 mt-0.5 truncate">{sub}</div>}
     </div>
   )

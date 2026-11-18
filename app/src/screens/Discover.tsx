@@ -379,7 +379,7 @@ export function Discover() {
             <span className="text-[11px] font-bold uppercase tracking-wider text-accent">
               Explorar Catálogo
             </span>
-            <h1 className="text-2xl lg:text-display font-bold lg:font-medium text-ink tracking-tight">¿Qué te apetece hoy?</h1>
+            <h1 className="text-display text-ink">¿Qué te apetece hoy?</h1>
           </div>
           <VariantSwitchButton variant={variant} onClick={() => setShowVariantMenu(true)} />
         </div>
@@ -600,7 +600,7 @@ export function Discover() {
           </div>
         ) : (
           <div className="h-full flex flex-col items-center justify-center text-center px-5 gap-3">
-            <h2 className="text-title text-ink font-medium">¡Has repasado todo {label.plural.toLowerCase()}!</h2>
+            <h2 className="text-title text-ink">¡Has repasado todo {label.plural.toLowerCase()}!</h2>
             <p className="text-mute text-body">Ya no quedan más en esta estantería de la demo.</p>
             <div className="mt-2">
               <Button variant="primary" onClick={() => nav('/comparar')}>
@@ -676,7 +676,7 @@ export function Discover() {
           </ActionBtn>
           <ActionBtn
             label={`${label.stamp.replace(/[¡!]/g, '')}: ${label.pronoun} he ${label.seenPastPart}`}
-            color="#3ec878"
+            color="#38c172"
             size={68}
             disabled={!deck.length || blocked}
             onClick={() => deckRef.current?.fling('right')}
@@ -697,7 +697,7 @@ export function Discover() {
       {showSheetSelector && (
         <Sheet label="Elegir estantería" onClose={() => setShowSheetSelector(false)} height="60%">
           <div className="space-y-3">
-            <h3 className="text-title text-ink font-bold">Elige qué descubrir</h3>
+            <h3 className="text-title text-ink">Elige qué descubrir</h3>
             <div className="space-y-1.5">
               {myShelves.map((s) => {
                 const isCurrent = s === shelf
@@ -801,7 +801,7 @@ function VariantModal({
     <Sheet label="Diseño de pantalla Explorar" onClose={onClose} height="65%">
       <div className="space-y-3.5">
         <div>
-          <h3 className="text-title text-ink font-bold">Prototipos de diseño</h3>
+          <h3 className="text-title text-ink">Prototipos de diseño</h3>
           <p className="text-xs text-mute">
             Prueba cómo se siente cada alternativa sin las categorías arriba:
           </p>

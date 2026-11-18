@@ -91,11 +91,11 @@ export function JoinInvite() {
       </div>
       <div className="w-full max-w-sm bg-surface border border-line rounded-2xl p-6 shadow-xl lg:shadow-lg space-y-5">
         <div className="flex justify-center">
-          <Avatar name={creatorName} url={creatorAvatar} color="#F5B544" size={64} />
+          <Avatar name={creatorName} url={creatorAvatar} color="#ff5a3c" size={64} />
         </div>
 
         <div>
-          <h1 className="text-title font-medium text-ink">{creatorName} te invita a su biblioteca</h1>
+          <h1 className="text-title text-ink">{creatorName} te invita a su biblioteca</h1>
           <p className="text-body text-mute mt-2">
             Descubre qué pelis, series, libros y juegos le han marcado y comparte tus gustos.
           </p>

@@ -13,7 +13,7 @@ export function ImportFlowView({ flow }: { flow: ImportFlow }) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center text-center p-8 gap-4">
         <div className="w-10 h-10 border-[3px] border-accent border-t-transparent rounded-full animate-spin" />
-        <h2 className="serif text-xl font-semibold">Buscando tus obras…</h2>
+        <h2 className="display text-xl">Buscando tus obras…</h2>
         {progress && <p className="text-sm text-mute">{progress.current} de {progress.total}</p>}
         <p className="text-xs text-mute max-w-xs leading-relaxed">Las casamos con el catálogo (Wikidata, TVmaze, Open Library y MusicBrainz).</p>
       </div>
@@ -25,7 +25,7 @@ export function ImportFlowView({ flow }: { flow: ImportFlow }) {
       <div className="flex-1 flex flex-col gap-6 p-5 max-w-md mx-auto w-full lg:max-w-column">
         <div className="rounded-3xl bg-surface border border-line p-5">
           <div className="label-caps text-mute">Resultado</div>
-          <div className="serif text-3xl font-semibold mt-1">{sure.length} encontradas</div>
+          <div className="display text-3xl mt-1">{sure.length} encontradas</div>
           <p className="text-xs text-mute mt-2">
             {doubtful.length} dudosas · {notFound.length} sin encontrar
           </p>
@@ -82,7 +82,7 @@ export function ImportFlowView({ flow }: { flow: ImportFlow }) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center text-center p-8 gap-5">
         <div className="w-14 h-14 rounded-full bg-accent/20 text-accent flex items-center justify-center text-2xl font-bold">✓</div>
-        <h2 className="serif text-2xl font-semibold">Hecho</h2>
+        <h2 className="display text-2xl">Hecho</h2>
         {summary && (
           <p className="text-sm text-mute max-w-xs leading-relaxed">
             Hemos añadido {summary.created} {summary.created === 1 ? 'obra nueva' : 'obras nuevas'} a tus estanterías

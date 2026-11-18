@@ -209,7 +209,7 @@ export function Onboarding() {
                   <div className="text-accent text-[11px] font-bold tracking-[0.2em] uppercase">
                     {APP_NAME}
                   </div>
-                  <h1 className="serif text-[32px] leading-[1.08] font-bold text-ink">
+                  <h1 className="display text-5xl leading-[1.02] text-ink">
                     Lo que te ha formado, ordenado por ti.
                   </h1>
                   <p className="text-mute text-sm max-w-xs mx-auto leading-relaxed pt-1">
@@ -252,7 +252,7 @@ export function Onboarding() {
             {step === 1 && (
               <div className="w-full space-y-4">
                 <div className="text-center space-y-1">
-                  <h2 className="serif text-[26px] leading-tight font-bold text-ink">
+                  <h2 className="display text-4xl leading-none text-ink">
                     Descubre con tres gestos
                   </h2>
                   <p className="text-mute text-xs">
@@ -294,7 +294,7 @@ export function Onboarding() {
                     {/* Sellos de swipe reactivos */}
                     <Stamp
                       label="LA HE VISTO"
-                      color="var(--color-stamp-green, #3ec878)"
+                      color="var(--color-stamp-green, #38c172)"
                       opacity={rightO}
                       className="top-[24%] left-4 -rotate-12 border-emerald-400 text-emerald-400 bg-black/60"
                     />
@@ -306,7 +306,7 @@ export function Onboarding() {
                     />
                     <Stamp
                       label="PENDIENTE"
-                      color="var(--color-stamp-blue, #5b9cf5)"
+                      color="var(--color-stamp-blue, #2ec4c8)"
                       opacity={upO}
                       className="top-[32%] left-1/2 -translate-x-1/2 -rotate-6 border-sky-400 text-sky-400 bg-black/60"
                     />
@@ -432,7 +432,7 @@ export function Onboarding() {
               return (
                 <div className="w-full flex flex-col text-center">
                   <div className="space-y-1 mb-2">
-                    <h2 className="serif text-[28px] leading-tight font-bold text-ink">
+                    <h2 className="display text-4xl leading-none text-ink">
                       Tu ranking sin poner notas
                     </h2>
                     <p className="text-mute text-xs leading-relaxed max-w-xs mx-auto">
@@ -484,7 +484,7 @@ export function Onboarding() {
             {step === 3 && (
               <div className="w-full space-y-6 text-center">
                 <div className="space-y-1">
-                  <h2 className="serif text-[28px] leading-tight font-bold text-ink">
+                  <h2 className="display text-4xl leading-none text-ink">
                     El criterio de tus amigos
                   </h2>
                   <p className="text-mute text-xs leading-relaxed max-w-xs mx-auto">
@@ -540,7 +540,7 @@ export function Onboarding() {
             {step === 4 && (
               <div className="w-full space-y-4">
                 <div className="text-center space-y-1 mb-2">
-                  <h2 className="serif text-[28px] leading-tight font-bold text-ink">
+                  <h2 className="display text-4xl leading-none text-ink">
                     ¿Cómo quieres empezar?
                   </h2>
                   <p className="text-mute text-xs">
@@ -616,7 +616,7 @@ export function Onboarding() {
             {step === 5 && (
               <div className="w-full space-y-5">
                 <div className="text-center space-y-1">
-                  <h2 className="serif text-[28px] leading-tight font-bold text-ink">
+                  <h2 className="display text-4xl leading-none text-ink">
                     ¿Qué te interesa guardar?
                   </h2>
                   <p className="text-mute text-xs">

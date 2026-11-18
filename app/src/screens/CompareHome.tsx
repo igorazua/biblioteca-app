@@ -33,7 +33,7 @@ function formatShelfNames(shelves: ShelfType[]): string {
 
 /** Color del % ordenado: verde desde el 80 %, luego amarillo, naranja y rojo. */
 export function pctColor(p: number): string {
-  if (p >= 80) return '#3ec878'
+  if (p >= 80) return '#38c172'
   if (p >= 55) return '#e8c547'
   if (p >= 30) return '#f2913a'
   return '#ef4b4b'
@@ -183,9 +183,9 @@ export function CompareHome() {
 
             {/* A 14 px: Título A o Título B */}
             <div className="serif text-[15px] text-center truncate max-w-full px-2 mt-[14px]">
-              <span className="italic">{displayTitle(pairItems.a, userLang())}</span>{' '}
-              <span className="text-mute not-italic">o</span>{' '}
-              <span className="italic">{displayTitle(pairItems.b, userLang())}</span>
+              <span className="font-extrabold">{displayTitle(pairItems.a, userLang())}</span>{' '}
+              <span className="text-mute">o</span>{' '}
+              <span className="font-extrabold">{displayTitle(pairItems.b, userLang())}</span>
             </div>
 
             {/* A 20 px: Botón principal al ancho del contenido */}
@@ -254,7 +254,7 @@ export function CompareHome() {
                     {/* Fila del nombre (alto 24) */}
                     <div className="h-6 flex items-center justify-between">
                       <div className="flex items-center gap-2">
-                        <span className="serif text-[18px] text-ink leading-none">{SHELF_LABEL[s].plural}</span>
+                        <span className="display text-[18px] text-ink leading-none">{SHELF_LABEL[s].plural}</span>
                         <span className="text-meta font-semibold tabular-nums" style={{ color: pctColor(o.ordenado) }}>
                           {o.ordenado} %
                         </span>

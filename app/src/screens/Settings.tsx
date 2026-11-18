@@ -399,7 +399,7 @@ export function Settings() {
       {feedbackOpen && (
         <Sheet label="Enviar sugerencia" onClose={() => setFeedbackOpen(false)} height="65%">
           <form onSubmit={handleSubmitFeedback} className="space-y-4 pt-1">
-            <h3 className="serif text-xl font-bold">Dinos qué piensas</h3>
+            <h3 className="display text-xl">Dinos qué piensas</h3>
             <p className="text-xs text-mute">
               ¿Hay algo confuso, alguna obra que no encuentras o alguna mejora que eches de menos?
             </p>

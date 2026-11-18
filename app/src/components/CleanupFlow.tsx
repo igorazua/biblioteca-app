@@ -195,7 +195,7 @@ export function CleanupFlow({ shelf, onClose }: CleanupFlowProps) {
             <Icon name="x" size={20} />
           </button>
           <div>
-            <h1 className="font-semibold text-base font-serif">Limpieza de pendientes</h1>
+            <h1 className="font-semibold text-base display">Limpieza de pendientes</h1>
             <div className="text-xs text-mute">{label.plural}</div>
           </div>
         </div>
@@ -209,20 +209,20 @@ export function CleanupFlow({ shelf, onClose }: CleanupFlowProps) {
       {showSummary ? (
         <div className="flex-1 flex flex-col items-center justify-center p-6 text-center gap-5">
           <div className="text-5xl">✨</div>
-          <h2 className="serif text-3xl font-semibold">Limpieza completada</h2>
+          <h2 className="display text-3xl">Limpieza completada</h2>
           <p className="text-mute text-sm">Has repasado tus pendientes de {label.plural.toLowerCase()}.</p>
 
           <div className="grid grid-cols-3 gap-3 w-full max-w-sm mt-2">
             <div className="rounded-2xl bg-surface border border-line p-3 text-center">
-              <div className="serif text-2xl font-bold text-stamp-green tabular-nums">{counts.seen}</div>
+              <div className="display text-2xl text-stamp-green tabular-nums">{counts.seen}</div>
               <div className="text-xs text-mute mt-1">{label.seen}</div>
             </div>
             <div className="rounded-2xl bg-surface border border-line p-3 text-center">
-              <div className="serif text-2xl font-bold text-stamp-blue tabular-nums">{counts.kept}</div>
+              <div className="display text-2xl text-stamp-blue tabular-nums">{counts.kept}</div>
               <div className="text-xs text-mute mt-1">Siguen</div>
             </div>
             <div className="rounded-2xl bg-surface border border-line p-3 text-center">
-              <div className="serif text-2xl font-bold text-stamp-red tabular-nums">{counts.dismissed}</div>
+              <div className="display text-2xl text-stamp-red tabular-nums">{counts.dismissed}</div>
               <div className="text-xs text-mute mt-1">Fuera</div>
             </div>
           </div>
@@ -254,7 +254,7 @@ export function CleanupFlow({ shelf, onClose }: CleanupFlowProps) {
             ) : (
               <div className="h-full flex flex-col items-center justify-center text-center px-6 gap-3">
                 <div className="text-4xl">🎉</div>
-                <h3 className="serif text-xl font-semibold">¡No quedan más pendientes!</h3>
+                <h3 className="display text-xl">¡No quedan más pendientes!</h3>
                 <button
                   onClick={onClose}
                   className="mt-2 min-h-[46px] px-6 rounded-2xl bg-accent text-accent-ink font-semibold"
