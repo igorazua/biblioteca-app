@@ -1,0 +1,10 @@
+:root {
+  --font-display: "Archivo", 'Arial Narrow', system-ui, sans-serif;
+  --font-display-weight: 800;
+  --font-display-tracking: -0.010em;
+  --font-display-variation: "wdth" 62;
+  --font-text: "Archivo", system-ui, sans-serif;
+  --font-text-weight: 400;
+  --font-text-tracking: 0.000em;
+  --font-text-variation: "wdth" 100;
+}

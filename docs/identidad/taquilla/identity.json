@@ -1,0 +1,368 @@
+{
+  "schema": "brand-identity/identity@1",
+  "brand": {
+    "name": "Biblioteca",
+    "tagline": "Lo que te ha formado",
+    "languages": [
+      "es"
+    ],
+    "doc_lang": "es",
+    "sector": "red social de cultura: pelis, series, libros, juegos de mesa y música",
+    "numbers": true,
+    "copy": {
+      "sentence": {
+        "es": "¿Parásitos o El viaje de Chihiro? Elige una y tu ranking se recoloca solo."
+      },
+      "nav": [
+        "Biblioteca",
+        "Descubrir",
+        "Duelos",
+        "Decidir"
+      ],
+      "cta": "Empezar a ordenar"
+    }
+  },
+  "set": {
+    "id": "A",
+    "name": "Taquilla",
+    "recommended": true,
+    "mechanism": "El cartel de cine pegado en la calle: letra estrecha y negrísima que llena el ancho, números de ranking como cifras de cartelera y dos tintas de imprenta (rojo tomate y cian) que son los dos lados del duelo.",
+    "expression_move": "La tipografía condensada a tamaño de cartel; el color se queda en dos tintas planas.",
+    "differs_by": "Letterboxd y Goodreads usan sans redondas o serif de libro sobre fondos neutros; esta habla como un cartel de estreno y usa el ancho completo de la pantalla."
+  },
+  "axes": {
+    "playful_serious": 0,
+    "classic_contemporary": -1,
+    "quiet_loud": 2
+  },
+  "components": {
+    "logo": {
+      "mode": "none",
+      "status": "not_applicable",
+      "source": null,
+      "sha256": null
+    },
+    "type": {
+      "mode": "new",
+      "status": "proposed",
+      "source": null,
+      "sha256": null
+    },
+    "palette": {
+      "mode": "refresh",
+      "status": "proposed",
+      "source": "source/palette-kept.json",
+      "sha256": null
+    }
+  },
+  "type": {
+    "pairing_mode": "single-family",
+    "display": {
+      "family": "Archivo",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        800
+      ],
+      "location": {
+        "wght": 800,
+        "wdth": 62
+      },
+      "features": [
+        "tnum"
+      ],
+      "case": "upper",
+      "tracking": -10,
+      "fallback": "'Arial Narrow', system-ui, sans-serif",
+      "file": null
+    },
+    "text": {
+      "family": "Archivo",
+      "source": "google",
+      "license": "OFL-1.1",
+      "weights": [
+        400,
+        600
+      ],
+      "location": {
+        "wght": 400,
+        "wdth": 100
+      },
+      "features": [
+        "tnum"
+      ],
+      "case": "as-is",
+      "tracking": 0,
+      "fallback": "system-ui, sans-serif",
+      "file": null
+    },
+    "mono": null
+  },
+  "logo": null,
+  "palette": "palette.json",
+  "defaults_used": [],
+  "rationale": [
+    {
+      "claim": "Una sola familia variable (anchura y peso) da el cartel y la lectura con un solo archivo de fuente, lo que pesa poco en la web y en la app nativa.",
+      "evidence": "practice",
+      "source": "references/type.md"
+    },
+    {
+      "claim": "Rojo cálido sobre fondo oscuro con un cian de contrapunto: dirección cálido + cian, bien valorada.",
+      "evidence": "strong",
+      "source": "references/color.md"
+    },
+    {
+      "claim": "La letra condensada de cartel encaja con números de ranking enormes; es una elección de gusto.",
+      "evidence": "judgement",
+      "source": null
+    }
+  ],
+  "derived": [
+    {
+      "file": "card.png",
+      "requires": [
+        "type",
+        "palette"
+      ],
+      "inputs_sha256": "2ffdadbc368453e05044e166a9613ad71c125f8a38dd7fe39a5ac4b4ff1b4cc1"
+    }
+  ],
+  "audit": {
+    "schema": "brand-identity/audit@1",
+    "passed": true,
+    "counts": {
+      "gate": 0,
+      "warn": 5,
+      "info": 9
+    },
+    "findings": [
+      {
+        "id": "palette.contrast.light.accent-on-background",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 1.89,
+        "threshold": 3.0,
+        "message": "light: accent #2ec4c8 on background #f2f1ef is 1.89:1, below 3.0:1 (accent fill against the page (needs a label or border if lower); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.accent",
+          "from": "#2ec4c8",
+          "to": "#0d9093",
+          "how": "use accent-600 (same scale)",
+          "ratio_after": 3.43
+        },
+        "roles": [
+          "light.accent",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.isoluminant.dark.primary-dark.accent",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 11.7,
+        "threshold": 12.0,
+        "message": "#ff5a3c and #2ec4c8 are both saturated (C* 79/38) with almost equal lightness (Delta L* 11.7); edges between them vibrate and text on either is unreadable",
+        "suggested_fix": {
+          "change": "dark.accent",
+          "from": "#2ec4c8",
+          "to": "#31c6ca",
+          "how": "lighten by OKLCH L +0.01, same hue"
+        },
+        "roles": [
+          "dark.primary",
+          "dark.accent"
+        ]
+      },
+      {
+        "id": "palette.structure.lightness-range",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 22.5,
+        "threshold": 25,
+        "message": "brand and action colours span only Delta L* 22.5; without a clear light/dark step between them the palette reads flat (lightness contrast is the strongest harmony predictor, O'Donovan 2011)",
+        "suggested_fix": {
+          "change": "brand/accent",
+          "how": "move the accent (not a locked brand colour) at least 25 L* away from the primary"
+        },
+        "roles": [
+          "brand",
+          "light.primary",
+          "light.accent"
+        ]
+      },
+      {
+        "id": "palette.extended.ui.light.ext-1",
+        "component": "palette",
+        "severity": "warn",
+        "measured": 2.06,
+        "threshold": 3.0,
+        "message": "light: ext-1 #38c172 is 2.06:1 on the light background #f2f1ef; as a stripe, chart series or thin line it needs 3:1 (WCAG 1.4.11)",
+        "suggested_fix": {
+          "change": "extended.ext-1",
+          "from": "#38c172",
+          "to": "#0c904e",
+          "how": "use ext-1-600 for stripes, chart series and thin lines"
+        },
+        "roles": [
+          "ext-1"
+        ]
+      },
+      {
+        "id": "palette.contrast.light.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.36,
+        "threshold": 3.0,
+        "message": "light: border #d3d0cb on background #f2f1ef is 1.36:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.light.border",
+          "from": "#d3d0cb",
+          "to": "#8e8b87",
+          "how": "darken by OKLCH L -0.22, same hue",
+          "ratio_after": 3.0
+        },
+        "roles": [
+          "light.border",
+          "light.background"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.link-on-text",
+        "component": "palette",
+        "severity": "info",
+        "measured": 2.79,
+        "threshold": 3.0,
+        "message": "dark: link #ff5a3c on text #f4f3f1 is 2.79:1, below 3.0:1 (underline links in dark mode (WCAG G183: without underline a link needs 3:1 against body text); WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.link",
+          "from": "#ff5a3c",
+          "to": "#df3514",
+          "how": "use primary-600 (same scale)",
+          "ratio_after": 4.07
+        },
+        "roles": [
+          "dark.link",
+          "dark.text"
+        ]
+      },
+      {
+        "id": "palette.contrast.dark.border-on-background",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.8,
+        "threshold": 3.0,
+        "message": "dark: border #454039 on background #16130f is 1.80:1, below 3.0:1 (borders: dividers are exempt, input outlines need 3:1; WCAG 2, no rounding)",
+        "suggested_fix": {
+          "change": "modes.dark.border",
+          "from": "#454039",
+          "to": "#77726c",
+          "how": "use neutral-500 (same scale)",
+          "ratio_after": 3.89
+        },
+        "roles": [
+          "dark.border",
+          "dark.background"
+        ]
+      },
+      {
+        "id": "palette.gamut.brand-1",
+        "component": "palette",
+        "severity": "info",
+        "measured": 1.0,
+        "threshold": 0.9,
+        "message": "#ff5a3c sits at the sRGB gamut edge (100% of max chroma); vivid colours like this often fall outside CMYK process gamut: specify Lab D50 + tolerance, check with the printer, consider a spot colour",
+        "suggested_fix": null,
+        "roles": [
+          "brand-1"
+        ]
+      },
+      {
+        "id": "palette.gamut.brand-2",
+        "component": "palette",
+        "severity": "info",
+        "measured": 0.93,
+        "threshold": 0.9,
+        "message": "#2ec4c8 sits at the sRGB gamut edge (93% of max chroma); vivid colours like this often fall outside CMYK process gamut: specify Lab D50 + tolerance, check with the printer, consider a spot colour",
+        "suggested_fix": null,
+        "roles": [
+          "brand-2"
+        ]
+      },
+      {
+        "id": "palette.structure.greyscale.brand-1-brand-2",
+        "component": "palette",
+        "severity": "info",
+        "measured": 11.7,
+        "threshold": 15.0,
+        "message": "#ff5a3c and #2ec4c8 differ by only Delta L* 11.7; side by side in a logo they merge in greyscale/one-colour print",
+        "suggested_fix": null,
+        "roles": [
+          "brand-1",
+          "brand-2"
+        ]
+      },
+      {
+        "id": "palette.harmony.primary-accent",
+        "component": "palette",
+        "severity": "info",
+        "measured": -0.33,
+        "threshold": -0.3,
+        "message": "Ou-Luo two-colour model scores #df3514 + #2ec4c8 at -0.33 (negative = less harmonious on a grey CRT test, no context): model signal only; the pairing table in references/pairing.md takes precedence",
+        "suggested_fix": null,
+        "roles": [
+          "light.primary",
+          "light.accent"
+        ]
+      },
+      {
+        "id": "type.display+text.web-weight",
+        "component": "type",
+        "severity": "info",
+        "measured": 78,
+        "threshold": null,
+        "message": "Archivo: ~78 KB WOFF2 for the brief's characters (one variable file, all weights; estimate)",
+        "suggested_fix": null
+      },
+      {
+        "id": "logo.skipped",
+        "component": "logo",
+        "severity": "info",
+        "measured": null,
+        "threshold": null,
+        "message": "logo component is 'none': not built",
+        "suggested_fix": null
+      },
+      {
+        "id": "cohesion.sets-close",
+        "component": "cohesion",
+        "severity": "warn",
+        "measured": [
+          "A–B",
+          "A–C",
+          "B–D"
+        ],
+        "threshold": "2 axes, 2 steps",
+        "message": "sets too alike on the axes: A–B, A–C, B–D differ by 2+ steps on fewer than 2 axes (heuristic)",
+        "suggested_fix": null
+      }
+    ],
+    "defaults": {
+      "matched": []
+    }
+  },
+  "palette_build": {
+    "strategy": null,
+    "accent": "#2ec4c8",
+    "light_bg": "#f2f1ef",
+    "dark_bg": "#16130f",
+    "neutral_tint": null,
+    "neutral_chroma": null,
+    "extra": [
+      "#38c172:Verde confirmado:duelo confirmado"
+    ]
+  },
+  "card": {
+    "ground": "dark"
+  }
+}
