@@ -335,7 +335,10 @@ function Reel({ shelf }: { shelf: ShelfType }) {
   const cardW = Math.round(cardW0)
   const cardH = Math.round(cardW0 / ratio)
   const cy = Math.round(stageH / 2 + cardH * 0.08)
-  const deckY = -Math.round(cardH * 0.56)
+  // el mazo asoma por encima de la pareja, pero su carta más alta nunca queda bajo la barra superior (top ≥ 72)
+  const deckY = -Math.round(Math.min(cardH * 0.56, 80 + cy - 72 - (cardH * DECK_SCALE) / 2 - (DECK - 1) * 7))
+  // lo que se aparta la perdedora: sin meterse bajo la cabecera ni bajo el ranking
+  const outX = Math.round(Math.max(24, Math.min(cardW * 0.42, (fanW - 1.83 * cardW) / 2 + 20)))
 
   if (summary) return <Summary shelf={shelf} startRank={startRank.current} compared={comparedRef.current} count={count} onMore={start} />
 
@@ -378,6 +381,7 @@ function Reel({ shelf }: { shelf: ShelfType }) {
                 w={cardW}
                 h={cardH}
                 deckY={deckY}
+                outX={outX}
                 thresh={Math.min(220, Math.max(140, vw * 0.12))}
                 picked={picked && picked.seq === pair.seq ? picked : null}
                 onCommit={commit}
@@ -420,7 +424,7 @@ function Reel({ shelf }: { shelf: ShelfType }) {
       </div>
       {front && (
         <p className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap text-[14px] text-ink/70 pointer-events-none">
-          Clic, <kbd className="font-semibold text-ink">←</kbd> <kbd className="font-semibold text-ink">→</kbd> o arrastra hacia el centro · Esc para terminar
+          Clic, <kbd className="font-semibold text-ink">←</kbd> <kbd className="font-semibold text-ink">→</kbd> o arrastra hacia el centro · la siguiente pareja la elige el motor cuando votas · Esc para terminar
         </p>
       )}
 
@@ -460,9 +464,6 @@ function Deck({ dealt, w, h, y, reduce }: { dealt: number; w: number; h: number;
           )
         })}
       </AnimatePresence>
-      <div className="absolute whitespace-nowrap text-[13px] text-ink/55 -translate-x-1/2" style={{ top: y - (h * DECK_SCALE) / 2 - 6 * DECK - 26 }}>
-        La siguiente pareja la elige el motor al votar
-      </div>
     </div>
   )
 }
@@ -483,6 +484,7 @@ function Fan({
   w,
   h,
   deckY,
+  outX,
   thresh,
   picked,
   onCommit,
@@ -492,6 +494,7 @@ function Fan({
   w: number
   h: number
   deckY: number
+  outX: number
   thresh: number
   picked: Picked | null
   onCommit: (s: 'L' | 'R') => void
@@ -534,8 +537,8 @@ function Fan({
     >
       {/* superficie de arrastre: todo el escenario; el gesto se recoge en el contenedor (también sobre las cartas) */}
       <div className="absolute cursor-grab active:cursor-grabbing" style={{ left: -w * 1.6, top: -h * 0.62, width: w * 3.2, height: h * 1.24 }} />
-      <FanCard id={q.left} side="L" w={w} h={h} deckY={deckY} g={gL} og={gR} picked={picked} dragged={dragged} onCommit={onCommit} reduce={reduce} />
-      <FanCard id={q.right} side="R" w={w} h={h} deckY={deckY} g={gR} og={gL} picked={picked} dragged={dragged} onCommit={onCommit} reduce={reduce} />
+      <FanCard id={q.left} side="L" w={w} h={h} deckY={deckY} outX={outX} g={gL} og={gR} picked={picked} dragged={dragged} onCommit={onCommit} reduce={reduce} />
+      <FanCard id={q.right} side="R" w={w} h={h} deckY={deckY} outX={outX} g={gR} og={gL} picked={picked} dragged={dragged} onCommit={onCommit} reduce={reduce} />
     </motion.div>
   )
 }
@@ -546,6 +549,7 @@ function FanCard({
   w,
   h,
   deckY,
+  outX,
   g,
   og,
   picked,
@@ -558,6 +562,7 @@ function FanCard({
   w: number
   h: number
   deckY: number
+  outX: number
   g: MotionValue<number>
   og: MotionValue<number>
   picked: Picked | null
@@ -574,7 +579,7 @@ function FanCard({
   const lost = !!picked && !won
 
   // como DuelFan: la elegida va en línea recta al centro, se endereza, sube un poco y crece algo; la otra se aparta y se apaga
-  const tx = useTransform([g, og] as MotionValue<number>[], ([a, b]: number[]) => -x0 * a + sign * w * 0.42 * b)
+  const tx = useTransform([g, og] as MotionValue<number>[], ([a, b]: number[]) => -x0 * a + sign * outX * b)
   const ty = useTransform(g, (v) => -22 * v)
   const rotate = useTransform(g, (v) => rot0 * (1 - v))
   const scale = useTransform([g, og] as MotionValue<number>[], ([a, b]: number[]) => (1 + 0.07 * a) * (1 - 0.1 * b))
