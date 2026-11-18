@@ -68,9 +68,9 @@ const metal = (hex: string) => [
   { at: 0.8, color: hex },
   { at: 1, color: tone(hex, 0.5) },
 ]
-const RIM_STOPS = { a: metal(colors.stampBlue), b: metal(colors.accent) } // azul acero a la izquierda, dorado a la derecha
-const DONE_STOPS = metal(colors.stampGreen)
-const DONE_FLASH = { core: tone(colors.stampGreen, 0.9), tail: tone(colors.stampGreen, 0.65) }
+const RIM_STOPS = { a: metal(colors.duelA), b: metal(colors.duelB) } // Taquilla: cian a la izquierda, rojo a la derecha
+const DONE_STOPS = metal(colors.duelDone)
+const DONE_FLASH = { core: tone(colors.duelDone, 0.9), tail: tone(colors.duelDone, 0.65) }
 
 /** Espera tras elegir hasta pasar al siguiente duelo; el borde y el destello caben dentro. */
 const pickDelay = (fast: boolean, reduce: boolean) => (fast ? FAST_DELAY : reduce ? REDUCED_DELAY : DECIDE_DELAY)
@@ -323,11 +323,11 @@ export function DuelFan({
               const tw = L.w * 0.4 - 12 // cada lado tiene su ancho y quedan 12 pt entre los dos
               return (
                 <Animated.View key={k} pointerEvents="none" style={[{ position: 'absolute', left: L.cx[k] - tw / 2, width: tw, top: L.titleTop, alignItems: 'center' }, uiOp]}>
-                  <AppText numberOfLines={2} style={{ fontFamily: 'Fraunces72-600', fontSize: 16, lineHeight: 20, color: colors.ink, textAlign: 'center' }}>
+                  <AppText numberOfLines={2} style={{ fontFamily: 'Archivo-SemiBold', fontSize: 16, lineHeight: 20, color: colors.ink, textAlign: 'center' }}>
                     {s.title}
                   </AppText>
                   {!!s.subtitle && (
-                    <AppText numberOfLines={1} style={{ fontFamily: 'Inter-400', fontSize: 11.5, color: colors.mute, marginTop: 2, textAlign: 'center' }}>
+                    <AppText numberOfLines={1} style={{ fontFamily: 'Archivo-Regular', fontSize: 11.5, color: colors.mute, marginTop: 2, textAlign: 'center' }}>
                       {s.subtitle}
                     </AppText>
                   )}
