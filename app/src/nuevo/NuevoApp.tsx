@@ -43,11 +43,11 @@ const LINKS: { to: string; label: string; end?: boolean; ext?: boolean }[] = [
 function TopBar() {
   const profile = useStore((s) => s.profile)
   return (
-    <header className="absolute inset-x-0 top-0 z-50 h-16 px-10 flex items-center gap-10 pointer-events-none">
-      <Link to="/nuevo" className="display text-[30px] leading-none text-ink pointer-events-auto" aria-label="Biblioteca, inicio">
+    <header className="absolute inset-x-0 top-0 z-50 h-16 px-10 flex items-center gap-10 bg-bg">
+      <Link to="/nuevo" className="display text-[30px] leading-none text-ink" aria-label="Biblioteca, inicio">
         Biblioteca
       </Link>
-      <nav className="flex items-center gap-7 pointer-events-auto" aria-label="Principal">
+      <nav className="flex items-center gap-7" aria-label="Principal">
         {LINKS.map((l) => (
           <NavLink key={l.to} to={l.to} end={l.end} className="relative py-2 text-[15px] font-semibold">
             {({ isActive }) => (
@@ -61,7 +61,7 @@ function TopBar() {
           </NavLink>
         ))}
       </nav>
-      <div className="ml-auto flex items-center gap-5 pointer-events-auto">
+      <div className="ml-auto flex items-center gap-5">
         <Link to="/" className="text-[14px] text-ink/60 hover:text-ink transition-colors">App clásica</Link>
         <Link to="/ajustes" aria-label="Ajustes" className="w-10 h-10 flex items-center justify-center text-ink/70 hover:text-ink transition-colors">
           <Icon name="gear" size={20} />

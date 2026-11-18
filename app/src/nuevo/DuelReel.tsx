@@ -582,7 +582,7 @@ function RankRail({ shelf, move }: { shelf: ShelfType; move: { winner: string; l
 
   if (!ranking.length) return null
   return (
-    <aside className="absolute right-10 top-24 bottom-8 z-20 w-[300px] flex flex-col" aria-label="Tu ranking">
+    <aside className="absolute right-10 top-24 bottom-8 z-20 w-[300px] hidden xl:flex flex-col" aria-label="Tu ranking">
       <h2 className="text-[17px] font-semibold text-ink">Tu ranking · {ranking.length}</h2>
       <ol className="mt-4 flex flex-col">
         <AnimatePresence initial={false}>

@@ -42,11 +42,12 @@ function Hero({ data, shelves, onShelf, name }: { data: ShelfData; shelves: Shel
   const reduce = useReducedMotion()
   const label = SHELF_LABEL[data.shelf]
   const mineIds = [...data.ranked, ...data.unranked]
-  const topId = mineIds[0]
+  // el número 1 sale solo del ranking: una obra sin ordenar no se presenta como tu favorita
+  const topId = data.ranked[0]
   const top = topId ? getItem(topId) : null
   // sin obras propias, el anillo enseña el catálogo de esa estantería (no se inventa un número 1)
   const ringIds = useMemo(() => {
-    const own = mineIds.slice(1, 21)
+    const own = mineIds.filter((id) => id !== topId).slice(0, 20)
     if (own.length >= 4) return own
     return itemsOfType(data.shelf).slice(0, 18).map((i) => i.id)
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -96,7 +97,10 @@ function Hero({ data, shelves, onShelf, name }: { data: ShelfData; shelves: Shel
             ) : (
               <>
                 <p className="text-[17px] text-ink/80">{name}, aún no tienes número 1 en {label.plural.toLowerCase()}</p>
-                <h1 className="display text-ink mt-3 text-[clamp(56px,6.6vw,124px)] leading-[0.86]">Empieza por lo que ya has visto</h1>
+                <h1 className="display text-ink mt-3 text-[clamp(56px,6.6vw,124px)] leading-[0.86]">
+                  {data.seen >= 2 ? 'Decide cuál manda' : 'Empieza por lo que ya has visto'}
+                </h1>
+                {data.seen > 0 && <p className="text-[15px] text-mute mt-6 max-w-[34ch]">{data.seen} {label.seen} sin ordenar todavía. Unos duelos y sale tu número 1.</p>}
               </>
             )}
             <div className="flex items-center gap-3 mt-9">
