@@ -88,6 +88,6 @@ const styles = StyleSheet.create({
   // rounded-xl shrink-0, centrado
   box: { borderRadius: 12, alignItems: 'center', justifyContent: 'center', flexShrink: 0, overflow: 'hidden' },
   // text-black font-black tracking-tighter text-[13px] leading-none
-  imdb: { fontFamily: 'Inter-900', fontSize: 13, lineHeight: 13, letterSpacing: -0.65, color: '#000000' },
-  initials: { fontFamily: 'Inter-600', fontSize: 14, lineHeight: 20, color: colors.ink },
+  imdb: { fontFamily: 'Archivo-SemiBold', fontSize: 13, lineHeight: 13, letterSpacing: -0.65, color: '#000000' },
+  initials: { fontFamily: 'Archivo-SemiBold', fontSize: 14, lineHeight: 20, color: colors.ink },
 })

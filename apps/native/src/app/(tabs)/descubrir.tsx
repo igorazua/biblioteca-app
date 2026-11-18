@@ -307,9 +307,9 @@ export default function Descubrir() {
             router.setParams({ shelf: undefined }) // para que un nuevo `?shelf=` igual al anterior vuelva a abrir el mazo
           }} accessibilityRole="button" accessibilityLabel="Categorías" style={{ flexDirection: 'row', alignItems: 'center', gap: 4, marginLeft: -4, paddingVertical: 4, paddingHorizontal: 6, borderRadius: 8 }}>
           <Icon name="back" size={15} strokeWidth={2.4} color={colors.accent} />
-          <AppText style={{ fontFamily: 'Inter-500', fontSize: 13, lineHeight: 18, color: colors.accent }}>Categorías</AppText>
+          <AppText style={{ fontFamily: 'Archivo-Regular', fontSize: 13, lineHeight: 18, color: colors.accent }}>Categorías</AppText>
         </Press>
-        <AppText style={{ fontFamily: 'Inter-500', fontSize: 12, lineHeight: 16, color: colors.mute, fontVariant: ['tabular-nums'] }}>
+        <AppText style={{ fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: colors.mute, fontVariant: ['tabular-nums'] }}>
           {`${label.plural} · ${remainingCount > 0 ? `${remainingCount} por ver` : 'Al día'}`}
         </AppText>
       </View>

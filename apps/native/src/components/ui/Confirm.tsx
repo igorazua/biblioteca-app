@@ -50,8 +50,8 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface,
     padding: 20,
   },
-  title: { fontFamily: 'Inter-600', fontSize: 18, lineHeight: 28, color: colors.ink },
-  text: { fontFamily: 'Inter-400', fontSize: 14, lineHeight: 20, color: colors.mute, marginTop: 6 },
+  title: { fontFamily: 'Archivo-SemiBold', fontSize: 18, lineHeight: 28, color: colors.ink },
+  text: { fontFamily: 'Archivo-Regular', fontSize: 14, lineHeight: 20, color: colors.mute, marginTop: 6 },
   buttons: { flexDirection: 'row', gap: 8, marginTop: 20 },
   cancel: {
     flex: 1,
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   // Sin interlineado en la PWA: los botones heredan la fuente del body (16 px) con interlineado «normal» de Inter (~1,21).
-  cancelText: { fontFamily: 'Inter-500', fontSize: 16, lineHeight: 19.4, color: colors.ink },
+  cancelText: { fontFamily: 'Archivo-Regular', fontSize: 16, lineHeight: 19.4, color: colors.ink },
   confirm: {
     flex: 1,
     minHeight: 46,
@@ -71,5 +71,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  confirmText: { fontFamily: 'Inter-600', fontSize: 16, lineHeight: 19.4, color: '#ffffff' },
+  confirmText: { fontFamily: 'Archivo-SemiBold', fontSize: 16, lineHeight: 19.4, color: '#ffffff' },
 })

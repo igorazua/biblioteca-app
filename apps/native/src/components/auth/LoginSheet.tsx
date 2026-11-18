@@ -162,5 +162,5 @@ const styles = StyleSheet.create({
   code: { textAlign: 'center', letterSpacing: 8, fontSize: 22 },
   error: { ...tx('meta'), color: colors.stampRed },
   links: { flexDirection: 'row', justifyContent: 'space-between' },
-  link: { ...tx('meta'), color: colors.accent, fontFamily: 'Inter-500' },
+  link: { ...tx('meta'), color: colors.accent, fontFamily: 'Archivo-Regular' },
 })

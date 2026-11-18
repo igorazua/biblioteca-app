@@ -60,11 +60,11 @@ export function Box({ children, pad = 12, gap = 8 }: { children: ReactNode; pad?
 
 const styles = StyleSheet.create({
   kpi: { borderRadius: 16, backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.line, padding: 12 },
-  kpiLabel: { fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16, color: colors.mute },
-  kpiValue: { fontFamily: 'Fraunces72-700', fontSize: 20, lineHeight: 28, color: '#ffffff', fontVariant: ['tabular-nums'], marginTop: 2 },
-  kpiSub: { fontFamily: 'Inter-400', fontSize: 10, lineHeight: 15, color: alpha(colors.mute, 0.8), marginTop: 2 },
+  kpiLabel: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: colors.mute },
+  kpiValue: { fontFamily: 'Archivo-Condensed-ExtraBold', fontSize: 26, lineHeight: 30, color: '#ffffff', fontVariant: ['tabular-nums'], marginTop: 2 },
+  kpiSub: { fontFamily: 'Archivo-Regular', fontSize: 10, lineHeight: 15, color: alpha(colors.mute, 0.8), marginTop: 2 },
   sectionHead: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
-  sectionTitle: { fontFamily: 'Fraunces72-600', fontSize: 18, lineHeight: 28, color: colors.accent },
-  sectionRight: { fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16, color: colors.mute },
+  sectionTitle: { fontFamily: 'Archivo-Condensed-ExtraBold', fontSize: 22, lineHeight: 28, textTransform: 'uppercase', color: colors.accent },
+  sectionRight: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: colors.mute },
   box: { borderRadius: 16, backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.line },
 })

@@ -88,7 +88,7 @@ interface State {
 
 const defaults = () => ({
   onboarded: false,
-  profile: { name: 'Tú', avatarColor: '#F5B544', platforms: [], country: 'ES', lang: 'es' } as Profile,
+  profile: { name: 'Tú', avatarColor: '#FF5A3C', platforms: [], country: 'ES', lang: 'es' } as Profile,
   entries: {} as Record<string, UserEntry>,
   rankings: { movie: [], series: [], book: [], artist: [], boardgame: [], song: [] } as Record<ShelfType, string[]>,
   lists: [] as List[],

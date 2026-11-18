@@ -102,7 +102,7 @@ function Stamp({ label, color, opacity, style, size = 26 }: { label: string; col
   const anim = useAnimatedStyle(() => ({ opacity: opacity.value }))
   return (
     <Animated.View pointerEvents="none" style={[{ position: 'absolute', zIndex: 10, borderWidth: 5, borderRadius: 12, paddingHorizontal: 12, paddingVertical: 4, borderColor: color }, style, anim]}>
-      <AppText fixed numberOfLines={1} style={{ fontFamily: 'Inter-900', fontSize: size, letterSpacing: size * 0.05, color }}>
+      <AppText fixed numberOfLines={1} style={{ fontFamily: 'Archivo-Condensed-ExtraBold', fontSize: size * 1.3, textTransform: 'uppercase', letterSpacing: size * 0.03, color }}>
         {label}
       </AppText>
     </Animated.View>

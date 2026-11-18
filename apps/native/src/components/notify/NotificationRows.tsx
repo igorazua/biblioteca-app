@@ -84,7 +84,7 @@ export function NotificationRows({ onToast }: { onToast: (message: string) => vo
 function Option({ active, label, onPress }: { active: boolean; label: string; onPress: () => void }) {
   return (
     <Press accessibilityRole="button" accessibilityState={{ selected: active }} onPress={onPress} style={[styles.opt, active ? styles.optOn : null]}>
-      <AppText style={[styles.optText, { color: active ? colors.accentInk : colors.mute }, active ? { fontFamily: 'Inter-600' } : null]}>{label}</AppText>
+      <AppText style={[styles.optText, { color: active ? colors.accentInk : colors.mute }, active ? { fontFamily: 'Archivo-SemiBold' } : null]}>{label}</AppText>
     </Press>
   )
 }
@@ -101,9 +101,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     gap: 8,
   },
-  label: { fontFamily: 'Inter-500', fontSize: 12, lineHeight: 16, color: colors.mute },
+  label: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: colors.mute },
   seg: { flexDirection: 'row', padding: 2, borderRadius: 12, backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.line },
   opt: { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 8 },
   optOn: { backgroundColor: colors.accent },
-  optText: { fontFamily: 'Inter-500', fontSize: 12, lineHeight: 16 },
+  optText: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16 },
 })

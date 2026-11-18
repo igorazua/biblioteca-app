@@ -170,7 +170,7 @@ export default function Perfil() {
               <Press accessibilityRole="link" onPress={() => router.push('/comparar')} style={styles.emptyTop}>
                 <AppText style={[tx('body'), { color: colors.mute }]}>
                   {'Cuando ordenes tus obras en '}
-                  <AppText style={{ color: colors.accent, fontFamily: 'Inter-500' }}>¡Duelos!</AppText>
+                  <AppText style={{ color: colors.accent, fontFamily: 'Archivo-Regular' }}>¡Duelos!</AppText>
                   {', aquí saldrá tu top 3 de cada estantería.'}
                 </AppText>
               </Press>
@@ -272,19 +272,19 @@ export default function Perfil() {
 
 const styles = StyleSheet.create({
   settingsBtn: { minHeight: 36, paddingLeft: 10, paddingRight: 14, borderRadius: 999, backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.line, flexDirection: 'row', alignItems: 'center', gap: 6 },
-  settingsText: { fontFamily: 'Inter-500', fontSize: 13, lineHeight: 18, color: colors.ink },
+  settingsText: { fontFamily: 'Archivo-Regular', fontSize: 13, lineHeight: 18, color: colors.ink },
   shelfHead: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 },
   fullRanking: { flexDirection: 'row', alignItems: 'center', gap: 4 },
-  fullRankingText: { fontFamily: 'Inter-600', fontSize: 12, lineHeight: 16, color: colors.accent },
+  fullRankingText: { fontFamily: 'Archivo-SemiBold', fontSize: 12, lineHeight: 16, color: colors.accent },
   emptyTop: { borderRadius: 16, borderWidth: 1, borderStyle: 'dashed', borderColor: colors.line, padding: 16 },
   stats: { flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between', rowGap: 10 },
   addBtn: { minHeight: 36, paddingHorizontal: 14, borderRadius: 999, backgroundColor: colors.accent, flexDirection: 'row', alignItems: 'center', gap: 6 },
-  addText: { fontFamily: 'Inter-600', fontSize: 12, lineHeight: 16, color: colors.accentInk },
+  addText: { fontFamily: 'Archivo-SemiBold', fontSize: 12, lineHeight: 16, color: colors.accentInk },
   noFriends: { backgroundColor: colors.surface, borderRadius: 24, borderWidth: 1, borderColor: colors.line, padding: 20, alignItems: 'center', gap: 10 },
   noFriendsIcon: { width: 40, height: 40, borderRadius: 16, backgroundColor: colors.surface2, alignItems: 'center', justifyContent: 'center' },
-  noFriendsTitle: { fontFamily: 'Inter-600', fontSize: 14, lineHeight: 20, color: colors.ink },
-  noFriendsText: { fontFamily: 'Inter-400', fontSize: 12, lineHeight: 19.5, color: colors.mute, textAlign: 'center', maxWidth: 320 },
-  sheetTitle: { fontFamily: 'Fraunces72-700', fontSize: 18, lineHeight: 28, color: colors.ink, marginBottom: 12 },
+  noFriendsTitle: { fontFamily: 'Archivo-SemiBold', fontSize: 14, lineHeight: 20, color: colors.ink },
+  noFriendsText: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 19.5, color: colors.mute, textAlign: 'center', maxWidth: 320 },
+  sheetTitle: { fontFamily: 'Archivo-Condensed-ExtraBold', fontSize: 24, lineHeight: 28, textTransform: 'uppercase', color: colors.ink, marginBottom: 12 },
   sheetBtn: { width: '100%', minHeight: 52, borderRadius: 16, backgroundColor: colors.surface2, borderWidth: 1, borderColor: colors.line, paddingHorizontal: 16, flexDirection: 'row', alignItems: 'center', gap: 12 },
-  sheetBtnText: { fontFamily: 'Inter-600', fontSize: 14, lineHeight: 20, color: colors.ink },
+  sheetBtnText: { fontFamily: 'Archivo-SemiBold', fontSize: 14, lineHeight: 20, color: colors.ink },
 })

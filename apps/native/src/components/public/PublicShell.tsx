@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: colors.bg },
   column: { flex: 1, width: '100%', maxWidth: 480, alignSelf: 'center', paddingHorizontal: 20 },
   header: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 24, minHeight: 24 },
-  open: { fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16.5, color: colors.mute, textDecorationLine: 'underline' },
+  open: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16.5, color: colors.mute, textDecorationLine: 'underline' },
   body: { flex: 1 },
   bottom: {
     position: 'absolute',

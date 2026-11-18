@@ -186,14 +186,14 @@ export const Poster = memo(function Poster({ item, style, showTitle = true, noBl
           <RNImage source={GRAIN} resizeMode="repeat" pointerEvents="none" style={{ position: 'absolute', left: 0, top: 0, width: w, height: H, opacity: 0.22 }} />
           {showTitle && (
             <View style={{ ...StyleSheet.absoluteFill as object, justifyContent: 'flex-end', padding: pad }}>
-              <AppText fixed numberOfLines={1} style={{ fontFamily: 'Inter-600', color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', fontSize: labelSize, letterSpacing: 0.24 * labelSize }}>
+              <AppText fixed numberOfLines={1} style={{ fontFamily: 'Archivo-SemiBold', color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', fontSize: labelSize, letterSpacing: 0.24 * labelSize }}>
                 {typeName(item.type)}
               </AppText>
-              <AppText fixed style={{ fontFamily: 'Fraunces72-600', color: '#fff', fontSize: cqwTitle * q, lineHeight: cqwTitle * q * 1.02, letterSpacing: -0.01 * cqwTitle * q, marginTop: 2.5 * q }}>
+              <AppText fixed style={{ fontFamily: 'Archivo-SemiBold', color: '#fff', fontSize: cqwTitle * q, lineHeight: cqwTitle * q * 1.02, letterSpacing: -0.01 * cqwTitle * q, marginTop: 2.5 * q }}>
                 {title}
               </AppText>
               <View style={{ marginTop: 3 * q, height: 1, width: 18 * q, backgroundColor: light, opacity: 0.8 }} />
-              <AppText fixed numberOfLines={1} style={{ fontFamily: 'Inter-400', color: 'rgba(255,255,255,0.65)', marginTop: 2.5 * q, fontSize: (isSquare ? 4.5 : 5) * q }}>
+              <AppText fixed numberOfLines={1} style={{ fontFamily: 'Archivo-Regular', color: 'rgba(255,255,255,0.65)', marginTop: 2.5 * q, fontSize: (isSquare ? 4.5 : 5) * q }}>
                 {item.year} · {item.creator}
               </AppText>
             </View>

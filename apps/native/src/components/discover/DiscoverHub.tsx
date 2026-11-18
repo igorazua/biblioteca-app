@@ -45,10 +45,10 @@ export function DiscoverHub({ entries, catalogVersion, onPick }: { entries: Reco
       contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 32, paddingTop: Math.max(insets.top, 12) }}
     >
       <View style={{ paddingTop: 12, paddingBottom: 12 }}>
-        <AppText style={{ fontFamily: 'Inter-700', fontSize: 11, lineHeight: 14, letterSpacing: 0.55, textTransform: 'uppercase', color: colors.accent }}>Explorar Catálogo</AppText>
-        <AppText accessibilityRole="header" style={{ fontFamily: 'Inter-700', fontSize: 24, lineHeight: 32, letterSpacing: -0.6, color: colors.ink }}>¿Qué te apetece hoy?</AppText>
+        <AppText style={{ fontFamily: 'Archivo-SemiBold', fontSize: 11, lineHeight: 14, letterSpacing: 0.55, textTransform: 'uppercase', color: colors.accent }}>Explorar Catálogo</AppText>
+        <AppText accessibilityRole="header" style={{ fontFamily: 'Archivo-SemiBold', fontSize: 24, lineHeight: 32, letterSpacing: -0.6, color: colors.ink }}>¿Qué te apetece hoy?</AppText>
       </View>
-      <AppText style={{ fontFamily: 'Inter-400', fontSize: 12, lineHeight: 19.5, color: colors.mute, marginBottom: 20 }}>
+      <AppText style={{ fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 19.5, color: colors.mute, marginBottom: 20 }}>
         Elige una estantería cultural para empezar una sesión de tarjetas y descubrir obras afines.
       </AppText>
 
@@ -104,16 +104,16 @@ export function DiscoverHub({ entries, catalogVersion, onPick }: { entries: Reco
 
             <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 2 }}>
               <Icon name={SHELF_ICON[s]} size={16} color={colors.accent} />
-              <AppText numberOfLines={1} style={{ flexShrink: 1, fontFamily: 'Inter-700', fontSize: 10, lineHeight: 12, letterSpacing: 0.5, textTransform: 'uppercase', color: colors.accent }}>
+              <AppText numberOfLines={1} style={{ flexShrink: 1, fontFamily: 'Archivo-SemiBold', fontSize: 10, lineHeight: 12, letterSpacing: 0.5, textTransform: 'uppercase', color: colors.accent }}>
                 {SHELF_LABEL[s].singular}
               </AppText>
             </View>
-            <AppText style={{ fontFamily: 'Inter-700', fontSize: 16, lineHeight: 20, color: colors.ink }}>{SHELF_LABEL[s].plural}</AppText>
+            <AppText style={{ fontFamily: 'Archivo-SemiBold', fontSize: 16, lineHeight: 20, color: colors.ink }}>{SHELF_LABEL[s].plural}</AppText>
 
             <View style={{ flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', columnGap: 8, rowGap: 2, marginTop: 12 }}>
-              <AppText style={{ fontFamily: 'Inter-500', fontSize: 12, lineHeight: 16, color: colors.mute, fontVariant: ['tabular-nums'] }}>{`${count} por ver`}</AppText>
+              <AppText style={{ fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: colors.mute, fontVariant: ['tabular-nums'] }}>{`${count} por ver`}</AppText>
               <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <AppText style={{ fontFamily: 'Inter-600', fontSize: 11, lineHeight: 16, color: colors.accent }}>Swipear</AppText>
+                <AppText style={{ fontFamily: 'Archivo-SemiBold', fontSize: 11, lineHeight: 16, color: colors.accent }}>Swipear</AppText>
                 <Icon name="chevron" size={13} color={colors.accent} />
               </View>
             </View>

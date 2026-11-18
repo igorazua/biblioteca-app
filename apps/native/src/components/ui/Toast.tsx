@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 12.5,
   },
-  message: { flex: 1, fontFamily: 'Inter-500', fontSize: 14, lineHeight: 20, color: colors.bg, textAlign: 'center' },
+  message: { flex: 1, fontFamily: 'Archivo-Regular', fontSize: 14, lineHeight: 20, color: colors.bg, textAlign: 'center' },
   action: { paddingHorizontal: 8, paddingVertical: 4 },
-  actionText: { fontFamily: 'Inter-600', fontSize: 14, lineHeight: 20, color: colors.bg },
+  actionText: { fontFamily: 'Archivo-SemiBold', fontSize: 14, lineHeight: 20, color: colors.bg },
 })

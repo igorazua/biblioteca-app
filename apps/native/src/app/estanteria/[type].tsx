@@ -141,7 +141,7 @@ function ShelfScreen({ t }: { t: ShelfType }) {
             <AppText style={[tx('meta'), { color: alpha(colors.ink, 0.75), marginTop: 4 }]}>
               {seg === 'ord' ? (
                 <>
-                  {totalSeen} obras · <AppText style={{ fontFamily: 'Inter-600', color: pctColor(ordenadoPct) }}>{ordenadoPct} % ordenado</AppText>
+                  {totalSeen} obras · <AppText style={{ fontFamily: 'Archivo-SemiBold', color: pctColor(ordenadoPct) }}>{ordenadoPct} % ordenado</AppText>
                 </>
               ) : (
                 `${pend.length} pendientes`
@@ -155,9 +155,9 @@ function ShelfScreen({ t }: { t: ShelfType }) {
       <View style={{ flexDirection: 'row', gap: 24, marginHorizontal: 20, marginBottom: 16, borderBottomWidth: 1, borderBottomColor: colors.line }} accessibilityRole="tablist">
         {(['ord', 'pend'] as const).map((k) => (
           <Press key={k} onPress={() => setSeg(k)} accessibilityRole="tab" accessibilityState={{ selected: seg === k }} style={{ paddingBottom: 10 }}>
-            <AppText style={{ fontFamily: 'Inter-600', fontSize: 15, color: seg === k ? colors.ink : colors.mute }}>
+            <AppText style={{ fontFamily: 'Archivo-SemiBold', fontSize: 15, color: seg === k ? colors.ink : colors.mute }}>
               {k === 'ord' ? `Mis ${plural}` : 'Pendientes'}{' '}
-              <AppText style={{ fontFamily: 'Inter-400', color: colors.mute, fontVariant: ['tabular-nums'] }}>{k === 'ord' ? totalSeen : pend.length}</AppText>
+              <AppText style={{ fontFamily: 'Archivo-Regular', color: colors.mute, fontVariant: ['tabular-nums'] }}>{k === 'ord' ? totalSeen : pend.length}</AppText>
             </AppText>
             {seg === k && <View style={{ position: 'absolute', left: 0, right: 0, bottom: -1, height: 2, borderRadius: 2, backgroundColor: colors.accent }} />}
           </Press>
@@ -225,10 +225,10 @@ function ShelfScreen({ t }: { t: ShelfType }) {
           style={{ position: 'absolute', right: 20, bottom: Math.max(insets.bottom, 20), flexDirection: 'row', alignItems: 'center', gap: 8, height: 52, paddingLeft: 16, paddingRight: 20, borderRadius: 26, backgroundColor: colors.accent, elevation: 8 }}
         >
           <Icon name="scale" size={18} strokeWidth={2.2} color={colors.accentInk} />
-          <AppText style={{ fontFamily: 'Inter-600', fontSize: 15, color: colors.accentInk }}>Ordenar</AppText>
+          <AppText style={{ fontFamily: 'Archivo-SemiBold', fontSize: 15, color: colors.accentInk }}>Ordenar</AppText>
           {unrankedIds.length > 0 && (
             <View style={{ minWidth: 22, height: 22, paddingHorizontal: 6, borderRadius: 11, backgroundColor: colors.accentInk, alignItems: 'center', justifyContent: 'center' }}>
-              <AppText style={{ fontFamily: 'Inter-700', fontSize: 12, color: colors.accent, fontVariant: ['tabular-nums'] }}>{unrankedIds.length}</AppText>
+              <AppText style={{ fontFamily: 'Archivo-SemiBold', fontSize: 12, color: colors.accent, fontVariant: ['tabular-nums'] }}>{unrankedIds.length}</AppText>
             </View>
           )}
         </Press>

@@ -142,40 +142,40 @@ const styles = StyleSheet.create({
   center: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 32 },
   spinner: { width: 40, height: 40, borderRadius: 20, borderWidth: 3, borderColor: colors.accent, borderTopColor: 'transparent' },
   // serif text-xl font-semibold
-  h2: { fontFamily: 'Fraunces72-600', fontSize: 20, lineHeight: 28, color: colors.ink, textAlign: 'center' },
+  h2: { fontFamily: 'Archivo-Condensed-ExtraBold', fontSize: 26, lineHeight: 28, textTransform: 'uppercase', color: colors.ink, textAlign: 'center' },
   // serif text-2xl font-semibold
-  h1: { fontFamily: 'Fraunces72-600', fontSize: 24, lineHeight: 32, color: colors.ink, textAlign: 'center' },
-  progress: { fontFamily: 'Inter-400', fontSize: 14, lineHeight: 20, color: colors.mute, textAlign: 'center' },
+  h1: { fontFamily: 'Archivo-Condensed-ExtraBold', fontSize: 32, lineHeight: 34, textTransform: 'uppercase', color: colors.ink, textAlign: 'center' },
+  progress: { fontFamily: 'Archivo-Regular', fontSize: 14, lineHeight: 20, color: colors.mute, textAlign: 'center' },
   // text-xs text-mute max-w-xs leading-relaxed
-  note: { fontFamily: 'Inter-400', fontSize: 12, lineHeight: 19.5, color: colors.mute, textAlign: 'center', maxWidth: 320 },
+  note: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 19.5, color: colors.mute, textAlign: 'center', maxWidth: 320 },
   // text-sm text-mute max-w-xs leading-relaxed
-  note2: { fontFamily: 'Inter-400', fontSize: 14, lineHeight: 22.75, color: colors.mute, textAlign: 'center', maxWidth: 320 },
+  note2: { fontFamily: 'Archivo-Regular', fontSize: 14, lineHeight: 22.75, color: colors.mute, textAlign: 'center', maxWidth: 320 },
   // flex-1 flex flex-col gap-6 p-5 max-w-md mx-auto w-full
   review: { flexGrow: 1, gap: 24, padding: 20, width: '100%', maxWidth: 448, alignSelf: 'center' },
   // rounded-3xl bg-surface border border-line p-5
   resultCard: { borderRadius: 24, backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.line, padding: 20 },
   // serif text-3xl font-semibold mt-1
-  resultTitle: { fontFamily: 'Fraunces72-600', fontSize: 30, lineHeight: 36, color: colors.ink, marginTop: 4 },
-  resultMeta: { fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16, color: colors.mute, marginTop: 8 },
+  resultTitle: { fontFamily: 'Archivo-Condensed-ExtraBold', fontSize: 38, lineHeight: 40, textTransform: 'uppercase', color: colors.ink, marginTop: 4 },
+  resultMeta: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: colors.mute, marginTop: 8 },
   // bg-surface border border-line rounded-2xl p-4 space-y-3
   doubtCard: { backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.line, borderRadius: 16, padding: 16, gap: 12 },
-  doubtTitle: { fontFamily: 'Inter-600', fontSize: 14, lineHeight: 20, color: colors.ink },
-  doubtYear: { fontFamily: 'Inter-400', color: colors.mute },
+  doubtTitle: { fontFamily: 'Archivo-SemiBold', fontSize: 14, lineHeight: 20, color: colors.ink },
+  doubtYear: { fontFamily: 'Archivo-Regular', color: colors.mute },
   chips: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
   // min-h-[40px] text-xs px-3 rounded-xl border text-left
   chip: { minHeight: 40, paddingHorizontal: 12, borderRadius: 12, borderWidth: 1, justifyContent: 'center' },
   chipOn: { backgroundColor: colors.accent, borderColor: colors.accent },
   chipOff: { backgroundColor: colors.surface2, borderColor: colors.line },
   chipNone: { backgroundColor: alpha(colors.stampRed, 0.2), borderColor: colors.stampRed },
-  chipText: { fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16 },
+  chipText: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16 },
   // mt-auto pt-2
   confirmWrap: { marginTop: 'auto', paddingTop: 8 },
   // w-full min-h-[52px] rounded-2xl bg-accent text-accent-ink font-semibold
   confirm: { width: '100%', minHeight: 52, borderRadius: 16, backgroundColor: colors.accent, alignItems: 'center', justifyContent: 'center' },
-  confirmText: { fontFamily: 'Inter-600', fontSize: 16, lineHeight: 24, color: colors.accentInk },
+  confirmText: { fontFamily: 'Archivo-SemiBold', fontSize: 16, lineHeight: 24, color: colors.accentInk },
   // w-14 h-14 rounded-full bg-accent/20 text-accent text-2xl font-bold
   tick: { width: 56, height: 56, borderRadius: 28, backgroundColor: alpha(colors.accent, 0.2), alignItems: 'center', justifyContent: 'center' },
-  tickText: { fontFamily: 'Inter-700', fontSize: 24, lineHeight: 32, color: colors.accent },
+  tickText: { fontFamily: 'Archivo-SemiBold', fontSize: 24, lineHeight: 32, color: colors.accent },
   // mt-2 px-6 min-h-[48px] rounded-2xl bg-accent text-accent-ink font-semibold
   finish: { marginTop: 8, paddingHorizontal: 24, minHeight: 48, borderRadius: 16, backgroundColor: colors.accent, alignItems: 'center', justifyContent: 'center' },
 })

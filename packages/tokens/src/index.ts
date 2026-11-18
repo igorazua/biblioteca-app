@@ -1,4 +1,4 @@
-// Tokens de diseño de la app nativa, copiados de app/src/index.css (web-congelada-v1).
+// Tokens de diseño de la app nativa, copiados de app/src/index.css (web-congelada-v1) y actualizados a Taquilla (docs/IDENTIDAD.md).
 // Sin dependencias. Los nombres de la web se mantienen; los valores de texto van en puntos (pt).
 // Regla de conversión: letterSpacing = em × fontSize (en pt); lineHeight = multiplicador × fontSize (en pt).
 // Lo que no está en index.css no figura aquí.
@@ -13,14 +13,19 @@ export const colors = {
   surface: '#2a2620',
   surface2: '#36312a',
   line: '#4a433b',
-  ink: '#f4efe6',
+  // Taquilla (18/11/2026, docs/IDENTIDAD.md): rojo cartel como acento, tinta casi blanca; los fondos siguen en D30.
+  ink: '#f4f3f1',
   mute: '#bdb6a9',
-  accent: '#f2b04a',
-  accentInk: '#100e0c',
+  accent: '#ff5a3c',
+  accentInk: '#120f0a',
   secundario: '#d9714e',
   stampRed: '#ef4b4b',
   stampGreen: '#3ec878',
   stampBlue: '#4a8df0',
+  // Lados del duelo (D33, Taquilla): cian a la izquierda y rojo a la derecha; la confirmación sigue en verde (#38c172).
+  duelA: '#2ec4c8',
+  duelB: '#ff5a3c',
+  duelDone: '#38c172',
 } as const
 
 // --color-shelf-* de @theme.
@@ -34,30 +39,21 @@ export const shelfColors = {
 } as const
 
 // ── Familias ──────────────────────────────────────────────────────────────────────────────────────
-// Nombres de la web (--font-sans / --font-serif). En nativo cada peso es un archivo estático con su
-// propio nombre: ver `fontFiles` y los `fontFamily` de `text`.
+// Taquilla: una sola familia, Archivo (Google Fonts, OFL 1.1). En nativo cada peso/anchura es un archivo estático
+// con su propio nombre: ver `fontFiles` y los `fontFamily` de `text`.
 export const fonts = {
-  sans: 'Inter Variable',
-  serif: 'Fraunces Variable',
+  sans: 'Archivo',
+  display: 'Archivo Condensed',
 } as const
 
 /**
  * Nombre lógico de cada fuente estática → archivo en apps/native/assets/fonts/.
- * Se genera con packages/tokens/scripts/make-fonts.py. El nombre lógico es el que usa `fontFamily`.
+ * Se genera con packages/tokens/scripts/make-fonts.py a partir de `Archivo[wdth,wght].ttf` oficial.
  */
 export const fontFiles = {
-  'Fraunces72-400': 'Fraunces72-400.ttf', // Fraunces, opsz 72, wght 400
-  'Fraunces72-500': 'Fraunces72-500.ttf', // opsz 72, wght 500
-  'Fraunces72-600': 'Fraunces72-600.ttf', // opsz 72, wght 600
-  'Fraunces72-700': 'Fraunces72-700.ttf', // opsz 72, wght 700
-  'Fraunces144-800': 'Fraunces144-800.ttf', // opsz 144, wght 800 (número de ranking)
-  'Fraunces72-400-italic': 'Fraunces72-400-italic.ttf', // cursiva, opsz 72, wght 400
-  'Fraunces72-500-italic': 'Fraunces72-500-italic.ttf', // cursiva, opsz 72, wght 500
-  'Inter-400': 'Inter-400.ttf',
-  'Inter-500': 'Inter-500.ttf',
-  'Inter-600': 'Inter-600.ttf',
-  'Inter-700': 'Inter-700.ttf',
-  'Inter-900': 'Inter-900.ttf',
+  'Archivo-Condensed-ExtraBold': 'Archivo-Condensed-ExtraBold.ttf', // wdth 62, wght 800: titulares, números de ranking, sellos (MAYÚSCULAS)
+  'Archivo-Regular': 'Archivo-Regular.ttf', // wdth 100, wght 400: texto
+  'Archivo-SemiBold': 'Archivo-SemiBold.ttf', // wdth 100, wght 600: botones, títulos de obra
 } as const
 
 export type FontName = keyof typeof fontFiles
@@ -74,32 +70,31 @@ export interface TextStyle {
 }
 
 export const text = {
-  // text-display: Fraunces, 30px, lh 1.05, 500, -0.02em
-  display: { fontFamily: 'Fraunces72-500', fontSize: 30, lineHeight: 31.5, fontWeight: 500, letterSpacing: -0.6 },
-  // text-title: Fraunces, 22px, lh 1.15, 500, -0.015em
-  title: { fontFamily: 'Fraunces72-500', fontSize: 22, lineHeight: 25.3, fontWeight: 500, letterSpacing: -0.33 },
-  // text-item: Fraunces, 16px, lh 1.2, 500 (sin letter-spacing)
-  item: { fontFamily: 'Fraunces72-500', fontSize: 16, lineHeight: 19.2, fontWeight: 500 },
-  // text-body: Inter, 15px, lh 1.45, 400
-  body: { fontFamily: 'Inter-400', fontSize: 15, lineHeight: 21.75, fontWeight: 400 },
-  // text-meta: Inter, 13px, lh 1.4, 400, color mute
-  meta: { fontFamily: 'Inter-400', fontSize: 13, lineHeight: 18.2, fontWeight: 400, color: colors.mute },
-  // text-label: Inter, 11px, lh 1, 500, 0.14em, mayúsculas, color mute
-  label: { fontFamily: 'Inter-500', fontSize: 11, lineHeight: 11, fontWeight: 500, letterSpacing: 1.54, textTransform: 'uppercase', color: colors.mute },
-  // .label-caps: 11px, 600, 0.16em, mayúsculas. La web no fija familia ni interlineado: hereda el body
-  // (Inter, interlineado normal), por eso se usa Inter-600 y sin lineHeight.
-  labelCaps: { fontFamily: 'Inter-600', fontSize: 11, fontWeight: 600, letterSpacing: 1.76, textTransform: 'uppercase' },
+  // text-display: Archivo condensada 800, MAYÚSCULAS, 36pt, lh 1, -0.01em (Taquilla)
+  display: { fontFamily: 'Archivo-Condensed-ExtraBold', fontSize: 36, lineHeight: 36, fontWeight: 800, letterSpacing: -0.36, textTransform: 'uppercase' },
+  // text-title: Archivo condensada 800, MAYÚSCULAS, 26pt, lh 1.05, -0.01em
+  title: { fontFamily: 'Archivo-Condensed-ExtraBold', fontSize: 26, lineHeight: 27.3, fontWeight: 800, letterSpacing: -0.26, textTransform: 'uppercase' },
+  // text-item: título de obra en listas y tarjetas: Archivo SemiBold normal, 16pt, lh 1.2
+  item: { fontFamily: 'Archivo-SemiBold', fontSize: 16, lineHeight: 19.2, fontWeight: 600 },
+  // text-body: Archivo Regular, 15px, lh 1.45, 400
+  body: { fontFamily: 'Archivo-Regular', fontSize: 15, lineHeight: 21.75, fontWeight: 400 },
+  // text-meta: Archivo Regular, 13px, lh 1.4, 400, color mute
+  meta: { fontFamily: 'Archivo-Regular', fontSize: 13, lineHeight: 18.2, fontWeight: 400, color: colors.mute },
+  // text-label: Archivo SemiBold, 11px, lh 1, 0.14em, mayúsculas, color mute
+  label: { fontFamily: 'Archivo-SemiBold', fontSize: 11, lineHeight: 11, fontWeight: 600, letterSpacing: 1.54, textTransform: 'uppercase', color: colors.mute },
+  // .label-caps: 11px, 600, 0.16em, mayúsculas, sin interlineado fijo.
+  labelCaps: { fontFamily: 'Archivo-SemiBold', fontSize: 11, fontWeight: 600, letterSpacing: 1.76, textTransform: 'uppercase' },
 } as const satisfies Record<string, TextStyle>
 
 // ── .rank-num: número de ranking hueco ───────────────────────────────────────────────────────────
 // No fija tamaño en la web (lo pone el componente). lineHeight 0.8 es multiplicador.
 export const rankNum = {
-  fontFamily: 'Fraunces144-800' as FontName,
+  fontFamily: 'Archivo-Condensed-ExtraBold' as FontName,
   fontWeight: 800,
   lineHeightRatio: 0.8,
-  opsz: 144,
+  widthAxis: 62, // wdth de la instancia condensada
   color: 'transparent',
-  strokeColor: 'rgba(244, 241, 234, 0.55)', // rgb(244 241 234 / 0.55)
+  strokeColor: 'rgba(244, 243, 241, 0.55)', // ink de Taquilla con alfa 0,55
   strokeWidth: 1.5,
 } as const
 

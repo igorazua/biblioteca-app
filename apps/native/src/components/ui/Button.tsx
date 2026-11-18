@@ -76,7 +76,7 @@ export function Button({
       ) : (
         <>
           {icon ? <View style={styles.iconLeft}>{icon}</View> : null}
-          <AppText style={tx('body', { fontFamily: 'Inter-500', color: v.color })}>{children}</AppText>
+          <AppText style={tx('body', { fontFamily: 'Archivo-Regular', color: v.color })}>{children}</AppText>
           {iconRight ? <View style={styles.iconRight}>{iconRight}</View> : null}
         </>
       )}

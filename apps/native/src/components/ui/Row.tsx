@@ -59,6 +59,6 @@ const styles = StyleSheet.create({
   },
   iconBox: { width: 36, height: 36, borderRadius: 12, alignItems: 'center', justifyContent: 'center' },
   text: { flex: 1, minWidth: 0 },
-  title: { fontFamily: 'Inter-600', fontSize: 14, lineHeight: 20, color: colors.ink },
-  sub: { fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16.5, color: colors.mute, marginTop: 2 },
+  title: { fontFamily: 'Archivo-SemiBold', fontSize: 14, lineHeight: 20, color: colors.ink },
+  sub: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16.5, color: colors.mute, marginTop: 2 },
 })

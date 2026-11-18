@@ -37,7 +37,7 @@ export function PhoneDiscovery({ onToast }: { onToast: (msg: string) => void }) 
   return (
     <View style={styles.card}>
       <View>
-        <AppText style={tx('body', { fontFamily: 'Inter-600', color: colors.ink })}>Que tus amigos te encuentren por tu teléfono</AppText>
+        <AppText style={tx('body', { fontFamily: 'Archivo-SemiBold', color: colors.ink })}>Que tus amigos te encuentren por tu teléfono</AppText>
         <AppText style={[tx('meta'), { marginTop: 4, lineHeight: 19 }]}>
           Si alguien que te tiene en su agenda busca amigos, le aparecerás para conectar. Tu número no se muestra a nadie y en el servidor solo queda una huella de la
           que no se puede sacar.
@@ -45,7 +45,7 @@ export function PhoneDiscovery({ onToast }: { onToast: (msg: string) => void }) 
       </View>
       {on ? (
         <View style={styles.onRow}>
-          <AppText style={tx('body', { fontFamily: 'Inter-500', color: colors.accent })}>Activado</AppText>
+          <AppText style={tx('body', { fontFamily: 'Archivo-Regular', color: colors.accent })}>Activado</AppText>
           <Press
             accessibilityRole="button"
             accessibilityLabel="Desactivar"
@@ -54,7 +54,7 @@ export function PhoneDiscovery({ onToast }: { onToast: (msg: string) => void }) 
             onPress={() => save(null)}
             style={styles.offBtn}
           >
-            <AppText style={tx('body', { fontFamily: 'Inter-500', color: colors.ink })}>Desactivar</AppText>
+            <AppText style={tx('body', { fontFamily: 'Archivo-Regular', color: colors.ink })}>Desactivar</AppText>
           </Press>
         </View>
       ) : (
@@ -80,7 +80,7 @@ export function PhoneDiscovery({ onToast }: { onToast: (msg: string) => void }) 
             onPress={() => save(phone)}
             style={styles.onBtn}
           >
-            <AppText style={tx('body', { fontFamily: 'Inter-600', color: colors.accentInk })}>{saving ? '…' : 'Activar'}</AppText>
+            <AppText style={tx('body', { fontFamily: 'Archivo-SemiBold', color: colors.accentInk })}>{saving ? '…' : 'Activar'}</AppText>
           </Press>
         </View>
       )}

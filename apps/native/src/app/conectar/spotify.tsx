@@ -71,9 +71,9 @@ const styles = StyleSheet.create({
   // flex-1 flex flex-col items-center justify-center text-center p-8 gap-4
   center: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 32, gap: 16 },
   // text-sm text-mute max-w-xs leading-relaxed
-  msg: { fontFamily: 'Inter-400', fontSize: 14, lineHeight: 22.75, color: colors.mute, textAlign: 'center', maxWidth: 320 },
-  wait: { fontFamily: 'Inter-400', fontSize: 14, lineHeight: 20, color: colors.mute, textAlign: 'center' },
+  msg: { fontFamily: 'Archivo-Regular', fontSize: 14, lineHeight: 22.75, color: colors.mute, textAlign: 'center', maxWidth: 320 },
+  wait: { fontFamily: 'Archivo-Regular', fontSize: 14, lineHeight: 20, color: colors.mute, textAlign: 'center' },
   // px-6 min-h-[48px] rounded-2xl bg-surface2 border border-line font-semibold
   back: { paddingHorizontal: 24, minHeight: 48, borderRadius: 16, backgroundColor: colors.surface2, borderWidth: 1, borderColor: colors.line, alignItems: 'center', justifyContent: 'center' },
-  backText: { fontFamily: 'Inter-600', fontSize: 16, lineHeight: 24, color: colors.ink },
+  backText: { fontFamily: 'Archivo-SemiBold', fontSize: 16, lineHeight: 24, color: colors.ink },
 })

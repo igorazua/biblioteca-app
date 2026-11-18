@@ -21,18 +21,9 @@ void SplashScreen.preventAutoHideAsync()
 
 // Las fuentes estáticas de assets/fonts (tokens: `fontFiles`). Los `require` tienen que ser literales para Metro.
 const FONTS = {
-  'Fraunces72-400': require('../../assets/fonts/Fraunces72-400.ttf'),
-  'Fraunces72-500': require('../../assets/fonts/Fraunces72-500.ttf'),
-  'Fraunces72-600': require('../../assets/fonts/Fraunces72-600.ttf'),
-  'Fraunces72-700': require('../../assets/fonts/Fraunces72-700.ttf'),
-  'Fraunces144-800': require('../../assets/fonts/Fraunces144-800.ttf'),
-  'Fraunces72-400-italic': require('../../assets/fonts/Fraunces72-400-italic.ttf'),
-  'Fraunces72-500-italic': require('../../assets/fonts/Fraunces72-500-italic.ttf'),
-  'Inter-400': require('../../assets/fonts/Inter-400.ttf'),
-  'Inter-500': require('../../assets/fonts/Inter-500.ttf'),
-  'Inter-600': require('../../assets/fonts/Inter-600.ttf'),
-  'Inter-700': require('../../assets/fonts/Inter-700.ttf'),
-  'Inter-900': require('../../assets/fonts/Inter-900.ttf'),
+  'Archivo-Condensed-ExtraBold': require('../../assets/fonts/Archivo-Condensed-ExtraBold.ttf'),
+  'Archivo-Regular': require('../../assets/fonts/Archivo-Regular.ttf'),
+  'Archivo-SemiBold': require('../../assets/fonts/Archivo-SemiBold.ttf'),
 }
 
 // App.tsx:42 de la PWA: sin onboarding hecho, todo lleva a /onboarding?next=… Las rutas públicas (/l, /p, /unete) quedan

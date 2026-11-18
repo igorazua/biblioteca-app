@@ -637,7 +637,7 @@ export default function Decidir() {
                     accessibilityState={{ selected: val === any.id }}
                     style={{ alignSelf: 'center', marginTop: 8, minHeight: 44, paddingHorizontal: 20, justifyContent: 'center' }}
                   >
-                    <AppText style={[tx('meta'), { fontFamily: 'Inter-500', color: val === any.id ? colors.ink : colors.accent }]}>{any.label}</AppText>
+                    <AppText style={[tx('meta'), { fontFamily: 'Archivo-Regular', color: val === any.id ? colors.ink : colors.accent }]}>{any.label}</AppText>
                   </Press>
                 )}
               </View>
@@ -712,7 +712,7 @@ export default function Decidir() {
               {typeName(currentItem.type)} · {currentItem.year} · {itemFacts(currentItem)}
             </AppText>
             <AppText style={[tx('display'), { color: colors.ink, marginTop: 4 }]}>{titleOf(currentItem)}</AppText>
-            <AppText style={[tx('meta'), { fontFamily: 'Inter-500', color: colors.accent, marginTop: 8 }]}>{reasonsText}</AppText>
+            <AppText style={[tx('meta'), { fontFamily: 'Archivo-Regular', color: colors.accent, marginTop: 8 }]}>{reasonsText}</AppText>
             <AppText numberOfLines={2} style={[tx('body'), { color: colors.mute, marginTop: 6 }]}>
               {currentItem.synopsis}
             </AppText>
@@ -721,7 +721,7 @@ export default function Decidir() {
         </View>
         {!!proposal?.alternatives?.length && (
           <Press onPress={() => setShowAlts(true)} accessibilityRole="button" style={{ alignSelf: 'center', marginTop: 12, minHeight: 36, paddingHorizontal: 12, flexDirection: 'row', alignItems: 'center', gap: 4 }}>
-            <AppText style={[tx('meta'), { fontFamily: 'Inter-500', color: colors.accent }]}>Ver {shelfTerms.fem ? 'otras' : 'otros'} {proposal.alternatives.length} {shelfTerms.fem ? 'candidatas' : 'candidatos'}</AppText>
+            <AppText style={[tx('meta'), { fontFamily: 'Archivo-Regular', color: colors.accent }]}>Ver {shelfTerms.fem ? 'otras' : 'otros'} {proposal.alternatives.length} {shelfTerms.fem ? 'candidatas' : 'candidatos'}</AppText>
             <Icon name="chevron" size={14} color={colors.accent} />
           </Press>
         )}

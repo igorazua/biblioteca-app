@@ -1,22 +1,22 @@
 """
-Genera las fuentes estáticas (TTF) de la app nativa a partir de los archivos variables de la PWA.
+Genera las fuentes estáticas (TTF) de la app nativa a partir del archivo variable oficial de Archivo.
 
-Origen (paquetes @fontsource-variable de app/node_modules):
-  - Fraunces: fraunces-latin-full-normal.woff2 (ejes opsz, wght, SOFT, WONK)
-              fraunces-latin-full-italic.woff2 (mismos ejes; cursivas Fraunces72-400-italic y -500-italic)
-  - Inter:    inter-latin-wght-normal.woff2    (eje wght)
+Origen: Google Fonts, `ofl/archivo/Archivo[wdth,wght].ttf` (licencia OFL 1.1; el texto va en
+apps/native/assets/fonts/OFL.txt). Si no se pasa ruta, el script lo descarga de la URL oficial.
 
 Destino: apps/native/assets/fonts/. Cada archivo lleva el nombre lógico de tokens.fontFiles
 (packages/tokens/src/index.ts) también en su tabla name, para que fontFamily coincida.
 
 Uso (desde la raíz del worktree):
-  python packages/tokens/scripts/make-fonts.py
+  python packages/tokens/scripts/make-fonts.py [ruta/Archivo[wdth,wght].ttf]
 
-Requiere fonttools y brotli (los WOFF2 se descomprimen con brotli).
+Requiere fonttools.
 """
 
 import os
 import sys
+import tempfile
+import urllib.request
 
 from fontTools.ttLib import TTFont
 from fontTools.varLib import instancer
@@ -25,48 +25,22 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
 OUT = os.path.join(REPO, "apps", "native", "assets", "fonts")
 
-SOURCE_DIRS = [
-    os.path.join(REPO, "app", "node_modules", "@fontsource-variable"),
-    os.path.join(REPO, "..", "app", "node_modules", "@fontsource-variable"),
-]
+BASE = "https://raw.githubusercontent.com/google/fonts/main/ofl/archivo/"
+VARIABLE_URL = BASE + "Archivo%5Bwdth%2Cwght%5D.ttf"
+LICENSE_URL = BASE + "OFL.txt"
 
-FRAUNCES = os.path.join("fraunces", "files", "fraunces-latin-full-normal.woff2")
-FRAUNCES_ITALIC = os.path.join("fraunces", "files", "fraunces-latin-full-italic.woff2")
-INTER = os.path.join("inter", "files", "inter-latin-wght-normal.woff2")
-
-# (nombre lógico, archivo de origen, coordenadas del eje)
-# Fraunces: SOFT y WONK fijados a su valor por defecto (0 y 1); opsz y wght según la web (.serif usa opsz 72, rank-num 144).
+# (nombre lógico, coordenadas de los ejes)
 JOBS = [
-    ("Fraunces72-400", FRAUNCES, {"opsz": 72, "wght": 400, "SOFT": 0, "WONK": 1}),
-    ("Fraunces72-500", FRAUNCES, {"opsz": 72, "wght": 500, "SOFT": 0, "WONK": 1}),
-    ("Fraunces72-600", FRAUNCES, {"opsz": 72, "wght": 600, "SOFT": 0, "WONK": 1}),
-    ("Fraunces72-700", FRAUNCES, {"opsz": 72, "wght": 700, "SOFT": 0, "WONK": 1}),
-    ("Fraunces144-800", FRAUNCES, {"opsz": 144, "wght": 800, "SOFT": 0, "WONK": 1}),
-    # Cursivas: mismos ejes que la normal (la PWA usa la cursiva variable con esos valores).
-    ("Fraunces72-400-italic", FRAUNCES_ITALIC, {"opsz": 72, "wght": 400, "SOFT": 0, "WONK": 1}),
-    ("Fraunces72-500-italic", FRAUNCES_ITALIC, {"opsz": 72, "wght": 500, "SOFT": 0, "WONK": 1}),
-    ("Inter-400", INTER, {"wght": 400}),
-    ("Inter-500", INTER, {"wght": 500}),
-    ("Inter-600", INTER, {"wght": 600}),
-    ("Inter-700", INTER, {"wght": 700}),
-    ("Inter-900", INTER, {"wght": 900}),
+    ("Archivo-Condensed-ExtraBold", {"wdth": 62, "wght": 800}),  # titulares, números de ranking, sellos
+    ("Archivo-Regular", {"wdth": 100, "wght": 400}),  # texto
+    ("Archivo-SemiBold", {"wdth": 100, "wght": 600}),  # botones, títulos de obra
 ]
-
-
-def find_source(rel):
-    for base in SOURCE_DIRS:
-        path = os.path.join(base, rel)
-        if os.path.isfile(path):
-            return path
-    sys.exit(f"No encuentro {rel} en {SOURCE_DIRS}")
 
 
 def set_names(font, family):
     """Pone el nombre lógico en las entradas de familia, nombre completo y PostScript, y quita las de subfamilia tipográfica."""
     name = font["name"]
-    for name_id in (1, 4, 6):
-        name.removeNames(nameID=name_id)
-    for name_id in (16, 17):
+    for name_id in (1, 4, 6, 16, 17):
         name.removeNames(nameID=name_id)
     ps = family.replace(" ", "")
     for name_id, value in ((1, family), (4, family), (6, ps)):
@@ -74,22 +48,23 @@ def set_names(font, family):
         name.setName(value, name_id, 1, 0, 0)
 
 
-def build(logical, rel, axes):
-    src = find_source(rel)
-    font = TTFont(src)
-    static = instancer.instantiateVariableFont(font, axes, inplace=False, updateFontNames=False)
-    set_names(static, logical)
-    static.flavor = None
-    out = os.path.join(OUT, f"{logical}.ttf")
-    static.save(out)
-    print(f"{logical}.ttf  <- {os.path.basename(src)}  {axes}")
-    return out
-
-
 def main():
     os.makedirs(OUT, exist_ok=True)
-    for logical, rel, axes in JOBS:
-        build(logical, rel, axes)
+    src = sys.argv[1] if len(sys.argv) > 1 else None
+    if not src:
+        src = os.path.join(tempfile.mkdtemp(), "Archivo-variable.ttf")
+        urllib.request.urlretrieve(VARIABLE_URL, src)
+    lic = os.path.join(OUT, "OFL.txt")
+    if not os.path.isfile(lic):
+        urllib.request.urlretrieve(LICENSE_URL, lic)
+    for logical, axes in JOBS:
+        font = TTFont(src)
+        static = instancer.instantiateVariableFont(font, axes, inplace=False, updateFontNames=False)
+        set_names(static, logical)
+        static.flavor = None
+        out = os.path.join(OUT, f"{logical}.ttf")
+        static.save(out)
+        print(f"{logical}.ttf  {axes}  {os.path.getsize(out)} bytes")
 
 
 if __name__ == "__main__":

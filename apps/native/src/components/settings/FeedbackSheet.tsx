@@ -80,7 +80,7 @@ export function FeedbackSheet({ userId, profileName, onClose, onResult }: Feedba
 }
 
 const styles = StyleSheet.create({
-  title: { fontFamily: 'Fraunces72-700', fontSize: 20, lineHeight: 26, color: colors.ink },
+  title: { fontFamily: 'Archivo-Condensed-ExtraBold', fontSize: 26, lineHeight: 28, textTransform: 'uppercase', color: colors.ink },
   area: {
     minHeight: 110,
     borderRadius: 16,
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     borderColor: colors.line,
     backgroundColor: colors.surface2,
     padding: 12,
-    fontFamily: 'Inter-400',
+    fontFamily: 'Archivo-Regular',
     fontSize: 14,
     lineHeight: 20,
     color: colors.ink,
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     borderColor: colors.line,
     backgroundColor: colors.surface2,
     padding: 12,
-    fontFamily: 'Inter-400',
+    fontFamily: 'Archivo-Regular',
     fontSize: 12,
     color: colors.ink,
   },

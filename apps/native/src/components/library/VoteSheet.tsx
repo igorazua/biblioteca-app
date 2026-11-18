@@ -19,7 +19,7 @@ export function VoteSheet({ votes, onToggle, onClose }: { votes: Record<string, 
             const on = !!votes[name]
             return (
               <View key={name} style={{ flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: colors.surface2, borderRadius: 16, paddingHorizontal: 16, minHeight: 52 }}>
-                <AppText style={{ flex: 1, fontFamily: 'Inter-500', fontSize: 15, color: colors.ink }}>{name}</AppText>
+                <AppText style={{ flex: 1, fontFamily: 'Archivo-Regular', fontSize: 15, color: colors.ink }}>{name}</AppText>
                 <AppText style={[tx('meta'), { fontVariant: ['tabular-nums'] }]}>{base + (on ? 1 : 0)}</AppText>
                 <Press onPress={() => onToggle(name)} accessibilityRole="button" accessibilityLabel={`Votar ${name}`} accessibilityState={{ checked: on }} style={{ width: 44, height: 44, alignItems: 'center', justifyContent: 'center' }}>
                   <Icon name="heart" size={24} color={on ? '#ef4b6b' : '#7b7b84'} fill={on ? '#ef4b6b' : 'none'} />

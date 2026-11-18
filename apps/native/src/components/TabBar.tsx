@@ -57,7 +57,7 @@ export function TabBar({ state, descriptors, emitter, navigateToTab }: BottomTab
                 <View style={{ width: 48, height: 28, borderRadius: 14, alignItems: 'center', justifyContent: 'center', backgroundColor: focused ? alpha(colors.accent, 0.15) : 'transparent' }}>
                   <Icon name={ICONS[route.name] ?? 'library'} size={22} color={color} />
                 </View>
-                <AppText fixed numberOfLines={1} style={{ fontFamily: 'Inter-500', fontSize: 10.5, color }}>
+                <AppText fixed numberOfLines={1} style={{ fontFamily: 'Archivo-Regular', fontSize: 10.5, color }}>
                   {label}
                 </AppText>
               </Press>

@@ -69,7 +69,7 @@ export function ShelfCard({ title, sub, cover, index, onPress }: { title: string
         <PosterStrip items={cover} opacity={0.3} />
         <Fade dir="right" stops={[[0, BG, 1], [0.5, BG, 0.8], [1, BG, 0]]} />
         <View style={{ position: 'absolute', top: 0, bottom: 0, left: 0, justifyContent: 'center', paddingHorizontal: 20 }}>
-          <AppText style={[tx('title'), { fontFamily: 'Inter-600', color: colors.ink }]}>{title}</AppText>
+          <AppText style={[tx('title'), { color: colors.ink }]}>{title}</AppText>
           <AppText style={[tx('meta'), { marginTop: 4 }]}>{sub}</AppText>
         </View>
         <View style={{ position: 'absolute', right: 16, bottom: 16, width: 36, height: 36, borderRadius: 18, backgroundColor: colors.surface2, borderWidth: 1, borderColor: colors.line, alignItems: 'center', justifyContent: 'center' }}>
@@ -99,7 +99,7 @@ export function ChoiceCard({ option, posters, selected, delay, onPress }: { opti
           </>
         )}
         <View style={{ position: 'absolute', left: 0, right: 0, bottom: 0, padding: 16 }}>
-          <AppText style={[tx('title'), { fontFamily: 'Fraunces72-600', color: colors.ink, lineHeight: 25.3 }]}>{option.label}</AppText>
+          <AppText style={[tx('title'), { fontFamily: 'Archivo-SemiBold', fontSize: 20, textTransform: 'none', color: colors.ink, lineHeight: 25.3 }]}>{option.label}</AppText>
           {!!option.sub && <AppText style={[tx('meta'), { marginTop: 4 }]}>{option.sub}</AppText>}
         </View>
       </Press>
@@ -133,7 +133,7 @@ export function PlatformTiles({ value, onChange, onNext }: { value: string[]; on
         borderColor: active ? colors.accent : colors.line,
       }}
     >
-      <AppText numberOfLines={1} style={[tx('body'), { fontFamily: 'Inter-500', flexShrink: 1, color: active ? colors.ink : 'rgba(244,239,230,0.8)' }]}>
+      <AppText numberOfLines={1} style={[tx('body'), { fontFamily: 'Archivo-Regular', flexShrink: 1, color: active ? colors.ink : 'rgba(244,239,230,0.8)' }]}>
         {label}
       </AppText>
       {active && <Icon name="check" size={16} color={colors.accent} strokeWidth={2.5} />}
@@ -153,7 +153,7 @@ export function PlatformTiles({ value, onChange, onNext }: { value: string[]; on
   )
 }
 
-/** Botón «Pasar» del duelo (WhatToWatch.tsx:691): ámbar con halo. */
+/** Botón «Pasar» del duelo (WhatToWatch.tsx:691): rojo cartel con halo. */
 export function PassButton({ onPress }: { onPress: () => void }) {
   const k = useSharedValue(0)
   useEffect(() => {
@@ -171,19 +171,19 @@ export function PassButton({ onPress }: { onPress: () => void }) {
           minHeight: 42,
           paddingHorizontal: 20,
           borderRadius: 999,
-          backgroundColor: '#ffb340',
+          backgroundColor: colors.accent,
           borderWidth: 1,
-          borderColor: 'rgba(255,179,64,0.5)',
+          borderColor: 'rgba(255,90,60,0.5)',
           alignItems: 'center',
           justifyContent: 'center',
-          shadowColor: 'rgb(255,150,40)',
+          shadowColor: 'rgb(255,90,60)',
           shadowOffset: { width: 0, height: 0 },
           shadowOpacity: 0.45,
           shadowRadius: 11,
           elevation: 6,
         }}
       >
-        <AppText style={{ fontFamily: 'Inter-600', fontSize: 14, lineHeight: 20, color: '#1a1206' }}>Pasar</AppText>
+        <AppText style={{ fontFamily: 'Archivo-SemiBold', fontSize: 14, lineHeight: 20, color: colors.accentInk }}>Pasar</AppText>
       </Press>
     </Animated.View>
   )

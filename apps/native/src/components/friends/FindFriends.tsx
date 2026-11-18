@@ -138,7 +138,7 @@ export function FindFriends({ onClose, onToast }: { onClose: () => void; onToast
       <View key={c.phone} style={styles.row}>
         <Avatar name={extra?.displayName ?? c.name} url={extra?.avatarUrl ?? undefined} color="#5B9CF5" size={40} />
         <View style={styles.rowText}>
-          <AppText numberOfLines={1} style={tx('body', { fontFamily: 'Inter-500', color: colors.ink })}>
+          <AppText numberOfLines={1} style={tx('body', { fontFamily: 'Archivo-Regular', color: colors.ink })}>
             {c.name}
           </AppText>
           {extra ? (
@@ -184,10 +184,10 @@ export function FindFriends({ onClose, onToast }: { onClose: () => void; onToast
           </AppText>
 
           <View style={styles.card}>
-            <AppText style={tx('body', { fontFamily: 'Inter-600', color: colors.ink })}>Buscar en tus contactos</AppText>
+            <AppText style={tx('body', { fontFamily: 'Archivo-SemiBold', color: colors.ink })}>Buscar en tus contactos</AppText>
             <AppText style={[tx('meta'), { marginTop: 4, lineHeight: 19 }]}>
               Sus números se comparan con los de quien ha decidido que le encuentren por teléfono y{' '}
-              <AppText style={{ color: colors.ink, fontFamily: 'Inter-500' }}>no se guardan</AppText>.
+              <AppText style={{ color: colors.ink, fontFamily: 'Archivo-Regular' }}>no se guardan</AppText>.
             </AppText>
             <Button onPress={start} icon={<Icon name="user" size={18} color={colors.accentInk} />} style={styles.cardBtn}>
               Buscar en tus contactos
@@ -218,7 +218,7 @@ export function FindFriends({ onClose, onToast }: { onClose: () => void; onToast
           <AppText style={tx('item', { color: colors.ink })}>Encuentra a tus amigos</AppText>
           <AppText style={tx('body', { color: colors.mute })}>
             Para decirte quién de tus contactos ya está en {APP_NAME}, enviaremos sus números de teléfono a nuestro servidor. Se comparan al momento y{' '}
-            <AppText style={{ color: colors.ink, fontFamily: 'Inter-600' }}>no se guardan</AppText>. Los nombres no salen de tu móvil. Solo te aparecerán quienes
+            <AppText style={{ color: colors.ink, fontFamily: 'Archivo-SemiBold' }}>no se guardan</AppText>. Los nombres no salen de tu móvil. Solo te aparecerán quienes
             hayan activado que se les encuentre por teléfono.
           </AppText>
           <Button onPress={accept}>Continuar</Button>
@@ -285,13 +285,13 @@ const styles = StyleSheet.create({
   block: { marginTop: 12, gap: 12 },
   card: { borderRadius: 16, borderWidth: 1, borderColor: colors.line, backgroundColor: colors.surface2, padding: 16 },
   cardBtn: { marginTop: 12 },
-  link: { ...tx('meta'), color: colors.accent, fontFamily: 'Inter-500' },
+  link: { ...tx('meta'), color: colors.accent, fontFamily: 'Archivo-Regular' },
   results: { flex: 1, marginTop: 8 },
   heading: { marginTop: 16, marginBottom: 4 },
   row: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingVertical: 10 },
   rowText: { flex: 1, minWidth: 0 },
   rowBtn: { minHeight: 40, paddingHorizontal: 14, borderRadius: 12, flexDirection: 'row', alignItems: 'center', gap: 6 },
-  rowBtnText: { ...tx('meta'), fontFamily: 'Inter-600', color: colors.mute },
+  rowBtnText: { ...tx('meta'), fontFamily: 'Archivo-SemiBold', color: colors.mute },
   skel: { backgroundColor: colors.surface2 },
   moreLink: { marginTop: 16, marginBottom: 8, alignSelf: 'flex-start' },
 })

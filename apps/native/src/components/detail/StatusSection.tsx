@@ -41,7 +41,7 @@ function StateButton({ status, active, label, icon, truncate, onPress }: { statu
     >
       <Icon name={icon} size={16} color={active ? t.fg : colors.mute} strokeWidth={active ? 2.5 : 2} fill={icon === 'bookmark' && active ? t.fg : 'none'} />
       {/* `text-meta` fija su propio color (mute) y se lo queda también con el botón activo */}
-      <AppText numberOfLines={truncate ? 1 : undefined} style={[tx('meta'), { fontFamily: 'Inter-500', letterSpacing: -0.325, maxWidth: '100%' }]}>
+      <AppText numberOfLines={truncate ? 1 : undefined} style={[tx('meta'), { fontFamily: 'Archivo-Regular', letterSpacing: -0.325, maxWidth: '100%' }]}>
         {label}
       </AppText>
     </Press>
@@ -101,18 +101,18 @@ export function StatusSection({ item, onNotify }: { item: Item; onNotify: (m: st
           {pos >= 0 && (
             <AppText style={[tx('meta'), { marginTop: 4 }]}>
               {'nº '}
-              <AppText style={{ fontFamily: 'Inter-700', color: colors.ink }}>{String(pos + 1)}</AppText>
+              <AppText style={{ fontFamily: 'Archivo-SemiBold', color: colors.ink }}>{String(pos + 1)}</AppText>
               {` de tus ${ranking.length} ${label.plural.toLowerCase()}`}
             </AppText>
           )}
-          {entry?.comment ? <AppText style={[tx('body'), { marginTop: 8, fontFamily: 'Fraunces72-400-italic', color: alpha(colors.ink, 0.9) }]}>{`«${entry.comment}»`}</AppText> : null}
+          {entry?.comment ? <AppText style={[tx('body'), { marginTop: 8, fontFamily: 'Archivo-Regular', color: alpha(colors.ink, 0.9) }]}>{`«${entry.comment}»`}</AppText> : null}
           <Press
             onPress={openRating}
             accessibilityRole="button"
             style={{ marginTop: 12, alignSelf: 'flex-start', minHeight: 44, paddingHorizontal: 16, borderRadius: 12, backgroundColor: colors.surface2, borderWidth: 1, borderColor: colors.line, flexDirection: 'row', alignItems: 'center', gap: 8 }}
           >
             <Icon name="edit" size={16} color={colors.ink} />
-            <AppText style={[tx('meta'), { fontFamily: 'Inter-500', color: colors.ink }]}>{entry?.comment ? 'Editar comentario' : entry?.stars ? 'Añadir comentario' : 'Valorar'}</AppText>
+            <AppText style={[tx('meta'), { fontFamily: 'Archivo-Regular', color: colors.ink }]}>{entry?.comment ? 'Editar comentario' : entry?.stars ? 'Añadir comentario' : 'Valorar'}</AppText>
           </Press>
         </View>
       )}

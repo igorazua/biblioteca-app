@@ -149,7 +149,7 @@ export default function Biblioteca() {
               <Icon name="heart" size={22} color={colors.accent} />
             </View>
             <View style={{ flex: 1 }}>
-              <AppText style={{ fontFamily: 'Inter-600', fontSize: 15, color: colors.ink }}>Vota nuevas estanterías</AppText>
+              <AppText style={{ fontFamily: 'Archivo-SemiBold', fontSize: 15, color: colors.ink }}>Vota nuevas estanterías</AppText>
               <AppText style={[tx('meta'), { marginTop: 2 }]}>{voted ? `Has votado ${voted}` : 'Tú decides qué categoría llega después'}</AppText>
             </View>
             <Icon name="chevron" size={18} color={colors.mute} />
@@ -162,7 +162,7 @@ export default function Biblioteca() {
               style={{ minHeight: 48, borderRadius: 16, borderWidth: 1, borderStyle: 'dashed', borderColor: 'rgba(242,176,74,0.6)', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8 }}
             >
               <Icon name="sparkle" size={17} color={colors.accent} />
-              <AppText style={{ color: colors.accent, fontFamily: 'Inter-500', fontSize: 14 }}>Cargar datos de ejemplo</AppText>
+              <AppText style={{ color: colors.accent, fontFamily: 'Archivo-Regular', fontSize: 14 }}>Cargar datos de ejemplo</AppText>
             </Press>
           )}
         </View>

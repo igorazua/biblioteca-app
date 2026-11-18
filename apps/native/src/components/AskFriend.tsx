@@ -18,7 +18,7 @@ function Btn({ bg, fg, label, icon, onPress }: { bg: string; fg: string; label: 
       style={{ alignSelf: 'flex-start', marginTop: 10, minHeight: 44, paddingHorizontal: 16, borderRadius: 12, backgroundColor: bg, flexDirection: 'row', alignItems: 'center', gap: 8 }}
     >
       {icon ? <Icon name={icon} size={17} color={fg} /> : null}
-      <AppText style={{ fontFamily: 'Inter-500', fontSize: 14, lineHeight: 20, color: fg }}>{label}</AppText>
+      <AppText style={{ fontFamily: 'Archivo-Regular', fontSize: 14, lineHeight: 20, color: fg }}>{label}</AppText>
     </Press>
   )
 }

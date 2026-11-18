@@ -45,7 +45,7 @@ export function ShelfCard({ shelf, ranked, unranked, pendingCount }: Props) {
           {pendingCount > 0 ? ` · ${pendingCount} pendientes` : ''}
         </AppText>
         <View style={{ marginLeft: 'auto', flexDirection: 'row', alignItems: 'center', gap: 2 }}>
-          <AppText style={[tx('meta'), { color: colors.accent, fontFamily: 'Inter-500' }]}>Ver todo</AppText>
+          <AppText style={[tx('meta'), { color: colors.accent, fontFamily: 'Archivo-Regular' }]}>Ver todo</AppText>
           <Icon name="chevron" size={14} color={colors.accent} />
         </View>
       </Press>
@@ -68,7 +68,7 @@ export function ShelfCard({ shelf, ranked, unranked, pendingCount }: Props) {
           >
             <PosterPile shelf={shelf} />
             <AppText style={[tx('body'), { flex: 1, color: colors.mute, fontSize: 14, lineHeight: 20 }]}>
-              Aún está vacía. <AppText style={{ color: colors.ink, fontFamily: 'Inter-500' }}>Haz swipe en Descubrir</AppText> y se llena sola.
+              Aún está vacía. <AppText style={{ color: colors.ink, fontFamily: 'Archivo-Regular' }}>Haz swipe en Descubrir</AppText> y se llena sola.
             </AppText>
             <Icon name="chevron" size={18} color={colors.mute} />
           </Press>

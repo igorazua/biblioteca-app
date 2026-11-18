@@ -42,5 +42,5 @@ const styles = StyleSheet.create({
   },
   divider: { height: 1, backgroundColor: alpha(colors.line, 0.6) },
   // leading-relaxed = 1,625 × 11
-  footer: { fontFamily: 'Inter-400', fontSize: 11, lineHeight: 17.875, color: colors.mute, paddingHorizontal: 4, marginTop: 8 },
+  footer: { fontFamily: 'Archivo-Regular', fontSize: 11, lineHeight: 17.875, color: colors.mute, paddingHorizontal: 4, marginTop: 8 },
 })

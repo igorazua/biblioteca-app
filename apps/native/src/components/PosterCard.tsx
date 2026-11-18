@@ -21,7 +21,7 @@ export interface PosterCardProps {
 function Badge({ text }: { text: string }) {
   return (
     <View style={{ position: 'absolute', top: 8, right: 8, backgroundColor: alpha(colors.bg, 0.85), paddingHorizontal: 8, paddingVertical: 2, borderRadius: 6 }}>
-      <AppText style={{ fontFamily: 'Inter-500', fontSize: 11, color: colors.ink, fontVariant: ['tabular-nums'] }}>{text}</AppText>
+      <AppText style={{ fontFamily: 'Archivo-Regular', fontSize: 11, color: colors.ink, fontVariant: ['tabular-nums'] }}>{text}</AppText>
     </View>
   )
 }
@@ -56,9 +56,9 @@ export function PosterCard({ item, subtitle, badge, onPress, showType = false, m
             {src ? <Image source={{ uri: src }} contentFit="cover" cachePolicy="memory-disk" recyclingKey={item.id} style={StyleSheet.absoluteFill} /> : placeholder(8, colors.surface2)}
           </View>
           <View style={{ flex: 1, padding: 8, justifyContent: 'center', backgroundColor: colors.surface }}>
-            {showType && <AppText numberOfLines={1} style={{ fontFamily: 'Inter-400', fontSize: 10, color: colors.mute, textTransform: 'uppercase', letterSpacing: 0.25 }}>{shelfLabel}</AppText>}
-            <AppText numberOfLines={2} style={{ fontFamily: 'Fraunces72-600', fontSize: 12, lineHeight: 15, color: colors.ink }}>{title}</AppText>
-            <AppText numberOfLines={1} style={{ fontFamily: 'Inter-400', fontSize: 11, color: colors.mute, marginTop: 2 }}>{item.creator}</AppText>
+            {showType && <AppText numberOfLines={1} style={{ fontFamily: 'Archivo-Regular', fontSize: 10, color: colors.mute, textTransform: 'uppercase', letterSpacing: 0.25 }}>{shelfLabel}</AppText>}
+            <AppText numberOfLines={2} style={{ fontFamily: 'Archivo-SemiBold', fontSize: 12, lineHeight: 15, color: colors.ink }}>{title}</AppText>
+            <AppText numberOfLines={1} style={{ fontFamily: 'Archivo-Regular', fontSize: 11, color: colors.mute, marginTop: 2 }}>{item.creator}</AppText>
           </View>
           {badge && <Badge text={badge} />}
         </View>

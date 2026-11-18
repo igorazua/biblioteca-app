@@ -123,8 +123,8 @@ export function CleanupFlow({ shelf, onClose }: CleanupFlowProps) {
 
   const stat = (n: number, text: string, color: string) => (
     <View style={{ flex: 1, borderRadius: 16, backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.line, padding: 12, alignItems: 'center' }}>
-      <AppText style={{ fontFamily: 'Fraunces72-700', fontSize: 24, lineHeight: 32, color, fontVariant: ['tabular-nums'] }}>{String(n)}</AppText>
-      <AppText style={{ fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16, color: colors.mute, marginTop: 4 }}>{text}</AppText>
+      <AppText style={{ fontFamily: 'Archivo-Condensed-ExtraBold', fontSize: 30, lineHeight: 34, color, fontVariant: ['tabular-nums'] }}>{String(n)}</AppText>
+      <AppText style={{ fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: colors.mute, marginTop: 4 }}>{text}</AppText>
     </View>
   )
 
@@ -151,11 +151,11 @@ export function CleanupFlow({ shelf, onClose }: CleanupFlowProps) {
                 <Icon name="x" size={20} color={colors.mute} />
               </Press>
               <View style={{ flexShrink: 1 }}>
-                <AppText numberOfLines={1} style={{ fontFamily: 'Fraunces72-600', fontSize: 16, lineHeight: 24, color: colors.ink }}>Limpieza de pendientes</AppText>
-                <AppText style={{ fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16, color: colors.mute }}>{label.plural}</AppText>
+                <AppText numberOfLines={1} style={{ fontFamily: 'Archivo-SemiBold', fontSize: 16, lineHeight: 24, color: colors.ink }}>Limpieza de pendientes</AppText>
+                <AppText style={{ fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: colors.mute }}>{label.plural}</AppText>
               </View>
             </View>
-            <AppText style={{ fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16, color: colors.mute, fontVariant: ['tabular-nums'] }}>
+            <AppText style={{ fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: colors.mute, fontVariant: ['tabular-nums'] }}>
               {pendingItems.length > 0 ? `${pendingItems.length} restantes` : 'Completado'}
             </AppText>
           </View>
@@ -163,8 +163,8 @@ export function CleanupFlow({ shelf, onClose }: CleanupFlowProps) {
           {showSummary ? (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24, gap: 20 }}>
               <AppText style={{ fontSize: 48, lineHeight: 48 }}>✨</AppText>
-              <AppText style={{ fontFamily: 'Fraunces72-600', fontSize: 30, lineHeight: 36, color: colors.ink, textAlign: 'center' }}>Limpieza completada</AppText>
-              <AppText style={{ fontFamily: 'Inter-400', fontSize: 14, lineHeight: 20, color: colors.mute, textAlign: 'center' }}>{`Has repasado tus pendientes de ${label.plural.toLowerCase()}.`}</AppText>
+              <AppText style={{ fontFamily: 'Archivo-Condensed-ExtraBold', fontSize: 38, lineHeight: 40, textTransform: 'uppercase', color: colors.ink, textAlign: 'center' }}>Limpieza completada</AppText>
+              <AppText style={{ fontFamily: 'Archivo-Regular', fontSize: 14, lineHeight: 20, color: colors.mute, textAlign: 'center' }}>{`Has repasado tus pendientes de ${label.plural.toLowerCase()}.`}</AppText>
               <View style={{ flexDirection: 'row', gap: 12, width: '100%', maxWidth: 384, marginTop: 8 }}>
                 {stat(counts.seen, label.seen, colors.stampGreen)}
                 {stat(counts.kept, 'Siguen', colors.stampBlue)}
@@ -176,7 +176,7 @@ export function CleanupFlow({ shelf, onClose }: CleanupFlowProps) {
                 accessibilityRole="button"
                 style={{ marginTop: 24, width: '100%', maxWidth: 384, minHeight: 52, borderRadius: 16, backgroundColor: colors.accent, alignItems: 'center', justifyContent: 'center' }}
               >
-                <AppText style={{ fontFamily: 'Inter-600', fontSize: 15, lineHeight: 22, color: colors.accentInk }}>Volver a Pendientes</AppText>
+                <AppText style={{ fontFamily: 'Archivo-SemiBold', fontSize: 15, lineHeight: 22, color: colors.accentInk }}>Volver a Pendientes</AppText>
               </Press>
             </View>
           ) : (
@@ -197,9 +197,9 @@ export function CleanupFlow({ shelf, onClose }: CleanupFlowProps) {
                 ) : (
                   <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 24, gap: 12 }}>
                     <AppText style={{ fontSize: 36, lineHeight: 40 }}>🎉</AppText>
-                    <AppText style={{ fontFamily: 'Fraunces72-600', fontSize: 20, lineHeight: 28, color: colors.ink, textAlign: 'center' }}>¡No quedan más pendientes!</AppText>
+                    <AppText style={{ fontFamily: 'Archivo-Condensed-ExtraBold', fontSize: 26, lineHeight: 28, textTransform: 'uppercase', color: colors.ink, textAlign: 'center' }}>¡No quedan más pendientes!</AppText>
                     <Press onPress={onClose} accessibilityRole="button" style={{ marginTop: 8, minHeight: 46, paddingHorizontal: 24, borderRadius: 16, backgroundColor: colors.accent, alignItems: 'center', justifyContent: 'center' }}>
-                      <AppText style={{ fontFamily: 'Inter-600', fontSize: 15, lineHeight: 22, color: colors.accentInk }}>Volver a Pendientes</AppText>
+                      <AppText style={{ fontFamily: 'Archivo-SemiBold', fontSize: 15, lineHeight: 22, color: colors.accentInk }}>Volver a Pendientes</AppText>
                     </Press>
                   </View>
                 )}

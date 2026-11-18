@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   head: { flexDirection: 'row', alignItems: 'center', gap: 14, padding: 16 },
   accountLine: { flexDirection: 'row', alignItems: 'center', gap: 6, marginTop: 2 },
   dot: { width: 6, height: 6, borderRadius: 3, backgroundColor: colors.stampGreen },
-  editLine: { fontFamily: 'Inter-500', fontSize: 12, lineHeight: 16, color: colors.accent, marginTop: 4 },
+  editLine: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: colors.accent, marginTop: 4 },
   signIn: { paddingHorizontal: 16, paddingTop: 12, paddingBottom: 16, gap: 10, borderTopWidth: 1, borderTopColor: colors.line },
   full: { width: '100%' },
 })

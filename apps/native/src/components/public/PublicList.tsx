@@ -66,7 +66,7 @@ export function PublicList({ payload }: { payload: string }) {
       <View style={styles.author}>
         <Avatar name={list.a} color={list.c} size={40} />
         <AppText style={[tx('meta'), { color: colors.mute, flex: 1 }]}>
-          <AppText style={{ color: colors.ink, fontFamily: 'Inter-600' }}>{list.a}</AppText> te ha preparado esta lista
+          <AppText style={{ color: colors.ink, fontFamily: 'Archivo-SemiBold' }}>{list.a}</AppText> te ha preparado esta lista
         </AppText>
       </View>
       <AppText style={[tx('display'), { color: colors.ink, marginTop: 12 }]}>{list.t}</AppText>
@@ -106,7 +106,7 @@ function ListRow({ item: it, note, saved, onSave }: { item: Item; note?: string;
         </AppText>
         <AppText style={[tx('item'), { color: colors.ink, marginTop: 2 }]}>{titleOf(it)}</AppText>
         <AppText style={[tx('meta'), { color: colors.mute, marginTop: 2 }]}>{facts ? `${it.creator} · ${facts}` : it.creator}</AppText>
-        {note ? <AppText style={[tx('body'), { color: colors.accent, marginTop: 6, fontFamily: 'Fraunces72-400-italic' }]}>«{note}»</AppText> : null}
+        {note ? <AppText style={[tx('body'), { color: colors.accent, marginTop: 6, fontFamily: 'Archivo-Regular' }]}>«{note}»</AppText> : null}
         <AppText style={[tx('meta'), { color: colors.mute, marginTop: 6 }]} numberOfLines={2}>
           {it.synopsis}
         </AppText>
@@ -130,7 +130,7 @@ function ListRow({ item: it, note, saved, onSave }: { item: Item; note?: string;
           style={styles.saveOne}
         >
           <Icon name={saved ? 'check' : 'bookmark'} size={14} color={saved ? colors.stampGreen : colors.ink} />
-          <AppText style={[tx('meta', { fontFamily: 'Inter-500' }), { color: saved ? colors.stampGreen : colors.ink }]}>
+          <AppText style={[tx('meta', { fontFamily: 'Archivo-Regular' }), { color: saved ? colors.stampGreen : colors.ink }]}>
             {saved ? 'Ya en tu biblioteca' : 'Guardar en mi biblioteca'}
           </AppText>
         </Press>

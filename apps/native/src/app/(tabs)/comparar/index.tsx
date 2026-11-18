@@ -175,15 +175,15 @@ export default function CompareHome() {
                   shadowRadius: 3,
                 }}
               >
-                <AppText style={{ fontFamily: 'Fraunces72-400', fontSize: 14, color: colors.mute }}>o</AppText>
+                <AppText style={{ fontFamily: 'Archivo-Regular', fontSize: 14, color: colors.mute }}>o</AppText>
               </View>
             </View>
-            <AppText numberOfLines={1} style={{ fontFamily: 'Fraunces72-400', fontSize: 15, marginTop: 14, paddingHorizontal: 8, maxWidth: '100%', textAlign: 'center', color: colors.ink }}>
-              <AppText style={{ fontFamily: 'Fraunces72-400-italic' }}>{titleOf(pairItems.a)}</AppText>
+            <AppText numberOfLines={1} style={{ fontFamily: 'Archivo-Regular', fontSize: 15, marginTop: 14, paddingHorizontal: 8, maxWidth: '100%', textAlign: 'center', color: colors.ink }}>
+              <AppText style={{ fontFamily: 'Archivo-SemiBold' }}>{titleOf(pairItems.a)}</AppText>
               {' '}
               <AppText style={{ color: colors.mute }}>o</AppText>
               {' '}
-              <AppText style={{ fontFamily: 'Fraunces72-400-italic' }}>{titleOf(pairItems.b)}</AppText>
+              <AppText style={{ fontFamily: 'Archivo-SemiBold' }}>{titleOf(pairItems.b)}</AppText>
             </AppText>
             <Button variant="primary" onPress={startDuel} style={{ alignSelf: 'stretch', marginTop: 20 }}>
               Empezar · 7 duelos
@@ -222,8 +222,8 @@ export default function CompareHome() {
                   <Press key={s} onPress={() => openShelf(s)} scaleTo={0.99} accessibilityRole="button" accessibilityLabel={`${SHELF_LABEL[s].plural}, ${o.ordenado} % ordenado`}>
                     <View style={{ height: 24, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
                       <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-                        <AppText style={{ fontFamily: 'Fraunces72-400', fontSize: 18, lineHeight: 18, color: colors.ink }}>{SHELF_LABEL[s].plural}</AppText>
-                        <AppText style={[tx('meta'), { fontFamily: 'Inter-600', color: pctColor(o.ordenado), fontVariant: ['tabular-nums'] }]}>{o.ordenado} %</AppText>
+                        <AppText style={{ fontFamily: 'Archivo-Condensed-ExtraBold', fontSize: 22, lineHeight: 22, textTransform: 'uppercase', color: colors.ink }}>{SHELF_LABEL[s].plural}</AppText>
+                        <AppText style={[tx('meta'), { fontFamily: 'Archivo-SemiBold', color: pctColor(o.ordenado), fontVariant: ['tabular-nums'] }]}>{o.ordenado} %</AppText>
                       </View>
                       <AppText style={tx('meta')}>{o.sinOrdenar > 0 ? `${o.sinOrdenar} ${o.sinOrdenar === 1 ? byGender(s, 'nueva', 'nuevo') : byGender(s, 'nuevas', 'nuevos')}` : 'todo en su sitio'}</AppText>
                     </View>

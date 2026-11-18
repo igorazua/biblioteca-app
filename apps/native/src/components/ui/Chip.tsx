@@ -38,5 +38,5 @@ const styles = StyleSheet.create({
   },
   on: { backgroundColor: colors.accent, borderColor: colors.accent },
   off: { backgroundColor: 'rgba(255, 255, 255, 0.05)', borderColor: 'rgba(255, 255, 255, 0.1)' },
-  text: { fontFamily: 'Inter-500', fontSize: 14, lineHeight: 20 },
+  text: { fontFamily: 'Archivo-Regular', fontSize: 14, lineHeight: 20 },
 })

@@ -213,12 +213,12 @@ const styles = StyleSheet.create({
   // flex items-center gap-3.5 mb-4
   head: { flexDirection: 'row', alignItems: 'center', gap: 14, marginBottom: 16 },
   // serif text-xl font-semibold leading-tight
-  headTitle: { fontFamily: 'Fraunces72-600', fontSize: 20, lineHeight: 25, color: colors.ink },
-  headSub: { fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16, color: colors.mute, marginTop: 2 },
+  headTitle: { fontFamily: 'Archivo-Condensed-ExtraBold', fontSize: 26, lineHeight: 28, textTransform: 'uppercase', color: colors.ink },
+  headSub: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: colors.mute, marginTop: 2 },
   // text-sm text-ink/80 leading-relaxed
-  blurb: { fontFamily: 'Inter-400', fontSize: 14, lineHeight: 22.75, color: alpha(colors.ink, 0.8) },
+  blurb: { fontFamily: 'Archivo-Regular', fontSize: 14, lineHeight: 22.75, color: alpha(colors.ink, 0.8) },
   // text-[11px] font-semibold uppercase tracking-wider text-mute
-  fieldLabel: { fontFamily: 'Inter-600', fontSize: 11, lineHeight: 16.5, letterSpacing: 0.88, textTransform: 'uppercase', color: colors.mute },
+  fieldLabel: { fontFamily: 'Archivo-SemiBold', fontSize: 11, lineHeight: 16.5, letterSpacing: 0.88, textTransform: 'uppercase', color: colors.mute },
   // mt-2 w-full min-h-[50px] rounded-2xl bg-surface2 border border-line px-4 text-sm text-ink
   input: {
     marginTop: 8,
@@ -228,13 +228,13 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     backgroundColor: colors.surface2,
     paddingHorizontal: 16,
-    fontFamily: 'Inter-400',
+    fontFamily: 'Archivo-Regular',
     fontSize: 14,
     color: colors.ink,
   },
   // text-xs text-mute mt-2 leading-snug
-  hint: { fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16.5, color: colors.mute, marginTop: 8 },
-  msg: { fontFamily: 'Inter-400', fontSize: 14, lineHeight: 20, marginTop: 12 },
+  hint: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16.5, color: colors.mute, marginTop: 8 },
+  msg: { fontFamily: 'Archivo-Regular', fontSize: 14, lineHeight: 20, marginTop: 12 },
   // mt-5 w-full min-h-[52px] rounded-2xl bg-accent shadow-md
   primary: {
     width: '100%',
@@ -249,20 +249,20 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
     elevation: 3,
   },
-  primaryText: { fontFamily: 'Inter-600', fontSize: 16, lineHeight: 24, color: colors.accentInk },
+  primaryText: { fontFamily: 'Archivo-SemiBold', fontSize: 16, lineHeight: 24, color: colors.accentInk },
   // mt-3 w-full py-2 text-xs font-medium text-mute text-center
   altFile: { marginTop: 12, width: '100%', paddingVertical: 8 },
-  altFileText: { fontFamily: 'Inter-500', fontSize: 12, lineHeight: 16, color: colors.mute, textAlign: 'center' },
+  altFileText: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: colors.mute, textAlign: 'center' },
   // mt-4 rounded-2xl bg-surface2 border border-line p-4 space-y-2.5
   steps: { marginTop: 16, borderRadius: 16, backgroundColor: colors.surface2, borderWidth: 1, borderColor: colors.line, padding: 16, gap: 10 },
   step: { flexDirection: 'row', gap: 6 },
-  stepNum: { fontFamily: 'Inter-400', fontSize: 12, lineHeight: 19.5, color: alpha(colors.ink, 0.8) },
-  stepText: { flex: 1, fontFamily: 'Inter-400', fontSize: 12, lineHeight: 19.5, color: alpha(colors.ink, 0.8) },
-  link: { fontFamily: 'Inter-600', fontSize: 12, lineHeight: 16, color: colors.accent, textDecorationLine: 'underline' },
+  stepNum: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 19.5, color: alpha(colors.ink, 0.8) },
+  stepText: { flex: 1, fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 19.5, color: alpha(colors.ink, 0.8) },
+  link: { fontFamily: 'Archivo-SemiBold', fontSize: 12, lineHeight: 16, color: colors.accent, textDecorationLine: 'underline' },
   // text-xs text-stamp-red mt-3 text-center
-  fileErr: { fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16, color: colors.stampRed, marginTop: 12, textAlign: 'center' },
+  fileErr: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: colors.stampRed, marginTop: 12, textAlign: 'center' },
   // mt-4 p-4 rounded-2xl bg-surface2 border border-line text-xs text-mute space-y-1
   privacy: { marginTop: 16, padding: 16, borderRadius: 16, backgroundColor: colors.surface2, borderWidth: 1, borderColor: colors.line, gap: 4 },
-  privacyText: { fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16, color: colors.mute },
+  privacyText: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: colors.mute },
 })
 

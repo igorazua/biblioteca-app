@@ -271,7 +271,7 @@ const styles = StyleSheet.create({
   hole: { width: VIEW + 800, height: VIEW + 800, borderRadius: (VIEW + 800) / 2, borderWidth: 400, borderColor: 'rgba(0,0,0,0.6)' },
   ring: { position: 'absolute', width: VIEW, height: VIEW, borderRadius: VIEW / 2, borderWidth: 2, borderColor: 'rgba(255,255,255,0.85)' },
   sliderRow: { flexDirection: 'row', alignItems: 'center', gap: 12 },
-  sign: { fontFamily: 'Inter-400', fontSize: 18, lineHeight: 18, color: colors.mute, width: 12, textAlign: 'center' },
+  sign: { fontFamily: 'Archivo-Regular', fontSize: 18, lineHeight: 18, color: colors.mute, width: 12, textAlign: 'center' },
   sliderHit: { height: 40, justifyContent: 'center' },
   track: { height: 4, borderRadius: 2, backgroundColor: colors.line },
   fill: { position: 'absolute', left: 0, height: 4, borderRadius: 2, backgroundColor: colors.accent },

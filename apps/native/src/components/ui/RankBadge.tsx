@@ -28,6 +28,6 @@ const styles = StyleSheet.create({
     paddingVertical: 1,
   },
   pillLg: { paddingHorizontal: 10, paddingVertical: 4 },
-  text: { fontFamily: 'Inter-700', fontSize: 10, lineHeight: 14, color: colors.accentInk, fontVariant: ['tabular-nums'] },
+  text: { fontFamily: 'Archivo-SemiBold', fontSize: 10, lineHeight: 14, color: colors.accentInk, fontVariant: ['tabular-nums'] },
   textLg: { fontSize: 12, lineHeight: 16 },
 })

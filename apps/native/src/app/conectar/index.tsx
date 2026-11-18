@@ -179,7 +179,7 @@ export default function Conectar() {
                         <AppText
                           style={[
                             styles.actionText,
-                            quiet ? (isAsked ? { fontFamily: 'Inter-500', color: colors.accent } : { color: colors.mute }) : { color: colors.ink },
+                            quiet ? (isAsked ? { fontFamily: 'Archivo-Regular', color: colors.accent } : { color: colors.mute }) : { color: colors.ink },
                           ]}
                         >
                           {actionLabel}
@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
   // px-5 pb-16 pt-2 w-full max-w-md mx-auto space-y-7
   content: { paddingHorizontal: 20, paddingTop: 8, gap: 28, width: '100%', maxWidth: 448, alignSelf: 'center' },
   // text-sm text-mute leading-relaxed
-  intro: { fontFamily: 'Inter-400', fontSize: 14, lineHeight: 22.75, color: colors.mute },
+  intro: { fontFamily: 'Archivo-Regular', fontSize: 14, lineHeight: 22.75, color: colors.mute },
   // min-h-[64px] px-4 py-3 flex items-center justify-between gap-3
   connRow: { minHeight: 64, paddingHorizontal: 16, paddingVertical: 12, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 12 },
   // min-h-[68px] px-4 py-3 flex items-center justify-between gap-3
@@ -230,20 +230,20 @@ const styles = StyleSheet.create({
   // flex items-center gap-3.5 min-w-0 flex-1
   rowLeft: { flexDirection: 'row', alignItems: 'center', gap: 14, flex: 1, minWidth: 0 },
   // text-[15px] font-semibold leading-tight
-  name: { fontFamily: 'Inter-600', fontSize: 15, lineHeight: 18.75, color: colors.ink },
+  name: { fontFamily: 'Archivo-SemiBold', fontSize: 15, lineHeight: 18.75, color: colors.ink },
   // text-xs text-mute mt-0.5 leading-snug
-  sub: { fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16.5, color: colors.mute, marginTop: 2 },
+  sub: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16.5, color: colors.mute, marginTop: 2 },
   statusLine: { flexDirection: 'row', alignItems: 'center', gap: 6 },
   dot: { width: 6, height: 6, borderRadius: 3, backgroundColor: '#34d399', flexShrink: 0, marginTop: 2 },
   // px-3 py-1.5 rounded-full text-xs font-medium text-mute
   disconnect: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: 999 },
-  disconnectText: { fontFamily: 'Inter-500', fontSize: 12, lineHeight: 16, color: colors.mute },
+  disconnectText: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: colors.mute },
   // px-4 py-4 text-xs text-mute leading-relaxed
   emptyConn: { paddingHorizontal: 16, paddingVertical: 16 },
-  emptyConnText: { fontFamily: 'Inter-400', fontSize: 12, lineHeight: 19.5, color: colors.mute },
+  emptyConnText: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 19.5, color: colors.mute },
   // min-h-[34px] px-3.5 rounded-full text-xs font-semibold shrink-0
   action: { minHeight: 34, paddingHorizontal: 14, borderRadius: 999, borderWidth: 1, alignItems: 'center', justifyContent: 'center', flexShrink: 0, backgroundColor: 'transparent' },
-  actionText: { fontFamily: 'Inter-600', fontSize: 12, lineHeight: 16 },
+  actionText: { fontFamily: 'Archivo-SemiBold', fontSize: 12, lineHeight: 16 },
   // shadow-sm
   actionShadow: { shadowColor: '#000000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.05, shadowRadius: 1, elevation: 1 },
 })

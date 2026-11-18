@@ -99,6 +99,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  badgeText: { fontFamily: 'Inter-700', fontSize: 11, lineHeight: 13, color: colors.accentInk, fontVariant: ['tabular-nums'] },
+  badgeText: { fontFamily: 'Archivo-SemiBold', fontSize: 11, lineHeight: 13, color: colors.accentInk, fontVariant: ['tabular-nums'] },
   cta: { width: '100%' },
 })

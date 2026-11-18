@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   cardBody: { marginVertical: 24 },
-  cardTitle: { fontFamily: 'Fraunces72-700', fontSize: 24, lineHeight: 33, color: colors.ink, marginBottom: 8 },
+  cardTitle: { fontFamily: 'Archivo-Condensed-ExtraBold', fontSize: 30, lineHeight: 33, textTransform: 'uppercase', color: colors.ink, marginBottom: 8 },
   cardMessage: { ...tx('body', { fontSize: 16, lineHeight: 26, color: colors.mute }) },
   cardAction: {
     minHeight: 50,
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 8,
   },
-  cardActionText: { fontFamily: 'Inter-600', fontSize: 14, lineHeight: 20, color: colors.accentInk },
+  cardActionText: { fontFamily: 'Archivo-SemiBold', fontSize: 14, lineHeight: 20, color: colors.accentInk },
 
   banner: {
     marginHorizontal: 20,
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
     flexShrink: 0,
   },
   bannerText: { flex: 1, minWidth: 0, paddingTop: 2 },
-  bannerMessage: { fontFamily: 'Inter-400', fontSize: 13, lineHeight: 17.875, color: alpha(colors.ink, 0.9) },
+  bannerMessage: { fontFamily: 'Archivo-Regular', fontSize: 13, lineHeight: 17.875, color: alpha(colors.ink, 0.9) },
   bannerAction: {
     marginTop: 10,
     minHeight: 40,
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  bannerActionText: { fontFamily: 'Inter-600', fontSize: 13, lineHeight: 18, color: colors.accentInk },
+  bannerActionText: { fontFamily: 'Archivo-SemiBold', fontSize: 13, lineHeight: 18, color: colors.accentInk },
   bannerClose: {
     width: 36,
     height: 36,

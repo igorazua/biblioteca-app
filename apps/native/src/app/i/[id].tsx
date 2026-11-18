@@ -151,7 +151,7 @@ function Detail({ item }: { item: Item }) {
                 style={{ flexDirection: 'row', alignItems: 'center', gap: 6, paddingHorizontal: 10, paddingVertical: 4, borderRadius: 12, backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.line }}
               >
                 <Icon name="disc" size={14} color={colors.accent} />
-                <AppText style={[tx('meta'), { fontFamily: 'Inter-500', color: colors.accent }]}>Spotify</AppText>
+                <AppText style={[tx('meta'), { fontFamily: 'Archivo-Regular', color: colors.accent }]}>Spotify</AppText>
               </Press>
             )}
           </View>

@@ -16,7 +16,7 @@ import { byGender } from '@biblioteca/core'
 // RatingFlow.tsx de la PWA: hoja de valoración tras marcar una obra como vista, y hoja de comentario de ¡Duelos!.
 // Cerrarla de cualquier forma guarda lo que haya. Las estrellas solo existen aquí, la primera vez (`withStars`).
 
-/** Casilla de «No preguntar más»: `w-5 h-5` con `accent-[#F5B544]`, dentro de una fila de al menos `minH` de alto. */
+/** Casilla de «No preguntar más»: `w-5 h-5` con `accent-[#FF5A3C]`, dentro de una fila de al menos `minH` de alto. */
 function CheckRow({ checked, onChange, label, minH }: { checked: boolean; onChange: (v: boolean) => void; label: string; minH: number }) {
   return (
     <Press
@@ -32,8 +32,8 @@ function CheckRow({ checked, onChange, label, minH }: { checked: boolean; onChan
           height: 20,
           borderRadius: 4,
           borderWidth: 1.5,
-          borderColor: checked ? '#F5B544' : colors.mute,
-          backgroundColor: checked ? '#F5B544' : 'transparent',
+          borderColor: checked ? colors.accent : colors.mute,
+          backgroundColor: checked ? colors.accent : 'transparent',
           alignItems: 'center',
           justifyContent: 'center',
         }}
@@ -70,7 +70,7 @@ function CommentInput({ value, onChange, placeholder }: { value: string; onChang
         paddingHorizontal: 16,
         paddingVertical: 12,
         color: colors.ink,
-        fontFamily: 'Inter-400',
+        fontFamily: 'Archivo-Regular',
         fontSize: 15,
         lineHeight: 21.75,
       }}
@@ -118,7 +118,7 @@ export function RatingFlow({ itemId, onDone, withStars }: { itemId: string; onDo
           </View>
           <View style={{ flex: 1, minWidth: 0 }}>
             <AppText style={tx('label')}>{label.actionPast}</AppText>
-            <AppText numberOfLines={2} style={[tx('title'), { fontFamily: 'Fraunces72-500', color: colors.ink, marginTop: 2, lineHeight: 25.3 }]}>
+            <AppText numberOfLines={2} style={[tx('title'), { fontFamily: 'Archivo-SemiBold', fontSize: 20, textTransform: 'none', color: colors.ink, marginTop: 2, lineHeight: 25.3 }]}>
               {titleOf(item)}
             </AppText>
           </View>
@@ -158,7 +158,7 @@ export function CommentSheet({ itemId, onClose }: { itemId: string; onClose: () 
     <Sheet label="Comentario" onClose={finish} height="34%">
       <Pressable accessible={false} onPress={Keyboard.dismiss} style={{ flex: 1 }}>
         <AppText style={[tx('title'), { color: colors.ink }]}>
-          ¿Algo que decir de <AppText style={{ fontFamily: 'Fraunces72-500-italic' }}>{titleOf(item)}</AppText>?
+          ¿Algo que decir de <AppText style={{ color: colors.accent }}>{titleOf(item)}</AppText>?
         </AppText>
         <CommentInput value={comment} onChange={setComment} placeholder="Tu comentario (opcional)" />
         <View style={{ marginTop: 12 }}>

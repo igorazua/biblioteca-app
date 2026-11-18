@@ -27,12 +27,12 @@ export function openItemFrom(node: ComponentRef<typeof View> | null, item: Item,
 }
 
 /**
- * Número de ranking hueco (D11): texto SVG con trazo de 1,5 pt y relleno transparente, Fraunces opsz 144 peso 800.
+ * Número de ranking hueco (D11): texto SVG con trazo de 1,5 pt y relleno transparente, Archivo condensada 800 (Taquilla).
  * La caja mide 86 x 0,8 de alto de línea; la línea base queda ~3 pt por encima del borde inferior, como en la web.
  */
 export function RankNumber({ rank }: { rank: number }) {
   const size = 86
-  const w = String(rank).length * size * 0.62 + 6
+  const w = String(rank).length * size * 0.45 + 6 // cifras de Archivo condensada: ~0,43 em
   return (
     <Svg width={w} height={size} style={{ position: 'absolute', left: 0, bottom: 0 }} pointerEvents="none">
       <SvgText
@@ -108,7 +108,7 @@ export function ItemRow({ item, rank, indent, note, tail, highlight }: RowProps)
       style={{ flexDirection: 'row', alignItems: 'center', gap: 12, paddingHorizontal: 16, paddingVertical: 10, minHeight: 56, width: '100%' }}
     >
       {rank !== undefined && (
-        <AppText style={{ width: 24, textAlign: 'center', fontFamily: 'Inter-600', fontSize: 12, lineHeight: 16, color: highlight ? colors.accent : colors.mute, fontVariant: ['tabular-nums'] }}>
+        <AppText style={{ width: 24, textAlign: 'center', fontFamily: 'Archivo-SemiBold', fontSize: 12, lineHeight: 16, color: highlight ? colors.accent : colors.mute, fontVariant: ['tabular-nums'] }}>
           {rank}
         </AppText>
       )}

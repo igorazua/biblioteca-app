@@ -278,7 +278,7 @@ export default function EditarPerfil() {
                   }}
                   style={styles.countryRow}
                 >
-                  <AppText style={[styles.countryText, { color: on ? colors.accent : colors.ink, fontFamily: on ? 'Inter-600' : 'Inter-400' }]}>{c.name}</AppText>
+                  <AppText style={[styles.countryText, { color: on ? colors.accent : colors.ink, fontFamily: on ? 'Archivo-SemiBold' : 'Archivo-Regular' }]}>{c.name}</AppText>
                   {on ? <Icon name="check" size={18} color={colors.accent} /> : null}
                 </Press>
               )
@@ -294,12 +294,12 @@ export default function EditarPerfil() {
 }
 
 const styles = StyleSheet.create({
-  save: { fontFamily: 'Inter-500', fontSize: 13, lineHeight: 18.2, color: colors.accent },
+  save: { fontFamily: 'Archivo-Regular', fontSize: 13, lineHeight: 18.2, color: colors.accent },
   photoBtn: { flexDirection: 'row', alignItems: 'center', gap: 6, minHeight: 40 },
-  photoText: { fontFamily: 'Inter-600', fontSize: 14, lineHeight: 20, color: colors.accent },
+  photoText: { fontFamily: 'Archivo-SemiBold', fontSize: 14, lineHeight: 20, color: colors.accent },
   swatch: { width: 32, height: 32, borderRadius: 16, borderWidth: 2 },
   block: { paddingHorizontal: 16, paddingVertical: 12 },
-  label: { fontFamily: 'Inter-600', fontSize: 12, lineHeight: 16, color: colors.mute },
+  label: { fontFamily: 'Archivo-SemiBold', fontSize: 12, lineHeight: 16, color: colors.mute },
   field: {
     width: '100%',
     minHeight: 44,
@@ -309,17 +309,17 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.line,
     backgroundColor: colors.surface2,
-    fontFamily: 'Inter-400',
+    fontFamily: 'Archivo-Regular',
     fontSize: 14,
     color: colors.ink,
   },
   fieldFocus: { borderColor: colors.accent },
   fieldInvalid: { borderColor: colors.stampRed },
   select: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
-  selectText: { fontFamily: 'Inter-400', fontSize: 14, lineHeight: 20, color: colors.ink },
-  at: { position: 'absolute', left: 14, zIndex: 1, top: 18, fontFamily: 'Inter-400', fontSize: 14, lineHeight: 20, color: colors.mute },
-  hint: { fontFamily: 'Inter-400', fontSize: 11, lineHeight: 14, color: colors.mute, marginTop: 6 },
-  noAccount: { fontFamily: 'Inter-400', fontSize: 12, lineHeight: 19.5, color: colors.mute, textAlign: 'center', paddingHorizontal: 16 },
+  selectText: { fontFamily: 'Archivo-Regular', fontSize: 14, lineHeight: 20, color: colors.ink },
+  at: { position: 'absolute', left: 14, zIndex: 1, top: 18, fontFamily: 'Archivo-Regular', fontSize: 14, lineHeight: 20, color: colors.mute },
+  hint: { fontFamily: 'Archivo-Regular', fontSize: 11, lineHeight: 14, color: colors.mute, marginTop: 6 },
+  noAccount: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 19.5, color: colors.mute, textAlign: 'center', paddingHorizontal: 16 },
   sheetTitle: { ...tx('title'), color: colors.ink, marginBottom: 8 },
   countryRow: { minHeight: 48, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   countryText: { fontSize: 15, lineHeight: 21.75 },

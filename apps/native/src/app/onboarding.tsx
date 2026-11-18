@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
   bar: { height: 56, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', flexShrink: 0 },
   back: { flexDirection: 'row', alignItems: 'center', gap: 6, minHeight: 44, paddingHorizontal: 8 },
   skip: { minHeight: 44, paddingHorizontal: 8, justifyContent: 'center' },
-  barText: { fontFamily: 'Inter-600', fontSize: 12, lineHeight: 16, color: colors.mute },
+  barText: { fontFamily: 'Archivo-SemiBold', fontSize: 12, lineHeight: 16, color: colors.mute },
   dots: { flexDirection: 'row', alignItems: 'center', gap: 6 },
   dot: { height: 6, borderRadius: 3 },
   dotOn: { width: 24, backgroundColor: colors.accent },

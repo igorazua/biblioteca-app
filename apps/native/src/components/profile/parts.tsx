@@ -116,21 +116,21 @@ export function NoticeLink({ icon, text, onPress }: { icon: IconName; text: stri
 }
 
 const styles = StyleSheet.create({
-  counterValue: { fontFamily: 'Inter-700', fontSize: 18, lineHeight: 18, color: colors.ink, fontVariant: ['tabular-nums'] },
-  counterLabel: { fontFamily: 'Inter-400', fontSize: 11, color: colors.mute, marginTop: 4 },
+  counterValue: { fontFamily: 'Archivo-SemiBold', fontSize: 18, lineHeight: 18, color: colors.ink, fontVariant: ['tabular-nums'] },
+  counterLabel: { fontFamily: 'Archivo-Regular', fontSize: 11, color: colors.mute, marginTop: 4 },
   sectionHead: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 },
   badge: { position: 'absolute', top: 6, left: 6, width: 20, height: 20, borderRadius: 10, backgroundColor: colors.accent, alignItems: 'center', justifyContent: 'center' },
-  badgeText: { fontFamily: 'Inter-700', fontSize: 11, lineHeight: 14, color: colors.accentInk, fontVariant: ['tabular-nums'] },
+  badgeText: { fontFamily: 'Archivo-SemiBold', fontSize: 11, lineHeight: 14, color: colors.accentInk, fontVariant: ['tabular-nums'] },
   statCard: { width: '48%', backgroundColor: colors.surface, borderRadius: 16, borderWidth: 1, borderColor: colors.line, padding: 12 },
-  statBig: { fontFamily: 'Inter-600', fontSize: 24, lineHeight: 24, color: colors.ink, fontVariant: ['tabular-nums'] },
-  statSmall: { fontFamily: 'Inter-600', fontSize: 18, lineHeight: 18, color: colors.ink },
+  statBig: { fontFamily: 'Archivo-SemiBold', fontSize: 24, lineHeight: 24, color: colors.ink, fontVariant: ['tabular-nums'] },
+  statSmall: { fontFamily: 'Archivo-SemiBold', fontSize: 18, lineHeight: 18, color: colors.ink },
   friendRow: { flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: colors.surface, borderRadius: 16, borderWidth: 1, borderColor: colors.line, padding: 12 },
-  friendName: { fontFamily: 'Inter-600', fontSize: 14, lineHeight: 20, color: colors.ink },
-  example: { fontFamily: 'Inter-400', fontSize: 10, color: colors.mute },
+  friendName: { fontFamily: 'Archivo-SemiBold', fontSize: 14, lineHeight: 20, color: colors.ink },
+  example: { fontFamily: 'Archivo-Regular', fontSize: 10, color: colors.mute },
   bar: { height: 6, borderRadius: 3, backgroundColor: colors.line, marginTop: 6, overflow: 'hidden' },
   barFill: { height: '100%', borderRadius: 3, backgroundColor: colors.accent },
-  noCommon: { fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16, color: colors.mute },
-  pct: { fontFamily: 'Inter-700', fontSize: 16, lineHeight: 24, color: colors.accent, fontVariant: ['tabular-nums'] },
+  noCommon: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: colors.mute },
+  pct: { fontFamily: 'Archivo-SemiBold', fontSize: 16, lineHeight: 24, color: colors.accent, fontVariant: ['tabular-nums'] },
   notice: { marginTop: 12, flexDirection: 'row', alignItems: 'center', gap: 12, padding: 12, borderRadius: 16, backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.line },
 })
 

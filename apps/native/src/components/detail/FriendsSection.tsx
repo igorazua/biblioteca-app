@@ -28,12 +28,12 @@ export function FriendsSection({ item, hits, onNotify }: { item: Item; hits: Fri
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
                 <Avatar name={friend.name} color={friend.avatarColor} url={friend.avatarUrl} size={36} />
                 <View style={{ flex: 1, minWidth: 0 }}>
-                  <AppText style={[tx('body'), { fontFamily: 'Inter-600', color: colors.ink }]}>{friend.name}</AppText>
+                  <AppText style={[tx('body'), { fontFamily: 'Archivo-SemiBold', color: colors.ink }]}>{friend.name}</AppText>
                   {r ? <AppText style={tx('meta')}>{`nº ${r.pos} de sus ${r.total} ${label.plural.toLowerCase()}`}</AppText> : null}
                 </View>
                 {r ? <RankBadge pos={r.pos} size="lg" /> : null}
               </View>
-              {e.comment ? <AppText style={[tx('body'), { marginTop: 8, fontFamily: 'Fraunces72-400-italic', color: alpha(colors.ink, 0.9) }]}>{`«${e.comment}»`}</AppText> : null}
+              {e.comment ? <AppText style={[tx('body'), { marginTop: 8, fontFamily: 'Archivo-Regular', color: alpha(colors.ink, 0.9) }]}>{`«${e.comment}»`}</AppText> : null}
               {r ? <AskFriend friend={friend} message={askText(friend.name, r.pos)} onNotify={onNotify} /> : null}
             </View>
           )

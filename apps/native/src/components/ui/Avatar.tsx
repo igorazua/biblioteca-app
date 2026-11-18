@@ -56,5 +56,5 @@ export function Avatar({ name, color, url, size = 32, style }: AvatarProps) {
 
 const styles = StyleSheet.create({
   fallback: { alignItems: 'center', justifyContent: 'center' },
-  initials: { fontFamily: 'Inter-600', color: 'rgba(0, 0, 0, 0.8)' },
+  initials: { fontFamily: 'Archivo-SemiBold', color: 'rgba(0, 0, 0, 0.8)' },
 })

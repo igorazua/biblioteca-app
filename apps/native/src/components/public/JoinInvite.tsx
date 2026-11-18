@@ -85,7 +85,7 @@ export function JoinInvite({ code }: { code: string }) {
     <View style={[styles.root, { paddingTop: insets.top + 24, paddingBottom: insets.bottom + 24 }]}>
       <View style={styles.card}>
         <View style={styles.avatar}>
-          <Avatar name={creatorName} url={creatorAvatar} color="#F5B544" size={64} />
+          <Avatar name={creatorName} url={creatorAvatar} color={colors.accent} size={64} />
         </View>
 
         <View>

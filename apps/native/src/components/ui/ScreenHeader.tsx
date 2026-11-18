@@ -34,6 +34,6 @@ export function ScreenHeader({ title, onBack, right }: ScreenHeaderProps) {
 const styles = StyleSheet.create({
   row: { paddingHorizontal: 12, paddingBottom: 8, flexDirection: 'row', alignItems: 'center', gap: 4 },
   back: { width: 44, height: 44, borderRadius: 22, alignItems: 'center', justifyContent: 'center' },
-  title: { flex: 1, minWidth: 0, fontFamily: 'Inter-600', fontSize: 20, lineHeight: 28, color: colors.ink },
+  title: { flex: 1, minWidth: 0, fontFamily: 'Archivo-SemiBold', fontSize: 20, lineHeight: 28, color: colors.ink },
   titleNoBack: { paddingLeft: 8 },
 })

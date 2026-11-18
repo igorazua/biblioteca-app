@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  rankText: { fontFamily: 'Inter-700', fontSize: 10, lineHeight: 10, color: colors.accentInk, fontVariant: ['tabular-nums'] },
+  rankText: { fontFamily: 'Archivo-SemiBold', fontSize: 10, lineHeight: 10, color: colors.accentInk, fontVariant: ['tabular-nums'] },
   pendingBadge: {
     position: 'absolute',
     bottom: -5,
@@ -200,7 +200,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   more: { marginLeft: 2, width: 34, height: 34, borderRadius: 999, backgroundColor: RING, alignItems: 'center', justifyContent: 'center' },
-  moreText: { fontFamily: 'Inter-600', fontSize: 12, lineHeight: 16, color: colors.ink },
+  moreText: { fontFamily: 'Archivo-SemiBold', fontSize: 12, lineHeight: 16, color: colors.ink },
   labelPill: {
     marginTop: 8,
     alignSelf: 'flex-end',
@@ -209,7 +209,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
     paddingVertical: 2,
   },
-  labelText: { fontFamily: 'Inter-400', fontSize: 11, color: alpha('#ffffff', 0.85) },
+  labelText: { fontFamily: 'Archivo-Regular', fontSize: 11, color: alpha('#ffffff', 0.85) },
   tip: {
     position: 'absolute',
     top: 48,
@@ -231,10 +231,10 @@ const styles = StyleSheet.create({
   },
   tipHead: { flexDirection: 'row', alignItems: 'center', gap: 10, marginBottom: 8 },
   tipText: { flexShrink: 1, minWidth: 0 },
-  tipName: { fontFamily: 'Inter-600', fontSize: 13, lineHeight: 18, color: '#ffffff' },
-  tipSub: { fontFamily: 'Inter-400', fontSize: 11, lineHeight: 15, color: alpha('#ffffff', 0.7) },
-  tipPending: { fontFamily: 'Inter-500', color: colors.stampBlue },
+  tipName: { fontFamily: 'Archivo-SemiBold', fontSize: 13, lineHeight: 18, color: '#ffffff' },
+  tipSub: { fontFamily: 'Archivo-Regular', fontSize: 11, lineHeight: 15, color: alpha('#ffffff', 0.7) },
+  tipPending: { fontFamily: 'Archivo-Regular', color: colors.stampBlue },
   tipRank: { marginLeft: 'auto' },
-  // La PWA usa la serif en cursiva (leading-snug = 1,375 × 13); Fraunces no trae cursiva en la fase 1 (anotado en el informe).
-  tipComment: { fontFamily: 'Fraunces72-400', fontSize: 13, lineHeight: 17.875, color: alpha('#ffffff', 0.9) },
+  // La PWA usaba la serif en cursiva; Taquilla no lleva cursivas (énfasis por peso).
+  tipComment: { fontFamily: 'Archivo-Regular', fontSize: 13, lineHeight: 17.875, color: alpha('#ffffff', 0.9) },
 })

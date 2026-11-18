@@ -59,7 +59,7 @@ export function WideButton({
       style={[styles.wide, { minHeight }, on ? styles.wideOn : styles.wideOff, style]}
     >
       {icon}
-      <AppText style={[styles.wideText, { fontFamily: bold ? 'Inter-700' : 'Inter-600', color: on ? colors.accentInk : colors.mute }]}>{label}</AppText>
+      <AppText style={[styles.wideText, { fontFamily: bold ? 'Archivo-SemiBold' : 'Archivo-SemiBold', color: on ? colors.accentInk : colors.mute }]}>{label}</AppText>
     </Press>
   )
 }
@@ -82,7 +82,7 @@ export function ShelfGlyph({ shelf, size, color }: { shelf: ShelfType; size: num
 }
 
 const styles = StyleSheet.create({
-  title: { fontFamily: 'Fraunces72-700', color: colors.ink, textAlign: 'center' },
+  title: { fontFamily: 'Archivo-Condensed-ExtraBold', textTransform: 'uppercase', color: colors.ink, textAlign: 'center' },
   wide: { width: '100%', borderRadius: 16, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' },
   wideOn: { backgroundColor: colors.accent },
   wideOff: { backgroundColor: colors.surface2, borderWidth: 1, borderColor: colors.line },

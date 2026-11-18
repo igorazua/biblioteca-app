@@ -214,8 +214,8 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
         <Press onPress={() => setOpen(isOpen ? null : it.id)} accessibilityRole="button" accessibilityState={{ expanded: isOpen }} style={{ flexDirection: 'row', alignItems: 'center', gap: 12, padding: 10 }}>
           <Poster item={it} style={[rowPoster(it), { borderRadius: 8, alignSelf: 'center' }]} />
           <View style={{ flex: 1, minWidth: 0 }}>
-            <AppText numberOfLines={2} style={{ fontFamily: 'Fraunces72-600', fontSize: 16, lineHeight: 20, color: colors.ink }}>{titleOf(it)}</AppText>
-            <AppText numberOfLines={1} style={{ fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16, color: colors.mute }}>{`${it.year} · ${it.creator}`}</AppText>
+            <AppText numberOfLines={2} style={{ fontFamily: 'Archivo-SemiBold', fontSize: 16, lineHeight: 20, color: colors.ink }}>{titleOf(it)}</AppText>
+            <AppText numberOfLines={1} style={{ fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: colors.mute }}>{`${it.year} · ${it.creator}`}</AppText>
           </View>
           {st ? <Icon name={st === 'seen' ? 'check' : 'bookmark'} size={18} color={colors.accent} /> : null}
         </Press>
@@ -223,7 +223,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
           <View style={{ paddingHorizontal: 12, paddingBottom: 12, paddingTop: 4 }}>
             {st ? (
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-                <AppText style={{ flex: 1, fontFamily: 'Inter-400', fontSize: 14, lineHeight: 20, color: colors.mute }}>{STATUS_TXT[st]}</AppText>
+                <AppText style={{ flex: 1, fontFamily: 'Archivo-Regular', fontSize: 14, lineHeight: 20, color: colors.mute }}>{STATUS_TXT[st]}</AppText>
                 <Press
                   accessibilityRole="button"
                   onPress={() => {
@@ -232,7 +232,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
                   }}
                   style={{ minHeight: 44, paddingHorizontal: 16, borderRadius: 12, backgroundColor: colors.accent, alignItems: 'center', justifyContent: 'center' }}
                 >
-                  <AppText style={{ fontFamily: 'Inter-600', fontSize: 14, lineHeight: 20, color: colors.accentInk }}>Abrir ficha</AppText>
+                  <AppText style={{ fontFamily: 'Archivo-SemiBold', fontSize: 14, lineHeight: 20, color: colors.accentInk }}>Abrir ficha</AppText>
                 </Press>
               </View>
             ) : (
@@ -245,7 +245,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
                   }}
                   style={{ flex: 1, minHeight: 46, borderRadius: 12, backgroundColor: colors.accent, alignItems: 'center', justifyContent: 'center' }}
                 >
-                  <AppText style={{ fontFamily: 'Inter-600', fontSize: 14, lineHeight: 20, color: colors.accentInk }}>{seenLabel(it.type)}</AppText>
+                  <AppText style={{ fontFamily: 'Archivo-SemiBold', fontSize: 14, lineHeight: 20, color: colors.accentInk }}>{seenLabel(it.type)}</AppText>
                 </Press>
                 <Press
                   accessibilityRole="button"
@@ -255,7 +255,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
                   }}
                   style={{ flex: 1, minHeight: 46, borderRadius: 12, backgroundColor: colors.surface2, borderWidth: 1, borderColor: colors.line, alignItems: 'center', justifyContent: 'center' }}
                 >
-                  <AppText style={{ fontFamily: 'Inter-600', fontSize: 14, lineHeight: 20, color: colors.ink }}>Pendiente</AppText>
+                  <AppText style={{ fontFamily: 'Archivo-SemiBold', fontSize: 14, lineHeight: 20, color: colors.ink }}>Pendiente</AppText>
                 </Press>
               </View>
             )}
@@ -270,8 +270,8 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
       {(remoteResults.length > 0 || searchingRemote) && (
         <View style={{ paddingTop: 16, paddingBottom: 8 }}>
           <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 8, marginBottom: 8 }}>
-            <AppText style={{ fontFamily: 'Inter-600', fontSize: 12, lineHeight: 16, letterSpacing: 1.2, textTransform: 'uppercase', color: colors.mute }}>Más en el catálogo</AppText>
-            {searchingRemote && <AppText style={{ fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16, color: alpha(colors.mute, 0.8) }}>Buscando…</AppText>}
+            <AppText style={{ fontFamily: 'Archivo-SemiBold', fontSize: 12, lineHeight: 16, letterSpacing: 1.2, textTransform: 'uppercase', color: colors.mute }}>Más en el catálogo</AppText>
+            {searchingRemote && <AppText style={{ fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: alpha(colors.mute, 0.8) }}>Buscando…</AppText>}
           </View>
           {searchingRemote && remoteResults.length === 0 &&
             [0, 1, 2].map((i) => (
@@ -302,11 +302,11 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
                   </View>
                 )}
                 <View style={{ flex: 1, minWidth: 0 }}>
-                  <AppText numberOfLines={2} style={{ fontFamily: 'Fraunces72-600', fontSize: 16, lineHeight: 20, color: colors.ink }}>{hit.title}</AppText>
-                  <AppText numberOfLines={1} style={{ fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16, color: colors.mute }}>{`${hit.year || '—'} ${hit.creator ? `· ${hit.creator}` : ''}`}</AppText>
+                  <AppText numberOfLines={2} style={{ fontFamily: 'Archivo-SemiBold', fontSize: 16, lineHeight: 20, color: colors.ink }}>{hit.title}</AppText>
+                  <AppText numberOfLines={1} style={{ fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: colors.mute }}>{`${hit.year || '—'} ${hit.creator ? `· ${hit.creator}` : ''}`}</AppText>
                 </View>
                 <View style={{ paddingHorizontal: 8, paddingVertical: 4, borderRadius: 8, backgroundColor: alpha(colors.accent, 0.1) }}>
-                  <AppText style={{ fontFamily: 'Inter-600', fontSize: 12, lineHeight: 16, color: colors.accent }}>{resolving ? '…' : 'Añadir'}</AppText>
+                  <AppText style={{ fontFamily: 'Archivo-SemiBold', fontSize: 12, lineHeight: 16, color: colors.accent }}>{resolving ? '…' : 'Añadir'}</AppText>
                 </View>
               </Press>
             )
@@ -334,7 +334,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
           <Press onPress={() => onClose()} accessibilityRole="button" accessibilityLabel="Cerrar" style={{ width: 44, height: 44, borderRadius: 22, alignItems: 'center', justifyContent: 'center' }}>
             <Icon name="x" color={colors.ink} />
           </Press>
-          <AppText numberOfLines={1} style={{ flex: 1, fontFamily: 'Inter-600', fontSize: 20, lineHeight: 28, color: colors.ink }}>
+          <AppText numberOfLines={1} style={{ flex: 1, fontFamily: 'Archivo-SemiBold', fontSize: 20, lineHeight: 28, color: colors.ink }}>
             {shelf ? `Añadir a ${SHELF_LABEL[shelf].plural}` : 'Añadir a mano'}
           </AppText>
         </View>
@@ -349,7 +349,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
                 accessibilityRole="button"
                 style={{ minHeight: 64, borderRadius: 24, backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.line, paddingHorizontal: 20, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}
               >
-                <AppText style={{ fontFamily: 'Inter-600', fontSize: 18, lineHeight: 28, color: colors.ink }}>{SHELF_LABEL[s].plural}</AppText>
+                <AppText style={{ fontFamily: 'Archivo-SemiBold', fontSize: 18, lineHeight: 28, color: colors.ink }}>{SHELF_LABEL[s].plural}</AppText>
                 <Icon name="chevron" size={18} color={colors.mute} />
               </Press>
             ))}
@@ -371,7 +371,7 @@ export function AddFlow({ shelf: initial, onClose }: { shelf?: ShelfType; onClos
                 accessibilityLabel="Buscar en el catálogo"
                 autoCorrect={false}
                 returnKeyType="search"
-                style={{ minHeight: 50, borderRadius: 16, backgroundColor: colors.surface, borderWidth: 1, borderColor: focus ? colors.accent : colors.line, paddingLeft: 40, paddingRight: 16, fontFamily: 'Inter-400', fontSize: 15, color: colors.ink }}
+                style={{ minHeight: 50, borderRadius: 16, backgroundColor: colors.surface, borderWidth: 1, borderColor: focus ? colors.accent : colors.line, paddingLeft: 40, paddingRight: 16, fontFamily: 'Archivo-Regular', fontSize: 15, color: colors.ink }}
               />
             </View>
             <FlatList

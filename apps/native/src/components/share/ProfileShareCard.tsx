@@ -13,9 +13,9 @@ import { posterOf, titleOf } from '../../lib/item'
  * es la imagen que se publica fuera de la app y debe parecerse a la que daba la PWA.
  *
  * Diferencias con el canvas, a propósito:
- *  - `system-ui` pasa a Inter y `Georgia` a Fraunces (las fuentes de la app).
+ *  - `system-ui` y `Georgia` pasan a Archivo (Taquilla: condensada 800 en titulares, Regular y SemiBold en el resto).
  *  - El texto del canvas se colocaba por su línea base: aquí se coloca por su caja, con la línea base calculada (`base`).
- *  - La cursiva del pie es sintética hasta que exista Fraunces cursiva estática (B2).
+ *  - Sin cursivas (Taquilla): el pie va en Regular.
  */
 export const CARD_W = 1080
 export const CARD_H = 1920
@@ -23,13 +23,13 @@ export const CARD_H = 1920
 const S = 1 / 3
 const u = (n: number) => n * S
 
-const INK = '#F4EFE6'
+const INK = '#F4F3F1'
 const MUTE = '#A39D92'
 const BG_DEEP = '#100E0C'
 const SURFACE = '#25221F'
-const DIVIDER = 'rgba(244, 239, 230, 0.12)'
+const DIVIDER = 'rgba(244, 243, 241, 0.12)'
 const ITEM_FILL = 'rgba(26, 24, 22, 0.7)'
-const ITEM_STROKE = 'rgba(244, 239, 230, 0.08)'
+const ITEM_STROKE = 'rgba(244, 243, 241, 0.08)'
 
 /** Los dos últimos dígitos hex de `#rrggbb` + alfa, como en el canvas (`${accentColor}25`). */
 const withAlpha = (hex: string, aa: string) => `${hex}${aa}`
@@ -48,7 +48,7 @@ export interface ShareCardProps {
 /** Cuántas portadas va a intentar cargar la tarjeta (las obras sin portada no cuentan). */
 export const posterCount = (items: Item[]) => items.slice(0, 5).filter((it) => posterOf(it)).length
 
-type FontName = 'Inter-400' | 'Inter-500' | 'Inter-600' | 'Inter-700' | 'Fraunces72-400' | 'Fraunces72-700'
+type FontName = 'Archivo-Condensed-ExtraBold' | 'Archivo-Regular' | 'Archivo-SemiBold'
 
 /** Texto colocado por su línea base, en unidades del canvas. `base` = y de `fillText`. */
 function T({ x, base, size, font, color, width, align = 'left', letterSpacing, style, children, lines = 1 }: {
@@ -93,7 +93,7 @@ function T({ x, base, size, font, color, width, align = 'left', letterSpacing, s
 }
 
 export const ProfileShareCard = forwardRef<ComponentRef<typeof View>, ShareCardProps>(function ProfileShareCard(
-  { title, subtitle = 'Lo que más me marcó', author, items, accentColor = '#F2B04A', shareUrl, onPosterSettled },
+  { title, subtitle = 'Lo que más me marcó', author, items, accentColor = '#FF5A3C', shareUrl, onPosterSettled },
   ref,
 ) {
   const list = items.slice(0, 5)
@@ -120,16 +120,16 @@ export const ProfileShareCard = forwardRef<ComponentRef<typeof View>, ShareCardP
 
       {/* 2. Cabecera */}
       <View style={{ position: 'absolute', left: u(80), top: u(100), width: u(240), height: u(56), borderRadius: u(28), backgroundColor: withAlpha(accentColor, '33') }} />
-      <T x={120} base={136} size={22} font="Inter-700" color={accentColor} width={200} letterSpacing={3}>
+      <T x={120} base={136} size={28} font="Archivo-Condensed-ExtraBold" color={accentColor} width={200} letterSpacing={3}>
         BIBLIOTECA
       </T>
-      <T x={80} base={220} size={32} font="Inter-500" color={MUTE} width={920}>
+      <T x={80} base={220} size={32} font="Archivo-Regular" color={MUTE} width={920}>
         {subtitle.toUpperCase()}
       </T>
-      <T x={80} base={300} size={64} font="Fraunces72-700" color={INK} width={920}>
+      <T x={80} base={300} size={84} font="Archivo-Condensed-ExtraBold" color={INK} width={920} style={{ textTransform: 'uppercase' }}>
         {title}
       </T>
-      <T x={80} base={360} size={36} font="Inter-600" color={accentColor} width={920}>
+      <T x={80} base={360} size={36} font="Archivo-SemiBold" color={accentColor} width={920}>
         {`por ${author}`}
       </T>
       <View style={{ position: 'absolute', left: u(80), top: u(409), width: u(920), height: u(2), backgroundColor: DIVIDER }} />
@@ -157,7 +157,7 @@ export const ProfileShareCard = forwardRef<ComponentRef<typeof View>, ShareCardP
             />
             {/* número de ranking */}
             <View style={{ position: 'absolute', left: u(140 - 36), top: u(y + 95 - 36), width: u(72), height: u(72), borderRadius: u(36), backgroundColor: accentColor, alignItems: 'center', justifyContent: 'center' }}>
-              <AppText fixed allowFontScaling={false} style={{ fontFamily: 'Inter-700', fontSize: u(36), lineHeight: u(36) * 1.2, color: BG_DEEP, includeFontPadding: false }}>
+              <AppText fixed allowFontScaling={false} style={{ fontFamily: 'Archivo-Condensed-ExtraBold', fontSize: u(44), lineHeight: u(44) * 1.2, color: '#120F0A', includeFontPadding: false }}>
                 {`${i + 1}`}
               </AppText>
             </View>
@@ -175,20 +175,20 @@ export const ProfileShareCard = forwardRef<ComponentRef<typeof View>, ShareCardP
                 />
               ) : (
                 <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                  <AppText fixed allowFontScaling={false} style={{ fontFamily: 'Inter-700', fontSize: u(32), lineHeight: u(32) * 1.2, color: MUTE, includeFontPadding: false }}>
+                  <AppText fixed allowFontScaling={false} style={{ fontFamily: 'Archivo-SemiBold', fontSize: u(32), lineHeight: u(32) * 1.2, color: MUTE, includeFontPadding: false }}>
                     {shown.slice(0, 1)}
                   </AppText>
                 </View>
               )}
             </View>
-            <T x={330} base={y + 80} size={38} font="Fraunces72-700" color={INK} width={650}>
+            <T x={330} base={y + 80} size={38} font="Archivo-SemiBold" color={INK} width={650}>
               {shown.length > 28 ? `${shown.slice(0, 27)}…` : shown}
             </T>
-            <T x={330} base={y + 125} size={28} font="Inter-400" color={MUTE} width={650}>
+            <T x={330} base={y + 125} size={28} font="Archivo-Regular" color={MUTE} width={650}>
               {meta.length > 36 ? `${meta.slice(0, 35)}…` : meta}
             </T>
             {it.genres?.length ? (
-              <T x={330} base={y + 160} size={22} font="Inter-500" color={withAlpha(accentColor, 'CC')} width={650}>
+              <T x={330} base={y + 160} size={22} font="Archivo-Regular" color={withAlpha(accentColor, 'CC')} width={650}>
                 {it.genres.slice(0, 3).join(' / ')}
               </T>
             ) : null}
@@ -198,11 +198,11 @@ export const ProfileShareCard = forwardRef<ComponentRef<typeof View>, ShareCardP
 
       {/* 4. Pie */}
       <View style={{ position: 'absolute', left: u(80), top: u(1719), width: u(920), height: u(2), backgroundColor: DIVIDER }} />
-      <T x={80} base={1780} size={30} font="Fraunces72-400" color={INK} width={920} style={{ fontStyle: 'italic' }}>
+      <T x={80} base={1780} size={30} font="Archivo-Regular" color={INK} width={920}>
         «Todo lo que te ha formado, en tus estanterías»
       </T>
       {shareUrl ? (
-        <T x={80} base={1830} size={26} font="Inter-500" color={accentColor} width={920}>
+        <T x={80} base={1830} size={26} font="Archivo-SemiBold" color={accentColor} width={920}>
           {shareUrl.replace(/^https?:\/\//, '')}
         </T>
       ) : null}

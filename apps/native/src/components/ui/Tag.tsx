@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     paddingVertical: 2,
   },
   text: {
-    fontFamily: 'Inter-500',
+    fontFamily: 'Archivo-Regular',
     fontSize: 11,
     lineHeight: 17.9,
     letterSpacing: 0.275,

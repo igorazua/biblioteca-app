@@ -397,7 +397,7 @@ export default function CompareSession() {
               scaleTo={0.95}
               style={{ paddingHorizontal: 12, paddingVertical: 6, borderRadius: 999, borderWidth: 1, borderColor: colors.mute }}
             >
-              <AppText style={[tx('meta'), { fontFamily: 'Inter-500', color: colors.ink }]}>Ver resumen</AppText>
+              <AppText style={[tx('meta'), { fontFamily: 'Archivo-Regular', color: colors.ink }]}>Ver resumen</AppText>
             </Press>
           ) : undefined
         }
@@ -531,7 +531,7 @@ function FlashName({ id, up = false }: { id: string; up?: boolean }) {
       <AppText importantForAccessibility="no" style={{ fontSize: 13, color: up ? '#3ec878' : '#ef4b4b' }}>
         {up ? '▲' : '▼'}
       </AppText>
-      <AppText numberOfLines={1} style={{ fontFamily: 'Inter-400', fontSize: 13, maxWidth: 224, color: colors.ink }}>
+      <AppText numberOfLines={1} style={{ fontFamily: 'Archivo-Regular', fontSize: 13, maxWidth: 224, color: colors.ink }}>
         {titleOf(it)}
       </AppText>
     </View>
@@ -548,7 +548,7 @@ function MoveList({
   rows: { id: string; oldPos?: number; newPos?: number; pos?: number; delta?: number }[]
 }) {
   if (!rows.length) return null
-  const color = type === 'up' ? '#3ec878' : type === 'down' ? '#ef4b4b' : type === 'kept' ? colors.mute : '#F5B544'
+  const color = type === 'up' ? '#3ec878' : type === 'down' ? '#ef4b4b' : type === 'kept' ? colors.mute : colors.accent
 
   return (
     <Group title={title}>
@@ -584,7 +584,7 @@ function MoveList({
               <AppText style={tx('meta')}>{subtitle}</AppText>
             </View>
             <View style={{ flexShrink: 0, paddingHorizontal: 10, paddingVertical: 4, borderRadius: 999, backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.line }}>
-              <AppText style={{ fontFamily: 'Inter-600', fontSize: 12, lineHeight: 16, color, textAlign: 'right', fontVariant: ['tabular-nums'] }}>{badge}</AppText>
+              <AppText style={{ fontFamily: 'Archivo-SemiBold', fontSize: 12, lineHeight: 16, color, textAlign: 'right', fontVariant: ['tabular-nums'] }}>{badge}</AppText>
             </View>
           </View>
         )

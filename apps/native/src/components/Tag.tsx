@@ -6,7 +6,7 @@ import { AppText } from './AppText'
 export function Tag({ children }: { children: string }) {
   return (
     <View style={{ backgroundColor: colors.surface2, borderColor: colors.line, borderWidth: 1, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 2 }}>
-      <AppText numberOfLines={1} style={{ fontFamily: 'Inter-500', fontSize: 11, lineHeight: 17.9, letterSpacing: 0.275, color: colors.ink }}>
+      <AppText numberOfLines={1} style={{ fontFamily: 'Archivo-Regular', fontSize: 11, lineHeight: 17.9, letterSpacing: 0.275, color: colors.ink }}>
         {children}
       </AppText>
     </View>

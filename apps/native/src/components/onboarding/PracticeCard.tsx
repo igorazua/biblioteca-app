@@ -199,9 +199,9 @@ const styles = StyleSheet.create({
     paddingVertical: 4,
     backgroundColor: alpha('#000000', 0.6),
   },
-  stampText: { fontFamily: 'Inter-700', fontSize: 18, lineHeight: 28, letterSpacing: 0.9 },
+  stampText: { fontFamily: 'Archivo-Condensed-ExtraBold', fontSize: 24, lineHeight: 30, letterSpacing: 0.5, textTransform: 'uppercase' },
   meta: { position: 'absolute', left: 0, right: 0, bottom: 0, padding: 16 },
-  kind: { fontFamily: 'Inter-700', fontSize: 10, lineHeight: 15, letterSpacing: 1, textTransform: 'uppercase', color: colors.accent },
-  title: { fontFamily: 'Fraunces72-700', fontSize: 20, lineHeight: 25, color: '#ffffff', marginTop: 2 },
-  creator: { fontFamily: 'Inter-400', fontSize: 12, lineHeight: 16, color: 'rgba(255,255,255,0.7)', marginTop: 2 },
+  kind: { fontFamily: 'Archivo-SemiBold', fontSize: 10, lineHeight: 15, letterSpacing: 1, textTransform: 'uppercase', color: colors.accent },
+  title: { fontFamily: 'Archivo-SemiBold', fontSize: 18, lineHeight: 23, color: '#ffffff', marginTop: 2 },
+  creator: { fontFamily: 'Archivo-Regular', fontSize: 12, lineHeight: 16, color: 'rgba(255,255,255,0.7)', marginTop: 2 },
 })

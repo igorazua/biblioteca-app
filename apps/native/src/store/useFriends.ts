@@ -69,7 +69,7 @@ export const useFriends = create<FriendsState>((set, get) => ({
         await useCatalog.getState().ensureItems(friendItemIds)
       }
 
-      const colors = ['#F5B544', '#5B9CF5', '#3EC878', '#FF6B6B', '#A78BFA', '#F472B6']
+      const colors = ['#FF5A3C', '#5B9CF5', '#3EC878', '#FF6B6B', '#A78BFA', '#F472B6']
 
       const mappedFriends: Friend[] = (profiles || []).map((p, idx) => {
         const all: FriendEntry[] = (entries || [])
