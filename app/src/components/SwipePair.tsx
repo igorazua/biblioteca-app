@@ -17,8 +17,8 @@ export interface Side {
   ratio?: number
 }
 
-export const DUEL_LEFT = '#F5B544' // ámbar del acento
-export const DUEL_RIGHT = '#9A86FF' // violeta contrastado
+export const DUEL_LEFT = '#2ec4c8' // cian taquilla (--color-duel-a)
+export const DUEL_RIGHT = '#ff5a3c' // rojo cartel (--color-duel-b)
 
 type Choose = (w: 'a' | 'b') => void
 

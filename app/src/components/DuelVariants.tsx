@@ -87,16 +87,16 @@ const metal = (v: string) => [
   { at: 0.8, color: v },
   { at: 1, color: `color-mix(in srgb, ${v} 50%, white)` },
 ]
-const RIM_STOPS = { a: metal('var(--color-stamp-blue)'), b: metal('var(--color-accent)') } // azul acero a la izquierda, dorado a la derecha, como la nativa (D33)
+const RIM_STOPS = { a: metal('var(--color-duel-a)'), b: metal('var(--color-duel-b)') } // cian a la izquierda, rojo cartel a la derecha (Taquilla, D33)
 const DONE_STOPS = metal('var(--color-stamp-green)')
 const DONE_FLASH = { core: 'color-mix(in srgb, var(--color-stamp-green) 10%, white)', tail: 'color-mix(in srgb, var(--color-stamp-green) 35%, white)' }
 
-/** «Gana *título*» con el título en cursiva serif. */
+/** «Gana *título*» con el título en negrita. */
 export function Chosen({ texts, title }: { texts: DuelTexts; title: string }) {
   return (
     <>
       {texts.prefix}
-      <em className="serif italic font-semibold">{title}</em>
+      <strong className="font-extrabold">{title}</strong>
     </>
   )
 }
