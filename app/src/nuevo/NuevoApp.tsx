@@ -8,6 +8,7 @@ import { useIsDesktop } from '../lib/useMediaQuery'
 import { Home } from './Home'
 
 const DuelReel = lazy(() => import('./DuelReel').then((m) => ({ default: m.DuelReel })))
+const DiscoverArc = lazy(() => import('./DiscoverArc').then((m) => ({ default: m.DiscoverArc })))
 const ShelfRank = lazy(() => import('./ShelfRank').then((m) => ({ default: m.ShelfRank })))
 
 /**
@@ -25,6 +26,8 @@ export function NuevoApp() {
           <Route index element={<Home />} />
           <Route path="duelos" element={<DuelReel />} />
           <Route path="duelos/:shelf" element={<DuelReel />} />
+          <Route path="descubrir" element={<DiscoverArc />} />
+          <Route path="descubrir/:shelf" element={<DiscoverArc />} />
           <Route path="estanteria/:type" element={<ShelfRank />} />
           <Route path="*" element={<Navigate to="/nuevo" replace />} />
         </Routes>
@@ -36,7 +39,7 @@ export function NuevoApp() {
 const LINKS: { to: string; label: string; end?: boolean; ext?: boolean }[] = [
   { to: '/nuevo', label: 'Inicio', end: true },
   { to: '/nuevo/duelos', label: 'Duelos' },
-  { to: '/descubrir', label: 'Descubrir', ext: true },
+  { to: '/nuevo/descubrir', label: 'Descubrir' },
   { to: '/decidir', label: 'Decidir', ext: true },
 ]
 
