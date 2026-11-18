@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 import { AnimatePresence, animate, motion, useMotionValue, useReducedMotion, useTransform, type MotionValue } from 'framer-motion'
 import {
@@ -20,20 +20,23 @@ import { useShortcuts } from '../lib/useShortcuts'
 import { Poster } from '../components/Poster'
 import { Icon } from '../components/Icon'
 import { CommentSheet } from '../components/RatingFlow'
-import { isShelf, titleOf, useCatalogFor, useViewportH, useViewportW } from './data'
+import { isShelf, titleOf, useCatalogFor, useShelfData, useViewportH, useViewportW } from './data'
 
 /**
- * Carrete de duelos. Las parejas esperan en cola en profundidad; la activa está delante. Eliges con clic, ← → o
- * arrastrando una carta hacia el centro (el borde D33 se dibuja con el recorrido y pasa a verde). La ganadora sube con
- * un sello que dice cómo cambia su puesto, la pareja sale hacia ti y todo el carrete corre una posición mientras llega
- * otra pareja desde el fondo.
+ * Duelos en escritorio: el mismo gesto que el abanico del móvil (DuelFan) a tamaño grande. Dos cartas ligeramente
+ * inclinadas y enfrentadas, solapadas; al elegir (clic, ← →, o arrastrando en horizontal: a la derecha elige la de la
+ * izquierda), la elegida viaja al centro, se endereza y se pone POR DELANTE de la otra, que se aparta y se apaga. El borde
+ * D33 se dibuja con el arrastre y al confirmar pasa a verde con un pulso.
+ *
+ * Cola honesta: detrás solo hay un mazo boca abajo, sin caras. Nunca se enseña una pareja futura: el motor decide la
+ * siguiente pareja (planNextDuel) solo después de guardar el duelo, y entonces dos cartas del mazo vienen al frente y se
+ * dan la vuelta. El mazo corre una posición en cada reparto.
  *
  * Guarda el duelo igual que CompareSession: recordDuel + bumpCompared + applyDuelToRanking (con el ranking del inicio de
- * la sesión como ancla) + markPlaced + applyRanking. La pareja de delante siempre es la que planifica el motor tras el
- * último duelo; las de detrás son una vista previa (el motor depende del resultado), por eso se ven apagadas.
+ * la sesión como ancla) + markPlaced + applyRanking.
  */
 
-/** Pareja en el carrete. `seq` es la identidad visual: la misma tarjeta avanza de hueco en hueco. */
+/** Pareja en juego. `seq` cuenta los repartos (identidad visual de la pareja y del mazo). */
 interface Q {
   seq: number
   left: string
@@ -51,7 +54,7 @@ interface Picked {
 interface Snapshot {
   entries: Record<string, UserEntry>
   ranking: string[]
-  queue: Q[]
+  pair: Q
   count: number
   sides: Record<string, 'L' | 'R'>
   seen: Record<string, number>
@@ -61,15 +64,17 @@ interface Snapshot {
   lastMove: { winner: string; loser: string } | null
 }
 
-const SLOTS = 4
 /** referencia estable para el selector de zustand cuando no hay ranking */
 const NONE: string[] = []
-/** recorrido (px) que hay que arrastrar una carta hacia el centro para elegirla */
-const THRESH = 150
-const DEPTH = { y: 92, z: 520 }
-
-const samePair = (a: { left: string; right: string }, b: { left: string; right: string }) =>
-  (a.left === b.left && a.right === b.right) || (a.left === b.right && a.right === b.left)
+/** inclinación de reposo de cada carta (como DuelFan) */
+const TILT = 6
+/** distancia entre los centros de las dos cartas, en anchos de carta: se solapan como en el móvil */
+const SPREAD = 0.83
+/** cartas visibles en el mazo boca abajo */
+const DECK = 6
+/** escala de las cartas del mazo respecto a las de la pareja */
+const DECK_SCALE = 0.36
+const clamp01 = (v: number) => Math.max(0, Math.min(1, v))
 
 export function DuelReel() {
   const { shelf: raw } = useParams<{ shelf: string }>()
@@ -92,9 +97,10 @@ function Reel({ shelf }: { shelf: ShelfType }) {
   const vw = useViewportW()
   const order = useMyShelves()
   useCatalogFor([shelf])
+  const data = useShelfData(shelf)
   const label = SHELF_LABEL[shelf]
 
-  const [queue, setQueue] = useState<Q[]>([])
+  const [pair, setPair] = useState<Q | null>(null)
   const [empty, setEmpty] = useState<'none' | 'complete' | 'need-more'>('none')
   const [count, setCount] = useState(0)
   const [picked, setPicked] = useState<Picked | null>(null)
@@ -150,25 +156,6 @@ function Reel({ shelf }: { shelf: ShelfType }) {
     return { seq, left: as.left, right: as.right, duel: d }
   }
 
-  /** Rellena la cola con vistas previas. No toca las refs de la sesión: trabaja con copias. */
-  const fillPreviews = (base: Q[]): Q[] => {
-    const out = [...base]
-    const sides = { ...sidesRef.current }
-    let tries = 0
-    while (out.length < SLOTS && tries < SLOTS * 2) {
-      tries++
-      const recent = [...recentRef.current, ...out.flatMap((q) => [q.left, q.right])]
-      const d = plan(countRef.current + out.length, recent)
-      if (!d || !getItem(d.a) || !getItem(d.b)) break
-      const as = assignSides(d.a, d.b, d.subject, sides, { ...seenRef.current })
-      Object.assign(sides, as.nextSides)
-      const q = { seq: ++seqRef.current, left: as.left, right: as.right, duel: d }
-      if (out.some((o) => samePair(o, q))) continue
-      out.push(q)
-    }
-    return out
-  }
-
   const start = () => {
     for (const t of timers.current) window.clearTimeout(t)
     timers.current = []
@@ -189,13 +176,13 @@ function Reel({ shelf }: { shelf: ShelfType }) {
     const d = plan(0, [])
     const first = d ? realPair(d, ++seqRef.current) : null
     if (!first) {
-      setQueue([])
+      setPair(null)
       const seen = Object.values(st.entries).filter((e) => e.status === 'seen' && (e.shelf ?? getItem(e.itemId)?.type) === shelf).length
       setEmpty(seen < 2 ? 'need-more' : 'complete')
       return
     }
     setEmpty('none')
-    setQueue(fillPreviews([first]))
+    setPair(first)
   }
 
   useEffect(() => {
@@ -205,7 +192,7 @@ function Reel({ shelf }: { shelf: ShelfType }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [shelf])
 
-  const front = queue[0] ?? null
+  const front = pair
 
   const commit = (side: 'L' | 'R') => {
     if (busy.current || !front || summary) return
@@ -221,7 +208,7 @@ function Reel({ shelf }: { shelf: ShelfType }) {
     const snap: Snapshot = {
       entries: st.entries,
       ranking: prevRank,
-      queue,
+      pair: front,
       count: countRef.current,
       sides: { ...sidesRef.current },
       seen: { ...seenRef.current },
@@ -278,25 +265,23 @@ function Reel({ shelf }: { shelf: ShelfType }) {
     setLastMove({ winner, loser })
     setPicked({ seq: front.seq, side, stamp, sub })
 
-    // la pareja que viene: la que planifica el motor ahora, no la vista previa
+    // la pareja que viene la decide el motor ahora, con el duelo ya guardado; hasta entonces el mazo no tiene caras
     const d = plan(nextCount, recentRef.current)
-    const rest = queue.slice(1)
-    const nextFront = d ? realPair(d, rest[0]?.seq ?? ++seqRef.current) : null
-    const holdMs = reduce ? 450 : 820
-    const moveMs = reduce ? 200 : 560
+    const next = d ? realPair(d, ++seqRef.current) : null
+    const holdMs = reduce ? 450 : 900
+    const dealMs = reduce ? 250 : 750
 
     timers.current.push(
       window.setTimeout(() => {
         setPicked(null)
-        if (!nextFront) {
-          setQueue([])
+        if (!next) {
+          setPair(null)
           setEmpty('complete')
           busy.current = false
           return
         }
-        const kept = rest.slice(1).filter((q) => !samePair(q, nextFront))
-        setQueue(fillPreviews([nextFront, ...kept]))
-        timers.current.push(window.setTimeout(() => (busy.current = false), moveMs))
+        setPair(next)
+        timers.current.push(window.setTimeout(() => (busy.current = false), dealMs))
       }, holdMs),
     )
   }
@@ -312,7 +297,8 @@ function Reel({ shelf }: { shelf: ShelfType }) {
     comparedRef.current = undo.compared
     countRef.current = undo.count
     setCount(undo.count)
-    setQueue(undo.queue)
+    // la pareja deshecha vuelve a repartirse (nuevo seq: se da la vuelta otra vez)
+    setPair({ ...undo.pair, seq: ++seqRef.current })
     setEmpty('none')
     setPicked(null)
     setSummary(false)
@@ -338,13 +324,18 @@ function Reel({ shelf }: { shelf: ShelfType }) {
   )
   useShortcuts({ escape: () => nav('/nuevo') }, summary)
 
-  // ── tamaño de las cartas ────────────────────────────────────────────────────────────────────────
+  // ── tamaños ────────────────────────────────────────────────────────────────────────────────────
+  // escenario: entre la barra superior (64) y el pie (112); a lo ancho, entre la cabecera (izquierda) y el ranking (derecha)
   const square = posterShape(shelf) === 'square'
-  // la pareja cabe entre la cabecera (izquierda) y el ranking (derecha): ~360 px a cada lado
   const ratio = square ? 1 : 2 / 3
-  const maxW = Math.max(200, (vw - 2 * 370) / 2.22)
-  const cardH = Math.round(Math.min(620, Math.max(280, vh * 0.56), maxW / ratio))
-  const cardW = Math.round(cardH * ratio)
+  const stageH = Math.max(420, vh - 80 - 112)
+  const fanW = Math.max(420, vw - 2 * 370)
+  // el abanico ocupa ~1,95 anchos de carta (dos cartas solapadas más la inclinación)
+  const cardW0 = Math.min(fanW / 1.95, (Math.min(620, stageH * 0.74)) * ratio)
+  const cardW = Math.round(cardW0)
+  const cardH = Math.round(cardW0 / ratio)
+  const cy = Math.round(stageH / 2 + cardH * 0.08)
+  const deckY = -Math.round(cardH * 0.56)
 
   if (summary) return <Summary shelf={shelf} startRank={startRank.current} compared={comparedRef.current} count={count} onMore={start} />
 
@@ -366,25 +357,36 @@ function Reel({ shelf }: { shelf: ShelfType }) {
             </Link>
           ))}
         </div>
+        {/* cifra real, aparte del mazo: el motor no saca la pareja de esta pila */}
+        {data.unranked.length > 0 && (
+          <p className="mt-6 text-[15px] text-ink/80 tabular-nums">
+            <span className="display text-[34px] leading-none text-ink mr-2">{data.unranked.length}</span>
+            {data.unranked.length === 1 ? 'espera su sitio' : 'esperan su sitio'}
+          </p>
+        )}
       </div>
 
-      {/* escenario con profundidad */}
-      <div className="absolute inset-0" style={{ perspective: 1700, perspectiveOrigin: '50% 8%' }}>
-        <AnimatePresence initial={false}>
-          {queue.map((q, k) => (
-            <PairSlot
-              key={q.seq}
-              q={q}
-              k={k}
-              w={cardW}
-              h={cardH}
-              picked={picked && picked.seq === q.seq ? picked : null}
-              onCommit={commit}
-              reduce={!!reduce}
-            />
-          ))}
-        </AnimatePresence>
-      </div>
+      {/* escenario: el mazo boca abajo detrás y la pareja delante */}
+      {pair && (
+        <div className="absolute inset-x-0" style={{ top: 80, height: stageH }}>
+          <div className="absolute left-1/2" style={{ top: cy, width: 0, height: 0 }}>
+            <Deck dealt={pair.seq} w={cardW} h={cardH} y={deckY} reduce={!!reduce} />
+            <AnimatePresence initial={false} mode="wait">
+              <Fan
+                key={pair.seq}
+                q={pair}
+                w={cardW}
+                h={cardH}
+                deckY={deckY}
+                thresh={Math.min(220, Math.max(140, vw * 0.12))}
+                picked={picked && picked.seq === pair.seq ? picked : null}
+                onCommit={commit}
+                reduce={!!reduce}
+              />
+            </AnimatePresence>
+          </div>
+        </div>
+      )}
 
       {empty !== 'none' && <EmptyState kind={empty} shelf={shelf} />}
 
@@ -428,132 +430,280 @@ function Reel({ shelf }: { shelf: ShelfType }) {
   )
 }
 
-// ── Una pareja del carrete ─────────────────────────────────────────────────────────────────────────
-function PairSlot({ q, k, w, h, picked, onCommit, reduce }: { q: Q; k: number; w: number; h: number; picked: Picked | null; onCommit: (s: 'L' | 'R') => void; reduce: boolean }) {
-  const slot = (i: number) =>
-    reduce
-      ? { opacity: i === 0 ? 1 : 0, y: 0, z: 0 }
-      : { opacity: i === 0 ? 1 : Math.max(0, 0.62 - (i - 1) * 0.2), y: -i * DEPTH.y, z: -i * DEPTH.z }
-  const active = k === 0
+// ── El mazo boca abajo ─────────────────────────────────────────────────────────────────────────────
+/**
+ * Cartas sin cara: no representan obras concretas, solo que hay más duelos. Cada carta tiene una identidad fija
+ * (`dealt*2 + i`), así que en cada reparto las dos de delante desaparecen (son las que acaban de darse la vuelta) y el
+ * resto corre una posición hacia delante.
+ */
+function Deck({ dealt, w, h, y, reduce }: { dealt: number; w: number; h: number; y: number; reduce: boolean }) {
+  const base = dealt * 2
+  const ids = Array.from({ length: DECK }, (_, i) => base + i)
+  return (
+    <div aria-hidden className="absolute" style={{ left: 0, top: 0, width: 0, height: 0 }}>
+      <AnimatePresence initial={false}>
+        {ids.map((id) => {
+          const i = id - base
+          const slot = { x: (i - (DECK - 1) / 2) * 3, y: y - i * 7, scale: DECK_SCALE * (1 - i * 0.025), opacity: 1 - i * 0.12, rotate: (i % 2 ? 1 : -1) * (1 + i * 0.4) }
+          return (
+            <motion.div
+              key={id}
+              className="absolute"
+              style={{ left: -w / 2, top: -h / 2, width: w, height: h, zIndex: DECK - i }}
+              initial={reduce ? { ...slot, opacity: 0 } : { ...slot, y: slot.y - 30, opacity: 0 }}
+              animate={slot}
+              exit={{ opacity: 0, transition: { duration: 0.12 } }}
+              transition={{ type: 'spring', stiffness: 220, damping: 26 }}
+            >
+              <CardBack />
+            </motion.div>
+          )
+        })}
+      </AnimatePresence>
+      <div className="absolute whitespace-nowrap text-[13px] text-ink/55 -translate-x-1/2" style={{ top: y - (h * DECK_SCALE) / 2 - 6 * DECK - 26 }}>
+        La siguiente pareja la elige el motor al votar
+      </div>
+    </div>
+  )
+}
+
+/** Dorso de carta: Taquilla, sin carátula. */
+function CardBack() {
+  return (
+    <div className="absolute inset-0 rounded-[18px] bg-surface2 border-[3px] border-line overflow-hidden flex items-center justify-center" style={{ boxShadow: '0 18px 40px -16px rgb(0 0 0 / 0.7)' }}>
+      <div className="absolute inset-3 rounded-[12px] border-2 border-ink/10" />
+      <span className="display text-[64px] leading-none text-ink/15 -rotate-90 whitespace-nowrap">Biblioteca</span>
+    </div>
+  )
+}
+
+// ── La pareja en abanico ───────────────────────────────────────────────────────────────────────────
+function Fan({
+  q,
+  w,
+  h,
+  deckY,
+  thresh,
+  picked,
+  onCommit,
+  reduce,
+}: {
+  q: Q
+  w: number
+  h: number
+  deckY: number
+  thresh: number
+  picked: Picked | null
+  onCommit: (s: 'L' | 'R') => void
+  reduce: boolean
+}) {
+  // x > 0 empuja la carta de la izquierda hacia el centro; x < 0, la de la derecha
+  const x = useMotionValue(0)
+  const gL = useTransform(x, (v) => clamp01(v / thresh))
+  const gR = useTransform(x, (v) => clamp01(-v / thresh))
+  const dragged = useRef(false)
+
+  useEffect(() => {
+    if (!picked) return
+    const to = picked.side === 'L' ? thresh : -thresh
+    const c = animate(x, to, reduce ? { duration: 0 } : { type: 'spring', stiffness: 300, damping: 30 })
+    return () => c.stop()
+  }, [picked, thresh, reduce, x])
+
   return (
     <motion.div
-      className="absolute inset-0 flex items-center justify-center"
-      style={{ zIndex: 10 - k, pointerEvents: active ? 'auto' : 'none', paddingTop: 40 }}
-      initial={slot(SLOTS)}
-      animate={slot(k)}
-      exit={reduce ? { opacity: 0 } : { opacity: 0, z: 320, y: 40, transition: { duration: 0.42, ease: [0.4, 0, 0.6, 1] } }}
-      transition={{ type: 'spring', stiffness: 170, damping: 24, mass: 1 }}
-      aria-hidden={!active}
+      className="absolute"
+      style={{ left: 0, top: 0, width: 0, height: 0 }}
+      onPanStart={() => {
+        if (picked) return
+        dragged.current = true
+        x.stop()
+      }}
+      onPan={(_, info) => {
+        if (!picked) x.set(info.offset.x)
+      }}
+      onPanEnd={(_, info) => {
+        if (!picked) {
+          const ox = info.offset.x
+          if (Math.abs(ox) >= thresh || Math.abs(info.velocity.x) > 900) onCommit(ox > 0 ? 'L' : 'R')
+          else animate(x, 0, { type: 'spring', stiffness: 420, damping: 32 })
+        }
+        window.setTimeout(() => (dragged.current = false), 60)
+      }}
+      exit={reduce ? { opacity: 0, transition: { duration: 0.15 } } : { opacity: 0, y: 40, transition: { duration: 0.26, ease: [0.4, 0, 0.6, 1] } }}
     >
-      <div className="flex items-center" style={{ gap: Math.round(w * 0.22) }}>
-        <DuelCard id={q.left} side="L" w={w} h={h} active={active} picked={picked} onCommit={onCommit} reduce={reduce} />
-        <DuelCard id={q.right} side="R" w={w} h={h} active={active} picked={picked} onCommit={onCommit} reduce={reduce} />
-      </div>
+      {/* superficie de arrastre: todo el escenario; el gesto se recoge en el contenedor (también sobre las cartas) */}
+      <div className="absolute cursor-grab active:cursor-grabbing" style={{ left: -w * 1.6, top: -h * 0.62, width: w * 3.2, height: h * 1.24 }} />
+      <FanCard id={q.left} side="L" w={w} h={h} deckY={deckY} g={gL} og={gR} picked={picked} dragged={dragged} onCommit={onCommit} reduce={reduce} />
+      <FanCard id={q.right} side="R" w={w} h={h} deckY={deckY} g={gR} og={gL} picked={picked} dragged={dragged} onCommit={onCommit} reduce={reduce} />
     </motion.div>
   )
 }
 
-const RIM_R = 14
-const rimPath = (w: number, h: number) => {
-  const r = RIM_R
-  const i = 1.5
-  return `M ${w / 2} ${i} H ${w - r} A ${r - i} ${r - i} 0 0 1 ${w - i} ${r} V ${h - r} A ${r - i} ${r - i} 0 0 1 ${w - r} ${h - i} H ${r} A ${r - i} ${r - i} 0 0 1 ${i} ${h - r} V ${r} A ${r - i} ${r - i} 0 0 1 ${r} ${i} Z`
-}
-
-function DuelCard({ id, side, w, h, active, picked, onCommit, reduce }: { id: string; side: 'L' | 'R'; w: number; h: number; active: boolean; picked: Picked | null; onCommit: (s: 'L' | 'R') => void; reduce: boolean }) {
+function FanCard({
+  id,
+  side,
+  w,
+  h,
+  deckY,
+  g,
+  og,
+  picked,
+  dragged,
+  onCommit,
+  reduce,
+}: {
+  id: string
+  side: 'L' | 'R'
+  w: number
+  h: number
+  deckY: number
+  g: MotionValue<number>
+  og: MotionValue<number>
+  picked: Picked | null
+  dragged: React.RefObject<boolean>
+  onCommit: (s: 'L' | 'R') => void
+  reduce: boolean
+}) {
   const item = getItem(id) as Item | undefined
-  const dir = side === 'L' ? 1 : -1
-  const x = useMotionValue(0)
-  const prog = useTransform(x, (v) => Math.max(0, Math.min(1, (v * dir) / THRESH)))
-  const rotate = useTransform(x, [-320, 320], [-7, 7])
-  const done = useMotionValue(0)
-  // un arrastre que no llega al umbral no debe contar como clic al soltar
-  const dragged = useRef(false)
+  const isLeft = side === 'L'
+  const sign = isLeft ? -1 : 1
+  const x0 = sign * (SPREAD / 2) * w
+  const rot0 = isLeft ? -TILT : TILT
   const won = picked?.side === side
   const lost = !!picked && !won
 
-  useEffect(() => {
-    if (won) animate(done, 1, { duration: reduce ? 0 : 0.16 })
-    else done.set(0)
-  }, [won, done, reduce])
+  // como DuelFan: la elegida va en línea recta al centro, se endereza, sube un poco y crece algo; la otra se aparta y se apaga
+  const tx = useTransform([g, og] as MotionValue<number>[], ([a, b]: number[]) => -x0 * a + sign * w * 0.42 * b)
+  const ty = useTransform(g, (v) => -22 * v)
+  const rotate = useTransform(g, (v) => rot0 * (1 - v))
+  const scale = useTransform([g, og] as MotionValue<number>[], ([a, b]: number[]) => (1 + 0.07 * a) * (1 - 0.1 * b))
+  const opacity = useTransform(og, (v) => 1 - 0.72 * clamp01(v))
+  const zIndex = useTransform(g, (v) => (v > 0.01 ? 4 : 2))
+  const shadow = useTransform(g, (v) => `0 ${18 + 14 * v}px ${40 + 30 * v}px -14px rgba(0,0,0,${0.6 + 0.2 * v})`)
 
-  const len = useTransform([prog, done] as MotionValue<number>[], ([a, b]: number[]) => Math.max(a, b))
-  const greenOp = done
-  const color = side === 'L' ? 'var(--color-duel-a)' : 'var(--color-duel-b)'
-  if (!item) return <div style={{ width: w, height: h }} className="skeleton" />
+  // reparto: viene del mazo (arriba, pequeña, boca abajo) y se da la vuelta en su sitio
+  const dealFrom = reduce
+    ? { opacity: 0 }
+    : { x: -x0, y: deckY, scale: DECK_SCALE, rotateY: 180, opacity: 1 }
+  const dealTo = { x: 0, y: 0, scale: 1, rotateY: 0, opacity: 1 }
 
   return (
-    <motion.button
-      type="button"
-      tabIndex={active ? 0 : -1}
-      aria-label={`Elegir ${titleOf(item)}`}
-      disabled={!active || !!picked}
-      className="relative outline-none rounded-[14px] focus-visible:ring-4 focus-visible:ring-ink/60 cursor-pointer disabled:cursor-default"
-      style={{ width: w, height: h, x, rotate, touchAction: 'pan-y' }}
-      drag={active && !picked ? 'x' : false}
-      dragSnapToOrigin
-      dragElastic={0.9}
-      onTapStart={() => (dragged.current = false)}
-      onDragStart={() => (dragged.current = true)}
-      onDragEnd={() => {
-        if (prog.get() >= 1) onCommit(side)
-      }}
-      onTap={() => !dragged.current && active && !picked && onCommit(side)}
-      whileHover={active && !picked && !reduce ? { y: -8, scale: 1.015 } : undefined}
-      animate={
-        won
-          ? { y: reduce ? 0 : -46, scale: reduce ? 1 : 1.06 }
-          : lost
-          ? { y: reduce ? 0 : 60, scale: 0.94, opacity: 0.3 }
-          : { y: 0, scale: 1, opacity: 1 }
-      }
-      transition={{ type: 'spring', stiffness: 300, damping: 24 }}
+    <motion.div
+      className="absolute"
+      style={{ left: x0 - w / 2, top: -h / 2, width: w, height: h, transformStyle: 'preserve-3d', transformPerspective: 1400, zIndex }}
+      initial={dealFrom}
+      animate={dealTo}
+      whileHover={!picked && !reduce ? { y: -8 } : undefined}
+      transition={reduce ? { duration: 0.2 } : { type: 'spring', stiffness: 150, damping: 20, delay: isLeft ? 0 : 0.09 }}
     >
-      <div className="absolute inset-0 rounded-[14px] overflow-hidden bg-surface">
-        <AnimatePresence initial={false}>
-          <motion.div key={id} className="absolute inset-0" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
-            <Poster item={item} showTitle={false} className="absolute inset-0 w-full h-full" />
-          </motion.div>
-        </AnimatePresence>
-        {/* velo neutro para leer el título sobre el póster */}
-        <motion.div
-          className="absolute inset-x-0 bottom-0 pt-24 px-5 pb-5 text-left"
-          style={{ background: 'linear-gradient(to top, rgb(10 9 8 / 0.92), rgb(10 9 8 / 0.6) 55%, transparent)' }}
-          animate={{ opacity: active ? 1 : 0 }}
-        >
-          <div className="text-[22px] leading-[1.12] font-semibold text-white line-clamp-2">{titleOf(item)}</div>
-          <div className="text-[14px] text-white/80 mt-1 truncate">{item.year} · {item.creator}</div>
-        </motion.div>
-      </div>
-      {/* borde D33: se dibuja con el arrastre, al elegir se completa en verde */}
-      <svg aria-hidden className="absolute inset-0 pointer-events-none overflow-visible" width={w} height={h} viewBox={`0 0 ${w} ${h}`} fill="none">
-        <motion.path d={rimPath(w, h)} pathLength={1} stroke={color} strokeWidth={4} strokeLinejoin="round" style={{ pathLength: len }} />
-        <motion.path d={rimPath(w, h)} pathLength={1} stroke="var(--color-stamp-green)" strokeWidth={5} strokeLinejoin="round" style={{ opacity: greenOp }} />
-      </svg>
-      {/* letra del lado */}
-      {active && !picked && (
-        <span className="absolute -top-9 display text-[22px] leading-none" style={{ color, [side === 'L' ? 'left' : 'right']: 0 }} aria-hidden>
-          {side === 'L' ? '← Izquierda' : 'Derecha →'}
-        </span>
-      )}
-      {/* sello */}
-      <AnimatePresence>
-        {won && picked && (
-          <motion.div
-            className="absolute left-1/2 top-[30%] -translate-x-1/2 z-10 pointer-events-none"
-            initial={reduce ? { opacity: 0 } : { opacity: 0, scale: 1.9, rotate: -14 }}
-            animate={{ opacity: 1, scale: 1, rotate: -7 }}
-            exit={{ opacity: 0 }}
-            transition={{ type: 'spring', stiffness: 520, damping: 20 }}
-          >
-            <div className="px-5 py-3 border-[5px] border-stamp-green bg-bg/85 text-center whitespace-nowrap">
-              <div className="display text-[54px] leading-[0.9] text-stamp-green">{picked.stamp}</div>
-              {picked.sub && <div className="text-[15px] font-semibold text-ink mt-1 tabular-nums">{picked.sub}</div>}
+      <motion.button
+        type="button"
+        aria-label={item ? `Elegir ${titleOf(item)}` : 'Elegir'}
+        disabled={!!picked}
+        onClick={() => {
+          if (!dragged.current && !picked) onCommit(side)
+        }}
+        className="absolute inset-0 outline-none rounded-[18px] focus-visible:ring-4 focus-visible:ring-ink/70 cursor-pointer disabled:cursor-default"
+        style={{ x: tx, y: ty, rotate, scale, opacity, transformStyle: 'preserve-3d', boxShadow: shadow }}
+      >
+        {/* cara */}
+        <div className="absolute inset-0 rounded-[18px] overflow-hidden bg-surface" style={{ backfaceVisibility: 'hidden' }}>
+          {item ? <Poster item={item} showTitle={false} className="absolute inset-0 w-full h-full" /> : <div className="absolute inset-0 skeleton" />}
+          {item && (
+            <div
+              className="absolute inset-x-0 bottom-0 pt-24 px-5 pb-5 text-left"
+              style={{ background: 'linear-gradient(to top, rgb(10 9 8 / 0.92), rgb(10 9 8 / 0.6) 55%, transparent)' }}
+            >
+              <div className="text-[22px] leading-[1.12] font-semibold text-white line-clamp-2">{titleOf(item)}</div>
+              <div className="text-[14px] text-white/80 mt-1 truncate">{item.year}{item.creator ? ` · ${item.creator}` : ''}</div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.button>
+          )}
+          <Rim w={w} h={h} side={side} g={g} done={won} reduce={reduce} />
+        </div>
+        {/* dorso: lo que se ve mientras viene del mazo */}
+        <div className="absolute inset-0" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
+          <CardBack />
+        </div>
+        {/* sello de la ganadora */}
+        <AnimatePresence>
+          {won && picked && (
+            <motion.div
+              className="absolute left-1/2 top-[28%] -translate-x-1/2 z-10 pointer-events-none"
+              initial={reduce ? { opacity: 0 } : { opacity: 0, scale: 1.9, rotate: -14 }}
+              animate={{ opacity: 1, scale: 1, rotate: -7 }}
+              exit={{ opacity: 0 }}
+              transition={{ type: 'spring', stiffness: 520, damping: 20 }}
+            >
+              <div className="px-5 py-3 border-[5px] border-stamp-green bg-bg/85 text-center whitespace-nowrap">
+                <div className="display text-[54px] leading-[0.9] text-stamp-green">{picked.stamp}</div>
+                {picked.sub && <div className="text-[15px] font-semibold text-ink mt-1 tabular-nums">{picked.sub}</div>}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.button>
+      {lost && <span className="sr-only">descartada</span>}
+    </motion.div>
+  )
+}
+
+// ── Borde D33 ──────────────────────────────────────────────────────────────────────────────────────
+const RIM_R = 18
+const RIM_W = 4
+const metal = (v: string) => [
+  { at: 0, color: `color-mix(in srgb, ${v} 50%, white)` },
+  { at: 0.3, color: v },
+  { at: 0.56, color: `color-mix(in srgb, ${v} 55%, black)` },
+  { at: 0.8, color: v },
+  { at: 1, color: `color-mix(in srgb, ${v} 50%, white)` },
+]
+
+/**
+ * El borde empieza arriba en el centro y baja primero por el lado que mira al centro de la mesa (en espejo, como
+ * DuelFan). Se dibuja con el arrastre; al confirmar se completa, pasa a verde y da un pulso de grosor.
+ */
+function Rim({ w, h, side, g, done, reduce }: { w: number; h: number; side: 'L' | 'R'; g: MotionValue<number>; done: boolean; reduce: boolean }) {
+  const uid = useId().replace(/:/g, '')
+  const isLeft = side === 'L'
+  const i = RIM_W / 2
+  const r = RIM_R - i
+  const x0 = i, y0 = i, x1 = w - i, y1 = h - i, mx = w / 2
+  const d = isLeft
+    ? `M ${mx} ${y0} L ${x1 - r} ${y0} A ${r} ${r} 0 0 1 ${x1} ${y0 + r} L ${x1} ${y1 - r} A ${r} ${r} 0 0 1 ${x1 - r} ${y1} L ${x0 + r} ${y1} A ${r} ${r} 0 0 1 ${x0} ${y1 - r} L ${x0} ${y0 + r} A ${r} ${r} 0 0 1 ${x0 + r} ${y0} L ${mx} ${y0}`
+    : `M ${mx} ${y0} L ${x0 + r} ${y0} A ${r} ${r} 0 0 0 ${x0} ${y0 + r} L ${x0} ${y1 - r} A ${r} ${r} 0 0 0 ${x0 + r} ${y1} L ${x1 - r} ${y1} A ${r} ${r} 0 0 0 ${x1} ${y1 - r} L ${x1} ${y0 + r} A ${r} ${r} 0 0 0 ${x1 - r} ${y0} L ${mx} ${y0}`
+  const fin = useMotionValue(0)
+  const pulse = useMotionValue(0)
+  useEffect(() => {
+    if (!done) {
+      fin.set(0)
+      pulse.set(0)
+      return
+    }
+    if (reduce) {
+      fin.set(1)
+      return
+    }
+    const a = animate(fin, 1, { duration: 0.14, ease: 'easeOut' })
+    const b = animate(pulse, [0, 1, 0], { duration: 0.3, times: [0, 0.37, 1], ease: 'easeInOut', delay: 0.14 })
+    return () => {
+      a.stop()
+      b.stop()
+    }
+  }, [done, reduce, fin, pulse])
+  const len = useTransform([g, fin] as MotionValue<number>[], ([a, b]: number[]) => Math.max(a, b))
+  const greenW = useTransform(pulse, (v) => RIM_W + 3 * v)
+  const grad = { gradientUnits: 'userSpaceOnUse' as const, x1: isLeft ? 0 : w, y1: 0, x2: isLeft ? w : 0, y2: h }
+  const stops = (list: { at: number; color: string }[]) => list.map((s) => <stop key={s.at} offset={s.at} style={{ stopColor: s.color }} />)
+  return (
+    <svg aria-hidden className="absolute inset-0 pointer-events-none" width={w} height={h} viewBox={`0 0 ${w} ${h}`} fill="none">
+      <defs>
+        <linearGradient id={`rim-${uid}`} {...grad}>{stops(metal(isLeft ? 'var(--color-duel-a)' : 'var(--color-duel-b)'))}</linearGradient>
+        <linearGradient id={`rim-ok-${uid}`} {...grad}>{stops(metal('var(--color-stamp-green)'))}</linearGradient>
+      </defs>
+      <motion.path d={d} pathLength={1} stroke={`url(#rim-${uid})`} strokeWidth={RIM_W} strokeLinejoin="round" style={{ pathLength: len }} />
+      <motion.path d={d} pathLength={1} stroke={`url(#rim-ok-${uid})`} strokeLinejoin="round" style={{ opacity: fin, strokeWidth: greenW }} />
+    </svg>
   )
 }
 
@@ -634,7 +784,7 @@ function EmptyState({ kind, shelf }: { kind: 'complete' | 'need-more'; shelf: Sh
             : `Necesitas al menos dos ${l.seen} para empezar a ordenarlas.`}
         </p>
         <div className="mt-8 flex justify-center gap-3">
-          <Link to={`/descubrir?shelf=${shelf}`} className="h-12 px-6 rounded-full bg-accent text-accent-ink font-semibold flex items-center">Descubrir {l.plural.toLowerCase()}</Link>
+          <Link to={`/nuevo/descubrir/${shelf}`} className="h-12 px-6 rounded-full bg-accent text-accent-ink font-semibold flex items-center">Descubrir {l.plural.toLowerCase()}</Link>
           <Link to={`/nuevo/estanteria/${shelf}`} className="h-12 px-6 rounded-full bg-surface2 text-ink font-semibold flex items-center">Ver el ranking</Link>
         </div>
       </div>
