@@ -21,14 +21,29 @@ async function loadImage(url: string): Promise<HTMLImageElement | null> {
   })
 }
 
+const SANS = "'Archivo Variable', system-ui, sans-serif"
+const DISPLAY = "'Archivo Variable', system-ui, sans-serif"
+
+/** El canvas no espera a las fuentes web: se cargan antes de pintar (si falla, cae a system-ui). */
+async function ensureFonts() {
+  try {
+    await Promise.all([
+      document.fonts.load(`800 extra-condensed 40px ${DISPLAY}`),
+      document.fonts.load(`400 20px ${SANS}`),
+      document.fonts.load(`600 20px ${SANS}`),
+    ])
+  } catch { /* sin fuentes: system-ui */ }
+}
+
 export async function generateShareCard({
   title,
   subtitle = 'Lo que más me marcó',
   author,
   items,
-  accentColor = '#F2B04A',
+  accentColor = '#FF5A3C',
   shareUrl,
 }: ShareCardOptions): Promise<Blob> {
+  await ensureFonts()
   const canvas = document.createElement('canvas')
   canvas.width = 1080
   canvas.height = 1920
@@ -58,28 +73,28 @@ export async function generateShareCard({
   ctx.fill()
 
   ctx.fillStyle = accentColor
-  ctx.font = 'bold 22px system-ui, sans-serif'
+  ctx.font = `800 extra-condensed 30px ${DISPLAY}`
   ctx.letterSpacing = '3px'
   ctx.fillText('BIBLIOTECA', 120, 136)
 
   // Subtítulo
   ctx.fillStyle = '#A39D92'
-  ctx.font = '500 32px system-ui, sans-serif'
+  ctx.font = `500 32px ${SANS}`
   ctx.letterSpacing = '0px'
   ctx.fillText(subtitle.toUpperCase(), 80, 220)
 
   // Título principal
-  ctx.fillStyle = '#F4EFE6'
-  ctx.font = 'bold 64px Georgia, serif'
-  ctx.fillText(title, 80, 300)
+  ctx.fillStyle = '#F4F3F1'
+  ctx.font = `800 extra-condensed 96px ${DISPLAY}`
+  ctx.fillText(title.toUpperCase(), 80, 300)
 
   // Autor
   ctx.fillStyle = accentColor
-  ctx.font = '600 36px system-ui, sans-serif'
+  ctx.font = `600 36px ${SANS}`
   ctx.fillText(`por ${author}`, 80, 360)
 
   // Línea divisoria
-  ctx.strokeStyle = 'rgba(244, 239, 230, 0.12)'
+  ctx.strokeStyle = 'rgba(244, 243, 241, 0.12)'
   ctx.lineWidth = 2
   ctx.beginPath()
   ctx.moveTo(80, 410)
@@ -100,7 +115,7 @@ export async function generateShareCard({
     ctx.beginPath()
     ctx.roundRect(80, y, 920, 190, 24)
     ctx.fill()
-    ctx.strokeStyle = 'rgba(244, 239, 230, 0.08)'
+    ctx.strokeStyle = 'rgba(244, 243, 241, 0.08)'
     ctx.stroke()
 
     // Número de ranking
@@ -109,8 +124,8 @@ export async function generateShareCard({
     ctx.arc(140, y + 95, 36, 0, Math.PI * 2)
     ctx.fill()
 
-    ctx.fillStyle = '#100E0C'
-    ctx.font = 'bold 36px system-ui, sans-serif'
+    ctx.fillStyle = '#120F0A'
+    ctx.font = `800 extra-condensed 52px ${DISPLAY}`
     ctx.textAlign = 'center'
     ctx.textBaseline = 'middle'
     ctx.fillText(`${i + 1}`, 140, y + 95)
@@ -143,46 +158,46 @@ export async function generateShareCard({
       ctx.roundRect(posterX, posterY, posterW, posterH, 14)
       ctx.fill()
       ctx.fillStyle = '#A39D92'
-      ctx.font = 'bold 32px system-ui, sans-serif'
+      ctx.font = `800 extra-condensed 48px ${DISPLAY}`
       ctx.fillText(displayTitle(it, userLang()).slice(0, 1), posterX + 38, posterY + 85)
     }
 
     // Título de la obra
-    ctx.fillStyle = '#F4EFE6'
-    ctx.font = 'bold 38px Georgia, serif'
+    ctx.fillStyle = '#F4F3F1'
+    ctx.font = `600 38px ${SANS}`
     const shown = displayTitle(it, userLang())
     const titleText = shown.length > 28 ? `${shown.slice(0, 27)}…` : shown
     ctx.fillText(titleText, 330, y + 80)
 
     // Creador y año
     ctx.fillStyle = '#A39D92'
-    ctx.font = '400 28px system-ui, sans-serif'
+    ctx.font = `400 28px ${SANS}`
     const meta = [it.creator, it.year].filter(Boolean).join(' · ')
     ctx.fillText(meta.length > 36 ? `${meta.slice(0, 35)}…` : meta, 330, y + 125)
 
     // Géneros
     if (it.genres?.length) {
       ctx.fillStyle = `${accentColor}CC`
-      ctx.font = '500 22px system-ui, sans-serif'
+      ctx.font = `500 22px ${SANS}`
       ctx.fillText(it.genres.slice(0, 3).join(' / '), 330, y + 160)
     }
   }
 
   // 4. Pie de página
-  ctx.strokeStyle = 'rgba(244, 239, 230, 0.12)'
+  ctx.strokeStyle = 'rgba(244, 243, 241, 0.12)'
   ctx.lineWidth = 2
   ctx.beginPath()
   ctx.moveTo(80, 1720)
   ctx.lineTo(1000, 1720)
   ctx.stroke()
 
-  ctx.fillStyle = '#F4EFE6'
-  ctx.font = 'italic 30px Georgia, serif'
+  ctx.fillStyle = '#F4F3F1'
+  ctx.font = `600 30px ${SANS}`
   ctx.fillText('«Todo lo que te ha formado, en tus estanterías»', 80, 1780)
 
   if (shareUrl) {
     ctx.fillStyle = accentColor
-    ctx.font = '500 26px system-ui, sans-serif'
+    ctx.font = `500 26px ${SANS}`
     ctx.fillText(shareUrl.replace(/^https?:\/\//, ''), 80, 1830)
   }
 
