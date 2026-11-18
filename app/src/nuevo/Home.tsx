@@ -9,6 +9,7 @@ import { useCompareOverview } from '../lib/useCompareOverview'
 import { Poster } from '../components/Poster'
 import { Icon } from '../components/Icon'
 import { PosterRing } from './Ring'
+import { RankAccordion } from './RankAccordion'
 import { SHELF_TINT, titleOf, useAllShelves, useCatalogFor, useViewportH, type ShelfData } from './data'
 
 const SPRING = { type: 'spring', stiffness: 260, damping: 26 } as const
@@ -36,43 +37,25 @@ export function Home() {
   )
 }
 
-// ── Escaparate: tu número 1 de pie y el resto girando alrededor ──────────────────────────────────
+// ── Escaparate: tu ranking en acordeón (la n.º 1 ancha a la izquierda) ───────────────────────────
 function Hero({ data, shelves, onShelf, name }: { data: ShelfData; shelves: ShelfData[]; onShelf: (s: ShelfType) => void; name: string }) {
   const vh = useViewportH()
   const reduce = useReducedMotion()
   const label = SHELF_LABEL[data.shelf]
-  const mineIds = [...data.ranked, ...data.unranked]
   // el número 1 sale solo del ranking: una obra sin ordenar no se presenta como tu favorita
-  const topId = data.ranked[0]
-  const top = topId ? getItem(topId) : null
-  // sin obras propias, el anillo enseña el catálogo de esa estantería (no se inventa un número 1)
+  const top = data.ranked[0] ? getItem(data.ranked[0]) : null
+  // sin ranking, el anillo queda como decoración (sin nada en el centro): tus vistas o el catálogo de la estantería
   const ringIds = useMemo(() => {
-    const own = mineIds.filter((id) => id !== topId).slice(0, 20)
+    const own = data.unranked.slice(0, 20)
     if (own.length >= 4) return own
     return itemsOfType(data.shelf).slice(0, 18).map((i) => i.id)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data])
-  const square = posterShape(data.shelf) === 'square'
   const scale = Math.min(1.25, Math.max(0.7, vh / 940))
-
-  const center = top ? (
-    <motion.div
-      key={top.id}
-      initial={reduce ? false : { opacity: 0, y: 40, scale: 0.9 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ ...SPRING, delay: 0.1 }}
-    >
-      <Link to={`/i/${top.id}`} className="relative block" style={{ width: 236, height: square ? 236 : 354 }} aria-label={`Tu número 1: ${titleOf(top)}`}>
-        <Poster item={top} className="absolute inset-0 w-full h-full" />
-        <span className="absolute -left-5 -bottom-6 display text-[120px] leading-[0.8] text-accent" aria-hidden>1</span>
-      </Link>
-    </motion.div>
-  ) : null
 
   return (
     <section className="relative h-screen min-h-[640px] flex" aria-label="Tu escaparate">
       {/* texto: columna izquierda, sobre fondo liso para que se lea siempre */}
-      <div className="relative z-10 w-[40%] max-w-[620px] pl-10 pr-6 pt-28 pb-10 flex flex-col">
+      <div className="relative z-10 w-[30%] min-w-[340px] max-w-[520px] pl-10 pr-6 pt-28 pb-10 flex flex-col">
         <AnimatePresence mode="wait">
           <motion.div
             key={data.shelf + (top?.id ?? '')}
@@ -84,38 +67,35 @@ function Hero({ data, shelves, onShelf, name }: { data: ShelfData; shelves: Shel
           >
             {top ? (
               <>
-                <p className="text-[17px] text-ink/80">{name}, tu número 1 en {label.plural.toLowerCase()} es</p>
-                <h1 className="display text-ink mt-3 line-clamp-3 text-[clamp(56px,6.6vw,124px)] leading-[0.86]">{titleOf(top)}</h1>
-                <p className="text-[17px] text-ink/80 mt-4">{top.year} · {top.creator}</p>
-                <p className="text-[15px] text-mute mt-6 max-w-[34ch]">
-                  {data.ranked.length > 1
-                    ? `Por delante de otras ${data.ranked.length - 1} en tu ranking.`
-                    : 'Haz duelos para que tenga rivales de verdad.'}
+                <p className="text-[17px] text-ink/80">{name}, así va tu ranking de</p>
+                <h1 className="display text-ink mt-2 text-[clamp(64px,6.4vw,124px)] leading-[0.84]">{label.plural}</h1>
+                <p className="text-[15px] text-mute mt-5 max-w-[34ch]">
+                  {data.ranked.length > 1 ? `${data.ranked.length} en tu ranking, con tu número 1 delante.` : 'Tu número 1 aún no tiene rivales: haz duelos.'}
                   {data.unranked.length > 0 && ` ${data.unranked.length} esperan su sitio.`}
                 </p>
               </>
             ) : (
               <>
                 <p className="text-[17px] text-ink/80">{name}, aún no tienes número 1 en {label.plural.toLowerCase()}</p>
-                <h1 className="display text-ink mt-3 text-[clamp(56px,6.6vw,124px)] leading-[0.86]">
+                <h1 className="display text-ink mt-3 text-[clamp(56px,5.6vw,112px)] leading-[0.86]">
                   {data.seen >= 2 ? 'Decide cuál manda' : 'Empieza por lo que ya has visto'}
                 </h1>
                 {data.seen > 0 && <p className="text-[15px] text-mute mt-6 max-w-[34ch]">{data.seen} {label.seen} sin ordenar todavía. Unos duelos y sale tu número 1.</p>}
               </>
             )}
-            <div className="flex items-center gap-3 mt-9">
+            <div className="flex flex-wrap items-center gap-3 mt-8">
               {data.seen >= 2 ? (
                 <Link to={`/nuevo/duelos/${data.shelf}`} className="h-13 px-7 rounded-full bg-accent text-accent-ink font-semibold text-[16px] flex items-center gap-2 hover:brightness-110 active:scale-[0.97] transition-[filter,transform]">
                   Ordenar con duelos <Icon name="chevron" size={16} strokeWidth={2.6} />
                 </Link>
               ) : (
-                <Link to={`/descubrir?shelf=${data.shelf}`} className="h-13 px-7 rounded-full bg-accent text-accent-ink font-semibold text-[16px] flex items-center">
+                <Link to={`/nuevo/descubrir/${data.shelf}`} className="h-13 px-7 rounded-full bg-accent text-accent-ink font-semibold text-[16px] flex items-center">
                   Descubrir {label.plural.toLowerCase()}
                 </Link>
               )}
               {data.seen > 0 && (
                 <Link to={`/nuevo/estanteria/${data.shelf}`} className="h-13 px-6 rounded-full bg-surface2 text-ink font-semibold text-[16px] flex items-center hover:bg-line transition-colors">
-                  Ver el ranking
+                  Ver la estantería
                 </Link>
               )}
             </div>
@@ -143,18 +123,24 @@ function Hero({ data, shelves, onShelf, name }: { data: ShelfData; shelves: Shel
         </div>
       </div>
 
-      {/* el anillo: ocupa toda la parte derecha y se sale del borde */}
-      <div className="absolute inset-y-0 right-0 left-[34%]">
-        <AnimatePresence mode="popLayout">
+      {/* derecha: el acordeón con tu ranking; sin ranking, el anillo como decoración */}
+      <div className="relative flex-1 min-w-0 pt-24 pb-10 pr-10">
+        <AnimatePresence mode="wait">
           <motion.div
-            key={data.shelf}
-            className="absolute inset-0"
-            initial={reduce ? { opacity: 0 } : { opacity: 0, scale: 0.85, rotate: -4 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            exit={{ opacity: 0, scale: 1.08 }}
-            transition={{ ...SPRING, opacity: { duration: 0.3 } }}
+            key={data.shelf + (top ? ':r' : ':d')}
+            className="absolute inset-0 pt-24 pb-10 pr-10"
+            initial={reduce ? { opacity: 0 } : { opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={reduce ? { opacity: 0 } : { opacity: 0, x: -24 }}
+            transition={{ ...SPRING, opacity: { duration: 0.25 } }}
           >
-            <PosterRing ids={ringIds} center={center} scale={scale} label={`Tus ${label.plural.toLowerCase()}`} />
+            {top ? (
+              <div className="relative w-full h-full">
+                <RankAccordion ids={data.ranked} shelf={data.shelf} label={`Tu ranking de ${label.plural.toLowerCase()}`} />
+              </div>
+            ) : (
+              <PosterRing ids={ringIds} scale={scale} label={`${label.plural} del catálogo`} />
+            )}
           </motion.div>
         </AnimatePresence>
       </div>
@@ -193,7 +179,7 @@ function FolderCard({ data, pct, lift }: { data: ShelfData; pct: number; lift: b
   return (
     <motion.div initial="rest" animate="rest" whileHover="open" whileFocus="open" className={`shrink-0 ${lift ? 'mb-10' : ''}`}>
       <Link
-        to={data.seen ? `/nuevo/estanteria/${data.shelf}` : `/descubrir?shelf=${data.shelf}`}
+        to={data.seen ? `/nuevo/estanteria/${data.shelf}` : `/nuevo/descubrir/${data.shelf}`}
         className="relative block w-[300px] h-[380px] focus-visible:outline-offset-4"
         aria-label={`${label.plural}: ${data.seen} ${label.seen}, ${pct} % ordenado`}
       >
@@ -260,7 +246,7 @@ function Doors({ shelves }: { shelves: ShelfData[] }) {
           duel
           tall
         />
-        <Bookmark to="/descubrir" figure={fmt(left)} title="Descubrir" line="obras del catálogo que aún no has marcado. Desliza: vista, pendiente o paso." />
+        <Bookmark to="/nuevo/descubrir" figure={fmt(left)} title="Descubrir" line="obras del catálogo que aún no has marcado. Desliza: vista, pendiente o paso." />
         <Bookmark to="/decidir" figure={fmt(pending)} title="Decidir" line="pendientes. Te proponemos qué ver hoy entre ellas." />
       </div>
     </section>
