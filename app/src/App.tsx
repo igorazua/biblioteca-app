@@ -34,6 +34,8 @@ const JoinInvite = lazy(() => import('./screens/JoinInvite').then((m) => ({ defa
 const Metrics = lazy(() => import('./screens/Metrics').then((m) => ({ default: m.Metrics })))
 const Settings = lazy(() => import('./screens/Settings').then((m) => ({ default: m.Settings })))
 const EditProfile = lazy(() => import('./screens/EditProfile').then((m) => ({ default: m.EditProfile })))
+// Web de escritorio nueva (/nuevo), sin la barra lateral del AppShell
+const NuevoApp = lazy(() => import('./nuevo/NuevoApp').then((m) => ({ default: m.NuevoApp })))
 
 function Frame() {
   const onboarded = useStore((s) => s.onboarded)
@@ -64,6 +66,7 @@ function Frame() {
             <Route path="perfil/editar" element={<EditProfile />} />
             <Route path="metricas" element={<Metrics />} />
           </Route>
+          <Route path="nuevo/*" element={<NuevoApp />} />
           {/* Sin barra lateral: la persona aún no ha entrado */}
           <Route path="onboarding" element={<div className="h-full w-full mx-auto md:max-w-column"><Onboarding /></div>} />
           <Route path="*" element={<Navigate to="/" replace />} />
