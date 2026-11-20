@@ -3,7 +3,7 @@
  * Centraliza todos los números y umbrales (MOTOR.md §10).
  */
 
-export const ENGINE_VERSION = 'm2.2-novelty' // 15/11/2026: la propuesta de Decidir descuenta lo que ya has visto (PLAN_DECIDIR M1); antes 'm2.1-quality' (M2) y 'm2.0-brain' (27/10/2026: cerebro y Decidir v2)
+export const ENGINE_VERSION = 'm2.3-phases' // 15/11/2026: fases de reconocibilidad en los duelos (PLAN_DECIDIR M3); antes 'm2.2-novelty' (15/11/2026: la propuesta de Decidir descuenta lo que ya has visto (PLAN_DECIDIR M1); antes 'm2.1-quality' (M2) y 'm2.0-brain' (27/10/2026: cerebro y Decidir v2)
 
 export type Bucket = 'seen_likely' | 'social' | 'friend_gem' | 'explore'
 
@@ -96,6 +96,19 @@ export interface EngineParams {
   SEEN_WINNER_FLOOR: number
   /** Decidir M1: peso del descuento ln(1 − 0,95·pVista) en la utilidad de la propuesta */
   NOVELTY_W: number
+
+  /** Decidir M3: R mínima y nivel de fama máximo de los orientadores por fase (F1 → duelos 1-3; F2 → resto de la primera ronda; F3 → «Seguir buscando») */
+  PHASE_F1_R: number
+  PHASE_F2_R: number
+  PHASE_F3_R: number
+  PHASE_F2_MAX_TIER: number
+  PHASE_F3_MAX_TIER: number
+  /** Decidir M3: duelos con la fase F1 al empezar la sesión */
+  PHASE_F1_DUELS: number
+  /** Decidir M3: si el conjunto de la fase tiene menos obras disponibles que esto, se completa con las de mayor R del siguiente */
+  PHASE_MIN_SET: number
+  /** Recog M3: suelo del factor de época de una obra de nivel 1 (antes 0,95) */
+  ERA_FLOOR_TIER1: number
 }
 
 export const PARAMS: EngineParams = {
@@ -190,6 +203,18 @@ export const PARAMS: EngineParams = {
   // ajustado con el banco: 1 apenas bajaba «propuesta ya vista» en series; 2 sube el acierto entre lo no visto en las
   // cinco estanterías sin bajar la calidad media más de 4 puntos
   NOVELTY_W: 2,
+
+  // PLAN_DECIDIR M3 (T17 §C.1-C.2). F1 (duelos 1-3): propias o nivel 1 con R ≥ 0,8. F2: + nivel ≤ 2 con R ≥ 0,65.
+  // F3: + nivel 3 con R ≥ 0,55. Nunca nivel 4 (salvo propias). Con menos de 12 disponibles se completa con el siguiente.
+  PHASE_F1_R: 0.8,
+  PHASE_F2_R: 0.65,
+  PHASE_F3_R: 0.55,
+  PHASE_F2_MAX_TIER: 2,
+  PHASE_F3_MAX_TIER: 3,
+  PHASE_F1_DUELS: 3,
+  PHASE_MIN_SET: 12,
+  // nivel 1 fuera de la generación del usuario baja a 0,8·notoriedad (no a 0,95): queda por debajo del 0,8 de F1
+  ERA_FLOOR_TIER1: 0.8,
 }
 
 /** Devuelve el valor o variante para pruebas A/B futuras */

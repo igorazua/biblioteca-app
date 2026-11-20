@@ -228,13 +228,13 @@ export function recog(item: Item, ctx: RecogContext): number {
 
   // 2. Factor época (§A.4)
   // Sin año de nacimiento: 1.0 para niveles 1 y 2, 0.9 para el resto
-  // Con año: curva actual, pero a las de nivel 1 nunca se les baja de 0.95
+  // Con año: curva actual, pero a las de nivel 1 no se les baja de PARAMS.ERA_FLOOR_TIER1 (0.8)
   let era = 1.0
   if (!birthYear) {
     era = fameTier === 1 || fameTier === 2 ? 1.0 : 0.9
   } else {
     const rawEra = eraFactor(item.year || 2000, birthYear, item, country)
-    era = fameTier === 1 ? Math.max(0.95, rawEra) : rawEra
+    era = fameTier === 1 ? Math.max(PARAMS.ERA_FLOOR_TIER1, rawEra) : rawEra
   }
 
   // 3. Factor zona neutra si no hay datos (§A.4)

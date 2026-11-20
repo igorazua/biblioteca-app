@@ -223,3 +223,73 @@ describe('Decidir v2 · la previa de calidad (M2)', () => {
     expect(vals.reduce((s, x) => s + x, 0) / vals.length).toBeCloseTo(0, 6)
   })
 })
+
+describe('Decidir v2 · fases de reconocibilidad (M3)', { timeout: 120_000 }, () => {
+  beforeAll(async () => { await Promise.all((['movie', 'series', 'book', 'boardgame', 'artist'] as ShelfType[]).map(loadShelfEngine)) }, 120_000)
+  const tier = (it: Item) => (typeof it.fameTier === 'number' ? it.fameTier : 1)
+
+  /** Primera ronda de un usuario nuevo respondiendo al azar (semilla fija); cada duelo con su R. */
+  function firstRound(shelf: ShelfType, profileOver: Partial<Profile> = {}, entries: Record<string, UserEntry> = {}, rankingsOver = rankings) {
+    let st = initDecideSession({ shelf, items, entries, rankings: rankingsOver, profile: { ...profile, ...profileOver }, friends: [], answers: { seen: 'nueva', source: 'igual', platforms: [] }, affinity: () => null, friendPct: () => null, recentOrienters: [], userVec: null, doubtfulItems: {} })
+    const duels: { a: Item; b: Item; rA: number; rB: number }[] = []
+    let seed = 7
+    const rng = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647 }
+    for (let i = 0; i < 6; i++) {
+      if (i > 0 && shouldPropose(st)) break
+      const d = nextDuel(st, items, new Set(), rng)
+      if (!d) break
+      duels.push({ a: d.a, b: d.b, rA: st.recogMap[d.a.id], rB: st.recogMap[d.b.id] })
+      st = rng() < 0.5 ? applyDuelChoice(st, d.a, d.b) : applyDuelChoice(st, d.b, d.a)
+    }
+    return { st, duels }
+  }
+
+  for (const shelf of ['movie', 'series', 'book', 'artist'] as ShelfType[]) {
+    it(`${shelf}: usuario nuevo, duelos 1-3 de nivel 1 con R ≥ 0,8 y desde el 4.º ni nivel 3 ni R < 0,65`, () => {
+      const { st, duels } = firstRound(shelf)
+      expect(duels.length).toBeGreaterThan(0)
+      const fillers = new Set(st.shown)
+      for (const [i, d] of duels.entries()) {
+        for (const [it, r] of [[d.a, d.rA], [d.b, d.rB]] as [Item, number][]) {
+          if (i < 3) { expect(tier(it) <= 2 && r >= 0.65, `${it.id} en el duelo ${i + 1}`).toBe(true); if (tier(it) === 1) expect(r).toBeGreaterThanOrEqual(0.8) }
+          else { expect(tier(it), `${it.id} en el duelo ${i + 1}`).toBeLessThanOrEqual(2); expect(r, `${it.id} en el duelo ${i + 1}`).toBeGreaterThanOrEqual(0.65) }
+        }
+      }
+      expect(fillers.size).toBeGreaterThan(0)
+    })
+  }
+
+  it('un nacido en 2005 sin obras propias no recibe en los duelos 1-3 una obra de nivel 1 de antes de 2005 con R < 0,8', () => {
+    for (const shelf of ['movie', 'series'] as ShelfType[]) {
+      const { st, duels } = firstRound(shelf, { birthYear: 2005 })
+      // la causa: su R ya no pasa de 0,8 (con notoriedad 1 queda justo en 0,8; antes el suelo de época de 0,95 las dejaba en 0,95-1)
+      const old = items.filter((it) => it.type === shelf && !it.hidden && tier(it) === 1 && it.year < 2005 && !it.isCanon && !(it as unknown as Record<string, unknown>).schoolReading)
+      expect(old.length).toBeGreaterThan(0)
+      for (const it of old) expect.soft(st.recogMap[it.id], it.id).toBeLessThanOrEqual(0.8 + 1e-9)
+      for (const d of duels.slice(0, 3)) for (const [it, r] of [[d.a, d.rA], [d.b, d.rB]] as [Item, number][]) {
+        if (tier(it) === 1 && it.year < 2005 && !it.isCanon) expect.soft(r, `${it.id} no debería salir: R ${r.toFixed(2)}`).toBeGreaterThanOrEqual(0.8 + 1e-9)
+      }
+    }
+  })
+
+  it('con una estantería en la que F1 tiene menos de 12 obras, la sesión sigue teniendo duelos', () => {
+    const word = (i: number) => String.fromCharCode(97 + (i % 26)) + String.fromCharCode(97 + (Math.floor(i / 26) % 26)) + 'zq'
+    let k = 0
+    const mkI = (id: string, o: Partial<Item>): Item => ({ id, type: 'movie', title: 'Obra ' + word(k++ * 7), year: 2000, creator: 'Dir ' + word(k * 5), genres: [['Drama', 'Comedia', 'Terror', 'Acción', 'Ciencia ficción'][k % 5], ['Aventura', 'Romance', 'Crimen'][k % 3]], synopsis: '', posterUrl: null, popularity: 50, ...o } as Item)
+    const list = [
+      ...Array.from({ length: 3 }, (_, i) => mkI(`t1${i}`, { fameTier: 1, notoriety: 0.97 })),
+      ...Array.from({ length: 8 }, (_, i) => mkI(`t2${i}`, { fameTier: 2, notoriety: 0.75 })),
+      ...Array.from({ length: 8 }, (_, i) => mkI(`t3${i}`, { fameTier: 3, notoriety: 0.7 })),
+      ...Array.from({ length: 8 }, (_, i) => mkI(`t4${i}`, { fameTier: 4, notoriety: 0.2 })),
+    ]
+    let st = initDecideSession({ shelf: 'movie', items: list, entries: {}, rankings, profile, friends: [], answers: { seen: 'nueva', source: 'igual', platforms: [] }, affinity: () => null, friendPct: () => null, recentOrienters: [], userVec: null, doubtfulItems: {} })
+    const shownIds: string[] = []
+    for (let i = 0; i < 3; i++) {
+      const d = nextDuel(st, list, new Set(), () => 0.4)
+      expect(d, `duelo ${i + 1}`).not.toBeNull()
+      for (const it of [d!.a, d!.b]) { shownIds.push(it.id); expect(tier(it), it.id).toBeLessThanOrEqual(3) }
+      st = applyDuelChoice(st, d!.a, d!.b)
+    }
+    expect(shownIds.some((id) => id.startsWith('t3'))).toBe(false)
+  })
+})

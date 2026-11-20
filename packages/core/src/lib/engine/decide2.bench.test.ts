@@ -10,6 +10,7 @@ import { fileURLToPath } from 'node:url'
 import { beforeAll, describe, expect, it } from 'vitest'
 import { items, itemsById } from '../../data/catalog'
 import * as v2 from './decide2'
+import { PARAMS } from './params'
 import { loadShelfEngine } from '../../testing/engineData'
 import { gauss, rngOf, seenSetFor, tasteFor, type Taste } from '../../testing/simUsers'
 import type { Item, Profile, ShelfType, UserEntry } from '../../types'
@@ -23,7 +24,7 @@ const MODES = ['sabe', 'azar', 'pasa', 'ruido'] as const
 type Mode = (typeof MODES)[number]
 const CENSUS_SESSIONS = 40
 const CENSUS_OWN = 30
-const CURVE_USERS = 60
+const CURVE_USERS = Number(process.env.BENCH_USERS ?? 60) // BENCH_USERS=240 para confirmar una medida justa
 const CURVE_DUELS = 6
 
 const profile: Profile = { name: 'Sim', avatarColor: '#fff', platforms: [], country: 'ES', lang: 'es' }
@@ -56,6 +57,7 @@ function census(shelf: ShelfType, withOwn: boolean) {
   const rows: CensusRow[] = Array.from({ length: 7 }, (_, i) => ({ n: i + 1, rs: [], prod: [], tiers: { propia: 0, 'nivel 1': 0, 'nivel 2': 0, 'nivel 3': 0, 'nivel 4': 0 } }))
   const early = new Map<string, number>() // sesiones en que sale cada obra en los duelos 1-3
   let sessions = 0
+  let noDuel = 0 // sesiones que no llegan a dar ni un duelo
   for (let s = 0; s < CENSUS_SESSIONS; s++) {
     const r = rngOf(5000 + s * 31 + shelf.length)
     let own: string[] = []
@@ -70,7 +72,7 @@ function census(shelf: ShelfType, withOwn: boolean) {
     for (let n = 0; n < 8; n++) {
       if (n > 0 && v2.shouldPropose(st)) break
       const d = v2.nextDuel(st, items, new Set(), answer)
-      if (!d) break
+      if (!d) { if (n === 0) noDuel++; break }
       if (n < 7) {
         const row = rows[n]
         const rA = d.rA ?? 0, rB = d.rB ?? 0
@@ -85,7 +87,7 @@ function census(shelf: ShelfType, withOwn: boolean) {
     sessions++
   }
   const top = [...early.entries()].sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1)).slice(0, 15)
-  return { rows, top: top.map(([id, c]) => ({ title: itemsById.get(id)?.title ?? id, share: c / sessions })), sessions }
+  return { rows, top: top.map(([id, c]) => ({ title: itemsById.get(id)?.title ?? id, share: c / sessions })), sessions, noDuel }
 }
 
 function censusTables(c: ReturnType<typeof census>): string {
@@ -102,7 +104,7 @@ function censusTables(c: ReturnType<typeof census>): string {
   lines.push(`Media de rA·rB en los duelos 4-6: **${f2(mean(late))}**. Obras más repetidas en los duelos 1-3 (% de sesiones en que salen): ` +
     c.top.map((t) => `${t.title} ${pct1(t.share)}`).join('; ') + '.')
   lines.push('')
-  lines.push(`Orientador más repetido en los duelos 1-3: **${pct1(c.top[0]?.share ?? 0)}** de las sesiones.`)
+  lines.push(`Orientador más repetido en los duelos 1-3: **${pct1(c.top[0]?.share ?? 0)}** de las sesiones. Sesiones sin ningún duelo: **${c.noDuel}** de ${c.sessions}.`)
   return lines.join('\n')
 }
 
@@ -206,6 +208,8 @@ function git(cmd: string): string {
 
 describe.runIf(process.env.BENCH)('Decidir: banco repetible', () => {
   beforeAll(async () => {
+    // BENCH_PARAMS='{"PHASE_F2_R":0.75}' sobrescribe parámetros del motor para barridos (no se escribe nada en params.ts)
+    if (process.env.BENCH_PARAMS) Object.assign(PARAMS, JSON.parse(process.env.BENCH_PARAMS))
     for (const s of SHELVES) if (!(process.env.BENCH_NOENGINE ?? '').split(',').includes(s)) await loadShelfEngine(s)
   }, 120_000)
 
@@ -220,16 +224,17 @@ describe.runIf(process.env.BENCH)('Decidir: banco repetible', () => {
       'Acierto nuevo tras 6 duelos (sabe, entre lo no visto)': [], 'Propuesta ya vista tras 6 duelos (sabe)': [],
       'Media de rA·rB, duelos 4-6 (usuario nuevo)': [], 'Sesiones con el orientador más repetido en los duelos 1-3 (usuario nuevo)': [],
       'La propuesta es un orientador enseñado (sabe)': [], 'R media de la propuesta (sabe)': [], 'Calidad media de la propuesta (percentil de voteAvg)': [],
-      'Peso de la previa: rango de st.base (máx − mín)': [],
+      'Peso de la previa: rango de st.base (máx − mín)': [], 'Sesiones sin ningún duelo (usuario nuevo / con 30 propias)': [],
     }
 
     for (const shelf of SHELVES) {
       out.push(`### ${NAME[shelf]} (${shelfPool(shelf).length} obras visibles)\n`)
       out.push(`#### Censo de orientadores, usuario nuevo (${CENSUS_SESSIONS} sesiones, respuestas al azar)\n`)
       const cNew = census(shelf, false)
+      const cOwn = census(shelf, true)
       out.push(censusTables(cNew) + '\n')
       out.push(`#### Censo de orientadores, usuario con ${CENSUS_OWN} obras propias (${CENSUS_SESSIONS} sesiones)\n`)
-      out.push(censusTables(census(shelf, true)) + '\n')
+      out.push(censusTables(cOwn) + '\n')
 
       const res = {} as Record<Mode, CurveResult>
       for (const m of MODES) res[m] = curve(shelf, m)
@@ -262,6 +267,7 @@ describe.runIf(process.env.BENCH)('Decidir: banco repetible', () => {
       sum['R media de la propuesta (sabe)'].push(f2(sabe.propR))
       sum['Calidad media de la propuesta (percentil de voteAvg)'].push(Number.isNaN(sabe.quality) ? '—' : pct1(sabe.quality))
       sum['Peso de la previa: rango de st.base (máx − mín)'].push(f2(pw.max - pw.min))
+      sum['Sesiones sin ningún duelo (usuario nuevo / con 30 propias)'].push(`${cNew.noDuel} / ${cOwn.noDuel}`)
     }
     for (const [k, v] of Object.entries(sum)) summary.push(`| ${k} | ${v.join(' | ')} |`)
 
@@ -279,5 +285,5 @@ describe.runIf(process.env.BENCH)('Decidir: banco repetible', () => {
       appendFileSync(file, '\n' + body)
     }
     expect(summary.length).toBeGreaterThan(2)
-  }, 600_000)
+  }, 600_000 * Math.max(1, CURVE_USERS / 60))
 })

@@ -453,6 +453,45 @@ export function nextDuel(st: Decide2State, _items: Item[], shownIds: Set<string>
   }
 }
 
+/** Fase de reconocibilidad de los orientadores (PLAN_DECIDIR M3): 1 = F1 (seguro que las conoce), 2 = F2, 3 = F3. */
+export function orienterPhase(st: Pick<Decide2State, 'duels' | 'round' | 'preferFameOrOwn'>): 1 | 2 | 3 {
+  if (st.preferFameOrOwn) return 1
+  if (st.round > 1) return 3
+  return st.duels.length < PARAMS.PHASE_F1_DUELS ? 1 : 2
+}
+
+/**
+ * Orientadores posibles cuando la bolsa no es estricta. F1 = propias, o nivel 1 con R ≥ 0,8; F2 = F1 + nivel ≤ 2 con
+ * R ≥ 0,65; F3 = F2 + nivel 3 con R ≥ 0,55; nunca nivel 4 salvo propias. Si el conjunto de la fase tiene menos de
+ * PHASE_MIN_SET obras, se completa con las de mayor R del siguiente (y de ahí al siguiente).
+ */
+function phaseCandidates(st: Decide2State, items: Item[], shown: Set<string>, isExpansion: (it: Item) => boolean, isOwn: (it: Item) => boolean): Item[] {
+  const phase = orienterPhase(st)
+  // fase mínima en la que cada obra entra (1-3); las que no entran en ninguna, fuera
+  const byLevel: Item[][] = [[], [], [], []]
+  for (const it of items) {
+    if (it.type !== st.shelf || it.hidden || shown.has(it.id) || st.rejected.includes(it.id)) continue
+    if (isExpansion(it) && !isOwn(it)) continue
+    let lv = 0
+    if (isOwn(it)) lv = 1
+    else {
+      const r = st.recogMap[it.id] ?? 0
+      const tier = tierOf(it)
+      if (tier === 1 && r >= PARAMS.PHASE_F1_R) lv = 1
+      else if (tier <= PARAMS.PHASE_F2_MAX_TIER && r >= PARAMS.PHASE_F2_R) lv = 2
+      else if (tier <= PARAMS.PHASE_F3_MAX_TIER && r >= PARAMS.PHASE_F3_R) lv = 3
+    }
+    if (lv) byLevel[lv].push(it)
+  }
+  const out: Item[] = []
+  for (let lv = 1; lv <= phase; lv++) out.push(...byLevel[lv])
+  for (let lv = phase + 1; lv <= 3 && out.length < PARAMS.PHASE_MIN_SET; lv++) {
+    const extra = [...byLevel[lv]].sort((a, b) => (st.recogMap[b.id] ?? 0) - (st.recogMap[a.id] ?? 0))
+    out.push(...extra.slice(0, PARAMS.PHASE_MIN_SET - out.length))
+  }
+  return out
+}
+
 function scorePairsRaw(st: Decide2State, shownIds: Set<string>, rng: () => number): ScoredPair[] {
   const items = st.catalog
   const byId = st.byId
@@ -470,19 +509,31 @@ function scorePairsRaw(st: Decide2State, shownIds: Set<string>, rng: () => numbe
   const baseTitles = new Set(items.filter((it) => it.type === st.shelf && !it.title.includes(':')).map(familyKey))
   const isExpansion = (it: Item) => st.shelf === 'boardgame' && it.title.includes(':') && baseTitles.has(familyKey(it))
   let cands: Item[]
+  let followUp: { item: Item; keys: string[] } | null = null
   if (strict(st.answers)) {
     cands = st.pool.map((id) => byId.get(id)!).filter((it) => it && !shown.has(it.id) && !st.rejected.includes(it.id))
   } else {
-    cands = items.filter((it) => {
-      if (it.type !== st.shelf || it.hidden || shown.has(it.id) || st.rejected.includes(it.id)) return false
-      if (isExpansion(it) && !isOwn(it)) return false
-      if (isOwn(it)) return true
-      const r = st.recogMap[it.id] ?? 0
-      const tier = tierOf(it)
-      if (tier >= 4 || r < 0.55) return false
-      if ((n < 3 || st.preferFameOrOwn) && tier !== 1) return false
-      return true
-    })
+    cands = phaseCandidates(st, items, shown, isExpansion, isOwn)
+    // Seguimiento del tanteo (Igor, 20/11/2026): si en el último duelo eligió la obra que tenía un rasgo decisivo (cooperativo…)
+    // y la otra no, el duelo siguiente puede usar otra obra con ese rasgo aunque quede fuera del conjunto de la fase:
+    // la de mayor R, nunca de nivel 4 y nunca una ya enseñada. Solo ese duelo; el conjunto de la fase no se abre más.
+    const last = st.duels[st.duels.length - 1]
+    if (last && last.winner) {
+      const kw = featsOf(st, items, last.winner).keys, kl = new Set(featsOf(st, items, last.a === last.winner ? last.b : last.a).keys)
+      const ks = kw.filter((k) => !isEmbKey(k) && !k.startsWith("k:") && priorVar(k) >= DECISIVE_VAR && !kl.has(k))
+      if (ks.length) {
+        const inSet = new Set(cands.map((it) => it.id))
+        let bestF: Item | null = null
+        for (const it of items) {
+          if (it.type !== st.shelf || it.hidden || shown.has(it.id) || st.rejected.includes(it.id) || inSet.has(it.id) || tierOf(it) >= 4) continue
+          if (isExpansion(it) && !isOwn(it)) continue
+          const ik = featsOf(st, items, it.id).keys
+          if (!ks.some((k) => ik.includes(k))) continue
+          if (!bestF || (st.recogMap[it.id] ?? 0) > (st.recogMap[bestF.id] ?? 0)) bestF = it
+        }
+        if (bestF) { cands.push(bestF); followUp = { item: bestF, keys: ks } }
+      }
+    }
   }
   if (cands.length < 2) return []
 
@@ -654,7 +705,7 @@ function scorePairsRaw(st: Decide2State, shownIds: Set<string>, rng: () => numbe
         maxB = Math.max(maxB, ub)
       }
       const kg = p * maxA + (1 - p) * maxB - bestU
-      const known = Math.sqrt((st.recogMap[a.id] ?? 0.8) * (st.recogMap[b.id] ?? 0.8)) * rot(a) * rot(b)
+      const known = (st.recogMap[a.id] ?? 0.8) * (st.recogMap[b.id] ?? 0.8) * rot(a) * rot(b)
       // al principio, parejas muy distintas (muchos rasgos en juego)
       const far = n < 3 ? 1 + Math.min(1, dSize / 25) : 1
       best.push({ a, b, score: Math.max(0, kg) * known * far, kg: Math.max(0, kg), p })
@@ -679,6 +730,16 @@ function scorePairsRaw(st: Decide2State, shownIds: Set<string>, rng: () => numbe
       probe.probe = true
       best.sort((x, y) => y.score - x.score)
       break
+    }
+  }
+  if (followUp && best.length) {
+    const f = followUp
+    const pr = best.find((x) => (x.a.id === f.item.id) !== (x.b.id === f.item.id) &&
+      f.keys.some((k) => featsOf(st, items, x.a.id).keys.includes(k) !== featsOf(st, items, x.b.id).keys.includes(k)))
+    if (pr && pr !== best[0]) {
+      pr.score = best[0].score * 1.01 + 1e-6
+      pr.probe = true
+      best.sort((x, y) => y.score - x.score)
     }
   }
   return best
