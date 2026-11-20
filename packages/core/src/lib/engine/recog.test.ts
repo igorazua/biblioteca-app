@@ -196,11 +196,13 @@ describe('Motor R: Reconocibilidad (recog.ts)', () => {
 
 describe('Motor R: suelo de época del nivel 1 (PLAN_DECIDIR M3)', () => {
   it('una obra de nivel 1 fuera de la generación del usuario baja de 0,95·notoriedad pero no de 0,8·notoriedad', () => {
-    const urgencias: Item = { id: 'series:urgencias-1994', type: 'series', title: 'Urgencias', year: 1994, creator: 'x', genres: ['Drama'], synopsis: '', posterUrl: null, popularity: 90, notoriety: 0.95, fameTier: 1 }
+    const urgencias: Item = { id: 'movie:urgencias-1994', type: 'movie', title: 'Urgencias', year: 1994, creator: 'x', genres: ['Drama'], synopsis: '', posterUrl: null, popularity: 90, notoriety: 0.95, fameTier: 1 }
     const r = recog(urgencias, { birthYear: 2005 })
     expect(r).toBeLessThan(0.95 * 0.95)
     expect(r).toBeGreaterThanOrEqual(0.8 * 0.95 - 1e-9)
     expect(r).toBeLessThan(0.8)
+    // en series el suelo sigue en 0,95 (M3 solo va en pelis, libros y artistas)
+    expect(recog({ ...urgencias, type: 'series' }, { birthYear: 2005 })).toBeGreaterThanOrEqual(0.95 * 0.95 - 1e-9)
     // sin año de nacimiento no cambia nada
     expect(recog(urgencias, { birthYear: null })).toBeGreaterThanOrEqual(0.9)
   })

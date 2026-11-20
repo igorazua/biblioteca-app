@@ -453,6 +453,8 @@ export function nextDuel(st: Decide2State, _items: Item[], shownIds: Set<string>
   }
 }
 
+const phasesOn = (shelf: string) => (PARAMS.PHASES_SHELVES as string[]).includes(shelf)
+
 /** Fase de reconocibilidad de los orientadores (PLAN_DECIDIR M3): 1 = F1 (seguro que las conoce), 2 = F2, 3 = F3. */
 export function orienterPhase(st: Pick<Decide2State, 'duels' | 'round' | 'preferFameOrOwn'>): 1 | 2 | 3 {
   if (st.preferFameOrOwn) return 1
@@ -513,12 +515,24 @@ function scorePairsRaw(st: Decide2State, shownIds: Set<string>, rng: () => numbe
   if (strict(st.answers)) {
     cands = st.pool.map((id) => byId.get(id)!).filter((it) => it && !shown.has(it.id) && !st.rejected.includes(it.id))
   } else {
-    cands = phaseCandidates(st, items, shown, isExpansion, isOwn)
+    if (!phasesOn(st.shelf)) {
+      // series y juegos: filtro de antes de M3 (Igor, 20/11/2026)
+      cands = items.filter((it) => {
+        if (it.type !== st.shelf || it.hidden || shown.has(it.id) || st.rejected.includes(it.id)) return false
+        if (isExpansion(it) && !isOwn(it)) return false
+        if (isOwn(it)) return true
+        const r = st.recogMap[it.id] ?? 0
+        const tier = tierOf(it)
+        if (tier >= 4 || r < 0.55) return false
+        if ((n < 3 || st.preferFameOrOwn) && tier !== 1) return false
+        return true
+      })
+    } else cands = phaseCandidates(st, items, shown, isExpansion, isOwn)
     // Seguimiento del tanteo (Igor, 20/11/2026): si en el último duelo eligió la obra que tenía un rasgo decisivo (cooperativo…)
     // y la otra no, el duelo siguiente puede usar otra obra con ese rasgo aunque quede fuera del conjunto de la fase:
     // la de mayor R, nunca de nivel 4 y nunca una ya enseñada. Solo ese duelo; el conjunto de la fase no se abre más.
     const last = st.duels[st.duels.length - 1]
-    if (last && last.winner) {
+    if (phasesOn(st.shelf) && last && last.winner) {
       const kw = featsOf(st, items, last.winner).keys, kl = new Set(featsOf(st, items, last.a === last.winner ? last.b : last.a).keys)
       const ks = kw.filter((k) => !isEmbKey(k) && !k.startsWith("k:") && priorVar(k) >= DECISIVE_VAR && !kl.has(k))
       if (ks.length) {
@@ -705,7 +719,8 @@ function scorePairsRaw(st: Decide2State, shownIds: Set<string>, rng: () => numbe
         maxB = Math.max(maxB, ub)
       }
       const kg = p * maxA + (1 - p) * maxB - bestU
-      const known = (st.recogMap[a.id] ?? 0.8) * (st.recogMap[b.id] ?? 0.8) * rot(a) * rot(b)
+      const rr = (st.recogMap[a.id] ?? 0.8) * (st.recogMap[b.id] ?? 0.8)
+      const known = (phasesOn(st.shelf) ? rr : Math.sqrt(rr)) * rot(a) * rot(b)
       // al principio, parejas muy distintas (muchos rasgos en juego)
       const far = n < 3 ? 1 + Math.min(1, dSize / 25) : 1
       best.push({ a, b, score: Math.max(0, kg) * known * far, kg: Math.max(0, kg), p })

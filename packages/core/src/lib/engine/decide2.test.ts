@@ -2,6 +2,7 @@
 import { beforeAll, describe, expect, it } from 'vitest'
 import { items, itemsById } from '../../data/catalog'
 import { applyDuelChoice, getProposal, initDecideSession, nextDuel, rejectAndContinue, sessionTaste, shouldPropose, traitWeight, type Decide2State } from './decide2'
+import { PARAMS } from './params'
 import { loadShelfEngine } from '../../testing/engineData'
 import type { Item, Profile, ShelfType, UserEntry } from '../../types'
 
@@ -244,7 +245,7 @@ describe('Decidir v2 · fases de reconocibilidad (M3)', { timeout: 120_000 }, ()
     return { st, duels }
   }
 
-  for (const shelf of ['movie', 'series', 'book', 'artist'] as ShelfType[]) {
+  for (const shelf of ['movie', 'book', 'artist'] as ShelfType[]) {
     it(`${shelf}: usuario nuevo, duelos 1-3 de nivel 1 con R ≥ 0,8 y desde el 4.º ni nivel 3 ni R < 0,65`, () => {
       const { st, duels } = firstRound(shelf)
       expect(duels.length).toBeGreaterThan(0)
@@ -260,7 +261,7 @@ describe('Decidir v2 · fases de reconocibilidad (M3)', { timeout: 120_000 }, ()
   }
 
   it('un nacido en 2005 sin obras propias no recibe en los duelos 1-3 una obra de nivel 1 de antes de 2005 con R < 0,8', () => {
-    for (const shelf of ['movie', 'series'] as ShelfType[]) {
+    for (const shelf of ['movie'] as ShelfType[]) {
       const { st, duels } = firstRound(shelf, { birthYear: 2005 })
       // la causa: su R ya no pasa de 0,8 (con notoriedad 1 queda justo en 0,8; antes el suelo de época de 0,95 las dejaba en 0,95-1)
       const old = items.filter((it) => it.type === shelf && !it.hidden && tier(it) === 1 && it.year < 2005 && !it.isCanon && !(it as unknown as Record<string, unknown>).schoolReading)
@@ -270,6 +271,22 @@ describe('Decidir v2 · fases de reconocibilidad (M3)', { timeout: 120_000 }, ()
         if (tier(it) === 1 && it.year < 2005 && !it.isCanon) expect.soft(r, `${it.id} no debería salir: R ${r.toFixed(2)}`).toBeGreaterThanOrEqual(0.8 + 1e-9)
       }
     }
+  })
+
+  it('series y juegos se comportan como antes de M3: mismos duelos que con las fases apagadas, y sin fases (R 0,55-0,65 desde el 4.º duelo)', () => {
+    expect(PARAMS.PHASES_SHELVES).toEqual(['movie', 'book', 'artist'])
+    const sig = (shelf: ShelfType) => firstRound(shelf).duels.map((d) => `${d.a.id}/${d.b.id}`).join(' ')
+    const on = { series: sig('series'), boardgame: sig('boardgame') }
+    const saved = PARAMS.PHASES_SHELVES
+    try {
+      PARAMS.PHASES_SHELVES = []
+      expect(sig('series')).toBe(on.series)
+      expect(sig('boardgame')).toBe(on.boardgame)
+      // y pelis, con las fases apagadas, sí cambia
+      const movieOff = sig('movie')
+      PARAMS.PHASES_SHELVES = saved
+      expect(sig('movie')).not.toBe(movieOff)
+    } finally { PARAMS.PHASES_SHELVES = saved }
   })
 
   it('con una estantería en la que F1 tiene menos de 12 obras, la sesión sigue teniendo duelos', () => {

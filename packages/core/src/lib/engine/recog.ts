@@ -234,7 +234,7 @@ export function recog(item: Item, ctx: RecogContext): number {
     era = fameTier === 1 || fameTier === 2 ? 1.0 : 0.9
   } else {
     const rawEra = eraFactor(item.year || 2000, birthYear, item, country)
-    era = fameTier === 1 ? Math.max(PARAMS.ERA_FLOOR_TIER1, rawEra) : rawEra
+    era = fameTier === 1 ? Math.max((PARAMS.PHASES_SHELVES as string[]).includes(item.type) ? PARAMS.ERA_FLOOR_TIER1 : 0.95, rawEra) : rawEra
   }
 
   // 3. Factor zona neutra si no hay datos (§A.4)

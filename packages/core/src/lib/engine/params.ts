@@ -3,7 +3,7 @@
  * Centraliza todos los números y umbrales (MOTOR.md §10).
  */
 
-export const ENGINE_VERSION = 'm2.3-phases' // 15/11/2026: fases de reconocibilidad en los duelos (PLAN_DECIDIR M3); antes 'm2.2-novelty' (15/11/2026: la propuesta de Decidir descuenta lo que ya has visto (PLAN_DECIDIR M1); antes 'm2.1-quality' (M2) y 'm2.0-brain' (27/10/2026: cerebro y Decidir v2)
+export const ENGINE_VERSION = 'm2.4-phases-shelves' // 15/11/2026: fases de reconocibilidad en los duelos (PLAN_DECIDIR M3); antes 'm2.2-novelty' (15/11/2026: la propuesta de Decidir descuenta lo que ya has visto (PLAN_DECIDIR M1); antes 'm2.1-quality' (M2) y 'm2.0-brain' (27/10/2026: cerebro y Decidir v2)
 
 export type Bucket = 'seen_likely' | 'social' | 'friend_gem' | 'explore'
 
@@ -109,6 +109,8 @@ export interface EngineParams {
   PHASE_MIN_SET: number
   /** Recog M3: suelo del factor de época de una obra de nivel 1 (antes 0,95) */
   ERA_FLOOR_TIER1: number
+  /** Decidir M3: estanterías en las que valen las fases, known = rA·rB, el suelo de época y el seguimiento del tanteo (series y juegos pierden acierto con M3: Igor, 20/11/2026) */
+  PHASES_SHELVES: string[]
 }
 
 export const PARAMS: EngineParams = {
@@ -215,6 +217,7 @@ export const PARAMS: EngineParams = {
   PHASE_MIN_SET: 12,
   // nivel 1 fuera de la generación del usuario baja a 0,8·notoriedad (no a 0,95): queda por debajo del 0,8 de F1
   ERA_FLOOR_TIER1: 0.8,
+  PHASES_SHELVES: ['movie', 'book', 'artist'],
 }
 
 /** Devuelve el valor o variante para pruebas A/B futuras */
