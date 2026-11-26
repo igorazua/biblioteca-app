@@ -2,7 +2,7 @@ import { userLang } from '../lib/userLang'
 import { type Item, type ShelfType, SHELF_LABEL, itemFacts, typeName } from '@biblioteca/core'
 import { displayTitle } from '@biblioteca/core/src/lib/locale'
 import { boardgameDeckLayout, posterShape } from '@biblioteca/core/src/lib/posterShape'
-import { forwardRef, useImperativeHandle, useLayoutEffect, useRef } from 'react'
+import { forwardRef, useImperativeHandle, useLayoutEffect, useRef, useState } from 'react'
 import { animate, motion, useMotionValue, useTransform, type MotionValue } from 'framer-motion'
 import { Poster, posterLayoutId } from './Poster'
 import { FriendBubbles, Tag } from './ui'
@@ -16,15 +16,21 @@ const H_THRESHOLD = 0.3
 const V_THRESHOLD = 0.2
 const FLICK = 600
 
-/** `flight`: solo la tarjeta de arriba vuela a la ficha (un único layoutId montado por obra). */
-function CardFace({ item, bubbles = true, flight = false }: { item: Item; bubbles?: boolean; flight?: boolean }) {
+/** Caja de juego ancha: la tarjeta mide lo que su carátula y su texto, y se centra en el mazo. */
+function fitsContent(item?: Item): boolean {
+  return item?.type === 'boardgame' && boardgameDeckLayout(item.posterRatio).mode === 'top'
+}
+
+/** `flight`: solo la tarjeta de arriba vuela a la ficha (un único layoutId montado por obra).
+ *  `fit`: la tarjeta toma la altura de su contenido en vez de llenar el hueco. */
+function CardFace({ item, bubbles = true, flight = false, fit = false }: { item: Item; bubbles?: boolean; flight?: boolean; fit?: boolean }) {
   const isSquare = posterShape(item.type) === 'square'
   const bgLayout = item.type === 'boardgame' ? boardgameDeckLayout(item.posterRatio) : null
 
   if (isSquare || bgLayout?.mode === 'top') {
     const isTopAspect = bgLayout?.mode === 'top'
     return (
-      <div className="absolute inset-0 rounded-[28px] overflow-hidden bg-surface border border-line shadow-2xl shadow-black/60 flex flex-col">
+      <div className={`${fit ? 'relative' : 'absolute inset-0'} rounded-[28px] overflow-hidden bg-surface border border-line shadow-2xl shadow-black/60 flex flex-col`}>
         <div
           className={`relative w-full shrink-0 overflow-hidden bg-surface2 ${isTopAspect ? '' : 'aspect-square'}`}
           style={isTopAspect ? { aspectRatio: bgLayout.aspect } : undefined}
@@ -37,7 +43,7 @@ function CardFace({ item, bubbles = true, flight = false }: { item: Item; bubble
           />
           {bubbles && <div className="absolute top-3 right-3"><FriendBubbles itemId={item.id} shelf={item.type} /></div>}
         </div>
-        <div className="flex-1 p-5 pb-4 flex flex-col justify-between min-h-0 bg-surface">
+        <div className={`${fit ? '' : 'flex-1 min-h-0'} p-5 pb-4 flex flex-col justify-between bg-surface`}>
           <div>
             <div className="text-label text-ink/80">{typeName(item.type)} · {item.year}</div>
             <h2 className="text-work-lg text-ink mt-1 line-clamp-2" style={{ textWrap: 'balance' } as React.CSSProperties}>{displayTitle(item, userLang())}</h2>
@@ -135,24 +141,46 @@ export const SwipeDeck = forwardRef<DeckHandle, Props>(function SwipeDeck({ deck
   const spring = { type: 'spring' as const, stiffness: 420, damping: 28 }
   const settle = () => { animate(x, 0, spring); animate(y, 0, spring) }
 
+  // Caja ancha arriba: la tarjeta mide su contenido; las de detrás copian esa altura para que el montón asome igual
+  const topFits = fitsContent(top)
+  const topCard = useRef<HTMLDivElement>(null)
+  const [fitH, setFitH] = useState<number | null>(null)
+  useLayoutEffect(() => {
+    const el = topCard.current
+    if (!topFits || !el) { setFitH(null); return }
+    setFitH(el.offsetHeight)
+    const ro = new ResizeObserver(() => setFitH(el.offsetHeight))
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [top?.id, topFits])
+  const backH = topFits && fitH != null ? fitH : undefined
+
   if (!top) return null
+  // cada capa ocupa el hueco del mazo y centra su tarjeta en vertical
+  const layer = 'absolute inset-x-0 top-0 bottom-[30px] flex items-center pointer-events-none'
   return (
     // la tarjeta nunca más ancha que un póster (2:3 + el hueco de 30 px del montón): si falta alto, se estrecha
     <div ref={box} className="relative h-full max-w-full mx-auto" style={{ aspectRatio: '2 / 3.15' }}>
       {deck[2] && (
-        <motion.div className="absolute inset-x-0 top-0 bottom-[30px]" style={{ scale: s3, y: y3, transformOrigin: '50% 100%' }}>
-          <CardFace item={deck[2]} bubbles={false} />
-        </motion.div>
+        <div className={layer}>
+          <motion.div className="relative w-full" style={{ height: backH ?? '100%', scale: s3, y: y3, transformOrigin: '50% 100%' }}>
+            <CardFace item={deck[2]} bubbles={false} />
+          </motion.div>
+        </div>
       )}
       {deck[1] && (
-        <motion.div className="absolute inset-x-0 top-0 bottom-[30px]" style={{ scale: s2, y: y2, transformOrigin: '50% 100%' }}>
-          <CardFace item={deck[1]} />
-        </motion.div>
+        <div className={layer}>
+          <motion.div className="relative w-full" style={{ height: backH ?? '100%', scale: s2, y: y2, transformOrigin: '50% 100%' }}>
+            <CardFace item={deck[1]} />
+          </motion.div>
+        </div>
       )}
+      <div className={layer}>
       <motion.div
         key={top.id}
-        className="absolute inset-x-0 top-0 bottom-[30px] cursor-grab active:cursor-grabbing touch-none-all"
-        style={{ x, y, rotate, touchAction: 'none' }}
+        ref={topCard}
+        className="relative w-full pointer-events-auto cursor-grab active:cursor-grabbing touch-none-all"
+        style={{ height: topFits ? 'auto' : '100%', x, y, rotate, touchAction: 'none' }}
         drag
         dragMomentum={false}
         dragElastic={1}
@@ -187,7 +215,7 @@ export const SwipeDeck = forwardRef<DeckHandle, Props>(function SwipeDeck({ deck
           else if (e.key === 'Enter') onOpen(top)
         }}
       >
-        <CardFace item={top} flight />
+        <CardFace item={top} flight fit={topFits} />
         <motion.div className="absolute inset-0 rounded-[28px] bg-stamp-green/25 pointer-events-none" style={{ opacity: rightO }} />
         <motion.div className="absolute inset-0 rounded-[28px] bg-stamp-red/25 pointer-events-none" style={{ opacity: leftO }} />
         <motion.div className="absolute inset-0 rounded-[28px] bg-stamp-blue/25 pointer-events-none" style={{ opacity: upO }} />
@@ -195,6 +223,7 @@ export const SwipeDeck = forwardRef<DeckHandle, Props>(function SwipeDeck({ deck
         <Stamp label={stamps?.left ?? "NO ME INTERESA"} color="var(--color-stamp-red)" opacity={leftO} className="top-[22%] right-4 rotate-12 text-[22px]" />
         <Stamp label={stamps?.up ?? "PENDIENTE"} color="var(--color-stamp-blue)" opacity={upO} className="top-[38%] left-1/2 -translate-x-1/2 -rotate-6" />
       </motion.div>
+      </div>
     </div>
   )
 })

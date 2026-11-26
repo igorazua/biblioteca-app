@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useStore } from '../store/useStore'
 import { Avatar } from '../components/ui'
 import { Icon } from '../components/Icon'
+import { ScreenSkeleton } from '../components/Skeletons'
 import { useIsDesktop } from '../lib/useMediaQuery'
 import { Home } from './Home'
 
@@ -21,7 +22,7 @@ export function NuevoApp() {
   return (
     <div className="relative h-full w-full overflow-hidden bg-bg text-ink">
       <TopBar />
-      <Suspense fallback={null}>
+      <Suspense fallback={<div className="pt-16 h-full"><ScreenSkeleton /></div>}>
         <Routes>
           <Route index element={<Home />} />
           <Route path="duelos" element={<DuelReel />} />

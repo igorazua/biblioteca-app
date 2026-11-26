@@ -102,7 +102,11 @@ export function JoinInvite() {
         </div>
 
         {loading ? (
-          <div className="py-4 text-meta text-mute">Cargando invitación...</div>
+          <div className="space-y-3 pt-2" aria-busy="true" aria-live="polite">
+            <span className="sr-only">Cargando invitación…</span>
+            <div className="skeleton h-4 rounded w-5/6" />
+            <div className="skeleton h-12 rounded-full w-full" />
+          </div>
         ) : inviteStatus !== 'ok' ? (
           <div className="space-y-3 pt-2">
             <p className="text-body text-ink/90 leading-relaxed">{STATUS_TEXT[inviteStatus]}</p>

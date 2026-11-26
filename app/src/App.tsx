@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { TabBar } from './components/TabBar'
 import { AppShell, SkipLink } from './components/AppShell'
 import { Toast } from './components/ui'
+import { ScreenSkeleton } from './components/Skeletons'
 import { UpdatePrompt } from './components/UpdatePrompt'
 import { PushPrompt } from './components/PushPrompt'
 import { useStore } from './store/useStore'
@@ -44,7 +45,7 @@ function Frame() {
   return (
     <div className="relative h-full w-full overflow-hidden bg-bg" data-overlay-host>
       <SkipLink />
-      <Suspense fallback={null}>
+      <Suspense fallback={<ScreenSkeleton />}>
         <Routes>
           <Route element={<AppShell />}>
             <Route element={<TabLayout />}>
@@ -90,7 +91,10 @@ function TabLayout() {
             transition={{ duration: 0.15 }}
             className="h-full"
           >
-            <Outlet />
+            {/* Suspense aquí dentro: mientras llega la pestaña se ve su esqueleto y la TabBar no desaparece */}
+            <Suspense fallback={<ScreenSkeleton />}>
+              <Outlet />
+            </Suspense>
           </motion.div>
         </AnimatePresence>
       </div>
@@ -168,7 +172,7 @@ export function App() {
       <UpdatePrompt />
       <PushPrompt />
       {syncToast && <Toast message={syncToast} onDone={() => setSyncToast(null)} />}
-      <Suspense fallback={null}>
+      <Suspense fallback={<ScreenSkeleton />}>
         <Routes>
           <Route path="/l/:payload" element={<PublicList />} />
           <Route path="/p/:payload" element={<PublicProfile />} />

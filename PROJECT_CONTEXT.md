@@ -5,7 +5,7 @@
 **Estado (23/10/2026):**
 - **Git & GitHub:** `git@github.com:igorazua/biblioteca-app.git` (rama `main`).
 - **Despliegue Vercel:** [https://app-rho-lac-65.vercel.app](https://app-rho-lac-65.vercel.app) (proyecto `biblioteca-app`, conectado a GitHub `main`, producción automática). Dominio secundario / alias: `biblioteca-social.vercel.app`.
-- **Backend Supabase:** Cuenta secundaria (`usamoneandoando@gmail.com`, proyecto `pvewnpemlwmvaduzhjso`). Tablas creadas con RLS: `biblio_profiles`, `biblio_entries`, `biblio_friends`, `biblio_invites`, `biblio_events`.
+- **Backend Supabase:** Cuenta principal/secundaria (`igorazua@gmail.com` / `usamoneandoando@gmail.com`, proyecto `pvewnpemlwmvaduzhjso`). Acceso vía API de gestión con `SUPABASE_ACCESS_TOKEN` y `SUPABASE_PROJECT_REF` en `app/.env.local`. Tablas creadas con RLS: `biblio_profiles`, `biblio_entries`, `biblio_friends`, `biblio_invites`, `biblio_events`, `biblio_contact_allowance`.
 - **Demo funcional:** PWA navegable en `app/` lista para probar con amigos y móviles reales.
 
 **Motor (16/10/2026):** decisiones de producto del motor (orden del mazo, Decidir, limpieza de guardados, métricas) en `docs/IDEA.md` §7b; diseño técnico por fases en `docs/MOTOR.md`. Se incorpora la fase previa de Backend Mínimo para conectar Supabase antes del cálculo de eventos.

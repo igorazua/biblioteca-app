@@ -1,5 +1,7 @@
+import { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
 import { SideNav } from './SideNav'
+import { ScreenSkeleton } from './Skeletons'
 
 /**
  * Marco de la app: barra lateral fija en escritorio (>= 1024 px) y, por debajo, solo contenido
@@ -12,7 +14,10 @@ export function AppShell() {
       <SideNav />
       <main id="contenido" tabIndex={-1} className="flex-1 min-w-0 h-full outline-none">
         <div className="relative h-full w-full mx-auto md:max-w-column lg:max-w-content">
-          <Outlet />
+          {/* La barra lateral se queda puesta mientras llega el código de la sección */}
+          <Suspense fallback={<ScreenSkeleton />}>
+            <Outlet />
+          </Suspense>
         </div>
       </main>
     </div>

@@ -31,6 +31,7 @@ import { track, useEvents } from '../store/useEvents'
 import { useRanks } from '../store/useScores'
 import { SwipeDeck, type DeckHandle, type SwipeDir } from '../components/SwipeDeck'
 import { RatingFlow } from '../components/RatingFlow'
+import { DeckCardSkeleton } from '../components/Skeletons'
 import { NudgeCard } from '../components/NudgeCard'
 import { Chip, Sheet, Toast } from '../components/ui'
 import { Icon, type IconName } from '../components/Icon'
@@ -597,6 +598,11 @@ export function Discover() {
                 nav(`/i/${encodeURIComponent(it.id)}`)
               }}
             />
+          </div>
+        ) : !shelfReady ? (
+          // la estantería aún se está cargando (canciones): carta fantasma, no «has repasado todo»
+          <div className="h-full lg:w-full lg:max-w-100 lg:max-h-157">
+            <DeckCardSkeleton />
           </div>
         ) : (
           <div className="h-full flex flex-col items-center justify-center text-center px-5 gap-3">

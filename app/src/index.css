@@ -184,10 +184,13 @@ h1, h2 { letter-spacing: -0.015em; }
   animation: skeleton-shine 1.3s ease-in-out infinite;
 }
 @keyframes skeleton-shine { from { background-position: 120% 0; } to { background-position: -120% 0; } }
+/* Esqueleto de pantalla: aparece tras 150 ms, así las cargas rápidas no parpadean */
+.skeleton-wait { animation: skeleton-wait 0.2s ease-out 0.15s both; }
+@keyframes skeleton-wait { from { opacity: 0; } to { opacity: 1; } }
 .img-in { animation: img-in 0.28s ease-out; }
 @keyframes img-in { from { opacity: 0.35; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) {
-  .skeleton, .img-in { animation: none; }
+  .skeleton, .img-in, .skeleton-wait { animation: none; }
 }
 
 /* --- Escritorio (>= 1024 px), DISENO_ESCRITORIO.md. Debajo de este ancho no cambia nada. --- */
